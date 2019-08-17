@@ -1,0 +1,238 @@
+head	1.5;
+access;
+symbols
+	V0_3_2:1.4
+	V0_1_4:1.2
+	V0_1_3:1.2
+	V0_1_2:1.2
+	V0_1_1:1.2
+	V0_1:1.2
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2002.10.07.08.00.23;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.04.15.19.05;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.05.20.20.12;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@* replace "type" by "class" since Object#type is deprecated in
+  1.7.3.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+#
+# Note - real testing of class semantics occurs in language stuff
+
+
+class TestClass < Rubicon::TestCase
+
+  # ------------------
+  # Various test classes
+  # ------------------
+
+  class ClassOne
+    attr :num_args
+    @@@@subs = []
+    def initialize(*args)
+      @@num_args = args.size
+      @@args = args
+    end
+    def [](n)
+      @@args[n]
+    end
+    def ClassOne.inherited(klass)
+      @@@@subs.push klass
+    end
+    def subs
+      @@@@subs
+    end
+  end
+
+  class ClassTwo < ClassOne
+  end
+
+  class ClassThree < ClassOne
+  end
+
+  class ClassFour < ClassThree
+  end
+
+  # ------------------
+  # Start of tests
+  # ------------------
+
+  def test_s_inherited
+    assert_equal([ClassTwo, ClassThree, ClassFour], ClassOne.new.subs)
+  end
+
+  def test_s_new
+    c = Class.new
+    assert_same(Class, c.class)
+    assert_same(Object, c.superclass)
+
+    c = Class.new(Fixnum)
+    assert_same(Class, c.class)
+    assert_same(Fixnum, c.superclass)
+  end
+
+  def test_00_new_basic
+    a = ClassOne.new
+    assert_equal(ClassOne, a.class)
+    assert_equal(0, a.num_args)
+
+    a = ClassOne.new(1, 2, 3)
+    assert_equal(3, a.num_args)
+    assert_equal(1, a[0])
+  end
+
+  def test_01_new_inherited
+    a = ClassTwo.new
+    assert_equal(ClassTwo, a.class)
+    assert_equal(0, a.num_args)
+
+    a = ClassTwo.new(1, 2, 3)
+    assert_equal(3, a.num_args)
+    assert_equal(1, a[0])
+  end
+
+  def test_superclass
+    assert_equal(ClassOne, ClassTwo.superclass)
+    assert_equal(Object,   ClassTwo.superclass.superclass)
+    assert_equal(nil,      ClassTwo.superclass.superclass.superclass)
+  end
+
+end
+
+Rubicon::handleTests(TestClass) if $0 == __FILE__
+@
+
+
+1.4
+log
+@Continue makig the tests Windows-agnostic. Include patch from Masaki
+Suketa which fixes some bad tests (assert(...) being used in place
+of assert_equals(...))
+@
+text
+@d51 1
+a51 1
+    assert_same(Class, c.type)
+d55 1
+a55 1
+    assert_same(Class, c.type)
+d61 1
+a61 1
+    assert_equal(ClassOne, a.type)
+d71 1
+a71 1
+    assert_equal(ClassTwo, a.type)
+@
+
+
+1.3
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d51 2
+a52 2
+    assert(Class, c.type)
+    assert(Object, c.superclass)
+d55 2
+a56 2
+    assert(Class, c.type)
+    assert(Fixnum, c.superclass)
+@
+
+
+1.2
+log
+@Add some tests
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 3
+d9 23
+a31 2
+  def test_new
+    assert_fail("untested")
+d34 1
+a34 2
+  def test_superclass
+    assert_fail("untested")
+d37 1
+a37 2
+  def test_s_constants
+    assert_fail("untested")
+d40 4
+d45 21
+a65 1
+    assert_fail("untested")
+d68 8
+a75 2
+  def test_s_nesting
+    assert_fail("untested")
+d78 4
+a81 2
+  def test_s_new
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

@@ -1,0 +1,1197 @@
+head	1.11;
+access;
+symbols
+	V0_3_2:1.11
+	V0_1_4:1.7
+	V0_1_3:1.7
+	V0_1_2:1.6
+	V0_1_1:1.5
+	V0_1:1.5
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.11
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.02.06.19.08.39;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.02.04.04.43.55;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.10.20.18.04.44;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.09.01.03.12.40;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.03.04.45;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.14.21.16.08;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.06.14.44.12;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+
+require 'rubicon'
+require 'ArrayBase.rb'
+
+
+class TestArray < ArrayBase
+  def initialize(*args)
+    @@cls = Array
+    super
+  end
+end
+
+
+
+Rubicon::handleTests(TestArray) if $0 == __FILE__
+@
+
+
+1.10
+log
+@Split out testing of Array semantics from TestArray
+@
+text
+@d1 3
+a3 1
+require '../rubicon'
+@
+
+
+1.9
+log
+@Add more confitional tests to handle logic changes between Ruby versions
+@
+text
+@d2 1
+d5 4
+a8 469
+class TestArray < Rubicon::TestCase
+
+  def test_00_new
+    a = Array.new()
+    assert_instance_of(Array, a)
+    assert_equal(0, a.length)
+    assert_nil(a[0])
+  end
+
+  def test_01_square_brackets
+    a = Array[ 5, 4, 3, 2, 1 ]
+    assert_instance_of(Array, a)
+    assert_equal(5, a.length)
+    5.times { |i| assert_equal(5-i, a[i]) }
+    assert_nil(a[6])
+  end
+
+  def test_AND # '&'
+    assert_equal([1, 3], [ 1, 1, 3, 5 ] & [ 1, 2, 3 ])
+    assert_equal([],     [ 1, 1, 3, 5 ] & [ ])
+    assert_equal([],     [  ]           & [ 1, 2, 3 ])
+    assert_equal([],     [ 1, 2, 3 ]    & [ 4, 5, 6 ])
+  end
+
+  def test_MUL # '*'
+    assert_equal([], []*3)
+    assert_equal([1, 1, 1], [1]*3)
+    assert_equal([1, 2, 1, 2, 1, 2], [1, 2]*3)
+    assert_equal([], [1, 2, 3] * 0)
+    assert_exception(ArgumentError) { [1, 2]*(-3) }
+
+    assert_equal('1-2-3-4-5', [1, 2, 3, 4, 5] * '-')
+    assert_equal('12345',     [1, 2, 3, 4, 5] * '')
+
+  end
+
+  def test_PLUS # '+'
+    assert_equal([],     []  + [])
+    assert_equal([1],    [1] + [])
+    assert_equal([1],    []  + [1])
+    assert_equal([1, 1], [1] + [1])
+    assert_equal(['cat', 'dog', 1, 2, 3], %w(cat dog) + (1..3).to_a)
+  end
+
+  def test_MINUS # '-'
+    assert_equal([],  [1] - [1])
+    assert_equal([1], [1, 2, 3, 4, 5] - [2, 3, 4, 5])
+    assert_equal([1], [1, 2, 1, 3, 1, 4, 1, 5] - [2, 3, 4, 5])
+    a = []
+    1000.times { a << 1 }
+    assert_equal(1000, a.length)
+    assert_equal([1], a - [2])
+    assert_equal([1],  [ 1, 2, 1] - [2])
+    assert_equal([1, 2, 3], [1, 2, 3] - [4, 5, 6])
+  end
+
+  def test_LSHIFT # '<<'
+    a = []
+    a << 1
+    assert_equal([1], a)
+    a << 2 << 3
+    assert_equal([1, 2, 3], a)
+    a << nil << 'cat'
+    assert_equal([1, 2, 3, nil, 'cat'], a)
+    a << a
+    assert_equal([1, 2, 3, nil, 'cat', a], a)
+  end
+
+  def test_CMP # '<=>'
+    assert_equal(0,  [] <=> [])
+    assert_equal(0,  [1] <=> [1])
+    assert_equal(0,  [1, 2, 3, 'cat'] <=> [1, 2, 3, 'cat'])
+    assert_equal(-1, [] <=> [1])
+    assert_equal(1,  [1] <=> [])
+    assert_equal(-1, [1, 2, 3] <=> [1, 2, 3, 'cat'])
+    assert_equal(1,  [1, 2, 3, 'cat'] <=> [1, 2, 3])
+    assert_equal(-1, [1, 2, 3, 'cat'] <=> [1, 2, 3, 'dog'])
+    assert_equal(1,  [1, 2, 3, 'dog'] <=> [1, 2, 3, 'cat'])
+  end
+
+  def test_EQUAL # '=='
+    assert([] == [])
+    assert([1] == [1])
+    assert([1, 1, 2, 2] == [1, 1, 2, 2])
+    assert([1.0, 1.0, 2.0, 2.0] == [1, 1, 2, 2])
+  end
+
+  def test_VERY_EQUAL # '==='
+    assert([] === [])
+    assert([1] === [1])
+    assert([1, 1, 2, 2] === [1, 1, 2, 2])
+    assert([1.0, 1.0, 2.0, 2.0] === [1, 1, 2, 2])
+  end
+
+  def test_AREF # '[]'
+    a = (1..100).to_a
+
+    assert_equal(1, a[0])
+    assert_equal(100, a[99])
+    assert_nil(a[100])
+    assert_equal(100, a[-1])
+    assert_equal(99,  a[-2])
+    assert_equal(1,   a[-100])
+    assert_nil(a[-101])
+
+    assert_equal([1],   a[0,1])
+    assert_equal([100], a[99,1])
+    assert_equal([],    a[100,1])
+    assert_equal([100], a[99,100])
+    assert_equal([100], a[-1,1])
+    assert_equal([99],  a[-2,1])
+
+    assert_equal([10, 11, 12], a[9, 3])
+    assert_equal([10, 11, 12], a[-91, 3])
+
+    assert_equal([1],   a[0..0])
+    assert_equal([100], a[99..99])
+    assert_equal([],    a[100..100])
+    assert_equal([100], a[99..200])
+    assert_equal([100], a[-1..-1])
+    assert_equal([99],  a[-2..-2])
+
+    assert_equal([10, 11, 12], a[9..11])
+    assert_equal([10, 11, 12], a[-91..-89])
+    
+    assert_nil(a[10, -3])
+    assert_nil(a[10..7])
+
+    assert_exception(TypeError) {a['cat']}
+  end
+
+  def test_ASET # '[]='
+    a = (0..99).to_a
+    assert_equal(0, a[0] = 0)
+    assert_equal([0] + (1..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(0, a[10,10] = 0)
+    assert_equal((0..9).to_a + [0] + (20..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(0, a[-1] = 0)
+    assert_equal((0..98).to_a + [0], a)
+
+    a = (0..99).to_a
+    assert_equal(0, a[-10, 10] = 0)
+    assert_equal((0..89).to_a + [0], a)
+
+    a = (0..99).to_a
+    assert_equal(0, a[0,1000] = 0)
+    assert_equal([0] , a)
+
+    a = (0..99).to_a
+    assert_equal(0, a[10..19] = 0)
+    assert_equal((0..9).to_a + [0] + (20..99).to_a , a)
+
+    b = %w( a b c )
+    a = (0..99).to_a
+    assert_equal(b, a[0,1] = b)
+    assert_equal(b + (1..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(b, a[10,10] = b)
+    assert_equal((0..9).to_a + b + (20..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(b, a[-1, 1] = b)
+    assert_equal((0..98).to_a + b, a)
+
+    a = (0..99).to_a
+    assert_equal(b, a[-10, 10] = b)
+    assert_equal((0..89).to_a + b, a)
+
+    a = (0..99).to_a
+    assert_equal(b, a[0,1000] = b)
+    assert_equal(b , a)
+
+    a = (0..99).to_a
+    assert_equal(b, a[10..19] = b)
+    assert_equal((0..9).to_a + b + (20..99).to_a , a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[0,1] = nil)
+    assert_equal((1..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[10,10] = nil)
+    assert_equal((0..9).to_a + (20..99).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[-1, 1] = nil)
+    assert_equal((0..98).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[-10, 10] = nil)
+    assert_equal((0..89).to_a, a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[0,1000] = nil)
+    assert_equal([] , a)
+
+    a = (0..99).to_a
+    assert_equal(nil, a[10..19] = nil)
+    assert_equal((0..9).to_a + (20..99).to_a , a)
+  end
+
+  def test_assoc
+    a1 = %w( cat feline )
+    a2 = %w( dog canine )
+    a3 = %w( mule asinine )
+
+    a = [ a1, a2, a3 ]
+
+    assert_equal(a1, a.assoc('cat'))
+    assert_equal(a3, a.assoc('mule'))
+    assert_equal(nil, a.assoc('asinine'))
+    assert_equal(nil, a.assoc('wombat'))
+    assert_equal(nil, a.assoc(1..2))
+  end
+
+  def test_at
+    a = (0..99).to_a
+    assert_equal(0,   a.at(0))
+    assert_equal(10,  a.at(10))
+    assert_equal(99,  a.at(99))
+    assert_equal(nil, a.at(100))
+    assert_equal(99,  a.at(-1))
+    assert_equal(0,  a.at(-100))
+    assert_equal(nil, a.at(-101))
+    assert_exception(TypeError) { a.at('cat') }
+  end
+
+  def test_clear
+    a = [1, 2, 3]
+    b = a.clear
+    assert_equal([], a)
+    assert_equal([], b)
+    assert_equal(a.id, b.id)
+  end
+
+  def test_clone
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = (0..99).to_a
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.clone
+
+        assert_equal(a, b)
+        assert(a.id != b.id)
+        assert_equal(a.frozen?, b.frozen?)
+        assert_equal(a.tainted?, b.tainted?)
+      end
+    end
+  end
+
+  def test_collect
+    a = [ 1, 'cat', 1..1 ]
+    assert_equal([ Fixnum, String, Range], a.collect {|e| e.type} )
+    assert_equal([ 99, 99, 99], a.collect { 99 } )
+
+    assert_equal([], [].collect { 99 })
+
+    assert_equal([1, 2, 3], [1, 2, 3].collect)
+  end
+
+  # also update map!
+  def test_collect!
+    a = [ 1, 'cat', 1..1 ]
+    assert_equal([ Fixnum, String, Range], a.collect! {|e| e.type} )
+    assert_equal([ Fixnum, String, Range], a)
+   
+    a = [ 1, 'cat', 1..1 ]
+    assert_equal([ 99, 99, 99], a.collect! { 99 } )
+    assert_equal([ 99, 99, 99], a)
+
+    a = [ ]
+    assert_equal([], a.collect! { 99 })
+    assert_equal([], a)
+  end
+
+  def test_compact
+    a = [ 1, nil, nil, 2, 3, nil, 4 ]
+    assert_equal([1, 2, 3, 4], a.compact)
+
+    a = [ nil, 1, nil, 2, 3, nil, 4 ]
+    assert_equal([1, 2, 3, 4], a.compact)
+
+    a = [ 1, nil, nil, 2, 3, nil, 4, nil ]
+    assert_equal([1, 2, 3, 4], a.compact)
+
+    a = [ 1, 2, 3, 4 ]
+    assert_equal([1, 2, 3, 4], a.compact)
+  end
+
+  def test_compact!
+    a = [ 1, nil, nil, 2, 3, nil, 4 ]
+    assert_equal([1, 2, 3, 4], a.compact!)
+    assert_equal([1, 2, 3, 4], a)
+
+    a = [ nil, 1, nil, 2, 3, nil, 4 ]
+    assert_equal([1, 2, 3, 4], a.compact!)
+    assert_equal([1, 2, 3, 4], a)
+
+    a = [ 1, nil, nil, 2, 3, nil, 4, nil ]
+    assert_equal([1, 2, 3, 4], a.compact!)
+    assert_equal([1, 2, 3, 4], a)
+
+    a = [ 1, 2, 3, 4 ]
+    assert_equal(nil, a.compact!)
+    assert_equal([1, 2, 3, 4], a)
+  end
+
+  def test_concat
+    assert_equal([1, 2, 3, 4],     [1, 2].concat([3, 4]))
+    assert_equal([1, 2, 3, 4],     [].concat([1, 2, 3, 4]))
+    assert_equal([1, 2, 3, 4],     [1, 2, 3, 4].concat([]))
+    assert_equal([],               [].concat([]))
+    assert_equal([[1, 2], [3, 4]], [[1, 2]].concat([[3, 4]]))
+  end
+
+  def test_delete
+    a = ('cab'..'cat').to_a
+    assert_equal('cap', a.delete('cap'))
+    assert_equal(('cab'..'cao').to_a + ('caq'..'cat').to_a, a)
+
+    a = ('cab'..'cat').to_a
+    assert_equal('cab', a.delete('cab'))
+    assert_equal(('cac'..'cat').to_a, a)
+
+    a = ('cab'..'cat').to_a
+    assert_equal('cat', a.delete('cat'))
+    assert_equal(('cab'..'cas').to_a.to_a, a)
+
+    a = ('cab'..'cat').to_a
+    assert_equal(nil, a.delete('cup'))
+    assert_equal(('cab'..'cat').to_a, a)
+
+    a = ('cab'..'cat').to_a
+    assert_equal(99, a.delete('cup') { 99 } )
+    assert_equal(('cab'..'cat').to_a, a)
+  end
+
+  def test_delete_at
+    a = (1..5).to_a
+    assert_equals(3, a.delete_at(2))
+    assert_equals([1, 2, 4, 5], a)
+
+    a = (1..5).to_a
+    assert_equals(4, a.delete_at(-2))
+    assert_equals([1, 2, 3, 5], a)
+
+    a = (1..5).to_a
+    assert_equals(nil, a.delete_at(5))
+    assert_equals([1, 2, 3, 4, 5], a)
+
+    a = (1..5).to_a
+    assert_equals(nil, a.delete_at(-6))
+    assert_equals([1, 2, 3, 4, 5], a)
+  end
+
+  # also reject!
+  def test_delete_if
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(a, a.delete_if { false })
+    assert_equal([1, 2, 3, 4, 5], a)
+
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(a, a.delete_if { true })
+    assert_equal([], a)
+
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(a, a.delete_if { |i| i > 3 })
+    assert_equal([1, 2, 3], a)
+  end
+
+  def test_dup
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = (0..99).to_a
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.dup
+
+        assert_equal(a, b)
+        assert(a.id != b.id)
+        assert_equals(false, b.frozen?)
+        assert_equals(a.tainted?, b.tainted?)
+      end
+    end
+  end
+
+  def test_each
+    a = %w( ant bat cat dog )
+    i = 0
+    a.each { |e|
+      assert_equal(a[i], e)
+      i += 1
+    }
+    assert_equal(4, i)
+
+    a = []
+    i = 0
+    a.each { |e|
+      assert_equal(a[i], e)
+      i += 1
+    }
+    assert_equal(0, i)
+
+    assert_equal(a, a.each {})
+  end
+
+  def test_each_index
+    a = %w( ant bat cat dog )
+    i = 0
+    a.each_index { |ind|
+      assert_equal(i, ind)
+      i += 1
+    }
+    assert_equal(4, i)
+
+    a = []
+    i = 0
+    a.each_index { |ind|
+      assert_equal(i, ind)
+      i += 1
+    }
+    assert_equal(0, i)
+
+    assert_equal(a, a.each_index {})
+  end
+
+  def test_empty?
+    assert([].empty?)
+    assert(![1].empty?)
+  end
+
+  def test_eql?
+    assert([].eql?([]))
+    assert([1].eql?([1]))
+    assert([1, 1, 2, 2].eql?([1, 1, 2, 2]))
+    assert(![1.0, 1.0, 2.0, 2.0].eql?([1, 1, 2, 2]))
+  end
+
+  def test_fill
+    assert_equal([],   [].fill(99))
+    assert_equal([],   [].fill(99, 0))
+    assert_equal([99], [].fill(99, 0, 1))
+    assert_equal([99], [].fill(99, 0..0))
+
+    assert_equal([99],   [1].fill(99))
+    assert_equal([99],   [1].fill(99, 0))
+    assert_equal([99],   [1].fill(99, 0, 1))
+    assert_equal([99],   [1].fill(99, 0..0))
+
+    assert_equal([99, 99], [1, 2].fill(99))
+    assert_equal([99, 99], [1, 2].fill(99, 0))
+    assert_equal([99, 99], [1, 2].fill(99, nil))
+    assert_equal([1,  99], [1, 2].fill(99, 1, nil))
+    assert_equal([99,  2], [1, 2].fill(99, 0, 1))
+    assert_equal([99,  2], [1, 2].fill(99, 0..0))
+  end
+
+#  def test_filter
+#  end
+
+  def test_first
+    assert_equal(3,   [3, 4, 5].first)
+    assert_equal(nil, [].first)
+a9 483
+
+  def test_flatten
+    a1 = [ 1, 2, 3]
+    a2 = [ 5, 6 ]
+    a3 = [ 4, a2 ]
+    a4 = [ a1, a3 ]
+    assert_equal([1, 2, 3, 4, 5, 6], a4.flatten)
+    assert_equal([ a1, a3], a4)
+
+    a5 = [ a1, [], a3 ]
+    assert_equal([1, 2, 3, 4, 5, 6], a5.flatten)
+    assert_equal([], [].flatten)
+    assert_equal([], [[[[],[]],[[]],[]],[[[]]]].flatten)
+  end
+
+  def test_flatten!
+    a1 = [ 1, 2, 3]
+    a2 = [ 5, 6 ]
+    a3 = [ 4, a2 ]
+    a4 = [ a1, a3 ]
+    assert_equal([1, 2, 3, 4, 5, 6], a4.flatten!)
+    assert_equal([1, 2, 3, 4, 5, 6], a4)
+
+    a5 = [ a1, [], a3 ]
+    assert_equal([1, 2, 3, 4, 5, 6], a5.flatten!)
+    assert_equal([1, 2, 3, 4, 5, 6], a5)
+
+    assert_equal([], [].flatten)
+    assert_equal([], [[[[],[]],[[]],[]],[[[]]]].flatten)
+  end
+
+  def test_hash
+    a1 = [ 'cat', 'dog' ]
+    a2 = [ 'cat', 'dog' ]
+    a3 = [ 'dog', 'cat' ]
+    assert(a1.hash == a2.hash)
+    assert(a1.hash != a3.hash)
+  end
+
+  def test_include?
+    a = [ 'cat', 99, /a/, [ 1, 2, 3] ]
+    assert(a.include?('cat'))
+    assert(a.include?(99))
+    assert(a.include?(/a/))
+    assert(a.include?([1,2,3]))
+    assert(!a.include?('ca'))
+    assert(!a.include?([1,2]))
+  end
+
+  def test_index
+    a = [ 'cat', 99, /a/, 99, [ 1, 2, 3] ]
+    assert_equal(0, a.index('cat'))
+    assert_equal(1, a.index(99))
+    assert_equal(4, a.index([1,2,3]))
+    assert_nil(a.index('ca'))
+    assert_nil(a.index([1,2]))
+  end
+
+  def test_indexes
+    a = ('a'..'j').to_a
+    assert_equal(['a', 'c', 'e'], a.indexes(0, 2, 4))
+    assert_equal(['j', 'h', 'f'], a.indexes(-1, -3, -5))
+    assert_equal(['h', nil, 'a'], a.indexes(-3, 99, 0))
+  end
+
+  def test_indices
+    a = ('a'..'j').to_a
+    assert_equal(['a', 'c', 'e'], a.indices(0, 2, 4))
+    assert_equal(['j', 'h', 'f'], a.indices(-1, -3, -5))
+    assert_equal(['h', nil, 'a'], a.indices(-3, 99, 0))
+  end
+
+  def test_join
+    $, = ""
+    a = []
+    assert_equal("", a.join)
+    assert_equal("", a.join(','))
+
+    $, = ""
+    a = [1, 2]
+    assert_equal("12", a.join)
+    assert_equal("1,2", a.join(','))
+
+    $, = ""
+    a = [1, 2, 3]
+    assert_equal("123", a.join)
+    assert_equal("1,2,3", a.join(','))
+
+    $, = ":"
+    a = [1, 2, 3]
+    assert_equal("1:2:3", a.join)
+    assert_equal("1,2,3", a.join(','))
+
+    $, = ""
+  end
+
+  def test_last
+    assert_equal(nil, [].last)
+    assert_equal(1, [1].last)
+    assert_equal(99, (3..99).to_a.last)
+  end
+
+  def test_length
+    assert_equal(0, [].length)
+    assert_equal(1, [1].length)
+    assert_equal(2, [1, nil].length)
+    assert_equal(2, [nil, 1].length)
+    assert_equal(234, (0..233).to_a.length)
+  end
+
+  # also update collect!
+  def test_map!
+    a = [ 1, 'cat', 1..1 ]
+    assert_equal([ Fixnum, String, Range], a.map! {|e| e.type} )
+    assert_equal([ Fixnum, String, Range], a)
+   
+    a = [ 1, 'cat', 1..1 ]
+    assert_equal([ 99, 99, 99], a.map! { 99 } )
+    assert_equal([ 99, 99, 99], a)
+
+    a = [ ]
+    assert_equal([], a.map! { 99 })
+    assert_equal([], a)
+  end
+
+  def test_nitems
+    assert_equal(0, [].nitems)
+    assert_equal(1, [1].nitems)
+    assert_equal(1, [1, nil].nitems)
+    assert_equal(1, [nil, 1].nitems)
+    assert_equal(3, [1, nil, nil, 2, nil, 3, nil].nitems)
+  end
+
+  def test_pack
+    a = %w( cat wombat x yy)
+    assert_equals("catwomx  yy ", a.pack("A3A3A3A3"))
+    assert_equals("cat", a.pack("A*"))
+    assert_equals("cwx  yy ", a.pack("A3@@1A3@@2A3A3"))
+    assert_equals("catwomx\000\000yy\000", a.pack("a3a3a3a3"))
+    assert_equals("cat", a.pack("a*"))
+    assert_equals("ca", a.pack("a2"))
+    assert_equals("cat\000\000", a.pack("a5"))
+
+    assert_equals("\x61",     ["01100001"].pack("B8"))
+    assert_equals("\x61",     ["01100001"].pack("B*"))
+    assert_equals("\x61",     ["0110000100110111"].pack("B8"))
+    assert_equals("\x61\x37", ["0110000100110111"].pack("B16"))
+    assert_equals("\x61\x37", ["01100001", "00110111"].pack("B8B8"))
+    assert_equals("\x60",     ["01100001"].pack("B4"))
+    assert_equals("\x40",     ["01100001"].pack("B2"))
+
+    assert_equals("\x86",     ["01100001"].pack("b8"))
+    assert_equals("\x86",     ["01100001"].pack("b*"))
+    assert_equals("\x86",     ["0110000100110111"].pack("b8"))
+    assert_equals("\x86\xec", ["0110000100110111"].pack("b16"))
+    assert_equals("\x86\xec", ["01100001", "00110111"].pack("b8b8"))
+    assert_equals("\x06",     ["01100001"].pack("b4"))
+    assert_equals("\x02",     ["01100001"].pack("b2"))
+
+    assert_equals("ABC",      [ 65, 66, 67 ].pack("C3"))
+    assert_equals("\377BC",   [ -1, 66, 67 ].pack("C*"))
+    assert_equals("ABC",      [ 65, 66, 67 ].pack("c3"))
+    assert_equals("\377BC",   [ -1, 66, 67 ].pack("c*"))
+
+    
+    assert_equal("AB\n\x10",  ["4142", "0a", "12"].pack("H4H2H1"))
+    assert_equal("AB\n\x02",  ["1424", "a0", "21"].pack("h4h2h1"))
+
+    assert_equal("abc=02def=\ncat=\n=01=\n", 
+                 ["abc\002def", "cat", "\001"].pack("M9M3M4"))
+
+    assert_equal("aGVsbG8K\n",  ["hello\n"].pack("m"))
+    assert_equal(",:&5L;&\\*:&5L;&\\*\n",  ["hello\nhello\n"].pack("u"))
+
+    assert_equal("\xc2\xa9B\xe2\x89\xa0", [0xa9, 0x42, 0x2260].pack("U*"))
+
+
+    skipping "Not tested:
+        D,d & double-precision float, native format\\
+        E & double-precision float, little-endian byte order\\
+        e & single-precision float, little-endian byte order\\
+        F,f & single-precision float, native format\\
+        G & double-precision float, network (big-endian) byte order\\
+        g & single-precision float, network (big-endian) byte order\\
+        I & unsigned integer\\
+        i & integer\\
+        L & unsigned long\\
+        l & long\\
+
+        m & string encoded in base64 (uuencoded)\\
+        N & long, network (big-endian) byte order\\
+        n & short, network (big-endian) byte-order\\
+        P & pointer to a structure (fixed-length string)\\
+        p & pointer to a null-terminated string\\
+        S & unsigned short\\
+        s & short\\
+        V & long, little-endian byte order\\
+        v & short, little-endian byte order\\
+        X & back up a byte\\
+        x & null byte\\
+        Z & ASCII string (null padded, count is width)\\
+"
+  end
+
+  def test_pop
+    a = [ 'cat', 'dog' ]
+    assert_equal('dog', a.pop)
+    assert_equal(['cat'], a)
+    assert_equal('cat', a.pop)
+    assert_equal([], a)
+    assert_nil(a.pop)
+    assert_equal([], a)
+  end
+
+  def test_push
+    a = [1, 2, 3]
+    assert_equal([1, 2, 3, 4, 5], a.push(4, 5))
+    if $rubyVersion >= "1.6.2"
+      assert_exception(ArgumentError, "a.push()") { a.push() }
+    else
+      assert_equal([1, 2, 3, 4, 5], a.push())
+    end
+    assert_equal([1, 2, 3, 4, 5, nil], a.push(nil))
+  end
+
+  def test_rassoc
+    a1 = %w( cat  feline )
+    a2 = %w( dog  canine )
+    a3 = %w( mule asinine )
+    a = [ a1, a2, a3 ]
+
+    assert_equal(a1,  a.rassoc('feline'))
+    assert_equal(a3,  a.rassoc('asinine'))
+    assert_equal(nil, a.rassoc('dog'))
+    assert_equal(nil, a.rassoc('mule'))
+    assert_equal(nil, a.rassoc(1..2))
+  end
+
+  # also delete_if
+  def test_reject!
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(nil, a.reject! { false })
+    assert_equal([1, 2, 3, 4, 5], a)
+
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(a, a.reject! { true })
+    assert_equal([], a)
+
+    a = [ 1, 2, 3, 4, 5 ]
+    assert_equal(a, a.reject! { |i| i > 3 })
+    assert_equal([1, 2, 3], a)
+  end
+
+  def test_replace
+    a = [ 1, 2, 3]
+    a_id = a.id
+    assert_equal([4, 5, 6], a.replace([4, 5, 6]))
+    assert_equal([4, 5, 6], a)
+    assert_equal(a_id, a.id)
+    assert_equal([], a.replace([]))
+  end
+
+  def test_reverse
+    a = %w( dog cat bee ant )
+    assert_equal(%w(ant bee cat dog), a.reverse)
+    assert_equal(%w(dog cat bee ant), a)
+    assert_equal([], [].reverse)
+  end
+
+  def test_reverse!
+    a = %w( dog cat bee ant )
+    assert_equal(%w(ant bee cat dog), a.reverse!)
+    assert_equal(%w(ant bee cat dog), a)
+    assert_nil([].reverse!)
+  end
+
+  def test_reverse_each
+    a = %w( dog cat bee ant )
+    i = a.length
+    a.reverse_each { |e|
+      i -= 1
+      assert_equal(a[i], e)
+    }
+    assert_equal(0, i)
+
+    a = []
+    i = 0
+    a.reverse_each { |e|
+      assert(false, "Never get here")
+    }
+    assert_equal(0, i)
+  end
+
+  def test_rindex
+    a = [ 'cat', 99, /a/, 99, [ 1, 2, 3] ]
+    assert_equal(0, a.rindex('cat'))
+    assert_equal(3, a.rindex(99))
+    assert_equal(4, a.rindex([1,2,3]))
+    assert_nil(a.rindex('ca'))
+    assert_nil(a.rindex([1,2]))
+  end
+
+  def test_shift
+    a = [ 'cat', 'dog' ]
+    assert_equal('cat', a.shift)
+    assert_equal(['dog'], a)
+    assert_equal('dog', a.shift)
+    assert_equal([], a)
+    assert_nil(a.shift)
+    assert_equal([], a)
+  end
+
+  def test_size
+    assert_equal(0,   [].size)
+    assert_equal(1,   [1].size)
+    assert_equal(100, (0..99).to_a.size)
+  end
+
+  def test_slice
+    a = (1..100).to_a
+
+    assert_equal(1, a.slice(0))
+    assert_equal(100, a.slice(99))
+    assert_nil(a.slice(100))
+    assert_equal(100, a.slice(-1))
+    assert_equal(99,  a.slice(-2))
+    assert_equal(1,   a.slice(-100))
+    assert_nil(a.slice(-101))
+
+    assert_equal([1],   a.slice(0,1))
+    assert_equal([100], a.slice(99,1))
+    assert_equal([],    a.slice(100,1))
+    assert_equal([100], a.slice(99,100))
+    assert_equal([100], a.slice(-1,1))
+    assert_equal([99],  a.slice(-2,1))
+
+    assert_equal([10, 11, 12], a.slice(9, 3))
+    assert_equal([10, 11, 12], a.slice(-91, 3))
+
+    assert_equal([1],   a.slice(0..0))
+    assert_equal([100], a.slice(99..99))
+    assert_equal([],    a.slice(100..100))
+    assert_equal([100], a.slice(99..200))
+    assert_equal([100], a.slice(-1..-1))
+    assert_equal([99],  a.slice(-2..-2))
+
+    assert_equal([10, 11, 12], a.slice(9..11))
+    assert_equal([10, 11, 12], a.slice(-91..-89))
+    
+    assert_nil(a.slice(10, -3))
+    assert_nil(a.slice(10..7))
+  end
+
+  def test_slice!
+    a = (1..5).to_a
+    assert_equals(3, a.slice!(2))
+    assert_equals([1, 2, 4, 5], a)
+
+    a = (1..5).to_a
+    assert_equals(4, a.slice!(-2))
+    assert_equals([1, 2, 3, 5], a)
+
+    a = (1..5).to_a
+    assert_equals([3,4], a.slice!(2,2))
+    assert_equals([1, 2, 5], a)
+
+    a = (1..5).to_a
+    assert_equals([4,5], a.slice!(-2,2))
+    assert_equals([1, 2, 3], a)
+
+    a = (1..5).to_a
+    assert_equals([3,4], a.slice!(2..3))
+    assert_equals([1, 2, 5], a)
+
+    a = (1..5).to_a
+    assert_equals(nil, a.slice!(20))
+    assert_equals([1, 2, 3, 4, 5], a)
+  end
+
+  def test_sort
+    a = [ 4, 1, 2, 3 ]
+    assert_equal([1, 2, 3, 4], a.sort)
+    assert_equal([4, 1, 2, 3], a)
+
+    assert_equal([4, 3, 2, 1], a.sort { |x, y| y <=> x} )
+    assert_equal([4, 1, 2, 3], a)
+
+    a.fill(1)
+    assert_equal([1, 1, 1, 1], a.sort)
+    
+    assert_equal([], [].sort)
+  end
+
+  def test_sort!
+    a = [ 4, 1, 2, 3 ]
+    assert_equal([1, 2, 3, 4], a.sort!)
+    assert_equal([1, 2, 3, 4], a)
+
+    assert_equal([4, 3, 2, 1], a.sort! { |x, y| y <=> x} )
+    assert_equal([4, 3, 2, 1], a)
+
+    a.fill(1)
+    assert_equal([1, 1, 1, 1], a.sort!)
+
+    if $rubyVersion < "1.7"
+      assert_nil([1].sort!)
+      assert_nil([].sort!)
+    else
+      assert_equal([1], [1].sort!)
+      assert_equal([], [].sort!)
+    end
+  end
+
+  def test_to_a
+    a = [ 1, 2, 3 ]
+    a_id = a.id
+    assert_equal(a, a.to_a)
+    assert_equal(a_id, a.to_a.id)
+  end
+
+  def test_to_ary
+    a = [ 1, 2, 3 ]
+    a_id = a.id
+    assert_equal(a, a.to_ary)
+    assert_equal(a_id, a.to_ary.id)
+  end
+
+  def test_to_s
+    $, = ""
+    a = []
+    assert_equal("", a.to_s)
+
+    $, = ""
+    a = [1, 2]
+    assert_equal("12", a.to_s)
+
+    $, = ""
+    a = [1, 2, 3]
+    assert_equal("123", a.to_s)
+
+    $, = ":"
+    a = [1, 2, 3]
+    assert_equal("1:2:3", a.to_s)
+
+    $, = ""
+  end
+
+  def test_uniq
+    a = [ 1, 2, 3, 2, 1, 2, 3, 4, nil ]
+    b = a.dup
+    assert_equal([1, 2, 3, 4, nil], a.uniq)
+    assert_equal(b, a)
+
+    assert_equal([1, 2, 3], [1, 2, 3].uniq)
+  end
+
+  def test_uniq!
+    a = [ 1, 2, 3, 2, 1, 2, 3, 4, nil ]
+    assert_equal([1, 2, 3, 4, nil], a.uniq!)
+    assert_equal([1, 2, 3, 4, nil], a)
+
+    assert_nil([1, 2, 3].uniq!)
+  end
+
+  def test_unshift
+    a = []
+    assert_equal(['cat'], a.unshift('cat'))
+    assert_equal(['dog', 'cat'], a.unshift('dog'))
+    assert_equal([nil, 'dog', 'cat'], a.unshift(nil))
+    assert_equal([[1,2], nil, 'dog', 'cat'], a.unshift([1, 2]))
+  end
+
+  def test_OR # '|'
+    assert_equals([],  []  | [])
+    assert_equals([1], [1] | [])
+    assert_equals([1], []  | [1])
+    assert_equals([1], [1] | [1])
+
+    assert_equals([1,2], [1] | [2])
+    assert_equals([1,2], [1, 1] | [2, 2])
+    assert_equals([1,2], [1, 2] | [1, 2])
+  end
+
+@
+
+
+1.8
+log
+@Many contributions from members of the ml
+@
+text
+@d877 8
+a884 3
+    
+    assert_equal([1], [1].sort!)
+    assert_equal([], [].sort!)
+@
+
+
+1.7
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d247 2
+a248 1
+        a = (0.99).to_a
+a249 1
+        a.taint  if taint
+d383 2
+a384 1
+        a = (0.99).to_a
+a385 1
+        a.taint  if taint
+d878 2
+a879 1
+    assert_nil([].sort!)
+@
+
+
+1.6
+log
+@Make Aleksi's changes
+@
+text
+@d690 1
+d693 2
+a695 2
+    assert_equal([1, 2, 3, 4, 5], a.push(4, 5))
+    assert_equal([1, 2, 3, 4, 5], a.push())
+@
+
+
+1.5
+log
+@Track the language
+@
+text
+@d690 3
+@
+
+
+1.4
+log
+@Change stderr write to skipping()
+@
+text
+@d711 1
+a711 1
+    assert_equal(a, a.reject! { false })
+d743 1
+a743 1
+    assert_equal([], [].reverse!)
+d874 1
+a874 1
+    assert_equal([], [].sort!)
+@
+
+
+1.3
+log
+@Archive save
+@
+text
+@d651 1
+a651 1
+    $stderr.puts "Not tested:
+@
+
+
+1.2
+log
+@Archive
+@
+text
+@d8 1
+a8 1
+    assert_instance_of(a, Array)
+d15 1
+a15 1
+    assert_instance_of(a, Array)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a669 1
+        U & UTF-8\\
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

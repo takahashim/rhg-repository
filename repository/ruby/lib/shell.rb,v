@@ -1,0 +1,1962 @@
+head	1.7;
+access;
+symbols
+	v1_6_7:1.1.4.6
+	v1_6_6:1.1.4.3
+	v1_6_5:1.1.4.3
+	v1_6_4:1.1.4.2
+	v1_7_1:1.4
+	v1_6_4_preview4:1.1.4.2
+	v1_6_4_preview3:1.1.4.2
+	SHELL_v0_6:1.1.1.1
+	KEIJU:1.1.1
+	v1_6_3:1.1
+	ruby_1_6:1.1.0.4
+	v1_2_6repack:1.1.2.3
+	v1_2_6:1.1.2.3
+	v1_2_5:1.1.2.3
+	v1_2_4:1.1.2.3
+	v1_2_2:1.1.2.3
+	v1_2_2_pr1:1.1.2.3
+	v1_2_1repack:1.1.2.3
+	v1_2_1:1.1.2.3
+	v1_2_stable:1.1.2.3
+	v1_1d1:1.1.2.2.2.1
+	v1_1d0:1.1.2.2.2.1
+	v1_1c9_1:1.1.2.3
+	v1_1c9:1.1.2.3
+	v1_1c8:1.1.2.3
+	v1_1c7:1.1.2.3
+	v1_1c6:1.1.2.3
+	v1_1d-start:1.1.2.2
+	v1_1c5:1.1.2.2
+	v1_1dev:1.1.2.2.0.2
+	v1_1c4:1.1.2.2
+	v1_1c3:1.1.2.2
+	v1_1c2:1.1.2.1
+	v1_1c1:1.1.2.1
+	v1_1c0:1.1.2.1
+	v1_1b9_31:1.1.2.1
+	v1_1b9_30:1.1.2.1
+	v1_1b9_28:1.1.2.1
+	v1_1b9_27:1.1.2.1
+	v1_1b9_26:1.1.2.1
+	r1_1b9_25:1.1.2.1
+	r1_1b9_24:1.1.2.1
+	v1_1b9_23:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.7
+date	2002.02.25.04.35.12;	author nobu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.02.22.10.28.47;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.02.21.07.15.06;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.05.30.09.10.26;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.17.10.19.45;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.17.10.12.10;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.05.25.09.42.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.1.1
+date	2001.05.17.10.02.47;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.05.25.09.42.44;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	98.08.27.03.55.46;	author matz;	state Exp;
+branches
+	1.1.2.2.2.1;
+next	1.1.2.3;
+
+1.1.2.3
+date	98.10.06.02.45.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.2.2.1
+date	98.10.06.03.28.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2001.05.17.10.35.32;	author knu;	state Exp;
+branches;
+next	1.1.4.2;
+
+1.1.4.2
+date	2001.05.17.10.41.20;	author knu;	state Exp;
+branches;
+next	1.1.4.3;
+
+1.1.4.3
+date	2001.06.23.10.15.44;	author knu;	state Exp;
+branches;
+next	1.1.4.4;
+
+1.1.4.4
+date	2002.02.21.07.14.14;	author matz;	state Exp;
+branches;
+next	1.1.4.5;
+
+1.1.4.5
+date	2002.02.22.10.29.27;	author matz;	state Exp;
+branches;
+next	1.1.4.6;
+
+1.1.4.6
+date	2002.02.25.06.24.44;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@* lib/shell.rb (Shell::expand_path): relative to @@cwd.
+@
+text
+@#
+#   shell.rb - 
+#   	$Release Version: 0.6.0 $
+#   	$Revision: 1.8 $
+#   	$Date: 2001/03/19 09:01:11 $
+#   	by Keiju ISHITSUKA(Nippon Rational Inc.)
+#
+# --
+#
+#   
+#
+
+require "e2mmap"
+require "thread"
+
+require "shell/error"
+require "shell/command-processor"
+require "shell/process-controller"
+
+class Shell
+  @@RCS_ID='-$Id: shell.rb,v 1.8 2001/03/19 09:01:11 keiju Exp keiju $-'
+
+  include Error
+  extend Exception2MessageMapper
+
+#  @@cascade = true
+  # debug: true -> normal debug
+  # debug: 1    -> eval definition debug
+  # debug: 2    -> detail inspect debug
+  @@debug = false
+  @@verbose = true
+
+  class << Shell
+    attr :cascade, true
+    attr :debug, true
+    attr :verbose, true
+
+#    alias cascade? cascade
+    alias debug? debug
+    alias verbose? verbose
+    @@verbose = true
+
+    def debug=(val)
+      @@debug = val
+      @@verbose = val if val
+    end
+
+    def cd(path)
+      sh = new
+      sh.cd path
+      sh
+    end
+
+    def default_system_path
+      if @@default_system_path
+	@@default_system_path
+      else
+	ENV["PATH"].split(":")
+      end
+    end
+
+    def default_system_path=(path)
+      @@default_system_path = path
+    end
+
+    def default_record_separator
+      if @@default_record_separator
+	@@default_record_separator
+      else
+	$/
+      end
+    end
+
+    def default_record_separator=(rs)
+      @@default_record_separator = rs
+    end
+  end
+
+  def initialize
+    @@cwd = Dir.pwd
+    @@dir_stack = []
+    @@umask = nil
+
+    @@system_path = Shell.default_system_path
+    @@record_separator = Shell.default_record_separator
+
+    @@command_processor = CommandProcessor.new(self)
+    @@process_controller = ProcessController.new(self)
+
+    @@verbose = Shell.verbose
+    @@debug = Shell.debug
+  end
+
+  attr_reader :system_path
+
+  def system_path=(path)
+    @@system_path = path
+    rehash
+  end
+
+  attr :umask, true
+  attr :record_separator, true
+
+  attr :verbose, true
+  attr :debug, true
+
+  def debug=(val)
+    @@debug = val
+    @@verbose = val if val
+  end
+
+  alias verbose? verbose
+  alias debug? debug
+
+  attr_reader :command_processor
+  attr_reader :process_controller
+
+  def expand_path(path)
+    File.expand_path(path, @@cwd)
+  end
+
+  # Most Shell commands are defined via CommandProcessor
+
+  #
+  # Dir related methods
+  #
+  # Shell#cwd/dir/getwd/pwd
+  # Shell#chdir/cd
+  # Shell#pushdir/pushd
+  # Shell#popdir/popd
+  # Shell#mkdir
+  # Shell#rmdir
+
+  attr :cwd
+  alias dir cwd
+  alias getwd cwd
+  alias pwd cwd
+
+  attr :dir_stack
+  alias dirs dir_stack
+
+  # If called as iterator, it restores the current directory when the
+  # block ends.
+  def chdir(path = nil)
+    if iterator?
+      cwd_old = @@cwd
+      begin
+	chdir(path)
+	yield
+      ensure
+	chdir(cwd_old)
+      end
+    else
+      path = "~" unless path
+      @@cwd = expand_path(path)
+      notify "current dir: #{@@cwd}"
+      rehash
+      self
+    end
+  end
+  alias cd chdir
+
+  def pushdir(path = nil)
+    if iterator?
+      pushdir(path)
+      begin
+	yield
+      ensure
+	popdir
+      end
+    elsif path
+      @@dir_stack.push @@cwd
+      chdir path
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      if pop = @@dir_stack.pop
+	@@dir_stack.push @@cwd
+	chdir pop
+	notify "dir stack: [#{@@dir_stack.join ', '}]"
+	self
+      else
+	Shell.Fail DirStackEmpty
+      end
+    end
+  end
+  alias pushd pushdir
+
+  def popdir
+    if pop = @@dir_stack.pop
+      chdir pop
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      Shell.Fail DirStackEmpty
+    end
+  end
+  alias popd popdir
+
+
+  #
+  # process management
+  #
+  def jobs
+    @@process_controller.jobs
+  end
+
+  def kill(sig, command)
+    @@process_controller.kill_job(sig, command)
+  end
+
+  #
+  # command definitions
+  #
+  def Shell.def_system_command(command, path = command)
+    CommandProcessor.def_system_command(command, path)
+  end
+
+  def Shell.undef_system_command(command)
+    CommandProcessor.undef_system_command(command)
+  end
+
+  def Shell.alias_command(ali, command, *opts, &block)
+    CommandProcessor.alias_command(ali, command, *opts, &block)
+  end
+
+  def Shell.unalias_command(ali)
+    CommandProcessor.unalias_command(ali)
+  end
+
+  def Shell.install_system_commands(pre = "sys_")
+    CommandProcessor.install_system_commands(pre)
+  end
+
+  #
+  def inspect
+    if debug.kind_of?(Integer) && debug > 2
+      super
+    else
+      to_s
+    end
+  end
+
+  def self.notify(*opts, &block)
+    Thread.exclusive do
+    if opts[-1].kind_of?(String)
+      yorn = verbose?
+    else
+      yorn = opts.pop
+    end
+    return unless yorn
+
+    _head = true
+    print opts.collect{|mes|
+      mes = mes.dup
+      yield mes if iterator?
+      if _head
+	_head = false
+	"shell: " + mes
+      else
+	"       " + mes
+      end
+    }.join("\n")+"\n"
+    end
+  end
+
+  CommandProcessor.initialize
+  CommandProcessor.run_config
+end
+
+@
+
+
+1.6
+log
+@* bignum.c (get2comp): need to specify to carry or not.
+
+* io.c (rb_io_inspect): embed path info.
+@
+text
+@d119 1
+a119 1
+    File.expand_path(path)
+@
+
+
+1.5
+log
+@* pack.c (pack_pack): wrong # comment treatment.
+
+* pack.c (pack_unpack): ditto.
+@
+text
+@d119 1
+a119 5
+    if /^[\/~]/ =~ path
+      File.expand_path(path)
+    else
+      File.expand_path(File.join(@@cwd, path))
+    end
+@
+
+
+1.4
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_finish): removed.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* string.c (rb_str_buf_finish): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d119 1
+a119 1
+    if /^\// =~ path
+@
+
+
+1.3
+log
+@* lib/shell.rb, lib/shell/process-controller.rb,
+lib/shell/command-processor.rb: translate Japanese comments into
+English.
+@
+text
+@d258 1
+a258 1
+    print *opts.collect{|mes|
+@
+
+
+1.2
+log
+@Yay, shell.rb is back!
+@
+text
+@d126 1
+a126 1
+  # ほとんどのShell Command は CommandProcessor により定義される.
+d129 1
+a129 1
+  # Dir関連メソッド
+d146 2
+a147 1
+  # イテレータとして呼ばれると一時的にcdすることになる.
+d206 1
+a206 1
+  # process 管理
+d217 1
+a217 1
+  # command 定義
+@
+
+
+1.1
+log
+@file shell.rb was initially added on branch v1_1r.
+@
+text
+@d1 273
+@
+
+
+1.1.4.1
+log
+@* doc/shell.rd*, lib/shell*: bring shell.rb 0.6 onto the ruby_1_6
+branch.
+@
+text
+@a0 273
+#
+#   shell.rb - 
+#   	$Release Version: 0.6.0 $
+#   	$Revision: 1.8 $
+#   	$Date: 2001/03/19 09:01:11 $
+#   	by Keiju ISHITSUKA(Nippon Rational Inc.)
+#
+# --
+#
+#   
+#
+
+require "e2mmap"
+require "thread"
+
+require "shell/error"
+require "shell/command-processor"
+require "shell/process-controller"
+
+class Shell
+  @@RCS_ID='-$Id: shell.rb,v 1.8 2001/03/19 09:01:11 keiju Exp keiju $-'
+
+  include Error
+  extend Exception2MessageMapper
+
+#  @@cascade = true
+  # debug: true -> normal debug
+  # debug: 1    -> eval definition debug
+  # debug: 2    -> detail inspect debug
+  @@debug = false
+  @@verbose = true
+
+  class << Shell
+    attr :cascade, true
+    attr :debug, true
+    attr :verbose, true
+
+#    alias cascade? cascade
+    alias debug? debug
+    alias verbose? verbose
+    @@verbose = true
+
+    def debug=(val)
+      @@debug = val
+      @@verbose = val if val
+    end
+
+    def cd(path)
+      sh = new
+      sh.cd path
+      sh
+    end
+
+    def default_system_path
+      if @@default_system_path
+	@@default_system_path
+      else
+	ENV["PATH"].split(":")
+      end
+    end
+
+    def default_system_path=(path)
+      @@default_system_path = path
+    end
+
+    def default_record_separator
+      if @@default_record_separator
+	@@default_record_separator
+      else
+	$/
+      end
+    end
+
+    def default_record_separator=(rs)
+      @@default_record_separator = rs
+    end
+  end
+
+  def initialize
+    @@cwd = Dir.pwd
+    @@dir_stack = []
+    @@umask = nil
+
+    @@system_path = Shell.default_system_path
+    @@record_separator = Shell.default_record_separator
+
+    @@command_processor = CommandProcessor.new(self)
+    @@process_controller = ProcessController.new(self)
+
+    @@verbose = Shell.verbose
+    @@debug = Shell.debug
+  end
+
+  attr_reader :system_path
+
+  def system_path=(path)
+    @@system_path = path
+    rehash
+  end
+
+  attr :umask, true
+  attr :record_separator, true
+
+  attr :verbose, true
+  attr :debug, true
+
+  def debug=(val)
+    @@debug = val
+    @@verbose = val if val
+  end
+
+  alias verbose? verbose
+  alias debug? debug
+
+  attr_reader :command_processor
+  attr_reader :process_controller
+
+  def expand_path(path)
+    if /^\// =~ path
+      File.expand_path(path)
+    else
+      File.expand_path(File.join(@@cwd, path))
+    end
+  end
+
+  # ほとんどのShell Command は CommandProcessor により定義される.
+
+  #
+  # Dir関連メソッド
+  #
+  # Shell#cwd/dir/getwd/pwd
+  # Shell#chdir/cd
+  # Shell#pushdir/pushd
+  # Shell#popdir/popd
+  # Shell#mkdir
+  # Shell#rmdir
+
+  attr :cwd
+  alias dir cwd
+  alias getwd cwd
+  alias pwd cwd
+
+  attr :dir_stack
+  alias dirs dir_stack
+
+  # イテレータとして呼ばれると一時的にcdすることになる.
+  def chdir(path = nil)
+    if iterator?
+      cwd_old = @@cwd
+      begin
+	chdir(path)
+	yield
+      ensure
+	chdir(cwd_old)
+      end
+    else
+      path = "~" unless path
+      @@cwd = expand_path(path)
+      notify "current dir: #{@@cwd}"
+      rehash
+      self
+    end
+  end
+  alias cd chdir
+
+  def pushdir(path = nil)
+    if iterator?
+      pushdir(path)
+      begin
+	yield
+      ensure
+	popdir
+      end
+    elsif path
+      @@dir_stack.push @@cwd
+      chdir path
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      if pop = @@dir_stack.pop
+	@@dir_stack.push @@cwd
+	chdir pop
+	notify "dir stack: [#{@@dir_stack.join ', '}]"
+	self
+      else
+	Shell.Fail DirStackEmpty
+      end
+    end
+  end
+  alias pushd pushdir
+
+  def popdir
+    if pop = @@dir_stack.pop
+      chdir pop
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      Shell.Fail DirStackEmpty
+    end
+  end
+  alias popd popdir
+
+
+  #
+  # process 管理
+  #
+  def jobs
+    @@process_controller.jobs
+  end
+
+  def kill(sig, command)
+    @@process_controller.kill_job(sig, command)
+  end
+
+  #
+  # command 定義
+  #
+  def Shell.def_system_command(command, path = command)
+    CommandProcessor.def_system_command(command, path)
+  end
+
+  def Shell.undef_system_command(command)
+    CommandProcessor.undef_system_command(command)
+  end
+
+  def Shell.alias_command(ali, command, *opts, &block)
+    CommandProcessor.alias_command(ali, command, *opts, &block)
+  end
+
+  def Shell.unalias_command(ali)
+    CommandProcessor.unalias_command(ali)
+  end
+
+  def Shell.install_system_commands(pre = "sys_")
+    CommandProcessor.install_system_commands(pre)
+  end
+
+  #
+  def inspect
+    if debug.kind_of?(Integer) && debug > 2
+      super
+    else
+      to_s
+    end
+  end
+
+  def self.notify(*opts, &block)
+    Thread.exclusive do
+    if opts[-1].kind_of?(String)
+      yorn = verbose?
+    else
+      yorn = opts.pop
+    end
+    return unless yorn
+
+    _head = true
+    print *opts.collect{|mes|
+      mes = mes.dup
+      yield mes if iterator?
+      if _head
+	_head = false
+	"shell: " + mes
+      else
+	"       " + mes
+      end
+    }.join("\n")+"\n"
+    end
+  end
+
+  CommandProcessor.initialize
+  CommandProcessor.run_config
+end
+
+@
+
+
+1.1.4.2
+log
+@* lib/shell.rb, lib/shell/process-controller.rb,
+lib/shell/command-processor.rb: translate Japanese comments into
+English.
+
+* doc/shell.rd.jp: RD'ify and make some fixes.
+
+* doc/shell.rd: RD'ify, delete Japanese leftovers, make overall
+English fixes, and sync with doc/shell.rd.jp.
+@
+text
+@d126 1
+a126 1
+  # Most Shell commands are defined via CommandProcessor
+d129 1
+a129 1
+  # Dir related methods
+d146 1
+a146 2
+  # If called as iterator, it restores the current directory when the
+  # block ends.
+d205 1
+a205 1
+  # process management
+d216 1
+a216 1
+  # command definitions
+@
+
+
+1.1.4.3
+log
+@Remove a redundant `*' against an array. (sync with 1.7)
+@
+text
+@d258 1
+a258 1
+    print opts.collect{|mes|
+@
+
+
+1.1.4.4
+log
+@* eval.c: typo fixed.
+@
+text
+@d119 1
+a119 1
+    if /^[\/~]/ =~ path
+@
+
+
+1.1.4.5
+log
+@* bignum.c (get2comp): need to specify to carry or not.
+@
+text
+@d119 5
+a123 1
+    File.expand_path(path)
+@
+
+
+1.1.4.6
+log
+@* lib/shell.rb (Shell::expand_path): relative to @@cwd.
+@
+text
+@d119 1
+a119 1
+    File.expand_path(path, @@cwd)
+@
+
+
+1.1.1.1
+log
+@Import Keiju ISHITSUKA's shell.rb 0.6 with some minor changes:
+
+	- all Japanese code were converted to EUC
+	- shell.doc and shell.doc.jp were renamed to shell.rd and
+	shell.rd.jp, respectively.  (They will be converted to RD
+	shortly)
+@
+text
+@a0 273
+#
+#   shell.rb - 
+#   	$Release Version: 0.6.0 $
+#   	$Revision: 1.8 $
+#   	$Date: 2001/03/19 09:01:11 $
+#   	by Keiju ISHITSUKA(Nippon Rational Inc.)
+#
+# --
+#
+#   
+#
+
+require "e2mmap"
+require "thread"
+
+require "shell/error"
+require "shell/command-processor"
+require "shell/process-controller"
+
+class Shell
+  @@RCS_ID='-$Id: shell.rb,v 1.8 2001/03/19 09:01:11 keiju Exp keiju $-'
+
+  include Error
+  extend Exception2MessageMapper
+
+#  @@cascade = true
+  # debug: true -> normal debug
+  # debug: 1    -> eval definition debug
+  # debug: 2    -> detail inspect debug
+  @@debug = false
+  @@verbose = true
+
+  class << Shell
+    attr :cascade, true
+    attr :debug, true
+    attr :verbose, true
+
+#    alias cascade? cascade
+    alias debug? debug
+    alias verbose? verbose
+    @@verbose = true
+
+    def debug=(val)
+      @@debug = val
+      @@verbose = val if val
+    end
+
+    def cd(path)
+      sh = new
+      sh.cd path
+      sh
+    end
+
+    def default_system_path
+      if @@default_system_path
+	@@default_system_path
+      else
+	ENV["PATH"].split(":")
+      end
+    end
+
+    def default_system_path=(path)
+      @@default_system_path = path
+    end
+
+    def default_record_separator
+      if @@default_record_separator
+	@@default_record_separator
+      else
+	$/
+      end
+    end
+
+    def default_record_separator=(rs)
+      @@default_record_separator = rs
+    end
+  end
+
+  def initialize
+    @@cwd = Dir.pwd
+    @@dir_stack = []
+    @@umask = nil
+
+    @@system_path = Shell.default_system_path
+    @@record_separator = Shell.default_record_separator
+
+    @@command_processor = CommandProcessor.new(self)
+    @@process_controller = ProcessController.new(self)
+
+    @@verbose = Shell.verbose
+    @@debug = Shell.debug
+  end
+
+  attr_reader :system_path
+
+  def system_path=(path)
+    @@system_path = path
+    rehash
+  end
+
+  attr :umask, true
+  attr :record_separator, true
+
+  attr :verbose, true
+  attr :debug, true
+
+  def debug=(val)
+    @@debug = val
+    @@verbose = val if val
+  end
+
+  alias verbose? verbose
+  alias debug? debug
+
+  attr_reader :command_processor
+  attr_reader :process_controller
+
+  def expand_path(path)
+    if /^\// =~ path
+      File.expand_path(path)
+    else
+      File.expand_path(File.join(@@cwd, path))
+    end
+  end
+
+  # ほとんどのShell Command は CommandProcessor により定義される.
+
+  #
+  # Dir関連メソッド
+  #
+  # Shell#cwd/dir/getwd/pwd
+  # Shell#chdir/cd
+  # Shell#pushdir/pushd
+  # Shell#popdir/popd
+  # Shell#mkdir
+  # Shell#rmdir
+
+  attr :cwd
+  alias dir cwd
+  alias getwd cwd
+  alias pwd cwd
+
+  attr :dir_stack
+  alias dirs dir_stack
+
+  # イテレータとして呼ばれると一時的にcdすることになる.
+  def chdir(path = nil)
+    if iterator?
+      cwd_old = @@cwd
+      begin
+	chdir(path)
+	yield
+      ensure
+	chdir(cwd_old)
+      end
+    else
+      path = "~" unless path
+      @@cwd = expand_path(path)
+      notify "current dir: #{@@cwd}"
+      rehash
+      self
+    end
+  end
+  alias cd chdir
+
+  def pushdir(path = nil)
+    if iterator?
+      pushdir(path)
+      begin
+	yield
+      ensure
+	popdir
+      end
+    elsif path
+      @@dir_stack.push @@cwd
+      chdir path
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      if pop = @@dir_stack.pop
+	@@dir_stack.push @@cwd
+	chdir pop
+	notify "dir stack: [#{@@dir_stack.join ', '}]"
+	self
+      else
+	Shell.Fail DirStackEmpty
+      end
+    end
+  end
+  alias pushd pushdir
+
+  def popdir
+    if pop = @@dir_stack.pop
+      chdir pop
+      notify "dir stack: [#{@@dir_stack.join ', '}]"
+      self
+    else
+      Shell.Fail DirStackEmpty
+    end
+  end
+  alias popd popdir
+
+
+  #
+  # process 管理
+  #
+  def jobs
+    @@process_controller.jobs
+  end
+
+  def kill(sig, command)
+    @@process_controller.kill_job(sig, command)
+  end
+
+  #
+  # command 定義
+  #
+  def Shell.def_system_command(command, path = command)
+    CommandProcessor.def_system_command(command, path)
+  end
+
+  def Shell.undef_system_command(command)
+    CommandProcessor.undef_system_command(command)
+  end
+
+  def Shell.alias_command(ali, command, *opts, &block)
+    CommandProcessor.alias_command(ali, command, *opts, &block)
+  end
+
+  def Shell.unalias_command(ali)
+    CommandProcessor.unalias_command(ali)
+  end
+
+  def Shell.install_system_commands(pre = "sys_")
+    CommandProcessor.install_system_commands(pre)
+  end
+
+  #
+  def inspect
+    if debug.kind_of?(Integer) && debug > 2
+      super
+    else
+      to_s
+    end
+  end
+
+  def self.notify(*opts, &block)
+    Thread.exclusive do
+    if opts[-1].kind_of?(String)
+      yorn = verbose?
+    else
+      yorn = opts.pop
+    end
+    return unless yorn
+
+    _head = true
+    print *opts.collect{|mes|
+      mes = mes.dup
+      yield mes if iterator?
+      if _head
+	_head = false
+	"shell: " + mes
+      else
+	"       " + mes
+      end
+    }.join("\n")+"\n"
+    end
+  end
+
+  CommandProcessor.initialize
+  CommandProcessor.run_config
+end
+
+@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 666
+#
+#   shell.rb - 
+#   	$Release Version: 0.1 $
+#   	$Revision: 1.1 $
+#   	$Date: 1998/03/29 17:10:09 $
+#   	by Keiju ISHITSUKA(Nippon Rational Inc.)
+#
+# --
+#
+#   
+#
+
+require "e2mmap"
+require "ftools"
+
+class Shell
+  @@RCS_ID='-$Id: shell.rb,v 1.1 1998/03/29 17:10:09 keiju Exp $-'
+
+  module Error
+    extend Exception2MessageMapper
+    def_exception :DirStackEmpty, "Directory stack empty."
+    def_exception :CanNotDefine, "Can't define method(%s, %s)."
+    def_exception :CanNotMethodApply, "This method(%s) can't apply this type(%s)."
+    def_exception :CommandNotFound, "Command not found(%s)."
+  end
+  include Error
+
+  class << Shell
+    attr :cascade, TRUE
+    attr :debug, TRUE
+    attr :verbose, TRUE
+
+    alias cascade? cascade
+    alias debug? debug
+    alias verbose? verbose
+  end
+
+  def Shell.cd(path)
+    sh = new
+    sh.cd path
+    sh
+  end
+
+  def Shell.default_system_path
+    if @@default_system_path
+      @@default_system_path
+    else
+      ENV["PATH"].split(":")
+    end
+  end
+
+  def Shell.default_system_path=(path)
+    @@default_system_path = path
+  end
+
+  def Shell.default_record_separator
+    if @@default_record_separator
+      @@default_record_separator
+    else
+      $/
+    end
+  end
+
+  def Shell.default_record_separator=(rs)
+    @@default_record_separator = rs
+  end
+
+  @@cascade = TRUE
+  @@debug = FALSE
+  @@verbose = TRUE
+
+  def initialize
+    @@cwd = Dir.pwd
+    @@dir_stack = []
+    @@umask = nil
+
+    @@system_commands = {}
+
+    @@system_path = Shell.default_system_path
+    @@record_separator = Shell.default_record_separator
+
+    @@verbose = Shell.verbose
+  end
+
+  attr :system_path
+  
+  def system_path=(path)
+    @@system_path = path
+    @@system_commands = {}
+  end
+
+  def rehash
+    @@system_commands = {}
+  end
+
+  attr :record_separator, TRUE
+
+  attr :umask, TRUE
+  attr :verbose, TRUE
+
+  alias verbose? verbose
+
+  def expand_path(path)
+    if /^\// =~ path
+      File.expand_path(path)
+    else
+      File.expand_path(File.join(@@cwd, path))
+    end
+  end
+
+  def effect_umask
+    if @@umask
+      Thread.critical = TRUE
+      save = File.umask
+      begin
+	yield
+      ensure
+	File.umask save
+	Thread.critical = FALSE
+      end
+    else
+      yield
+    end
+  end
+
+  # Dir関連メソッド
+  def [](pattern)
+    Thread.critical=TRUE
+    back = Dir.pwd
+    begin
+      Dir.chdir @@cwd
+      Dir[pattern]
+    ensure
+      Dir.chdir back
+      Thread.critical = FALSE
+    end
+  end
+  alias glob []
+
+  def chdir(path = nil)
+    path = "~" unless path
+    @@cwd = expand_path(path)
+    @@system_commands.clear
+  end
+  alias cd chdir
+
+  def pushdir(path = nil)
+    if iterator?
+      pushdir(path)
+      begin
+	yield
+      ensure
+	popdir
+      end
+    elsif path
+      @@dir_stack.push @@cwd
+      @@cwd = expand_path(path)
+    else
+      if pop = @@dir_stack.pop
+	@@dir_stack.push @@cwd
+	chdir pop
+      else
+	Shell.fail DirStackEmpty
+      end
+    end
+  end
+  alias pushd pushdir
+
+  def popdir
+    if pop = @@dir_stack.pop
+      @@cwd = pop
+    else
+      Shell.fail DirStackEmpty
+    end
+  end
+  alias popd popdir
+
+  attr :cwd
+  alias dir cwd
+  alias getwd cwd
+  alias pwd cwd
+  
+  def foreach(path = nil, *rs)
+    path = "." unless path
+    path = expand_path(path)
+
+    if File.directory?(path)
+      Dir.foreach(path){|fn| yield fn}
+    else
+      IO.foreach(path, *rs){|l| yield l}
+    end
+  end
+
+  def mkdir(path)
+    Dir.mkdir(expand_path(path))
+  end
+  
+  #
+  # modeはpathがファイルの時だけ有効
+  #
+  def open(path, mode)
+    path = expand_path(path)
+    if File.directory?(path)
+      Dir.open(path)
+    else
+      effect_umask do
+	File.open(path, mode)
+      end
+    end
+  end
+#  public :open
+
+  def rmdir(path)
+    Dir.rmdir(expand_path(path))
+  end
+
+  def unlink(path)
+    path = expand_path(path)
+    if File.directory?(path)
+      Dir.unlink(path)
+    else
+      IO.unlink(path)
+    end
+  end
+
+  #
+  # コマンド拡張
+  #   command_specs = [[command_name, [arguments,...]]]
+  # FILENAME* -> expand_path(filename*)
+  # \*FILENAME* -> filename*.collect{|fn| expand_path(fn)}.join(", ")
+  #
+  def Shell.def_commands(delegation_class, command_specs)
+    for meth, args in command_specs
+      arg_str = args.collect{|arg| arg.downcase}.join(", ")
+      call_arg_str = args.collect{
+	|arg|
+	case arg
+	when /^(FILENAME.*)$/
+	  format("expand_path(%s)", $1.downcase)
+	when /^(\*FILENAME.*)$/
+	  # \*FILENAME* -> filenames.collect{|fn| expand_path(fn)}.join(", ")
+	  $1.downcase + '.collect{|fn| expand_path(fn)}'
+	else
+	  arg
+	end
+      }.join(", ")
+      d = %Q[
+        def #{meth}(#{arg_str})
+	  #{delegation_class}.#{meth}(#{call_arg_str})
+        end
+      ]
+      if debug?
+	print d
+      elsif verbose?
+	print "Define #{meth}(#{arg_str})\n"
+      end
+      eval d
+    end
+  end
+
+  #
+  # File関連メソッド
+  #	open/foreach/unlinkは別定義
+  #
+  normal_delegation_file_methods = [
+    ["atime", ["FILENAME"]],
+    ["basename", ["fn", "*opts"]],
+    ["chmod", ["mode", "*FILENAMES"]], 
+    ["chown", ["owner", "group", "FILENAME"]],
+    ["ctime", ["group", "*FILENAMES"]],
+    ["delete", ["*FILENAMES"]],
+    ["dirname", ["FILENAME"]],
+    ["ftype", ["FILENAME"]],
+    ["join", ["*items"]],
+    ["link", ["FILENAME_O", "FILENAME_N"]],
+    ["lstat", ["FILENAME"]],
+    ["mtime", ["FILENAME"]],
+    ["readlink", ["FILENAME"]],
+    ["rename", ["FILENAME_FROM", "FILENAME_TO"]],
+    ["size", ["FILENAME"]],
+    ["split", ["pathname"]],
+    ["stat", ["FILENAME"]],
+    ["symlink", ["FILENAME_O", "FILENAME_N"]],
+    ["truncate", ["FILENAME", "length"]],
+    ["utime", ["atime", "mtime", "*FILENAMES"]]]
+  def_commands(File,
+	       normal_delegation_file_methods)
+  alias rm delete
+
+  # FileTest関連メソッド
+  def_commands(FileTest, 
+	       FileTest.singleton_methods.collect{|m| [m, ["FILENAME"]]})
+
+  # ftools関連メソッド
+  normal_delegation_ftools_methods = [
+    ["syscopy", ["FILENAME_FROM", "FILENAME_TO"]],
+    ["copy", ["FILENAME_FROM", "FILENAME_TO"]],
+    ["move", ["FILENAME_FROM", "FILENAME_TO"]],
+    ["compare", ["FILENAME_FROM", "FILENAME_TO"]],
+    ["safe_unlink", ["*FILENAMES"]],
+    ["makedirs", ["*FILENAMES"]],
+#    ["chmod", ["mode", "*FILENAMES"]],
+    ["install", ["FILENAME_FROM", "FILENAME_TO", "mode"]],
+  ]
+  def_commands(File,
+	       normal_delegation_ftools_methods)
+  alias cmp compare
+  alias mv move
+  alias cp copy
+  alias rm_f safe_unlink
+  alias mkpath makedirs
+
+  # testコマンド
+  alias top_level_test test
+  def test(command, file1, file2 = nil)
+    if file2
+      top_level_test command, expand_path(file1), expand_path(file2)
+    else
+      top_level_test command, expand_path(file1)
+    end
+  end
+
+  # shell拡張
+  def echo(*strings)
+    Echo.new(self, *strings)
+  end
+
+  def cat(*filenames)
+    Cat.new(self, *filenames)
+  end
+
+  def tee(file)
+    Tee.new(self, file)
+  end
+
+#   def sort(*filenames)
+#     Sort.new(self, *filenames)
+#   end
+
+  def system(command, *opts)
+    System.new(self, find_system_command(command), *opts)
+  end
+
+  #
+  # コマンドを検索する. もし存在しなけば例外を返す.
+  #
+  def find_system_command(command)
+    return command if /^\// =~ command
+    case path = @@system_commands[command]
+    when String
+      if sh.exists?(path)
+	return path
+      else
+	Shell.fail CommandNotFound, command
+      end
+    when FALSE
+      Shell.fail CommandNotFound, command
+    end
+
+    for p in @@system_path
+      path = join(p, command)
+      if FileTest.exists?(path)
+	@@system_commands[command] = path
+	return path
+      end
+    end
+    @@system_commands[command] = FALSE
+    Shell.fail CommandNotFound, command
+  end
+
+  #
+  # コマンドを特異メソッドとして定義する.
+  #	定義できない時は例外が発生する.
+  #
+  def def_system_command(command, path = command)
+    d = "
+      def self.#{command}(*opts)
+	System.new(self, find_system_command('#{path}'), *opts)
+      end
+    "
+    begin
+      eval d
+    rescue
+      print "Can't define self.#{command} path: #{path}\n" if debug? or verbose?
+      Shell.fail CanNotDefine, comamnd, path
+    end
+    if debug?
+      print d
+    elsif verbose?
+      print "Define self.#{command} path: #{path}\n"
+    end
+  end
+
+  #
+  # コマンドをShellのメソッドとして定義する.
+  #	定義できない時は例外が発生する.
+  #
+  def Shell.def_system_command(command, path = command)
+    d = "
+      def #{command}(*opts)
+	System.new(self, '#{path}', *opts)
+      end
+    "
+    begin
+      eval d
+    rescue
+      print "Can't define #{command} path: #{path}\n" if debug? or verbose?
+      Shell.fail CanNotDefine, comamnd, path
+    end
+    if debug?
+      print d
+    elsif verbose?
+      print "Define #{command} path: #{path}\n"
+    end
+  end
+
+  #
+  # default_path上にのるコマンドを定義する. すでに同名のメソッドが存在
+  #     する時は, 定義を行なわない.
+  #	デフォルトでは, 全てのメソッドには接頭子"sys_"をつける. 
+  #	メソッド名として許されないキャラクタ(英数時以外とメソッド名の
+  #	先頭が数値になる場合)は, 強制的に``_''に変換する. 
+  #     定義エラーは無視する.
+  #
+  def Shell.install_system_command(pre = "sys_")
+    defined_meth = {}
+    for m in Shell.methods
+      defined_meth[m] = TRUE
+    end
+    sh = Shell.new
+    for path in Shell.default_path
+      next unless sh.directory? path
+      sh.cd path
+      sh.foreach do
+	|cn|
+	if !defined_meth[pre + cn] && sh.file?(cn) && sh.executable?(cn)
+	  command = (pre + cn).gsub(/\W/, "_").sub(/^([0-9])/, '_\1')
+	  begin
+	    def_system_command(command, sh.expand_path(cn))
+	  rescue
+            printf("Warning: Can't define %s path: %s\n",
+		   comamnd,
+		   cn) unless debug? or verbose?
+	  end
+	  defined_meth[command] = command
+	end
+      end
+    end
+  end
+
+  #
+  # Filterクラス
+  # 必要なメソッド:
+  #    each()
+  class Filter
+    include Enumerable
+    include Error
+
+    def initialize(sh)
+      @@shell = sh
+    end
+
+    def input=(filter)
+      @@input = filter
+    end
+
+    def each(rs = nil)
+      rs = @@shell.record_separator unless rs
+      if @@input
+	@@input.each(rs){|l| yield l}
+      end
+    end
+
+    def < (src)
+      case src
+      when String
+	cat = Cat.new(@@shell, src)
+	cat | self
+      when IO
+	@@input = src
+	self
+      else
+	Filter.fail CanNotMethodApply, "<", to.type
+      end
+    end
+
+    def > (to)
+      case to
+      when String
+	dst = @@shell.open(to, "w")
+	begin
+	  each(){|l| dst << l}
+	ensure
+	  dst.close
+	end
+      when IO
+	each(){|l| to << l}
+      else
+	Filter.fail CanNotMethodApply, ">", to.type
+      end
+      self
+    end
+
+    def >> (to)
+      case to
+      when String
+	dst = @@shell.open(to, "a")
+	begin
+	  each(){|l| dst << l}
+	ensure
+	  dst.close
+	end
+      when IO
+	each(){|l| to << l}
+      else
+	Filter.fail CanNotMethodApply, ">>", to.type
+      end
+      self
+    end
+
+    def | (filter)
+      filter.input = self
+      filter
+    end
+
+    def method_missing(method, *args)
+      if Shell.cascade? and @@shell.respond_to?(method)
+	self | @@shell.send(method, *args)
+      else
+	super
+      end
+    end
+
+    def to_a
+      ary = []
+      each(){|l| ary.push l}
+      ary
+    end
+
+    def to_s
+      str = ""
+      each(){|l| str.concat l}
+      str
+    end
+  end
+
+  class Echo < Filter
+    def initialize(sh, *strings)
+      super sh
+      @@strings = strings
+    end
+    
+    def each(rs = nil)
+      rs =  @@shell.record_separator unless rs
+      for str  in @@strings
+	yield str + rs
+      end
+    end
+  end
+
+  class Cat < Filter
+    def initialize(sh, *filenames)
+      super sh
+      @@cat_files = filenames
+    end
+
+    def each(rs = nil)
+      if @@cat_files.empty?
+	super
+      else
+	for src in @@cat_files
+	  @@shell.foreach(src, rs){|l| yield l}
+	end
+      end
+    end
+  end
+
+#   class Sort < Cat
+#     def initialize(sh, *filenames)
+#       super
+#     end
+#
+#     def each(rs = nil)
+#       ary = []
+#       super{|l|	ary.push l}
+#       for l in ary.sort!
+# 	yield l
+#       end
+#     end
+#   end
+
+  class Tee < Filter
+    def initialize(sh, filename)
+      super sh
+      @@to_filename = filename
+    end
+
+    def each(rs = nil)
+      to = @@shell.open(@@to_filename, "w")
+      begin
+	super{|l| to << l; yield l}
+      ensure
+	to.close
+      end
+    end
+  end
+
+  class System < Filter
+    def initialize(sh, command, *opts)
+      require "socket"
+      
+      super(sh)
+#      @@sock_me, @@sock_peer = Socket.pair(Socket::AF_UNIX, Socket::SOCK_STREAM, 0)
+      @@pipe_me_in, @@pipe_peer_out = pipe
+      @@pipe_peer_in, @@pipe_me_out = pipe
+      begin
+	pid = fork {
+#	  @@sock_me.close
+	  @@pipe_me_in.close
+	  @@pipe_me_out.close
+#	  STDIN.reopen(@@sock_peer)
+#	  STDOUT.reopen(@@sock_peer)
+	  STDIN.reopen(@@pipe_peer_in)
+	  STDOUT.reopen(@@pipe_peer_out)
+	  fork {
+	    exec(command + " " + opts.join(" "))
+	  }
+	  exit
+	}
+#	print pid; $stdout.flush
+      ensure
+#       sock_peer.close
+        @@pipe_peer_in.close
+	@@pipe_peer_out.close
+	begin
+	  Process.waitpid(pid, nil)
+	rescue Errno::ECHILD
+	end
+      end
+    end
+
+    def each(rs = nil)
+      rs = @@shell.record_separator unless rs
+      begin
+	th_o = Thread.start{
+	  super{|l| @@pipe_me_out.print l}
+#	  @@sock_me.shutdown(0)
+	  @@pipe_me_out.close
+	}
+	begin
+	  @@pipe_me_in.each(rs) do
+	    |l|
+#	    print l
+	    yield l
+	  end
+	ensure
+	  th_o.exit
+	end
+      ensure
+#	@@sock_peer.close unless @@sock_peer.closed?
+#	@@sock_me.close
+	@@pipe_me_in.close
+      end
+    end
+  end
+end
+@
+
+
+1.1.2.2
+log
+@1.1c3
+@
+text
+@d126 1
+d199 1
+a199 1
+  # `mode' is effective iff `path' is specifying a file.
+d227 1
+a227 1
+  # command extension
+d262 2
+a263 2
+  # File methods
+  #	open/foreach/unlink are defined elsewhere.
+d290 1
+a290 1
+  # FileTest method
+d294 1
+a294 1
+  # ftools methods
+d313 1
+a313 1
+  # test function
+d323 1
+a323 1
+  # shell functions
+d345 1
+a345 1
+  # search for command, raise exception if not found.
+d372 2
+a373 1
+  # define command as singleton method.
+d395 2
+a396 1
+  # define command as Shell method.
+d418 6
+a423 3
+  # defines commands on default_path.  if the method is already defined,
+  # do nothing.  as default, methods are prefixed by "sys_".
+  # invalid characters as method name are converted into "_".
+d452 2
+a453 2
+  # Filter
+  # required method:
+@
+
+
+1.1.2.2.2.1
+log
+@join 1.1c6
+@
+text
+@d162 1
+a162 1
+	Shell.Fail DirStackEmpty
+d172 1
+a172 1
+      Shell.Fail DirStackEmpty
+d353 1
+a353 1
+	Shell.Fail CommandNotFound, command
+d356 1
+a356 1
+      Shell.Fail CommandNotFound, command
+d367 1
+a367 2
+#    Shell.fail CommandNotFound, command
+    raise CommandNotFound, command
+d383 1
+a383 1
+      Shell.Fail CanNotDefine, comamnd, path
+d405 1
+a405 1
+      Shell.Fail CanNotDefine, comamnd, path
+d477 1
+a477 1
+	Filter.Fail CanNotMethodApply, "<", to.type
+d493 1
+a493 1
+	Filter.Fail CanNotMethodApply, ">", to.type
+d510 1
+a510 1
+	Filter.Fail CanNotMethodApply, ">>", to.type
+@
+
+
+1.1.2.3
+log
+@1.1c6
+@
+text
+@d367 1
+a367 2
+#    Shell.fail CommandNotFound, command
+    raise CommandNotFound, command
+@
+
+

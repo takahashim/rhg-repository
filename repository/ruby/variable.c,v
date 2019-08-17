@@ -1,0 +1,9093 @@
+head	1.73;
+access;
+symbols
+	v1_6_7:1.29.2.16
+	v1_6_6:1.29.2.11
+	v1_6_5:1.29.2.6
+	v1_6_4:1.29.2.4
+	v1_7_1:1.36
+	v1_6_4_preview4:1.29.2.4
+	v1_6_4_preview3:1.29.2.3
+	v1_6_4_preview2:1.29.2.2
+	v1_6_4_preview1:1.29.2.1
+	v1_6_3:1.29
+	ruby_m17n:1.29.0.4
+	ruby_1_6:1.29.0.2
+	v1_6_2:1.29
+	v1_6_1:1.25
+	v1_6_0:1.22
+	v1_4_6:1.3.2.3
+	v1_4_5:1.3.2.3
+	v1_4_4:1.3.2.2
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.6
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.11
+	v1_3_6_repack:1.1.1.3.2.11
+	v1_3_6:1.1.1.3.2.11
+	v1_3_5:1.1.1.3.2.11
+	v1_2_6repack:1.1.1.2.2.15
+	v1_3_4_990625:1.1.1.3.2.11
+	v1_3_4_990624:1.1.1.3.2.10
+	v1_2_6:1.1.1.2.2.15
+	v1_3_4_990611:1.1.1.3.2.10
+	v1_3_4_990531:1.1.1.3.2.9
+	v1_3_3_990518:1.1.1.3.2.7
+	v1_3_3_990513:1.1.1.3.2.7
+	v1_3_3_990507:1.1.1.3.2.7
+	v1_2_5:1.1.1.2.2.14
+	v1_2_4:1.1.1.2.2.14
+	v1_3_1_990225:1.1.1.3.2.5
+	v1_3_1_990224:1.1.1.3.2.4
+	v1_3_1_990215:1.1.1.3.2.3
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.2
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.14
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.14
+	v1_2_1repack:1.1.1.2.2.14
+	v1_2_1:1.1.1.2.2.14
+	v1_2_stable:1.1.1.2.2.14
+	v1_1d1:1.1.1.2.2.14.2.4
+	v1_1d0:1.1.1.2.2.14.2.4
+	v1_1c9_1:1.1.1.2.2.14
+	v1_1c9:1.1.1.2.2.14
+	v1_1c8:1.1.1.2.2.14
+	v1_1c7:1.1.1.2.2.14
+	v1_1c6:1.1.1.2.2.14
+	v1_1d-start:1.1.1.2.2.14.2.1
+	v1_1c5:1.1.1.2.2.14
+	v1_1dev:1.1.1.2.2.14.0.2
+	v1_1c4:1.1.1.2.2.14
+	v1_1c3:1.1.1.2.2.14
+	v1_1c2:1.1.1.2.2.14
+	v1_1c1:1.1.1.2.2.14
+	v1_1c0:1.1.1.2.2.14
+	v1_1b9_31:1.1.1.2.2.14
+	v1_1b9_30:1.1.1.2.2.13
+	v1_1b9_28:1.1.1.2.2.13
+	v1_1b9_27:1.1.1.2.2.13
+	v1_1b9_26:1.1.1.2.2.13
+	r1_1b9_25:1.1.1.2.2.12
+	r1_1b9_24:1.1.1.2.2.12
+	v1_1b9_23:1.1.1.2.2.11
+	v1_1b9_22:1.1.1.2.2.10
+	v1_1b9_20:1.1.1.2.2.9
+	v1_1b9_18:1.1.1.2.2.8
+	v1_1b9_16:1.1.1.2.2.8
+	v1_1b9_15:1.1.1.2.2.7
+	v1_1b9_13:1.1.1.2.2.7
+	v1_1b9_12:1.1.1.2.2.7
+	v1_1b9_11:1.1.1.2.2.6
+	v1_1b9_08:1.1.1.2.2.5
+	v1_1b9_07:1.1.1.2.2.4
+	r1_1b9:1.1.1.2.2.3
+	v1_1b8:1.1.1.2.2.3
+	v1_1b7:1.1.1.2.2.3
+	v1_1b6:1.1.1.2.2.3
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.73
+date	2002.10.23.08.20.35;	author matz;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.10.16.04.43.28;	author nobu;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.09.26.00.48.33;	author matz;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.09.17.09.36.05;	author matz;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.09.05.09.42.56;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.09.03.05.20.07;	author matz;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.08.30.10.46.37;	author nobu;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.08.28.14.59.01;	author michal;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.04.24.04.54.14;	author matz;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.04.11.10.02.59;	author matz;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.03.20.11.15.19;	author nobu;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.02.15.06.14.25;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.02.13.09.01.09;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.02.04.08.07.01;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.01.16.09.25.55;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.12.21.09.23.22;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.12.18.08.46.56;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.12.11.03.48.08;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.11.13.08.19.52;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.10.29.05.07.18;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.10.22.16.20.14;	author nobu;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.10.21.13.22.54;	author nobu;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.10.17.05.28.02;	author nobu;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.10.03.07.19.11;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.08.23.06.02.15;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.08.20.04.29.56;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.08.14.08.13.26;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.07.18.05.55.20;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.07.14.15.17.19;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.07.02.08.46.22;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.06.08.16.15.03;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.06.08.14.20.20;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.06.06.06.42.21;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.06.05.07.19.38;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.05.22.08.28.11;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.03.19.03.20.21;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.02.14.05.51.58;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.01.10.07.52.46;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.12.08.07.10.25;	author matz;	state Exp;
+branches
+	1.29.2.1
+	1.29.4.1;
+next	1.28;
+
+1.28
+date	2000.12.05.09.36.39;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.11.27.09.23.26;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.11.21.14.26.24;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.09.22.18.15.45;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.09.15.06.00.28;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.09.07.06.59.37;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.08.28.09.53.30;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.08.25.08.26.04;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.07.27.09.49.25;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.07.12.09.36.21;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.07.12.06.06.50;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.06.19.08.38.11;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.12.09.07.48;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.05.09.04.53.05;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.01.09.41.31;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.04.10.05.44.20;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.03.23.08.37.32;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.17.08.58.15;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.18.06.59.34;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.01.03.12.15;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.01.05.04.37.14;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.12.14.06.49.53;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.11.29.06.33.00;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.25.09.03.07;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.17.07.30.36;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.04.04.51.06;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.13;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.31;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.27.08.08.37;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.24.04.31.26;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.25.06.39.11;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.03.24.08.52.34;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.04.20.08.21.41;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.05.25.08.26.18;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.05.31.09.13.30;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.06.09.09.21.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.06.25.09.02.50;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.08.10.08.47.18;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.19.05.08.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.01.23.10.01.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.03.28.10.57.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.04.07.08.41.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.04.08.08.12.38;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.04.20.05.55.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.04.27.10.04.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.05.13.07.26.39;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.05.18.04.56.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.05.25.04.57.59;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.06.02.10.05.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.06.16.04.23.50;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.07.15.06.12.55;	author matz;	state Exp;
+branches
+	1.1.1.2.2.14.2.1;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	99.05.14.08.56.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.14.2.1
+date	98.09.08.07.09.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14.2.2;
+
+1.1.1.2.2.14.2.2
+date	98.10.06.03.28.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14.2.3;
+
+1.1.1.2.2.14.2.3
+date	98.11.25.03.31.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14.2.4;
+
+1.1.1.2.2.14.2.4
+date	98.12.16.07.30.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.11.29.06.31.03;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.02.08.08.53.57;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.03.23.04.14.22;	author matz;	state Exp;
+branches;
+next	;
+
+1.29.2.1
+date	2001.04.06.05.42.40;	author matz;	state Exp;
+branches;
+next	1.29.2.2;
+
+1.29.2.2
+date	2001.04.11.07.41.32;	author matz;	state Exp;
+branches;
+next	1.29.2.3;
+
+1.29.2.3
+date	2001.05.22.08.27.03;	author matz;	state Exp;
+branches;
+next	1.29.2.4;
+
+1.29.2.4
+date	2001.05.25.15.01.06;	author matz;	state Exp;
+branches;
+next	1.29.2.5;
+
+1.29.2.5
+date	2001.06.06.07.39.39;	author matz;	state Exp;
+branches;
+next	1.29.2.6;
+
+1.29.2.6
+date	2001.08.23.06.00.31;	author matz;	state Exp;
+branches;
+next	1.29.2.7;
+
+1.29.2.7
+date	2001.10.21.13.22.48;	author nobu;	state Exp;
+branches;
+next	1.29.2.8;
+
+1.29.2.8
+date	2001.11.13.08.22.27;	author matz;	state Exp;
+branches;
+next	1.29.2.9;
+
+1.29.2.9
+date	2001.12.12.09.07.35;	author matz;	state Exp;
+branches;
+next	1.29.2.10;
+
+1.29.2.10
+date	2001.12.18.08.40.31;	author matz;	state Exp;
+branches;
+next	1.29.2.11;
+
+1.29.2.11
+date	2001.12.21.09.20.54;	author matz;	state Exp;
+branches;
+next	1.29.2.12;
+
+1.29.2.12
+date	2002.01.16.09.22.39;	author matz;	state Exp;
+branches;
+next	1.29.2.13;
+
+1.29.2.13
+date	2002.01.25.08.23.32;	author matz;	state Exp;
+branches;
+next	1.29.2.14;
+
+1.29.2.14
+date	2002.02.08.05.20.34;	author matz;	state Exp;
+branches;
+next	1.29.2.15;
+
+1.29.2.15
+date	2002.02.13.09.02.15;	author matz;	state Exp;
+branches;
+next	1.29.2.16;
+
+1.29.2.16
+date	2002.02.19.04.48.04;	author matz;	state Exp;
+branches;
+next	1.29.2.17;
+
+1.29.2.17
+date	2002.04.10.08.47.40;	author matz;	state Exp;
+branches;
+next	1.29.2.18;
+
+1.29.2.18
+date	2002.05.01.09.37.59;	author matz;	state Exp;
+branches;
+next	1.29.2.19;
+
+1.29.2.19
+date	2002.05.04.12.04.52;	author knu;	state Exp;
+branches;
+next	1.29.2.20;
+
+1.29.2.20
+date	2002.09.25.07.07.38;	author matz;	state Exp;
+branches;
+next	;
+
+1.29.4.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.73
+log
+@README.EXT: grammer updates by Simon Cozens.
+@
+text
+@/**********************************************************************
+
+  variable.c -
+
+  $Author: nobu $
+  $Date: 2002/10/16 04:43:28 $
+  created at: Tue Apr 19 23:55:15 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "env.h"
+#include "node.h"
+#include "st.h"
+#include "util.h"
+
+static st_table *rb_global_tbl;
+st_table *rb_class_tbl;
+
+void
+Init_var_tables()
+{
+    rb_global_tbl = st_init_numtable();
+    rb_class_tbl = st_init_numtable();
+}
+
+struct fc_result {
+    ID name;
+    VALUE klass;
+    VALUE path;
+    VALUE track;
+    struct fc_result *prev;
+};
+
+static VALUE
+fc_path(fc, name)
+    struct fc_result *fc;
+    ID name;
+{
+    VALUE path, tmp;
+
+    path = rb_str_new2(rb_id2name(name));
+    while (fc) {
+	if (fc->track == rb_cObject) break;
+	if (ROBJECT(fc->track)->iv_tbl &&
+	    st_lookup(ROBJECT(fc->track)->iv_tbl, rb_intern("__classpath__"), &tmp)) {
+	    tmp = rb_str_dup(tmp);
+	    rb_str_cat2(tmp, "::");
+	    rb_str_append(tmp, path);
+
+	    return tmp;
+	}
+	tmp = rb_str_new2(rb_id2name(fc->name));
+	rb_str_cat2(tmp, "::");
+	rb_str_append(tmp, path);
+	path = tmp;
+	fc = fc->prev;
+    }
+    return path;
+}
+
+static int
+fc_i(key, value, res)
+    ID key;
+    VALUE value;
+    struct fc_result *res;
+{
+    if (!rb_is_const_id(key)) return ST_CONTINUE;
+
+    if (value == res->klass) {
+	res->path = fc_path(res, key);
+	return ST_STOP;
+    }
+    switch (TYPE(value)) {
+      case T_MODULE:
+      case T_CLASS:
+	if (!RCLASS(value)->iv_tbl) return ST_CONTINUE;
+	else {
+	    struct fc_result arg;
+	    struct fc_result *list;
+
+	    list = res;
+	    while (list) {
+		if (list->track == value) return ST_CONTINUE;
+		list = list->prev;
+	    }
+
+	    arg.name = key;
+	    arg.path = 0;
+	    arg.klass = res->klass;
+	    arg.track = value;
+	    arg.prev = res;
+	    st_foreach(RCLASS(value)->iv_tbl, fc_i, &arg);
+	    if (arg.path) {
+		res->path = arg.path;
+		return ST_STOP;
+	    }
+	}
+	break;
+
+      default:
+	break;
+	    
+    }
+    return ST_CONTINUE;
+}
+
+static VALUE
+find_class_path(klass)
+    VALUE klass;
+{
+    struct fc_result arg;
+
+    arg.name = 0;
+    arg.path = 0;
+    arg.klass = klass;
+    arg.track = rb_cObject;
+    arg.prev = 0;
+    if (RCLASS(rb_cObject)->iv_tbl) {
+	st_foreach(RCLASS(rb_cObject)->iv_tbl, fc_i, &arg);
+    }
+    if (arg.path == 0) {
+	st_foreach(rb_class_tbl, fc_i, &arg);
+    }
+    if (arg.path) {
+	if (!ROBJECT(klass)->iv_tbl) {
+	    ROBJECT(klass)->iv_tbl = st_init_numtable();
+	} 
+	st_insert(ROBJECT(klass)->iv_tbl,rb_intern("__classpath__"),arg.path);
+	return arg.path;
+    }
+    return Qnil;
+}
+
+static VALUE
+classname(klass)
+    VALUE klass;
+{
+    VALUE path = Qnil;
+    ID classpath = rb_intern("__classpath__");
+
+    klass = rb_class_real(klass);
+    if (!klass) klass = rb_cObject;
+    if (ROBJECT(klass)->iv_tbl &&
+	!st_lookup(ROBJECT(klass)->iv_tbl, classpath, &path)) {
+	ID classid = rb_intern("__classid__");
+
+	if (st_lookup(ROBJECT(klass)->iv_tbl, classid, &path)) {
+	    path = rb_str_new2(rb_id2name(SYM2ID(path)));
+	    st_insert(ROBJECT(klass)->iv_tbl, classpath, path);
+	    st_delete(RCLASS(klass)->iv_tbl, &classid, 0);
+	}
+    }
+    if (NIL_P(path)) {
+	path = find_class_path(klass);
+	if (NIL_P(path)) {
+	    return 0;
+	}
+	return path;
+    }
+    if (TYPE(path) != T_STRING)
+	rb_bug("class path is not set properly");
+    return path;
+}
+
+VALUE
+rb_mod_name(mod)
+    VALUE mod;
+{
+    VALUE path = classname(mod);
+
+    if (path) return rb_str_dup(path);
+    return rb_str_new(0,0);
+}
+
+VALUE
+rb_class_path(klass)
+    VALUE klass;
+{
+    VALUE path = classname(klass);
+
+    if (path) return path;
+    else {
+	VALUE str;
+	char *s = "Class";
+
+	if (TYPE(klass) == T_MODULE) {
+	    if (rb_obj_class(klass) == rb_cModule) {
+		s = "Module";
+	    }
+	    else {
+		s = rb_class2name(RBASIC(klass)->klass);
+	    }
+	}
+	str = rb_str_new(0, 2 + strlen(s) + 3 + 2 * SIZEOF_LONG + 1);
+	sprintf(RSTRING(str)->ptr, "#<%s:0x%lx>", s, klass);
+	RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+
+	return str;
+    }
+}
+
+void
+rb_set_class_path(klass, under, name)
+    VALUE klass, under;
+    const char *name;
+{
+    VALUE str;
+
+    if (under == rb_cObject) {
+	str = rb_str_new2(name);
+    }
+    else {
+	str = rb_str_dup(rb_class_path(under));
+	rb_str_cat2(str, "::");
+	rb_str_cat2(str, name);
+    }
+    rb_iv_set(klass, "__classpath__", str);
+}
+
+VALUE
+rb_path2class(path)
+    const char *path;
+{
+    const char *pbeg, *p;
+    ID id;
+    VALUE c = rb_cObject;
+
+    if (path[0] == '#') {
+	rb_raise(rb_eArgError, "can't retrieve anonymous class %s", path);
+    }
+    pbeg = p = path;
+    while (*p) {
+	VALUE str;
+
+	while (*p && *p != ':') p++;
+	str = rb_str_new(pbeg, p-pbeg);
+	id = rb_intern(RSTRING(str)->ptr);
+	if (p[0] == ':') {
+	    if (p[1] != ':') goto undefined_class;
+	    p += 2;
+	    pbeg = p;
+	}
+	if (!rb_const_defined(c, id)) {
+	  undefined_class:
+	    rb_raise(rb_eArgError, "undefined class/module %s", rb_id2name(id));
+	    rb_raise(rb_eArgError, "undefined class/module %s", path);
+	}
+	c = rb_const_get_at(c, id);
+	switch (TYPE(c)) {
+	  case T_MODULE:
+	  case T_CLASS:
+	    break;
+	  default:
+	    rb_raise(rb_eTypeError, "%s does not refer class/module", path);
+	}
+    }
+
+    return c;
+}
+
+void
+rb_name_class(klass, id)
+    VALUE klass;
+    ID id;
+{
+    rb_iv_set(klass, "__classid__", ID2SYM(id));
+}
+
+static st_table *autoload_tbl = 0;
+
+static void
+rb_autoload_id(id, filename)
+    ID id;
+    const char *filename;
+{
+    rb_secure(4);
+    if (!rb_is_const_id(id)) {
+	rb_name_error(id, "autoload must be constant name");
+    }
+
+    if (!autoload_tbl) {
+	autoload_tbl = st_init_numtable();
+    }
+    st_insert(autoload_tbl, id, strdup(filename));
+}
+
+void
+rb_autoload(klass, filename)
+    const char *klass, *filename;
+{
+    rb_autoload_id(rb_intern(klass), filename);
+}
+
+VALUE
+rb_f_autoload(obj, klass, file)
+    VALUE obj, klass, file;
+{
+    rb_autoload_id(rb_to_id(klass), StringValuePtr(file));
+    return Qnil;
+}
+
+char *
+rb_class2name(klass)
+    VALUE klass;
+{
+    return RSTRING(rb_class_path(klass))->ptr;
+}
+
+struct trace_var {
+    int removed;
+    void (*func)();
+    VALUE data;
+    struct trace_var *next;
+};
+
+struct global_variable {
+    int   counter;
+    void *data;
+    VALUE (*getter)();
+    void  (*setter)();
+    void  (*marker)();
+    int block_trace;
+    struct trace_var *trace;
+};
+
+struct global_entry {
+    struct global_variable *var;
+    ID id;
+};
+
+static VALUE undef_getter();
+static void  undef_setter();
+static void  undef_marker();
+
+static VALUE val_getter();
+static void  val_setter();
+static void  val_marker();
+
+static VALUE var_getter();
+static void  var_setter();
+static void  var_marker();
+
+struct global_entry*
+rb_global_entry(id)
+    ID id;
+{
+    struct global_entry *entry;
+
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	struct global_variable *var;
+	entry = ALLOC(struct global_entry);
+	var = ALLOC(struct global_variable);
+	entry->id = id;
+	entry->var = var;
+	var->counter = 1;
+	var->data = 0;
+	var->getter = undef_getter;
+	var->setter = undef_setter;
+	var->marker = undef_marker;
+
+	var->block_trace = 0;
+	var->trace = 0;
+	st_add_direct(rb_global_tbl, id, entry);
+    }
+    return entry;
+}
+
+static VALUE
+undef_getter(id)
+    ID id;
+{
+    rb_warning("global variable `%s' not initialized", rb_id2name(id));
+
+    return Qnil;
+}
+
+static void
+undef_setter(val, id, data, var)
+    VALUE val;
+    ID id;
+    void *data;
+    struct global_variable *var;
+{
+    var->getter = val_getter;
+    var->setter = val_setter;
+    var->marker = val_marker;
+
+    var->data = (void*)val;
+}
+
+static void
+undef_marker()
+{
+}
+
+static VALUE
+val_getter(id, val)
+    ID id;
+    VALUE val;
+{
+    return val;
+}
+
+static void
+val_setter(val, id, data, var)
+    VALUE val;
+    ID id;
+    void *data;
+    struct global_variable *var;
+{
+    var->data = (void*)val;
+}
+
+static void
+val_marker(data)
+    VALUE data;
+{
+    if (data) rb_gc_mark_maybe(data);
+}
+
+static VALUE
+var_getter(id, var)
+    ID id;
+    VALUE *var;
+{
+    if (!var) return Qnil;
+    return *var;
+}
+
+static void
+var_setter(val, id, var)
+    VALUE val;
+    ID id;
+    VALUE *var;
+{
+    *var = val;
+}
+
+static void
+var_marker(var)
+    VALUE *var;
+{
+    if (var) rb_gc_mark_maybe(*var);
+}
+
+static void
+readonly_setter(val, id, var)
+    VALUE val;
+    ID id;
+    void *var;
+{
+    rb_name_error(id, "can't set variable %s", rb_id2name(id));
+}
+
+static int
+mark_global_entry(key, entry)
+    ID key;
+    struct global_entry *entry;
+{
+    struct trace_var *trace;
+    struct global_variable *var = entry->var;
+
+    (*var->marker)(var->data);
+    trace = var->trace;
+    while (trace) {
+	if (trace->data) rb_gc_mark_maybe(trace->data);
+	trace = trace->next;
+    }
+    return ST_CONTINUE;
+}
+
+void
+rb_gc_mark_global_tbl()
+{
+    st_foreach(rb_global_tbl, mark_global_entry, 0);
+}
+
+static ID
+global_id(name)
+    const char *name;
+{
+    ID id;
+
+    if (name[0] == '$') id = rb_intern(name);
+    else {
+	char *buf = ALLOCA_N(char, strlen(name)+2);
+	buf[0] = '$';
+	strcpy(buf+1, name);
+	id = rb_intern(buf);
+    }
+    return id;
+}
+
+void
+rb_define_hooked_variable(name, var, getter, setter)
+    const char  *name;
+    VALUE *var;
+    VALUE (*getter)();
+    void  (*setter)();
+{
+    struct global_variable *gvar;
+    ID id = global_id(name);
+
+    gvar = rb_global_entry(id)->var;
+    gvar->data = (void*)var;
+    gvar->getter = getter?getter:var_getter;
+    gvar->setter = setter?setter:var_setter;
+    gvar->marker = var_marker;
+}
+
+void
+rb_define_variable(name, var)
+    const char  *name;
+    VALUE *var;
+{
+    rb_define_hooked_variable(name, var, 0, 0);
+}
+
+void
+rb_define_readonly_variable(name, var)
+    const char  *name;
+    VALUE *var;
+{
+    rb_define_hooked_variable(name, var, 0, readonly_setter);
+}
+
+void
+rb_define_virtual_variable(name, getter, setter)
+    const char  *name;
+    VALUE (*getter)();
+    void  (*setter)();
+{
+    if (!getter) getter = val_getter;
+    if (!setter) setter = readonly_setter;
+    rb_define_hooked_variable(name, 0, getter, setter);
+}
+
+static void
+rb_trace_eval(cmd, val)
+    VALUE cmd, val;
+{
+    rb_eval_cmd(cmd, rb_ary_new3(1, val), 0);
+}
+
+VALUE
+rb_f_trace_var(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE var, cmd;
+    struct global_entry *entry;
+    struct trace_var *trace;
+
+    rb_secure(4);
+    if (rb_scan_args(argc, argv, "11", &var, &cmd) == 1) {
+	cmd = rb_f_lambda();
+    }
+    if (NIL_P(cmd)) {
+	return rb_f_untrace_var(argc, argv);
+    }
+    entry = rb_global_entry(rb_to_id(var));
+    if (OBJ_TAINTED(cmd)) {
+	rb_raise(rb_eSecurityError, "Insecure: tainted variable trace");
+    }
+    trace = ALLOC(struct trace_var);
+    trace->next = entry->var->trace;
+    trace->func = rb_trace_eval;
+    trace->data = cmd;
+    trace->removed = 0;
+    entry->var->trace = trace;
+
+    return Qnil;
+}
+
+static void
+remove_trace(var)
+    struct global_variable *var;
+{
+    struct trace_var *trace = var->trace;
+    struct trace_var t;
+    struct trace_var *next;
+
+    t.next = trace;
+    trace = &t;
+    while (trace->next) {
+	next = trace->next;
+	if (next->removed) {
+	    trace->next = next->next;
+	    free(next);
+	}
+	else {
+	    trace = next;
+	}
+    }
+    var->trace = t.next;
+}
+
+VALUE
+rb_f_untrace_var(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE var, cmd;
+    ID id;
+    struct global_entry *entry;
+    struct trace_var *trace;
+
+    rb_scan_args(argc, argv, "11", &var, &cmd);
+    id = rb_to_id(var);
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_name_error(id, "undefined global variable %s", rb_id2name(id));
+    }
+
+    trace = entry->var->trace;
+    if (NIL_P(cmd)) {
+	VALUE ary = rb_ary_new();
+
+	while (trace) {
+	    struct trace_var *next = trace->next;
+	    rb_ary_push(ary, (VALUE)trace->data);
+	    trace->removed = 1;
+	    trace = next;
+	}
+
+	if (!entry->var->block_trace) remove_trace(entry->var);
+	return ary;
+    }
+    else {
+	while (trace) {
+	    if (trace->data == cmd) {
+		trace->removed = 1;
+		if (!entry->var->block_trace) remove_trace(entry->var);
+		return rb_ary_new3(1, cmd);
+	    }
+	    trace = trace->next;
+	}
+    }
+    return Qnil;
+}
+
+VALUE
+rb_gvar_get(entry)
+    struct global_entry *entry;
+{
+    struct global_variable *var = entry->var;
+    return (*var->getter)(entry->id, var->data, var);
+}
+
+struct trace_data {
+    struct trace_var *trace;
+    VALUE val;
+};
+    
+static VALUE
+trace_ev(data)
+    struct trace_data *data;
+{
+    struct trace_var *trace = data->trace;
+
+    while (trace) {
+	(*trace->func)(trace->data, data->val);
+	trace = trace->next;
+    }
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+trace_en(var)
+    struct global_variable *var;
+{
+    var->block_trace = 0;
+    remove_trace(var);
+    return Qnil;		/* not reached */
+}
+
+VALUE
+rb_gvar_set(entry, val)
+    struct global_entry *entry;
+    VALUE val;
+{
+    struct trace_data trace;
+    struct global_variable *var = entry->var;
+
+    if (rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't change global variable value");
+    (*var->setter)(val, entry->id, var->data, var);
+
+    if (var->trace && !var->block_trace) {
+	var->block_trace = 1;
+	trace.trace = var->trace;
+	trace.val = val;
+	rb_ensure(trace_ev, (VALUE)&trace, trace_en, (VALUE)var);
+    }
+    return val;
+}
+
+VALUE
+rb_gv_set(name, val)
+    const char *name;
+    VALUE val;
+{
+    struct global_entry *entry;
+
+    entry = rb_global_entry(global_id(name));
+    return rb_gvar_set(entry, val);
+}
+
+VALUE
+rb_gv_get(name)
+    const char *name;
+{
+    struct global_entry *entry;
+
+    entry = rb_global_entry(global_id(name));
+    return rb_gvar_get(entry);
+}
+
+VALUE
+rb_gvar_defined(entry)
+    struct global_entry *entry;
+{
+    if (entry->var->getter == undef_getter) return Qfalse;
+    return Qtrue;
+}
+
+static int
+gvar_i(key, entry, ary)
+    ID key;
+    struct global_entry *entry;
+    VALUE ary;
+{
+    rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    return ST_CONTINUE;
+}
+
+VALUE
+rb_f_global_variables()
+{
+    VALUE ary = rb_ary_new();
+    char buf[4];
+    char *s = "&`'+123456789";
+
+    st_foreach(rb_global_tbl, gvar_i, ary);
+    if (!NIL_P(rb_backref_get())) {
+	while (*s) {
+	    sprintf(buf, "$%c", *s++);
+	    rb_ary_push(ary, rb_str_new2(buf));
+	}
+    }
+    return ary;
+}
+
+void
+rb_alias_variable(name1, name2)
+    ID name1;
+    ID name2;
+{
+    struct global_entry *entry1, *entry2;
+
+    if (rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't alias global variable");
+
+    entry2 = rb_global_entry(name2);
+    if (!st_lookup(rb_global_tbl, name1, &entry1)) {
+	entry1 = ALLOC(struct global_entry);
+	entry1->id = name1;
+	st_add_direct(rb_global_tbl, name1, entry1);
+    }
+    else if (entry1->var != entry2->var) {
+	struct global_variable *var = entry1->var;
+	if (var->block_trace) {
+	    rb_raise(rb_eRuntimeError, "can't alias in tracer");
+	}
+	var->counter--;
+	if (var->counter == 0) {
+	    struct trace_var *trace = var->trace;
+	    while (trace) {
+		struct trace_var *next = trace->next;
+		free(trace);
+		trace = next;
+	    }
+	    free(var);
+	}
+    }
+    else {
+	return;
+    }
+    entry2->var->counter++;
+    entry1->var = entry2->var;
+}
+
+static int special_generic_ivar = 0;
+static st_table *generic_iv_tbl;
+
+st_table*
+rb_generic_ivar_table(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (!generic_iv_tbl) return 0;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return 0;
+    return tbl;
+}
+
+static VALUE
+generic_ivar_get(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    if (st_lookup(tbl, id, &val)) {
+	return val;
+    }
+    return Qnil;
+}
+
+static void
+generic_ivar_set(obj, id, val)
+    VALUE obj;
+    ID id;
+    VALUE val;
+{
+    st_table *tbl;
+
+    if (rb_special_const_p(obj)) {
+	special_generic_ivar = 1;
+    }
+    if (!generic_iv_tbl) {
+	generic_iv_tbl = st_init_numtable();
+    }
+
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) {
+	FL_SET(obj, FL_EXIVAR);
+	tbl = st_init_numtable();
+	st_add_direct(generic_iv_tbl, obj, tbl);
+	st_add_direct(tbl, id, val);
+	return;
+    }
+    st_insert(tbl, id, val);
+}
+
+static VALUE
+generic_ivar_defined(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qfalse;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qfalse;
+    if (st_lookup(tbl, id, &val)) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static int
+generic_ivar_remove(obj, id, valp)
+    VALUE obj;
+    ID id;
+    VALUE *valp;
+{
+    st_table *tbl;
+    int status;
+
+    if (!generic_iv_tbl) return 0;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return 0;
+    status = st_delete(tbl, &id, valp);
+    if (tbl->num_entries == 0) {
+	st_delete(generic_iv_tbl, &obj, &tbl);
+	st_free_table(tbl);
+    }
+    return status;
+}
+
+void
+rb_mark_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (!generic_iv_tbl) return;
+    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+	rb_mark_tbl(tbl);
+    }
+}
+
+static int
+givar_mark_i(key, value)
+    ID key;
+    VALUE value;
+{
+    rb_gc_mark(value);
+    return ST_CONTINUE;
+}
+
+static int
+givar_i(obj, tbl)
+    VALUE obj;
+    st_table *tbl;
+{
+    if (rb_special_const_p(obj)) {
+	st_foreach(tbl, givar_mark_i, 0);
+    }
+    return ST_CONTINUE;
+}
+
+void
+rb_mark_generic_ivar_tbl()
+{
+    if (!generic_iv_tbl) return;
+    if (special_generic_ivar == 0) return;
+    st_foreach(generic_iv_tbl, givar_i, 0);
+}
+
+void
+rb_free_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (st_delete(generic_iv_tbl, &obj, &tbl))
+	st_free_table(tbl);
+}
+
+void
+rb_copy_generic_ivar(clone, obj)
+    VALUE clone, obj;
+{
+    st_table *tbl;
+
+    if (!generic_iv_tbl) return;
+    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+	st_table *old;
+
+	if (st_lookup(generic_iv_tbl, clone, &old)) {
+	    st_free_table(old);
+	    st_insert(generic_iv_tbl, clone, st_copy(tbl));
+	}
+	else {
+	    st_add_direct(generic_iv_tbl, clone, st_copy(tbl));
+	}
+    }
+}
+
+VALUE
+rb_ivar_get(obj, id)
+    VALUE obj;
+    ID id;
+{
+    VALUE val;
+
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl && st_lookup(ROBJECT(obj)->iv_tbl, id, &val))
+	    return val;
+	break;
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_get(obj, id);
+	break;
+    }
+    rb_warning("instance variable %s not initialized", rb_id2name(id));
+
+    return Qnil;
+}
+
+VALUE
+rb_ivar_set(obj, id, val)
+    VALUE obj;
+    ID id;
+    VALUE val;
+{
+    if (!OBJ_TAINTED(obj) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+    if (OBJ_FROZEN(obj)) rb_error_frozen("object");
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (!ROBJECT(obj)->iv_tbl) ROBJECT(obj)->iv_tbl = st_init_numtable();
+	st_insert(ROBJECT(obj)->iv_tbl, id, val);
+	break;
+      default:
+	generic_ivar_set(obj, id, val);
+	break;
+    }
+    return val;
+}
+
+VALUE
+rb_ivar_defined(obj, id)
+    VALUE obj;
+    ID id;
+{
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl && st_lookup(ROBJECT(obj)->iv_tbl, id, 0))
+	    return Qtrue;
+	break;
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_defined(obj, id);
+	break;
+    }
+    return Qfalse;
+}
+
+static int
+ivar_i(key, entry, ary)
+    ID key;
+    struct global_entry *entry;
+    VALUE ary;
+{
+    if (rb_is_instance_id(key)) {
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+VALUE
+rb_obj_instance_variables(obj)
+    VALUE obj;
+{
+    VALUE ary;
+
+    ary = rb_ary_new();
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl) {
+	    st_foreach(ROBJECT(obj)->iv_tbl, ivar_i, ary);
+	}
+	break;
+      default:
+	if (!generic_iv_tbl) break;
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj)) {
+	    st_table *tbl;
+
+	    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+		st_foreach(tbl, ivar_i, ary);
+	    }
+	}
+	break;
+    }
+    return ary;
+}
+
+VALUE
+rb_obj_remove_instance_variable(obj, name)
+    VALUE obj, name;
+{
+    VALUE val = Qnil;
+    ID id = rb_to_id(name);
+
+    if (!OBJ_TAINTED(obj) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+    if (OBJ_FROZEN(obj)) rb_error_frozen("object");
+    if (!rb_is_instance_id(id)) {
+	rb_name_error(id, "`%s' is not an instance variable", rb_id2name(id));
+    }
+
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl && st_delete(ROBJECT(obj)->iv_tbl, &id, &val)) {
+	    return val;
+	}
+	break;
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj)) {
+	    if (generic_ivar_remove(obj, id, &val)) {
+		return val;
+	    }
+	}
+	break;
+    }
+    rb_name_error(id, "instance variable %s not defined", rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+static int
+top_const_get(id, klassp)
+    ID id;
+    VALUE *klassp;
+{
+    /* pre-defined class */
+    if (st_lookup(rb_class_tbl, id, klassp)) return Qtrue;
+
+    /* autoload */
+    if (autoload_tbl && st_lookup(autoload_tbl, id, 0)) {
+	rb_autoload_load(id);
+	*klassp = rb_const_get(rb_cObject, id);
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+VALUE
+rb_const_get_at(klass, id)
+    VALUE klass;
+    ID id;
+{
+    VALUE value;
+
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, &value)) {
+	return value;
+    }
+    if (klass == rb_cObject && top_const_get(id, &value)) {
+	return value;
+    }
+    rb_name_error(id, "uninitialized constant %s::%s",
+		  RSTRING(rb_class_path(klass))->ptr,
+		  rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+void
+rb_autoload_load(id)
+    ID id;
+{
+    char *modname;
+    VALUE module;
+
+    st_delete(autoload_tbl, &id, &modname);
+    if (rb_provided(modname)) {
+	free(modname);
+	return;
+    }
+    module = rb_str_new2(modname);
+    free(modname);
+    FL_UNSET(module, FL_TAINT);
+    rb_f_require(Qnil, module);
+}
+
+VALUE
+rb_const_get(klass, id)
+    VALUE klass;
+    ID id;
+{
+    VALUE value, tmp;
+    int mod_retry = 0;
+
+    tmp = klass;
+  retry:
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+	    return value;
+	}
+	if (tmp == rb_cObject && top_const_get(id, &value)) return value;
+	tmp = RCLASS(tmp)->super;
+    }
+    if (!mod_retry && BUILTIN_TYPE(klass) == T_MODULE) {
+	mod_retry = 1;
+	tmp = rb_cObject;
+	goto retry;
+    }
+
+    /* Uninitialized constant */
+    if (klass && klass != rb_cObject) {
+	rb_name_error(id, "uninitialized constant %s at %s",
+		      rb_id2name(id),
+		      RSTRING(rb_class_path(klass))->ptr);
+    }
+    else { /* global_uninitialized */
+	rb_name_error(id, "uninitialized constant %s",rb_id2name(id));
+    }
+    return Qnil;		/* not reached */
+}
+
+VALUE
+rb_mod_remove_const(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+    VALUE val;
+
+    if (!rb_is_const_id(id)) {
+	rb_name_error(id, "`%s' is not constant", rb_id2name(id));
+    }
+    if (!OBJ_TAINTED(mod) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't remove constant");
+    if (OBJ_FROZEN(mod)) rb_error_frozen("class/module");
+
+    if (RCLASS(mod)->iv_tbl && st_delete(ROBJECT(mod)->iv_tbl, &id, &val)) {
+	return val;
+    }
+    if (rb_const_defined_at(mod, id)) {
+	rb_name_error(id, "cannot remove %s::%s", 
+		 rb_class2name(mod), rb_id2name(id));
+    }
+    rb_name_error(id, "constant %s::%s not defined", 
+		  rb_class2name(mod), rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+static int
+sv_i(key, value, tbl)
+    ID key;
+    VALUE value;
+    st_table *tbl;
+{
+    if (rb_is_const_id(key)) {
+	if (!st_lookup(tbl, key, 0)) {
+	    st_insert(tbl, key, key);
+	}
+    }
+    return ST_CONTINUE;
+}
+
+static int
+autoload_i(key, name, tbl)
+    ID key;
+    const char *name;
+    st_table *tbl;
+{
+    if (!st_lookup(tbl, key, 0)) {
+	st_insert(tbl, key, key);
+    }
+    return ST_CONTINUE;
+}
+
+void*
+rb_mod_const_at(mod, data)
+    VALUE mod;
+    void *data;
+{
+    st_table *tbl = data;
+    if (!tbl) {
+	tbl = st_init_numtable();
+    }
+    if (RCLASS(mod)->iv_tbl) {
+	st_foreach(RCLASS(mod)->iv_tbl, sv_i, tbl);
+    }
+    if ((VALUE)mod == rb_cObject) {
+	st_foreach(rb_class_tbl, sv_i, tbl);
+	if (autoload_tbl) {
+	    st_foreach(autoload_tbl, autoload_i, tbl);
+	}
+    }
+    return tbl;
+}
+
+void*
+rb_mod_const_of(mod, data)
+    VALUE mod;
+    void *data;
+{
+    for (;;) {
+	data = rb_mod_const_at(mod, data);
+	mod = RCLASS(mod)->super;
+	if (!mod) break;
+    }
+    return data;
+}
+
+static int
+list_i(key, value, ary)
+    ID key, value;
+    VALUE ary;
+{
+    rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    return ST_CONTINUE;
+}
+
+VALUE
+rb_const_list(data)
+    void *data;
+{
+    st_table *tbl = data;
+    VALUE ary;
+
+    if (!tbl) return rb_ary_new2(0);
+    ary = rb_ary_new2(tbl->num_entries);
+    st_foreach(tbl, list_i, ary);
+    st_free_table(tbl);
+
+    return ary;
+}
+
+VALUE
+rb_mod_constants(mod)
+    VALUE mod;
+{
+    return rb_const_list(rb_mod_const_of(mod, 0));
+}
+
+int
+rb_const_defined_at(klass, id)
+    VALUE klass;
+    ID id;
+{
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+	return Qtrue;
+    }
+    if (klass == rb_cObject) {
+	return rb_const_defined(klass, id);
+    }
+    return Qfalse;
+}
+
+int
+rb_autoload_defined(id)
+    ID id;
+{
+    if (autoload_tbl && st_lookup(autoload_tbl, id, 0))
+	return Qtrue;
+    return Qfalse;
+}
+
+int
+rb_const_defined(klass, id)
+    VALUE klass;
+    ID id;
+{
+    VALUE tmp = klass;
+
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    return Qtrue;
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+	return rb_const_defined(rb_cObject, id);
+    }
+    if (st_lookup(rb_class_tbl, id, 0))
+	return Qtrue;
+    return rb_autoload_defined(id);
+}
+
+static void
+mod_av_set(klass, id, val, isconst)
+    VALUE klass;
+    ID id;
+    VALUE val;
+    int isconst;
+{
+    char *dest = isconst ? "constant" : "class variable";
+
+    if (!OBJ_TAINTED(klass) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't set %s", dest);
+    if (OBJ_FROZEN(klass)) rb_error_frozen("class/module");
+    if (!RCLASS(klass)->iv_tbl) {
+	RCLASS(klass)->iv_tbl = st_init_numtable();
+    }
+    else if (isconst) {
+	if (st_lookup(RCLASS(klass)->iv_tbl, id, 0) ||
+	    (klass == rb_cObject && st_lookup(rb_class_tbl, id, 0))) {
+	    rb_warn("already initialized %s %s", dest, rb_id2name(id));
+	}
+    }
+
+    st_insert(RCLASS(klass)->iv_tbl, id, val);
+}
+
+void
+rb_const_set(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    mod_av_set(klass, id, val, Qtrue);
+}
+
+void
+rb_const_assign(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    VALUE tmp = klass;
+    
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    st_insert(RCLASS(tmp)->iv_tbl, id, val);
+	    return;
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+    /* pre-defined class */
+    if (st_lookup(rb_class_tbl, id, 0)) {
+	st_delete(rb_class_tbl, &id, 0);
+	st_insert(RCLASS(rb_cObject)->iv_tbl, id, val);
+	return;
+    }
+
+    /* autoload */
+    if (autoload_tbl && st_lookup(autoload_tbl, id, 0)) {
+	char *modname;
+
+	st_delete(autoload_tbl, &id, &modname);
+	free(modname);
+	st_insert(RCLASS(rb_cObject)->iv_tbl, id, val);
+	return;
+    }
+
+    /* Uninitialized constant */
+    if (klass && klass != rb_cObject)
+	rb_name_error(id, "uninitialized constant %s::%s",
+		      RSTRING(rb_class_path(klass))->ptr,
+		      rb_id2name(id));
+    else {
+	rb_name_error(id, "uninitialized constant %s",rb_id2name(id));
+    }
+}
+
+void
+rb_define_const(klass, name, val)
+    VALUE klass;
+    const char *name;
+    VALUE val;
+{
+    ID id = rb_intern(name);
+
+    if (klass == rb_cObject) {
+	rb_secure(4);
+    }
+    rb_const_set(klass, id, val);
+}
+
+void
+rb_define_global_const(name, val)
+    const char *name;
+    VALUE val;
+{
+    rb_define_const(rb_cObject, name, val);
+}
+
+static VALUE
+original_module(c)
+    VALUE c;
+{
+    if (TYPE(c) == T_ICLASS)
+	return RBASIC(c)->klass;
+    return c;
+}
+
+static void
+cvar_override_check(id, a)
+    ID id;
+    VALUE a;
+{
+    VALUE base = original_module(a);
+
+    a = RCLASS(a)->super;
+    while (a) {
+	if (RCLASS(a)->iv_tbl) {
+	    if (st_lookup(RCLASS(a)->iv_tbl,id,0)) {
+		rb_warning("class variable %s of %s is overridden by %s",
+			   rb_id2name(id), rb_class2name(original_module(a)),
+			   rb_class2name(base));
+	    }
+	}
+	a = RCLASS(a)->super;
+    }
+}
+
+void
+rb_cvar_set(klass, id, val, warn)
+    VALUE klass;
+    ID id;
+    VALUE val;
+    int warn;
+{
+    VALUE tmp;
+
+    tmp = klass;
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    if (OBJ_FROZEN(tmp)) rb_error_frozen("class/module");
+	    if (!OBJ_TAINTED(tmp) && rb_safe_level() >= 4)
+		rb_raise(rb_eSecurityError, "Insecure: can't modify class variable");
+	    if (warn && RTEST(ruby_verbose) && klass != tmp) {
+		rb_warning("already initialized class variable %s", rb_id2name(id));
+	    }
+	    st_insert(RCLASS(tmp)->iv_tbl,id,val);
+	    if (RTEST(ruby_verbose)) {
+		cvar_override_check(id, tmp);
+	    }
+	    return;
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+
+    mod_av_set(klass, id, val, Qfalse);
+}
+
+VALUE
+rb_cvar_get(klass, id)
+    VALUE klass;
+    ID id;
+{
+    VALUE value;
+    VALUE tmp;
+
+    tmp = klass;
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl) {
+	    if (st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+		if (RTEST(ruby_verbose)) {
+		    cvar_override_check(id, tmp);
+		}
+		return value;
+	    }
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+
+    rb_name_error(id,"uninitialized class variable %s in %s",
+		  rb_id2name(id), rb_class2name(klass));
+    return Qnil;		/* not reached */
+}
+
+VALUE
+rb_cvar_defined(klass, id)
+    VALUE klass;
+    ID id;
+{
+    VALUE tmp;
+
+    tmp = klass;
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    return Qtrue;
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+
+    return Qfalse;
+}
+
+void
+rb_cv_set(klass, name, val)
+    VALUE klass;
+    const char *name;
+    VALUE val;
+{
+    ID id = rb_intern(name);
+    if (!rb_is_class_id(id)) {
+	rb_name_error(id, "wrong class variable name %s", name);
+    }
+    rb_cvar_set(klass, id, val, Qfalse);
+}
+
+VALUE
+rb_cv_get(klass, name)
+    VALUE klass;
+    const char *name;
+{
+    ID id = rb_intern(name);
+    if (!rb_is_class_id(id)) {
+	rb_name_error(id, "wrong class variable name %s", name);
+    }
+    return rb_cvar_get(klass, id);
+}
+
+void
+rb_define_class_variable(klass, name, val)
+    VALUE klass;
+    const char *name;
+    VALUE val;
+{
+    ID id = rb_intern(name);
+
+    if (!rb_is_class_id(id)) {
+	rb_name_error(id, "wrong class variable name %s", name);
+    }
+    rb_cvar_set(klass, id, val, Qtrue);
+}
+
+static int
+cv_i(key, value, ary)
+    ID key;
+    VALUE value;
+    VALUE ary;
+{
+    if (rb_is_class_id(key)) {
+	VALUE kval = rb_str_new2(rb_id2name(key));
+	if (!rb_ary_includes(ary, kval)) {
+	    rb_ary_push(ary, kval);
+	}
+    }
+    return ST_CONTINUE;
+}
+
+VALUE
+rb_mod_class_variables(obj)
+    VALUE obj;
+{
+    VALUE ary = rb_ary_new();
+
+    for (;;) {
+	if (RCLASS(obj)->iv_tbl) {
+	    st_foreach(RCLASS(obj)->iv_tbl, cv_i, ary);
+	}
+	obj = RCLASS(obj)->super;
+	if (!obj) break;
+    }
+    return ary;
+}
+
+VALUE
+rb_mod_remove_cvar(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+    VALUE val;
+
+    if (!rb_is_class_id(id)) {
+	rb_name_error(id, "wrong class variable name %s", rb_id2name(id));
+    }
+    if (!OBJ_TAINTED(mod) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't remove class variable");
+    if (OBJ_FROZEN(mod)) rb_error_frozen("class/module");
+
+    if (RCLASS(mod)->iv_tbl && st_delete(ROBJECT(mod)->iv_tbl, &id, &val)) {
+	return val;
+    }
+    if (rb_cvar_defined(mod, id)) {
+	rb_name_error(id, "cannot remove %s for %s", 
+		 rb_id2name(id), rb_class2name(mod));
+    }
+    rb_name_error(id, "class variable %s not defined for %s",
+		  rb_id2name(id), rb_class2name(mod));
+    return Qnil;		/* not reached */
+}
+
+VALUE
+rb_iv_get(obj, name)
+    VALUE obj;
+    const char *name;
+{
+    ID id = rb_intern(name);
+
+    return rb_ivar_get(obj, id);
+}
+
+VALUE
+rb_iv_set(obj, name, val)
+    VALUE obj;
+    const char *name;
+    VALUE val;
+{
+    ID id = rb_intern(name);
+
+    return rb_ivar_set(obj, id, val);
+}
+@
+
+
+1.72
+log
+@* variable.c (rb_global_entry): not add global entry until
+  initialized to avoid accessing it while GC.  [ruby-dev:18514]
+
+* variable.c (rb_alias_variable): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/09/26 00:48:33 $
+d259 1
+a259 1
+	    rb_raise(rb_eTypeError, "%s does not refer class/module %d", path, TYPE(c));
+@
+
+
+1.71
+log
+@
+* regex.c (re_match): p1 may exceed pend limit.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/17 09:36:05 $
+a356 1
+	st_add_direct(rb_global_tbl, id, entry);
+d368 1
+d771 1
+a772 1
+	entry1->id = name1;
+@
+
+
+1.70
+log
+@* eval.c (rb_mod_nesting): load wrapping module should appear in
+  Module#nesting list. (ruby-bugs-ja:PR#328)
+
+* eval.c (rb_thread_remove): free stack buffer on remove.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/05 09:42:56 $
+a145 3
+    if (TYPE(klass) == T_ICLASS) {
+	klass = RBASIC(klass)->klass;
+    }
+@
+
+
+1.69
+log
+@* variable.c (rb_path2class): should not use rb_eval_string().
+
+* marshal.c (w_extended): should allow marshaling of object which
+  is extended by named module.
+
+* class.c (rb_make_metaclass): super may be T_ICLASS, need to skip.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/03 05:20:07 $
+d1461 1
+@
+
+
+1.68
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/30 10:46:37 $
+d232 3
+a234 1
+    VALUE c;
+d239 25
+a263 7
+    c = rb_eval_string(path);
+    switch (TYPE(c)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "class path %s does not point class", path);
+d265 1
+@
+
+
+1.67
+log
+@* variable.c (rb_const_assign): st_delete() takes pointer to key.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/28 14:59:01 $
+d927 9
+a935 1
+	st_add_direct(generic_iv_tbl, clone, st_copy(tbl));
+@
+
+
+1.66
+log
+@variable.c: Get rid of fix len buffer in rb_class_path (ruby-core:381)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d1374 1
+a1374 1
+	st_delete(rb_class_tbl, id, 0);
+@
+
+
+1.65
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 04:54:14 $
+d191 1
+a191 1
+	char buf[256];
+d195 1
+a195 1
+	    if (rb_obj_class(klass) == rb_cModule)
+d197 2
+a198 1
+	    else
+d200 1
+d202 5
+a206 2
+	sprintf(buf, "#<%s:0x%lx>", s, klass);
+	return rb_str_new2(buf);
+@
+
+
+1.64
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/11 10:02:59 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.63
+log
+@* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+
+* dir.c (glob_helper): should have proceed link when link->path
+  was non existing symbolic link.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+a71 2
+    VALUE path;
+    
+d1151 1
+a1151 2
+    else {
+      global_uninitialized:
+@
+
+
+1.62
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/20 11:15:19 $
+d356 2
+a357 3
+    if (ruby_verbose) {
+	rb_warning("global variable `%s' not initialized", rb_id2name(id));
+    }
+d947 2
+a948 3
+    if (ruby_verbose) {
+	rb_warning("instance variable %s not initialized", rb_id2name(id));
+    }
+d1462 1
+a1462 1
+	    if (warn && ruby_verbose && klass != tmp) {
+d1466 1
+a1466 1
+	    if (ruby_verbose) {
+d1489 1
+a1489 1
+		if (ruby_verbose) {
+@
+
+
+1.61
+log
+@* variable.c (rb_const_list): a temporary table must be freed.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/11 08:02:02 $
+d262 1
+a262 1
+	rb_name_error(id, "autoload must be constant name", rb_id2name(id));
+d848 2
+a849 2
+static VALUE
+generic_ivar_remove(obj, id)
+d852 1
+d855 1
+a855 1
+    VALUE val;
+d857 3
+a859 3
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    st_delete(tbl, &id, &val);
+d864 1
+a864 1
+    return val;
+d1056 2
+a1057 2
+	if (ROBJECT(obj)->iv_tbl) {
+	    st_delete(ROBJECT(obj)->iv_tbl, &id, &val);
+d1061 5
+a1065 2
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_remove(obj, id);
+d1068 2
+a1069 1
+    return val;
+@
+
+
+1.60
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/15 06:14:25 $
+d1262 1
+@
+
+
+1.59
+log
+@* eval.c (rb_eval): replace rb_cvar_declare() by rb_cvar_set().
+
+* eval.c (assign): ditto.
+
+* variable.c (rb_cvar_set): 4th argument (warn) added; define new
+  class variable if it's not defined yet.
+
+* variable.c (rb_cvar_declare): removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:01:09 $
+d1151 1
+@
+
+
+1.58
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/04 08:07:01 $
+d1443 1
+a1443 1
+rb_cvar_set(klass, id, val)
+d1447 1
+d1457 1
+a1457 28
+	    st_insert(RCLASS(tmp)->iv_tbl,id,val);
+	    if (ruby_verbose) {
+		cvar_override_check(id, tmp);
+	    }
+	    return;
+	}
+	tmp = RCLASS(tmp)->super;
+    }
+
+    rb_name_error(id,"uninitialized class variable %s in %s",
+		  rb_id2name(id), rb_class2name(klass));
+}
+
+void
+rb_cvar_declare(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    VALUE tmp;
+
+    tmp = klass;
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    if (OBJ_FROZEN(tmp)) rb_error_frozen("class/module");
+	    if (!OBJ_TAINTED(tmp) && rb_safe_level() >= 4)
+		rb_raise(rb_eSecurityError, "Insecure: can't modify class variable");
+	    if (ruby_verbose && klass != tmp) {
+d1526 1
+a1526 1
+    rb_cvar_set(klass, id, val);
+d1552 1
+a1552 1
+    rb_cvar_declare(klass, id, val);
+@
+
+
+1.57
+log
+@* object.c (rb_class_real): should not follow ICLASS link
+
+* variable.c (classname): should follow ICLASS link explicitly.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/16 09:25:55 $
+a1413 14
+VALUE
+rb_cvar_singleton(obj)
+    VALUE obj;
+{
+    switch (TYPE(obj)) {
+      case T_MODULE:
+      case T_CLASS:
+	return obj;
+      default:
+	break;
+    }
+    return CLASS_OF(obj);
+}
+
+a1600 4
+
+    if (FL_TEST(obj, FL_SINGLETON)) {
+	obj = rb_cvar_singleton(rb_iv_get(obj, "__attached__"));
+    }
+@
+
+
+1.56
+log
+@* st.c: primes should be primes.
+
+* eval.c (is_defined): method defined? check should honor
+  protected too.
+
+* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/21 09:23:22 $
+d148 4
+d179 1
+a179 1
+    VALUE path = classname(rb_class_real(mod));
+d189 1
+a189 1
+    VALUE path = classname(rb_class_real(klass));
+@
+
+
+1.55
+log
+@* time.c (time_plus): result should not be negative unless
+  NEGATIVE_TIME_T is defined.
+
+* time.c (time_new_internal): should check tv_sec overflow too.
+
+* time.c (time_timeval): should check time_t range when time is
+  initialized from float.
+
+* time.c (time_plus): uses modf(3).
+
+* variable.c (rb_cvar_set): add frozen class/module check.
+
+* variable.c (rb_cvar_declare): add frozen class/module check.
+
+* re.c (match_to_a): should propagate taint.
+
+* re.c (rb_reg_s_quote): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/18 08:46:56 $
+d1634 1
+a1634 1
+	rb_name_error(id, "wrong class variable name %s", name);
+@
+
+
+1.54
+log
+@* string.c (rb_str_replace): swap arguments of OBJ_INFECT.
+
+* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* time.c (time_plus): wrong boundary check.
+
+* time.c (time_minus): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/11 03:48:08 $
+d1462 7
+a1468 9
+	if (RCLASS(tmp)->iv_tbl) {
+	    if (st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+		if (!OBJ_TAINTED(tmp) && rb_safe_level() >= 4)
+		    rb_raise(rb_eSecurityError, "Insecure: can't modify class variable");
+		st_insert(RCLASS(tmp)->iv_tbl,id,val);
+		if (ruby_verbose) {
+		    cvar_override_check(id, tmp);
+		}
+		return;
+d1470 1
+d1490 1
+@
+
+
+1.53
+log
+@* string.c (rb_str_match_m): should convert an argument into
+  regexp if it's a string.
+
+* array.c (rb_ary_select): Array#select(n,m,...) now works like
+  Array#indexes(n,m,..). [new, experimental]
+
+* hash.c (rb_hash_select): ditto.
+
+* hash.c (env_select): ditto.
+
+* re.c (match_select): ditto.
+
+* struct.c (rb_struct_select): ditto.
+
+* gc.c (STR_ASSOC): use FL_USER3 instead of FL_USER2.
+
+* parse.y (str_extend): make up pushback call.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:19:52 $
+d132 3
+@
+
+
+1.52
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/29 05:07:18 $
+d146 2
+a147 3
+    if (!ROBJECT(klass)->iv_tbl)
+	ROBJECT(klass)->iv_tbl = st_init_numtable();
+    else if (!st_lookup(ROBJECT(klass)->iv_tbl, classpath, &path)) {
+@
+
+
+1.51
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* variable.c (rb_cvar_set): empty iv_tbl may cause infinite loop.
+
+* variable.c (rb_cvar_get): ditto.
+
+* variable.c (cvar_override_check): ditto.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+
+* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/22 16:20:14 $
+d405 1
+a405 1
+    if (!var || !*var) return Qnil;
+d521 1
+a521 1
+    rb_eval_cmd(cmd, rb_ary_new3(1, val));
+a529 1
+    ID id;
+d533 1
+d540 3
+a542 3
+    id = rb_to_id(var);
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_name_error(id, "undefined global variable %s", rb_id2name(id));
+d1422 9
+d1432 2
+a1433 2
+cvar_override_check(id, a, b)
+    VALUE a, b;
+d1435 2
+d1442 2
+a1443 2
+			   rb_id2name(id), rb_class2name(a),
+			   rb_class2name(b));
+d1466 1
+a1466 1
+		    cvar_override_check(id, tmp, klass);
+d1496 1
+a1496 1
+		cvar_override_check(id, tmp, klass);
+d1519 1
+a1519 1
+		    cvar_override_check(id, tmp, klass);
+@
+
+
+1.50
+log
+@* variable.c (rb_global_entry): reconstruct global variable
+  aliasing (sharing global_entry->var with other global_entry).
+
+* variable.c (undef_getter): ditto.
+
+* variable.c (undef_setter): ditto.
+
+* variable.c (val_setter): ditto.
+
+* variable.c (mark_global_entry): ditto.
+
+* variable.c (rb_define_hooked_variable): ditto.
+
+* variable.c (rb_f_trace_var): ditto.
+
+* variable.c (remove_trace): ditto.
+
+* variable.c (rb_f_untrace_var): ditto.
+
+* variable.c (rb_gvar_get): ditto.
+
+* variable.c (trace_en): ditto.
+
+* variable.c (rb_gvar_set): ditto.
+
+* variable.c (rb_gvar_defined): ditto.
+
+* variable.c (rb_alias_variable): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/21 13:22:54 $
+d1428 6
+a1433 5
+	if (!RCLASS(a)->iv_tbl) continue;
+	if (st_lookup(RCLASS(a)->iv_tbl,id,0)) {
+	    rb_warning("class variable %s of %s is overridden by %s",
+		       rb_id2name(id), rb_class2name(a),
+		       rb_class2name(b));
+d1449 9
+a1457 7
+	if (!RCLASS(tmp)->iv_tbl) continue;
+	if (st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    if (!OBJ_TAINTED(tmp) && rb_safe_level() >= 4)
+		rb_raise(rb_eSecurityError, "Insecure: can't modify class variable");
+	    st_insert(RCLASS(tmp)->iv_tbl,id,val);
+	    if (ruby_verbose) {
+		cvar_override_check(id, tmp, klass);
+a1458 1
+	    return;
+d1505 6
+a1510 4
+	if (!RCLASS(tmp)->iv_tbl) continue;
+	if (st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+	    if (ruby_verbose) {
+		cvar_override_check(id, tmp, klass);
+a1511 1
+	    return value;
+@
+
+
+1.49
+log
+@* variable.c (remove_trace): should not access already freed area.
+
+* variable.c (rb_f_untrace_var): fix memory leak.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/17 05:28:02 $
+d294 2
+a295 2
+struct global_entry {
+    ID id;
+d304 5
+a320 3
+static VALUE alias_getter();
+static void  alias_setter();
+
+d328 1
+d331 1
+d333 6
+a338 4
+	entry->data = 0;
+	entry->getter = undef_getter;
+	entry->setter = undef_setter;
+	entry->marker = undef_marker;
+d340 2
+a341 2
+	entry->block_trace = 0;
+	entry->trace = 0;
+d357 1
+a357 1
+undef_setter(val, id, data, entry)
+d361 1
+a361 1
+    struct global_entry *entry;
+d363 3
+a365 3
+    entry->getter = val_getter;
+    entry->setter = val_setter;
+    entry->marker = val_marker;
+d367 1
+a367 1
+    entry->data = (void*)val;
+d384 1
+a384 1
+val_setter(val, id, data, entry)
+d388 1
+a388 1
+    struct global_entry *entry;
+d390 1
+a390 1
+    entry->data = (void*)val;
+a434 38
+alias_fixup(entry1, entry2)
+    struct global_entry *entry1, *entry2;
+{
+    if (entry2->getter != val_getter) return 0;
+    entry1->data   = &entry2->data;
+    entry1->getter = var_getter;
+    if (entry2->setter == val_setter)
+	entry1->setter = var_setter;
+    else
+	entry1->setter = entry2->setter;
+    return 1;
+}
+
+static VALUE
+alias_getter(id, data, entry)
+    ID id;
+    void *data;
+    struct global_entry *entry;
+{
+    struct global_entry *entry2 = data;
+    VALUE val = (*entry2->getter)(id, entry2->data, entry2);
+    alias_fixup(entry, entry2);
+    return val;
+}
+
+static void
+alias_setter(val, id, data, entry)
+    VALUE val;
+    ID id;
+    void *data;
+    struct global_entry *entry;
+{
+    struct global_entry *entry2 = data;
+    (*entry2->setter)(val, id, entry2->data, entry2);
+    alias_fixup(entry, entry2);
+}
+
+static int
+d440 1
+d442 2
+a443 2
+    (*entry->marker)(entry->data);
+    trace = entry->trace;
+d480 1
+a480 1
+    struct global_entry *entry;
+d483 5
+a487 5
+    entry = rb_global_entry(id);
+    entry->data = (void*)var;
+    entry->getter = getter?getter:var_getter;
+    entry->setter = setter?setter:var_setter;
+    entry->marker = var_marker;
+d545 1
+a545 1
+    trace->next = entry->trace;
+d549 1
+a549 1
+    entry->trace = trace;
+d555 2
+a556 2
+remove_trace(entry)
+    struct global_entry *entry;
+d558 1
+a558 1
+    struct trace_var *trace = entry->trace;
+d574 1
+a574 1
+    entry->trace = t.next;
+d593 1
+a593 1
+    trace = entry->trace;
+d604 1
+a604 1
+	if (!entry->block_trace) remove_trace(entry);
+d611 1
+a611 1
+		if (!entry->block_trace) remove_trace(entry);
+d624 2
+a625 1
+    return (*entry->getter)(entry->id, entry->data, entry);
+d647 2
+a648 2
+trace_en(entry)
+    struct global_entry *entry;
+d650 2
+a651 2
+    entry->block_trace = 0;
+    remove_trace(entry);
+d661 1
+d665 1
+a665 1
+    (*entry->setter)(val, entry->id, entry->data, entry);
+d667 3
+a669 3
+    if (entry->trace && !entry->block_trace) {
+	entry->block_trace = 1;
+	trace.trace = entry->trace;
+d671 1
+a671 1
+	rb_ensure(trace_ev, (VALUE)&trace, trace_en, (VALUE)entry);
+d701 1
+a701 3
+    if (entry->getter == alias_getter && !alias_fixup(entry, entry->data))
+	entry = entry->data;
+    if (entry->getter == undef_getter) return Qfalse;
+d741 1
+a741 1
+    entry1 = rb_global_entry(name1);
+d743 23
+a765 10
+
+    if (entry2->getter == undef_getter) {
+	entry1->data   = entry2;
+	entry1->getter = alias_getter;
+	entry1->setter = alias_setter;
+    }
+    else if (!alias_fixup(entry1, entry2)) {
+	entry1->data   = entry2->data;
+	entry1->getter = entry2->getter;
+	entry1->setter = entry2->setter;
+d767 2
+a768 1
+    entry1->marker = undef_marker;
+@
+
+
+1.48
+log
+@* variable.c (alias_fixup): added. ad hoc support for ordinary
+  global variable aliasing. when original entry is set, make the
+  alias to refer directly as possible.
+
+* variable.c (alias_getter, alias_setter): ditto.
+
+* variable.c (rb_alias_variable): ditto. and no need to mark alias
+  variables.
+
+* variable.c (rb_gvar_defined): refer the original entry of an alias.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/03 07:19:11 $
+d601 3
+a603 1
+	trace = next;
+a633 1
+	entry->trace = 0;
+@
+
+
+1.47
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:02:15 $
+d316 3
+d429 38
+d649 1
+d729 2
+d774 11
+a784 4
+    entry1->data   = entry2->data;
+    entry1->getter = entry2->getter;
+    entry1->setter = entry2->setter;
+    entry1->marker = entry2->marker;
+@
+
+
+1.46
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* file.c (group_member): should check real gid only.
+
+* file.c (eaccess): do not cache euid, since effective euid may be
+  changed via Process.euid=().
+
+* file.c (eaccess): return -1 unless every specified access mode
+  is permitted.
+
+* eval.c (rb_eval): while/until returns the value which is given
+  to break.
+
+* parse.y (value_expr): using while/until/class/def as an
+  expression is now gives a warning, not an error.
+
+* range.c (range_eqq): should compare strings based on magical
+  increment (using String#upto), not dictionary order.
+
+* enum.c (enum_sort_by): new method for Schewartzian transformed
+  stable sort.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/20 04:29:56 $
+d190 7
+a196 2
+	if (TYPE(klass) == T_MODULE) s = "Module";
+	sprintf(buf, "#<%s 0lx%lx>", s, klass);
+@
+
+
+1.45
+log
+@* range.c (range_step): 'iter' here should be an array.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+
+* variable.c (rb_cvar_get): class variable override check added.
+
+* variable.c (rb_cvar_set): ditto
+
+* variable.c (rb_cvar_declare): ditto.
+
+* parse.y (parse_regx): handle backslash escaping of delimiter here.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/14 08:13:26 $
+d1285 5
+a1289 2
+    else if (isconst && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+	rb_warn("already initialized %s %s", dest, rb_id2name(id));
+@
+
+
+1.44
+log
+@* range.c (range_step): new method.
+
+* string.c (rb_str_cmp): remove needless conditional.
+
+* string.c (rb_str_lstrip_bang) `return Qnil' was missing.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/18 05:55:20 $
+d1379 16
+d1405 2
+a1406 1
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+d1410 3
+d1439 3
+d1460 5
+a1464 1
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+@
+
+
+1.43
+log
+@* regex.c (NUM_FAILURE_ITEMS): was confusing NUM_REG_ITEMS and
+  NUM_NONREG_ITEMS, which have happened to be same value.
+
+* class.c (rb_class_new): subclass check moved to this function.
+
+* class.c (rb_class_boot): check less version of rb_class_new().
+
+* eval.c (proc_invoke): should preserve iter status for embedded
+  frame in the block.
+
+* file.c (rb_file_s_expand_path): may overrun buffer on stack.
+
+* string.c (rb_str_insert): forgot to call rb_str_modify().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/14 15:17:19 $
+d1415 3
+@
+
+
+1.42
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:22 $
+d173 1
+a173 1
+    VALUE path = classname(rb_obj_type(mod));
+@
+
+
+1.41
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/08 16:15:03 $
+a144 3
+    while (TYPE(klass) == T_ICLASS || FL_TEST(klass, FL_SINGLETON)) {
+	klass = (VALUE)RCLASS(klass)->super;
+    }
+d173 1
+a173 1
+    VALUE path = classname(mod);
+d183 1
+a183 1
+    VALUE path = classname(klass);
+d871 1
+a871 1
+rb_clone_generic_ivar(clone, obj)
+@
+
+
+1.40
+log
+@remove debug printf
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/08 14:20:20 $
+d254 1
+a254 2
+	rb_raise(rb_eNameError, "autoload must be constant name",
+		 rb_id2name(id));
+d420 1
+a420 1
+    rb_raise(rb_eNameError, "can't set variable %s", rb_id2name(id));
+d530 1
+a530 2
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+d576 1
+a576 2
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+d1005 1
+a1005 2
+	rb_raise(rb_eNameError, "`%s' is not an instance variable",
+		 rb_id2name(id));
+d1054 3
+a1056 3
+    rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+	     RSTRING(rb_class_path(klass))->ptr,
+	     rb_id2name(id));
+d1103 3
+a1105 3
+	rb_raise(rb_eNameError, "uninitialized constant %s at %s",
+		 rb_id2name(id),
+		 RSTRING(rb_class_path(klass))->ptr);
+d1108 1
+a1108 1
+	rb_raise(rb_eNameError, "uninitialized constant %s",rb_id2name(id));
+d1121 1
+a1121 1
+	rb_raise(rb_eNameError, "`%s' is not constant", rb_id2name(id));
+d1131 1
+a1131 1
+	rb_raise(rb_eNameError, "cannot remove %s::%s", 
+d1134 2
+a1135 2
+    rb_raise(rb_eNameError, "constant %s::%s not defined", 
+	     rb_class2name(mod), rb_id2name(id));
+d1338 3
+a1340 3
+	rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+d1342 1
+a1342 1
+	rb_raise(rb_eNameError, "uninitialized constant %s",rb_id2name(id));
+d1401 2
+a1402 2
+    rb_raise(rb_eNameError,"uninitialized class variable %s in %s",
+	     rb_id2name(id), rb_class2name(klass));
+d1443 2
+a1444 2
+    rb_raise(rb_eNameError,"uninitialized class variable %s in %s",
+	     rb_id2name(id), rb_class2name(klass));
+d1474 1
+a1474 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", name);
+d1486 1
+a1486 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", name);
+d1500 1
+a1500 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", name);
+d1548 1
+a1548 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", name);
+d1558 1
+a1558 1
+	rb_raise(rb_eNameError, "cannot remove %s for %s", 
+d1561 2
+a1562 2
+    rb_raise(rb_eNameError, "class variable %s not defined for %s",
+	     rb_id2name(id), rb_class2name(mod));
+@
+
+
+1.39
+log
+@* gc.c (Init_stack): avoid __builtin_frame_address(2) to retrieve
+  stack bottom line.
+
+* st.c (numhash): should shuffle bits by dividing by prime number.
+
+* eval.c (rb_eval): multiple assignment behavior fixed, which
+  results "*a = nil" makes "a == []" now.
+
+* eval.c (rb_f_require): should set SCOPE_PUBLIC before calling
+  dln_load().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/06 06:42:21 $
+a75 1
+    printf("fc: %s\n", rb_id2name(key));
+@
+
+
+1.38
+log
+@* parse.y (aref_args): "*arg" should always be expanded by REXPAND.
+
+* variable.c (fc_i): removed vast string allocation.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 07:19:38 $
+d76 1
+@
+
+
+1.37
+log
+@* variable.c (rb_mod_const_at): use hash table as internal
+  data. [new]
+
+* variable.c (rb_mod_const_of): ditto.
+
+* variable.c (rb_const_list): new function to convert internal
+  data (hash table) to array of strings.
+
+* eval.c (rb_mod_s_constants): data handling scheme has changed.
+
+* eval.c (rb_add_method): should not call rb_secure(), for
+  last_func may not be set.
+
+* io.c (rb_io_ctl): ioctl should accept any integer within C long
+  range.
+
+* marshal.c (r_object): wrong type check for modules.
+
+* marshal.c (w_object): should not dump anonymous classes/modules.
+
+* io.c (rb_open_file): use rb_file_sysopen_internal() if the 3rd
+  argument (permission flags) is given. [new, should be backported?]
+
+* io.c (rb_io_mode_binmode): mode string (e.g. "r+") to flags to
+  open(2).
+
+* eval.c (rb_eval): NODE_REXPAND expand an array of 1 element as
+  the element itself. [new, should be backported?]
+
+* parse.y (ret_args): should treat "*[a]" in rhs expression as
+  "a", not "[a]".
+
+* regex.c (re_compile_pattern): should push option modifier at the
+  right place.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d39 27
+a72 1
+    char *name;
+a75 9
+    name = rb_id2name(key);
+    if (res->path) {
+	path = rb_str_dup(res->path);
+	rb_str_cat2(path, "::");
+	rb_str_cat2(path, name);
+    }
+    else {
+	path = rb_str_new2(name);
+    }
+d77 1
+a77 2
+	res->name = key;
+	res->path = path;
+d80 3
+a82 5
+    if (rb_obj_is_kind_of(value, rb_cModule)) {
+	struct fc_result arg;
+	struct fc_result *list;
+
+
+d84 20
+a103 5
+
+	list = res;
+	while (list) {
+	    if (list->track == value) return ST_CONTINUE;
+	    list = list->prev;
+d105 1
+d107 3
+a109 11
+	arg.name = 0;
+	arg.path = path;
+	arg.klass = res->klass;
+	arg.track = value;
+	arg.prev = res;
+	st_foreach(RCLASS(value)->iv_tbl, fc_i, &arg);
+	if (arg.name) {
+	    res->name = arg.name;
+	    res->path = arg.path;
+	    return ST_STOP;
+	}
+d128 1
+a128 1
+    if (arg.name == 0) {
+d131 1
+a131 1
+    if (arg.name) {
+@
+
+
+1.36
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/22 08:28:11 $
+a1094 15
+static int
+sv_i(key, value, ary)
+    ID key;
+    VALUE value;
+    VALUE ary;
+{
+    if (rb_is_const_id(key)) {
+	VALUE kval = rb_str_new2(rb_id2name(key));
+	if (!rb_ary_includes(ary, kval)) {
+	    rb_ary_push(ary, kval);
+	}
+    }
+    return ST_CONTINUE;
+}
+
+d1122 15
+a1136 1
+autoload_i(key, name, ary)
+d1139 1
+a1139 1
+    VALUE ary;
+d1141 2
+a1142 3
+    VALUE kval = rb_str_new2(rb_id2name(key));
+    if (!rb_ary_includes(ary, kval)) {
+	rb_ary_push(ary, kval);
+d1147 4
+a1150 3
+VALUE
+rb_mod_const_at(mod, ary)
+    VALUE mod, ary;
+d1152 4
+d1157 1
+a1157 1
+	st_foreach(RCLASS(mod)->iv_tbl, sv_i, ary);
+d1160 1
+a1160 1
+	st_foreach(rb_class_tbl, sv_i, ary);
+d1162 1
+a1162 1
+	    st_foreach(autoload_tbl, autoload_i, ary);
+d1165 1
+a1165 1
+    return ary;
+d1168 2
+a1169 2
+VALUE
+rb_mod_const_of(mod, ary)
+d1171 1
+a1171 1
+    VALUE ary;
+d1174 1
+a1174 1
+	rb_mod_const_at(mod, ary);
+d1178 23
+d1208 1
+a1208 1
+    return rb_mod_const_of(mod, rb_ary_new());
+@
+
+
+1.35
+log
+@* variable.c (rb_alias_variable): should not allow variable
+  aliasing if $SAFE >= 4.
+
+* parse.y (expr): "break" and "next" to take optional expression,
+  which is used as a value for termination. [new, experimental]
+
+* eval.c (rb_eval): "break" can give value to terminating method.
+
+* eval.c (rb_eval): "break" and "next" to take optional expression.
+
+* eval.c (rb_yield_0): "next" can give value to terminating "yield".
+
+* eval.c (rb_iterate): "break" can give value to terminating method.
+
+* eval.c (proc_call): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:24:54 $
+d19 1
+@
+
+
+1.34
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d703 2
+@
+
+
+1.33
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/19 03:20:21 $
+a259 3
+    if (klass == rb_cNilClass) return "nil";
+    if (klass == rb_cTrueClass) return "true";
+    if (klass == rb_cFalseClass) return "false";
+@
+
+
+1.32
+log
+@* dir.c (glob_helper): replace lstat() by stat() to follow symlink
+  in the case like 'symlink/*'.
+
+* dir.c (glob_helper): gave warning too much.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:58 $
+d252 1
+a252 1
+    rb_autoload_id(rb_to_id(klass), STR2CSTR(file));
+d1065 2
+a1066 2
+    VALUE value;
+    VALUE tmp;
+d1069 1
+d1077 4
+a1080 2
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+	return rb_const_get(rb_cObject, id);
+d1084 5
+a1088 4
+    if (klass && klass != rb_cObject)
+	rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+a1312 3
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+    }
+d1428 5
+a1432 1
+    rb_cvar_set(klass, rb_intern(name), val);
+d1440 5
+a1444 1
+    return rb_cvar_get(klass, rb_intern(name));
+@
+
+
+1.31
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:46 $
+d269 1
+a269 1
+    void *data;
+d365 1
+a365 1
+    void *data;
+d390 1
+a390 1
+    VALUE **var;
+d517 1
+a517 1
+    trace->data = (void*)cmd;
+d579 1
+a579 1
+	    if (trace->data == (void*)cmd) {
+@
+
+
+1.30
+log
+@* m17n baseline.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/08 07:10:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:39 $
+a1010 2
+    VALUE value;
+
+@
+
+
+1.29.2.1
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/08 07:10:25 $
+d1067 2
+a1068 2
+    VALUE value, tmp;
+    int mod_retry = 0;
+a1070 1
+  retry:
+d1078 2
+a1079 4
+    if (!mod_retry && BUILTIN_TYPE(klass) == T_MODULE) {
+	mod_retry = 1;
+	tmp = rb_cObject;
+	goto retry;
+@
+
+
+1.29.2.2
+log
+@* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:40 $
+d1087 3
+a1089 3
+	rb_raise(rb_eNameError, "uninitialized constant %s at %s",
+		 rb_id2name(id),
+		 RSTRING(rb_class_path(klass))->ptr);
+@
+
+
+1.29.2.3
+log
+@* variable.c (rb_alias_variable): should not allow variable
+  aliasing if $SAFE >= 4.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/11 07:41:32 $
+a705 2
+    if (rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't alias global variable");
+@
+
+
+1.29.2.4
+log
+@* string.c (rb_str_replace): add taint status infection
+  (OBJ_INFECT()).
+
+* string.c (rb_str_crypt): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/22 08:27:03 $
+a18 1
+#include "util.h"
+@
+
+
+1.29.2.5
+log
+@* eval.c (rb_load): should check if tainted even when wrap is
+  specified.
+
+* regex.c (re_compile_pattern): too much optimization for the
+  cases like /(.|a)b/.
+
+* variable.c (fc_i): removed vast string allocation.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/25 15:01:06 $
+a38 27
+static VALUE
+fc_path(fc, name)
+    struct fc_result *fc;
+    ID name;
+{
+    VALUE path, tmp;
+
+    path = rb_str_new2(rb_id2name(name));
+    while (fc) {
+	if (fc->track == rb_cObject) break;
+	if (ROBJECT(fc->track)->iv_tbl &&
+	    st_lookup(ROBJECT(fc->track)->iv_tbl, rb_intern("__classpath__"), &tmp)) {
+	    tmp = rb_str_dup(tmp);
+	    rb_str_cat2(tmp, "::");
+	    rb_str_append(tmp, path);
+
+	    return tmp;
+	}
+	tmp = rb_str_new2(rb_id2name(fc->name));
+	rb_str_cat2(tmp, "::");
+	rb_str_append(tmp, path);
+	path = tmp;
+	fc = fc->prev;
+    }
+    return path;
+}
+
+d46 1
+d50 9
+d60 2
+a61 1
+	res->path = fc_path(res, key);
+d64 5
+a68 3
+    switch (TYPE(value)) {
+      case T_MODULE:
+      case T_CLASS:
+d70 5
+a74 20
+	else {
+	    struct fc_result arg;
+	    struct fc_result *list;
+
+	    list = res;
+	    while (list) {
+		if (list->track == value) return ST_CONTINUE;
+		list = list->prev;
+	    }
+
+	    arg.name = key;
+	    arg.path = 0;
+	    arg.klass = res->klass;
+	    arg.track = value;
+	    arg.prev = res;
+	    st_foreach(RCLASS(value)->iv_tbl, fc_i, &arg);
+	    if (arg.path) {
+		res->path = arg.path;
+		return ST_STOP;
+	    }
+a75 1
+	break;
+d77 11
+a87 3
+      default:
+	break;
+	    
+d106 1
+a106 1
+    if (arg.path == 0) {
+d109 1
+a109 1
+    if (arg.path) {
+@
+
+
+1.29.2.6
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/06 07:39:39 $
+d1270 2
+a1271 5
+    else if (isconst) {
+	if (st_lookup(RCLASS(klass)->iv_tbl, id, 0) ||
+	    (klass == rb_cObject && st_lookup(rb_class_tbl, id, 0))) {
+	    rb_warn("already initialized %s %s", dest, rb_id2name(id));
+	}
+@
+
+
+1.29.2.7
+log
+@* variable.c (remove_trace): should not access already freed area.
+
+* variable.c (rb_f_untrace_var): fix memory leak.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:00:31 $
+d563 1
+a563 3
+	else {
+	    trace = next;
+	}
+d595 1
+@
+
+
+1.29.2.8
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/21 13:22:48 $
+d398 1
+a398 1
+    if (!var) return Qnil;
+@
+
+
+1.29.2.9
+log
+@* parse.y (str_extend): make up pushback call.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/13 08:22:27 $
+a144 3
+    if (TYPE(klass) == T_ICLASS) {
+	klass = RBASIC(klass)->klass;
+    }
+d149 3
+a151 2
+    if (ROBJECT(klass)->iv_tbl &&
+	!st_lookup(ROBJECT(klass)->iv_tbl, classpath, &path)) {
+@
+
+
+1.29.2.10
+log
+@* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* variable.c (find_class_path): should initialize iv_tbl if it's
+  NULL.
+
+* class.c (rb_define_class): should return the existing class if
+  the class is already defined and its superclass is ideintical to
+  the specified superclass.
+
+* class.c (rb_define_class_under): ditto.
+
+* class.c (rb_define_module): should return the existing module if
+  the module is already defined.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/12 09:07:35 $
+a131 3
+	if (!ROBJECT(klass)->iv_tbl) {
+	    ROBJECT(klass)->iv_tbl = st_init_numtable();
+	} 
+d145 6
+a150 1
+    klass = rb_class_real(klass);
+@
+
+
+1.29.2.11
+log
+@* variable.c (rb_cvar_set): add frozen class/module check.
+
+* variable.c (rb_cvar_declare): add frozen class/module check.
+
+* re.c (match_to_a): should propagate taint.
+
+* re.c (rb_reg_s_quote): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/18 08:40:31 $
+a1381 1
+	    if (OBJ_FROZEN(tmp)) rb_error_frozen("class/module");
+a1404 1
+	    if (OBJ_FROZEN(tmp)) rb_error_frozen("class/module");
+@
+
+
+1.29.2.12
+log
+@* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/21 09:20:54 $
+d1531 1
+a1531 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", rb_id2name(name));
+@
+
+
+1.29.2.13
+log
+@* class.c (rb_include_module): detect cyclic module inclusion.
+
+* eval.c (rb_thread_schedule): should check time only if BOTH
+  WAIT_SELECT and WAIT_TIME.
+
+* string.c (rb_str_split_m): no need to consider KANJI
+characters, if the length of separator is 1 (byte).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/16 09:22:39 $
+d1531 1
+a1531 1
+	rb_raise(rb_eNameError, "wrong class variable name %s", rb_id2name(id));
+@
+
+
+1.29.2.14
+log
+@* parse.y (yycompile): should inherit "in_single" if eval happened
+  in a singleton method.
+
+* eval.c (rb_eval): class variables from singleton methods defined
+  within singleton class statement should work like ones defined
+  by sington def statements.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/25 08:23:32 $
+a147 3
+    if (TYPE(klass) == T_ICLASS) {
+	klass = RBASIC(klass)->klass;
+    }
+@
+
+
+1.29.2.15
+log
+@* parse.y (assignable): should emit CVASGN within the method
+  body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/08 05:20:34 $
+d1360 14
+d1511 4
+@
+
+
+1.29.2.16
+log
+@* variable.c (rb_cvar_set): define new class variable if it's not
+  defined yet.
+
+* eval.c (rb_eval_string_wrap): should hide the toplevel local
+  variable bindings by PUSH_SCOPE().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:02:15 $
+d1360 2
+a1361 2
+static void
+cvar_set(klass, id, val, warn)
+a1364 1
+    int warn;
+a1373 3
+	    if (warn && ruby_verbose && klass != tmp) {
+		rb_warning("already initialized class variable %s", rb_id2name(id));
+	    }
+d1380 2
+a1381 1
+    mod_av_set(klass, id, val, Qfalse);
+d1385 1
+a1385 1
+rb_cvar_set(klass, id, val)
+d1390 13
+a1402 2
+    cvar_set(klass, id, val, Qfalse);
+}
+d1404 1
+a1404 7
+void
+rb_cvar_declare(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    cvar_set(klass, id, val, Qtrue);
+@
+
+
+1.29.2.17
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+
+* numeric.c (int_step): step may be a float less than 1.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/19 04:48:04 $
+d257 2
+a258 1
+	rb_raise(rb_eNameError, "autoload must be constant name");
+d815 2
+a816 2
+static int
+generic_ivar_remove(obj, id, valp)
+a818 1
+    VALUE *valp;
+d821 1
+a821 1
+    int status;
+d823 3
+a825 3
+    if (!generic_iv_tbl) return 0;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return 0;
+    status = st_delete(tbl, &id, valp);
+d830 1
+a830 1
+    return status;
+d1023 2
+a1024 2
+	if (ROBJECT(obj)->iv_tbl && st_delete(ROBJECT(obj)->iv_tbl, &id, &val)) {
+	    return val;
+d1028 2
+a1029 5
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj)) {
+	    if (generic_ivar_remove(obj, id, &val)) {
+		return val;
+	    }
+	}
+d1032 1
+a1032 2
+    rb_raise(rb_eNameError, "instance variable %s not defined", rb_id2name(id));
+    return Qnil;		/* not reached */
+@
+
+
+1.29.2.18
+log
+@* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* eval.c (rb_thread_cleanup): current thread may be THREAD_STOPPED,
+  for example when terminated from signal handler.
+
+* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+
+* pack.c (pack_unpack): should treat 'U' in character unit, not in
+  byte unit.
+
+* marshal.c (w_uclass): should check based on rb_obj_class(), not
+  CLASS_OF().
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+
+* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:47:40 $
+d345 3
+a347 2
+    rb_warning("global variable `%s' not initialized", rb_id2name(id));
+
+d914 3
+a916 2
+    rb_warning("instance variable %s not initialized", rb_id2name(id));
+
+d1379 1
+a1379 1
+	    if (warn && RTEST(ruby_verbose) && klass != tmp) {
+@
+
+
+1.29.2.19
+log
+@* eval.c, gc.c, intern.h, variable.c: declare rb_gc_mark{,maybe}()
+  canonically in order not to confuse C++ compilers. (backported
+  from 1.7, problem noted by ttate)
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/01 09:37:59 $
+d391 1
+a391 1
+    if (data) rb_gc_mark_maybe((VALUE)data);
+d414 1
+a414 1
+    VALUE *var;
+d438 1
+a438 1
+	if (trace->data) rb_gc_mark_maybe((VALUE)trace->data);
+@
+
+
+1.29.2.20
+log
+@* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* variable.c (rb_path2class): should not use rb_eval_string().
+
+* parse.y (str_extend): expression substitution can contain string
+  terminator again.
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/05/04 12:04:52 $
+d224 1
+a224 3
+    const char *pbeg, *p;
+    ID id;
+    VALUE c = rb_cObject;
+d229 7
+a235 25
+    pbeg = p = path;
+    while (*p) {
+	VALUE str;
+
+	while (*p && *p != ':') p++;
+	str = rb_str_new(pbeg, p-pbeg);
+	id = rb_intern(RSTRING(str)->ptr);
+	if (p[0] == ':') {
+	    if (p[1] != ':') goto undefined_class;
+	    p += 2;
+	    pbeg = p;
+	}
+	if (!rb_const_defined(c, id)) {
+	  undefined_class:
+	    rb_raise(rb_eArgError, "undefined class/module %s", rb_id2name(id));
+	    rb_raise(rb_eArgError, "undefined class/module %s", path);
+	}
+	c = rb_const_get_at(c, id);
+	switch (TYPE(c)) {
+	  case T_MODULE:
+	  case T_CLASS:
+	    break;
+	  default:
+	    rb_raise(rb_eTypeError, "%s does not refer class/module %d", path, TYPE(c));
+	}
+a236 1
+
+@
+
+
+1.29.4.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/08 07:10:25 $
+d1011 2
+@
+
+
+1.28
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:26 $
+d1228 1
+a1228 1
+mod_av_set(klass, id, val, dest, once)
+d1232 1
+a1232 2
+    char *dest;
+    int once;
+d1234 2
+d1242 1
+a1242 1
+    else if (once && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+d1248 1
+a1248 1
+    
+d1255 1
+a1255 1
+    mod_av_set(klass, id, val, "constant", Qtrue);
+d1381 1
+a1381 1
+    mod_av_set(klass, id, val, "class variable", Qfalse);
+d1405 1
+a1405 1
+int
+d1487 26
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/21 14:26:24 $
+a872 2
+    if (!OBJ_TAINTED(obj) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't access instance variable");
+a951 2
+    if (!OBJ_TAINTED(obj) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+a1150 2
+    if (!OBJ_TAINTED(mod) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+a1472 3
+
+    if (!OBJ_TAINTED(obj) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/22 18:15:45 $
+d1482 4
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/15 06:00:28 $
+d1330 14
+a1425 49
+}
+
+int
+rb_cvar_defined_singleton(obj, id)
+    VALUE obj;
+    ID id;
+{
+    switch (TYPE(obj)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	obj = CLASS_OF(obj);
+	break;
+    }
+    return rb_cvar_defined(obj, id);
+}
+
+void
+rb_cvar_set_singleton(obj, id, value)
+    VALUE obj;
+    ID id;
+    VALUE value;
+{
+    switch (TYPE(obj)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	obj = CLASS_OF(obj);
+	break;
+    }
+    rb_cvar_set(obj, id, value);
+}
+
+VALUE
+rb_cvar_get_singleton(obj, id)
+    VALUE obj;
+    ID id;
+{
+    switch (TYPE(obj)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	obj = CLASS_OF(obj);
+	break;
+    }
+    return rb_cvar_get(obj, id);
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/07 06:59:37 $
+d1056 4
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/28 09:53:30 $
+a1169 1
+    rb_mod_const_at(mod, ary);
+d1171 1
+a1173 1
+	rb_mod_const_at(mod, ary);
+d1488 34
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/25 08:26:04 $
+a1334 2
+    if (!OBJ_TAINTED(klass) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't modify class variable");
+d1338 2
+d1356 13
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:25 $
+d1057 1
+a1058 1
+    free(modname);
+d1396 49
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/12 09:36:21 $
+d1231 1
+a1231 1
+rb_mod_av_set(klass, id, val, dest)
+d1236 1
+d1244 1
+a1244 1
+    else if (st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+d1257 1
+a1257 1
+    rb_mod_av_set(klass, id, val, "constant");
+a1327 12
+rb_cvar_declare(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	klass = rb_iv_get(klass, "__attached__");
+    }
+    rb_mod_av_set(klass, id, val, "class variable");
+}
+
+void
+a1336 3
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	klass = rb_iv_get(klass, "__attached__");
+    }
+d1346 11
+a1356 1
+    rb_raise(rb_eNameError,"uninitialized class variable %s",rb_id2name(id));
+a1366 3
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	klass = rb_iv_get(klass, "__attached__");
+    }
+d1375 2
+a1376 1
+    rb_raise(rb_eNameError,"uninitialized class variable %s",rb_id2name(id));
+a1386 3
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	klass = rb_iv_get(klass, "__attached__");
+    }
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/12 06:06:50 $
+a18 4
+
+#ifndef strdup
+char *strdup();
+#endif
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/19 08:38:11 $
+d1014 2
+a1015 3
+static VALUE
+top_const_get(klass, id)
+    VALUE klass;
+d1017 1
+d1022 1
+a1022 1
+    if (st_lookup(rb_class_tbl, id, &value)) return value;
+d1027 2
+a1028 1
+	return rb_const_get(klass, id);
+d1030 1
+a1030 10
+
+    /* Uninitialized constant */
+    if (klass && klass != rb_cObject)
+	rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+    else {
+	rb_raise(rb_eNameError, "uninitialized constant %s",rb_id2name(id));
+    }
+    return Qnil;		/* not reached */
+d1043 2
+a1044 2
+    if (klass == rb_cObject) {
+	return top_const_get(klass, id);
+d1079 1
+d1085 10
+a1094 1
+    return top_const_get(klass, id);
+@
+
+
+1.17
+log
+@2000-06-19
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:07:48 $
+d1014 27
+d1052 1
+a1052 1
+	return rb_const_get(klass, id);
+a1059 1
+
+d1092 1
+a1092 19
+
+    /* pre-defined class */
+    if (st_lookup(rb_class_tbl, id, &value)) return value;
+
+    /* autoload */
+    if (autoload_tbl && st_lookup(autoload_tbl, id, 0)) {
+	rb_autoload_load(id);
+	return rb_const_get(klass, id);
+    }
+
+    /* Uninitialized constant */
+    if (klass && klass != rb_cObject)
+	rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+    else {
+	rb_raise(rb_eNameError, "uninitialized constant %s",rb_id2name(id));
+    }
+    return Qnil;		/* not reached */
+@
+
+
+1.16
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:53:05 $
+d1340 2
+@
+
+
+1.15
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:31 $
+a726 1
+    VALUE val;
+a1337 1
+    VALUE value;
+a1382 1
+    VALUE value;
+@
+
+
+1.14
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:44:20 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.13
+log
+@2000-04-10
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/23 08:37:32 $
+d9 5
+a13 1
+************************************************/
+@
+
+
+1.12
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/17 08:58:15 $
+d52 2
+a53 2
+	rb_str_cat(path, "::", 2);
+	rb_str_cat(path, name, strlen(name));
+d132 1
+a132 1
+	    path = rb_str_new2(rb_id2name(FIX2INT(path)));
+d188 2
+a189 2
+	rb_str_cat(str, "::", 2);
+	rb_str_cat(str, name, strlen(name));
+d219 1
+a219 1
+    rb_iv_set(klass, "__classid__", INT2FIX(id));
+@
+
+
+1.11
+log
+@2000-03-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/18 06:59:34 $
+d1318 1
+a1318 1
+rb_shared_variable_declare(klass, id, val)
+d1323 4
+a1326 1
+    rb_mod_av_set(klass, id, val, "shared variable");
+d1330 1
+a1330 1
+rb_shared_variable_set(klass, id, val)
+d1338 3
+d1350 1
+a1350 1
+    rb_raise(rb_eNameError,"uninitialized shared variable %s",rb_id2name(id));
+d1354 1
+a1354 1
+rb_shared_variable_get(klass, id)
+d1361 3
+d1372 1
+a1372 1
+    rb_raise(rb_eNameError,"uninitialized shared variable %s",rb_id2name(id));
+d1377 1
+a1377 1
+rb_shared_variable_defined(klass, id)
+d1384 3
+d1399 18
+a1416 1
+rb_define_shared_variable(klass, name, val)
+d1423 2
+a1424 2
+    if (!rb_is_shared_id(id)) {
+	rb_raise(rb_eNameError, "wrong shared variable name %s", name);
+d1426 1
+a1426 1
+    rb_shared_variable_declare(klass, id, val);
+@
+
+
+1.10
+log
+@2000-02-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:15 $
+d229 1
+d1040 1
+@
+
+
+1.9
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:14 $
+d1219 2
+a1220 2
+void
+rb_const_set(klass, id, val)
+d1224 1
+d1227 1
+a1227 1
+	rb_raise(rb_eSecurityError, "Insecure: can't set constant");
+d1233 1
+a1233 1
+	rb_warn("already initialized constant %s", rb_id2name(id));
+d1238 9
+d1313 83
+@
+
+
+1.8
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:53 $
+d901 1
+d988 1
+a1103 2
+    if (!OBJ_TAINTED(mod) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't remove constant");
+d1107 3
+d1227 1
+d1230 3
+@
+
+
+1.7
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/29 06:33:00 $
+d716 12
+@
+
+
+1.6
+log
+@19991129
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/25 09:03:07 $
+d47 1
+a47 1
+    if (!rb_is_shared_id(key)) return ST_CONTINUE;
+d229 1
+a229 1
+    if (!rb_is_shared_id(id)) {
+d861 1
+a861 1
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+d876 1
+a876 1
+	rb_warning("instance var %s not initialized", rb_id2name(id));
+d887 1
+a887 1
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+d939 1
+a939 1
+    VALUE ary = rb_ary_new();
+d941 1
+a941 1
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+d943 1
+d973 1
+a973 1
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+d997 1
+a997 1
+rb_shvar_get_at(klass, id)
+d1007 1
+a1007 1
+	return rb_shvar_get(klass, id);
+d1016 2
+a1017 3
+VALUE
+rb_const_get_at(klass, id)
+    VALUE klass;
+d1020 7
+a1026 1
+    return rb_shvar_get_at(klass, id);
+d1030 1
+a1030 1
+rb_shvar_get(klass, id)
+d1045 1
+a1045 1
+	return rb_shvar_get(rb_cObject, id);
+d1053 2
+a1054 8
+	char *modname;
+	VALUE module;
+
+	st_delete(autoload_tbl, &id, &modname);
+	module = rb_str_new2(modname);
+	free(modname);
+	rb_f_require(Qnil, module);
+	return rb_shvar_get(klass, id);
+a1067 8
+VALUE
+rb_const_get(klass, id)
+    VALUE klass;
+    ID id;
+{
+    return rb_shvar_get(klass, id);
+}
+
+d1074 1
+a1074 1
+    if (rb_is_shared_id(key)) {
+d1084 1
+a1084 1
+rb_mod_remove_shvar(mod, name)
+d1090 4
+a1093 2
+    if (!rb_is_shared_id(id)) {
+	rb_raise(rb_eNameError, "`%s' is not shared variable", rb_id2name(id));
+d1099 1
+a1099 1
+    if (rb_shvar_defined_at(mod, id)) {
+a1107 7
+VALUE
+rb_mod_remove_const(mod, name)
+    VALUE mod, name;
+{
+    return rb_mod_remove_shvar(mod, name);
+}
+
+d1122 1
+a1122 1
+rb_mod_shvar_at(mod, ary)
+d1125 1
+a1125 1
+    if (!FL_TEST(mod, FL_TAINT) && rb_safe_level() >= 4)
+d1140 1
+a1140 8
+rb_mod_const_at(mod, ary)
+    VALUE mod, ary;
+{
+    return rb_mod_shvar_at(mod, ary);
+}
+
+VALUE
+rb_mod_shvar_of(mod, ary)
+d1144 1
+a1144 1
+    rb_mod_shvar_at(mod, ary);
+d1148 1
+a1148 1
+	rb_mod_shvar_at(mod, ary);
+a1153 15
+rb_mod_const_of(mod, ary)
+    VALUE mod;
+    VALUE ary;
+{
+    return rb_mod_shvar_of(mod, ary);
+}
+
+VALUE
+rb_mod_shvars(mod)
+    VALUE mod;
+{
+    return rb_mod_shvar_of(mod, rb_ary_new());
+}
+
+VALUE
+d1157 1
+a1157 1
+    return rb_mod_shvars(mod);
+d1161 1
+a1161 1
+rb_shvar_defined_at(klass, id)
+d1169 1
+a1169 1
+	return rb_shvar_defined(klass, id);
+a1174 8
+rb_const_defined_at(klass, id)
+    VALUE klass;
+    ID id;
+{
+    return rb_shvar_defined_at(klass, id);
+}
+
+int
+d1184 1
+a1184 1
+rb_shvar_defined(klass, id)
+d1197 1
+a1197 1
+	return rb_shvar_defined(rb_cObject, id);
+a1203 8
+int
+rb_const_defined(klass, id)
+    VALUE klass;
+    ID id;
+{
+    return rb_shvar_defined(klass, id);
+}
+
+d1205 1
+a1205 1
+rb_shvar_set(klass, id, val)
+d1210 1
+a1210 1
+    if (!FL_TEST(klass, FL_TAINT) && rb_safe_level() >= 4)
+d1220 1
+a1220 10
+rb_const_set(klass, id, val)
+    VALUE klass;
+    ID id;
+    VALUE val;
+{
+    rb_shvar_set(klass, id, val);
+}
+
+void
+rb_shvar_assign(klass, id, val)
+d1272 2
+a1273 2
+    if (!rb_is_shared_id(id)) {
+	rb_raise(rb_eNameError, "wrong shared variable name %s", name);
+d1275 1
+a1275 10
+    rb_shvar_set(klass, id, val);
+}
+
+void
+rb_define_shvar(klass, name, val)
+    VALUE klass;
+    const char *name;
+    VALUE val;
+{
+    rb_define_const(klass, name, val);
+a1283 8
+}
+
+void
+rb_define_global_shvar(name, val)
+    const char *name;
+    VALUE val;
+{
+    rb_define_global_const(name, val);
+@
+
+
+1.5
+log
+@19991125
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:36 $
+d198 2
+d203 9
+a211 1
+    return rb_eval_string(path);
+@
+
+
+1.4
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/04 04:51:06 $
+d1266 1
+a1266 1
+    return rb_shvar_set(klass, id, val);
+d1334 1
+a1334 1
+    return rb_define_const(klass, name, val);
+@
+
+
+1.3
+log
+@19991004
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+d47 1
+a47 1
+    if (!rb_is_const_id(key)) return ST_CONTINUE;
+d219 1
+a219 1
+    if (!rb_is_const_id(id)) {
+d633 1
+a633 1
+rb_gvar_set2(name, val)
+d644 10
+d986 1
+a986 1
+rb_const_get_at(klass, id)
+d996 1
+a996 1
+	return rb_const_get(klass, id);
+d1006 9
+a1014 1
+rb_const_get(klass, id)
+d1029 1
+a1029 1
+	return rb_const_get(rb_cObject, id);
+d1044 1
+a1044 1
+	return rb_const_get(klass, id);
+d1058 8
+d1067 1
+a1067 1
+const_i(key, value, ary)
+d1072 1
+a1072 1
+    if (rb_is_const_id(key)) {
+d1082 1
+a1082 1
+rb_mod_remove_const(mod, name)
+d1088 2
+a1089 2
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "`%s' is not constant", rb_id2name(id));
+d1095 1
+a1095 1
+    if (rb_const_defined_at(mod, id)) {
+d1104 7
+d1125 1
+a1125 1
+rb_mod_const_at(mod, ary)
+d1131 1
+a1131 1
+	st_foreach(RCLASS(mod)->iv_tbl, const_i, ary);
+d1134 1
+a1134 1
+	st_foreach(rb_class_tbl, const_i, ary);
+d1143 2
+a1144 2
+rb_mod_constants(mod)
+    VALUE mod;
+d1146 1
+a1146 1
+    return rb_mod_const_at(mod, rb_ary_new());
+d1150 1
+a1150 1
+rb_mod_const_of(mod, ary)
+d1154 1
+a1154 1
+    rb_mod_const_at(mod, ary);
+d1158 1
+a1158 1
+	rb_mod_const_at(mod, ary);
+d1163 22
+d1186 1
+a1186 1
+rb_const_defined_at(klass, id)
+d1194 1
+a1194 1
+	return rb_const_defined(klass, id);
+d1200 8
+d1217 1
+a1217 1
+rb_const_defined(klass, id)
+d1230 1
+a1230 1
+	return rb_const_defined(rb_cObject, id);
+d1237 8
+d1246 1
+a1246 1
+rb_const_set(klass, id, val)
+d1256 43
+a1298 2
+    else if (st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+	rb_warn("already initialized constant %s", rb_id2name(id));
+d1301 8
+a1308 1
+    st_insert(RCLASS(klass)->iv_tbl, id, val);
+d1322 2
+a1323 2
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+d1325 10
+a1334 1
+    rb_const_set(klass, id, val);
+d1343 8
+@
+
+
+1.3.2.1
+log
+@19991129
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/04 04:51:06 $
+a197 2
+    VALUE c;
+
+d201 1
+a201 9
+    c = rb_eval_string(path);
+    switch (TYPE(c)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "class path %s does not point class", path);
+    }
+    return c;
+@
+
+
+1.3.2.2
+log
+@2000-02-08
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/29 06:31:03 $
+a705 12
+
+st_table*
+rb_generic_ivar_table(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return 0;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return 0;
+    return tbl;
+}
+@
+
+
+1.3.2.3
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/08 08:53:57 $
+a228 1
+    rb_secure(4);
+d643 1
+a643 1
+rb_gv_set(name, val)
+a653 10
+rb_gv_get(name)
+    const char *name;
+{
+    struct global_entry *entry;
+
+    entry = rb_global_entry(global_id(name));
+    return rb_gvar_get(entry);
+}
+
+VALUE
+a1045 1
+	FL_UNSET(module, FL_TAINT);
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/10 08:47:18 $
+d919 1
+a919 1
+    VALUE ary;
+a926 1
+	ary = rb_ary_new();
+d930 1
+a930 1
+	return ary;
+d932 1
+a932 1
+	if (!generic_iv_tbl) return Qnil;
+a936 1
+		ary = rb_ary_new();
+a937 1
+		return ary;
+d940 1
+d942 1
+a942 1
+    return Qnil;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 08:54:53 $
+d16 2
+a17 2
+#ifdef HAVE_STRING_H
+# include <string.h>
+a21 10
+#define global_tbl rb_global_tbl
+#define class_tbl rb_class_tbl
+
+int rb_const_defined();
+
+st_table*
+new_idhash()
+{
+    return st_init_numtable();
+}
+d26 2
+a27 2
+    global_tbl = new_idhash();
+    class_tbl = new_idhash();
+d32 1
+a32 1
+    VALUE class;
+a37 2
+extern VALUE cModule;
+
+d51 3
+a53 3
+	path = str_dup(res->path);
+	str_cat(path, "::", 2);
+	str_cat(path, name, strlen(name));
+d56 1
+a56 1
+	path = str_new2(name);
+d58 1
+a58 1
+    if (value == res->class) {
+d63 1
+a63 1
+    if (obj_is_kind_of(value, cModule)) {
+d78 1
+a78 1
+	arg.class = res->class;
+d92 2
+a93 2
+find_class_path(class)
+    VALUE class;
+a94 1
+    VALUE c;
+d99 2
+a100 2
+    arg.class = class;
+    arg.track = cObject;
+d102 2
+a103 2
+    if (RCLASS(cObject)->iv_tbl) {
+	st_foreach(RCLASS(cObject)->iv_tbl, fc_i, &arg);
+d106 1
+a106 1
+	st_foreach(class_tbl, fc_i, &arg);
+d109 1
+a109 1
+	rb_iv_set(class, "__classpath__", arg.path);
+d116 2
+a117 2
+classname(class)
+    VALUE class;
+d119 2
+a120 1
+    VALUE path;
+d122 2
+a123 2
+    while (TYPE(class) == T_ICLASS || FL_TEST(class, FL_SINGLETON)) {
+	class = (VALUE)RCLASS(class)->super;
+d125 10
+a134 5
+    path = rb_iv_get(class, "__classpath__");
+    if (NIL_P(path)) {
+	path = rb_iv_get(class, "__classid__");
+	if (!NIL_P(path)) {
+	    path = str_new2(rb_id2name(FIX2INT(path)));
+d138 1
+a138 1
+	path = find_class_path(class);
+d144 2
+a145 1
+    if (TYPE(path) != T_STRING) Bug("class path is not set properly");
+d150 2
+a151 2
+rb_class_path(class)
+    VALUE class;
+d153 11
+a163 1
+    VALUE path = classname(class);
+d170 3
+a172 3
+	if (TYPE(class) == T_MODULE) s = "Module";
+	sprintf(buf, "#<%s 0x%x>", s, class);
+	return str_new2(buf);
+d177 3
+a179 3
+rb_set_class_path(class, under, name)
+    VALUE class, under;
+    char *name;
+a181 1
+    char *s;
+d183 2
+a184 2
+    if (under == cObject) {
+	str = str_new2(name);
+d187 3
+a189 3
+	str = str_dup(rb_class_path(under));
+	str_cat(str, "::", 2);
+	str_cat(str, name, strlen(name));
+d191 1
+a191 1
+    rb_iv_set(class, "__classpath__", str);
+d196 1
+a196 1
+    char *path;
+d199 1
+a199 1
+	ArgError("can't retrieve anonymous class %s", path);
+d205 2
+a206 2
+rb_name_class(class, id)
+    VALUE class;
+d209 1
+a209 8
+    extern VALUE cString;
+
+    if (cString) {
+	rb_iv_set(class, "__classpath__", str_new2(rb_id2name(id)));
+    }
+    else {
+	rb_iv_set(class, "__classid__", INT2FIX(id));
+    }
+d217 1
+a217 1
+    char *filename;
+d220 2
+a221 1
+	NameError("autoload must be constant name", rb_id2name(id));
+d225 1
+a225 1
+	autoload_tbl = new_idhash();
+d231 2
+a232 2
+rb_autoload(class, filename)
+    char *class, *filename;
+d234 1
+a234 1
+    rb_autoload_id(rb_intern(class), filename);
+d238 2
+a239 3
+f_autoload(obj, class, file)
+    VALUE obj, class;
+    struct RString *file;
+d241 1
+a241 4
+    ID id = rb_to_id(class);
+
+    Check_Type(file, T_STRING);
+    rb_autoload_id(id, file->ptr);
+d246 2
+a247 2
+rb_class2name(class)
+    VALUE class;
+d249 4
+a252 1
+    return RSTRING(rb_class_path(class))->ptr;
+d256 1
+a261 2
+VALUE f_untrace_var();
+
+d290 1
+a290 1
+    if (!st_lookup(global_tbl, id, &entry)) {
+d292 1
+a292 1
+	st_insert(global_tbl, id, entry);
+d309 3
+a311 1
+    Warning("global variable `%s' not initialized", rb_id2name(id));
+d356 1
+a356 1
+    if (data) gc_mark_maybe(data);
+d381 1
+a381 1
+    if (var) gc_mark_maybe(*var);
+d390 1
+a390 1
+    NameError("Can't set variable %s", rb_id2name(id));
+d403 1
+a403 1
+	if (trace->data) gc_mark_maybe(trace->data);
+d410 1
+a410 1
+gc_mark_global_tbl()
+d412 1
+a412 1
+    st_foreach(global_tbl, mark_global_entry, 0);
+d417 1
+a417 1
+    char *name;
+d433 1
+a433 1
+    char  *name;
+d450 1
+a450 1
+    char  *name;
+d458 1
+a458 1
+    char  *name;
+d466 1
+a466 1
+    char  *name;
+d479 1
+a479 1
+    rb_eval_cmd(cmd, ary_new3(1, val));
+d483 1
+a483 1
+f_trace_var(argc, argv)
+d493 1
+a493 1
+	cmd = f_lambda();
+d496 1
+a496 1
+	return f_untrace_var(argc, argv, Qnil);
+d499 3
+a501 2
+    if (!st_lookup(global_tbl, id, &entry)) {
+	NameError("undefined global variable %s", rb_id2name(id));
+d507 1
+d513 21
+d535 1
+a535 1
+f_untrace_var(argc, argv)
+d546 3
+a548 2
+    if (!st_lookup(global_tbl, id, &entry)) {
+	NameError("undefined global variable %s", rb_id2name(id));
+d550 2
+d553 1
+a553 1
+	VALUE ary = ary_new();
+a554 1
+	trace = entry->trace;
+d557 2
+a558 2
+	    ary_push(ary, trace->data);
+	    free(trace);
+d563 1
+d567 5
+a571 12
+	struct trace_var t;
+	struct trace_var *next;
+
+	t.next = entry->trace;
+	trace = &t;
+	while (trace->next) {
+	    next = trace->next;
+	    if (next->data == (void*)cmd) {
+		trace->next = next->next;
+		free(next);
+		entry->trace = t.next;
+		return ary_new3(1, cmd);
+d573 1
+a573 1
+	    trace = next;
+a577 1
+
+d590 1
+a590 1
+static void
+d600 1
+d603 1
+a603 1
+static void
+d608 2
+d619 2
+a620 4
+    if (rb_safe_level() >= 4) {
+	extern VALUE eSecurityError;
+	Raise(eSecurityError, "cannot change global variable value");
+    }
+d623 1
+a623 1
+    if (!entry->block_trace) {
+d627 1
+a627 1
+	rb_ensure(trace_ev, &trace, trace_en, entry);
+d634 1
+a634 1
+    char *name;
+d647 29
+a675 2
+    if (entry->getter == undef_getter) return FALSE;
+    return TRUE;
+d694 140
+d836 1
+a836 1
+    struct RObject *obj;
+d841 2
+d847 1
+a847 1
+	if (obj->iv_tbl && st_lookup(obj->iv_tbl, id, &val))
+d849 1
+a849 1
+	return Qnil;
+d851 2
+a852 2
+	TypeError("class %s can not have instance variables",
+		  rb_class2name(CLASS_OF(obj)));
+d855 3
+a857 1
+    Warning("instance var %s not initialized", rb_id2name(id));
+d863 1
+a863 1
+    struct RObject *obj;
+d867 2
+a868 4
+    if (rb_safe_level() >= 5) {
+	extern VALUE eSecurityError;
+	Raise(eSecurityError, "cannot change object status");
+    }
+d873 2
+a874 2
+	if (!obj->iv_tbl) obj->iv_tbl = new_idhash();
+	st_insert(obj->iv_tbl, id, val);
+d877 1
+a877 2
+	TypeError("class %s can not have instance variables",
+		  rb_class2name(CLASS_OF(obj)));
+d885 1
+a885 1
+    struct RObject *obj;
+d892 6
+a897 2
+	if (obj->iv_tbl && st_lookup(obj->iv_tbl, id, 0))
+	    return TRUE;
+d900 45
+a944 1
+    return FALSE;
+d948 32
+a979 2
+rb_const_get_at(class, id)
+    struct RClass *class;
+d984 1
+a984 1
+    if (class->iv_tbl && st_lookup(class->iv_tbl, id, &value)) {
+d987 2
+a988 2
+    if ((VALUE)class == cObject) {
+	return rb_const_get(class, id);
+d990 4
+a993 4
+    NameError("Uninitialized constant %s::%s",
+	      RSTRING(rb_class_path(class))->ptr,
+	      rb_id2name(id));
+    /* not reached */
+d996 1
+d998 2
+a999 2
+rb_const_get(class, id)
+    struct RClass *class;
+d1003 1
+a1003 1
+    struct RClass *tmp;
+d1005 1
+a1005 1
+    tmp = class;
+d1007 1
+a1007 1
+	if (tmp->iv_tbl && st_lookup(tmp->iv_tbl, id, &value)) {
+d1010 1
+a1010 1
+	tmp = tmp->super;
+d1012 2
+a1013 2
+    if (BUILTIN_TYPE(class) == T_MODULE) {
+	return rb_const_get(cObject, id);
+d1017 1
+a1017 1
+    if (st_lookup(class_tbl, id, &value)) return value;
+d1025 1
+a1025 1
+	module = str_new2(modname);
+d1027 2
+a1028 2
+	f_require(0, module);
+	return rb_const_get(class, id);
+d1032 4
+a1035 4
+    if (class && (VALUE)class != cObject)
+	NameError("Uninitialized constant %s::%s",
+		  RSTRING(rb_class_path(class))->ptr,
+		  rb_id2name(id));
+d1037 1
+a1037 1
+	NameError("Uninitialized constant %s",rb_id2name(id));
+d1039 1
+a1039 1
+    /* not reached */
+d1042 2
+a1043 2
+int
+const_i(key, value, hash)
+d1046 1
+a1046 1
+    VALUE hash;
+d1049 4
+a1052 1
+	hash_aset(hash, str_new2(rb_id2name(key)), value);
+d1058 27
+a1084 4
+mod_constants(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    struct RClass *mod;
+d1086 6
+a1091 2
+    VALUE option;
+    VALUE hash;
+d1093 11
+a1103 17
+    rb_scan_args(argc, argv, "01", &option);
+    hash = hash_new();
+    st_foreach(mod->iv_tbl, const_i, hash);
+    if (!FL_TEST(mod, FL_SINGLETON)) {
+	mod = mod->super;
+	if (!mod) {
+	    Bug("no superclass for singleton class");
+	}
+	st_foreach(mod->iv_tbl, const_i, hash);
+    }
+    if (RTEST(option)) {
+	for (;;) {
+	    mod = mod->super;
+	    if (!mod) break;
+	    st_foreach(mod->iv_tbl, const_i, hash);
+	}
+	st_foreach(class_tbl, const_i, hash);
+d1105 1
+a1105 1
+	    st_foreach(autoload_tbl, const_i, hash);
+d1108 22
+a1129 1
+    return hash;
+d1133 2
+a1134 2
+rb_const_defined_at(class, id)
+    struct RClass *class;
+d1137 2
+a1138 2
+    if (class->iv_tbl && st_lookup(class->iv_tbl, id, 0)) {
+	return TRUE;
+d1140 2
+a1141 2
+    if ((VALUE)class == cObject) {
+	return rb_const_defined(class, id);
+d1143 1
+a1143 1
+    return FALSE;
+d1151 2
+a1152 2
+	return TRUE;
+    return FALSE;
+d1156 2
+a1157 2
+rb_const_defined(class, id)
+    struct RClass *class;
+d1160 5
+a1164 3
+    while (class) {
+	if (class->iv_tbl && st_lookup(class->iv_tbl, id, 0)) {
+	    return TRUE;
+d1166 4
+a1169 1
+	class = class->super;
+d1171 2
+a1172 2
+    if (st_lookup(class_tbl, id, 0))
+	return TRUE;
+d1177 2
+a1178 2
+rb_const_set(class, id, val)
+    struct RClass *class;
+d1182 4
+a1185 2
+    if (!class->iv_tbl) {
+	class->iv_tbl = new_idhash();
+d1187 2
+a1188 2
+    else if (st_lookup(class->iv_tbl, id, 0)) {
+	NameError("already initialized constant %s", rb_id2name(id));
+d1191 1
+a1191 1
+    st_insert(class->iv_tbl, id, val);
+d1195 3
+a1197 3
+rb_define_const(class, name, val)
+    VALUE class;
+    char *name;
+d1201 4
+d1206 1
+a1206 1
+	NameError("wrong constant name %s", name);
+d1208 1
+a1208 1
+    rb_const_set(class, id, val);
+a1210 2
+extern VALUE mKernel;
+
+d1213 1
+a1213 1
+    char *name;
+d1216 1
+a1216 1
+    rb_define_const(mKernel, name, val);
+d1222 1
+a1222 1
+    char *name;
+d1232 1
+a1232 1
+    char *name;
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d16 4
+d42 1
+a42 1
+    VALUE klass;
+d70 1
+a70 1
+    if (value == res->klass) {
+d90 1
+a90 1
+	arg.klass = res->klass;
+d104 2
+a105 2
+find_class_path(cls)
+    VALUE cls;
+d107 1
+d112 1
+a112 1
+    arg.klass = cls;
+d122 1
+a122 1
+	rb_iv_set(cls, "__classpath__", arg.path);
+d129 2
+a130 2
+classname(cls)
+    VALUE cls;
+d134 2
+a135 2
+    while (TYPE(cls) == T_ICLASS || FL_TEST(cls, FL_SINGLETON)) {
+	cls = (VALUE)RCLASS(cls)->super;
+d137 1
+a137 1
+    path = rb_iv_get(cls, "__classpath__");
+d139 1
+a139 1
+	path = rb_iv_get(cls, "__classid__");
+d145 1
+a145 1
+	path = find_class_path(cls);
+d156 2
+a157 12
+mod_name(mod)
+    VALUE mod;
+{
+    VALUE path = classname(mod);
+
+    if (path) return path;
+    return str_new(0,0);
+}
+
+VALUE
+rb_class_path(cls)
+    VALUE cls;
+d159 1
+a159 1
+    VALUE path = classname(cls);
+d166 2
+a167 2
+	if (TYPE(cls) == T_MODULE) s = "Module";
+	sprintf(buf, "#<%s 0x%x>", s, cls);
+d173 2
+a174 2
+rb_set_class_path(cls, under, name)
+    VALUE cls, under;
+d178 1
+d188 1
+a188 1
+    rb_iv_set(cls, "__classpath__", str);
+d202 2
+a203 2
+rb_name_class(cls, id)
+    VALUE cls;
+d209 1
+a209 1
+	rb_iv_set(cls, "__classpath__", str_new2(rb_id2name(id)));
+d212 1
+a212 1
+	rb_iv_set(cls, "__classid__", INT2FIX(id));
+d234 2
+a235 2
+rb_autoload(cls, filename)
+    char *cls, *filename;
+d237 1
+a237 1
+    rb_autoload_id(rb_intern(cls), filename);
+d241 3
+a243 2
+f_autoload(obj, cls, file)
+    VALUE obj, cls, file;
+d245 1
+a245 1
+    ID id = rb_to_id(cls);
+d248 1
+a248 1
+    rb_autoload_id(id, RSTRING(file)->ptr);
+d253 2
+a254 2
+rb_class2name(cls)
+    VALUE cls;
+d256 1
+a256 1
+    return RSTRING(rb_class_path(cls))->ptr;
+a259 1
+    int removed;
+d265 2
+d499 1
+a499 1
+	return f_untrace_var(argc, argv);
+a508 1
+    trace->removed = 0;
+a513 21
+static void
+remove_trace(entry)
+    struct global_entry *entry;
+{
+    struct trace_var *trace = entry->trace;
+    struct trace_var t;
+    struct trace_var *next;
+
+    t.next = trace;
+    trace = &t;
+    while (trace->next) {
+	next = trace->next;
+	if (next->removed) {
+	    trace->next = next->next;
+	    free(next);
+	}
+	trace = next;
+    }
+    entry->trace = t.next;
+}
+
+d535 2
+a536 2
+	    ary_push(ary, (VALUE)trace->data);
+	    trace->removed = 1;
+a540 1
+	if (!entry->block_trace) remove_trace(entry);
+d544 11
+a554 4
+	while (trace) {
+	    if (trace->data == (void*)cmd) {
+		trace->removed = 1;
+		if (!entry->block_trace) remove_trace(entry);
+d557 1
+a557 1
+	    trace = trace->next;
+d562 1
+a591 1
+    remove_trace(entry);
+d607 1
+a607 1
+    if (entry->trace && !entry->block_trace) {
+a634 25
+static int
+gvar_i(key, entry, ary)
+    ID key;
+    struct global_entry *entry;
+    VALUE ary;
+{
+    ary_push(ary, str_new2(rb_id2name(entry->id)));
+    return ST_CONTINUE;
+}
+
+VALUE
+f_global_variables()
+{
+    VALUE ary = ary_new();
+    char buf[3];
+    char *s = "^&`'+123456789";
+
+    st_foreach(global_tbl, gvar_i, ary);
+    while (*s) {
+	sprintf(buf, "$%c", *s++);
+	ary_push(ary, str_new2(buf));
+    }
+    return ary;
+}
+
+d653 1
+a653 1
+    VALUE obj;
+d662 1
+a662 1
+	if (ROBJECT(obj)->iv_tbl && st_lookup(ROBJECT(obj)->iv_tbl, id, &val))
+d676 1
+a676 1
+    VALUE obj;
+d688 2
+a689 2
+	if (!ROBJECT(obj)->iv_tbl) ROBJECT(obj)->iv_tbl = new_idhash();
+	st_insert(ROBJECT(obj)->iv_tbl, id, val);
+d701 1
+a701 1
+    VALUE obj;
+a703 2
+    if (!rb_is_instance_id(id)) return FALSE;
+
+d708 1
+a708 1
+	if (ROBJECT(obj)->iv_tbl && st_lookup(ROBJECT(obj)->iv_tbl, id, 0))
+a714 12
+static int
+ivar_i(key, value, hash)
+    ID key;
+    VALUE value;
+    VALUE hash;
+{
+    if (rb_is_instance_id(key)) {
+	hash_aset(hash, str_new2(rb_id2name(key)), value);
+    }
+    return ST_CONTINUE;
+}
+
+d716 2
+a717 49
+obj_instance_variables(obj)
+    VALUE obj;
+{
+    VALUE hash = hash_new();
+
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl) {
+	    st_foreach(ROBJECT(obj)->iv_tbl, ivar_i, hash);
+	}
+	break;
+      default:
+       break;
+    }
+    return hash;
+}
+
+VALUE
+obj_remove_instance_variable(obj, name)
+    VALUE obj, name;
+{
+    VALUE val;
+    ID id = rb_to_id(name);
+
+    if (rb_ivar_defined(obj, id)) {
+	NameError("`%s' is not an instance variable", rb_id2name(id));
+    }
+
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(obj)->iv_tbl) {
+	    st_delete(ROBJECT(obj)->iv_tbl, &id, &val);
+	}
+	break;
+      default:
+	TypeError("object %s can not have instance variables",
+		  rb_class2name(CLASS_OF(obj)));
+	break;
+    }
+    return obj;
+}
+
+VALUE
+rb_const_get_at(cls, id)
+    VALUE cls;
+d722 1
+a722 1
+    if (RCLASS(cls)->iv_tbl && st_lookup(RCLASS(cls)->iv_tbl, id, &value)) {
+d725 2
+a726 2
+    if (cls == cObject) {
+	return rb_const_get(cls, id);
+d729 1
+a729 1
+	      RSTRING(rb_class_path(cls))->ptr,
+a733 1
+
+d735 2
+a736 2
+rb_const_get(cls, id)
+    VALUE cls;
+d740 1
+a740 1
+    VALUE tmp;
+d742 1
+a742 1
+    tmp = cls;
+d744 1
+a744 1
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+d747 1
+a747 1
+	tmp = RCLASS(tmp)->super;
+d749 1
+a749 1
+    if (BUILTIN_TYPE(cls) == T_MODULE) {
+d765 1
+a765 1
+	return rb_const_get(cls, id);
+d769 1
+a769 1
+    if (cls && cls != cObject)
+d771 1
+a771 1
+		  RSTRING(rb_class_path(cls))->ptr,
+d779 2
+a780 2
+static int
+const_i(key, value, ary)
+d783 1
+a783 1
+    VALUE ary;
+d786 1
+a786 4
+	VALUE kval = str_new2(rb_id2name(key));
+	if (!ary_includes(ary, kval)) {
+	    ary_push(ary, kval);
+	}
+d791 5
+a795 5
+static int
+autoload_i(key, name, ary)
+    ID key;
+    char *name;
+    VALUE ary;
+d797 2
+a798 6
+    VALUE kval = str_new2(rb_id2name(key));
+    if (!ary_includes(ary, kval)) {
+	ary_push(ary, kval);
+    }
+    return ST_CONTINUE;
+}
+d800 17
+a816 9
+VALUE
+mod_const_at(mod, ary)
+    VALUE mod, ary;
+{
+    if (RCLASS(mod)->iv_tbl) {
+	st_foreach(RCLASS(mod)->iv_tbl, const_i, ary);
+    }
+    if ((VALUE)mod == cObject) {
+	st_foreach(class_tbl, const_i, ary);
+d818 1
+a818 1
+	    st_foreach(autoload_tbl, autoload_i, ary);
+d821 1
+a821 22
+    return ary;
+}
+
+VALUE
+mod_constants(mod)
+    VALUE mod;
+{
+    return mod_const_at(mod, ary_new());
+}
+
+VALUE
+mod_const_of(mod, ary)
+    VALUE mod;
+    VALUE ary;
+{
+    mod_const_at(mod, ary);
+    for (;;) {
+	mod = RCLASS(mod)->super;
+	if (!mod) break;
+	mod_const_at(mod, ary);
+    }
+    return ary;
+d825 2
+a826 2
+rb_const_defined_at(cls, id)
+    VALUE cls;
+d829 1
+a829 1
+    if (RCLASS(cls)->iv_tbl && st_lookup(RCLASS(cls)->iv_tbl, id, 0)) {
+d832 2
+a833 2
+    if (cls == cObject) {
+	return rb_const_defined(cls, id);
+d848 2
+a849 2
+rb_const_defined(cls, id)
+    VALUE cls;
+d852 2
+a853 2
+    while (cls) {
+	if (RCLASS(cls)->iv_tbl && st_lookup(RCLASS(cls)->iv_tbl, id, 0)) {
+d856 1
+a856 1
+	cls = RCLASS(cls)->super;
+d864 2
+a865 2
+rb_const_set(cls, id, val)
+    VALUE cls;
+d869 2
+a870 2
+    if (!RCLASS(cls)->iv_tbl) {
+	RCLASS(cls)->iv_tbl = new_idhash();
+d872 1
+a872 1
+    else if (st_lookup(RCLASS(cls)->iv_tbl, id, 0)) {
+d876 1
+a876 1
+    st_insert(RCLASS(cls)->iv_tbl, id, val);
+d880 2
+a881 2
+rb_define_const(cls, name, val)
+    VALUE cls;
+d889 1
+a889 1
+    rb_const_set(cls, id, val);
+d892 2
+d899 1
+a899 1
+    rb_define_const(cObject, name, val);
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:34 $
+a15 4
+#ifdef USE_CWGUSI
+char* strdup(char*);
+#endif
+
+d18 10
+d32 2
+a33 2
+    rb_global_tbl = st_init_numtable();
+    rb_class_tbl = st_init_numtable();
+d44 2
+d59 3
+a61 3
+	path = rb_str_dup(res->path);
+	rb_str_cat(path, "::", 2);
+	rb_str_cat(path, name, strlen(name));
+d64 1
+a64 1
+	path = rb_str_new2(name);
+d71 1
+a71 1
+    if (rb_obj_is_kind_of(value, rb_cModule)) {
+d100 2
+a101 2
+find_class_path(klass)
+    VALUE klass;
+d107 2
+a108 2
+    arg.klass = klass;
+    arg.track = rb_cObject;
+d110 2
+a111 2
+    if (RCLASS(rb_cObject)->iv_tbl) {
+	st_foreach(RCLASS(rb_cObject)->iv_tbl, fc_i, &arg);
+d114 1
+a114 1
+	st_foreach(rb_class_tbl, fc_i, &arg);
+d117 1
+a117 1
+	rb_iv_set(klass, "__classpath__", arg.path);
+d124 2
+a125 2
+classname(klass)
+    VALUE klass;
+a127 1
+    ID classpath = rb_intern("__classpath__");
+d129 2
+a130 2
+    while (TYPE(klass) == T_ICLASS || FL_TEST(klass, FL_SINGLETON)) {
+	klass = (VALUE)RCLASS(klass)->super;
+d132 3
+a134 6
+    if (!klass) klass = rb_cObject;
+    if (!ROBJECT(klass)->iv_tbl ||
+	!st_lookup(ROBJECT(klass)->iv_tbl, classpath, &path)) {
+	ID classid = rb_intern("__classid__");
+
+	path = rb_ivar_get(klass, classid);
+d136 1
+a136 5
+	    path = rb_str_new2(rb_id2name(FIX2INT(path)));
+	    if (!ROBJECT(klass)->iv_tbl)
+		ROBJECT(klass)->iv_tbl = st_init_numtable();
+	    st_insert(ROBJECT(klass)->iv_tbl, classpath, path);
+	    st_delete(RCLASS(klass)->iv_tbl, &classid, 0);
+d140 1
+a140 1
+	path = find_class_path(klass);
+d146 1
+a146 2
+    if (TYPE(path) != T_STRING)
+	rb_bug("class path is not set properly");
+d151 1
+a151 1
+rb_mod_name(mod)
+d156 2
+a157 2
+    if (path) return rb_str_dup(path);
+    return rb_str_new(0,0);
+d161 2
+a162 2
+rb_class_path(klass)
+    VALUE klass;
+d164 1
+a164 1
+    VALUE path = classname(klass);
+d171 3
+a173 3
+	if (TYPE(klass) == T_MODULE) s = "Module";
+	sprintf(buf, "#<%s 0x%x>", s, klass);
+	return rb_str_new2(buf);
+d178 2
+a179 2
+rb_set_class_path(klass, under, name)
+    VALUE klass, under;
+d184 2
+a185 2
+    if (under == rb_cObject) {
+	str = rb_str_new2(name);
+d188 3
+a190 3
+	str = rb_str_dup(rb_class_path(under));
+	rb_str_cat(str, "::", 2);
+	rb_str_cat(str, name, strlen(name));
+d192 1
+a192 1
+    rb_iv_set(klass, "__classpath__", str);
+d200 1
+a200 1
+	rb_raise(rb_eArgError, "can't retrieve anonymous class %s", path);
+d206 2
+a207 2
+rb_name_class(klass, id)
+    VALUE klass;
+d210 8
+a217 1
+    rb_iv_set(klass, "__classid__", INT2FIX(id));
+d228 1
+a228 2
+	rb_raise(rb_eNameError, "autoload must be constant name",
+		 rb_id2name(id));
+d232 1
+a232 1
+	autoload_tbl = st_init_numtable();
+d238 2
+a239 2
+rb_autoload(klass, filename)
+    char *klass, *filename;
+d241 1
+a241 1
+    rb_autoload_id(rb_intern(klass), filename);
+d245 2
+a246 2
+rb_f_autoload(obj, klass, file)
+    VALUE obj, klass, file;
+d248 4
+a251 1
+    rb_autoload_id(rb_to_id(klass), STR2CSTR(file));
+d256 2
+a257 2
+rb_class2name(klass)
+    VALUE klass;
+d259 1
+a259 1
+    return RSTRING(rb_class_path(klass))->ptr;
+d297 1
+a297 1
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+d299 1
+a299 1
+	st_add_direct(rb_global_tbl, id, entry);
+d316 1
+a316 3
+    if (rb_verbose) {
+	rb_warning("global variable `%s' not initialized", rb_id2name(id));
+    }
+d361 1
+a361 1
+    if (data) rb_gc_mark_maybe(data);
+d386 1
+a386 1
+    if (var) rb_gc_mark_maybe(*var);
+d395 1
+a395 1
+    rb_raise(rb_eNameError, "Can't set variable %s", rb_id2name(id));
+d408 1
+a408 1
+	if (trace->data) rb_gc_mark_maybe(trace->data);
+d415 1
+a415 1
+rb_gc_mark_global_tbl()
+d417 1
+a417 1
+    st_foreach(rb_global_tbl, mark_global_entry, 0);
+d484 1
+a484 1
+    rb_eval_cmd(cmd, rb_ary_new3(1, val));
+d488 1
+a488 1
+rb_f_trace_var(argc, argv)
+d498 1
+a498 1
+	cmd = rb_f_lambda();
+d501 1
+a501 1
+	return rb_f_untrace_var(argc, argv);
+d504 2
+a505 3
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+d539 1
+a539 1
+rb_f_untrace_var(argc, argv)
+d550 2
+a551 3
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+a552 2
+
+    trace = entry->trace;
+d554 1
+a554 1
+	VALUE ary = rb_ary_new();
+d556 1
+d559 1
+a559 1
+	    rb_ary_push(ary, (VALUE)trace->data);
+d573 1
+a573 1
+		return rb_ary_new3(1, cmd);
+d592 1
+a592 1
+static VALUE
+a601 1
+    return Qnil;		/* not reached */
+d604 1
+a604 1
+static VALUE
+a609 1
+    return Qnil;		/* not reached */
+d619 4
+a622 2
+    if (rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't change global variable value");
+d629 1
+a629 1
+	rb_ensure(trace_ev, (VALUE)&trace, trace_en, (VALUE)entry);
+d649 2
+a650 2
+    if (entry->getter == undef_getter) return Qfalse;
+    return Qtrue;
+d659 1
+a659 1
+    rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d664 1
+a664 1
+rb_f_global_variables()
+d666 8
+a673 10
+    VALUE ary = rb_ary_new();
+    char buf[4];
+    char *s = "&`'+123456789";
+
+    st_foreach(rb_global_tbl, gvar_i, ary);
+    if (!NIL_P(rb_backref_get())) {
+	while (*s) {
+	    sprintf(buf, "$%c", *s++);
+	    rb_ary_push(ary, rb_str_new2(buf));
+	}
+a693 127
+static int special_generic_ivar = 0;
+static st_table *generic_iv_tbl;
+
+static VALUE
+generic_ivar_get(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    if (st_lookup(tbl, id, &val)) {
+	return val;
+    }
+    return Qnil;
+}
+
+static void
+generic_ivar_set(obj, id, val)
+    VALUE obj;
+    ID id;
+    VALUE val;
+{
+    st_table *tbl;
+
+    if (rb_special_const_p(obj)) {
+	special_generic_ivar = 1;
+    }
+    if (!generic_iv_tbl) {
+	generic_iv_tbl = st_init_numtable();
+    }
+
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) {
+	FL_SET(obj, FL_EXIVAR);
+	tbl = st_init_numtable();
+	st_add_direct(generic_iv_tbl, obj, tbl);
+	st_add_direct(tbl, id, val);
+	return;
+    }
+    st_insert(tbl, id, val);
+}
+
+static VALUE
+generic_ivar_defined(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qfalse;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qfalse;
+    if (st_lookup(tbl, id, &val)) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+generic_ivar_remove(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    st_delete(tbl, &id, &val);
+    if (tbl->num_entries == 0) {
+	st_delete(generic_iv_tbl, &obj, &tbl);
+	st_free_table(tbl);
+    }
+    return val;
+}
+
+static int
+givar_mark_i(key, value)
+    ID key;
+    VALUE value;
+{
+    rb_gc_mark(value);
+    return ST_CONTINUE;
+}
+
+void
+rb_mark_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+	rb_mark_tbl(tbl);
+    }
+}
+
+static int
+givar_i(obj, tbl)
+    VALUE obj;
+    st_table *tbl;
+{
+    if (rb_special_const_p(obj)) {
+	st_foreach(tbl, givar_mark_i, 0);
+    }
+    return ST_CONTINUE;
+}
+
+void
+rb_mark_generic_ivar_tbl()
+{
+    if (special_generic_ivar == 0) return;
+    if (!generic_iv_tbl) return;
+    st_foreach(generic_iv_tbl, givar_i, 0);
+}
+
+void
+rb_free_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (st_delete(generic_iv_tbl, &obj, &tbl))
+	st_free_table(tbl);
+}
+
+a704 1
+      case T_FILE:
+d707 1
+a707 1
+	break;
+d709 2
+a710 2
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_get(obj, id);
+d713 1
+a713 3
+    if (rb_verbose) {
+	rb_warning("instance var %s not initialized", rb_id2name(id));
+    }
+d723 4
+d731 1
+a731 4
+      case T_FILE:
+	if (rb_safe_level() >= 4 && !FL_TEST(obj, FL_TAINT))
+	    rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+	if (!ROBJECT(obj)->iv_tbl) ROBJECT(obj)->iv_tbl = st_init_numtable();
+d735 2
+a736 1
+	generic_ivar_set(obj, id, val);
+d747 1
+a747 1
+    if (!rb_is_instance_id(id)) return Qfalse;
+a752 1
+      case T_FILE:
+d754 1
+a754 5
+	    return Qtrue;
+	break;
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_defined(obj, id);
+d757 1
+a757 1
+    return Qfalse;
+d761 1
+a761 1
+ivar_i(key, entry, ary)
+d763 2
+a764 2
+    struct global_entry *entry;
+    VALUE ary;
+d767 1
+a767 1
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d773 1
+a773 1
+rb_obj_instance_variables(obj)
+d776 1
+a776 1
+    VALUE ary;
+a781 2
+      case T_FILE:
+	ary = rb_ary_new();
+d783 1
+a783 1
+	    st_foreach(ROBJECT(obj)->iv_tbl, ivar_i, ary);
+d785 1
+a785 1
+	return ary;
+d787 1
+a787 9
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj)) {
+	    st_table *tbl;
+
+	    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+		ary = rb_ary_new();
+		st_foreach(tbl, ivar_i, ary);
+		return ary;
+	    }
+	}
+d789 1
+a789 1
+    return Qnil;
+d793 1
+a793 1
+rb_obj_remove_instance_variable(obj, name)
+d796 1
+a796 1
+    VALUE val = Qnil;
+d799 2
+a800 3
+    if (!rb_is_instance_id(id)) {
+	rb_raise(rb_eNameError, "`%s' is not an instance variable",
+		 rb_id2name(id));
+a806 1
+      case T_FILE:
+d812 2
+a813 2
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_remove(obj, id);
+d816 1
+a816 1
+    return val;
+d820 2
+a821 2
+rb_const_get_at(klass, id)
+    VALUE klass;
+d826 1
+a826 1
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, &value)) {
+d829 2
+a830 2
+    if (klass == rb_cObject) {
+	return rb_const_get(klass, id);
+d832 4
+a835 4
+    rb_raise(rb_eNameError, "Uninitialized constant %s::%s",
+	     RSTRING(rb_class_path(klass))->ptr,
+	     rb_id2name(id));
+    return Qnil;		/* not reached */
+d840 2
+a841 2
+rb_const_get(klass, id)
+    VALUE klass;
+d847 1
+a847 1
+    tmp = klass;
+d854 2
+a855 2
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+	return rb_const_get(rb_cObject, id);
+d859 1
+a859 1
+    if (st_lookup(rb_class_tbl, id, &value)) return value;
+d867 1
+a867 1
+	module = rb_str_new2(modname);
+d869 2
+a870 2
+	rb_f_require(Qnil, module);
+	return rb_const_get(klass, id);
+d874 4
+a877 4
+    if (klass && klass != rb_cObject)
+	rb_raise(rb_eNameError, "Uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+d879 1
+a879 1
+	rb_raise(rb_eNameError, "Uninitialized constant %s",rb_id2name(id));
+d881 1
+a881 1
+    return Qnil;		/* not reached */
+d891 3
+a893 3
+	VALUE kval = rb_str_new2(rb_id2name(key));
+	if (!rb_ary_includes(ary, kval)) {
+	    rb_ary_push(ary, kval);
+a898 23
+VALUE
+rb_mod_remove_const(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+    VALUE val;
+
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "`%s' is not constant", rb_id2name(id));
+    }
+
+    if (RCLASS(mod)->iv_tbl && st_delete(ROBJECT(mod)->iv_tbl, &id, &val)) {
+	return val;
+    }
+    if (rb_const_defined_at(mod, id)) {
+	rb_raise(rb_eNameError, "cannot remove %s::%s", 
+		 rb_class2name(mod), rb_id2name(id));
+    }
+    rb_raise(rb_eNameError, "constant %s::%s not defined", 
+	     rb_class2name(mod), rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+d905 3
+a907 3
+    VALUE kval = rb_str_new2(rb_id2name(key));
+    if (!rb_ary_includes(ary, kval)) {
+	rb_ary_push(ary, kval);
+d913 1
+a913 1
+rb_mod_const_at(mod, ary)
+d919 2
+a920 2
+    if ((VALUE)mod == rb_cObject) {
+	st_foreach(rb_class_tbl, const_i, ary);
+d929 1
+a929 1
+rb_mod_constants(mod)
+d932 1
+a932 1
+    return rb_mod_const_at(mod, rb_ary_new());
+d936 1
+a936 1
+rb_mod_const_of(mod, ary)
+d940 1
+a940 1
+    rb_mod_const_at(mod, ary);
+d944 1
+a944 1
+	rb_mod_const_at(mod, ary);
+d950 2
+a951 2
+rb_const_defined_at(klass, id)
+    VALUE klass;
+d954 2
+a955 2
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+	return Qtrue;
+d957 2
+a958 2
+    if (klass == rb_cObject) {
+	return rb_const_defined(klass, id);
+d960 1
+a960 1
+    return Qfalse;
+d968 2
+a969 2
+	return Qtrue;
+    return Qfalse;
+d973 2
+a974 2
+rb_const_defined(klass, id)
+    VALUE klass;
+d977 3
+a979 5
+    VALUE tmp = klass;
+
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+	    return Qtrue;
+d981 1
+a981 4
+	tmp = RCLASS(tmp)->super;
+    }
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+	return rb_const_defined(rb_cObject, id);
+d983 2
+a984 2
+    if (st_lookup(rb_class_tbl, id, 0))
+	return Qtrue;
+d989 2
+a990 2
+rb_const_set(klass, id, val)
+    VALUE klass;
+d994 2
+a995 4
+    if (rb_safe_level() >= 4 && !FL_TEST(klass, FL_TAINT))
+	rb_raise(rb_eSecurityError, "Insecure: can't set constant");
+    if (!RCLASS(klass)->iv_tbl) {
+	RCLASS(klass)->iv_tbl = st_init_numtable();
+d997 2
+a998 3
+    else if (st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+	rb_raise(rb_eNameError, "already initialized constant %s",
+		 rb_id2name(id));
+d1001 1
+a1001 1
+    st_add_direct(RCLASS(klass)->iv_tbl, id, val);
+d1005 2
+a1006 2
+rb_define_const(klass, name, val)
+    VALUE klass;
+a1010 4
+
+    if (klass == rb_cObject) {
+	rb_secure(4);
+    }
+d1012 1
+a1012 1
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+d1014 1
+a1014 1
+    rb_const_set(klass, id, val);
+d1022 1
+a1022 1
+    rb_define_const(rb_cObject, name, val);
+@
+
+
+1.1.1.3.2.1
+log
+@990127
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:31 $
+a718 1
+    int special = Qfalse;
+a721 1
+	special = Qtrue;
+a826 2
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't access instance variable");
+a851 2
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+d857 2
+a909 2
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+a940 2
+    if (!FL_TEST(obj, FL_TAINT) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+a1082 2
+    if (!FL_TEST(mod, FL_TAINT) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+d1166 1
+a1166 1
+    if (!FL_TEST(klass, FL_TAINT) && rb_safe_level() >= 4)
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/27 08:08:37 $
+d109 1
+a109 1
+	st_insert(ROBJECT(klass)->iv_tbl,rb_intern("__classpath__"),arg.path);
+d126 2
+a127 3
+    if (!ROBJECT(klass)->iv_tbl)
+	ROBJECT(klass)->iv_tbl = st_init_numtable();
+    else if (!st_lookup(ROBJECT(klass)->iv_tbl, classpath, &path)) {
+d130 2
+a131 1
+	if (st_lookup(ROBJECT(klass)->iv_tbl, classid, &path)) {
+d133 2
+d308 1
+a308 1
+    if (ruby_verbose) {
+d844 1
+a844 1
+    if (ruby_verbose) {
+@
+
+
+1.1.1.3.2.3
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:58 $
+d876 2
+@
+
+
+1.1.1.3.2.4
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:24 $
+d119 1
+a119 1
+    VALUE path = Qnil;
+@
+
+
+1.1.1.3.2.5
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:26 $
+a248 3
+    if (klass == rb_cNilClass) return "nil";
+    if (klass == rb_cTrueClass) return "true";
+    if (klass == rb_cFalseClass) return "false";
+d387 1
+a387 1
+    rb_raise(rb_eNameError, "can't set variable %s", rb_id2name(id));
+d980 1
+a980 1
+    rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+d1023 1
+a1023 1
+	rb_raise(rb_eNameError, "uninitialized constant %s::%s",
+d1027 1
+a1027 1
+	rb_raise(rb_eNameError, "uninitialized constant %s",rb_id2name(id));
+@
+
+
+1.1.1.3.2.6
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:11 $
+d17 1
+a17 1
+char* strdup(const char*);
+d179 1
+a179 1
+    const char *name;
+d196 1
+a196 1
+    const char *path;
+d217 1
+a217 1
+    const char *filename;
+d232 1
+a232 1
+    const char *klass, *filename;
+d417 1
+a417 1
+    const char *name;
+d433 1
+a433 1
+    const char  *name;
+d450 1
+a450 1
+    const char  *name;
+d458 1
+a458 1
+    const char  *name;
+d466 1
+a466 1
+    const char  *name;
+d634 1
+a634 1
+    const char *name;
+d1076 1
+a1076 1
+    const char *name;
+d1191 1
+a1191 1
+    const char *name;
+d1207 1
+a1207 1
+    const char *name;
+d1216 1
+a1216 1
+    const char *name;
+d1226 1
+a1226 1
+    const char *name;
+@
+
+
+1.1.1.3.2.7
+log
+@to open CVS
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:34 $
+a925 1
+	if (!generic_iv_tbl) return Qnil;
+@
+
+
+1.1.1.3.2.8
+log
+@regexp null pattern
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/20 08:21:41 $
+d171 1
+a171 1
+	sprintf(buf, "#<%s 0lx%lx>", s, klass);
+@
+
+
+1.1.1.3.2.9
+log
+@990531
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/25 08:26:18 $
+d16 2
+a17 2
+#ifndef strdup
+char *strdup();
+@
+
+
+1.1.1.3.2.10
+log
+@thread bugs
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/31 09:13:30 $
+d1182 2
+a1183 1
+	rb_warn("already initialized constant %s", rb_id2name(id));
+d1186 1
+a1186 1
+    st_insert(RCLASS(klass)->iv_tbl, id, val);
+@
+
+
+1.1.1.3.2.11
+log
+@990625
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/09 09:21:33 $
+d836 1
+d863 1
+d883 1
+d919 1
+d958 1
+@
+
+
+1.1.1.3.2.12
+log
+@clone
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/25 09:02:50 $
+d720 1
+d724 1
+d774 9
+a788 1
+    if (!generic_iv_tbl) return;
+a794 9
+givar_mark_i(key, value)
+    ID key;
+    VALUE value;
+{
+    rb_gc_mark(value);
+    return ST_CONTINUE;
+}
+
+static int
+d808 1
+a809 1
+    if (special_generic_ivar == 0) return;
+a820 12
+}
+
+void
+rb_clone_generic_ivar(clone, obj)
+    VALUE clone, obj;
+{
+    st_table *tbl;
+
+    if (!generic_iv_tbl) return;
+    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+	st_add_direct(generic_iv_tbl, clone, st_copy(tbl));
+    }
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 09:18:02 $
+a704 1
+      case T_FILE:
+a730 1
+      case T_FILE:
+a752 1
+      case T_FILE:
+a781 1
+      case T_FILE:
+a806 1
+      case T_FILE:
+@
+
+
+1.1.1.2.2.2
+log
+@Mon Jan 19 14:06:13 JST 1998
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:49 $
+d100 2
+a101 2
+find_class_path(klass)
+    VALUE klass;
+d107 1
+a107 1
+    arg.klass = klass;
+d117 1
+a117 1
+	rb_iv_set(klass, "__classpath__", arg.path);
+d124 2
+a125 2
+classname(klass)
+    VALUE klass;
+d129 2
+a130 2
+    while (TYPE(klass) == T_ICLASS || FL_TEST(klass, FL_SINGLETON)) {
+	klass = (VALUE)RCLASS(klass)->super;
+d132 1
+a132 1
+    path = rb_iv_get(klass, "__classpath__");
+d134 1
+a134 1
+	path = rb_iv_get(klass, "__classid__");
+d140 1
+a140 1
+	path = find_class_path(klass);
+d161 2
+a162 2
+rb_class_path(klass)
+    VALUE klass;
+d164 1
+a164 1
+    VALUE path = classname(klass);
+d171 2
+a172 2
+	if (TYPE(klass) == T_MODULE) s = "Module";
+	sprintf(buf, "#<%s 0x%x>", s, klass);
+d178 2
+a179 2
+rb_set_class_path(klass, under, name)
+    VALUE klass, under;
+d192 1
+a192 1
+    rb_iv_set(klass, "__classpath__", str);
+d206 2
+a207 2
+rb_name_class(klass, id)
+    VALUE klass;
+d213 1
+a213 1
+	rb_iv_set(klass, "__classpath__", str_new2(rb_id2name(id)));
+d216 1
+a216 1
+	rb_iv_set(klass, "__classid__", INT2FIX(id));
+d238 2
+a239 2
+rb_autoload(klass, filename)
+    char *klass, *filename;
+d241 1
+a241 1
+    rb_autoload_id(rb_intern(klass), filename);
+d245 2
+a246 2
+f_autoload(obj, klass, file)
+    VALUE obj, klass, file;
+d248 1
+a248 1
+    ID id = rb_to_id(klass);
+d256 2
+a257 2
+rb_class2name(klass)
+    VALUE klass;
+d259 1
+a259 1
+    return RSTRING(rb_class_path(klass))->ptr;
+d705 1
+d732 1
+d755 1
+d785 1
+d811 1
+d825 2
+a826 2
+rb_const_get_at(klass, id)
+    VALUE klass;
+d831 1
+a831 1
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, &value)) {
+d834 2
+a835 2
+    if (klass == cObject) {
+	return rb_const_get(klass, id);
+d838 1
+a838 1
+	      RSTRING(rb_class_path(klass))->ptr,
+d845 2
+a846 2
+rb_const_get(klass, id)
+    VALUE klass;
+d852 1
+a852 1
+    tmp = klass;
+d859 1
+a859 1
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+d875 1
+a875 1
+	return rb_const_get(klass, id);
+d879 1
+a879 1
+    if (klass && klass != cObject)
+d881 1
+a881 1
+		  RSTRING(rb_class_path(klass))->ptr,
+d955 2
+a956 2
+rb_const_defined_at(klass, id)
+    VALUE klass;
+d959 1
+a959 1
+    if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+d962 2
+a963 2
+    if (klass == cObject) {
+	return rb_const_defined(klass, id);
+d978 2
+a979 2
+rb_const_defined(klass, id)
+    VALUE klass;
+d982 2
+a983 2
+    while (klass) {
+	if (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+d986 1
+a986 1
+	klass = RCLASS(klass)->super;
+d994 2
+a995 2
+rb_const_set(klass, id, val)
+    VALUE klass;
+d999 2
+a1000 2
+    if (!RCLASS(klass)->iv_tbl) {
+	RCLASS(klass)->iv_tbl = new_idhash();
+d1002 1
+a1002 1
+    else if (st_lookup(RCLASS(klass)->iv_tbl, id, 0)) {
+d1006 1
+a1006 1
+    st_insert(RCLASS(klass)->iv_tbl, id, val);
+d1010 2
+a1011 2
+rb_define_const(klass, name, val)
+    VALUE klass;
+d1019 1
+a1019 1
+    rb_const_set(klass, id, val);
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/19 05:08:21 $
+d134 6
+d156 1
+a156 1
+    if (path) return str_dup(path);
+d212 6
+a217 1
+    rb_iv_set(klass, "__classpath__", str_new2(rb_id2name(id)));
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_05 bug fix
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/23 10:01:08 $
+d643 1
+a643 1
+var_i(key, entry, ary)
+d648 1
+a648 1
+    ary_push(ary, str_new2(rb_id2name(key)));
+d656 2
+a657 2
+    char buf[4];
+    char *s = "&`'+123456789";
+d659 4
+a662 6
+    st_foreach(global_tbl, var_i, ary);
+    if (!NIL_P(backref_get())) {
+	while (*s) {
+	    sprintf(buf, "$%c", *s++);
+	    ary_push(ary, str_new2(buf));
+	}
+d749 12
+d765 1
+a765 1
+    VALUE ary;
+a770 1
+	ary = ary_new();
+d772 1
+a772 1
+	    st_foreach(ROBJECT(obj)->iv_tbl, var_i, ary);
+d774 3
+a776 1
+	return ary;
+d778 1
+a778 1
+    return Qnil;
+@
+
+
+1.1.1.2.2.5
+log
+@1.1b9_07
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/28 10:57:41 $
+a133 10
+	ID classid = rb_intern("__classid__");
+
+	path = rb_ivar_get(klass, classid);
+	if (!NIL_P(path)) {
+	    path = str_new2(rb_id2name(FIX2INT(path)));
+	    rb_ivar_set(klass, classid, path);
+	    st_delete(RCLASS(klass)->iv_tbl, &classid, 0);
+	}
+    }
+    if (NIL_P(path)) {
+d206 1
+a206 6
+    if (cString) {
+	rb_iv_set(klass, "__classpath__", str_new2(rb_id2name(id)));
+    }
+    else {
+	rb_iv_set(klass, "__classid__", INT2FIX(id));
+    }
+@
+
+
+1.1.1.2.2.6
+log
+@local_variables/defined?(TOPLEVEL_CONST) in modules
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:41:24 $
+d970 2
+a971 4
+    VALUE tmp = klass;
+
+    while (tmp) {
+	if (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,0)) {
+d974 1
+a974 4
+	tmp = RCLASS(tmp)->super;
+    }
+    if (BUILTIN_TYPE(klass) == T_MODULE) {
+	return rb_const_defined(cObject, id);
+@
+
+
+1.1.1.2.2.7
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/08 08:12:38 $
+d789 1
+a789 1
+    VALUE val = Qnil;
+d792 1
+a792 1
+    if (!rb_is_instance_id(id)) {
+d809 1
+a809 1
+    return val;
+a889 22
+}
+
+VALUE
+mod_remove_const(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+    VALUE val;
+
+    if (!rb_is_const_id(id)) {
+	NameError("`%s' is not constant", rb_id2name(id));
+    }
+
+    if (RCLASS(mod)->iv_tbl && st_delete(ROBJECT(mod)->iv_tbl, &id, &val)) {
+	return val;
+    }
+    if (rb_const_defined_at(mod, id)) {
+	NameError("cannot remove %s::%s", 
+		  rb_class2name(mod), rb_id2name(id));
+    }
+    NameError("constant %s::%s not defined", 
+	      rb_class2name(mod), rb_id2name(id));
+@
+
+
+1.1.1.2.2.8
+log
+@tcltklib/gtk
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 05:55:37 $
+d252 4
+a255 1
+    rb_autoload_id(rb_to_id(klass), STR2CSTR(file));
+@
+
+
+1.1.1.2.2.9
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/27 10:04:03 $
+a15 4
+#ifdef USE_CWGUSI
+char* strdup(char*);
+#endif
+
+d593 1
+a593 1
+static VALUE
+d605 1
+a605 1
+static VALUE
+d630 1
+a630 1
+	rb_ensure(trace_ev, (VALUE)&trace, trace_en, (VALUE)entry);
+@
+
+
+1.1.1.2.2.10
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:39 $
+d24 2
+@
+
+
+1.1.1.2.2.11
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:27 $
+a555 2
+
+    trace = entry->trace;
+d559 1
+@
+
+
+1.1.1.2.2.12
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:59 $
+d45 2
+@
+
+
+1.1.1.2.2.13
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:36 $
+d214 2
+d622 1
+d728 1
+@
+
+
+1.1.1.2.2.14
+log
+@1.1b9_31
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:50 $
+d653 1
+a653 1
+gvar_i(key, entry, ary)
+d669 1
+a669 1
+    st_foreach(global_tbl, gvar_i, ary);
+a759 12
+static int
+ivar_i(key, entry, ary)
+    ID key;
+    struct global_entry *entry;
+    VALUE ary;
+{
+    if (rb_is_instance_id(key)) {
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+d772 1
+a772 1
+	    st_foreach(ROBJECT(obj)->iv_tbl, ivar_i, ary);
+@
+
+
+1.1.1.2.2.15
+log
+@moving
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:55 $
+d747 2
+@
+
+
+1.1.1.2.2.14.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:55 $
+d22 8
+d34 2
+a35 2
+    rb_global_tbl = st_init_numtable();
+    rb_class_tbl = st_init_numtable();
+d59 3
+a61 3
+	path = rb_str_dup(res->path);
+	rb_str_cat(path, "::", 2);
+	rb_str_cat(path, name, strlen(name));
+d64 1
+a64 1
+	path = rb_str_new2(name);
+d71 1
+a71 1
+    if (rb_obj_is_kind_of(value, rb_cModule)) {
+d108 1
+a108 1
+    arg.track = rb_cObject;
+d110 2
+a111 2
+    if (RCLASS(rb_cObject)->iv_tbl) {
+	st_foreach(RCLASS(rb_cObject)->iv_tbl, fc_i, &arg);
+d114 1
+a114 1
+	st_foreach(rb_class_tbl, fc_i, &arg);
+a131 1
+    if (!klass) klass = rb_cObject;
+d138 1
+a138 1
+	    path = rb_str_new2(rb_id2name(FIX2INT(path)));
+d150 1
+a150 2
+    if (TYPE(path) != T_STRING)
+	rb_bug("class path is not set properly");
+d155 1
+a155 1
+rb_mod_name(mod)
+d160 2
+a161 2
+    if (path) return rb_str_dup(path);
+    return rb_str_new(0,0);
+d177 1
+a177 1
+	return rb_str_new2(buf);
+d188 2
+a189 2
+    if (under == rb_cObject) {
+	str = rb_str_new2(name);
+d192 3
+a194 3
+	str = rb_str_dup(rb_class_path(under));
+	rb_str_cat(str, "::", 2);
+	rb_str_cat(str, name, strlen(name));
+d204 1
+a204 1
+	rb_raise(rb_eArgError, "can't retrieve anonymous class %s", path);
+d214 2
+a215 2
+    if (rb_cString) {
+	rb_iv_set(klass, "__classpath__", rb_str_new2(rb_id2name(id)));
+d230 1
+a230 2
+	rb_raise(rb_eNameError, "autoload must be constant name",
+		 rb_id2name(id));
+d234 1
+a234 1
+	autoload_tbl = st_init_numtable();
+d247 1
+a247 1
+rb_f_autoload(obj, klass, file)
+d296 1
+a296 1
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+d298 1
+a298 1
+	st_add_direct(rb_global_tbl, id, entry);
+d315 1
+a315 3
+    if (rb_verbose) {
+	rb_warning("global variable `%s' not initialized", rb_id2name(id));
+    }
+d360 1
+a360 1
+    if (data) rb_gc_mark_maybe(data);
+d385 1
+a385 1
+    if (var) rb_gc_mark_maybe(*var);
+d394 1
+a394 1
+    rb_raise(rb_eNameError, "Can't set variable %s", rb_id2name(id));
+d407 1
+a407 1
+	if (trace->data) rb_gc_mark_maybe(trace->data);
+d414 1
+a414 1
+rb_gc_mark_global_tbl()
+d416 1
+a416 1
+    st_foreach(rb_global_tbl, mark_global_entry, 0);
+d483 1
+a483 1
+    rb_eval_cmd(cmd, rb_ary_new3(1, val));
+d487 1
+a487 1
+rb_f_trace_var(argc, argv)
+d497 1
+a497 1
+	cmd = rb_f_lambda();
+d500 1
+a500 1
+	return rb_f_untrace_var(argc, argv);
+d503 2
+a504 3
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+d538 1
+a538 1
+rb_f_untrace_var(argc, argv)
+d549 2
+a550 3
+    if (!st_lookup(rb_global_tbl, id, &entry)) {
+	rb_raise(rb_eNameError, "undefined global variable %s",
+		 rb_id2name(id));
+d555 1
+a555 1
+	VALUE ary = rb_ary_new();
+d559 1
+a559 1
+	    rb_ary_push(ary, (VALUE)trace->data);
+d573 1
+a573 1
+		return rb_ary_new3(1, cmd);
+d620 1
+a620 1
+	rb_raise(rb_eSecurityError, "cannot change global variable value");
+d648 2
+a649 2
+    if (entry->getter == undef_getter) return Qfalse;
+    return Qtrue;
+d658 1
+a658 1
+    rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d663 1
+a663 1
+rb_f_global_variables()
+d665 1
+a665 1
+    VALUE ary = rb_ary_new();
+d669 2
+a670 2
+    st_foreach(rb_global_tbl, gvar_i, ary);
+    if (!NIL_P(rb_backref_get())) {
+d673 1
+a673 1
+	    rb_ary_push(ary, rb_str_new2(buf));
+d710 2
+a711 2
+	rb_raise(rb_eTypeError, "class %s can not have instance variables",
+		 rb_class2name(CLASS_OF(obj)));
+d714 1
+a714 3
+    if (rb_verbose) {
+	rb_warning("instance var %s not initialized", rb_id2name(id));
+    }
+d725 1
+a725 1
+	rb_raise(rb_eSecurityError, "cannot change object status");
+d731 1
+a731 1
+	if (!ROBJECT(obj)->iv_tbl) ROBJECT(obj)->iv_tbl = st_init_numtable();
+d735 2
+a736 2
+	rb_raise(rb_eTypeError, "class %s can not have instance variables",
+		 rb_class2name(CLASS_OF(obj)));
+d747 1
+a747 1
+    if (!rb_is_instance_id(id)) return Qfalse;
+d754 1
+a754 1
+	    return Qtrue;
+d757 1
+a757 1
+    return Qfalse;
+d767 1
+a767 1
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d773 1
+a773 1
+rb_obj_instance_variables(obj)
+d782 1
+a782 1
+	ary = rb_ary_new();
+d792 1
+a792 1
+rb_obj_remove_instance_variable(obj, name)
+d799 1
+a799 2
+	rb_raise(rb_eNameError, "`%s' is not an instance variable",
+		 rb_id2name(id));
+d811 2
+a812 2
+	rb_raise(rb_eTypeError, "object %s can not have instance variables",
+		 rb_class2name(CLASS_OF(obj)));
+d828 1
+a828 1
+    if (klass == rb_cObject) {
+d831 3
+a833 3
+    rb_raise(rb_eNameError, "Uninitialized constant %s::%s",
+	     RSTRING(rb_class_path(klass))->ptr,
+	     rb_id2name(id));
+d854 1
+a854 1
+	return rb_const_get(rb_cObject, id);
+d858 1
+a858 1
+    if (st_lookup(rb_class_tbl, id, &value)) return value;
+d866 1
+a866 1
+	module = rb_str_new2(modname);
+d868 1
+a868 1
+	rb_f_require(Qnil, module);
+d873 4
+a876 4
+    if (klass && klass != rb_cObject)
+	rb_raise(rb_eNameError, "Uninitialized constant %s::%s",
+		 RSTRING(rb_class_path(klass))->ptr,
+		 rb_id2name(id));
+d878 1
+a878 1
+	rb_raise(rb_eNameError, "Uninitialized constant %s",rb_id2name(id));
+d890 3
+a892 3
+	VALUE kval = rb_str_new2(rb_id2name(key));
+	if (!rb_ary_includes(ary, kval)) {
+	    rb_ary_push(ary, kval);
+d899 1
+a899 1
+rb_mod_remove_const(mod, name)
+d906 1
+a906 1
+	rb_raise(rb_eNameError, "`%s' is not constant", rb_id2name(id));
+d913 2
+a914 2
+	rb_raise(rb_eNameError, "cannot remove %s::%s", 
+		 rb_class2name(mod), rb_id2name(id));
+d916 2
+a917 2
+    rb_raise(rb_eNameError, "constant %s::%s not defined", 
+	     rb_class2name(mod), rb_id2name(id));
+d926 3
+a928 3
+    VALUE kval = rb_str_new2(rb_id2name(key));
+    if (!rb_ary_includes(ary, kval)) {
+	rb_ary_push(ary, kval);
+d934 1
+a934 1
+rb_mod_const_at(mod, ary)
+d940 2
+a941 2
+    if ((VALUE)mod == rb_cObject) {
+	st_foreach(rb_class_tbl, const_i, ary);
+d950 1
+a950 1
+rb_mod_constants(mod)
+d953 1
+a953 1
+    return rb_mod_const_at(mod, rb_ary_new());
+d957 1
+a957 1
+rb_mod_const_of(mod, ary)
+d961 1
+a961 1
+    rb_mod_const_at(mod, ary);
+d965 1
+a965 1
+	rb_mod_const_at(mod, ary);
+d976 1
+a976 1
+	return Qtrue;
+d978 1
+a978 1
+    if (klass == rb_cObject) {
+d981 1
+a981 1
+    return Qfalse;
+d989 2
+a990 2
+	return Qtrue;
+    return Qfalse;
+d1002 1
+a1002 1
+	    return Qtrue;
+d1007 1
+a1007 1
+	return rb_const_defined(rb_cObject, id);
+d1009 2
+a1010 2
+    if (st_lookup(rb_class_tbl, id, 0))
+	return Qtrue;
+d1021 1
+a1021 1
+	RCLASS(klass)->iv_tbl = st_init_numtable();
+d1024 1
+a1024 2
+	rb_raise(rb_eNameError, "already initialized constant %s",
+		 rb_id2name(id));
+d1027 1
+a1027 1
+    st_add_direct(RCLASS(klass)->iv_tbl, id, val);
+d1038 1
+a1038 1
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+d1048 1
+a1048 1
+    rb_define_const(rb_cObject, name, val);
+@
+
+
+1.1.1.2.2.14.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:26 $
+d725 3
+a1039 4
+
+    if (klass == rb_cObject) {
+	rb_secure(4);
+    }
+@
+
+
+1.1.1.2.2.14.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:17 $
+d618 3
+a620 2
+    if (rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't change global variable value");
+a728 2
+	if (rb_safe_level() >= 4 && !FL_TEST(obj, FL_TAINT))
+	    rb_raise(rb_eSecurityError, "Insecure: can't modify instance variable");
+a1018 2
+    if (rb_safe_level() >= 4 && !FL_TEST(klass, FL_TAINT))
+	rb_raise(rb_eSecurityError, "Insecure: can't set constant");
+@
+
+
+1.1.1.2.2.14.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:18 $
+d132 1
+a132 1
+	    rb_ivar_set(klass, rb_intern("__classpath__"), path);
+d208 6
+a213 1
+    rb_iv_set(klass, "__classid__", INT2FIX(id));
+a692 127
+static int special_generic_ivar = 0;
+static st_table *generic_iv_tbl;
+
+static VALUE
+generic_ivar_get(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    if (st_lookup(tbl, id, &val)) {
+	return val;
+    }
+    return Qnil;
+}
+
+static void
+generic_ivar_set(obj, id, val)
+    VALUE obj;
+    ID id;
+    VALUE val;
+{
+    st_table *tbl;
+
+    if (rb_special_const_p(obj)) {
+	special_generic_ivar = 1;
+    }
+    if (!generic_iv_tbl) {
+	generic_iv_tbl = st_init_numtable();
+    }
+
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) {
+	FL_SET(obj, FL_EXIVAR);
+	tbl = st_init_numtable();
+	st_add_direct(generic_iv_tbl, obj, tbl);
+	st_add_direct(tbl, id, val);
+	return;
+    }
+    st_insert(tbl, id, val);
+}
+
+static VALUE
+generic_ivar_defined(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qfalse;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qfalse;
+    if (st_lookup(tbl, id, &val)) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+generic_ivar_remove(obj, id)
+    VALUE obj;
+    ID id;
+{
+    st_table *tbl;
+    VALUE val;
+
+    if (!generic_iv_tbl) return Qnil;
+    if (!st_lookup(generic_iv_tbl, obj, &tbl)) return Qnil;
+    st_delete(tbl, &id, &val);
+    if (tbl->num_entries == 0) {
+	st_delete(generic_iv_tbl, &obj, &tbl);
+	st_free_table(tbl);
+    }
+    return val;
+}
+
+static int
+givar_mark_i(key, value)
+    ID key;
+    VALUE value;
+{
+    rb_gc_mark(value);
+    return ST_CONTINUE;
+}
+
+void
+rb_mark_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+	st_foreach(tbl, givar_mark_i, 0);
+    }
+}
+
+static int
+givar_i(obj, tbl)
+    VALUE obj;
+    st_table *tbl;
+{
+    if (rb_special_const_p(obj)) {
+	st_foreach(tbl, givar_mark_i, 0);
+    }
+    return ST_CONTINUE;
+}
+
+void
+rb_mark_generic_ivar_tbl()
+{
+    if (special_generic_ivar == 0) return;
+    if (!generic_iv_tbl) return;
+    st_foreach(generic_iv_tbl, givar_i, 0);
+}
+
+void
+rb_free_generic_ivar(obj)
+    VALUE obj;
+{
+    st_table *tbl;
+
+    if (st_delete(generic_iv_tbl, &obj, &tbl))
+	st_free_table(tbl);
+}
+
+a703 1
+      case T_FILE:
+d706 1
+a706 1
+	break;
+d708 2
+a709 2
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_get(obj, id);
+a727 1
+      case T_FILE:
+d734 2
+a735 1
+	generic_ivar_set(obj, id, val);
+a751 1
+      case T_FILE:
+a754 4
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_defined(obj, id);
+	break;
+a780 1
+      case T_FILE:
+a785 10
+      default:
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj)) {
+	    st_table *tbl;
+
+	    if (st_lookup(generic_iv_tbl, obj, &tbl)) {
+		ary = rb_ary_new();
+		st_foreach(tbl, ivar_i, ary);
+		return ary;
+	    }
+	}
+a805 1
+      case T_FILE:
+d811 2
+a812 2
+	if (FL_TEST(obj, FL_EXIVAR) || rb_special_const_p(obj))
+	    return generic_ivar_remove(obj, id);
+@

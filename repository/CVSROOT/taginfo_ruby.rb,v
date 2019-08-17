@@ -1,0 +1,192 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2001.05.24.08.03.26;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.02.03.15.55.05;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.01.31.15.28.48;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.01.31.15.07.20;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.01.31.05.22.34;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.01.30.18.33.49;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@Do not abort even if no file is specified.  It's okay if modulepath is
+specified at least.
+@
+text
+@#!/usr/bin/env ruby
+#
+# CVS tag info script
+# This script is run before each tag/rtag.
+#
+# Use only args, not STDIN.
+# ARG0 : $CVSROOT
+# ARG1 : CVS user name
+# ARG2 : tagname
+# ARG3 : operation ("add" for tag, "mov" for tag -F, and "del" for tag -d)
+# ARG4 : absolute path of the module
+# ARG5 : file1
+# ARG6 : revision1
+# ..
+#
+# $devId: taginfo.rb,v 1.5 2001/02/03 15:53:30 knu Exp $
+# $Id: taginfo_ruby.rb,v 1.5 2001/02/03 15:55:05 knu Exp $
+#
+
+if ARGV.size < 5
+  puts "Usage: #{$0} CVSROOT USER tagname operation modulepath [file1 rev1 file2 rev2 ...]"
+  exit 1	# No way!
+end
+
+$cvsroot, $cvsuser, $tagname, $operation, $modulepath, *$cvsfilerevs = *ARGV
+
+$cvsroot.tr_s!('/', '/')
+$modulepath.tr_s!('/', '/')
+
+$modulename = $modulepath.sub(/^#{Regexp.quote($cvsroot)}/, '')
+
+$aclfile = "#{$cvsroot}/CVSROOT/acl"
+
+require "socket"
+$hostname = Socket.gethostbyname(Socket.gethostname)[0]
+
+# acl check:
+$:.unshift "#{$cvsroot}/CVSROOT"
+require "cvsacl"
+
+if File.exist?($aclfile)
+  if !check_acl($aclfile, $hostname, $cvsuser, $modulename)
+    exit 1	# No way!
+  end
+end
+
+exit 0		# Let's do it!
+
+# END OF THE SCRIPT
+@
+
+
+1.5
+log
+@Fix up ACL file's path name this time.
+@
+text
+@d17 1
+a17 1
+# $Id: taginfo_ruby.rb,v 1.4 2001/01/31 15:28:48 knu Exp $
+d20 2
+a21 2
+if ARGV.size < 6
+  puts "Usage: #{$0} CVSROOT USER tagname operation modulepath file1 rev1 [file2 rev2 ...]"
+@
+
+
+1.4
+log
+@Fix load path for cvsacl.rb.
+@
+text
+@d16 2
+a17 2
+# $devId: taginfo.rb,v 1.3 2001/01/31 14:58:24 knu Exp $
+# $Id: taginfo_ruby.rb,v 1.3 2001/01/31 15:07:20 knu Exp $
+d32 1
+a32 1
+$aclfile = "#{$cvsroot}/acl"
+@
+
+
+1.3
+log
+@Merge from the latest cvsmailer:
+
+    - Chop the cvsroot part off a module path before checking ACL.
+
+    - Lengthen the "Revision" column in commit mails.
+@
+text
+@d17 1
+a17 1
+# $Id: taginfo_ruby.rb,v 1.2 2001/01/31 05:22:34 knu Exp $
+d38 1
+a38 1
+$:.unshift $cvsroot
+@
+
+
+1.2
+log
+@Merge from the latest cvsmailer.
+
+Turn debug output on.
+@
+text
+@d16 2
+a17 2
+# $devId: taginfo.rb,v 1.2 2001/01/31 05:18:14 knu Exp $
+# $Id: taginfo_ruby.rb,v 1.1 2001/01/30 18:33:49 knu Exp $
+d21 1
+a21 1
+  puts "Usage: #{$0} CVSROOT USER tagname operation module file1 rev1 [file2 rev2 ...]"
+d25 1
+a25 1
+$cvsroot, $cvsuser, $tagname, $operation, $modulename, *$cvsfilerevs = *ARGV
+d28 3
+a30 1
+$modulename.tr_s!('/', '/')
+d41 4
+a44 2
+if File.exist?($aclfile) && !check_acl($aclfile, $hostname, $cvsuser, $modulename)
+  exit 1	# No way!
+@
+
+
+1.1
+log
+@Update to cvsmailer 0.15.
+
+Add rules for www, doc, and rwiki.
+@
+text
+@d16 2
+a17 2
+# $devId: taginfo.rb,v 1.1 2001/01/30 15:39:47 knu Exp $
+# $Id$
+d32 3
+d39 1
+a39 1
+if File.exist?($aclfile) && !check_acl($aclfile, $cvsuser, $modulename)
+@
+

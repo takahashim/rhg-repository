@@ -1,0 +1,1752 @@
+head	1.40;
+access;
+symbols
+	V0_3_2:1.33
+	V0_1_4:1.21
+	V0_1_3:1.20
+	V0_1_2:1.19
+	V0_1_1:1.17
+	V0_1:1.15
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.40
+date	2002.09.28.04.50.25;	author akr;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.08.16.00.50.33;	author dave;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.03.26.03.33.20;	author dave;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.03.18.05.47.03;	author dave;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.03.08.14.20.43;	author dave;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.01.05.14.35.05;	author chad;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.11.16.17.36.31;	author dave;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.11.13.03.49.01;	author dave;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.11.09.06.18.14;	author dave;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.11.09.06.10.57;	author dave;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.11.09.03.00.31;	author dave;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.11.06.23.53.49;	author dave;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.03.04.15.17;	author dave;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.02.06.09.14;	author dave;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.02.00.17.06;	author dave;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.08.02.16.02.19;	author dave;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.07.29.17.20.52;	author dave;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.07.27.05.49.26;	author dave;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.11.16.19.05.23;	author dave;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.10.20.18.05.17;	author dave;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.10.20.18.04.44;	author dave;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.10.12.19.28.12;	author dave;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.10.12.19.27.47;	author dave;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.10.12.03.33.15;	author dave;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.09.20.02.34.03;	author andy;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.24.00.52.43;	author dave;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.15.20.35.30;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.15.19.59.31;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.15.17.37.53;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.15.13.57.20;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.14.21.16.08;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.08.20.53.05;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.08.20.32.05;	author andy;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.06.22.25.54;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.06.19.22.00;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.06.17.14.24;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.40
+log
+@* rubicon.rb: recognize HP-UX to treat it as an Unix variant.
+
+* builtin/TestIO.rb (test_pid): Use `exec' trick for all Unix
+variants.
+
+* builtin/TestFileTest.rb (TestFileTest::test_test): Use 02755 instead
+of 02644 for setgid bit because setgid bit without execution bit means
+mandatory locking for Solaris and it fails on NFS.
+(TestFileTest::test_test): /dev/tty is symlink on Solaris.
+
+* builtin/TestFloat.rb: Use 0.0/0.0 instead of Math::log(-1.0) to
+generate NaN because Math::log(-1.0) returns -Infinity instead of NaN
+on Solaris.
+
+* builtin/TestThreadGroup.rb (test_list): Avoid deadlock.
+@
+text
+@require "tempfile"
+require "rbconfig.rb"
+
+require "rubicon_tests"
+
+#
+# Simple wrapper for RubyUnit, primarily designed to capture
+# statistics and report them at the end.
+#
+
+# -------------------------------------------------------------
+#
+# Operating system classification. We use classes for this, as 
+# we get lots of flexibility with comparisons.
+#
+# Use with
+#
+#   Unix.or_variant do ... end        # operating system is some Unix variant
+#
+#   Linux.only do .... end            # operating system is Linux
+#
+#   MsWin32.dont do .... end          # don't run under MsWin32
+#
+# If there is a known problem which is very, very unlikely ever to be
+# fixed, you can say
+#
+#   Cygwin.known_problem do
+#
+#   end
+#
+# This runs the test, but squelches the error on that particular operating
+# system
+
+class OS
+  def OS.or_variant
+    yield if $os <= self
+  end
+
+  def OS.only
+    yield if $os == self
+  end
+
+  def OS.dont
+    yield unless $os <= self
+  end
+
+  def OS.known_problem
+    if $os <= self
+      begin
+        yield
+      rescue RUNIT::AssertionFailedError => err
+        $stderr.puts "Ignoring known problem: #{err.message}"
+        $stderr.puts err.backtrace[0]
+      end
+    else
+      yield
+    end
+  end
+end
+
+class Unix    < OS;      end
+class Linux   < Unix;    end
+class BSD     < Unix;    end
+class FreeBSD < BSD;     end
+class Solaris < Unix;    end
+class HPUX    < Unix;    end
+
+class JRuby   < OS;      end
+
+class Windows < OS;      end
+class Cygwin  < Windows; end
+
+class WindowsNative < Windows; end
+class MsWin32 < WindowsNative; end
+class MinGW   < WindowsNative; end
+
+$os = case RUBY_PLATFORM
+      when /linux/   then  Linux
+      when /bsd/     then BSD
+      when /solaris/ then Solaris
+      when /hpux/    then HPUX
+      when /cygwin/  then Cygwin
+      when /mswin32/ then MsWin32
+      when /mingw32/ then MinGW
+      when /java/    then JRuby
+      else OS
+      end
+
+
+#
+# Find the name of the interpreter.
+# 
+
+$interpreter = File.join(Config::CONFIG["bindir"], 
+			 Config::CONFIG["RUBY_INSTALL_NAME"])
+
+MsWin32.or_variant { $interpreter.tr! '/', '\\' }
+
+
+######################################################################
+#
+# This is tacky, but... We need to be able tofind the executable
+# files in the util subdirectory. However, we can be initiated by
+# running a file in either the top-level rubicon directory or in
+# one of its test subdirectories (such as language). We therefore
+# need to hunt around for the util directory
+
+run_dir = File.dirname(__FILE__)
+
+for relative_path in [ ".", ".." ]
+  util = File.join(run_dir, relative_path, "util")
+
+  if File.exist?(util) and File.directory?(util)
+    UTIL = util
+    break
+  end
+end
+
+raise "Cannot find 'util' directory" unless defined?(UTIL)
+
+CHECKSTAT = File.join(UTIL, "checkstat")
+TEST_TOUCH = File.join(UTIL, "test_touch")
+
+if Config::CONFIG["EXEEXT"]
+CHECKSTAT << Config::CONFIG["EXEEXT"]
+TEST_TOUCH << Config::CONFIG["EXEEXT"]
+end
+
+for file in [CHECKSTAT, TEST_TOUCH]
+  raise "Cannot find #{file}" unless File.exist?(file)
+end
+
+
+#
+# Classification routines. We use these so that the code can
+# test for operating systems, ruby versions, and other features
+# without being platform specific
+#
+
+# -------------------------------------------------------
+# Class to manipulate Ruby version numbers. We use this to 
+# insulate ourselves from changes in version number format.
+# Independent of the internal representation, we always allow 
+# comparison against a string.
+#
+# Use in the code with stuff like:
+#
+#    Version.greater_than("1.6.2) do
+#       assert(...)
+#    end
+#
+
+class Version
+  include Comparable
+  
+  def initialize(version)
+    @@version = version
+  end
+  
+  def <=>(other)
+    @@version <=> other
+  end
+
+  # Specify a range of versions, and run a test block if the current version
+  # falls within that range.  
+  def Version.in(range)
+    if(range.include?(VERSION)) then
+      yield
+    end
+  end
+
+  def Version.greater_than(version)
+    if(VERSION > version) then
+      yield
+    end
+  end
+
+  def Version.greater_or_equal(version)
+    if(VERSION >= version) then
+      yield
+    end
+  end
+
+  def Version.less_than(version)
+    if(VERSION < version) then
+      yield
+    end
+  end
+
+  def Version.less_or_equal(version)
+    if(VERSION <= version) then
+      yield
+    end
+  end
+ 
+end
+@
+
+
+1.39
+log
+@JRuby tests
+@
+text
+@d66 1
+d81 1
+@
+
+
+1.38
+log
+@Patch form Benoit Cerrina/Jan  Arn Petersen to make it work better with JRuby
+(it no longer assumes Windows executables end in .exe)
+@
+text
+@d83 1
+a83 1
+      when /Java/    then JRuby
+@
+
+
+1.37
+log
+@iPatch to use __FILE__ rather than $0 in the path. Thanks to Nobu Nakada.
+@
+text
+@d67 2
+d83 1
+d122 3
+a124 4
+
+WindowsNative.or_variant do
+  CHECKSTAT << ".exe"
+  TEST_TOUCH << ".exe"
+@
+
+
+1.36
+log
+@Fix some typos (from Hugh Sasse)
+@
+text
+@d103 1
+a103 1
+run_dir = File.dirname($0)
+@
+
+
+1.35
+log
+@Replaced $rubyVersion global with Version class methods.  Replaced references to the former with the latter.  Deprecated tests for #indexes and #indices where appropriate.  Removed some duplication in several tests in ArrayBase and HashBase.
+@
+text
+@d8 1
+a8 1
+# statsistics and report them at the end.
+d18 1
+a18 1
+#   Unix.or_varient do ... end        # operating system is some Unix variant
+d99 1
+a99 1
+# running a file in either the tpo-level rubicon directory or in
+d101 1
+a101 1
+# need tpo hunt around for the util directory
+@
+
+
+1.34
+log
+@Added support for 'known problems'.
+
+This is only used for those problems that really will never get
+fixed.
+@
+text
+@d144 2
+a145 2
+#    if $rubyVersion <= "1.6.2" 
+#       asert(...)
+d149 1
+a149 1
+class VersionNumber
+a158 4
+end
+
+$rubyVersion = VersionNumber.new(VERSION)
+
+d160 7
+d168 5
+d174 5
+d180 5
+d186 7
+@
+
+
+1.33
+log
+@Yet more tidying.
+
+Get stuff working across Cygwin and MsRuby.
+@
+text
+@d23 10
+d45 13
+@
+
+
+1.32
+log
+@Add selector for MinGW
+@
+text
+@d42 1
+d54 1
+@
+
+
+1.31
+log
+@Give up on abort_on_exception=.
+
+Handle path separator differences between mswin and cygwin.
+@
+text
+@d45 4
+a48 1
+class MsWin32 < Windows; end
+d55 1
+d59 1
+d94 2
+a95 1
+MsWin32.only do
+@
+
+
+1.30
+log
+@Split out the tests from the support code in preparation for Rubric
+@
+text
+@d62 1
+a62 1
+Windows.or_variant { $interpreter.tr! '/', '\\' }
+@
+
+
+1.29
+log
+@iMake the output format pluggable as a first step towards decent
+publishing of the results.
+@
+text
+@d4 2
+a10 2
+RUBICON_VERSION = "V0.3"
+
+d98 1
+a133 364
+#
+# This is the main Rubicon module, implemented as a module to
+# protect the namespace a tad
+#
+
+module Rubicon
+
+  require 'runit/testcase'
+  require 'runit/cui/testrunner'
+
+  # -------------------------------------------------------
+
+  class TestResult < RUNIT::TestResult
+  end
+
+  # -------------------------------------------------------
+
+  class TestRunner < RUNIT::CUI::TestRunner
+    def create_result
+      TestResult.new
+    end
+  end
+
+  # -------------------------------------------------------
+
+  class TestSuite < RUNIT::TestSuite
+  end
+
+
+  # -------------------------------------------------------
+
+  class TestCase < RUNIT::TestCase
+
+    # Local routine to check that a set of bits, and only a set of bits,
+    # is set!
+    def checkBits(bits, num)
+      0.upto(90)  { |n|
+        expected = bits.include?(n) ? 1 : 0
+        assert_equal(expected, num[n], "bit %d" % n)
+      }
+    end
+
+    def truth_table(method, *result)
+      for a in [ false, true ]
+        res = result.shift
+        assert_equal(method.call(a), res)
+        assert_equal(method.call(a ? self : nil), res)
+      end
+    end
+
+    # 
+    # Report we're skipping a test
+    #
+    def skipping(info, from=nil)
+      unless from
+        caller[0] =~ /`(.*)'/ #`
+        from = $1
+      end
+      if true
+        $stderr.print "S"
+      else
+        $stderr.puts "\nSkipping: #{from} - #{info}"
+      end
+    end
+
+    #
+    # Check a float for approximate equality
+    #
+    def assert_flequal(exp, actual, msg='')
+      if exp == 0.0
+        error = 1e-7
+      else
+        error = exp.abs/1e7
+      end
+      
+      assert((exp - actual).abs < error, 
+             "#{msg} Expected #{'%f' % exp} got #{'%f' % actual}")
+    end
+
+    def assert_kindof_exception(exception, message="")
+      setup_assert
+      block = proc
+      exception_raised = true
+      err = ""
+      ret = nil
+      begin
+	block.call
+	exception_raised = false
+	err = 'NO EXCEPTION RAISED'
+      rescue Exception
+	if $!.kind_of?(exception)
+	  exception_raised = true
+	  ret = $!
+	else
+	  raise $!.type, $!.message, $!.backtrace
+	end
+      end
+      if !exception_raised
+      	msg = edit_message(message)
+        msg.concat "expected:<"
+	msg.concat to_str(exception)
+	msg.concat "> but was:<"
+	msg.concat to_str(err)
+	msg.concat ">"
+	raise_assertion_error(msg, 2)
+      end
+      ret
+    end
+
+    #
+    # Skip a test if not super user
+    #
+    def super_user
+      caller[0] =~ /`(.*)'/ #`
+      skipping("not super user", $1)
+    end
+
+    #
+    # Issue a system and abort on error
+    #
+    def sys(cmd)
+      if $os == MsWin32
+	assert(system(cmd), "command failed: #{cmd}")
+      else
+	assert(system(cmd), cmd + ": #{$? >> 8}")
+	assert_equal(0, $?, "cmd: #{$?}")
+      end
+    end
+
+    #
+    # Use our 'test_touch' utility to touch a file
+    #
+    def touch(arg)
+#      puts("#{TEST_TOUCH} #{arg}")
+      sys("#{TEST_TOUCH} #{arg}")
+    end
+
+    #
+    # And out checkstat utility to get the status
+    #
+    def checkstat(arg)
+#      puts("#{CHECKSTAT} #{arg}")
+      `#{CHECKSTAT} #{arg}`
+    end
+
+    #
+    # Check two arrays for set equality
+    #
+    def assert_set_equal(expected, actual)
+      assert_equal([], (expected - actual) | (actual - expected),
+                   "Expected: #{expected.inspect}, Actual: #{actual.inspect}")
+    end
+
+    #
+    # Run a block in a sub process and return exit status
+    #
+    def runChild(&block)
+      pid = fork 
+      if pid.nil?
+	block.call
+        exit 0
+      end
+      Process.waitpid(pid, 0)
+      return ($? >> 8) & 0xff
+    end
+
+    def setup
+      super
+    end
+
+    def teardown
+      if $os != MsWin32
+	begin
+	  loop { Process.wait; puts "\n\nCHILD REAPED\n\n" }
+	rescue Errno::ECHILD
+	end
+      end
+      super
+    end
+    #
+    # Setup some files in a test directory.
+    #
+    def setupTestDir
+      @@start = Dir.getwd
+      teardownTestDir
+      begin
+	Dir.mkdir("_test")
+      rescue
+        $stderr.puts "Cannot run a file or directory test: " + 
+          "will destroy existing directory _test"
+        exit(99)
+      end
+      Dir.chdir("_test")
+      File.open("_file1", "w", 0644) {}
+      File.open("_file2", "w", 0644) {}
+      Dir.chdir("..")
+      @@files = %w(. .. _file1 _file2)
+    end
+    
+    def deldir(name)
+      File.chmod(0755, name)
+      Dir.chdir(name)
+      Dir.foreach(".") do |f|
+        next if f == '.' || f == '..'
+        if File.lstat(f).directory?
+          deldir(f) 
+        else
+          File.chmod(0644, f) rescue true
+          File.delete(f)
+        end 
+      end
+      Dir.chdir("..")
+      Dir.rmdir(name)
+    end
+
+    def teardownTestDir
+      Dir.chdir(@@start)
+      deldir("_test") if (File.exists?("_test"))
+    end
+
+  end
+
+    
+  #
+  # Common code to run the tests in a class
+  #
+  def handleTests(testClass)
+    testrunner = TestRunner.new
+#    TestRunner.quiet_mode = true
+    if ARGV.size == 0
+      suite = testClass.suite
+    else
+      suite = RUNIT::TestSuite.new
+      ARGV.each do |testmethod|
+        suite.add_test(testClass.new(testmethod))
+      end
+    end
+    results = testrunner.run(suite)
+  end
+  module_function :handleTests
+
+
+  # Record a particule failure, which is a location
+  # and an error message. We simply ape the runit
+  # TestFailure class.
+
+  class Failure
+    attr_accessor :at
+    attr_accessor :err
+    
+    def Failure.from_real_failures(f)
+      f.collect do |a_failure|
+        my_f = Failure.new
+        my_f.at = a_failure.at
+        my_f.err = a_failure.err
+        my_f
+      end
+    end
+  end
+
+  # Objects of this class get generated from the TestResult
+  # passed back by RUnit. We don't use it's class for two reasons:
+  # 1. We decouple better this way
+  # 2. We can't serialize the RUnit class, as it contains IO objects
+  #
+
+  
+  class Results
+    attr_reader :failure_size
+    attr_reader :error_size
+    attr_reader :run_tests
+    attr_reader :run_asserts
+    attr_reader :failures
+    attr_reader :errors
+
+    def initialize_from(test_result)
+      @@failure_size = test_result.failure_size
+      @@error_size   = test_result.error_size
+      @@run_tests    = test_result.run_tests
+      @@run_asserts  = test_result.run_asserts
+      @@succeed      = test_result.succeed?
+      @@failures     = Failure.from_real_failures(test_result.failures)
+      @@errors       = Failure.from_real_failures(test_result.errors)
+      self
+    end
+
+    def succeed?
+      @@succeed
+    end
+  end
+
+  # And here is where we gather the results of all the tests. This is
+  # also the object exported to XML
+
+  class ResultGatherer
+
+    attr_reader   :results
+    attr_accessor :name
+    attr_reader   :config
+    attr_reader   :date
+    attr_reader   :rubicon_version
+
+    def initialize(name = '')
+      @@name    = ''
+      @@results = {}
+      @@config  = Config::CONFIG
+      @@date    = Time.now
+      @@rubicon_version = RUBICON_VERSION
+    end
+    
+    def add(klass, result_set)
+      @@results[klass.name] = Results.new.initialize_from(result_set)
+    end
+    
+  end
+
+  # Run a set of tests in a file. This would be a TestSuite, but we
+  # want to run each file separately, and to summarize the results
+  # differently
+
+  class BulkTestRunner
+
+    def initialize(args, group_name)
+      @@groupName = group_name
+      @@files     = []
+      @@results   = ResultGatherer.new
+      @@results.name   = group_name
+      @@op_class_file  = "ascii"
+
+      # Look for a -op <class> argument, which controls
+      # where our output goes
+
+      if args.size > 1 and args[0] == "-op"
+        args.shift
+        @@op_class_file = args.shift
+      end
+
+      @@op_class_file = "result_" + @@op_class_file
+      require @@op_class_file
+    end
+
+    def addFile(fileName)
+      @@files << fileName
+    end
+
+    def run
+      @@files.each do |file|
+        require file
+        className = File.basename(file)
+        className.sub!(/\.rb$/, '')
+        klass = eval className
+        runner = TestRunner.new
+        TestRunner.quiet_mode = true
+        $stderr.print "\n", className, ": "
+
+        @@results.add(klass, runner.run(klass.suite))
+      end
+
+      reporter = ResultDisplay.new(@@results)
+      reporter.reportOn $stdout
+    end
+
+  end
+end
+@
+
+
+1.28
+log
+@Win32 changes to Kernel, etc... Thread is incomplete: we'll do something of
+a rewrite under Linux.
+@
+text
+@d2 1
+d9 1
+a9 1
+RUBICON_VERSION = "V0.2"
+a58 1
+require "rbconfig.rb"
+d375 24
+a398 1
+  # Accumulate a running set of results, and report them at the end
+d400 27
+d429 5
+a433 3
+    LINE_LENGTH = 72
+    LINE = '=' * LINE_LENGTH
+    Line = ' ' * 12 + '-' * (LINE_LENGTH - 12)
+d435 2
+a436 2
+    def initialize(name)
+      @@name    = name
+d438 3
+d442 3
+a444 3
+
+    def add(klass, resultSet)
+      @@results[klass.name] = resultSet
+a446 119
+    def reportOn(op)
+      op.puts
+      op.puts LINE
+      title = "Test Results".center(LINE_LENGTH)
+      title[0, @@name.length] = @@name
+      title[-RUBICON_VERSION.length, RUBICON_VERSION.length] = RUBICON_VERSION
+      op.puts title
+      op.puts LINE
+      op.puts "                 Name   OK?   Tests  Asserts      Failures   Errors"
+      op.puts Line
+
+      total_classes = 0
+      total_tests   = 0
+      total_asserts = 0
+      total_fails   = 0
+      total_errors  = 0
+      total_bad     = 0
+
+      format = "%21s   %4s   %4d  %7d  %9s  %7s\n"
+
+      names = @@results.keys.sort
+      for name in names
+        res    = @@results[name]
+        fails  = res.failure_size.nonzero? || ''
+        errors = res.error_size.nonzero? || ''
+
+        total_classes += 1
+        total_tests   += res.run_tests
+        total_asserts += res.run_asserts
+        total_fails   += res.failure_size
+        total_errors  += res.error_size
+        total_bad     += 1 unless res.succeed?
+
+        op.printf format,
+          name.sub(/^Test/, ''),
+          res.succeed? ? "    " : "FAIL",
+          res.run_tests, res.run_asserts, 
+          fails.to_s, errors
+      end
+
+      op.puts LINE
+      if total_classes > 1
+        op.printf format, 
+          sprintf("All %d files", total_classes),
+          total_bad > 0 ? "FAIL" : "    ",
+          total_tests, total_asserts,
+          total_fails, total_errors
+        op.puts LINE
+      end
+
+      if total_fails > 0
+        op.puts
+        op.puts "Failure Report".center(LINE_LENGTH)
+        op.puts LINE
+        left = total_fails
+
+        for name in names
+          res = @@results[name]
+          if res.failure_size > 0
+            op.puts
+            op.puts name + ":"
+            op.puts "-" * name.length.succ
+
+            res.failures.each do |f|
+              f.at.each do |at|
+                break if at =~ /rubicon/
+                op.print "    ", at, "\n"
+              end
+              err = f.err.to_s
+
+              if err =~ /expected:(.*)but was:(.*)/m
+                exp = $1.dump
+                was = $2.dump
+                op.print "    ....Expected: #{exp}\n"
+                op.print "    ....But was:  #{was}\n"
+              else
+                op.print "    ....#{err}\n"
+              end
+            end
+
+            left -= res.failure_size
+            op.puts
+            op.puts Line if left > 0
+          end
+        end
+        op.puts LINE
+      end
+
+      if total_errors > 0
+        op.puts
+        op.puts "Error Report".center(LINE_LENGTH)
+        op.puts LINE
+        left = total_errors
+
+        for name in names
+          res = @@results[name]
+          if res.error_size > 0
+            op.puts
+            op.puts name + ":"
+            op.puts "-" * name.length.succ
+
+            res.errors.each do |f|
+              f.at.each do |at|
+                break if at =~ /rubicon/
+                op.print "    ", at, "\n"
+              end
+              err = f.err.to_s
+              op.print "    ....#{err}\n"
+            end
+
+            left -= res.error_size
+            op.puts
+            op.puts Line if left > 0
+          end
+        end
+        op.puts LINE
+      end
+
+    end
+a448 1
+
+d455 2
+a456 2
+    def initialize(groupName)
+      @@groupName = groupName
+d458 14
+a471 1
+      @@results   = ResultGatherer.new(groupName)
+d491 2
+a492 1
+      @@results.reportOn $stderr
+@
+
+
+1.27
+log
+@Get more tests working under Win32, and tidy up some of the
+operating system dependencies a tad
+@
+text
+@d1 2
+@
+
+
+1.26
+log
+@Start adding MsWin32 support
+@
+text
+@d8 56
+d87 1
+a87 1
+if RUBY_PLATFORM =~ /mswin32/
+a129 28
+# -------------------------------------------------------------
+#
+# Operating system classification. We use classes for this, as 
+# we get lots of flexibility with comparisons.
+#
+# Use with
+#
+#   if $os <= Unix           # operating system is some Unix variant
+#
+#   if $os == Linux          # operating system is Linux
+
+class OS;                end
+class Unix    < OS;      end
+class Linux   < Unix;    end
+class BSD     < Unix;    end
+class FreeBSD < BSD;     end
+
+class Windows < OS;      end
+class Cygwin  < Windows; end
+class MsWin32 < Windows; end
+
+$os = case RUBY_PLATFORM
+      when /linux/   then  Linux
+      when /bsd/     then BSD
+      when /cygwin/  then Cygwin
+      when /mswin32/ then MsWin32
+      else OS
+      end
+@
+
+
+1.25
+log
+@Fix a typo in runChild (thanks to Yamada-san for finding it)
+@
+text
+@d31 5
+d93 1
+d96 4
+a99 3
+      when /linux/  then  Linux
+      when /bsd/    then BSD
+      when /cygwin/ then Cygwin
+d224 6
+a229 2
+      assert(system(cmd), cmd + ": #{$? >> 8}")
+      assert_equal(0, $?, "cmd: #{$?}")
+d262 1
+a262 1
+        block.call
+d274 5
+a278 3
+      begin
+        loop { Process.wait; puts "\n\nCHILD REAPED\n\n" }
+      rescue Errno::ECHILD
+d288 3
+a290 2
+      Dir.mkdir("_test")
+      if $? != 0 && false
+@
+
+
+1.24
+log
+@WHen fixing up the DOS stuff, I removed too many permissions, to directories
+couldn't be deleted under Unix
+@
+text
+@d251 2
+a252 1
+          block.call          exit 0
+@
+
+
+1.23
+log
+@Start to get tests running better under Windows. Start some basic work
+on File and Dir, We seem to be bumping up against some Cygwin bugs
+though; utime and IGNORED signals don't seem to work correctly. Once I get the
+tests stabilized I'll publish a list and hopefully those who know about
+these things will be able to comment.
+@
+text
+@d217 1
+a217 1
+      assert(system(cmd), cmd)
+d287 16
+d305 1
+a305 14
+      if (File.exists?("_test"))
+        Dir.chdir("_test")
+        Dir.foreach(".") { |f|
+	  File.chmod(0644, f) rescue true
+          begin
+            File.delete(f)
+          rescue
+            Dir.delete(f) rescue puts $!
+          end unless f[0] == ?.
+        }
+        Dir.chdir("..")
+	File.chmod(0644, "_test")
+        Dir.rmdir("_test")
+      end
+@
+
+
+1.22
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d80 15
+a94 9
+class OS;             end
+class Unix    < OS;   end
+class Linux   < Unix; end
+class BSD     < Unix; end
+class FreeBSD < BSD;  end
+
+$os = OS
+$os = Linux if RUBY_PLATFORM =~ /linux/
+$os = BSD   if RUBY_PLATFORM =~ /bsd/
+d251 1
+a251 2
+          block.call
+          exit 0
+d292 1
+d296 1
+a296 1
+            Dir.delete(f)
+d300 1
+@
+
+
+1.21
+log
+@Fix bugs based on Matz's comments
+@
+text
+@d6 1
+a6 1
+RUBICON_VERSION = "V0.1.4"
+d8 26
+d216 16
+d345 1
+a345 1
+      op.puts "            Name   OK?   Tests  Asserts      Failures   Errors"
+d355 1
+a355 1
+      format = "%16s   %4s   %4d  %7d  %9s  %7s\n"
+@
+
+
+1.20
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d6 1
+a6 1
+RUBICON_VERSION = "V0.1.3"
+d295 3
+a297 3
+    def report
+      puts
+      puts LINE
+d301 4
+a304 4
+      puts title
+      puts LINE
+      puts "            Name   OK?   Tests  Asserts      Failures   Errors"
+      puts Line
+d328 1
+a328 1
+        printf format,
+d335 1
+a335 1
+      puts LINE
+d337 1
+a337 1
+        printf format, 
+d342 1
+a342 1
+        puts LINE
+d346 3
+a348 3
+        puts
+        puts "Failure Report".center(LINE_LENGTH)
+        puts LINE
+d354 3
+a356 3
+            puts
+            puts name + ":"
+            puts "-" * name.length.succ
+d361 1
+a361 1
+                print "    ", at, "\n"
+d368 2
+a369 2
+                print "    ....Expected: #{exp}\n"
+                print "    ....But was:  #{was}\n"
+d371 1
+a371 1
+                print "    ....#{err}\n"
+d376 2
+a377 2
+            puts
+            puts Line if left > 0
+d380 1
+a380 1
+        puts LINE
+d384 3
+a386 3
+        puts
+        puts "Error Report".center(LINE_LENGTH)
+        puts LINE
+d392 3
+a394 3
+            puts
+            puts name + ":"
+            puts "-" * name.length.succ
+d399 1
+a399 1
+                print "    ", at, "\n"
+d402 1
+a402 1
+              print "    ....#{err}\n"
+d406 2
+a407 2
+            puts
+            puts Line if left > 0
+d410 1
+a410 1
+        puts LINE
+d446 1
+a446 1
+      @@results.report
+@
+
+
+1.19
+log
+@Added Aleksi's changes
+@
+text
+@d6 1
+a6 1
+RUBICON_VERSION = "V0.1.2"
+d9 30
+a38 1
+module Rubicon
+d40 1
+a40 2
+  require 'runit/testcase'
+  require 'runit/cui/testrunner'
+a41 4
+  # -------------------------------------------------------
+  # Class to manipulate Ruby version numbers. We use this to 
+  # insulate ourselves from changes in version number format
+  #
+d43 25
+a67 2
+  class VersionNumber
+    include Comparable
+d69 1
+a69 3
+    def initialize(version)
+      @@version = version
+    end
+d71 2
+a72 6
+    def <=>(other)
+      @@version <=> other
+    end
+  end
+
+  $rubyVersion = VersionNumber.new(VERSION)
+d244 7
+a250 1
+        Dir.foreach(".") { |f| File.delete(f) unless f[0] == ?. }
+@
+
+
+1.18
+log
+@Make Aleksi's changes
+@
+text
+@d6 1
+a6 1
+RUBICON_VERSION = "V0.1.1"
+@
+
+
+1.17
+log
+@New version with built-in touch
+@
+text
+@d6 2
+a7 1
+VERSION = "VV0.1.1"
+d15 19
+d102 29
+d253 1
+a253 1
+      title[-VERSION.length, VERSION.length] = VERSION
+@
+
+
+1.16
+log
+@Add our own touch utility
+@
+text
+@d6 1
+a6 1
+VERSION = "VV0.1"
+@
+
+
+1.15
+log
+@Release 0.1. First public release
+@
+text
+@a99 19
+    # Gotta love standards...
+    # GNU touch changed position of Century+Year between 3.16 and 4.0p
+    #
+    def sys_touch(type, moday, hourmin, year, file)
+      if @@touch_order == nil
+        which = `touch --version`
+        case which 
+          when /4.0p/ 
+            @@touch_order= proc { |m,h,y| "#{y}#{m}#{h}" }
+          when /3.16/
+            @@touch_order= proc { |m,h,y| "#{m}#{h}#{y}" }
+          else
+            @@touch_order= proc { |m,h,y| "#{m}#{h}#{y}" }
+        end
+      end
+      sys ("touch -#{type} -t #{@@touch_order.call(moday,hourmin,year)} #{file}")
+    end
+
+    #
+@
+
+
+1.14
+log
+@Fixed problem with different versions of "touch"
+@
+text
+@d1 7
+a68 16
+    # Handle broken exception handling
+    #
+#     def assert_exception(ex, &code)
+#       begin
+#         super
+#       rescue ex
+#         if $!.instance_of? ex
+#           $stderr.puts "\nThis RubyUnit does not trap #{ex}. This error can\n" +
+#           "safely be ignored"
+#         else
+#           raise
+#         end
+#       end
+#     end
+
+    #
+d223 1
+@
+
+
+1.13
+log
+@Archive save
+@
+text
+@d109 19
+@
+
+
+1.12
+log
+@Various fixes
+@
+text
+@d64 21
+a84 6
+    def assert_exception(ex, &code)
+      begin
+        super
+      rescue ex
+        $stderr.puts "\nThis RubyUnit does not trap #{ex}. This error can\n" +
+                     "safely be ignored"
+d86 3
+d90 2
+d120 1
+a120 1
+      pid=fork 
+d125 1
+a125 1
+      Process.waitpid(pid,0)
+d129 11
+d250 1
+a250 1
+          sprintf("All %d classes", total_classes),
+d268 1
+d280 2
+a281 2
+                print "    Expected: #{exp}\n"
+                print "    But was:  #{was}\n"
+d283 1
+a283 1
+                print "    #{err}\n"
+d295 30
+d327 2
+@
+
+
+1.11
+log
+@CHange to using Dir calls to tidy up
+@
+text
+@d114 1
+a114 1
+ 
+d146 1
+a146 1
+    TestRunner.quiet_mode = true
+@
+
+
+1.10
+log
+@Tidy up a tad
+@
+text
+@d115 1
+a115 3
+      Dir.mkdir("_test", 0644)
+      system("ls -ld _test")
+      exit
+d130 6
+a135 4
+      Dir.chdir("_test")
+      Dir.foreach { |f| File.delete(f) unless f[0] = ?. }
+      Dir.chdir("..")
+      Dir.rmdir("_test")
+@
+
+
+1.9
+log
+@Tidy up the test output
+@
+text
+@d110 1
+a110 1
+    # Setup some files in a test directory
+d115 3
+a117 1
+      system("mkdir _test")
+d123 4
+a126 2
+      sys("touch _test/_file1")
+      sys("touch _test/_file2")
+d132 4
+a135 2
+      system("rm -f _test/*")
+      system("rmdir _test 2>/dev/null")
+@
+
+
+1.8
+log
+@Trap bad exception handling
+@
+text
+@d6 7
+d14 3
+d19 2
+d24 3
+a107 1
+    
+d109 3
+d135 3
+d152 140
+d293 3
+@
+
+
+1.7
+log
+@Archive save
+@
+text
+@d6 3
+d39 5
+a43 1
+      $stderr.puts "\nSkipping: #{from} - #{info}"
+d47 11
+d119 2
+a120 2
+    testrunner = RUNIT::CUI::TestRunner.new
+    RUNIT::CUI::TestRunner.quiet_mode = true
+d129 1
+a129 1
+    testrunner.run(suite)
+@
+
+
+1.6
+log
+@Lord knows
+@
+text
+@d56 8
+d81 1
+a81 1
+      if $? != 0
+@
+
+
+1.5
+log
+@Finished.  Took forever, wasn't that big. *sigh*.
+@
+text
+@d36 1
+a36 1
+      $stderr.puts "Skipping: #{from} - #{info}"
+d71 1
+d74 1
+a74 1
+        $stderr.puts "Cannot run directory test: " + 
+@
+
+
+1.4
+log
+@Finished with TestFile
+@
+text
+@d33 1
+a33 1
+        caller[0] =~ /`(.*)'/
+d43 1
+a43 1
+      caller[0] =~ /`(.*)'/
+d53 13
+@
+
+
+1.3
+log
+@Archive save
+@
+text
+@d43 2
+a44 1
+      skipping("not super user")
+@
+
+
+1.2
+log
+@Archive
+@
+text
+@d28 17
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d19 38
+d59 1
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

@@ -1,0 +1,1063 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.6.2.1
+	v1_6_6:1.6.2.1
+	v1_6_5:1.6.2.1
+	v1_6_4:1.6
+	v1_7_1:1.8
+	v1_6_4_preview4:1.6
+	v1_6_4_preview3:1.6
+	v1_6_4_preview2:1.6
+	v1_6_4_preview1:1.6
+	v1_6_3:1.6
+	ruby_m17n:1.6.0.4
+	ruby_1_6:1.6.0.2
+	v1_6_2:1.6
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.3
+	v1_3_6_repack:1.1.1.1.2.3
+	v1_3_6:1.1.1.1.2.3
+	v1_3_5:1.1.1.1.2.3
+	v1_2_6repack:1.1.2.8
+	v1_3_4_990625:1.1.1.1.2.3
+	v1_3_4_990624:1.1.1.1.2.3
+	v1_2_6:1.1.2.8
+	v1_3_4_990611:1.1.1.1.2.3
+	v1_3_4_990531:1.1.1.1.2.1
+	v1_3_3_990518:1.1.1.1.2.1
+	v1_3_3_990513:1.1.1.1.2.1
+	v1_3_3_990507:1.1.1.1.2.1
+	v1_2_5:1.1.2.8
+	v1_2_4:1.1.2.8
+	v1_3_1_990225:1.1.1.1.2.1
+	v1_3_1_990224:1.1.1.1.2.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.8
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.8
+	v1_2_1repack:1.1.2.8
+	v1_2_1:1.1.2.8
+	v1_2_stable:1.1.2.8
+	v1_1d1:1.1.2.8.2.1
+	v1_1d0:1.1.2.8.2.1
+	v1_1c9_1:1.1.2.8
+	v1_1c9:1.1.2.8
+	v1_1c8:1.1.2.8
+	v1_1c7:1.1.2.8
+	v1_1c6:1.1.2.8
+	v1_1d-start:1.1.2.8.2.1
+	v1_1c5:1.1.2.8
+	v1_1dev:1.1.2.8.0.2
+	v1_1c4:1.1.2.8
+	v1_1c3:1.1.2.8
+	v1_1c2:1.1.2.8
+	v1_1c1:1.1.2.7
+	v1_1c0:1.1.2.7
+	v1_1b9_31:1.1.2.7
+	v1_1b9_30:1.1.2.7
+	v1_1b9_28:1.1.2.7
+	v1_1b9_27:1.1.2.7
+	v1_1b9_26:1.1.2.7
+	r1_1b9_25:1.1.2.7
+	r1_1b9_24:1.1.2.7
+	v1_1b9_23:1.1.2.7
+	v1_1b9_22:1.1.2.7
+	v1_1b9_20:1.1.2.7
+	v1_1b9_18:1.1.2.7
+	v1_1b9_16:1.1.2.7
+	v1_1b9_15:1.1.2.7
+	v1_1b9_13:1.1.2.7
+	v1_1b9_12:1.1.2.7
+	v1_1b9_11:1.1.2.7
+	v1_1b9_08:1.1.2.7
+	v1_1b9_07:1.1.2.7
+	r1_1b9:1.1.2.6
+	v1_1b8:1.1.2.6
+	v1_1b7:1.1.2.6
+	v1_1b6:1.1.2.4
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.10
+date	2002.06.04.07.34.19;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.07.05.17.19.28;	author knu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.05.06.15.04.52;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.01.26.05.02.19;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.12.08.07.10.36;	author matz;	state Exp;
+branches
+	1.6.2.1;
+next	1.5;
+
+1.5
+date	2000.07.15.13.37.03;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.07.06.07.21.24;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.29.08.05.31;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.18;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.44.38;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.02.24.04.31.29;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.06.01.06.59.20;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.06.09.09.21.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.01.16.12.44.38;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	98.01.16.12.58.19;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	98.01.19.05.08.25;	author matz;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	98.01.23.10.39.02;	author matz;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	98.02.02.04.49.13;	author matz;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	98.02.09.10.56.23;	author matz;	state Exp;
+branches;
+next	1.1.2.7;
+
+1.1.2.7
+date	98.03.11.07.33.07;	author matz;	state Exp;
+branches;
+next	1.1.2.8;
+
+1.1.2.8
+date	98.07.29.09.50.43;	author matz;	state Exp;
+branches
+	1.1.2.8.2.1;
+next	;
+
+1.1.2.8.2.1
+date	98.09.08.07.09.47;	author matz;	state Exp;
+branches;
+next	;
+
+1.6.2.1
+date	2001.07.06.06.32.19;	author knu;	state Exp;
+branches;
+next	1.6.2.2;
+
+1.6.2.2
+date	2002.09.11.07.17.18;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+
+* lib/tempfile.rb (Tempfile::size): added.
+@
+text
+@#
+# $Id: tempfile.rb,v 1.9 2001/07/05 17:19:28 knu Exp $
+#
+# The class for temporary files.
+#  o creates a temporary file, which name is "basename.pid.n" with mode "w+".
+#  o Tempfile objects can be used like IO object.
+#  o with tempfile.close(true) created temporary files are removed.
+#  o created files are also removed on script termination.
+#  o with Tempfile#open, you can reopen the temporary file.
+#  o file mode of the temporary files are 0600.
+
+require 'delegate'
+
+class Tempfile < SimpleDelegator
+  Max_try = 10
+
+  def Tempfile.callback(path, data)
+    pid = $$
+    lambda{
+      if pid == $$ 
+	print "removing ", path, "..." if $DEBUG
+	data[0].close if data[0]
+	if File.exist?(path)
+	  File.unlink(path) 
+	end
+	if File.exist?(path + '.lock')
+	  Dir.rmdir(path + '.lock')
+	end
+	print "done\n" if $DEBUG
+      end
+    }
+  end
+
+  def initialize(basename, tmpdir=ENV['TMPDIR']||ENV['TMP']||ENV['TEMP']||'/tmp')
+    if $SAFE > 0 and tmpdir.tainted?
+      tmpdir = '/tmp'
+    end
+    n = 0
+    while true
+      begin
+	tmpname = sprintf('%s/%s%d.%d', tmpdir, basename, $$, n)
+	lock = tmpname + '.lock'
+	unless File.exist?(tmpname) or File.exist?(lock)
+	  Dir.mkdir(lock)
+	  break
+	end
+      rescue
+	raise "cannot generate tempfile `%s'" % tmpname if n >= Max_try
+	#sleep(1)
+      end
+      n += 1
+    end
+
+    @@protect = []
+    @@clean_files = Tempfile.callback(tmpname, @@protect)
+    ObjectSpace.define_finalizer(self, @@clean_files)
+
+    @@tmpfile = File.open(tmpname, File::RDWR|File::CREAT|File::EXCL, 0600)
+    @@protect[0] = @@tmpfile
+    @@tmpname = tmpname
+    super(@@tmpfile)
+    Dir.rmdir(lock)
+  end
+
+  def Tempfile.open(*args)
+    Tempfile.new(*args)
+  end
+
+  def open
+    @@tmpfile.close if @@tmpfile
+    @@tmpfile = File.open(@@tmpname, 'r+')
+    @@protect[0] = @@tmpfile
+    __setobj__(@@tmpfile)
+  end
+
+  def close(real=false)
+    @@tmpfile.close if @@tmpfile
+    @@protect[0] = @@tmpfile = nil
+    if real
+      @@clean_files.call
+      ObjectSpace.undefine_finalizer(self)
+    end
+  end
+
+  def path
+    @@tmpname
+  end
+
+  def size
+    if @@tmpfile
+      @@tmpfile.flush
+      @@tmpfile.stat.size
+    else
+      0
+    end
+  end
+end
+
+if __FILE__ == $0
+#  $DEBUG = true
+  f = Tempfile.new("foo")
+  f.print("foo\n")
+  f.close
+  f.open
+  p f.gets # => "foo\n"
+  f.close(true)
+end
+@
+
+
+1.9
+log
+@* lib/tempfile.rb: a tempfile must be created with mode 0600.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.8 2001/05/06 15:04:52 matz Exp $
+d87 9
+@
+
+
+1.8
+log
+@forgot some checkins.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.7 2001/01/26 05:02:19 matz Exp $
+d58 1
+a58 1
+    @@tmpfile = File.open(tmpname, File::RDWR|File::CREAT|File::EXCL)
+@
+
+
+1.7
+log
+@* parse.y: clarify do ambiguity, bit more complex but natural
+  from my point of view.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.6 2000/12/08 07:10:36 matz Exp $
+d7 1
+a7 1
+#  o with tmpfile.close(true) created temporary files are removed.
+d38 8
+a45 14
+    umask = File.umask(0177)
+    begin
+      n = 0
+      while true
+	begin
+	  tmpname = sprintf('%s/%s%d.%d', tmpdir, basename, $$, n)
+	  lock = tmpname + '.lock'
+	  unless File.exist?(tmpname) or File.exist?(lock)
+	    Dir.mkdir(lock)
+	    break
+	  end
+	rescue
+	  raise "cannot generate tmpfile `%s'" % tmpname if n >= Max_try
+	  #sleep(1)
+d47 3
+a49 1
+	n += 1
+d51 2
+d54 9
+a62 12
+      @@protect = []
+      @@clean_files = Tempfile.callback(tmpname, @@protect)
+      ObjectSpace.define_finalizer(self, @@clean_files)
+
+      @@tmpfile = File.open(tmpname, File::RDWR|File::CREAT|File::EXCL)
+      @@protect[0] = @@tmpfile
+      @@tmpname = tmpname
+      super(@@tmpfile)
+      Dir.rmdir(lock)
+    ensure
+      File.umask(umask)
+    end
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.5 2000/07/15 13:37:03 matz Exp $
+d18 1
+d20 10
+a29 4
+      print "removing ", path, "..." if $DEBUG
+      data[0].close if data[0]
+      if File.exist?(path)
+	File.unlink(path) 
+a30 4
+      if File.exist?(path + '.lock')
+	Dir.rmdir(path + '.lock')
+      end
+      print "done\n" if $DEBUG
+@
+
+
+1.6.2.1
+log
+@* lib/tempfile.rb: merge from 1.7: do not delete a used tempfile
+  from children processes.
+
+* lib/tempfile.rb: merge from 1.7: do not change the umask so as
+  not to affect other threads' file creation.  specify a file mode
+  (0600) when creating a tempfile instead.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.6 2000/12/08 07:10:36 matz Exp $
+d7 1
+a7 1
+#  o with tempfile.close(true) created temporary files are removed.
+a17 1
+    pid = $$
+d19 7
+a25 10
+      if pid == $$ 
+	print "removing ", path, "..." if $DEBUG
+	data[0].close if data[0]
+	if File.exist?(path)
+	  File.unlink(path) 
+	end
+	if File.exist?(path + '.lock')
+	  Dir.rmdir(path + '.lock')
+	end
+	print "done\n" if $DEBUG
+d27 1
+d35 14
+a48 8
+    n = 0
+    while true
+      begin
+	tmpname = sprintf('%s/%s%d.%d', tmpdir, basename, $$, n)
+	lock = tmpname + '.lock'
+	unless File.exist?(tmpname) or File.exist?(lock)
+	  Dir.mkdir(lock)
+	  break
+d50 1
+a50 3
+      rescue
+	raise "cannot generate tempfile `%s'" % tmpname if n >= Max_try
+	#sleep(1)
+d52 12
+a63 1
+      n += 1
+a64 10
+
+    @@protect = []
+    @@clean_files = Tempfile.callback(tmpname, @@protect)
+    ObjectSpace.define_finalizer(self, @@clean_files)
+
+    @@tmpfile = File.open(tmpname, File::RDWR|File::CREAT|File::EXCL, 0600)
+    @@protect[0] = @@tmpfile
+    @@tmpname = tmpname
+    super(@@tmpfile)
+    Dir.rmdir(lock)
+@
+
+
+1.6.2.2
+log
+@* lib/tempfile.rb: Merge from 1.7: Add Tempfile#size.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.6.2.1 2001/07/06 06:32:19 knu Exp $
+a86 9
+  end
+
+  def size
+    if @@tmpfile
+      @@tmpfile.flush
+      @@tmpfile.stat.size
+    else
+      0
+    end
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.4 2000/07/06 07:21:24 matz Exp $
+d32 3
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.3 2000/02/29 08:05:31 matz Exp $
+a12 1
+require 'final'
+@
+
+
+1.3
+log
+@2000-02-29
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.2 1999/08/13 05:45:18 matz Exp $
+d55 1
+a55 1
+      @@tmpfile = File.open(tmpname, 'w+')
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.1.1.2.3 1999/06/09 09:21:36 matz Exp $
+d18 1
+a18 1
+  def Tempfile.callback(path)
+d21 1
+d51 2
+a52 1
+      @@clean_files = Tempfile.callback(tmpname)
+d56 1
+d72 1
+d78 1
+a78 1
+    @@tmpfile = nil
+@
+
+
+1.1
+log
+@file tempfile.rb was initially added on branch v1_1r.
+@
+text
+@d1 94
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 91
+#
+# $Id: tempfile.rb,v 1.1.2.8.2.1 1998/09/08 07:09:47 matz Exp $
+#
+# The class for temporary files.
+#  o creates a temporary file, which name is "basename.pid.n" with mode "w+".
+#  o Tempfile objects can be used like IO object.
+#  o with tmpfile.close(true) created temporary files are removed.
+#  o created files are also removed on script termination.
+#  o with Tempfile#open, you can reopen the temporary file.
+#  o file mode of the temporary files are 0600.
+
+require 'delegate'
+require 'final'
+
+class Tempfile < SimpleDelegator
+  Max_try = 10
+
+  def Tempfile.callback(path)
+    lambda{
+      print "removing ", path, "..." if $DEBUG
+      if File.exist?(path)
+	File.unlink(path) 
+      end
+      if File.exist?(path + '.lock')
+	Dir.rmdir(path + '.lock')
+      end
+      print "done\n" if $DEBUG
+    }
+  end
+
+  def initialize(basename, tmpdir = '/tmp')
+    umask = File.umask(0177)
+    tmpname = lock = nil
+    begin
+      n = 0
+      while true
+	begin
+	  tmpname = sprintf('%s/%s.%d.%d', tmpdir, basename, $$, n)
+	  lock = tmpname + '.lock'
+	  unless File.exist?(lock)
+	    Dir.mkdir(lock)
+	    break
+	  end
+	rescue
+	  raise "cannot generate tmpfile `%s'" % tmpname if n >= Max_try
+	  #sleep(1)
+	end
+	n += 1
+      end
+
+      @@clean_files = Tempfile.callback(tmpname)
+      ObjectSpace.define_finalizer(self, @@clean_files)
+
+      @@tmpfile = File.open(tmpname, 'w+')
+      @@tmpname = tmpname
+      super(@@tmpfile)
+      Dir.rmdir(lock)
+    ensure
+      File.umask(umask)
+    end
+  end
+
+  def Tempfile.open(*args)
+    Tempfile.new(*args)
+  end
+
+  def open
+    @@tmpfile.close if @@tmpfile
+    @@tmpfile = File.open(@@tmpname, 'r+')
+    __setobj__(@@tmpfile)
+  end
+
+  def close(real=false)
+    @@tmpfile.close if @@tmpfile
+    @@tmpfile = nil
+    if real
+      @@clean_files.call
+      ObjectSpace.undefine_finalizer(self)
+    end
+  end
+end
+
+if __FILE__ == $0
+#  $DEBUG = true
+  f = Tempfile.new("foo")
+  f.print("foo\n")
+  f.close
+  f.open
+  p f.gets # => "foo\n"
+  f.close(true)
+end
+@
+
+
+1.1.1.1.2.1
+log
+@990224
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.1.1 1999/01/20 04:59:35 matz Exp $
+d31 1
+a31 1
+  def initialize(basename, tmpdir = nil)
+a37 1
+	  tmpdir ||= ENV['TMPDIR'] || ENV['TMP'] || ENV['TEMP'] || '/tmp'
+@
+
+
+1.1.1.1.2.2
+log
+@rb_exec_end_proc, etc.
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.1.1.2.1 1999/02/24 04:31:29 matz Exp $
+d41 1
+a41 1
+	  unless File.exist?(tmpname) or File.exist?(lock)
+a80 4
+  end
+
+  def path
+    @@tmpname
+@
+
+
+1.1.1.1.2.3
+log
+@thread bugs
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.1.1.2.2 1999/06/01 06:59:20 matz Exp $
+d31 1
+a31 1
+  def initialize(basename, tmpdir=ENV['TMPDIR']||ENV['TMP']||ENV['TEMP']||'/tmp')
+d33 1
+d38 2
+a39 1
+	  tmpname = sprintf('%s/%s%d.%d', tmpdir, basename, $$, n)
+@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 64
+#
+# $Id: tempfile.rb,v 0.2 1998/01/16 09:27:33 akira Exp $
+# Copyright (C) 1998 akira yamada. All rights reserved. 
+# This file can be distributed under the terms the Ruby.
+
+# The class for temporary files.
+#  o creates a temporary file, which name is "basename.pid.n" with mode "w+".
+#  o Tempfile objects can be used like IO object.
+#  o created temporary files are removed if it is closed or garbage collected,
+#    or script termination.
+#  o file mode of the temporary files are 0600.
+
+require 'delegate'
+
+class Tempfile < SimpleDelegater
+  Max_try = 10
+
+  def initialize(basename, tmpdir = '/tmp')
+    @@tmpdir = tmpdir
+
+    umask = File.umask(0177)
+    cwd = Dir.getwd
+    Dir.chdir(@@tmpdir)
+    begin
+      n = 0
+      while true
+	begin
+	  @@tmpname = sprintf('%s.%d.%d', basename, $$, n)
+	  unless File.exist?(@@tmpname)
+	    File.symlink('.', @@tmpname + '.lock')
+	    break
+	  end
+	rescue
+	  raise "cannot generate tmpfile `%s'" % @@tmpname if n >= Max_try
+	  #sleep(1)
+	end
+	n += 1
+      end
+
+      @@clean_files = proc {|id| 
+	if File.exist?(@@tmpdir + '/' + @@tmpname)
+	  File.unlink(@@tmpdir + '/' + @@tmpname) 
+	end
+	if File.exist?(@@tmpdir + '/' + @@tmpname + '.lock')
+	  File.unlink(@@tmpdir + '/' + @@tmpname + '.lock')
+	end
+      }
+      ObjectSpace.call_finalizer(self)
+      ObjectSpace.add_finalizer(@@clean_files)
+
+      @@tmpfile = open(@@tmpname, 'w+')
+      super(@@tmpfile)
+      File.unlink(@@tmpname + '.lock')
+    ensure
+      File.umask(umask)
+      Dir.chdir(cwd)
+    end
+  end
+
+  def close
+    super
+    @@clean_files.call
+  end
+end
+@
+
+
+1.1.2.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.1 1998/01/16 12:44:38 matz Exp $
+d4 1
+a4 1
+# This file can be distributed under the terms of the Ruby.
+@
+
+
+1.1.2.3
+log
+@Mon Jan 19 14:06:13 JST 1998
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.2 1998/01/16 12:58:19 matz Exp $
+d9 2
+a10 1
+#  o created temporary files are removed on closing or script termination.
+a13 1
+require 'final'
+d48 2
+a49 1
+      ObjectSpace.define_finalizer(self, @@clean_files)
+a59 4
+  def Tempfile.open(*args)
+    Tempfile.new(*args)
+  end
+
+d61 1
+a61 1
+    @@tmpfile.close
+a62 1
+    ObjectSpace.undefine_finalizer(self)
+@
+
+
+1.1.2.4
+log
+@tempfile.rb modified
+@
+text
+@d2 4
+a5 2
+# $Id: tempfile.rb,v 1.1.2.3 1998/01/19 05:08:25 matz Exp $
+#
+d9 1
+a9 3
+#  o with tmpfile.close(true) created temporary files are removed.
+#  o created files are also removed on script termination.
+#  o with Tempfile#open, you can reopen the temporary file.
+d19 2
+d22 2
+d28 1
+a28 1
+	  @@tmpname = sprintf('%s/%s.%d.%d', tmpdir, basename, $$, n)
+d30 1
+a30 1
+	    File.symlink(tmpdir, @@tmpname + '.lock')
+d41 2
+a42 2
+	if File.exist?(@@tmpname)
+	  File.unlink(@@tmpname) 
+d44 2
+a45 2
+	if File.exist?(@@tmpname + '.lock')
+	  File.unlink(@@tmpname + '.lock')
+d50 1
+a50 1
+      @@tmpfile = File.open(@@tmpname, 'w+')
+d55 1
+d63 4
+a66 13
+  def open
+    @@tmpfile.close if @@tmpfile
+    @@tmpfile = File.open(@@tmpname, 'r+')
+    __setobj__(@@tmpfile)
+  end
+
+  def close(real=false)
+    @@tmpfile.close if @@tmpfile
+    @@tmpfile = nil
+    if real
+      @@clean_files.call
+      ObjectSpace.undefine_finalizer(self)
+    end
+@
+
+
+1.1.2.5
+log
+@__FILE__,__LINE__
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.4 1998/01/23 10:39:02 matz Exp $
+d15 1
+a15 1
+class Tempfile < SimpleDelegator
+a71 9
+end
+
+if __FILE__ == $0
+  f = Tempfile.new("foo")
+  f.print("foo\n")
+  f.close
+  f.open
+  p f.gets # => "foo\n"
+  f.close(true)
+@
+
+
+1.1.2.6
+log
+@1.1b7 pre
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.5 1998/02/02 04:49:13 matz Exp $
+a17 13
+  def Tempfile.callback(path)
+    lambda{
+      print "removing ", path, "..."
+      if File.exist?(path)
+	File.unlink(path) 
+      end
+      if File.exist?(path + '.lock')
+	File.unlink(path + '.lock')
+      end
+      print "done\n"
+    }
+  end
+
+d36 8
+a43 1
+      @@clean_files = Tempfile.callback(@@tmpname)
+a77 1
+  f = nil
+@
+
+
+1.1.2.7
+log
+@gets speed up patch
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.6 1998/02/09 10:56:23 matz Exp $
+d84 1
+@
+
+
+1.1.2.8
+log
+@sync ev
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.7 1998/03/11 07:33:07 matz Exp $
+d20 1
+a20 1
+      print "removing ", path, "..." if $DEBUG
+d25 1
+a25 1
+	File.rmdir(path + '.lock')
+d27 1
+a27 1
+      print "done\n" if $DEBUG
+a32 1
+    tmpname = lock = nil
+d37 3
+a39 4
+	  tmpname = sprintf('%s/%s.%d.%d', tmpdir, basename, $$, n)
+	  lock = tmpname + '.lock'
+	  unless File.exist?(lock)
+	    Dir.mkdir(lock)
+d43 1
+a43 1
+	  raise "cannot generate tmpfile `%s'" % tmpname if n >= Max_try
+d49 1
+a49 1
+      @@clean_files = Tempfile.callback(tmpname)
+d52 1
+a52 2
+      @@tmpname = tmpname
+      @@tmpfile = File.open(tmpname, 'w+')
+d54 1
+a54 1
+      Dir.rmdir(lock)
+a80 1
+#  $DEBUG = true
+@
+
+
+1.1.2.8.2.1
+log
+@1.1d series
+@
+text
+@d2 1
+a2 1
+# $Id: tempfile.rb,v 1.1.2.8 1998/07/29 09:50:43 matz Exp $
+d25 1
+a25 1
+	Dir.rmdir(path + '.lock')
+d54 1
+a55 1
+      @@tmpname = tmpname
+@

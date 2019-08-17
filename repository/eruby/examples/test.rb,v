@@ -1,0 +1,74 @@
+head	1.2;
+access;
+symbols
+	release_0_9_8:1.2
+	autoconfiscation-branch:1.2.0.2
+	root-of-autoconfiscation:1.2
+	release_0_9_7:1.2
+	release_0_9_6:1.2
+	release_0_9_5:1.2
+	release_0_9_4:1.2
+	release_0_9_3:1.2
+	release_0_9_2:1.1
+	release_0_9_1:1.1
+	release_0_9_0:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.06.04.05.20.20;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.19.06.02.41;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* examples/e2r.rb: new file.
+* examples/test.rhtml: new file.
+* examples/foo.rhtml: new file.
+* COPYING: new file.
+* GPL: new file.
+* LGPL: new file.
+* eruby_lib.c (eruby_import): use Kernel#eval for backtrace.
+@
+text
+@require "eruby"
+
+if filename = ARGV.shift
+  file = open(filename)
+else
+  filename = "-"
+  file = STDIN
+end
+compiler = ERuby::Compiler.new
+code = compiler.compile_file(file)
+eval(code, nil, filename)
+
+@
+
+
+1.1
+log
+@* eruby_lib.c: renamed from eruby.c.
+* eruby_lib.c (eruby_init): new class ERuby::Compiler.
+* eruby_ext.c: new file for eruby extention library.
+* examples/test.rb: example for eruby extention library.
+@
+text
+@d3 6
+a8 1
+file = ARGV.shift || STDIN
+d10 3
+a12 1
+print compiler.compile_file(file)
+@

@@ -1,0 +1,193 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.3
+	v1_3_6_repack:1.1.2.3
+	v1_3_6:1.1.2.3
+	v1_3_5:1.1.2.3
+	v1_3_4_990625:1.1.2.3
+	v1_3_4_990624:1.1.2.3
+	v1_3_4_990611:1.1.2.3
+	v1_3_4_990531:1.1.2.3
+	v1_3_3_990518:1.1.2.2
+	v1_3_3_990513:1.1.2.2
+	v1_3_3_990507:1.1.2.2
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.46;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.26.09.42.43;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.04.26.09.42.43;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.04.27.02.56.30;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	99.05.31.09.13.30;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@
+def uniq(data)
+  last=nil
+  data.delete_if do |name|
+    if last == name
+      TRUE
+    else
+      last = name
+      FALSE
+    end
+  end
+end
+
+def extract(nm, out)
+  data = nm.readlines.collect{|line|
+    line = line.split
+    case line[1]
+    when "B", "D"
+      line[0]
+    else
+      next
+    end
+  }.compact!.sort!
+  uniq(data)
+  exp = open(out, "w")
+  exp.printf "#!\n"
+  for line in data
+    exp.printf "%s\n", line
+  end
+  exp.close
+  nm.close
+end
+extract(open("|/usr/ccs/bin/nm -p ../libruby.a"), "../ruby.imp")
+@
+
+
+1.1
+log
+@file aix_mksym.rb was initially added on branch ruby_1_3.
+@
+text
+@d1 33
+@
+
+
+1.1.2.1
+log
+@aix shlib link
+@
+text
+@a0 35
+
+def uniq(data)
+  last=nil
+  data.delete_if do |name|
+    if last == name
+      TRUE
+    else
+      last = name
+      FALSE
+    end
+  end
+end
+
+def extract(nm, out)
+  data = nm.readlines.collect{|line|
+    line = line.split
+    case line[1]
+    when "B", "D"
+      line[0]
+    else
+      next
+    end
+  }.compact!.sort!
+  uniq(data)
+  exp = open(out, "w")
+  exp.printf "#!\n"
+  for line in data
+    exp.printf "%s\n", line
+  end
+  exp.close
+  nm.close
+end
+if older("../ruby.imp", "../miniruby")
+  extract(open("|/usr/ccs/bin/nm -p ../*.o"), "../ruby.imp")
+end
+@
+
+
+1.1.2.2
+log
+@better AIX support
+@
+text
+@d33 3
+a35 1
+extract(open("|/usr/ccs/bin/nm -p ../*.o"), "../ruby.imp")
+@
+
+
+1.1.2.3
+log
+@990531
+@
+text
+@d33 1
+a33 1
+extract(open("|/usr/ccs/bin/nm -p ../libruby.a"), "../ruby.imp")
+@
+
+

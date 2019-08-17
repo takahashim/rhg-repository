@@ -1,0 +1,633 @@
+head	1.1;
+branch	1.1.1;
+access;
+symbols
+	onigd20020424:1.1.1.7
+	onigd20020416:1.1.1.6
+	onigd20020401:1.1.1.6
+	onigd20020325:1.1.1.5
+	onigd20020313:1.1.1.4
+	onigd20020306:1.1.1.3
+	onigd20020304:1.1.1.2
+	onigd20020225:1.1.1.1
+	KOSAKO:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2002.03.04.03.14.05;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.03.04.03.14.05;	author knu;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	2002.03.04.03.20.51;	author knu;	state Exp;
+branches;
+next	1.1.1.3;
+
+1.1.1.3
+date	2002.03.06.04.40.25;	author knu;	state Exp;
+branches;
+next	1.1.1.4;
+
+1.1.1.4
+date	2002.03.13.08.57.48;	author knu;	state Exp;
+branches;
+next	1.1.1.5;
+
+1.1.1.5
+date	2002.03.25.05.22.48;	author knu;	state Exp;
+branches;
+next	1.1.1.6;
+
+1.1.1.6
+date	2002.04.02.05.34.14;	author knu;	state Exp;
+branches;
+next	1.1.1.7;
+
+1.1.1.7
+date	2002.04.24.07.50.39;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/**********************************************************************
+
+  regex.h - Oni Guruma (regular expression library)
+
+  Copyright (C) 2002  K.Kosako (kosako@@sofnec.co.jp)
+
+**********************************************************************/
+#ifndef _REGEX_H_
+#define _REGEX_H_
+
+#define _ONIGURUMA_
+#define  ONIGURUMA_VERSION          100    /* 1.00 */
+
+/* config parameters */
+#ifndef RE_NREGS
+#define RE_NREGS                     10
+#endif
+#define REG_NREGION            RE_NREGS
+#define REG_MAX_BACKREF_NUM       10000
+#define REG_MAX_REPEAT_NUM     10000000
+#define REG_CHAR_TABLE_SIZE         256
+
+#if defined(RUBY_PLATFORM) && defined(M17N_H)
+#define REG_RUBY_M17N
+
+typedef m17n_encoding*        RegCharCodeType;
+#define REGCODE_UNDEF         ((RegCharCodeType )NULL)
+#define REGCODE_DEFAULT       REGCODE_UNDEF
+
+#else
+
+typedef const char*           RegCharCodeType;
+#define MBCTYPE_ASCII         0
+#define MBCTYPE_EUC           2
+#define MBCTYPE_SJIS          3
+#define MBCTYPE_UTF8          1
+
+#define REGCODE_ASCII         REG_MBLEN_TABLE[MBCTYPE_ASCII]
+#define REGCODE_UTF8          REG_MBLEN_TABLE[MBCTYPE_UTF8]
+#define REGCODE_EUCJP         REG_MBLEN_TABLE[MBCTYPE_EUC]
+#define REGCODE_SJIS          REG_MBLEN_TABLE[MBCTYPE_SJIS]
+#define REGCODE_UNDEF         ((RegCharCodeType )0)
+#define REGCODE_DEFAULT       REGCODE_ASCII
+
+#endif /* else RUBY && M17N */
+
+#if defined(RUBY_PLATFORM) && !defined(M17N_H)
+#undef ismbchar
+#define ismbchar(c)    (mbclen((c)) != 1)
+#define mbclen(c)      RegDefaultCharCode[(unsigned char )(c)]
+
+extern RegCharCodeType RegDefaultCharCode;
+extern const char REG_MBLEN_TABLE[][REG_CHAR_TABLE_SIZE];
+#endif
+
+
+#define REG_OPTION_DEFAULT      REG_OPTION_NONE
+
+/* GNU regex options */
+#define RE_OPTION_IGNORECASE    (1L)
+#define RE_OPTION_EXTENDED      (RE_OPTION_IGNORECASE << 1)
+#define RE_OPTION_MULTILINE     (RE_OPTION_EXTENDED   << 1)
+#define RE_OPTION_SINGLELINE    (RE_OPTION_MULTILINE  << 1)
+#define RE_OPTION_POSIXLINE     (RE_OPTION_MULTILINE|RE_OPTION_SINGLELINE)
+#define RE_OPTION_LONGEST       (RE_OPTION_SINGLELINE << 1)
+
+/* options */
+#define REG_OPTION_NONE             0
+#define REG_OPTION_SINGLELINE       RE_OPTION_SINGLELINE
+#define REG_OPTION_MULTILINE        RE_OPTION_MULTILINE
+#define REG_OPTION_IGNORECASE       RE_OPTION_IGNORECASE
+#define REG_OPTION_EXTEND           RE_OPTION_EXTENDED
+#define REG_OPTION_FIND_LONGEST     RE_OPTION_LONGEST
+
+#define REG_OPTION_ON(options,regopt)      ((options) |= (regopt))
+#define REG_OPTION_OFF(options,regopt)     ((options) &= ~(regopt))
+#define IS_REG_OPTION_ON(options,option)   ((options) & (option))
+
+/* error codes */
+/* return normal */
+#define REG_NORMAL                                             0
+#define REG_MISMATCH                                          -1
+/* internal error */
+#define REGERR_MEMORY                                         -2
+#define REGERR_TYPE_BUG                                      -10
+#define REGERR_STACK_BUG                                     -11
+#define REGERR_UNDEFINED_BYTECODE                            -12
+#define REGERR_UNEXPECTED_BYTECODE                           -13
+#define REGERR_TABLE_FOR_IGNORE_CASE_IS_NOT_SETTED           -20
+#define REGERR_DEFAULT_ENCODING_IS_NOT_SETTED                -21
+#define REGERR_SPECIFIED_ENCODING_CANT_CONVERT_TO_WIDE_CHAR  -22
+/* sytax error */
+#define REGERR_END_PATTERN_AT_LEFT_BRACE                    -100
+#define REGERR_END_PATTERN_AT_LEFT_BRACKET                  -101
+#define REGERR_EMPTY_CHAR_CLASS                             -102
+#define REGERR_PREMATURE_END_OF_CHAR_CLASS                  -103
+#define REGERR_END_PATTERN_AT_BACKSLASH                     -104
+#define REGERR_END_PATTERN_AT_META                          -105
+#define REGERR_END_PATTERN_AT_CONTROL                       -106
+#define REGERR_END_PATTERN_AFTER_BACKSLASH                  -107
+#define REGERR_META_CODE_SYNTAX                             -108
+#define REGERR_CONTROL_CODE_SYNTAX                          -109
+#define REGERR_CHAR_CLASS_VALUE_AT_END_OF_RANGE             -110
+#define REGERR_CHAR_CLASS_VALUE_AT_START_OF_RANGE           -111
+#define REGERR_TARGET_OF_REPEAT_QUALIFIER_NOT_FOUND         -112
+#define REGERR_NESTED_REPEAT_OPERATOR                       -113
+#define REGERR_UNMATCHED_RIGHT_PARENTHESIS                  -114
+#define REGERR_END_PATTERN_WITH_UNMATCHED_PARENTHESIS       -115
+#define REGERR_END_PATTERN_AT_GROUP_OPTION                  -117
+#define REGERR_UNDEFINED_GROUP_OPTION                       -118
+#define REGERR_END_PATTERN_AT_GROUP_COMMENT                 -119
+#define REGERR_INVALID_POSIX_CHAR_CLASS                     -120
+/* values error */
+#define REGERR_TOO_BIG_NUMBER                               -200
+#define REGERR_TOO_BIG_NUMBER_FOR_REPEAT_RANGE              -201
+#define REGERR_UPPER_SMALLER_THAN_LOWER_IN_REPEAT_RANGE     -202
+#define REGERR_RIGHT_SMALLER_THAN_LEFT_IN_CLASS_RANGE       -203
+#define REGERR_TOO_MANY_MULTI_BYTE_RANGES                   -204
+#define REGERR_TOO_SHORT_MULTI_BYTE_STRING                  -205
+#define REGERR_TOO_BIG_BACKREF_NUMBER                       -206
+
+/* match result region type */
+struct re_registers {
+  int  allocated;
+  int  num_regs;
+  int* beg;
+  int* end;
+};
+
+typedef struct re_registers   RegRegion;
+typedef unsigned int          RegOptionType;
+typedef unsigned char*        RegTransTableType;
+typedef unsigned int          RegDistance;
+typedef unsigned char         UChar;
+
+/* regex_t state */
+#define REG_STATE_NORMAL              0
+#define REG_STATE_SEARCHING           1
+#define REG_STATE_COMPILING          -1
+#define REG_STATE_MODIFY             -2
+
+#define REG_STATE(regex) \
+  ((regex)->state > 0 ? REG_STATE_SEARCHING : (regex)->state)
+
+typedef struct re_pattern_buffer {
+  /* common members in BBuf type */
+  unsigned char* p;         /* compiled pattern */
+  unsigned int used;        /* used space for p */
+  unsigned int alloc;       /* allocated space for p */
+
+  int state;                /* normal, searching, compiling */
+  int max_mem;              /* used memory(...) num counted from 1 */
+  int num_repeat;           /* OP_REPEAT/OP_REPEAT_NG id-counter */
+  int num_null_check;       /* OP_NULL_CHECK_START/END id counter */
+  unsigned int mem_stats;   /* mem:n -> n-bit flag (n:1-31)
+                              (backref-ed or must be cleared in backtrack) */
+
+  RegCharCodeType   code;
+  RegOptionType     options;
+  RegTransTableType transtable;  /* char-case trans table */
+
+  /* optimize info (string search and char-map and anchor) */
+  int            optimize;          /* optimize flag */
+  int            threshold_len;     /* search str-length for apply optimize */
+  int            anchor;            /* BEGIN_BUF, NEGIN_POS, (SEMI_)END_BUF */
+  RegDistance    anchor_dmin;       /* (SEMI_)END_BUF anchor distance */
+  RegDistance    anchor_dmax;       /* (SEMI_)END_BUF anchor distance */
+  int            sub_anchor;        /* start-anchor for exact or map */
+  unsigned char *exact;
+  unsigned char *exact_end;
+  unsigned char  map[REG_CHAR_TABLE_SIZE];  /* used as BM skip or char-map */
+  int           *int_map;                   /* BM skip for exact_len > 255 */
+  int           *int_map_backward;          /* BM skip for backward search */
+  RegDistance    dmin;                      /* min-distance of exact or map */
+  RegDistance    dmax;                      /* max-distance of exact or map */
+
+  /* regex_t link chain */
+  struct re_pattern_buffer* chain; /* escape compile-conflict on multi-thread */
+} regex_t;
+
+#ifdef RUBY_PLATFORM
+#define re_mbcinit              ruby_re_mbcinit
+#define re_compile_pattern      ruby_re_compile_pattern
+#define re_recompile_pattern    ruby_re_recompile_pattern
+#define re_free_pattern         ruby_re_free_pattern
+#define re_adjust_startpos      ruby_re_adjust_startpos
+#define re_search               ruby_re_search
+#define re_match                ruby_re_match
+#define re_set_casetable        ruby_re_set_casetable
+#define re_copy_registers       ruby_re_copy_registers
+#define re_free_registers       ruby_re_free_registers
+#define register_info_type      ruby_register_info_type
+#define re_error_code_to_str    ruby_error_code_to_str
+
+#define ruby_error_code_to_str  RegexErrorCodeToStr
+#define ruby_re_copy_registers  RegexRegionCopy
+#else
+#define re_error_code_to_str    RegexErrorCodeToStr
+#define re_copy_registers       RegexRegionCopy
+#endif
+
+
+/* Native API */
+#ifdef __STDC__
+extern int   RegexInit(void);
+extern char* RegexErrorCodeToStr(int err_code);
+extern int   RegexNew(regex_t** reg, UChar* pattern, UChar* pattern_end,
+		RegOptionType option, RegCharCodeType code, UChar* transtable);
+extern int   RegexClone(regex_t* to, regex_t* from);
+extern void  RegexFree(regex_t* reg);
+extern int   RegexReCompile(regex_t* reg, UChar* pattern, UChar* pattern_end,
+		RegOptionType option, RegCharCodeType code, UChar* transtable);
+extern int   RegexSearch(regex_t* reg, UChar* str, UChar* end,
+			 UChar* start, UChar* range, RegRegion* region);
+extern RegRegion* RegexRegionNew(void);
+extern void  RegexRegionFree(RegRegion* region, int free_self);
+extern void  RegexRegionCopy(RegRegion* r1, RegRegion* r2);
+extern void  RegexRegionClear(RegRegion* region);
+extern int   RegexRegionResize(RegRegion* region, int n);
+extern int   RegexEnd(void);
+
+#else
+
+extern int   RegexInit();
+extern char* RegexErrorCodeToStr();
+extern int   RegexNew();
+extern int   RegexClone();
+extern void  RegexFree();
+extern int   RegexReCompile();
+extern int   RegexSearch();
+extern RegRegion* RegexRegionNew();
+extern void  RegexRegionFree();
+extern void  RegexRegionCopy();
+extern void  RegexRegionClear();
+extern int   RegexRegionResize();
+extern int   RegexEnd();
+#endif
+
+/* GNU regex compatible API */
+#ifdef __STDC__
+
+extern void  re_mbcinit(int);
+extern char* re_compile_pattern(const char*, int, struct re_pattern_buffer*);
+extern char* re_recompile_pattern(const char*, int, struct re_pattern_buffer*);
+extern void  re_free_pattern(struct re_pattern_buffer*);
+extern int   re_adjust_startpos(struct re_pattern_buffer*, const char*,
+				int, int, int);
+extern int   re_search(struct re_pattern_buffer*, const char*, int, int, int,
+		       struct re_registers*);
+extern int   re_match(struct re_pattern_buffer*, const char *, int, int,
+		      struct re_registers*);
+extern void  re_set_casetable(const char*);
+extern void  re_free_registers(struct re_registers*);
+extern int   re_alloc_pattern(struct re_pattern_buffer**);  /* added */
+
+#else
+
+extern void  re_mbcinit();
+extern char* re_compile_pattern();
+extern char* re_recompile_pattern();  /* added */
+extern void  re_free_pattern();
+extern int   re_adjust_startpos();
+extern int   re_search();
+extern int   re_match();
+extern void  re_set_casetable();
+extern void  re_free_registers();
+extern int   re_alloc_pattern();  /* added */
+
+#endif /* __STDC__ */
+
+#endif /* _REGEX_H_ */
+@
+
+
+1.1.1.1
+log
+@This is the initial import of Oni Guruma, a GNU regex compatible
+regular expression library, snapshotted at 2002-02-25.
+
+Copyright (C) 2002  K.Kosako (kosako@@sofnec.co.jp)
+@
+text
+@@
+
+
+1.1.1.2
+log
+@Import Oni Guruma 20020304 (version 1.1).
+@
+text
+@d12 1
+a12 1
+#define  ONIGURUMA_VERSION          110    /* 1.1 */
+d26 2
+a27 2
+typedef m17n_encoding*        RegCharEncoding;
+#define REGCODE_UNDEF         ((RegCharEncoding )NULL)
+d32 1
+a32 1
+typedef const char*           RegCharEncoding;
+d42 1
+a42 1
+#define REGCODE_UNDEF         ((RegCharEncoding )0)
+a44 1
+extern const char REG_MBLEN_TABLE[][REG_CHAR_TABLE_SIZE];
+d52 2
+a53 1
+extern RegCharEncoding RegDefaultCharCode;
+d80 1
+a80 1
+/* normal return */
+d105 4
+a108 5
+#define REGERR_TARGET_OF_REPEAT_QUALIFIER_NOT_SPECIFIED     -112
+#define REGERR_TARGET_OF_REPEAT_QUALIFIER_IS_EMPTY          -113
+#define REGERR_NESTED_REPEAT_OPERATOR                       -114
+#define REGERR_UNMATCHED_RIGHT_PARENTHESIS                  -115
+#define REGERR_END_PATTERN_WITH_UNMATCHED_PARENTHESIS       -116
+d112 1
+a112 2
+#define REGERR_INVALID_POSIX_BRACKET_TYPE                   -120
+#define REGERR_INVALID_LOOK_BEHIND_PATTERN                  -121
+d158 1
+a158 1
+  RegCharEncoding   code;
+d165 1
+a165 1
+  int            anchor;            /* BEGIN_BUF, BEGIN_POS, (SEMI_)END_BUF */
+d208 1
+a208 1
+		RegOptionType option, RegCharEncoding code, UChar* transtable);
+d212 1
+a212 1
+		RegOptionType option, RegCharEncoding code, UChar* transtable);
+@
+
+
+1.1.1.3
+log
+@Import Oni Guruma 20020306.
+@
+text
+@d8 2
+a9 2
+#ifndef REGEX_H
+#define REGEX_H
+d11 2
+a12 2
+#define ONIGURUMA
+#define ONIGURUMA_VERSION          110    /* 1.1 */
+d92 1
+a92 1
+/* syntax error */
+d148 1
+a148 1
+  /* common members in BBuf(bytes-buffer) type */
+a216 2
+extern int   RegexMatch(regex_t* reg, UChar* str, UChar* end, UChar* at,
+			RegRegion* region);
+a232 1
+extern int   RegexMatch();
+d273 1
+a273 1
+#endif /* REGEX_H */
+@
+
+
+1.1.1.4
+log
+@Import Oni Guruma 20020313.
+@
+text
+@d3 1
+a3 1
+  regex.h - OniGuruma (regular expression library)
+d12 1
+a12 1
+#define ONIGURUMA_VERSION           120    /* 1.2 */
+d19 2
+a20 2
+#define REG_MAX_BACKREF_NUM        1000
+#define REG_MAX_REPEAT_NUM       100000
+a22 2
+#define REGCODE_UNDEF         ((RegCharEncoding )0)
+
+d25 1
+d27 1
+d29 1
+d31 1
+a33 1
+#define MBCTYPE_UTF8          1
+d36 1
+d42 1
+d51 1
+a51 1
+#define mbclen(c)      RegDefaultCharEncoding[(unsigned char )(c)]
+d53 1
+a53 1
+extern RegCharEncoding RegDefaultCharEncoding;
+d57 1
+a57 3
+/* argument values for regex_new(), regex_recompile() */
+#define REG_TRANSTABLE_USE_DEFAULT   ((RegTransTableType )0)
+#define REG_OPTION_DEFAULT            REG_OPTION_NONE
+d159 1
+d197 2
+a198 2
+#define ruby_error_code_to_str  regex_error_code_to_str
+#define ruby_re_copy_registers  regex_region_copy
+d200 2
+a201 2
+#define re_error_code_to_str    regex_error_code_to_str
+#define re_copy_registers       regex_region_copy
+d207 3
+a209 3
+extern int   regex_init(void);
+extern char* regex_error_code_to_str(int err_code);
+extern int   regex_new(regex_t** reg, UChar* pattern, UChar* pattern_end,
+d211 3
+a213 3
+extern int   regex_clone(regex_t* to, regex_t* from);
+extern void  regex_free(regex_t* reg);
+extern int   regex_recompile(regex_t* reg, UChar* pattern, UChar* pattern_end,
+d215 10
+a224 10
+extern int   regex_search(regex_t* reg, UChar* str, UChar* end,
+			  UChar* start, UChar* range, RegRegion* region);
+extern int   regex_match(regex_t* reg, UChar* str, UChar* end, UChar* at,
+			 RegRegion* region);
+extern RegRegion* regex_region_new(void);
+extern void  regex_region_free(RegRegion* region, int free_self);
+extern void  regex_region_copy(RegRegion* r1, RegRegion* r2);
+extern void  regex_region_clear(RegRegion* region);
+extern int   regex_region_resize(RegRegion* region, int n);
+extern int   regex_end(void);
+d228 14
+a241 14
+extern int   regex_init();
+extern char* regex_error_code_to_str();
+extern int   regex_new();
+extern int   regex_clone();
+extern void  regex_free();
+extern int   regex_recompile();
+extern int   regex_search();
+extern int   regex_match();
+extern RegRegion* regex_region_new();
+extern void  regex_region_free();
+extern void  regex_region_copy();
+extern void  regex_region_clear();
+extern int   regex_region_resize();
+extern int   regex_end();
+@
+
+
+1.1.1.5
+log
+@Import Oni Guruma 20020325.
+@
+text
+@a72 1
+#define REG_OPTION_FIND_NOT_EMPTY   (REG_OPTION_FIND_LONGEST << 1)
+a78 1
+#define REG_IS_PATTERN_ERROR(ecode)   ((ecode) <= -100 && (ecode) > -300)
+d104 10
+a113 11
+#define REGERR_UNMATCHED_RANGE_SPECIFIER_IN_CHAR_CLASS      -112
+#define REGERR_TARGET_OF_REPEAT_OPERATOR_NOT_SPECIFIED      -113
+#define REGERR_TARGET_OF_REPEAT_OPERATOR_INVALID            -114
+#define REGERR_NESTED_REPEAT_OPERATOR                       -115
+#define REGERR_UNMATCHED_RIGHT_PARENTHESIS                  -116
+#define REGERR_END_PATTERN_WITH_UNMATCHED_PARENTHESIS       -117
+#define REGERR_END_PATTERN_AT_GROUP_OPTION                  -118
+#define REGERR_UNDEFINED_GROUP_OPTION                       -119
+#define REGERR_END_PATTERN_AT_GROUP_COMMENT                 -120
+#define REGERR_INVALID_POSIX_BRACKET_TYPE                   -121
+#define REGERR_INVALID_LOOK_BEHIND_PATTERN                  -122
+d119 3
+a121 4
+#define REGERR_MISMATCH_CODE_LENGTH_IN_CLASS_RANGE          -204
+#define REGERR_TOO_MANY_MULTI_BYTE_RANGES                   -205
+#define REGERR_TOO_SHORT_MULTI_BYTE_STRING                  -206
+#define REGERR_TOO_BIG_BACKREF_NUMBER                       -207
+a244 3
+#ifdef REG_RUBY_M17N
+extern void  re_mbcinit(RegCharEncoding);
+#else
+a245 2
+#endif
+
+@
+
+
+1.1.1.6
+log
+@Import Oni Guruma 20020401 (version 1.3).
+@
+text
+@d12 1
+a12 1
+#define ONIGURUMA_VERSION           130    /* 1.3 */
+d32 3
+a34 3
+#define MBCTYPE_EUC           1
+#define MBCTYPE_SJIS          2
+#define MBCTYPE_UTF8          3
+a125 3
+#define REGERR_TOO_BIG_WIDE_CHAR_VALUE                      -208
+#define REGERR_TOO_LONG_WIDE_CHAR_VALUE                     -209
+#define REGERR_INVALID_WIDE_CHAR_VALUE                      -210
+@
+
+
+1.1.1.7
+log
+@Import Oni Guruma 20020424.
+@
+text
+@a44 2
+extern RegCharEncoding RegDefaultCharEncoding;
+
+d49 2
+d53 1
+d73 1
+a73 4
+#define REG_OPTION_FIND_NOT_EMPTY   (REG_OPTION_FIND_LONGEST   << 1)
+/* options (search time) */
+#define REG_OPTION_NOTBOL           (REG_OPTION_FIND_NOT_EMPTY << 1)
+#define REG_OPTION_NOTEOL           (REG_OPTION_NOTBOL         << 1)
+d221 1
+a221 2
+			  UChar* start, UChar* range, RegRegion* region,
+			  RegOptionType option);
+d223 1
+a223 1
+			 RegRegion* region, RegOptionType option);
+a228 7
+extern UChar* regex_get_prev_char_head(RegCharEncoding code,
+				       UChar* start, UChar* s);
+extern UChar* regex_get_left_adjust_char_head(RegCharEncoding code,
+					      UChar* start, UChar* s);
+extern UChar* regex_get_right_adjust_char_head(RegCharEncoding code,
+					       UChar* start, UChar* s);
+extern void  regex_set_default_trans_table(UChar* table);
+d233 8
+a240 8
+extern int    regex_init();
+extern char*  regex_error_code_to_str();
+extern int    regex_new();
+extern int    regex_clone();
+extern void   regex_free();
+extern int    regex_recompile();
+extern int    regex_search();
+extern int    regex_match();
+d242 5
+a246 9
+extern void   regex_region_free();
+extern void   regex_region_copy();
+extern void   regex_region_clear();
+extern int    regex_region_resize();
+extern UChar* regex_get_prev_char_head();
+extern UChar* regex_get_left_adjust_char_head();
+extern UChar* regex_get_right_adjust_char_head();
+extern void   regex_set_default_trans_table();
+extern int    regex_end();
+@

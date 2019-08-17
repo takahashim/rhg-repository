@@ -1,0 +1,83 @@
+head	1.1;
+access;
+symbols
+	release_0_9_8:1.1
+	autoconfiscation-branch:1.1.0.2
+	root-of-autoconfiscation:1.1
+	release_0_9_7:1.1
+	release_0_9_6:1.1
+	release_0_9_5:1.1
+	release_0_9_4:1.1
+	release_0_9_3:1.1
+	release_0_9_2:1.1
+	release_0_9_1:1.1
+	release_0_9_0:1.1
+	release_0_1_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2000.09.13.07.35.51;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@*** empty log message ***
+@
+text
+@=begin
+
+= NAME
+
+eruby - Embedded Ruby Language
+
+= SYNOPSIS
+
+eruby [options] [inputfile]
+
+= DESCRIPTION
+
+eruby interprets a Ruby code embedded text file. For example, eruby
+enables you to embed a Ruby code to a HTML file.
+
+A Ruby block starts with `<%' and ends with `%>'. eRuby replaces
+the block with its output.
+
+If `<%' is followed by `=', eRuby replaces the block with a value
+of the block.
+
+If `<%' is followed by `#', the block is ignored as a comment.
+
+= OPTIONS
+
+:-d, --debug
+  set debugging flags (set $DEBUG to true)
+:-Kkcode
+  specifies KANJI (Japanese) code-set
+:-Mmode
+  specifies runtime mode
+    f: filter mode
+    c: CGI mode
+    n: NPH-CGI mode
+:-C charset
+  specifies charset parameter for Content-Type
+:-n, --noheader
+  disables CGI header output
+:-v, --verbose
+  enables verbose mode
+:--version 
+  print version information and exit
+
+= AUTHOR
+
+Shugo Maeda <shugo@@ruby-lang.org>
+
+=end
+@

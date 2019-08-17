@@ -1,0 +1,1433 @@
+head	1.28;
+access;
+symbols
+	v1_6_7:1.8.2.7
+	v1_6_6:1.8.2.7
+	v1_6_5:1.8.2.6
+	v1_6_4:1.8.2.5
+	v1_7_1:1.15
+	v1_6_4_preview4:1.8.2.4
+	v1_6_4_preview3:1.8.2.4
+	v1_6_4_preview2:1.8.2.2
+	v1_6_4_preview1:1.8.2.2
+	v1_6_3:1.8.2.2
+	ruby_m17n:1.9.0.2
+	ruby_1_6:1.8.0.2
+	v1_6_2:1.8
+	v1_6_1:1.8
+	v1_6_0:1.7
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.7
+	v1_3_6_repack:1.1.1.2.2.7
+	v1_3_6:1.1.1.2.2.7
+	v1_3_5:1.1.1.2.2.6
+	v1_2_6repack:1.1.1.1.2.3
+	v1_3_4_990625:1.1.1.2.2.6
+	v1_3_4_990624:1.1.1.2.2.6
+	v1_2_6:1.1.1.1.2.3
+	v1_3_4_990611:1.1.1.2.2.6
+	v1_3_4_990531:1.1.1.2.2.5
+	v1_3_3_990518:1.1.1.2.2.5
+	v1_3_3_990513:1.1.1.2.2.5
+	v1_3_3_990507:1.1.1.2.2.5
+	v1_2_5:1.1.1.1.2.3
+	v1_2_4:1.1.1.1.2.3
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.3
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.3
+	v1_2_1repack:1.1.1.1.2.3
+	v1_2_1:1.1.1.1.2.3
+	v1_2_stable:1.1.1.1.2.3
+	v1_1d1:1.1.1.1.2.2.2.1
+	v1_1d0:1.1.1.1.2.2.2.1
+	v1_1c9_1:1.1.1.1.2.3
+	v1_1c9:1.1.1.1.2.3
+	v1_1c8:1.1.1.1.2.3
+	v1_1c7:1.1.1.1.2.3
+	v1_1c6:1.1.1.1.2.2
+	v1_1d-start:1.1.1.1.2.2
+	v1_1c5:1.1.1.1.2.2
+	v1_1dev:1.1.1.1.2.2.0.2
+	v1_1c4:1.1.1.1.2.2
+	v1_1c3:1.1.1.1.2.2
+	v1_1c2:1.1.1.1.2.2
+	v1_1c1:1.1.1.1.2.2
+	v1_1c0:1.1.1.1.2.2
+	v1_1b9_31:1.1.1.1.2.2
+	v1_1b9_30:1.1.1.1.2.2
+	v1_1b9_28:1.1.1.1.2.2
+	v1_1b9_27:1.1.1.1.2.2
+	v1_1b9_26:1.1.1.1.2.2
+	r1_1b9_25:1.1.1.1.2.2
+	r1_1b9_24:1.1.1.1.2.2
+	v1_1b9_23:1.1.1.1.2.2
+	v1_1b9_22:1.1.1.1.2.2
+	v1_1b9_20:1.1.1.1.2.2
+	v1_1b9_18:1.1.1.1.2.2
+	v1_1b9_16:1.1.1.1.2.2
+	v1_1b9_15:1.1.1.1.2.2
+	v1_1b9_13:1.1.1.1.2.2
+	v1_1b9_12:1.1.1.1.2.1
+	v1_1b9_11:1.1.1.1.2.1
+	v1_1b9_08:1.1.1.1.2.1
+	v1_1b9_07:1.1.1.1.2.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.28
+date	2002.10.27.02.16.51;	author nobu;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.10.27.02.09.18;	author nobu;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.10.23.17.40.14;	author nobu;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.10.21.14.17.44;	author nobu;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.09.15.12.57.20;	author eban;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.08.23.08.18.18;	author eban;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.07.29.05.59.46;	author gotoken;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.03.20.13.19.36;	author akr;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.03.20.10.44.31;	author akr;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.17.14.46.40;	author nobu;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.11.13.08.19.52;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.11.08.09.21.59;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.08.20.10.55.46;	author eban;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.05.31.04.40.37;	author eban;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.05.25.01.33.03;	author eban;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.05.24.07.13.56;	author eban;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.05.07.09.26.24;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.01.22.07.37.14;	author eban;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.01.17.04.45.22;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.12.28.05.00.39;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.09.27.07.22.17;	author eban;	state Exp;
+branches
+	1.8.2.1;
+next	1.7;
+
+1.7
+date	2000.08.03.09.50.33;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.07.31.09.43.14;	author eban;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.31.09.21.24;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.19.03.37.52;	author eban;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.12.02.06.58.50;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.04.20.08.21.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.26.09.42.32;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.04.27.02.56.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.04.30.07.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.05.06.08.31.32;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.06.09.09.21.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.07.28.09.26.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.04.07.08.34.08;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.04.21.08.41.05;	author matz;	state Exp;
+branches
+	1.1.1.1.2.2.2.1;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.11.09.09.11.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.2.2.1
+date	98.11.25.03.31.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.8.2.1
+date	2001.01.17.04.43.12;	author eban;	state Exp;
+branches;
+next	1.8.2.2;
+
+1.8.2.2
+date	2001.01.22.07.43.21;	author eban;	state Exp;
+branches;
+next	1.8.2.3;
+
+1.8.2.3
+date	2001.05.08.08.29.52;	author matz;	state Exp;
+branches;
+next	1.8.2.4;
+
+1.8.2.4
+date	2001.05.24.07.13.47;	author eban;	state Exp;
+branches;
+next	1.8.2.5;
+
+1.8.2.5
+date	2001.05.31.04.40.20;	author eban;	state Exp;
+branches;
+next	1.8.2.6;
+
+1.8.2.6
+date	2001.08.20.10.56.02;	author eban;	state Exp;
+branches;
+next	1.8.2.7;
+
+1.8.2.7
+date	2001.11.13.08.22.27;	author matz;	state Exp;
+branches;
+next	1.8.2.8;
+
+1.8.2.8
+date	2002.10.27.02.09.23;	author nobu;	state Exp;
+branches;
+next	1.8.2.9;
+
+1.8.2.9
+date	2002.10.27.02.16.55;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.28
+log
+@* moved a blank line.
+@
+text
+@#!./miniruby -s
+
+require File.dirname($0)+"/lib/ftools"
+mkconfig = File.basename($0)
+
+rbconfig_rb = ARGV[0] || 'rbconfig.rb'
+srcdir = $srcdir || '.'
+File.makedirs(File.dirname(rbconfig_rb), true)
+
+version = RUBY_VERSION
+rbconfig_rb_tmp = rbconfig_rb + '.tmp'
+config = open(rbconfig_rb_tmp, "w")
+$orgout = $stdout.dup
+$stdout.reopen(config)
+
+fast = {'prefix'=>TRUE, 'ruby_install_name'=>TRUE, 'INSTALL'=>TRUE, 'EXEEXT'=>TRUE}
+print %[
+# This file was created by #{mkconfig} when ruby was built.  Any
+# changes made to this file will be lost the next time ruby is built.
+
+module Config
+  RUBY_VERSION == "#{version}" or
+    raise "ruby lib version (#{version}) doesn't match executable version (\#{RUBY_VERSION})"
+
+]
+
+v_fast = []
+v_others = []
+has_version = false
+File.foreach "config.status" do |line|
+  next if /^#/ =~ line
+  if /^s[%,]@@program_transform_name@@[%,]s,(.*)/ =~ line
+    next if $install_name
+    ptn = $1.sub(/\$\$/, '$').split(/,/)	#'
+    v_fast << "  CONFIG[\"ruby_install_name\"] = \"" + "ruby".sub(/#{ptn[0]}/,ptn[1]) + "\"\n"
+  elsif /^s[%,]@@(\w+)@@[%,](.*)[%,]/ =~ line
+    name = $1
+    val = $2 || ""
+    next if /^(INSTALL|DEFS|configure_input|srcdir|top_srcdir)$/ =~ name
+    next if $install_name and /^RUBY_INSTALL_NAME$/ =~ name
+    next if $so_name and /^RUBY_SO_NAME$/ =~  name
+    v = "  CONFIG[\"" + name + "\"] = " +
+      val.gsub(/\$(?:\$|\{?(\w+)\}?)/) {$1?"$(#{$1})":$&}.dump + "\n"
+    if fast[name]
+      v_fast << v
+    else
+      v_others << v
+    end
+    has_version = true if name == "MAJOR"
+  elsif /^(?:ac_given_)?srcdir=(.*)/ =~ line
+    srcdir = $1
+  elsif /^ac_given_INSTALL=(.*)/ =~ line
+    v_fast << "  CONFIG[\"INSTALL\"] = " + $1 + "\n"
+  end
+#  break if /^CEOF/
+end
+
+srcdir = File.expand_path(srcdir)
+v_fast.unshift("  CONFIG[\"srcdir\"] = \"" + srcdir + "\"\n")
+
+v_fast.collect! do |x|
+  if /"prefix"/ === x
+    x.sub(/= (.*)/, '= (TOPDIR || DESTDIR + \1)')
+  else
+    x
+  end
+end
+
+drive = File::PATH_SEPARATOR == ';'
+
+prefix = Regexp.quote('/lib/ruby/' + RUBY_VERSION.sub(/\.\d+$/, '') + '/' + RUBY_PLATFORM)
+print "  TOPDIR = File.dirname(__FILE__).sub!(%r'#{prefix}\\Z', '')\n"
+print "  DESTDIR = ", (drive ? "TOPDIR && TOPDIR[/\\A[a-z]:/i] || " : ""), "'' unless defined? DESTDIR\n"
+print "  CONFIG = {}\n"
+print "  CONFIG[\"DESTDIR\"] = DESTDIR\n"
+
+unless has_version
+  RUBY_VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) {
+    print "  CONFIG[\"MAJOR\"] = \"" + $1 + "\"\n"
+    print "  CONFIG[\"MINOR\"] = \"" + $2 + "\"\n"
+    print "  CONFIG[\"TEENY\"] = \"" + $3 + "\"\n"
+  }
+end
+
+dest = drive ? /= \"(?!\$[\(\{])(?:[a-z]:)?/i : /= \"(?!\$[\(\{])/
+v_others.collect! do |x|
+  if /^\s*CONFIG\["(?!abs_|old)[a-z]+(?:_prefix|dir)"]/ === x
+    x.sub(dest, '= "$(DESTDIR)')
+  else
+    x
+  end
+end
+
+if $install_name
+  v_fast << "  CONFIG[\"ruby_install_name\"] = \"" + $install_name + "\"\n"
+  v_fast << "  CONFIG[\"RUBY_INSTALL_NAME\"] = \"" + $install_name + "\"\n"
+end
+if $so_name
+  v_fast << "  CONFIG[\"RUBY_SO_NAME\"] = \"" + $so_name + "\"\n"
+end
+
+print v_fast, v_others
+print <<EOS
+  CONFIG["ruby_version"] = "$(MAJOR).$(MINOR)"
+  CONFIG["rubylibdir"] = "$(libdir)/ruby/$(ruby_version)"
+  CONFIG["archdir"] = "$(rubylibdir)/$(arch)"
+  CONFIG["sitelibdir"] = "$(sitedir)/$(ruby_version)"
+  CONFIG["sitearchdir"] = "$(sitelibdir)/$(sitearch)"
+  CONFIG["compile_dir"] = "#{Dir.pwd}"
+  MAKEFILE_CONFIG = {}
+  CONFIG.each{|k,v| MAKEFILE_CONFIG[k] = v.dup}
+  def Config::expand(val, config = CONFIG)
+    val.gsub!(/\\$\\$|\\$\\(([^()]+)\\)|\\$\\{([^{}]+)\\}/) do |var|
+      if !(v = $1 || $2)
+	'$'
+      elsif key = config[v]
+	config[v] = false
+        Config::expand(key, config)
+	config[v] = key
+      else
+	var
+      end
+    end
+    val
+  end
+  CONFIG.each_value do |val|
+    Config::expand(val)
+  end
+end
+EOS
+$stdout.flush
+$stdout.reopen($orgout)
+config.close
+File.rename(rbconfig_rb_tmp, rbconfig_rb)
+
+# vi:set sw=2:
+@
+
+
+1.27
+log
+@* fixed generator script name.
+@
+text
+@a21 1
+
+d24 1
+@
+
+
+1.26
+log
+@* configure.in (LIBPATHFLAG): should escape $.  [ruby-dev:18572]
+
+* mkconfig.rb: never substute escaped $$.
+
+* instruby.rb: not install LIBRUBY_SO unless enable-shared.
+  [ruby-dev:18569]
+@
+text
+@d4 1
+d18 3
+a24 3
+
+# This file was created by configrb when ruby was built. Any changes
+# made to this file will be lost the next time ruby is built.
+@
+
+
+1.25
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@d42 1
+a42 1
+      val.gsub(/\$\{?(\w+)\}?/) {"$(#{$1})"}.dump + "\n"
+@
+
+
+1.24
+log
+@* configure.in (OUTFLAG, CPPOUTFILE): moved from lib/mkmf.rb.
+  check whether ${CPP} accepts the -o option.
+* win32/Makefile.sub (OUTFLAG, CPPOUTFILE): ditto.
+* bcc32/Makefile.sub (OUTFLAG, CPPOUTFILE): ditto.
+* djgpp/config.sed (OUTFLAG, CPPOUTFILE): ditto.
+* lib/mkmf.rb (OUTFLAG, CPPOUTFILE): use CONFIG.
+  make easy to understand log.
+* mkconfig.rb (val): should not strip.
+@
+text
+@d6 1
+a6 1
+srcdir = $srcdir if $srcdir
+a25 1
+print "  DESTDIR = '' if not defined? DESTDIR\n  CONFIG = {}\n"
+a27 1
+has_srcdir = false
+d50 1
+a50 2
+    v_fast << "  CONFIG[\"srcdir\"] = \"" + File.expand_path($1) + "\"\n"
+    has_srcdir = true
+d57 9
+a65 2
+if not has_srcdir
+  v_fast << "  CONFIG[\"srcdir\"] = \"" + File.expand_path(srcdir || '.') + "\"\n"
+d68 9
+a76 1
+if not has_version
+d84 4
+a87 5
+v_fast.collect! do |x|
+  if /"prefix"/ === x
+    prefix = Regexp.quote('/lib/ruby/' + RUBY_VERSION.sub(/\.\d+$/, '') + '/' + RUBY_PLATFORM)
+    puts "  TOPDIR = File.dirname(__FILE__).sub!(%r'#{prefix}\\Z', '')"
+    x.sub(/= (.*)/, '= (TOPDIR || DESTDIR + \1)')
+d111 8
+a118 4
+  def Config::expand(val)
+    val.gsub!(/\\$\\(([^()]+)\\)|\\$\\{([^{}]+)\\}/) do |var|
+      if key = CONFIG[$1 || $2]
+        Config::expand(key)
+@
+
+
+1.23
+log
+@* configure.in: RUBY_SO_NAME is msvcrt-rubyXX on mswin32/mingw32.
+* configure.in (sitearch): new var.
+* mkconfig.rb, lib/mkmf.rb (sitearch): ditto.
+* win32/Makefile.sub, win32/setup.mak (sitearch): ditto.
+@
+text
+@d44 1
+a44 1
+      val.strip.gsub(/\$\{?(\w+)\}?/) {"$(#{$1})"}.dump + "\n"
+@
+
+
+1.22
+log
+@* mkconfig.rb: unexpected `"ruby".sub("$","17") == "ruby"'
+  because of recent change in string.c:get_pat().
+@
+text
+@d96 1
+a96 1
+  CONFIG["sitearchdir"] = "$(sitelibdir)/$(arch)"
+@
+
+
+1.21
+log
+@* mkconfig.rb: close duplicated $stdout before renaming rbconfig.rb.
+@
+text
+@d36 1
+a36 1
+    v_fast << "  CONFIG[\"ruby_install_name\"] = \"" + "ruby".sub(ptn[0],ptn[1]) + "\"\n"
+@
+
+
+1.20
+log
+@* mkconfig.rb: don't touch rbconfig.rb if there is a trouble.
+@
+text
+@d12 1
+d115 2
+@
+
+
+1.19
+log
+@* mkconfig.rb (Config::expand): expand ${} too.
+
+* ext/extmk.rb.in (try_link0): expand command.
+
+* ext/extmk.rb.in (try_cpp): ditto.
+
+* ext/extmk.rb.in (extmake): default $LIBPATH to $libdir
+@
+text
+@d10 2
+a11 1
+config = open(rbconfig_rb, "w")
+d115 1
+@
+
+
+1.18
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d99 3
+a101 4
+    val.gsub!(/\\$\\(([^()]+)\\)/) do |var|
+      key = $1
+      if CONFIG.key? key
+        Config::expand(CONFIG[key])
+@
+
+
+1.17
+log
+@* file.c (path_check_1): forgot to initialize 'p'.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+
+* array.c (rb_ary_hash): should override 'hash' too.
+@
+text
+@d42 1
+a42 3
+      val.sub(/^\s*(.*)\s*$/, '\1').gsub(/\$\{?(\w+)\}?/) {
+      "$(#{$1})"
+    }.dump + "\n"
+@
+
+
+1.16
+log
+@* ext/digest/sha2/extconf.rb: fix support for cross-compiling.
+* mkconfig.rb: fix support for autoconf 2.52.
+@
+text
+@d42 1
+a42 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$\{?(\w+)\}?/) {
+d44 1
+a44 1
+    } + "\n"
+@
+
+
+1.15
+log
+@* mkconfig.rb, ext/configsub.rb: VERSION -> RUBY_VERSION.
+@
+text
+@d31 1
+a31 1
+  if /^s[%,]@@program_transform_name@@[%,]s,(.*)[%,]/ =~ line
+@
+
+
+1.14
+log
+@* mkconfig.rb: typo.
+@
+text
+@d9 1
+a9 1
+version = VERSION
+d17 2
+a18 2
+  VERSION == "#{version}" or
+    raise "ruby lib version (#{version}) doesn't match executable version (\#{VERSION})"
+d65 1
+a65 1
+  VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) {
+@
+
+
+1.13
+log
+@* mkconfig.rb: autoconf 2.50 support.
+@
+text
+@d51 1
+a51 1
+  elsif /^(?:ac_given_)srcdir=(.*)/ =~ line
+@
+
+
+1.12
+log
+@* parse.y (arg): "||=" should not warn for uninitialized instance
+  variables.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (eval): preserve and restore ruby_cref as well.
+@
+text
+@d51 1
+a51 1
+  elsif /^ac_given_srcdir=(.*)/ =~ line
+d61 1
+a61 1
+  v_fast << "  CONFIG[\"srcdir\"] = \"" + File.expand_path(srcdir) + "\"\n"
+@
+
+
+1.11
+log
+@* mkconfig.rb: autoconf 2.49 support.
+@
+text
+@d43 1
+a43 1
+      "\#{CONFIG[\\\"#{$1}\\\"]}"
+d92 5
+d104 1
+a104 1
+        "\#{Config::expand(CONFIG[\\\"\#{key}\\\"])}"
+@
+
+
+1.10
+log
+@* mkconfig.rb: remove DEFS definition.
+@
+text
+@d31 1
+a31 1
+  if /^s%@@program_transform_name@@%s,(.*)%g$/ =~ line
+d35 1
+a35 1
+  elsif /^s%@@(\w+)@@%(.*)%g/ =~ line
+@
+
+
+1.9
+log
+@changes from personal modifies -- matz
+@
+text
+@a50 13
+    if /DEFS/ =~ line
+      val.split(/\s*-D/).each do |i|
+	if i =~ /(.*)=(\\")?([^\\]*)(\\")?/
+	  key, val = $1, $3
+	  if val == '1'
+	    val = "TRUE"
+	  else
+	    val.sub! /^\s*(.*)\s*$/, '"\1"'
+	  end
+	  print "  CONFIG[\"#{key}\"] = #{val}\n"
+	end
+      end
+    end
+@
+
+
+1.8
+log
+@eban
+@
+text
+@d29 3
+a31 3
+File.foreach "config.status" do |$_|
+  next if /^#/
+  if /^s%@@program_transform_name@@%s,(.*)%g$/
+d35 1
+a35 1
+  elsif /^s%@@(\w+)@@%(.*)%g/
+d38 3
+a40 3
+    next if name =~ /^(INSTALL|DEFS|configure_input|srcdir|top_srcdir)$/
+    next if $install_name and name =~ /^RUBY_INSTALL_NAME$/
+    next if $so_name and name =~ /^RUBY_SO_NAME$/
+d51 1
+a51 1
+    if /DEFS/
+d64 1
+a64 1
+  elsif /^ac_given_srcdir=(.*)/
+d67 1
+a67 1
+  elsif /^ac_given_INSTALL=(.*)/
+@
+
+
+1.8.2.1
+log
+@* mkconfig.rb: remove DEFS definition.
+@
+text
+@d51 13
+@
+
+
+1.8.2.2
+log
+@* mkconfig.rb: autoconf 2.49 support.
+@
+text
+@d31 1
+a31 1
+  if /^s[%,]@@program_transform_name@@[%,]s,(.*)[%,]/
+d35 1
+a35 1
+  elsif /^s[%,]@@(\w+)@@[%,](.*)[%,]/
+@
+
+
+1.8.2.3
+log
+@* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto
+@
+text
+@d43 1
+a43 1
+      "$(#{$1})"
+a91 5
+  CONFIG["ruby_version"] = "$(MAJOR).$(MINOR)"
+  CONFIG["rubylibdir"] = "$(libdir)/ruby/$(ruby_version)"
+  CONFIG["archdir"] = "$(rubylibdir)/$(arch)"
+  CONFIG["sitelibdir"] = "$(sitedir)/$(ruby_version)"
+  CONFIG["sitearchdir"] = "$(sitelibdir)/$(arch)"
+d99 1
+a99 1
+        Config::expand(CONFIG[key])
+@
+
+
+1.8.2.4
+log
+@* mkconfig.rb: autoconf 2.50 support.
+@
+text
+@d51 1
+a51 1
+  elsif /^(?:ac_given_)?srcdir=(.*)/
+d61 1
+a61 1
+  v_fast << "  CONFIG[\"srcdir\"] = \"" + File.expand_path(srcdir || '.') + "\"\n"
+@
+
+
+1.8.2.5
+log
+@* mkconfig.rb, ext/configsub.rb: VERSION -> RUBY_VERSION.
+@
+text
+@d9 1
+a9 1
+version = RUBY_VERSION
+d17 2
+a18 2
+  RUBY_VERSION == "#{version}" or
+    raise "ruby lib version (#{version}) doesn't match executable version (\#{RUBY_VERSION})"
+d65 1
+a65 1
+  RUBY_VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) {
+@
+
+
+1.8.2.6
+log
+@* ext/digest/sha2/extconf.rb: fix support for cross-compiling.
+* mkconfig.rb: fix support for autoconf 2.52.
+@
+text
+@d31 1
+a31 1
+  if /^s[%,]@@program_transform_name@@[%,]s,(.*)/
+@
+
+
+1.8.2.7
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d42 3
+a44 1
+      val.strip.gsub(/\$\{?(\w+)\}?/) {"$(#{$1})"}.dump + "\n"
+@
+
+
+1.8.2.8
+log
+@* fixed generator script name.
+@
+text
+@a3 1
+mkconfig = File.basename($0)
+a14 3
+# This file was created by #{mkconfig} when ruby was built.  Any
+# changes made to this file will be lost the next time ruby is built.
+
+d19 3
+@
+
+
+1.8.2.9
+log
+@* moved a blank line.
+@
+text
+@d20 1
+a22 1
+
+@
+
+
+1.7
+log
+@matz - nakada win32 patch
+@
+text
+@d42 1
+a42 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$\{?([^(){}]+)\}?/) {
+@
+
+
+1.6
+log
+@eban
+@
+text
+@d1 1
+a1 1
+#!./miniruby
+d6 1
+d13 1
+a13 1
+fast = {'prefix'=>TRUE, 'INSTALL'=>TRUE, 'EXEEXT'=>TRUE}
+d27 1
+d32 1
+d39 2
+d66 1
+d73 4
+d87 3
+a89 1
+    x.sub(/= /, '= DESTDIR + ')
+d93 8
+@
+
+
+1.5
+log
+@matz - biorhythm.rb
+@
+text
+@d86 16
+a101 1
+  MAKEFILE_CONFIG = CONFIG.dup
+@
+
+
+1.4
+log
+@2000-06-19
+@
+text
+@d86 1
+a86 16
+  MAKEFILE_CONFIG = {}
+  CONFIG.each{|k,v| MAKEFILE_CONFIG[k] = v.dup}
+  def Config::expand(val)
+    val.gsub!(/\\$\\(([^()]+)\\)/) do |var|
+      key = $1
+      if CONFIG.key? key
+        "\#{Config::expand(CONFIG[\\\"\#{key}\\\"])}"
+      else
+	var
+      end
+    end
+    val
+  end
+  CONFIG.each_value do |val|
+    Config::expand(val)
+  end
+@
+
+
+1.3
+log
+@19991292
+@
+text
+@d23 1
+a23 1
+print "  CONFIG = {}\n"
+d73 8
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d78 3
+a80 1
+  CONFIG.each_value do |val|
+d84 1
+a84 1
+        "\#{CONFIG[\\\"\#{key}\\\"]}"
+d89 4
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d12 1
+a12 1
+fast = {'prefix'=>TRUE, 'INSTALL'=>TRUE, 'binsuffix'=>TRUE}
+d26 1
+d30 1
+a30 1
+    ptn = $1.sub(/\$\$/, '$').split(/,/)
+d37 1
+a37 1
+    val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$\{?([^}]*)\}?/) {
+d45 1
+d60 1
+a60 8
+    path = $1
+    cwd = Dir.pwd
+    begin
+      Dir.chdir path
+      v_fast << "  CONFIG[\"srcdir\"] = \"" + Dir.pwd + "\"\n"
+    ensure
+      Dir.chdir cwd
+    end
+d67 8
+d76 14
+a89 3
+Dir.chdir File.dirname($0)
+print "  CONFIG[\"compile_dir\"] = \"#{Dir.pwd}\"\n"
+print "end\n"
+d91 1
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d29 1
+a29 1
+    ptn = $1.sub(/\$\$/, '$').split(/,/)	#'
+d36 1
+a36 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$[{(]?([^})]+)[})]?/) {
+@
+
+
+1.1.1.2.2.1
+log
+@to open CVS
+@
+text
+@d58 8
+a65 1
+    v_fast << "  CONFIG[\"srcdir\"] = \"" + File.expand_path($1) + "\"\n"
+d73 2
+a74 1
+print "  CONFIG[\"compile_dir\"] = \"#{File.expand_path($0)}\"\n"
+@
+
+
+1.1.1.2.2.2
+log
+@aix shlib link
+@
+text
+@d66 1
+a66 1
+print "  CONFIG[\"compile_dir\"] = \"#{File.expand_path(File.dirname($0))}\"\n"
+@
+
+
+1.1.1.2.2.3
+log
+@better AIX support
+@
+text
+@a30 2
+  elsif /^s%@@DLDFLAGS@@%(.*)%g$/
+    v_fast << "  CONFIG[\"DLDFLAGS\"] = \"" + $1 + "\"\n"
+@
+
+
+1.1.1.2.2.4
+log
+@glibc 2.1
+@
+text
+@d31 2
+d38 1
+a38 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$\{?([^(){}]+)\}?/) {
+@
+
+
+1.1.1.2.2.5
+log
+@small fixes
+@
+text
+@d66 2
+a67 14
+print <<EOS
+  CONFIG["compile_dir"] = "#{File.expand_path(File.dirname($0))}"
+  CONFIG.each_value do |val|
+    val.gsub!(/\\$\\(([^()]+)\\)/) do |var|
+      key = $1
+      if CONFIG.key? key
+        "\#{CONFIG[\\\"\#{key}\\\"]}"
+      else
+	var
+      end
+    end
+  end
+end
+EOS
+a68 1
+
+@
+
+
+1.1.1.2.2.6
+log
+@thread bugs
+@
+text
+@d67 1
+a67 1
+  CONFIG["compile_dir"] = "#{Dir.pwd}"
+@
+
+
+1.1.1.2.2.7
+log
+@990728
+@
+text
+@d12 1
+a12 1
+fast = {'prefix'=>TRUE, 'INSTALL'=>TRUE, 'EXEEXT'=>TRUE}
+a25 1
+has_version = false
+a43 1
+    has_version = true if name == "MAJOR"
+a62 8
+end
+
+if not has_version
+  VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) {
+    print "  CONFIG[\"MAJOR\"] = \"" + $1 + "\"\n"
+    print "  CONFIG[\"MINOR\"] = \"" + $2 + "\"\n"
+    print "  CONFIG[\"TEENY\"] = \"" + $3 + "\"\n"
+  }
+@
+
+
+1.1.1.1.2.1
+log
+@dynamic (nested) local variables
+@
+text
+@a34 2
+    p defined? val
+    p val
+d36 1
+a36 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$\{?([^}]*)\}?/) {
+@
+
+
+1.1.1.1.2.2
+log
+@ruby 1.1b9_13
+@
+text
+@d35 2
+@
+
+
+1.1.1.1.2.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d36 1
+a36 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$[{(]?([^})]+)[})]?/) {
+@
+
+
+1.1.1.1.2.3
+log
+@1.1c7
+@
+text
+@d36 1
+a36 1
+      val.sub(/^\s*(.*)\s*$/, '"\1"').gsub(/\$[{(]?([^})]+)[})]?/) {
+@

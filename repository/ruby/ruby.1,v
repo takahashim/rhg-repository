@@ -1,0 +1,1534 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.9.2.2
+	v1_6_6:1.9.2.1
+	v1_6_5:1.9.2.1
+	v1_6_4:1.9
+	v1_7_1:1.9
+	v1_6_4_preview4:1.9
+	v1_6_4_preview3:1.9
+	v1_6_4_preview2:1.9
+	v1_6_4_preview1:1.9
+	v1_6_3:1.9
+	ruby_m17n:1.9.0.4
+	ruby_1_6:1.9.0.2
+	v1_6_2:1.9
+	v1_6_1:1.8
+	v1_6_0:1.6
+	v1_4_6:1.4
+	v1_4_5:1.4
+	v1_4_4:1.4
+	ruby_1_4_3:1.4
+	ruby1_4_3:1.4
+	v1_4_3:1.4
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.4
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.4.4
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.4.4
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.4
+	v1_2_4:1.1.1.1.4.4
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.4
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.4
+	v1_2_1repack:1.1.1.1.4.3
+	v1_2_1:1.1.1.1.4.3
+	v1_2_stable:1.1.1.1.4.3
+	v1_1d1:1.1.1.1.4.3.2.1
+	v1_1d0:1.1.1.1.4.3.2.1
+	v1_1c9_1:1.1.1.1.4.3
+	v1_1c9:1.1.1.1.4.3
+	v1_1c8:1.1.1.1.4.3
+	v1_1c7:1.1.1.1.4.3
+	v1_1c6:1.1.1.1.4.3
+	v1_1d-start:1.1.1.1.4.3
+	v1_1c5:1.1.1.1.4.3
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.3
+	v1_1c1:1.1.1.1.4.3
+	v1_1c0:1.1.1.1.4.3
+	v1_1b9_31:1.1.1.1.4.3
+	v1_1b9_30:1.1.1.1.4.3
+	v1_1b9_28:1.1.1.1.4.3
+	v1_1b9_27:1.1.1.1.4.2
+	v1_1b9_26:1.1.1.1.4.2
+	r1_1b9_25:1.1.1.1.4.2
+	r1_1b9_24:1.1.1.1.4.2
+	v1_1b9_23:1.1.1.1.4.2
+	v1_1b9_22:1.1.1.1.4.2
+	v1_1b9_20:1.1.1.1.4.2
+	v1_1b9_18:1.1.1.1.4.2
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.2
+	v1_1b9_12:1.1.1.1.4.2
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.2
+	v1_1b8:1.1.1.1.4.2
+	v1_1b7:1.1.1.1.4.2
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@.\" @;
+
+
+1.10
+date	2001.09.08.14.17.10;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.10.06.06.13.49;	author eban;	state Exp;
+branches
+	1.9.2.1;
+next	1.8;
+
+1.8
+date	2000.09.12.05.37.25;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.09.04.08.24.03;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.24.04.34.08;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.08.03.57.01;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.18.04.48.51;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.54;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.25;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.01.07.34.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.08.13.05.17.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.47;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.01.30.10.18.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.06.26.09.44.33;	author matz;	state Exp;
+branches
+	1.1.1.1.4.3.2.1;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	99.01.18.09.08.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.3.2.1
+date	98.10.06.03.28.15;	author matz;	state Exp;
+branches;
+next	;
+
+1.9.2.1
+date	2001.09.08.14.05.51;	author matz;	state Exp;
+branches;
+next	1.9.2.2;
+
+1.9.2.2
+date	2002.01.16.09.22.39;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@netlab.jp>.
+.na
+.TH RUBY 1 "ruby 1.6" "2000-09-11" "Ruby Programmers Reference Guide"
+.SH NAME
+ruby - Interpreted object-oriented scripting language
+.SH SYNOPSIS
+.B ruby \c
+  [ \c
+.BI --version \c
+ ]  [ \c
+.BI -c \c
+ ]  [ \c
+.BI -w \c
+ ]  [ \c
+.BI -d \c
+ ]  [ \c
+.BI -l \c
+ ]
+       [ \c
+.BI -p \c
+ ]  [ \c
+.BI -n \c
+ ]  [ \c
+.BI -a \c
+ ]  [ \c
+.BI -s \c
+ ]  [ \c
+.BI -0 "[octal]"\c
+ ]
+       [ \c
+.BI -K "c"\c
+ ]  [ \c
+.BI -e "command"\c
+ ]  [ \c
+.BI -F "pattern"\c
+ ]
+       [ \c
+.BI -i "[extension]"\c
+ ]  [ \c
+.BI -I "dir"\c
+ ] [ \c
+.BI -r "library"\c
+ ]
+       [ \c
+.BI -S \c
+ ]  [ \c
+.BI -v \c
+ ]  [ \c
+.BI -x "[directory]"\c
+ ]  [ \c
+.BI -C "directory"\c
+ ]
+       [ \c
+.BI -y \c
+] [ \c
+.BI -- \c
+ ] [ programfile ]  [ argument ] ...
+
+.SH PREFACE
+Ruby is an interpreted scripting language for quick and easy
+object-oriented programming.  It has many features to process text
+files and to do system management tasks (as in Perl).  It is simple,
+straight-forward, and extensible.
+.PP
+If you want a language for easy object-oriented programming, or you
+don't like the Perl ugliness, or you do like the concept of lisp, but
+don't like too much parentheses, Ruby may be the language of your
+choice.
+.SH DESCRIPTION
+Ruby's features are as follows:
+.TP
+.B "\(bu Interpretive"
+Ruby is an interpreted language, so you don't have to recompile
+programs written in Ruby to execute them.
+.TP
+.B "\(bu Variables have no type (dynamic typing)"
+Variables in Ruby can contain data of any type.  You don't have to
+worry about variable typing.  Consequently, it has a weaker compile
+time check.
+.TP
+.B "\(bu No declaration needed"
+You can use variables in your Ruby programs without any declarations.
+Variable names denote their scope, local, global, instance, etc.
+.TP
+.B "\(bu Simple syntax"
+Ruby has a simple syntax influenced slightly from Eiffel.
+.TP
+.B "\(bu No user-level memory management"
+Ruby has automatic memory management. Objects no longer
+referenced from anywhere are automatically collected by the
+garbage collector built into the interpreter.
+.TP
+.B "\(bu Everything is an object"
+Ruby is the purely object-oriented language, and was so since its
+creation.  Even such basic data as integers are seen as objects.
+.TP
+.B "\(bu Class, inheritance, methods"
+Of course, as an object-oriented language, Ruby has such basic
+features like classes, inheritance, and methods.
+.TP
+.B "\(bu Singleton methods"
+Ruby has the ability to define methods for certain objects.  For
+example, you can define a press-button action for certain widget by
+defining a singleton method for the button.  Or, you can make up your
+own prototype based object system using singleton methods, if you want
+to.
+.TP
+.B "\(bu Mix-in by modules"
+Ruby intentionally does not have the multiple inheritance as it is a
+source of confusion.  Instead, Ruby has the ability to share
+implementations across the inheritance tree.  This is often called
+`Mix-in'.
+.TP
+.B "\(bu Iterators"
+Ruby has iterators for loop abstraction.
+.TP
+.B "\(bu Closures"
+In Ruby, you can objectify the procedure.
+.TP
+.B "\(bu Text processing and regular expression"
+Ruby has a bunch of text processing features like in Perl.
+.TP
+.B "\(bu Bignums"
+With built-in bignums, you can for example calculate factorial(400).
+.TP
+.B "\(bu Exception handling"
+As in Java(tm).
+.TP
+.B "\(bu Direct access to the OS"
+Ruby can use most UNIX system calls, often used in system programming.
+.TP
+.B "\(bu Dynamic loading"
+On most UNIX systems, you can load object files into the Ruby
+interpreter on-the-fly.
+.PP
+.SH COMMAND LINE OPTIONS
+Ruby interpreter accepts following command-line options (switches).
+They are quite similar to those of Perl.
+.TP
+.B -0[octal]
+specifies the input record separator ($/) as an octal number. If no
+digit is given, the null character is taken as the separator.  Other
+switches may follow the digits.  -00 turns Ruby into paragraph mode.  -
+0777 makes Ruby read whole file at once as a single string since there
+is no legal character with that value.
+.TP
+.B -a
+turns on auto-split mode when used with -n or -p. In auto-split
+mode, Ruby executes
+.nf
+.ne 1
+\&    $F = $_.split
+at beginning of each loop.
+.fi
+.TP
+.B  -c
+causes Ruby to check the syntax of the script and exit without
+executing. If there are no syntax errors, Ruby will print "Syntax
+OK" to the standard output.
+.TP
+.B --copyright
+prints the copyright notice.
+.TP
+.B -d --debug
+turns on debug mode. $DEBUG will set true.
+.TP
+.B -e command
+specifies script from command-line while telling Ruby to not
+search argv for script filenames.
+.TP
+.B -F pattern
+specifies input field separator ($;).
+.TP
+.B -h --help
+prints a summary of the options.
+.TP
+.B -i extension
+specifies in-place-edit mode. The extension, if specified, is
+added to old filename to make a backup copy.
+example:
+.nf
+.ne 8
+\&    % echo matz > /tmp/junk
+\&    % cat /tmp/junk
+\&    matz
+\&    % ruby -p -i.bak -e '$_.upcase!' /tmp/junk
+\&    % cat /tmp/junk
+\&    MATZ
+\&    % cat /tmp/junk.bak
+\&    matz
+.fi
+.TP
+.B -I directory
+used to tell Ruby where to load the library scripts. Directory path
+will be added to the load-path variable ($:').
+.TP
+.B -Kkcode
+specifies KANJI (Japanese) encoding.
+.TP
+.B -l
+enables automatic line-ending processing, which means to firstly set
+$\e to the value of $/, and secondly chops every line read using chop!.
+.TP
+.B -n
+causes Ruby to assume the following loop around your script,
+which makes it iterate over filename arguments somewhat like
+sed -n or awk.
+.nf
+.ne 3
+\&    while gets
+\&      ...
+\&    end
+.fi
+.TP
+.B -p
+acts mostly same as -n switch, but print the value of variable
+$_ at the each end of the loop.
+example:
+.nf
+.ne 2
+\&    % echo matz | ruby -p -e '$_.tr! "a-z", "A-Z"'
+\&    MATZ
+.fi
+.TP
+.B -r library
+causes Ruby to load the library using require. It is useful
+with switches -n or -p.
+.TP
+.B -s
+enables some switch parsing for switches after script name but before
+any filename arguments (or before a --). Any switches found there are
+removed from ARGV and set the corresponding variable in the script.
+example:
+.nf
+.ne 3
+\&    #! /usr/local/bin/ruby -s
+\&    # prints "true" if invoked with `-xyz' switch.
+\&    print "true\en" if $xyz
+.fi
+.TP
+.B -S
+makes Ruby use the PATH environment variable to search for
+script, unless if its name begins with a slash. This is used to
+emulate #! on machines that don't support it, in the following
+manner:
+.nf
+.ne 2
+\&    #! /usr/local/bin/ruby
+\&    # This line makes the next one a comment in ruby \e
+\&      exec /usr/local/bin/ruby -S $0 $*
+.fi
+On some systems $0 does not always contain the full pathname, so you
+need -S switch to tell Ruby to search for the script if necessary.  To
+handle embedded spaces or such.  A better construct than $* would be
+${1+"$@@"}, but it does not work if the script is being interpreted by
+csh.
+.TP
+.B -v --verbose
+enables verbose mode. Ruby will print its version at the beginning,
+and set the variable `$VERBOSE' to true. Some methods print extra
+messages if this variable is true. If this switch is given, and no
+other switches are present, Ruby quits after printing its version.
+.TP
+.B -T[level]
+turns on taint checks at the specified level (default 1).
+.TP
+.B --version
+prints the version of Ruby interpreter.
+.TP
+.B -w
+enables verbose mode without printing version message at the
+beginning. It set the `$VERBOSE' variable to true.
+.TP
+.B -x[directory]
+tells Ruby that the script is embedded in a message. Leading garbage
+will be discarded until the first that starts with "#!"  and contains
+the string, "ruby". Any meaningful switches on that line will applied.
+The end of script must be specified with either EOF, ^D (control-D),
+^Z (control-Z), or reserved word __END__.If the directory name is
+specified, Ruby will switch to that directory before executing script.
+.TP
+.B -C directory
+causes Ruby to switch to the directory.
+.TP
+.B -y --yydebug
+turns on compiler debug mode. Ruby will print a bunch of internal
+state messages during compiling scripts. You don't have to specify
+this switch, unless you are going to debug the Ruby interpreter.
+.PP
+.SH AUTHOR
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@netlab.jp>.
+@
+
+
+1.9
+log
+@eban
+@
+text
+@d1 1
+a1 1
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@zetabits.com>.
+d291 1
+a291 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@zetabits.com>.
+@
+
+
+1.9.2.1
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+@
+text
+@d1 1
+a1 1
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@netlab.jp>.
+d291 1
+a291 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@netlab.jp>.
+@
+
+
+1.9.2.2
+log
+@* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d3 1
+a3 1
+.TH RUBY 1 "ruby 1.6" "2001-12-25" "Ruby Programmers Reference Manual"
+@
+
+
+1.8
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d282 1
+a282 1
+.B -X directory
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d3 1
+a3 1
+.TH RUBY 1 "ruby 1.6" "2000-09-04" "Ruby Programmers Reference Guide"
+d198 1
+a198 1
+specifies KANJI (Japanese) code-set.
+@
+
+
+1.6
+log
+@2000-05-24
+@
+text
+@d1 1
+a1 1
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+d3 1
+a3 1
+.TH RUBY 1 "ruby 1.5" "5/Nov/99" "Ruby Programmers Reference Guide"
+d291 1
+a291 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+@
+
+
+1.5
+log
+@19991108
+@
+text
+@d9 1
+a9 1
+.BI -version \c
+d51 1
+a51 1
+.BI -X "directory"\c
+@
+
+
+1.4
+log
+@990918-repack
+@
+text
+@d3 1
+a3 1
+.TH RUBY 1 "ruby 1.4" "13/Aug/99" "Ruby Programmers Reference Guide"
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d36 1
+a36 1
+ ] 
+d43 1
+a43 1
+ ]  
+d52 2
+a53 1
+ ]  [ \c
+d55 1
+a55 2
+]
+       [ \c
+d58 1
+a58 1
+                                       
+d64 1
+a64 1
+.PP   
+d139 1
+a139 1
+.TP   
+d152 1
+a152 1
+\&    $F = $_.split 
+d168 1
+a168 1
+specifies script from command-line while telling Ruby to not 
+d209 1
+a209 1
+.ne 3          
+d235 1
+a235 1
+.ne 3          
+d247 1
+a247 1
+.ne 2          
+d265 1
+a265 1
+turns on taint checks at the specified level (default 1).  
+d277 1
+a277 1
+the string, "ruby". Any meaningful switches on that line will applied. 
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d28 1
+a28 1
+.BI -0 "[digit]"\c
+d33 1
+a33 1
+.BI -e "script"\c
+d42 1
+a42 1
+.BI -r "filename"\c
+d49 1
+a49 1
+.BI -x "[dir]"\c
+d51 1
+a51 1
+.BI -X "[dir]"\c
+d109 3
+a111 3
+Ruby intentioanlly does not have the multiple inheritance as it is a
+souce of confusion.  Instead, Ruby has the ability to share
+implementations acrss the inheritance tree.  This is oftern called
+d140 2
+a141 2
+.B -0digit
+pecifies the input record separator ($/) as an octal number. If no
+d161 2
+a162 2
+.B -Kc
+specifies KANJI (Japanese) code-set.
+d165 1
+a165 1
+turns on debug mode. $DEBUG will set TRUE.
+d167 1
+a167 1
+.B -e script
+d171 1
+a171 1
+.B -F regexp
+d197 3
+d202 1
+a202 1
+$\ to the value of $/, and secondly chops every line read using chop!.
+d225 2
+a226 2
+.B -r filename
+causes Ruby to load the file using [4]require. It is useful
+d249 1
+a249 1
+\&    # This line makes the next one a comment in ruby \\
+d260 2
+a261 2
+and set the variable `$VERBOSE' to TRUE. Some methods print extra
+messages if this variable is TRUE. If this switch is given, and no
+d263 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 38
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@ruby.club.co.jp>.
+.\"
+.\"This source is distributed under the conditions blow:
+.\"
+.\" 1. You may make and give away verbatim copies of the source form of
+.\"    the software without restriction, provided that you do not modify
+.\"    the original distribution files.
+.\"
+.\"    If you want to distribute the modified version in any way, contact 
+.\"    the author.
+.\"
+.\" 2. You may distribute the software in object code or executable
+.\"    form, provided that you distribute it with instructions on where
+.\"    to get the software.
+.\"
+.\" 3. You may modify the software in any way, provided that you do not
+.\"    distribute the modified version.
+.\"
+.\" 4. You may modify and include the part of the software into any other
+.\"    software (possibly commercial).  But some files in the distribution
+.\"    are not written by the author, so that they are not under this terms.
+.\"    They are gc.c(partly)，utils.c(partly), regex.[ch]，fnmatch.[ch]，
+.\"    glob.c, st.[ch] and somme files under the ./missing directory.  See
+.\"    each files for the copying condition.
+.\"
+.\" 5. The scripts and library files supplied as input to or produced as 
+.\"    output from the software do not automatically fall under the
+.\"    copyright of the software, but belong to whomever generated them, 
+.\"    and may be sold commercially, and may be aggregated with this
+.\"    software.
+.\"
+.\" 6. THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
+.\"    IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+.\"    WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+.\"    PURPOSE.
+.\"
+.\" $Id$
+.\"
+d3 1
+a3 1
+.TH RUBY 1 "ruby 1.0" "19/Sep/97" "Ruby Programmers Reference Guide"
+d5 1
+a5 1
+ruby - Interpreted scripting language
+d60 3
+a62 3
+Ruby is the interpreted scripting language for quick and easy
+object-oriented programming. It has many features to process text
+files and to do system management tasks (as in perl). It is simple,
+d66 2
+a67 2
+don't like the PERL ugliness, or you do like the concept of lisp, but
+don't like too much parentheses, ruby may be the language of the
+d73 2
+a74 2
+Ruby is the interpreted language, so you don't have to
+recompile to execute the program written in ruby.
+d77 4
+a80 4
+Variables in ruby can contain data of any type. You don't have
+to worry about variable typing. Consequently, it has weaker
+compile time check.
+.TP          
+d82 2
+a83 3
+You can use variables in your ruby programs without any
+declarations. Variable name itself denotes its scope (local,
+global, instance, etc.)
+d86 1
+a86 1
+Ruby has simple syntax influenced slightly from Eiffel.
+d91 1
+a91 1
+garbage collector built in the interpreter.
+d93 3
+a95 3
+.B "\(bu Everything is object"
+Ruby is the pure object-oriented language from the beginning.
+Even basic data like integers are treated uniformly as objects.
+d98 2
+a99 2
+Of course, as a O-O language, ruby has basic features like
+classes, inheritance, methods, etc.
+d102 5
+a106 5
+Ruby has the feature to define methods for certain specified
+object. For example, you can define a press-button action for
+certain GUI button by defining a singleton method for the
+button. Or, you can make up your own prototype based object
+system using singleton methods (if you want to).
+d109 4
+a112 4
+Ruby does not have the multiple inheritance intentionally. IMO,
+It is the source of confusion. Instead, ruby has modules to
+share the implementation across the inheritance tree. It is
+often called "Mix-in."
+d118 1
+a118 1
+In ruby, you can objectify the procedure.
+d121 1
+a121 1
+Ruby has bunch of text processing features like in perl.
+d124 1
+a124 2
+With bu ilt-in bignums, you can calculate factorial(400), for
+example.
+d129 2
+a130 3
+.B "\(bu Direct access to OS"
+Ruby can call most of system calls on UNIX boxes. It can be
+used in system programming.
+d133 2
+a134 2
+You can load object files into ruby interpreter on-the-fly, on
+most of UNIXes.
+d136 1
+a136 1
+.SH Command line options
+d138 1
+a138 1
+Basically they are quite similar to those of Perl.
+d141 5
+a145 5
+specifies the input record separator ($/) as an octal number.
+If no digits given, the null character is the separator. Other
+switches may follow the digits. -00 turns ruby into paragraph
+mode. -0777 makes ruby read whole file at once as a single
+string, since there is no legal character with that value.
+d149 1
+a149 1
+mode, ruby executes
+d157 2
+a158 2
+causes ruby to check the syntax of the script and exit without
+executing. If there is no syntax error, ruby will print "Syntax
+d162 1
+a162 1
+specifies KANJI (Japanese character) code-set.
+d164 1
+a164 2
+.B
+-d --debug
+d168 2
+a169 2
+specifies script from command-line. if -e switch specified,
+ruby will not look for a script filename in the arguments.
+d174 3
+d194 2
+a195 2
+used to tell ruby where to load the library scripts. Directory
+path will be added to the load-path variable ($:').
+d198 2
+a199 3
+enables automatic line-ending processing, which means firstly
+set $\ to the value of $/, and secondly chops every line read
+using chop!.
+d202 1
+a202 1
+causes ruby to assume the following loop around your script,
+d223 1
+a223 1
+causes ruby to load the file using [4]require. It is useful
+d227 3
+a229 4
+enables some switch parsing for switches after script name but
+before any filename arguments (or before a --). Any switches
+found there is removed from ARGV and set the corresponding
+variable in the script.
+d235 1
+a235 1
+\&    print "true\n" if $xyz
+d239 1
+a239 1
+makes ruby uses the PATH environment variable to search for
+d249 5
+a253 6
+On some systems $0 does not always contain the full pathname,
+so you need -S switch to tell ruby to search for the script if
+necessary.
+To handle embedded spaces or such, A better construct than $*
+would be ${1+"$@@"}, but it does not work if the script is being
+interpreted by csh.
+d256 4
+a259 5
+enables verbose mode. Ruby will prints its version at the
+beginning, and set the variable `$VERBOSE' to TRUE. Some
+methods prints extra messages if this variable is TRUE. If this
+switch is given, and no other switches present, ruby quits
+after printing its version.
+d262 1
+a262 1
+prints the version of ruby executable.
+d266 1
+a266 1
+beginning. It set the variable `$VERBOSE' to TRUE.
+d269 6
+a274 7
+tells ruby that the script is embedded in a message. Leading
+garbage will be discarded until the first that starts with "#!"
+and contains string "ruby". Any meaningful switches on that
+line will applied. The end of script must be specified with
+either EOF, ^D (control-D), ^Z (control-Z), or reserved word
+__END__.If the directory name is specified, ruby will switch to
+that directory before executing script.
+d277 1
+a277 1
+causes ruby to switch to the directory.
+d280 3
+a282 4
+turns on compiler debug mode. ruby will print bunch of internal
+state messages during compiling scripts. You don't have to
+specify this switch, unless you are going to debug the ruby
+interpreter itself.
+d285 1
+a285 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@ruby.club.co.jp>.
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d1 38
+a38 1
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+d40 1
+a40 1
+.TH RUBY 1 "ruby 1.3" "18/Jan/99" "Ruby Programmers Reference Guide"
+d42 1
+a42 1
+ruby - Interpreted object-oriented scripting language
+d97 3
+a99 3
+Ruby is an interpreted scripting language for quick and easy
+object-oriented programming.  It has many features to process text
+files and to do system management tasks (as in Perl).  It is simple,
+d103 2
+a104 2
+don't like the Perl ugliness, or you do like the concept of lisp, but
+don't like too much parentheses, Ruby may be the language of your
+d110 2
+a111 2
+Ruby is an interpreted language, so you don't have to recompile
+programs written in Ruby to execute them.
+d114 4
+a117 4
+Variables in Ruby can contain data of any type.  You don't have to
+worry about variable typing.  Consequently, it has a weaker compile
+time check.
+.TP
+d119 3
+a121 2
+You can use variables in your Ruby programs without any declarations.
+Variable names denote their scope, local, global, instance, etc.
+d124 1
+a124 1
+Ruby has a simple syntax influenced slightly from Eiffel.
+d129 1
+a129 1
+garbage collector built into the interpreter.
+d131 3
+a133 3
+.B "\(bu Everything is an object"
+Ruby is the purely object-oriented language, and was so since its
+creation.  Even such basic data as integers are seen as objects.
+d136 2
+a137 2
+Of course, as an object-oriented language, Ruby has such basic
+features like classes, inheritance, and methods.
+d140 5
+a144 5
+Ruby has the ability to define methods for certain objects.  For
+example, you can define a press-button action for certain widget by
+defining a singleton method for the button.  Or, you can make up your
+own prototype based object system using singleton methods, if you want
+to.
+d147 4
+a150 4
+Ruby intentioanlly does not have the multiple inheritance as it is a
+souce of confusion.  Instead, Ruby has the ability to share
+implementations acrss the inheritance tree.  This is oftern called
+`Mix-in'.
+d156 1
+a156 1
+In Ruby, you can objectify the procedure.
+d159 1
+a159 1
+Ruby has a bunch of text processing features like in Perl.
+d162 2
+a163 1
+With built-in bignums, you can for example calculate factorial(400).
+d168 3
+a170 2
+.B "\(bu Direct access to the OS"
+Ruby can use most UNIX system calls, often used in system programming.
+d173 2
+a174 2
+On most UNIX systems, you can load object files into the Ruby
+interpreter on-the-fly.
+d176 1
+a176 1
+.SH COMMAND LINE OPTIONS
+d178 1
+a178 1
+They are quite similar to those of Perl.
+d181 5
+a185 5
+pecifies the input record separator ($/) as an octal number. If no
+digit is given, the null character is taken as the separator.  Other
+switches may follow the digits.  -00 turns Ruby into paragraph mode.  -
+0777 makes Ruby read whole file at once as a single string since there
+is no legal character with that value.
+d189 1
+a189 1
+mode, Ruby executes
+d197 2
+a198 2
+causes Ruby to check the syntax of the script and exit without
+executing. If there are no syntax errors, Ruby will print "Syntax
+d202 1
+a202 1
+specifies KANJI (Japanese) code-set.
+d209 2
+a210 2
+specifies script from command-line while telling Ruby to not 
+search argv for script filenames.
+d232 2
+a233 2
+used to tell Ruby where to load the library scripts. Directory path
+will be added to the load-path variable ($:').
+d236 3
+a238 2
+enables automatic line-ending processing, which means to firstly set
+$\ to the value of $/, and secondly chops every line read using chop!.
+d241 1
+a241 1
+causes Ruby to assume the following loop around your script,
+d262 1
+a262 1
+causes Ruby to load the file using [4]require. It is useful
+d266 4
+a269 3
+enables some switch parsing for switches after script name but before
+any filename arguments (or before a --). Any switches found there are
+removed from ARGV and set the corresponding variable in the script.
+d275 1
+a275 1
+\&    print "true\en" if $xyz
+d279 1
+a279 1
+makes Ruby use the PATH environment variable to search for
+d289 6
+a294 5
+On some systems $0 does not always contain the full pathname, so you
+need -S switch to tell Ruby to search for the script if necessary.  To
+handle embedded spaces or such.  A better construct than $* would be
+${1+"$@@"}, but it does not work if the script is being interpreted by
+csh.
+d297 5
+a301 4
+enables verbose mode. Ruby will print its version at the beginning,
+and set the variable `$VERBOSE' to TRUE. Some methods print extra
+messages if this variable is TRUE. If this switch is given, and no
+other switches are present, Ruby quits after printing its version.
+d304 1
+a304 1
+prints the version of Ruby interpreter.
+d308 1
+a308 1
+beginning. It set the `$VERBOSE' variable to true.
+d311 7
+a317 6
+tells Ruby that the script is embedded in a message. Leading garbage
+will be discarded until the first that starts with "#!"  and contains
+the string, "ruby". Any meaningful switches on that line will applied. 
+The end of script must be specified with either EOF, ^D (control-D),
+^Z (control-Z), or reserved word __END__.If the directory name is
+specified, Ruby will switch to that directory before executing script.
+d320 1
+a320 1
+causes Ruby to switch to the directory.
+d323 4
+a326 3
+turns on compiler debug mode. Ruby will print a bunch of internal
+state messages during compiling scripts. You don't have to specify
+this switch, unless you are going to debug the Ruby interpreter.
+d329 1
+a329 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+@
+
+
+1.1.1.2.2.1
+log
+@990201
+@
+text
+@d164 2
+a165 1
+.B -d --debug
+a173 3
+.TP
+.B -h --help
+prints a summary of the options.
+@
+
+
+1.1.1.2.2.2
+log
+@pre 1.4.0
+@
+text
+@d3 1
+a3 1
+.TH RUBY 1 "ruby 1.4" "13/Aug/99" "Ruby Programmers Reference Guide"
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d37 1
+a37 1
+.\" $Id: ruby.1,v 1.1.1.1 1998/01/16 04:05:48 matz Exp $
+@
+
+
+1.1.1.1.4.2
+log
+@*** empty log message ***
+@
+text
+@d37 1
+a37 1
+.\" $Id: ruby.1,v 1.1.1.1.4.1 1998/01/16 12:35:47 matz Exp $
+d275 1
+a275 1
+\&    print "true\en" if $xyz
+@
+
+
+1.1.1.1.4.3
+log
+@980626
+@
+text
+@d1 1
+a1 1
+.\"Ruby is copyrighted by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+d37 1
+a37 1
+.\" $Id: ruby.1,v 1.1.1.1.4.2 1998/01/30 10:18:25 matz Exp $
+d40 1
+a40 1
+.TH RUBY 1 "ruby 1.1" "22/Jun/98" "Ruby Programmers Reference Guide"
+d329 1
+a329 1
+ Ruby is designed and implemented by Yukihiro Matsumoto <matz@@netlab.co.jp>.
+@
+
+
+1.1.1.1.4.4
+log
+@1.2.2 PR1
+@
+text
+@d37 1
+a37 1
+.\" $Id: ruby.1,v 1.1.1.1.4.3 1998/06/26 09:44:33 matz Exp $
+d40 1
+a40 1
+.TH RUBY 1 "ruby 1.2" "12/Jan/99" "Ruby Programmers Reference Guide"
+d42 1
+a42 1
+ruby - Interpreted object-oriented scripting language
+d97 3
+a99 3
+Ruby is an interpreted scripting language for quick and easy
+object-oriented programming.  It has many features to process text
+files and to do system management tasks (as in Perl).  It is simple,
+d103 2
+a104 2
+don't like the Perl ugliness, or you do like the concept of lisp, but
+don't like too much parentheses, Ruby may be the language of your
+d110 2
+a111 2
+Ruby is an interpreted language, so you don't have to recompile
+programs written in Ruby to execute them.
+d114 4
+a117 4
+Variables in Ruby can contain data of any type.  You don't have to
+worry about variable typing.  Consequently, it has a weaker compile
+time check.
+.TP
+d119 3
+a121 2
+You can use variables in your Ruby programs without any declarations.
+Variable names denote their scope, local, global, instance, etc.
+d124 1
+a124 1
+Ruby has a simple syntax influenced slightly from Eiffel.
+d129 1
+a129 1
+garbage collector built into the interpreter.
+d131 3
+a133 3
+.B "\(bu Everything is an object"
+Ruby is the purely object-oriented language, and was so since its
+creation.  Even such basic data as integers are seen as objects.
+d136 2
+a137 2
+Of course, as an object-oriented language, Ruby has such basic
+features like classes, inheritance, and methods.
+d140 5
+a144 5
+Ruby has the ability to define methods for certain objects.  For
+example, you can define a press-button action for certain widget by
+defining a singleton method for the button.  Or, you can make up your
+own prototype based object system using singleton methods, if you want
+to.
+d147 4
+a150 4
+Ruby intentioanlly does not have the multiple inheritance as it is a
+souce of confusion.  Instead, Ruby has the ability to share
+implementations acrss the inheritance tree.  This is oftern called
+`Mix-in'.
+d156 1
+a156 1
+In Ruby, you can objectify the procedure.
+d159 1
+a159 1
+Ruby has a bunch of text processing features like in Perl.
+d162 2
+a163 1
+With built-in bignums, you can for example calculate factorial(400).
+d168 3
+a170 2
+.B "\(bu Direct access to the OS"
+Ruby can use most UNIX system calls, often used in system programming.
+d173 2
+a174 2
+On most UNIX systems, you can load object files into the Ruby
+interpreter on-the-fly.
+d176 1
+a176 1
+.SH COMMAND LINE OPTIONS
+d178 1
+a178 1
+They are quite similar to those of Perl.
+d181 5
+a185 5
+pecifies the input record separator ($/) as an octal number. If no
+digit is given, the null character is taken as the separator.  Other
+switches may follow the digits.  -00 turns Ruby into paragraph mode.  -
+0777 makes Ruby read whole file at once as a single string since there
+is no legal character with that value.
+d189 1
+a189 1
+mode, Ruby executes
+d197 2
+a198 2
+causes Ruby to check the syntax of the script and exit without
+executing. If there are no syntax errors, Ruby will print "Syntax
+d202 1
+a202 1
+specifies KANJI (Japanese) code-set.
+d209 2
+a210 2
+specifies script from command-line while telling Ruby to not 
+search argv for script filenames.
+d232 2
+a233 2
+used to tell Ruby where to load the library scripts. Directory path
+will be added to the load-path variable ($:').
+d236 3
+a238 2
+enables automatic line-ending processing, which means to firstly set
+$\ to the value of $/, and secondly chops every line read using chop!.
+d241 1
+a241 1
+causes Ruby to assume the following loop around your script,
+d262 1
+a262 1
+causes Ruby to load the file using [4]require. It is useful
+d266 4
+a269 3
+enables some switch parsing for switches after script name but before
+any filename arguments (or before a --). Any switches found there are
+removed from ARGV and set the corresponding variable in the script.
+d279 1
+a279 1
+makes Ruby use the PATH environment variable to search for
+d289 6
+a294 5
+On some systems $0 does not always contain the full pathname, so you
+need -S switch to tell Ruby to search for the script if necessary.  To
+handle embedded spaces or such.  A better construct than $* would be
+${1+"$@@"}, but it does not work if the script is being interpreted by
+csh.
+d297 5
+a301 4
+enables verbose mode. Ruby will print its version at the beginning,
+and set the variable `$VERBOSE' to TRUE. Some methods print extra
+messages if this variable is TRUE. If this switch is given, and no
+other switches are present, Ruby quits after printing its version.
+d304 1
+a304 1
+prints the version of Ruby interpreter.
+d308 1
+a308 1
+beginning. It set the `$VERBOSE' variable to true.
+d311 7
+a317 6
+tells Ruby that the script is embedded in a message. Leading garbage
+will be discarded until the first that starts with "#!"  and contains
+the string, "ruby". Any meaningful switches on that line will applied. 
+The end of script must be specified with either EOF, ^D (control-D),
+^Z (control-Z), or reserved word __END__.If the directory name is
+specified, Ruby will switch to that directory before executing script.
+d320 1
+a320 1
+causes Ruby to switch to the directory.
+d323 4
+a326 3
+turns on compiler debug mode. Ruby will print a bunch of internal
+state messages during compiling scripts. You don't have to specify
+this switch, unless you are going to debug the Ruby interpreter.
+@
+
+
+1.1.1.1.4.3.2.1
+log
+@join 1.1c6
+@
+text
+@d1 1
+d3 35
+a37 1
+.\" $Id: ruby.1,v 1.1.1.1.4.3 1998/06/26 09:44:33 matz Exp $
+d42 1
+a42 1
+ruby - interpreted object-oriented scripting language
+d104 1
+a104 1
+don't like too much parentheses, Ruby may be the language of the
+d111 1
+a111 1
+recompile to execute the program written in Ruby.
+d114 1
+a114 1
+Variables in Ruby can contain data of any type. You don't have
+d119 1
+a119 1
+You can use variables in your Ruby programs without any
+d136 1
+a136 1
+Of course, as a O-O language, Ruby has basic features like
+d148 1
+a148 1
+It is the source of confusion. Instead, Ruby has modules to
+d150 1
+a150 1
+often called as "Mix-in."
+d156 1
+a156 1
+In Ruby, you can objectify the procedure.
+d162 1
+a162 1
+With built-in bignums, you can calculate factorial(400), for
+d180 2
+a181 2
+.B -0\fIdigit
+specifies the input record separator (\fB$/\fR) as an octal number.
+d183 2
+a184 2
+switches may follow the digits. \fB-00\fR turns ruby into paragraph
+mode. \fB-0777\fR makes ruby read whole file at once as a single
+d188 1
+a188 1
+turns on auto-split mode when used with \fB-n\fR or \fB-p\fR. In auto-split
+d201 1
+a201 1
+.B -K\fIc
+d206 1
+a206 1
+turns on debug mode. \fB$DEBUG\fR will set TRUE.
+d208 2
+a209 2
+.B -e \fIscript
+specifies script from command-line. if \fB-e\fR switch specified,
+d212 2
+a213 2
+.B -F \fIregexp
+specifies input field separator (\fB$;\fR).
+d215 1
+a215 1
+.B -i \fIextension
+d231 1
+a231 1
+.B -I \fIdirectory
+d233 1
+a233 1
+path will be added to the load-path variable (\fB$:\fR).
+d237 2
+a238 2
+set \fB$\\\fR to the value of \fB$/\fR, and secondly chops every line read
+using \fBchop!\fR.
+d243 1
+a243 1
+sed \fB-n\fR or awk.
+d252 2
+a253 2
+acts mostly same as \fB-n\fR switch, but print the value of variable
+\fB$_\fR at the each end of the loop.
+d261 3
+a263 3
+.B -r \fIfilename
+causes ruby to load the file using require. It is useful
+with switches -n or \fB-p\fR.
+d267 1
+a267 1
+before any filename arguments (or before a \fB--\fR). Any switches
+d281 1
+a281 1
+emulate \fB#!\fR on machines that don't support it, in the following
+d290 1
+a290 1
+so you need \fB-S\fR switch to tell ruby to search for the script if
+d292 2
+a293 2
+To handle embedded spaces or such, A better construct than \fB$*\fR
+would be \fB${1+"$@@"}\fR, but it does not work if the script is being
+d298 1
+a298 1
+beginning, and set the variable \fB$VERBOSE\fR to TRUE. Some
+d300 1
+a300 1
+switch is given, and no other arguments present, ruby quits
+d308 1
+a308 1
+beginning. It set the variable \fB$VERBOSE\fR to TRUE.
+d310 1
+a310 1
+.B -x\fR[\fIdirectory\fR]
+d312 1
+a312 1
+garbage will be discarded until the first that starts with "\fB#!\fR"
+d319 1
+a319 1
+.B -X \fIdirectory
+@
+
+

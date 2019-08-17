@@ -1,0 +1,4200 @@
+head	1.29;
+access;
+symbols
+	v1_6_7:1.11.2.3
+	v1_6_6:1.11.2.3
+	v1_6_5:1.11.2.2
+	v1_6_4:1.11.2.2
+	v1_7_1:1.18
+	v1_6_4_preview4:1.11.2.2
+	v1_6_4_preview3:1.11.2.2
+	v1_6_4_preview2:1.11.2.2
+	v1_6_4_preview1:1.11.2.2
+	v1_6_3:1.11.2.1
+	ruby_m17n:1.12.0.2
+	ruby_1_6:1.11.0.2
+	v1_6_2:1.11
+	v1_6_1:1.9
+	v1_6_0:1.9
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.8
+	v1_3_6_repack:1.1.1.3.2.7
+	v1_3_6:1.1.1.3.2.7
+	v1_3_5:1.1.1.3.2.6
+	v1_2_6repack:1.1.1.2.2.10
+	v1_3_4_990625:1.1.1.3.2.6
+	v1_3_4_990624:1.1.1.3.2.6
+	v1_2_6:1.1.1.2.2.10
+	v1_3_4_990611:1.1.1.3.2.6
+	v1_3_4_990531:1.1.1.3.2.6
+	v1_3_3_990518:1.1.1.3.2.6
+	v1_3_3_990513:1.1.1.3.2.6
+	v1_3_3_990507:1.1.1.3.2.6
+	v1_2_5:1.1.1.2.2.10
+	v1_2_4:1.1.1.2.2.10
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.2
+	v1_3_1_990210:1.1.1.3.2.2
+	v1_3_1_:1.1.1.3.2.2
+	v1_3_1_990209:1.1.1.3.2.2
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.10
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.10
+	v1_2_1repack:1.1.1.2.2.10
+	v1_2_1:1.1.1.2.2.10
+	v1_2_stable:1.1.1.2.2.9
+	v1_1d1:1.1.1.2.2.7.2.3
+	v1_1d0:1.1.1.2.2.7.2.3
+	v1_1c9_1:1.1.1.2.2.9
+	v1_1c9:1.1.1.2.2.9
+	v1_1c8:1.1.1.2.2.9
+	v1_1c7:1.1.1.2.2.9
+	v1_1c6:1.1.1.2.2.9
+	v1_1d-start:1.1.1.2.2.7.2.1
+	v1_1c5:1.1.1.2.2.8
+	v1_1dev:1.1.1.2.2.7.0.2
+	v1_1c4:1.1.1.2.2.7
+	v1_1c3:1.1.1.2.2.6
+	v1_1c2:1.1.1.2.2.6
+	v1_1c1:1.1.1.2.2.6
+	v1_1c0:1.1.1.2.2.6
+	v1_1b9_31:1.1.1.2.2.6
+	v1_1b9_30:1.1.1.2.2.6
+	v1_1b9_28:1.1.1.2.2.6
+	v1_1b9_27:1.1.1.2.2.6
+	v1_1b9_26:1.1.1.2.2.6
+	r1_1b9_25:1.1.1.2.2.4
+	r1_1b9_24:1.1.1.2.2.4
+	v1_1b9_23:1.1.1.2.2.4
+	v1_1b9_22:1.1.1.2.2.4
+	v1_1b9_20:1.1.1.2.2.3
+	v1_1b9_18:1.1.1.2.2.2
+	v1_1b9_16:1.1.1.2.2.1
+	v1_1b9_15:1.1.1.2.2.1
+	v1_1b9_13:1.1.1.2.2.1
+	v1_1b9_12:1.1.1.2.2.1
+	v1_1b9_11:1.1.1.2.2.1
+	v1_1b9_08:1.1.1.2.2.1
+	v1_1b9_07:1.1.1.2.2.1
+	r1_1b9:1.1.1.2.2.1
+	v1_1b8:1.1.1.2.2.1
+	v1_1b7:1.1.1.2.2.1
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.29
+date	2002.08.28.08.05.23;	author michal;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.05.29.05.20.33;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.05.28.18.11.07;	author michal;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.03.23.16.07.55;	author eban;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.03.19.15.45.53;	author knu;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.12.10.07.18.12;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.11.28.14.55.55;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.03.27.07.09.23;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.03.22.08.59.02;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.03.21.04.18.10;	author eban;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.02.14.05.51.58;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.01.10.07.52.46;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.12.18.14.22.37;	author eban;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2000.12.05.09.36.37;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.07.27.09.49.24;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.07.04.04.17.16;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.02.15.57.14;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.12.09.07.47;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.01.09.41.31;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.03.07.08.37.49;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.05.04.37.13;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.13;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.30;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.17;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.24.04.31.26;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.03.24.08.52.34;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.04.16.06.12.48;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.04.16.06.14.43;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.07.28.09.26.51;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.08.06.06.48.21;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.05.01.08.56.39;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.05.15.05.43.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.05.18.04.56.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.06.16.04.23.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.06.18.07.46.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.09.03.07.43.44;	author matz;	state Exp;
+branches
+	1.1.1.2.2.7.2.1;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.09.08.09.17.44;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.10.06.02.45.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	99.01.11.07.55.27;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.7.2.1
+date	98.09.08.07.09.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7.2.2;
+
+1.1.1.2.2.7.2.2
+date	98.10.06.03.28.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7.2.3;
+
+1.1.1.2.2.7.2.3
+date	98.11.25.03.31.18;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.24.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.02.08.09.17.57;	author matz;	state Exp;
+branches;
+next	1.11.2.2;
+
+1.11.2.2
+date	2001.03.22.08.59.26;	author matz;	state Exp;
+branches;
+next	1.11.2.3;
+
+1.11.2.3
+date	2001.11.28.14.52.58;	author matz;	state Exp;
+branches;
+next	1.11.2.4;
+
+1.11.2.4
+date	2002.04.24.12.06.57;	author eban;	state Exp;
+branches;
+next	1.11.2.5;
+
+1.11.2.5
+date	2002.10.26.15.57.24;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.29
+log
+@Int vs Long cleanup #3 (ruby-core:352)
+@
+text
+@/**********************************************************************
+
+  util.c -
+
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+  created at: Fri Mar 10 17:22:34 JST 1995
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+
+#include <ctype.h>
+#include <stdio.h>
+#include <errno.h>
+
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+#include "util.h"
+#ifndef HAVE_STRING_H
+char *strchr _((char*,char));
+#endif
+
+unsigned long
+scan_oct(start, len, retlen)
+    const char *start;
+    int len;
+    int *retlen;
+{
+    register const char *s = start;
+    register unsigned long retval = 0;
+
+    while (len-- && *s >= '0' && *s <= '7') {
+	retval <<= 3;
+	retval |= *s++ - '0';
+    }
+    *retlen = s - start;
+    return retval;
+}
+
+unsigned long
+scan_hex(start, len, retlen)
+    const char *start;
+    int len;
+    int *retlen;
+{
+    static char hexdigit[] = "0123456789abcdef0123456789ABCDEF";
+    register const char *s = start;
+    register unsigned long retval = 0;
+    char *tmp;
+
+    while (len-- && *s && (tmp = strchr(hexdigit, *s))) {
+	retval <<= 4;
+	retval |= (tmp - hexdigit) & 15;
+	s++;
+    }
+    *retlen = s - start;
+    return retval;
+}
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#if defined(HAVE_FCNTL_H)
+#include <fcntl.h>
+#endif
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+#if defined(MSDOS) || defined(__CYGWIN32__) || defined(NT)
+/*
+ *  Copyright (c) 1993, Intergraph Corporation
+ *
+ *  You may distribute under the terms of either the GNU General Public
+ *  License or the Artistic License, as specified in the perl README file.
+ *
+ *  Various Unix compatibility functions and NT specific functions.
+ *
+ *  Some of this code was derived from the MSDOS port(s) and the OS/2 port.
+ *
+ */
+
+
+/*
+ * Suffix appending for in-place editing under MS-DOS and OS/2 (and now NT!).
+ *
+ * Here are the rules:
+ *
+ * Style 0:  Append the suffix exactly as standard perl would do it.
+ *           If the filesystem groks it, use it.  (HPFS will always
+ *           grok it.  So will NTFS. FAT will rarely accept it.)
+ *
+ * Style 1:  The suffix begins with a '.'.  The extension is replaced.
+ *           If the name matches the original name, use the fallback method.
+ *
+ * Style 2:  The suffix is a single character, not a '.'.  Try to add the 
+ *           suffix to the following places, using the first one that works.
+ *               [1] Append to extension.  
+ *               [2] Append to filename, 
+ *               [3] Replace end of extension, 
+ *               [4] Replace end of filename.
+ *           If the name matches the original name, use the fallback method.
+ *
+ * Style 3:  Any other case:  Ignore the suffix completely and use the
+ *           fallback method.
+ *
+ * Fallback method:  Change the extension to ".$$$".  If that matches the
+ *           original name, then change the extension to ".~~~".
+ *
+ * If filename is more than 1000 characters long, we die a horrible
+ * death.  Sorry.
+ *
+ * The filename restriction is a cheat so that we can use buf[] to store
+ * assorted temporary goo.
+ *
+ * Examples, assuming style 0 failed.
+ *
+ * suffix = ".bak" (style 1)
+ *                foo.bar => foo.bak
+ *                foo.bak => foo.$$$	(fallback)
+ *                foo.$$$ => foo.~~~	(fallback)
+ *                makefile => makefile.bak
+ *
+ * suffix = "~" (style 2)
+ *                foo.c => foo.c~
+ *                foo.c~ => foo.c~~
+ *                foo.c~~ => foo~.c~~
+ *                foo~.c~~ => foo~~.c~~
+ *                foo~~~~~.c~~ => foo~~~~~.$$$ (fallback)
+ *
+ *                foo.pas => foo~.pas
+ *                makefile => makefile.~
+ *                longname.fil => longname.fi~
+ *                longname.fi~ => longnam~.fi~
+ *                longnam~.fi~ => longnam~.$$$
+ *                
+ */
+
+
+static int valid_filename(char *s);
+
+static char suffix1[] = ".$$$";
+static char suffix2[] = ".~~~";
+
+#define ext (&buf[1000])
+
+#define strEQ(s1,s2) (strcmp(s1,s2) == 0)
+
+void
+ruby_add_suffix(str, suffix)
+    VALUE str;
+    char *suffix;
+{
+    int baselen;
+    int extlen = strlen(suffix);
+    char *s, *t, *p;
+    long slen;
+    char buf[1024];
+
+    if (RSTRING(str)->len > 1000)
+        rb_fatal("Cannot do inplace edit on long filename (%ld characters)",
+		 RSTRING(str)->len);
+
+#if defined(DJGPP) || defined(__CYGWIN32__) || defined(NT)
+    /* Style 0 */
+    slen = RSTRING(str)->len;
+    rb_str_cat(str, suffix, extlen);
+#if defined(DJGPP)
+    if (_USE_LFN) return;
+#else
+    if (valid_filename(RSTRING(str)->ptr)) return;
+#endif
+
+    /* Fooey, style 0 failed.  Fix str before continuing. */
+    RSTRING(str)->ptr[RSTRING(str)->len = slen] = '\0';
+#endif
+
+    slen = extlen;
+    t = buf; baselen = 0; s = RSTRING(str)->ptr;
+    while ((*t = *s) && *s != '.') {
+	baselen++;
+	if (*s == '\\' || *s == '/') baselen = 0;
+ 	s++; t++;
+    }
+    p = t;
+
+    t = ext; extlen = 0;
+    while (*t++ = *s++) extlen++;
+    if (extlen == 0) { ext[0] = '.'; ext[1] = 0; extlen++; }
+
+    if (*suffix == '.') {        /* Style 1 */
+        if (strEQ(ext, suffix)) goto fallback;
+	strcpy(p, suffix);
+    }
+    else if (suffix[1] == '\0') {  /* Style 2 */
+        if (extlen < 4) { 
+	    ext[extlen] = *suffix;
+	    ext[++extlen] = '\0';
+        }
+	else if (baselen < 8) {
+   	    *p++ = *suffix;
+	}
+	else if (ext[3] != *suffix) {
+	    ext[3] = *suffix;
+	}
+	else if (buf[7] != *suffix) {
+	    buf[7] = *suffix;
+	}
+	else goto fallback;
+	strcpy(p, ext);
+    }
+    else { /* Style 3:  Panic */
+fallback:
+	(void)memcpy(p, strEQ(ext, suffix1) ? suffix2 : suffix1, 5);
+    }
+    rb_str_resize(str, strlen(buf));
+    memcpy(RSTRING(str)->ptr, buf, RSTRING(str)->len);
+}
+
+#if defined(__CYGWIN32__) || defined(NT)
+static int 
+valid_filename(char *s)
+{
+    int fd;
+
+    /*
+    // if the file exists, then it's a valid filename!
+    */
+
+    if (_access(s, 0) == 0) {
+	return 1;
+    }
+
+    /*
+    // It doesn't exist, so see if we can open it.
+    */
+    
+    if ((fd = _open(s, O_CREAT, 0666)) >= 0) {
+	_close(fd);
+	_unlink (s);	/* don't leave it laying around */
+	return 1;
+    }
+    return 0;
+}
+#endif
+#endif
+
+#if defined __DJGPP__
+
+#include <dpmi.h>
+
+static char dbcs_table[256];
+
+int
+make_dbcs_table()
+{
+    __dpmi_regs r;
+    struct {
+	unsigned char start;
+	unsigned char end;
+    } vec;
+    int offset;
+
+    memset(&r, 0, sizeof(r));
+    r.x.ax = 0x6300;
+    __dpmi_int(0x21, &r);
+    offset = r.x.ds * 16 + r.x.si;
+
+    for (;;) {
+	int i;
+	dosmemget(offset, sizeof vec, &vec);
+	if (!vec.start && !vec.end)
+	    break;
+	for (i = vec.start; i <= vec.end; i++)
+	    dbcs_table[i] = 1;
+	offset += 2;
+    }
+}
+
+int
+mblen(const char *s, size_t n)
+{
+    static int need_init = 1;
+    if (need_init) {
+	make_dbcs_table();
+	need_init = 0;
+    }
+    if (s) {
+	if (n == 0 || *s == 0)
+	    return 0;
+	return dbcs_table[(unsigned char)*s] + 1;
+    }
+    else
+	return 1;
+}
+
+struct PathList {
+    struct PathList *next;
+    char *path;
+};
+
+struct PathInfo {
+    struct PathList *head;
+    int count;
+};
+
+static void
+push_element(const char *path, VALUE vinfo)
+{
+    struct PathList *p;
+    struct PathInfo *info = (struct PathInfo *)vinfo;
+
+    p = ALLOC(struct PathList);
+    MEMZERO(p, struct PathList, 1);
+    p->path = ruby_strdup(path);
+    p->next = info->head;
+    info->head = p;
+    info->count++;
+}
+
+#include <dirent.h>
+int __opendir_flags = __OPENDIR_PRESERVE_CASE;
+
+char **
+__crt0_glob_function(char *path)
+{
+    int len = strlen(path);
+    int i;
+    char **rv;
+    char path_buffer[PATH_MAX];
+    char *buf = path_buffer;
+    char *p;
+    struct PathInfo info;
+    struct PathList *plist;
+
+    if (PATH_MAX <= len)
+	buf = ruby_xmalloc(len + 1);
+
+    strncpy(buf, path, len);
+    buf[len] = '\0';
+
+    for (p = buf; *p; p += mblen(p, MB_CUR_MAX))
+	if (*p == '\\')
+	    *p = '/';
+
+    info.count = 0;
+    info.head = 0;
+
+    rb_globi(buf, push_element, (VALUE)&info);
+
+    if (buf != path_buffer)
+	ruby_xfree(buf);
+
+    if (info.count == 0)
+	return 0;
+
+    rv = ruby_xmalloc((info.count + 1) * sizeof (char *));
+
+    plist = info.head;
+    i = 0;
+    while (plist) {
+	struct PathList *cur;
+	rv[i] = plist->path;
+	cur = plist;
+	plist = plist->next;
+	ruby_xfree(cur);
+	i++;
+    }
+    rv[i] = 0;
+    return rv;
+}
+
+#endif
+
+/* mm.c */
+
+#define A ((int*)a)
+#define B ((int*)b)
+#define C ((int*)c)
+#define D ((int*)d)
+
+#define mmprepare(base, size) do {\
+ if (((long)base & (0x3)) == 0)\
+   if (size >= 16) mmkind = 1;\
+   else            mmkind = 0;\
+ else              mmkind = -1;\
+ high = (size & (~0xf));\
+ low  = (size &  0x0c);\
+} while (0)\
+
+#define mmarg mmkind, size, high, low
+
+static void mmswap_(a, b, mmarg)
+    register char *a, *b;
+    int mmarg;
+{
+ register int s;
+ if (a == b) return;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     } while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }
+ else {
+   register char *t = a + size;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+#define mmswap(a,b) mmswap_((a),(b),mmarg)
+
+static void mmrot3_(a, b, c, mmarg)
+    register char *a, *b, *c;
+    int mmarg;
+{
+ register int s;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = C[3]; C[3] = s; a += 16; b += 16; c += 16;
+     } while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;}}}
+ }
+ else {
+   register char *t = a + size;
+   do {s = *a; *a++ = *b; *b++ = *c; *c++ = s;} while (a < t);
+ }
+}
+#define mmrot3(a,b,c) mmrot3_((a),(b),(c),mmarg)
+
+/* qs6.c */
+/*****************************************************/
+/*                                                   */
+/*          qs6   (Quick sort function)              */
+/*                                                   */
+/* by  Tomoyuki Kawamura              1995.4.21      */
+/* kawamura@@tokuyama.ac.jp                           */
+/*****************************************************/
+
+typedef struct { char *LL, *RR; } stack_node; /* Stack structure for L,l,R,r */
+#define PUSH(ll,rr) do { top->LL = (ll); top->RR = (rr); ++top; } while (0)  /* Push L,l,R,r */
+#define POP(ll,rr)  do { --top; ll = top->LL; rr = top->RR; } while (0)      /* Pop L,l,R,r */
+
+#define med3(a,b,c) ((*cmp)(a,b)<0 ?                                   \
+                       ((*cmp)(b,c)<0 ? b : ((*cmp)(a,c)<0 ? c : a)) : \
+                       ((*cmp)(b,c)>0 ? b : ((*cmp)(a,c)<0 ? a : c)))
+
+void ruby_qsort (base, nel, size, cmp)
+     void* base;
+     const int nel;
+     const int size;
+     int (*cmp)();
+{
+  register char *l, *r, *m;          	/* l,r:left,right group   m:median point */
+  register int  t, eq_l, eq_r;       	/* eq_l: all items in left group are equal to S */
+  char *L = base;                    	/* left end of curren region */
+  char *R = (char*)base + size*(nel-1); /* right end of current region */
+  int  chklim = 63;                     /* threshold of ordering element check */
+  stack_node stack[32], *top = stack;   /* 32 is enough for 32bit CPU */
+  int mmkind, high, low;
+
+  if (nel <= 1) return;        /* need not to sort */
+  mmprepare(base, size);
+  goto start;
+
+  nxt:
+  if (stack == top) return;    /* return if stack is empty */
+  POP(L,R);
+
+  for (;;) {
+    start:
+    if (L + size == R) {       /* 2 elements */
+      if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;
+    }
+
+    l = L; r = R;
+    t = (r - l + size) / size;  /* number of elements */
+    m = l + size * (t >> 1);    /* calculate median value */
+
+    if (t >= 60) {
+      register char *m1;
+      register char *m3;
+      if (t >= 200) {
+	t = size*(t>>3); /* number of bytes in splitting 8 */
+	{
+	  register char *p1 = l  + t;
+	  register char *p2 = p1 + t;
+	  register char *p3 = p2 + t;
+	  m1 = med3(p1, p2, p3);
+	  p1 = m  + t;
+	  p2 = p1 + t;
+	  p3 = p2 + t;
+	  m3 = med3(p1, p2, p3);
+	}
+      }
+      else {
+	t = size*(t>>2); /* number of bytes in splitting 4 */
+	m1 = l + t;
+	m3 = m + t;
+      }
+      m = med3(m1, m, m3);
+    }
+
+    if ((t = (*cmp)(l,m)) < 0) {                             /*3-5-?*/
+      if ((t = (*cmp)(m,r)) < 0) {                           /*3-5-7*/
+	if (chklim && nel >= chklim) {   /* check if already ascending order */
+	  char *p;
+	  chklim = 0;
+	  for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) > 0) goto fail;
+	  goto nxt;
+	}
+	fail: goto loopA;                                    /*3-5-7*/
+      }
+      if (t > 0) {
+	if ((*cmp)(l,r) <= 0) {mmswap(m,r); goto loopA;}     /*3-5-4*/
+	mmrot3(r,m,l); goto loopA;                           /*3-5-2*/
+      }
+      goto loopB;                                            /*3-5-5*/
+    }
+
+    if (t > 0) {                                             /*7-5-?*/
+      if ((t = (*cmp)(m,r)) > 0) {                           /*7-5-3*/
+	if (chklim && nel >= chklim) {   /* check if already ascending order */
+	  char *p;
+	  chklim = 0;
+	  for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) < 0) goto fail2;
+	  while (l<r) {mmswap(l,r); l+=size; r-=size;}  /* reverse region */
+	  goto nxt;
+	}
+	fail2: mmswap(l,r); goto loopA;                      /*7-5-3*/
+      }
+      if (t < 0) {
+	if ((*cmp)(l,r) <= 0) {mmswap(l,m); goto loopB;}     /*7-5-8*/
+	mmrot3(l,m,r); goto loopA;                           /*7-5-6*/
+      }
+      mmswap(l,r); goto loopA;                               /*7-5-5*/
+    }
+
+    if ((t = (*cmp)(m,r)) < 0)  {goto loopA;}                /*5-5-7*/
+    if (t > 0) {mmswap(l,r); goto loopB;}                    /*5-5-3*/
+
+    /* determining splitting type in case 5-5-5 */           /*5-5-5*/
+    for (;;) {
+      if ((l += size) == r)      goto nxt;                   /*5-5-5*/
+      if (l == m) continue;
+      if ((t = (*cmp)(l,m)) > 0) {mmswap(l,r); l = L; goto loopA;}  /*575-5*/
+      if (t < 0)                 {mmswap(L,l); l = L; goto loopB;}  /*535-5*/
+    }
+
+    loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right */
+    for (;;) {
+      for (;;) {
+	if ((l += size) == r)
+	  {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+	if (l == m) continue;
+	if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+	if (t < 0) eq_l = 0;
+      }
+      for (;;) {
+	if (l == (r -= size))
+	  {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+	if (r == m) {m = l; break;}
+	if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+	if (t == 0) break;
+      }
+      mmswap(l,r);    /* swap left and right */
+    }
+
+    loopB: eq_l = 1; eq_r = 1;  /* splitting type B */ /* left < median <= right */
+    for (;;) {
+      for (;;) {
+	if (l == (r -= size))
+	  {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+	if (r == m) continue;
+	if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+	if (t > 0) eq_r = 0;
+      }
+      for (;;) {
+	if ((l += size) == r)
+	  {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+	if (l == m) {m = r; break;}
+	if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+	if (t == 0) break;
+      }
+      mmswap(l,r);    /* swap left and right */
+    }
+
+    fin:
+    if (eq_l == 0)                         /* need to sort left side */
+      if (eq_r == 0)                       /* need to sort right side */
+	if (l-L < R-r) {PUSH(r,R); R = l;} /* sort left side first */
+	else           {PUSH(L,l); L = r;} /* sort right side first */
+      else R = l;                          /* need to sort left side only */
+    else if (eq_r == 0) L = r;             /* need to sort right side only */
+    else goto nxt;                         /* need not to sort both sides */
+  }
+}
+
+char *
+ruby_strdup(str)
+    const char *str;
+{
+    char *tmp;
+    int len = strlen(str) + 1;
+
+    tmp = xmalloc(len);
+    if (tmp == NULL) return NULL;
+    memcpy(tmp, str, len);
+
+    return tmp;
+}
+
+char *
+ruby_getcwd()
+{
+    int size = 200;
+    char *buf = xmalloc(size);
+
+    while (!getcwd(buf, size)) {
+	if (errno != ERANGE) rb_sys_fail(0);
+	size *= 2;
+	buf = xrealloc(buf, size);
+    }
+    return buf;
+}
+
+/* copyright notice for strtod implementation --
+ *
+ * Copyright (c) 1988-1993 The Regents of the University of California.
+ * Copyright (c) 1994 Sun Microsystems, Inc.
+ *
+ * Permission to use, copy, modify, and distribute this
+ * software and its documentation for any purpose and without
+ * fee is hereby granted, provided that the above copyright
+ * notice appear in all copies.  The University of California
+ * makes no representations about the suitability of this
+ * software for any purpose.  It is provided "as is" without
+ * express or implied warranty.
+ *
+ */
+
+#define TRUE 1
+#define FALSE 0
+
+static int maxExponent = 511;	/* Largest possible base 10 exponent.  Any
+				 * exponent larger than this will already
+				 * produce underflow or overflow, so there's
+				 * no need to worry about additional digits.
+				 */
+static double powersOf10[] = {	/* Table giving binary powers of 10.  Entry */
+    10.0,			/* is 10^2^i.  Used to convert decimal */
+    100.0,			/* exponents into floating-point numbers. */
+    1.0e4,
+    1.0e8,
+    1.0e16,
+    1.0e32,
+    1.0e64,
+    1.0e128,
+    1.0e256
+};
+
+/*
+ *----------------------------------------------------------------------
+ *
+ * strtod --
+ *
+ *	This procedure converts a floating-point number from an ASCII
+ *	decimal representation to internal double-precision format.
+ *
+ * Results:
+ *	The return value is the double-precision floating-point
+ *	representation of the characters in string.  If endPtr isn't
+ *	NULL, then *endPtr is filled in with the address of the
+ *	next character after the last one that was part of the
+ *	floating-point number.
+ *
+ * Side effects:
+ *	None.
+ *
+ *----------------------------------------------------------------------
+ */
+
+double
+ruby_strtod(string, endPtr)
+    const char *string;		/* A decimal ASCII floating-point number,
+				 * optionally preceded by white space.
+				 * Must have form "-I.FE-X", where I is the
+				 * integer part of the mantissa, F is the
+				 * fractional part of the mantissa, and X
+				 * is the exponent.  Either of the signs
+				 * may be "+", "-", or omitted.  Either I
+				 * or F may be omitted, or both.  The decimal
+				 * point isn't necessary unless F is present.
+				 * The "E" may actually be an "e".  E and X
+				 * may both be omitted (but not just one).
+				 */
+    char **endPtr;		/* If non-NULL, store terminating character's
+				 * address here. */
+{
+    int sign, expSign = FALSE;
+    double fraction, dblExp, *d;
+    register const char *p;
+    register int c;
+    int exp = 0;		/* Exponent read from "EX" field. */
+    int fracExp = 0;		/* Exponent that derives from the fractional
+				 * part.  Under normal circumstatnces, it is
+				 * the negative of the number of digits in F.
+				 * However, if I is very long, the last digits
+				 * of I get dropped (otherwise a long I with a
+				 * large negative exponent could cause an
+				 * unnecessary overflow on I alone).  In this
+				 * case, fracExp is incremented one for each
+				 * dropped digit. */
+    int mantSize;		/* Number of digits in mantissa. */
+    int decPt;			/* Number of mantissa digits BEFORE decimal
+				 * point. */
+    const char *pExp;		/* Temporarily holds location of exponent
+				 * in string. */
+
+    /*
+     * Strip off leading blanks and check for a sign.
+     */
+
+    errno = 0;
+    p = string;
+    while (ISSPACE(*p)) {
+	p += 1;
+    }
+    if (*p == '-') {
+	sign = TRUE;
+	p += 1;
+    }
+    else {
+	if (*p == '+') {
+	    p += 1;
+	}
+	sign = FALSE;
+    }
+
+    /*
+     * Count the number of digits in the mantissa (including the decimal
+     * point), and also locate the decimal point.
+     */
+
+    decPt = -1;
+    for (mantSize = 0; ; mantSize += 1) {
+	c = *p;
+	if (!ISDIGIT(c)) {
+	    if ((c != '.') || (decPt >= 0)) {
+		break;
+	    }
+	    decPt = mantSize;
+	}
+	p += 1;
+    }
+
+    /*
+     * Now suck up the digits in the mantissa.  Use two integers to
+     * collect 9 digits each (this is faster than using floating-point).
+     * If the mantissa has more than 18 digits, ignore the extras, since
+     * they can't affect the value anyway.
+     */
+    
+    pExp  = p;
+    p -= mantSize;
+    if (decPt < 0) {
+	decPt = mantSize;
+    }
+    else {
+	mantSize -= 1;			/* One of the digits was the point. */
+    }
+    if (mantSize > 18) {
+	fracExp = decPt - 18;
+	mantSize = 18;
+    }
+    else {
+	fracExp = decPt - mantSize;
+    }
+    if (mantSize == 0) {
+	fraction = 0.0;
+	p = string;
+	goto done;
+    }
+    else {
+	int frac1, frac2;
+	frac1 = 0;
+	for ( ; mantSize > 9; mantSize -= 1) {
+	    c = *p;
+	    p += 1;
+	    if (c == '.') {
+		c = *p;
+		p += 1;
+	    }
+	    frac1 = 10*frac1 + (c - '0');
+	}
+	frac2 = 0;
+	for (; mantSize > 0; mantSize -= 1) {
+	    c = *p;
+	    p += 1;
+	    if (c == '.') {
+		c = *p;
+		p += 1;
+	    }
+	    frac2 = 10*frac2 + (c - '0');
+	}
+	fraction = (1.0e9 * frac1) + frac2;
+    }
+
+    /*
+     * Skim off the exponent.
+     */
+
+    p = pExp;
+    if ((*p == 'E') || (*p == 'e')) {
+	p += 1;
+	if (*p == '-') {
+	    expSign = TRUE;
+	    p += 1;
+	}
+	else {
+	    if (*p == '+') {
+		p += 1;
+	    }
+	    expSign = FALSE;
+	}
+	while (ISDIGIT(*p)) {
+	    exp = exp * 10 + (*p - '0');
+	    p += 1;
+	}
+    }
+    if (expSign) {
+	exp = fracExp - exp;
+    }
+    else {
+	exp = fracExp + exp;
+    }
+
+    /*
+     * Generate a floating-point number that represents the exponent.
+     * Do this by processing the exponent one bit at a time to combine
+     * many powers of 2 of 10. Then combine the exponent with the
+     * fraction.
+     */
+    
+    if (exp < 0) {
+	expSign = TRUE;
+	exp = -exp;
+    }
+    else {
+	expSign = FALSE;
+    }
+    if (exp > maxExponent) {
+	exp = maxExponent;
+	errno = ERANGE;
+    }
+    dblExp = 1.0;
+    for (d = powersOf10; exp != 0; exp >>= 1, d += 1) {
+	if (exp & 01) {
+	    dblExp *= *d;
+	}
+    }
+    if (expSign) {
+	fraction /= dblExp;
+    }
+    else {
+	fraction *= dblExp;
+    }
+
+done:
+    if (endPtr != NULL) {
+	*endPtr = (char *) p;
+    }
+
+    if (sign) {
+	return -fraction;
+    }
+    return fraction;
+}
+@
+
+
+1.28
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/29 05:20:33 $
+d30 3
+a32 3
+const char *start;
+int len;
+int *retlen;
+d47 3
+a49 3
+const char *start;
+int len;
+int *retlen;
+@
+
+
+1.27
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/05/28 18:11:07 $
+d169 1
+a169 1
+    int slen;
+@
+
+
+1.26
+log
+@	* array.c: fixed format string for 'long' args (%d -> %ld).
+
+	* class.c: ditto.
+
+	* eval.c: ditto.
+
+	* numeric.c: ditto.
+
+	* pack.c: ditto.
+
+	* parse.y: ditto.
+
+	* range.c: ditto.
+
+	* string.c: ditto.
+
+	* util.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d15 1
+d751 1
+d753 1
+a753 1
+    while (isspace(*p)) {
+d775 1
+a775 1
+	if (!isdigit(c)) {
+d853 1
+a853 1
+	while (isdigit(*p)) {
+@
+
+
+1.25
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:18 $
+d172 1
+a172 1
+        rb_fatal("Cannot do inplace edit on long filename (%d characters)",
+@
+
+
+1.24
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/03/23 16:07:55 $
+d13 2
+a21 2
+#include "ruby.h"
+
+d646 1
+a646 1
+	if (errno != ERANGE) rb_sys_fail(NULL);
+d651 252
+@
+
+
+1.23
+log
+@* util.c (push_element): avoid warning for djgpp.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/03/19 15:45:53 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d467 2
+a468 2
+#define PUSH(ll,rr) {top->LL = (ll); top->RR = (rr); ++top;}  /* Push L,l,R,r */
+#define POP(ll,rr)  {--top; ll = top->LL; rr = top->RR;}      /* Pop L,l,R,r */
+@
+
+
+1.22
+log
+@* util.c (ruby_getcwd): the content of buf is uncertain and must
+  not be printed when getcwd(buf, size) has failed.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/12/10 07:18:12 $
+d319 1
+a319 1
+push_element(char *path, struct PathInfo *info)
+d322 1
+@
+
+
+1.21
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/28 14:55:55 $
+d645 1
+a645 1
+	if (errno != ERANGE) rb_sys_fail(buf);
+@
+
+
+1.20
+log
+@* eval.c (rb_thread_select): should subtract timeofday() from
+  limit, not reverse.
+
+* util.c (scan_hex): x is not a hexadecimal digit.
+
+* eval.c (rb_thread_schedule): should treat the case that
+  select(2) returns 0, if a thread is under both WAIT_SELECT and
+  WAIT_TIME.  Jakub Travnik <J.Travnik@@sh.cvut.cz> actually fixed
+  this bug.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/08 06:43:08 $
+a386 2
+static int mmkind, mmsize, high, low;
+
+d392 14
+a405 18
+static void mmprepare(base, size) void *base; int size;
+{
+#ifdef DEBUG
+ if (sizeof(int) != 4) die("sizeof(int) != 4");
+ if (size <= 0) die("mmsize <= 0");
+#endif
+
+ if (((long)base & (4-1)) == 0 && ((long)base & (4-1)) == 0)
+   if (size >= 16) mmkind = 1;
+   else            mmkind = 0;
+ else              mmkind = -1;
+ 
+ mmsize = size;
+ high = (size & (-16));
+ low  = (size & 0x0c);
+}
+
+static void mmswap(a, b) register char *a, *b;
+d424 1
+a424 1
+   register char *t = a + mmsize;
+d428 1
+d430 3
+a432 1
+static void mmrot3(a, b, c) register char *a, *b, *c;
+d450 1
+a450 1
+   register char *t = a + mmsize;
+d454 1
+d473 5
+a477 1
+void ruby_qsort (base, nel, size, cmp) void* base; int nel; int size; int (*cmp)();
+d482 4
+a485 3
+  char *R = (char*)base + size*(nel-1); 	/* right end of current region */
+  int  chklim = 63;                      /* threshold of ordering element check */
+  stack_node stack[32], *top = stack;    /* 32 is enough for 32bit CPU */
+d497 3
+a499 1
+    if (L + size == R) {if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;}/* 2 elements */
+d567 1
+a567 1
+    /* deteming splitting type in case 5-5-5 */              /*5-5-5*/
+@
+
+
+1.19
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d50 1
+a50 1
+    static char hexdigit[] = "0123456789abcdef0123456789ABCDEFx";
+@
+
+
+1.18
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/27 07:09:23 $
+d14 1
+d631 14
+@
+
+
+1.17
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/22 08:59:02 $
+d204 2
+a205 1
+    } else if (suffix[1] == '\0') {  /* Style 2 */
+d209 2
+a210 1
+        } else if (baselen < 8) {
+d212 2
+a213 1
+	} else if (ext[3] != *suffix) {
+d215 2
+a216 1
+	} else if (buf[7] != *suffix) {
+d218 2
+a219 1
+	} else goto fallback;
+d221 2
+a222 1
+    } else { /* Style 3:  Panic */
+d427 2
+a428 1
+ }else{
+d445 1
+a445 1
+     }while (a < t);
+d450 2
+a451 1
+ }else{
+d476 140
+a615 139
+ register char *l, *r, *m;          	/* l,r:left,right group   m:median point */
+ register int  t, eq_l, eq_r;       	/* eq_l: all items in left group are equal to S */
+ char *L = base;                    	/* left end of curren region */
+ char *R = (char*)base + size*(nel-1); 	/* right end of current region */
+ int  chklim = 63;                      /* threshold of ordering element check */
+ stack_node stack[32], *top = stack;    /* 32 is enough for 32bit CPU */
+
+ if (nel <= 1) return;        /* need not to sort */
+ mmprepare(base, size);
+ goto start;
+  
+ nxt:
+ if (stack == top) return;    /* return if stack is empty */
+ POP(L,R);
+   
+ for (;;) {
+   start:
+   if (L + size == R) {if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;}/* 2 elements */
+   
+   l = L; r = R;
+   t = (r - l + size) / size;  /* number of elements */
+   m = l + size * (t >> 1);    /* calculate median value */
+   
+   if (t >= 60) {
+     register char *m1;
+     register char *m3;
+     if (t >= 200) {
+       t = size*(t>>3); /* number of bytes in splitting 8 */
+       {
+       register char *p1 = l  + t;
+       register char *p2 = p1 + t;
+       register char *p3 = p2 + t;
+       m1 = med3(p1, p2, p3);
+       p1 = m  + t;
+       p2 = p1 + t;
+       p3 = p2 + t;
+       m3 = med3(p1, p2, p3);
+       }
+     }else{
+       t = size*(t>>2); /* number of bytes in splitting 4 */
+       m1 = l + t;
+       m3 = m + t;
+     }
+     m = med3(m1, m, m3);
+   }
+   
+   if ((t = (*cmp)(l,m)) < 0) {                             /*3-5-?*/
+     if ((t = (*cmp)(m,r)) < 0) {                           /*3-5-7*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) > 0) goto fail;
+         goto nxt;
+       }
+       fail: goto loopA;                                    /*3-5-7*/
+     }
+     if (t > 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(m,r); goto loopA;}     /*3-5-4*/
+       mmrot3(r,m,l); goto loopA;                           /*3-5-2*/
+     }
+     goto loopB;                                            /*3-5-5*/
+   }
+   
+   if (t > 0) {                                             /*7-5-?*/
+     if ((t = (*cmp)(m,r)) > 0) {                           /*7-5-3*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) < 0) goto fail2;
+         while (l<r) {mmswap(l,r); l+=size; r-=size;}  /* reverse region */
+         goto nxt;
+       }
+       fail2: mmswap(l,r); goto loopA;                      /*7-5-3*/
+     }
+     if (t < 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(l,m); goto loopB;}     /*7-5-8*/
+       mmrot3(l,m,r); goto loopA;                           /*7-5-6*/
+     }
+     mmswap(l,r); goto loopA;                               /*7-5-5*/
+   }
+    
+   if ((t = (*cmp)(m,r)) < 0)  {goto loopA;}                /*5-5-7*/
+   if (t > 0) {mmswap(l,r); goto loopB;}                    /*5-5-3*/
+   
+   /* deteming splitting type in case 5-5-5 */              /*5-5-5*/
+   for (;;) {
+     if ((l += size) == r)      goto nxt;                   /*5-5-5*/
+     if (l == m) continue;
+     if ((t = (*cmp)(l,m)) > 0) {mmswap(l,r); l = L; goto loopA;}  /*575-5*/
+     if (t < 0)                 {mmswap(L,l); l = L; goto loopB;}  /*535-5*/
+   }
+   
+   loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right */
+   for (;;) {
+     for (;;) {
+       if ((l += size) == r)
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (l == m) continue;
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t < 0) eq_l = 0;
+     }
+     for (;;) {
+       if (l == (r -= size))
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (r == m) {m = l; break;}
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   loopB: eq_l = 1; eq_r = 1;  /* splitting type B */ /* left < median <= right */
+   for (;;) {
+     for (;;) {
+       if (l == (r -= size))
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (r == m) continue;
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t > 0) eq_r = 0;
+     }
+     for (;;) {
+       if ((l += size) == r)
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (l == m) {m = r; break;}
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   fin:
+   if (eq_l == 0)                         /* need to sort left side */
+     if (eq_r == 0)                       /* need to sort right side */
+       if (l-L < R-r) {PUSH(r,R); R = l;} /* sort left side first */
+       else           {PUSH(L,l); L = r;} /* sort right side first */
+     else R = l;                          /* need to sort left side only */
+   else if (eq_r == 0) L = r;             /* need to sort right side only */
+   else goto nxt;                         /* need not to sort both sides */
+ }
+@
+
+
+1.16
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/21 04:18:10 $
+a18 1
+#define INLINE_DEFINE
+@
+
+
+1.15
+log
+@rb_iglob -> rb_globi
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/14 05:51:58 $
+d19 1
+a19 1
+#define RUBY_NO_INLINE
+@
+
+
+1.14
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:46 $
+d353 1
+a353 1
+    rb_iglob(buf, push_element, (VALUE)&info);
+@
+
+
+1.13
+log
+@* m17n baseline.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/26 08:08:50 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/12/18 14:22:37 $
+a79 13
+
+static char *
+check_dir(dir)
+    char *dir;
+{
+    struct stat st;
+
+    if (dir == NULL) return NULL;
+    if (stat(dir, &st) < 0) return NULL;
+    if (!S_ISDIR(st.st_mode)) return NULL;
+    if (eaccess(dir, W_OK) < 0) return NULL;
+    return dir;
+}
+@
+
+
+1.11
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/12/05 09:36:37 $
+a20 36
+
+VALUE
+rb_class_of(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+    if (SYMBOL_P(obj)) return rb_cSymbol;
+
+    return RBASIC(obj)->klass;
+}
+
+int
+rb_type(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+    if (obj == Qundef) return T_UNDEF;
+    if (SYMBOL_P(obj)) return T_SYMBOL;
+
+    return BUILTIN_TYPE(obj);
+}
+
+int
+rb_special_const_p(obj)
+    VALUE obj;
+{
+    if (SPECIAL_CONST_P(obj)) return Qtrue;
+
+    return Qfalse;
+}
+@
+
+
+1.11.2.1
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/12/18 14:22:37 $
+d21 36
+@
+
+
+1.11.2.2
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/08 09:17:57 $
+d19 1
+a19 1
+#define INLINE_DEFINE
+@
+
+
+1.11.2.3
+log
+@* eval.c (rb_thread_select): should subtract timeofday() from
+  limit, not reverse.
+
+* util.c (scan_hex): x is not a hexadecimal digit.
+
+* eval.c (rb_thread_schedule): should treat the case that
+  select(2) returns 0, if a thread is under both WAIT_SELECT and
+  WAIT_TIME.  Jakub Travnik <J.Travnik@@sh.cvut.cz> actually fixed
+  this bug.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/22 08:59:26 $
+d50 1
+a50 1
+    static char hexdigit[] = "0123456789abcdef0123456789ABCDEF";
+@
+
+
+1.11.2.4
+log
+@* util.c (push_element): avoid warning for djgpp.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/28 14:52:58 $
+d326 1
+a326 1
+push_element(const char *path, VALUE vinfo)
+a328 1
+    struct PathInfo *info = (struct PathInfo *)vinfo;
+@
+
+
+1.11.2.5
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/04/24 12:06:57 $
+d185 1
+a185 1
+        rb_fatal("Cannot do inplace edit on long filename (%ld characters)",
+@
+
+
+1.10
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:24 $
+d302 1
+a302 9
+#ifdef DJGPP
+#include <libc/stubs.h>
+#include <stdio.h>		/* For FILENAME_MAX */
+#include <errno.h>		/* For errno */
+#include <fcntl.h>		/* For LFN stuff */
+#include <go32.h>
+#include <dpmi.h>		/* For dpmisim */
+#include <crt0.h>		/* For crt0 flags */
+#include <libc/dosio.h>
+d304 1
+a304 1
+static unsigned use_lfn;
+d306 1
+a306 1
+static char *__get_current_directory(char *out, int drive_number);
+d308 2
+a309 2
+static char *
+__get_current_directory(char *out, int drive_number)
+d311 6
+a316 2
+  __dpmi_regs r;
+  char tmpbuf[FILENAME_MAX];
+d318 4
+a321 28
+  memset(&r, 0, sizeof(r));
+  if(use_lfn)
+    r.x.ax = 0x7147;
+  else
+    r.h.ah = 0x47;
+  r.h.dl = drive_number + 1;
+  r.x.si = __tb_offset;
+  r.x.ds = __tb_segment;
+  __dpmi_int(0x21, &r);
+
+  if (r.x.flags & 1)
+  {
+    errno = r.x.ax;
+    return out;
+  }
+  else
+  {
+    dosmemget(__tb, sizeof(tmpbuf), tmpbuf);
+    strcpy(out+1,tmpbuf);
+
+    /* Root path, don't insert "/", it'll be added later */
+    if (*(out + 1) != '\0')
+      *out = '/';
+    else
+      *out = '\0';
+    return out + strlen(out);
+  }
+}
+d323 9
+a331 4
+__inline__ static int
+is_slash(int c)
+{
+  return c == '/' || c == '\\';
+d334 2
+a335 25
+__inline__ static int
+is_term(int c)
+{
+  return c == '/' || c == '\\' || c == '\0';
+}
+
+#ifdef SJIS
+__inline__ static int
+is_sjis1(int c)
+{
+  return 0x81 <= c && (c <= 0x9f || 0xe0 <= c);
+}
+#endif
+
+/* Takes as input an arbitrary path.  Fixes up the path by:
+   1. Removing consecutive slashes
+   2. Removing trailing slashes
+   3. Making the path absolute if it wasn't already
+   4. Removing "." in the path
+   5. Removing ".." entries in the path (and the directory above them)
+   6. Adding a drive specification if one wasn't there
+   7. Converting all slashes to '/'
+ */
+void
+fixpath(const char *in, char *out)
+d337 9
+a345 17
+  int		drive_number;
+  const char	*ip = in;
+  char		*op = out;
+  int		preserve_case = _preserve_fncase();
+  char		*name_start;
+
+  use_lfn = _USE_LFN;
+
+  /* Add drive specification to output string */
+  if (((*ip >= 'a' && *ip <= 'z') ||
+       (*ip >= 'A' && *ip <= 'Z'))
+      && (*(ip + 1) == ':'))
+  {
+    if (*ip >= 'a' && *ip <= 'z')
+    {
+      drive_number = *ip - 'a';
+      *op++ = *ip++;
+d348 2
+a349 33
+    {
+      drive_number = *ip - 'A';
+      if (*ip <= 'Z')
+	*op++ = drive_number + 'a';
+      else
+	*op++ = *ip;
+      ++ip;
+    }
+    *op++ = *ip++;
+  }
+  else
+  {
+    __dpmi_regs r;
+    r.h.ah = 0x19;
+    __dpmi_int(0x21, &r);
+    drive_number = r.h.al;
+    *op++ = drive_number + (drive_number < 26 ? 'a' : 'A');
+    *op++ = ':';
+  }
+
+  /* Convert relative path to absolute */
+  if (!is_slash(*ip))
+    op = __get_current_directory(op, drive_number);
+
+  /* Step through the input path */
+  while (*ip)
+  {
+    /* Skip input slashes */
+    if (is_slash(*ip))
+    {
+      ip++;
+      continue;
+    }
+d351 70
+a420 5
+    /* Skip "." and output nothing */
+    if (*ip == '.' && is_term(*(ip + 1)))
+    {
+      ip++;
+      continue;
+d422 3
+a425 69
+    /* Skip ".." and remove previous output directory */
+    if (*ip == '.' && *(ip + 1) == '.' && is_term(*(ip + 2)))
+    {
+      ip += 2;
+      /* Don't back up over drive spec */
+      if (op > out + 2)
+	/* This requires "/" to follow drive spec */
+	while (!is_slash(*--op));
+      continue;
+    }
+
+    /* Copy path component from in to out */
+    *op++ = '/';
+#ifndef SJIS
+    while (!is_term(*ip)) *op++ = *ip++;
+#else
+    while (!is_term(*ip)) {
+      if (is_sjis1((unsigned char)*ip))
+	*op++ = *ip++;
+      *op++ = *ip++;
+    }
+#endif
+  }
+
+  /* If root directory, insert trailing slash */
+  if (op == out + 2) *op++ = '/';
+
+  /* Null terminate the output */
+  *op = '\0';
+
+  /* switch FOO\BAR to foo/bar, downcase where appropriate */
+  for (op = out + 3, name_start = op - 1; *name_start; op++)
+  {
+    char long_name[FILENAME_MAX], short_name[13];
+
+#ifdef SJIS
+    if (is_sjis1((unsigned char)*op)) {
+      op++;
+      continue;
+    }
+#endif
+    if (*op == '\\')
+      *op = '/';
+    if (!preserve_case && (*op == '/' || *op == '\0'))
+    {
+      memcpy(long_name, name_start+1, op - name_start - 1);
+      long_name[op - name_start - 1] = '\0';
+      if (!strcmp(_lfn_gen_short_fname(long_name, short_name), long_name))
+      {
+#ifndef SJIS
+	while (++name_start < op)
+	  if (*name_start >= 'A' && *name_start <= 'Z')
+	    *name_start += 'a' - 'A';
+#else
+	while (++name_start < op) {
+	  if (is_sjis1((unsigned char)*name_start))
+	    name_start++;
+	  else if (*name_start >= 'A' && *name_start <= 'Z')
+	    *name_start += 'a' - 'A';
+	}
+#endif
+      }
+      else
+	name_start = op;
+    }
+    else if (*op == '\0')
+      break;
+  }
+}
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/04 04:17:16 $
+a511 15
+
+#ifdef TEST
+
+int main (int argc, char *argv[])
+{
+  char fixed[FILENAME_MAX];
+  if (argc > 1)
+    {
+      _fixpath (argv[1], fixed);
+      printf ("You mean %s?\n", fixed);
+    }
+  return 0;
+}
+
+#endif
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/07/02 15:57:14 $
+a302 1
+/* Copyright (C) 1995 DJ Delorie, see COPYING.DJ for details */
+d381 1
+a381 1
+_fixpath(const char *in, char *out)
+d760 13
+@
+
+
+1.7
+log
+@2000-07-02
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/12 09:07:47 $
+d43 1
+@
+
+
+1.6
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:31 $
+a125 18
+    return dir;
+}
+
+char *
+ruby_mktemp()
+{
+    char *dir;
+    char *buf;
+
+    dir = check_dir(getenv("TMP"));
+    if (!dir) dir = check_dir(getenv("TMPDIR"));
+    if (!dir) dir = "/tmp";
+
+    buf = ALLOC_N(char,strlen(dir)+10);
+    sprintf(buf, "%s/rbXXXXXX", dir);
+    dir = mktemp(buf);
+    if (dir == NULL) free(buf);
+
+@
+
+
+1.5
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:49 $
+a591 22
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmswapblock(a, b, size) register char *a, *b; int size;
+{
+ register int s;
+ if (mmkind >= 0) {
+   register char *t = a + (size & (-16)); register int  lo = (size & 0x0C);
+   if (size >= 16) {
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (lo != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (lo >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (lo == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + size;
+@
+
+
+1.4
+log
+@2000-03-07
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/01/05 04:37:13 $
+d11 1
+a11 1
+************************************************/
+@
+
+
+1.3
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+a21 4
+#ifdef USE_CWGUSI
+extern char* mktemp(char*);
+#endif
+
+d30 1
+d43 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/06 06:48:21 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d54 1
+a54 4
+    if (FIXNUM_P(obj)) return Qtrue;
+    if (obj == Qnil) return Qtrue;
+    if (obj == Qfalse) return Qtrue;
+    if (obj == Qtrue) return Qtrue;
+a56 7
+}
+
+int
+rb_test_false_or_nil(v)
+    VALUE v;
+{
+    return (v != Qnil) && (v != Qfalse);
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+a6 2
+  $Author$
+  $Date$
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d13 7
+d21 48
+d70 2
+a71 4
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+char *strchr();
+d76 1
+a76 1
+char *start;
+d80 1
+a80 1
+    register char *s = start;
+d93 1
+a93 1
+char *start;
+d98 1
+a98 1
+    register char *s = start;
+d111 48
+a159 1
+#include <fcntl.h>
+d239 3
+a241 1
+add_suffix(struct RString *str, char *suffix)
+d249 3
+a251 2
+    if (str->len > 1000)
+        Fatal("Cannot do inplace edit on long filename (%d characters)", str->len);
+d255 2
+a256 2
+    slen = str->len;
+    str_cat(str, suffix, extlen);
+d260 1
+a260 1
+    if (valid_filename(str->ptr)) return;
+d264 1
+a264 1
+    str->ptr[str->len = slen] = '\0';
+d268 2
+a269 2
+    t = buf; baselen = 0; s = str->ptr;
+    while ( (*t = *s) && *s != '.') {
+d299 2
+a300 2
+    str_resize(str, strlen(buf));
+    memcpy(str->ptr, buf, str->len);
+a331 1
+/* Copyright (C) 1996 DJ Delorie, see COPYING.DJ for details */
+a335 2
+#include <ctype.h>		/* For tolower */
+#include <string.h>		/* For strlen() */
+a339 1
+#include <sys/stat.h>
+d558 254
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@a12 1
+#define RUBY_NO_INLINE
+a13 32
+
+int
+rb_type(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == FALSE) return T_FALSE;
+    if (obj == TRUE) return T_TRUE;
+
+    return BUILTIN_TYPE(obj);
+}
+
+int
+rb_special_const_p(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return TRUE;
+    if (obj == Qnil) return TRUE;
+    if (obj == FALSE) return TRUE;
+    if (obj == TRUE) return TRUE;
+
+    return FALSE;
+}
+
+int
+rb_test_false_or_nil(v)
+    VALUE v;
+{
+    return (v != Qnil) && (v != FALSE);
+}
+
+d15 3
+a17 1
+#ifndef HAVE_STRING_H
+d139 1
+a139 1
+add_suffix(VALUE str, char *suffix)
+d147 2
+a148 2
+    if (RSTRING(str)->len > 1000)
+        Fatal("Cannot do inplace edit on long filename (%d characters)", RSTRING(str)->len);
+d152 1
+a152 1
+    slen = RSTRING(str)->len;
+d157 1
+a157 1
+    if (valid_filename(RSTRING(str)->ptr)) return;
+d161 1
+a161 1
+    RSTRING(str)->ptr[RSTRING(str)->len = slen] = '\0';
+d165 1
+a165 1
+    t = buf; baselen = 0; s = RSTRING(str)->ptr;
+d197 1
+a197 1
+    memcpy(RSTRING(str)->ptr, buf, RSTRING(str)->len);
+d235 1
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 1998/11/25 03:31:18 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a12 6
+#include <stdio.h>
+
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+a15 12
+VALUE
+rb_class_of(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+
+    return RBASIC(obj)->klass;
+}
+
+d22 2
+a23 2
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+d32 4
+a35 4
+    if (FIXNUM_P(obj)) return Qtrue;
+    if (obj == Qnil) return Qtrue;
+    if (obj == Qfalse) return Qtrue;
+    if (obj == Qtrue) return Qtrue;
+d37 1
+a37 1
+    return Qfalse;
+d44 1
+a44 1
+    return (v != Qnil) && (v != Qfalse);
+d49 1
+a49 1
+char *strchr _((char*,char));
+d89 1
+a89 6
+#include <sys/types.h>
+#include <sys/stat.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#if defined(HAVE_FCNTL)
+a90 42
+#endif
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+static char *
+check_dir(dir)
+    char *dir;
+{
+    struct stat st;
+
+    if (dir == NULL) return NULL;
+    if (stat(dir, &st) < 0) return NULL;
+    if (!S_ISDIR(st.st_mode)) return NULL;
+    if (eaccess(dir, W_OK) < 0) return NULL;
+    return dir;
+}
+
+char *
+ruby_mktemp()
+{
+    char *dir;
+    char *buf;
+
+    dir = check_dir(getenv("TMP"));
+    if (!dir) dir = check_dir(getenv("TMPDIR"));
+    if (!dir) dir = "/tmp";
+
+    buf = ALLOC_N(char,strlen(dir)+10);
+    sprintf(buf, "%s/rbXXXXXX", dir);
+    dir = mktemp(buf);
+    if (dir == NULL) free(buf);
+
+    return dir;
+}
+
+#if defined(MSDOS) || defined(__CYGWIN32__) || defined(NT)
+d170 1
+a170 3
+ruby_add_suffix(str, suffix)
+    VALUE str;
+    char *suffix;
+d179 1
+a179 2
+        rb_fatal("Cannot do inplace edit on long filename (%d characters)",
+		 RSTRING(str)->len);
+d184 1
+a184 1
+    rb_str_cat(str, suffix, extlen);
+d227 1
+a227 1
+    rb_str_resize(str, strlen(buf));
+d265 1
+d270 1
+a488 253
+
+/* mm.c */
+
+static int mmkind, mmsize, high, low;
+
+#define A ((int*)a)
+#define B ((int*)b)
+#define C ((int*)c)
+#define D ((int*)d)
+
+static void mmprepare(base, size) void *base; int size;
+{
+#ifdef DEBUG
+ if (sizeof(int) != 4) die("sizeof(int) != 4");
+ if (size <= 0) die("mmsize <= 0");
+#endif
+
+ if ( ((int)base & (4-1)) == 0  &&  (size & (4-1)) == 0 )
+   if      (size >= 16) mmkind = 1;
+   else                 mmkind = 0;
+ else                   mmkind = -1;
+ 
+ mmsize = size;
+ high = (size & (-16));
+ low  = (size & 0x0C );
+}
+
+static void mmswap(a, b) register char *a, *b;
+{
+ register int s;
+ if (a == b) return;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmswapblock(a, b, size) register char *a, *b; int size;
+{
+ register int s;
+ if (mmkind >= 0) {
+   register char *t = a + (size & (-16)); register int  lo = (size & 0x0C);
+   if (size >= 16) {
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (lo != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (lo >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (lo == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + size;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmrot3(a, b, c) register char *a, *b, *c;
+{
+ register int s;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = C[3]; C[3] = s; a += 16; b += 16; c += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = *c; *c++ = s;} while (a < t);
+ }
+}
+
+/* qs6.c */
+/*****************************************************/
+/*                                                   */
+/*          qs6   (Quick sort function)              */
+/*                                                   */
+/* by  Tomoyuki Kawamura              1995.4.21      */
+/* kawamura@@tokuyama.ac.jp                           */
+/*****************************************************/
+
+typedef struct { char *LL, *RR; } stack_node; /* Stack structure for L,l,R,r */
+#define PUSH(ll,rr) {top->LL = (ll); top->RR = (rr); ++top;}  /* Push L,l,R,r */
+#define POP(ll,rr)  {--top; ll = top->LL; rr = top->RR;}      /* Pop L,l,R,r */
+
+#define med3(a,b,c) ((*cmp)(a,b)<0 ?                                   \
+                       ((*cmp)(b,c)<0 ? b : ((*cmp)(a,c)<0 ? c : a)) : \
+                       ((*cmp)(b,c)>0 ? b : ((*cmp)(a,c)<0 ? a : c)) )
+
+void ruby_qsort (base, nel, size, cmp) void* base; int nel; int size; int (*cmp)();
+{
+ register char *l, *r, *m;          	/* l,r:left,right group   m:median point */
+ register int  t, eq_l, eq_r;       	/* eq_l: all items in left group are equal to S */
+ char *L = base;                    	/* left end of curren region */
+ char *R = (char*)base + size*(nel-1); 	/* right end of current region */
+ int  chklim = 63;                      /* threshold of ordering element check */
+ stack_node stack[32], *top = stack;    /* 32 is enough for 32bit CPU */
+
+ if (nel <= 1) return;        /* need not to sort */
+ mmprepare( base, size );
+ goto start;
+  
+ nxt:
+ if (stack == top) return;    /* return if stack is empty */
+ POP(L,R);
+   
+ for (;;) {
+   start:
+   if (L + size == R) {if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;}/* 2 elements */
+   
+   l = L; r = R;
+   t = (r - l + size) / size;  /* number of elements */
+   m = l + size * (t >> 1);    /* calculate median value */
+   
+   if (t >= 60) {
+     register char *m1;
+     register char *m3;
+     if (t >= 200) {
+       t = size*(t>>3); /* number of bytes in splitting 8 */
+       {
+       register char *p1 = l  + t;
+       register char *p2 = p1 + t;
+       register char *p3 = p2 + t;
+       m1 = med3( p1, p2, p3 );
+       p1 = m  + t;
+       p2 = p1 + t;
+       p3 = p2 + t;
+       m3 = med3( p1, p2, p3 );
+       }
+     }else{
+       t = size*(t>>2); /* number of bytes in splitting 4 */
+       m1 = l + t;
+       m3 = m + t;
+     }
+     m = med3( m1, m, m3 );
+   }
+   
+   if ((t = (*cmp)(l,m)) < 0) {                             /*3-5-?*/
+     if ((t = (*cmp)(m,r)) < 0) {                           /*3-5-7*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) > 0) goto fail;
+         goto nxt;
+       }
+       fail: goto loopA;                                    /*3-5-7*/
+     }
+     if (t > 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(m,r); goto loopA;}     /*3-5-4*/
+       mmrot3(r,m,l); goto loopA;                           /*3-5-2*/
+     }
+     goto loopB;                                            /*3-5-5*/
+   }
+   
+   if (t > 0) {                                             /*7-5-?*/
+     if ((t = (*cmp)(m,r)) > 0) {                           /*7-5-3*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) < 0) goto fail2;
+         while (l<r) {mmswap(l,r); l+=size; r-=size;}  /* reverse region */
+         goto nxt;
+       }
+       fail2: mmswap(l,r); goto loopA;                      /*7-5-3*/
+     }
+     if (t < 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(l,m); goto loopB;}     /*7-5-8*/
+       mmrot3(l,m,r); goto loopA;                           /*7-5-6*/
+     }
+     mmswap(l,r); goto loopA;                               /*7-5-5*/
+   }
+    
+   if ((t = (*cmp)(m,r)) < 0)  {goto loopA;}                /*5-5-7*/
+   if (t > 0) {mmswap(l,r); goto loopB;}                    /*5-5-3*/
+   
+   /* deteming splitting type in case 5-5-5 */              /*5-5-5*/
+   for (;;) {
+     if ((l += size) == r)      goto nxt;                   /*5-5-5*/
+     if (l == m) continue;
+     if ((t = (*cmp)(l,m)) > 0) {mmswap(l,r); l = L; goto loopA;}  /*575-5*/
+     if (t < 0)                 {mmswap(L,l); l = L; goto loopB;}  /*535-5*/
+   }
+   
+   loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right右*/
+   for (;;) {
+     for (;;) {
+       if ((l += size) == r)
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (l == m) continue;
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t < 0) eq_l = 0;
+     }
+     for (;;) {
+       if (l == (r -= size))
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (r == m) {m = l; break;}
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   loopB: eq_l = 1; eq_r = 1;  /* splitting type B */ /* left < median <= right */
+   for (;;) {
+     for (;;) {
+       if (l == (r -= size))
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (r == m) continue;
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t > 0) eq_r = 0;
+     }
+     for (;;) {
+       if ((l += size) == r)
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (l == m) {m = r; break;}
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   fin:
+   if (eq_l == 0)                         /* need to sort left side */
+     if (eq_r == 0)                       /* need to sort right side */
+       if (l-L < R-r) {PUSH(r,R); R = l;} /* sort left side first */
+       else           {PUSH(L,l); L = r;} /* sort right side first */
+     else R = l;                          /* need to sort left side only */
+   else if (eq_r == 0) L = r;             /* need to sort right side only */
+   else goto nxt;                         /* need not to sort both sides */
+ }
+}
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:30 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+a20 4
+
+#ifdef USE_CWGUSI
+extern char* mktemp(char*);
+#endif
+@
+
+
+1.1.1.3.2.2
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:17 $
+d764 1
+a764 1
+   loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right */
+@
+
+
+1.1.1.3.2.3
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:24 $
+a811 1
+
+@
+
+
+1.1.1.3.2.4
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:26 $
+d76 1
+a76 1
+const char *start;
+d80 1
+a80 1
+    register const char *s = start;
+d93 1
+a93 1
+const char *start;
+d98 1
+a98 1
+    register const char *s = start;
+d332 1
+@
+
+
+1.1.1.3.2.5
+log
+@alpha
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:34 $
+d575 4
+a578 4
+ if (((long)base & (4-1)) == 0 && (long & (4-1)) == 0)
+   if (size >= 16) mmkind = 1;
+   else            mmkind = 0;
+ else              mmkind = -1;
+d597 1
+a597 1
+     } while (a < t);
+@
+
+
+1.1.1.3.2.6
+log
+@alpha
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 06:12:48 $
+d575 1
+a575 1
+ if (((long)base & (4-1)) == 0 && ((long)base & (4-1)) == 0)
+@
+
+
+1.1.1.3.2.7
+log
+@990728
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 06:14:43 $
+d269 1
+a269 1
+    while ((*t = *s) && *s != '.') {
+d582 1
+a582 1
+ low  = (size & 0x0c);
+d667 1
+a667 1
+                       ((*cmp)(b,c)>0 ? b : ((*cmp)(a,c)<0 ? a : c)))
+d679 1
+a679 1
+ mmprepare(base, size);
+d703 1
+a703 1
+       m1 = med3(p1, p2, p3);
+d707 1
+a707 1
+       m3 = med3(p1, p2, p3);
+d714 1
+a714 1
+     m = med3(m1, m, m3);
+@
+
+
+1.1.1.3.2.8
+log
+@990806
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/28 09:26:51 $
+d116 1
+a116 1
+#if defined(HAVE_FCNTL_H)
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 1998/01/16 05:04:58 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@exception model changed
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+a88 41
+#include <sys/types.h>
+#include <sys/stat.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+static char *
+check_dir(dir)
+    char *dir;
+{
+    struct stat st;
+
+    if (dir == NULL) return NULL;
+    if (stat(dir, &st) < 0) return NULL;
+    if (!S_ISDIR(st.st_mode)) return NULL;
+    if (eaccess(dir, W_OK) < 0) return NULL;
+    return dir;
+}
+
+char *
+ruby_mktemp()
+{
+    char *dir;
+    char *buf;
+
+    dir = check_dir(getenv("TMP"));
+    if (!dir) dir = check_dir(getenv("TMPDIR"));
+    if (!dir) dir = "/tmp";
+
+    buf = ALLOC_N(char,strlen(dir)+10);
+    sprintf(buf, "%s/rbXXXXXX", dir);
+    dir = mktemp(buf);
+    if (dir == NULL) free(buf);
+
+    return dir;
+}
+
+d270 1
+@
+
+
+1.1.1.2.2.3
+log
+@ruby 1.1b9_20
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/01 08:56:39 $
+a11 2
+
+#include <stdio.h>
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/15 05:43:26 $
+d51 1
+a51 1
+char *strchr _((char*,char));
+d308 1
+@
+
+
+1.1.1.2.2.5
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:24 $
+a94 3
+#endif
+#if defined(HAVE_FCNTL)
+#include <fcntl.h>
+@
+
+
+1.1.1.2.2.6
+log
+@1.1b9_26
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:49 $
+a17 4
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+a103 4
+#ifdef NT
+#include "missing/file.h"
+#endif
+
+d136 1
+@
+
+
+1.1.1.2.2.7
+log
+@1.1c4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/18 07:46:57 $
+a539 253
+
+/* mm.c */
+
+static int mmkind, mmsize, high, low;
+
+#define A ((int*)a)
+#define B ((int*)b)
+#define C ((int*)c)
+#define D ((int*)d)
+
+static void mmprepare( void *base, int size )
+{
+#ifdef DEBUG
+ if (sizeof(int) != 4) die("sizeof(int) != 4");
+ if (size <= 0) die("mmsize <= 0");
+#endif
+
+ if ( ((int)base & (4-1)) == 0  &&  (size & (4-1)) == 0 )
+   if      (size >= 16) mmkind = 1;
+   else                 mmkind = 0;
+ else                   mmkind = -1;
+ 
+ mmsize = size;
+ high = (size & (-16));
+ low  = (size & 0x0C );
+}
+
+static void mmswap( register char *a, register char *b )
+{
+ register int s;
+ if (a == b) return;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmswapblock( register char *a, register char *b, int size )
+{
+ register int s;
+ if (mmkind >= 0) {
+   register char *t = a + (size & (-16)); register int  lo = (size & 0x0C);
+   if (size >= 16) {
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (lo != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (lo >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (lo == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + size;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmrot3( register char *a, register char *b, register char *c )
+{
+ register int s;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = C[3]; C[3] = s; a += 16; b += 16; c += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = *c; *c++ = s;} while (a < t);
+ }
+}
+
+/* qs6.c */
+/*****************************************************/
+/*                                                   */
+/*          qs6   (Quick sort function)              */
+/*                                                   */
+/* by  Tomoyuki Kawamura              1995.4.21      */
+/* kawamura@@tokuyama.ac.jp                           */
+/*****************************************************/
+
+typedef struct { char *LL, *RR; } stack_node; /* Stack structure for L,l,R,r */
+#define PUSH(ll,rr) {top->LL = (ll); top->RR = (rr); ++top;}  /* Push L,l,R,r */
+#define POP(ll,rr)  {--top; ll = top->LL; rr = top->RR;}      /* Pop L,l,R,r */
+
+#define med3(a,b,c) ((*cmp)(a,b)<0 ?                                   \
+                       ((*cmp)(b,c)<0 ? b : ((*cmp)(a,c)<0 ? c : a)) : \
+                       ((*cmp)(b,c)>0 ? b : ((*cmp)(a,c)<0 ? a : c)) )
+
+void qsort (base, nel, size, cmp) void* base; size_t nel; size_t size; int (*cmp)();
+{
+ register char *l, *r, *m;          /*l,r:左右の集団の端   m:配列の中央の位置*/
+ register int  t, eq_l, eq_r;       /*eq_l:左の集団が全てｓに等しいことを示す*/
+ char *L = base;                    /*現在分割している区間の左端の要素の先頭 */
+ char *R = base + size * (nel - 1); /*現在分割している区間の右端の要素の先頭 */
+ int  chklim = 63;                           /*昇(降)順検査をする要素数の下限*/
+ stack_node stack[32], *top = stack;         /* 32 ３２ビットマシンでは３２で十分*/
+
+ if (nel <= 1) return;        /* need not to sort */
+ mmprepare( base, size );
+ goto start;
+  
+ nxt:
+ if (stack == top) return;    /* return if stack is empty */
+ POP(L,R);
+   
+ for (;;) {
+   start:
+   if (L + size == R) {if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;}/* 2 elements */
+   
+   l = L; r = R;
+   t = (r - l + size) / size;  /* number of elements */
+   m = l + size * (t >> 1);    /* calculate median value */
+   
+   if (t >= 60) {
+     register char *m1;
+     register char *m3;
+     if (t >= 200) {
+       t = size*(t>>3); /* number of bytes in splitting 8 */
+       {
+       register char *p1 = l  + t;
+       register char *p2 = p1 + t;
+       register char *p3 = p2 + t;
+       m1 = med3( p1, p2, p3 );
+       p1 = m  + t;
+       p2 = p1 + t;
+       p3 = p2 + t;
+       m3 = med3( p1, p2, p3 );
+       }
+     }else{
+       t = size*(t>>2); /* number of bytes in splitting 4 */
+       m1 = l + t;
+       m3 = m + t;
+     }
+     m = med3( m1, m, m3 );
+   }
+   
+   if ((t = (*cmp)(l,m)) < 0) {                             /*3-5-?*/
+     if ((t = (*cmp)(m,r)) < 0) {                           /*3-5-7*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) > 0) goto fail;
+         goto nxt;
+       }
+       fail: goto loopA;                                    /*3-5-7*/
+     }
+     if (t > 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(m,r); goto loopA;}     /*3-5-4*/
+       mmrot3(r,m,l); goto loopA;                           /*3-5-2*/
+     }
+     goto loopB;                                            /*3-5-5*/
+   }
+   
+   if (t > 0) {                                             /*7-5-?*/
+     if ((t = (*cmp)(m,r)) > 0) {                           /*7-5-3*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) < 0) goto fail2;
+         while (l<r) {mmswap(l,r); l+=size; r-=size;}  /* reverse region */
+         goto nxt;
+       }
+       fail2: mmswap(l,r); goto loopA;                      /*7-5-3*/
+     }
+     if (t < 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(l,m); goto loopB;}     /*7-5-8*/
+       mmrot3(l,m,r); goto loopA;                           /*7-5-6*/
+     }
+     mmswap(l,r); goto loopA;                               /*7-5-5*/
+   }
+    
+   if ((t = (*cmp)(m,r)) < 0)  {goto loopA;}                /*5-5-7*/
+   if (t > 0) {mmswap(l,r); goto loopB;}                    /*5-5-3*/
+   
+   /* deteming splitting type in case 5-5-5 */              /*5-5-5*/
+   for (;;) {
+     if ((l += size) == r)      goto nxt;                   /*5-5-5*/
+     if (l == m) continue;
+     if ((t = (*cmp)(l,m)) > 0) {mmswap(l,r); l = L; goto loopA;}  /*575-5*/
+     if (t < 0)                 {mmswap(L,l); l = L; goto loopB;}  /*535-5*/
+   }
+   
+   loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right右*/
+   for (;;) {
+     for (;;) {
+       if ((l += size) == r)
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (l == m) continue;
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t < 0) eq_l = 0;
+     }
+     for (;;) {
+       if (l == (r -= size))
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (r == m) {m = l; break;}
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   loopB: eq_l = 1; eq_r = 1;  /* splitting type B */ /* left < median <= right */
+   for (;;) {
+     for (;;) {
+       if (l == (r -= size))
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (r == m) continue;
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t > 0) eq_r = 0;
+     }
+     for (;;) {
+       if ((l += size) == r)
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (l == m) {m = r; break;}
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   fin:
+   if (eq_l == 0)                         /* need to sort left side */
+     if (eq_r == 0)                       /* need to sort right side */
+       if (l-L < R-r) {PUSH(r,R); R = l;} /* sort left side first */
+       else           {PUSH(L,l); L = r;} /* sort right side first */
+     else R = l;                          /* need to sort left side only */
+   else if (eq_r == 0) L = r;             /* need to sort right side only */
+   else goto nxt;                         /* need not to sort both sides */
+ }
+}
+@
+
+
+1.1.1.2.2.8
+log
+@1.1c5
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:44 $
+d541 252
+@
+
+
+1.1.1.2.2.9
+log
+@1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 09:17:44 $
+a540 252
+/* mm.c */
+
+static int mmkind, mmsize, high, low;
+
+#define A ((int*)a)
+#define B ((int*)b)
+#define C ((int*)c)
+#define D ((int*)d)
+
+static void mmprepare(base, size) void *base; int size;
+{
+#ifdef DEBUG
+ if (sizeof(int) != 4) die("sizeof(int) != 4");
+ if (size <= 0) die("mmsize <= 0");
+#endif
+
+ if ( ((int)base & (4-1)) == 0  &&  (size & (4-1)) == 0 )
+   if      (size >= 16) mmkind = 1;
+   else                 mmkind = 0;
+ else                   mmkind = -1;
+ 
+ mmsize = size;
+ high = (size & (-16));
+ low  = (size & 0x0C );
+}
+
+static void mmswap(a, b) register char *a, *b;
+{
+ register int s;
+ if (a == b) return;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmswapblock(a, b, size) register char *a, *b; int size;
+{
+ register int s;
+ if (mmkind >= 0) {
+   register char *t = a + (size & (-16)); register int  lo = (size & 0x0C);
+   if (size >= 16) {
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = s;  a += 16; b += 16;
+     }while (a < t);
+   }
+   if (lo != 0) { s = A[0]; A[0] = B[0]; B[0] = s;
+     if (lo >= 8) { s = A[1]; A[1] = B[1]; B[1] = s;
+       if (lo == 12) {s = A[2]; A[2] = B[2]; B[2] = s;}}}
+ }else{
+   register char *t = a + size;
+   do {s = *a; *a++ = *b; *b++ = s;} while (a < t);
+ }
+}
+
+static void mmrot3(a, b, c) register char *a, *b, *c;
+{
+ register int s;
+ if (mmkind >= 0) {
+   if (mmkind > 0) {
+     register char *t = a + high;
+     do {
+       s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+       s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;
+       s = A[3]; A[3] = B[3]; B[3] = C[3]; C[3] = s; a += 16; b += 16; c += 16;
+     }while (a < t);
+   }
+   if (low != 0) { s = A[0]; A[0] = B[0]; B[0] = C[0]; C[0] = s;
+     if (low >= 8) { s = A[1]; A[1] = B[1]; B[1] = C[1]; C[1] = s;
+       if (low == 12) {s = A[2]; A[2] = B[2]; B[2] = C[2]; C[2] = s;}}}
+ }else{
+   register char *t = a + mmsize;
+   do {s = *a; *a++ = *b; *b++ = *c; *c++ = s;} while (a < t);
+ }
+}
+
+/* qs6.c */
+/*****************************************************/
+/*                                                   */
+/*          qs6   (Quick sort function)              */
+/*                                                   */
+/* by  Tomoyuki Kawamura              1995.4.21      */
+/* kawamura@@tokuyama.ac.jp                           */
+/*****************************************************/
+
+typedef struct { char *LL, *RR; } stack_node; /* Stack structure for L,l,R,r */
+#define PUSH(ll,rr) {top->LL = (ll); top->RR = (rr); ++top;}  /* Push L,l,R,r */
+#define POP(ll,rr)  {--top; ll = top->LL; rr = top->RR;}      /* Pop L,l,R,r */
+
+#define med3(a,b,c) ((*cmp)(a,b)<0 ?                                   \
+                       ((*cmp)(b,c)<0 ? b : ((*cmp)(a,c)<0 ? c : a)) : \
+                       ((*cmp)(b,c)>0 ? b : ((*cmp)(a,c)<0 ? a : c)) )
+
+void qsort (base, nel, size, cmp) void* base; size_t nel; size_t size; int (*cmp)();
+{
+ register char *l, *r, *m;          	/* l,r:left,right group   m:median point */
+ register int  t, eq_l, eq_r;       	/* eq_l: all items in left group are equal to S */
+ char *L = base;                    	/* left end of curren region */
+ char *R = (char*)base + size*(nel-1); 	/* right end of current region */
+ int  chklim = 63;                      /* threshold of ordering element check */
+ stack_node stack[32], *top = stack;    /* 32 is enough for 32bit CPU */
+
+ if (nel <= 1) return;        /* need not to sort */
+ mmprepare( base, size );
+ goto start;
+  
+ nxt:
+ if (stack == top) return;    /* return if stack is empty */
+ POP(L,R);
+   
+ for (;;) {
+   start:
+   if (L + size == R) {if ((*cmp)(L,R) > 0) mmswap(L,R); goto nxt;}/* 2 elements */
+   
+   l = L; r = R;
+   t = (r - l + size) / size;  /* number of elements */
+   m = l + size * (t >> 1);    /* calculate median value */
+   
+   if (t >= 60) {
+     register char *m1;
+     register char *m3;
+     if (t >= 200) {
+       t = size*(t>>3); /* number of bytes in splitting 8 */
+       {
+       register char *p1 = l  + t;
+       register char *p2 = p1 + t;
+       register char *p3 = p2 + t;
+       m1 = med3( p1, p2, p3 );
+       p1 = m  + t;
+       p2 = p1 + t;
+       p3 = p2 + t;
+       m3 = med3( p1, p2, p3 );
+       }
+     }else{
+       t = size*(t>>2); /* number of bytes in splitting 4 */
+       m1 = l + t;
+       m3 = m + t;
+     }
+     m = med3( m1, m, m3 );
+   }
+   
+   if ((t = (*cmp)(l,m)) < 0) {                             /*3-5-?*/
+     if ((t = (*cmp)(m,r)) < 0) {                           /*3-5-7*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) > 0) goto fail;
+         goto nxt;
+       }
+       fail: goto loopA;                                    /*3-5-7*/
+     }
+     if (t > 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(m,r); goto loopA;}     /*3-5-4*/
+       mmrot3(r,m,l); goto loopA;                           /*3-5-2*/
+     }
+     goto loopB;                                            /*3-5-5*/
+   }
+   
+   if (t > 0) {                                             /*7-5-?*/
+     if ((t = (*cmp)(m,r)) > 0) {                           /*7-5-3*/
+       if (chklim && nel >= chklim) {   /* check if already ascending order */
+         char *p;
+         chklim = 0;
+         for (p=l; p<r; p+=size) if ((*cmp)(p,p+size) < 0) goto fail2;
+         while (l<r) {mmswap(l,r); l+=size; r-=size;}  /* reverse region */
+         goto nxt;
+       }
+       fail2: mmswap(l,r); goto loopA;                      /*7-5-3*/
+     }
+     if (t < 0) {
+       if ((*cmp)(l,r) <= 0) {mmswap(l,m); goto loopB;}     /*7-5-8*/
+       mmrot3(l,m,r); goto loopA;                           /*7-5-6*/
+     }
+     mmswap(l,r); goto loopA;                               /*7-5-5*/
+   }
+    
+   if ((t = (*cmp)(m,r)) < 0)  {goto loopA;}                /*5-5-7*/
+   if (t > 0) {mmswap(l,r); goto loopB;}                    /*5-5-3*/
+   
+   /* deteming splitting type in case 5-5-5 */              /*5-5-5*/
+   for (;;) {
+     if ((l += size) == r)      goto nxt;                   /*5-5-5*/
+     if (l == m) continue;
+     if ((t = (*cmp)(l,m)) > 0) {mmswap(l,r); l = L; goto loopA;}  /*575-5*/
+     if (t < 0)                 {mmswap(L,l); l = L; goto loopB;}  /*535-5*/
+   }
+   
+   loopA: eq_l = 1; eq_r = 1;  /* splitting type A */ /* left <= median < right右*/
+   for (;;) {
+     for (;;) {
+       if ((l += size) == r)
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (l == m) continue;
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t < 0) eq_l = 0;
+     }
+     for (;;) {
+       if (l == (r -= size))
+         {l -= size; if (l != m) mmswap(m,l); l -= size; goto fin;}
+       if (r == m) {m = l; break;}
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   loopB: eq_l = 1; eq_r = 1;  /* splitting type B */ /* left < median <= right */
+   for (;;) {
+     for (;;) {
+       if (l == (r -= size))
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (r == m) continue;
+       if ((t = (*cmp)(r,m)) < 0) {eq_l = 0; break;}
+       if (t > 0) eq_r = 0;
+     }
+     for (;;) {
+       if ((l += size) == r)
+         {r += size; if (r != m) mmswap(r,m); r += size; goto fin;}
+       if (l == m) {m = r; break;}
+       if ((t = (*cmp)(l,m)) > 0) {eq_r = 0; break;}
+       if (t == 0) break;
+     }
+     mmswap(l,r);    /* swap left and right */
+   }
+   
+   fin:
+   if (eq_l == 0)                         /* need to sort left side */
+     if (eq_r == 0)                       /* need to sort right side */
+       if (l-L < R-r) {PUSH(r,R); R = l;} /* sort left side first */
+       else           {PUSH(L,l); L = r;} /* sort right side first */
+     else R = l;                          /* need to sort left side only */
+   else if (eq_r == 0) L = r;             /* need to sort right side only */
+   else goto nxt;                         /* need not to sort both sides */
+ }
+}
+@
+
+
+1.1.1.2.2.10
+log
+@1.2.1 stable
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:45:05 $
+d651 1
+a651 1
+void rb_qsort (base, nel, size, cmp) void* base; size_t nel; size_t size; int (*cmp)();
+@
+
+
+1.1.1.2.2.7.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:44 $
+a21 12
+VALUE
+rb_class_of(obj)
+    VALUE obj;
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+
+    return RBASIC(obj)->klass;
+}
+
+d28 2
+a29 2
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+d38 4
+a41 4
+    if (FIXNUM_P(obj)) return Qtrue;
+    if (obj == Qnil) return Qtrue;
+    if (obj == Qfalse) return Qtrue;
+    if (obj == Qtrue) return Qtrue;
+d43 1
+a43 1
+    return Qfalse;
+d50 1
+a50 1
+    return (v != Qnil) && (v != Qfalse);
+d232 1
+a232 2
+        rb_fatal("Cannot do inplace edit on long filename (%d characters)",
+		 RSTRING(str)->len);
+d237 1
+a237 1
+    rb_str_cat(str, suffix, extlen);
+d280 1
+a280 1
+    rb_str_resize(str, strlen(buf));
+@
+
+
+1.1.1.2.2.7.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:45:05 $
+d235 1
+a235 3
+add_suffix(str, suffix)
+    VALUE str;
+    char *suffix;
+d563 1
+a563 1
+static void mmprepare(base, size) void *base; int size;
+d580 1
+a580 1
+static void mmswap(a, b) register char *a, *b;
+d603 1
+a603 1
+static void mmswapblock(a, b, size) register char *a, *b; int size;
+d625 1
+a625 1
+static void mmrot3(a, b, c) register char *a, *b, *c;
+d664 1
+a664 1
+void ruby_qsort (base, nel, size, cmp) void* base; int nel; int size; int (*cmp)();
+d666 6
+a671 6
+ register char *l, *r, *m;          	/* l,r:left,right group   m:median point */
+ register int  t, eq_l, eq_r;       	/* eq_l: all items in left group are equal to S */
+ char *L = base;                    	/* left end of curren region */
+ char *R = (char*)base + size*(nel-1); 	/* right end of current region */
+ int  chklim = 63;                      /* threshold of ordering element check */
+ stack_node stack[32], *top = stack;    /* 32 is enough for 32bit CPU */
+@
+
+
+1.1.1.2.2.7.2.3
+log
+@*** empty log message ***
+@
+text
+@@

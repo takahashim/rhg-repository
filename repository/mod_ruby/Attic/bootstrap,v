@@ -1,0 +1,64 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.09.44.42;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.09.44.42;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.22.07.36.43;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file bootstrap was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@* autoconfiscated
+@
+text
+@a0 8
+#!/bin/sh -x
+
+autoheader && \
+aclocal -I . && \
+libtoolize --force --copy && \
+autoheader && \
+automake --foreign --add-missing && \
+autoconf
+@
+
+
+1.1.2.2
+log
+@* fix bootstrap script.
+@
+text
+@d3 1
+d5 1
+@
+
+

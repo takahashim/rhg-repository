@@ -1,0 +1,207 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.2
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1.2.1
+	v1_6_4_preview3:1.1.2.1
+	ruby_1_6:1.1.0.2
+	forwardable_v1_1:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.03.13.41.57;	author keiju;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.05.07.23.56.05;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.11.03.13.38.34;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* matrix.rb (Matrix#column_vectors, Matrix#row_vectors): ditto bug.
+  this bug report and fix by tsutomu@@nucba.ac.jp.
+
+* forwardable.rb: change raise to Kernel::raise
+@
+text
+@#
+#   forwardable.rb - 
+#   	$Release Version: 1.1$
+#   	$Revision: 1.1 $
+#   	$Date: 2001/04/03 13:40:58 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#	original definition by delegator.rb
+# --
+# Usage:
+#
+#   class Foo
+#     extend Forwardable
+#
+#     def_delegators("@@out", "printf", "print")
+#     def_delegators(:@@in, :gets)
+#     def_delegator(:@@contents, :[], "content_at")
+#   end
+#   f = Foo.new
+#   f.printf ...
+#   f.gets
+#   f.content_at(1)
+#
+#   g = Goo.new
+#   g.extend SingleForwardable
+#   g.def_delegator("@@out", :puts)
+#   g.puts ...
+#
+#
+
+module Forwardable
+
+  @@debug = nil
+  class<<self
+    attr_accessor :debug
+  end
+
+  def def_instance_delegators(accessor, *methods)
+    for method in methods
+      def_instance_delegator(accessor, method)
+    end
+  end
+
+  def def_instance_delegator(accessor, method, ali = method)
+    accessor = accessor.id2name if accessor.kind_of?(Integer)
+    method = method.id2name if method.kind_of?(Integer)
+    ali = ali.id2name if ali.kind_of?(Integer)
+
+    module_eval(<<-EOS, "(__FORWARDABLE__)", 1)
+      def #{ali}(*args, &block)
+	begin
+	  #{accessor}.__send__(:#{method}, *args, &block)
+	rescue Exception
+	  $@@.delete_if{|s| /^\\(__FORWARDABLE__\\):/ =~ s} unless Forwardable::debug
+	  Kernel::raise
+	end
+      end
+    EOS
+  end
+
+  alias def_delegators def_instance_delegators
+  alias def_delegator def_instance_delegator
+end
+
+module SingleForwardable
+  def def_singleton_delegators(accessor, *methods)
+    for method in methods
+      def_singleton_delegator(accessor, method)
+    end
+  end
+
+  def def_singleton_delegator(accessor, method, ali = method)
+    accessor = accessor.id2name if accessor.kind_of?(Integer)
+    method = method.id2name if method.kind_of?(Integer)
+    ali = ali.id2name if ali.kind_of?(Integer)
+
+    instance_eval(<<-EOS, "(__FORWARDABLE__)", 1)
+       def #{ali}(*args, &block)
+	 begin
+	   #{accessor}.__send__(:#{method}, *args,&block)
+	 rescue Exception
+	   $@@.delete_if{|s| /^\\(__FORWARDABLE__\\):/ =~ s} unless Forwardable::debug
+	   Kernel::raise
+	 end
+       end
+    EOS
+  end
+
+  alias def_delegators def_singleton_delegators
+  alias def_delegator def_singleton_delegator
+end
+
+
+
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d54 1
+a54 1
+	  raise
+d82 1
+a82 1
+	   raise
+@
+
+
+1.1.2.1
+log
+@Bring forwardable 1.1 onto the ruby_1_6 branch.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/05/07 23:38:53 $
+@
+
+
+1.1.2.2
+log
+@* matrix.rb (Matrix#column_vectors, Matrix#row_vectors): ditto bug.
+  this bug report and fix by tsutomu@@nucba.ac.jp.
+
+* forwardable.rb: change raise to Kernel::raise
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.2.1 $
+#   	$Date: 2001/05/07 23:56:05 $
+d54 1
+a54 1
+	  Kernel::raise
+d82 1
+a82 1
+	   Kernel::raise
+@
+
+
+1.1.1.1
+log
+@Import forwardable 1.1.
+@
+text
+@@

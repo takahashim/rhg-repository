@@ -1,0 +1,422 @@
+head	1.12;
+access;
+symbols
+	release_0_9_8:1.11
+	autoconfiscation-branch:1.11.0.2
+	root-of-autoconfiscation:1.11
+	release_0_9_7:1.11
+	release_0_9_6:1.10
+	release_0_9_5:1.9
+	release_0_9_4:1.6
+	release_0_9_3:1.6;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.05.07.05.26.31;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.10.10.02.39.12;	author shugo;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2001.07.23.03.24.09;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.20.06.52.31;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.09.09.54.37;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.08.09.54.34;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.04.10.07.45;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.05.28.02.16.02;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.05.18.07.44.53;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.18.05.58.57;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.16.08.33.52;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.16.04.29.01;	author shugo;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.10.19.07.07.46;	author shugo;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* Makefile.in: added datadir.
+* configure.rb: added datadir support.
+@
+text
+@# Generated automatically by configure.rb.
+
+srcdir = @@srcdir@@
+topdir = @@topdir@@
+hdrdir = @@hdrdir@@
+VPATH = $(srcdir)
+
+arch = @@arch@@
+ruby_version = @@ruby_version@@
+
+DESTDIR = @@drive@@
+
+prefix = $(DESTDIR)@@prefix@@
+exec_prefix = @@exec_prefix@@
+bindir = @@bindir@@
+datadir = @@datadir@@
+libdir = @@libdir@@
+rubylibdir = @@rubylibdir@@
+archdir = @@archdir@@
+sitedir = @@sitedir@@
+sitelibdir = @@sitelibdir@@
+sitearchdir = @@sitearchdir@@
+includedir = @@includedir@@
+mandir = @@mandir@@
+
+CC = @@CC@@
+AR = @@AR@@
+LD = @@LD@@
+RANLIB = @@RANLIB@@
+RUBY = $(RUBY_INSTALL_NAME)
+
+CFLAGS = @@CFLAGS@@ -I. -I$(hdrdir)
+LDFLAGS = @@LDFLAGS@@
+LIBS = @@LIBS@@
+XLDFLAGS = @@XLDFLAGS@@
+DLDFLAGS = @@DLDFLAGS@@
+LDSHARED = @@LDSHARED@@
+EXT_DLDFLAGS = @@EXT_DLDFLAGS@@
+INSTALL_PROGRAM = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0755, true'
+INSTALL_DLLIB = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0555, true'
+INSTALL_DATA = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0644, true'
+INSTALL_DIR = $(RUBY) -r ftools -e 'File.makedirs(*ARGV)'
+
+RUBY_INSTALL_NAME = @@RUBY_INSTALL_NAME@@
+LIBRUBYARG = @@LIBRUBYARG@@
+LIBRUBY_A = @@LIBRUBY_A@@
+RUBY_SO_NAME = @@RUBY_SO_NAME@@
+EXT_LIBRUBYARG = @@EXT_LIBRUBYARG@@
+
+RM = $(RUBY) -e "ARGV.each {|f|File.unlink(f) rescue Errno}"
+
+ERUBY = eruby@@EXEEXT@@
+DLLIB = eruby.@@DLEXT@@
+MANPAGE = eruby.1
+
+MAJOR = @@MAJOR@@
+MINOR = @@MINOR@@
+TEENY = @@TEENY@@
+MAJOR_MINOR = @@MAJOR_MINOR@@
+VERSION = $(MAJOR).$(MINOR).$(TEENY)
+TAG = release_$(MAJOR)_$(MINOR)_$(TEENY)
+
+LIBERUBY_A = @@LIBERUBY_A@@
+LIBERUBY_SO = @@LIBERUBY_SO@@
+LIBERUBY_ALIASES = @@LIBERUBY_ALIASES@@
+LIBERUBY = @@LIBERUBY@@
+LIBERUBYARG = @@LIBERUBYARG@@
+.SUFFIXES: .@@OBJEXT@@ .c .rd .1
+
+LIBERUBY_OBJS = eruby_lib.@@OBJEXT@@
+OBJS = eruby_logo.@@OBJEXT@@ eruby_main.@@OBJEXT@@
+EXT_OBJS = eruby_ext.@@OBJEXT@@
+
+@@VPATH@@.c.@@OBJEXT@@:
+	$(CC) $(CFLAGS) -c $<
+
+all: $(LIBERUBY_A) $(ERUBY) $(DLLIB) $(MANPAGE) Makefile
+
+install: install-main
+	@@-$(INSTALL_DIR) $(archdir)
+	@@-$(INSTALL_DLLIB) $(DLLIB) $(archdir)
+
+site-install: install-main
+	@@-$(INSTALL_DIR) $(sitearchdir)
+	@@-$(INSTALL_DLLIB) $(DLLIB) $(sitearchdir)
+
+install-main: all
+	@@-$(INSTALL_DIR) $(bindir)
+	@@-$(INSTALL_DIR) $(libdir)
+	@@-$(INSTALL_DIR) $(includedir)
+	@@-$(INSTALL_DIR) $(mandir)/man1
+	@@-$(INSTALL_PROGRAM) $(ERUBY) $(bindir)/$(ERUBY)
+	@@-if [ -f $(LIBERUBY_SO) ]; then \
+		$(INSTALL_DATA) $(LIBERUBY_SO) $(libdir)/$(LIBERUBY_SO); \
+		cd $(libdir); \
+		$(RUBY) -e 'ARGV.each{|link| File.delete link \
+			if File.exist? link; \
+			File.symlink "$(LIBERUBY_SO)", link}' \
+			$(LIBERUBY_ALIASES); \
+	fi
+	@@-$(INSTALL_DATA) $(LIBERUBY_A) $(libdir)/$(LIBERUBY_A)
+	@@-$(INSTALL_DATA) $(srcdir)/eruby.h $(includedir)/eruby.h
+	@@-$(INSTALL_DATA) $(srcdir)/$(MANPAGE) $(mandir)/man1/$(MANPAGE)
+
+clean:
+	$(RM) $(ERUBY)
+	$(RM) $(DLLIB)
+	$(RM) $(LIBERUBY_A)
+	$(RM) $(LIBERUBY_SO)
+	$(RM) $(LIBERUBY_ALIASES)
+	$(RM) $(LIBERUBY_OBJS)
+	$(RM) $(OBJS)
+	$(RM) $(EXT_OBJS)
+	$(RM) eruby.imp
+
+distclean: clean
+	$(RM) config.h
+	$(RM) Makefile
+	$(RM) *~
+
+tag:
+	cvs tag $(TAG)
+
+dist:
+	cvs export -r $(TAG) -d eruby-$(VERSION) eruby
+	tar zcf ../eruby-$(VERSION).tar.gz eruby-$(VERSION)
+	rm -rf eruby-$(VERSION)
+
+$(LIBERUBY_A): $(LIBERUBY_OBJS)
+	$(AR) @@AROPT@@ $(LIBERUBY_OBJS)
+	@@-$(RANLIB) $@@ 2> /dev/null || true
+
+$(LIBERUBY_SO): $(LIBERUBY_OBJS)
+	$(LDSHARED) $(DLDFLAGS) $(LIBERUBY_OBJS) $(EXT_LIBRUBYARG) $(LIBS) -o $@@
+	@@-$(RUBY) -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+		File.symlink "$(LIBERUBY_SO)", link}' $(LIBERUBY_ALIASES)
+
+$(ERUBY): $(OBJS) $(LIBERUBY)
+	@@MKERUBY@@
+
+$(DLLIB): $(EXT_OBJS) $(LIBERUBY)
+	@@MKDLLIB@@
+
+$(MANPAGE): @@VPATH@@eruby.rd
+
+@@VPATH@@.rd@@VPATH@@.1:
+	$(RUBY) -S rd2 -r rd/rd2man-lib -o $* $<
+	$(RUBY) -i~ -ne 'print if ~/.+/' $@@
+	$(RM) $@@~
+
+eruby_logo.c: @@VPATH@@eruby_logo.png
+	$(srcdir)/bin2c $(srcdir)/eruby_logo.png
+eruby_lib.@@OBJEXT@@: @@VPATH@@eruby_lib.c @@VPATH@@eruby.h config.h
+eruby_logo.@@OBJEXT@@: @@VPATH@@eruby_logo.c @@VPATH@@eruby_logo.h
+eruby_main.@@OBJEXT@@: @@VPATH@@eruby_main.c @@VPATH@@eruby.h @@VPATH@@eruby_logo.h
+eruby_ext.@@OBJEXT@@: @@VPATH@@eruby_ext.c @@VPATH@@eruby.h
+@
+
+
+1.11
+log
+@* eruby_main.c (run): print error messages to stderr if $DEBUG is
+false.
+@
+text
+@d16 1
+@
+
+
+1.11.2.1
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.10
+log
+@* hack for mswin32.
+@
+text
+@d76 1
+a76 1
+all: $(LIBERUBY_A) $(ERUBY) $(DLLIB) $(MANPAGE)
+@
+
+
+1.9
+log
+@* version 0.9.5 released.
+@
+text
+@d11 1
+a11 1
+DESTDIR = 
+d138 1
+a138 1
+	$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.8
+log
+@* configure.rb.in: check for gcc.
+* eruby_lib.c (eruby_compiler_get_sourcefile): new method.
+* eruby_lib.c (eruby_compiler_set_sourcefile): ditto.
+@
+text
+@d59 2
+d119 8
+@
+
+
+1.7
+log
+@* examples/httpd.conf: changed the example of Apache's LIBEXECDIR
+to /usr/local/apache/libexec.
+@
+text
+@d37 1
+a37 1
+DLL_DLDFLAGS = @@DLL_DLDFLAGS@@
+d47 1
+d123 1
+a123 1
+	$(LDSHARED) $(DLDFLAGS) $(LIBERUBY_OBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.6
+log
+@* configure.rb.in: use DLL_DLDFLAGS for eruby.so.
+@
+text
+@a7 3
+RUBY_INSTALL_NAME = @@RUBY_INSTALL_NAME@@
+RUBY_SO_NAME = @@RUBY_SO_NAME@@
+RUBY = $(RUBY_INSTALL_NAME)
+d29 1
+d33 1
+a33 1
+LIBS = $(LIBRUBYARG) @@LIBS@@
+d43 1
+d45 2
+d122 1
+a122 1
+	$(LDSHARED) $(DLDFLAGS) $(LIBERUBY_OBJS) $(LIBS) -o $@@
+d127 1
+a127 1
+	$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBS) -o $@@
+@
+
+
+1.5
+log
+@* Makefile.in: RUBY_SO_NAME for cygwin.
+@
+text
+@d39 1
+@
+
+
+1.4
+log
+@* Makefile.RB: removed.
+@
+text
+@d9 1
+@
+
+
+1.3
+log
+@* configure.rb: support new version of mkmf.
+@
+text
+@d42 1
+@
+
+
+1.2
+log
+@* configure.rb: new options, --prefix, --exec-prefix etc....
+* config.h.in: quote @@DEFAULT_CHARSET@@.
+@
+text
+@d4 2
+d7 1
+a7 4
+CC = @@CC@@
+AR = @@AR@@
+LD = @@LD@@
+RANLIB = @@RANLIB@@
+d10 2
+d15 1
+a15 1
+prefix = @@prefix@@
+d17 9
+a25 6
+bindir = $(DESTDIR)@@bindir@@
+libdir = $(DESTDIR)@@libdir@@
+includedir = $(DESTDIR)@@includedir@@
+archdir = $(DESTDIR)@@archdir@@
+sitearchdir = $(DESTDIR)@@sitearchdir@@
+mandir = $(DESTDIR)@@mandir@@
+d27 4
+a30 2
+topdir = @@topdir@@
+hdrdir = @@hdrdir@@
+@
+
+
+1.1
+log
+@* Makefile.in: new file.
+* config.h.in: new file.
+@
+text
+@d15 1
+a17 1
+sitelibdir = $(DESTDIR)@@sitelibdir@@
+d65 9
+a73 1
+install: all
+a77 1
+	@@-$(INSTALL_DIR) $(archdir)
+a89 1
+	@@-$(INSTALL_DLLIB) $(DLLIB) $(archdir)
+@

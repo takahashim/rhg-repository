@@ -1,0 +1,197 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2.2.2
+	v1_6_6:1.2.2.2
+	v1_6_5:1.2.2.2
+	v1_6_4:1.2.2.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2.2.2
+	v1_6_4_preview3:1.2.2.2
+	ruby_1_6:1.2.0.2
+	forwardable_v1_1:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.05.07.23.52.57;	author knu;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.05.07.23.56.05;	author knu;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2001.05.07.23.59.00;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@ -- forwardable.rb
+						
+                                                $Release Version: 1.1 $
+                                                $Revision: 1.1.1.1 $
+                                                $Date: 2001/05/07 23:38:53 $
+						Original version by Tosh
+
+=begin
+
+= Forwardable
+
+A Module to define delegations for selected methods to a class.
+
+== Usage
+
+Using through extending the class.
+  
+  class Foo
+    extend Forwardable
+
+    def_delegators("@@out", "printf", "print")
+    def_delegators(:@@in, :gets)
+    def_delegator(:@@contents, :[], "content_at")
+  end
+  f = Foo.new
+  f.printf ...
+  f.gets
+  f.content_at(1)
+
+== Methods
+
+--- Forwardable#def_instance_delegators(accessor, *methods)
+
+      adding the delegations for each method of ((|methods|)) to
+      ((|accessor|)).
+
+--- Forwardable#def_instance_delegator(accessor, method, ali = method)
+      
+      adding the delegation for ((|method|)) to ((|accessor|)). When
+      you give optional argument ((|ali|)), ((|ali|)) is used as the
+      name of the delegation method, instead of ((|method|)).
+
+--- Forwardable#def_delegators(accessor, *methods)
+
+      the alias of ((|Forwardable#def_instance_delegators|)).
+
+--- Forwardable#def_delegator(accessor, method, ali = method)
+      
+      the alias of ((|Forwardable#def_instance_delegator|)).
+
+= SingleForwardable
+
+a Module to define delegations for selected methods to an object.
+
+== Usage
+
+Using through extending the object.
+
+  g = Goo.new
+  g.extend SingleForwardable
+  g.def_delegator("@@out", :puts)
+  g.puts ...
+
+== Methods
+
+--- SingleForwardable#def_singleton_delegators(accessor, *methods)
+
+      adding the delegations for each method of ((|methods|)) to
+      ((|accessor|)).
+
+--- SingleForwardable#def_singleton_delegator(accessor, method, ali = method)
+
+      adding the delegation for ((|method|)) to ((|accessor|)). When
+      you give optional argument ((|ali|)), ((|ali|)) is used as the
+      name of the delegation method, instead of ((|method|)).
+
+--- SingleForwardable#def_delegators(accessor, *methods)
+
+      the alias of ((|SingleForwardable#def_instance_delegators|)).
+
+--- SingleForwardable#def_delegator(accessor, method, ali = method)
+
+      the alias of ((|SingleForwardable#def_instance_delegator|)).
+=end
+@
+
+
+1.2.2.1
+log
+@Bring forwardable 1.1 onto the ruby_1_6 branch.
+@
+text
+@d8 1
+a8 1
+==begin
+d84 1
+a84 1
+==end@
+
+
+1.2.2.2
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@d4 2
+a5 2
+                                                $Revision: 1.2.2.1 $
+                                                $Date: 2001/05/07 23:56:05 $
+d8 1
+a8 1
+=begin
+d84 1
+a84 1
+=end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+                                                $Revision: 1.1 $
+                                                $Date: 2001/04/03 13:41:43 $
+d8 1
+a8 1
+==begin
+d84 1
+a84 1
+==end@
+
+
+1.1.1.1
+log
+@Import forwardable 1.1.
+@
+text
+@@

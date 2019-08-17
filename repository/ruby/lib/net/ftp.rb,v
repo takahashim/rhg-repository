@@ -1,0 +1,1781 @@
+head	1.15;
+access;
+symbols
+	v1_6_7:1.9
+	v1_6_6:1.9
+	v1_6_5:1.9
+	v1_6_4:1.9
+	v1_7_1:1.9
+	v1_6_4_preview4:1.9
+	v1_6_4_preview3:1.9
+	v1_6_4_preview2:1.9
+	v1_6_4_preview1:1.9
+	v1_6_3:1.9
+	ruby_m17n:1.9.0.4
+	ruby_1_6:1.9.0.2
+	v1_6_2:1.9
+	v1_6_1:1.8
+	v1_6_0:1.7
+	v1_4_6:1.1.2.1
+	v1_4_5:1.1.2.1
+	v1_4_4:1.1.2.1
+	ruby_1_4:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.15
+date	2002.07.18.02.52.48;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.07.11.08.22.16;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.07.03.05.28.01;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.07.03.04.59.24;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.07.03.04.49.54;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.06.11.04.20.11;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.12.21.06.35.05;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.09.12.05.37.34;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.08.17.03.14.22;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.08.15.09.04.32;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.10.04.49.23;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.22.05.37.12;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.03.06.06.32.08;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.02.08.06.03.42;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.02.08.05.58.24;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2000.02.08.05.58.24;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2000.08.15.08.57.56;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.15
+log
+@* lib/net/ftp.rb (set_socket): new method.
+@
+text
+@=begin
+
+= net/ftp.rb
+
+written by Shugo Maeda <shugo@@ruby-lang.org>
+
+This library is distributed under the terms of the Ruby license.
+You can freely distribute/modify this library.
+
+=end
+
+require "socket"
+require "monitor"
+
+module Net
+
+  class FTPError < StandardError; end
+  class FTPReplyError < FTPError; end
+  class FTPTempError < FTPError; end
+  class FTPPermError < FTPError; end
+  class FTPProtoError < FTPError; end
+
+  class FTP
+    include MonitorMixin
+    
+    FTP_PORT = 21
+    CRLF = "\r\n"
+
+    DEFAULT_BLOCKSIZE = 4096
+    
+    attr_accessor :binary, :passive, :return_code, :debug_mode, :resume
+    attr_reader :welcome, :lastresp
+    
+    def FTP.open(host, user = nil, passwd = nil, acct = nil)
+      new(host, user, passwd, acct)
+    end
+    
+    def initialize(host = nil, user = nil, passwd = nil, acct = nil)
+      super()
+      @@binary = true
+      @@passive = false
+      @@return_code = "\n"
+      @@debug_mode = false
+      @@resume = false
+      if host
+	connect(host)
+	if user
+	  login(user, passwd, acct)
+	end
+      end
+    end
+
+    def open_socket(host, port)
+      if defined? SOCKSsocket and ENV["SOCKS_SERVER"]
+	@@passive = true
+	return SOCKSsocket.open(host, port)
+      else
+	return TCPSocket.open(host, port)
+      end
+    end
+    private :open_socket
+    
+    def connect(host, port = FTP_PORT)
+      if @@debug_mode
+	print "connect: ", host, ", ", port, "\n"
+      end
+      synchronize do
+	@@sock = open_socket(host, port)
+	voidresp
+      end
+    end
+
+    def set_socket(sock, get_greeting = true)
+      synchronize do
+	@@sock = sock
+	if get_greeting
+	  voidresp
+	end
+      end
+    end
+
+    def sanitize(s)
+      if s =~ /^PASS /i
+	return s[0, 5] + "*" * (s.length - 5)
+      else
+	return s
+      end
+    end
+    private :sanitize
+    
+    def putline(line)
+      if @@debug_mode
+	print "put: ", sanitize(line), "\n"
+      end
+      line = line + CRLF
+      @@sock.write(line)
+    end
+    private :putline
+    
+    def getline
+      line = @@sock.readline # if get EOF, raise EOFError
+      if line[-2, 2] == CRLF
+	line = line[0 .. -3]
+      elsif line[-1] == ?\r or
+	  line[-1] == ?\n
+	line = line[0 .. -2]
+      end
+      if @@debug_mode
+	print "get: ", sanitize(line), "\n"
+      end
+      return line
+    end
+    private :getline
+    
+    def getmultiline
+      line = getline
+      buff = line
+      if line[3] == ?-
+	  code = line[0, 3]
+	begin
+	  line = getline
+	  buff << "\n" << line
+	end until line[0, 3] == code and line[3] != ?-
+      end
+      return buff << "\n"
+    end
+    private :getmultiline
+    
+    def getresp
+      resp = getmultiline
+      @@lastresp = resp[0, 3]
+      c = resp[0]
+      case c
+      when ?1, ?2, ?3
+	return resp
+      when ?4
+	raise FTPTempError, resp
+      when ?5
+	raise FTPPermError, resp
+      else
+	raise FTPProtoError, resp
+      end
+    end
+    private :getresp
+    
+    def voidresp
+      resp = getresp
+      if resp[0] != ?2
+	raise FTPReplyError, resp
+      end
+    end
+    private :voidresp
+    
+    def sendcmd(cmd)
+      synchronize do
+	putline(cmd)
+	return getresp
+      end
+    end
+    
+    def voidcmd(cmd)
+      synchronize do
+	putline(cmd)
+	voidresp
+      end
+    end
+    
+    def sendport(host, port)
+      af = (@@sock.peeraddr)[0]
+      if af == "AF_INET"
+	hbytes = host.split(".")
+	pbytes = [port / 256, port % 256]
+	bytes = hbytes + pbytes
+	cmd = "PORT " + bytes.join(",")
+      elsif af == "AF_INET6"
+	cmd = "EPRT |2|" + host + "|" + sprintf("%d", port) + "|"
+      else
+	raise FTPProtoError, host
+      end
+      voidcmd(cmd)
+    end
+    private :sendport
+    
+    def makeport
+      sock = TCPServer.open(@@sock.addr[3], 0)
+      port = sock.addr[1]
+      host = sock.addr[3]
+      resp = sendport(host, port)
+      return sock
+    end
+    private :makeport
+    
+    def makepasv
+      if @@sock.peeraddr[0] == "AF_INET"
+	host, port = parse227(sendcmd("PASV"))
+      else
+	host, port = parse229(sendcmd("EPSV"))
+	#     host, port = parse228(sendcmd("LPSV"))
+      end
+      return host, port
+    end
+    private :makepasv
+    
+    def transfercmd(cmd, rest_offset = nil)
+      if @@passive
+	host, port = makepasv
+	conn = open_socket(host, port)
+	if @@resume and rest_offset
+	  resp = sendcmd("REST " + rest_offset.to_s) 
+	  if resp[0] != ?3
+	    raise FTPReplyError, resp
+	  end
+	end
+	resp = sendcmd(cmd)
+	if resp[0] != ?1
+	  raise FTPReplyError, resp
+	end
+      else
+	sock = makeport
+	if @@resume and rest_offset
+	  resp = sendcmd("REST " + rest_offset.to_s) 
+	  if resp[0] != ?3
+	    raise FTPReplyError, resp
+	  end
+	end
+	resp = sendcmd(cmd)
+	if resp[0] != ?1
+	  raise FTPReplyError, resp
+	end
+	conn = sock.accept
+	sock.close
+      end
+      return conn
+    end
+    private :transfercmd
+    
+    def getaddress
+      thishost = Socket.gethostname
+      if not thishost.index(".")
+	thishost = Socket.gethostbyname(thishost)[0]
+      end
+      if ENV.has_key?("LOGNAME")
+	realuser = ENV["LOGNAME"]
+      elsif ENV.has_key?("USER")
+	realuser = ENV["USER"]
+      else
+	realuser = "anonymous"
+      end
+      return realuser + "@@" + thishost
+    end
+    private :getaddress
+    
+    def login(user = "anonymous", passwd = nil, acct = nil)
+      if user == "anonymous" and passwd == nil
+	passwd = getaddress
+      end
+      
+      resp = ""
+      synchronize do
+	resp = sendcmd('USER ' + user)
+	if resp[0] == ?3
+	  resp = sendcmd('PASS ' + passwd)
+	end
+	if resp[0] == ?3
+	  resp = sendcmd('ACCT ' + acct)
+	end
+      end
+      if resp[0] != ?2
+	raise FTPReplyError, resp
+      end
+      @@welcome = resp
+    end
+    
+    def retrbinary(cmd, blocksize, rest_offset = nil)
+      synchronize do
+	voidcmd("TYPE I")
+	conn = transfercmd(cmd, rest_offset)
+	loop do
+	  data = conn.read(blocksize)
+	  break if data == nil
+	  yield(data)
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def retrlines(cmd)
+      synchronize do
+	voidcmd("TYPE A")
+	conn = transfercmd(cmd)
+	loop do
+	  line = conn.gets
+	  break if line == nil
+	  if line[-2, 2] == CRLF
+	    line = line[0 .. -3]
+	  elsif line[-1] == ?\n
+	    line = line[0 .. -2]
+	  end
+	  yield(line)
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def storbinary(cmd, file, blocksize, rest_offset = nil, &block)
+      synchronize do
+	voidcmd("TYPE I")
+	conn = transfercmd(cmd, rest_offset)
+	loop do
+	  buf = file.read(blocksize)
+	  break if buf == nil
+	  conn.write(buf)
+	  yield(buf) if block
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def storlines(cmd, file, &block)
+      synchronize do
+	voidcmd("TYPE A")
+	conn = transfercmd(cmd)
+	loop do
+	  buf = file.gets
+	  break if buf == nil
+	  if buf[-2, 2] != CRLF
+	    buf = buf.chomp + CRLF
+	  end
+	  conn.write(buf)
+	  yield(buf) if block
+	end
+	conn.close
+	voidresp
+      end
+    end
+
+    def getbinaryfile(remotefile, localfile = File.basename(remotefile),
+		      blocksize = DEFAULT_BLOCKSIZE, &block)
+      if @@resume
+	rest_offset = File.size?(localfile)
+	f = open(localfile, "a")
+      else
+	rest_offset = nil
+	f = open(localfile, "w")
+      end
+      begin
+	f.binmode
+	retrbinary("RETR " + remotefile, blocksize, rest_offset) do |data|
+	  f.write(data)
+	  yield(data) if block
+	end
+      ensure
+	f.close
+      end
+    end
+    
+    def gettextfile(remotefile, localfile = File.basename(remotefile), &block)
+      f = open(localfile, "w")
+      begin
+	retrlines("RETR " + remotefile) do |line|
+	  line = line + @@return_code
+	  f.write(line)
+	  yield(line) if block
+	end
+      ensure
+	f.close
+      end
+    end
+
+    def get(localfile, remotefile = File.basename(localfile),
+	    blocksize = DEFAULT_BLOCKSIZE, &block)
+      unless @@binary
+	gettextfile(localfile, remotefile, &block)
+      else
+	getbinaryfile(localfile, remotefile, blocksize, &block)
+      end
+    end
+    
+    def putbinaryfile(localfile, remotefile = File.basename(localfile),
+		      blocksize = DEFAULT_BLOCKSIZE, &block)
+      if @@resume
+	rest_offset = size(remotefile)
+      else
+	rest_offset = nil
+      end
+      f = open(localfile)
+      begin
+	f.binmode
+	storbinary("STOR " + remotefile, f, blocksize, rest_offset, &block)
+      ensure
+	f.close
+      end
+    end
+    
+    def puttextfile(localfile, remotefile = File.basename(localfile), &block)
+      f = open(localfile)
+      begin
+	storlines("STOR " + remotefile, f, &block)
+      ensure
+	f.close
+      end
+    end
+
+    def put(localfile, remotefile = File.basename(localfile),
+	    blocksize = DEFAULT_BLOCKSIZE, &block)
+      unless @@binary
+	puttextfile(localfile, remotefile, &block)
+      else
+	putbinaryfile(localfile, remotefile, blocksize, &block)
+      end
+    end
+
+    def acct(account)
+      cmd = "ACCT " + account
+      voidcmd(cmd)
+    end
+    
+    def nlst(dir = nil)
+      cmd = "NLST"
+      if dir
+	cmd = cmd + " " + dir
+      end
+      files = []
+      retrlines(cmd) do |line|
+	files.push(line)
+      end
+      return files
+    end
+    
+    def list(*args, &block)
+      cmd = "LIST"
+      args.each do |arg|
+	cmd = cmd + " " + arg
+      end
+      if block
+	retrlines(cmd, &block)
+      else
+	lines = []
+	retrlines(cmd) do |line|
+	  lines << line
+	end
+	return lines
+      end
+    end
+    alias ls list
+    alias dir list
+    
+    def rename(fromname, toname)
+      resp = sendcmd("RNFR " + fromname)
+      if resp[0] != ?3
+	raise FTPReplyError, resp
+      end
+      voidcmd("RNTO " + toname)
+    end
+    
+    def delete(filename)
+      resp = sendcmd("DELE " + filename)
+      if resp[0, 3] == "250"
+	return
+      elsif resp[0] == ?5
+	raise FTPPermError, resp
+      else
+	raise FTPReplyError, resp
+      end
+    end
+    
+    def chdir(dirname)
+      if dirname == ".."
+	begin
+	  voidcmd("CDUP")
+	  return
+	rescue FTPPermError
+	  if $![0, 3] != "500"
+	    raise FTPPermError, $!
+	  end
+	end
+      end
+      cmd = "CWD " + dirname
+      voidcmd(cmd)
+    end
+    
+    def size(filename)
+      voidcmd("TYPE I")
+      resp = sendcmd("SIZE " + filename)
+      if resp[0, 3] != "213" 
+	raise FTPReplyError, resp
+      end
+      return resp[3..-1].strip.to_i
+    end
+    
+    MDTM_REGEXP = /^(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/
+    
+    def mtime(filename, local = false)
+      str = mdtm(filename)
+      ary = str.scan(MDTM_REGEXP)[0].collect {|i| i.to_i}
+      return local ? Time.local(*ary) : Time.gm(*ary)
+    end
+    
+    def mkdir(dirname)
+      resp = sendcmd("MKD " + dirname)
+      return parse257(resp)
+    end
+    
+    def rmdir(dirname)
+      voidcmd("RMD " + dirname)
+    end
+    
+    def pwd
+      resp = sendcmd("PWD")
+      return parse257(resp)
+    end
+    alias getdir pwd
+    
+    def system
+      resp = sendcmd("SYST")
+      if resp[0, 3] != "215"
+	raise FTPReplyError, resp
+      end
+      return resp[4 .. -1]
+    end
+    
+    def abort
+      line = "ABOR" + CRLF
+      print "put: ABOR\n" if @@debug_mode
+      @@sock.send(line, Socket::MSG_OOB)
+      resp = getmultiline
+      unless ["426", "226", "225"].include?(resp[0, 3])
+	raise FTPProtoError, resp
+      end
+      return resp
+    end
+    
+    def status
+      line = "STAT" + CRLF
+      print "put: STAT\n" if @@debug_mode
+      @@sock.send(line, Socket::MSG_OOB)
+      return getresp
+    end
+    
+    def mdtm(filename)
+      resp = sendcmd("MDTM " + filename)
+      if resp[0, 3] == "213"
+	return resp[3 .. -1].strip
+      end
+    end
+    
+    def help(arg = nil)
+      cmd = "HELP"
+      if arg
+	cmd = cmd + " " + arg
+      end
+      sendcmd(cmd)
+    end
+    
+    def quit
+      voidcmd("QUIT")
+    end
+
+    def noop
+      voidcmd("NOOP")
+    end
+
+    def site(arg)
+      cmd = "SITE " + arg
+      voidcmd(cmd)
+    end
+    
+    def close
+      @@sock.close if @@sock and not @@sock.closed?
+    end
+    
+    def closed?
+      @@sock == nil or @@sock.closed?
+    end
+    
+    def parse227(resp)
+      if resp[0, 3] != "227"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(",")
+      if numbers.length != 6
+	raise FTPProtoError, resp
+      end
+      host = numbers[0, 4].join(".")
+      port = (numbers[4].to_i << 8) + numbers[5].to_i
+      return host, port
+    end
+    private :parse227
+    
+    def parse228(resp)
+      if resp[0, 3] != "228"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(",")
+      if numbers[0] == "4"
+	if numbers.length != 9 || numbers[1] != "4" || numbers[2 + 4] != "2"
+	  raise FTPProtoError, resp
+	end
+	host = numbers[2, 4].join(".")
+	port = (numbers[7].to_i << 8) + numbers[8].to_i
+      elsif numbers[0] == "6"
+	if numbers.length != 21 || numbers[1] != "16" || numbers[2 + 16] != "2"
+	  raise FTPProtoError, resp
+	end
+	v6 = ["", "", "", "", "", "", "", ""]
+	for i in 0 .. 7
+	  v6[i] = sprintf("%02x%02x", numbers[(i * 2) + 2].to_i,
+			  numbers[(i * 2) + 3].to_i)
+	end
+	host = v6[0, 8].join(":")
+	port = (numbers[19].to_i << 8) + numbers[20].to_i
+      end 
+      return host, port
+    end
+    private :parse228
+    
+    def parse229(resp)
+      if resp[0, 3] != "229"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(resp[left + 1, 1])
+      if numbers.length != 4
+	raise FTPProtoError, resp
+      end
+      port = numbers[3].to_i
+      host = (@@sock.peeraddr())[3]
+      return host, port
+    end
+    private :parse229
+    
+    def parse257(resp)
+      if resp[0, 3] != "257"
+	raise FTPReplyError, resp
+      end
+      if resp[3, 2] != ' "'
+	return ""
+      end
+      dirname = ""
+      i = 5
+      n = resp.length
+      while i < n
+	c = resp[i, 1]
+	i = i + 1
+	if c == '"'
+	  if i > n or resp[i, 1] != '"'
+	    break
+	  end
+	  i = i + 1
+	end
+	dirname = dirname + c
+      end
+      return dirname
+    end
+    private :parse257
+  end
+
+end
+@
+
+
+1.14
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* array.c (rb_ary_insert): type fixed.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* string.c (rb_str_become): was leaking memory.
+
+* class.c (rb_include_module): should not alter other
+  classes/modules by inclusion.  by this fix, local order may not
+  be preserved for some cases.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+@
+text
+@d72 10
+a81 1
+    
+@
+
+
+1.13
+log
+@* lib/net/ftp.rb (get): new method.
+* lib/net/ftp.rb (putt): ditto.
+* lib/net/ftp.rb (binary): ditto.
+* lib/net/ftp.rb (binary=): ditto.
+@
+text
+@d58 1
+a58 1
+	return TCPsocket.open(host, port)
+d176 1
+a176 1
+      sock = TCPserver.open(@@sock.addr[3], 0)
+@
+
+
+1.12
+log
+@* lib/net/ftp.rb (getbinaryfile): the second argument (localfile)
+is now optional.
+* lib/net/ftp.rb (gettextfile): ditto.
+@
+text
+@d31 1
+a31 1
+    attr_accessor :passive, :return_code, :debug_mode, :resume
+d40 1
+d52 1
+a52 1
+    
+d330 1
+a330 1
+    
+d363 9
+d373 1
+a373 1
+    def putbinaryfile(localfile, remotefile,
+d389 1
+a389 1
+    def puttextfile(localfile, remotefile, &block)
+d397 10
+a406 1
+    
+@
+
+
+1.11
+log
+@* lib/net/ftp.rb: use &block and yield for speed.
+@
+text
+@d330 1
+a330 1
+    def getbinaryfile(remotefile, localfile,
+d350 1
+a350 1
+    def gettextfile(remotefile, localfile, &block)
+@
+
+
+1.10
+log
+@* lib/net/ftp.rb (noop): new method.
+* lib/net/ftp.rb (site): ditto.
+@
+text
+@d264 1
+a264 1
+    def retrbinary(cmd, blocksize, rest_offset = nil, callback = Proc.new)
+d271 1
+a271 1
+	  callback.call(data)
+d278 1
+a278 6
+    def retrlines(cmd, callback = nil)
+      if block_given?
+	callback = Proc.new
+      elsif not callback.is_a?(Proc)
+	callback = Proc.new {|line| print line, "\n"}
+      end
+d290 1
+a290 1
+	  callback.call(line)
+d297 1
+a297 5
+    def storbinary(cmd, file, blocksize, rest_offset = nil, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d305 1
+a305 1
+	  callback.call(buf) if use_callback
+d312 1
+a312 5
+    def storlines(cmd, file, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d323 1
+a323 1
+	  callback.call(buf) if use_callback
+d331 1
+a331 5
+		      blocksize = DEFAULT_BLOCKSIZE, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d343 1
+a343 1
+	  callback.call(data) if use_callback
+d350 1
+a350 5
+    def gettextfile(remotefile, localfile, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d356 1
+a356 1
+	  callback.call(line) if use_callback
+d364 1
+a364 5
+		      blocksize = DEFAULT_BLOCKSIZE, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d373 1
+a373 3
+	storbinary("STOR " + remotefile, f, blocksize, rest_offset) do |data|
+	  callback.call(data) if use_callback
+	end
+d379 1
+a379 5
+    def puttextfile(localfile, remotefile, callback = nil)
+      if block_given?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+d382 1
+a382 3
+	storlines("STOR " + remotefile, f) do |line|
+	  callback.call(line) if use_callback
+	end
+@
+
+
+1.9
+log
+@shugo
+@
+text
+@d566 9
+@
+
+
+1.8
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d177 1
+a177 1
+      host = TCPsocket.getaddress(@@sock.addr[2])
+@
+
+
+1.7
+log
+@Added default blocksize to Net::FTP#getbinaryfile
+@
+text
+@d279 1
+a279 1
+      if iterator?
+d303 1
+a303 1
+      if iterator?
+d322 1
+a322 1
+      if iterator?
+d345 1
+a345 1
+      if iterator?
+d368 1
+a368 1
+      if iterator?
+d386 1
+a386 1
+      if iterator?
+d407 1
+a407 1
+      if iterator?
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d28 2
+d343 2
+a344 1
+    def getbinaryfile(remotefile, localfile, blocksize, callback = nil)
+d384 2
+a385 1
+    def putbinaryfile(localfile, remotefile, blocksize = 4096, callback = nil)
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d219 1
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d380 1
+a380 1
+    def putbinaryfile(localfile, remotefile, blocksize, callback = nil)
+d638 1
+a638 1
+    private :parse228
+@
+
+
+1.3
+log
+@2000-03-06
+@
+text
+@d29 1
+a29 1
+    attr_accessor :passive, :return_code, :debug_mode
+d41 1
+d192 1
+a192 1
+    def transfercmd(cmd)
+d196 6
+d208 6
+d261 1
+a261 1
+    def retrbinary(cmd, blocksize, callback = Proc.new)
+d264 1
+a264 1
+	conn = transfercmd(cmd)
+d299 1
+a299 1
+    def storbinary(cmd, file, blocksize, callback = nil)
+d306 1
+a306 1
+	conn = transfercmd(cmd)
+d345 7
+a351 1
+      f = open(localfile, "w")
+d354 1
+a354 1
+	retrbinary("RETR " + remotefile, blocksize) do |data|
+d385 5
+d393 1
+a393 1
+	storbinary("STOR " + remotefile, f, blocksize) do |data|
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d37 1
+a37 1
+      super
+@
+
+
+1.1
+log
+@file ftp.rb was initially added on branch ruby_1_4.
+@
+text
+@d1 642
+@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 642
+=begin
+
+= net/ftp.rb
+
+written by Shugo Maeda <shugo@@ruby-lang.org>
+
+This library is distributed under the terms of the Ruby license.
+You can freely distribute/modify this library.
+
+=end
+
+require "socket"
+require "monitor"
+
+module Net
+
+  class FTPError < StandardError; end
+  class FTPReplyError < FTPError; end
+  class FTPTempError < FTPError; end
+  class FTPPermError < FTPError; end
+  class FTPProtoError < FTPError; end
+
+  class FTP
+    include MonitorMixin
+    
+    FTP_PORT = 21
+    CRLF = "\r\n"
+    
+    attr_accessor :passive, :return_code, :debug_mode
+    attr_reader :welcome, :lastresp
+    
+    def FTP.open(host, user = nil, passwd = nil, acct = nil)
+      new(host, user, passwd, acct)
+    end
+    
+    def initialize(host = nil, user = nil, passwd = nil, acct = nil)
+      super
+      @@passive = false
+      @@return_code = "\n"
+      @@debug_mode = false
+      if host
+	connect(host)
+	if user
+	  login(user, passwd, acct)
+	end
+      end
+    end
+    
+    def open_socket(host, port)
+      if defined? SOCKSsocket and ENV["SOCKS_SERVER"]
+	@@passive = true
+	return SOCKSsocket.open(host, port)
+      else
+	return TCPsocket.open(host, port)
+      end
+    end
+    private :open_socket
+    
+    def connect(host, port = FTP_PORT)
+      if @@debug_mode
+	print "connect: ", host, ", ", port, "\n"
+      end
+      synchronize do
+	@@sock = open_socket(host, port)
+	voidresp
+      end
+    end
+    
+    def sanitize(s)
+      if s =~ /^PASS /i
+	return s[0, 5] + "*" * (s.length - 5)
+      else
+	return s
+      end
+    end
+    private :sanitize
+    
+    def putline(line)
+      if @@debug_mode
+	print "put: ", sanitize(line), "\n"
+      end
+      line = line + CRLF
+      @@sock.write(line)
+    end
+    private :putline
+    
+    def getline
+      line = @@sock.readline # if get EOF, raise EOFError
+      if line[-2, 2] == CRLF
+	line = line[0 .. -3]
+      elsif line[-1] == ?\r or
+	  line[-1] == ?\n
+	line = line[0 .. -2]
+      end
+      if @@debug_mode
+	print "get: ", sanitize(line), "\n"
+      end
+      return line
+    end
+    private :getline
+    
+    def getmultiline
+      line = getline
+      buff = line
+      if line[3] == ?-
+	  code = line[0, 3]
+	begin
+	  line = getline
+	  buff << "\n" << line
+	end until line[0, 3] == code and line[3] != ?-
+      end
+      return buff << "\n"
+    end
+    private :getmultiline
+    
+    def getresp
+      resp = getmultiline
+      @@lastresp = resp[0, 3]
+      c = resp[0]
+      case c
+      when ?1, ?2, ?3
+	return resp
+      when ?4
+	raise FTPTempError, resp
+      when ?5
+	raise FTPPermError, resp
+      else
+	raise FTPProtoError, resp
+      end
+    end
+    private :getresp
+    
+    def voidresp
+      resp = getresp
+      if resp[0] != ?2
+	raise FTPReplyError, resp
+      end
+    end
+    private :voidresp
+    
+    def sendcmd(cmd)
+      synchronize do
+	putline(cmd)
+	return getresp
+      end
+    end
+    
+    def voidcmd(cmd)
+      synchronize do
+	putline(cmd)
+	voidresp
+      end
+    end
+    
+    def sendport(host, port)
+      af = (@@sock.peeraddr)[0]
+      if af == "AF_INET"
+	hbytes = host.split(".")
+	pbytes = [port / 256, port % 256]
+	bytes = hbytes + pbytes
+	cmd = "PORT " + bytes.join(",")
+      elsif af == "AF_INET6"
+	cmd = "EPRT |2|" + host + "|" + sprintf("%d", port) + "|"
+      else
+	raise FTPProtoError, host
+      end
+      voidcmd(cmd)
+    end
+    private :sendport
+    
+    def makeport
+      sock = TCPserver.open(@@sock.addr[3], 0)
+      port = sock.addr[1]
+      host = TCPsocket.getaddress(@@sock.addr[2])
+      resp = sendport(host, port)
+      return sock
+    end
+    private :makeport
+    
+    def makepasv
+      if @@sock.peeraddr[0] == "AF_INET"
+	host, port = parse227(sendcmd("PASV"))
+      else
+	host, port = parse229(sendcmd("EPSV"))
+	#     host, port = parse228(sendcmd("LPSV"))
+      end
+      return host, port
+    end
+    private :makepasv
+    
+    def transfercmd(cmd)
+      if @@passive
+	host, port = makepasv
+	conn = open_socket(host, port)
+	resp = sendcmd(cmd)
+	if resp[0] != ?1
+	  raise FTPReplyError, resp
+	end
+      else
+	sock = makeport
+	resp = sendcmd(cmd)
+	if resp[0] != ?1
+	  raise FTPReplyError, resp
+	end
+	conn = sock.accept
+      end
+      return conn
+    end
+    private :transfercmd
+    
+    def getaddress
+      thishost = Socket.gethostname
+      if not thishost.index(".")
+	thishost = Socket.gethostbyname(thishost)[0]
+      end
+      if ENV.has_key?("LOGNAME")
+	realuser = ENV["LOGNAME"]
+      elsif ENV.has_key?("USER")
+	realuser = ENV["USER"]
+      else
+	realuser = "anonymous"
+      end
+      return realuser + "@@" + thishost
+    end
+    private :getaddress
+    
+    def login(user = "anonymous", passwd = nil, acct = nil)
+      if user == "anonymous" and passwd == nil
+	passwd = getaddress
+      end
+      
+      resp = ""
+      synchronize do
+	resp = sendcmd('USER ' + user)
+	if resp[0] == ?3
+	  resp = sendcmd('PASS ' + passwd)
+	end
+	if resp[0] == ?3
+	  resp = sendcmd('ACCT ' + acct)
+	end
+      end
+      if resp[0] != ?2
+	raise FTPReplyError, resp
+      end
+      @@welcome = resp
+    end
+    
+    def retrbinary(cmd, blocksize, callback = Proc.new)
+      synchronize do
+	voidcmd("TYPE I")
+	conn = transfercmd(cmd)
+	loop do
+	  data = conn.read(blocksize)
+	  break if data == nil
+	  callback.call(data)
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def retrlines(cmd, callback = nil)
+      if iterator?
+	callback = Proc.new
+      elsif not callback.is_a?(Proc)
+	callback = Proc.new {|line| print line, "\n"}
+      end
+      synchronize do
+	voidcmd("TYPE A")
+	conn = transfercmd(cmd)
+	loop do
+	  line = conn.gets
+	  break if line == nil
+	  if line[-2, 2] == CRLF
+	    line = line[0 .. -3]
+	  elsif line[-1] == ?\n
+	    line = line[0 .. -2]
+	  end
+	  callback.call(line)
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def storbinary(cmd, file, blocksize, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      synchronize do
+	voidcmd("TYPE I")
+	conn = transfercmd(cmd)
+	loop do
+	  buf = file.read(blocksize)
+	  break if buf == nil
+	  conn.write(buf)
+	  callback.call(buf) if use_callback
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def storlines(cmd, file, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      synchronize do
+	voidcmd("TYPE A")
+	conn = transfercmd(cmd)
+	loop do
+	  buf = file.gets
+	  break if buf == nil
+	  if buf[-2, 2] != CRLF
+	    buf = buf.chomp + CRLF
+	  end
+	  conn.write(buf)
+	  callback.call(buf) if use_callback
+	end
+	conn.close
+	voidresp
+      end
+    end
+    
+    def getbinaryfile(remotefile, localfile, blocksize, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      f = open(localfile, "w")
+      begin
+	f.binmode
+	retrbinary("RETR " + remotefile, blocksize) do |data|
+	  f.write(data)
+	  callback.call(data) if use_callback
+	end
+      ensure
+	f.close
+      end
+    end
+    
+    def gettextfile(remotefile, localfile, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      f = open(localfile, "w")
+      begin
+	retrlines("RETR " + remotefile) do |line|
+	  line = line + @@return_code
+	  f.write(line)
+	  callback.call(line) if use_callback
+	end
+      ensure
+	f.close
+      end
+    end
+    
+    def putbinaryfile(localfile, remotefile, blocksize, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      f = open(localfile)
+      begin
+	f.binmode
+	storbinary("STOR " + remotefile, f, blocksize) do |data|
+	  callback.call(data) if use_callback
+	end
+      ensure
+	f.close
+      end
+    end
+    
+    def puttextfile(localfile, remotefile, callback = nil)
+      if iterator?
+	callback = Proc.new
+      end
+      use_callback = callback.is_a?(Proc)
+      f = open(localfile)
+      begin
+	storlines("STOR " + remotefile, f) do |line|
+	  callback.call(line) if use_callback
+	end
+      ensure
+	f.close
+      end
+    end
+    
+    def acct(account)
+      cmd = "ACCT " + account
+      voidcmd(cmd)
+    end
+    
+    def nlst(dir = nil)
+      cmd = "NLST"
+      if dir
+	cmd = cmd + " " + dir
+      end
+      files = []
+      retrlines(cmd) do |line|
+	files.push(line)
+      end
+      return files
+    end
+    
+    def list(*args, &block)
+      cmd = "LIST"
+      args.each do |arg|
+	cmd = cmd + " " + arg
+      end
+      if block
+	retrlines(cmd, &block)
+      else
+	lines = []
+	retrlines(cmd) do |line|
+	  lines << line
+	end
+	return lines
+      end
+    end
+    alias ls list
+    alias dir list
+    
+    def rename(fromname, toname)
+      resp = sendcmd("RNFR " + fromname)
+      if resp[0] != ?3
+	raise FTPReplyError, resp
+      end
+      voidcmd("RNTO " + toname)
+    end
+    
+    def delete(filename)
+      resp = sendcmd("DELE " + filename)
+      if resp[0, 3] == "250"
+	return
+      elsif resp[0] == ?5
+	raise FTPPermError, resp
+      else
+	raise FTPReplyError, resp
+      end
+    end
+    
+    def chdir(dirname)
+      if dirname == ".."
+	begin
+	  voidcmd("CDUP")
+	  return
+	rescue FTPPermError
+	  if $![0, 3] != "500"
+	    raise FTPPermError, $!
+	  end
+	end
+      end
+      cmd = "CWD " + dirname
+      voidcmd(cmd)
+    end
+    
+    def size(filename)
+      voidcmd("TYPE I")
+      resp = sendcmd("SIZE " + filename)
+      if resp[0, 3] != "213" 
+	raise FTPReplyError, resp
+      end
+      return resp[3..-1].strip.to_i
+    end
+    
+    MDTM_REGEXP = /^(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/
+    
+    def mtime(filename, local = false)
+      str = mdtm(filename)
+      ary = str.scan(MDTM_REGEXP)[0].collect {|i| i.to_i}
+      return local ? Time.local(*ary) : Time.gm(*ary)
+    end
+    
+    def mkdir(dirname)
+      resp = sendcmd("MKD " + dirname)
+      return parse257(resp)
+    end
+    
+    def rmdir(dirname)
+      voidcmd("RMD " + dirname)
+    end
+    
+    def pwd
+      resp = sendcmd("PWD")
+      return parse257(resp)
+    end
+    alias getdir pwd
+    
+    def system
+      resp = sendcmd("SYST")
+      if resp[0, 3] != "215"
+	raise FTPReplyError, resp
+      end
+      return resp[4 .. -1]
+    end
+    
+    def abort
+      line = "ABOR" + CRLF
+      print "put: ABOR\n" if @@debug_mode
+      @@sock.send(line, Socket::MSG_OOB)
+      resp = getmultiline
+      unless ["426", "226", "225"].include?(resp[0, 3])
+	raise FTPProtoError, resp
+      end
+      return resp
+    end
+    
+    def status
+      line = "STAT" + CRLF
+      print "put: STAT\n" if @@debug_mode
+      @@sock.send(line, Socket::MSG_OOB)
+      return getresp
+    end
+    
+    def mdtm(filename)
+      resp = sendcmd("MDTM " + filename)
+      if resp[0, 3] == "213"
+	return resp[3 .. -1].strip
+      end
+    end
+    
+    def help(arg = nil)
+      cmd = "HELP"
+      if arg
+	cmd = cmd + " " + arg
+      end
+      sendcmd(cmd)
+    end
+    
+    def quit
+      voidcmd("QUIT")
+    end
+    
+    def close
+      @@sock.close if @@sock and not @@sock.closed?
+    end
+    
+    def closed?
+      @@sock == nil or @@sock.closed?
+    end
+    
+    def parse227(resp)
+      if resp[0, 3] != "227"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(",")
+      if numbers.length != 6
+	raise FTPProtoError, resp
+      end
+      host = numbers[0, 4].join(".")
+      port = (numbers[4].to_i << 8) + numbers[5].to_i
+      return host, port
+    end
+    private :parse227
+    
+    def parse228(resp)
+      if resp[0, 3] != "228"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(",")
+      if numbers[0] == "4"
+	if numbers.length != 9 || numbers[1] != "4" || numbers[2 + 4] != "2"
+	  raise FTPProtoError, resp
+	end
+	host = numbers[2, 4].join(".")
+	port = (numbers[7].to_i << 8) + numbers[8].to_i
+      elsif numbers[0] == "6"
+	if numbers.length != 21 || numbers[1] != "16" || numbers[2 + 16] != "2"
+	  raise FTPProtoError, resp
+	end
+	v6 = ["", "", "", "", "", "", "", ""]
+	for i in 0 .. 7
+	  v6[i] = sprintf("%02x%02x", numbers[(i * 2) + 2].to_i,
+			  numbers[(i * 2) + 3].to_i)
+	end
+	host = v6[0, 8].join(":")
+	port = (numbers[19].to_i << 8) + numbers[20].to_i
+      end 
+      return host, port
+    end
+    private :parse228
+    
+    def parse229(resp)
+      if resp[0, 3] != "229"
+	raise FTPReplyError, resp
+      end
+      left = resp.index("(")
+      right = resp.index(")")
+      if left == nil or right == nil
+	raise FTPProtoError, resp
+      end
+      numbers = resp[left + 1 .. right - 1].split(resp[left + 1, 1])
+      if numbers.length != 4
+	raise FTPProtoError, resp
+      end
+      port = numbers[3].to_i
+      host = (@@sock.peeraddr())[3]
+      return host, port
+    end
+    private :parse228
+    
+    def parse257(resp)
+      if resp[0, 3] != "257"
+	raise FTPReplyError, resp
+      end
+      if resp[3, 2] != ' "'
+	return ""
+      end
+      dirname = ""
+      i = 5
+      n = resp.length
+      while i < n
+	c = resp[i, 1]
+	i = i + 1
+	if c == '"'
+	  if i > n or resp[i, 1] != '"'
+	    break
+	  end
+	  i = i + 1
+	end
+	dirname = dirname + c
+      end
+      return dirname
+    end
+    private :parse257
+  end
+
+end
+@
+
+
+1.1.2.2
+log
+@matz
+@
+text
+@a205 1
+	sock.close
+@

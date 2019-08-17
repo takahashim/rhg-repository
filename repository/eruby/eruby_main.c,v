@@ -1,0 +1,2024 @@
+head	1.32;
+access;
+symbols
+	release_0_9_8:1.32
+	autoconfiscation-branch:1.32.0.2
+	root-of-autoconfiscation:1.32
+	release_0_9_7:1.32
+	release_0_9_6:1.28
+	release_0_9_5:1.27
+	release_0_9_4:1.23
+	release_0_9_3:1.23
+	release_0_9_2:1.22
+	release_0_9_1:1.22
+	release_0_9_0:1.21
+	release_0_1_1:1.17
+	release_0_1_0:1.17
+	start:1.1.1.1
+	shugo:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.32
+date	2001.10.15.04.55.40;	author shugo;	state Exp;
+branches
+	1.32.2.1;
+next	1.31;
+
+1.31
+date	2001.10.10.06.15.58;	author shugo;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.10.10.02.39.12;	author shugo;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.09.04.06.33.08;	author shugo;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.08.06.09.42.47;	author shugo;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.06.12.06.56.51;	author shugo;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.06.11.05.38.56;	author shugo;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.06.11.04.04.18;	author shugo;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.06.09.09.54.37;	author shugo;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.06.04.05.20.18;	author shugo;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.04.20.07.16.42;	author shugo;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.04.19.07.59.41;	author shugo;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.04.19.06.02.39;	author shugo;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.12.22.02.26.44;	author shugo;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.12.06.05.52.29;	author shugo;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.09.11.06.41.23;	author shugo;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.08.30.09.09.03;	author shugo;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.08.30.08.30.53;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.08.30.07.32.42;	author shugo;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.08.28.10.12.03;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.08.25.07.41.44;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.08.02.07.02.05;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.08.02.05.16.20;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.30.02.36.05;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.18.08.09.13;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.31.09.53.13;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.30.08.09.30;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.03.28.05.39.42;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.08.10.04.44.39;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.05.21.06.45.38;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.05.20.05.37.26;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches;
+next	;
+
+1.32.2.1
+date	2001.10.30.06.13.47;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.32
+log
+@* eruby_main.c (run): fix prototype of Init_stack().
+@
+text
+@/*
+ * $Id: eruby_main.c,v 1.31 2001/10/10 06:15:58 shugo Exp $
+ * Copyright (C) 2000  ZetaBITS, Inc.
+ * Copyright (C) 2000  Information-technology Promotion Agency, Japan
+ * Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+ *
+ * This file is part of eruby.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA
+ */
+
+#include <ctype.h>
+#include <time.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#include "ruby.h"
+#include "re.h"
+#include "regex.h"
+#include "version.h"
+
+#include "eruby.h"
+#include "eruby_logo.h"
+
+EXTERN VALUE ruby_errinfo;
+EXTERN VALUE rb_stdout;
+EXTERN VALUE rb_defout;
+EXTERN VALUE rb_load_path;
+
+/* copied from eval.c */
+#define TAG_RETURN	0x1
+#define TAG_BREAK	0x2
+#define TAG_NEXT	0x3
+#define TAG_RETRY	0x4
+#define TAG_REDO	0x5
+#define TAG_RAISE	0x6
+#define TAG_THROW	0x7
+#define TAG_FATAL	0x8
+#define TAG_MASK	0xf
+
+static void write_escaping_html(FILE *out, char *str, int len)
+{
+    int i;
+    for (i = 0; i < len; i++) {
+	switch (str[i]) {
+	case '&':
+	    fputs("&amp;", out);
+	    break;
+	case '<':
+	    fputs("&lt;", out);
+	    break;
+	case '>':
+	    fputs("&gt;", out);
+	    break;
+	case '"':
+	    fputs("&quot;", out);
+	    break;
+	default:
+	    putc(str[i], out);
+	    break;
+	}
+    }
+}
+
+static void error_pos(FILE *out, int cgi)
+{
+    char buff[BUFSIZ];
+    ID last_func = rb_frame_last_func();
+
+    if (ruby_sourcefile) {
+	if (last_func) {
+	    snprintf(buff, BUFSIZ, "%s:%d:in `%s'", ruby_sourcefile, ruby_sourceline,
+		     rb_id2name(last_func));
+	}
+	else {
+	    snprintf(buff, BUFSIZ, "%s:%d", ruby_sourcefile, ruby_sourceline);
+	}
+	if (cgi)
+	    write_escaping_html(out, buff, strlen(buff));
+	else
+	    fputs(buff, out);
+    }
+}
+
+static void exception_print(FILE *out, int cgi)
+{
+    VALUE errat;
+    VALUE eclass;
+    VALUE einfo;
+
+    if (NIL_P(ruby_errinfo)) return;
+
+    errat = rb_funcall(ruby_errinfo, rb_intern("backtrace"), 0);
+    if (!NIL_P(errat)) {
+	VALUE mesg = RARRAY(errat)->ptr[0];
+
+	if (NIL_P(mesg)) {
+	    error_pos(out, cgi);
+	}
+	else {
+	    if (cgi)
+		write_escaping_html(out, RSTRING(mesg)->ptr, RSTRING(mesg)->len);
+	    else
+		fwrite(RSTRING(mesg)->ptr, 1, RSTRING(mesg)->len, out);
+	}
+    }
+
+    eclass = CLASS_OF(ruby_errinfo);
+    einfo = rb_obj_as_string(ruby_errinfo);
+    if (eclass == rb_eRuntimeError && RSTRING(einfo)->len == 0) {
+	fprintf(out, ": unhandled exception\n");
+    }
+    else {
+	VALUE epath;
+
+	epath = rb_class_path(eclass);
+	if (RSTRING(einfo)->len == 0) {
+	    fprintf(out, ": ");
+	    if (cgi)
+		write_escaping_html(out, RSTRING(epath)->ptr, RSTRING(epath)->len);
+	    else
+		fwrite(RSTRING(epath)->ptr, 1, RSTRING(epath)->len, out);
+	    if (cgi)
+		fprintf(out, "<br>\n");
+	    else
+		fprintf(out, "\n");
+	}
+	else {
+	    char *tail  = 0;
+	    int len = RSTRING(einfo)->len;
+
+	    if (RSTRING(epath)->ptr[0] == '#') epath = 0;
+	    if ((tail = strchr(RSTRING(einfo)->ptr, '\n')) != NULL) {
+		len = tail - RSTRING(einfo)->ptr;
+		tail++;		/* skip newline */
+	    }
+	    fprintf(out, ": ");
+	    if (cgi)
+		write_escaping_html(out, RSTRING(einfo)->ptr, len);
+	    else
+		fwrite(RSTRING(einfo)->ptr, 1, len, out);
+	    if (epath) {
+		fprintf(out, " (");
+		if (cgi)
+		    write_escaping_html(out, RSTRING(epath)->ptr, RSTRING(epath)->len);
+		else
+		    fwrite(RSTRING(epath)->ptr, 1, RSTRING(epath)->len, out);
+		if (cgi)
+		    fprintf(out, ")<br>\n");
+		else
+		    fprintf(out, ")\n");
+	    }
+	    if (tail) {
+		if (cgi)
+		    write_escaping_html(out, tail, RSTRING(einfo)->len - len - 1);
+		else
+		    fwrite(tail, 1, RSTRING(einfo)->len - len - 1, out);
+		if (cgi)
+		    fprintf(out, "<br>\n");
+		else
+		    fprintf(out, "\n");
+	    }
+	}
+    }
+
+    if (!NIL_P(errat)) {
+	int i;
+	struct RArray *ep = RARRAY(errat);
+
+#define TRACE_MAX (TRACE_HEAD+TRACE_TAIL+5)
+#define TRACE_HEAD 8
+#define TRACE_TAIL 5
+
+	rb_ary_pop(errat);
+	ep = RARRAY(errat);
+	for (i=1; i<ep->len; i++) {
+	    if (TYPE(ep->ptr[i]) == T_STRING) {
+		if (cgi) {
+		    fprintf(out, "<div class=\"backtrace\">from ");
+		    write_escaping_html(out,
+					RSTRING(ep->ptr[i])->ptr,
+					RSTRING(ep->ptr[i])->len);
+		}
+		else {
+		    fprintf(out, "        from ");
+		    fwrite(RSTRING(ep->ptr[i])->ptr, 1,
+			   RSTRING(ep->ptr[i])->len, out);
+		}
+		if (cgi)
+		    fprintf(out, "<br></div>\n");
+		else
+		    fprintf(out, "\n");
+	    }
+	    if (i == TRACE_HEAD && ep->len > TRACE_MAX) {
+		char buff[BUFSIZ];
+		if (cgi)
+		    snprintf(buff, BUFSIZ,
+			     "<div class=\"backtrace\">... %ld levels...\n",
+			     ep->len - TRACE_HEAD - TRACE_TAIL);
+		else
+		    snprintf(buff, BUFSIZ, "         ... %ld levels...<br></div>\n",
+			     ep->len - TRACE_HEAD - TRACE_TAIL);
+		if (cgi)
+		    write_escaping_html(out, buff, strlen(buff));
+		else
+		    fputs(buff, out);
+		i = ep->len - TRACE_TAIL;
+	    }
+	}
+    }
+}
+
+static void print_generated_code(FILE *out, VALUE code, int cgi)
+{
+    if (cgi) {
+	fprintf(out, "<tr><th id=\"code\">\n");
+	fprintf(out, "GENERATED CODE\n");
+	fprintf(out, "</th></tr>\n");
+	fprintf(out, "<tr><td headers=\"code\">\n");
+	fprintf(out, "<pre><code>\n");
+    }
+    else {
+	fprintf(out, "--- generated code ---\n");
+    }
+
+    if (cgi) {
+	write_escaping_html(out, RSTRING(code)->ptr, RSTRING(code)->len);
+    }
+    else {
+	fwrite(RSTRING(code)->ptr, 1, RSTRING(code)->len, out);
+    }
+    if (cgi) {
+	fprintf(out, "</code></pre>\n");
+	fprintf(out, "</td></tr>\n");
+    }
+    else {
+	fprintf(out, "----------------------\n");
+    }
+}
+
+char rfc822_days[][4] =
+{
+    "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+};
+
+char rfc822_months[][4] =
+{
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+};
+
+static char *rfc1123_time(time_t t)
+{
+    static char s[32];
+    struct tm *tm;
+
+    tm = gmtime(&t);
+    sprintf(s, "%s, %.2d %s %d %.2d:%.2d:%.2d GMT",
+	    rfc822_days[tm->tm_wday], tm->tm_mday, rfc822_months[tm->tm_mon],
+	    tm->tm_year + 1900,	tm->tm_hour, tm->tm_min, tm->tm_sec);
+    return s;
+}
+
+static void print_http_headers()
+{
+    char *tmp;
+
+    if ((tmp = getenv("SERVER_PROTOCOL")) == NULL)
+        tmp = "HTTP/1.0";
+    printf("%s 200 OK\r\n", tmp);
+    if ((tmp = getenv("SERVER_SOFTWARE")) == NULL)
+	tmp = "unknown-server/0.0";
+    printf("Server: %s\r\n", tmp);
+    printf("Date: %s\r\n", rfc1123_time(time(NULL)));
+    printf("Connection: close\r\n");
+}
+
+static void error_print(FILE *out, int state, int cgi, int mode, VALUE code)
+{
+    char buff[BUFSIZ];
+
+    rb_defout = rb_stdout;
+    if (cgi) {
+	char *imgdir;
+	if ((imgdir = getenv("SCRIPT_NAME")) == NULL)
+	    imgdir = "UNKNOWN_IMG_DIR";
+        if (mode == MODE_NPHCGI)
+            print_http_headers();
+        fprintf(out, "Content-Type: text/html\r\n");
+        fprintf(out, "Content-Style-Type: text/css\r\n");
+        fprintf(out, "\r\n");
+	fprintf(out, "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n");
+	fprintf(out, "<html>\n");
+	fprintf(out, "<head>\n");
+	fprintf(out, "<title>eRuby</title>\n");
+	fprintf(out, "<style type=\"text/css\">\n");
+	fprintf(out, "<!--\n");
+	fprintf(out, "body { background-color: #ffffff }\n");
+	fprintf(out, "table { width: 100%%; padding: 5pt; border-style: none }\n");
+	fprintf(out, "th { color: #6666ff; background-color: #b0d0d0; text-align: left }\n");
+	fprintf(out, "td { color: #336666; background-color: #d0ffff }\n");
+	fprintf(out, "strong { color: #ff0000; font-weight: bold }\n");
+	fprintf(out, "div.backtrace { text-indent: 15%% }\n");
+	fprintf(out, "#version { color: #ff9900 }\n");
+	fprintf(out, "-->\n");
+	fprintf(out, "</style>\n");
+	fprintf(out, "</head>\n");
+	fprintf(out, "<body>\n");
+        fprintf(out, "<table summary=\"eRuby error information\">\n");
+        fprintf(out, "<caption>\n");
+	fprintf(out, "<img src=\"%s/logo.png\" alt=\"eRuby\">\n", imgdir);
+        fprintf(out, "<span id=version>version: %s</span>\n", ERUBY_VERSION);
+        fprintf(out, "</caption>\n");
+        fprintf(out, "<tr><th id=\"error\">\n");
+        fprintf(out, "ERROR\n");
+        fprintf(out, "</th></tr>\n");
+        fprintf(out, "<tr><td headers=\"error\">\n");
+    }
+
+    switch (state) {
+    case TAG_RETURN:
+	error_pos(out, cgi);
+	fprintf(out, ": unexpected return\n");
+	break;
+    case TAG_NEXT:
+	error_pos(out, cgi);
+	fprintf(out, ": unexpected next\n");
+	break;
+    case TAG_BREAK:
+	error_pos(out, cgi);
+	fprintf(out, ": unexpected break\n");
+	break;
+    case TAG_REDO:
+	error_pos(out, cgi);
+	fprintf(out, ": unexpected redo\n");
+	break;
+    case TAG_RETRY:
+	error_pos(out, cgi);
+	fprintf(out, ": retry outside of rescue clause\n");
+	break;
+    case TAG_RAISE:
+    case TAG_FATAL:
+	exception_print(out, cgi);
+	break;
+    default:
+	error_pos(out, cgi);
+	snprintf(buff, BUFSIZ, ": unknown longjmp status %d", state);
+	fputs(buff, out);
+	break;
+    }
+    if (cgi) {
+        fprintf(out, "</td></tr>\n");
+    }
+
+    if (!NIL_P(code))
+	print_generated_code(out, code, cgi);
+
+    if (cgi) {
+        fprintf(out, "</table>\n");
+	fprintf(out, "</body>\n");
+	fprintf(out, "</html>\n");
+    }
+}
+
+static VALUE defout_write(VALUE self, VALUE str)
+{
+    str = rb_obj_as_string(str);
+    rb_str_cat(self, RSTRING(str)->ptr, RSTRING(str)->len);
+    return Qnil;
+}
+
+static VALUE defout_cancel(VALUE self)
+{
+    if (RSTRING(self)->len == 0) return Qnil;
+    RSTRING(self)->len = 0;
+    RSTRING(self)->ptr[0] = '\0';
+    return Qnil;
+}
+
+static int guess_mode()
+{
+    if (getenv("GATEWAY_INTERFACE") == NULL) {
+	return MODE_FILTER;
+    }
+    else {
+	char *name = getenv("SCRIPT_FILENAME");
+	char buff[BUFSIZ];
+	
+	if (name != NULL) {
+	    strcpy(buff, name);
+	    if ((name = strrchr(buff, '/')) != NULL) 
+		*name++ = '\0';
+	    else 
+		name = buff;
+	    if (strncasecmp(name, "nph-", 4) == 0) 
+		return MODE_NPHCGI;
+	    else
+		return MODE_CGI;
+	}
+	else {
+	    return MODE_CGI;
+	}
+    }
+}
+
+static void give_img_logo(int mode)
+{
+    if (mode == MODE_NPHCGI)
+	print_http_headers();
+    printf("Content-Type: image/png\r\n\r\n");
+    fwrite(eruby_logo_data, eruby_logo_size, 1, stdout);
+}
+
+static void init()
+{
+    ruby_init();
+#if RUBY_VERSION_CODE >= 160
+    ruby_init_loadpath();
+#else
+#if RUBY_VERSION_CODE >= 145
+    rb_ary_push(rb_load_path, rb_str_new2("."));
+#endif
+#endif
+    if (eruby_mode == MODE_CGI || eruby_mode == MODE_NPHCGI)
+	rb_set_safe_level(1);
+
+    rb_defout = rb_str_new("", 0);
+    rb_io_binmode(rb_stdout);	/* for mswin32 */
+    rb_define_singleton_method(rb_defout, "write", defout_write, 1);
+    rb_define_singleton_method(rb_defout, "cancel", defout_cancel, 0);
+    eruby_init();
+}
+
+static void proc_args(int argc, char **argv)
+{
+    int option_index;
+
+    ruby_script(argv[0]);
+
+    switch (eruby_parse_options(argc, argv, &option_index)) {
+    case 1:
+	exit(0);
+    case 2:
+	exit(2);
+    }
+
+    if (eruby_mode == MODE_UNKNOWN)
+	eruby_mode = guess_mode();
+
+    if (eruby_mode == MODE_CGI || eruby_mode == MODE_NPHCGI) {
+	char *path;
+	/*char *script_filename;*/
+	char *path_translated;
+	char *query_string;
+	int qs_has_equal;
+
+	if ((path = getenv("PATH_INFO")) != NULL &&
+	    strcmp(path, "/logo.png") == 0) {
+	    give_img_logo(eruby_mode);
+	    exit(0);
+	}
+
+	/*
+	  if ((script_filename = getenv("SCRIPT_FILENAME")) == NULL)
+	script_filename = "";
+	*/
+	if ((path_translated = getenv("PATH_TRANSLATED")) == NULL)
+	    path_translated = "";
+	if ((query_string = getenv("QUERY_STRING")) == NULL)
+	    query_string = "";
+	qs_has_equal = (strchr(query_string, '=') != NULL);
+
+	if (path_translated[0] &&
+	    ((option_index == argc &&
+	      (!query_string[0] || qs_has_equal)) ||
+	     (option_index == argc - 1 &&
+	      !qs_has_equal && strcmp(argv[option_index], query_string) == 0))) {
+	    eruby_filename = path_translated;
+	}
+	else if ((option_index == argc - 1 &&
+		  (!query_string[0] || qs_has_equal)) ||
+		 (option_index == argc - 2 &&
+		  !qs_has_equal &&
+		  strcmp(argv[option_index + 1], query_string) == 0)) {
+	    eruby_filename = argv[option_index];
+	}
+	else {
+	    fprintf(stderr, "%s: missing required file to process\n", argv[0]);
+	    exit(1);
+	}
+		
+
+	/*
+	if (strstr(script_filename, argv[0]) != NULL)
+	    eruby_filename = NULL;
+	*/
+    }
+    else {
+	if (option_index == argc) {
+	    eruby_filename = "-";
+	}
+	else {
+	    eruby_filename = argv[option_index];
+	}
+    }
+}
+
+static void run()
+{
+    VALUE stack_start;
+    VALUE code;
+    int state;
+    char *out;
+    int nout;
+    void Init_stack _((VALUE*));
+
+    Init_stack(&stack_start);
+    code = eruby_load(eruby_filename, 0, &state);
+    ruby_finalize();
+    if (state && !rb_obj_is_kind_of(ruby_errinfo, rb_eSystemExit)) {
+	if (RTEST(ruby_debug) &&
+	    (eruby_mode == MODE_CGI || eruby_mode == MODE_NPHCGI)) {
+	    error_print(stdout, state, 1, eruby_mode, code);
+	    exit(0);
+	}
+	else {
+	    error_print(stderr, state, 0, eruby_mode, code);
+	    exit(1);
+	}
+    }
+    if (eruby_mode == MODE_FILTER && (RTEST(ruby_debug) || RTEST(ruby_verbose))) {
+	print_generated_code(stderr, code, 0);
+    }
+    out = RSTRING(rb_defout)->ptr;
+    nout = RSTRING(rb_defout)->len;
+    if (!eruby_noheader &&
+	(eruby_mode == MODE_CGI || eruby_mode == MODE_NPHCGI)) {
+	if (eruby_mode == MODE_NPHCGI)
+	    print_http_headers();
+
+	printf("Content-Type: text/html; charset=%s\r\n", ERUBY_CHARSET);
+	printf("Content-Length: %d\r\n", nout);
+	printf("\r\n");
+    }
+    fwrite(out, nout, 1, stdout);
+    fflush(stdout);
+}
+
+int main(int argc, char **argv)
+{
+    init();
+    proc_args(argc, argv);
+    run();
+    return 0;
+}
+
+/*
+ * Local variables:
+ * mode: C
+ * tab-width: 8
+ * End:
+ */
+@
+
+
+1.32.2.1
+log
+@* use VERSION instead of ERUBY_VERSION.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.32 2001/10/15 04:55:40 shugo Exp $
+a37 1
+#include "config.h"
+d326 1
+a326 1
+        fprintf(out, "<span id=version>version: %s</span>\n", VERSION);
+@
+
+
+1.31
+log
+@* eruby_main.c (run): call ruby_finalize().
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.30 2001/10/10 02:39:12 shugo Exp $
+d524 1
+d529 1
+a529 1
+    void Init_stack _((void*));
+d531 1
+a531 1
+    Init_stack(&code);
+@
+
+
+1.30
+log
+@* eruby_main.c (run): print error messages to stderr if $DEBUG is
+false.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.29 2001/09/04 06:33:08 shugo Exp $
+d532 1
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.28 2001/08/06 09:42:47 shugo Exp $
+d55 1
+a55 1
+static void write_escaping_html(char *str, int len)
+d61 1
+a61 1
+	    fputs("&amp;", stdout);
+d64 1
+a64 1
+	    fputs("&lt;", stdout);
+d67 1
+a67 1
+	    fputs("&gt;", stdout);
+d70 1
+a70 1
+	    fputs("&quot;", stdout);
+d73 1
+a73 1
+	    putc(str[i], stdout);
+d79 1
+a79 1
+static void error_pos(int cgi)
+d93 1
+a93 1
+	    write_escaping_html(buff, strlen(buff));
+d95 1
+a95 1
+	    fputs(buff, stdout);
+d99 1
+a99 1
+static void exception_print(int cgi)
+d112 1
+a112 1
+	    error_pos(cgi);
+d116 1
+a116 1
+		write_escaping_html(RSTRING(mesg)->ptr, RSTRING(mesg)->len);
+d118 1
+a118 1
+		fwrite(RSTRING(mesg)->ptr, 1, RSTRING(mesg)->len, stdout);
+d125 1
+a125 1
+	printf(": unhandled exception\n");
+d132 1
+a132 1
+	    printf(": ");
+d134 1
+a134 1
+		write_escaping_html(RSTRING(epath)->ptr, RSTRING(epath)->len);
+d136 1
+a136 1
+		fwrite(RSTRING(epath)->ptr, 1, RSTRING(epath)->len, stdout);
+d138 1
+a138 1
+		printf("<br>\n");
+d140 1
+a140 1
+		printf("\n");
+d151 1
+a151 1
+	    printf(": ");
+d153 1
+a153 1
+		write_escaping_html(RSTRING(einfo)->ptr, len);
+d155 1
+a155 1
+		fwrite(RSTRING(einfo)->ptr, 1, len, stdout);
+d157 1
+a157 1
+		printf(" (");
+d159 1
+a159 1
+		    write_escaping_html(RSTRING(epath)->ptr, RSTRING(epath)->len);
+d161 1
+a161 1
+		    fwrite(RSTRING(epath)->ptr, 1, RSTRING(epath)->len, stdout);
+d163 1
+a163 1
+		    printf(")<br>\n");
+d165 1
+a165 1
+		    printf(")\n");
+d169 1
+a169 1
+		    write_escaping_html(tail, RSTRING(einfo)->len - len - 1);
+d171 1
+a171 1
+		    fwrite(tail, 1, RSTRING(einfo)->len - len - 1, stdout);
+d173 1
+a173 1
+		    printf("<br>\n");
+d175 1
+a175 1
+		    printf("\n");
+d193 3
+a195 2
+		    printf("<div class=\"backtrace\">from ");
+		    write_escaping_html(RSTRING(ep->ptr[i])->ptr,
+d199 1
+a199 1
+		    printf("        from ");
+d201 1
+a201 1
+			   RSTRING(ep->ptr[i])->len, stdout);
+d204 1
+a204 1
+		    printf("<br></div>\n");
+d206 1
+a206 1
+		    printf("\n");
+d218 1
+a218 1
+		    write_escaping_html(buff, strlen(buff));
+d220 1
+a220 1
+		    fputs(buff, stdout);
+d227 1
+a227 1
+static void print_generated_code(VALUE code, int cgi)
+d230 5
+a234 5
+	printf("<tr><th id=\"code\">\n");
+	printf("GENERATED CODE\n");
+	printf("</th></tr>\n");
+	printf("<tr><td headers=\"code\">\n");
+	printf("<pre><code>\n");
+d237 1
+a237 1
+	printf("--- generated code ---\n");
+d241 1
+a241 1
+	write_escaping_html(RSTRING(code)->ptr, RSTRING(code)->len);
+d244 1
+a244 1
+	fwrite(RSTRING(code)->ptr, 1, RSTRING(code)->len, stdout);
+d247 2
+a248 2
+	printf("</code></pre>\n");
+	printf("</td></tr>\n");
+d251 1
+a251 1
+	printf("----------------------\n");
+a289 2
+
+    return;
+d292 1
+a292 1
+static void error_print(int state, int mode, VALUE code)
+a294 1
+    int cgi = mode == MODE_CGI || mode == MODE_NPHCGI;
+d303 29
+a331 29
+        printf("Content-Type: text/html\r\n");
+        printf("Content-Style-Type: text/css\r\n");
+        printf("\r\n");
+	printf("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n");
+	printf("<html>\n");
+	printf("<head>\n");
+	printf("<title>eRuby</title>\n");
+	printf("<style type=\"text/css\">\n");
+	printf("<!--\n");
+	printf("body { background-color: #ffffff }\n");
+	printf("table { width: 100%%; padding: 5pt; border-style: none }\n");
+	printf("th { color: #6666ff; background-color: #b0d0d0; text-align: left }\n");
+	printf("td { color: #336666; background-color: #d0ffff }\n");
+	printf("strong { color: #ff0000; font-weight: bold }\n");
+	printf("div.backtrace { text-indent: 15%% }\n");
+	printf("#version { color: #ff9900 }\n");
+	printf("-->\n");
+	printf("</style>\n");
+	printf("</head>\n");
+	printf("<body>\n");
+        printf("<table summary=\"eRuby error information\">\n");
+        printf("<caption>\n");
+	printf("<img src=\"%s/logo.png\" alt=\"eRuby\">\n", imgdir);
+        printf("<span id=version>version: %s</span>\n", ERUBY_VERSION);
+        printf("</caption>\n");
+        printf("<tr><th id=\"error\">\n");
+        printf("ERROR\n");
+        printf("</th></tr>\n");
+        printf("<tr><td headers=\"error\">\n");
+d336 2
+a337 2
+	error_pos(cgi);
+	printf(": unexpected return\n");
+d340 2
+a341 2
+	error_pos(cgi);
+	printf(": unexpected next\n");
+d344 2
+a345 2
+	error_pos(cgi);
+	printf(": unexpected break\n");
+d348 2
+a349 2
+	error_pos(cgi);
+	printf(": unexpected redo\n");
+d352 2
+a353 2
+	error_pos(cgi);
+	printf(": retry outside of rescue clause\n");
+d357 1
+a357 1
+	exception_print(cgi);
+d360 1
+a360 1
+	error_pos(cgi);
+d362 1
+a362 1
+	fputs(buff, stdout);
+d366 1
+a366 1
+        printf("</td></tr>\n");
+d370 1
+a370 1
+	print_generated_code(code, cgi);
+d373 3
+a375 3
+        printf("</table>\n");
+	printf("</body>\n");
+	printf("</html>\n");
+d533 9
+a541 2
+	error_print(state, eruby_mode, code);
+	exit(0);
+d544 1
+a544 1
+	print_generated_code(code, 0);
+@
+
+
+1.28
+log
+@* version 0.9.6 released.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.27 2001/06/12 06:56:51 shugo Exp $
+d530 1
+d532 1
+@
+
+
+1.27
+log
+@* eruby_lib.c (eruby_parse_options): added new argument for
+optind.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.26 2001/06/11 05:38:56 shugo Exp $
+d444 1
+@
+
+
+1.26
+log
+@* eruby_main.c (proc_args): distinguish stand-alone CGI scripts
+correctly.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.25 2001/06/11 04:04:18 shugo Exp $
+d451 2
+d455 1
+a455 1
+    switch (eruby_parse_options(argc, argv)) {
+a487 4
+	fprintf(stderr, "query_string: %s\n", query_string);
+	if (eruby_optind < argc)
+	    fprintf(stderr, "argv[eruby_optind]: %s\n", argv[eruby_optind]);
+
+d489 1
+a489 1
+	    ((eruby_optind == argc &&
+d491 2
+a492 2
+	     (eruby_optind == argc - 1 &&
+	      !qs_has_equal && strcmp(argv[eruby_optind], query_string) == 0))) {
+d495 1
+a495 1
+	else if ((eruby_optind == argc - 1 &&
+d497 1
+a497 1
+		 (eruby_optind == argc - 2 &&
+d499 2
+a500 2
+		  strcmp(argv[eruby_optind + 1], query_string) == 0)) {
+	    eruby_filename = argv[eruby_optind];
+d514 1
+a514 1
+	if (eruby_optind == argc) {
+d518 1
+a518 1
+	    eruby_filename = argv[eruby_optind];
+@
+
+
+1.25
+log
+@* eruby_main.c (print_http_headers): "\n" -> "\r\n".
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.24 2001/06/09 09:54:37 shugo Exp $
+d465 1
+a465 1
+	char *script_filename;
+d467 2
+d475 20
+a494 5
+	
+	if ((script_filename = getenv("SCRIPT_FILENAME")) == NULL
+	    || strstr(script_filename, argv[0]) != NULL)
+	    eruby_filename = NULL;
+	if ((path_translated = getenv("PATH_TRANSLATED")) != NULL) {
+d497 17
+a513 2
+	if (eruby_filename == NULL)
+	    eruby_filename = "";
+d516 1
+a516 1
+	if (eruby_filename == NULL)
+d518 4
+@
+
+
+1.24
+log
+@* configure.rb.in: check for gcc.
+* eruby_lib.c (eruby_compiler_get_sourcefile): new method.
+* eruby_lib.c (eruby_compiler_set_sourcefile): ditto.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.23 2001/06/04 05:20:18 shugo Exp $
+d283 1
+a283 1
+    printf("%s 200 OK\n", tmp);
+d286 3
+a288 3
+    printf("Server: %s\n", tmp);
+    printf("Date: %s\n", rfc1123_time(time(NULL)));
+    printf("Connection: close\n");
+d305 3
+a307 3
+        printf("Content-Type: text/html\n");
+        printf("Content-Style-Type: text/css\n");
+        printf("\n");
+d426 1
+a426 1
+    printf("Content-Type: image/png\n\n");
+d511 3
+a513 3
+	printf("Content-Type: text/html; charset=%s\n", ERUBY_CHARSET);
+	printf("Content-Length: %d\n", nout);
+	printf("\n");
+@
+
+
+1.23
+log
+@* examples/e2r.rb: new file.
+* examples/test.rhtml: new file.
+* examples/foo.rhtml: new file.
+* COPYING: new file.
+* GPL: new file.
+* LGPL: new file.
+* eruby_lib.c (eruby_import): use Kernel#eval for backtrace.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.22 2001/04/20 07:16:42 shugo Exp $
+d451 2
+@
+
+
+1.22
+log
+@* eruby_main.c: use EXTERN instead of extern.
+* eruby_lib.c: ditto.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.21 2001/04/19 07:59:41 shugo Exp $
+d5 18
+@
+
+
+1.21
+log
+@* eruby_lib.c (output): use buffer.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.20 2001/04/19 06:02:39 shugo Exp $
+a6 5
+#include "ruby.h"
+#include "re.h"
+#include "regex.h"
+#include "version.h"
+
+d13 5
+d21 4
+a24 4
+extern VALUE ruby_errinfo;
+extern VALUE rb_stdout;
+extern VALUE rb_defout;
+extern VALUE rb_load_path;
+@
+
+
+1.20
+log
+@* eruby_lib.c: renamed from eruby.c.
+* eruby_lib.c (eruby_init): new class ERuby::Compiler.
+* eruby_ext.c: new file for eruby extention library.
+* examples/test.rb: example for eruby extention library.
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.19 2000/12/22 02:26:44 shugo Exp $
+d21 4
+a24 4
+EXTERN VALUE ruby_errinfo;
+EXTERN VALUE rb_stdout;
+EXTERN VALUE rb_defout;
+EXTERN VALUE rb_load_path;
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.18 2000/12/06 05:52:29 shugo Exp $
+d208 1
+a208 1
+static int is_errline(int lineno, int errc, int *errv)
+a209 24
+    int i;
+
+    if (errc == 0 || lineno < errv[0] || errv[errc - 1] < lineno)
+	return 0;
+    for (i = 0; i < errc; i++) {
+	if (lineno == errv[i])
+	    return 1;
+    }
+    return 0;
+}
+
+static void print_generated_code(VALUE script, int cgi)
+{
+    FILE *f;
+    char buff[BUFSIZ];
+    int len = 1;
+    int lineno = 1;
+    int print_lineno = 1;
+    int errc = 0;
+    int *errv = NULL;
+    int errline = 0;
+
+    if ((f = fopen(RSTRING(script)->ptr, "r")) == NULL)
+	return;
+a215 15
+	if (!NIL_P(ruby_errinfo)) {
+	    VALUE errat = rb_funcall(ruby_errinfo, rb_intern("backtrace"), 0);
+	    int i, n;
+	    char fmt[BUFSIZ];
+
+	    if (!NIL_P(errat)) {
+		errv = ALLOCA_N(int, RARRAY(errat)->len);
+		snprintf(fmt, BUFSIZ, "%s:%%d", RSTRING(script)->ptr);
+		for (i = 0; i < RARRAY(errat)->len; i++) {
+		    if (sscanf(RSTRING(RARRAY(errat)->ptr[i])->ptr, fmt, &n) == 1) {
+			errv[errc++] = n;
+		    }
+		}
+	    }
+	}
+d221 5
+a225 21
+    while (fgets(buff, BUFSIZ, f) != NULL) {
+	if (print_lineno) {
+	    if (cgi && is_errline(lineno, errc, errv)) {
+		printf("<strong>");
+		errline = 1;
+	    }
+	    printf("%5d: ", lineno++);
+	}
+	len = strlen(buff);
+	print_lineno = buff[len - 1] == '\n';
+	if (cgi) {
+	    if (print_lineno && errline) buff[--len] = '\0';
+	    write_escaping_html(buff, len);
+	    if (print_lineno && errline) {
+		printf("</strong>\n");
+		errline = 0;
+	    }
+	}
+	else {
+	    fwrite(buff, 1, len, stdout);
+	}
+a226 1
+
+d275 1
+a275 1
+static void error_print(int state, int mode, VALUE script)
+d353 2
+a354 2
+    if (!NIL_P(script))
+	print_generated_code(script, cgi);
+d471 1
+a471 1
+    VALUE script;
+d476 1
+a476 1
+    script = eruby_load(eruby_filename, 0, &state);
+d478 1
+a478 3
+	error_print(state, eruby_mode, script);
+	if (!NIL_P(script))
+	    unlink(RSTRING(script)->ptr);
+d482 1
+a482 1
+	print_generated_code(script, 0);
+a483 1
+    unlink(RSTRING(script)->ptr);
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.17 2000/09/11 06:41:23 shugo Exp $
+d21 4
+a24 4
+extern VALUE ruby_errinfo;
+extern VALUE rb_stdout;
+extern VALUE rb_defout;
+extern VALUE rb_load_path;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d2 3
+a4 2
+ * $Id: eruby_main.c,v 1.16 2000/08/30 09:09:03 shugo Exp $
+ * Copyright (C) 1999  Network Applied Communication Laboratory, Inc.
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.15 2000/08/30 08:30:53 shugo Exp $
+d470 3
+d475 1
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.14 2000/08/30 07:32:42 shugo Exp $
+d505 2
+a506 2
+	if ((script_filename = getenv("SCRIPT_FILENAME")) != NULL
+	    && strstr(script_filename, argv[0]) != NULL)
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.13 2000/08/28 10:12:03 shugo Exp $
+d467 1
+a467 1
+static void usage(char *progname)
+a468 48
+    fprintf(stderr, "\
+usage: %s [switches] [inputfile]\n\n\
+  -d, --debug		set debugging flags (set $DEBUG to true)\n\
+  -K[kcode]		specifies KANJI (Japanese) code-set\n\
+  -M[mode]		specifies runtime mode\n\
+			  f: filter mode\n\
+			  c: CGI mode\n\
+			  n: NPH-CGI mode\n\
+  -C [charset]		specifies charset parameter for Content-Type\n\
+  -n, --noheader	disables CGI header output\n\
+  -v, --verbose		enables verbose mode\n\
+  --version		print version information and exit\n\
+\n", progname);
+}
+
+static void show_version()
+{
+    fprintf(stderr, "eRuby version %s\n", ERUBY_VERSION);
+    ruby_show_version();
+}
+
+static void set_mode(char *mode)
+{
+    switch (*mode) {
+    case 'f':
+	eruby_mode = MODE_FILTER;
+	break;
+    case 'c':
+	eruby_mode = MODE_CGI;
+	break;
+    case 'n':
+	eruby_mode = MODE_NPHCGI;
+	break;
+    default:
+	fprintf(stderr, "invalid mode -- %s\n", mode);
+	exit(2);
+    }
+}
+
+int main(int argc, char **argv)
+{
+    char *path;
+    VALUE script;
+    int state;
+    char *out;
+    int nout;
+    char *qstr;
+
+d480 10
+a490 1
+    eruby_parse_options(argc, argv);
+a493 3
+    qstr = getenv("QUERY_STRING");
+    if (qstr && strchr(qstr, '=') == NULL)
+	eruby_filename = NULL;
+d495 1
+d497 1
+d502 1
+a502 1
+	    return 0;
+d504 6
+a509 4
+	script_filename = getenv("SCRIPT_FILENAME");
+	if (eruby_filename == NULL) {
+	    if ((eruby_filename = getenv("PATH_TRANSLATED")) == NULL)
+		eruby_filename = "";
+d511 2
+d518 8
+d532 1
+a532 1
+	return 0;
+d551 7
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.12 2000/08/25 07:41:44 shugo Exp $
+d11 1
+a35 10
+#define ERUBY_VERSION "0.0.9"
+
+#define MODE_UNKNOWN    1
+#define MODE_FILTER     2
+#define MODE_CGI        4
+#define MODE_NPHCGI     8
+
+static char *eruby_filename = NULL;
+static int eruby_mode = MODE_UNKNOWN;
+
+a507 91
+static void parse_options(int argc, char **argv)
+{
+    int i;
+    char *s;
+
+    for (i = 1; i < argc; i++) {
+	if (argv[i][0] != '-' || argv[i][1] == '\0') {
+	    eruby_filename = argv[i];
+	    break;
+	}
+
+	s = argv[i] + 1;
+    again:
+	switch (*s) {
+	case 'M':
+	    set_mode(++s);
+	    s++;
+	    goto again;
+	case 'K':
+	    s++;
+	    if (*s == '\0') {
+		fprintf(stderr, "%s: no arg given for -K\n", argv[0]);
+		exit(2);
+	    }
+	    rb_set_kcode(s);
+	    s++;
+	    goto again;
+	case 'C':
+	    s++;
+	    if (*s == '\0') {
+		i++;
+		if (i == argc) {
+		    fprintf(stderr, "%s: no arg given for -C\n", argv[0]);
+		    exit(2);
+		}
+		eruby_charset = rb_str_new2(argv[i]);
+	    }
+	    else {
+		eruby_charset = rb_str_new2(s);
+	    }
+	    break;
+	case 'd':
+	    ruby_debug = Qtrue;
+	    s++;
+	    goto again;
+	case 'v':
+	    ruby_verbose = Qtrue;
+	    s++;
+	    goto again;
+	case 'n':
+	    eruby_noheader = 1;
+	    s++;
+	    goto again;
+	case '\0':
+	    break;
+	case 'h':
+	    usage(argv[0]);
+	    exit(0);
+	case '-':
+	    s++;
+	    if (strcmp("debug", s) == 0) {
+		ruby_debug = Qtrue;
+	    }
+	    else if (strcmp("noheader", s) == 0) {
+		eruby_noheader = 1;
+	    }
+	    else if (strcmp("version", s) == 0) {
+		show_version();
+		exit(0);
+	    }
+	    else if (strcmp("verbose", s) == 0) {
+		ruby_verbose = Qtrue;
+	    }
+	    else if (strcmp("help", s) == 0) {
+		usage(argv[0]);
+		exit(0);
+	    }
+	    else {
+		fprintf(stderr, "%s: invalid option -- %s\n", argv[0], s);
+		fprintf(stderr, "try `%s --help' for more information.\n", argv[0]);
+		exit(2);
+	    }
+	    break;
+	default:
+	    fprintf(stderr, "%s: invalid option -- %s\n", argv[0], s);
+	    fprintf(stderr, "try `%s --help' for more information.\n", argv[0]);
+	    exit(2);
+	}
+    }
+}
+
+d515 1
+d529 1
+a529 1
+    parse_options(argc, argv);
+d533 3
+d537 2
+d544 5
+a548 2
+	if ((eruby_filename = getenv("PATH_TRANSLATED")) == NULL)
+	    eruby_filename = "";
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.11 2000/08/02 07:02:05 shugo Exp $
+d436 1
+a436 1
+    if (RSTRING(self)->len == 0) return;
+d486 1
+d535 4
+a538 11
+#if 0
+	case 'B':
+	    if (*++s == '\0') {
+		s = argv[++i];
+		if (s == NULL) {
+		    fprintf(stderr, "%s: no delimiter given\n", argv[0]);
+		    exit(2);
+		}
+	    }
+	    if (strlen(s) > 2) {
+		fprintf(stderr, "%s: demiliter must be 1 or 2 characters\n", argv[0]);
+d541 9
+a549 8
+	    eruby_begin_delimiter1 = *s++;
+	    eruby_begin_delimiter2 = *s;
+	    break;
+	case 'E':
+	    if (*++s == '\0') {
+		s = argv[++i];
+		if (s == NULL) {
+		    fprintf(stderr, "%s: no delimiter given\n", argv[0]);
+d552 1
+d554 2
+a555 3
+	    if (strlen(s) > 2) {
+		fprintf(stderr, "%s: demiliter must be 1 or 2 characters\n", argv[0]);
+		exit(2);
+a556 2
+	    eruby_end_delimiter1 = *s++;
+	    eruby_end_delimiter2 = *s;
+a557 5
+#endif
+	case 'K':
+	    rb_set_kcode(++s);
+	    s++;
+	    goto again;
+d616 12
+a645 11
+    ruby_init();
+#if RUBY_VERSION_CODE >= 145
+    rb_ary_push(rb_load_path, rb_str_new2("."));
+#endif
+    if (eruby_mode == MODE_CGI || eruby_mode == MODE_NPHCGI)
+	rb_set_safe_level(1);
+
+    rb_defout = rb_str_new("", 0);
+    rb_define_singleton_method(rb_defout, "write", defout_write, 1);
+    rb_define_singleton_method(rb_defout, "cancel", defout_cancel, 0);
+    eruby_init();
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.10 2000/08/02 05:16:20 shugo Exp $
+d19 4
+a22 3
+EXTERN VALUE ruby_errinfo;
+EXTERN VALUE rb_stdout;
+EXTERN VALUE rb_defout;
+d638 2
+a639 4
+	if (eruby_filename == NULL) {
+	    if ((eruby_filename = getenv("PATH_TRANSLATED")) == NULL)
+		eruby_filename = "";
+	}
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.9 2000/05/30 02:36:05 shugo Exp $
+d648 3
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.8 2000/05/18 08:09:13 shugo Exp $
+d34 1
+a34 1
+#define ERUBY_VERSION "0.0.8"
+d656 1
+a656 1
+    if (state) {
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.7 2000/03/31 09:53:13 shugo Exp $
+d19 3
+a21 3
+extern VALUE ruby_errinfo;
+extern VALUE rb_stdout;
+extern VALUE rb_defout;
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.6 2000/03/30 08:09:30 shugo Exp $
+d34 1
+a34 1
+#define ERUBY_VERSION "0.0.7"
+a43 15
+static char *get_charset()
+{
+    switch (rb_kcode()) {
+    case MBCTYPE_EUC:
+	return "EUC-JP";
+    case MBCTYPE_SJIS:
+	return "SHIFT_JIS";
+    case MBCTYPE_UTF8:
+	return "UTF-8";
+    case MBCTYPE_ASCII:
+    default:
+	return "US-ASCII";
+    }
+}
+
+d372 1
+a372 1
+	printf("<img src=\"%s/logo.gif\" alt=\"eRuby\">\n", imgdir);
+d471 1
+a471 1
+    printf("Content-Type: image/gif\n\n");
+a626 1
+
+d633 1
+a633 1
+	    strcmp(path, "/logo.gif") == 0) {
+d673 1
+a673 1
+	printf("Content-Type: text/html; charset=%s\n", get_charset());
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.5 2000/03/28 05:39:42 shugo Exp $
+d34 1
+a34 1
+#define ERUBY_VERSION "0.0.4"
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.4 1999/08/10 04:44:39 shugo Exp $
+d52 1
+a52 1
+	return "UTF8";
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.3 1999/05/21 06:45:38 shugo Exp $
+a42 1
+static int eruby_no_header = 0;
+d441 1
+a441 1
+static VALUE str_write(VALUE self, VALUE str)
+d448 8
+a494 2
+  -B[str]		set begin block delimiter\n\
+  -E[str]		set end block delimiter\n\
+d548 1
+d579 1
+d593 1
+a593 1
+	    eruby_no_header = 1;
+d607 1
+a607 1
+		eruby_no_header = 1;
+d668 3
+a670 1
+    rb_define_singleton_method(rb_defout, "write", str_write, 1);
+d678 1
+a678 1
+    if (eruby_mode == MODE_FILTER && (ruby_debug || ruby_verbose)) {
+d684 1
+a684 1
+    if (!eruby_no_header &&
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.2 1999/05/20 05:37:26 shugo Exp $
+d34 2
+d41 4
+d216 1
+a216 1
+			     "<div class=\"backtrace\">... %d levels...\n",
+d219 1
+a219 1
+		    snprintf(buff, BUFSIZ, "         ... %d levels...<br></div>\n",
+d483 43
+a525 1
+static char *parse_options(int argc, char **argv)
+a526 1
+    char *filename = NULL;
+d528 1
+d531 4
+a534 2
+	if (*argv[i] == '-') {
+	    char *opt = argv[i] + 1;
+d536 14
+a549 3
+	    if (*opt == '\0') {
+		if (filename == NULL)
+		    filename = argv[i];
+d551 3
+a553 2
+	    else if (strcmp(opt, "d") == 0) {
+		ruby_debug = 1;
+d555 57
+a611 2
+	    else if (strcmp(opt, "v") == 0) {
+		ruby_verbose = 1;
+d614 3
+a616 2
+		fprintf(stderr, "usage: %s [-dv] [file]\n", argv[0]);
+		exit(1);
+d618 5
+a622 4
+	}
+	else {
+	    if (filename == NULL)
+		filename = argv[i];
+a624 1
+    return filename;
+a629 1
+    char *filename = NULL;
+a631 1
+    int mode = MODE_UNKNOWN;
+a634 2
+    if (mode == MODE_UNKNOWN)
+	mode = guess_mode();
+d636 5
+a640 1
+    if (mode == MODE_CGI || mode == MODE_NPHCGI) {
+d643 1
+a643 1
+	    give_img_logo(mode);
+d646 4
+a649 2
+	if ((filename = getenv("PATH_TRANSLATED")) == NULL)
+	    filename = "";
+d652 2
+a653 2
+	if ((filename = parse_options(argc, argv)) == NULL)
+	    filename = "-";
+d657 1
+a657 1
+    if (mode == MODE_CGI || mode == MODE_NPHCGI)
+d662 1
+a662 1
+    script = eruby_load(filename, 0, &state);
+d664 1
+a664 1
+	error_print(state, mode, script);
+d669 1
+a669 1
+    if (mode == MODE_FILTER && (ruby_debug || ruby_verbose)) {
+d675 3
+a677 2
+    if (mode == MODE_CGI || mode == MODE_NPHCGI) {
+	if (mode == MODE_NPHCGI)
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby_main.c,v 1.1.1.1 1999/05/17 09:29:02 shugo Exp $
+d309 23
+a334 2
+    time_t t;
+    struct tm *tm;
+d342 1
+a342 5
+    t = time(&t);
+    tm = localtime(&t);
+    tmp = ctime(&t);
+    tmp[strlen(tmp)-1] = '\0';
+    printf("Date: %s\n", tmp);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+ * $Id$
+d343 1
+a343 1
+        printf("Content-Type: text/html; charset=%s\n", get_charset());
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

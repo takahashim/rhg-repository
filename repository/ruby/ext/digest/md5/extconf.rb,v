@@ -1,0 +1,171 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.3.2.1
+	v1_6_6:1.3.2.1
+	v1_6_5:1.3.2.1
+	ruby_1_6:1.3.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.09.26.16.27.23;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.08.14.20.05.20;	author knu;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2001.07.14.03.29.50;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.14;	author knu;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.08.16.07.35.42;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* ext/digest/md5: Use OpenSSL's MD5 engine if available.  It is
+  much faster than what we have now (md5.[ch]).  Add a knob
+  (--with-bundled-md5) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@# $RoughId: extconf.rb,v 1.3 2001/08/14 19:54:51 knu Exp $
+# $Id: extconf.rb,v 1.3 2001/08/14 20:05:20 knu Exp $
+
+require "mkmf"
+
+$CFLAGS << " -DHAVE_CONFIG_H -I#{File.dirname(__FILE__)}/.."
+
+$objs = [ "md5init.#{$OBJEXT}" ]
+
+dir_config("openssl")
+
+if !with_config("bundled-md5") &&
+    have_library("crypto") && have_header("openssl/md5.h")
+  $objs << "md5ossl.#{$OBJEXT}"
+
+  $libs << " -lcrypto"
+else
+  $objs << "md5.#{$OBJEXT}"
+end
+
+have_header("sys/cdefs.h")
+
+have_header("inttypes.h")
+
+have_header("unistd.h")
+
+create_makefile("digest/md5")
+@
+
+
+1.3
+log
+@* ext/digest/*/extconf.rb: really fix so that they build from any
+  directory.
+@
+text
+@d2 1
+a2 1
+# $Id: extconf.rb,v 1.2 2001/07/14 03:29:50 knu Exp $
+d8 12
+a19 4
+$objs = [
+  "md5.#{$OBJEXT}",
+  "md5init.#{$OBJEXT}",
+]
+@
+
+
+1.3.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@d2 1
+a2 1
+# $Id: extconf.rb,v 1.3 2001/08/14 20:05:20 knu Exp $
+@
+
+
+1.2
+log
+@* ext/digest/*/extconf.rb: fix so that they build from any
+  directory.
+@
+text
+@d1 2
+a2 2
+# $RoughId: extconf.rb,v 1.1 2001/07/13 15:38:27 knu Exp $
+# $Id: extconf.rb,v 1.1 2001/07/13 20:06:14 knu Exp $
+d6 1
+a6 1
+$CFLAGS << " -DHAVE_CONFIG_H -I$(srcdir)/.."
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d2 1
+a2 1
+# $Id$
+d6 1
+a6 1
+$CFLAGS << " -DHAVE_CONFIG_H -I.."
+@

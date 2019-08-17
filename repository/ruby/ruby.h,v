@@ -1,0 +1,6036 @@
+head	1.71;
+access;
+symbols
+	v1_6_7:1.29.2.11
+	v1_6_6:1.29.2.10
+	v1_6_5:1.29.2.7
+	v1_6_4:1.29.2.6
+	v1_7_1:1.48
+	v1_6_4_preview4:1.29.2.6
+	v1_6_4_preview3:1.29.2.6
+	v1_6_4_preview2:1.29.2.6
+	v1_6_4_preview1:1.29.2.6
+	v1_6_3:1.29.2.3
+	ruby_m17n:1.30.0.2
+	ruby_1_6:1.29.0.2
+	v1_6_2:1.29
+	v1_6_1:1.26
+	v1_6_0:1.24
+	v1_4_6:1.2.2.6
+	v1_4_5:1.2.2.6
+	v1_4_4:1.2.2.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.12
+	v1_3_6_repack:1.1.1.3.2.11
+	v1_3_6:1.1.1.3.2.11
+	v1_3_5:1.1.1.3.2.11
+	v1_2_6repack:1.1.1.2.2.30
+	v1_3_4_990625:1.1.1.3.2.10
+	v1_3_4_990624:1.1.1.3.2.9
+	v1_2_6:1.1.1.2.2.30
+	v1_3_4_990611:1.1.1.3.2.8
+	v1_3_4_990531:1.1.1.3.2.7
+	v1_3_3_990518:1.1.1.3.2.6
+	v1_3_3_990513:1.1.1.3.2.6
+	v1_3_3_990507:1.1.1.3.2.5
+	v1_2_5:1.1.1.2.2.30
+	v1_2_4:1.1.1.2.2.30
+	v1_3_1_990225:1.1.1.3.2.4
+	v1_3_1_990224:1.1.1.3.2.4
+	v1_3_1_990215:1.1.1.3.2.3
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.2
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.30
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.30
+	v1_2_1repack:1.1.1.2.2.30
+	v1_2_1:1.1.1.2.2.30
+	v1_2_stable:1.1.1.2.2.30
+	v1_1d1:1.1.1.2.2.29.2.4
+	v1_1d0:1.1.1.2.2.29.2.4
+	v1_1c9_1:1.1.1.2.2.30
+	v1_1c9:1.1.1.2.2.30
+	v1_1c8:1.1.1.2.2.30
+	v1_1c7:1.1.1.2.2.30
+	v1_1c6:1.1.1.2.2.29
+	v1_1d-start:1.1.1.2.2.29.2.1
+	v1_1c5:1.1.1.2.2.29
+	v1_1dev:1.1.1.2.2.29.0.2
+	v1_1c4:1.1.1.2.2.29
+	v1_1c3:1.1.1.2.2.29
+	v1_1c2:1.1.1.2.2.28
+	v1_1c1:1.1.1.2.2.28
+	v1_1c0:1.1.1.2.2.28
+	v1_1b9_31:1.1.1.2.2.28
+	v1_1b9_30:1.1.1.2.2.27
+	v1_1b9_28:1.1.1.2.2.26
+	v1_1b9_27:1.1.1.2.2.25
+	v1_1b9_26:1.1.1.2.2.24
+	r1_1b9_25:1.1.1.2.2.24
+	r1_1b9_24:1.1.1.2.2.23
+	v1_1b9_23:1.1.1.2.2.22
+	v1_1b9_22:1.1.1.2.2.21
+	v1_1b9_20:1.1.1.2.2.20
+	v1_1b9_18:1.1.1.2.2.17
+	v1_1b9_16:1.1.1.2.2.16
+	v1_1b9_15:1.1.1.2.2.15
+	v1_1b9_13:1.1.1.2.2.15
+	v1_1b9_12:1.1.1.2.2.15
+	v1_1b9_11:1.1.1.2.2.15
+	v1_1b9_08:1.1.1.2.2.14
+	v1_1b9_07:1.1.1.2.2.14
+	r1_1b9:1.1.1.2.2.6
+	v1_1b8:1.1.1.2.2.5
+	v1_1b7:1.1.1.2.2.4
+	v1_1b6:1.1.1.2.2.3
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.71
+date	2002.10.29.21.35.28;	author knu;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.09.09.10.26.02;	author michal;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.08.29.09.08.16;	author matz;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.05.11.19.34.13;	author eban;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.04.24.04.54.14;	author matz;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.03.27.05.27.57;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.03.15.08.51.31;	author usa;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.03.14.06.23.44;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.02.18.09.52.45;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2001.12.21.07.20.23;	author nobu;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2001.12.17.07.52.35;	author nobu;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.12.10.07.23.58;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.12.10.07.18.12;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.10.29.05.07.18;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.07.19.02.46.28;	author usa;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.07.14.15.17.19;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.07.08.11.53.37;	author knu;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.05.11.06.13.45;	author eban;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.03.28.08.43.25;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.03.27.07.09.23;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.03.26.08.57.10;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.03.22.08.59.02;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.03.21.03.51.23;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.03.21.03.41.41;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.03.19.03.20.21;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.02.19.09.14.58;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.02.09.15.02.14;	author usa;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.01.29.05.10.42;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.01.23.08.08.59;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.01.10.10.07.31;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.01.10.08.09.01;	author eban;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.01.10.07.30.18;	author eban;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches
+	1.30.2.1;
+next	1.29;
+
+1.29
+date	2000.11.27.09.23.26;	author matz;	state Exp;
+branches
+	1.29.2.1;
+next	1.28;
+
+1.28
+date	2000.11.20.01.24.22;	author eban;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.10.16.09.13.20;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.09.25.09.15.03;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.09.15.06.00.28;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.08.31.05.29.54;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.08.09.04.32.18;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.08.07.06.11.34;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.07.31.04.36.38;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.07.04.04.17.14;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.06.26.15.16.03;	author eban;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.06.22.08.29.46;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.05.29.02.10.18;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.24.04.34.08;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.05.16.02.46.56;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.12.09.07.46;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.09.04.53.04;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.01.09.41.29;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.07.08.37.46;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.06.04.15.32;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.29.08.05.27;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.17.07.11.17;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.08.08.48.54;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.01.03.12.11;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.37.11;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.14.06.49.52;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.17.07.30.36;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.25;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.57;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.09.06.08.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.24.04.31.25;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.03.24.08.52.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.05.13.10.01.07;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.05.25.08.26.15;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.06.09.09.21.31;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.06.24.04.24.03;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.06.25.09.02.48;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.07.15.07.59.55;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.08.06.06.48.21;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.13;
+
+1.1.1.3.2.13
+date	99.08.10.08.47.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.14;
+
+1.1.1.3.2.14
+date	99.08.13.05.17.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.19.05.08.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.01.22.10.07.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.09.10.56.22;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.02.18.10.01.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.02.26.08.27.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.03.10.16.14;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.03.05.06.37.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.03.06.10.07.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.03.11.07.33.01;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.03.25.09.36.59;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.03.28.10.57.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.03.31.04.52.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.04.07.08.34.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.04.09.09.30.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.04.27.10.04.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.05.08.09.38.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.05.13.05.58.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.05.13.07.26.32;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.05.14.04.10.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	98.05.18.04.56.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	98.05.25.09.42.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	98.06.02.10.05.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	98.06.11.10.03.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	98.06.19.09.32.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.26;
+
+1.1.1.2.2.26
+date	98.06.26.09.44.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.27;
+
+1.1.1.2.2.27
+date	98.07.09.08.40.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.28;
+
+1.1.1.2.2.28
+date	98.07.13.04.37.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29;
+
+1.1.1.2.2.29
+date	98.08.27.03.55.31;	author matz;	state Exp;
+branches
+	1.1.1.2.2.29.2.1;
+next	1.1.1.2.2.30;
+
+1.1.1.2.2.30
+date	98.11.09.09.11.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.29.2.1
+date	98.09.08.07.09.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29.2.2;
+
+1.1.1.2.2.29.2.2
+date	98.10.06.03.28.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29.2.3;
+
+1.1.1.2.2.29.2.3
+date	98.11.25.03.31.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29.2.4;
+
+1.1.1.2.2.29.2.4
+date	98.12.16.07.30.33;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.12.14.06.50.39;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.01.17.08.24.12;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.03.23.04.14.20;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.04.10.05.48.37;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.05.30.04.21.25;	author matz;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.06.05.09.01.03;	author matz;	state Exp;
+branches;
+next	1.2.2.7;
+
+1.2.2.7
+date	2000.08.09.04.59.00;	author matz;	state Exp;
+branches;
+next	1.2.2.8;
+
+1.2.2.8
+date	2000.08.27.03.55.35;	author eban;	state Exp;
+branches;
+next	;
+
+1.29.2.1
+date	2001.02.02.11.39.51;	author matz;	state Exp;
+branches;
+next	1.29.2.2;
+
+1.29.2.2
+date	2001.02.08.09.17.57;	author matz;	state Exp;
+branches;
+next	1.29.2.3;
+
+1.29.2.3
+date	2001.02.09.15.07.52;	author usa;	state Exp;
+branches;
+next	1.29.2.4;
+
+1.29.2.4
+date	2001.03.22.08.59.26;	author matz;	state Exp;
+branches;
+next	1.29.2.5;
+
+1.29.2.5
+date	2001.03.26.08.56.04;	author matz;	state Exp;
+branches;
+next	1.29.2.6;
+
+1.29.2.6
+date	2001.03.27.07.10.56;	author matz;	state Exp;
+branches;
+next	1.29.2.7;
+
+1.29.2.7
+date	2001.07.08.11.54.55;	author knu;	state Exp;
+branches;
+next	1.29.2.8;
+
+1.29.2.8
+date	2001.12.17.08.13.17;	author nobu;	state Exp;
+branches;
+next	1.29.2.9;
+
+1.29.2.9
+date	2001.12.21.07.20.00;	author nobu;	state Exp;
+branches;
+next	1.29.2.10;
+
+1.29.2.10
+date	2001.12.25.15.09.05;	author matz;	state Exp;
+branches;
+next	1.29.2.11;
+
+1.29.2.11
+date	2002.02.27.04.50.30;	author matz;	state Exp;
+branches;
+next	1.29.2.12;
+
+1.29.2.12
+date	2002.05.01.09.37.59;	author matz;	state Exp;
+branches;
+next	;
+
+1.30.2.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	1.30.2.2;
+
+1.30.2.2
+date	2002.07.09.05.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.71
+log
+@* eval.c, file.c, gc.c, io.c, object.c, ruby.c, ruby.h, struct.c,
+  ext/socket/socket.c: differentiate long and int; use proper
+  printf type specifiers and do casts where appropriate.
+@
+text
+@/**********************************************************************
+
+  ruby.h -
+
+  $Author: michal $
+  created at: Thu Jun 10 14:26:32 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#ifndef RUBY_H
+#define RUBY_H
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+#include "config.h"
+#include "defines.h"
+
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+# include <strings.h>
+#endif
+
+#include <stddef.h>
+#include <stdio.h>
+
+/* need to include <ctype.h> to use these macros */
+#ifndef ISPRINT
+#define ISASCII(c) isascii((unsigned char)(c))
+#undef ISPRINT
+#define ISPRINT(c) (ISASCII(c) && isprint((unsigned char)(c)))
+#define ISSPACE(c) (ISASCII(c) && isspace((unsigned char)(c)))
+#define ISUPPER(c) (ISASCII(c) && isupper((unsigned char)(c)))
+#define ISLOWER(c) (ISASCII(c) && islower((unsigned char)(c)))
+#define ISALNUM(c) (ISASCII(c) && isalnum((unsigned char)(c)))
+#define ISALPHA(c) (ISASCII(c) && isalpha((unsigned char)(c)))
+#define ISDIGIT(c) (ISASCII(c) && isdigit((unsigned char)(c)))
+#define ISXDIGIT(c) (ISASCII(c) && isxdigit((unsigned char)(c)))
+#endif
+
+#ifndef NORETURN
+# define NORETURN(x) x
+#endif
+
+#if defined(HAVE_ALLOCA_H) && !defined(__GNUC__)
+#include <alloca.h>
+#endif
+
+#ifdef _AIX
+#pragma alloca
+#endif
+
+#if defined(__VMS)
+# pragma builtins
+# define alloca __alloca
+#endif
+
+#if SIZEOF_LONG != SIZEOF_VOIDP
+# error ---->> ruby requires sizeof(void*) == sizeof(long) to be compiled. <<----
+#endif
+typedef unsigned long VALUE;
+typedef unsigned long ID;
+
+#ifdef __STDC__
+# include <limits.h>
+#else
+# ifndef LONG_MAX
+#  ifdef HAVE_LIMITS_H
+#   include <limits.h>
+#  else
+    /* assuming 32bit(2's compliment) long */
+#   define LONG_MAX 2147483647
+#  endif
+# endif
+# ifndef LONG_MIN
+#  define LONG_MIN (-LONG_MAX-1)
+# endif
+# ifndef CHAR_BIT
+#  define CHAR_BIT 8
+# endif
+#endif
+
+#if HAVE_LONG_LONG
+# ifndef LLONG_MAX
+#  ifdef LONG_LONG_MAX
+#   define LLONG_MAX  LONG_LONG_MAX
+#  else
+#   ifdef _I64_MAX
+#    define LLONG_MAX _I64_MAX
+#   else
+    /* assuming 64bit(2's complement) long long */
+#    define LLONG_MAX 9223372036854775807LL
+#   endif
+#  endif
+# endif
+# ifndef LLONG_MIN
+#  ifdef LONG_LONG_MIN
+#   define LLONG_MIN  LONG_LONG_MIN
+#  else
+#   ifdef _I64_MIN
+#    define LLONG_MIN _I64_MAX
+#   else
+#    define LLONG_MIN (-LLONG_MAX-1)
+#   endif
+#  endif
+# endif
+#endif
+
+#define FIXNUM_MAX (LONG_MAX>>1)
+#define FIXNUM_MIN RSHIFT((long)LONG_MIN,1)
+
+#define FIXNUM_FLAG 0x01
+#define INT2FIX(i) ((VALUE)(((long)(i))<<1 | FIXNUM_FLAG))
+#define LONG2FIX(i) INT2FIX(i)
+#define rb_fix_new(v) INT2FIX(v)
+VALUE rb_int2inum _((long));
+#define INT2NUM(v) rb_int2inum(v)
+#define LONG2NUM(v) INT2NUM(v)
+#define rb_int_new(v) rb_int2inum(v)
+VALUE rb_uint2inum _((unsigned long));
+#define UINT2NUM(v) rb_uint2inum(v)
+#define ULONG2NUM(v) UINT2NUM(v)
+#define rb_uint_new(v) rb_uint2inum(v)
+
+#if HAVE_LONG_LONG
+VALUE rb_ll2inum _((LONG_LONG));
+#define LL2NUM(v) rb_ll2inum(v)
+VALUE rb_ull2inum _((unsigned LONG_LONG));
+#define ULL2NUM(v) rb_ull2inum(v)
+#endif
+
+#if SIZEOF_OFF_T > SIZEOF_LONG && defined(HAVE_LONG_LONG)
+# define OFFT2NUM(v) LL2NUM(v)
+#else
+# define OFFT2NUM(v) INT2NUM(v)
+#endif
+
+#define FIX2LONG(x) RSHIFT((long)x,1)
+#define FIX2ULONG(x) (((unsigned long)(x))>>1)
+#define FIXNUM_P(f) (((long)(f))&FIXNUM_FLAG)
+#define POSFIXABLE(f) ((f) <= FIXNUM_MAX)
+#define NEGFIXABLE(f) ((f) >= FIXNUM_MIN)
+#define FIXABLE(f) (POSFIXABLE(f) && NEGFIXABLE(f))
+
+#define IMMEDIATE_MASK 0x03
+#define IMMEDIATE_P(x) ((VALUE)(x) & IMMEDIATE_MASK)
+
+#define SYMBOL_FLAG 0x0e
+#define SYMBOL_P(x) (((VALUE)(x)&0xff)==SYMBOL_FLAG)
+#define ID2SYM(x) ((VALUE)(((long)(x))<<8|SYMBOL_FLAG))
+#define SYM2ID(x) RSHIFT((long)x,8)
+
+/* special contants - i.e. non-zero and non-fixnum constants */
+#define Qfalse 0
+#define Qtrue  2
+#define Qnil   4
+#define Qundef 6		/* undefined value for placeholder */
+
+#define RTEST(v) (((VALUE)(v) & ~Qnil) != 0)
+#define NIL_P(v) ((VALUE)(v) == Qnil)
+
+#define CLASS_OF(v) rb_class_of((VALUE)(v))
+
+#define T_NONE   0x00
+
+#define T_NIL    0x01
+#define T_OBJECT 0x02
+#define T_CLASS  0x03
+#define T_ICLASS 0x04
+#define T_MODULE 0x05
+#define T_FLOAT  0x06
+#define T_STRING 0x07
+#define T_REGEXP 0x08
+#define T_ARRAY  0x09
+#define T_FIXNUM 0x0a
+#define T_HASH   0x0b
+#define T_STRUCT 0x0c
+#define T_BIGNUM 0x0d
+#define T_FILE   0x0e
+
+#define T_TRUE   0x20
+#define T_FALSE  0x21
+#define T_DATA   0x22
+#define T_MATCH  0x23
+#define T_SYMBOL 0x24
+
+#define T_BLKTAG 0x3b
+#define T_UNDEF  0x3c
+#define T_VARMAP 0x3d
+#define T_SCOPE  0x3e
+#define T_NODE   0x3f
+
+#define T_MASK   0x3f
+
+#define BUILTIN_TYPE(x) (((struct RBasic*)(x))->flags & T_MASK)
+
+#define TYPE(x) rb_type((VALUE)(x))
+
+void rb_check_type _((VALUE,int));
+#define Check_Type(v,t) rb_check_type((VALUE)(v),t)
+
+VALUE rb_str_to_str _((VALUE));
+VALUE rb_string_value _((volatile VALUE*));
+char *rb_string_value_ptr _((volatile VALUE*));
+
+#define StringValue(v) if (TYPE(v) != T_STRING) rb_string_value(&(v))
+void rb_check_safe_str _((VALUE));
+#define SafeStringValue(v) do {\
+    StringValue(v);\
+    rb_check_safe_str(v);\
+} while (0)
+#define StringValuePtr(v) rb_string_value_ptr(&(v))
+/* obsolete macro - use SafeStringValue(v) */
+#define Check_SafeStr(v) rb_check_safe_str((VALUE)(v))
+
+void rb_secure _((int));
+EXTERN int ruby_safe_level;
+#define rb_safe_level() (ruby_safe_level)
+void rb_set_safe_level _((int));
+
+long rb_num2long _((VALUE));
+unsigned long rb_num2ulong _((VALUE));
+#define NUM2LONG(x) (FIXNUM_P(x)?FIX2LONG(x):rb_num2long((VALUE)x))
+#define NUM2ULONG(x) rb_num2ulong((VALUE)x)
+#if SIZEOF_INT < SIZEOF_LONG
+int rb_num2int _((VALUE));
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):rb_num2int((VALUE)x))
+int rb_fix2int _((VALUE));
+#define FIX2INT(x) rb_fix2int((VALUE)x)
+#define NUM2UINT(x) ((unsigned int)NUM2INT(x))
+#define FIX2UINT(x) ((unsigned int)FIX2INT(x))
+#else
+#define NUM2INT(x) ((int)NUM2LONG(x))
+#define NUM2UINT(x) ((unsigned int)NUM2ULONG(x))
+#define FIX2INT(x) ((int)FIX2LONG(x))
+#define FIX2UINT(x) ((unsigned int)FIX2ULONG(x))
+#endif
+
+#if HAVE_LONG_LONG
+LONG_LONG rb_num2ll _((VALUE));
+unsigned LONG_LONG rb_num2ull _((VALUE));
+# define NUM2LL(x) (FIXNUM_P(x)?FIX2LONG(x):rb_num2ll((VALUE)x))
+#endif
+
+#if HAVE_LONG_LONG && SIZEOF_OFF_T > SIZEOF_LONG
+# define NUM2OFFT(x) ((off_t)NUM2LL(x))
+#else
+# define NUM2OFFT(x) NUM2LONG(x)
+#endif
+
+double rb_num2dbl _((VALUE));
+#define NUM2DBL(x) rb_num2dbl((VALUE)(x))
+
+/* obsolete API - use StringValue() */
+char *rb_str2cstr _((VALUE,long*));
+/* obsolete API - use StringValuePtr() */
+#define STR2CSTR(x) rb_str2cstr((VALUE)(x),0)
+
+#define NUM2CHR(x) (((TYPE(x) == T_STRING)&&(RSTRING(x)->len>=1))?\
+                     RSTRING(x)->ptr[0]:(char)(NUM2INT(x)&0xff))
+#define CHR2FIX(x) INT2FIX((long)((x)&0xff))
+
+VALUE rb_newobj _((void));
+#define NEWOBJ(obj,type) type *obj = (type*)rb_newobj()
+#define OBJSETUP(obj,c,t) do {\
+    RBASIC(obj)->flags = (t);\
+    RBASIC(obj)->klass = (c);\
+    if (rb_safe_level() >= 3) FL_SET(obj, FL_TAINT);\
+} while (0)
+#define CLONESETUP(clone,obj) do {\
+    OBJSETUP(clone,rb_singleton_class_clone((VALUE)obj),RBASIC(obj)->flags);\
+    rb_singleton_class_attached(RBASIC(clone)->klass, (VALUE)clone);\
+    if (FL_TEST(obj, FL_EXIVAR)) rb_copy_generic_ivar((VALUE)clone,(VALUE)obj);\
+} while (0)
+#define DUPSETUP(dup,obj) do {\
+    OBJSETUP(dup,rb_obj_class(obj),(RBASIC(obj)->flags)&(T_MASK|FL_EXIVAR|FL_TAINT));\
+    if (FL_TEST(obj, FL_EXIVAR)) rb_copy_generic_ivar((VALUE)dup,(VALUE)obj);\
+} while (0)
+
+struct RBasic {
+    unsigned long flags;
+    VALUE klass;
+};
+
+struct RObject {
+    struct RBasic basic;
+    struct st_table *iv_tbl;
+};
+
+struct RClass {
+    struct RBasic basic;
+    struct st_table *iv_tbl;
+    struct st_table *m_tbl;
+    VALUE super;
+};
+
+struct RFloat {
+    struct RBasic basic;
+    double value;
+};
+
+#define ELTS_SHARED FL_USER2
+
+struct RString {
+    struct RBasic basic;
+    long len;
+    char *ptr;
+    union {
+	long capa;
+	VALUE shared;
+    } aux;
+};
+
+struct RArray {
+    struct RBasic basic;
+    long len;
+    union {
+	long capa;
+	VALUE shared;
+    } aux;
+    VALUE *ptr;
+};
+
+struct RRegexp {
+    struct RBasic basic;
+    struct re_pattern_buffer *ptr;
+    long len;
+    char *str;
+};
+
+struct RHash {
+    struct RBasic basic;
+    struct st_table *tbl;
+    int iter_lev;
+    VALUE ifnone;
+};
+
+struct RFile {
+    struct RBasic basic;
+    struct OpenFile *fptr;
+};
+
+struct RData {
+    struct RBasic basic;
+    void (*dmark) _((void*));
+    void (*dfree) _((void*));
+    void *data;
+};
+
+#define DATA_PTR(dta) (RDATA(dta)->data)
+
+/*
+#define RUBY_DATA_FUNC(func) ((void (*)_((void*)))func)
+*/
+typedef void (*RUBY_DATA_FUNC) _((void*));
+
+VALUE rb_data_object_alloc _((VALUE,void*,RUBY_DATA_FUNC,RUBY_DATA_FUNC));
+
+#define Data_Wrap_Struct(klass,mark,free,sval)\
+    rb_data_object_alloc(klass,sval,(RUBY_DATA_FUNC)mark,(RUBY_DATA_FUNC)free)
+
+#define Data_Make_Struct(klass,type,mark,free,sval) (\
+    sval = ALLOC(type),\
+    memset(sval, 0, sizeof(type)),\
+    Data_Wrap_Struct(klass,mark,free,sval)\
+)
+
+#define Data_Get_Struct(obj,type,sval) do {\
+    Check_Type(obj, T_DATA); \
+    sval = (type*)DATA_PTR(obj);\
+} while (0)
+
+struct RStruct {
+    struct RBasic basic;
+    long len;
+    VALUE *ptr;
+};
+
+struct RBignum {
+    struct RBasic basic;
+    char sign;
+    long len;
+    void *digits;
+};
+
+#define R_CAST(st)   (struct st*)
+#define RBASIC(obj)  (R_CAST(RBasic)(obj))
+#define ROBJECT(obj) (R_CAST(RObject)(obj))
+#define RCLASS(obj)  (R_CAST(RClass)(obj))
+#define RMODULE(obj) RCLASS(obj)
+#define RFLOAT(obj)  (R_CAST(RFloat)(obj))
+#define RSTRING(obj) (R_CAST(RString)(obj))
+#define RREGEXP(obj) (R_CAST(RRegexp)(obj))
+#define RARRAY(obj)  (R_CAST(RArray)(obj))
+#define RHASH(obj)   (R_CAST(RHash)(obj))
+#define RDATA(obj)   (R_CAST(RData)(obj))
+#define RSTRUCT(obj) (R_CAST(RStruct)(obj))
+#define RBIGNUM(obj) (R_CAST(RBignum)(obj))
+#define RFILE(obj)   (R_CAST(RFile)(obj))
+
+#define FL_SINGLETON FL_USER0
+#define FL_MARK      (1<<6)
+#define FL_FINALIZE  (1<<7)
+#define FL_TAINT     (1<<8)
+#define FL_EXIVAR    (1<<9)
+#define FL_FREEZE    (1<<10)
+
+#define FL_USHIFT    11
+
+#define FL_USER0     (1<<(FL_USHIFT+0))
+#define FL_USER1     (1<<(FL_USHIFT+1))
+#define FL_USER2     (1<<(FL_USHIFT+2))
+#define FL_USER3     (1<<(FL_USHIFT+3))
+#define FL_USER4     (1<<(FL_USHIFT+4))
+#define FL_USER5     (1<<(FL_USHIFT+5))
+#define FL_USER6     (1<<(FL_USHIFT+6))
+#define FL_USER7     (1<<(FL_USHIFT+7))
+
+#define FL_UMASK  (0xff<<FL_USHIFT)
+
+#define SPECIAL_CONST_P(x) (IMMEDIATE_P(x) || !RTEST(x))
+
+#define FL_ABLE(x) (!SPECIAL_CONST_P(x))
+#define FL_TEST(x,f) (FL_ABLE(x)?(RBASIC(x)->flags&(f)):0)
+#define FL_SET(x,f) do {if (FL_ABLE(x)) RBASIC(x)->flags |= (f);} while (0)
+#define FL_UNSET(x,f) do {if (FL_ABLE(x)) RBASIC(x)->flags &= ~(f);} while (0)
+#define FL_REVERSE(x,f) do {if (FL_ABLE(x)) RBASIC(x)->flags ^= (f);} while (0)
+
+#define OBJ_TAINTED(x) FL_TEST((x), FL_TAINT)
+#define OBJ_TAINT(x) FL_SET((x), FL_TAINT)
+#define OBJ_INFECT(x,s) do {if (FL_ABLE(x) && FL_ABLE(s)) RBASIC(x)->flags |= RBASIC(s)->flags & FL_TAINT;} while (0)
+
+#define OBJ_FROZEN(x) FL_TEST((x), FL_FREEZE)
+#define OBJ_FREEZE(x) FL_SET((x), FL_FREEZE)
+
+#define ALLOC_N(type,n) (type*)xmalloc(sizeof(type)*(n))
+#define ALLOC(type) (type*)xmalloc(sizeof(type))
+#define REALLOC_N(var,type,n) (var)=(type*)xrealloc((char*)(var),sizeof(type)*(n))
+
+#define ALLOCA_N(type,n) (type*)alloca(sizeof(type)*(n))
+
+#define MEMZERO(p,type,n) memset((p), 0, sizeof(type)*(n))
+#define MEMCPY(p1,p2,type,n) memcpy((p1), (p2), sizeof(type)*(n))
+#define MEMMOVE(p1,p2,type,n) memmove((p1), (p2), sizeof(type)*(n))
+#define MEMCMP(p1,p2,type,n) memcmp((p1), (p2), sizeof(type)*(n))
+
+void rb_glob _((char*,void(*)(const char*,VALUE),VALUE));
+void rb_globi _((char*,void(*)(const char*,VALUE),VALUE));
+
+VALUE rb_define_class _((const char*,VALUE));
+VALUE rb_define_module _((const char*));
+VALUE rb_define_class_under _((VALUE, const char*, VALUE));
+VALUE rb_define_module_under _((VALUE, const char*));
+
+void rb_include_module _((VALUE,VALUE));
+void rb_extend_object _((VALUE,VALUE));
+
+void rb_define_variable _((const char*,VALUE*));
+void rb_define_virtual_variable _((const char*,VALUE(*)(ANYARGS),void(*)(ANYARGS)));
+void rb_define_hooked_variable _((const char*,VALUE*,VALUE(*)(ANYARGS),void(*)(ANYARGS)));
+void rb_define_readonly_variable _((const char*,VALUE*));
+void rb_define_const _((VALUE,const char*,VALUE));
+void rb_define_global_const _((const char*,VALUE));
+
+#define RUBY_METHOD_FUNC(func) ((VALUE (*)(ANYARGS))func)
+void rb_define_method _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+void rb_define_module_function _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+void rb_define_global_function _((const char*,VALUE(*)(ANYARGS),int));
+
+void rb_undef_method _((VALUE,const char*));
+void rb_define_alias _((VALUE,const char*,const char*));
+void rb_define_attr _((VALUE,const char*,int,int));
+
+void rb_global_variable _((VALUE*));
+void rb_gc_register_address _((VALUE*));
+void rb_gc_unregister_address _((VALUE*));
+
+ID rb_intern _((const char*));
+char *rb_id2name _((ID));
+ID rb_to_id _((VALUE));
+
+char *rb_class2name _((VALUE));
+
+void rb_p _((VALUE));
+
+VALUE rb_eval_string _((const char*));
+VALUE rb_eval_string_protect _((const char*, int*));
+VALUE rb_eval_string_wrap _((const char*, int*));
+VALUE rb_funcall __((VALUE, ID, int, ...));
+VALUE rb_funcall2 _((VALUE, ID, int, const VALUE*));
+VALUE rb_funcall3 _((VALUE, ID, int, const VALUE*));
+int rb_scan_args __((int, const VALUE*, const char*, ...));
+VALUE rb_call_super _((int, const VALUE*));
+
+VALUE rb_gv_set _((const char*, VALUE));
+VALUE rb_gv_get _((const char*));
+VALUE rb_iv_get _((VALUE, const char*));
+VALUE rb_iv_set _((VALUE, const char*, VALUE));
+
+VALUE rb_equal _((VALUE,VALUE));
+
+EXTERN VALUE ruby_verbose, ruby_debug;
+
+NORETURN(void rb_raise __((VALUE, const char*, ...)));
+NORETURN(void rb_fatal __((const char*, ...)));
+NORETURN(void rb_bug __((const char*, ...)));
+NORETURN(void rb_sys_fail _((const char*)));
+NORETURN(void rb_iter_break _((void)));
+NORETURN(void rb_exit _((int)));
+NORETURN(void rb_notimplement _((void)));
+
+void rb_warning __((const char*, ...));		/* reports if `-w' specified */
+void rb_sys_warning __((const char*, ...));	/* reports if `-w' specified */
+void rb_warn __((const char*, ...));		/* reports always */
+
+VALUE rb_each _((VALUE));
+VALUE rb_yield _((VALUE));
+int rb_block_given_p _((void));
+VALUE rb_iterate _((VALUE(*)(VALUE),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_rescue _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_rescue2 __((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE,...));
+VALUE rb_ensure _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_catch _((const char*,VALUE(*)(ANYARGS),VALUE));
+NORETURN(void rb_throw _((const char*,VALUE)));
+
+VALUE rb_require _((const char*));
+
+void ruby_init _((void));
+void ruby_options _((int, char**));
+void ruby_run _((void));
+
+EXTERN VALUE rb_mKernel;
+EXTERN VALUE rb_mComparable;
+EXTERN VALUE rb_mEnumerable;
+EXTERN VALUE rb_mPrecision;
+EXTERN VALUE rb_mErrno;
+EXTERN VALUE rb_mFileTest;
+EXTERN VALUE rb_mGC;
+EXTERN VALUE rb_mMath;
+EXTERN VALUE rb_mProcess;
+
+EXTERN VALUE rb_cObject;
+EXTERN VALUE rb_cArray;
+EXTERN VALUE rb_cBignum;
+EXTERN VALUE rb_cClass;
+EXTERN VALUE rb_cDir;
+EXTERN VALUE rb_cData;
+EXTERN VALUE rb_cFalseClass;
+EXTERN VALUE rb_cFile;
+EXTERN VALUE rb_cFixnum;
+EXTERN VALUE rb_cFloat;
+EXTERN VALUE rb_cHash;
+EXTERN VALUE rb_cInteger;
+EXTERN VALUE rb_cIO;
+EXTERN VALUE rb_cModule;
+EXTERN VALUE rb_cNilClass;
+EXTERN VALUE rb_cNumeric;
+EXTERN VALUE rb_cProc;
+EXTERN VALUE rb_cRange;
+EXTERN VALUE rb_cRegexp;
+EXTERN VALUE rb_cString;
+EXTERN VALUE rb_cSymbol;
+EXTERN VALUE rb_cThread;
+EXTERN VALUE rb_cTime;
+EXTERN VALUE rb_cTrueClass;
+EXTERN VALUE rb_cStruct;
+
+EXTERN VALUE rb_eException;
+EXTERN VALUE rb_eStandardError;
+EXTERN VALUE rb_eSystemExit;
+EXTERN VALUE rb_eInterrupt;
+EXTERN VALUE rb_eSignal;
+EXTERN VALUE rb_eFatal;
+EXTERN VALUE rb_eArgError;
+EXTERN VALUE rb_eEOFError;
+EXTERN VALUE rb_eIndexError;
+EXTERN VALUE rb_eRangeError;
+EXTERN VALUE rb_eIOError;
+EXTERN VALUE rb_eRuntimeError;
+EXTERN VALUE rb_eSecurityError;
+EXTERN VALUE rb_eSystemCallError;
+EXTERN VALUE rb_eTypeError;
+EXTERN VALUE rb_eZeroDivError;
+EXTERN VALUE rb_eNotImpError;
+EXTERN VALUE rb_eNoMemError;
+EXTERN VALUE rb_eNoMethodError;
+EXTERN VALUE rb_eFloatDomainError;
+
+EXTERN VALUE rb_eScriptError;
+EXTERN VALUE rb_eNameError;
+EXTERN VALUE rb_eSyntaxError;
+EXTERN VALUE rb_eLoadError;
+
+EXTERN VALUE rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo;
+
+static inline VALUE
+#if defined(HAVE_PROTOTYPES)
+rb_class_of(VALUE obj)
+#else
+rb_class_of(obj)
+    VALUE obj;
+#endif
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+    if (SYMBOL_P(obj)) return rb_cSymbol;
+
+    return RBASIC(obj)->klass;
+}
+
+static inline int
+#if defined(HAVE_PROTOTYPES)
+rb_type(VALUE obj)
+#else
+rb_type(obj)
+   VALUE obj;
+#endif
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+    if (obj == Qundef) return T_UNDEF;
+    if (SYMBOL_P(obj)) return T_SYMBOL;
+    return BUILTIN_TYPE(obj);
+}
+
+static inline int
+#if defined(HAVE_PROTOTYPES)
+rb_special_const_p(VALUE obj)
+#else
+rb_special_const_p(obj)
+    VALUE obj;
+#endif
+{
+    if (SPECIAL_CONST_P(obj)) return Qtrue;
+    return Qfalse;
+}
+
+#include "intern.h"
+#include "missing.h"
+
+#if defined(EXTLIB) && defined(USE_DLN_A_OUT)
+/* hook for external modules */
+static char *dln_libs_to_be_linked[] = { EXTLIB, 0 };
+#endif
+
+#if defined(__cplusplus)
+}  /* extern "C" { */
+#endif
+
+#endif /* ifndef RUBY_H */
+@
+
+
+1.70
+log
+@capa field in RString, and RArray is now LONG (ruby-lang:458)
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d243 4
+a246 4
+#define NUM2INT(x) NUM2LONG(x)
+#define NUM2UINT(x) NUM2ULONG(x)
+#define FIX2INT(x) FIX2LONG(x)
+#define FIX2UINT(x) FIX2ULONG(x)
+@
+
+
+1.69
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d319 1
+a319 1
+	int capa;
+d328 1
+a328 1
+	int capa;
+@
+
+
+1.68
+log
+@* array.c (rb_ary_become): should not free ptr if it's shared.
+
+* eval.c (rb_alias): prohibit making an alias named "allocate" if
+  klass is a metaclass.
+
+* string.c (rb_string_value_ptr): StringValuePtr() should never
+  return NULL pointer.
+@
+text
+@d5 1
+a5 1
+  $Author: michal $
+d281 1
+a281 1
+    OBJSETUP(clone,rb_singleton_class_clone(RBASIC(obj)->klass),RBASIC(obj)->flags);\
+@
+
+
+1.67
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d214 1
+d222 1
+a222 1
+#define StringValuePtr(v) RSTRING((TYPE(v) == T_STRING) ? (v) : rb_string_value(&(v)))->ptr
+@
+
+
+1.66
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d264 1
+a264 1
+char *rb_str2cstr _((VALUE,int*));
+@
+
+
+1.65
+log
+@* forgot to commit.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d8 1
+a8 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.64
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d652 1
+@
+
+
+1.63
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d69 1
+a69 1
+---->> ruby requires sizeof(void*) == sizeof(long) to be compiled. <<----
+d274 1
+a274 1
+#define OBJSETUP(obj,c,t) {\
+d278 1
+a278 1
+}
+d368 2
+a369 3
+#define Data_Wrap_Struct(klass,mark,free,sval) (\
+    rb_data_object_alloc(klass,sval,(RUBY_DATA_FUNC)mark,(RUBY_DATA_FUNC)free)\
+)
+d377 1
+a377 1
+#define Data_Get_Struct(obj,type,sval) {\
+d380 1
+a380 1
+}
+@
+
+
+1.62
+log
+@* io.c (rb_io_sysseek): new method based on a patch from Aristarkh
+  A Zagorodnikov <xm@@bolotov-team.ru>. [new]
+
+* io.c (READ_DATA_PENDING): use !feof(fp) for default behavior.
+@
+text
+@d500 4
+a503 4
+VALUE rb_funcall2 _((VALUE, ID, int, VALUE*));
+VALUE rb_funcall3 _((VALUE, ID, int, VALUE*));
+int rb_scan_args __((int, VALUE*, const char*, ...));
+VALUE rb_call_super _((int, VALUE*));
+@
+
+
+1.61
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: usa $
+d142 1
+a142 1
+#if SIZEOF_OFF_T > SIZEOF_LONG && HAVE_LONG_LONG
+@
+
+
+1.60
+log
+@* bignum.c, intern.h (rb_ull2big, rb_ll2big, rb_ull2inum, rb_ll2inum,
+  big2ull, rb_big2ull, rb_big2ll): use LONG_LONG macro instead of
+  long long.
+* numeric.c, intern.h, ruby.h (rb_num2ll, rb_num2ull): ditto.
+* ruby.h: use _I64_MAX and _I64_MIN if they are defined (for VC++).
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d61 5
+@
+
+
+1.59
+log
+@* re.c (rb_reg_match): should clear $~ if operand is nil.
+
+* re.c (rb_reg_match2): ditto.
+
+* configure: merge Jonathan Baker's large file support patch
+  [ruby-talk:35316], with read_all patch in [ruby-talk:35470].
+
+* eval.c (rb_f_abort): optional message argument that be printed
+  on termination. [new]
+@
+text
+@d93 3
+d97 2
+a98 1
+#   define LLONG_MAX 9223372036854775807LL
+d105 5
+a109 1
+#   define LLONG_MIN (-LLONG_MAX-1)
+d131 1
+a131 1
+VALUE rb_ll2inum _((long long));
+d133 1
+a133 1
+VALUE rb_ull2inum _((unsigned long long));
+d244 2
+a245 2
+long long rb_num2ll _((VALUE));
+unsigned long long rb_num2ull _((VALUE));
+@
+
+
+1.58
+log
+@* parse.y (expr_value, arg_value, primary_value): value_expr()
+  check in place.
+
+* eval.c (block_pass): "&nil" should clear block given.
+
+* dir.c (push_braces): remove MAXPATHLEN dependency.
+
+* dir.c (dir_s_globd): ditto.
+
+* dln.c (init_funcname): ditto.
+
+* dln.c (load_1): ditto.
+
+* dln.c (dln_load): ditto.
+
+* configure.in: add GNU/Hurd switches.
+
+* pack.c (pack_pack): allows comment in template strings.
+
+* pack.c (pack_unpack): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: nobu $
+d88 18
+d122 13
+d233 12
+@
+
+
+1.57
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@a50 33
+#if !defined(__STDC__) && !defined(_MSC_VER)
+# define volatile
+#endif
+
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+
+#undef _
+#ifdef HAVE_PROTOTYPES
+# define _(args) args
+#else
+# define _(args) ()
+#endif
+
+#undef __
+#ifdef HAVE_STDARG_PROTOTYPES
+# define __(args) args
+#else
+# define __(args) ()
+#endif
+
+#ifdef __cplusplus
+#define ANYARGS ...
+#else
+#define ANYARGS
+#endif
+
+a388 10
+
+#define xmalloc ruby_xmalloc
+#define xcalloc ruby_xcalloc
+#define xrealloc ruby_xrealloc
+#define xfree ruby_xfree
+
+void *xmalloc _((long));
+void *xcalloc _((long,long));
+void *xrealloc _((void*,long));
+void xfree _((void*));
+@
+
+
+1.56
+log
+@* intern.h: add prototypes.
+  rb_gc_enable(), rb_gc_disable(), rb_gc_start(), rb_str_new5()
+  rb_str_buf_append(), rb_str_buf_cat(), rb_str_buf_cat2(),
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d55 9
+d594 1
+a594 1
+#if defined(__cplusplus)
+d611 1
+a611 1
+#if defined(__cplusplus)
+d628 1
+a628 1
+#if defined(__cplusplus)
+@
+
+
+1.55
+log
+@auxiliary routines update.
+@
+text
+@d582 2
+@
+
+
+1.54
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d38 1
+d49 1
+@
+
+
+1.53
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d250 4
+d277 2
+d283 4
+a286 1
+    VALUE orig;
+d291 5
+a295 1
+    long len, capa;
+@
+
+
+1.52
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* variable.c (rb_cvar_set): empty iv_tbl may cause infinite loop.
+
+* variable.c (rb_cvar_get): ditto.
+
+* variable.c (cvar_override_check): ditto.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+
+* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+@
+text
+@d5 1
+a5 1
+  $Author: usa $
+d38 1
+d40 8
+a47 8
+#define ISPRINT(c) isprint((unsigned char)(c))
+#define ISSPACE(c) isspace((unsigned char)(c))
+#define ISUPPER(c) isupper((unsigned char)(c))
+#define ISLOWER(c) islower((unsigned char)(c))
+#define ISALNUM(c) isalnum((unsigned char)(c))
+#define ISALPHA(c) isalpha((unsigned char)(c))
+#define ISDIGIT(c) isdigit((unsigned char)(c))
+#define ISXDIGIT(c) isxdigit((unsigned char)(c))
+@
+
+
+1.51
+log
+@* ruby.h: enable volatile directive with VC++.
+
+* regex.c: ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d491 1
+a491 1
+VALUE rb_iterate _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+@
+
+
+1.50
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d5 1
+a5 1
+  $Author: knu $
+d48 1
+a48 1
+#ifndef __STDC__
+@
+
+
+1.49
+log
+@* ruby.h: fix a wrong function name: rb_iglob() -> rb_globi().
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d247 1
+a247 1
+    if (FL_TEST(obj, FL_EXIVAR)) rb_clone_generic_ivar((VALUE)clone,(VALUE)obj);\
+@
+
+
+1.48
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d420 1
+a420 1
+void rb_iglob _((char*,void(*)(const char*,VALUE),VALUE));
+@
+
+
+1.47
+log
+@* ruby.h (rb_string_value): add volatile to avoid compiler warning.
+* string.c (rb_string_value): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d114 1
+@
+
+
+1.46
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d189 1
+a189 1
+VALUE rb_string_value _((VALUE*));
+@
+
+
+1.45
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d189 3
+a191 3
+#define StringValue(v) do {\
+    if (TYPE(v) != T_STRING) v = rb_str_to_str(v);\
+} while (0)
+a192 2
+/* obsolete macro - use SafeStringValue(v) */
+#define Check_SafeStr(v) rb_check_safe_str((VALUE)(v))
+d194 1
+a194 1
+    if (TYPE(v) != T_STRING) v = rb_str_to_str(v);\
+d197 3
+a199 3
+
+#define StringValuePtr(v) \
+    (((TYPE(v) != T_STRING) ? v = rb_str_to_str(v) : (v)), RSTRING(v)->ptr)
+a201 1
+
+@
+
+
+1.44
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d66 6
+d117 1
+d121 1
+d187 5
+d193 1
+a193 1
+/* obsolete macro - use SafeStr(v) */
+d195 2
+a196 3
+VALUE rb_str_to_str _((VALUE));
+#define SafeStr(v) do {\
+    v = rb_str_to_str(v);\
+d200 3
+d230 1
+d232 1
+a232 1
+#define str2cstr(x,l) rb_str2cstr((VALUE)(x),(l))
+d421 2
+a422 2
+void rb_glob _((char*,void(*)(),VALUE));
+void rb_iglob _((char*,void(*)(),VALUE));
+d433 2
+a434 2
+void rb_define_virtual_variable _((const char*,VALUE(*)(),void(*)()));
+void rb_define_hooked_variable _((const char*,VALUE*,VALUE(*)(),void(*)()));
+d439 4
+a442 4
+#define RUBY_METHOD_FUNC(func) ((VALUE (*)__((...)))func)
+void rb_define_method _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_module_function _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_global_function _((const char*,VALUE(*)(),int));
+d493 5
+a497 5
+VALUE rb_iterate _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_rescue _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_rescue2 __((VALUE(*)(),VALUE,VALUE(*)(),VALUE,...));
+VALUE rb_ensure _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_catch _((const char*,VALUE(*)(),VALUE));
+d560 1
+@
+
+
+1.43
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d180 1
+d182 6
+@
+
+
+1.42
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* file.c (rb_file_flock): do not trap EINTR.
+
+* missing/flock.c (flock): returns the value from lockf(2)
+  directly.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/md5/md5.h: replace by independent md5 implementation
+  contributed by L. Peter Deutsch (thanks).
+
+* ext/md5/md5init.c: adopted to Deutsch's md5 implementation.
+
+* pack.c (pack_unpack): string from P/p should be tainted.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+
+* object.c (sym_intern): new method.
+@
+text
+@d544 1
+a544 12
+#ifdef INLINE_DEFINE
+#define INLINE
+#else
+#define INLINE inline
+#endif
+
+extern INLINE VALUE rb_class_of _((VALUE));
+extern INLINE int rb_type _((VALUE));
+extern INLINE int rb_special_const_p _((VALUE));
+
+#if !defined(NO_C_INLINE) || defined(INLINE_DEFINE)
+extern INLINE VALUE
+d561 1
+a561 1
+extern INLINE int
+d578 1
+a578 1
+extern INLINE int
+a588 3
+#endif
+
+#undef INLINE
+@
+
+
+1.41
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d544 9
+a552 3
+extern inline VALUE rb_class_of _((VALUE));
+extern inline int rb_type _((VALUE));
+extern inline int rb_special_const_p _((VALUE));
+d555 4
+a558 1
+extern inline VALUE
+d561 1
+d572 4
+a575 1
+extern inline int
+d577 2
+a578 1
+    VALUE obj;
+d589 4
+a592 1
+extern inline int
+d595 1
+d601 2
+@
+
+
+1.40
+log
+@* ruby.h: rb_sys_stat -> stat
+@
+text
+@d548 4
+a551 5
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+VALUE
+rb_class_of(VALUE obj)
+d562 3
+a564 5
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+int
+rb_type(VALUE obj)
+d575 3
+a577 5
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+int
+rb_special_const_p(VALUE obj)
+d582 1
+@
+
+
+1.39
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@a594 4
+#ifndef rb_sys_stat
+#define rb_sys_stat stat
+#endif
+
+@
+
+
+1.38
+log
+@* dir.c (glob_helper): replace lstat() by stat() to follow symlink
+  in the case like 'symlink/*'.
+
+* dir.c (glob_helper): gave warning too much.
+@
+text
+@d595 4
+@
+
+
+1.37
+log
+@* string.c (rb_str_substr): "a"[1,2] should return ""; need
+  rubicon upgrade.
+@
+text
+@d5 1
+a5 1
+  $Author: usa $
+a592 4
+#endif
+
+#ifndef rb_sys_stat
+#define rb_sys_stat stat
+@
+
+
+1.36
+log
+@* win32/win32.c (win32_stat): replace stat for enable when pathname
+  ends with '/' or '\' for mswin32 on Win9X / Win2k.
+
+* win32/win32.h: ditto.
+
+* ruby.h: ditto.
+
+* dir.c (rb_glob_helper): ditto.
+
+* file.c (rb_stat, rb_file_s_stat, eaccess, check3rdbyte): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+a462 1
+void rb_warn __((const char*, ...));
+d464 2
+@
+
+
+1.35
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d594 4
+@
+
+
+1.34
+log
+@* gc.c (os_live_obj): do not list terminated object.
+
+* gc.c (os_obj_of): ditto.
+
+* gc.c (rb_gc_mark): support new T_BLKTAG tag.
+
+* gc.c (obj_free): ditto.
+
+* eval.c (new_blktag): creation of new block tag, which holds
+  destination of global jump and orphan status.
+
+* eval.c (block_pass): break from orphan Proc object will raise a
+  LocalJumpError exception.
+
+* eval.c (block_pass): behavior consistency with proc_call(). do
+  not propagate `break'.
+@
+text
+@d8 1
+a8 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.33
+log
+@inline fix
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d165 1
+@
+
+
+1.32
+log
+@NORETURN
+@
+text
+@d542 3
+a544 3
+extern INLINE VALUE rb_class_of _((VALUE));
+extern INLINE int rb_type _((VALUE));
+extern INLINE int rb_special_const_p _((VALUE));
+a545 1
+#if defined(HAVE_INLINE) || defined(RUBY_NO_INLINE)
+d547 1
+a547 1
+extern
+d549 1
+a549 1
+INLINE VALUE
+d562 1
+a562 1
+extern
+d564 1
+a564 1
+INLINE int
+d577 1
+a577 1
+extern
+d579 1
+a579 1
+INLINE int
+a584 1
+#endif
+@
+
+
+1.31
+log
+@setres[ug]id, NORETURN
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d66 1
+a66 3
+#ifdef HAVE_ATTR_NORETURN
+# define NORETURN(x) x __attribute__ ((noreturn))
+#elif !defined NORETURN
+@
+
+
+1.30
+log
+@matz
+@
+text
+@d67 3
+a69 3
+# define NORETURN __attribute__ ((noreturn))
+#else
+# define NORETURN
+d456 7
+a462 7
+void rb_raise __((VALUE, const char*, ...)) NORETURN;
+void rb_fatal __((const char*, ...)) NORETURN;
+void rb_bug __((const char*, ...)) NORETURN;
+void rb_sys_fail _((const char*)) NORETURN;
+void rb_iter_break _((void)) NORETURN;
+void rb_exit _((int)) NORETURN;
+void rb_notimplement _((void)) NORETURN;
+d475 1
+a475 1
+void rb_throw _((const char*,VALUE)) NORETURN;
+@
+
+
+1.30.2.1
+log
+@m17n fix
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d66 4
+a69 2
+#ifndef NORETURN
+# define NORETURN(x) x
+d456 7
+a462 7
+NORETURN(void rb_raise __((VALUE, const char*, ...)));
+NORETURN(void rb_fatal __((const char*, ...)));
+NORETURN(void rb_bug __((const char*, ...)));
+NORETURN(void rb_sys_fail _((const char*)));
+NORETURN(void rb_iter_break _((void)));
+NORETURN(void rb_exit _((int)));
+NORETURN(void rb_notimplement _((void)));
+d475 1
+a475 1
+NORETURN(void rb_throw _((const char*,VALUE)));
+@
+
+
+1.30.2.2
+log
+@several minor fixes.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d37 10
+a46 5
+#include "m17n.h"
+#define ISSPACE(c) m17n_isspace(ruby_default_encoding, (c))
+#define ISALPHA(c) m17n_isalpha(ruby_default_encoding, (c))
+#define ISALNUM(c) m17n_isalnum(ruby_default_encoding, (c))
+#define ISDIGIT(c) m17n_isdigit(ruby_default_encoding, (c))
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d544 9
+a552 6
+#if defined(__GNUC__) && __GNUC__ >= 2 && !defined(RUBY_NO_INLINE)
+extern __inline__ VALUE rb_class_of _((VALUE));
+extern __inline__ int rb_type _((VALUE));
+extern __inline__ int rb_special_const_p _((VALUE));
+
+extern __inline__ VALUE
+d564 4
+a567 1
+extern __inline__ int
+d579 4
+a582 1
+extern __inline__ int
+a587 5
+
+#else
+VALUE rb_class_of _((VALUE));
+int rb_type _((VALUE));
+int rb_special_const_p _((VALUE));
+@
+
+
+1.29.2.1
+log
+@* eval.c (POP_VARS): propagate DVAR_DONT_RECYCLE, if
+  SCOPE_DONT_RECYCLE of ruby_scope is set.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+a166 1
+#define T_BLKTAG 0x3b
+@
+
+
+1.29.2.2
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+@
+text
+@d545 4
+a548 3
+extern inline VALUE rb_class_of _((VALUE));
+extern inline int rb_type _((VALUE));
+extern inline int rb_special_const_p _((VALUE));
+d550 1
+a550 4
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+VALUE
+d562 1
+a562 4
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+int
+d574 1
+a574 4
+#ifndef RUBY_NO_INLINE
+extern inline
+#endif
+int
+d580 6
+@
+
+
+1.29.2.3
+log
+@* win32/win32.c (win32_stat): replace stat for enable when pathname
+  ends with '/' or '\' for mswin32 on Win9X / Win2k.
+
+* win32/win32.h: ditto.
+
+* ruby.h: ditto.
+
+* dir.c (rb_glob_helper): ditto.
+
+* file.c (rb_stat, rb_file_s_stat, eaccess, check3rdbyte): ditto.
+@
+text
+@a595 4
+#ifndef rb_sys_stat
+#define rb_sys_stat stat
+#endif
+
+@
+
+
+1.29.2.4
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d5 1
+a5 1
+  $Author: usa $
+d549 5
+a553 4
+#if !defined(NO_C_INLINE) || defined(INLINE_DEFINE)
+extern inline VALUE
+rb_class_of(obj)
+    VALUE obj;
+d564 5
+a568 3
+extern inline int
+rb_type(obj)
+    VALUE obj;
+d579 5
+a583 3
+extern inline int
+rb_special_const_p(obj)
+    VALUE obj;
+a587 1
+#endif
+@
+
+
+1.29.2.5
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d545 3
+a547 9
+#ifdef INLINE_DEFINE
+#define INLINE
+#else
+#define INLINE inline
+#endif
+
+extern INLINE VALUE rb_class_of _((VALUE));
+extern INLINE int rb_type _((VALUE));
+extern INLINE int rb_special_const_p _((VALUE));
+d550 1
+a550 4
+extern INLINE VALUE
+#if defined(__cplusplus)
+rb_class_of(VALUE obj)
+#else
+a552 1
+#endif
+d563 1
+a563 4
+extern INLINE int
+#if defined(__cplusplus)
+rb_type(VALUE obj)
+#else
+d565 1
+a565 2
+   VALUE obj;
+#endif
+d576 1
+a576 4
+extern INLINE int
+#if defined(__cplusplus)
+rb_special_const_p(VALUE obj)
+#else
+a578 1
+#endif
+a583 2
+
+#undef INLINE
+@
+
+
+1.29.2.6
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d545 12
+a556 1
+static inline VALUE
+d573 1
+a573 1
+static inline int
+d590 1
+a590 1
+static inline int
+d601 3
+@
+
+
+1.29.2.7
+log
+@* ruby.h: fix a wrong function name: rb_iglob() -> rb_globi().
+@
+text
+@d401 1
+a401 1
+void rb_globi _((char*,void(*)(),VALUE));
+@
+
+
+1.29.2.8
+log
+@* intern.h: add prototypes.
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d5 1
+a5 1
+  $Author: knu $
+a543 2
+
+EXTERN VALUE rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo;
+@
+
+
+1.29.2.9
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@d5 1
+a5 1
+  $Author: nobu $
+a51 9
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+
+d548 1
+a548 1
+#if defined(HAVE_PROTOTYPES)
+d565 1
+a565 1
+#if defined(HAVE_PROTOTYPES)
+d582 1
+a582 1
+#if defined(HAVE_PROTOTYPES)
+@
+
+
+1.29.2.10
+log
+@* stable version 1.6.6 released.
+@
+text
+@a37 1
+#ifndef ISUPPER
+a46 1
+#endif
+@
+
+
+1.29.2.11
+log
+@* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+a76 6
+#ifdef __cplusplus
+#define ANYARGS ...
+#else
+#define ANYARGS
+#endif
+ 
+d411 2
+a412 2
+void rb_glob _((char*,void(*)(const char*,VALUE),VALUE));
+void rb_iglob _((char*,void(*)(const char*,VALUE),VALUE));
+d423 2
+a424 2
+void rb_define_virtual_variable _((const char*,VALUE(*)(ANYARGS),void(*)(ANYARGS)));
+void rb_define_hooked_variable _((const char*,VALUE*,VALUE(*)(ANYARGS),void(*)(ANYARGS)));
+d429 4
+a432 4
+#define RUBY_METHOD_FUNC(func) ((VALUE (*)(ANYARGS))func)
+void rb_define_method _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+void rb_define_module_function _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+void rb_define_global_function _((const char*,VALUE(*)(ANYARGS),int));
+d482 5
+a486 5
+VALUE rb_iterate _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_rescue _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_rescue2 __((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE,...));
+VALUE rb_ensure _((VALUE(*)(ANYARGS),VALUE,VALUE(*)(ANYARGS),VALUE));
+VALUE rb_catch _((const char*,VALUE(*)(ANYARGS),VALUE));
+@
+
+
+1.29.2.12
+log
+@* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* eval.c (rb_thread_cleanup): current thread may be THREAD_STOPPED,
+  for example when terminated from signal handler.
+
+* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+
+* pack.c (pack_unpack): should treat 'U' in character unit, not in
+  byte unit.
+
+* marshal.c (w_uclass): should check based on rb_obj_class(), not
+  CLASS_OF().
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+
+* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+@
+text
+@a126 1
+#define LONG2FIX(i) INT2FIX(i)
+a129 1
+#define LONG2NUM(v) INT2NUM(v)
+a132 1
+#define ULONG2NUM(v) UINT2NUM(v)
+@
+
+
+1.28
+log
+@eban
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d383 3
+a385 3
+void *xmalloc _((size_t));
+void *xcalloc _((size_t,size_t));
+void *xrealloc _((void*,size_t));
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d400 1
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d197 2
+a198 2
+#define NUM2UINT(x) ((unsigned int)NUM2ULONG(x))
+#define FIX2UINT(x) ((unsigned int)FIX2ULONG(x))
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d139 1
+a139 1
+#define RTEST(v) ((VALUE)(v) & ~Qnil)
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d397 1
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d470 1
+a470 1
+VALUE rb_rescue2 _((VALUE(*)(),VALUE,VALUE,VALUE(*)(),VALUE));
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d220 1
+a221 1
+    RBASIC(obj)->flags = (t);\
+d225 1
+a225 2
+    RBASIC(clone)->flags = (RBASIC(obj)->flags);\
+    RBASIC(obj)->klass = (rb_singleton_class_clone(RBASIC(obj)->klass));\
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d225 2
+a226 1
+    OBJSETUP(clone,rb_singleton_class_clone(RBASIC(obj)->klass),RBASIC(obj)->flags);\
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+a527 2
+EXTERN VALUE rb_eLoadError;
+EXTERN VALUE rb_eNameError;
+a529 1
+EXTERN VALUE rb_eSyntaxError;
+d536 5
+@
+
+
+1.19
+log
+@2000-06-27
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d470 1
+@
+
+
+1.18
+log
+@2000-06-22
+@
+text
+@d5 1
+a5 1
+  $Author: eban $
+d293 1
+d295 9
+a303 1
+VALUE rb_data_object_alloc _((VALUE,void*,void (*) _((void*)),void (*) _((void*))));
+d307 1
+a307 5
+    rb_data_object_alloc(klass,sval,mark,free)\
+)
+
+#define Data_Wrap_Struct(klass,mark,free,sval) (\
+    rb_data_object_alloc(klass,sval,mark,free)\
+@
+
+
+1.17
+log
+@see ChangeLog.
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d293 1
+d410 1
+@
+
+
+1.16
+log
+@2000-05-24
+@
+text
+@d392 2
+@
+
+
+1.15
+log
+@remove configure from repositry
+@
+text
+@d458 1
+a458 1
+int rb_iterator_p _((void));
+@
+
+
+1.14
+log
+@2000-05-12
+@
+text
+@d372 5
+d380 2
+@
+
+
+1.13
+log
+@2000-05-09
+@
+text
+@d361 3
+a363 3
+#define FL_SET(x,f) (FL_ABLE(x) && (RBASIC(x)->flags |= (f)))
+#define FL_UNSET(x,f) (FL_ABLE(x) && (RBASIC(x)->flags &= ~(f)))
+#define FL_REVERSE(x,f) (FL_ABLE(x) && (RBASIC(x)->flags ^= (f)))
+d367 1
+a367 1
+#define OBJ_INFECT(x,s) (FL_ABLE(x) && FL_ABLE(s) && (RBASIC(x)->flags |= RBASIC(s)->flags & FL_TAINT))
+d397 2
+a398 2
+void rb_define_constants _((VALUE,const char*,VALUE));
+void rb_define_global_constants _((const char*,VALUE));
+@
+
+
+1.12
+log
+@2000-05-01
+@
+text
+@d10 1
+a10 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+a73 10
+#endif
+
+#if defined(__CYGWIN32__)
+#if defined(USEIMPORTLIB)
+#include "import.h"
+#else
+#if !defined(__CYGWIN__)
+#define environ (*__imp___cygwin_environ)
+#endif
+#endif
+@
+
+
+1.11
+log
+@2000-03-07
+@
+text
+@d1 1
+a1 1
+/************************************************
+d9 2
+d12 1
+a12 1
+*************************************************/
+d557 1
+a557 1
+    if (obj == Qtrue) return T_UNDEF;
+@
+
+
+1.10
+log
+@2000-03-06
+@
+text
+@d117 1
+a117 1
+#define INT2FIX(i) (VALUE)(((long)(i))<<1 | FIXNUM_FLAG)
+d133 8
+d173 1
+d175 1
+d365 1
+a365 1
+#define SPECIAL_CONST_P(x) (FIXNUM_P((VALUE)x) || (VALUE)(x) <= Qundef)
+d502 1
+d517 1
+d543 1
+d555 2
+@
+
+
+1.9
+log
+@2000-02-29
+@
+text
+@d425 1
+@
+
+
+1.8
+log
+@2000-02-17
+@
+text
+@d182 1
+a182 1
+extern int ruby_safe_level;
+@
+
+
+1.7
+log
+@2000-02-08
+@
+text
+@d118 1
+d121 1
+d124 1
+@
+
+
+1.6
+log
+@2000-02-01
+@
+text
+@d403 4
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d163 3
+a165 3
+#define T_VARMAP 0x7d
+#define T_SCOPE  0x7e
+#define T_NODE   0x7f
+d167 1
+a167 1
+#define T_MASK   0x7f
+d179 4
+d333 5
+a337 4
+#define FL_MARK      (1<<7)
+#define FL_FINALIZE  (1<<8)
+#define FL_TAINT     (1<<9)
+#define FL_EXIVAR    (1<<10)
+d364 3
+a426 3
+
+int rb_safe_level _((void));
+void rb_set_safe_level _((int));
+@
+
+
+1.4
+log
+@19991214
+@
+text
+@d8 1
+a8 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d134 1
+d136 1
+a136 1
+#define RTEST(v) rb_test_false_or_nil((VALUE)(v))
+d310 1
+a310 1
+    unsigned short *digits;
+d347 3
+a349 1
+#define FL_ABLE(x) (!(FIXNUM_P(x)||rb_special_const_p((VALUE)(x))))
+d351 3
+a353 3
+#define FL_SET(x,f) if (FL_ABLE(x)) {RBASIC(x)->flags |= (f);}
+#define FL_UNSET(x,f) if(FL_ABLE(x)){RBASIC(x)->flags &= ~(f);}
+#define FL_REVERSE(x,f) if(FL_ABLE(x)){RBASIC(x)->flags ^= f;}
+d357 1
+a509 1
+extern __inline__ int rb_test_false_or_nil _((VALUE));
+d535 1
+a535 4
+    if (FIXNUM_P(obj)) return Qtrue;
+    if (obj == Qnil) return Qtrue;
+    if (obj == Qfalse) return Qtrue;
+    if (obj == Qtrue) return Qtrue;;
+a538 5
+extern __inline__ int
+rb_test_false_or_nil(VALUE v)
+{
+    return (v != Qnil) && (v != Qfalse);
+}
+a542 1
+int rb_test_false_or_nil _((VALUE));
+@
+
+
+1.3
+log
+@19991117
+@
+text
+@d92 1
+a92 1
+typedef unsigned int ID;
+d120 2
+d276 2
+a277 2
+    void (*dmark)();
+    void (*dfree)();
+d283 1
+a283 1
+VALUE rb_data_object_alloc _((VALUE,void*,void (*)(),void (*)()));
+d380 2
+a381 2
+void rb_define_shared_variable _((VALUE,const char*,VALUE));
+void rb_define_global_shared_variable _((const char*,VALUE));
+d499 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d378 2
+a379 2
+void rb_define_const _((VALUE,const char*,VALUE));
+void rb_define_global_const _((const char*,VALUE));
+d405 2
+a408 3
+VALUE rb_const_get _((VALUE, ID));
+VALUE rb_const_get_at _((VALUE, ID));
+void rb_const_set _((VALUE, ID, VALUE));
+@
+
+
+1.2.2.1
+log
+@19991214
+@
+text
+@d92 1
+a92 1
+typedef unsigned long ID;
+a119 2
+VALUE rb_uint2inum _((unsigned long));
+#define UINT2NUM(v) rb_uint2inum(v)
+@
+
+
+1.2.2.2
+log
+@2000-01-17
+@
+text
+@d8 1
+a8 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.3
+log
+@2000-03-23
+@
+text
+@a194 1
+#define SYM2ID(x) FIX2INT(x)
+a406 2
+VALUE rb_gv_set _((const char*, VALUE));
+VALUE rb_gv_get _((const char*));
+@
+
+
+1.2.2.4
+log
+@2000-04-10
+@
+text
+@a194 1
+#define ID2SYM(x) INT2FIX(x)
+@
+
+
+1.2.2.5
+log
+@2000-05-30
+@
+text
+@d74 10
+@
+
+
+1.2.2.6
+log
+@2000-06-05
+@
+text
+@a346 5
+#define xmalloc ruby_xmalloc
+#define xcalloc ruby_xcalloc
+#define xrealloc ruby_xrealloc
+#define xfree ruby_xfree
+
+a349 2
+void xfree _((void*));
+
+@
+
+
+1.2.2.7
+log
+@matz
+@
+text
+@d202 1
+a203 1
+    RBASIC(obj)->klass = (c);\
+@
+
+
+1.2.2.8
+log
+@eban
+@
+text
+@a21 4
+#if defined HAVE__MKTEMP && !defined mktemp
+#define mktemp _mktemp
+#endif
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a5 1
+  $Date: 1996/12/25 08:54:52 $
+d8 1
+a8 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 4
+a19 1
+
+d26 20
+d48 6
+a53 5
+# ifdef __GNUC__
+#  define const __const__
+# else
+#  define const
+# endif
+d55 11
+d67 1
+a67 1
+# define _(args) args
+d74 10
+d88 5
+a92 6
+typedef unsigned int UINT;
+typedef UINT VALUE;
+typedef UINT ID;
+
+typedef unsigned short USHORT;
+typedef unsigned char UCHAR;
+d101 2
+a102 1
+#   define LONG_MAX 2147483647	/* assuming 32bit(2's compliment) LONG */
+d106 1
+a106 5
+#  if (0 != ~0)
+#   define LONG_MIN (-LONG_MAX-1)
+#  else
+#   define LONG_MIN (-LONG_MAX)
+#  endif
+d117 7
+a123 13
+#define INT2FIX(i) (VALUE)(((int)(i))<<1 | FIXNUM_FLAG)
+VALUE int2inum _((int));
+#define INT2NUM(v) int2inum(v)
+
+#if (-1==(((-1)<<1)&FIXNUM_FLAG)>>1)
+# define RSHIFT(x,y) ((x)>>y)
+#else
+# define RSHIFT(x,y) (((x)<0) ? ~((~(x))>>y) : (x)>>y)
+#endif
+#define FIX2INT(x) RSHIFT((int)x,1)
+
+#define FIX2UINT(f) ((UINT)(f)>>1)
+#define FIXNUM_P(f) (((int)(f))&FIXNUM_FLAG)
+d129 3
+a131 5
+#undef FALSE 
+#define FALSE 0
+#undef TRUE
+#define TRUE  2
+#define Qnil 4
+d133 1
+a133 2
+int rb_test_false_or_nil _((VALUE));
+# define RTEST(v) rb_test_false_or_nil((VALUE)(v))
+d136 1
+a136 1
+extern VALUE cObject;
+d138 1
+a138 2
+VALUE rb_class_of _((VALUE));
+#define CLASS_OF(v) rb_class_of((VALUE)(v))
+d140 14
+a153 14
+#define T_NIL    0x00
+#define T_OBJECT 0x01
+#define T_CLASS  0x02
+#define T_ICLASS 0x03
+#define T_MODULE 0x04
+#define T_FLOAT  0x05
+#define T_STRING 0x06
+#define T_REGEXP 0x07
+#define T_ARRAY  0x08
+#define T_FIXNUM 0x09
+#define T_HASH   0x0a
+#define T_STRUCT 0x0b
+#define T_BIGNUM 0x0c
+#define T_FILE   0x0d
+d160 3
+a162 3
+#define T_VARMAP 0xfd
+#define T_SCOPE  0xfe
+#define T_NODE   0xff
+d164 1
+a164 1
+#define T_MASK   0xff
+a167 1
+int rb_type _((VALUE));
+d176 17
+a192 3
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):num2int(x))
+VALUE num2fix _((VALUE));
+int   num2int _((VALUE));
+d194 12
+d208 1
+a208 1
+    RBASIC(obj)->class = (c);\
+d210 1
+d212 5
+a216 2
+#define CLONESETUP(obj1,obj2) \
+    OBJSETUP(obj1,RBASIC(obj2)->class,RBASIC(obj2)->flags);
+d219 2
+a220 2
+    UINT flags;
+    VALUE class;
+d232 1
+a232 1
+    struct RClass *super;
+d242 3
+a244 3
+    UINT len;
+    UCHAR *ptr;
+    struct RString *orig;
+d249 1
+a249 1
+    UINT len, capa;
+d256 2
+a257 2
+    UINT len;
+    UCHAR *str;
+d264 1
+a264 1
+    UINT status;
+d281 2
+a282 2
+VALUE data_object_alloc _((VALUE,void*,void (*)(),void (*)()));
+#define Data_Make_Struct(class,type,mark,free,sval) (\
+d285 1
+a285 1
+    data_object_alloc(class,sval,mark,free)\
+d288 2
+a289 2
+#define Data_Wrap_Struct(class,mark,free,sval) (\
+    data_object_alloc(class,sval,mark,free)\
+d299 1
+a299 1
+    UINT len;
+d306 2
+a307 2
+    UINT len;
+    USHORT *digits;
+d310 1
+a310 1
+#define R_CAST(st) (struct st*)
+d314 1
+d325 5
+a329 3
+#define FL_SINGLETON (1<<8)
+#define FL_MARK      (1<<9)
+#define FL_FINALIZE  (1<<10)
+d340 1
+d342 1
+a342 1
+#define FL_UMASK  (0x7f<<FL_USHIFT)
+a343 1
+int rb_special_const_p _((VALUE));
+d350 6
+d366 4
+a369 3
+void *xmalloc _((unsigned long));
+void *xcalloc _((unsigned long,unsigned long));
+void *xrealloc _((void*,unsigned long));
+a370 2
+VALUE rb_define_class _((char*,VALUE));
+VALUE rb_define_module _((char*));
+d374 14
+a387 11
+void rb_define_variable _((char*,VALUE*));
+void rb_define_virtual_variable _((char*,VALUE(*)(),void(*)()));
+void rb_define_hooked_variable _((char*,VALUE*,VALUE(*)(),void(*)()));
+void rb_define_const _((VALUE,char*,VALUE));
+void rb_define_global_const _((char*,VALUE));
+
+void rb_define_method _((VALUE,char*,VALUE(*)(),int));
+void rb_define_singleton_method _((VALUE,char*,VALUE(*)(),int));
+void rb_undef_method _((VALUE,char*));
+void rb_define_alias _((VALUE,char*,char*));
+void rb_define_attr _((VALUE,ID,int));
+d389 1
+a389 1
+ID rb_intern _((char*));
+a393 1
+int rb_method_boundp _((VALUE,ID,int));
+d395 1
+a395 8
+VALUE rb_eval_string _((char*));
+VALUE rb_funcall();
+int rb_scan_args();
+
+VALUE rb_iv_get();
+VALUE rb_iv_set();
+void rb_const_set();
+VALUE rb_const_get();
+d397 13
+a409 2
+VALUE rb_yield();
+int iterator_p();
+d413 1
+a413 1
+extern int verbose, debug;
+d415 1
+a415 1
+int rb_safe_level();
+d418 124
+a541 13
+#ifdef __GNUC__
+typedef void voidfn ();
+volatile voidfn Raise;
+volatile voidfn Fail;
+volatile voidfn Fatal;
+volatile voidfn Bug;
+volatile voidfn WrongType;
+volatile voidfn rb_sys_fail;
+volatile voidfn rb_break;
+volatile voidfn rb_exit;
+volatile voidfn rb_fatal;
+volatile voidfn rb_raise;
+volatile voidfn rb_notimplement;
+d543 4
+a546 11
+void Raise();
+void Fail();
+void Fatal();
+void Bug();
+void WrongType();
+void rb_sys_fail();
+void rb_break();
+void rb_exit();
+void rb_fatal();
+void rb_raise();
+void rb_notimplement();
+d549 1
+a549 2
+void Error();
+void Warning();
+d553 1
+a553 1
+static char *libs_to_be_linked[] = { EXTLIB, 0 };
+d556 2
+d559 2
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@a23 6
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+# include <strings.h>
+#endif
+
+d44 1
+a44 10
+typedef unsigned short USHORT;
+typedef unsigned long UINT;
+
+#if SIZEOF_INT == SIZEOF_VOIDP
+typedef int INT;
+#elif SIZEOF_LONG == SIZEOF_VOIDP
+typedef long INT;
+#else
+---->> ruby requires sizeof(void*) == sizeof(int/long) to be compiled. <<----
+#endif
+d46 1
+a46 1
+typedef unsigned int ID;
+d48 1
+d74 1
+a74 1
+#define FIXNUM_MIN RSHIFT((INT)LONG_MIN,1)
+d77 2
+a78 2
+#define INT2FIX(i) (VALUE)(((INT)(i))<<1 | FIXNUM_FLAG)
+VALUE int2inum _((INT));
+d86 1
+a86 1
+#define FIX2INT(x) RSHIFT((INT)x,1)
+d88 2
+a89 2
+#define FIX2UINT(f) (((UINT)(f))>>1)
+#define FIXNUM_P(f) (((long)(f))&FIXNUM_FLAG)
+d96 1
+d98 2
+a99 6
+#define FALSE  0
+#define TRUE   2
+#define NIL    4
+#define Qfalse 0
+#define Qtrue  2
+#define Qnil   4
+d101 1
+d138 1
+d147 2
+a149 4
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):num2int(x))
+
+double num2dbl _((VALUE));
+#define NUM2DBL(x) num2dbl((VALUE)(x))
+a150 1
+VALUE rb_newobj _((void));
+d156 2
+a157 4
+#define CLONESETUP(clone,obj) {\
+    OBJSETUP(clone,singleton_class_clone(RBASIC(obj)->class),RBASIC(obj)->flags);\
+    singleton_class_attached(RBASIC(clone)->class, (VALUE)clone);\
+}
+d173 1
+a173 1
+    VALUE super;
+d185 1
+a185 1
+    VALUE orig;
+d281 1
+a287 32
+#if defined(__GNUC__) && __GNUC__ >= 2 && !defined(RUBY_NO_INLINE)
+extern __inline__ int
+rb_type(VALUE obj)
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == FALSE) return T_FALSE;
+    if (obj == TRUE) return T_TRUE;
+
+    return BUILTIN_TYPE(obj);
+}
+
+extern __inline__ int
+rb_special_const_p(VALUE obj)
+{
+    return (FIXNUM_P(obj)||obj == Qnil||obj == FALSE||obj == TRUE)?TRUE:FALSE;
+}
+
+extern __inline__ int
+rb_test_false_or_nil(VALUE v)
+{
+    return (v != Qnil) && (v != FALSE);
+}
+#else
+int rb_type _((VALUE));
+int rb_special_const_p _((VALUE));
+int rb_test_false_or_nil _((VALUE));
+#endif
+
+void *xmalloc _((unsigned long));
+void *xcalloc _((unsigned long,unsigned long));
+void *xrealloc _((void*,unsigned long));
+d298 4
+a303 3
+VALUE rb_define_class_under _((VALUE, char *, VALUE));
+VALUE rb_define_module_under _((VALUE, char *));
+
+a309 1
+void rb_define_readonly_variable _((char*,VALUE*));
+d314 1
+a314 4
+void rb_define_function _((VALUE,char*,VALUE(*)(),int));
+void rb_define_module_function _((VALUE,char*,VALUE(*)(),int));
+void rb_define_global_function _((char *, VALUE (*)(), int));
+
+d317 1
+a317 1
+void rb_define_attr _((VALUE,ID,int,int));
+d324 1
+a324 2
+
+void rb_p _((VALUE));
+d330 7
+a336 5
+VALUE rb_iv_get _((VALUE, char *));
+VALUE rb_iv_set _((VALUE, char *, VALUE));
+VALUE rb_const_get _((VALUE, ID));
+VALUE rb_const_get_at _((VALUE, ID));
+void rb_const_set _((VALUE, ID, VALUE));
+d340 1
+a340 1
+extern VALUE verbose, debug;
+d342 1
+a342 1
+int rb_safe_level _((void));
+d353 1
+a353 1
+volatile voidfn rb_iter_break;
+d364 6
+a369 6
+void rb_sys_fail _((char *));
+void rb_iter_break _((void));
+void rb_exit _((int));
+void rb_raise _((VALUE));
+void rb_fatal _((VALUE));
+void rb_notimplement _((void));
+a373 9
+
+VALUE rb_each _((VALUE));
+VALUE rb_yield _((VALUE));
+int iterator_p _((void));
+VALUE rb_iterate();
+VALUE rb_rescue();
+VALUE rb_ensure();
+
+#include "intern.h"
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:33 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d16 1
+a16 3
+#if defined(__cplusplus)
+extern "C" {
+#endif
+a17 1
+#include "config.h"
+a19 6
+#if 0
+#ifndef RUBY_RENAME
+#include "rename2.h"
+#endif
+#endif
+
+a29 13
+#include <stddef.h>
+#include <stdio.h>
+
+/* need to include <ctype.h> to use these macros */
+#define ISSPACE(c) isspace((unsigned char)(c))
+#define ISUPPER(c) isupper((unsigned char)(c))
+#define ISLOWER(c) islower((unsigned char)(c))
+#define ISPRINT(c) isprint((unsigned char)(c))
+#define ISALNUM(c) isalnum((unsigned char)(c))
+#define ISALPHA(c) isalpha((unsigned char)(c))
+#define ISDIGIT(c) isdigit((unsigned char)(c))
+#define ISXDIGIT(c) isxdigit((unsigned char)(c))
+
+a36 5
+#endif
+
+#ifdef HAVE_PROTOTYPES
+# define _(args) args
+#else
+a37 4
+#endif
+
+#ifdef HAVE_STDARG_PROTOTYPES
+# define __(args) args
+d39 1
+a39 7
+# define __(args) ()
+#endif
+
+#ifdef HAVE_ATTR_NORETURN
+# define NORETURN __attribute__ ((noreturn))
+#else
+# define NORETURN
+a45 8
+#if defined(__CYGWIN32__)
+#if defined(DLLIMPORT)
+#include "import.h"
+#else
+#define environ (*__imp___cygwin_environ)
+#endif
+#endif
+
+d50 11
+a60 4
+#if SIZEOF_LONG != SIZEOF_VOIDP
+---->> ruby requires sizeof(void*) == sizeof(long) to be compiled. <<----
+# endif
+typedef unsigned long VALUE;
+d63 2
+d72 1
+a72 2
+    /* assuming 32bit(2's compliment) long */
+#   define LONG_MAX 2147483647
+d76 5
+a80 1
+#  define LONG_MIN (-LONG_MAX-1)
+d88 1
+a88 1
+#define FIXNUM_MIN RSHIFT((long)LONG_MIN,1)
+d91 10
+a100 3
+#define INT2FIX(i) (VALUE)(((long)(i))<<1 | FIXNUM_FLAG)
+VALUE rb_int2inum _((long));
+#define INT2NUM(v) rb_int2inum(v)
+d102 1
+a102 2
+#define FIX2LONG(x) RSHIFT((long)x,1)
+#define FIX2ULONG(x) (((unsigned long)(x))>>1)
+d109 5
+d121 3
+d126 14
+a139 16
+#define T_NONE   0x00
+
+#define T_NIL    0x01
+#define T_OBJECT 0x02
+#define T_CLASS  0x03
+#define T_ICLASS 0x04
+#define T_MODULE 0x05
+#define T_FLOAT  0x06
+#define T_STRING 0x07
+#define T_REGEXP 0x08
+#define T_ARRAY  0x09
+#define T_FIXNUM 0x0a
+#define T_HASH   0x0b
+#define T_STRUCT 0x0c
+#define T_BIGNUM 0x0d
+#define T_FILE   0x0e
+d146 3
+a148 3
+#define T_VARMAP 0x7d
+#define T_SCOPE  0x7e
+#define T_NODE   0x7f
+d150 1
+a150 1
+#define T_MASK   0x7f
+d162 5
+a166 28
+long rb_num2long _((VALUE));
+unsigned long rb_num2ulong _((VALUE));
+#define NUM2LONG(x) (FIXNUM_P(x)?FIX2INT(x):rb_num2long((VALUE)x))
+#define NUM2ULONG(x) rb_num2ulong((VALUE)x)
+#if SIZEOF_INT < SIZEOF_LONG
+int rb_num2int _((VALUE));
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):rb_num2int((VALUE)x))
+int rb_fix2int _((VALUE));
+#define FIX2INT(x) rb_fix2int((VALUE)x)
+#define NUM2UINT(x) ((unsigned int)NUM2ULONG(x))
+#define FIX2UINT(x) ((unsigned int)FIX2ULONG(x))
+#else
+#define NUM2INT(x) NUM2LONG(x)
+#define NUM2UINT(x) NUM2ULONG(x)
+#define FIX2INT(x) FIX2LONG(x)
+#define FIX2UINT(x) FIX2ULONG(x)
+#endif
+
+double rb_num2dbl _((VALUE));
+#define NUM2DBL(x) rb_num2dbl((VALUE)(x))
+
+char *rb_str2cstr _((VALUE,int*));
+#define str2cstr(x,l) rb_str2cstr((VALUE)(x),(l))
+#define STR2CSTR(x) rb_str2cstr((VALUE)(x),0)
+
+#define NUM2CHR(x) (((TYPE(x) == T_STRING)&&(RSTRING(x)->len>=1))?\
+                     RSTRING(x)->ptr[0]:(char)NUM2INT(x))
+#define CHR2FIX(x) INT2FIX((int)x)
+d171 1
+a171 1
+    RBASIC(obj)->klass = (c);\
+a172 1
+    if (rb_safe_level() >= 3) FL_SET(obj, FL_TAINT);\
+d175 2
+a176 2
+    OBJSETUP(clone,rb_singleton_class_clone(RBASIC(obj)->klass),RBASIC(obj)->flags);\
+    rb_singleton_class_attached(RBASIC(clone)->klass, (VALUE)clone);\
+d180 2
+a181 2
+    unsigned long flags;
+    VALUE klass;
+d203 2
+a204 2
+    size_t len;
+    char *ptr;
+d210 1
+a210 1
+    size_t len, capa;
+d217 2
+a218 2
+    size_t len;
+    char *str;
+d225 1
+a225 1
+    VALUE ifnone;
+a229 1
+    struct st_table *iv_tbl;
+a239 1
+extern VALUE rb_cData;
+d242 2
+a243 2
+VALUE rb_data_object_alloc _((VALUE,void*,void (*)(),void (*)()));
+#define Data_Make_Struct(klass,type,mark,free,sval) (\
+d246 1
+a246 1
+    rb_data_object_alloc(klass,sval,mark,free)\
+d249 2
+a250 2
+#define Data_Wrap_Struct(klass,mark,free,sval) (\
+    rb_data_object_alloc(klass,sval,mark,free)\
+d260 1
+a260 1
+    size_t len;
+d267 2
+a268 2
+    size_t len;
+    unsigned short *digits;
+d271 1
+a271 1
+#define R_CAST(st)   (struct st*)
+a274 1
+#define RMODULE(obj) RCLASS(obj)
+d285 3
+a287 5
+#define FL_SINGLETON FL_USER0
+#define FL_MARK      (1<<7)
+#define FL_FINALIZE  (1<<8)
+#define FL_TAINT     (1<<9)
+#define FL_EXIVAR    (1<<10)
+a297 1
+#define FL_USER7     (1<<(FL_USHIFT+7))
+d299 1
+a299 1
+#define FL_UMASK  (0xff<<FL_USHIFT)
+d307 11
+a317 2
+#define OBJ_TAINTED(x) FL_TEST((x), FL_TAINT)
+#define OBJ_TAINT(x) FL_SET((x), FL_TAINT)
+d319 20
+a338 3
+void *xmalloc _((size_t));
+void *xcalloc _((size_t,size_t));
+void *xrealloc _((void*,size_t));
+d365 1
+d367 1
+a367 1
+void rb_define_global_function _((char*,VALUE(*)(),int));
+d371 1
+a371 1
+void rb_define_attr _((VALUE,char*,int,int));
+d382 2
+a383 3
+VALUE rb_eval_string_protect _((char*, int*));
+VALUE rb_funcall __((VALUE, ID, int, ...));
+int rb_scan_args __((int, VALUE*, char*, ...));
+d393 1
+a393 1
+EXTERN VALUE rb_verbose, rb_debug;
+d398 26
+a423 7
+void rb_raise __((VALUE, char*, ...)) NORETURN;
+void rb_fatal __((char*, ...)) NORETURN;
+void rb_bug __((char*, ...)) NORETURN;
+void rb_sys_fail _((char*)) NORETURN;
+void rb_iter_break _((void)) NORETURN;
+void rb_exit _((int)) NORETURN;
+void rb_notimplement _((void)) NORETURN;
+d425 2
+a426 2
+void rb_warn __((char*, ...));
+void rb_warning __((char*, ...));		/* reports if `-w' specified */
+d430 4
+a433 106
+int rb_iterator_p _((void));
+VALUE rb_iterate _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_rescue _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_ensure _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_catch _((char*,VALUE(*)(),VALUE));
+void rb_throw _((char*,VALUE)) NORETURN;
+
+void ruby_init _((void));
+void ruby_options _((int, char**));
+void ruby_run _((void));
+
+EXTERN VALUE rb_mKernel;
+EXTERN VALUE rb_mComparable;
+EXTERN VALUE rb_mEnumerable;
+EXTERN VALUE rb_mErrno;
+EXTERN VALUE rb_mFileTest;
+EXTERN VALUE rb_mGC;
+EXTERN VALUE rb_mMath;
+EXTERN VALUE rb_mProcess;
+
+EXTERN VALUE rb_cObject;
+EXTERN VALUE rb_cArray;
+EXTERN VALUE rb_cBignum;
+EXTERN VALUE rb_cClass;
+EXTERN VALUE rb_cDir;
+EXTERN VALUE rb_cData;
+EXTERN VALUE rb_cFalseClass;
+EXTERN VALUE rb_cFile;
+EXTERN VALUE rb_cFixnum;
+EXTERN VALUE rb_cFloat;
+EXTERN VALUE rb_cHash;
+EXTERN VALUE rb_cInteger;
+EXTERN VALUE rb_cIO;
+EXTERN VALUE rb_cModule;
+EXTERN VALUE rb_cNilClass;
+EXTERN VALUE rb_cNumeric;
+EXTERN VALUE rb_cProc;
+EXTERN VALUE rb_cRange;
+EXTERN VALUE rb_cRegexp;
+EXTERN VALUE rb_cString;
+EXTERN VALUE rb_cThread;
+EXTERN VALUE rb_cTime;
+EXTERN VALUE rb_cTrueClass;
+EXTERN VALUE rb_cStruct;
+
+EXTERN VALUE rb_eException;
+EXTERN VALUE rb_eStandardError;
+EXTERN VALUE rb_eSystemExit, rb_eInterrupt, rb_eFatal;
+EXTERN VALUE rb_eArgError;
+EXTERN VALUE rb_eEOFError;
+EXTERN VALUE rb_eIndexError;
+EXTERN VALUE rb_eIOError;
+EXTERN VALUE rb_eLoadError;
+EXTERN VALUE rb_eNameError;
+EXTERN VALUE rb_eRuntimeError;
+EXTERN VALUE rb_eSecurityError;
+EXTERN VALUE rb_eSyntaxError;
+EXTERN VALUE rb_eSystemCallError;
+EXTERN VALUE rb_eTypeError;
+EXTERN VALUE rb_eZeroDiv;
+EXTERN VALUE rb_eNotImpError;
+
+#if defined(__GNUC__) && __GNUC__ >= 2 && !defined(RUBY_NO_INLINE)
+extern __inline__ VALUE rb_class_of _((VALUE));
+extern __inline__ int rb_type _((VALUE));
+extern __inline__ int rb_special_const_p _((VALUE));
+extern __inline__ int rb_test_false_or_nil _((VALUE));
+
+extern __inline__ VALUE
+rb_class_of(VALUE obj)
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+
+    return RBASIC(obj)->klass;
+}
+
+extern __inline__ int
+rb_type(VALUE obj)
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+    return BUILTIN_TYPE(obj);
+}
+
+extern __inline__ int
+rb_special_const_p(VALUE obj)
+{
+    return (FIXNUM_P(obj)||obj == Qnil||obj == Qfalse||obj == Qtrue)?Qtrue:Qfalse;
+}
+
+extern __inline__ int
+rb_test_false_or_nil(VALUE v)
+{
+    return (v != Qnil) && (v != Qfalse);
+}
+#else
+VALUE rb_class_of _((VALUE));
+int rb_type _((VALUE));
+int rb_special_const_p _((VALUE));
+int rb_test_false_or_nil _((VALUE));
+#endif
+d439 1
+a439 1
+static char *dln_libs_to_be_linked[] = { EXTLIB, 0 };
+a441 2
+#if defined(__cplusplus)
+}  /* extern "C" { */
+a442 2
+
+#endif /* ifndef RUBY_H */
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d248 1
+a248 1
+    int len;
+d255 1
+a255 1
+    int len, capa;
+d262 1
+a262 1
+    int len;
+d307 1
+a307 1
+    int len;
+d314 1
+a314 1
+    int len;
+a449 1
+EXTERN VALUE rb_mPrecision;
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d417 1
+a417 1
+EXTERN VALUE ruby_verbose, ruby_debug;
+@
+
+
+1.1.1.3.2.3
+log
+@990209
+@
+text
+@d528 1
+a528 5
+    if (FIXNUM_P(obj)) return Qtrue;
+    if (obj == Qnil) return Qtrue;
+    if (obj == Qfalse) return Qtrue;
+    if (obj == Qtrue) return Qtrue;;
+    return Qfalse;
+@
+
+
+1.1.1.3.2.4
+log
+@990224
+@
+text
+@a41 2
+#undef ISPRINT
+#define ISPRINT(c) isprint((unsigned char)(c))
+d45 1
+d483 1
+a483 3
+EXTERN VALUE rb_eSystemExit;
+EXTERN VALUE rb_eInterrupt;
+EXTERN VALUE rb_eFatal;
+d495 1
+a495 1
+EXTERN VALUE rb_eZeroDivError;
+a496 1
+EXTERN VALUE rb_eFloatDomainError;
+@
+
+
+1.1.1.3.2.5
+log
+@990324
+@
+text
+@d54 5
+a60 1
+#undef _
+a66 1
+#undef __
+a86 1
+#if !defined(__CYGWIN__)
+a89 1
+#endif
+d374 4
+a377 4
+VALUE rb_define_class _((const char*,VALUE));
+VALUE rb_define_module _((const char*));
+VALUE rb_define_class_under _((VALUE, const char*, VALUE));
+VALUE rb_define_module_under _((VALUE, const char*));
+d382 14
+a395 14
+void rb_define_variable _((const char*,VALUE*));
+void rb_define_virtual_variable _((const char*,VALUE(*)(),void(*)()));
+void rb_define_hooked_variable _((const char*,VALUE*,VALUE(*)(),void(*)()));
+void rb_define_readonly_variable _((const char*,VALUE*));
+void rb_define_const _((VALUE,const char*,VALUE));
+void rb_define_global_const _((const char*,VALUE));
+
+void rb_define_method _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_module_function _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_global_function _((const char*,VALUE(*)(),int));
+
+void rb_undef_method _((VALUE,const char*));
+void rb_define_alias _((VALUE,const char*,const char*));
+void rb_define_attr _((VALUE,const char*,int,int));
+d397 1
+a397 1
+ID rb_intern _((const char*));
+d405 2
+a406 2
+VALUE rb_eval_string _((const char*));
+VALUE rb_eval_string_protect _((const char*, int*));
+d408 1
+a408 1
+int rb_scan_args __((int, VALUE*, const char*, ...));
+d410 2
+a411 2
+VALUE rb_iv_get _((VALUE, const char*));
+VALUE rb_iv_set _((VALUE, const char*, VALUE));
+d423 4
+a426 4
+void rb_raise __((VALUE, const char*, ...)) NORETURN;
+void rb_fatal __((const char*, ...)) NORETURN;
+void rb_bug __((const char*, ...)) NORETURN;
+void rb_sys_fail _((const char*)) NORETURN;
+d431 2
+a432 2
+void rb_warn __((const char*, ...));
+void rb_warning __((const char*, ...));		/* reports if `-w' specified */
+d440 2
+a441 2
+VALUE rb_catch _((const char*,VALUE(*)(),VALUE));
+void rb_throw _((const char*,VALUE)) NORETURN;
+a485 1
+EXTERN VALUE rb_eSignal;
+@
+
+
+1.1.1.3.2.6
+log
+@990513
+@
+text
+@a405 1
+VALUE rb_eval_string_wrap _((const char*, int*));
+@
+
+
+1.1.1.3.2.7
+log
+@regexp null pattern
+@
+text
+@d247 1
+a247 1
+    long len;
+d254 1
+a254 1
+    long len, capa;
+d261 1
+a261 1
+    long len;
+d306 1
+a306 1
+    long len;
+d313 1
+a313 1
+    long len;
+@
+
+
+1.1.1.3.2.8
+log
+@thread bugs
+@
+text
+@d22 6
+d81 1
+a81 1
+#if defined(USEIMPORTLIB)
+d184 1
+a184 1
+#define NUM2LONG(x) (FIXNUM_P(x)?FIX2LONG(x):rb_num2long((VALUE)x))
+d208 2
+a209 2
+                     RSTRING(x)->ptr[0]:(char)(NUM2INT(x)&0xff))
+#define CHR2FIX(x) INT2FIX((long)((x)&0xff))
+@
+
+
+1.1.1.3.2.9
+log
+@990624
+@
+text
+@d279 1
+@
+
+
+1.1.1.3.2.10
+log
+@990625
+@
+text
+@d133 1
+a133 1
+#define RTEST(v) rb_test_false_or_nil((VALUE)(v))
+d268 1
+@
+
+
+1.1.1.3.2.11
+log
+@990715
+@
+text
+@d90 1
+a90 1
+#endif
+@
+
+
+1.1.1.3.2.12
+log
+@990806
+@
+text
+@a434 2
+VALUE rb_require _((const char*));
+
+@
+
+
+1.1.1.3.2.13
+log
+@clone
+@
+text
+@d212 1
+a212 1
+#define CLONESETUP(clone,obj) do {\
+d215 1
+a215 2
+    if (FL_TEST(obj, FL_EXIVAR)) rb_clone_generic_ivar((VALUE)clone,(VALUE)obj);\
+} while (0)
+@
+
+
+1.1.1.3.2.14
+log
+@pre 1.4.0
+@
+text
+@a400 2
+VALUE rb_funcall2 _((VALUE, ID, int, VALUE*));
+VALUE rb_funcall3 _((VALUE, ID, int, VALUE*));
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 09:18:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a229 1
+    struct st_table *iv_tbl;
+@
+
+
+1.1.1.2.2.2
+log
+@Mon Jan 19 14:06:13 JST 1998
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+d230 1
+@
+
+
+1.1.1.2.2.3
+log
+@use STR2CSTR
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/19 05:08:21 $
+a166 3
+
+char *str2cstr _((VALUE));
+#define STR2CSTR(x) str2cstr((VALUE)(x))
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/22 10:07:53 $
+d174 1
+a174 1
+    RBASIC(obj)->klass = (c);\
+d178 2
+a179 2
+    OBJSETUP(clone,singleton_class_clone(RBASIC(obj)->klass),RBASIC(obj)->flags);\
+    singleton_class_attached(RBASIC(clone)->klass, (VALUE)clone);\
+d184 1
+a184 1
+    VALUE klass;
+d246 1
+a246 1
+#define Data_Make_Struct(klass,type,mark,free,sval) (\
+d249 1
+a249 1
+    data_object_alloc(klass,sval,mark,free)\
+d252 2
+a253 2
+#define Data_Wrap_Struct(klass,mark,free,sval) (\
+    data_object_alloc(klass,sval,mark,free)\
+@
+
+
+1.1.1.2.2.5
+log
+@cygwin patches
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:22 $
+a43 4
+#endif
+
+#if defined(__CYGWIN32__) && defined(DLLIMPORT)
+#include "import.h"
+@
+
+
+1.1.1.2.2.6
+log
+@1.1b8_00?
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 10:01:46 $
+d278 1
+a278 1
+#define R_CAST(st)   (struct st*)
+a281 1
+#define RMODULE(obj) RCLASS(obj)
+@
+
+
+1.1.1.2.2.7
+log
+@shugo's method etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/26 08:27:11 $
+a174 4
+#define NUM2CHR(x) (((TYPE(x) == T_STRING)&&(RSTRING(x)->len>=1))?\
+                     RSTRING(x)->ptr[0]:(char)NUM2INT(x))
+#define CHR2FIX(x) INT2FIX((int)x)
+
+d293 3
+a295 3
+#define FL_SINGLETON FL_USER0
+#define FL_MARK      (1<<8)
+#define FL_FINALIZE  (1<<9)
+d297 1
+a297 1
+#define FL_USHIFT    10
+a305 1
+#define FL_USER7     (1<<(FL_USHIFT+7))
+d307 1
+a307 1
+#define FL_UMASK  (0xff<<FL_USHIFT)
+@
+
+
+1.1.1.2.2.8
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/03 10:16:14 $
+a297 1
+#define FL_PRIMITIVE FL_USER1
+@
+
+
+1.1.1.2.2.9
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:47 $
+d130 14
+a143 16
+#define T_NONE   0x00
+
+#define T_NIL    0x01
+#define T_OBJECT 0x02
+#define T_CLASS  0x03
+#define T_ICLASS 0x04
+#define T_MODULE 0x05
+#define T_FLOAT  0x06
+#define T_STRING 0x07
+#define T_REGEXP 0x08
+#define T_ARRAY  0x09
+#define T_FIXNUM 0x0a
+#define T_HASH   0x0b
+#define T_STRUCT 0x0c
+#define T_BIGNUM 0x0d
+#define T_FILE   0x0e
+d298 1
+a319 2
+
+#define FL_PRIMITIVE FL_USER1
+@
+
+
+1.1.1.2.2.10
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/06 10:07:53 $
+a252 2
+extern VALUE cData;
+
+d321 2
+@
+
+
+1.1.1.2.2.11
+log
+@heredoc etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:33:01 $
+d443 1
+a443 2
+void Warn();
+void Warning();			/* reports if `-w' specified */
+@
+
+
+1.1.1.2.2.12
+log
+@1.1b9_05 bug fix
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/25 09:36:59 $
+d388 1
+a388 1
+void rb_define_attr _((VALUE,char*,int,int));
+@
+
+
+1.1.1.2.2.13
+log
+@eval(..,file,line);String#center
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/28 10:57:41 $
+d168 1
+a168 1
+int num2int _((VALUE));
+@
+
+
+1.1.1.2.2.14
+log
+@dynamic (nested) local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/31 04:52:09 $
+d54 3
+a58 2
+typedef unsigned int UINT;
+# define PTR_SIZED_MAX INT_MAX
+a60 2
+typedef unsigned long UINT;
+# define PTR_SIZED_MAX LONG_MAX
+a67 1
+typedef unsigned short USHORT;
+d76 1
+a76 2
+    /* assuming 32bit(2's compliment) LONG */
+#   define LONG_MAX 2147483647	
+d80 5
+a84 6
+#  define LONG_MIN (-LONG_MAX-1)
+# endif
+# ifndef INT_MAX
+   /* assuming 32bit(2's compliment) int */
+#  define INT_MAX       2147483647
+#  define INT_MIN       (-INT_MAX-1)
+d91 2
+a92 3
+#define PTR_SIZED_MIN (-PTR_SIZED_MAX-1)
+#define FIXNUM_MAX (PTR_SIZED_MAX>>1)
+#define FIXNUM_MIN RSHIFT((INT)PTR_SIZED_MIN,1)
+@
+
+
+1.1.1.2.2.15
+log
+@1.1b9_09 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:34:09 $
+d173 2
+a174 2
+INT num2int _((VALUE));
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):num2int((VALUE)x))
+@
+
+
+1.1.1.2.2.16
+log
+@tcltklib/gtk
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/09 09:30:23 $
+d78 1
+a78 1
+    /* assuming 32bit(2's compliment) long */
+d179 2
+a180 2
+char *str2cstr _((VALUE,int*));
+#define STR2CSTR(x) str2cstr((VALUE)(x),0)
+d426 1
+d438 1
+@
+
+
+1.1.1.2.2.17
+log
+@pack/unpack unsigned
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/27 10:04:00 $
+a174 2
+UINT num2uint _((VALUE));
+#define NUM2UINT(x) num2uint((VALUE)x)
+@
+
+
+1.1.1.2.2.18
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/08 09:38:15 $
+d54 5
+a58 4
+#if SIZEOF_LONG != SIZEOF_VOIDP
+---->> ruby requires sizeof(void*) == sizeof(long) to be compiled. <<----
+# endif
+/* INT, UINT, UCHAR are obsolete macro, do not use them. */
+d61 7
+d69 1
+a69 3
+
+typedef unsigned long VALUE;
+typedef unsigned int ID;
+d85 5
+d95 3
+a97 2
+#define FIXNUM_MAX (LONG_MAX>>1)
+#define FIXNUM_MIN RSHIFT((long)LONG_MIN,1)
+d100 2
+a101 2
+#define INT2FIX(i) (VALUE)(((long)(i))<<1 | FIXNUM_FLAG)
+VALUE int2inum _((long));
+d109 3
+a111 2
+#define FIX2LONG(x) RSHIFT((long)x,1)
+#define FIX2ULONG(x) (((unsigned long)(x))>>1)
+d173 1
+a173 6
+long num2long _((VALUE));
+unsigned long num2ulong _((VALUE));
+#define NUM2LONG(x) (FIXNUM_P(x)?FIX2INT(x):num2long((VALUE)x))
+#define NUM2ULONG(x) num2ulong((VALUE)x)
+#if SIZEOF_INT < SIZEOF_LONG
+int num2int _((VALUE));
+d175 2
+a176 10
+int fix2int _((VALUE));
+#define FIX2INT(x) fix2int((VALUE)x)
+#define NUM2UINT(x) ((unsigned int)NUM2ULONG(x))
+#define FIX2UINT(x) ((unsigned int)FIX2ULONG(x))
+#else
+#define NUM2INT(x) NUM2LONG(x)
+#define NUM2UINT(x) NUM2ULONG(x)
+#define FIX2INT(x) FIX2LONG(x)
+#define FIX2UINT(x) FIX2ULONG(x)
+#endif
+d200 1
+a200 1
+    unsigned long flags;
+d223 2
+a224 2
+    unsigned int len;
+    char *ptr;
+d230 1
+a230 1
+    unsigned int len, capa;
+d237 2
+a238 2
+    unsigned int len;
+    char *str;
+d245 1
+a245 1
+    long status;
+d282 1
+a282 1
+    unsigned int len;
+d289 2
+a290 2
+    unsigned int len;
+    unsigned short *digits;
+@
+
+
+1.1.1.2.2.19
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:58:07 $
+a15 4
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+a29 4
+#if defined(__MWERKS__) && defined(__cplusplus)
+# define NEED_PROTO
+#endif
+
+d37 1
+a38 3
+# define NEED_PROTO
+#endif
+#ifdef NEED_PROTO
+a39 2
+#else
+# define _(args) ()
+d105 5
+a109 7
+#ifndef MACRUBY_PUBLIC_INTERFACE
+# undef FALSE 
+# undef TRUE
+# define FALSE  0
+# define TRUE   2
+# define NIL    4
+#endif
+a116 3
+#ifdef __MACOS__ /* name conflict, AERegistory.h */
+extern VALUE cRubyObject;
+#else
+a117 1
+#endif
+a336 4
+#ifdef MACRUBY_PUBLIC_INTERFACE
+    if (obj == RubyFALSE) return T_FALSE;
+    if (obj == RubyTRUE) return T_TRUE;
+#else
+d339 1
+a339 1
+#endif
+a345 3
+#ifdef MACRUBY_PUBLIC_INTERFACE
+    return (FIXNUM_P(obj)||obj == Qnil||obj == RubyFALSE||obj == RubyTRUE)?RubyTRUE:RubyFALSE;
+#else
+a346 1
+#endif
+a351 4
+#ifdef MACRUBY_PUBLIC_INTERFACE
+    return (v != Qnil) && (v != RubyFALSE);
+    return (v != Qnil) && (v != RubyFALSE);
+#else
+a352 2
+    return (v != Qnil) && (v != FALSE);
+#endif
+d406 2
+a407 2
+VALUE rb_funcall _((VALUE, ID, int, ...));
+int rb_scan_args _((int, VALUE*, char*, ...));
+d422 17
+a438 4
+void Raise _((VALUE, char*, ...));
+void Fail _((char*, ...));
+void Fatal _((char*, ...));
+void Bug _((char*, ...));
+d445 1
+d447 3
+a449 3
+void Error _((char*, ...));
+void Warn _((char*, ...));
+void Warning _((char*, ...));		/* reports if `-w' specified */
+d454 3
+a456 3
+VALUE rb_iterate _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_rescue _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+VALUE rb_ensure _((VALUE(*)(),VALUE,VALUE(*)(),VALUE));
+a464 4
+#endif
+
+#if defined(__cplusplus)
+}  /* extern "C" { */
+@
+
+
+1.1.1.2.2.20
+log
+@prototypes
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:32 $
+d34 4
+d45 2
+d48 1
+a48 2
+
+#ifdef HAVE_PROTOTYPES
+a53 12
+#ifdef HAVE_STDARG_PROTOTYPES
+# define __(args) args
+#else
+# define __(args) ()
+#endif
+
+#ifdef HAVE_ATTR_NORETURN
+# define NORETURN __attribute__ ((noreturn))
+#else
+# define NORETURN
+#endif
+
+d438 2
+a439 2
+VALUE rb_funcall __((VALUE, ID, int, ...));
+int rb_scan_args __((int, VALUE*, char*, ...));
+d454 14
+a467 14
+void Raise __((VALUE, char*, ...)) NORETURN;
+void Fail __((char*, ...)) NORETURN;
+void Fatal __((char*, ...)) NORETURN;
+void Bug __((char*, ...)) NORETURN;
+void rb_sys_fail _((char *)) NORETURN;
+void rb_iter_break _((void)) NORETURN;
+void rb_exit _((int)) NORETURN;
+void rb_raise _((VALUE)) NORETURN;
+void rb_fatal _((VALUE)) NORETURN;
+void rb_notimplement _((void)) NORETURN;
+
+void Error __((char*, ...));
+void Warn __((char*, ...));
+void Warning __((char*, ...));		/* reports if `-w' specified */
+@
+
+
+1.1.1.2.2.21
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/14 04:10:33 $
+a32 12
+
+#include <stdio.h>
+
+/* need to include <ctype.h> to use these macros */
+#define ISSPACE(c) isspace((unsigned char)(c))
+#define ISUPPER(c) isupper((unsigned char)(c))
+#define ISLOWER(c) islower((unsigned char)(c))
+#define ISPRINT(c) isprint((unsigned char)(c))
+#define ISALNUM(c) isalnum((unsigned char)(c))
+#define ISALPHA(c) isalpha((unsigned char)(c))
+#define ISDIGIT(c) isdigit((unsigned char)(c))
+#define ISXDIGIT(c) isxdigit((unsigned char)(c))
+@
+
+
+1.1.1.2.2.22
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:17 $
+d502 2
+a506 2
+
+#endif /* ifndef RUBY_H */
+@
+
+
+1.1.1.2.2.23
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 09:42:36 $
+d150 6
+a493 49
+
+extern VALUE mKernel;
+extern VALUE mComparable;
+extern VALUE mEnumerable;
+extern VALUE mErrno;
+extern VALUE mFileTest;
+extern VALUE mGC;
+extern VALUE mMath;
+extern VALUE mProcess;
+
+#ifdef __MACOS__ /* name conflict, AERegistory.h */
+extern VALUE cRubyObject;
+#else
+extern VALUE cObject;
+#endif
+extern VALUE cArray;
+extern VALUE cBignum;
+extern VALUE cClass;
+extern VALUE cData;
+extern VALUE cFile;
+extern VALUE cFixnum;
+extern VALUE cFloat;
+extern VALUE cHash;
+extern VALUE cInteger;
+extern VALUE cIO;
+extern VALUE cModule;
+extern VALUE cNumeric;
+extern VALUE cProc;
+extern VALUE cRegexp;
+extern VALUE cString;
+extern VALUE cThread;
+extern VALUE cStruct;
+
+extern VALUE eException;
+extern VALUE eStandardError;
+extern VALUE eSystemExit, eInterrupt, eFatal;
+extern VALUE eArgError;
+extern VALUE eEOFError;
+extern VALUE eIndexError;
+extern VALUE eIOError;
+extern VALUE eLoadError;
+extern VALUE eNameError;
+extern VALUE eRuntimeError;
+extern VALUE eSecurityError;
+extern VALUE eSyntaxError;
+extern VALUE eSystemCallError;
+extern VALUE eTypeError;
+extern VALUE eZeroDiv;
+extern VALUE eNotImpError;
+@
+
+
+1.1.1.2.2.24
+log
+@1.1b9_25
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:31 $
+d104 1
+a104 1
+#   define LONG_MAX 2147483647
+d405 3
+a407 3
+void *xmalloc _((int));
+void *xcalloc _((int,int));
+void *xrealloc _((void*,int));
+@
+
+
+1.1.1.2.2.25
+log
+@1.1b9_27
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/11 10:03:09 $
+d123 5
+@
+
+
+1.1.1.2.2.26
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/19 09:32:07 $
+d466 1
+a466 1
+void rb_sys_fail _((char*)) NORETURN;
+@
+
+
+1.1.1.2.2.27
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:36 $
+a482 2
+VALUE rb_catch _((char*,VALUE(*)(),VALUE));
+void rb_throw _((char*,VALUE)) NORETURN;
+@
+
+
+1.1.1.2.2.28
+log
+@str2cstr
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:25 $
+d249 1
+a249 1
+    int len;
+d256 1
+a256 1
+    int len, capa;
+d263 1
+a263 1
+    int len;
+d308 1
+a308 1
+    int len;
+d315 1
+a315 1
+    int len;
+@
+
+
+1.1.1.2.2.29
+log
+@1.1c3
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/13 04:37:55 $
+d77 1
+a77 2
+#if defined(__CYGWIN32__)
+#if defined(DLLIMPORT)
+a78 3
+#else
+#define environ (*__imp___cygwin_environ)
+#endif
+@
+
+
+1.1.1.2.2.30
+log
+@1.1c7
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:31 $
+d290 1
+a290 1
+EXTERN VALUE cData;
+d461 1
+a461 1
+EXTERN VALUE verbose, debug;
+d490 8
+a497 8
+EXTERN VALUE mKernel;
+EXTERN VALUE mComparable;
+EXTERN VALUE mEnumerable;
+EXTERN VALUE mErrno;
+EXTERN VALUE mFileTest;
+EXTERN VALUE mGC;
+EXTERN VALUE mMath;
+EXTERN VALUE mProcess;
+d500 1
+a500 1
+EXTERN VALUE cRubyObject;
+d502 1
+a502 1
+EXTERN VALUE cObject;
+d504 34
+a537 34
+EXTERN VALUE cArray;
+EXTERN VALUE cBignum;
+EXTERN VALUE cClass;
+EXTERN VALUE cData;
+EXTERN VALUE cFile;
+EXTERN VALUE cFixnum;
+EXTERN VALUE cFloat;
+EXTERN VALUE cHash;
+EXTERN VALUE cInteger;
+EXTERN VALUE cIO;
+EXTERN VALUE cModule;
+EXTERN VALUE cNumeric;
+EXTERN VALUE cProc;
+EXTERN VALUE cRegexp;
+EXTERN VALUE cString;
+EXTERN VALUE cThread;
+EXTERN VALUE cStruct;
+
+EXTERN VALUE eException;
+EXTERN VALUE eStandardError;
+EXTERN VALUE eSystemExit, eInterrupt, eFatal;
+EXTERN VALUE eArgError;
+EXTERN VALUE eEOFError;
+EXTERN VALUE eIndexError;
+EXTERN VALUE eIOError;
+EXTERN VALUE eLoadError;
+EXTERN VALUE eNameError;
+EXTERN VALUE eRuntimeError;
+EXTERN VALUE eSecurityError;
+EXTERN VALUE eSyntaxError;
+EXTERN VALUE eSystemCallError;
+EXTERN VALUE eTypeError;
+EXTERN VALUE eZeroDiv;
+EXTERN VALUE eNotImpError;
+@
+
+
+1.1.1.2.2.29.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:31 $
+d21 1
+a23 6
+#if 0
+#ifndef RUBY_RENAME
+#include "rename2.h"
+#endif
+#endif
+
+d92 5
+d124 2
+a125 2
+VALUE rb_int2inum _((long));
+#define INT2NUM(v) rb_int2inum(v)
+d135 7
+d149 1
+d190 4
+a193 4
+long rb_num2long _((VALUE));
+unsigned long rb_num2ulong _((VALUE));
+#define NUM2LONG(x) (FIXNUM_P(x)?FIX2INT(x):rb_num2long((VALUE)x))
+#define NUM2ULONG(x) rb_num2ulong((VALUE)x)
+d195 4
+a198 4
+int rb_num2int _((VALUE));
+#define NUM2INT(x) (FIXNUM_P(x)?FIX2INT(x):rb_num2int((VALUE)x))
+int rb_fix2int _((VALUE));
+#define FIX2INT(x) rb_fix2int((VALUE)x)
+d208 2
+a209 2
+double rb_num2dbl _((VALUE));
+#define NUM2DBL(x) rb_num2dbl((VALUE)(x))
+d211 2
+a212 3
+char *rb_str2cstr _((VALUE,int*));
+#define str2cstr(x,l) rb_str2cstr((VALUE)(x),(l))
+#define STR2CSTR(x) rb_str2cstr((VALUE)(x),0)
+d225 2
+a226 2
+    OBJSETUP(clone,rb_singleton_class_clone(RBASIC(obj)->klass),RBASIC(obj)->flags);\
+    rb_singleton_class_attached(RBASIC(clone)->klass, (VALUE)clone);\
+d275 1
+a275 1
+    VALUE ifnone;
+d290 1
+a290 1
+extern VALUE rb_cData;
+d294 1
+a294 1
+VALUE rb_data_object_alloc _((VALUE,void*,void (*)(),void (*)()));
+d298 1
+a298 1
+    rb_data_object_alloc(klass,sval,mark,free)\
+d302 1
+a302 1
+    rb_data_object_alloc(klass,sval,mark,free)\
+d361 43
+d461 1
+a461 1
+extern VALUE rb_verbose, rb_debug;
+d466 4
+a469 3
+void rb_raise __((VALUE, char*, ...)) NORETURN;
+void rb_fatal __((char*, ...)) NORETURN;
+void rb_bug __((char*, ...)) NORETURN;
+d473 2
+d477 3
+a479 2
+void rb_warn __((char*, ...));
+void rb_warning __((char*, ...));		/* reports if `-w' specified */
+d483 1
+a483 1
+int rb_iterator_p _((void));
+d490 8
+a497 81
+void ruby_init _((void));
+void ruby_options _((int, char**));
+void ruby_run _((void));
+
+extern VALUE rb_mKernel;
+extern VALUE rb_mComparable;
+extern VALUE rb_mEnumerable;
+extern VALUE rb_mErrno;
+extern VALUE rb_mFileTest;
+extern VALUE rb_mGC;
+extern VALUE rb_mMath;
+extern VALUE rb_mProcess;
+
+extern VALUE rb_cObject;
+extern VALUE rb_cArray;
+extern VALUE rb_cBignum;
+extern VALUE rb_cClass;
+extern VALUE rb_cDir;
+extern VALUE rb_cData;
+extern VALUE rb_cFalseClass;
+extern VALUE rb_cFile;
+extern VALUE rb_cFixnum;
+extern VALUE rb_cFloat;
+extern VALUE rb_cHash;
+extern VALUE rb_cInteger;
+extern VALUE rb_cIO;
+extern VALUE rb_cModule;
+extern VALUE rb_cNilClass;
+extern VALUE rb_cNumeric;
+extern VALUE rb_cProc;
+extern VALUE rb_cRange;
+extern VALUE rb_cRegexp;
+extern VALUE rb_cString;
+extern VALUE rb_cThread;
+extern VALUE rb_cTime;
+extern VALUE rb_cTrueClass;
+extern VALUE rb_cStruct;
+
+extern VALUE rb_eException;
+extern VALUE rb_eStandardError;
+extern VALUE rb_eSystemExit, rb_eInterrupt, rb_eFatal;
+extern VALUE rb_eArgError;
+extern VALUE rb_eEOFError;
+extern VALUE rb_eIndexError;
+extern VALUE rb_eIOError;
+extern VALUE rb_eLoadError;
+extern VALUE rb_eNameError;
+extern VALUE rb_eRuntimeError;
+extern VALUE rb_eSecurityError;
+extern VALUE rb_eSyntaxError;
+extern VALUE rb_eSystemCallError;
+extern VALUE rb_eTypeError;
+extern VALUE rb_eZeroDiv;
+extern VALUE rb_eNotImpError;
+
+#if defined(__GNUC__) && __GNUC__ >= 2 && !defined(RUBY_NO_INLINE)
+extern __inline__ VALUE rb_class_of _((VALUE));
+extern __inline__ int rb_type _((VALUE));
+extern __inline__ int rb_special_const_p _((VALUE));
+extern __inline__ int rb_test_false_or_nil _((VALUE));
+
+extern __inline__ VALUE
+rb_class_of(VALUE obj)
+{
+    if (FIXNUM_P(obj)) return rb_cFixnum;
+    if (obj == Qnil) return rb_cNilClass;
+    if (obj == Qfalse) return rb_cFalseClass;
+    if (obj == Qtrue) return rb_cTrueClass;
+
+    return RBASIC(obj)->klass;
+}
+
+extern __inline__ int
+rb_type(VALUE obj)
+{
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == Qfalse) return T_FALSE;
+    if (obj == Qtrue) return T_TRUE;
+    return BUILTIN_TYPE(obj);
+}
+d499 2
+a500 17
+extern __inline__ int
+rb_special_const_p(VALUE obj)
+{
+    return (FIXNUM_P(obj)||obj == Qnil||obj == Qfalse||obj == Qtrue)?Qtrue:Qfalse;
+}
+
+extern __inline__ int
+rb_test_false_or_nil(VALUE v)
+{
+#ifdef MACRUBY_PUBLIC_INTERFACE
+    return (v != Qnil) && (v != RubyFALSE);
+    return (v != Qnil) && (v != RubyFALSE);
+#else
+    return (v != Qnil) && (v != Qfalse);
+    return (v != Qnil) && (v != Qfalse);
+#endif
+}
+d502 1
+a502 4
+VALUE rb_class_of _((VALUE));
+int rb_type _((VALUE));
+int rb_special_const_p _((VALUE));
+int rb_test_false_or_nil _((VALUE));
+d504 34
+d543 1
+a543 1
+static char *dln_libs_to_be_linked[] = { EXTLIB, 0 };
+@
+
+
+1.1.1.2.2.29.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:10 $
+d383 1
+d385 1
+a385 1
+void rb_define_global_function _((char*,VALUE(*)(),int));
+d527 5
+d533 1
+@
+
+
+1.1.1.2.2.29.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/09 09:11:51 $
+a215 1
+    if (rb_safe_level() >= 3) FL_SET(obj, FL_TAINT);\
+d284 1
+a333 1
+#define FL_TAINT     (1<<10)
+d335 1
+a335 1
+#define FL_USHIFT    11
+d410 1
+a410 1
+EXTERN VALUE rb_verbose, rb_debug;
+d439 50
+a488 50
+EXTERN VALUE rb_mKernel;
+EXTERN VALUE rb_mComparable;
+EXTERN VALUE rb_mEnumerable;
+EXTERN VALUE rb_mErrno;
+EXTERN VALUE rb_mFileTest;
+EXTERN VALUE rb_mGC;
+EXTERN VALUE rb_mMath;
+EXTERN VALUE rb_mProcess;
+
+EXTERN VALUE rb_cObject;
+EXTERN VALUE rb_cArray;
+EXTERN VALUE rb_cBignum;
+EXTERN VALUE rb_cClass;
+EXTERN VALUE rb_cDir;
+EXTERN VALUE rb_cData;
+EXTERN VALUE rb_cFalseClass;
+EXTERN VALUE rb_cFile;
+EXTERN VALUE rb_cFixnum;
+EXTERN VALUE rb_cFloat;
+EXTERN VALUE rb_cHash;
+EXTERN VALUE rb_cInteger;
+EXTERN VALUE rb_cIO;
+EXTERN VALUE rb_cModule;
+EXTERN VALUE rb_cNilClass;
+EXTERN VALUE rb_cNumeric;
+EXTERN VALUE rb_cProc;
+EXTERN VALUE rb_cRange;
+EXTERN VALUE rb_cRegexp;
+EXTERN VALUE rb_cString;
+EXTERN VALUE rb_cThread;
+EXTERN VALUE rb_cTime;
+EXTERN VALUE rb_cTrueClass;
+EXTERN VALUE rb_cStruct;
+
+EXTERN VALUE rb_eException;
+EXTERN VALUE rb_eStandardError;
+EXTERN VALUE rb_eSystemExit, rb_eInterrupt, rb_eFatal;
+EXTERN VALUE rb_eArgError;
+EXTERN VALUE rb_eEOFError;
+EXTERN VALUE rb_eIndexError;
+EXTERN VALUE rb_eIOError;
+EXTERN VALUE rb_eLoadError;
+EXTERN VALUE rb_eNameError;
+EXTERN VALUE rb_eRuntimeError;
+EXTERN VALUE rb_eSecurityError;
+EXTERN VALUE rb_eSyntaxError;
+EXTERN VALUE rb_eSystemCallError;
+EXTERN VALUE rb_eTypeError;
+EXTERN VALUE rb_eZeroDiv;
+EXTERN VALUE rb_eNotImpError;
+@
+
+
+1.1.1.2.2.29.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:17 $
+d166 3
+a168 3
+#define T_VARMAP 0x7d
+#define T_SCOPE  0x7e
+#define T_NODE   0x7f
+d170 1
+a170 1
+#define T_MASK   0x7f
+a273 1
+    struct st_table *iv_tbl;
+d332 3
+a334 4
+#define FL_MARK      (1<<7)
+#define FL_FINALIZE  (1<<8)
+#define FL_TAINT     (1<<9)
+#define FL_EXIVAR    (1<<10)
+@

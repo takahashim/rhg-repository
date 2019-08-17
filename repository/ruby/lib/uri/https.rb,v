@@ -1,0 +1,69 @@
+head	1.1;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.01.10.08.00.51;	author akira;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2002.01.16.14.48.28;	author akira;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@added uri library (uri-0.9.4)
+@
+text
+@#
+# $Id: https.rb,v 1.1 2001/08/06 05:08:41 akira Exp $
+#
+# Copyright (c) 2001 akira yamada <akira@@ruby-lang.org>
+# You can redistribute it and/or modify it under the same term as Ruby.
+#
+
+require 'uri/http'
+
+module URI
+
+=begin
+
+== URI::HTTPS
+
+=== Super Class
+
+((<URI::HTTP>))
+
+=end
+
+  class HTTPS < HTTP
+    DEFAULT_PORT = 443
+  end
+  @@@@schemes['HTTPS'] = HTTPS
+end # URI
+@
+
+
+1.1.2.1
+log
+@added uri library (uri-0.9.4)
+@
+text
+@d2 1
+a2 1
+# $Id: https.rb,v 1.1 2002/01/10 08:00:51 akira Exp $
+@
+

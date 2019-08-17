@@ -1,0 +1,129 @@
+#
+# acl - access control list for the repository
+#
+# $Id: acl,v 1.50 2002/10/17 15:49:54 knu Exp $
+#
+
+#
+# Turn debug output on/off
+#
+# Usage:
+#   debug:{on|off}
+#
+
+debug:off
+
+#
+# Restrict hosts on which one could commit
+#
+# Usage:
+#   host:hostname1[,hostname2..]
+#
+# Note:
+#   If none matches, user is told to use hostname1 as the CVS host.
+#
+
+host:cvs.ruby-lang.org,helium.ruby-lang.org
+
+#
+# Define groups
+#
+# Usage:
+#   group:groupname:{username|@groupname}[,{username|@groupname}..]
+#
+# Note:
+#   "all" is a pre-defined special group that includes everyone
+#
+
+group:admin:matz,shugo,akira,knu
+
+group:ruby:matz,shugo,aamine,wakou,eban,knu,komatsu,usa,keiju,nobu,ts,ttate,nagai,akr,nahi,gotoken,arai,tadf,michal,H_Konishi,suke
+group:shim:@all
+group:rough:@all
+group:eruby:shugo
+group:mod_ruby:shugo
+group:rubicon:dave,andy,aleksi,chad,@ruby
+group:pocketruby:li-te_cheng,jack_kwok,ned
+group:ruby-parser:markus
+group:cvsmailer:knu
+group:div:seki,nahi
+group:rwiki:seki,nahi,kazu
+group:rwiki-installer:kazu
+group:drb:seki
+group:raa:nahi,usa
+group:interbase:matz,bizenn
+group:rice:akira
+group:irc:iga,knu,gnhurst
+group:metaruby:matju,aleksi
+group:xlib:matju
+group:gnome-ruby-old:iga
+group:opengl:yoshi
+group:math3d:yoshi
+group:devices:matju
+group:hybris:matju
+group:csv:nahi
+group:devel-logger:nahi
+group:http-access2:nahi
+group:soap4r:nahi
+group:snmp:sean,jd
+
+group:www:@all
+
+group:doc:@all
+
+
+#
+# List access controls
+#
+# Usage:
+#   {grant|deny}:{username|@groupname}[,{username|@groupname}..]:module_pattern
+#
+# Note:
+#   For convenience, each module_pattern match is executed with an
+#   implicit `^/?(?:' at the beginning and an implicit `)(?:/|$)' at
+#   the end.  Besides, each comparison is made case-insensitively.
+#
+#   The rules work on a first-match-wins basis.  If none matches,
+#   access will be granted.
+#
+
+# Grant "admin" members everything
+grant:@admin:.*
+
+grant:@ruby:ruby
+grant:@ruby,@doc:ruby/doc
+grant:@rough:rough
+grant:@shim:shim
+grant:@eruby:eruby
+grant:@mod_ruby:mod_ruby
+grant:@rubicon:rubicon
+grant:@pocketruby:pocketruby
+grant:@ruby-parser:ruby-parser
+grant:@cvsmailer:app/cvsmailer
+grant:@div:app/div
+grant:@rwiki-installer:app/rwiki/installer
+grant:@rwiki:app/rwiki
+grant:@raa:app/raa
+grant:@drb:lib/drb
+grant:@interbase:lib/interbase
+grant:@rice:lib/rice
+grant:@irc:lib/irc
+grant:@metaruby:lib/metaruby
+grant:@xlib:lib/xlib
+grant:@gnome-ruby-old:lib/gnome-ruby-old
+grant:@opengl:lib/opengl
+grant:@math3d:lib/math3d
+grant:@devices:lib/devices
+grant:@hybris:lib/hybris
+grant:@csv:lib/csv
+grant:@devel-logger:lib/devel-logger
+grant:@http-access2:lib/http-access2
+grant:@soap4r:lib/soap4r
+grant:@snmp:lib/snmp
+
+grant:@www:www
+
+grant:@doc:doc
+
+# Deny access if we reach here
+deny:@all:.*

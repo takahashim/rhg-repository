@@ -1,0 +1,292 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_1d1:1.1.1.1.2.2
+	v1_1d0:1.1.1.1.2.2
+	v1_1c7:1.1.1.1.2.2
+	v1_1c6:1.1.1.1.2.2
+	v1_1d-start:1.1.1.1.2.2
+	v1_1c5:1.1.1.1.2.2
+	v1_1dev:1.1.1.1.2.2.0.2
+	v1_1c4:1.1.1.1.2.2
+	v1_1c3:1.1.1.1.2.2
+	v1_1c2:1.1.1.1.2.2
+	v1_1c1:1.1.1.1.2.2
+	v1_1c0:1.1.1.1.2.2
+	v1_1b9_31:1.1.1.1.2.1
+	v1_1b9_30:1.1.1.1.2.1
+	v1_1b9_28:1.1.1.1.2.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.06.09.53;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.18;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.18;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	98.06.26.09.45.02;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.07.17.05.12.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.11.17.09.12.46;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@require "tk"
+
+class TkDialog < TkWindow
+  # initialize tk_dialog
+  def initialize
+    super
+    @@var = TkVariable.new
+    id = @@var.id
+    INTERP._eval('eval {global '+id+';'+
+		 'set '+id+' [tk_dialog '+ 
+		 @@path+" "+title+" \"#{message}\" "+bitmap+" "+
+		 default_button+" "+buttons+']}')
+  end
+  def value
+    return @@var.value.to_i
+  end
+  ######################################################
+  #                                                    #
+  # these methods must be overridden for each dialog   #
+  #                                                    #
+  ######################################################
+  def title
+    return "DIALOG"
+  end
+  def message
+    return "MESSAGE"
+  end
+  def bitmap
+    return "info"
+  end
+  def default_button
+    return 0
+  end
+  def buttons
+    return "BUTTON1 BUTTON2"
+  end
+end
+
+#
+# dialog for warning
+#
+class TkWarning < TkDialog
+  def initialize(mes)
+    @@mes = mes
+    super()
+  end
+  def message
+    return @@mes
+  end
+  def title
+    return "WARNING";
+  end
+  def bitmap
+    return "warning";
+  end
+  def default_button
+    return 0;
+  end
+  def buttons
+    return "OK";
+  end
+end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.2.1
+log
+@980626
+@
+text
+@d12 1
+a12 1
+		 String(default_button)+" "+buttons+']}')
+@
+
+
+1.1.1.1.2.2
+log
+@1.1c0
+@
+text
+@a3 2
+  extend Tk
+
+d5 2
+a6 2
+  def initialize(keys = nil)
+    super()
+d9 1
+a9 68
+
+    @@title   = title
+
+    @@message = message
+    @@message_config = message_config
+
+    @@bitmap  = bitmap
+    @@bitmap_config = message_config
+
+    @@default_button = default_button
+
+    @@buttons = buttons
+    @@button_configs = proc{|num| button_configs num}
+
+    if keys.kind_of? Hash
+      @@title   = keys['title'] if keys['title']
+      @@message = keys['message'] if keys['message']
+      @@bitmap  = keys['bitmap'] if keys['bitmap']
+      @@default_button = keys['default'] if keys['default']
+      @@buttons = keys['buttons'] if keys['buttons']
+
+      @@command = keys['prev_command']
+
+      @@message_config = keys['message_config'] if keys['message_config']
+      @@bitmap_config  = keys['bitmap_config']  if keys['bitmap_config']
+      @@button_configs = keys['button_configs'] if keys['button_configs']
+    end
+
+    if @@title.include? ?\s
+      @@title = '{' + @@title + '}'
+    end
+
+    @@buttons = tk_split_list(@@buttons) if @@buttons.kind_of? String
+    @@buttons = @@buttons.collect{|s|
+      if s.kind_of? Array
+	s = s.join(' ')
+      end
+      if s.include? ?\s
+	'{' + s + '}'
+      else
+	s
+      end
+    }
+
+    config = ""
+    if @@message_config.kind_of? Hash
+      config << format("%s.msg configure %s\n", 
+		       @@path, hash_kv(@@message_config).join(' '))
+    end
+    if @@bitmap_config.kind_of? Hash
+      config << format("%s.msg configure %s\n", 
+		       @@path, hash_kv(@@bitmap_config).join(' '))
+    end
+    if @@button_configs.kind_of? Proc
+      @@buttons.each_index{|i|
+	if (c = @@button_configs.call(i)).kind_of? Hash
+	  config << format("%s.button%s configure %s\n", 
+			   @@path, i, hash_kv(c).join(' '))
+	end
+      }
+    end
+    config = 'after idle {' + config + '};' if config != ""
+
+    if @@command.kind_of? Proc
+      @@command.call(self)
+    end
+
+    INTERP._eval('eval {global '+id+';'+config+
+d11 2
+a12 2
+		 @@path+" "+@@title+" {#{@@message}} "+@@bitmap+" "+
+		 String(@@default_button)+" "+@@buttons.join(' ')+']}')
+a27 3
+  def message_config
+    return nil
+  end
+a30 3
+  def bitmap_config
+    return nil
+  end
+d35 1
+a35 5
+    #return "BUTTON1 BUTTON2"
+    return ["BUTTON1", "BUTTON2"]
+  end
+  def button_configs(num)
+    return nil
+@
+
+
+1.1.1.1.2.3
+log
+@1.1c8
+@
+text
+@@
+
+

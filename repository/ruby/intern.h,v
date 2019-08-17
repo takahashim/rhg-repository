@@ -1,0 +1,6567 @@
+head	1.100;
+access;
+symbols
+	v1_6_7:1.35.2.18
+	v1_6_6:1.35.2.14
+	v1_6_5:1.35.2.7
+	v1_6_4:1.35.2.4
+	v1_7_1:1.49
+	v1_6_4_preview4:1.35.2.4
+	v1_6_4_preview3:1.35.2.4
+	v1_6_4_preview2:1.35.2.3
+	v1_6_4_preview1:1.35.2.3
+	v1_6_3:1.35.2.2
+	ruby_m17n:1.35.0.4
+	ruby_1_6:1.35.0.2
+	v1_6_2:1.35
+	v1_6_1:1.28
+	v1_6_0:1.26
+	v1_4_6:1.2.2.7
+	v1_4_5:1.2.2.7
+	v1_4_4:1.2.2.5
+	ruby_1_4_3:1.2.2.4
+	ruby1_4_3:1.2.2.4
+	v1_4_3:1.2.2.4
+	v1_5_0:1.9
+	ruby_1_4_3_pre1:1.2.2.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.11
+	v1_3_6_repack:1.1.1.2.2.11
+	v1_3_6:1.1.1.2.2.10
+	v1_3_5:1.1.1.2.2.10
+	v1_2_6repack:1.1.1.1.2.29
+	v1_3_4_990625:1.1.1.2.2.10
+	v1_3_4_990624:1.1.1.2.2.10
+	v1_2_6:1.1.1.1.2.29
+	v1_3_4_990611:1.1.1.2.2.10
+	v1_3_4_990531:1.1.1.2.2.8
+	v1_3_3_990518:1.1.1.2.2.6
+	v1_3_3_990513:1.1.1.2.2.6
+	v1_3_3_990507:1.1.1.2.2.6
+	v1_2_5:1.1.1.1.2.29
+	v1_2_4:1.1.1.1.2.29
+	v1_3_1_990225:1.1.1.2.2.5
+	v1_3_1_990224:1.1.1.2.2.4
+	v1_3_1_990215:1.1.1.2.2.3
+	v1_3_1_990212:1.1.1.2.2.3
+	v1_3_1_990210:1.1.1.2.2.2
+	v1_3_1_:1.1.1.2.2.2
+	v1_3_1_990209:1.1.1.2.2.2
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2.2.1
+	v1_3_1_990127:1.1.1.2.2.1
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.28
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.28
+	v1_2_1repack:1.1.1.1.2.28
+	v1_2_1:1.1.1.1.2.28
+	v1_2_stable:1.1.1.1.2.28
+	v1_1d1:1.1.1.1.2.24.2.5
+	v1_1d0:1.1.1.1.2.24.2.4
+	v1_1c9_1:1.1.1.1.2.28
+	v1_1c9:1.1.1.1.2.27
+	v1_1c8:1.1.1.1.2.26
+	v1_1c7:1.1.1.1.2.26
+	v1_1c6:1.1.1.1.2.25
+	v1_1d-start:1.1.1.1.2.24.2.1
+	v1_1c5:1.1.1.1.2.24
+	v1_1dev:1.1.1.1.2.24.0.2
+	v1_1c4:1.1.1.1.2.24
+	v1_1c3:1.1.1.1.2.24
+	v1_1c2:1.1.1.1.2.24
+	v1_1c1:1.1.1.1.2.24
+	v1_1c0:1.1.1.1.2.23
+	v1_1b9_31:1.1.1.1.2.23
+	v1_1b9_30:1.1.1.1.2.23
+	v1_1b9_28:1.1.1.1.2.23
+	v1_1b9_27:1.1.1.1.2.21
+	v1_1b9_26:1.1.1.1.2.21
+	r1_1b9_25:1.1.1.1.2.20
+	r1_1b9_24:1.1.1.1.2.20
+	v1_1b9_23:1.1.1.1.2.20
+	v1_1b9_22:1.1.1.1.2.19
+	v1_1b9_20:1.1.1.1.2.17
+	v1_1b9_18:1.1.1.1.2.13
+	v1_1b9_16:1.1.1.1.2.11
+	v1_1b9_15:1.1.1.1.2.10
+	v1_1b9_13:1.1.1.1.2.9
+	v1_1b9_12:1.1.1.1.2.9
+	v1_1b9_11:1.1.1.1.2.8
+	v1_1b9_08:1.1.1.1.2.6
+	v1_1b9_07:1.1.1.1.2.6
+	r1_1b9:1.1.1.1.2.2
+	v1_1b8:1.1.1.1.2.2
+	v1_1b7:1.1.1.1.2.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.100
+date	2002.10.30.08.04.31;	author matz;	state Exp;
+branches;
+next	1.99;
+
+1.99
+date	2002.10.29.19.11.17;	author nobu;	state Exp;
+branches;
+next	1.98;
+
+1.98
+date	2002.10.23.10.17.29;	author nobu;	state Exp;
+branches;
+next	1.97;
+
+1.97
+date	2002.09.23.15.48.42;	author nobu;	state Exp;
+branches;
+next	1.96;
+
+1.96
+date	2002.09.05.20.00.52;	author aamine;	state Exp;
+branches;
+next	1.95;
+
+1.95
+date	2002.09.03.10.00.45;	author michal;	state Exp;
+branches;
+next	1.94;
+
+1.94
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.93;
+
+1.93
+date	2002.09.02.12.19.30;	author aamine;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2002.08.19.05.56.05;	author matz;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2002.08.15.11.49.39;	author nobu;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2002.07.26.06.12.38;	author matz;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2002.05.29.05.20.33;	author matz;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2002.04.26.00.40.28;	author nobu;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2002.04.26.00.38.44;	author nobu;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2002.04.24.04.54.13;	author matz;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2002.03.15.08.51.31;	author usa;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2002.03.14.06.23.43;	author matz;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2002.03.07.11.19.37;	author nobu;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2002.02.20.06.33.24;	author nobu;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2002.02.15.06.14.25;	author matz;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2002.02.13.09.01.09;	author matz;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2002.02.01.10.23.22;	author nobu;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2002.01.11.09.18.50;	author matz;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2002.01.10.20.18.39;	author nobu;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.01.04.14.14.34;	author matz;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2001.12.17.07.52.34;	author nobu;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2001.11.29.15.57.25;	author matz;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2001.11.21.15.41.26;	author matz;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2001.11.19.05.03.03;	author matz;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2001.11.13.08.19.51;	author matz;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2001.10.29.06.16.00;	author usa;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2001.10.29.05.07.18;	author matz;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2001.10.16.15.14.37;	author nobu;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2001.10.10.08.21.13;	author matz;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2001.09.20.06.23.49;	author nobu;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2001.09.05.22.31.07;	author nobu;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2001.09.03.11.30.58;	author nobu;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2001.08.23.06.02.15;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2001.08.20.04.29.56;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2001.08.06.03.05.12;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2001.07.25.11.31.59;	author knu;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2001.07.25.08.19.49;	author knu;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2001.07.24.09.07.33;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.07.18.05.55.20;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.07.14.15.17.18;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.07.03.07.29.00;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.06.19.04.35.13;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.06.05.07.19.38;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.05.16.09.05.50;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.05.06.15.01.58;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.03.28.08.43.24;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.03.19.03.20.21;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.03.16.08.30.09;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.03.13.05.45.08;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.02.16.07.53.19;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.02.02.11.38.10;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.01.15.07.00.54;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.01.10.07.30.18;	author eban;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.01.09.07.26.17;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2000.12.18.09.46.04;	author matz;	state Exp;
+branches
+	1.35.2.1
+	1.35.4.1;
+next	1.34;
+
+1.34
+date	2000.12.08.07.10.23;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.12.06.05.29.05;	author shugo;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.11.27.09.23.20;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.11.21.14.26.22;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.11.20.07.31.39;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.11.13.05.39.32;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.09.22.18.15.42;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.09.15.06.00.24;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.08.28.09.53.28;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.08.25.08.26.00;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.08.02.09.22.23;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.07.17.09.37.59;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.07.04.07.04.35;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.06.14.05.30.21;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.05.18.04.32.03;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.05.17.04.38.13;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.05.12.09.07.40;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.05.09.04.52.58;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.01.09.41.20;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.04.10.05.44.13;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.03.17.08.58.14;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.02.08.08.48.50;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.02.01.03.12.05;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.01.05.04.37.04;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	99.12.14.06.49.45;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	99.12.07.09.23.27;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	99.12.06.09.03.54;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.11.26.09.07.25;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.11.17.07.30.30;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.04.08.39.37;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.29.09.25.31;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.15.08.52.16;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.09.06.08.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.02.12.11.17.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.02.24.04.31.20;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.02.25.06.39.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.03.24.08.52.29;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.05.25.08.26.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	99.05.31.09.13.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	99.06.01.06.59.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	99.06.09.09.21.14;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	99.07.28.10.32.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	99.08.10.08.47.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	99.08.13.05.17.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.02.03.10.02.56;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.02.20.08.28.44;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.03.11.07.32.57;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.03.28.10.57.40;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.04.02.10.03.50;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.04.07.08.34.08;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7;
+
+1.1.1.1.2.7
+date	98.04.13.06.06.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.8;
+
+1.1.1.1.2.8
+date	98.04.16.07.42.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.9;
+
+1.1.1.1.2.9
+date	98.04.20.06.20.34;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.10;
+
+1.1.1.1.2.10
+date	98.04.22.08.57.31;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.11;
+
+1.1.1.1.2.11
+date	98.04.27.10.03.55;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.12;
+
+1.1.1.1.2.12
+date	98.05.06.03.08.54;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.13;
+
+1.1.1.1.2.13
+date	98.05.08.09.38.08;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.14;
+
+1.1.1.1.2.14
+date	98.05.13.05.57.58;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.15;
+
+1.1.1.1.2.15
+date	98.05.13.07.26.19;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.16;
+
+1.1.1.1.2.16
+date	98.05.14.04.10.30;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.17;
+
+1.1.1.1.2.17
+date	98.05.15.05.43.20;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.18;
+
+1.1.1.1.2.18
+date	98.05.18.04.56.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.19;
+
+1.1.1.1.2.19
+date	98.05.18.05.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.20;
+
+1.1.1.1.2.20
+date	98.05.25.04.57.38;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.21;
+
+1.1.1.1.2.21
+date	98.06.18.07.46.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.22;
+
+1.1.1.1.2.22
+date	98.06.24.04.37.58;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.23;
+
+1.1.1.1.2.23
+date	98.06.26.09.44.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.24;
+
+1.1.1.1.2.24
+date	98.07.24.04.32.27;	author matz;	state Exp;
+branches
+	1.1.1.1.2.24.2.1;
+next	1.1.1.1.2.25;
+
+1.1.1.1.2.25
+date	98.10.06.02.44.57;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.26;
+
+1.1.1.1.2.26
+date	98.11.09.09.11.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.27;
+
+1.1.1.1.2.27
+date	98.11.26.08.25.44;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.28;
+
+1.1.1.1.2.28
+date	98.12.14.09.00.07;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.29;
+
+1.1.1.1.2.29
+date	99.04.08.10.14.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.24.2.1
+date	98.09.08.07.08.48;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.24.2.2;
+
+1.1.1.1.2.24.2.2
+date	98.10.06.03.28.10;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.24.2.3;
+
+1.1.1.1.2.24.2.3
+date	98.11.25.03.31.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.24.2.4;
+
+1.1.1.1.2.24.2.4
+date	98.12.16.07.30.31;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.24.2.5;
+
+1.1.1.1.2.24.2.5
+date	98.12.22.09.01.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.10.25.05.09.12;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	99.11.04.08.39.55;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	99.11.29.06.31.03;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	99.12.06.09.03.32;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.02.08.08.53.51;	author matz;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.05.30.04.21.04;	author matz;	state Exp;
+branches;
+next	1.2.2.7;
+
+1.2.2.7
+date	2000.06.05.09.00.54;	author matz;	state Exp;
+branches;
+next	;
+
+1.35.2.1
+date	2001.02.02.11.39.51;	author matz;	state Exp;
+branches;
+next	1.35.2.2;
+
+1.35.2.2
+date	2001.03.13.05.51.40;	author matz;	state Exp;
+branches;
+next	1.35.2.3;
+
+1.35.2.3
+date	2001.04.06.05.42.40;	author matz;	state Exp;
+branches;
+next	1.35.2.4;
+
+1.35.2.4
+date	2001.05.01.08.45.11;	author matz;	state Exp;
+branches;
+next	1.35.2.5;
+
+1.35.2.5
+date	2001.07.19.07.59.48;	author matz;	state Exp;
+branches;
+next	1.35.2.6;
+
+1.35.2.6
+date	2001.09.03.11.28.37;	author nobu;	state Exp;
+branches;
+next	1.35.2.7;
+
+1.35.2.7
+date	2001.09.06.03.05.02;	author nobu;	state Exp;
+branches;
+next	1.35.2.8;
+
+1.35.2.8
+date	2001.10.02.04.25.52;	author matz;	state Exp;
+branches;
+next	1.35.2.9;
+
+1.35.2.9
+date	2001.10.16.15.17.10;	author nobu;	state Exp;
+branches;
+next	1.35.2.10;
+
+1.35.2.10
+date	2001.11.13.08.22.27;	author matz;	state Exp;
+branches;
+next	1.35.2.11;
+
+1.35.2.11
+date	2001.12.04.04.53.31;	author matz;	state Exp;
+branches;
+next	1.35.2.12;
+
+1.35.2.12
+date	2001.12.17.08.13.17;	author nobu;	state Exp;
+branches;
+next	1.35.2.13;
+
+1.35.2.13
+date	2001.12.18.08.40.30;	author matz;	state Exp;
+branches;
+next	1.35.2.14;
+
+1.35.2.14
+date	2001.12.20.02.03.03;	author nobu;	state Exp;
+branches;
+next	1.35.2.15;
+
+1.35.2.15
+date	2002.01.10.23.38.57;	author nobu;	state Exp;
+branches;
+next	1.35.2.16;
+
+1.35.2.16
+date	2002.02.13.09.02.15;	author matz;	state Exp;
+branches;
+next	1.35.2.17;
+
+1.35.2.17
+date	2002.02.20.06.35.37;	author nobu;	state Exp;
+branches;
+next	1.35.2.18;
+
+1.35.2.18
+date	2002.02.27.04.50.30;	author matz;	state Exp;
+branches;
+next	1.35.2.19;
+
+1.35.2.19
+date	2002.03.07.11.19.28;	author nobu;	state Exp;
+branches;
+next	1.35.2.20;
+
+1.35.2.20
+date	2002.05.04.12.04.52;	author knu;	state Exp;
+branches;
+next	1.35.2.21;
+
+1.35.2.21
+date	2002.09.02.15.20.12;	author aamine;	state Exp;
+branches;
+next	1.35.2.22;
+
+1.35.2.22
+date	2002.09.05.20.08.49;	author aamine;	state Exp;
+branches;
+next	;
+
+1.35.4.1
+date	2001.01.10.09.24.27;	author matz;	state Exp;
+branches;
+next	1.35.4.2;
+
+1.35.4.2
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	1.35.4.3;
+
+1.35.4.3
+date	2001.03.05.03.37.34;	author matz;	state Exp;
+branches;
+next	1.35.4.4;
+
+1.35.4.4
+date	2002.07.09.05.26.48;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.100
+log
+@* eval.c (rb_mod_public_method_defined, etc.): new methods:
+  public_method_defined?, private_method_defined?,
+  protected_method_defined?
+
+* object.c (rb_obj_public_methods): new method
+  Object#public_methods.
+
+* class.c (ins_methods_i): Object#methods should list both public
+  and protected methods.
+
+* class.c (rb_class_public_instance_methods): new method
+  Module#public_instance_methods.
+@
+text
+@/**********************************************************************
+
+  intern.h -
+
+  $Author: nobu $
+  $Date: 2002/10/29 19:11:17 $
+  created at: Thu Jun 10 14:22:17 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+/* 
+ * Functions and variables that are used by more than one source file of
+ * the kernel.
+ */
+
+/* array.c */
+void rb_mem_clear _((register VALUE*, register long));
+VALUE rb_assoc_new _((VALUE, VALUE));
+VALUE rb_ary_new _((void));
+VALUE rb_ary_new2 _((long));
+VALUE rb_ary_new3 __((long,...));
+VALUE rb_ary_new4 _((long, const VALUE *));
+VALUE rb_ary_freeze _((VALUE));
+VALUE rb_ary_aref _((int, VALUE*, VALUE));
+void rb_ary_store _((VALUE, long, VALUE));
+VALUE rb_ary_dup _((VALUE));
+VALUE rb_ary_to_ary _((VALUE));
+VALUE rb_ary_to_s _((VALUE));
+VALUE rb_ary_push _((VALUE, VALUE));
+VALUE rb_ary_pop _((VALUE));
+VALUE rb_ary_shift _((VALUE));
+VALUE rb_ary_unshift _((VALUE, VALUE));
+VALUE rb_ary_entry _((VALUE, long));
+VALUE rb_ary_each _((VALUE));
+VALUE rb_ary_join _((VALUE, VALUE));
+VALUE rb_ary_print_on _((VALUE, VALUE));
+VALUE rb_ary_reverse _((VALUE));
+VALUE rb_ary_sort _((VALUE));
+int rb_cmpint _((VALUE));
+VALUE rb_ary_sort_bang _((VALUE));
+VALUE rb_ary_delete _((VALUE, VALUE));
+VALUE rb_ary_delete_at _((VALUE, long));
+VALUE rb_ary_clear _((VALUE));
+VALUE rb_ary_plus _((VALUE, VALUE));
+VALUE rb_ary_concat _((VALUE, VALUE));
+VALUE rb_ary_assoc _((VALUE, VALUE));
+VALUE rb_ary_rassoc _((VALUE, VALUE));
+VALUE rb_ary_includes _((VALUE, VALUE));
+VALUE rb_ary_cmp _((VALUE, VALUE));
+VALUE rb_protect_inspect _((VALUE(*)(ANYARGS),VALUE,VALUE));
+VALUE rb_inspecting_p _((VALUE));
+/* bignum.c */
+VALUE rb_big_clone _((VALUE));
+void rb_big_2comp _((VALUE));
+VALUE rb_big_norm _((VALUE));
+VALUE rb_uint2big _((unsigned long));
+VALUE rb_int2big _((long));
+VALUE rb_uint2inum _((unsigned long));
+VALUE rb_int2inum _((long));
+VALUE rb_cstr_to_inum _((const char*, int, int));
+VALUE rb_str_to_inum _((VALUE, int, int));
+VALUE rb_cstr2inum _((const char*, int));
+VALUE rb_str2inum _((VALUE, int));
+VALUE rb_big2str _((VALUE, int));
+long rb_big2long _((VALUE));
+#define rb_big2int(x) rb_big2long(x)
+unsigned long rb_big2ulong _((VALUE));
+#define rb_big2uint(x) rb_big2ulong(x)
+#if HAVE_LONG_LONG
+VALUE rb_ll2inum _((LONG_LONG));
+VALUE rb_ull2inum _((unsigned LONG_LONG));
+LONG_LONG rb_big2ll _((VALUE));
+unsigned LONG_LONG rb_big2ull _((VALUE));
+#endif  /* HAVE_LONG_LONG */
+void rb_quad_pack _((char*,VALUE));
+VALUE rb_quad_unpack _((const char*,int));
+VALUE rb_dbl2big _((double));
+double rb_big2dbl _((VALUE));
+VALUE rb_big_plus _((VALUE, VALUE));
+VALUE rb_big_minus _((VALUE, VALUE));
+VALUE rb_big_mul _((VALUE, VALUE));
+VALUE rb_big_divmod _((VALUE, VALUE));
+VALUE rb_big_pow _((VALUE, VALUE));
+VALUE rb_big_and _((VALUE, VALUE));
+VALUE rb_big_or _((VALUE, VALUE));
+VALUE rb_big_xor _((VALUE, VALUE));
+VALUE rb_big_lshift _((VALUE, VALUE));
+VALUE rb_big_rand _((VALUE, double*));
+/* class.c */
+VALUE rb_class_boot _((VALUE));
+VALUE rb_class_new _((VALUE));
+VALUE rb_mod_clone _((VALUE));
+VALUE rb_mod_dup _((VALUE));
+VALUE rb_singleton_class_clone _((VALUE));
+void rb_singleton_class_attached _((VALUE,VALUE));
+VALUE rb_make_metaclass _((VALUE, VALUE));
+VALUE rb_class_inherited _((VALUE, VALUE));
+VALUE rb_define_class_id _((ID, VALUE));
+VALUE rb_module_new _((void));
+VALUE rb_define_module_id _((ID));
+VALUE rb_mod_included_modules _((VALUE));
+VALUE rb_mod_include_p _((VALUE, VALUE));
+VALUE rb_mod_ancestors _((VALUE));
+VALUE rb_class_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_public_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_protected_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_private_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_obj_singleton_methods _((int, VALUE*, VALUE));
+void rb_define_method_id _((VALUE, ID, VALUE (*)(ANYARGS), int));
+void rb_frozen_class_p _((VALUE));
+void rb_undef _((VALUE, ID));
+void rb_define_protected_method _((VALUE, const char*, VALUE (*)(ANYARGS), int));
+void rb_define_private_method _((VALUE, const char*, VALUE (*)(ANYARGS), int));
+void rb_define_singleton_method _((VALUE, const char*, VALUE(*)(ANYARGS), int));
+void rb_define_private_method _((VALUE, const char*, VALUE(*)(ANYARGS), int));
+VALUE rb_singleton_class _((VALUE));
+/* enum.c */
+/* error.c */
+EXTERN int ruby_nerrs;
+VALUE rb_exc_new _((VALUE, const char*, long));
+VALUE rb_exc_new2 _((VALUE, const char*));
+VALUE rb_exc_new3 _((VALUE, VALUE));
+NORETURN(void rb_loaderror __((const char*, ...)));
+NORETURN(void rb_name_error __((ID, const char*, ...)));
+NORETURN(void rb_invalid_str _((const char*, const char*)));
+void rb_compile_error __((const char*, ...));
+void rb_compile_error_append __((const char*, ...));
+NORETURN(void rb_load_fail _((char*)));
+NORETURN(void rb_error_frozen _((char*)));
+void rb_check_frozen _((VALUE));
+/* eval.c */
+EXTERN struct RNode *ruby_current_node;
+void ruby_set_current_source _((void));
+NORETURN(void rb_exc_raise _((VALUE)));
+NORETURN(void rb_exc_fatal _((VALUE)));
+void rb_remove_method _((VALUE, const char*));
+void rb_disable_super _((VALUE, const char*));
+void rb_enable_super _((VALUE, const char*));
+void rb_clear_cache _((void));
+void rb_alias _((VALUE, ID, ID));
+void rb_attr _((VALUE,ID,int,int,int));
+int rb_method_boundp _((VALUE, ID, int));
+VALUE rb_dvar_defined _((ID));
+VALUE rb_dvar_curr _((ID));
+VALUE rb_dvar_ref _((ID));
+void rb_dvar_asgn _((ID, VALUE));
+void rb_dvar_push _((ID, VALUE));
+VALUE *rb_svar _((int));
+VALUE rb_eval_cmd _((VALUE, VALUE, int));
+int rb_respond_to _((VALUE, ID));
+void rb_interrupt _((void));
+VALUE rb_apply _((VALUE, ID, VALUE));
+void rb_backtrace _((void));
+ID rb_frame_last_func _((void));
+VALUE rb_obj_instance_eval _((int, VALUE*, VALUE));
+VALUE rb_mod_module_eval _((int, VALUE*, VALUE));
+void rb_load _((VALUE, int));
+void rb_load_protect _((VALUE, int, int*));
+NORETURN(void rb_jump_tag _((int)));
+int rb_provided _((const char*));
+void rb_provide _((const char*));
+VALUE rb_f_require _((VALUE, VALUE));
+void rb_obj_call_init _((VALUE, int, VALUE*));
+VALUE rb_class_new_instance _((int, VALUE*, VALUE));
+VALUE rb_f_lambda _((void));
+VALUE rb_proc_new _((VALUE (*)(ANYARGS/* VALUE yieldarg[, VALUE procarg] */), VALUE));
+VALUE rb_protect _((VALUE (*)(VALUE), VALUE, int*));
+void rb_set_end_proc _((void (*)(VALUE), VALUE));
+void rb_mark_end_proc _((void));
+void rb_exec_end_proc _((void));
+void ruby_finalize _((void));
+void ruby_stop _((int));
+int ruby_cleanup _((int));
+int ruby_exec _((void));
+void rb_gc_mark_threads _((void));
+void rb_thread_start_timer _((void));
+void rb_thread_stop_timer _((void));
+void rb_thread_schedule _((void));
+void rb_thread_wait_fd _((int));
+int rb_thread_fd_writable _((int));
+void rb_thread_fd_close _((int));
+int rb_thread_alone _((void));
+void rb_thread_polling _((void));
+void rb_thread_sleep _((int));
+void rb_thread_sleep_forever _((void));
+VALUE rb_thread_stop _((void));
+VALUE rb_thread_wakeup _((VALUE));
+VALUE rb_thread_run _((VALUE));
+VALUE rb_thread_create _((VALUE (*)(ANYARGS), void*));
+void rb_thread_interrupt _((void));
+void rb_thread_trap_eval _((VALUE, int));
+void rb_thread_signal_raise _((char*));
+int rb_thread_select(ANYARGS);
+void rb_thread_wait_for(ANYARGS);
+VALUE rb_thread_current _((void));
+VALUE rb_thread_main _((void));
+VALUE rb_thread_local_aref _((VALUE, ID));
+VALUE rb_thread_local_aset _((VALUE, ID, VALUE));
+void rb_thread_atfork _((void));
+/* file.c */
+int eaccess _((const char*, int));
+VALUE rb_file_s_expand_path _((int, VALUE *));
+void rb_file_const _((const char*, VALUE));
+int rb_find_file_ext _((VALUE*, const char* const*));
+VALUE rb_find_file _((VALUE));
+/* gc.c */
+NORETURN(void rb_memerror __((void)));
+int ruby_stack_check _((void));
+int ruby_stack_length _((VALUE**));
+char *rb_source_filename _((const char*));
+void rb_gc_mark_locations _((VALUE*, VALUE*));
+void rb_mark_tbl _((struct st_table*));
+void rb_mark_hash _((struct st_table*));
+void rb_gc_mark_maybe _((VALUE));
+void rb_gc_mark _((VALUE));
+void rb_gc_force_recycle _((VALUE));
+void rb_gc _((void));
+void rb_gc_call_finalizer_at_exit _((void));
+VALUE rb_gc_enable _((void));
+VALUE rb_gc_disable _((void));
+VALUE rb_gc_start _((void));
+/* hash.c */
+VALUE rb_hash _((VALUE));
+VALUE rb_hash_new _((void));
+VALUE rb_hash_freeze _((VALUE));
+VALUE rb_hash_aref _((VALUE, VALUE));
+VALUE rb_hash_aset _((VALUE, VALUE, VALUE));
+VALUE rb_hash_delete_if _((VALUE));
+VALUE rb_hash_delete _((VALUE,VALUE));
+int rb_path_check _((char*));
+int rb_env_path_tainted _((void));
+/* io.c */
+EXTERN VALUE rb_fs;
+EXTERN VALUE rb_output_fs;
+EXTERN VALUE rb_rs;
+EXTERN VALUE rb_default_rs;
+EXTERN VALUE rb_output_rs;
+VALUE rb_io_write _((VALUE, VALUE));
+VALUE rb_io_gets _((VALUE));
+VALUE rb_io_getc _((VALUE));
+VALUE rb_io_ungetc _((VALUE, VALUE));
+VALUE rb_io_close _((VALUE));
+VALUE rb_io_eof _((VALUE));
+VALUE rb_io_binmode _((VALUE));
+VALUE rb_io_addstr _((VALUE, VALUE));
+VALUE rb_io_printf _((int, VALUE*, VALUE));
+VALUE rb_io_print _((int, VALUE*, VALUE));
+VALUE rb_io_puts _((int, VALUE*, VALUE));
+VALUE rb_file_open _((const char*, const char*));
+VALUE rb_gets _((void));
+/* marshal.c */
+VALUE rb_marshal_dump _((VALUE, VALUE));
+VALUE rb_marshal_load _((VALUE));
+/* numeric.c */
+void rb_num_zerodiv _((void));
+VALUE rb_num_coerce_bin _((VALUE, VALUE));
+VALUE rb_float_new _((double));
+VALUE rb_num2fix _((VALUE));
+VALUE rb_fix2str _((VALUE, int));
+VALUE rb_dbl_cmp _((double, double));
+/* object.c */
+int rb_eql _((VALUE, VALUE));
+VALUE rb_any_to_s _((VALUE));
+VALUE rb_inspect _((VALUE));
+VALUE rb_obj_is_instance_of _((VALUE, VALUE));
+VALUE rb_obj_is_kind_of _((VALUE, VALUE));
+VALUE rb_obj_alloc _((VALUE));
+VALUE rb_obj_clone _((VALUE));
+VALUE rb_obj_dup _((VALUE));
+VALUE rb_obj_taint _((VALUE));
+VALUE rb_obj_tainted _((VALUE));
+VALUE rb_obj_untaint _((VALUE));
+VALUE rb_obj_freeze _((VALUE));
+VALUE rb_obj_id _((VALUE));
+VALUE rb_obj_class _((VALUE));
+VALUE rb_class_real _((VALUE));
+VALUE rb_convert_type _((VALUE,int,const char*,const char*));
+VALUE rb_check_convert_type _((VALUE,int,const char*,const char*));
+VALUE rb_to_int _((VALUE));
+VALUE rb_Integer _((VALUE));
+VALUE rb_Float _((VALUE));
+VALUE rb_String _((VALUE));
+VALUE rb_Array _((VALUE));
+double rb_cstr_to_dbl _((const char*, int));
+double rb_str_to_dbl _((VALUE, int));
+/* parse.y */
+EXTERN int   ruby_sourceline;
+EXTERN char *ruby_sourcefile;
+int ruby_yyparse _((void));
+ID rb_id_attrset _((ID));
+void rb_parser_append_print _((void));
+void rb_parser_while_loop _((int, int));
+int ruby_parser_stack_on_heap _((void));
+void rb_gc_mark_parser _((void));
+int rb_is_const_id _((ID));
+int rb_is_instance_id _((ID));
+int rb_is_class_id _((ID));
+int rb_is_local_id _((ID));
+int rb_is_junk_id _((ID));
+VALUE rb_backref_get _((void));
+void rb_backref_set _((VALUE));
+VALUE rb_lastline_get _((void));
+void rb_lastline_set _((VALUE));
+VALUE rb_sym_all_symbols _((void));
+/* process.c */
+int rb_proc_exec _((const char*));
+VALUE rb_f_exec _((int,VALUE*));
+int rb_waitpid _((int,int*,int));
+void rb_syswait _((int));
+VALUE rb_proc_times _((VALUE));
+/* range.c */
+VALUE rb_range_new _((VALUE, VALUE, int));
+VALUE rb_range_beg_len _((VALUE, long*, long*, long, int));
+VALUE rb_length_by_each _((VALUE));
+/* re.c */
+int rb_memcmp _((char*,char*,long));
+int rb_memcicmp _((char*,char*,long));
+VALUE rb_reg_nth_defined _((int, VALUE));
+VALUE rb_reg_nth_match _((int, VALUE));
+VALUE rb_reg_last_match _((VALUE));
+VALUE rb_reg_match_pre _((VALUE));
+VALUE rb_reg_match_post _((VALUE));
+VALUE rb_reg_match_last _((VALUE));
+VALUE rb_reg_new _((const char*, long, int));
+VALUE rb_reg_match _((VALUE, VALUE));
+VALUE rb_reg_match2 _((VALUE));
+int rb_reg_options _((VALUE));
+void rb_set_kcode _((const char*));
+const char* rb_get_kcode _((void));
+/* ruby.c */
+EXTERN VALUE rb_argv;
+EXTERN VALUE rb_argv0;
+void rb_load_file _((char*));
+void ruby_script _((char*));
+void ruby_prog_init _((void));
+void ruby_set_argv _((int, char**));
+void ruby_process_options _((int, char**));
+void ruby_load_script _((void));
+void ruby_init_loadpath _((void));
+void ruby_incpush _((const char*));
+/* signal.c */
+VALUE rb_f_kill _((int, VALUE*));
+void rb_gc_mark_trap_list _((void));
+#ifdef POSIX_SIGNAL
+#define posix_signal ruby_posix_signal
+void posix_signal _((int, RETSIGTYPE (*)(int)));
+#endif
+void rb_trap_exit _((void));
+void rb_trap_exec _((void));
+/* sprintf.c */
+VALUE rb_f_sprintf _((int, VALUE*));
+/* string.c */
+VALUE rb_str_new _((const char*, long));
+VALUE rb_str_new2 _((const char*));
+VALUE rb_str_new3 _((VALUE));
+VALUE rb_str_new4 _((VALUE));
+VALUE rb_str_new5 _((VALUE, const char*, long));
+VALUE rb_tainted_str_new _((const char*, long));
+VALUE rb_tainted_str_new2 _((const char*));
+VALUE rb_str_buf_new _((long));
+VALUE rb_str_buf_new2 _((const char*));
+VALUE rb_str_buf_append _((VALUE, VALUE));
+VALUE rb_str_buf_cat _((VALUE, const char*, long));
+VALUE rb_str_buf_cat2 _((VALUE, const char*));
+VALUE rb_obj_as_string _((VALUE));
+VALUE rb_str_dup _((VALUE));
+VALUE rb_str_dup_frozen _((VALUE));
+VALUE rb_str_plus _((VALUE, VALUE));
+VALUE rb_str_times _((VALUE, VALUE));
+VALUE rb_str_substr _((VALUE, long, long));
+void rb_str_modify _((VALUE));
+VALUE rb_str_freeze _((VALUE));
+VALUE rb_str_resize _((VALUE, long));
+VALUE rb_str_cat _((VALUE, const char*, long));
+VALUE rb_str_cat2 _((VALUE, const char*));
+VALUE rb_str_append _((VALUE, VALUE));
+VALUE rb_str_concat _((VALUE, VALUE));
+int rb_str_hash _((VALUE));
+int rb_str_cmp _((VALUE, VALUE));
+VALUE rb_str_upto _((VALUE, VALUE, int));
+void rb_str_update _((VALUE, long, long, VALUE));
+VALUE rb_str_inspect _((VALUE));
+VALUE rb_str_dump _((VALUE));
+VALUE rb_str_split _((VALUE, const char*));
+void rb_str_associate _((VALUE, VALUE));
+VALUE rb_str_associated _((VALUE));
+void rb_str_setter _((VALUE, ID, VALUE*));
+VALUE rb_str_intern _((VALUE));
+/* struct.c */
+VALUE rb_struct_new __((VALUE, ...));
+VALUE rb_struct_define __((const char*, ...));
+VALUE rb_struct_alloc _((VALUE, VALUE));
+VALUE rb_struct_aref _((VALUE, VALUE));
+VALUE rb_struct_aset _((VALUE, VALUE, VALUE));
+VALUE rb_struct_getmember _((VALUE, ID));
+VALUE rb_struct_iv_get _((VALUE, char*));
+/* time.c */
+VALUE rb_time_new(ANYARGS);
+/* variable.c */
+VALUE rb_mod_name _((VALUE));
+VALUE rb_class_path _((VALUE));
+void rb_set_class_path _((VALUE, VALUE, const char*));
+VALUE rb_path2class _((const char*));
+void rb_name_class _((VALUE, ID));
+void rb_autoload _((const char*, const char*));
+VALUE rb_f_autoload _((VALUE, VALUE, VALUE));
+void rb_gc_mark_global_tbl _((void));
+VALUE rb_f_trace_var _((int, VALUE*));
+VALUE rb_f_untrace_var _((int, VALUE*));
+VALUE rb_f_global_variables _((void));
+void rb_alias_variable _((ID, ID));
+struct st_table* rb_generic_ivar_table _((VALUE));
+void rb_copy_generic_ivar _((VALUE,VALUE));
+void rb_mark_generic_ivar _((VALUE));
+void rb_mark_generic_ivar_tbl _((void));
+void rb_free_generic_ivar _((VALUE));
+VALUE rb_ivar_get _((VALUE, ID));
+VALUE rb_ivar_set _((VALUE, ID, VALUE));
+VALUE rb_ivar_defined _((VALUE, ID));
+VALUE rb_iv_set _((VALUE, const char*, VALUE));
+VALUE rb_iv_get _((VALUE, const char*));
+VALUE rb_obj_instance_variables _((VALUE));
+VALUE rb_obj_remove_instance_variable _((VALUE, VALUE));
+void *rb_mod_const_at _((VALUE, void*));
+void *rb_mod_const_of _((VALUE, void*));
+VALUE rb_const_list _((void*));
+VALUE rb_mod_constants _((VALUE));
+VALUE rb_mod_remove_const _((VALUE, VALUE));
+int rb_const_defined_at _((VALUE, ID));
+int rb_autoload_defined _((ID));
+int rb_const_defined _((VALUE, ID));
+VALUE rb_const_get _((VALUE, ID));
+VALUE rb_const_get_at _((VALUE, ID));
+void rb_const_set _((VALUE, ID, VALUE));
+void rb_const_assign _((VALUE, ID, VALUE));
+VALUE rb_mod_constants _((VALUE));
+void rb_autoload_load _((ID));
+VALUE rb_cvar_defined _((VALUE, ID));
+void rb_cvar_set _((VALUE, ID, VALUE, int));
+VALUE rb_cvar_get _((VALUE, ID));
+void rb_cv_set _((VALUE, const char*, VALUE));
+VALUE rb_cv_get _((VALUE, const char*));
+void rb_define_class_variable _((VALUE, const char*, VALUE));
+VALUE rb_mod_class_variables _((VALUE));
+VALUE rb_mod_remove_cvar _((VALUE, VALUE));
+/* version.c */
+void ruby_show_version _((void));
+void ruby_show_copyright _((void));
+@
+
+
+1.99
+log
+@	* eval.c (error_print, rb_longjmp, rb_thread_schedule): flush
+	  error message.  [ruby-dev:18582]
+
+	* eval.c (ruby_cleanup): added.  just clean up without exit.
+	  [ruby-dev:18582]
+
+	* eval.c (ruby_exec): added.  execute main evaluation tree without
+	  exit.  [ruby-dev:18582]
+
+	* intern.h: prototypes; ruby_cleanup, ruby_exec
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/23 10:17:29 $
+d109 1
+@
+
+
+1.98
+log
+@* eval.c (rb_eval): added NODE_DSYM, symbol literal with
+  interpolation.
+
+* node.h: ditto.
+
+* intern.h: prototypes; rb_is_junk_id, rb_str_dump, rb_str_intern
+
+* object.c (sym_inspect): escape and quote for non-alphanumeric
+  symbols.
+
+* parse.y (dsym, tokadd_string, yylex): extended symbol literals.
+
+* parse.y (rb_is_junk_id): added.
+
+* string.c (rb_str_dump, rb_str_intern) : make extern.
+
+* lib/mkmf.rb (create_makefile): deffile should be removed by
+  distclean, not clean.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/23 15:48:42 $
+d176 2
+@
+
+
+1.97
+log
+@* eval.c (rb_call0): must not clear ruby_current_node, or
+  backtrace cannot be genetated.
+
+* intern.h (ruby_yyparse): rather than yyparse().
+
+* parse.y (yylex): nextc() returns -1 at end of input, not 0.
+
+* parse.y (newline_node): reduce deplicated newline node.
+
+* parse.y (literal_concat): get rid of warning.
+
+* parse.y (new_evstr): fixed junk code.
+@
+text
+@d5 2
+a6 2
+  $Author: aamine $
+  $Date: 2002/09/05 20:00:52 $
+d300 1
+d384 1
+d389 1
+@
+
+
+1.96
+log
+@* gc.c (gc_sweep): should mark parser.
+* parse.y (rb_gc_mark_parser): new function.
+* intern.h (rb_gc_mark_parser): added.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/09/03 10:00:45 $
+d290 1
+a290 1
+int yyparse _((void));
+@
+
+
+1.95
+log
+@rb_check_frozen has been added (ruby-core:412)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/09/03 05:20:06 $
+d295 1
+@
+
+
+1.94
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d5 2
+a6 2
+  $Author: aamine $
+  $Date: 2002/09/02 12:19:30 $
+d127 1
+a127 1
+NORETURN(void rb_name_error __((VALUE id, const char*, ...)));
+d133 1
+@
+
+
+1.93
+log
+@* gc.c (gc_sweep): does reclaim nodes in also compile time, if we can.
+* ruby.c (load_file): omit GC if we can.
+* parse.y (ruby_parser_stack_on_heap): new function.
+* intern.h (ruby_parser_stack_on_heap): added.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/19 05:56:05 $
+a97 1
+VALUE rb_singleton_class_new _((VALUE));
+@
+
+
+1.92
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (ary_new): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* object.c (rb_class_allocate_instance): move singleton class
+  check from rb_obj_alloc().
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* ext/tcltklib/tcltklib.c (ip_init): allocation framework.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/15 11:49:39 $
+d294 1
+@
+
+
+1.91
+log
+@* eval.c (ruby_current_node) : added to set sourceline on demand.
+
+* eval.c (error_pos, error_print, rb_longjmp, assign): set source
+  file/line.
+
+* eval.c (rb_eval): store current node instead of file/line, and
+  preserve it at return.
+
+* eval.c (module_setup): ditto.
+
+* eval.c (struct thread): store node instead of file/line.
+
+* eval.c (rb_thread_raise): ditto.
+
+* intern.h (ruby_current_node): added.
+
+* intern.h (ruby_set_current_source): added.
+
+* parse.y (stmt, arg): not fix position of assignment.
+
+* parse.y (node_assign): ditto.
+
+* parse.y (yycompile): clear current node.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/07/26 06:12:38 $
+d261 1
+@
+
+
+1.90
+log
+@* random.c: replace with Mersenne Twister RNG.
+
+* eval.c (jump_tag_but_local_jump): preserve retval in
+  LocalJumpError exceptions.
+
+* parse.y (command): no more check for "super outside of method".
+
+* eval.c (rb_mod_define_method): should set last_class and
+  last_func in the block->frame.
+
+* eval.c (error_handle): should handle TAG_THROW as well.
+
+* parse.y (yylex): new decimal notation '0d4567'.
+
+* parse.y (yylex): new octal notation '0o777'.
+
+* parse.y (string_content): every string_content node should
+  return string only.  use NODE_EVSTR to coercing.
+
+* eval.c (rb_eval): NODE_EVSTR support.
+
+* re.c (rb_reg_quote): avoid unnecessary string allocation.
+
+* string.c (get_pat): quote metachracters before compiling a
+  string into a regex.
+
+* string.c (rb_str_split_m): special treatment of strings of size
+  1, but AWK emulation.  now uses get_pat().
+
+* string.c (rb_str_match_m): quote metacharacters.
+
+* string.c (rb_str_match2): ditto.
+
+* ext/socket/socket.c (sock_addrinfo): make all 3 versions of
+  getaddrinfo happy.  [ruby-core:00184]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/29 05:20:33 $
+d135 2
+@
+
+
+1.89
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/04/26 00:40:28 $
+d92 1
+a92 1
+VALUE rb_big_rand _((VALUE, double));
+@
+
+
+1.88
+log
+@ANSI C requires a named argument before `...'
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/26 00:38:44 $
+a286 6
+#define yyparse ruby_yyparse
+#define yylex ruby_yylex
+#define yyerror ruby_yyerror
+#define yylval ruby_yylval
+#define yychar ruby_yychar
+#define yydebug ruby_yydebug
+@
+
+
+1.87
+log
+@* eval.c (rb_proc_new): make Proc from C function. [new]
+
+* intern.h (rb_proc_new): prototype.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/04/24 04:54:13 $
+d167 1
+a167 1
+VALUE rb_proc_new _((VALUE (*)(.../* VALUE yieldarg[, VALUE procarg] */), VALUE));
+@
+
+
+1.86
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:18 $
+d167 1
+@
+
+
+1.85
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2002/03/15 08:51:31 $
+d205 1
+a257 1
+VALUE rb_fix_upto _((VALUE, VALUE));
+@
+
+
+1.84
+log
+@* bignum.c, intern.h (rb_ull2big, rb_ll2big, rb_ull2inum, rb_ll2inum,
+  big2ull, rb_big2ull, rb_big2ll): use LONG_LONG macro instead of
+  long long.
+* numeric.c, intern.h, ruby.h (rb_num2ll, rb_num2ull): ditto.
+* ruby.h: use _I64_MAX and _I64_MIN if they are defined (for VC++).
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/14 06:23:43 $
+d26 1
+a26 1
+VALUE rb_ary_new4 _((long, VALUE *));
+d207 1
+a207 1
+char *rb_source_filename _((const char *));
+d227 1
+a227 1
+int rb_path_check _((char *));
+d281 1
+a281 1
+double rb_cstr_to_dbl _((const char *, int));
+d357 1
+a357 1
+VALUE rb_str_new5 _((VALUE, const char *, long));
+d363 2
+a364 2
+VALUE rb_str_buf_cat _((VALUE, const char *, long));
+VALUE rb_str_buf_cat2 _((VALUE, const char *));
+d418 2
+a419 2
+VALUE rb_iv_set _((VALUE, const char *, VALUE));
+VALUE rb_iv_get _((VALUE, const char *));
+d439 3
+a441 3
+void rb_cv_set _((VALUE, const char *, VALUE));
+VALUE rb_cv_get _((VALUE, const char *));
+void rb_define_class_variable _((VALUE, const char *, VALUE));
+@
+
+
+1.83
+log
+@* re.c (rb_reg_match): should clear $~ if operand is nil.
+
+* re.c (rb_reg_match2): ditto.
+
+* configure: merge Jonathan Baker's large file support patch
+  [ruby-talk:35316], with read_all patch in [ruby-talk:35470].
+
+* eval.c (rb_f_abort): optional message argument that be printed
+  on termination. [new]
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/07 11:19:37 $
+d74 4
+a77 4
+VALUE rb_ll2inum _((long long));
+VALUE rb_ull2inum _((unsigned long long));
+long long rb_big2ll _((VALUE));
+unsigned long long rb_big2ull _((VALUE));
+@
+
+
+1.82
+log
+@* gc.c (rb_source_filename): added. holds unique strings for file
+  names with GC space.
+
+* gc.c (rb_gc_mark): mark source file name.
+
+* gc.c (gc_sweep): ditto.
+
+* gc.c (Init_GC): initialize source file name table.
+
+* intern.h (rb_source_filename): added.
+
+* eval.c (rb_eval_string): use rb_source_filename().
+
+* parse.y (yycompile): ditto.
+
+* ruby.c (proc_options): ditto.
+
+* ruby.c (load_file): ditto.
+
+* ruby.c (ruby_script): ditto.
+
+* ruby.c (ruby_prog_init): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/20 06:33:24 $
+d73 6
+@
+
+
+1.81
+log
+@* intern.h: prototypes; rb_io_addstr(), rb_io_printf(),
+  rb_io_print(), rb_io_puts()
+
+* io.c (rb_io_addstr): make extern.
+
+* io.c (rb_io_printf): ditto.
+
+* io.c (rb_io_print): ditto.
+
+* io.c (rb_io_puts): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/15 06:14:25 $
+d201 1
+@
+
+
+1.80
+log
+@* eval.c (rb_eval): replace rb_cvar_declare() by rb_cvar_set().
+
+* eval.c (assign): ditto.
+
+* variable.c (rb_cvar_set): 4th argument (warn) added; define new
+  class variable if it's not defined yet.
+
+* variable.c (rb_cvar_declare): removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:01:09 $
+d235 4
+@
+
+
+1.79
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/01 10:23:22 $
+a424 1
+void rb_cvar_declare _((VALUE, ID, VALUE));
+d426 1
+a426 1
+void rb_cvar_set _((VALUE, ID, VALUE));
+@
+
+
+1.78
+log
+@* intern.h: prototypes for new functions; rb_cstr_to_inum(),
+  rb_str_to_inum(), rb_cstr_to_dbl(), rb_str_to_dbl()
+
+* bignum.c (rb_cstr_to_inum): changed from rb_cstr2inum(), and
+  added argument badcheck to be consistent with parser. [new]
+
+* bignum.c (rb_str_to_inum): ditto.
+
+* bignum.c (rb_cstr2inum): wapper of rb_cstr_to_inum() now.
+
+* bignum.c (rb_str2inum): ditto.
+
+* object.c (rb_cstr_to_dbl): float number parser. [new]
+
+* object.c (rb_str_to_dbl): ditto.
+
+* object.c (rb_Float): use rb_cstr_to_dbl() for strict check.
+
+* object.c (rb_Integer): use rb_str_to_inum() for strict check.
+
+* string.c (rb_str_to_f): use rb_str_to_dbl() with less check.
+
+* string.c (rb_str_to_i): use rb_str_to_inum() with less check.
+
+* string.c (rb_str_hex): ditto.
+
+* string.c (rb_str_oct): ditto.
+
+* sprintf.c (rb_f_sprintf): ditto.
+
+* time.c (obj2long): ditto.
+
+* parse.y (yylex): use rb_cstr_to_inum() for strict check.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/11 09:18:50 $
+d73 2
+a428 1
+VALUE rb_cvar_singleton _((VALUE));
+@
+
+
+1.77
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 20:18:39 $
+d64 2
+d268 2
+@
+
+
+1.76
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/04 14:14:34 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.75
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/17 07:52:34 $
+d91 2
+@
+
+
+1.74
+log
+@* intern.h: add prototypes.
+  rb_gc_enable(), rb_gc_disable(), rb_gc_start(), rb_str_new5()
+  rb_str_buf_append(), rb_str_buf_cat(), rb_str_buf_cat2(),
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/29 15:57:25 $
+d117 1
+@
+
+
+1.73
+log
+@* string.c (rb_str_equal): object with to_str must be treated as a
+  string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/21 15:41:26 $
+d202 3
+d337 1
+d342 3
+d347 1
+@
+
+
+1.72
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* process.c (pst_wstopsig): returns nil unless WIFSTOPPED() is
+  non-zero.
+
+* process.c (pst_wtermsig): returns nil unless WIFSIGNALED() is
+  non-zero.
+
+* process.c (pst_wexitstatus): returns nil unless WIFEXITED() is
+  non-zero.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+
+* parse.y (call_args2): block_arg may follow the first argument in
+  call_args2.
+
+* eval.c (stack_check): should avoid stack length check during
+  raising SystemStackError exception.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:03 $
+d254 1
+@
+
+
+1.71
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:19:51 $
+d192 1
+a192 1
+void ruby_stack_check _((void));
+@
+
+
+1.70
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/10/29 06:16:00 $
+a109 1
+VALUE rb_enum_length _((VALUE));
+a114 1
+void rb_stack_check _((void));
+d192 2
+d262 6
+a267 6
+#define yyparse rb_yyparse
+#define yylex rb_yylex
+#define yyerror rb_yyerror
+#define yylval rb_yylval
+#define yychar rb_yychar
+#define yydebug rb_yydebug
+d283 1
+@
+
+
+1.69
+log
+@	* intern.h (rb_protect_inspect): follow the change of array.c.
+
+	* eval.c (rb_exec_end_proc): follow the change of rb_protect().
+
+	* eval.c (method_proc, umethod_proc, rb_catch): cast the first
+	  parameter of rb_iterate() to avoid VC++ warning.
+
+	* range.c (range_step): ditto.
+
+	* ext/sdbm/init.c (fsdbm_update, fsdbm_replace): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/29 05:07:18 $
+d43 1
+d139 1
+a139 1
+VALUE rb_eval_cmd _((VALUE, VALUE));
+@
+
+
+1.68
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* variable.c (rb_cvar_set): empty iv_tbl may cause infinite loop.
+
+* variable.c (rb_cvar_get): ditto.
+
+* variable.c (cvar_override_check): ditto.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+
+* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/16 15:14:37 $
+d53 1
+a53 1
+VALUE rb_protect_inspect _((VALUE(*)(VALUE,VALUE),VALUE,VALUE));
+@
+
+
+1.67
+log
+@* eval.c (rb_f_missing): check stack level with rb_stack_check().
+
+* eval.c (rb_call0): ditto.
+
+* eval.c, intern.h (rb_stack_check): added. [new]
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/10 08:21:13 $
+d53 1
+a53 1
+VALUE rb_protect_inspect _((VALUE(*)(),VALUE,VALUE));
+@
+
+
+1.66
+log
+@* file.c (rb_stat_clone): should copy internal data too.
+
+* numeric.c (num_clone): Numeric should not be copied by clone.
+
+* object.c (rb_obj_clone): should check immediate values.
+
+* parse.y (command): `yield' should take command_args.
+
+* parse.y (parse_quotedwords): %w(...) is not a string.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/09/20 06:23:49 $
+d115 1
+@
+
+
+1.65
+log
+@* eval.c, intern.h (rb_svar): return reference to special variable
+  from local variable index. [new]
+
+* eval.c (rb_eval): use rb_svar() for NODE_FLIP{2,3}.
+
+* parse.y (rb_(backref|lastline)_(get|set)): access via rb_svar().
+
+* eval.c (proc_invoke): push dynamic variables.
+
+* eval.c (rb_thread_yield): push special variables as dynamic
+  variables($_, $~ and FLIP states).
+
+
+* intern.h, parse.y (rb_is_local_id): return true if the ID is
+  local symbol. [new]
+
+* parse.y (internal_id): make new ID for internal use. [new]
+
+* parse.y (cond0): allocate internal ID for NODE_FLIP{2,3}.
+
+* eval.c (rb_f_local_variables): use rb_is_local_id() to select
+  visible local variables.
+
+
+* eval.c (rb_thread_start_0): SCOPE_SHARED is removed.
+
+* eval.c, intern.h (rb_thread_scope_shared_p): removed. special
+  variables are no longer shared by threads.
+
+* re.c (rb_reg_search): MATCHDATA is no longer shared by threads.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/05 22:31:07 $
+d144 1
+@
+
+
+1.64
+log
+@* file.c (rb_find_file_ext): add const qualifiers to ext.
+
+* intern.h (rb_find_file_ext): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/03 11:30:58 $
+d136 1
+a173 1
+int rb_thread_scope_shared_p _((void));
+d272 1
+@
+
+
+1.63
+log
+@* intern.h (rb_find_file_ext): changed from rb_find_file_noext().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/08/29 06:28:44 $
+d188 1
+a188 1
+int rb_find_file_ext _((VALUE*, char**));
+@
+
+
+1.62
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:02:15 $
+d188 1
+a188 1
+int rb_find_file_noext _((VALUE*));
+@
+
+
+1.61
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* file.c (group_member): should check real gid only.
+
+* file.c (eaccess): do not cache euid, since effective euid may be
+  changed via Process.euid=().
+
+* file.c (eaccess): return -1 unless every specified access mode
+  is permitted.
+
+* eval.c (rb_eval): while/until returns the value which is given
+  to break.
+
+* parse.y (value_expr): using while/until/class/def as an
+  expression is now gives a warning, not an error.
+
+* range.c (range_eqq): should compare strings based on magical
+  increment (using String#upto), not dictionary order.
+
+* enum.c (enum_sort_by): new method for Schewartzian transformed
+  stable sort.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/20 04:29:56 $
+d360 1
+@
+
+
+1.60
+log
+@* range.c (range_step): 'iter' here should be an array.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+
+* variable.c (rb_cvar_get): class variable override check added.
+
+* variable.c (rb_cvar_set): ditto
+
+* variable.c (rb_cvar_declare): ditto.
+
+* parse.y (parse_regx): handle backslash escaping of delimiter here.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/06 03:05:12 $
+d52 1
+@
+
+
+1.59
+log
+@* string.c (rb_str_lstrip_bang): new method.
+
+* string.c (rb_str_rstrip_bang): new method.
+
+* string.c (rb_str_associate): should consider STR_ASSOC too.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+
+* process.c (proc_waitpid): now all arguments are optional.
+
+* process.c (Init_process): waitpid is now alias to wait.
+
+* process.c (Init_process): waitpid2 is now alias to wait2.
+
+* process.c (rb_waitpid): made public.
+
+* ext/pty/pty.c (pty_getpty): avoid disturbing SIGCHLD using
+  thread and rb_waitpid.
+
+* process.c (proc_getpgrp): now takes no argument on all
+  platforms.
+
+* process.c (proc_setpgrp): ditto.
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::pack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::pack_sockaddr_un(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::unpack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::unpack_sockaddr_un(). [new]
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/07/25 11:31:59 $
+d247 1
+a247 1
+VALUE rb_obj_type _((VALUE));
+@
+
+
+1.58
+log
+@Fix a bogon in my last commit..
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/25 08:19:49 $
+d278 1
+@
+
+
+1.57
+log
+@* intern.h: add some missing function prototypes.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/24 09:07:33 $
+d404 1
+a404 1
+VALUE rb_cv_set _((VALUE, const char *, VALUE));
+@
+
+
+1.56
+log
+@* eval.c (rb_provide_feature): should not tweak extension used for
+  loading.
+
+* io.c (io_fread): use fread(3) if PENDING_COUND is available.
+
+* class.c (rb_mod_include_p): Module#include? added. [new]
+
+* re.c (ignorecase_setter): give warning on modifying $=.
+
+* string.c (rb_str_casecmp): new method. [new]
+
+* string.c (rb_str_eql): separated from rb_str_equal(), make it
+  always be case sensitive. [new]
+
+* string.c (rb_str_hash): made it always be case sensitive.
+
+* eval.c (rb_f_require): should not include path in $" value
+
+* file.c (rb_find_file): should return 0 explicitly on failure.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/18 05:55:20 $
+d381 2
+d404 3
+@
+
+
+1.55
+log
+@* regex.c (NUM_FAILURE_ITEMS): was confusing NUM_REG_ITEMS and
+  NUM_NONREG_ITEMS, which have happened to be same value.
+
+* class.c (rb_class_new): subclass check moved to this function.
+
+* class.c (rb_class_boot): check less version of rb_class_new().
+
+* eval.c (proc_invoke): should preserve iter status for embedded
+  frame in the block.
+
+* file.c (rb_file_s_expand_path): may overrun buffer on stack.
+
+* string.c (rb_str_insert): forgot to call rb_str_modify().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/14 15:17:18 $
+d93 1
+d205 1
+d286 1
+@
+
+
+1.54
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/03 07:29:00 $
+d82 1
+@
+
+
+1.53
+log
+@credit rb_name_error() fix to Nobuyoshi Nakada.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+d30 1
+d185 2
+a186 2
+int rb_find_file_noext _((char*));
+char *rb_find_file _((char*));
+d244 2
+d370 1
+a370 1
+void rb_clone_generic_ivar _((VALUE,VALUE));
+@
+
+
+1.52
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/19 04:35:13 $
+d219 3
+@
+
+
+1.51
+log
+@* eval.c (rb_f_require): searches ".rb" and ".so" at the same
+  time.  previous behavior (search ".rb", then ".so") has a
+  security risk (ruby-bugs#PR140).
+
+* array.c (rb_ary_to_ary): new function to replace internal
+  rb_Array(), which never calls to_a, but to_ary (rb_Array() might
+  call both). [new]
+
+* regex.c (PUSH_FAILURE_POINT): push option status again.
+
+* regex.c (re_compile_pattern): avoid pushing unnecessary
+  option_set.
+
+* eval.c (rb_load): tainted string is OK if wrapped *and*
+  $SAFE >= 4.
+
+* eval.c (rb_thread_start_0): should not nail down higher blocks
+  before preserving original context (i.e. should not alter
+  original context).
+
+* eval.c (proc_yield): new method equivalent to Proc#call but no
+  check for number of arguments. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 07:19:38 $
+d112 1
+@
+
+
+1.50
+log
+@* variable.c (rb_mod_const_at): use hash table as internal
+  data. [new]
+
+* variable.c (rb_mod_const_of): ditto.
+
+* variable.c (rb_const_list): new function to convert internal
+  data (hash table) to array of strings.
+
+* eval.c (rb_mod_s_constants): data handling scheme has changed.
+
+* eval.c (rb_add_method): should not call rb_secure(), for
+  last_func may not be set.
+
+* io.c (rb_io_ctl): ioctl should accept any integer within C long
+  range.
+
+* marshal.c (r_object): wrong type check for modules.
+
+* marshal.c (w_object): should not dump anonymous classes/modules.
+
+* io.c (rb_open_file): use rb_file_sysopen_internal() if the 3rd
+  argument (permission flags) is given. [new, should be backported?]
+
+* io.c (rb_io_mode_binmode): mode string (e.g. "r+") to flags to
+  open(2).
+
+* eval.c (rb_eval): NODE_REXPAND expand an array of 1 element as
+  the element itself. [new, should be backported?]
+
+* parse.y (ret_args): should treat "*[a]" in rhs expression as
+  "a", not "[a]".
+
+* regex.c (re_compile_pattern): should push option modifier at the
+  right place.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d30 1
+d183 1
+@
+
+
+1.49
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/16 09:05:50 $
+d370 3
+a372 1
+VALUE rb_mod_const_at _((VALUE, VALUE));
+a373 1
+VALUE rb_mod_const_of _((VALUE, VALUE));
+@
+
+
+1.48
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/06 15:01:58 $
+d94 1
+a94 1
+VALUE rb_obj_singleton_methods _((VALUE));
+d315 2
+@
+
+
+1.47
+log
+@forgot some checkins.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:10 $
+d330 1
+@
+
+
+1.46
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:24 $
+d50 1
+a50 1
+VALUE rb_protect_inspect _((VALUE(*)(VALUE,VALUE),VALUE,VALUE));
+d147 1
+a147 1
+void rb_set_end_proc _((void (*)(void), VALUE));
+@
+
+
+1.45
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/19 03:20:21 $
+d50 1
+a50 1
+VALUE rb_protect_inspect _((VALUE(*)(),VALUE,VALUE));
+d81 2
+d95 1
+a95 1
+void rb_define_method_id _((VALUE, ID, VALUE (*)(), int));
+d98 4
+a101 4
+void rb_define_protected_method _((VALUE, const char*, VALUE (*)(), int));
+void rb_define_private_method _((VALUE, const char*, VALUE (*)(), int));
+void rb_define_singleton_method _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_private_method _((VALUE,const char*,VALUE(*)(),int));
+d146 2
+a147 2
+VALUE rb_protect _((VALUE (*)(), VALUE, int*));
+void rb_set_end_proc _((void (*)(), VALUE));
+d166 1
+a166 1
+VALUE rb_thread_create _((VALUE (*)(), void*));
+d171 2
+a172 2
+int rb_thread_select();
+void rb_thread_wait_for();
+d263 1
+d302 1
+a302 1
+void posix_signal _((int, void (*)()));
+d343 1
+a343 1
+VALUE rb_time_new();
+@
+
+
+1.44
+log
+@* dir.c (glob_helper): replace lstat() by stat() to follow symlink
+  in the case like 'symlink/*'.
+
+* dir.c (glob_helper): gave warning too much.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/16 08:30:09 $
+a312 1
+VALUE rb_str_to_str _((VALUE));
+@
+
+
+1.43
+log
+@* dir.c (dir_s_chdir): block form of Dir.chdir. (RCR#U016).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:08 $
+d185 2
+a186 2
+void rb_gc_mark_maybe _((void*));
+void rb_gc_mark _((void*));
+@
+
+
+1.42
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/16 07:53:19 $
+d185 2
+a186 2
+void rb_gc_mark_maybe();
+void rb_gc_mark();
+@
+
+
+1.41
+log
+@* io.c (set_outfile): f should be the FILE* from the assigning value.
+
+* ext/socket/socket.c (tcp_s_open): should not give default value
+  to local_host.
+
+* time.c (time_s_times): move to Process::times.
+
+* file.c (rb_file_s_lchmod): new method File::lchmod.
+
+* file.c (rb_file_s_lchown): new method File::lchown.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d44 1
+@
+
+
+1.40
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/02 11:38:10 $
+d263 1
+@
+
+
+1.39
+log
+@* array.c (rb_ary_sort_bang): returns self, even if its length is
+  less than 2.
+
+* eval.c (POP_VARS): propagate DVAR_DONT_RECYCLE, if
+  SCOPE_DONT_RECYCLE of ruby_scope is set.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:00:54 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.38
+log
+@Mon Jan 15 16:00:07 2001  Yukihiro Matsumoto  <matz@@ruby-lang.org>
+
+	* pack.c (pack_unpack): should check associated pointer packed by
+	  pack("P").  restriction added.
+
+Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+
+	* re.c (rb_reg_s_last_match): should explicitly return nth match.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/01/10 07:30:18 $
+d110 1
+@
+
+
+1.37
+log
+@setres[ug]id, NORETURN
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/01/09 07:26:17 $
+d328 1
+@
+
+
+1.36
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/18 09:46:04 $
+d107 1
+a107 1
+void rb_loaderror __((const char*, ...)) NORETURN;
+d110 1
+a110 1
+void rb_error_frozen _((char*)) NORETURN;
+d112 2
+a113 2
+void rb_exc_raise _((VALUE)) NORETURN;
+void rb_exc_fatal _((VALUE)) NORETURN;
+d135 1
+a135 1
+void rb_jump_tag _((int)) NORETURN;
+@
+
+
+1.35
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/08 07:10:23 $
+d110 1
+a110 1
+void rb_error_frozen _((char*));
+@
+
+
+1.35.2.1
+log
+@* eval.c (POP_VARS): propagate DVAR_DONT_RECYCLE, if
+  SCOPE_DONT_RECYCLE of ruby_scope is set.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/18 09:46:04 $
+d110 1
+a110 2
+void rb_load_fail _((char*)) NORETURN;
+void rb_error_frozen _((char*)) NORETURN;
+@
+
+
+1.35.2.2
+log
+@export rb_ary_clear()
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/02 11:39:51 $
+a43 1
+VALUE rb_ary_clear _((VALUE));
+@
+
+
+1.35.2.3
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:51:40 $
+a80 2
+VALUE rb_mod_clone _((VALUE));
+VALUE rb_mod_dup _((VALUE));
+@
+
+
+1.35.2.4
+log
+@* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): inifinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe leve 4.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:40 $
+d300 1
+a300 1
+void posix_signal _((int, RETSIGTYPE (*)()));
+@
+
+
+1.35.2.5
+log
+@back port from 1.7
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/01 08:45:11 $
+d182 1
+a182 2
+int rb_find_file_noext _((VALUE*));
+VALUE rb_find_file _((VALUE));
+@
+
+
+1.35.2.6
+log
+@* intern.h (rb_find_file_ext): changed from rb_find_file_noext().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/19 07:59:48 $
+d182 1
+a182 1
+int rb_find_file_ext _((VALUE*, char**));
+@
+
+
+1.35.2.7
+log
+@* file.c (rb_find_file_ext): add const qualifiers to ext.
+
+* intern.h (rb_find_file_ext): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/09/03 11:28:37 $
+d182 1
+a182 1
+int rb_find_file_ext _((VALUE*, const char* const*));
+@
+
+
+1.35.2.8
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/06 03:05:02 $
+a237 1
+VALUE rb_obj_class _((VALUE));
+@
+
+
+1.35.2.9
+log
+@* eval.c (rb_f_missing): check stack level with rb_stack_check().
+
+* eval.c (rb_call0): ditto.
+
+* eval.c, intern.h (rb_stack_check): added. [new]
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/02 04:25:52 $
+a117 1
+void rb_stack_check _((void));
+@
+
+
+1.35.2.10
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/16 15:17:10 $
+a40 1
+int rb_cmpint _((VALUE));
+@
+
+
+1.35.2.11
+log
+@* io.c (io_fread): EAGAIN/EWOULDBLOCK should not terminate and
+  throw away the input.
+
+* time.c (time_new_internal): underflow adjustment must not use
+  negative div/mod.
+
+* time.c (time_cmp): should consider tv_usec on non Fixnum number
+  comparison.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/13 08:22:27 $
+a241 1
+VALUE rb_check_convert_type _((VALUE,int,const char*,const char*));
+@
+
+
+1.35.2.12
+log
+@* intern.h: add prototypes.
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/04 04:53:31 $
+a320 1
+VALUE rb_str_dup_frozen _((VALUE));
+@
+
+
+1.35.2.13
+log
+@* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* variable.c (find_class_path): should initialize iv_tbl if it's
+  NULL.
+
+* class.c (rb_define_class): should return the existing class if
+  the class is already defined and its superclass is ideintical to
+  the specified superclass.
+
+* class.c (rb_define_class_under): ditto.
+
+* class.c (rb_define_module): should return the existing module if
+  the module is already defined.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/17 08:13:17 $
+a239 1
+VALUE rb_class_real _((VALUE));
+@
+
+
+1.35.2.14
+log
+@* intern.h: added prototypes: rb_cv_set(), rb_cv_get(),
+  rb_define_class_variable()
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/12/18 08:40:30 $
+a389 3
+void rb_cv_set _((VALUE, const char *, VALUE));
+VALUE rb_cv_get _((VALUE, const char *));
+void rb_define_class_variable _((VALUE, const char *, VALUE));
+@
+
+
+1.35.2.15
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/20 02:03:03 $
+a86 2
+VALUE rb_make_metaclass _((VALUE, VALUE));
+VALUE rb_class_inherited _((VALUE, VALUE));
+@
+
+
+1.35.2.16
+log
+@* parse.y (assignable): should emit CVASGN within the method
+  body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/10 23:38:57 $
+d391 1
+@
+
+
+1.35.2.17
+log
+@* intern.h: prototypes; rb_io_addstr(), rb_io_printf(),
+  rb_io_print(), rb_io_puts()
+
+* io.c (rb_io_addstr): make extern.
+
+* io.c (rb_io_printf): ditto.
+
+* io.c (rb_io_print): ditto.
+
+* io.c (rb_io_puts): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/13 09:02:15 $
+a218 4
+VALUE rb_io_addstr _((VALUE, VALUE));
+VALUE rb_io_printf _((int, VALUE*, VALUE));
+VALUE rb_io_print _((int, VALUE*, VALUE));
+VALUE rb_io_puts _((int, VALUE*, VALUE));
+@
+
+
+1.35.2.18
+log
+@* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/20 06:35:37 $
+d98 1
+a98 1
+void rb_define_method_id _((VALUE, ID, VALUE (*)(ANYARGS), int));
+d101 4
+a104 4
+void rb_define_protected_method _((VALUE, const char*, VALUE (*)(ANYARGS), int));
+void rb_define_private_method _((VALUE, const char*, VALUE (*)(ANYARGS), int));
+void rb_define_singleton_method _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+void rb_define_private_method _((VALUE,const char*,VALUE(*)(ANYARGS),int));
+d170 1
+a170 1
+VALUE rb_thread_create _((VALUE (*)(ANYARGS), void*));
+d175 2
+a176 2
+int rb_thread_select(ANYARGS);
+void rb_thread_wait_for(ANYARGS);
+d354 1
+a354 1
+VALUE rb_time_new(ANYARGS);
+@
+
+
+1.35.2.19
+log
+@* gc.c (rb_source_filename): added. holds unique strings for file
+  names with GC space.
+
+* gc.c (rb_gc_mark): mark source file name.
+
+* gc.c (gc_sweep): ditto.
+
+* gc.c (Init_GC): initialize source file name table.
+
+* intern.h (rb_source_filename): added.
+
+* eval.c (rb_eval_string): use rb_source_filename().
+
+* parse.y (yycompile): ditto.
+
+* ruby.c (proc_options): ditto.
+
+* ruby.c (load_file): ditto.
+
+* ruby.c (ruby_script): ditto.
+
+* ruby.c (ruby_prog_init): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/27 04:50:30 $
+a195 1
+char *rb_source_filename _((const char *));
+@
+
+
+1.35.2.20
+log
+@* eval.c, gc.c, intern.h, variable.c: declare rb_gc_mark{,maybe}()
+  canonically in order not to confuse C++ compilers. (backported
+  from 1.7, problem noted by ttate)
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/07 11:19:28 $
+d192 2
+a193 2
+void rb_gc_mark_maybe _((VALUE));
+void rb_gc_mark _((VALUE));
+@
+
+
+1.35.2.21
+log
+@* gc.c (gc_sweep): does reclaim nodes in also compile time, if we can.
+* ruby.c (load_file): omit GC if we can.
+* parse.y (ruby_parser_stack_on_heap): new function.
+* intern.h (ruby_parser_stack_on_heap): added.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/05/04 12:04:52 $
+a268 1
+int ruby_parser_stack_on_heap _((void));
+@
+
+
+1.35.2.22
+log
+@* gc.c (rb_gc): should mark parser.
+* parse.y (rb_gc_mark_parser): new function.
+* intern.h (rb_gc_mark_parser): added.
+@
+text
+@d5 2
+a6 2
+  $Author: aamine $
+  $Date: 2002/09/02 15:20:12 $
+a269 1
+void rb_gc_mark_parser _((void));
+@
+
+
+1.35.4.1
+log
+@m17n baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/18 09:46:04 $
+d110 1
+a110 3
+<<<<<<< intern.h
+NORETURN(void rb_load_fail _((char*)));
+NORETURN(void rb_error_frozen _((char*)));
+@
+
+
+1.35.4.2
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:45 $
+d107 1
+a107 1
+NORETURN(void rb_loaderror __((const char*, ...)));
+d110 2
+d114 2
+a115 2
+NORETURN(void rb_exc_raise _((VALUE)));
+NORETURN(void rb_exc_fatal _((VALUE)));
+d137 1
+a137 1
+NORETURN(void rb_jump_tag _((int)));
+d269 1
+a304 6
+struct m17n_encoding *ruby_default_encoding;
+struct m17n_encoding *rb_m17n_get_encoding _((VALUE obj));
+void rb_m17n_associate_encoding _((VALUE obj, struct m17n_encoding* enc));
+void rb_m17n_enc_check _((VALUE str1, VALUE str2, struct m17n_encoding **encp));
+VALUE rb_enc_get_encoding _((VALUE obj));
+VALUE rb_enc_set_encoding _((VALUE obj, VALUE encoding));
+a316 1
+VALUE rb_str_length _((VALUE));
+@
+
+
+1.35.4.3
+log
+@tested a bit; utf-8 bugs removed
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/12 04:36:00 $
+a305 1
+int rb_str_sublen _((VALUE, int));
+@
+
+
+1.35.4.4
+log
+@several minor fixes.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/05 03:37:34 $
+d304 2
+a305 3
+void rb_m17n_associate_encoding _((VALUE, struct m17n_encoding*));
+void rb_m17n_copy_encoding _((VALUE, VALUE));
+void rb_m17n_enc_check _((VALUE, VALUE, struct m17n_encoding **));
+d307 2
+a308 2
+VALUE rb_enc_get_encoding _((VALUE));
+VALUE rb_enc_set_encoding _((VALUE, VALUE));
+@
+
+
+1.34
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: shugo $
+  $Date: 2000/12/06 05:29:05 $
+d93 2
+a94 1
+void rb_undef_method _((VALUE, const char*));
+@
+
+
+1.33
+log
+@shugo
+
+* intern.h: added prototype of rb_exec_end_proc()
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/11/27 09:23:20 $
+d374 1
+a374 1
+int rb_cvar_defined _((VALUE, ID));
+d379 1
+@
+
+
+1.32
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/21 14:26:22 $
+d144 1
+@
+
+
+1.31
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/20 07:31:39 $
+a142 1
+void rb_exec_end_proc _((void));
+d144 2
+d171 1
+@
+
+
+1.30
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/13 05:39:32 $
+d374 1
+a374 3
+int rb_cvar_defined_singleton _((VALUE, ID));
+void rb_cvar_set_singleton _((VALUE, ID, VALUE));
+VALUE rb_cvar_get_singleton _((VALUE, ID));
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/22 18:15:42 $
+d21 1
+a21 1
+void rb_mem_clear _((register VALUE*, register size_t));
+d263 1
+a263 1
+int rb_memcmp _((char*,char*,size_t));
+@
+
+
+1.28
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/15 06:00:24 $
+d230 1
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/28 09:53:28 $
+d135 1
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/25 08:26:00 $
+d375 1
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/02 09:22:23 $
+d369 2
+d372 3
+a374 1
+void rb_cvar_set _((VALUE, ID, VALUE));
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/17 09:37:59 $
+a206 1
+void rb_str_setter _((VALUE, ID, VALUE*));
+d322 1
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/04 07:04:35 $
+d284 2
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/14 05:30:21 $
+d223 1
+@
+
+
+1.21
+log
+@2000-06-14
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/18 04:32:03 $
+d189 1
+@
+
+
+1.20
+log
+@2000-05-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/17 04:38:13 $
+d260 1
+@
+
+
+1.19
+log
+@2000-05-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:07:40 $
+d192 5
+a196 5
+extern VALUE rb_fs;
+extern VALUE rb_output_fs;
+extern VALUE rb_rs;
+extern VALUE rb_default_rs;
+extern VALUE rb_output_rs;
+d233 2
+a234 2
+extern int   ruby_sourceline;
+extern char *ruby_sourcefile;
+@
+
+
+1.18
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:52:58 $
+d152 1
+@
+
+
+1.17
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:20 $
+d71 1
+d109 1
+d224 1
+d246 1
+d359 1
+d362 3
+@
+
+
+1.16
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/17 15:39:37 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.15
+log
+@2000-04-10
+@
+text
+@d1 17
+a17 2
+/* Functions and variables that are used by more than one source file of
+ * the kernel.  Not available to extensions and applications.
+@
+
+
+1.14
+log
+@2000-03-17
+@
+text
+@d289 2
+@
+
+
+1.13
+log
+@2000-02-08
+@
+text
+@d295 1
+@
+
+
+1.12
+log
+@2000-02-01
+@
+text
+@a156 1
+void rb_global_variable _((VALUE*));
+d250 1
+a251 3
+void rb_set_kcode _((const char*));
+int rb_ignorecase_p _((void));
+void rb_match_busy _((VALUE, int));
+@
+
+
+1.11
+log
+@20000105
+@
+text
+@d104 1
+@
+
+
+1.10
+log
+@19991214
+@
+text
+@d28 1
+a28 1
+VALUE rb_ary_delete_at _((VALUE, VALUE));
+d44 2
+a45 1
+VALUE rb_str2inum _((const char*, int));
+d154 1
+d319 1
+@
+
+
+1.9
+log
+@991207
+@
+text
+@d224 1
+a224 1
+int rb_is_shvar_id _((ID));
+d326 5
+a330 5
+VALUE rb_mod_shvar_at _((VALUE, VALUE));
+VALUE rb_mod_shvars _((VALUE));
+VALUE rb_mod_shvar_of _((VALUE, VALUE));
+VALUE rb_mod_remove_shvar _((VALUE, VALUE));
+int rb_shvar_defined_at _((VALUE, ID));
+d332 6
+a337 5
+int rb_shvar_defined _((VALUE, ID));
+VALUE rb_shvar_get _((VALUE, ID));
+VALUE rb_shvar_get_at _((VALUE, ID));
+void rb_shvar_set _((VALUE, ID, VALUE));
+VALUE rb_mod_shared_variables _((VALUE));
+@
+
+
+1.8
+log
+@19991206
+@
+text
+@d236 1
+@
+
+
+1.7
+log
+@mark_end_proc
+@
+text
+@d60 1
+a60 1
+VALUE rb_big_rand _((VALUE));
+@
+
+
+1.6
+log
+@19991117
+@
+text
+@d124 1
+@
+
+
+1.5
+log
+@19991104
+@
+text
+@d223 1
+a223 1
+int rb_is_const_id _((ID));
+a312 1
+VALUE rb_gvar_set2 _((const char*, VALUE));
+d324 5
+a328 5
+VALUE rb_mod_const_at _((VALUE, VALUE));
+VALUE rb_mod_constants _((VALUE));
+VALUE rb_mod_const_of _((VALUE, VALUE));
+VALUE rb_mod_remove_const _((VALUE, VALUE));
+int rb_const_defined_at _((VALUE, ID));
+d330 5
+a334 1
+int rb_const_defined _((VALUE, ID));
+@
+
+
+1.4
+log
+@19991029
+@
+text
+@d213 6
+@
+
+
+1.3
+log
+@-r debug, -s, etc.
+@
+text
+@d85 1
+a85 1
+extern int ruby_nerrs;
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@a251 1
+void ruby_require_libraries _((void));
+@
+
+
+1.2.2.1
+log
+@19991025
+@
+text
+@d85 1
+a85 1
+EXTERN int ruby_nerrs;
+@
+
+
+1.2.2.2
+log
+@19991104
+@
+text
+@a212 6
+#define yyparse rb_yyparse
+#define yylex rb_yylex
+#define yyerror rb_yyerror
+#define yylval rb_yylval
+#define yychar rb_yychar
+#define yydebug rb_yydebug
+@
+
+
+1.2.2.3
+log
+@19991129
+@
+text
+@a123 1
+void rb_mark_end_proc _((void));
+@
+
+
+1.2.2.4
+log
+@19991206
+@
+text
+@d60 1
+a60 1
+VALUE rb_big_rand _((VALUE, double));
+@
+
+
+1.2.2.5
+log
+@2000-02-08
+@
+text
+@a317 1
+struct st_table* rb_generic_ivar_table _((VALUE));
+@
+
+
+1.2.2.6
+log
+@2000-05-30
+@
+text
+@d212 2
+a213 2
+EXTERN int   ruby_sourceline;
+EXTERN char *ruby_sourcefile;
+@
+
+
+1.2.2.7
+log
+@2000-06-05
+@
+text
+@d172 5
+a176 5
+EXTERN VALUE rb_fs;
+EXTERN VALUE rb_output_fs;
+EXTERN VALUE rb_rs;
+EXTERN VALUE rb_default_rs;
+EXTERN VALUE rb_output_rs;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 30
+a35 27
+void memclear _((register VALUE *, register int));
+VALUE assoc_new _((VALUE, VALUE));
+VALUE ary_new _((void));
+VALUE ary_new2 _((int));
+VALUE ary_new3();
+VALUE ary_new4 _((int, VALUE *));
+VALUE ary_freeze _((VALUE));
+void ary_store _((VALUE, int, VALUE));
+VALUE ary_push _((VALUE, VALUE));
+VALUE ary_pop _((VALUE));
+VALUE ary_shift _((VALUE));
+VALUE ary_unshift _((VALUE, VALUE));
+VALUE ary_entry _((VALUE, int));
+VALUE ary_each _((VALUE));
+VALUE ary_join _((VALUE, VALUE));
+VALUE ary_to_s _((VALUE));
+VALUE ary_print_on _((VALUE, VALUE));
+VALUE ary_reverse _((VALUE));
+VALUE ary_sort_bang _((VALUE));
+VALUE ary_sort _((VALUE));
+VALUE ary_delete _((VALUE, VALUE));
+VALUE ary_delete_at _((VALUE, VALUE));
+VALUE ary_plus _((VALUE, VALUE));
+VALUE ary_concat _((VALUE, VALUE));
+VALUE ary_assoc _((VALUE, VALUE));
+VALUE ary_rassoc _((VALUE, VALUE));
+VALUE ary_includes _((VALUE, VALUE));
+d37 24
+a60 23
+VALUE big_clone _((VALUE));
+void big_2comp _((VALUE));
+VALUE big_norm _((VALUE));
+VALUE uint2big _((UINT));
+VALUE int2big _((INT));
+VALUE uint2inum _((UINT));
+VALUE int2inum _((INT));
+VALUE str2inum _((UCHAR *, int));
+VALUE big2str _((VALUE, int));
+INT big2int _((VALUE));
+VALUE big_to_i _((VALUE));
+VALUE dbl2big _((double));
+double big2dbl _((VALUE));
+VALUE big_to_f _((VALUE));
+VALUE big_plus _((VALUE, VALUE));
+VALUE big_minus _((VALUE, VALUE));
+VALUE big_mul _((VALUE, VALUE));
+VALUE big_pow _((VALUE, VALUE));
+VALUE big_and _((VALUE, VALUE));
+VALUE big_or _((VALUE, VALUE));
+VALUE big_xor _((VALUE, VALUE));
+VALUE big_lshift _((VALUE, VALUE));
+VALUE big_rand _((VALUE));
+d62 4
+a65 4
+VALUE class_new _((VALUE));
+VALUE singleton_class_new _((VALUE));
+VALUE singleton_class_clone _((VALUE));
+void singleton_class_attached _((VALUE,VALUE));
+d67 1
+a67 1
+VALUE module_new _((void));
+d69 6
+a74 5
+VALUE mod_included_modules _((VALUE));
+VALUE mod_ancestors _((VALUE));
+VALUE class_instance_methods _((int, VALUE *, VALUE));
+VALUE class_private_instance_methods _((int, VALUE *, VALUE));
+VALUE obj_singleton_methods _((VALUE));
+d76 5
+a80 4
+void rb_undef_method _((VALUE, char *));
+void rb_define_private_method _((VALUE, char *, VALUE (*)(), int));
+void rb_define_singleton_method _((VALUE,char*,VALUE(*)(),int));
+void rb_define_private_method _((VALUE,char*,VALUE(*)(),int));
+d83 1
+a83 1
+VALUE enum_length _((VALUE));
+d85 7
+a91 16
+VALUE exc_new _((VALUE, char *, UINT));
+VALUE exc_new2 _((VALUE, char *));
+VALUE exc_new3 _((VALUE, VALUE));
+#ifdef __GNUC__
+volatile voidfn TypeError;
+volatile voidfn ArgError;
+volatile voidfn NameError;
+volatile voidfn IndexError;
+volatile voidfn LoadError;
+#else
+void TypeError();
+void ArgError();
+void NameError();
+void IndexError();
+void LoadError();
+#endif
+d93 5
+d100 1
+d102 5
+a106 8
+VALUE dyna_var_defined _((ID));
+VALUE dyna_var_ref _((ID));
+VALUE dyna_var_asgn _((ID, VALUE));
+void ruby_init _((void));
+void ruby_options _((int, char **));
+void ruby_run _((void));
+void rb_eval_cmd _((VALUE, VALUE));
+void rb_trap_eval _((VALUE, int));
+a107 2
+void rb_raise _((VALUE));
+void rb_fatal _((VALUE));
+a108 2
+int iterator_p _((void));
+VALUE rb_yield_0 _((VALUE, volatile VALUE));
+a109 1
+VALUE rb_funcall2 _((VALUE, ID, int, VALUE *));
+d112 36
+a147 15
+VALUE f_load _((VALUE, VALUE));
+void rb_provide _((char *));
+VALUE f_require _((VALUE, VALUE));
+VALUE class_new_instance _((int, VALUE *, VALUE));
+VALUE f_lambda _((void));
+void rb_set_end_proc _((void (*)(),VALUE));
+void gc_mark_threads _((void));
+void thread_schedule _((void));
+void thread_wait_fd _((int));
+void thread_fd_writable _((int));
+int thread_alone _((void));
+void thread_sleep _((int));
+void thread_sleep_forever _((void));
+VALUE thread_create _((VALUE (*)(), void *));
+void thread_interrupt _((void));
+d149 3
+a151 3
+VALUE file_open _((char *, char *));
+int eaccess _((char *, int));
+VALUE file_s_expand_path _((VALUE, VALUE));
+d153 9
+a161 8
+void rb_global_variable _((VALUE *));
+void gc_mark_locations _((VALUE *, VALUE *));
+void gc_mark_maybe();
+void gc_mark();
+void gc_force_recycle();
+void gc_gc _((void));
+void init_stack _((void));
+void init_heap _((void));
+a162 1
+VALUE hash_freeze _((VALUE));
+d164 6
+a169 3
+VALUE hash_new _((void));
+VALUE hash_aref _((VALUE, VALUE));
+VALUE hash_aset _((VALUE, VALUE, VALUE));
+d171 15
+a185 12
+void eof_error _((void));
+VALUE io_write _((VALUE, VALUE));
+VALUE io_gets_method _((int, VALUE*, VALUE));
+VALUE io_gets _((VALUE));
+VALUE io_getc _((VALUE));
+VALUE io_ungetc _((VALUE, VALUE));
+VALUE io_close _((VALUE));
+VALUE io_binmode _((VALUE));
+int io_mode_flags _((char *));
+VALUE io_reopen _((VALUE, VALUE));
+VALUE f_gets _((void));
+void rb_str_setter _((VALUE, ID, VALUE *));
+d187 6
+a192 9
+void num_zerodiv _((void));
+VALUE num_coerce_bin _((VALUE, VALUE));
+VALUE float_new _((double));
+VALUE flo_pow _((VALUE, VALUE));
+VALUE num2fix _((VALUE));
+VALUE fix2str _((VALUE, int));
+VALUE fix_to_s _((VALUE));
+VALUE num_upto _((VALUE, VALUE));
+VALUE fix_upto _((VALUE, VALUE));
+a193 1
+VALUE rb_equal _((VALUE, VALUE));
+d195 1
+a195 2
+VALUE obj_equal _((VALUE, VALUE));
+VALUE any_to_s _((VALUE));
+d197 9
+a205 3
+VALUE obj_is_instance_of _((VALUE, VALUE));
+VALUE obj_is_kind_of _((VALUE, VALUE));
+VALUE obj_alloc _((VALUE));
+a209 1
+double num2dbl _((VALUE));
+d211 2
+d214 3
+a216 4
+void pushback _((int));
+ID id_attrset _((ID));
+void yyappend_print _((void));
+void yywhile_loop _((int, int));
+d219 4
+a222 5
+void local_var_append _((ID));
+VALUE backref_get _((void));
+void backref_set _((VALUE));
+VALUE lastline_get _((void));
+void lastline_set _((VALUE));
+d224 1
+a224 1
+int rb_proc_exec _((char *));
+d227 2
+a228 2
+VALUE range_new _((VALUE, VALUE));
+VALUE range_beg_end _((VALUE, int *, int *));
+d230 14
+a243 10
+VALUE reg_nth_defined _((int, VALUE));
+VALUE reg_nth_match _((int, VALUE));
+VALUE reg_last_match _((VALUE));
+VALUE reg_match_pre _((VALUE));
+VALUE reg_match_post _((VALUE));
+VALUE reg_match_last _((VALUE));
+VALUE reg_new _((char *, int, int));
+VALUE reg_match _((VALUE, VALUE));
+VALUE reg_match2 _((VALUE));
+void rb_set_kcode _((char *));
+d245 4
+a248 3
+void rb_require_modules _((void));
+void rb_load_file _((char *));
+void ruby_script _((char *));
+d250 4
+a253 2
+void ruby_set_argv _((int, char **));
+void ruby_process_options _((int, char **));
+d255 4
+a258 2
+VALUE f_kill _((int, VALUE *));
+void gc_mark_trap_list _((void));
+d260 1
+d264 1
+a264 1
+VALUE f_sprintf _((int, VALUE *));
+d266 22
+a287 21
+VALUE str_new _((UCHAR *, UINT));
+VALUE str_new2 _((UCHAR *));
+VALUE str_new3 _((VALUE));
+VALUE str_new4 _((VALUE));
+VALUE obj_as_string _((VALUE));
+VALUE str_dup _((VALUE));
+VALUE str_plus _((VALUE, VALUE));
+VALUE str_times _((VALUE, VALUE));
+VALUE str_substr _((VALUE, int, int));
+void str_modify _((VALUE));
+VALUE str_freeze _((VALUE));
+VALUE str_dup_freezed _((VALUE));
+VALUE str_taint _((VALUE));
+VALUE str_tainted _((VALUE));
+VALUE str_resize _((VALUE, int));
+VALUE str_cat _((VALUE, UCHAR *, UINT));
+int str_hash _((VALUE));
+int str_cmp _((VALUE, VALUE));
+VALUE str_upto _((VALUE, VALUE));
+VALUE str_inspect _((VALUE));
+VALUE str_split _((VALUE, char *));
+d289 6
+a294 6
+VALUE struct_new();
+VALUE struct_define();
+VALUE struct_alloc _((VALUE, VALUE));
+VALUE struct_aref _((VALUE, VALUE));
+VALUE struct_aset _((VALUE, VALUE, VALUE));
+VALUE struct_getmember _((VALUE, ID));
+d296 1
+a296 5
+VALUE time_new _((int, int));
+/* util.c */
+void add_suffix _((VALUE, char *));
+unsigned long scan_oct _((char *, int, int *));
+unsigned long scan_hex _((char *, int, int *));
+d298 1
+a298 1
+VALUE mod_name _((VALUE));
+d300 2
+a301 2
+void rb_set_class_path _((VALUE, VALUE, char *));
+VALUE rb_path2class _((char *));
+d303 7
+a309 7
+void rb_autoload _((char *, char *));
+VALUE f_autoload _((VALUE, VALUE, VALUE));
+void gc_mark_global_tbl _((void));
+VALUE f_trace_var _((int, VALUE *));
+VALUE f_untrace_var _((int, VALUE *));
+VALUE rb_gvar_set2 _((char *, VALUE));
+VALUE f_global_variables _((void));
+d311 4
+d318 6
+a323 4
+VALUE obj_instance_variables _((VALUE));
+VALUE mod_const_at _((VALUE, VALUE));
+VALUE mod_constants _((VALUE));
+VALUE mod_const_of _((VALUE, VALUE));
+d327 3
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d6 27
+a32 30
+void rb_mem_clear _((register VALUE*, register size_t));
+VALUE rb_assoc_new _((VALUE, VALUE));
+VALUE rb_ary_new _((void));
+VALUE rb_ary_new2 _((size_t));
+VALUE rb_ary_new3 __((size_t,...));
+VALUE rb_ary_new4 _((size_t, VALUE *));
+VALUE rb_ary_freeze _((VALUE));
+VALUE rb_ary_aref _((int, VALUE*, VALUE));
+void rb_ary_store _((VALUE, size_t, VALUE));
+VALUE rb_ary_to_s _((VALUE));
+VALUE rb_ary_push _((VALUE, VALUE));
+VALUE rb_ary_pop _((VALUE));
+VALUE rb_ary_shift _((VALUE));
+VALUE rb_ary_unshift _((VALUE, VALUE));
+VALUE rb_ary_entry _((VALUE, size_t));
+VALUE rb_ary_each _((VALUE));
+VALUE rb_ary_join _((VALUE, VALUE));
+VALUE rb_ary_print_on _((VALUE, VALUE));
+VALUE rb_ary_reverse _((VALUE));
+VALUE rb_ary_sort _((VALUE));
+VALUE rb_ary_sort_bang _((VALUE));
+VALUE rb_ary_delete _((VALUE, VALUE));
+VALUE rb_ary_delete_at _((VALUE, VALUE));
+VALUE rb_ary_plus _((VALUE, VALUE));
+VALUE rb_ary_concat _((VALUE, VALUE));
+VALUE rb_ary_assoc _((VALUE, VALUE));
+VALUE rb_ary_rassoc _((VALUE, VALUE));
+VALUE rb_ary_includes _((VALUE, VALUE));
+VALUE rb_protect_inspect _((VALUE(*)(),VALUE,VALUE));
+VALUE rb_inspecting_p _((VALUE));
+d34 23
+a56 24
+VALUE rb_big_clone _((VALUE));
+void rb_big_2comp _((VALUE));
+VALUE rb_big_norm _((VALUE));
+VALUE rb_uint2big _((unsigned long));
+VALUE rb_int2big _((long));
+VALUE rb_uint2inum _((unsigned long));
+VALUE rb_int2inum _((long));
+VALUE rb_str2inum _((char*, int));
+VALUE rb_big2str _((VALUE, int));
+long rb_big2long _((VALUE));
+#define rb_big2int(x) rb_big2long(x)
+unsigned long rb_big2ulong _((VALUE));
+#define rb_big2uint(x) rb_big2ulong(x)
+VALUE rb_dbl2big _((double));
+double rb_big2dbl _((VALUE));
+VALUE rb_big_plus _((VALUE, VALUE));
+VALUE rb_big_minus _((VALUE, VALUE));
+VALUE rb_big_mul _((VALUE, VALUE));
+VALUE rb_big_pow _((VALUE, VALUE));
+VALUE rb_big_and _((VALUE, VALUE));
+VALUE rb_big_or _((VALUE, VALUE));
+VALUE rb_big_xor _((VALUE, VALUE));
+VALUE rb_big_lshift _((VALUE, VALUE));
+VALUE rb_big_rand _((VALUE));
+d58 4
+a61 4
+VALUE rb_class_new _((VALUE));
+VALUE rb_singleton_class_new _((VALUE));
+VALUE rb_singleton_class_clone _((VALUE));
+void rb_singleton_class_attached _((VALUE,VALUE));
+d63 1
+a63 1
+VALUE rb_module_new _((void));
+d65 5
+a69 6
+VALUE rb_mod_included_modules _((VALUE));
+VALUE rb_mod_ancestors _((VALUE));
+VALUE rb_class_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_protected_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_private_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_obj_singleton_methods _((VALUE));
+d71 2
+a72 3
+void rb_undef_method _((VALUE, char*));
+void rb_define_protected_method _((VALUE, char*, VALUE (*)(), int));
+void rb_define_private_method _((VALUE, char*, VALUE (*)(), int));
+d77 1
+a77 1
+VALUE rb_enum_length _((VALUE));
+d79 16
+a94 7
+extern int ruby_nerrs;
+VALUE rb_exc_new _((VALUE, char*, int));
+VALUE rb_exc_new2 _((VALUE, char*));
+VALUE rb_exc_new3 _((VALUE, VALUE));
+void rb_loaderror __((char*, ...)) NORETURN;
+void rb_compile_error __((char*, ...));
+void rb_compile_error_append __((char*, ...));
+a95 5
+void rb_exc_raise _((VALUE)) NORETURN;
+void rb_exc_fatal _((VALUE)) NORETURN;
+void rb_remove_method _((VALUE, char*));
+void rb_disable_super _((VALUE, char*));
+void rb_enable_super _((VALUE, char*));
+a97 1
+void rb_attr _((VALUE,ID,int,int,int));
+d99 8
+a106 6
+VALUE rb_dvar_defined _((ID));
+VALUE rb_dvar_ref _((ID));
+void rb_dvar_asgn _((ID, VALUE));
+void rb_dvar_push _((ID, VALUE));
+VALUE rb_eval_cmd _((VALUE, VALUE));
+VALUE rb_trap_eval _((VALUE, int));
+d108 2
+d111 2
+d114 1
+a114 1
+VALUE rb_funcall2 _((VALUE, ID, int, VALUE*));
+d117 15
+a131 30
+VALUE rb_obj_instance_eval _((int, VALUE*, VALUE));
+void rb_load _((VALUE, int));
+void rb_load_protect _((VALUE, int, int*));
+void rb_jump_tag _((int)) NORETURN;
+void rb_provide _((char*));
+VALUE rb_f_require _((VALUE, VALUE));
+void rb_obj_call_init _((VALUE));
+VALUE rb_class_new_instance _((int, VALUE*, VALUE));
+VALUE rb_f_lambda _((void));
+VALUE rb_protect _((VALUE (*)(), VALUE, int*));
+void rb_set_end_proc _((void (*)(), VALUE));
+void rb_gc_mark_threads _((void));
+void rb_thread_start_timer _((void));
+void rb_thread_stop_timer _((void));
+void rb_thread_schedule _((void));
+void rb_thread_wait_fd _((int));
+void rb_thread_fd_writable _((int));
+int rb_thread_alone _((void));
+void rb_thread_sleep _((int));
+void rb_thread_sleep_forever _((void));
+VALUE rb_thread_create _((VALUE (*)(), void*));
+int rb_thread_scope_shared_p _((void));
+void rb_thread_interrupt _((void));
+void rb_thread_trap_eval _((VALUE, int));
+int rb_thread_select();
+void rb_thread_wait_for();
+VALUE rb_thread_current _((void));
+VALUE rb_thread_main _((void));
+VALUE rb_thread_local_aref _((VALUE, ID));
+VALUE rb_thread_local_aset _((VALUE, ID, VALUE));
+d133 3
+a135 3
+VALUE rb_file_open _((char*, char*));
+int eaccess _((char*, int));
+VALUE rb_file_s_expand_path _((int, VALUE *));
+d137 8
+a144 9
+void rb_global_variable _((VALUE*));
+void rb_gc_mark_locations _((VALUE*, VALUE*));
+void rb_mark_tbl _((struct st_table*));
+void rb_mark_hash _((struct st_table*));
+void rb_gc_mark_maybe();
+void rb_gc_mark();
+void rb_gc_force_recycle _((VALUE));
+void rb_gc _((void));
+void rb_gc_call_finalizer_at_exit _((void));
+d146 1
+d148 3
+a150 6
+VALUE rb_hash_new _((void));
+VALUE rb_hash_freeze _((VALUE));
+VALUE rb_hash_aref _((VALUE, VALUE));
+VALUE rb_hash_aset _((VALUE, VALUE, VALUE));
+int rb_path_check _((char *));
+int rb_env_path_tainted _((void));
+d152 12
+a163 16
+extern VALUE rb_fs;
+extern VALUE rb_output_fs;
+extern VALUE rb_rs;
+extern VALUE rb_default_rs;
+extern VALUE rb_output_rs;
+VALUE rb_io_write _((VALUE, VALUE));
+VALUE rb_io_gets _((VALUE));
+VALUE rb_io_getc _((VALUE));
+VALUE rb_io_ungetc _((VALUE, VALUE));
+VALUE rb_io_close _((VALUE));
+VALUE rb_io_eof _((VALUE));
+VALUE rb_io_binmode _((VALUE));
+int rb_io_mode_flags _((char*));
+VALUE rb_io_reopen _((VALUE, VALUE));
+VALUE rb_gets _((void));
+void rb_str_setter _((VALUE, ID, VALUE*));
+d165 9
+a173 6
+void rb_num_zerodiv _((void));
+VALUE rb_num_coerce_bin _((VALUE, VALUE));
+VALUE rb_float_new _((double));
+VALUE rb_num2fix _((VALUE));
+VALUE rb_fix2str _((VALUE, int));
+VALUE rb_fix_upto _((VALUE, VALUE));
+d175 1
+d177 2
+a178 1
+VALUE rb_any_to_s _((VALUE));
+d180 3
+a182 9
+VALUE rb_obj_is_instance_of _((VALUE, VALUE));
+VALUE rb_obj_is_kind_of _((VALUE, VALUE));
+VALUE rb_obj_alloc _((VALUE));
+VALUE rb_obj_clone _((VALUE));
+VALUE rb_obj_taint _((VALUE));
+VALUE rb_obj_tainted _((VALUE));
+VALUE rb_obj_untaint _((VALUE));
+VALUE rb_obj_id _((VALUE));
+VALUE rb_convert_type _((VALUE,int,char*,char*));
+d187 1
+a188 2
+extern int   ruby_sourceline;
+extern char *ruby_sourcefile;
+d190 4
+a193 3
+ID rb_id_attrset _((ID));
+void rb_parser_append_print _((void));
+void rb_parser_while_loop _((int, int));
+d196 5
+a200 4
+VALUE rb_backref_get _((void));
+void rb_backref_set _((VALUE));
+VALUE rb_lastline_get _((void));
+void rb_lastline_set _((VALUE));
+d202 1
+a202 1
+int rb_proc_exec _((char*));
+d205 2
+a206 2
+VALUE rb_range_new _((VALUE, VALUE));
+VALUE rb_range_beg_end _((VALUE, int*, int*));
+d208 10
+a217 13
+VALUE rb_reg_nth_defined _((int, VALUE));
+VALUE rb_reg_nth_match _((int, VALUE));
+VALUE rb_reg_last_match _((VALUE));
+VALUE rb_reg_match_pre _((VALUE));
+VALUE rb_reg_match_post _((VALUE));
+VALUE rb_reg_match_last _((VALUE));
+VALUE rb_reg_new _((char*, size_t, int));
+VALUE rb_reg_match _((VALUE, VALUE));
+VALUE rb_reg_match2 _((VALUE));
+int rb_reg_options _((VALUE));
+char*rb_get_kcode _((void));
+void rb_set_kcode _((char*));
+int rb_ignorecase_p _((void));
+d219 3
+a221 2
+void rb_load_file _((char*));
+void ruby_script _((char*));
+d223 2
+a224 4
+void ruby_set_argv _((int, char**));
+void ruby_process_options _((int, char**));
+void ruby_require_modules _((void));
+void ruby_load_script _((void));
+d226 2
+a227 4
+VALUE rb_f_kill _((int, VALUE*));
+void rb_gc_mark_trap_list _((void));
+#ifdef POSIX_SIGNAL
+#define posix_signal ruby_posix_signal
+a228 1
+#endif
+d232 1
+a232 1
+VALUE rb_f_sprintf _((int, VALUE*));
+d234 21
+a254 23
+VALUE rb_str_new _((char*, size_t));
+VALUE rb_str_new2 _((char*));
+VALUE rb_str_new3 _((VALUE));
+VALUE rb_str_new4 _((VALUE));
+VALUE rb_tainted_str_new _((char*, size_t));
+VALUE rb_tainted_str_new2 _((char*));
+VALUE rb_obj_as_string _((VALUE));
+VALUE rb_str_to_str _((VALUE));
+VALUE rb_str_dup _((VALUE));
+VALUE rb_str_plus _((VALUE, VALUE));
+VALUE rb_str_times _((VALUE, VALUE));
+VALUE rb_str_substr _((VALUE, size_t, size_t));
+void rb_str_modify _((VALUE));
+VALUE rb_str_freeze _((VALUE));
+VALUE rb_str_dup_frozen _((VALUE));
+VALUE rb_str_resize _((VALUE, size_t));
+VALUE rb_str_cat _((VALUE, char*, size_t));
+VALUE rb_str_concat _((VALUE, VALUE));
+int rb_str_hash _((VALUE));
+int rb_str_cmp _((VALUE, VALUE));
+VALUE rb_str_upto _((VALUE, VALUE));
+VALUE rb_str_inspect _((VALUE));
+VALUE rb_str_split _((VALUE, char*));
+d256 6
+a261 6
+VALUE rb_struct_new __((VALUE, ...));
+VALUE rb_struct_define __((char*, ...));
+VALUE rb_struct_alloc _((VALUE, VALUE));
+VALUE rb_struct_aref _((VALUE, VALUE));
+VALUE rb_struct_aset _((VALUE, VALUE, VALUE));
+VALUE rb_struct_getmember _((VALUE, ID));
+d263 5
+a267 1
+VALUE rb_time_new _((int, int));
+d269 1
+a269 1
+VALUE rb_mod_name _((VALUE));
+d271 2
+a272 2
+void rb_set_class_path _((VALUE, VALUE, char*));
+VALUE rb_path2class _((char*));
+d274 7
+a280 7
+void rb_autoload _((char*, char*));
+VALUE rb_f_autoload _((VALUE, VALUE, VALUE));
+void rb_gc_mark_global_tbl _((void));
+VALUE rb_f_trace_var _((int, VALUE*));
+VALUE rb_f_untrace_var _((int, VALUE*));
+VALUE rb_gvar_set2 _((char*, VALUE));
+VALUE rb_f_global_variables _((void));
+a281 3
+void rb_mark_generic_ivar _((VALUE));
+void rb_mark_generic_ivar_tbl _((void));
+void rb_free_generic_ivar _((VALUE));
+d285 4
+a288 6
+VALUE rb_obj_instance_variables _((VALUE));
+VALUE rb_obj_remove_instance_variable _((VALUE, VALUE));
+VALUE rb_mod_const_at _((VALUE, VALUE));
+VALUE rb_mod_constants _((VALUE));
+VALUE rb_mod_const_of _((VALUE, VALUE));
+VALUE rb_mod_remove_const _((VALUE, VALUE));
+a291 3
+/* version.c */
+void ruby_show_version _((void));
+void ruby_show_copyright _((void));
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d9 3
+a11 3
+VALUE rb_ary_new2 _((int));
+VALUE rb_ary_new3 __((int,...));
+VALUE rb_ary_new4 _((int, VALUE *));
+d14 1
+a14 1
+void rb_ary_store _((VALUE, int, VALUE));
+d20 1
+a20 1
+VALUE rb_ary_entry _((VALUE, int));
+d233 1
+a233 1
+VALUE rb_reg_new _((char*, int, int));
+a240 1
+extern VALUE rb_argv0;
+d260 1
+a260 1
+VALUE rb_str_new _((char*, int));
+d264 1
+a264 1
+VALUE rb_tainted_str_new _((char*, int));
+d271 1
+a271 1
+VALUE rb_str_substr _((VALUE, int, int));
+d275 2
+a276 2
+VALUE rb_str_resize _((VALUE, int));
+VALUE rb_str_cat _((VALUE, char*, int));
+@
+
+
+1.1.1.2.2.2
+log
+@990209
+@
+text
+@d145 1
+a147 1
+void rb_file_const _((char*, VALUE));
+d179 2
+a180 1
+VALUE rb_file_open _((char*, char*));
+d275 1
+@
+
+
+1.1.1.2.2.3
+log
+@990212
+@
+text
+@d130 1
+a130 1
+int rb_thread_fd_writable _((int));
+@
+
+
+1.1.1.2.2.4
+log
+@990224
+@
+text
+@a120 1
+void rb_obj_call_init2 _((VALUE, int, VALUE*));
+d289 2
+@
+
+
+1.1.1.2.2.5
+log
+@990225
+@
+text
+@d120 2
+a121 1
+void rb_obj_call_init _((VALUE, int, VALUE*));
+@
+
+
+1.1.1.2.2.6
+log
+@990324
+@
+text
+@d44 1
+a44 1
+VALUE rb_str2inum _((const char*, int));
+d76 5
+a80 5
+void rb_undef_method _((VALUE, const char*));
+void rb_define_protected_method _((VALUE, const char*, VALUE (*)(), int));
+void rb_define_private_method _((VALUE, const char*, VALUE (*)(), int));
+void rb_define_singleton_method _((VALUE,const char*,VALUE(*)(),int));
+void rb_define_private_method _((VALUE,const char*,VALUE(*)(),int));
+d86 2
+a87 2
+VALUE rb_exc_new _((VALUE, const char*, int));
+VALUE rb_exc_new2 _((VALUE, const char*));
+d89 3
+a91 3
+void rb_loaderror __((const char*, ...)) NORETURN;
+void rb_compile_error __((const char*, ...));
+void rb_compile_error_append __((const char*, ...));
+d95 3
+a97 3
+void rb_remove_method _((VALUE, const char*));
+void rb_disable_super _((VALUE, const char*));
+void rb_enable_super _((VALUE, const char*));
+d107 1
+d118 1
+a118 1
+void rb_provide _((const char*));
+a137 1
+void rb_thread_signal_raise _((char*));
+d145 1
+a145 1
+int eaccess _((const char*, int));
+d147 1
+a147 1
+void rb_file_const _((const char*, VALUE));
+d179 1
+a179 1
+VALUE rb_file_open _((const char*, const char*));
+d201 1
+a201 1
+VALUE rb_convert_type _((VALUE,int,const char*,const char*));
+d220 1
+a220 1
+int rb_proc_exec _((const char*));
+d223 2
+a224 2
+VALUE rb_range_new _((VALUE, VALUE, int));
+VALUE rb_range_beg_len _((VALUE, int*, int*, int, int));
+d232 1
+a232 1
+VALUE rb_reg_new _((const char*, int, int));
+d236 2
+a237 2
+const char* rb_get_kcode _((void));
+void rb_set_kcode _((const char*));
+d260 2
+a261 2
+VALUE rb_str_new _((const char*, int));
+VALUE rb_str_new2 _((const char*));
+d264 2
+a265 2
+VALUE rb_tainted_str_new _((const char*, int));
+VALUE rb_tainted_str_new2 _((const char*));
+d275 1
+a275 1
+VALUE rb_str_cat _((VALUE, const char*, int));
+d279 1
+a279 1
+VALUE rb_str_upto _((VALUE, VALUE, int));
+d281 1
+a281 1
+VALUE rb_str_split _((VALUE, const char*));
+d284 1
+a284 1
+VALUE rb_struct_define __((const char*, ...));
+a288 2
+/* time.c */
+VALUE rb_time_new();
+d292 2
+a293 2
+void rb_set_class_path _((VALUE, VALUE, const char*));
+VALUE rb_path2class _((const char*));
+d295 1
+a295 1
+void rb_autoload _((const char*, const char*));
+d300 1
+a300 1
+VALUE rb_gvar_set2 _((const char*, VALUE));
+@
+
+
+1.1.1.2.2.7
+log
+@regexp null pattern
+@
+text
+@d9 3
+a11 3
+VALUE rb_ary_new2 _((long));
+VALUE rb_ary_new3 __((long,...));
+VALUE rb_ary_new4 _((long, VALUE *));
+d14 1
+a14 1
+void rb_ary_store _((VALUE, long, VALUE));
+d20 1
+a20 1
+VALUE rb_ary_entry _((VALUE, long));
+d86 1
+a86 1
+VALUE rb_exc_new _((VALUE, const char*, long));
+a129 1
+void rb_thread_fd_close _((int));
+d224 1
+a224 1
+VALUE rb_range_beg_len _((VALUE, long*, long*, long, int));
+d232 1
+a232 1
+VALUE rb_reg_new _((const char*, long, int));
+a238 1
+void rb_match_busy _((VALUE, int));
+d260 1
+a260 1
+VALUE rb_str_new _((const char*, long));
+d264 1
+a264 1
+VALUE rb_tainted_str_new _((const char*, long));
+d271 1
+a271 1
+VALUE rb_str_substr _((VALUE, long, long));
+d274 2
+a275 2
+VALUE rb_str_resize _((VALUE, long));
+VALUE rb_str_cat _((VALUE, const char*, long));
+@
+
+
+1.1.1.2.2.8
+log
+@990531
+@
+text
+@d248 1
+a248 1
+void ruby_require_libraries _((void));
+@
+
+
+1.1.1.2.2.9
+log
+@rb_exec_end_proc, etc.
+@
+text
+@a123 1
+void rb_exec_end_proc _((void));
+@
+
+
+1.1.1.2.2.10
+log
+@thread bugs
+@
+text
+@a134 3
+VALUE rb_thread_stop _((void));
+VALUE rb_thread_wakeup _((VALUE));
+VALUE rb_thread_run _((VALUE));
+@
+
+
+1.1.1.2.2.11
+log
+@990728 repack
+@
+text
+@d246 1
+a246 2
+EXTERN VALUE rb_argv;
+EXTERN VALUE rb_argv0;
+@
+
+
+1.1.1.2.2.12
+log
+@clone
+@
+text
+@a311 1
+void rb_clone_generic_ivar _((VALUE,VALUE));
+@
+
+
+1.1.1.2.2.13
+log
+@pre 1.4.0
+@
+text
+@d110 1
+@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@d219 1
+a224 2
+void ruby_require_modules _((void));
+void ruby_load_script _((void));
+@
+
+
+1.1.1.1.2.2
+log
+@1.1b8pre2
+@
+text
+@a216 1
+char*rb_get_kcode _((void));
+@
+
+
+1.1.1.1.2.3
+log
+@gets speed up patch
+@
+text
+@a95 3
+void rb_remove_method _((VALUE, char *));
+void rb_disable_super _((VALUE, char *));
+void rb_enable_super _((VALUE, char *));
+@
+
+
+1.1.1.1.2.4
+log
+@1.1b9_05 bug fix
+@
+text
+@a100 1
+void rb_attr _((VALUE,ID,int,int,int));
+@
+
+
+1.1.1.1.2.5
+log
+@call initialize
+@
+text
+@a123 1
+void obj_call_init _((VALUE));
+@
+
+
+1.1.1.1.2.6
+log
+@dynamic (nested) local variables
+@
+text
+@a71 1
+void rb_define_protected_method _((VALUE, char *, VALUE (*)(), int));
+@
+
+
+1.1.1.1.2.7
+log
+@signal to main_thread
+@
+text
+@a137 1
+void thread_trap_eval _((VALUE, int));
+@
+
+
+1.1.1.1.2.8
+log
+@flock,flatten,signal to main_thread
+@
+text
+@d254 1
+a254 1
+VALUE str_dup_frozen _((VALUE));
+@
+
+
+1.1.1.1.2.9
+log
+@1.1b9_12
+@
+text
+@a189 1
+int rb_obj2int _((VALUE));
+@
+
+
+1.1.1.1.2.10
+log
+@1.1b9_14
+@
+text
+@d190 1
+@
+
+
+1.1.1.1.2.11
+log
+@tcltklib/gtk
+@
+text
+@a189 1
+VALUE rb_convert_type _((VALUE,int,char*,char*));
+@
+
+
+1.1.1.1.2.12
+log
+@new exception model
+@
+text
+@a248 1
+VALUE str_to_str _((VALUE));
+@
+
+
+1.1.1.1.2.13
+log
+@pack/unpack unsigned
+@
+text
+@a43 1
+UINT big2uint _((VALUE));
+@
+
+
+1.1.1.1.2.14
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+void memclear _((register VALUE*, register int));
+d11 1
+a11 1
+VALUE ary_new4 _((int, VALUE*));
+d37 5
+a41 5
+VALUE uint2big _((unsigned long));
+VALUE int2big _((long));
+VALUE uint2inum _((unsigned long));
+VALUE int2inum _((long));
+VALUE str2inum _((char*, int));
+d43 2
+a44 4
+long big2long _((VALUE));
+#define big2int(x) big2long(x)
+unsigned long big2ulong _((VALUE));
+#define big2uint(x) big2ulong(x)
+d68 2
+a69 2
+VALUE class_instance_methods _((int, VALUE*, VALUE));
+VALUE class_private_instance_methods _((int, VALUE*, VALUE));
+d72 3
+a74 3
+void rb_undef_method _((VALUE, char*));
+void rb_define_protected_method _((VALUE, char*, VALUE (*)(), int));
+void rb_define_private_method _((VALUE, char*, VALUE (*)(), int));
+d81 2
+a82 2
+VALUE exc_new _((VALUE, char*, unsigned int));
+VALUE exc_new2 _((VALUE, char*));
+d98 3
+a100 3
+void rb_remove_method _((VALUE, char*));
+void rb_disable_super _((VALUE, char*));
+void rb_enable_super _((VALUE, char*));
+d109 1
+a109 1
+void ruby_options _((int, char**));
+d120 1
+a120 1
+VALUE rb_funcall2 _((VALUE, ID, int, VALUE*));
+d124 1
+a124 1
+void rb_provide _((char*));
+d127 1
+a127 1
+VALUE class_new_instance _((int, VALUE*, VALUE));
+d137 1
+a137 1
+VALUE thread_create _((VALUE (*)(), void*));
+d141 2
+a142 2
+VALUE file_open _((char*, char*));
+int eaccess _((char*, int));
+d145 2
+a146 2
+void rb_global_variable _((VALUE*));
+void gc_mark_locations _((VALUE*, VALUE*));
+d168 1
+a168 1
+int io_mode_flags _((char*));
+d171 1
+a171 1
+void rb_str_setter _((VALUE, ID, VALUE*));
+d211 1
+a211 1
+int rb_proc_exec _((char*));
+d215 1
+a215 1
+VALUE range_beg_end _((VALUE, int*, int*));
+d223 1
+a223 1
+VALUE reg_new _((char*, int, int));
+d227 1
+a227 1
+void rb_set_kcode _((char*));
+d229 2
+a230 2
+void rb_load_file _((char*));
+void ruby_script _((char*));
+d232 2
+a233 2
+void ruby_set_argv _((int, char**));
+void ruby_process_options _((int, char**));
+d237 1
+a237 1
+VALUE f_kill _((int, VALUE*));
+d243 1
+a243 1
+VALUE f_sprintf _((int, VALUE*));
+d245 2
+a246 2
+VALUE str_new _((char*, unsigned int));
+VALUE str_new2 _((char*));
+d261 1
+a261 1
+VALUE str_cat _((VALUE, char*, unsigned int));
+d266 1
+a266 1
+VALUE str_split _((VALUE, char*));
+d277 3
+a279 3
+void add_suffix _((VALUE, char*));
+unsigned long scan_oct _((char*, int, int*));
+unsigned long scan_hex _((char*, int, int*));
+d283 2
+a284 2
+void rb_set_class_path _((VALUE, VALUE, char*));
+VALUE rb_path2class _((char*));
+d286 1
+a286 1
+void rb_autoload _((char*, char*));
+d289 3
+a291 3
+VALUE f_trace_var _((int, VALUE*));
+VALUE f_untrace_var _((int, VALUE*));
+VALUE rb_gvar_set2 _((char*, VALUE));
+@
+
+
+1.1.1.1.2.15
+log
+@1.1b9_19
+@
+text
+@d10 2
+a11 2
+VALUE ary_new3 _((int,...));
+VALUE ary_new4 _((int, VALUE *));
+a12 1
+VALUE ary_aref(int, VALUE*, VALUE);
+d86 13
+a98 5
+void TypeError _((char*, ...));
+void ArgError _((char*, ...));
+void NameError _((char*, ...));
+void IndexError _((char*, ...));
+void LoadError _((char*, ...));
+d270 2
+a271 2
+VALUE struct_new _((VALUE, ...));
+VALUE struct_define _((char*, ...));
+@
+
+
+1.1.1.1.2.16
+log
+@prototypes
+@
+text
+@d10 1
+a10 1
+VALUE ary_new3 __((int,...));
+d87 5
+a91 5
+void TypeError __((char*, ...)) NORETURN;
+void ArgError __((char*, ...)) NORETURN;
+void NameError __((char*, ...)) NORETURN;
+void IndexError __((char*, ...)) NORETURN;
+void LoadError __((char*, ...)) NORETURN;
+d263 2
+a264 2
+VALUE struct_new __((VALUE, ...));
+VALUE struct_define __((char*, ...));
+@
+
+
+1.1.1.1.2.17
+log
+@ruby 1.1b9_20
+@
+text
+@d13 1
+a13 1
+VALUE ary_aref _((int, VALUE*, VALUE));
+@
+
+
+1.1.1.1.2.18
+log
+@*** empty log message ***
+@
+text
+@a153 1
+int env_path_tainted _((void));
+a275 1
+struct st_table *new_idhash _((void));
+@
+
+
+1.1.1.1.2.19
+log
+@1.1b9_21
+@
+text
+@d138 1
+a138 1
+VALUE file_s_expand_path _((int, VALUE *));
+@
+
+
+1.1.1.1.2.20
+log
+@remove unused variables
+@
+text
+@a134 2
+int thread_select();
+void thread_wait_for();
+a257 1
+VALUE str_concat _((VALUE, VALUE));
+@
+
+
+1.1.1.1.2.21
+log
+@1.1b9_26
+@
+text
+@d106 2
+a107 2
+VALUE rb_eval_cmd _((VALUE, VALUE));
+VALUE rb_trap_eval _((VALUE, int));
+@
+
+
+1.1.1.1.2.22
+log
+@thread->thred
+@
+text
+@d126 11
+a136 11
+void thred_schedule _((void));
+void thred_wait_fd _((int));
+void thred_fd_writable _((int));
+int thred_alone _((void));
+void thred_sleep _((int));
+void thred_sleep_forever _((void));
+VALUE thred_create _((VALUE (*)(), void*));
+void thred_interrupt _((void));
+void thred_trap_eval _((VALUE, int));
+int thred_select();
+void thred_wait_for();
+@
+
+
+1.1.1.1.2.23
+log
+@980626
+@
+text
+@d126 11
+a136 11
+void thread_schedule _((void));
+void thread_wait_fd _((int));
+void thread_fd_writable _((int));
+int thread_alone _((void));
+void thread_sleep _((int));
+void thread_sleep_forever _((void));
+VALUE thread_create _((VALUE (*)(), void*));
+void thread_interrupt _((void));
+void thread_trap_eval _((VALUE, int));
+int thread_select();
+void thread_wait_for();
+@
+
+
+1.1.1.1.2.24
+log
+@marshal/reg_clone
+@
+text
+@a223 1
+int reg_options _((VALUE));
+@
+
+
+1.1.1.1.2.25
+log
+@1.1c6
+@
+text
+@d160 1
+@
+
+
+1.1.1.1.2.26
+log
+@1.1c7
+@
+text
+@a102 1
+void dyna_var_push _((ID, VALUE));
+@
+
+
+1.1.1.1.2.27
+log
+@1.1c9 - 1.1c final, hopefully
+@
+text
+@d203 1
+@
+
+
+1.1.1.1.2.28
+log
+@1.1c final (hopefully)
+@
+text
+@a126 2
+void thread_start_timer _((void));
+void thread_stop_timer _((void));
+@
+
+
+1.1.1.1.2.29
+log
+@1.2.4
+@
+text
+@d114 1
+a114 1
+VALUE rb_yield_0 _((VALUE, volatile VALUE, volatile VALUE));
+@
+
+
+1.1.1.1.2.24.2.1
+log
+@1.1d series
+@
+text
+@d6 28
+a33 28
+void rb_mem_clear _((register VALUE*, register int));
+VALUE rb_assoc_new _((VALUE, VALUE));
+VALUE rb_ary_new _((void));
+VALUE rb_ary_new2 _((int));
+VALUE rb_ary_new3 __((int,...));
+VALUE rb_ary_new4 _((int, VALUE *));
+VALUE rb_ary_freeze _((VALUE));
+VALUE rb_ary_aref _((int, VALUE*, VALUE));
+void rb_ary_store _((VALUE, int, VALUE));
+VALUE rb_ary_to_s _((VALUE));
+VALUE rb_ary_push _((VALUE, VALUE));
+VALUE rb_ary_pop _((VALUE));
+VALUE rb_ary_shift _((VALUE));
+VALUE rb_ary_unshift _((VALUE, VALUE));
+VALUE rb_ary_entry _((VALUE, int));
+VALUE rb_ary_each _((VALUE));
+VALUE rb_ary_join _((VALUE, VALUE));
+VALUE rb_ary_print_on _((VALUE, VALUE));
+VALUE rb_ary_reverse _((VALUE));
+VALUE rb_ary_sort _((VALUE));
+VALUE rb_ary_sort_bang _((VALUE));
+VALUE rb_ary_delete _((VALUE, VALUE));
+VALUE rb_ary_delete_at _((VALUE, VALUE));
+VALUE rb_ary_plus _((VALUE, VALUE));
+VALUE rb_ary_concat _((VALUE, VALUE));
+VALUE rb_ary_assoc _((VALUE, VALUE));
+VALUE rb_ary_rassoc _((VALUE, VALUE));
+VALUE rb_ary_includes _((VALUE, VALUE));
+d35 26
+a60 24
+VALUE rb_big_clone _((VALUE));
+void rb_big_2comp _((VALUE));
+VALUE rb_big_norm _((VALUE));
+VALUE rb_uint2big _((unsigned long));
+VALUE rb_int2big _((long));
+VALUE rb_uint2inum _((unsigned long));
+VALUE rb_int2inum _((long));
+VALUE rb_str2inum _((char*, int));
+VALUE rb_big2str _((VALUE, int));
+long rb_big2long _((VALUE));
+#define rb_big2int(x) rb_big2long(x)
+unsigned long rb_big2ulong _((VALUE));
+#define rb_big2uint(x) rb_big2ulong(x)
+VALUE rb_dbl2big _((double));
+double rb_big2dbl _((VALUE));
+VALUE rb_big_plus _((VALUE, VALUE));
+VALUE rb_big_minus _((VALUE, VALUE));
+VALUE rb_big_mul _((VALUE, VALUE));
+VALUE rb_big_pow _((VALUE, VALUE));
+VALUE rb_big_and _((VALUE, VALUE));
+VALUE rb_big_or _((VALUE, VALUE));
+VALUE rb_big_xor _((VALUE, VALUE));
+VALUE rb_big_lshift _((VALUE, VALUE));
+VALUE rb_big_rand _((VALUE));
+d62 4
+a65 4
+VALUE rb_class_new _((VALUE));
+VALUE rb_singleton_class_new _((VALUE));
+VALUE rb_singleton_class_clone _((VALUE));
+void rb_singleton_class_attached _((VALUE,VALUE));
+d67 1
+a67 1
+VALUE rb_module_new _((void));
+d69 5
+a73 5
+VALUE rb_mod_included_modules _((VALUE));
+VALUE rb_mod_ancestors _((VALUE));
+VALUE rb_class_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_class_private_instance_methods _((int, VALUE*, VALUE));
+VALUE rb_obj_singleton_methods _((VALUE));
+d82 1
+a82 1
+VALUE rb_enum_length _((VALUE));
+d84 8
+a91 7
+extern int ruby_nerrs;
+VALUE rb_exc_new _((VALUE, char*, unsigned int));
+VALUE rb_exc_new2 _((VALUE, char*));
+VALUE rb_exc_new3 _((VALUE, VALUE));
+void rb_loaderror __((char*, ...)) NORETURN;
+void rb_compile_error __((char*, ...));
+void rb_compile_append __((char*, ...));
+a92 2
+void rb_exc_raise _((VALUE)) NORETURN;
+void rb_exc_fatal _((VALUE)) NORETURN;
+d100 6
+a105 4
+VALUE rb_dvar_defined _((ID));
+VALUE rb_dvar_ref _((ID));
+void rb_dvar_asgn _((ID, VALUE));
+void rb_dvar_push _((ID, VALUE));
+d109 2
+d112 2
+d118 1
+a118 1
+VALUE rb_f_load _((VALUE, VALUE));
+d120 4
+a123 4
+VALUE rb_f_require _((VALUE, VALUE));
+void rb_obj_call_init _((VALUE));
+VALUE rb_class_new_instance _((int, VALUE*, VALUE));
+VALUE rb_f_lambda _((void));
+d125 12
+a136 13
+void rb_gc_mark_threads _((void));
+void rb_thread_schedule _((void));
+void rb_thread_wait_fd _((int));
+void rb_thread_fd_writable _((int));
+int rb_thread_alone _((void));
+void rb_thread_sleep _((int));
+void rb_thread_sleep_forever _((void));
+VALUE rb_thread_create _((VALUE (*)(), void*));
+int rb_thread_scope_shared_p _((void));
+void rb_thread_interrupt _((void));
+void rb_thread_trap_eval _((VALUE, int));
+int rb_thread_select();
+void rb_thread_wait_for();
+d138 1
+a138 1
+VALUE rb_file_open _((char*, char*));
+d140 1
+a140 1
+VALUE rb_file_s_expand_path _((int, VALUE *));
+d143 7
+a149 6
+void rb_gc_mark_locations _((VALUE*, VALUE*));
+void rb_gc_mark_maybe();
+void rb_gc_mark();
+void rb_gc_force_recycle();
+void rb_gc _((void));
+void rb_gc_call_finalizer_at_exit _((void));
+d151 1
+a151 1
+VALUE rb_hash_freeze _((VALUE));
+d153 4
+a156 4
+VALUE rb_hash_new _((void));
+VALUE rb_hash_aref _((VALUE, VALUE));
+VALUE rb_hash_aset _((VALUE, VALUE, VALUE));
+int rb_env_path_tainted _((void));
+d158 11
+a168 15
+extern VALUE rb_fs;
+extern VALUE rb_output_fs;
+extern VALUE rb_rs;
+extern VALUE rb_default_rs;
+extern VALUE rb_output_rs;
+VALUE rb_io_write _((VALUE, VALUE));
+VALUE rb_io_gets_method _((int, VALUE*, VALUE));
+VALUE rb_io_gets _((VALUE));
+VALUE rb_io_getc _((VALUE));
+VALUE rb_io_ungetc _((VALUE, VALUE));
+VALUE rb_io_close _((VALUE));
+VALUE rb_io_binmode _((VALUE));
+int rb_io_mode_flags _((char*));
+VALUE rb_io_reopen _((VALUE, VALUE));
+VALUE rb_f_gets _((void));
+d171 9
+a179 6
+void rb_num_zerodiv _((void));
+VALUE rb_num_coerce_bin _((VALUE, VALUE));
+VALUE rb_float_new _((double));
+VALUE rb_num2fix _((VALUE));
+VALUE rb_fix2str _((VALUE, int));
+VALUE rb_fix_upto _((VALUE, VALUE));
+d183 2
+a184 2
+VALUE rb_obj_equal _((VALUE, VALUE));
+VALUE rb_any_to_s _((VALUE));
+d186 3
+a188 3
+VALUE rb_obj_is_instance_of _((VALUE, VALUE));
+VALUE rb_obj_is_kind_of _((VALUE, VALUE));
+VALUE rb_obj_alloc _((VALUE));
+d194 1
+a194 1
+double rb_num2dbl _((VALUE));
+a195 2
+extern int   ruby_sourceline;
+extern char *ruby_sourcefile;
+d197 4
+a200 3
+ID rb_id_attrset _((ID));
+void rb_parser_append_print _((void));
+void rb_parser_while_loop _((int, int));
+d203 5
+a207 4
+VALUE rb_backref_get _((void));
+void rb_backref_set _((VALUE));
+VALUE rb_lastline_get _((void));
+void rb_lastline_set _((VALUE));
+d212 2
+a213 2
+VALUE rb_range_new _((VALUE, VALUE));
+VALUE rb_range_beg_end _((VALUE, int*, int*));
+d215 10
+a224 10
+VALUE rb_reg_nth_defined _((int, VALUE));
+VALUE rb_reg_nth_match _((int, VALUE));
+VALUE rb_reg_last_match _((VALUE));
+VALUE rb_reg_match_pre _((VALUE));
+VALUE rb_reg_match_post _((VALUE));
+VALUE rb_reg_match_last _((VALUE));
+VALUE rb_reg_new _((char*, int, int));
+VALUE rb_reg_match _((VALUE, VALUE));
+VALUE rb_reg_match2 _((VALUE));
+int rb_reg_options _((VALUE));
+a226 1
+int rb_ignorecase_p _((void));
+d236 2
+a237 4
+VALUE rb_f_kill _((int, VALUE*));
+void rb_gc_mark_trap_list _((void));
+#ifdef POSIX_SIGNAL
+#define posix_signal ruby_posix_signal
+a238 1
+#endif
+d242 1
+a242 1
+VALUE rb_f_sprintf _((int, VALUE*));
+d244 23
+a266 23
+VALUE rb_str_new _((char*, unsigned int));
+VALUE rb_str_new2 _((char*));
+VALUE rb_str_new3 _((VALUE));
+VALUE rb_str_new4 _((VALUE));
+VALUE rb_obj_as_string _((VALUE));
+VALUE rb_str_to_str _((VALUE));
+VALUE rb_str_dup _((VALUE));
+VALUE rb_str_plus _((VALUE, VALUE));
+VALUE rb_str_times _((VALUE, VALUE));
+VALUE rb_str_substr _((VALUE, int, int));
+void rb_str_modify _((VALUE));
+VALUE rb_str_freeze _((VALUE));
+VALUE rb_str_dup_frozen _((VALUE));
+VALUE rb_str_taint _((VALUE));
+VALUE rb_str_tainted _((VALUE));
+VALUE rb_str_resize _((VALUE, int));
+VALUE rb_str_cat _((VALUE, char*, unsigned int));
+VALUE rb_str_concat _((VALUE, VALUE));
+int rb_str_hash _((VALUE));
+int rb_str_cmp _((VALUE, VALUE));
+VALUE rb_str_upto _((VALUE, VALUE));
+VALUE rb_str_inspect _((VALUE));
+VALUE rb_str_split _((VALUE, char*));
+d268 6
+a273 6
+VALUE rb_struct_new __((VALUE, ...));
+VALUE rb_struct_define __((char*, ...));
+VALUE rb_struct_alloc _((VALUE, VALUE));
+VALUE rb_struct_aref _((VALUE, VALUE));
+VALUE rb_struct_aset _((VALUE, VALUE, VALUE));
+VALUE rb_struct_getmember _((VALUE, ID));
+d275 5
+a279 1
+VALUE rb_time_new _((int, int));
+d281 2
+a282 1
+VALUE rb_mod_name _((VALUE));
+d288 4
+a291 4
+VALUE rb_f_autoload _((VALUE, VALUE, VALUE));
+void rb_gc_mark_global_tbl _((void));
+VALUE rb_f_trace_var _((int, VALUE*));
+VALUE rb_f_untrace_var _((int, VALUE*));
+d293 1
+a293 1
+VALUE rb_f_global_variables _((void));
+d298 4
+a301 6
+VALUE rb_obj_instance_variables _((VALUE));
+VALUE rb_obj_remove_instance_variable _((VALUE, VALUE));
+VALUE rb_mod_const_at _((VALUE, VALUE));
+VALUE rb_mod_constants _((VALUE));
+VALUE rb_mod_const_of _((VALUE, VALUE));
+VALUE rb_mod_remove_const _((VALUE, VALUE));
+a304 3
+/* version.c */
+void ruby_show_version _((void));
+void ruby_show_copyright _((void));
+@
+
+
+1.1.1.1.2.24.2.2
+log
+@join 1.1c6
+@
+text
+@d83 1
+a83 1
+VALUE rb_exc_new _((VALUE, char*, int));
+d111 1
+a111 1
+void rb_load _((VALUE, VALUE));
+d140 1
+a140 1
+void rb_gc_force_recycle _((VALUE));
+d144 1
+a146 1
+VALUE rb_hash_freeze _((VALUE));
+a148 1
+void rb_path_check _((char *));
+d157 1
+d165 1
+a165 1
+VALUE rb_gets _((void));
+d242 1
+a242 1
+VALUE rb_str_new _((char*, int));
+d258 1
+a258 1
+VALUE rb_str_cat _((VALUE, char*, int));
+@
+
+
+1.1.1.1.2.24.2.3
+log
+@*** empty log message ***
+@
+text
+@a102 3
+void ruby_init _((void));
+void ruby_options _((int, char**));
+void ruby_run _((void));
+a182 3
+VALUE rb_obj_taint _((VALUE));
+VALUE rb_obj_tainted _((VALUE));
+VALUE rb_obj_untaint _((VALUE));
+a245 2
+VALUE rb_tainted_str_new _((char*, int));
+VALUE rb_tainted_str_new2 _((char*));
+d255 2
+@
+
+
+1.1.1.1.2.24.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@a69 1
+VALUE rb_class_protected_instance_methods _((int, VALUE*, VALUE));
+d103 3
+a121 2
+void thread_start_timer _((void));
+void thread_stop_timer _((void));
+d178 1
+d180 1
+d194 1
+a293 3
+void rb_mark_generic_ivar _((VALUE));
+void rb_mark_generic_ivar_tbl _((void));
+void rb_free_generic_ivar _((VALUE));
+@
+
+
+1.1.1.1.2.24.2.5
+log
+@1.1d1
+@
+text
+@a111 1
+VALUE rb_obj_instance_eval _((int, VALUE*, VALUE));
+d152 1
+a152 1
+int rb_path_check _((char *));
+@

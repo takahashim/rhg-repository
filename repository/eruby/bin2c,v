@@ -1,0 +1,94 @@
+head	1.2;
+access;
+symbols
+	release_0_9_8:1.2
+	autoconfiscation-branch:1.2.0.2
+	root-of-autoconfiscation:1.2
+	release_0_9_7:1.2
+	release_0_9_6:1.2
+	release_0_9_5:1.2
+	release_0_9_4:1.2
+	release_0_9_3:1.2
+	release_0_9_2:1.2
+	release_0_9_1:1.2
+	release_0_9_0:1.2
+	release_0_1_1:1.2
+	release_0_1_0:1.2
+	start:1.1.1.1
+	shugo:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.03.28.05.39.42;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@#!/usr/bin/env ruby
+
+unless filename = ARGV.shift
+  puts "usage: bin2c filename"
+end
+
+basename = File.basename(filename)
+basename = /^[^.]*/.match(basename)[0]
+
+open(basename + ".c", "w") do |output|
+  output.printf("#include \"%s.h\"\n", basename)
+  output.printf("int %s_size    = %s;\n", basename, File.size(filename))
+  output.printf("char %s_data[] = {\n", basename)
+  open(filename) do |input|
+    i = 0
+    input.each_byte do |c|
+      if i > 0
+	output.print(",")
+	output.print("\n") if i % 15 == 0
+      end
+      output.printf("0x%02x", c)
+      i += 1
+    end
+    output.print(" };\n")
+  end
+end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 1
+#!/usr/bin/ruby
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

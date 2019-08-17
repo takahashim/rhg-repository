@@ -1,0 +1,138 @@
+head	1.1;
+access;
+symbols
+	v1_6_3:1.1
+	ruby_1_6:1.1.0.4
+	v1_1d1:1.1.2.2
+	v1_1d0:1.1.2.2
+	v1_1c7:1.1.2.2
+	v1_1c6:1.1.2.2
+	v1_1d-start:1.1.2.2
+	v1_1c5:1.1.2.2
+	v1_1dev:1.1.2.2.0.2
+	v1_1c4:1.1.2.2
+	v1_1c3:1.1.2.2
+	v1_1c2:1.1.2.2
+	v1_1c1:1.1.2.2
+	v1_1c0:1.1.2.2
+	v1_1b9_31:1.1.2.2
+	v1_1b9_30:1.1.2.2
+	v1_1b9_28:1.1.2.2
+	v1_1b9_27:1.1.2.1
+	v1_1b9_26:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	98.06.18.07.47.08;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	98.06.18.07.47.08;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	98.06.26.09.45.04;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	98.11.17.09.12.46;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file tkpalette.rb was initially added on branch v1_1r.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@1.1b9_26
+@
+text
+@a0 46
+#
+#   tkpalette.rb : methods for Tcl/Tk standard library 'palette.tcl'
+#                     1998/06/18 by Hidetoshi Nagai <nagai@@ai.kyutech.ac.jp>
+#
+module TkPalette
+  include Tk
+  extend Tk
+
+  def TkPalette.set(*args)
+    args = args.to_a.flatten if args.kind_of? Hash
+    tk_call 'tk_setPalette', *args
+  end
+  def TkPalette.setPalette(*args)
+    TkPalette.set(*args)
+  end
+
+  def TkPalette.bisque
+    tk_call 'tk_bisque'
+  end
+
+  def TkPalette.darken(color, percent)
+    tk_call 'tkDarken', color, percent
+  end
+
+  def TkPalette.recolorTree(window, colors)
+    if not colors.kind_of?(Hash)
+      fail "2nd arg need to be Hash"
+    end
+
+    colors.each{|key, value|
+      begin
+	if window.cget(key) == tk_call('set', "tkPalette(#{key})")
+	  window[key] = colors[key]
+	end
+      rescue
+	# ignore
+      end
+    }
+
+    TkWinfo.children(window).each{|w| TkPalette.recolorTree(w, colors)}
+  end
+
+  def recolorTree(colors)
+    TkPalette.recolorTree(self, colors)
+  end
+end
+@
+
+
+1.1.2.2
+log
+@980626
+@
+text
+@d3 1
+a3 1
+#                     1998/06/21 by Hidetoshi Nagai <nagai@@ai.kyutech.ac.jp>
+a4 2
+require 'tk'
+
+@
+
+
+1.1.2.3
+log
+@1.1c8
+@
+text
+@@
+
+

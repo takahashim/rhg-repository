@@ -1,0 +1,568 @@
+head	1.1;
+branch	1.1.1;
+access;
+symbols
+	onigd20020424:1.1.1.8
+	onigd20020416:1.1.1.7
+	onigd20020401:1.1.1.6
+	onigd20020325:1.1.1.5
+	onigd20020313:1.1.1.4
+	onigd20020306:1.1.1.3
+	onigd20020304:1.1.1.2
+	onigd20020225:1.1.1.1
+	KOSAKO:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.04.03.14.04;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.03.04.03.14.04;	author knu;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	2002.03.04.03.20.50;	author knu;	state Exp;
+branches;
+next	1.1.1.3;
+
+1.1.1.3
+date	2002.03.06.04.40.25;	author knu;	state Exp;
+branches;
+next	1.1.1.4;
+
+1.1.1.4
+date	2002.03.13.08.57.35;	author knu;	state Exp;
+branches;
+next	1.1.1.5;
+
+1.1.1.5
+date	2002.03.25.05.22.47;	author knu;	state Exp;
+branches;
+next	1.1.1.6;
+
+1.1.1.6
+date	2002.04.02.05.34.13;	author knu;	state Exp;
+branches;
+next	1.1.1.7;
+
+1.1.1.7
+date	2002.04.16.07.14.21;	author knu;	state Exp;
+branches;
+next	1.1.1.8;
+
+1.1.1.8
+date	2002.04.24.07.50.38;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@README  2002/02/25
+
+Oni Guruma (regular expression library)
+
+Copyright (C) 2002  K.Kosako (kosako@@sofnec.co.jp)
+
+
+Install into Ruby
+
+   1. copy regex.h and regex.c to ruby source directory.
+   2. apply patch file to re.c.
+      re.c.166.patch for Ruby 1.6.6
+      re.c.172.patch for Ruby 1.7.2
+   3. make clean
+   4. make
+
+
+Difference with GNU regex
+
+   + has original native API. (Thread safe?  I hope so.)
+   + has modified GNU regex API.
+      - re_compile_fastmap() is removed. (no needs to call)
+      - re_recompile_pattern() is added.
+      - re_alloc_pattern()    is added.
+   + octal or hexadecimal number sequence can be treated as 
+     multibyte code in char-class[..] (ex. [\xa1\xa2]).
+   + POSIX bracket [:ascii:] is added. (Perl extension ?)
+
+
+ToDo
+
+   + GNU autoconf
+   ? Add new stack type for opcode OP_ANYCHAR_STAR(.*) matching process.
+     [STK_ANYCHAR_STAR, address, str-low, str-now]
+   ? Ruby M17N (re-check specification, see MB2WC_AVAILABLE(enc))
+  ?? dynamic eval {?{Ruby code...})     I don't know Perl. :-)
+  ?? POSIX compatible API
+
+
+History
+
+2002/02/25: Version: 1.0 (first release)
+@
+
+
+1.1.1.1
+log
+@This is the initial import of Oni Guruma, a GNU regex compatible
+regular expression library, snapshotted at 2002-02-25.
+
+Copyright (C) 2002  K.Kosako (kosako@@sofnec.co.jp)
+@
+text
+@@
+
+
+1.1.1.2
+log
+@Import Oni Guruma 20020304 (version 1.1).
+@
+text
+@d1 1
+a1 1
+README  2002/03/04
+d10 2
+a11 2
+   1. Copy regex.h and regex.c into ruby source directory.
+   2. Apply patch file to re.c.
+d18 1
+a18 1
+Differences with GNU regex(version 0.12)
+d24 4
+a27 12
+      - re_alloc_pattern() is added.
+      - error messages are different.
+
+   + look-behind (?<=fixed-char-length-pattern) and
+                 (?<!fixed-char-length-pattern) is added.
+     (includes char-class and anchor (^$), but not includes
+      fixed number repeat(/(?<=a{7})/))
+   + Octal or hexadecimal number sequence can be treated as 
+     multibyte code in char-class. (ex. [\xa1\xa2])
+   + Effect range of isolated option is to next ')'.
+     ex. (?:(?i)a|b) is interpreted as (?:(?i:a|b)), not (?:(?i:a)|b).
+   + POSIX bracket [:ascii:] is added.
+a31 3
+   + expand repeated exact string. ex. /(?:aaa){10}/
+   + get tail exact string optimizing info. ex. /X((.*).)+X/
+     (by adding backward link to NCONS ?)
+d33 1
+a33 1
+   + Add new stack type for opcode OP_ANYCHAR_STAR(.*) matching process.
+d35 3
+a37 11
+   + script program for test and benchmark.
+
+   ? reduce null-check range in compile time.
+     (add new opcode OP_NULL_CHECK_END_JUMP ?)
+   ? merge re_alloc_pattern() with re_compile_pattern().
+   ? add new opcode for exact pattern in look-behind.
+  ?? convert function name style from CamelCase to underline separation.
+  ?? postponed regular subexpression (?p{Ruby code...})
+ ??? POSIX compatible API
+
+ and I'm thankful to Akinori MUSHA.
+d42 1
+a42 24
+2002/03/04: Version 1.1
+
+2002/03/04: [impl] replace STK_BOTTOM with STK_ALT.
+2002/03/02: [impl] add new opcode OP_FINISH and new stack type
+                   STK_BOTTOM for (little bit) speed up STACK_POP.
+2002/03/02: [impl] add new opcode OP_EXACT1_IC, OP_EXACTN_IC
+                   for compile time ignore case check.
+                   remove opcode OP_EXACT1_RAW, OP_EXACTN_RAW.
+2002/03/02: [impl] add OpTime info to statistical data.
+2002/02/28: [bug]  sub_anchor($) in ForwardSearch() and BackwardSearch().
+                   ex. /$\x0az/.match("\nz")
+2002/02/28: [new]  look-behind (?<=pattern), (?<!pattern).
+2002/02/27: [bug]  use StackIndex instead of StackType* for realloc problem.
+2002/02/27: [impl] use m17n_codepoint() as mb2wc() in REG_RUBY_M17N.
+2002/02/27: [spec] undefined POSIX bracket /[[:xyz:]]/ should be syntax error.
+2002/02/26: [bug]  ex. /$*/, /[a-]/, /((?i)a)b/   (thanks matz)
+
+2002/02/25: Version 1.0 (first release)
+
+--
+[bug:  bug fix]
+[new:  new feature]
+[spec: specification change]
+[impl: implementation change]
+@
+
+
+1.1.1.3
+log
+@Import Oni Guruma 20020306.
+@
+text
+@d1 1
+a1 1
+README  2002/03/06
+d11 1
+a11 1
+   2. Apply a patch file to re.c.
+d20 1
+a20 1
+   + has a original native API. (Thread safe?  I hope so.)
+d28 3
+a30 2
+                 (?<!fixed-char-length-pattern) are added.
+     (char-class, anychar(.) and anchor(^$ only) are allowed.)
+d32 1
+a32 2
+     a multibyte code char in char-class, if multibyte encoding is specified.
+     (ex. [\xa1\xa2], [\xa1\xa7-\xa4\xa1])
+a34 1
+   + Negative POSIX bracket [:^xxxx:] is supported.
+a40 5
+   + GNU Autoconf
+   + Add a new opcode for anystar(.*) and exact combination.
+     [anystar, exact, ...] -> [anystar-peek-next, exact, ...]
+   + Add a new stack type for anystar(.*) matching process.
+     [STK_ANYCHAR_STAR, address, str-low, str-now]
+d43 3
+a49 1
+   ? add a new opcode for exact pattern in look-behind.
+d51 3
+a53 2
+  ?? convert function name style from CamelCase to underline_separation.
+  ?? postponed regular subexpression. /(?p{Ruby code...})/
+a60 10
+2002/03/06: [bug]  if pattern has NULL(\000) char, infinite loop happens 
+                   in ScanMakeNode(). (beware of strchr(). thanks nobu)
+2002/03/06: [bug]  range argument of ForwardSearchRange() is wrong.
+                   ex. /\A.a/, /\G.a/ mismatched with "aa". (thanks nobu)
+2002/03/05: [new]  add RegexMatch() API. rename regexMatch() to matchAt().
+2002/03/05: [impl] change function definition style.
+2002/03/05: [impl] abolish use of macro symbol which name begin with underline.
+2002/03/04: [bug]  make up a break-statement in compileTree().
+                   (compile error on Mac OS X 10.1.3)
+
+a84 1
+[inst: changes for installation]
+@
+
+
+1.1.1.4
+log
+@Import Oni Guruma 20020313.
+@
+text
+@d1 1
+a1 1
+README  2002/03/13
+d3 1
+a3 1
+OniGuruma (regular expression library)
+d8 1
+a8 1
+There are two ways of using of it in this program.
+d10 6
+a15 32
+  A. built-in regular expression engine of Ruby
+  B. C library
+
+
+Install
+
+  A. Install into Ruby
+
+     1. Copy regex.h and regex.c into ruby source directory.
+     2. Apply a patch file to re.c.
+
+        re.c.166.patch for Ruby 1.6.6 or 1.6.7
+        re.c.172.patch for Ruby 1.7.2
+
+     3. make clean     (in ruby source directory)
+     4. make           (in ruby source directory)
+
+    If you extracted this archive in ruby source directory
+    (i.e. this file is ruby/oniguruma/README),
+    then step 1 and 2 can be replaced with the following.
+
+     1. ./configure             (in oniguruma directory)
+     2. make 166 (or make 172)  (in oniguruma directory)
+
+
+  B. Install library (and header file)
+
+     1. ./configure
+     2. make
+     3. make install
+
+     (* uninstall:  make uninstall)
+d22 4
+a25 4
+      * re_compile_fastmap() is removed. (no needs to call)
+      * re_recompile_pattern() is added.
+      * re_alloc_pattern() is added.
+      * error messages are different.
+d29 1
+a29 1
+     (char-class, anychar(.) and anchor(^,$,\A only) are allowed.)
+a37 3
+   + OniGuruma Extension  (*** It is invalid with Ruby in default. ***)
+     * \k(single-byte word char), \K(multi-byte char). [experimental]
+
+d41 8
+a48 1
+   + serialize integer in bytecode. (switch at compile time)
+a50 2
+   ? get tail string optimizing info. ex. /X((.*).)+X/
+     (add backward link to NCONS)
+d52 6
+a57 3
+   ? add a new stack type for anystar(.*) matching process.
+     [STK_ANYCHAR_STAR, address, str-low, str-now]
+  ?? POSIX compatible API.
+a61 6
+Problem
+
+   + AC_PROG_INSTALL in configure.in  is not used.
+     (Why configure script can't find /usr/bin/install in my box?)
+
+
+a63 30
+2002/03/13: Version 1.2
+
+2002/03/13: [test] success in rubicon/builtin/AllBuiltinTests.rb.
+                   (thanks rubicon)
+2002/03/13: [bug]  OP_EXACTMBN process in matchAt() is wrong.
+2002/03/13: [bug]  start argument of BackwardSearchRange() is wrong.
+2002/03/12: [spec] change function name style from CamelCase
+                   to underline_separation. (includes API)
+2002/03/12: [bug]  if pattern has nested null-check, cause infinite loop.
+                   correct STACK_NULL_CHECK() macro. (thanks Guy Decoux)
+2002/03/11: [bug]  it is wrong that four numbers to continue as
+                   an octal value in scanBackSlash(). ex. /\0111/
+                   (thanks matz)
+2002/03/11: [new]  \k (single-byte word char), \K (multi-byte char).
+2002/03/09: [inst] add two targets to Makefile.in (166 and 177).
+2002/03/09: [spec] decrease REG_MAX_BACKREF_NUM, REG_MAX_REPEAT_NUM
+                   values.
+2002/03/08: [spec] allow use of "\A"(begin-buf) in look-behind.
+2002/03/08: [impl] add a new opcode OP_PUSH_IF_PEEK_NEXT.
+2002/03/08: [impl] add a new opcode OP_ANYCHAR_STAR_PEEK_NEXT.
+2002/03/07: [spec] prohibit use of memory group "(...)"
+                   in negative look-behind.
+2002/03/07: [inst] add configure.in, config.h.in, Makefile.in.
+2002/03/07: [impl] call Init_REGEX_STAT() in RegexInit().
+2002/03/07: [spec] less length string match with negative look-behind.
+                   ex. /(?<!XXX)a/.match("Xa").    (thanks nobu)
+2002/03/06: [impl] expand repeated string, if expanded length <= 100.
+                   ex. /(?:abc){10}/
+2002/03/06: [new]  add a symbol REG_TRANSTABLE_USE_DEFAULT in regex.h.
+2002/03/06: [impl] rename RegDefaultCharCode to RegDefaultCharEncoding.
+@
+
+
+1.1.1.5
+log
+@Import Oni Guruma 20020325.
+@
+text
+@d1 1
+a1 1
+README  2002/03/25
+d44 1
+a44 8
+License
+
+   When this software is partly used or it is distributed, this of Ruby
+   follows the license of Ruby.
+   It follows the BSD license in the case of the one except for it.
+
+
+Differences with japanized GNU regex(version 0.12) of Ruby
+a60 4
+   + Isolated option is not transparent to previous pattern.
+     ex. a(?i)* is a syntax error pattern.
+   + allowed incompleted left brace as a usual char.
+     ex. /{/, /({)/, /a{2,3/ etc...
+d70 2
+a71 1
+   + benchmark script.
+d75 1
+a75 1
+   ? reduce null-check range at bytecode compile time.
+a84 8
+   + Ignore case option is not effect to an octal or hexadecimal 
+     numbered char, but it becomes effective if it appears in the char class.
+     This doesn't have consistency, though they are the specifications
+     which are the same as GNU regex of Ruby.
+
+      /\x61/i.match("A")     # => nil
+      /[\x61]/i.match("A")   # => match
+
+a89 27
+
+2002/03/25: [spec] if encoding is utf-8, combination of singlebyte - 
+                   multibyte code range in char class is allowed.
+2002/03/25: the description of the license condition is added to README.
+2002/03/23: [bug]  should set all bits of reg->mem_stats,
+                   if REG_OPTION_FIND_LONGEST or REG_OPTION_NOT_EMPTY.
+2002/03/23: [new]  add a new option REG_OPTION_NOT_EMPTY.
+2002/03/20: [spec] allow incompleted left brace as a usual char.
+                   ex. /{/, /({)/, /a{2,3/ etc...
+2002/03/20: [impl] serialize integer in bytecode.
+                   (switch by UNALIGNED_WORD_ACCESS macro in regex.c)
+2002/03/20: [impl] change re_mbcinit() for REG_RUBY_M17N.
+2002/03/19: [impl] word alignment of char class multi-byte code ranges.
+2002/03/19: [impl] replace OP_EXACTMB4N with OP_EXACTMB3N.
+2002/03/19: [bug]  OP_CCLASS_MB_NOT process in matchAt() is wrong.
+2002/03/19: [new]  add re_mbctab[] for Ruby extension library compatibility.
+2002/03/19: [spec] allow nested repeat operator, if operator is {n,m} type.
+2002/03/19: [new]  add REG_IS_PATTERN_ERROR(ecode) in regex.h
+2002/03/18: [spec] /[a-b-c]/ should be error.
+2002/03/18: [bug]  /[\w-a]/ should be error.        (thanks Guy Decoux)
+2002/03/18: [bug]  /[\]/ should be error.           (thanks Guy Decoux)
+2002/03/18: [bug]  /()*/ etc.. should not be error. (thanks Guy Decoux)
+2002/03/18: [spec] /a{1}*/ should not be error.     (thanks Guy Decoux)
+2002/03/18: [bug]  ab{2}{3} was interpreded to (?:a(?:b{2})){3}
+                   (thanks Guy Decoux)
+2002/03/18: [bug]  abort /(?i)*a/ etc...            (thanks Guy Decoux)
+2002/03/18: [bug]  abort /a|*/,/a|{1}/ etc...       (thanks Guy Decoux)
+@
+
+
+1.1.1.6
+log
+@Import Oni Guruma 20020401 (version 1.3).
+@
+text
+@d1 1
+a1 1
+README  2002/04/01
+d5 1
+a5 1
+K.Kosako <kosako@@sofnec.co.jp>
+a62 1
+   + specify wide-char value by \x{hexadecimal-number} form.
+a80 1
+   + check invalid wide char value in WC2MB, WC2MB_FIRST on Ruby M17N.
+a85 1
+     ex. (?:a*)+  ===> (?:aa*|)+
+d109 3
+a111 13
+2002/04/01: Version 1.3
+
+2002/04/01: [dist] add COPYING.
+2002/03/30: [spec] warn redundant nested repeat operator
+                   in Ruby verbose mode.  ex. (?:a*)?
+2002/03/30: [spec] nested repeat operator error check should be 
+                   same with GNU regex.             (thanks Guy Decoux)
+2002/03/30: [new]  add \x{hexadecimal-wide-char}.   (thanks matz)
+2002/03/27: [bug]  MBCTYPE_XXX symbol values should be same with GNU regex.
+2002/03/27: [impl] add THREAD_ATOMIC to regex_clone(), regex_init(), regex_end().
+2002/03/25: [spec] if encoding is utf-8, allow combination of singlebyte and
+                   multibyte code range in char class.
+2002/03/25: [dist] description of the license condition is added to README.
+d118 1
+a118 1
+                   (switch by UNALIGNED_WORD_ACCESS in regex.c)
+d150 1
+a150 1
+2002/03/09: [inst] add two targets to Makefile.in (166 and 172).
+a200 2
+[dist: distribution change]
+[test: test]
+@
+
+
+1.1.1.7
+log
+@Import Oni Guruma 20020416.
+@
+text
+@d1 1
+a1 1
+README  2002/04/16
+d10 2
+a11 2
+  a. Built-in regular expression engine of Ruby
+  b. C library
+d16 1
+a16 1
+  a. Install into Ruby
+d35 1
+a35 1
+  b. Install library (and header file)
+d46 2
+a47 2
+   When this software is partly used or it is distributed with Ruby, 
+   this of Ruby follows the license of Ruby.
+d51 1
+a51 1
+Differences with Japanized GNU regex(version 0.12) of Ruby
+a62 3
+     (in negative-look-behind, capture group() isn't allowed, 
+      shy group(?:) is allowed.)
+
+a81 1
+   + POSIX compatible API.
+d85 2
+a86 5
+   ? named sub-pattern, named back-reference, pattern and bytecode sharing.
+     ex. define: (?<name>...), back-ref: \g<name>, share: (?*name)
+
+     Pattern sharing was proposed by Tanaka Akira for DFA -> regexp transformation.
+
+d89 3
+a91 1
+
+a111 9
+2002/04/09: [impl] move IS_MULTILINE() to outside of loop in OP_ANYCHAR_STAR.
+2002/04/08: [impl] don't use OP_REPEAT operator for '??'.
+2002/04/06: [impl] reduce redundant nested repeat operators(?,*,+,??,*?,+?).
+                   ex. (?:a*)?, (?:a??)* etc..
+2002/04/06: [spec] should not warn for /(?:a?)+?/.
+2002/04/04: [spec] should allow fixed length alternative and repeat pattern
+                   in look-behind. ex. /(?<=(a|b){3})/  (thanks Guy Decoux)
+2002/04/02: [spec] should warn for /(?:a+)?/ and /(?:a*)??/.  (thanks akr)
+
+a123 1
+                   (cancelled 2002/04/01: for M17N compatibility)
+d169 1
+a169 1
+2002/03/07: [spec] prohibit use of capture group "(...)"
+@
+
+
+1.1.1.8
+log
+@Import Oni Guruma 20020424.
+@
+text
+@d1 1
+a1 1
+README  2002/04/24
+d18 1
+a18 2
+     1. Copy regex.h, regint.h regcomp.c, regexec.c, reggnu.c and regex.c 
+        into ruby source directory.
+d79 3
+a85 1
+   + C library test program.
+a116 6
+2002/04/24: [spec] USE_ONIGURUMA_EXTENSION is disabled in default.
+2002/04/24: [new]  add searching time option: REG_OPTION_NOTBOL/NOTEOL.
+                   add searching time option argument to regex_search() and
+                   regex_match(). (prepare for POSIX API)
+2002/04/20: [impl] divide regex.c file into regcomp.c, regexec.c, reggnu.c
+                   and regint.h.
+@

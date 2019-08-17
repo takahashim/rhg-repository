@@ -1,0 +1,9957 @@
+head	1.79;
+access;
+symbols
+	v1_6_7:1.31.2.21
+	v1_6_6:1.31.2.14
+	v1_6_5:1.31.2.12
+	v1_6_4:1.31.2.10
+	v1_7_1:1.39
+	v1_6_4_preview4:1.31.2.10
+	v1_6_4_preview3:1.31.2.10
+	v1_6_4_preview2:1.31.2.8
+	v1_6_4_preview1:1.31.2.7
+	v1_6_3:1.31.2.3
+	ruby_m17n:1.31.0.4
+	ruby_1_6:1.31.0.2
+	v1_6_2:1.31
+	v1_6_1:1.23
+	v1_6_0:1.22
+	v1_4_6:1.2.2.11
+	v1_4_5:1.2.2.10
+	v1_4_4:1.2.2.4
+	ruby_1_4_3:1.2.2.2
+	ruby1_4_3:1.2.2.2
+	v1_4_3:1.2.2.2
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.10
+	v1_3_6_repack:1.1.1.3.2.10
+	v1_3_6:1.1.1.3.2.10
+	v1_3_5:1.1.1.3.2.10
+	v1_2_6repack:1.1.1.2.2.25
+	v1_3_4_990625:1.1.1.3.2.9
+	v1_3_4_990624:1.1.1.3.2.9
+	v1_2_6:1.1.1.2.2.25
+	v1_3_4_990611:1.1.1.3.2.9
+	v1_3_4_990531:1.1.1.3.2.9
+	v1_3_3_990518:1.1.1.3.2.8
+	v1_3_3_990513:1.1.1.3.2.8
+	v1_3_3_990507:1.1.1.3.2.8
+	v1_2_5:1.1.1.2.2.25
+	v1_2_4:1.1.1.2.2.25
+	v1_3_1_990225:1.1.1.3.2.6
+	v1_3_1_990224:1.1.1.3.2.5
+	v1_3_1_990215:1.1.1.3.2.4
+	v1_3_1_990212:1.1.1.3.2.4
+	v1_3_1_990210:1.1.1.3.2.4
+	v1_3_1_:1.1.1.3.2.4
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.2
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.2
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.23
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.23
+	v1_2_1repack:1.1.1.2.2.23
+	v1_2_1:1.1.1.2.2.23
+	v1_2_stable:1.1.1.2.2.22
+	v1_1d1:1.1.1.2.2.21.2.3
+	v1_1d0:1.1.1.2.2.21.2.3
+	v1_1c9_1:1.1.1.2.2.22
+	v1_1c9:1.1.1.2.2.22
+	v1_1c8:1.1.1.2.2.22
+	v1_1c7:1.1.1.2.2.22
+	v1_1c6:1.1.1.2.2.22
+	v1_1d-start:1.1.1.2.2.21.2.1
+	v1_1c5:1.1.1.2.2.22
+	v1_1dev:1.1.1.2.2.21.0.2
+	v1_1c4:1.1.1.2.2.21
+	v1_1c3:1.1.1.2.2.21
+	v1_1c2:1.1.1.2.2.21
+	v1_1c1:1.1.1.2.2.21
+	v1_1c0:1.1.1.2.2.21
+	v1_1b9_31:1.1.1.2.2.21
+	v1_1b9_30:1.1.1.2.2.20
+	v1_1b9_28:1.1.1.2.2.18
+	v1_1b9_27:1.1.1.2.2.18
+	v1_1b9_26:1.1.1.2.2.17
+	r1_1b9_25:1.1.1.2.2.16
+	r1_1b9_24:1.1.1.2.2.16
+	v1_1b9_23:1.1.1.2.2.15
+	v1_1b9_22:1.1.1.2.2.13
+	v1_1b9_20:1.1.1.2.2.12
+	v1_1b9_18:1.1.1.2.2.10
+	v1_1b9_16:1.1.1.2.2.9
+	v1_1b9_15:1.1.1.2.2.9
+	v1_1b9_13:1.1.1.2.2.9
+	v1_1b9_12:1.1.1.2.2.9
+	v1_1b9_11:1.1.1.2.2.9
+	v1_1b9_08:1.1.1.2.2.8
+	v1_1b9_07:1.1.1.2.2.8
+	r1_1b9:1.1.1.2.2.4
+	v1_1b8:1.1.1.2.2.4
+	v1_1b7:1.1.1.2.2.4
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.79
+date	2002.10.17.07.26.59;	author matz;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2002.10.07.07.43.41;	author matz;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2002.10.07.07.15.38;	author matz;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2002.10.04.17.54.29;	author matz;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.08.19.05.56.05;	author matz;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.08.16.06.39.27;	author nobu;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.08.13.09.21.13;	author matz;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.08.12.07.39.07;	author matz;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.08.12.07.21.25;	author nobu;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.07.26.06.12.38;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.06.18.07.01.46;	author nobu;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.06.18.06.29.04;	author matz;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.06.11.07.01.13;	author matz;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.05.14.06.22.25;	author matz;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.04.18.08.46.17;	author matz;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.03.26.03.01.30;	author eban;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.03.15.08.51.31;	author usa;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.03.14.06.23.43;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.02.26.12.35.44;	author usa;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.02.22.10.28.45;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.02.15.04.43.05;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.02.13.09.53.17;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.02.13.09.01.09;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.02.01.10.23.22;	author nobu;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.01.16.02.17.30;	author nobu;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.01.11.09.18.49;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.01.04.14.14.34;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.12.27.09.53.54;	author nobu;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.12.26.16.56.51;	author nobu;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.11.19.05.03.02;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.11.01.05.11.22;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.10.30.08.43.25;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.10.29.05.07.17;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.08.13.05.17.38;	author knu;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.07.31.06.24.42;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.05.21.04.22.54;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.05.06.15.01.58;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.03.14.04.44.47;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.02.20.07.42.03;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.01.09.07.26.16;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.12.25.06.28.56;	author matz;	state Exp;
+branches
+	1.31.2.1
+	1.31.4.1;
+next	1.30;
+
+1.30
+date	2000.12.22.09.00.14;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.12.22.03.21.53;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.11.17.04.41.09;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.11.08.05.29.21;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.11.02.09.04.53;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.11.01.08.49.39;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.10.31.08.37.38;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.09.15.06.00.22;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.07.19.08.04.45;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.07.12.07.33.34;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.07.12.06.33.11;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.07.12.06.06.45;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.07.11.08.27.06;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.07.06.07.21.06;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.03.05.46.32;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.28.08.26.53;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.06.23.07.01.22;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.22.08.29.40;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.06.02.39.39;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.05.08.46.47;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.04.15.32.18;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.12.09.07.32;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.01.09.41.11;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.04.12.05.06.20;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.07.08.37.25;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.36.56;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.06.09.03.49;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.12.01.09.24.11;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.02;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.08;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.21;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.08;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.01.28.07.55.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.09.06.08.18;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.10.08.44.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.24.04.31.17;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.02.25.06.39.02;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.03.24.08.52.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.04.16.07.16.45;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.05.25.08.25.47;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.07.15.07.59.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.30.10.18.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.03.10.02.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.09.10.56.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.03.05.06.37.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.03.11.07.32.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.17.10.06.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.04.07.08.34.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.04.09.09.30.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.05.08.09.38.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.05.13.05.57.50;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.05.13.07.25.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.05.18.04.55.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.05.25.04.57.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.05.25.09.42.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.06.02.10.05.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.06.16.04.23.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.06.19.09.31.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.07.03.07.06.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.07.09.08.40.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	98.07.15.06.12.45;	author matz;	state Exp;
+branches
+	1.1.1.2.2.21.2.1;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	98.09.08.09.17.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	99.01.11.07.55.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	99.02.09.03.29.20;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	99.04.08.10.14.29;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.21.2.1
+date	98.09.08.07.08.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21.2.2;
+
+1.1.1.2.2.21.2.2
+date	98.10.06.03.28.02;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21.2.3;
+
+1.1.1.2.2.21.2.3
+date	98.11.25.03.31.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.12.01.09.24.45;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	99.12.06.09.03.25;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	99.12.08.05.35.54;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.01.05.04.40.59;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.04.14.14.35.40;	author matz;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.06.05.09.00.40;	author matz;	state Exp;
+branches;
+next	1.2.2.7;
+
+1.2.2.7
+date	2000.06.05.18.48.00;	author matz;	state Exp;
+branches;
+next	1.2.2.8;
+
+1.2.2.8
+date	2000.06.06.02.28.09;	author matz;	state Exp;
+branches;
+next	1.2.2.9;
+
+1.2.2.9
+date	2000.06.22.05.09.35;	author matz;	state Exp;
+branches;
+next	1.2.2.10;
+
+1.2.2.10
+date	2000.06.23.07.05.48;	author matz;	state Exp;
+branches;
+next	1.2.2.11;
+
+1.2.2.11
+date	2000.06.23.16.06.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.31.2.1
+date	2001.01.10.05.05.09;	author matz;	state Exp;
+branches;
+next	1.31.2.2;
+
+1.31.2.2
+date	2001.02.20.07.42.20;	author matz;	state Exp;
+branches;
+next	1.31.2.3;
+
+1.31.2.3
+date	2001.03.14.04.45.44;	author matz;	state Exp;
+branches;
+next	1.31.2.4;
+
+1.31.2.4
+date	2001.04.06.05.42.39;	author matz;	state Exp;
+branches;
+next	1.31.2.5;
+
+1.31.2.5
+date	2001.04.06.09.07.45;	author eban;	state Exp;
+branches;
+next	1.31.2.6;
+
+1.31.2.6
+date	2001.04.06.09.20.41;	author eban;	state Exp;
+branches;
+next	1.31.2.7;
+
+1.31.2.7
+date	2001.04.06.09.32.48;	author eban;	state Exp;
+branches;
+next	1.31.2.8;
+
+1.31.2.8
+date	2001.04.17.08.26.13;	author matz;	state Exp;
+branches;
+next	1.31.2.9;
+
+1.31.2.9
+date	2001.05.11.05.21.57;	author matz;	state Exp;
+branches;
+next	1.31.2.10;
+
+1.31.2.10
+date	2001.05.21.04.21.17;	author matz;	state Exp;
+branches;
+next	1.31.2.11;
+
+1.31.2.11
+date	2001.07.31.06.20.10;	author matz;	state Exp;
+branches;
+next	1.31.2.12;
+
+1.31.2.12
+date	2001.08.24.06.36.14;	author matz;	state Exp;
+branches;
+next	1.31.2.13;
+
+1.31.2.13
+date	2001.10.29.05.04.40;	author matz;	state Exp;
+branches;
+next	1.31.2.14;
+
+1.31.2.14
+date	2001.11.01.05.09.51;	author matz;	state Exp;
+branches;
+next	1.31.2.15;
+
+1.31.2.15
+date	2001.12.26.17.01.20;	author nobu;	state Exp;
+branches;
+next	1.31.2.16;
+
+1.31.2.16
+date	2001.12.27.09.53.42;	author nobu;	state Exp;
+branches;
+next	1.31.2.17;
+
+1.31.2.17
+date	2002.01.04.14.19.47;	author matz;	state Exp;
+branches;
+next	1.31.2.18;
+
+1.31.2.18
+date	2002.01.16.02.20.25;	author nobu;	state Exp;
+branches;
+next	1.31.2.19;
+
+1.31.2.19
+date	2002.02.15.04.43.58;	author matz;	state Exp;
+branches;
+next	1.31.2.20;
+
+1.31.2.20
+date	2002.02.22.10.29.25;	author matz;	state Exp;
+branches;
+next	1.31.2.21;
+
+1.31.2.21
+date	2002.02.26.12.36.26;	author usa;	state Exp;
+branches;
+next	1.31.2.22;
+
+1.31.2.22
+date	2002.05.01.09.37.57;	author matz;	state Exp;
+branches;
+next	1.31.2.23;
+
+1.31.2.23
+date	2002.07.11.08.24.53;	author matz;	state Exp;
+branches;
+next	1.31.2.24;
+
+1.31.2.24
+date	2002.08.19.05.59.05;	author matz;	state Exp;
+branches;
+next	1.31.2.25;
+
+1.31.2.25
+date	2002.10.07.07.16.12;	author matz;	state Exp;
+branches;
+next	1.31.2.26;
+
+1.31.2.26
+date	2002.10.07.07.44.18;	author matz;	state Exp;
+branches;
+next	;
+
+1.31.4.1
+date	2001.01.12.04.35.59;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.79
+log
+@* object.c (rb_str_to_dbl): RString ptr might be NULL.
+
+* object.c (rb_cstr_to_dbl): p pointer might be NULL.
+
+* bignum.c (rb_str_to_inum): RString ptr might be NULL.
+
+* bignum.c (rb_cstr_to_inum): str pointer might be NULL.
+@
+text
+@/**********************************************************************
+
+  bignum.c -
+
+  $Author: matz $
+  $Date: 2002/10/07 07:43:41 $
+  created at: Fri Jun 10 00:48:55 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+
+#include <math.h>
+#include <ctype.h>
+
+VALUE rb_cBignum;
+
+#if defined __MINGW32__
+#define USHORT _USHORT
+#endif
+
+#define BDIGITS(x) ((BDIGIT*)RBIGNUM(x)->digits)
+#define BITSPERDIG (SIZEOF_BDIGITS*CHAR_BIT)
+#define BIGRAD ((BDIGIT_DBL)1 << BITSPERDIG)
+#define DIGSPERLONG ((unsigned int)(SIZEOF_LONG/SIZEOF_BDIGITS))
+#if HAVE_LONG_LONG
+# define DIGSPERLL ((unsigned int)(SIZEOF_LONG_LONG/SIZEOF_BDIGITS))
+#endif
+#define BIGUP(x) ((BDIGIT_DBL)(x) << BITSPERDIG)
+#define BIGDN(x) RSHIFT(x,BITSPERDIG)
+#define BIGLO(x) ((BDIGIT)((x) & (BIGRAD-1)))
+
+static VALUE
+bignew_1(klass, len, sign)
+    VALUE klass;
+    long len;
+    char sign;
+{
+    NEWOBJ(big, struct RBignum);
+    OBJSETUP(big, klass, T_BIGNUM);
+    big->sign = sign;
+    big->len = len;
+    big->digits = ALLOC_N(BDIGIT, len);
+
+    return (VALUE)big;
+}
+
+#define bignew(len,sign) bignew_1(rb_cBignum,len,sign)
+
+VALUE
+rb_big_clone(x)
+    VALUE x;
+{
+    VALUE z = bignew_1(CLASS_OF(x), RBIGNUM(x)->len, RBIGNUM(x)->sign);
+
+    MEMCPY(BDIGITS(z), BDIGITS(x), BDIGIT, RBIGNUM(x)->len);
+    return z;
+}
+
+static void
+get2comp(x, carry)		/* get 2's complement */
+    VALUE x;
+    int carry;
+{
+    long i = RBIGNUM(x)->len;
+    BDIGIT *ds = BDIGITS(x);
+    BDIGIT_DBL num;
+
+    while (i--) ds[i] = ~ds[i];
+    i = 0; num = 1;
+    do {
+	num += ds[i];
+	ds[i++] = BIGLO(num);
+	num = BIGDN(num);
+    } while (i < RBIGNUM(x)->len);
+    if (!carry) return;
+    if ((ds[RBIGNUM(x)->len-1] & (1<<(BITSPERDIG-1))) == 0) {
+	REALLOC_N(RBIGNUM(x)->digits, BDIGIT, ++RBIGNUM(x)->len);
+	ds = BDIGITS(x);
+	ds[RBIGNUM(x)->len-1] = ~0;
+    }
+}
+
+void
+rb_big_2comp(x)			/* get 2's complement */
+    VALUE x;
+{
+    get2comp(x, Qtrue);
+}
+
+static VALUE
+bignorm(x)
+    VALUE x;
+{
+    if (!FIXNUM_P(x)) {
+	long len = RBIGNUM(x)->len;
+	BDIGIT *ds = BDIGITS(x);
+
+	while (len-- && !ds[len]) ;
+	RBIGNUM(x)->len = ++len;
+
+	if (len*SIZEOF_BDIGITS <= sizeof(VALUE)) {
+	    long num = 0;
+	    while (len--) {
+		num = BIGUP(num) + ds[len];
+	    }
+	    if (num >= 0) {
+		if (RBIGNUM(x)->sign) {
+		    if (POSFIXABLE(num)) return LONG2FIX(num);
+		}
+		else if (NEGFIXABLE(-(long)num)) return LONG2FIX(-(long)num);
+	    }
+	}
+    }
+    return x;
+}
+
+VALUE
+rb_big_norm(x)
+    VALUE x;
+{
+    return bignorm(x);
+}
+
+VALUE
+rb_uint2big(n)
+    unsigned long n;
+{
+    BDIGIT_DBL num = n;
+    long i = 0;
+    BDIGIT *digits;
+    VALUE big;
+
+    big = bignew(DIGSPERLONG, 1);
+    digits = BDIGITS(big);
+    while (i < DIGSPERLONG) {
+	digits[i++] = BIGLO(num);
+	num = BIGDN(num);
+    }
+
+    i = DIGSPERLONG;
+    while (--i && !digits[i]) ;
+    RBIGNUM(big)->len = i+1;
+    return big;
+}
+
+VALUE
+rb_int2big(n)
+    long n;
+{
+    long neg = 0;
+    VALUE big;
+
+    if (n < 0) {
+	n = -n;
+	neg = 1;
+    }
+    big = rb_uint2big(n);
+    if (neg) {
+	RBIGNUM(big)->sign = 0;
+    }
+    return big;
+}
+
+VALUE
+rb_uint2inum(n)
+    unsigned long n;
+{
+    if (POSFIXABLE(n)) return LONG2FIX(n);
+    return rb_uint2big(n);
+}
+
+VALUE
+rb_int2inum(n)
+    long n;
+{
+    if (FIXABLE(n)) return LONG2FIX(n);
+    return rb_int2big(n);
+}
+
+#ifdef HAVE_LONG_LONG
+
+#define DIGSPERLONGLONG ((unsigned int)(SIZEOF_LONG_LONG/SIZEOF_BDIGITS))
+
+void
+rb_quad_pack(buf, val)
+    char *buf;
+    VALUE val;
+{
+    LONG_LONG q;
+
+    val = rb_to_int(val);
+    if (FIXNUM_P(val)) {
+	q = FIX2LONG(val);
+    }
+    else {
+	long len = RBIGNUM(val)->len;
+	BDIGIT *ds;
+
+	ds = BDIGITS(val);
+	q = 0;
+	while (len--) {
+	    q = BIGUP(q);
+	    q += ds[len];
+	}
+    }
+    memcpy(buf, (char*)&q, SIZEOF_LONG_LONG);
+}
+
+VALUE
+rb_quad_unpack(buf, sign)
+    const char *buf;
+    int sign;
+{
+    unsigned LONG_LONG q;
+    long neg = 0;
+    long i;
+    BDIGIT *digits;
+    VALUE big;
+
+    memcpy(&q, buf, SIZEOF_LONG_LONG);
+    if (sign) {
+	if (FIXABLE((LONG_LONG)q)) return LONG2FIX((LONG_LONG)q);
+	if ((LONG_LONG)q < 0) {
+	    q = -(LONG_LONG)q;
+	    neg = 1;
+	}
+    }
+    else {
+	if (POSFIXABLE(q)) return LONG2FIX(q);
+    }
+
+    i = 0;
+    big = bignew(DIGSPERLONGLONG, 1);
+    digits = BDIGITS(big);
+    while (i < DIGSPERLONGLONG) {
+	digits[i++] = BIGLO(q);
+	q = BIGDN(q);
+    }
+
+    i = DIGSPERLONGLONG;
+    while (i-- && !digits[i]) ;
+    RBIGNUM(big)->len = i+1;
+
+    if (neg) {
+	RBIGNUM(big)->sign = 0;
+    }
+    return bignorm(big);
+}
+
+#else
+
+#define QUAD_SIZE 8
+
+void
+rb_quad_pack(buf, val)
+    char *buf;
+    VALUE val;
+{
+    long len;
+
+    memset(buf, 0, QUAD_SIZE);
+    val = rb_to_int(val);
+    if (FIXNUM_P(val)) {
+	val = rb_int2big(FIX2LONG(val));
+    }
+    len = RBIGNUM(val)->len * SIZEOF_BDIGITS;
+    if (len > QUAD_SIZE) len = QUAD_SIZE;
+    memcpy(buf, (char*)BDIGITS(val), len);
+    if (!RBIGNUM(val)->sign) {
+	len = QUAD_SIZE;
+	while (len--) {
+	    *buf = ~*buf;
+	    buf++;
+	}
+    }
+}
+
+#define BNEG(b) (RSHIFT(((BDIGIT*)b)[QUAD_SIZE/SIZEOF_BDIGITS-1],BITSPERDIG-1) != 0)
+
+VALUE
+rb_quad_unpack(buf, sign)
+    const char *buf;
+    int sign;
+{
+    VALUE big = bignew(QUAD_SIZE/SIZEOF_BDIGITS, 1);
+
+    memcpy((char*)BDIGITS(big), buf, QUAD_SIZE);
+    if (sign && BNEG(buf)) {
+	long len = QUAD_SIZE;
+	char *tmp = (char*)BDIGITS(big);
+
+	RBIGNUM(big)->sign = 0;
+	while (len--) {
+	    *tmp = ~*tmp;
+	    tmp++;
+	}
+    }
+
+    return bignorm(big);
+}
+
+#endif
+
+VALUE
+rb_cstr_to_inum(str, base, badcheck)
+    const char *str;
+    int base;
+    int badcheck;
+{
+    const char *s = str;
+    char *end;
+    char sign = 1, c, nondigit = 0;
+    BDIGIT_DBL num;
+    long len, blen = 1;
+    long i;
+    VALUE z;
+    BDIGIT *zds;
+
+    if (!str) {
+	if (badcheck) goto bad;
+	return INT2FIX(0);
+    }
+    if (badcheck) {
+	while (ISSPACE(*str)) str++;
+    }
+    else {
+	while (ISSPACE(*str) || *str == '_') str++;
+    }
+
+    if (str[0] == '+') {
+	str++;
+    }
+    else if (str[0] == '-') {
+	str++;
+	sign = 0;
+    }
+    if (str[0] == '+' || str[0] == '-') {
+	if (badcheck) goto bad;
+	return INT2FIX(0);
+    }
+    if (base <= 0) {
+	if (str[0] == '0') {
+	    switch (str[1]) {
+	      case 'x': case 'X':
+		base = 16;
+		break;
+	      case 'b': case 'B':
+		base = 2;
+		break;
+	      case 'o': case 'O':
+		base = 8;
+		break;
+	      case 'd': case 'D':
+		base = 10;
+		break;
+	      default:
+		base = 8;
+	    }
+	}
+	else if (base < -1) {
+	    base = -base;
+	}
+	else {
+	    base = 10;
+	}
+    }
+    switch (base) {
+      case 2:
+	len = 1;
+	if (str[0] == '0' && (str[1] == 'b'||str[1] == 'B')) {
+	    str += 2;
+	}
+	break;
+      case 8:
+	len = 3;
+	if (str[0] == '0' && (str[1] == 'o'||str[1] == 'O')) {
+	    str += 2;
+	}
+	break;
+      case 10:
+	len = 4;
+	if (str[0] == '0' && (str[1] == 'd'||str[1] == 'D')) {
+	    str += 2;
+	}
+	break;
+      case 16:
+	len = 4;
+	if (str[0] == '0' && (str[1] == 'x'||str[1] == 'X')) {
+	    str += 2;
+	}
+	break;
+    }
+    if (*str == '0') {		/* squeeze preceeding 0s */
+	while (*++str == '0');
+	--str;
+    }
+    len *= strlen(str)*sizeof(char);
+
+    if (len <= (sizeof(VALUE)*CHAR_BIT)) {
+	unsigned long val = strtoul((char*)str, &end, base);
+
+	if (*end == '_') goto bigparse;
+	if (badcheck) {
+	    if (end == str) goto bad; /* no number */
+	    while (*end && ISSPACE(*end)) end++;
+	    if (*end) {		      /* trailing garbage */
+	      bad:
+		rb_invalid_str(s, "Integer");
+	    }
+	}
+
+	if (POSFIXABLE(val)) {
+	    if (sign) return LONG2FIX(val);
+	    else {
+		long result = -(long)val;
+		return LONG2FIX(result);
+	    }
+	}
+	else {
+	    VALUE big = rb_uint2big(val);
+	    RBIGNUM(big)->sign = sign;
+	    return bignorm(big);
+	}
+    }
+  bigparse:
+    len = (len/BITSPERDIG)+1;
+    if (badcheck && *str == '_') goto bad;
+
+    z = bignew(len, sign);
+    zds = BDIGITS(z);
+    for (i=len;i--;) zds[i]=0;
+    while (c = *str++) {
+	switch (c) {
+	  case '8': case '9':
+	    if (base == 8) {
+		c = base;
+		break;
+	    }
+	  case '0': case '1': case '2': case '3': case '4':
+	  case '5': case '6': case '7': 
+	    c = c - '0';
+	    nondigit = 0;
+	    break;
+	  case 'a': case 'b': case 'c':
+	  case 'd': case 'e': case 'f':
+	    c -= 'a' - 'A';
+	  case 'A': case 'B': case 'C':
+	  case 'D': case 'E': case 'F':
+	    if (base != 16) {
+		nondigit = c;
+		c = base;
+	    }
+	    else {
+		c = c - 'A' + 10;
+		nondigit = 0;
+	    }
+	    break;
+	  case '_':
+	    if (badcheck) {
+		if (nondigit) goto bad;
+		nondigit = c;
+	    }
+	    continue;
+	  default:
+	    c = base;
+	    break;
+	}
+	if (c >= base) break;
+	i = 0;
+	num = c;
+	for (;;) {
+	    while (i<blen) {
+		num += (BDIGIT_DBL)zds[i]*base;
+		zds[i++] = BIGLO(num);
+		num = BIGDN(num);
+	    }
+	    if (num) {
+		blen++;
+		continue;
+	    }
+	    break;
+	}
+    }
+    if (badcheck) {
+	str--;
+	if (s+1 < str && str[-1] == '_') goto bad;
+	while (*str && ISSPACE(*str)) str++;
+	if (*str) goto bad;
+    }
+
+    return bignorm(z);
+}
+
+VALUE
+rb_str_to_inum(str, base, badcheck)
+    VALUE str;
+    int base;
+    int badcheck;
+{
+    char *s;
+    long len;
+
+    StringValue(str);
+    s = RSTRING(str)->ptr;
+    if (s) {
+	len = RSTRING(str)->len;
+	if (s[len]) {		/* no sentinel somehow */
+	    char *p = ALLOCA_N(char, len+1);
+
+	    MEMCPY(p, s, char, len);
+	    p[len] = '\0';
+	    s = p;
+	}
+	if (badcheck && len != strlen(s)) {
+	    rb_raise(rb_eArgError, "string for Integer contains null byte");
+	}
+    }
+    return rb_cstr_to_inum(s, base, badcheck); 
+}
+
+#if HAVE_LONG_LONG
+
+VALUE
+rb_ull2big(n)
+    unsigned LONG_LONG n;
+{
+    BDIGIT_DBL num = n;
+    long i = 0;
+    BDIGIT *digits;
+    VALUE big;
+
+    big = bignew(DIGSPERLL, 1);
+    digits = BDIGITS(big);
+    while (i < DIGSPERLL) {
+	digits[i++] = BIGLO(num);
+	num = BIGDN(num);
+    }
+
+    i = DIGSPERLL;
+    while (i-- && !digits[i]) ;
+    RBIGNUM(big)->len = i+1;
+    return big;
+}
+
+VALUE
+rb_ll2big(n)
+    LONG_LONG n;
+{
+    long neg = 0;
+    VALUE big;
+
+    if (n < 0) {
+	n = -n;
+	neg = 1;
+    }
+    big = rb_ull2big(n);
+    if (neg) {
+	RBIGNUM(big)->sign = 0;
+    }
+    return big;
+}
+
+VALUE
+rb_ull2inum(n)
+    unsigned LONG_LONG n;
+{
+    if (POSFIXABLE(n)) return LONG2FIX(n);
+    return rb_ull2big(n);
+}
+
+VALUE
+rb_ll2inum(n)
+    LONG_LONG n;
+{
+    if (FIXABLE(n)) return LONG2FIX(n);
+    return rb_ll2big(n);
+}
+
+#endif  /* HAVE_LONG_LONG */
+ 
+VALUE
+rb_cstr2inum(str, base)
+    const char *str;
+    int base;
+{
+    return rb_cstr_to_inum(str, base, base==0);
+}
+
+VALUE
+rb_str2inum(str, base)
+    VALUE str;
+    int base;
+{
+    return rb_str_to_inum(str, base, base==0);
+}
+
+static char hexmap[] = "0123456789abcdef";
+VALUE
+rb_big2str(x, base)
+    VALUE x;
+    int base;
+{
+    volatile VALUE t;
+    BDIGIT *ds;
+    long i, j, hbase;
+    VALUE ss;
+    char *s, c;
+
+    if (FIXNUM_P(x)) {
+	return rb_fix2str(x, base);
+    }
+    i = RBIGNUM(x)->len;
+    if (i == 0 || (i == 1 && BDIGITS(x)[0] == 0)) {
+	return rb_str_new2("0");
+    }
+    if (base == 10) {
+	j = (SIZEOF_BDIGITS/sizeof(char)*CHAR_BIT*i*241L)/800+2;
+	hbase = 10000;
+    }
+    else if (base == 16) {
+	j = (SIZEOF_BDIGITS/sizeof(char)*CHAR_BIT*i)/4+2;
+	hbase = 0x10000;
+    }
+    else if (base == 8) {
+	j = (SIZEOF_BDIGITS/sizeof(char)*CHAR_BIT*i)+2;
+	hbase = 010000;
+    }
+    else if (base == 2) {
+	j = (SIZEOF_BDIGITS*CHAR_BIT*i)+2;
+	hbase = 020;
+    }
+    else {
+	rb_raise(rb_eArgError, "illegal radix %d", base);
+    }
+
+    t = rb_big_clone(x);
+    ds = BDIGITS(t);
+    ss = rb_str_new(0, j);
+    s = RSTRING(ss)->ptr;
+
+    s[0] = RBIGNUM(x)->sign ? '+' : '-';
+    while (i && j) {
+	long k = i;
+	BDIGIT_DBL num = 0;
+
+	while (k--) {
+	    num = BIGUP(num) + ds[k];
+	    ds[k] = (BDIGIT)(num / hbase);
+	    num %= hbase;
+	}
+	if (ds[i-1] == 0) i--;
+	k = 4;
+	while (k--) {
+	    c = (char)(num % base);
+	    s[--j] = hexmap[(int)c];
+	    num /= base;
+	    if (i == 0 && num == 0) break;
+	}
+    }
+    while (s[j] == '0') j++;
+    RSTRING(ss)->len -= RBIGNUM(x)->sign?j:j-1;
+    memmove(RBIGNUM(x)->sign?s:s+1, s+j, RSTRING(ss)->len);
+    s[RSTRING(ss)->len] = '\0';
+
+    return ss;
+}
+
+static VALUE
+rb_big_to_s(argc, argv, x)
+    int argc;
+    VALUE *argv;
+    VALUE x;
+{
+    VALUE b;
+    int base;
+
+    rb_scan_args(argc, argv, "01", &b);
+    if (argc == 0) base = 10;
+    else base = NUM2INT(b);
+    return rb_big2str(x, base);
+}
+
+static unsigned long
+big2ulong(x, type)
+    VALUE x;
+    char *type;
+{
+    long len = RBIGNUM(x)->len;
+    BDIGIT_DBL num;
+    BDIGIT *ds;
+
+    if (len > SIZEOF_LONG/SIZEOF_BDIGITS)
+	rb_raise(rb_eRangeError, "bignum too big to convert into `%s'", type);
+    ds = BDIGITS(x);
+    num = 0;
+    while (len--) {
+	num = BIGUP(num);
+	num += ds[len];
+    }
+    return num;
+}
+
+unsigned long
+rb_big2ulong(x)
+    VALUE x;
+{
+    unsigned long num = big2ulong(x, "unsigned long");
+
+    if (!RBIGNUM(x)->sign) return -num;
+    return num;
+}
+
+long
+rb_big2long(x)
+    VALUE x;
+{
+    unsigned long num = big2ulong(x, "int");
+
+    if ((long)num < 0 && (RBIGNUM(x)->sign || (long)num != LONG_MIN)) {
+	rb_raise(rb_eRangeError, "bignum too big to convert into `int'");
+    }
+    if (!RBIGNUM(x)->sign) return -(long)num;
+    return num;
+}
+
+#if HAVE_LONG_LONG
+
+static unsigned LONG_LONG
+big2ull(x, type)
+    VALUE x;
+    char *type;
+{
+    long len = RBIGNUM(x)->len;
+    BDIGIT_DBL num;
+    BDIGIT *ds;
+
+    if (len > SIZEOF_LONG_LONG/SIZEOF_BDIGITS)
+	rb_raise(rb_eRangeError, "bignum too big to convert into `%s'", type);
+    ds = BDIGITS(x);
+    num = 0;
+    while (len--) {
+	num = BIGUP(num);
+	num += ds[len];
+    }
+    return num;
+}
+
+unsigned LONG_LONG
+rb_big2ull(x)
+    VALUE x;
+{
+    unsigned LONG_LONG num = big2ull(x, "unsigned long long");
+
+    if (!RBIGNUM(x)->sign) return -num;
+    return num;
+}
+
+LONG_LONG
+rb_big2ll(x)
+    VALUE x;
+{
+    unsigned LONG_LONG num = big2ull(x, "long long");
+
+    if ((LONG_LONG)num < 0 && (RBIGNUM(x)->sign
+			       || (LONG_LONG)num != LLONG_MIN)) {
+	rb_raise(rb_eRangeError, "bignum too big to convert into `long long'");
+    }
+    if (!RBIGNUM(x)->sign) return -(LONG_LONG)num;
+    return num;
+}
+
+#endif  /* HAVE_LONG_LONG */
+
+static VALUE
+dbl2big(d)
+    double d;
+{
+    long i = 0;
+    BDIGIT c;
+    BDIGIT *digits;
+    VALUE z;
+    double u = (d < 0)?-d:d;
+
+    if (isinf(d)) {
+	rb_raise(rb_eFloatDomainError, d < 0 ? "-Infinity" : "Infinity");
+    }
+    if (isnan(d)) {
+	rb_raise(rb_eFloatDomainError, "NaN");
+    }
+
+    while (!POSFIXABLE(u) || 0 != (long)u) {
+	u /= (double)(BIGRAD);
+	i++;
+    }
+    z = bignew(i, d>=0);
+    digits = BDIGITS(z);
+    while (i--) {
+	u *= BIGRAD;
+	c = (BDIGIT)u;
+	u -= c;
+	digits[i] = c;
+    }
+
+    return z;
+}
+
+VALUE
+rb_dbl2big(d)
+    double d;
+{
+    return bignorm(dbl2big(d));
+}
+
+double
+rb_big2dbl(x)
+    VALUE x;
+{
+    double d = 0.0;
+    long i = RBIGNUM(x)->len;
+    BDIGIT *ds = BDIGITS(x);
+
+    while (i--) {
+	d = ds[i] + BIGRAD*d;
+    }
+    if (isinf(d)) d = HUGE_VAL;
+    if (!RBIGNUM(x)->sign) d = -d;
+    return d;
+}
+
+static VALUE
+rb_big_to_f(x)
+    VALUE x;
+{
+    return rb_float_new(rb_big2dbl(x));
+}
+
+static VALUE
+rb_big_cmp(x, y)
+    VALUE x, y;
+{
+    long xlen = RBIGNUM(x)->len;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      case T_FLOAT:
+	return rb_dbl_cmp(rb_big2dbl(x), RFLOAT(y)->value);
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+
+    if (RBIGNUM(x)->sign > RBIGNUM(y)->sign) return INT2FIX(1);
+    if (RBIGNUM(x)->sign < RBIGNUM(y)->sign) return INT2FIX(-1);
+    if (xlen < RBIGNUM(y)->len)
+	return (RBIGNUM(x)->sign) ? INT2FIX(-1) : INT2FIX(1);
+    if (xlen > RBIGNUM(y)->len)
+	return (RBIGNUM(x)->sign) ? INT2FIX(1) : INT2FIX(-1);
+
+    while(xlen-- && (BDIGITS(x)[xlen]==BDIGITS(y)[xlen]));
+    if (-1 == xlen) return INT2FIX(0);
+    return (BDIGITS(x)[xlen] > BDIGITS(y)[xlen]) ?
+	(RBIGNUM(x)->sign ? INT2FIX(1) : INT2FIX(-1)) :
+	    (RBIGNUM(x)->sign ? INT2FIX(-1) : INT2FIX(1));
+}
+
+static VALUE
+rb_big_eq(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+      case T_BIGNUM:
+	break;
+      case T_FLOAT:
+	if (rb_big2dbl(x) == RFLOAT(y)->value)
+	    return Qtrue;
+	else
+	    return Qfalse;
+      default:
+	return rb_equal(y, x);
+    }
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign) return Qfalse;
+    if (RBIGNUM(x)->len != RBIGNUM(y)->len) return Qfalse;
+    if (MEMCMP(BDIGITS(x),BDIGITS(y),BDIGIT,RBIGNUM(y)->len) != 0) return Qfalse;
+    return Qtrue;
+}
+
+static VALUE
+rb_big_eql(x, y)
+    VALUE x, y;
+{
+    if (TYPE(y) != T_BIGNUM) return Qfalse;
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign) return Qfalse;
+    if (RBIGNUM(x)->len != RBIGNUM(y)->len) return Qfalse;
+    if (MEMCMP(BDIGITS(x),BDIGITS(y),BDIGIT,RBIGNUM(y)->len) != 0) return Qfalse;
+    return Qtrue;
+}
+
+static VALUE
+rb_big_uminus(x)
+    VALUE x;
+{
+    VALUE z = rb_big_clone(x);
+
+    RBIGNUM(z)->sign = !RBIGNUM(x)->sign;
+
+    return bignorm(z);
+}
+
+static VALUE
+rb_big_neg(x)
+    VALUE x;
+{
+    VALUE z = rb_big_clone(x);
+    long i = RBIGNUM(x)->len;
+    BDIGIT *ds = BDIGITS(z);
+
+    if (!RBIGNUM(x)->sign) get2comp(z, Qtrue);
+    while (i--) ds[i] = ~ds[i];
+    if (RBIGNUM(x)->sign) get2comp(z, Qfalse);
+    RBIGNUM(z)->sign = !RBIGNUM(z)->sign;
+
+    return bignorm(z);
+}
+
+static VALUE
+bigsub(x, y)
+    VALUE x, y;
+{
+    VALUE z = 0;
+    BDIGIT *zds;
+    BDIGIT_DBL_SIGNED num;
+    long i = RBIGNUM(x)->len;
+    
+    /* if x is larger than y, swap */
+    if (RBIGNUM(x)->len < RBIGNUM(y)->len) {
+	z = x; x = y; y = z;	/* swap x y */
+    }
+    else if (RBIGNUM(x)->len == RBIGNUM(y)->len) {
+	while (i > 0) {
+	    i--;
+	    if (BDIGITS(x)[i] > BDIGITS(y)[i]) {
+		break;
+	    }
+	    if (BDIGITS(x)[i] < BDIGITS(y)[i]) {
+		z = x; x = y; y = z;	/* swap x y */
+		break;
+	    }
+	}
+    }
+
+    z = bignew(RBIGNUM(x)->len, (z == 0)?1:0);
+    zds = BDIGITS(z);
+
+    for (i = 0, num = 0; i < RBIGNUM(y)->len; i++) { 
+	num += (BDIGIT_DBL_SIGNED)BDIGITS(x)[i] - BDIGITS(y)[i];
+	zds[i] = BIGLO(num);
+	num = BIGDN(num);
+    } 
+    while (num && i < RBIGNUM(x)->len) {
+	num += BDIGITS(x)[i];
+	zds[i++] = BIGLO(num);
+	num = BIGDN(num);
+    }
+    while (i < RBIGNUM(x)->len) {
+	zds[i] = BDIGITS(x)[i];
+	i++;
+    }
+    
+    return z;
+}
+
+static VALUE
+bigadd(x, y, sign)
+    VALUE x, y;
+    char sign;
+{
+    VALUE z;
+    BDIGIT_DBL num;
+    long i, len;
+
+    sign = (sign == RBIGNUM(y)->sign);
+    if (RBIGNUM(x)->sign != sign) {
+	if (sign) return bigsub(y, x);
+	return bigsub(x, y);
+    }
+
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	len = RBIGNUM(x)->len + 1;
+        z = x; x = y; y = z;
+    }
+    else {
+	len = RBIGNUM(y)->len + 1;
+    }
+    z = bignew(len, sign);
+
+    len = RBIGNUM(x)->len;
+    for (i = 0, num = 0; i < len; i++) {
+	num += (BDIGIT_DBL)BDIGITS(x)[i] + BDIGITS(y)[i];
+	BDIGITS(z)[i] = BIGLO(num);
+	num = BIGDN(num);
+    }
+    len = RBIGNUM(y)->len;
+    while (num && i < len) {
+	num += BDIGITS(y)[i];
+	BDIGITS(z)[i++] = BIGLO(num);
+	num = BIGDN(num);
+    }
+    while (i < len) {
+	BDIGITS(z)[i] = BDIGITS(y)[i];
+	i++;
+    }
+    BDIGITS(z)[i] = (BDIGIT)num;
+
+    return z;
+}
+
+VALUE
+rb_big_plus(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	/* fall through */
+      case T_BIGNUM:
+	return bignorm(bigadd(x, y, 1));
+
+      case T_FLOAT:
+	return rb_float_new(rb_big2dbl(x) + RFLOAT(y)->value);
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+VALUE
+rb_big_minus(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	/* fall through */
+      case T_BIGNUM:
+	return bignorm(bigadd(x, y, 0));
+
+      case T_FLOAT:
+	return rb_float_new(rb_big2dbl(x) - RFLOAT(y)->value);
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+VALUE
+rb_big_mul(x, y)
+    VALUE x, y;
+{
+    long i, j;
+    BDIGIT_DBL n = 0;
+    VALUE z;
+    BDIGIT *zds;
+
+    if (FIXNUM_P(x)) x = rb_int2big(FIX2LONG(x));
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      case T_FLOAT:
+	return rb_float_new(rb_big2dbl(x) * RFLOAT(y)->value);
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+
+    j = RBIGNUM(x)->len + RBIGNUM(y)->len + 1;
+    z = bignew(j, RBIGNUM(x)->sign==RBIGNUM(y)->sign);
+    zds = BDIGITS(z);
+    while (j--) zds[j] = 0;
+    for (i = 0; i < RBIGNUM(x)->len; i++) {
+	BDIGIT_DBL dd = BDIGITS(x)[i]; 
+	if (dd == 0) continue;
+	n = 0;
+	for (j = 0; j < RBIGNUM(y)->len; j++) {
+	    BDIGIT_DBL ee = n + (BDIGIT_DBL)dd * BDIGITS(y)[j];
+	    n = zds[i + j] + ee;
+	    if (ee) zds[i + j] = BIGLO(n);
+	    n = BIGDN(n);
+	}
+	if (n) {
+	    zds[i + j] = n;
+	}
+    }
+
+    return bignorm(z);
+}
+
+static void
+bigdivrem(x, y, divp, modp)
+    VALUE x, y;
+    VALUE *divp, *modp;
+{
+    long nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len;
+    long i, j;
+    VALUE yy, z;
+    BDIGIT *xds, *yds, *zds, *tds;
+    BDIGIT_DBL t2;
+    BDIGIT_DBL_SIGNED num;
+    BDIGIT dd, q;
+
+    yds = BDIGITS(y);
+    if (ny == 0 && yds[0] == 0) rb_num_zerodiv();
+    if (nx < ny	|| nx == ny && BDIGITS(x)[nx - 1] < BDIGITS(y)[ny - 1]) {
+	if (divp) *divp = rb_int2big(0);
+	if (modp) *modp = x;
+	return;
+    }
+    xds = BDIGITS(x);
+    if (ny == 1) {
+	dd = yds[0];
+	z = rb_big_clone(x);
+	zds = BDIGITS(z);
+	t2 = 0; i = nx;
+	while (i--) {
+	    t2 = BIGUP(t2) + zds[i];
+	    zds[i] = (BDIGIT)(t2 / dd);
+	    t2 %= dd;
+	}
+	RBIGNUM(z)->sign = RBIGNUM(x)->sign==RBIGNUM(y)->sign;
+	if (modp) {
+	    *modp = rb_uint2big((unsigned long)t2);
+	    RBIGNUM(*modp)->sign = RBIGNUM(x)->sign;
+	}
+	if (divp) *divp = z;
+	return;
+    }
+    z = bignew(nx==ny?nx+2:nx+1, RBIGNUM(x)->sign==RBIGNUM(y)->sign);
+    zds = BDIGITS(z);
+    if (nx==ny) zds[nx+1] = 0;
+    while (!yds[ny-1]) ny--;
+
+    dd = 0;
+    q = yds[ny-1];
+    while ((q & (1<<(BITSPERDIG-1))) == 0) {
+	q <<= 1;
+	dd++;
+    }
+    if (dd) {
+	yy = rb_big_clone(y);
+	tds = BDIGITS(yy);
+	j = 0;
+	t2 = 0;
+	while (j<ny) {
+	    t2 += (BDIGIT_DBL)yds[j]<<dd;
+	    tds[j++] = BIGLO(t2);
+	    t2 = BIGDN(t2);
+	}
+	yds = tds;
+	j = 0;
+	t2 = 0;
+	while (j<nx) {
+	    t2 += (BDIGIT_DBL)xds[j]<<dd;
+	    zds[j++] = BIGLO(t2);
+	    t2 = BIGDN(t2);
+	}
+	zds[j] = (BDIGIT)t2;
+    }
+    else {
+	zds[nx] = 0;
+	j = nx;
+	while (j--) zds[j] = xds[j];
+    }
+
+    j = nx==ny?nx+1:nx;
+    do {
+	if (zds[j] ==  yds[ny-1]) q = BIGRAD-1;
+	else q = (BDIGIT)((BIGUP(zds[j]) + zds[j-1])/yds[ny-1]);
+	if (q) {
+	    i = 0; num = 0; t2 = 0;
+	    do {			/* multiply and subtract */
+		BDIGIT_DBL ee;
+		t2 += (BDIGIT_DBL)yds[i] * q;
+		ee = num - BIGLO(t2);
+		num = (BDIGIT_DBL)zds[j - ny + i] + ee;
+		if (ee) zds[j - ny + i] = BIGLO(num);
+		num = BIGDN(num);
+		t2 = BIGDN(t2);
+	    } while (++i < ny);
+	    num += zds[j - ny + i] - t2;/* borrow from high digit; don't update */
+	    while (num) {		/* "add back" required */
+		i = 0; num = 0; q--;
+		do {
+		    BDIGIT_DBL ee = num + yds[i];
+		    num = (BDIGIT_DBL)zds[j - ny + i] + ee;
+		    if (ee) zds[j - ny + i] = BIGLO(num);
+		    num = BIGDN(num);
+		} while (++i < ny);
+		num--;
+	    }
+	}
+	zds[j] = q;
+    } while (--j >= ny);
+    if (divp) {			/* move quotient down in z */
+	*divp = rb_big_clone(z);
+	zds = BDIGITS(*divp);
+	j = (nx==ny ? nx+2 : nx+1) - ny;
+	for (i = 0;i < j;i++) zds[i] = zds[i+ny];
+	RBIGNUM(*divp)->len = i;
+    }
+    if (modp) {			/* normalize remainder */
+	*modp = rb_big_clone(z);
+	zds = BDIGITS(*modp);
+	while (--ny && !zds[ny]); ++ny;
+	if (dd) {
+	    t2 = 0; i = ny;
+	    while(i--) {
+		t2 = (t2 | zds[i]) >> dd;
+		q = zds[i];
+		zds[i] = BIGLO(t2);
+		t2 = BIGUP(q);
+	    }
+	}
+	RBIGNUM(*modp)->len = ny;
+	RBIGNUM(*modp)->sign = RBIGNUM(x)->sign;
+    }
+}
+
+static void
+bigdivmod(x, y, divp, modp)
+    VALUE x, y;
+    VALUE *divp, *modp;
+{
+    VALUE mod;
+
+    bigdivrem(x, y, divp, &mod);
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign &&
+	!(RBIGNUM(mod)->len == 1 && BDIGITS(mod)[0] == 0)) {
+	if (divp) *divp = bigadd(*divp, rb_int2big(1), 0);
+	if (modp) *modp = bigadd(mod, y, 1);
+    }
+    else {
+	if (divp) *divp = *divp;
+	if (modp) *modp = mod;
+    }
+}
+
+static VALUE
+rb_big_div(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      case T_FLOAT:
+	return rb_float_new(rb_big2dbl(x) / RFLOAT(y)->value);
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    bigdivmod(x, y, &z, 0);
+
+    return bignorm(z);
+}
+
+
+static VALUE
+rb_big_modulo(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    bigdivmod(x, y, 0, &z);
+
+    return bignorm(z);
+}
+
+static VALUE
+rb_big_remainder(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    bigdivrem(x, y, 0, &z);
+
+    return bignorm(z);
+}
+
+VALUE
+rb_big_divmod(x, y)
+    VALUE x, y;
+{
+    VALUE div, mod;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+
+      case T_BIGNUM:
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    bigdivmod(x, y, &div, &mod);
+
+    return rb_assoc_new(bignorm(div), bignorm(mod));
+}
+
+VALUE
+rb_big_pow(x, y)
+    VALUE x, y;
+{
+    double d;
+    long yy;
+    
+    if (y == INT2FIX(0)) return INT2FIX(1);
+    switch (TYPE(y)) {
+      case T_FLOAT:
+	d = RFLOAT(y)->value;
+	break;
+
+      case T_BIGNUM:
+	rb_warn("in a**b, b may be too big");
+	d = rb_big2dbl(y);
+	break;
+
+      case T_FIXNUM:
+	yy = NUM2LONG(y);
+	if (yy > 0) {
+	    VALUE z = x;
+
+	    for (;;) {
+		yy -= 1;
+		if (yy == 0) break;
+		while (yy % 2 == 0) {
+		    yy /= 2;
+		    x = rb_big_mul(x, x);
+		}
+		z = rb_big_mul(z, x);
+	    }
+	    return bignorm(z);
+	}
+	d = (double)yy;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return rb_float_new(pow(rb_big2dbl(x), d));
+}
+
+VALUE
+rb_big_and(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+    BDIGIT *ds1, *ds2, *zds;
+    long i, l1, l2;
+    char sign;
+
+    if (FIXNUM_P(y)) {
+	y = rb_int2big(FIX2LONG(y));
+    }
+    else {
+	Check_Type(y, T_BIGNUM);
+    }
+
+    if (!RBIGNUM(y)->sign) {
+	y = rb_big_clone(y);
+	get2comp(y, Qtrue);
+    }
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	get2comp(x, Qtrue);
+    }
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+	ds1 = BDIGITS(y);
+	ds2 = BDIGITS(x);
+	sign = RBIGNUM(y)->sign;
+    }
+    else {
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+	ds1 = BDIGITS(x);
+	ds2 = BDIGITS(y);
+	sign = RBIGNUM(x)->sign;
+    }
+    z = bignew(l2, RBIGNUM(x)->sign || RBIGNUM(y)->sign);
+    zds = BDIGITS(z);
+
+    for (i=0; i<l1; i++) {
+	zds[i] = ds1[i] & ds2[i];
+    }
+    for (; i<l2; i++) {
+	zds[i] = sign?0:ds2[i];
+    }
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+    return bignorm(z);
+}
+
+VALUE
+rb_big_or(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+    BDIGIT *ds1, *ds2, *zds;
+    long i, l1, l2;
+    char sign;
+
+    if (FIXNUM_P(y)) {
+	y = rb_int2big(FIX2LONG(y));
+    }
+    else {
+	Check_Type(y, T_BIGNUM);
+    }
+
+    if (!RBIGNUM(y)->sign) {
+	y = rb_big_clone(y);
+	get2comp(y, Qtrue);
+    }
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	get2comp(x, Qtrue);
+    }
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+	ds1 = BDIGITS(y);
+	ds2 = BDIGITS(x);
+	sign = RBIGNUM(y)->sign;
+    }
+    else {
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+	ds1 = BDIGITS(x);
+	ds2 = BDIGITS(y);
+	sign = RBIGNUM(x)->sign;
+    }
+    z = bignew(l2, RBIGNUM(x)->sign && RBIGNUM(y)->sign);
+    zds = BDIGITS(z);
+
+    for (i=0; i<l1; i++) {
+	zds[i] = ds1[i] | ds2[i];
+    }
+    for (; i<l2; i++) {
+	zds[i] = sign?ds2[i]:(BIGRAD-1);
+    }
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+
+    return bignorm(z);
+}
+
+VALUE
+rb_big_xor(x, y)
+    VALUE x, y;
+{
+    VALUE z;
+    BDIGIT *ds1, *ds2, *zds;
+    long i, l1, l2;
+    char sign;
+
+    if (FIXNUM_P(y)) {
+	y = rb_int2big(FIX2LONG(y));
+    }
+    else {
+	Check_Type(y, T_BIGNUM);
+    }
+
+    if (!RBIGNUM(y)->sign) {
+	y = rb_big_clone(y);
+	get2comp(y, Qtrue);
+    }
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	get2comp(x, Qtrue);
+    }
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+	ds1 = BDIGITS(y);
+	ds2 = BDIGITS(x);
+	sign = RBIGNUM(y)->sign;
+    }
+    else {
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+	ds1 = BDIGITS(x);
+	ds2 = BDIGITS(y);
+	sign = RBIGNUM(x)->sign;
+    }
+    RBIGNUM(x)->sign = RBIGNUM(x)->sign?1:0;
+    RBIGNUM(y)->sign = RBIGNUM(y)->sign?1:0;
+    z = bignew(l2, !(RBIGNUM(x)->sign ^ RBIGNUM(y)->sign));
+    zds = BDIGITS(z);
+
+    for (i=0; i<l1; i++) {
+	zds[i] = ds1[i] ^ ds2[i];
+    }
+    for (; i<l2; i++) {
+	zds[i] = sign?ds2[i]:~ds2[i];
+    }
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+
+    return bignorm(z);
+}
+
+static VALUE rb_big_rshift _((VALUE,VALUE));
+
+VALUE
+rb_big_lshift(x, y)
+    VALUE x, y;
+{
+    BDIGIT *xds, *zds;
+    int shift = NUM2INT(y);
+    int s1 = shift/BITSPERDIG;
+    int s2 = shift%BITSPERDIG;
+    VALUE z;
+    BDIGIT_DBL num = 0;
+    long len, i;
+
+    if (shift < 0) return rb_big_rshift(x, INT2FIX(-shift));
+    len = RBIGNUM(x)->len;
+    z = bignew(len+s1+1, RBIGNUM(x)->sign);
+    zds = BDIGITS(z);
+    for (i=0; i<s1; i++) {
+	*zds++ = 0;
+    }
+    xds = BDIGITS(x);
+    for (i=0; i<len; i++) {
+	num = num | (BDIGIT_DBL)*xds++<<s2;
+	*zds++ = BIGLO(num);
+	num = BIGDN(num);
+    }
+    *zds = BIGLO(num);
+    return bignorm(z);
+}
+
+static VALUE
+rb_big_rshift(x, y)
+    VALUE x, y;
+{
+    BDIGIT *xds, *zds;
+    int shift = NUM2INT(y);
+    long s1 = shift/BITSPERDIG;
+    long s2 = shift%BITSPERDIG;
+    VALUE z;
+    BDIGIT_DBL num = 0;
+    long i, j;
+
+    if (shift < 0) return rb_big_lshift(x, INT2FIX(-shift));
+
+    if (s1 > RBIGNUM(x)->len) {
+	if (RBIGNUM(x)->sign)
+	    return INT2FIX(0);
+	else
+	    return INT2FIX(-1);
+    }
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	get2comp(x, Qtrue);
+    }
+    xds = BDIGITS(x);
+    i = RBIGNUM(x)->len; j = i - s1;
+    z = bignew(j, RBIGNUM(x)->sign);
+    if (!RBIGNUM(x)->sign) {
+	num = ((BDIGIT_DBL)~0) << BITSPERDIG;
+    }
+    zds = BDIGITS(z);
+    while (i--, j--) {
+	num = (num | xds[i]) >> s2;
+	zds[j] = BIGLO(num);
+	num = BIGUP(xds[i]);
+    }
+    if (!RBIGNUM(x)->sign) {
+	get2comp(z, Qfalse);
+    }
+    return bignorm(z);
+}
+
+static VALUE
+rb_big_aref(x, y)
+    VALUE x, y;
+{
+    BDIGIT *xds;
+    int shift;
+    long s1, s2;
+
+    if (TYPE(y) == T_BIGNUM) {
+	if (!RBIGNUM(y)->sign || RBIGNUM(x)->sign)
+	    return INT2FIX(0);
+	return INT2FIX(1);
+    }
+    shift = NUM2INT(y);
+    if (shift < 0) return INT2FIX(0);
+    s1 = shift/BITSPERDIG;
+    s2 = shift%BITSPERDIG;
+
+    if (!RBIGNUM(x)->sign) {
+	if (s1 >= RBIGNUM(x)->len) return INT2FIX(1);
+	x = rb_big_clone(x);
+	get2comp(x, Qtrue);
+    }
+    else {
+	if (s1 >= RBIGNUM(x)->len) return INT2FIX(0);
+    }
+    xds = BDIGITS(x);
+    if (xds[s1] & (1<<s2))
+	return INT2FIX(1);
+    return INT2FIX(0);
+}
+
+static VALUE
+rb_big_hash(x)
+    VALUE x;
+{
+    long i, len, key;
+    BDIGIT *digits;
+
+    key = 0; digits = BDIGITS(x); len = RBIGNUM(x)->len;
+    for (i=0; i<len; i++) {
+	key ^= *digits++;
+    }
+    return LONG2FIX(key);
+}
+
+static VALUE
+rb_big_coerce(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	return rb_assoc_new(rb_int2big(FIX2LONG(y)), x);
+    }
+    else {
+	rb_raise(rb_eTypeError, "Can't coerce %s to Bignum",
+		 rb_class2name(CLASS_OF(y)));
+    }
+    /* not reached */
+    return Qnil;
+}
+
+static VALUE
+rb_big_abs(x)
+    VALUE x;
+{
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	RBIGNUM(x)->sign = 1;
+    }
+    return x;
+}
+
+VALUE
+rb_big_rand(max, rand_buf)
+    VALUE max;
+    double *rand_buf;
+{
+    VALUE v;
+    long len = RBIGNUM(max)->len;
+    
+    if (len == 0 && BDIGITS(max)[0] == 0) {
+	return rb_float_new(rand_buf[0]);
+    }
+    v = bignew(len,1);
+    while (len--) {
+	BDIGITS(v)[len] = ((BDIGIT)~0) * rand_buf[len];
+    }
+
+    return rb_big_modulo((VALUE)v, max);
+}
+
+static VALUE
+rb_big_size(big)
+    VALUE big;
+{
+    return LONG2FIX(RBIGNUM(big)->len*SIZEOF_BDIGITS);
+}
+
+void
+Init_Bignum()
+{
+    rb_cBignum = rb_define_class("Bignum", rb_cInteger);
+
+    rb_define_method(rb_cBignum, "to_s", rb_big_to_s, -1);
+    rb_define_method(rb_cBignum, "coerce", rb_big_coerce, 1);
+    rb_define_method(rb_cBignum, "-@@", rb_big_uminus, 0);
+    rb_define_method(rb_cBignum, "+", rb_big_plus, 1);
+    rb_define_method(rb_cBignum, "-", rb_big_minus, 1);
+    rb_define_method(rb_cBignum, "*", rb_big_mul, 1);
+    rb_define_method(rb_cBignum, "/", rb_big_div, 1);
+    rb_define_method(rb_cBignum, "%", rb_big_modulo, 1);
+    rb_define_method(rb_cBignum, "div", rb_big_div, 1);
+    rb_define_method(rb_cBignum, "divmod", rb_big_divmod, 1);
+    rb_define_method(rb_cBignum, "modulo", rb_big_modulo, 1);
+    rb_define_method(rb_cBignum, "remainder", rb_big_remainder, 1);
+    rb_define_method(rb_cBignum, "**", rb_big_pow, 1);
+    rb_define_method(rb_cBignum, "&", rb_big_and, 1);
+    rb_define_method(rb_cBignum, "|", rb_big_or, 1);
+    rb_define_method(rb_cBignum, "^", rb_big_xor, 1);
+    rb_define_method(rb_cBignum, "~", rb_big_neg, 0);
+    rb_define_method(rb_cBignum, "<<", rb_big_lshift, 1);
+    rb_define_method(rb_cBignum, ">>", rb_big_rshift, 1);
+    rb_define_method(rb_cBignum, "[]", rb_big_aref, 1);
+
+    rb_define_method(rb_cBignum, "<=>", rb_big_cmp, 1);
+    rb_define_method(rb_cBignum, "==", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "===", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "eql?", rb_big_eql, 1);
+    rb_define_method(rb_cBignum, "hash", rb_big_hash, 0);
+    rb_define_method(rb_cBignum, "to_f", rb_big_to_f, 0);
+    rb_define_method(rb_cBignum, "abs", rb_big_abs, 0);
+    rb_define_method(rb_cBignum, "size", rb_big_size, 0);
+}
+@
+
+
+1.78
+log
+@* bignum.c (bigdivrem): bignum zero's len should not be 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/07 07:15:38 $
+d322 4
+d508 12
+a519 10
+    len = RSTRING(str)->len;
+    if (s[len]) {		/* no sentinel somehow */
+	char *p = ALLOCA_N(char, len+1);
+
+	MEMCPY(p, s, char, len);
+	p[len] = '\0';
+	s = p;
+    }
+    if (badcheck && len != strlen(s)) {
+	rb_raise(rb_eArgError, "string for Integer contains null byte");
+@
+
+
+1.77
+log
+@* bignum.c (bigdivmod): wrong condition check for Bignum zero.
+
+* bignum.c (Init_Bignum): need to add Bignum#div.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/04 17:54:29 $
+d1220 1
+a1220 1
+    if (modp) {			/* just normalize remainder */
+d1223 1
+a1223 1
+	while (ny-- && !zds[ny]); ++ny;
+@
+
+
+1.76
+log
+@
+* bignum.c (rb_big_rshift): num should be initialized by carry
+  bits if x is negative.
+
+* bignum.c (bigdivmod): len for bignum zero is 1, not 0.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d1247 1
+a1247 1
+	RBIGNUM(mod)->len > 0 && BDIGITS(mod)[0] != 0) {
+d1733 1
+@
+
+
+1.75
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/19 05:56:05 $
+d1246 2
+a1247 1
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign && RBIGNUM(mod)->len > 0) {
+d1607 3
+@
+
+
+1.74
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (ary_new): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* object.c (rb_class_allocate_instance): move singleton class
+  check from rb_obj_alloc().
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* ext/tcltklib/tcltklib.c (ip_init): allocation framework.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/16 06:39:27 $
+d111 1
+a111 1
+		    if (POSFIXABLE(num)) return INT2FIX(num);
+d113 1
+a113 1
+		else if (NEGFIXABLE(-(long)num)) return INT2FIX(-(long)num);
+a135 1
+    i = 0;
+d171 1
+a171 1
+    if (POSFIXABLE(n)) return INT2FIX(n);
+d179 1
+a179 1
+    if (FIXABLE(n)) return INT2FIX(n);
+d219 1
+a219 1
+    long i = 0;
+d225 1
+a225 1
+	if (FIXABLE((LONG_LONG)q)) return INT2FIX((LONG_LONG)q);
+d232 1
+a232 1
+	if (POSFIXABLE(q)) return INT2FIX(q);
+d412 1
+a412 1
+	    if (sign) return INT2FIX(val);
+d415 1
+a415 1
+		return INT2FIX(result);
+d500 1
+a500 1
+    int len;
+a528 1
+    i = 0;
+d564 1
+a564 1
+    if (POSFIXABLE(n)) return INT2FIX(n);
+d572 1
+a572 1
+    if (FIXABLE(n)) return INT2FIX(n);
+d938 2
+a939 3
+    long i;
+
+    i = RBIGNUM(x)->len;
+d1585 2
+a1586 2
+    int s1 = shift/BITSPERDIG;
+    int s2 = shift%BITSPERDIG;
+d1589 1
+a1589 2
+    long i = RBIGNUM(x)->len;
+    long j;
+d1624 1
+a1624 1
+    int s1, s2;
+d1661 1
+a1661 1
+    return INT2FIX(key);
+d1696 2
+a1697 3
+    long len;
+
+    len = RBIGNUM(max)->len;
+d1713 1
+a1713 1
+    return INT2FIX(RBIGNUM(big)->len*SIZEOF_BDIGITS);
+@
+
+
+1.73
+log
+@* bignum.c (rb_cstr_to_inum): new decimal and octal string.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/13 09:21:13 $
+d612 3
+a614 1
+    if (i == 0) return rb_str_new2("0");
+d851 1
+a851 9
+        {
+	    double d = rb_big2dbl(x);
+
+	    if (d == RFLOAT(y)->value) return INT2FIX(0);
+	    if (d > RFLOAT(y)->value) return INT2FIX(1);
+	    if (d < RFLOAT(y)->value) return INT2FIX(-1);
+	    rb_raise(rb_eFloatDomainError, "comparing NaN");
+	}
+	break;
+@
+
+
+1.72
+log
+@* hash.c (rb_hash_replace): should copy ifnone.
+
+* hash.c (rb_hash_dup): should preserve HASH_PROC_DEFAULT and
+  HASH_DELETED flags.
+
+* hash.c (rb_hash_shift): shift from empty hash should not return
+  its default proc.
+
+* hash.c (rb_hash_default_proc): new method. [new]
+
+* array.c (rb_ary_aref): no need for Bignum check.
+
+* array.c (rb_ary_aset): explicit Bignum check removd.
+
+* numeric.c (fix_aref): normalize bignum before bit-op.
+
+* bignum.c (rb_big_rand): max may be Bignum zero.
+
+* bignum.c (rb_cstr_to_inum): should normalize bignums, to avoid
+  returning fixable bignum value.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+
+* hash.c (rb_hash_equal): should check HASH_PROC_DEFAULT too.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/12 07:39:07 $
+d343 2
+a344 1
+	    if (str[1] == 'x' || str[1] == 'X') {
+d346 2
+a347 2
+	    }
+	    else if (str[1] == 'b' || str[1] == 'B') {
+d349 8
+a356 2
+	    }
+	    else {
+d367 8
+a374 1
+    if (base == 8) {
+d376 1
+a376 3
+    }
+    else {			/* base == 10, 2 or 16 */
+	if (base == 16 && str[0] == '0' && (str[1] == 'x'||str[1] == 'X')) {
+d379 4
+a382 1
+	else if (base == 2 && str[0] == '0' && (str[1] == 'b'||str[1] == 'B')) {
+d385 2
+d388 4
+@
+
+
+1.71
+log
+@* bignum.c (rb_big_cmp): use dbl2big() for Floats, instead of
+  big2dbl().
+
+* bignum.c (Init_Bignum): rb_big_zero_p() removed.  There may be
+  Bignum zero.
+
+* eval.c (rb_call0): new argument added for original method name.
+  preserve original method name in frame->orig_func.
+
+* eval.c (is_defined): use frame->orig_func, not last_func.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (method_call): supply data->oid also to rb_call0().
+
+* object.c (rb_class_allocate_instance): call rb_obj_alloc() when
+  called from alias, thus invoke original "allocate".
+
+* eval.c (remove_method): removing allocate from classes should
+  cause NameError.
+
+* hash.c (rb_hash_equal): should check default values.
+
+* ext/socket/socket.c (s_recvfrom): update RSTRING len.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/12 07:21:25 $
+d145 1
+a145 1
+    while (i-- && !digits[i]) ;
+d401 1
+a401 1
+	    return big;
+d1688 3
+@
+
+
+1.70
+log
+@* bignum.c (rb_big_cmp): raise for NaN.  (ruby-bugs-ja:PR#284).
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/07/26 06:12:38 $
+a1702 7
+static VALUE
+rb_big_zero_p(big)
+    VALUE big;
+{
+    return Qfalse;
+}
+
+a1735 1
+    rb_define_method(rb_cBignum, "zero?", rb_big_zero_p, 0);
+@
+
+
+1.69
+log
+@* random.c: replace with Mersenne Twister RNG.
+
+* eval.c (jump_tag_but_local_jump): preserve retval in
+  LocalJumpError exceptions.
+
+* parse.y (command): no more check for "super outside of method".
+
+* eval.c (rb_mod_define_method): should set last_class and
+  last_func in the block->frame.
+
+* eval.c (error_handle): should handle TAG_THROW as well.
+
+* parse.y (yylex): new decimal notation '0d4567'.
+
+* parse.y (yylex): new octal notation '0o777'.
+
+* parse.y (string_content): every string_content node should
+  return string only.  use NODE_EVSTR to coercing.
+
+* eval.c (rb_eval): NODE_EVSTR support.
+
+* re.c (rb_reg_quote): avoid unnecessary string allocation.
+
+* string.c (get_pat): quote metachracters before compiling a
+  string into a regex.
+
+* string.c (rb_str_split_m): special treatment of strings of size
+  1, but AWK emulation.  now uses get_pat().
+
+* string.c (rb_str_match_m): quote metacharacters.
+
+* string.c (rb_str_match2): ditto.
+
+* ext/socket/socket.c (sock_addrinfo): make all 3 versions of
+  getaddrinfo happy.  [ruby-core:00184]
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/06/18 07:01:46 $
+d80 1
+a80 1
+	REALLOC_N(RBIGNUM(x)->digits, BDIGIT, RBIGNUM(x)->len++);
+d829 1
+a829 1
+	  double d = rb_big2dbl(x);
+d831 4
+a834 3
+	  if (d == RFLOAT(y)->value) return INT2FIX(0);
+	  if (d > RFLOAT(y)->value) return INT2FIX(1);
+	  if (d < RFLOAT(y)->value) return INT2FIX(-1);
+@
+
+
+1.68
+log
+@unused variable.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/06/18 06:29:04 $
+a1677 4
+/* !!!warnig!!!!
+   this is not really a random number!!
+*/
+
+d1679 1
+a1679 1
+rb_big_rand(max, rand)
+d1681 1
+a1681 1
+    double rand;
+d1689 1
+a1689 1
+	BDIGITS(v)[len] = ((BDIGIT)~0) * rand;
+@
+
+
+1.67
+log
+@* parse.y (yylex): obsolete '?<whitespace>'; use '?\s', '?\n',
+  etc, instead.
+
+* parse.y (yylex): no here document after a dot.
+
+* parse.y (yylex): should have set lex_state after '`'.
+
+* parse.y (yylex): should have set lex_state properly after
+  tOP_ASGN.
+
+* bignum.c (rb_big2dbl): return canonical HUGE_VAL for infinity.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/06/11 07:01:13 $
+a858 2
+    double d;
+
+@
+
+
+1.66
+log
+@* eval.c (rb_eval): ruby_frame->last_func may be null, if it's
+  called outside of a method.
+
+* parse.y (arg): use INT2NUM, not INT2FIX for tUMINUS.
+
+* parse.y (arg): unnecessary negative tPOW treatment.
+
+* parse.y (tokadd_escape): wrong backslash escapement.
+
+* parse.y (stmt,arg): too much void value check.
+
+* parse.y (stmt,arg): need to check void value on rules which does
+  not use node_assign().
+
+* ext/socket/socket.c (ipaddr): need not to taint hostnames.
+
+* range.c (range_include): should be based on "<=>", whereas
+  member? still is based on "each".
+
+* range.c (range_min,range_max): redefine methods based on "<=>".
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/14 06:22:25 $
+d801 1
+d859 2
+@
+
+
+1.65
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:17 $
+d1355 1
+a1355 1
+	    VALUE z;
+a1356 1
+	    z = x;
+d1358 1
+a1358 1
+		yy = yy - 1;
+d1361 1
+a1361 1
+		    yy = yy / 2;
+d1366 1
+a1366 2
+	    if (!FIXNUM_P(z)) z = bignorm(z);
+	    return z;
+@
+
+
+1.64
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d13 2
+a16 1
+#include "ruby.h"
+@
+
+
+1.63
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/03/26 03:01:30 $
+d864 4
+a867 1
+	return (rb_big2dbl(x) == RFLOAT(y)->value)?Qtrue:Qfalse;
+d869 1
+a869 1
+	return Qfalse;
+@
+
+
+1.62
+log
+@* bignum.c (rb_quad_pack): get rid of escape sequences.
+* dln.c (dln_load, __VMS): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/22 07:26:35 $
+a22 14
+#if SIZEOF_INT*2 <= SIZEOF_LONG_LONG
+typedef unsigned int BDIGIT;
+typedef unsigned LONG_LONG BDIGIT_DBL;
+typedef LONG_LONG BDIGIT_DBL_SIGNED;
+#elif SIZEOF_INT*2 <= SIZEOF_LONG
+typedef unsigned int BDIGIT;
+typedef unsigned long BDIGIT_DBL;
+typedef LONG_LONG BDIGIT_DBL_SIGNED;
+#else
+typedef unsigned short BDIGIT;
+typedef unsigned long BDIGIT_DBL;
+typedef long BDIGIT_DBL_SIGNED;
+#endif
+
+d24 1
+a24 1
+#define BITSPERDIG (sizeof(BDIGIT)*CHAR_BIT)
+d26 1
+a26 1
+#define DIGSPERLONG ((unsigned int)(sizeof(long)/sizeof(BDIGIT)))
+d28 1
+a28 1
+# define DIGSPERLL ((unsigned int)(sizeof(LONG_LONG)/sizeof(BDIGIT)))
+d78 1
+a78 5
+    if (ds[0] == 1 || ds[0] == 0) {
+	if (RBIGNUM(x)->len == 1) return;
+	for (i=1; i<RBIGNUM(x)->len; i++) {
+	    if (ds[i] != 0) return;
+	}
+d81 1
+a81 1
+	ds[RBIGNUM(x)->len-1] = 1;
+d103 1
+a103 1
+	if (len*sizeof(BDIGIT) <= sizeof(VALUE)) {
+d185 1
+a185 1
+#define DIGSPERLONGLONG ((unsigned int)(sizeof(LONG_LONG)/sizeof(BDIGIT)))
+d209 1
+a209 1
+    memcpy(buf, (char*)&q, sizeof(LONG_LONG));
+d223 1
+a223 1
+    memcpy(&q, buf, sizeof(LONG_LONG));
+d269 1
+a269 1
+    len = RBIGNUM(val)->len * sizeof(BDIGIT);
+d281 1
+a281 1
+#define BNEG(b) (RSHIFT(((BDIGIT*)b)[QUAD_SIZE/sizeof(BDIGIT)-1],BITSPERDIG-1) != 0)
+d288 1
+a288 1
+    VALUE big = bignew(QUAD_SIZE/sizeof(BDIGIT), 1);
+d592 1
+a592 1
+	j = (sizeof(BDIGIT)/sizeof(char)*CHAR_BIT*i*241L)/800+2;
+d596 1
+a596 1
+	j = (sizeof(BDIGIT)/sizeof(char)*CHAR_BIT*i)/4+2;
+d600 1
+a600 1
+	j = (sizeof(BDIGIT)/sizeof(char)*CHAR_BIT*i)+2;
+d604 1
+a604 1
+	j = (sizeof(BDIGIT)*CHAR_BIT*i)+2;
+d667 1
+a667 1
+    if (len > sizeof(long)/sizeof(BDIGIT))
+d712 1
+a712 1
+    if (len > sizeof(LONG_LONG)/sizeof(BDIGIT))
+d1700 1
+a1700 1
+    return INT2FIX(RBIGNUM(big)->len*sizeof(BDIGIT));
+@
+
+
+1.61
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2002/03/15 08:51:31 $
+d293 1
+a293 1
+	    *buf = (J~(B*buf;
+@
+
+
+1.60
+log
+@* bignum.c, intern.h (rb_ull2big, rb_ll2big, rb_ull2inum, rb_ll2inum,
+  big2ull, rb_big2ull, rb_big2ll): use LONG_LONG macro instead of
+  long long.
+* numeric.c, intern.h, ruby.h (rb_num2ll, rb_num2ull): ditto.
+* ruby.h: use _I64_MAX and _I64_MIN if they are defined (for VC++).
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/14 06:23:43 $
+d293 2
+a294 1
+	    *buf = ~*buf++;
+d315 2
+a316 1
+	    *tmp = ~*tmp++;
+@
+
+
+1.59
+log
+@* re.c (rb_reg_match): should clear $~ if operand is nil.
+
+* re.c (rb_reg_match2): ditto.
+
+* configure: merge Jonathan Baker's large file support patch
+  [ruby-talk:35316], with read_all patch in [ruby-talk:35470].
+
+* eval.c (rb_f_abort): optional message argument that be printed
+  on termination. [new]
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2002/02/26 12:35:44 $
+d30 1
+a30 1
+typedef long long BDIGIT_DBL_SIGNED;
+d42 1
+a42 1
+# define DIGSPERLL ((unsigned int)(sizeof(long long)/sizeof(BDIGIT)))
+d517 1
+a517 1
+    unsigned long long n;
+d540 1
+a540 1
+    long long n;
+d558 1
+a558 1
+    unsigned long long n;
+d566 1
+a566 1
+    long long n;
+d719 1
+a719 1
+static unsigned long long
+d728 1
+a728 1
+    if (len > sizeof(long long)/sizeof(BDIGIT))
+d739 1
+a739 1
+unsigned long long
+d743 1
+a743 1
+    unsigned long long num = big2ull(x, "unsigned long long");
+d749 1
+a749 1
+long long
+d753 1
+a753 1
+    unsigned long long num = big2ull(x, "long long");
+d755 2
+a756 2
+    if ((long long)num < 0 && (RBIGNUM(x)->sign
+			       || (long long)num != LLONG_MIN)) {
+d759 1
+a759 1
+    if (!RBIGNUM(x)->sign) return -(long long)num;
+@
+
+
+1.58
+log
+@* bignum.c (rb_big_2comp): void function cannot return any value.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/22 10:28:45 $
+d41 3
+d513 61
+d716 48
+@
+
+
+1.57
+log
+@* bignum.c (get2comp): need to specify to carry or not.
+
+* io.c (rb_io_inspect): embed path info.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/15 04:43:05 $
+d104 1
+a104 1
+    return get2comp(x, Qtrue);
+@
+
+
+1.56
+log
+@* bignum.c (rb_big_rshift): should properly convert the nagative
+  value to 2's compliment.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:53:17 $
+d72 2
+a73 2
+void
+rb_big_2comp(x)			/* get 2's complement */
+d75 1
+d88 1
+d90 1
+d100 7
+d808 1
+a808 1
+    if (!RBIGNUM(x)->sign) rb_big_2comp(z);
+d810 1
+a810 1
+    if (RBIGNUM(x)->sign) rb_big_2comp(z);
+d1297 1
+a1297 1
+	rb_big_2comp(y);
+d1301 1
+a1301 1
+	rb_big_2comp(x);
+d1326 1
+a1326 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1348 1
+a1348 1
+	rb_big_2comp(y);
+d1352 1
+a1352 1
+	rb_big_2comp(x);
+d1377 1
+a1377 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1400 1
+a1400 1
+	rb_big_2comp(y);
+d1404 1
+a1404 1
+	rb_big_2comp(x);
+d1431 1
+a1431 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1490 1
+a1490 1
+	rb_big_2comp(x);
+d1502 1
+a1502 1
+	rb_big_2comp(z);
+d1528 1
+a1528 1
+	rb_big_2comp(x);
+@
+
+
+1.55
+log
+@* bignum.c: forget to check in DIGSPERLONGLONG.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:01:09 $
+d1471 1
+d1478 4
+d1490 3
+@
+
+
+1.54
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/01 10:23:22 $
+d190 2
+d272 1
+a272 1
+	val = rb_uint2big(FIX2LONG(val));
+d277 6
+d285 2
+d295 4
+a298 1
+    if (sign && (buf[7] & 0x80)) {
+d300 3
+@
+
+
+1.53
+log
+@* intern.h: prototypes for new functions; rb_cstr_to_inum(),
+  rb_str_to_inum(), rb_cstr_to_dbl(), rb_str_to_dbl()
+
+* bignum.c (rb_cstr_to_inum): changed from rb_cstr2inum(), and
+  added argument badcheck to be consistent with parser. [new]
+
+* bignum.c (rb_str_to_inum): ditto.
+
+* bignum.c (rb_cstr2inum): wapper of rb_cstr_to_inum() now.
+
+* bignum.c (rb_str2inum): ditto.
+
+* object.c (rb_cstr_to_dbl): float number parser. [new]
+
+* object.c (rb_str_to_dbl): ditto.
+
+* object.c (rb_Float): use rb_cstr_to_dbl() for strict check.
+
+* object.c (rb_Integer): use rb_str_to_inum() for strict check.
+
+* string.c (rb_str_to_f): use rb_str_to_dbl() with less check.
+
+* string.c (rb_str_to_i): use rb_str_to_inum() with less check.
+
+* string.c (rb_str_hex): ditto.
+
+* string.c (rb_str_oct): ditto.
+
+* sprintf.c (rb_f_sprintf): ditto.
+
+* time.c (obj2long): ditto.
+
+* parse.y (yylex): use rb_cstr_to_inum() for strict check.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/16 02:17:30 $
+d187 106
+@
+
+
+1.52
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/11 09:18:49 $
+d189 1
+a189 1
+rb_cstr2inum(str, base)
+d192 1
+d196 1
+a196 2
+    int badcheck = (base==0)?1:0;
+    char sign = 1, c;
+d203 6
+a208 1
+    while (*str && ISSPACE(*str)) str++;
+d221 1
+a221 1
+    if (base == 0) {
+d233 3
+d301 1
+d305 1
+a305 3
+	    if (base != 16) c = base;
+	    else c = c - 'a' + 10;
+	    break;
+d308 8
+a315 2
+	    if (base != 16) c = base;
+	    else c = c - 'A' + 10;
+d318 4
+d354 1
+a354 1
+rb_str2inum(str, base)
+d357 1
+d372 1
+a372 1
+    if (base == 0 && len != strlen(s)) {
+d375 17
+a391 1
+    return rb_cstr2inum(s, base); 
+@
+
+
+1.51
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/04 14:14:34 $
+d255 1
+a256 1
+	    if (end == str) goto bad; /* no number */
+@
+
+
+1.50
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/27 09:53:54 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d354 1
+a354 1
+    if (len != strlen(s)) {
+@
+
+
+1.49
+log
+@* bignum.c (rb_cstr2inum): deny "0_".
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/26 16:56:51 $
+d255 1
+a256 1
+	    while (*end && ISSPACE(*end)) end++;
+d259 1
+a259 1
+		rb_raise(rb_eArgError, "invalid value for Integer: \"%s\"", s);
+@
+
+
+1.48
+log
+@* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/19 05:03:02 $
+d244 3
+a246 12
+    if (*str == '0') {
+	do str++; while (*str == '0');
+	if (!*str) return INT2FIX(0);
+	while (*str == '_') str++;
+	if (!*str) str--;
+	if (ISSPACE(*str)) {
+	    if (badcheck) {
+		while (ISSPACE(*str)) str++;
+		if (*str) goto bad;
+	    }
+	    return INT2FIX(0);
+	}
+@
+
+
+1.47
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/08 06:43:08 $
+d233 1
+a233 4
+	while (*str == '0') str++;
+	if (!*str) return INT2FIX(0);
+	while (*str == '_') str++;
+	len = 3*strlen(str)*sizeof(char);
+d242 7
+a248 1
+	while (*str && *str == '0') str++;
+d250 4
+a253 1
+	    if (badcheck) goto bad;
+a255 2
+	if (!*str) str--;
+	len = 4*strlen(str)*sizeof(char);
+d257 1
+d338 1
+a338 3
+	if (ISSPACE(c)) {
+	    while (*str && ISSPACE(*str)) str++;
+	}
+@
+
+
+1.46
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/01 05:11:22 $
+a12 1
+#include "ruby.h"
+d15 1
+d400 1
+a400 3
+	j = 0;
+	hbase = 0;
+	rb_raise(rb_eArgError, "Bignum cannot treat base %d", base);
+d436 3
+a438 1
+rb_big_to_s(x)
+d441 7
+a447 1
+    return rb_big2str(x, 10);
+d1451 1
+a1451 1
+    rb_define_method(rb_cBignum, "to_s", rb_big_to_s, 0);
+@
+
+
+1.45
+log
+@* bignum.c (rb_big_aref): idx may be a Bignum.
+
+* numeric.c (fix_aref): negative index must return zero.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/30 08:43:25 $
+d613 11
+d1468 1
+a1468 1
+    rb_define_method(rb_cBignum, "eql?", rb_big_eq, 1);
+@
+
+
+1.44
+log
+@* string.c (rb_str_chomp_bang): do smart chomp if $/ == '\n'.
+
+* io.c (rb_io_puts): don't treat Array specially.
+
+* bignum.c (rb_big_cmp): should convert bignum to float.
+
+* eval.c (rb_f_eval): can't modify untainted binding.
+
+* regex.c (re_compile_pattern): should preverve p0 value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/29 05:07:17 $
+d1327 1
+a1327 1
+    int shift = NUM2INT(y);
+d1330 6
+@
+
+
+1.43
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* variable.c (rb_cvar_set): empty iv_tbl may cause infinite loop.
+
+* variable.c (rb_cvar_get): ditto.
+
+* variable.c (cvar_override_check): ditto.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+
+* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/29 06:28:44 $
+d564 7
+a570 1
+	y = dbl2big(RFLOAT(y)->value);
+@
+
+
+1.42
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/08/13 05:17:38 $
+d596 1
+a596 2
+	y = dbl2big(RFLOAT(y)->value);
+	break;
+@
+
+
+1.41
+log
+@* bignum.c, marshal.c: Detypo: s/SIZEOF_ING/SIZEOF_INT/.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/31 06:24:42 $
+a1421 2
+
+    rb_undef_method(CLASS_OF(rb_cBignum), "new");
+@
+
+
+1.40
+log
+@* marshal.c (Init_marshal): new constant Marshal::MAJOR_VERSION
+  and Marshal::MINOR_VERSION.
+
+* marshal.c (marshal_load): ruby_verbose test should be wrapped by
+  RTEST().
+
+* hash.c (rb_hash_index): should return nil (not the default
+  value) if value is not in the hash.
+
+* numeric.c (num_div): new method added.  alias to '/' which
+  should be preserved even if '/' is redefined (e.g. by
+  mathn). [new]
+
+* bignum.c (rb_cstr2inum): "0 ff".hex should return 0, not 255.
+
+* file.c (rb_file_s_expand_path): fixed using CharNext().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/21 04:22:54 $
+d27 1
+a27 1
+#elif SIZEOF_ING*2 <= SIZEOF_LONG
+@
+
+
+1.39
+log
+@* bignum.c (rb_big2str): t should be protected from GC.
+
+* process.c (rb_proc_times): need not to check retrun value from
+  times(2).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:24:54 $
+d242 1
+a242 1
+	if (base == 2 && str[0] == '0' && (str[1] == 'b'||str[1] == 'B')) {
+d246 4
+@
+
+
+1.38
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/06 15:01:58 $
+d368 1
+a368 1
+    VALUE t;
+d398 1
+a398 1
+	rb_raise(rb_eArgError, "bignum cannot treat base %d", base);
+@
+
+
+1.37
+log
+@forgot some checkins.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:10 $
+d923 1
+a923 1
+	while (!zds[ny-1]) ny--;
+@
+
+
+1.36
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/14 04:44:47 $
+d26 1
+a26 1
+typedef long long BDIGIT_DBL_SIGNED;
+@
+
+
+1.35
+log
+@* eval.c (rb_yield_0): 0 (= Qfalse) is a valid value, so that
+  default self should be checked by klass == 0.
+
+* bignum.c (rb_cstr2inum): should disallow '++1', '+-1', etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/20 07:42:03 $
+d25 1
+a25 1
+typedef unsigned long long BDIGIT_DBL;
+d27 1
+a27 1
+#elif SIZEOF_INT*2 <= SIZEOF___INT64
+d29 2
+a30 2
+typedef unsigned __int64 BDIGIT_DBL;
+typedef __int64 BDIGIT_DBL_SIGNED;
+d346 3
+a348 1
+    s = rb_str2cstr(str, &len);
+d476 1
+a476 1
+    if ((long)num < 0 && (long)num != LONG_MIN) {
+d922 2
+d925 1
+a925 3
+	    zds = BDIGITS(*modp);
+	    while (ny-- && !zds[ny]) ;
+	    t2 = 0; i = ++ny;
+@
+
+
+1.34
+log
+@* configure.in: add check for negative time_t for gmtime(3).
+
+* time.c (time_new_internal): no positive check if gmtime(3) can
+  handle negative time_t.
+
+* time.c (time_timeval): ditto.
+
+* bignum.c (rb_big2long): should not raise RangeError for Bignum
+  LONG_MIN value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d211 4
+@
+
+
+1.33
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:16 $
+d470 1
+a470 1
+    if ((long)num < 0) {
+@
+
+
+1.32
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/25 06:28:56 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.31
+log
+@001225
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/22 09:00:14 $
+d834 4
+a837 2
+	if (!RBIGNUM(x)->sign) t2 = -(long)t2;
+	if (modp) *modp = rb_int2big((long)t2);
+@
+
+
+1.31.4.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:45 $
+a13 2
+#include "m17n.h"
+
+d15 1
+a192 1
+    m17n_encoding *enc = m17n_index_to_encoding(0);
+d203 1
+a203 1
+    while (*str && m17n_isspace(enc, *str)) str++;
+d252 1
+a252 1
+	    while (*end && m17n_isspace(enc, *end)) end++;
+d325 2
+a326 2
+	if (m17n_isspace(enc, c)) {
+	    while (*str && m17n_isspace(enc, *str)) str++;
+d817 1
+a817 1
+    if (nx < ny	|| (nx == ny && BDIGITS(x)[nx - 1] < BDIGITS(y)[ny - 1])) {
+d834 2
+a835 4
+	if (modp) {
+	    *modp = rb_uint2big((unsigned long)t2);
+	    RBIGNUM(*modp)->sign = RBIGNUM(x)->sign;
+	}
+@
+
+
+1.31.2.1
+log
+@* gc.c: wrap inline by #if.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:16 $
+d834 2
+a835 4
+	if (modp) {
+	    *modp = rb_uint2big((unsigned long)t2);
+	    RBIGNUM(*modp)->sign = RBIGNUM(x)->sign;
+	}
+@
+
+
+1.31.2.2
+log
+@* bignum.c (rb_big2long): should not raise RangeError for Bignum
+  LONG_MIN value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 05:05:09 $
+d470 1
+a470 1
+    if ((long)num < 0 && (long)num != LONG_MIN) {
+@
+
+
+1.31.2.3
+log
+@* eval.c (rb_yield_0): 0 (= Qfalse) is a valid value, so that
+  default self should be checked by klass == 0.
+
+* bignum.c (rb_cstr2inum): should disallow '++1', '+-1', etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/20 07:42:20 $
+a210 4
+    }
+    if (str[0] == '+' || str[0] == '-') {
+	if (badcheck) goto bad;
+	return INT2FIX(0);
+@
+
+
+1.31.2.4
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/14 04:45:44 $
+a919 2
+	zds = BDIGITS(*modp);
+	while (!zds[ny-1]) ny--;
+d921 3
+a923 1
+	    t2 = 0; i = ny;
+@
+
+
+1.31.2.5
+log
+@* bignum.c (bigdivrem): ny must be 0 or greater.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:39 $
+d921 1
+a921 1
+	while (ny-- && !zds[ny-1]) ;
+@
+
+
+1.31.2.6
+log
+@* bignum.c (bigdivrem): ny must be 0 or greater.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/04/06 09:07:45 $
+d921 1
+a921 1
+	while (0 <= ny && !zds[ny-1]) ny--;
+@
+
+
+1.31.2.7
+log
+@* bignum.c (bigdivrem): ny must be 0 or greater.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 09:20:41 $
+d921 1
+a921 1
+	while (0 < ny && !zds[ny-1]) ny--;
+@
+
+
+1.31.2.8
+log
+@	* eval.c (safe_getter): should use INT2NUM().
+
+	* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 09:32:48 $
+d474 1
+a474 1
+    if ((long)num < 0 && (RBIGNUM(x)->sign || (long)num != LONG_MIN)) {
+@
+
+
+1.31.2.9
+log
+@* bignum.c (bigdivrem): access boundary bug.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/04/17 08:26:13 $
+d921 1
+a921 1
+	while (ny-- && !zds[ny]); ++ny;
+@
+
+
+1.31.2.10
+log
+@* bignum.c (rb_big2str): t should be protected from GC.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:21:57 $
+d366 1
+a366 1
+    volatile VALUE t;
+@
+
+
+1.31.2.11
+log
+@* marshal.c (marshal_load): ruby_verbose test should be wrapped by
+  RTEST().
+
+* hash.c (rb_hash_index): should return nil (not the default
+  value) if value is not in the hash.
+
+* bignum.c (rb_cstr2inum): "0 ff".hex should return 0, not 255.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/21 04:21:17 $
+a245 4
+	if (ISSPACE(*str)) {
+	    if (badcheck) goto bad;
+	    return INT2FIX(0);
+	}
+@
+
+
+1.31.2.12
+log
+@* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/31 06:20:10 $
+d1420 2
+@
+
+
+1.31.2.13
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/24 06:36:14 $
+d594 2
+a595 1
+	return (rb_big2dbl(x) == RFLOAT(y)->value)?Qtrue:Qfalse;
+@
+
+
+1.31.2.14
+log
+@* bignum.c (rb_big_aref): idx may be a Bignum.
+
+* numeric.c (fix_aref): negative index must return zero.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/29 05:04:40 $
+d1319 1
+a1319 1
+    int shift;
+a1321 6
+    if (TYPE(y) == T_BIGNUM) {
+	if (!RBIGNUM(y)->sign || RBIGNUM(x)->sign)
+	    return INT2FIX(0);
+	return INT2FIX(1);
+    }
+    shift = NUM2INT(y);
+@
+
+
+1.31.2.15
+log
+@* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/01 05:09:51 $
+d233 4
+a236 1
+	len = 3;
+d242 1
+a242 1
+	else if (base == 2 && str[0] == '0' && (str[1] == 'b'||str[1] == 'B')) {
+d245 1
+a245 7
+	len = 4;
+    }
+    if (*str == '0') {
+	do str++; while (*str == '0');
+	if (!*str) return INT2FIX(0);
+	while (*str == '_') str++;
+	if (!*str) str--;
+d247 1
+a247 4
+	    if (badcheck) {
+		while (ISSPACE(*str)) str++;
+		if (*str) goto bad;
+	    }
+d250 2
+a252 1
+    len *= strlen(str)*sizeof(char);
+d333 3
+a335 1
+	while (*str && ISSPACE(*str)) str++;
+@
+
+
+1.31.2.16
+log
+@* bignum.c (rb_cstr2inum): deny "0_".
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/26 17:01:20 $
+d244 12
+a255 3
+    if (*str == '0') {		/* squeeze preceeding 0s */
+	while (*++str == '0');
+	--str;
+@
+
+
+1.31.2.17
+log
+@forgot to commit everything bug ChangeLog
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/27 09:53:42 $
+d255 1
+a256 1
+	    if (end == str) goto bad; /* no number */
+@
+
+
+1.31.2.18
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/04 14:19:47 $
+d255 1
+a256 1
+	    while (*end && ISSPACE(*end)) end++;
+@
+
+
+1.31.2.19
+log
+@* bignum.c (rb_big_rshift): should properly convert the nagative
+  value to 2's compliment.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/16 02:20:25 $
+a1295 4
+    if (!RBIGNUM(x)->sign) {
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+    }
+a1303 3
+    }
+    if (!RBIGNUM(x)->sign) {
+	rb_big_2comp(z);
+@
+
+
+1.31.2.20
+log
+@* bignum.c (get2comp): need to specify to carry or not.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/15 04:43:58 $
+d72 2
+a73 2
+static void
+get2comp(x, carry)		/* get 2's complement */
+a74 1
+    int carry;
+a86 1
+    if (!carry) return;
+a87 1
+	if (RBIGNUM(x)->len == 1) return;
+a96 7
+void
+rb_big_2comp(x)			/* get 2's complement */
+    VALUE x;
+{
+    return get2comp(x, Qtrue);
+}
+
+d617 1
+a617 1
+    if (!RBIGNUM(x)->sign) get2comp(z, Qtrue);
+d619 1
+a619 1
+    if (RBIGNUM(x)->sign) get2comp(z, Qfalse);
+d1106 1
+a1106 1
+	get2comp(y, Qtrue);
+d1110 1
+a1110 1
+	get2comp(x, Qtrue);
+d1135 1
+a1135 1
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+d1157 1
+a1157 1
+	get2comp(y, Qtrue);
+d1161 1
+a1161 1
+	get2comp(x, Qtrue);
+d1186 1
+a1186 1
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+d1209 1
+a1209 1
+	get2comp(y, Qtrue);
+d1213 1
+a1213 1
+	get2comp(x, Qtrue);
+d1240 1
+a1240 1
+    if (!RBIGNUM(z)->sign) get2comp(z, Qfalse);
+d1298 1
+a1298 1
+	get2comp(x, Qtrue);
+d1310 1
+a1310 1
+	get2comp(z, Qfalse);
+d1336 1
+a1336 1
+	get2comp(x, Qtrue);
+@
+
+
+1.31.2.21
+log
+@* bignum.c (rb_big_2comp): void function cannot return any value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/22 10:29:25 $
+d104 1
+a104 1
+    get2comp(x, Qtrue);
+@
+
+
+1.31.2.22
+log
+@* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* eval.c (rb_thread_cleanup): current thread may be THREAD_STOPPED,
+  for example when terminated from signal handler.
+
+* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+
+* pack.c (pack_unpack): should treat 'U' in character unit, not in
+  byte unit.
+
+* marshal.c (w_uclass): should check based on rb_obj_class(), not
+  CLASS_OF().
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+
+* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2002/02/26 12:36:26 $
+d600 1
+a600 1
+	return rb_equal(y, x);
+@
+
+
+1.31.2.23
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+
+* re.c (rb_reg_expr_str): need to process backslashes properly.
+
+* parse.y (yylex): no here document after a dot.
+
+* parse.y (yylex): should have set lex_state properly after '`'.
+
+* parse.y (yylex): should have set lex_state properly after
+  tOP_ASGN.
+
+* bignum.c (rb_big2dbl): return canonical HUGE_VAL for infinity.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/01 09:37:57 $
+a539 1
+    if (isinf(d)) d = HUGE_VAL;
+@
+
+
+1.31.2.24
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (rb_ary_new2): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/07/11 08:24:53 $
+d94 1
+a94 1
+	REALLOC_N(RBIGNUM(x)->digits, BDIGIT, ++RBIGNUM(x)->len);
+d159 1
+a159 1
+    while (--i && !digits[i]) ;
+d384 1
+a384 3
+    if (i == 0 || (i == 1 && BDIGITS(x)[0] == 0)) {
+	return rb_str_new2("0");
+    }
+@
+
+
+1.31.2.25
+log
+@* bignum.c (bigdivmod): wrong condition check for Bignum zero.
+
+* bignum.c (Init_Bignum): need to add Bignum#div.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/19 05:59:05 $
+d954 1
+a954 2
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign &&
+	!(RBIGNUM(mod)->len == 1 && BDIGITS(mod)[0] == 0)) {
+a1315 3
+    if (!RBIGNUM(x)->sign) {
+	num = ((BDIGIT_DBL)~0) << BITSPERDIG;
+    }
+a1447 1
+    rb_define_method(rb_cBignum, "div", rb_big_div, 1);
+@
+
+
+1.31.2.26
+log
+@* bignum.c (bigdivrem): bignum zero's len should not be 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/07 07:16:12 $
+d931 1
+a931 1
+	while (--ny && !zds[ny]); ++ny;
+@
+
+
+1.30
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/22 03:21:53 $
+a221 1
+		if (!str[1]) return INT2FIX(0);
+a223 3
+	else if (str[0] == 0) {
+	    return INT2FIX(0);
+	}
+d255 1
+a255 1
+		rb_raise(rb_eArgError, "invalid literal for Integer: %s", s);
+d281 5
+d287 1
+a287 1
+	  case '5': case '6': case '7': case '8': case '9':
+d292 2
+a293 1
+	    c = c - 'a' + 10;
+d297 2
+a298 1
+	    c = c - 'A' + 10;
+a302 7
+	    if (badcheck) {
+		if (ISSPACE(c)) {
+		    while (*str && ISSPACE(*str)) str++;
+		    if (!*str) break;
+		}
+		rb_raise(rb_eArgError, "invalid literal for Integer: %s", s);
+	    }
+d322 8
+a329 1
+    if (badcheck && s+2 < str && str[-2] == '_') goto bad;
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/17 04:41:09 $
+d205 1
+a205 1
+    if (*str == '+') {
+d208 1
+a208 1
+    else if (*str == '-') {
+d213 2
+a214 4
+	if (*str == '0') {
+	    str++;
+	    if (*str == 'x' || *str == 'X') {
+		str++;
+d217 1
+a217 2
+	    else if (*str == 'b' || *str == 'B') {
+		str++;
+d222 1
+a222 1
+		if (!*str) return INT2FIX(0);
+d225 3
+a229 1
+	    if (!*str) return INT2FIX(0);
+@
+
+
+1.28
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/08 05:29:21 $
+d234 3
+a236 1
+	while (str[0] == '0') str++;
+d254 1
+d277 1
+d279 1
+d298 2
+d327 1
+d1263 1
+a1263 1
+	num = num | *xds++<<s2;
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/02 09:04:53 $
+d906 2
+a907 1
+	    t2 = 0; i = ny;
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/01 08:49:39 $
+d833 8
+a840 1
+    if ((dd = BIGRAD/(BDIGIT_DBL_SIGNED)(yds[ny-1]+1)) != 1) {
+d844 1
+a844 1
+	num = 0;
+d846 3
+a848 3
+	    num += (BDIGIT_DBL)yds[j]*dd;
+	    tds[j++] = BIGLO(num);
+	    num = BIGDN(num);
+d852 1
+a852 1
+	num = 0;
+d854 3
+a856 3
+	    num += (BDIGIT_DBL)xds[j]*dd;
+	    zds[j++] = BIGLO(num);
+	    num = BIGDN(num);
+d858 1
+a858 1
+	zds[j] = (BDIGIT)num;
+d865 1
+d908 4
+a911 3
+		t2 = BIGUP(t2) + zds[i];
+		zds[i] = (BDIGIT)(t2 / dd);
+		t2 %= dd;
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/31 08:37:38 $
+d23 2
+a24 2
+#if SIZEOF_LONG*2 <= SIZEOF_LONG_LONG
+typedef unsigned long BDIGIT;
+d27 1
+a27 1
+#elif SIZEOF_INT*2 <= SIZEOF_LONG_LONG
+d29 2
+a30 2
+typedef unsigned long long BDIGIT_DBL;
+typedef long long BDIGIT_DBL_SIGNED;
+d472 1
+a472 1
+    long c;
+d492 1
+a492 1
+	c = (long)u;
+d494 1
+a494 1
+	digits[i] = (BDIGIT)c;
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/15 06:00:22 $
+d25 2
+a26 2
+typedef unsigned long long BDIGIT2;
+typedef long long BDIGIT2_SIGNED;
+d29 2
+a30 2
+typedef unsigned long long BDIGIT2;
+typedef long long BDIGIT2_SIGNED;
+d33 2
+a34 2
+typedef unsigned long BDIGIT2;
+typedef long BDIGIT2_SIGNED;
+d39 1
+a39 1
+#define BIGRAD ((BDIGIT2)1 << BITSPERDIG)
+d41 1
+a41 1
+#define BIGUP(x) ((BDIGIT2)(x) << BITSPERDIG)
+d78 1
+a78 1
+    BDIGIT2 num;
+d135 1
+a135 1
+    BDIGIT2 num = n;
+d197 1
+a197 1
+    BDIGIT2 num;
+d309 1
+a309 1
+		num += (BDIGIT2)zds[i]*base;
+d393 1
+a393 1
+	BDIGIT2 num = 0;
+d430 1
+a430 1
+    BDIGIT2 num;
+d620 1
+a620 1
+    BDIGIT2_SIGNED num;
+d645 1
+a645 1
+	num += (BDIGIT2_SIGNED)BDIGITS(x)[i] - BDIGITS(y)[i];
+d668 1
+a668 1
+    BDIGIT2 num;
+d688 1
+a688 1
+	num += BDIGITS(x)[i] + BDIGITS(y)[i];
+d750 1
+a750 1
+    BDIGIT2 n = 0;
+d775 1
+a775 1
+	BDIGIT2 dd = BDIGITS(x)[i]; 
+d779 1
+a779 1
+	    BDIGIT2 ee = n + (BDIGIT2)dd * BDIGITS(y)[j];
+d801 2
+a802 2
+    BDIGIT2 t2;
+    BDIGIT2_SIGNED num;
+d833 1
+a833 1
+    if ((dd = BIGRAD/(BDIGIT2_SIGNED)(yds[ny-1]+1)) != 1) {
+d839 1
+a839 1
+	    num += (BDIGIT2)yds[j]*dd;
+d847 1
+a847 1
+	    num += (BDIGIT2)xds[j]*dd;
+d865 2
+a866 2
+		BDIGIT2 ee;
+		t2 += (BDIGIT2)yds[i] * q;
+d868 1
+a868 1
+		num = zds[j - ny + i] + ee;
+d873 1
+a873 1
+	    num += zds[j - ny + i] - t2; /* borrow from high digit; don't update */
+d877 2
+a878 2
+		    BDIGIT2 ee = num + yds[i];
+		    num = (BDIGIT2)zds[j - ny + i] + ee;
+d1233 1
+a1233 1
+    BDIGIT2 num = 0;
+d1262 1
+a1262 1
+    BDIGIT2 num = 0;
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/19 08:04:45 $
+d23 13
+a35 1
+typedef unsigned short USHORT;
+d37 5
+a41 5
+#define BDIGITS(x) ((USHORT*)RBIGNUM(x)->digits)
+#define BITSPERDIG (sizeof(short)*CHAR_BIT)
+#define BIGRAD (1L << BITSPERDIG)
+#define DIGSPERLONG ((unsigned int)(sizeof(long)/sizeof(short)))
+#define BIGUP(x) ((unsigned long)(x) << BITSPERDIG)
+d43 1
+a43 1
+#define BIGLO(x) ((USHORT)((x) & (BIGRAD-1)))
+d55 1
+a55 1
+    big->digits = ALLOC_N(USHORT, len);
+d68 1
+a68 1
+    MEMCPY(BDIGITS(z), BDIGITS(x), USHORT, RBIGNUM(x)->len);
+d77 2
+a78 2
+    USHORT *ds = BDIGITS(x);
+    long num;
+d91 1
+a91 1
+	REALLOC_N(RBIGNUM(x)->digits, USHORT, RBIGNUM(x)->len++);
+d103 1
+a103 1
+	USHORT *ds = BDIGITS(x);
+d108 1
+a108 1
+	if (len*sizeof(USHORT) <= sizeof(VALUE)) {
+d135 3
+a137 2
+    unsigned int i = 0;
+    USHORT *digits;
+d144 2
+a145 2
+	digits[i++] = BIGLO(n);
+	n = BIGDN(n);
+d197 1
+a197 1
+    unsigned long num;
+d201 1
+a201 1
+    USHORT *zds;
+d253 1
+a253 2
+	    if (end == str || *end)
+		goto bad;
+d255 1
+a255 1
+	    if (*end) {
+a293 1
+	    c = base;
+d297 1
+a297 3
+		    if (*str) {
+			break;
+		    }
+d301 1
+d309 1
+a309 1
+		num += zds[i]*base;
+d333 7
+d353 2
+a354 2
+    USHORT *ds;
+    unsigned long i, j, hbase;
+d364 1
+a364 1
+	j = (sizeof(USHORT)/sizeof(char)*CHAR_BIT*i*241L)/800+2;
+d368 1
+a368 1
+	j = (sizeof(USHORT)/sizeof(char)*CHAR_BIT*i)/4+2;
+d372 1
+a372 1
+	j = (sizeof(USHORT)/sizeof(char)*CHAR_BIT*i)+2;
+d376 1
+a376 1
+	j = (sizeof(USHORT)*CHAR_BIT*i)+2;
+d393 2
+a394 1
+	unsigned long num = 0;
+d397 1
+a397 1
+	    ds[k] = (USHORT)(num / hbase);
+a428 1
+    unsigned long num;
+d430 2
+a431 1
+    USHORT *ds;
+d433 1
+a433 1
+    if (len > sizeof(long)/sizeof(USHORT))
+d471 1
+a471 1
+    unsigned long i = 0;
+d473 1
+a473 1
+    USHORT *digits;
+d494 1
+a494 1
+	digits[i] = (USHORT)c;
+d513 1
+a513 1
+    USHORT *ds = BDIGITS(x);
+d583 1
+a583 1
+    if (MEMCMP(BDIGITS(x),BDIGITS(y),USHORT,RBIGNUM(y)->len) != 0) return Qfalse;
+d604 1
+a604 1
+    USHORT *ds = BDIGITS(z);
+d619 2
+a620 2
+    USHORT *zds;
+    long num;
+d645 1
+a645 1
+	num += (long)BDIGITS(x)[i] - BDIGITS(y)[i];
+d668 1
+a668 1
+    long num;
+d702 1
+a702 1
+    BDIGITS(z)[i] = (USHORT)num;
+d750 1
+a750 1
+    unsigned long n = 0;
+d752 1
+a752 1
+    USHORT *zds;
+d775 1
+a775 1
+	unsigned long dd = BDIGITS(x)[i]; 
+d779 1
+a779 1
+	    int ee = n + dd * BDIGITS(y)[j];
+d800 4
+a803 4
+    USHORT *xds, *yds, *zds, *tds;
+    unsigned long t2;
+    long num;
+    USHORT dd, q;
+d820 1
+a820 1
+	    zds[i] = (USHORT)(t2 / dd);
+d833 1
+a833 1
+    if ((dd = BIGRAD/(int)(yds[ny-1]+1)) != 1) {
+d839 1
+a839 1
+	    num += (long)yds[j]*dd;
+d847 1
+a847 1
+	    num += (long)xds[j]*dd;
+d851 1
+a851 1
+	zds[j] = (USHORT)num;
+d861 1
+a861 1
+	else q = (USHORT)((BIGUP(zds[j]) + zds[j-1])/yds[ny-1]);
+d865 2
+a866 2
+		int ee;
+		t2 += (long)yds[i] * q;
+d877 2
+a878 2
+		    int ee = num + yds[i];
+		    num = (long) zds[j - ny + i] + ee;
+d901 1
+a901 1
+		zds[i] = (USHORT)(t2 / dd);
+d1070 1
+a1070 1
+    USHORT *ds1, *ds2, *zds;
+d1121 2
+a1122 2
+    USHORT *ds1, *ds2, *zds;
+    unsigned long i, l1, l2;
+d1173 2
+a1174 2
+    USHORT *ds1, *ds2, *zds;
+    unsigned int i, l1, l2;
+d1228 1
+a1228 1
+    USHORT *xds, *zds;
+d1233 1
+a1233 1
+    unsigned long num = 0;
+d1257 1
+a1257 1
+    USHORT *xds, *zds;
+d1262 1
+a1262 1
+    unsigned long num = 0;
+d1289 1
+a1289 1
+    USHORT *xds;
+d1315 2
+a1316 3
+    long i, len;
+    int key;
+    USHORT *digits;
+d1318 2
+a1319 2
+    key = 0; digits = BDIGITS(x);
+    for (i=0,len=RBIGNUM(x)->len; i<RBIGNUM(x)->len; i++) {
+d1366 1
+a1366 1
+	BDIGITS(v)[len] = ((USHORT)~0) * rand;
+d1376 1
+a1376 1
+    return INT2FIX(RBIGNUM(big)->len*sizeof(USHORT));
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/12 07:33:34 $
+d565 1
+a565 1
+    if (memcmp(BDIGITS(x),BDIGITS(y),RBIGNUM(y)->len) != 0) return Qfalse;
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/12 06:33:11 $
+d807 1
+a807 1
+	if (modp) *modp = rb_uint2big(t2);
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/12 06:06:45 $
+d790 1
+a790 1
+	if (divp) *divp = INT2FIX(0);
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/11 08:27:06 $
+d871 1
+a871 1
+	zds = BDIGITS(*div);
+d874 1
+a874 1
+	RBIGNUM(*div)->len = i;
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/06 07:21:06 $
+d89 17
+a105 14
+    long len = RBIGNUM(x)->len;
+    USHORT *ds = BDIGITS(x);
+
+    while (len-- && !ds[len]) ;
+    RBIGNUM(x)->len = ++len;
+
+    if (len*sizeof(USHORT) <= sizeof(VALUE)) {
+	long num = 0;
+	while (len--) {
+	    num = BIGUP(num) + ds[len];
+	}
+	if (num >= 0) {
+	    if (RBIGNUM(x)->sign) {
+		if (POSFIXABLE(num)) return INT2FIX(num);
+a106 1
+	    else if (NEGFIXABLE(-(long)num)) return INT2FIX(-(long)num);
+d641 1
+a641 1
+    return bignorm(z);
+d686 1
+a686 1
+    return bignorm(z);
+d698 1
+a698 1
+	return bigadd(x, y, 1);
+d717 1
+a717 1
+	return bigadd(x, y, 0);
+d775 1
+a775 1
+bigdivrem(x, y, div, mod)
+d777 1
+a777 1
+    VALUE *div, *mod;
+d790 2
+a791 2
+	if (div) *div = INT2FIX(0);
+	if (mod) *mod = x;
+d807 2
+a808 2
+	if (mod) *mod = rb_uint2big(t2);
+	if (div) *div = z;
+d869 2
+a870 2
+    if (div) {			/* move quotient down in z */
+	*div = rb_big_clone(z);
+d876 2
+a877 2
+    if (mod) {			/* just normalize remainder */
+	*mod = rb_big_clone(z);
+d879 1
+a879 1
+	    zds = BDIGITS(*mod);
+d887 2
+a888 2
+	RBIGNUM(*mod)->len = ny;
+	RBIGNUM(*mod)->sign = RBIGNUM(x)->sign;
+d905 2
+a906 2
+	if (divp) *divp = bignorm(*divp);
+	if (modp) *modp = bignorm(mod);
+d932 1
+a932 1
+    return z;
+d955 1
+a955 1
+    return z;
+d999 1
+a999 1
+    return rb_assoc_new(div, mod);
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/03 05:46:32 $
+a947 4
+      case T_FLOAT:
+	y = dbl2big(RFLOAT(y)->value);
+	break;
+
+a969 4
+      case T_FLOAT:
+	y = dbl2big(RFLOAT(y)->value);
+	break;
+
+a986 4
+	break;
+
+      case T_FLOAT:
+	y = dbl2big(RFLOAT(y)->value);
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/28 08:26:53 $
+a447 7
+rb_big_to_i(x)
+    VALUE x;
+{
+    return bignorm(x);
+}
+
+static VALUE
+d773 1
+a773 1
+bigdivmod(x, y, div, mod)
+d789 1
+a789 1
+	if (mod) *mod = bignorm(x);
+d804 3
+a806 5
+	if (div) *div = bignorm(z);
+	if (mod) {
+	    if (!RBIGNUM(x)->sign) t2 = -(long)t2;
+	    *mod = INT2NUM(t2);
+	}
+a872 1
+	*div = bignorm(*div);
+d887 18
+a904 1
+	*mod = bignorm(*mod);
+d928 1
+a928 1
+    bigdivmod(x, y, &z, 0, 0);
+d935 1
+a935 1
+rb_big_mod(x, y)
+d960 26
+d1362 1
+a1362 1
+    return rb_big_mod((VALUE)v, max);
+d1393 1
+a1393 1
+    rb_define_method(rb_cBignum, "%", rb_big_mod, 1);
+d1395 2
+a1410 1
+    rb_define_method(rb_cBignum, "to_i", rb_big_to_i, 0);
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/23 07:01:22 $
+d780 1
+a780 1
+bigdivmod(x, y, div, mod, modulo)
+a782 1
+    int modulo;
+a813 3
+	    if (modulo && RBIGNUM(x)->sign != RBIGNUM(y)->sign) {
+		t2 = t2 + yds[0] * (RBIGNUM(y)->sign ? 1 : -1);
+	    }
+a896 4
+	if (modulo && RBIGNUM(x)->sign != RBIGNUM(y)->sign) {
+	    *mod = bigadd(*mod, y, 1);
+	    return;
+	}
+d928 1
+a928 1
+rb_big_modulo(x, y, modulo)
+a929 1
+    int modulo;
+d948 1
+a948 1
+    bigdivmod(x, y, 0, &z, modulo);
+a952 14
+static VALUE
+rb_big_mod(x, y)
+    VALUE x, y;
+{
+    return rb_big_modulo(x, y, 1);
+}
+
+static VALUE
+rb_big_remainder(x, y)
+    VALUE x, y;
+{
+    return rb_big_modulo(x, y, 0);
+}
+
+d974 1
+a974 1
+    bigdivmod(x, y, &div, &mod, 1);
+a1361 1
+    rb_define_method(rb_cBignum, "remainder", rb_big_remainder, 1);
+@
+
+
+1.14
+log
+@2000-06-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/22 08:29:40 $
+a1218 1
+    xds = BDIGITS(x);
+d1225 1
+@
+
+
+1.13
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/06 02:39:39 $
+d902 2
+a903 7
+	    long len = ny;
+	    zds = BDIGITS(*mod);
+	    while (len && !zds[len]) len--;
+	    if (len > 0) {
+		*mod = bigadd(*mod, y, 1);
+		return;
+	    }
+@
+
+
+1.12
+log
+@bignum divmod bug
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/05 08:46:47 $
+d454 2
+a455 2
+VALUE
+rb_dbl2big(d)
+d484 8
+a491 1
+    return bignorm(z);
+d531 1
+a531 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d563 1
+a563 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d904 1
+a904 1
+	    while (len-- && !zds[len]);
+d956 1
+a956 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d993 1
+a993 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d1004 1
+a1004 1
+    return rb_assoc_new(div, mod);;
+@
+
+
+1.11
+log
+@2000-06-05
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/06/04 15:32:18 $
+d807 4
+a810 1
+	    if (!RBIGNUM(y)->sign) t2 = -(long)t2;
+@
+
+
+1.10
+log
+@see ChangeLog
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/12 09:07:32 $
+d523 4
+d549 16
+a564 2
+    if (rb_big_cmp(x, y) == INT2FIX(0)) return Qtrue;
+    return Qfalse;
+@
+
+
+1.9
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:11 $
+d18 5
+@
+
+
+1.8
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/12 05:06:20 $
+d426 1
+d948 1
+a948 1
+static VALUE
+@
+
+
+1.7
+log
+@mkmf
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/07 08:37:25 $
+d9 3
+a11 1
+************************************************/
+@
+
+
+1.6
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:56 $
+d72 1
+a72 1
+	REALLOC_N(BDIGITS(x), USHORT, RBIGNUM(x)->len++);
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:49 $
+d407 1
+a407 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `%s'", type);
+d433 1
+a433 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `int'");
+@
+
+
+1.4
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/01 09:24:11 $
+d18 1
+a18 1
+#define BDIGITS(x) RBIGNUM(x)->digits
+d21 1
+a21 1
+#define DIGSPERINT ((unsigned int)(sizeof(long)/sizeof(short)))
+d36 1
+a36 1
+    BDIGITS(big) = ALLOC_N(USHORT, len);
+d119 1
+a119 1
+    big = bignew(DIGSPERINT, 1);
+d121 1
+a121 1
+    while (i < DIGSPERINT) {
+d126 1
+a126 1
+    i = DIGSPERINT;
+d167 1
+a167 1
+rb_str2inum(str, base)
+d171 3
+d181 1
+a181 1
+    while (ISSPACE(*str)) str++;
+d203 1
+a204 1
+	    if (*str == '\0') return INT2FIX(0);
+d208 1
+d222 2
+a223 1
+	while (str[0] == '0') str++;
+d228 11
+a238 1
+	unsigned long val = strtoul((char*)str, 0, base);
+d274 9
+d301 1
+d305 15
+d397 2
+a398 2
+unsigned long
+rb_big2ulong(x)
+d400 1
+d407 1
+a407 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `uint'");
+d417 9
+d430 1
+a430 1
+    unsigned long num = rb_big2ulong(x);
+@
+
+
+1.3
+log
+@19991201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:02 $
+d1258 1
+a1258 1
+rb_big_rand(max)
+d1260 1
+d1262 1
+a1262 1
+    struct RBignum *v;
+d1266 1
+a1266 1
+    v = RBIGNUM(bignew(len,1));
+d1268 1
+a1268 5
+#ifdef HAVE_RANDOM
+	BDIGITS(v)[len] = random();
+#else
+	BDIGITS(v)[len] = rand();
+#endif
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:32 $
+d23 1
+a23 1
+#define BIGDN(x) (((x)<0) ? ~((~(x))>>BITSPERDIG) : (x)>>BITSPERDIG)
+@
+
+
+1.2.2.1
+log
+@19991201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:02 $
+d23 1
+a23 1
+#define BIGDN(x) RSHIFT(x,BITSPERDIG)
+@
+
+
+1.2.2.2
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/01 09:24:45 $
+d1258 1
+a1258 1
+rb_big_rand(max, rand)
+a1259 1
+    double rand;
+d1261 1
+a1261 1
+    VALUE v;
+d1264 2
+a1265 2
+    len = RBIGNUM(v)->len;
+    v = bignew(len,1);
+d1267 5
+a1271 1
+	BDIGITS(v)[len] = ((USHORT)~0) * rand;
+@
+
+
+1.2.2.3
+log
+@19991208
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:25 $
+d1265 1
+a1265 1
+    len = RBIGNUM(max)->len;
+@
+
+
+1.2.2.4
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/08 05:35:54 $
+d19 1
+a19 1
+#define BITSPERDIG (sizeof(USHORT)*CHAR_BIT)
+d21 1
+a21 1
+#define DIGSPERLONG ((unsigned int)(sizeof(long)/sizeof(USHORT)))
+d36 1
+a36 1
+    big->digits = ALLOC_N(USHORT, len);
+d119 1
+a119 1
+    big = bignew(DIGSPERLONG, 1);
+d121 1
+a121 1
+    while (i < DIGSPERLONG) {
+d126 1
+a126 1
+    i = DIGSPERLONG;
+@
+
+
+1.2.2.5
+log
+@000414
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:40:59 $
+d72 1
+a72 1
+	REALLOC_N(RBIGNUM(x)->digits, USHORT, RBIGNUM(x)->len++);
+@
+
+
+1.2.2.6
+log
+@2000-06-05
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/14 14:35:40 $
+a461 4
+      case T_FLOAT:
+	y = rb_dbl2big(RFLOAT(y)->value);
+	break;
+
+d487 2
+a488 16
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	y = rb_int2big(FIX2LONG(y));
+	break;
+      case T_BIGNUM:
+	break;
+      case T_FLOAT:
+	y = rb_dbl2big(RFLOAT(y)->value);
+	break;
+      default:
+	return Qfalse;
+    }
+    if (RBIGNUM(x)->sign != RBIGNUM(y)->sign) return Qfalse;
+    if (RBIGNUM(x)->len != RBIGNUM(y)->len) return Qfalse;
+    if (memcmp(BDIGITS(x),BDIGITS(y),RBIGNUM(y)->len) != 0) return Qfalse;
+    return Qtrue;
+@
+
+
+1.2.2.7
+log
+@ext/md5/extconf.rb added
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/05 09:00:40 $
+d724 1
+a724 1
+    long t2;
+d749 1
+a749 4
+	    if (!RBIGNUM(x)->sign) t2 = -(long)t2;
+	    if (modulo && RBIGNUM(x)->sign != RBIGNUM(y)->sign) {
+		t2 = t2 + yds[0] * (RBIGNUM(y)->sign ? 1 : -1);
+	    }
+@
+
+
+1.2.2.8
+log
+@bignum divmod unsigned bug
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/05 18:48:00 $
+d724 1
+a724 1
+    unsigned long t2;
+@
+
+
+1.2.2.9
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/06 02:28:09 $
+a15 5
+
+#if defined __MINGW32__
+#define USHORT _USHORT
+#endif
+
+d18 2
+a19 2
+#define BDIGITS(x) ((USHORT*)RBIGNUM(x)->digits)
+#define BITSPERDIG (sizeof(short)*CHAR_BIT)
+d21 1
+a21 1
+#define DIGSPERLONG ((unsigned int)(sizeof(long)/sizeof(short)))
+a170 3
+    const char *s = str;
+    char *end;
+    int badcheck = (base==0)?1:0;
+d178 1
+a178 1
+    while (*str && ISSPACE(*str)) str++;
+a199 1
+		if (!*str) return INT2FIX(0);
+d201 1
+a204 1
+	    if (!*str) return INT2FIX(0);
+d218 1
+a218 2
+	while (*str && *str == '0') str++;
+	if (!*str) str--;
+d223 1
+a223 11
+	unsigned long val = strtoul((char*)str, &end, base);
+
+	if (badcheck) {
+	    if (end == str || *end)
+		goto bad;
+	    while (*end && ISSPACE(*end)) end++;
+	    if (*end) {
+	      bad:
+		rb_raise(rb_eArgError, "invalid literal for Integer: %s", s);
+	    }
+	}
+a258 9
+	    if (badcheck) {
+		if (ISSPACE(c)) {
+		    while (*str && ISSPACE(*str)) str++;
+		    if (*str) {
+			break;
+		    }
+		}
+		rb_raise(rb_eArgError, "invalid literal for Integer: %s", s);
+	    }
+a276 1
+
+d357 2
+a358 2
+static unsigned long
+big2ulong(x, type)
+a359 1
+    char *type;
+d366 1
+a366 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `%s'", type);
+a375 10
+unsigned long
+rb_big2ulong(x)
+    VALUE x;
+{
+    unsigned long num = big2ulong(x, "unsigned long");
+
+    if (!RBIGNUM(x)->sign) return -num;
+    return num;
+}
+
+d380 1
+a380 1
+    unsigned long num = big2ulong(x, "int");
+d396 2
+a397 2
+static VALUE
+dbl2big(d)
+d426 1
+a426 8
+    return z;
+}
+
+VALUE
+rb_dbl2big(d)
+    double d;
+{
+    return bignorm(dbl2big(d));
+d463 1
+a463 1
+	y = dbl2big(RFLOAT(y)->value);
+d498 1
+a498 1
+	y = dbl2big(RFLOAT(y)->value);
+d839 1
+a839 1
+	    while (len && !zds[len]) len--;
+d891 1
+a891 1
+	y = dbl2big(RFLOAT(y)->value);
+d928 1
+a928 1
+	y = dbl2big(RFLOAT(y)->value);
+d939 1
+a939 1
+    return rb_assoc_new(div, mod);
+@
+
+
+1.2.2.10
+log
+@2000-06-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/22 05:09:35 $
+d885 7
+a891 2
+	    *mod = bigadd(*mod, y, 1);
+	    return;
+@
+
+
+1.2.2.11
+log
+@2000-06-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/23 07:05:48 $
+d1202 1
+a1208 1
+    xds = BDIGITS(x);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:19 $
+d12 1
+a13 1
+#include <math.h>
+d15 2
+a16 2
+extern VALUE cInteger;
+VALUE cBignum;
+d19 1
+a19 1
+#define BITSPERDIG (sizeof(USHORT)*CHAR_BIT)
+d21 1
+a21 1
+#define DIGSPERLONG ((UINT)(sizeof(long)/sizeof(USHORT)))
+d23 2
+a24 2
+#define BIGDN(x) ((x) >> BITSPERDIG)
+#define BIGLO(x) ((x) & (BIGRAD-1))
+d27 3
+a29 3
+bignew_1(class, len, sign)
+    VALUE class;
+    UINT len;
+d33 1
+a33 1
+    OBJSETUP(big, cBignum, T_BIGNUM);
+d41 1
+a41 1
+#define bignew(len,sign) bignew_1(cBignum,len,sign)
+d44 2
+a45 2
+big_clone(x)
+    struct RBignum *x;
+d47 1
+a47 1
+    VALUE z = bignew_1(CLASS_OF(x), x->len, x->sign);
+d49 2
+a50 2
+    MEMCPY(BDIGITS(z), BDIGITS(x), USHORT, x->len);
+    return (VALUE)z;
+d54 2
+a55 2
+big_2comp(x)			/* get 2's complement */
+    struct RBignum *x;
+d57 1
+a57 1
+    UINT i = x->len;
+d64 1
+a64 1
+	num += (long)ds[i];
+d67 1
+a67 1
+    } while (i < x->len);
+d69 1
+a69 1
+	for (i=1;i<x->len;i++) {
+d72 1
+a72 1
+	REALLOC_N(BDIGITS(x), USHORT, x->len++);
+d74 1
+a74 1
+	ds[x->len-1] = 1;
+d80 1
+a80 1
+    struct RBignum *x;
+d82 1
+a82 1
+    UINT len = x->len;
+d86 1
+a86 1
+    x->len = ++len;
+d88 1
+a88 3
+    if (len*sizeof(USHORT) < sizeof(VALUE) ||
+	(len*sizeof(USHORT) == sizeof(VALUE) &&
+	 ds[sizeof(VALUE)/sizeof(USHORT)-1] <= 0x3fff)) {
+d93 5
+a97 2
+	if (x->sign) {
+	    if (POSFIXABLE(num)) return INT2FIX(num);
+a98 1
+	else if (NEGFIXABLE(-num)) return INT2FIX(-num);
+d100 1
+a100 1
+    return (VALUE)x;
+d104 1
+a104 1
+big_norm(x)
+d111 2
+a112 2
+uint2big(n)
+    UINT n;
+d114 1
+a114 1
+    UINT i = 0;
+d116 1
+a116 1
+    struct RBignum *big;
+d119 1
+a119 1
+    big = (struct RBignum*)bignew(DIGSPERLONG, 1);
+d121 1
+a121 1
+    while (i < DIGSPERLONG) {
+d126 1
+a126 1
+    i = DIGSPERLONG;
+d128 2
+a129 2
+    big->len = i+1;
+    return (VALUE)big;
+d133 2
+a134 2
+int2big(n)
+    int n;
+d136 2
+a137 2
+    int neg = 0;
+    struct RBignum *big;
+d143 1
+a143 1
+    big = (struct RBignum*)uint2big(n);
+d145 1
+a145 1
+	big->sign = 0;
+d147 1
+a147 1
+    return (VALUE)big;
+d151 2
+a152 2
+uint2inum(n)
+    UINT n;
+d155 1
+a155 1
+    return uint2big(n);
+d159 2
+a160 2
+int2inum(n)
+    int n;
+d163 1
+a163 1
+    return int2big(n);
+d167 2
+a168 2
+str2inum(str, base)
+    UCHAR *str;
+d173 2
+a174 1
+    UINT len, blen = 1, i;
+d178 6
+a183 2
+    while (isspace(*str)) str++;
+    if (*str == '-') {
+d194 4
+a206 1
+    len = strlen(str);
+d208 2
+a209 1
+	len = 3*len*sizeof(char);
+d211 9
+a219 2
+    else {			/* base == 10 or 16 */
+	len = 4*len*sizeof(char);
+d223 1
+a223 1
+	UINT val = strtoul((char*)str, 0, base);
+d228 1
+a228 1
+		int result = -(int)val;
+d233 1
+a233 1
+	    VALUE big = uint2big(val);
+d238 1
+a238 1
+    len = (len/(sizeof(USHORT)*CHAR_BIT))+1;
+d282 2
+a283 2
+big2str(x, base)
+    struct RBignum *x;
+d288 1
+a288 1
+    UINT i, j, hbase;
+d290 1
+a290 1
+    UCHAR *s, c;
+d293 1
+a293 1
+	return fix2str(x, base);
+d295 2
+a296 2
+    i = x->len;
+    if (i == 0) return str_new2("0");
+d316 1
+a316 1
+	Fail("bignum cannot treat base %d", base);
+d319 1
+a319 1
+    t = big_clone(x);
+d321 1
+a321 1
+    ss = str_new(0, j);
+d324 1
+a324 1
+    s[0] = x->sign ? '+' : '-';
+d326 1
+a326 1
+	int k = i;
+d330 1
+a330 1
+	    ds[k] = num / hbase;
+d336 1
+a336 1
+	    c = num % base;
+d343 2
+a344 2
+    RSTRING(ss)->len -= x->sign?j:j-1;
+    memmove(x->sign?s:s+1, s+j, RSTRING(ss)->len);
+d351 2
+a352 2
+big_to_s(x)
+    struct RBignum *x;
+d354 1
+a354 1
+    return big2str(x, 10);
+d357 3
+a359 3
+int
+big2int(x)
+    struct RBignum *x;
+d362 1
+a362 1
+    UINT len = x->len;
+d366 1
+a366 1
+	ArgError("Bignum too big to convert into fixnum");
+a372 1
+    if (!x->sign) return -num;
+d376 15
+a390 2
+VALUE
+big_to_i(x)
+d397 1
+a397 1
+dbl2big(d)
+d400 1
+a400 1
+    UINT i = 0;
+d406 8
+a413 1
+    while (0 != (long)u) {
+d423 1
+a423 1
+	digits[i] = c;
+d430 2
+a431 2
+big2dbl(x)
+    struct RBignum *x;
+d434 1
+a434 1
+    UINT i = x->len;
+d440 1
+a440 1
+    if (!x->sign) d = -d;
+d444 2
+a445 2
+VALUE
+big_to_f(x)
+d448 1
+a448 1
+    return float_new(big2dbl(x));
+d452 2
+a453 2
+big_cmp(x, y)
+    struct RBignum *x, *y;
+d455 1
+a455 1
+    int xlen = x->len;
+d459 1
+a459 1
+	y = (struct RBignum*)int2big(FIX2INT(y));
+d466 1
+a466 1
+	return num_coerce_bin(x, y);
+d469 6
+a474 6
+    if (x->sign > y->sign) return INT2FIX(1);
+    if (x->sign < y->sign) return INT2FIX(-1);
+    if (xlen < y->len)
+	return (x->sign) ? INT2FIX(-1) : INT2FIX(1);
+    if (xlen > y->len)
+	return (x->sign) ? INT2FIX(1) : INT2FIX(-1);
+d479 2
+a480 2
+	(x->sign ? INT2FIX(1) : INT2FIX(-1)) :
+	    (x->sign ? INT2FIX(-1) : INT2FIX(1));
+d484 1
+a484 1
+big_eq(x, y)
+d487 2
+a488 2
+    if (big_cmp(x, y) == INT2FIX(0)) return TRUE;
+    return FALSE;
+d492 2
+a493 2
+big_uminus(x)
+    struct RBignum *x;
+d495 1
+a495 1
+    VALUE z = big_clone(x);
+d497 1
+a497 1
+    RBIGNUM(z)->sign = !x->sign;
+d503 2
+a504 2
+big_neg(x)
+    struct RBignum *x;
+d506 2
+a507 2
+    VALUE z = big_clone(x);
+    UINT i = x->len;
+d510 1
+a510 1
+    if (!x->sign) big_2comp(z);
+d512 1
+a512 1
+    if (x->sign) big_2comp(z);
+d520 1
+a520 1
+    struct RBignum *x, *y;
+d522 1
+a522 1
+    struct RBignum *z = 0;
+d525 1
+a525 1
+    UINT i;
+d527 1
+a527 1
+    i = x->len;
+d529 1
+a529 1
+    if (x->len < y->len) {
+d532 1
+a532 1
+    else if (x->len == y->len) {
+d545 1
+a545 1
+    z = (struct RBignum*)bignew(x->len, (z == 0)?1:0);
+d548 1
+a548 1
+    for (i = 0, num = 0; i < y->len; i++) { 
+d553 1
+a553 1
+    while (num && i < x->len) {
+d558 1
+a558 1
+    while (i < x->len) {
+d568 1
+a568 1
+    struct RBignum *x, *y;
+d571 1
+a571 1
+    struct RBignum *z;
+d573 5
+a577 3
+    UINT i, len;
+    if (x->sign == (y->sign ^ sign)) {
+	if (y->sign == sign) return bigsub(y, x);
+d581 3
+a583 2
+    if (x->len > y->len) {
+	len = x->len + 1;
+d586 1
+a586 1
+	len = y->len + 1;
+d588 1
+a588 1
+    z = (struct RBignum*)bignew(len, sign==y->sign);
+d590 3
+a592 5
+    if (x->len > y->len) {
+        struct RBignum* t = x; x = y; y = t;
+    }
+    for (i = 0, num = 0; i < x->len; i++) {
+	num += (long)(BDIGITS(x)[i]) + BDIGITS(y)[i];
+d596 2
+a597 1
+    while (num && i < y->len) {
+d602 1
+a602 1
+    while (i < y->len) {
+d606 1
+a606 1
+    BDIGITS(z)[i] = num;
+d612 1
+a612 1
+big_plus(x, y)
+d617 1
+a617 1
+	y = int2big(FIX2INT(y));
+d623 1
+a623 1
+	return float_new(big2dbl(x) + RFLOAT(y)->value);
+d626 1
+a626 1
+	return num_coerce_bin(x, y);
+d631 1
+a631 1
+big_minus(x, y)
+d636 1
+a636 1
+	y = int2big(FIX2INT(y));
+d642 1
+a642 1
+	return float_new(big2dbl(x) - RFLOAT(y)->value);
+d645 1
+a645 1
+	return num_coerce_bin(x, y);
+d650 2
+a651 2
+big_mul(x, y)
+    struct RBignum *x, *y;
+d653 1
+a653 1
+    UINT i = 0, j;
+d658 1
+a658 1
+    if (FIXNUM_P(x)) x = (struct RBignum*)int2big(FIX2INT(x));
+d661 1
+a661 1
+	y = (struct RBignum*)int2big(FIX2INT(y));
+d668 1
+a668 1
+	return float_new(big2dbl(x) * RFLOAT(y)->value);
+d671 1
+a671 1
+	return num_coerce_bin(x, y);
+d674 2
+a675 2
+    j = x->len + y->len + 1;
+    z = bignew(j, x->sign==y->sign);
+d678 1
+a678 1
+    for (i = 0; i < x->len; i++) {
+d682 1
+a682 1
+	for (j = 0; j < y->len; j++) {
+d697 2
+a698 2
+bigdivmod(x, y, div, mod)
+    struct RBignum *x, *y;
+d700 1
+d702 3
+a704 2
+    UINT nx = x->len, ny = y->len, i, j;
+    VALUE z;
+d711 1
+a711 1
+    if (ny == 0 && yds[0] == 0) num_zerodiv();
+d720 1
+a720 1
+	z = big_clone(x);
+d725 1
+a725 1
+	    zds[i] = t2 / dd;
+d728 1
+d731 2
+a732 2
+	    if (!y->sign) t2 = -t2;
+	    *mod = INT2FIX(t2);
+d736 1
+a736 1
+    z = bignew(nx==ny?nx+2:nx+1, x->sign==y->sign);
+d741 2
+a742 2
+	y = (struct RBignum*)big_clone(y);
+	tds = BDIGITS(y);
+d746 1
+a746 1
+	    num += (unsigned long)yds[j]*dd;
+d754 1
+a754 1
+	    num += (unsigned long)xds[j]*dd;
+d758 1
+a758 1
+	zds[j] = num;
+d768 1
+a768 1
+	else q = (BIGUP(zds[j]) + zds[j-1])/yds[ny-1];
+d773 1
+a773 1
+		t2 += (unsigned long)yds[i] * q;
+d795 1
+a795 1
+	*div = big_clone(z);
+d803 1
+a803 1
+	*mod = big_clone(z);
+d809 1
+a809 1
+		zds[i] = t2 / dd;
+d814 10
+a823 1
+	RBIGNUM(*mod)->sign = y->sign;
+d829 1
+a829 1
+big_div(x, y)
+d836 1
+a836 1
+	y = int2big(FIX2INT(y));
+d843 1
+a843 1
+	return float_new(big2dbl(x) / RFLOAT(y)->value);
+d846 1
+a846 1
+	return num_coerce_bin(x, y);
+d848 1
+a848 1
+    bigdivmod(x, y, &z, 0);
+d853 1
+d855 1
+a855 1
+big_mod(x, y)
+d857 1
+d863 1
+a863 1
+	y = int2big(FIX2INT(y));
+d870 1
+a870 1
+	y = dbl2big(RFLOAT(y)->value);
+d874 1
+a874 1
+	return num_coerce_bin(x, y);
+d876 1
+a876 1
+    bigdivmod(x, y, 0, &z);
+d882 15
+a896 1
+big_divmod(x, y)
+d903 1
+a903 1
+	y = int2big(FIX2INT(y));
+d907 1
+a907 1
+	y = dbl2big(RFLOAT(y)->value);
+d914 1
+a914 1
+	return num_coerce_bin(x, y);
+d916 1
+a916 1
+    bigdivmod(x, y, &div, &mod);
+d918 1
+a918 1
+    return assoc_new(div, mod);;
+d922 1
+a922 1
+big_pow(x, y)
+d926 1
+a926 1
+    VALUE z;
+d935 2
+a936 2
+	if (RBIGNUM(y)->sign) goto pos_big;
+	d = big2dbl(y);
+d940 18
+a957 2
+	if (FIX2INT(y) > 0) goto pos_big;
+	d = (double)FIX2INT(y);
+d961 1
+a961 14
+	return num_coerce_bin(x, y);
+    }
+    return float_new(pow(big2dbl(x), d));
+
+  pos_big:
+    z = x;
+    for (;;) {
+	y = rb_funcall(y, '-', 1, INT2FIX(1));
+	if (y == INT2FIX(0)) break;
+	while (rb_funcall(y, '%', 1, INT2FIX(2)) == INT2FIX(0)) {
+	    y = rb_funcall(y, '/', 1, INT2FIX(2));
+	    x = big_mul(x, x);
+	}
+	z = big_mul(z, x);
+d963 1
+a963 1
+    return z;
+d967 2
+a968 2
+big_and(x, y)
+    struct RBignum *x, *y;
+d972 1
+a972 1
+    UINT i, l1, l2;
+d976 1
+a976 1
+	y = (struct RBignum*)int2big(FIX2INT(y));
+d982 11
+a992 11
+    if (!y->sign) {
+	y = (struct RBignum*)big_clone(y);
+	big_2comp(y);
+    }
+    if (!x->sign) {
+	x = (struct RBignum*)big_clone(x);
+	big_2comp(x);
+    }
+    if (x->len > y->len) {
+	l1 = y->len;
+	l2 = x->len;
+d995 1
+a995 1
+	sign = y->sign;
+d998 2
+a999 2
+	l1 = x->len;
+	l2 = y->len;
+d1002 1
+a1002 1
+	sign = x->sign;
+d1004 1
+a1004 1
+    z = bignew(l2, x->sign && y->sign);
+d1013 1
+a1013 1
+    if (!RBIGNUM(z)->sign) big_2comp(z);
+d1018 2
+a1019 2
+big_or(x, y)
+    struct RBignum *x, *y;
+d1023 1
+a1023 1
+    UINT i, l1, l2;
+d1027 1
+a1027 1
+	y = (struct RBignum*)int2big(FIX2INT(y));
+d1033 11
+a1043 11
+    if (!y->sign) {
+	y = (struct RBignum*)big_clone(y);
+	big_2comp(y);
+    }
+    if (!x->sign) {
+	x = (struct RBignum*)big_clone(x);
+	big_2comp(x);
+    }
+    if (x->len > y->len) {
+	l1 = y->len;
+	l2 = x->len;
+d1046 1
+a1046 1
+	sign = y->sign;
+d1049 2
+a1050 2
+	l1 = x->len;
+	l2 = y->len;
+d1053 1
+a1053 1
+	sign = x->sign;
+d1055 1
+a1055 1
+    z = bignew(l2, x->sign || y->sign);
+d1064 1
+a1064 1
+    if (!RBIGNUM(z)->sign) big_2comp(z);
+d1070 2
+a1071 2
+big_xor(x, y)
+    struct RBignum *x, *y;
+d1075 1
+a1075 1
+    UINT i, l1, l2;
+d1079 1
+a1079 1
+	y = (struct RBignum*)int2big(FIX2INT(y));
+d1085 11
+a1095 11
+    if (!y->sign) {
+	y = (struct RBignum*)big_clone(y);
+	big_2comp(y);
+    }
+    if (!x->sign) {
+	x = (struct RBignum*)big_clone(x);
+	big_2comp(x);
+    }
+    if (x->len > y->len) {
+	l1 = y->len;
+	l2 = x->len;
+d1098 1
+a1098 1
+	sign = y->sign;
+d1101 2
+a1102 2
+	l1 = x->len;
+	l2 = y->len;
+d1105 1
+a1105 1
+	sign = x->sign;
+d1107 3
+a1109 3
+    x->sign = x->sign?1:0;
+    y->sign = y->sign?1:0;
+    z = bignew(l2, !(x->sign ^ y->sign));
+d1118 1
+a1118 1
+    if (!RBIGNUM(z)->sign) big_2comp(z);
+d1123 1
+a1123 1
+static VALUE big_rshift();
+d1126 2
+a1127 3
+big_lshift(x, y)
+    struct RBignum *x;
+    VALUE y;
+d1131 2
+a1132 2
+    UINT s1 = shift/(sizeof(USHORT)*CHAR_BIT);
+    UINT s2 = shift%(sizeof(USHORT)*CHAR_BIT);
+d1135 1
+a1135 1
+    UINT len, i;
+d1137 1
+a1137 1
+    if (shift < 0) return big_rshift(x, INT2FIX(-shift));
+d1139 2
+a1140 2
+    len = x->len;
+    z = bignew(len+s1+1, x->sign);
+d1155 2
+a1156 3
+big_rshift(x, y)
+    struct RBignum *x;
+    VALUE y;
+d1160 2
+a1161 2
+    UINT s1 = shift/(sizeof(USHORT)*CHAR_BIT);
+    UINT s2 = shift%(sizeof(USHORT)*CHAR_BIT);
+d1164 2
+a1165 1
+    UINT i = x->len, j;
+d1167 3
+a1169 3
+    if (shift < 0) return big_lshift(x, INT2FIX(-shift));
+    if (s1 > x->len) {
+	if (x->sign)
+d1175 2
+a1176 2
+    i = x->len; j = i - s1;
+    z = bignew(j, x->sign);
+d1187 2
+a1188 3
+big_aref(x, y)
+    struct RBignum *x;
+    VALUE y;
+d1192 1
+a1192 1
+    UINT s1, s2;
+d1195 2
+a1196 2
+    s1 = shift/(sizeof(USHORT)*CHAR_BIT);
+    s2 = shift%(sizeof(USHORT)*CHAR_BIT);
+d1198 4
+a1201 4
+    if (!x->sign) {
+	if (s1 >= x->len) return INT2FIX(1);
+	x = (struct RBignum*)big_clone(x);
+	big_2comp(x);
+d1204 1
+a1204 1
+	if (s1 >= x->len) return INT2FIX(0);
+d1213 2
+a1214 2
+big_hash(x)
+    struct RBignum *x;
+d1216 2
+a1217 1
+    int i, len, key;
+d1221 1
+a1221 1
+    for (i=0,len=x->len; i<x->len; i++) {
+d1228 2
+a1229 3
+big_coerce(x, y)
+    struct RBignum *x;
+    VALUE y;
+d1232 1
+a1232 1
+	return assoc_new(int2big(FIX2INT(y)), x);
+d1235 2
+a1236 1
+	TypeError("can't coerce %s to Bignum", rb_class2name(CLASS_OF(y)));
+d1239 1
+d1243 2
+a1244 2
+big_abs(x)
+    struct RBignum *x;
+d1246 3
+a1248 3
+    if (!x->sign) {
+	x = (struct RBignum*)big_clone(x);
+	x->sign = 1;
+d1250 1
+a1250 1
+    return (VALUE)x;
+d1258 2
+a1259 2
+big_rand(max)
+    struct RBignum *max;
+d1262 1
+a1262 1
+    int len;
+d1264 1
+a1264 1
+    len = max->len;
+d1274 8
+a1281 1
+    return big_mod(v, max);
+d1285 2
+a1286 2
+big_size(big)
+    struct RBignum *big;
+d1288 1
+a1288 1
+    return INT2FIX(big->len*2);
+d1294 1
+a1294 1
+    cBignum = rb_define_class("Bignum", cInteger);
+d1296 1
+a1296 1
+    rb_undef_method(CLASS_OF(cBignum), "new");
+d1298 29
+a1326 26
+    rb_define_method(cBignum, "to_s", big_to_s, 0);
+    rb_define_method(cBignum, "coerce", big_coerce, 1);
+    rb_define_method(cBignum, "-@@", big_uminus, 0);
+    rb_define_method(cBignum, "+", big_plus, 1);
+    rb_define_method(cBignum, "-", big_minus, 1);
+    rb_define_method(cBignum, "*", big_mul, 1);
+    rb_define_method(cBignum, "/", big_div, 1);
+    rb_define_method(cBignum, "%", big_mod, 1);
+    rb_define_method(cBignum, "divmod", big_divmod, 1);
+    rb_define_method(cBignum, "**", big_pow, 1);
+    rb_define_method(cBignum, "&", big_and, 1);
+    rb_define_method(cBignum, "|", big_or, 1);
+    rb_define_method(cBignum, "^", big_xor, 1);
+    rb_define_method(cBignum, "~", big_neg, 0);
+    rb_define_method(cBignum, "<<", big_lshift, 1);
+    rb_define_method(cBignum, ">>", big_rshift, 1);
+    rb_define_method(cBignum, "[]", big_aref, 1);
+
+    rb_define_method(cBignum, "<=>", big_cmp, 1);
+    rb_define_method(cBignum, "==", big_eq, 1);
+    rb_define_method(cBignum, "eql?", big_eq, 1);
+    rb_define_method(cBignum, "hash", big_hash, 0);
+    rb_define_method(cBignum, "to_i", big_to_i, 0);
+    rb_define_method(cBignum, "to_f", big_to_f, 0);
+    rb_define_method(cBignum, "abs", big_abs, 0);
+    rb_define_method(cBignum, "size", big_size, 0);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d21 2
+a22 2
+#define DIGSPERINT ((UINT)(sizeof(INT)/sizeof(USHORT)))
+#define BIGUP(x) ((UINT)(x) << BITSPERDIG)
+d45 1
+a45 1
+    VALUE x;
+d47 1
+a47 1
+    VALUE z = bignew_1(CLASS_OF(x), RBIGNUM(x)->len, RBIGNUM(x)->sign);
+d49 2
+a50 2
+    MEMCPY(BDIGITS(z), BDIGITS(x), USHORT, RBIGNUM(x)->len);
+    return z;
+d55 1
+a55 1
+    VALUE x;
+d57 1
+a57 1
+    UINT i = RBIGNUM(x)->len;
+d67 1
+a67 1
+    } while (i < RBIGNUM(x)->len);
+d69 1
+a69 1
+	for (i=1;i<RBIGNUM(x)->len;i++) {
+d72 1
+a72 1
+	REALLOC_N(BDIGITS(x), USHORT, RBIGNUM(x)->len++);
+d74 1
+a74 1
+	ds[RBIGNUM(x)->len-1] = 1;
+d80 1
+a80 1
+    VALUE x;
+d82 1
+a82 1
+    UINT len = RBIGNUM(x)->len;
+d86 1
+a86 1
+    RBIGNUM(x)->len = ++len;
+d95 1
+a95 1
+	if (RBIGNUM(x)->sign) {
+d100 1
+a100 1
+    return x;
+d107 1
+a107 1
+    return bignorm(RBIGNUM(x));
+d116 1
+a116 1
+    VALUE big;
+d119 1
+a119 1
+    big = bignew(DIGSPERINT, 1);
+d121 1
+a121 1
+    while (i < DIGSPERINT) {
+d126 1
+a126 1
+    i = DIGSPERINT;
+d128 2
+a129 2
+    RBIGNUM(big)->len = i+1;
+    return big;
+d134 1
+a134 1
+    INT n;
+d136 2
+a137 2
+    INT neg = 0;
+    VALUE big;
+d143 1
+a143 1
+    big = uint2big(n);
+d145 1
+a145 1
+	RBIGNUM(big)->sign = 0;
+d147 1
+a147 1
+    return big;
+d160 1
+a160 1
+    INT n;
+d212 1
+a212 1
+		INT result = -(INT)val;
+d222 1
+a222 1
+    len = (len/BITSPERDIG)+1;
+d267 1
+a267 1
+    VALUE x;
+d279 1
+a279 1
+    i = RBIGNUM(x)->len;
+d308 1
+a308 1
+    s[0] = RBIGNUM(x)->sign ? '+' : '-';
+d327 2
+a328 2
+    RSTRING(ss)->len -= RBIGNUM(x)->sign?j:j-1;
+    memmove(RBIGNUM(x)->sign?s:s+1, s+j, RSTRING(ss)->len);
+d336 1
+a336 1
+    VALUE x;
+d341 1
+a341 1
+INT
+d343 1
+a343 1
+    VALUE x;
+d345 2
+a346 2
+    UINT num;
+    UINT len = RBIGNUM(x)->len;
+d357 1
+a357 1
+    if (!RBIGNUM(x)->sign) return -num;
+d396 1
+a396 1
+    VALUE x;
+d399 1
+a399 1
+    UINT i = RBIGNUM(x)->len;
+d405 1
+a405 1
+    if (!RBIGNUM(x)->sign) d = -d;
+d418 1
+a418 1
+    VALUE x, y;
+d420 1
+a420 1
+    int xlen = RBIGNUM(x)->len;
+d424 1
+a424 1
+	y = int2big(FIX2INT(y));
+d434 6
+a439 6
+    if (RBIGNUM(x)->sign > RBIGNUM(y)->sign) return INT2FIX(1);
+    if (RBIGNUM(x)->sign < RBIGNUM(y)->sign) return INT2FIX(-1);
+    if (xlen < RBIGNUM(y)->len)
+	return (RBIGNUM(x)->sign) ? INT2FIX(-1) : INT2FIX(1);
+    if (xlen > RBIGNUM(y)->len)
+	return (RBIGNUM(x)->sign) ? INT2FIX(1) : INT2FIX(-1);
+d444 2
+a445 2
+	(RBIGNUM(x)->sign ? INT2FIX(1) : INT2FIX(-1)) :
+	    (RBIGNUM(x)->sign ? INT2FIX(-1) : INT2FIX(1));
+d458 1
+a458 1
+    VALUE x;
+d462 1
+a462 1
+    RBIGNUM(z)->sign = !RBIGNUM(x)->sign;
+d469 1
+a469 1
+    VALUE x;
+d472 1
+a472 1
+    UINT i = RBIGNUM(x)->len;
+d475 1
+a475 1
+    if (!RBIGNUM(x)->sign) big_2comp(z);
+d477 1
+a477 1
+    if (RBIGNUM(x)->sign) big_2comp(z);
+d485 1
+a485 1
+    VALUE x, y;
+d487 1
+a487 1
+    VALUE z = 0;
+d492 1
+a492 1
+    i = RBIGNUM(x)->len;
+d494 1
+a494 1
+    if (RBIGNUM(x)->len < RBIGNUM(y)->len) {
+d497 1
+a497 1
+    else if (RBIGNUM(x)->len == RBIGNUM(y)->len) {
+d510 1
+a510 1
+    z = bignew(RBIGNUM(x)->len, (z == 0)?1:0);
+d513 1
+a513 1
+    for (i = 0, num = 0; i < RBIGNUM(y)->len; i++) { 
+d518 1
+a518 1
+    while (num && i < RBIGNUM(x)->len) {
+d523 1
+a523 1
+    while (i < RBIGNUM(x)->len) {
+d533 1
+a533 1
+    VALUE x, y;
+d536 1
+a536 1
+    VALUE z;
+d539 2
+a540 3
+
+    if (RBIGNUM(x)->sign == (RBIGNUM(y)->sign ^ sign)) {
+	if (RBIGNUM(y)->sign == sign) return bigsub(y, x);
+d544 2
+a545 3
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	len = RBIGNUM(x)->len + 1;
+        z = x; x = y; y = z;
+d548 1
+a548 1
+	len = RBIGNUM(y)->len + 1;
+d550 1
+a550 1
+    z = bignew(len, sign==RBIGNUM(y)->sign);
+d552 5
+a556 3
+    len = RBIGNUM(x)->len;
+    for (i = 0, num = 0; i < len; i++) {
+	num += (long)(BDIGITS(x)[i] + BDIGITS(y)[i]);
+d560 1
+a560 2
+    len = RBIGNUM(y)->len;
+    while (num && i < len) {
+d565 1
+a565 1
+    while (i < len) {
+d614 1
+a614 1
+    VALUE x, y;
+d621 1
+a621 1
+    if (FIXNUM_P(x)) x = int2big(FIX2INT(x));
+d624 1
+a624 1
+	y = int2big(FIX2INT(y));
+d637 2
+a638 2
+    j = RBIGNUM(x)->len + RBIGNUM(y)->len + 1;
+    z = bignew(j, RBIGNUM(x)->sign==RBIGNUM(y)->sign);
+d641 1
+a641 1
+    for (i = 0; i < RBIGNUM(x)->len; i++) {
+d645 1
+a645 1
+	for (j = 0; j < RBIGNUM(y)->len; j++) {
+d661 1
+a661 1
+    VALUE x, y;
+d664 1
+a664 1
+    UINT nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len, i, j;
+d691 1
+a691 1
+	    if (!RBIGNUM(y)->sign) t2 = -t2;
+d696 1
+a696 1
+    z = bignew(nx==ny?nx+2:nx+1, RBIGNUM(x)->sign==RBIGNUM(y)->sign);
+d701 1
+a701 1
+	y = big_clone(y);
+d774 1
+a774 1
+	RBIGNUM(*mod)->sign = RBIGNUM(y)->sign;
+d900 1
+a900 1
+    VALUE x, y;
+d908 1
+a908 1
+	y = int2big(FIX2INT(y));
+d914 2
+a915 2
+    if (!RBIGNUM(y)->sign) {
+	y = big_clone(y);
+d918 2
+a919 2
+    if (!RBIGNUM(x)->sign) {
+	x = big_clone(x);
+d922 3
+a924 3
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+d927 1
+a927 1
+	sign = RBIGNUM(y)->sign;
+d930 2
+a931 2
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+d934 1
+a934 1
+	sign = RBIGNUM(x)->sign;
+d936 1
+a936 1
+    z = bignew(l2, RBIGNUM(x)->sign && RBIGNUM(y)->sign);
+d951 1
+a951 1
+    VALUE x, y;
+d959 1
+a959 1
+	y = int2big(FIX2INT(y));
+d965 2
+a966 2
+    if (!RBIGNUM(y)->sign) {
+	y = big_clone(y);
+d969 2
+a970 2
+    if (!RBIGNUM(x)->sign) {
+	x = big_clone(x);
+d973 3
+a975 3
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+d978 1
+a978 1
+	sign = RBIGNUM(y)->sign;
+d981 2
+a982 2
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+d985 1
+a985 1
+	sign = RBIGNUM(x)->sign;
+d987 1
+a987 1
+    z = bignew(l2, RBIGNUM(x)->sign || RBIGNUM(y)->sign);
+d1003 1
+a1003 1
+    VALUE x, y;
+d1011 1
+a1011 1
+	y = int2big(FIX2INT(y));
+d1017 2
+a1018 2
+    if (!RBIGNUM(y)->sign) {
+	y = big_clone(y);
+d1021 2
+a1022 2
+    if (!RBIGNUM(x)->sign) {
+	x = big_clone(x);
+d1025 3
+a1027 3
+    if (RBIGNUM(x)->len > RBIGNUM(y)->len) {
+	l1 = RBIGNUM(y)->len;
+	l2 = RBIGNUM(x)->len;
+d1030 1
+a1030 1
+	sign = RBIGNUM(y)->sign;
+d1033 2
+a1034 2
+	l1 = RBIGNUM(x)->len;
+	l2 = RBIGNUM(y)->len;
+d1037 1
+a1037 1
+	sign = RBIGNUM(x)->sign;
+d1039 3
+a1041 3
+    RBIGNUM(x)->sign = RBIGNUM(x)->sign?1:0;
+    RBIGNUM(y)->sign = RBIGNUM(y)->sign?1:0;
+    z = bignew(l2, !(RBIGNUM(x)->sign ^ RBIGNUM(y)->sign));
+d1059 2
+a1060 1
+    VALUE x, y;
+d1064 2
+a1065 2
+    UINT s1 = shift/BITSPERDIG;
+    UINT s2 = shift%BITSPERDIG;
+d1072 2
+a1073 2
+    len = RBIGNUM(x)->len;
+    z = bignew(len+s1+1, RBIGNUM(x)->sign);
+d1089 2
+a1090 1
+    VALUE x, y;
+d1094 2
+a1095 2
+    UINT s1 = shift/BITSPERDIG;
+    UINT s2 = shift%BITSPERDIG;
+d1098 1
+a1098 2
+    UINT i = RBIGNUM(x)->len;
+    UINT j;
+d1101 2
+a1102 2
+    if (s1 > RBIGNUM(x)->len) {
+	if (RBIGNUM(x)->sign)
+d1108 2
+a1109 2
+    i = RBIGNUM(x)->len; j = i - s1;
+    z = bignew(j, RBIGNUM(x)->sign);
+d1121 2
+a1122 1
+    VALUE x, y;
+d1129 2
+a1130 2
+    s1 = shift/BITSPERDIG;
+    s2 = shift%BITSPERDIG;
+d1132 3
+a1134 3
+    if (!RBIGNUM(x)->sign) {
+	if (s1 >= RBIGNUM(x)->len) return INT2FIX(1);
+	x = big_clone(x);
+d1138 1
+a1138 1
+	if (s1 >= RBIGNUM(x)->len) return INT2FIX(0);
+d1148 1
+a1148 1
+    VALUE x;
+d1154 1
+a1154 1
+    for (i=0,len=RBIGNUM(x)->len; i<RBIGNUM(x)->len; i++) {
+d1162 2
+a1163 1
+    VALUE x, y;
+d1176 1
+a1176 1
+    VALUE x;
+d1178 3
+a1180 3
+    if (!RBIGNUM(x)->sign) {
+	x = big_clone(x);
+	RBIGNUM(x)->sign = 1;
+d1191 1
+a1191 1
+    VALUE max;
+d1196 1
+a1196 1
+    len = RBIGNUM(max)->len;
+d1211 1
+a1211 1
+    VALUE big;
+d1213 1
+a1213 1
+    return INT2FIX(RBIGNUM(big)->len*sizeof(USHORT));
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:09 $
+d12 1
+a13 1
+#include <ctype.h>
+d15 2
+a16 2
+VALUE rb_cBignum;
+typedef unsigned short USHORT;
+d19 1
+a19 1
+#define BITSPERDIG (sizeof(short)*CHAR_BIT)
+d21 4
+a24 4
+#define DIGSPERINT ((unsigned int)(sizeof(long)/sizeof(short)))
+#define BIGUP(x) ((unsigned long)(x) << BITSPERDIG)
+#define BIGDN(x) (((x)<0) ? ~((~(x))>>BITSPERDIG) : (x)>>BITSPERDIG)
+#define BIGLO(x) ((USHORT)((x) & (BIGRAD-1)))
+d27 3
+a29 3
+bignew_1(klass, len, sign)
+    VALUE klass;
+    size_t len;
+d33 1
+a33 1
+    OBJSETUP(big, klass, T_BIGNUM);
+d41 1
+a41 1
+#define bignew(len,sign) bignew_1(rb_cBignum,len,sign)
+d44 1
+a44 1
+rb_big_clone(x)
+d54 1
+a54 1
+rb_big_2comp(x)			/* get 2's complement */
+d57 1
+a57 1
+    int i = RBIGNUM(x)->len;
+d64 1
+a64 1
+	num += ds[i];
+d69 1
+a69 1
+	for (i=1; i<RBIGNUM(x)->len; i++) {
+d82 1
+a82 1
+    size_t len = RBIGNUM(x)->len;
+d88 3
+a90 1
+    if (len*sizeof(USHORT) <= sizeof(VALUE)) {
+d95 2
+a96 5
+	if (num >= 0) {
+	    if (RBIGNUM(x)->sign) {
+		if (POSFIXABLE(num)) return INT2FIX(num);
+	    }
+	    else if (NEGFIXABLE(-(long)num)) return INT2FIX(-(long)num);
+d98 1
+d104 1
+a104 1
+rb_big_norm(x)
+d107 1
+a107 1
+    return bignorm(x);
+d111 2
+a112 2
+rb_uint2big(n)
+    unsigned long n;
+d114 1
+a114 1
+    unsigned int i = 0;
+d133 2
+a134 2
+rb_int2big(n)
+    long n;
+d136 1
+a136 1
+    long neg = 0;
+d143 1
+a143 1
+    big = rb_uint2big(n);
+d151 2
+a152 2
+rb_uint2inum(n)
+    unsigned long n;
+d155 1
+a155 1
+    return rb_uint2big(n);
+d159 2
+a160 2
+rb_int2inum(n)
+    long n;
+d163 1
+a163 1
+    return rb_int2big(n);
+d167 2
+a168 2
+rb_str2inum(str, base)
+    char *str;
+d173 1
+a173 2
+    size_t len, blen = 1;
+    int i;
+d177 2
+a178 6
+    while (ISSPACE(*str)) str++;
+
+    if (*str == '+') {
+	str++;
+    }
+    else if (*str == '-') {
+d198 1
+d200 1
+a200 2
+	while (str[0] == '0') str++;
+	len = 3*strlen(str)*sizeof(char);
+d203 1
+a203 5
+	if (base == 16 && str[0] == '0' && (str[1] == 'x'||str[1] == 'X')) {
+	    str += 2;
+	}
+	while (str[0] == '0') str++;
+	len = 4*strlen(str)*sizeof(char);
+d207 1
+a207 1
+	unsigned int val = strtoul((char*)str, 0, base);
+d212 1
+a212 1
+		long result = -(long)val;
+d217 1
+a217 1
+	    VALUE big = rb_uint2big(val);
+d266 1
+a266 1
+rb_big2str(x, base)
+d272 1
+a272 1
+    unsigned int i, j, hbase;
+d274 1
+a274 1
+    char *s, c;
+d277 1
+a277 1
+	return rb_fix2str(x, base);
+d280 1
+a280 1
+    if (i == 0) return rb_str_new2("0");
+d300 1
+a300 1
+	rb_raise(rb_eArgError, "bignum cannot treat base %d", base);
+d303 1
+a303 1
+    t = rb_big_clone(x);
+d305 1
+a305 1
+    ss = rb_str_new(0, j);
+d314 1
+a314 1
+	    ds[k] = (USHORT)(num / hbase);
+d320 1
+a320 1
+	    c = (char)(num % base);
+d335 1
+a335 1
+rb_big_to_s(x)
+d338 1
+a338 1
+    return rb_big2str(x, 10);
+d341 2
+a342 2
+unsigned long
+rb_big2ulong(x)
+d345 2
+a346 2
+    unsigned long num;
+    size_t len = RBIGNUM(x)->len;
+d350 1
+a350 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `uint'");
+d357 1
+d361 2
+a362 15
+long
+rb_big2long(x)
+    VALUE x;
+{
+    unsigned long num = rb_big2ulong(x);
+
+    if ((long)num < 0) {
+	rb_raise(rb_eArgError, "bignum too big to convert into `int'");
+    }
+    if (!RBIGNUM(x)->sign) return -(long)num;
+    return num;
+}
+
+static VALUE
+rb_big_to_i(x)
+d369 1
+a369 1
+rb_dbl2big(d)
+d372 1
+a372 1
+    unsigned int i = 0;
+d388 1
+a388 1
+	digits[i] = (USHORT)c;
+d395 1
+a395 1
+rb_big2dbl(x)
+d399 1
+a399 1
+    size_t i = RBIGNUM(x)->len;
+d409 2
+a410 2
+static VALUE
+rb_big_to_f(x)
+d413 1
+a413 1
+    return rb_float_new(rb_big2dbl(x));
+d417 1
+a417 1
+rb_big_cmp(x, y)
+d420 1
+a420 1
+    size_t xlen = RBIGNUM(x)->len;
+d424 1
+a424 1
+	y = rb_int2big(FIX2LONG(y));
+d431 1
+a431 1
+	return rb_num_coerce_bin(x, y);
+d449 1
+a449 1
+rb_big_eq(x, y)
+d452 2
+a453 2
+    if (rb_big_cmp(x, y) == INT2FIX(0)) return Qtrue;
+    return Qfalse;
+d457 1
+a457 1
+rb_big_uminus(x)
+d460 1
+a460 1
+    VALUE z = rb_big_clone(x);
+d468 1
+a468 1
+rb_big_neg(x)
+d471 2
+a472 2
+    VALUE z = rb_big_clone(x);
+    size_t i = RBIGNUM(x)->len;
+d475 1
+a475 1
+    if (!RBIGNUM(x)->sign) rb_big_2comp(z);
+d477 1
+a477 1
+    if (RBIGNUM(x)->sign) rb_big_2comp(z);
+d490 1
+a490 1
+    size_t i;
+d538 1
+a538 1
+    size_t i, len;
+d540 2
+a541 3
+    sign = (sign == RBIGNUM(y)->sign);
+    if (RBIGNUM(x)->sign != sign) {
+	if (sign) return bigsub(y, x);
+d552 1
+a552 1
+    z = bignew(len, sign);
+d556 1
+a556 1
+	num += BDIGITS(x)[i] + BDIGITS(y)[i];
+d570 1
+a570 1
+    BDIGITS(z)[i] = (USHORT)num;
+d576 1
+a576 1
+rb_big_plus(x, y)
+d581 1
+a581 1
+	y = rb_int2big(FIX2LONG(y));
+d587 1
+a587 1
+	return rb_float_new(rb_big2dbl(x) + RFLOAT(y)->value);
+d590 1
+a590 1
+	return rb_num_coerce_bin(x, y);
+d595 1
+a595 1
+rb_big_minus(x, y)
+d600 1
+a600 1
+	y = rb_int2big(FIX2LONG(y));
+d606 1
+a606 1
+	return rb_float_new(rb_big2dbl(x) - RFLOAT(y)->value);
+d609 1
+a609 1
+	return rb_num_coerce_bin(x, y);
+d614 1
+a614 1
+rb_big_mul(x, y)
+d617 1
+a617 1
+    size_t i, j;
+d622 1
+a622 1
+    if (FIXNUM_P(x)) x = rb_int2big(FIX2LONG(x));
+d625 1
+a625 1
+	y = rb_int2big(FIX2LONG(y));
+d632 1
+a632 1
+	return rb_float_new(rb_big2dbl(x) * RFLOAT(y)->value);
+d635 1
+a635 1
+	return rb_num_coerce_bin(x, y);
+d661 1
+a661 1
+bigdivmod(x, y, div, mod, modulo)
+a663 1
+    int modulo;
+d665 2
+a666 3
+    size_t nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len;
+    int i, j;
+    VALUE yy, z;
+d668 1
+a668 1
+    size_t t2;
+d673 1
+a673 1
+    if (ny == 0 && yds[0] == 0) rb_num_zerodiv();
+d682 1
+a682 1
+	z = rb_big_clone(x);
+d687 1
+a687 1
+	    zds[i] = (USHORT)(t2 / dd);
+d692 1
+a692 1
+	    if (!RBIGNUM(y)->sign) t2 = -(long)t2;
+d702 2
+a703 2
+	yy = rb_big_clone(y);
+	tds = BDIGITS(yy);
+d707 1
+a707 1
+	    num += (long)yds[j]*dd;
+d715 1
+a715 1
+	    num += (long)xds[j]*dd;
+d719 1
+a719 1
+	zds[j] = (USHORT)num;
+d729 1
+a729 1
+	else q = (USHORT)((BIGUP(zds[j]) + zds[j-1])/yds[ny-1]);
+d734 1
+a734 1
+		t2 += (long)yds[i] * q;
+d756 1
+a756 1
+	*div = rb_big_clone(z);
+d764 1
+a764 1
+	*mod = rb_big_clone(z);
+d770 1
+a770 1
+		zds[i] = (USHORT)(t2 / dd);
+d775 1
+a775 10
+	RBIGNUM(*mod)->sign = RBIGNUM(x)->sign;
+	if (modulo && RBIGNUM(x)->sign != RBIGNUM(y)->sign) {
+	    size_t len = ny;
+	    zds = BDIGITS(*mod);
+	    while (len-- && !zds[len]);
+	    if (len > 0) {
+		*mod = bigadd(*mod, y, 1);
+		return;
+	    }
+	}
+d781 1
+a781 1
+rb_big_div(x, y)
+d788 1
+a788 1
+	y = rb_int2big(FIX2LONG(y));
+d795 1
+a795 1
+	return rb_float_new(rb_big2dbl(x) / RFLOAT(y)->value);
+d798 1
+a798 1
+	return rb_num_coerce_bin(x, y);
+d800 1
+a800 1
+    bigdivmod(x, y, &z, 0, 0);
+a804 1
+
+d806 1
+a806 1
+rb_big_modulo(x, y, modulo)
+a807 1
+    int modulo;
+d813 1
+a813 1
+	y = rb_int2big(FIX2LONG(y));
+d820 1
+a820 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d824 1
+a824 1
+	return rb_num_coerce_bin(x, y);
+d826 1
+a826 1
+    bigdivmod(x, y, 0, &z, modulo);
+d832 1
+a832 15
+rb_big_mod(x, y)
+    VALUE x, y;
+{
+    return rb_big_modulo(x, y, 1);
+}
+
+static VALUE
+rb_big_remainder(x, y)
+    VALUE x, y;
+{
+    return rb_big_modulo(x, y, 0);
+}
+
+static VALUE
+rb_big_divmod(x, y)
+d839 1
+a839 1
+	y = rb_int2big(FIX2LONG(y));
+d843 1
+a843 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d850 1
+a850 1
+	return rb_num_coerce_bin(x, y);
+d852 1
+a852 1
+    bigdivmod(x, y, &div, &mod, 1);
+d854 1
+a854 1
+    return rb_assoc_new(div, mod);;
+d858 1
+a858 1
+rb_big_pow(x, y)
+d862 1
+a862 1
+    long yy;
+d871 2
+a872 2
+	rb_warn("in a**b, b may be too big");
+	d = rb_big2dbl(y);
+d876 2
+a877 17
+	yy = NUM2LONG(y);
+	if (yy > 0) {
+	    VALUE z;
+
+	    z = x;
+	    for (;;) {
+		yy = yy - 1;
+		if (yy == 0) break;
+		while (yy % 2 == 0) {
+		    yy = yy / 2;
+		    x = rb_big_mul(x, x);
+		}
+		z = rb_big_mul(z, x);
+	    }
+	    return z;
+	}
+	d = (double)yy;
+d881 14
+a894 1
+	return rb_num_coerce_bin(x, y);
+d896 1
+a896 1
+    return rb_float_new(pow(rb_big2dbl(x), d));
+d900 1
+a900 1
+rb_big_and(x, y)
+d905 1
+a905 1
+    size_t i, l1, l2;
+d909 1
+a909 1
+	y = rb_int2big(FIX2LONG(y));
+d916 2
+a917 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d920 2
+a921 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d946 1
+a946 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d951 1
+a951 1
+rb_big_or(x, y)
+d956 1
+a956 1
+    unsigned int i, l1, l2;
+d960 1
+a960 1
+	y = rb_int2big(FIX2LONG(y));
+d967 2
+a968 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d971 2
+a972 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d997 1
+a997 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1003 1
+a1003 1
+rb_big_xor(x, y)
+d1008 1
+a1008 1
+    unsigned int i, l1, l2;
+d1012 1
+a1012 1
+	y = rb_int2big(FIX2LONG(y));
+d1019 2
+a1020 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d1023 2
+a1024 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1051 1
+a1051 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1056 1
+a1056 1
+static VALUE rb_big_rshift _((VALUE,VALUE));
+d1059 1
+a1059 1
+rb_big_lshift(x, y)
+d1064 2
+a1065 2
+    size_t s1 = shift/BITSPERDIG;
+    size_t s2 = shift%BITSPERDIG;
+d1068 1
+a1068 1
+    size_t len, i;
+d1070 1
+a1070 1
+    if (shift < 0) return rb_big_rshift(x, INT2FIX(-shift));
+d1088 1
+a1088 1
+rb_big_rshift(x, y)
+d1093 2
+a1094 2
+    size_t s1 = shift/BITSPERDIG;
+    size_t s2 = shift%BITSPERDIG;
+d1097 2
+a1098 2
+    size_t i = RBIGNUM(x)->len;
+    size_t j;
+d1100 1
+a1100 1
+    if (shift < 0) return rb_big_lshift(x, INT2FIX(-shift));
+d1120 1
+a1120 1
+rb_big_aref(x, y)
+d1125 1
+a1125 1
+    size_t s1, s2;
+d1133 2
+a1134 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1146 1
+a1146 1
+rb_big_hash(x)
+d1149 1
+a1149 2
+    size_t i, len;
+    int key;
+d1160 1
+a1160 1
+rb_big_coerce(x, y)
+d1164 1
+a1164 1
+	return rb_assoc_new(rb_int2big(FIX2LONG(y)), x);
+d1167 1
+a1167 2
+	rb_raise(rb_eTypeError, "can't coerce %s to Bignum",
+		 rb_class2name(CLASS_OF(y)));
+a1169 1
+    return Qnil;
+d1173 1
+a1173 1
+rb_big_abs(x)
+d1177 1
+a1177 1
+	x = rb_big_clone(x);
+d1180 1
+a1180 1
+    return x;
+d1188 1
+a1188 1
+rb_big_rand(max)
+d1192 1
+a1192 1
+    size_t len;
+d1204 1
+a1204 1
+    return rb_big_mod((VALUE)v, max);
+d1208 1
+a1208 1
+rb_big_size(big)
+a1213 7
+static VALUE
+rb_big_zero_p(big)
+    VALUE big;
+{
+    return Qfalse;
+}
+
+d1217 1
+a1217 1
+    rb_cBignum = rb_define_class("Bignum", rb_cInteger);
+d1219 1
+a1219 1
+    rb_undef_method(CLASS_OF(rb_cBignum), "new");
+d1221 26
+a1246 29
+    rb_define_method(rb_cBignum, "to_s", rb_big_to_s, 0);
+    rb_define_method(rb_cBignum, "coerce", rb_big_coerce, 1);
+    rb_define_method(rb_cBignum, "-@@", rb_big_uminus, 0);
+    rb_define_method(rb_cBignum, "+", rb_big_plus, 1);
+    rb_define_method(rb_cBignum, "-", rb_big_minus, 1);
+    rb_define_method(rb_cBignum, "*", rb_big_mul, 1);
+    rb_define_method(rb_cBignum, "/", rb_big_div, 1);
+    rb_define_method(rb_cBignum, "%", rb_big_mod, 1);
+    rb_define_method(rb_cBignum, "divmod", rb_big_divmod, 1);
+    rb_define_method(rb_cBignum, "remainder", rb_big_remainder, 1);
+    rb_define_method(rb_cBignum, "**", rb_big_pow, 1);
+    rb_define_method(rb_cBignum, "&", rb_big_and, 1);
+    rb_define_method(rb_cBignum, "|", rb_big_or, 1);
+    rb_define_method(rb_cBignum, "^", rb_big_xor, 1);
+    rb_define_method(rb_cBignum, "~", rb_big_neg, 0);
+    rb_define_method(rb_cBignum, "<<", rb_big_lshift, 1);
+    rb_define_method(rb_cBignum, ">>", rb_big_rshift, 1);
+    rb_define_method(rb_cBignum, "[]", rb_big_aref, 1);
+
+    rb_define_method(rb_cBignum, "<=>", rb_big_cmp, 1);
+    rb_define_method(rb_cBignum, "==", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "===", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "eql?", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "hash", rb_big_hash, 0);
+    rb_define_method(rb_cBignum, "to_i", rb_big_to_i, 0);
+    rb_define_method(rb_cBignum, "to_f", rb_big_to_f, 0);
+    rb_define_method(rb_cBignum, "abs", rb_big_abs, 0);
+    rb_define_method(rb_cBignum, "size", rb_big_size, 0);
+    rb_define_method(rb_cBignum, "zero?", rb_big_zero_p, 0);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:21 $
+d29 1
+a29 1
+    int len;
+d82 1
+a82 1
+    int len = RBIGNUM(x)->len;
+d173 1
+a173 1
+    int len, blen = 1;
+d355 1
+a355 1
+    int len = RBIGNUM(x)->len;
+d420 1
+a420 1
+    int i = RBIGNUM(x)->len;
+d441 1
+a441 1
+    int xlen = RBIGNUM(x)->len;
+d493 1
+a493 1
+    int i = RBIGNUM(x)->len;
+d511 1
+a511 1
+    int i;
+d559 1
+a559 1
+    int i, len;
+d639 1
+a639 1
+    int i, j;
+d688 1
+a688 1
+    int nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len;
+d692 1
+a692 1
+    unsigned long t2;
+d717 1
+a717 1
+	    *mod = INT2NUM(t2);
+d801 1
+a801 1
+	    int len = ny;
+d956 1
+a956 1
+    int i, l1, l2;
+d1115 2
+a1116 2
+    int s1 = shift/BITSPERDIG;
+    int s2 = shift%BITSPERDIG;
+d1119 1
+a1119 1
+    int len, i;
+d1144 2
+a1145 2
+    int s1 = shift/BITSPERDIG;
+    int s2 = shift%BITSPERDIG;
+d1148 2
+a1149 2
+    int i = RBIGNUM(x)->len;
+    int j;
+d1176 1
+a1176 1
+    int s1, s2;
+d1200 1
+a1200 1
+    int i, len;
+d1246 1
+a1246 1
+    int len;
+@
+
+
+1.1.1.3.2.2
+log
+@990128
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:08 $
+d399 1
+a399 1
+    while (!POSFIXABLE(u) || 0 != (long)u) {
+@
+
+
+1.1.1.3.2.3
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/28 07:55:29 $
+a193 4
+	    else if (*str == 'b' || *str == 'B') {
+		str++;
+		base = 2;
+	    }
+d207 1
+a207 1
+    else {			/* base == 10, 2 or 16 */
+a208 3
+	    str += 2;
+	}
+	if (base == 2 && str[0] == '0' && (str[1] == 'b'||str[1] == 'B')) {
+@
+
+
+1.1.1.3.2.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:18 $
+a945 1
+	    if (!FIXNUM_P(z)) z = bignorm(z);
+@
+
+
+1.1.1.3.2.5
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/10 08:44:23 $
+a404 7
+
+    if (isinf(d)) {
+	rb_raise(rb_eFloatDomainError, d < 0 ? "-Inifinity" : "Inifinity");
+    }
+    if (isnan(d)) {
+	rb_raise(rb_eFloatDomainError, "NaN");
+    }
+@
+
+
+1.1.1.3.2.6
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:17 $
+d1234 1
+a1234 1
+	rb_raise(rb_eTypeError, "Can't coerce %s to Bignum",
+@
+
+
+1.1.1.3.2.7
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:02 $
+d168 1
+a168 1
+    const char *str;
+d1003 1
+a1003 1
+    z = bignew(l2, RBIGNUM(x)->sign || RBIGNUM(y)->sign);
+d1054 1
+a1054 1
+    z = bignew(l2, RBIGNUM(x)->sign && RBIGNUM(y)->sign);
+@
+
+
+1.1.1.3.2.8
+log
+@alpha bug2/long
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:24 $
+d223 1
+a223 1
+	unsigned long val = strtoul((char*)str, 0, base);
+@
+
+
+1.1.1.3.2.9
+log
+@regexp null pattern
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 07:16:45 $
+d29 1
+a29 1
+    long len;
+d57 1
+a57 1
+    long i = RBIGNUM(x)->len;
+d82 1
+a82 1
+    long len = RBIGNUM(x)->len;
+d173 2
+a174 2
+    long len, blen = 1;
+    long i;
+d288 1
+a288 1
+    unsigned long i, j, hbase;
+d326 1
+a326 1
+	long k = i;
+d362 1
+a362 1
+    long len = RBIGNUM(x)->len;
+d400 1
+a400 1
+    unsigned long i = 0;
+d434 1
+a434 1
+    long i = RBIGNUM(x)->len;
+d455 1
+a455 1
+    long xlen = RBIGNUM(x)->len;
+d507 1
+a507 1
+    long i = RBIGNUM(x)->len;
+d525 1
+a525 1
+    long i;
+d573 1
+a573 1
+    long i, len;
+d653 1
+a653 1
+    long i, j;
+d702 2
+a703 2
+    long nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len;
+    long i, j;
+d815 1
+a815 1
+	    long len = ny;
+d971 1
+a971 1
+    long i, l1, l2;
+d1022 1
+a1022 1
+    unsigned long i, l1, l2;
+d1134 1
+a1134 1
+    long len, i;
+d1163 2
+a1164 2
+    long i = RBIGNUM(x)->len;
+    long j;
+d1215 1
+a1215 1
+    long i, len;
+d1261 1
+a1261 1
+    long len;
+@
+
+
+1.1.1.3.2.10
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/25 08:25:47 $
+d407 1
+a407 1
+	rb_raise(rb_eFloatDomainError, d < 0 ? "-Infinity" : "Infinity");
+a727 1
+	RBIGNUM(z)->sign = RBIGNUM(x)->sign==RBIGNUM(y)->sign;
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 04:14:43 $
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+d27 2
+a28 2
+bignew_1(klass, len, sign)
+    VALUE klass;
+d33 1
+a33 1
+    OBJSETUP(big, klass, T_BIGNUM);
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/30 10:18:24 $
+d198 1
+d200 1
+a200 2
+	while (str[0] == '0') str++;
+	len = 3*strlen(str)*sizeof(char);
+d203 1
+a203 5
+	if (base == 16 && str[0] == '0' && (str[1] == 'x'||str[1] == 'X')) {
+	    str += 2;
+	}
+	while (str[0] == '0') str++;
+	len = 4*strlen(str)*sizeof(char);
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/03 10:02:55 $
+d1184 1
+a1184 1
+    return x;
+@
+
+
+1.1.1.2.2.5
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:18 $
+a1250 2
+
+    FL_SET(cBignum, FL_PRIMITIVE);
+@
+
+
+1.1.1.2.2.6
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:42 $
+d1251 2
+@
+
+
+1.1.1.2.2.7
+log
+@modulo, frexp, ldexp
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:32:52 $
+d665 1
+a665 1
+bigdivmod(x, y, div, mod, modulo)
+a667 1
+    int modulo;
+d670 1
+a670 1
+    VALUE yy, z;
+d706 2
+a707 2
+	yy = big_clone(y);
+	tds = BDIGITS(yy);
+d779 1
+a779 10
+	RBIGNUM(*mod)->sign = RBIGNUM(x)->sign;
+	if (modulo && RBIGNUM(x)->sign != RBIGNUM(y)->sign) {
+	    int len = ny;
+	    zds = BDIGITS(*mod);
+	    while (len-- && !zds[len]);
+	    if (len > 0) {
+		*mod = bigadd(*mod, y, 1);
+		return;
+	    }
+	}
+d804 1
+a804 1
+    bigdivmod(x, y, &z, 0, 0);
+a808 1
+
+d810 1
+a810 1
+big_modulo(x, y, modulo)
+a811 1
+    int modulo;
+d830 1
+a830 1
+    bigdivmod(x, y, 0, &z, modulo);
+a835 14
+big_mod(x, y)
+    VALUE x, y;
+{
+    return big_modulo(x, y, 1);
+}
+
+static VALUE
+big_remainder(x, y)
+    VALUE x, y;
+{
+    return big_modulo(x, y, 0);
+}
+
+static VALUE
+d856 1
+a856 1
+    bigdivmod(x, y, &div, &mod, 1);
+@
+
+
+1.1.1.2.2.8
+log
+@dynamic (nested) local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/17 10:06:57 $
+a1243 7
+static VALUE
+big_zero_p(big)
+    VALUE big;
+{
+    return FALSE;
+}
+
+a1276 1
+    rb_define_method(cBignum, "zero?", big_zero_p, 0);
+@
+
+
+1.1.1.2.2.9
+log
+@1.1b9_09 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:34:05 $
+d353 2
+a354 2
+    if (len > sizeof(INT)/sizeof(USHORT))
+	ArgError("bignum too big to convert into `int'");
+a359 3
+    }
+    if ((INT)num < 0) {
+	ArgError("bignum too big to convert into `int'");
+@
+
+
+1.1.1.2.2.10
+log
+@pack/unpack unsigned
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/09 09:30:18 $
+d345 2
+a346 2
+UINT
+big2uint(x)
+d354 1
+a354 1
+	ArgError("bignum too big to convert into `uint'");
+a360 9
+    return num;
+}
+
+INT
+big2int(x)
+    VALUE x;
+{
+    UINT num = big2uint(x);
+
+@
+
+
+1.1.1.2.2.11
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/08 09:38:06 $
+a16 1
+typedef unsigned short USHORT;
+d19 1
+a19 1
+#define BITSPERDIG (sizeof(short)*CHAR_BIT)
+d21 2
+a22 2
+#define DIGSPERINT ((unsigned int)(sizeof(long)/sizeof(short)))
+#define BIGUP(x) ((unsigned int)(x) << BITSPERDIG)
+d29 1
+a29 1
+    unsigned int len;
+d57 1
+a57 1
+    unsigned int i = RBIGNUM(x)->len;
+d82 1
+a82 1
+    unsigned int len = RBIGNUM(x)->len;
+d112 1
+a112 1
+    unsigned long n;
+d114 1
+a114 1
+    unsigned int i = 0;
+d134 1
+a134 1
+    long n;
+d136 1
+a136 1
+    long neg = 0;
+d152 1
+a152 1
+    unsigned long n;
+d160 1
+a160 1
+    long n;
+d168 1
+a168 1
+    char *str;
+d173 1
+a173 1
+    unsigned int len, blen = 1, i;
+d211 1
+a211 1
+	unsigned int val = strtoul((char*)str, 0, base);
+d216 1
+a216 1
+		long result = -(long)val;
+d276 1
+a276 1
+    unsigned int i, j, hbase;
+d278 1
+a278 1
+    char *s, c;
+d345 2
+a346 2
+unsigned long
+big2ulong(x)
+d349 2
+a350 2
+    unsigned int num;
+    unsigned int len = RBIGNUM(x)->len;
+d353 1
+a353 1
+    if (len > sizeof(long)/sizeof(short))
+d364 2
+a365 2
+long
+big2long(x)
+d368 1
+a368 1
+    unsigned long num = big2ulong(x);
+d370 1
+a370 1
+    if ((long)num < 0) {
+d388 1
+a388 1
+    unsigned int i = 0;
+d415 1
+a415 1
+    unsigned int i = RBIGNUM(x)->len;
+d488 1
+a488 1
+    unsigned int i = RBIGNUM(x)->len;
+d506 1
+a506 1
+    unsigned int i;
+d554 1
+a554 1
+    unsigned int i, len;
+d633 1
+a633 1
+    unsigned int i = 0, j;
+d682 1
+a682 1
+    unsigned int nx = RBIGNUM(x)->len, ny = RBIGNUM(y)->len, i, j;
+d947 1
+a947 1
+    unsigned int i, l1, l2;
+d998 1
+a998 1
+    unsigned int i, l1, l2;
+d1050 1
+a1050 1
+    unsigned int i, l1, l2;
+d1106 2
+a1107 2
+    unsigned int s1 = shift/BITSPERDIG;
+    unsigned int s2 = shift%BITSPERDIG;
+d1110 1
+a1110 1
+    unsigned int len, i;
+d1135 2
+a1136 2
+    unsigned int s1 = shift/BITSPERDIG;
+    unsigned int s2 = shift%BITSPERDIG;
+d1139 2
+a1140 2
+    unsigned int i = RBIGNUM(x)->len;
+    unsigned int j;
+d1167 1
+a1167 1
+    unsigned int s1, s2;
+@
+
+
+1.1.1.2.2.12
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:57:50 $
+a559 12
+    }
+    else if (sign == 0) {
+      /* x - y */
+      if ((RBIGNUM(x)->sign == 0) && (RBIGNUM(y)->sign == 1)) {
+	/* x is negative and y is positive. */
+	/* return -(abs(x) + y) */
+	VALUE ret;
+	RBIGNUM(x)->sign = 1;   /* x = abs(x) */
+	ret = bigadd(x, y, 1);  /* ret = x + y  (recursive call) */
+	RBIGNUM(ret)->sign = 0; /* ret = -ret */
+	return ret;
+      }
+@
+
+
+1.1.1.2.2.13
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:25:58 $
+d12 1
+a13 1
+#include <ctype.h>
+d178 1
+a178 1
+    while (ISSPACE(*str)) str++;
+d1111 1
+a1111 1
+static VALUE big_rshift _((VALUE,VALUE));
+@
+
+
+1.1.1.2.2.14
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:55:55 $
+a1291 1
+    rb_define_method(cBignum, "remainder", big_remainder, 1);
+@
+
+
+1.1.1.2.2.15
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:30 $
+d24 1
+a24 1
+#define BIGDN(x) RSHIFT((x),BITSPERDIG)
+d350 1
+a350 1
+    unsigned long num;
+d354 1
+a354 1
+    if (len > sizeof(long)/sizeof(USHORT))
+@
+
+
+1.1.1.2.2.16
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 09:42:18 $
+d15 1
+@
+
+
+1.1.1.2.2.17
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:15 $
+d178 1
+a178 5
+
+    if (*str == '|') {
+	str++;
+    }
+    else if (*str == '-') {
+@
+
+
+1.1.1.2.2.18
+log
+@1.1b9_27
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:12 $
+d179 1
+a179 1
+    if (*str == '+') {
+@
+
+
+1.1.1.2.2.19
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/19 09:31:58 $
+d23 1
+a23 1
+#define BIGDN(x) (((x)<0) ? ~((~(x))>>BITSPERDIG) : (x)>>BITSPERDIG)
+d64 1
+a64 1
+	num += ds[i];
+d444 1
+a444 1
+	y = int2big(FIX2LONG(y));
+d588 1
+a588 1
+	num += BDIGITS(x)[i] + BDIGITS(y)[i];
+d613 1
+a613 1
+	y = int2big(FIX2LONG(y));
+d632 1
+a632 1
+	y = int2big(FIX2LONG(y));
+d654 1
+a654 1
+    if (FIXNUM_P(x)) x = int2big(FIX2LONG(x));
+d657 1
+a657 1
+	y = int2big(FIX2LONG(y));
+d740 1
+a740 1
+	    num += (long)yds[j]*dd;
+d748 1
+a748 1
+	    num += (long)xds[j]*dd;
+d767 1
+a767 1
+		t2 += (long)yds[i] * q;
+d830 1
+a830 1
+	y = int2big(FIX2LONG(y));
+d857 1
+a857 1
+	y = int2big(FIX2LONG(y));
+d897 1
+a897 1
+	y = int2big(FIX2LONG(y));
+d934 2
+a935 2
+	if (FIX2LONG(y) > 0) goto pos_big;
+	d = (double)FIX2LONG(y);
+d967 1
+a967 1
+	y = int2big(FIX2LONG(y));
+d1018 1
+a1018 1
+	y = int2big(FIX2LONG(y));
+d1070 1
+a1070 1
+	y = int2big(FIX2LONG(y));
+d1222 1
+a1222 1
+	return assoc_new(int2big(FIX2LONG(y)), x);
+@
+
+
+1.1.1.2.2.20
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:18 $
+d920 1
+a920 1
+    long yy;
+d929 1
+a929 1
+	Warn("in a**b, b may be too big");
+d934 2
+a935 17
+	yy = NUM2LONG(y);
+	if (yy > 0) {
+	    VALUE z;
+
+	    z = x;
+	    for (;;) {
+		yy = yy - 1;
+		if (yy == 0) break;
+		while (yy % 2 == 0) {
+		    yy = yy / 2;
+		    x = big_mul(x, x);
+		}
+		z = big_mul(z, x);
+	    }
+	    return z;
+	}
+	d = (double)yy;
+d942 13
+@
+
+
+1.1.1.2.2.21
+log
+@1.1b9_31
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:11 $
+d22 1
+a22 1
+#define BIGUP(x) ((unsigned long)(x) << BITSPERDIG)
+d88 3
+a90 1
+    if (len*sizeof(USHORT) <= sizeof(VALUE)) {
+d95 2
+a96 5
+	if (num >= 0) {
+	    if (RBIGNUM(x)->sign) {
+		if (POSFIXABLE(num)) return INT2FIX(num);
+	    }
+	    else if (NEGFIXABLE(-num)) return INT2FIX(-num);
+d98 1
+@
+
+
+1.1.1.2.2.22
+log
+@1.1c5
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:45 $
+d560 2
+a561 3
+    sign = (sign == RBIGNUM(y)->sign);
+    if (RBIGNUM(x)->sign != sign) {
+	if (sign) return bigsub(y, x);
+d564 12
+d584 1
+a584 1
+    z = bignew(len, sign);
+@
+
+
+1.1.1.2.2.23
+log
+@1.2.1 stable
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 09:17:26 $
+a1297 1
+    rb_define_method(cBignum, "===", big_eq, 1);
+@
+
+
+1.1.1.2.2.24
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/11 07:55:24 $
+d398 1
+a398 1
+    while (!FIXABLE(u) || 0 != (long)u) {
+@
+
+
+1.1.1.2.2.25
+log
+@1.2.4
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 03:29:20 $
+d986 1
+a986 1
+    z = bignew(l2, RBIGNUM(x)->sign || RBIGNUM(y)->sign);
+d1037 1
+a1037 1
+    z = bignew(l2, RBIGNUM(x)->sign && RBIGNUM(y)->sign);
+@
+
+
+1.1.1.2.2.21.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:45 $
+d15 1
+a15 1
+VALUE rb_cBignum;
+d41 1
+a41 1
+#define bignew(len,sign) bignew_1(rb_cBignum,len,sign)
+d44 1
+a44 1
+rb_big_clone(x)
+d54 1
+a54 1
+rb_big_2comp(x)			/* get 2's complement */
+d104 1
+a104 1
+rb_big_norm(x)
+d107 1
+a107 1
+    return bignorm(x);
+d111 1
+a111 1
+rb_uint2big(n)
+d133 1
+a133 1
+rb_int2big(n)
+d143 1
+a143 1
+    big = rb_uint2big(n);
+d151 1
+a151 1
+rb_uint2inum(n)
+d155 1
+a155 1
+    return rb_uint2big(n);
+d159 1
+a159 1
+rb_int2inum(n)
+d163 1
+a163 1
+    return rb_int2big(n);
+d167 1
+a167 1
+rb_str2inum(str, base)
+d225 1
+a225 1
+	    VALUE big = rb_uint2big(val);
+d274 1
+a274 1
+rb_big2str(x, base)
+d285 1
+a285 1
+	return rb_fix2str(x, base);
+d288 1
+a288 1
+    if (i == 0) return rb_str_new2("0");
+d308 1
+a308 1
+	rb_raise(rb_eArgError, "bignum cannot treat base %d", base);
+d311 1
+a311 1
+    t = rb_big_clone(x);
+d313 1
+a313 1
+    ss = rb_str_new(0, j);
+d343 1
+a343 1
+rb_big_to_s(x)
+d346 1
+a346 1
+    return rb_big2str(x, 10);
+d350 1
+a350 1
+rb_big2ulong(x)
+d358 1
+a358 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `uint'");
+d369 1
+a369 1
+rb_big2long(x)
+d372 1
+a372 1
+    unsigned long num = rb_big2ulong(x);
+d375 1
+a375 1
+	rb_raise(rb_eArgError, "bignum too big to convert into `int'");
+d381 2
+a382 2
+static VALUE
+rb_big_to_i(x)
+d389 1
+a389 1
+rb_dbl2big(d)
+d415 1
+a415 1
+rb_big2dbl(x)
+d429 2
+a430 2
+static VALUE
+rb_big_to_f(x)
+d433 1
+a433 1
+    return rb_float_new(rb_big2dbl(x));
+d437 1
+a437 1
+rb_big_cmp(x, y)
+d444 1
+a444 1
+	y = rb_int2big(FIX2LONG(y));
+d451 1
+a451 1
+	return rb_num_coerce_bin(x, y);
+d469 1
+a469 1
+rb_big_eq(x, y)
+d472 2
+a473 2
+    if (rb_big_cmp(x, y) == INT2FIX(0)) return Qtrue;
+    return Qfalse;
+d477 1
+a477 1
+rb_big_uminus(x)
+d480 1
+a480 1
+    VALUE z = rb_big_clone(x);
+d488 1
+a488 1
+rb_big_neg(x)
+d491 1
+a491 1
+    VALUE z = rb_big_clone(x);
+d495 1
+a495 1
+    if (!RBIGNUM(x)->sign) rb_big_2comp(z);
+d497 1
+a497 1
+    if (RBIGNUM(x)->sign) rb_big_2comp(z);
+d560 2
+a561 3
+    sign = (sign == RBIGNUM(y)->sign);
+    if (RBIGNUM(x)->sign != sign) {
+	if (sign) return bigsub(y, x);
+d564 12
+d584 1
+a584 1
+    z = bignew(len, sign);
+d608 1
+a608 1
+rb_big_plus(x, y)
+d613 1
+a613 1
+	y = rb_int2big(FIX2LONG(y));
+d619 1
+a619 1
+	return rb_float_new(rb_big2dbl(x) + RFLOAT(y)->value);
+d622 1
+a622 1
+	return rb_num_coerce_bin(x, y);
+d627 1
+a627 1
+rb_big_minus(x, y)
+d632 1
+a632 1
+	y = rb_int2big(FIX2LONG(y));
+d638 1
+a638 1
+	return rb_float_new(rb_big2dbl(x) - RFLOAT(y)->value);
+d641 1
+a641 1
+	return rb_num_coerce_bin(x, y);
+d646 1
+a646 1
+rb_big_mul(x, y)
+d654 1
+a654 1
+    if (FIXNUM_P(x)) x = rb_int2big(FIX2LONG(x));
+d657 1
+a657 1
+	y = rb_int2big(FIX2LONG(y));
+d664 1
+a664 1
+	return rb_float_new(rb_big2dbl(x) * RFLOAT(y)->value);
+d667 1
+a667 1
+	return rb_num_coerce_bin(x, y);
+d706 1
+a706 1
+    if (ny == 0 && yds[0] == 0) rb_num_zerodiv();
+d715 1
+a715 1
+	z = rb_big_clone(x);
+d735 1
+a735 1
+	yy = rb_big_clone(y);
+d789 1
+a789 1
+	*div = rb_big_clone(z);
+d797 1
+a797 1
+	*mod = rb_big_clone(z);
+d823 1
+a823 1
+rb_big_div(x, y)
+d830 1
+a830 1
+	y = rb_int2big(FIX2LONG(y));
+d837 1
+a837 1
+	return rb_float_new(rb_big2dbl(x) / RFLOAT(y)->value);
+d840 1
+a840 1
+	return rb_num_coerce_bin(x, y);
+d849 1
+a849 1
+rb_big_modulo(x, y, modulo)
+d857 1
+a857 1
+	y = rb_int2big(FIX2LONG(y));
+d864 1
+a864 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d868 1
+a868 1
+	return rb_num_coerce_bin(x, y);
+d876 1
+a876 1
+rb_big_mod(x, y)
+d879 1
+a879 1
+    return rb_big_modulo(x, y, 1);
+d883 1
+a883 1
+rb_big_remainder(x, y)
+d886 1
+a886 1
+    return rb_big_modulo(x, y, 0);
+d890 1
+a890 1
+rb_big_divmod(x, y)
+d897 1
+a897 1
+	y = rb_int2big(FIX2LONG(y));
+d901 1
+a901 1
+	y = rb_dbl2big(RFLOAT(y)->value);
+d908 1
+a908 1
+	return rb_num_coerce_bin(x, y);
+d912 1
+a912 1
+    return rb_assoc_new(div, mod);;
+d916 1
+a916 1
+rb_big_pow(x, y)
+d929 2
+a930 2
+	rb_warn("in a**b, b may be too big");
+	d = rb_big2dbl(y);
+d944 1
+a944 1
+		    x = rb_big_mul(x, x);
+d946 1
+a946 1
+		z = rb_big_mul(z, x);
+d954 1
+a954 1
+	return rb_num_coerce_bin(x, y);
+d956 1
+a956 1
+    return rb_float_new(pow(rb_big2dbl(x), d));
+d960 1
+a960 1
+rb_big_and(x, y)
+d969 1
+a969 1
+	y = rb_int2big(FIX2LONG(y));
+d976 2
+a977 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d980 2
+a981 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1006 1
+a1006 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1011 1
+a1011 1
+rb_big_or(x, y)
+d1020 1
+a1020 1
+	y = rb_int2big(FIX2LONG(y));
+d1027 2
+a1028 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d1031 2
+a1032 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1057 1
+a1057 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1063 1
+a1063 1
+rb_big_xor(x, y)
+d1072 1
+a1072 1
+	y = rb_int2big(FIX2LONG(y));
+d1079 2
+a1080 2
+	y = rb_big_clone(y);
+	rb_big_2comp(y);
+d1083 2
+a1084 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1111 1
+a1111 1
+    if (!RBIGNUM(z)->sign) rb_big_2comp(z);
+d1116 1
+a1116 1
+static VALUE rb_big_rshift _((VALUE,VALUE));
+d1119 1
+a1119 1
+rb_big_lshift(x, y)
+d1130 1
+a1130 1
+    if (shift < 0) return rb_big_rshift(x, INT2FIX(-shift));
+d1148 1
+a1148 1
+rb_big_rshift(x, y)
+d1160 1
+a1160 1
+    if (shift < 0) return rb_big_lshift(x, INT2FIX(-shift));
+d1180 1
+a1180 1
+rb_big_aref(x, y)
+d1193 2
+a1194 2
+	x = rb_big_clone(x);
+	rb_big_2comp(x);
+d1206 1
+a1206 1
+rb_big_hash(x)
+d1220 1
+a1220 1
+rb_big_coerce(x, y)
+d1224 1
+a1224 1
+	return rb_assoc_new(rb_int2big(FIX2LONG(y)), x);
+d1227 1
+a1227 2
+	rb_raise(rb_eTypeError, "can't coerce %s to Bignum",
+		 rb_class2name(CLASS_OF(y)));
+d1233 1
+a1233 1
+rb_big_abs(x)
+d1237 1
+a1237 1
+	x = rb_big_clone(x);
+d1248 1
+a1248 1
+rb_big_rand(max)
+d1264 1
+a1264 1
+    return rb_big_mod((VALUE)v, max);
+d1268 1
+a1268 1
+rb_big_size(big)
+d1275 1
+a1275 1
+rb_big_zero_p(big)
+d1278 1
+a1278 1
+    return Qfalse;
+d1284 1
+a1284 1
+    rb_cBignum = rb_define_class("Bignum", rb_cInteger);
+d1286 1
+a1286 1
+    rb_undef_method(CLASS_OF(rb_cBignum), "new");
+d1288 28
+a1315 28
+    rb_define_method(rb_cBignum, "to_s", rb_big_to_s, 0);
+    rb_define_method(rb_cBignum, "coerce", rb_big_coerce, 1);
+    rb_define_method(rb_cBignum, "-@@", rb_big_uminus, 0);
+    rb_define_method(rb_cBignum, "+", rb_big_plus, 1);
+    rb_define_method(rb_cBignum, "-", rb_big_minus, 1);
+    rb_define_method(rb_cBignum, "*", rb_big_mul, 1);
+    rb_define_method(rb_cBignum, "/", rb_big_div, 1);
+    rb_define_method(rb_cBignum, "%", rb_big_mod, 1);
+    rb_define_method(rb_cBignum, "divmod", rb_big_divmod, 1);
+    rb_define_method(rb_cBignum, "remainder", rb_big_remainder, 1);
+    rb_define_method(rb_cBignum, "**", rb_big_pow, 1);
+    rb_define_method(rb_cBignum, "&", rb_big_and, 1);
+    rb_define_method(rb_cBignum, "|", rb_big_or, 1);
+    rb_define_method(rb_cBignum, "^", rb_big_xor, 1);
+    rb_define_method(rb_cBignum, "~", rb_big_neg, 0);
+    rb_define_method(rb_cBignum, "<<", rb_big_lshift, 1);
+    rb_define_method(rb_cBignum, ">>", rb_big_rshift, 1);
+    rb_define_method(rb_cBignum, "[]", rb_big_aref, 1);
+
+    rb_define_method(rb_cBignum, "<=>", rb_big_cmp, 1);
+    rb_define_method(rb_cBignum, "==", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "eql?", rb_big_eq, 1);
+    rb_define_method(rb_cBignum, "hash", rb_big_hash, 0);
+    rb_define_method(rb_cBignum, "to_i", rb_big_to_i, 0);
+    rb_define_method(rb_cBignum, "to_f", rb_big_to_f, 0);
+    rb_define_method(rb_cBignum, "abs", rb_big_abs, 0);
+    rb_define_method(rb_cBignum, "size", rb_big_size, 0);
+    rb_define_method(rb_cBignum, "zero?", rb_big_zero_p, 0);
+@
+
+
+1.1.1.2.2.21.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 09:17:26 $
+@
+
+
+1.1.1.2.2.21.2.3
+log
+@*** empty log message ***
+@
+text
+@@

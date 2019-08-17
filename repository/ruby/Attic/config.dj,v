@@ -1,0 +1,162 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_1d1:1.1.1.1.4.1
+	v1_1d0:1.1.1.1.4.1
+	v1_1c6:1.1.1.1.4.1
+	v1_1d-start:1.1.1.1.4.1
+	v1_1c5:1.1.1.1.4.1
+	v1_1dev:1.1.1.1.4.1.0.2
+	v1_1c4:1.1.1.1.4.1
+	v1_1c3:1.1.1.1.4.1
+	v1_1c2:1.1.1.1.4.1
+	v1_1c1:1.1.1.1.4.1
+	v1_1c0:1.1.1.1.4.1
+	v1_1b9_31:1.1.1.1.4.1
+	v1_1b9_30:1.1.1.1.4.1
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.06.09.52;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	;
+
+1.1.1.1.4.1
+date	98.05.14.04.10.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.11.09.09.11.48;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@#define THREAD 1
+#define HAVE_DIRENT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_PWD_H 1
+#define HAVE_SYS_TIME_H 1
+#define HAVE_SYS_TIMES_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_SYS_WAIT_H 1
+#define HAVE_STRING_H 1
+#define HAVE_UTIME_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_ST_BLKSIZE 1
+#define HAVE_ST_RDEV 1
+#define GETGROUPS_T gid_t
+#define RETSIGTYPE void
+#define HAVE_ALLOCA 1
+#define vfork fork
+#define HAVE_FMOD 1
+#define HAVE_RANDOM 1
+#define HAVE_WAITPID 1
+#define HAVE_GETCWD 1
+#define HAVE_TRUNCATE 1
+#define HAVE_CHSIZE 1
+#define HAVE_TIMES 1
+#define HAVE_UTIMES 1
+/* #define HAVE_FCNTL 1 */
+/* #define HAVE_SETITIMER 1 */
+#define HAVE_GETGROUPS 1
+#define HAVE_SIGPROCMASK 1
+#define FILE_COUNT _cnt
+#define DLEXT ".so"
+#define RUBY_LIB ";/usr/local/lib/ruby;."
+#define RUBY_ARCHLIB "/usr/local/lib/ruby/i386-djgpp"
+#define RUBY_PLATFORM "i386-djgpp"
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.4.1
+log
+@prototypes
+@
+text
+@a1 6
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 4
+#define SIZEOF_VOIDP 4
+#define HAVE_PROTOTYPES 1
+#define HAVE_STDARG_PROTOTYPES 1
+#define HAVE_ATTR_NORETURN 1
+@
+
+
+1.1.1.1.4.2
+log
+@1.1c7
+@
+text
+@@
+
+

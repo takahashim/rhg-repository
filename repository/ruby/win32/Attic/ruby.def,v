@@ -1,0 +1,3233 @@
+head	1.21;
+access;
+symbols
+	v1_6_3:1.21
+	ruby_1_6:1.21.0.2
+	v1_4_6:1.4.2.6
+	v1_4_5:1.4.2.5
+	v1_4_4:1.4.2.3
+	ruby_1_4_3:1.4.2.1
+	ruby1_4_3:1.4.2.1
+	v1_4_3:1.4.2.1
+	v1_5_0:1.6
+	ruby_1_4_3_pre1:1.4.2.1
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.8
+	v1_3_6_repack:1.1.1.3.2.7
+	v1_3_6:1.1.1.3.2.7
+	v1_3_5:1.1.1.3.2.7
+	v1_2_6repack:1.1.1.2.2.5
+	v1_3_4_990625:1.1.1.3.2.7
+	v1_3_4_990624:1.1.1.3.2.7
+	v1_2_6:1.1.1.2.2.5
+	v1_3_4_990611:1.1.1.3.2.6
+	v1_3_4_990531:1.1.1.3.2.5
+	v1_3_3_990518:1.1.1.3.2.5
+	v1_3_3_990513:1.1.1.3.2.5
+	v1_3_3_990507:1.1.1.3.2.5
+	v1_2_5:1.1.1.2.2.5
+	v1_2_4:1.1.1.2.2.5
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.5
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.4
+	v1_2_1repack:1.1.1.2.2.4
+	v1_2_1:1.1.1.2.2.4
+	v1_2_stable:1.1.1.2.2.4
+	v1_1d1:1.1.1.2.2.4
+	v1_1d0:1.1.1.2.2.4
+	v1_1c9_1:1.1.1.2.2.4
+	v1_1c9:1.1.1.2.2.4
+	v1_1c8:1.1.1.2.2.4
+	v1_1c7:1.1.1.2.2.4
+	v1_1c6:1.1.1.2.2.4
+	v1_1d-start:1.1.1.2.2.4
+	v1_1c5:1.1.1.2.2.4
+	v1_1dev:1.1.1.2.2.4.0.2
+	v1_1c4:1.1.1.2.2.4
+	v1_1c3:1.1.1.2.2.4
+	v1_1c2:1.1.1.2.2.4
+	v1_1c1:1.1.1.2.2.4
+	v1_1c0:1.1.1.2.2.4
+	v1_1b9_31:1.1.1.2.2.4
+	v1_1b9_30:1.1.1.2.2.4
+	v1_1b9_28:1.1.1.2.2.4
+	v1_1b9_27:1.1.1.2.2.4
+	v1_1b9_26:1.1.1.2.2.4
+	r1_1b9_25:1.1.1.2.2.3
+	r1_1b9_24:1.1.1.2.2.3
+	v1_1b9_23:1.1.1.2.2.3
+	v1_1b9_22:1.1.1.2.2.3
+	v1_1b9_20:1.1.1.2.2.3
+	v1_1b9_18:1.1.1.2.2.2
+	v1_1b9_16:1.1.1.2.2.2
+	v1_1b9_15:1.1.1.2.2.2
+	v1_1b9_13:1.1.1.2.2.2
+	v1_1b9_12:1.1.1.2.2.2
+	v1_1b9_11:1.1.1.2.2.2
+	v1_1b9_08:1.1.1.2.2.2
+	v1_1b9_07:1.1.1.2.2.2
+	r1_1b9:1.1.1.2.2.1
+	v1_1b8:1.1.1.2.2.1
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.21
+date	2000.08.03.09.55.54;	author matz;	state dead;
+branches;
+next	1.20;
+
+1.20
+date	2000.08.02.09.22.27;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.07.17.09.38.10;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.07.06.07.21.26;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.07.04.04.17.26;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.03.16.51.57;	author eban;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.28.08.27.03;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.06.14.05.30.29;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.30.04.24.17;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.25.05.55.12;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.18.04.32.13;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.16.15.50.49;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.09.04.53.16;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.03.13.07.18.45;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.29.08.05.32;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.11.04.08.39.39;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.29.09.25.32;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.22.04.30.11;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.56;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.20;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.38;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.28.07.55.30;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.15.07.31.51;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.24.04.31.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.04.12.09.59.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.06.01.06.59.20;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.06.24.04.24.08;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.08.06.06.48.25;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.08.13.05.17.43;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.02.16.06.05.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.03.26.09.09.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.05.14.04.10.39;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.06.18.07.47.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.01.21.09.04.58;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	99.10.25.05.09.13;	author matz;	state Exp;
+branches;
+next	1.4.2.2;
+
+1.4.2.2
+date	99.12.08.00.37.35;	author matz;	state Exp;
+branches;
+next	1.4.2.3;
+
+1.4.2.3
+date	2000.03.13.09.15.46;	author matz;	state Exp;
+branches;
+next	1.4.2.4;
+
+1.4.2.4
+date	2000.03.23.08.42.46;	author matz;	state Exp;
+branches;
+next	1.4.2.5;
+
+1.4.2.5
+date	2000.06.05.09.01.07;	author matz;	state Exp;
+branches;
+next	1.4.2.6;
+
+1.4.2.6
+date	2000.06.29.07.46.56;	author matz;	state Exp;
+branches;
+next	1.4.2.7;
+
+1.4.2.7
+date	2000.08.09.06.34.46;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.21
+log
+@matz - add/remove files
+@
+text
+@LIBRARY rubymw.dll
+DESCRIPTION 'win32 rubymw.dll'
+EXPORTS
+;;global objects
+;array.c
+	rb_cArray
+;bignum.c
+	rb_cBignum
+;compar.c
+	rb_mComparable
+;dir.c
+	rb_cDir
+;enum.c
+	rb_mEnumerable
+;error.c
+	rb_eException
+	rb_eSystemExit
+	rb_eInterrupt
+	rb_eSignal
+	rb_eFatal
+	rb_eStandardError
+	rb_eRuntimeError
+	rb_eSyntaxError
+	rb_eTypeError
+	rb_eArgError
+	rb_eNameError
+	rb_eIndexError
+	rb_eRangeError
+	rb_eLoadError
+	rb_eSecurityError
+	rb_eNotImpError
+	rb_eSystemCallError
+	rb_eZeroDivError
+	rb_mErrno
+	ruby_nerrs
+;eval.c
+	rb_cProc
+	ruby_safe_level
+	ruby_errinfo
+	ruby_frame
+	rb_cThread
+	rb_thread_tick
+	rb_thread_critical
+;file.c
+	rb_cFile
+	rb_mFileTest
+;gc.c
+	rb_mGC
+;hash.c
+	rb_cHash
+;io.c
+	rb_cIO
+	rb_eEOFError
+	rb_eIOError
+	rb_stdin
+	rb_stdout
+	rb_stderr
+	rb_defout
+	rb_output_fs
+	rb_rs
+	rb_output_rs
+	rb_default_rs
+;math.c
+	rb_mMath
+;numeric.c
+	rb_cNumeric
+	rb_cFloat
+	rb_cInteger
+	rb_cFixnum
+	rb_eFloatDomainError
+;object.c
+	rb_mKernel
+	rb_cObject
+	rb_cModule
+	rb_cClass
+	rb_cData
+	rb_cNilClass
+	rb_cTrueClass
+	rb_cFalseClass
+	rb_cSymbol
+;parse.c
+	ruby_sourcefile
+	ruby_sourceline
+;prec.c
+	rb_mPrecision
+;process.c
+	rb_mProcess
+;range.c
+	rb_cRange
+;re.c
+	ruby_ignorecase
+	rb_cRegexp
+;regex.c
+	re_mbctab
+;ruby.c
+	ruby_debug
+	ruby_verbose
+	rb_progname
+	rb_argv
+	rb_argv0
+;signal.c
+	rb_trap_pending
+	rb_trap_immediate
+	rb_prohibit_interrupt
+;string.c
+	rb_cString
+	rb_cStruct
+;time.c
+	rb_cTime
+
+;;procedures/methods
+;missing/alloca.c
+	alloca
+;missing/crypt.c
+	definekey
+	encrypt
+	crypt
+;missing/isinf.c
+	isinf
+;missing/isnan.c
+	isnan
+;win32/win32.c
+	NtInitialize
+	myfdopen
+	myfdclose
+	myaccept
+	mybind
+	myfdclr
+	myconnect
+	myfdset
+	myfdisset
+	myselect
+	mygetpeername
+	mygetsockname
+	mygetsockopt
+	myioctlsocket
+	mylisten
+	myrecv
+	myrecvfrom
+	mysend
+	mysendto
+	mysetsockopt
+	myshutdown
+	mysocket
+	mygethostbyaddr
+	mygethostbyname
+	mygethostname
+	mygetprotobyname
+	mygetprotobynumber
+	mygetservbyname
+	mygetservbyport
+	myget_osfhandle
+	win32_getcwd
+	win32_getenv
+;array.c
+	rb_mem_clear
+	rb_ary_freeze
+	rb_ary_new
+	rb_ary_new2
+	rb_ary_new3
+	rb_ary_new4
+	rb_assoc_new
+	rb_ary_store
+	rb_ary_push
+	rb_ary_pop
+	rb_ary_shift
+	rb_ary_unshift
+	rb_ary_entry
+	rb_ary_aref
+	rb_ary_each
+	rb_ary_join
+	rb_ary_to_s
+	rb_protect_inspect
+	rb_inspecting_p
+	rb_ary_reverse
+	rb_ary_sort_bang
+	rb_ary_sort
+	rb_ary_delete
+	rb_ary_delete_at
+	rb_ary_plus
+	rb_ary_concat
+	rb_ary_assoc
+	rb_ary_rassoc
+	rb_ary_includes
+;bignum.c
+	rb_big_clone
+	rb_big_2comp
+	rb_big_norm
+	rb_uint2big
+	rb_int2big
+	rb_uint2inum
+	rb_int2inum
+	rb_cstr2inum
+	rb_str2inum
+	rb_big2str
+	rb_big2ulong
+	rb_big2long
+	rb_dbl2big
+	rb_big2dbl
+	rb_big_plus
+	rb_big_minus
+	rb_big_mul
+	rb_big_divmod
+	rb_big_pow
+	rb_big_and
+	rb_big_or
+	rb_big_xor
+	rb_big_lshift
+	rb_big_rand
+;class.c
+	rb_class_new
+	rb_singleton_class_new
+	rb_singleton_class_clone
+	rb_singleton_class_attached
+	rb_define_class_id
+	rb_define_class
+	rb_define_class_under
+	rb_module_new
+	rb_define_module_id
+	rb_define_module
+	rb_define_module_under
+	rb_include_module
+	rb_mod_included_modules
+	rb_mod_ancestors
+	rb_class_instance_methods
+	rb_class_protected_instance_methods
+	rb_class_private_instance_methods
+	rb_obj_singleton_methods
+	rb_define_method_id
+	rb_define_method
+	rb_define_protected_method
+	rb_define_private_method
+	rb_undef_method
+	rb_singleton_class
+	rb_define_singleton_method
+	rb_define_module_function
+	rb_define_global_function
+	rb_define_alias
+	rb_define_attr
+	rb_scan_args
+;dir.c
+	rb_glob
+;dln.c
+	dln_load
+	dln_find_exe
+	dln_find_file
+;enum.c
+	rb_each
+;error.c
+	rb_compile_error
+	rb_compile_error_append
+	rb_warn
+	rb_warning
+	rb_bug
+	rb_check_type
+	rb_exc_new
+	rb_exc_new2
+	rb_exc_new3
+	rb_raise
+	rb_loaderror
+	rb_notimplement
+	rb_fatal
+	rb_sys_fail
+;eval.c
+	rb_clear_cache
+	rb_add_method
+	rb_alias
+	rb_remove_method
+	rb_disable_super
+	rb_enable_super
+	rb_method_boundp
+	rb_attr
+	rb_dvar_defined
+	rb_dvar_curr
+	rb_dvar_ref
+	rb_dvar_push
+	rb_set_safe_level
+	rb_check_safe_str
+	rb_secure
+	ruby_init
+	ruby_options
+	ruby_run
+	rb_eval_string
+	rb_eval_string_protect
+	rb_eval_string_wrap
+	rb_eval_cmd
+	rb_respond_to
+	rb_exit
+	rb_iter_break
+	rb_exc_raise
+	rb_exc_fatal
+	rb_interrupt
+	rb_jump_tag
+	rb_block_given_p
+	rb_iterator_p
+	rb_yield
+	rb_iterate
+	rb_rescue
+	rb_rescue2
+	rb_protect
+	rb_ensure
+	rb_with_disable_interrupt
+	rb_apply
+	rb_funcall
+	rb_funcall2
+	rb_funcall3
+	rb_call_super
+	rb_backtrace
+	rb_frame_last_func
+	rb_obj_instance_eval
+	rb_load
+	rb_load_protect
+	rb_provide
+	rb_f_require
+	rb_require
+	rb_obj_call_init
+	rb_class_new_instance
+	rb_extend_object
+	rb_set_end_proc
+	rb_exec_end_proc
+	rb_f_lambda
+	rb_gc_mark_threads
+	rb_thread_fd_close
+	rb_thread_schedule
+	rb_thread_wait_fd
+	rb_thread_fd_writable
+	rb_thread_wait_for
+	rb_thread_alone
+	rb_thread_select
+	rb_thread_current
+	rb_thread_main
+	rb_thread_wakeup
+	rb_thread_run
+	rb_thread_stop
+	rb_thread_polling
+	rb_thread_sleep
+	rb_thread_sleep_forever
+	rb_thread_create
+	rb_thread_scope_shared_p
+	rb_thread_interrupt
+	rb_thread_signal_raise
+	rb_thread_trap_eval
+	rb_thread_local_aref
+	rb_thread_local_aset
+	rb_catch
+	rb_throw
+;file.c
+	eaccess
+	rb_file_s_expand_path
+	rb_file_const
+	rb_find_file
+	rb_path_check
+;gc.c
+	ruby_xmalloc
+	ruby_xcalloc
+	ruby_xrealloc
+	ruby_xfree
+	rb_global_variable
+	rb_newobj
+	rb_data_object_alloc
+	rb_gc_mark_locations
+	rb_mark_tbl
+	rb_mark_hash
+	rb_gc_mark_maybe
+	rb_gc_mark
+	rb_gc_force_recycle
+	rb_gc_mark_frame
+	rb_gc
+	rb_gc_call_finalizer_at_exit
+	xmalloc
+	xcalloc
+	xrealloc
+	xfree
+;hash.c
+	rb_hash_freeze
+	rb_hash
+	rb_hash_new
+	rb_hash_aref
+	rb_hash_aset
+	rb_hash_delete_if
+	rb_path_check
+	rb_env_path_tainted
+	ruby_setenv
+	ruby_unsetenv
+;inits.c
+	rb_call_inits
+;io.c
+	rb_eof_error
+	rb_io_check_closed
+	rb_io_check_readable
+	rb_io_check_writable
+	rb_read_pending
+	rb_read_check
+	rb_io_write
+	rb_io_eof
+	rb_io_gets
+	rb_io_getc
+	rb_getc
+	rb_io_ungetc
+	rb_io_fptr_finalize
+	rb_io_close
+	rb_io_close_read
+	rb_io_binmode
+	rb_io_mode_flags
+	rb_fopen
+	rb_fdopen
+	rb_file_open
+	rb_file_sysopen
+	rb_io_synchronized
+	rb_p
+	rb_gets
+	rb_str_setter
+;numeric.c
+	rb_num_zerodiv
+	rb_num_coerce_bin
+	rb_float_new
+	rb_num2long
+	rb_num2ulong
+	rb_num2int
+	rb_fix2int
+	rb_num2fix
+	rb_fix2str
+	rb_fix_upto
+;object.c
+	rb_equal
+	rb_eql
+	rb_obj_id
+	rb_obj_clone
+	rb_obj_dup
+	rb_any_to_s
+	rb_inspect
+	rb_obj_is_instance_of
+	rb_obj_is_kind_of
+	rb_obj_tainted
+	rb_obj_taint
+	rb_obj_untaint
+	rb_obj_alloc
+	rb_to_id
+	rb_convert_type
+	rb_Integer
+	rb_Float
+	rb_num2dbl
+	rb_str2cstr
+	rb_String
+	rb_Array
+;parse.c
+	rb_compile_string
+	rb_compile_cstr
+	rb_compile_file
+	rb_node_newnode
+	rb_id_attrset
+	rb_parser_append_print
+	rb_parser_while_loop
+	rb_intern
+	rb_id2name
+	rb_is_const_id
+	rb_is_instance_id
+	rb_backref_get
+	rb_backref_set
+	rb_lastline_get
+	rb_lastline_set
+;process.c
+	rb_proc_exec
+	rb_syswait
+;range.c
+	rb_range_new
+	rb_range_beg_len
+;re.c
+	rb_memcmp
+	rb_reg_mbclen2
+	rb_match_busy
+	rb_reg_adjust_startpos
+	rb_reg_search
+	rb_reg_nth_defined
+	rb_reg_nth_match
+	rb_reg_last_match
+	rb_reg_match_pre
+	rb_reg_match_post
+	rb_reg_match_last
+	rb_reg_new
+	rb_reg_regcomp
+	rb_reg_match
+	rb_reg_match2
+	rb_kcode
+	rb_reg_options
+	rb_reg_regsub
+	rb_get_kcode
+	rb_set_kcode
+;regex.c
+	ruby_re_set_casetable
+	ruby_re_compile_pattern
+	ruby_re_free_pattern
+	ruby_re_compile_fastmap
+	ruby_re_adjust_startpos
+	ruby_re_search
+	ruby_re_match
+	ruby_re_copy_registers
+	ruby_re_free_registers
+	ruby_re_mbcinit
+;ruby.c
+	rb_load_file
+	ruby_script
+	ruby_prog_init
+	ruby_set_argv
+	ruby_process_options
+	ruby_load_script
+	ruby_init_loadpath
+	ruby_incpush
+;signal.c
+	rb_f_kill
+	rb_gc_mark_trap_list
+	rb_trap_exit
+	rb_trap_exec
+	rb_trap_restore_mask
+;sprintf.c
+	rb_f_sprintf
+;st.c
+	st_init_table_with_size
+	st_init_table
+	st_init_numtable
+	st_init_numtable_with_size
+	st_init_strtable
+	st_init_strtable_with_size
+	st_free_table
+	st_lookup
+	st_insert
+	st_add_direct
+	st_copy
+	st_delete
+	st_delete_safe
+	st_cleanup_safe
+	st_foreach
+;string.c
+	rb_str_new
+	rb_str_new2
+	rb_tainted_str_new
+	rb_tainted_str_new2
+	rb_str_new3
+	rb_str_new4
+	rb_str_to_str
+	rb_str_associate
+	rb_obj_as_string
+	rb_str_dup
+	rb_str_plus
+	rb_str_times
+	rb_str_substr
+	rb_str_modify
+	rb_str_freeze
+	rb_str_dup_frozen
+	rb_str_resize
+	rb_str_cat
+	rb_str_cat2
+	rb_str_append
+	rb_str_concat
+	rb_str_hash
+	rb_str_cmp
+	rb_str_upto
+	rb_str_inspect
+	rb_str_split
+;struct.c
+	rb_struct_getmember
+	rb_struct_define
+	rb_struct_alloc
+	rb_struct_new
+	rb_struct_aref
+	rb_struct_aset
+;time.c
+	rb_time_new
+	rb_time_interval
+	rb_time_timeval
+;util.c
+	rb_class_of
+	rb_type
+	rb_special_const_p
+	ruby_scan_oct
+	ruby_scan_hex
+	ruby_add_suffix
+	ruby_qsort
+;variable.c
+	rb_mod_name
+	rb_class_path
+	rb_set_class_path
+	rb_path2class
+	rb_name_class
+	rb_autoload
+	rb_f_autoload
+	rb_class2name
+	rb_global_entry
+	rb_gc_mark_global_tbl
+	rb_define_hooked_variable
+	rb_define_variable
+	rb_define_readonly_variable
+	rb_define_virtual_variable
+	rb_f_trace_var
+	rb_f_untrace_var
+	rb_gvar_get
+	rb_gvar_set
+	rb_gv_set
+	rb_gv_get
+	rb_gvar_defined
+	rb_f_global_variables
+	rb_alias_variable
+	rb_mark_generic_ivar
+	rb_mark_generic_ivar_tbl
+	rb_free_generic_ivar
+	rb_clone_generic_ivar
+	rb_ivar_get
+	rb_ivar_set
+	rb_ivar_defined
+	rb_obj_instance_variables
+	rb_obj_remove_instance_variable
+	rb_const_get_at
+	rb_autoload_load
+	rb_const_get
+	rb_mod_remove_const
+	rb_mod_const_at
+	rb_mod_const_of
+	rb_mod_constants
+	rb_const_defined_at
+	rb_autoload_defined
+	rb_const_defined
+	rb_const_set
+	rb_const_assign
+	rb_define_const
+	rb_define_global_const
+	rb_cvar_declare
+	rb_cvar_set
+	rb_cvar_get
+	rb_cvar_defined
+	rb_cv_set
+	rb_cv_get
+	rb_define_class_variable
+	rb_iv_get
+	rb_iv_set
+;version.c
+	ruby_show_version
+	ruby_show_copyright
+@
+
+
+1.20
+log
+@matz
+@
+text
+@@
+
+
+1.19
+log
+@matz
+@
+text
+@d506 3
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d429 1
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d380 1
+@
+
+
+1.16
+log
+@remove ruby_mktemp
+@
+text
+@d299 1
+@
+
+
+1.15
+log
+@matz
+@
+text
+@a570 1
+	ruby_mktemp
+@
+
+
+1.14
+log
+@2000-06-14
+@
+text
+@d128 1
+@
+
+
+1.13
+log
+@2000-05-30
+@
+text
+@d465 1
+a465 1
+	rb_str_cicmp
+@
+
+
+1.12
+log
+@2000-05-25
+@
+text
+@d91 1
+d240 2
+d485 11
+@
+
+
+1.11
+log
+@2000-05-18
+@
+text
+@d290 1
+@
+
+
+1.10
+log
+@mswin32 DLEXT2
+O_BINARY
+@
+text
+@d39 1
+d55 8
+d81 3
+d329 1
+d348 4
+a351 4
+	xmalloc
+	xfree
+	xcalloc
+	xrealloc
+d364 4
+@
+
+
+1.9
+log
+@2000-05-09
+@
+text
+@d189 1
+@
+
+
+1.8
+log
+@2000-03-13
+@
+text
+@d501 1
+d512 2
+d574 1
+d578 1
+a579 1
+	rb_mod_const_of
+d584 1
+d587 7
+@
+
+
+1.7
+log
+@2000-02-29
+@
+text
+@d28 1
+d71 1
+d288 1
+@
+
+
+1.6
+log
+@19991104
+@
+text
+@d37 1
+d137 1
+d177 1
+a229 1
+	rb_enum_length
+d255 1
+a257 2
+	rb_dvar_asgn
+	rb_safe_level
+d327 3
+d332 1
+d364 1
+d381 1
+a381 1
+	rb_io_synchronized	
+d441 1
+d443 1
+a528 1
+	rb_test_false_or_nil
+d532 1
+d553 2
+a554 1
+	rb_gvar_set2
+@
+
+
+1.5
+log
+@19991029
+@
+text
+@a101 2
+;missing/fnmatch.c
+	fnmatch
+a452 1
+	ruby_require_libraries
+@
+
+
+1.4
+log
+@19990922
+@
+text
+@d34 1
+@
+
+
+1.4.2.1
+log
+@19991025
+@
+text
+@a33 1
+	ruby_nerrs
+@
+
+
+1.4.2.2
+log
+@991208-repack
+@
+text
+@d102 2
+@
+
+
+1.4.2.3
+log
+@2000-03-13
+@
+text
+@a135 1
+	win32_getcwd
+a284 1
+	rb_call_super
+a327 1
+	xfree
+d375 1
+a375 1
+	rb_io_synchronized
+@
+
+
+1.4.2.4
+log
+@2000-03-23
+@
+text
+@d549 1
+a549 2
+	rb_gv_get
+	rb_gv_set
+@
+
+
+1.4.2.5
+log
+@2000-06-05
+@
+text
+@a36 1
+	ruby_errinfo
+a51 9
+	rb_stdin
+	rb_stdout
+	rb_stderr
+	rb_defout
+	rb_fs
+	rb_output_fs
+	rb_rs
+	rb_output_rs
+	rb_default_rs
+a68 3
+;parse.c
+	ruby_sourcefile
+	ruby_sourceline
+a75 1
+	ruby_ignorecase
+d329 4
+a332 4
+	ruby_xmalloc
+	ruby_xcalloc
+	ruby_xrealloc
+	ruby_xfree
+a344 4
+	xmalloc
+	xcalloc
+	xrealloc
+	xfree
+a454 10
+;regex.c
+	ruby_re_set_casetable
+	ruby_re_compile_pattern
+	ruby_re_free_pattern
+	ruby_re_compile_fastmap
+	ruby_re_search
+	ruby_re_match
+	ruby_re_copy_registers
+	ruby_re_free_registers
+	ruby_re_mbcinit
+@
+
+
+1.4.2.6
+log
+@matz
+@
+text
+@a127 1
+	myfdclr
+@
+
+
+1.4.2.7
+log
+@eban
+@
+text
+@a152 1
+	myrename
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d36 1
+d76 2
+d376 1
+a376 1
+	rb_io_unbuffered
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d282 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 572
+a572 55
+LIBRARY ruby.dll
+CODE LOADONCALL
+DATA LOADONCALL
+DESCRIPTION 'win32 ruby.dll'
+EXPORTS
+
+;missing/nt.c
+	NtInitialize
+;eval.c
+	ruby_init
+	ruby_options
+	ruby_run
+;class.c
+	;;rb_define_module_function
+	;;rb_define_const
+	;;rb_define_singleton_method
+	;;rb_define_alias
+	rb_define_alias
+	rb_define_attr
+	rb_define_class
+	rb_define_class_id
+	rb_define_class_under
+	rb_define_global_function
+	rb_define_method
+	rb_define_method_id
+	rb_define_module
+	rb_define_module_function
+	rb_define_module_id
+	rb_define_module_under
+	rb_define_private_method
+	rb_define_singleton_method
+	rb_scan_args
+;variable.c
+	rb_define_const
+	rb_define_hooked_variable
+	rb_define_global_const
+	rb_define_readonly_variable
+	rb_define_variable
+	rb_define_virtual_variable
+;string.c
+	str_new
+	str_new2
+	str_new3
+	str_new4
+;numeric.c
+	num2int
+
+;error.c
+	rb_check_type
+	Fatal
+
+;gc.c
+	xmalloc
+	xcalloc
+
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+LIBRARY rubymw.dll
+d4 1
+a4 1
+DESCRIPTION 'win32 rubymw.dll'
+a5 29
+;global objects
+;array.c:
+	cArray
+;bignum.c:
+	cBignum
+;eval.c:
+	cProc
+;file.c:
+	cFile
+;hash.c:
+	cHash
+;io.c:
+	cIO
+;numeric.c:
+	cNumeric
+	cFloat
+	cInteger
+	cFixnum
+;object.c
+	cObject
+	cModule
+	cClass
+	cFixnum
+	cData
+;re.c:
+	cRegexp
+;string.c:
+	cString
+	cStruct
+a6 1
+; procedures/methods
+d9 4
+a12 74
+	myfdopen
+	myaccept
+	mybind
+	myconnect
+	mygetpeername
+	mygetsockname
+	mygetsockopt
+	myioctlsocket
+	mylisten
+	myrecv
+	myrecvfrom
+	mysend
+	mysendto
+	mysetsockopt
+	myshutdown
+	mysocket
+	mygethostbyaddr
+	mygethostbyname
+	mygethostname
+	mygetprotobyname
+	mygetprotobynumber
+	mygetservbyname
+	mygetservbyport
+;array.c
+	memclear
+	ary_freeze
+	ary_new2
+	ary_new
+	ary_new3
+	ary_new4
+	assoc_new
+	ary_store
+	ary_push
+	ary_pop
+	ary_shift
+	ary_unshift
+	ary_entry
+	ary_each
+	ary_join
+	ary_to_s
+	ary_reverse
+	ary_sort_bang
+	ary_sort
+	ary_delete
+	ary_delete_at
+	ary_plus
+	ary_concat
+	ary_assoc
+	ary_rassoc
+	ary_includes
+;bignum.c
+	big_clone
+	big_2comp
+	big_norm
+	uint2big
+	int2big
+	uint2inum
+	int2inum
+	str2inum
+	big2str
+	big2int
+	big_to_i
+	dbl2big
+	big2dbl
+	big_to_f
+	big_plus
+	big_minus
+	big_mul
+	big_pow
+	big_and
+	big_or
+	big_xor
+	big_lshift
+	big_rand
+d14 7
+a20 3
+	class_new
+	singleton_class_new
+	singleton_class_clone
+a21 1
+	rb_define_class
+d23 5
+a27 1
+	module_new
+a28 1
+	rb_define_module
+a29 4
+	rb_include_module
+	rb_define_method_id
+	rb_define_method
+	rb_undef_method
+a30 1
+	rb_singleton_class
+a31 4
+	rb_define_module_function
+	rb_define_global_function
+	rb_define_alias
+	rb_define_attr
+d33 8
+a40 215
+; dln.c
+	dln_load
+	dln_find_exe
+	dln_find_file
+; enum.c
+	rb_each
+	enum_length
+; error.c
+	Error
+	Error_Append
+	Warning
+	Bug
+	rb_check_type
+	exc_new
+	exc_new2
+	exc_new3
+	Raise
+	TypeError
+	ArgError
+	NameError
+	IndexError
+	Fail
+	rb_notimplement
+	LoadError
+	Fatal
+	rb_sys_fail
+;eval.c
+	rb_clear_cache
+	rb_add_method
+	rb_alias
+	rb_method_boundp
+	dyna_var_defined
+	dyna_var_ref
+	dyna_var_asgn
+	rb_safe_level
+	rb_set_safe_level
+	rb_check_safe_str
+	rb_secure
+	ruby_init
+	ruby_options
+	ruby_run
+	rb_eval_string
+	rb_eval_cmd
+	rb_trap_eval
+	rb_test_false_or_nil
+	rb_respond_to
+	rb_exit
+	rb_raise
+	rb_fatal
+	rb_interrupt
+	iterator_p
+	rb_yield_0
+	rb_yield
+	rb_iterate
+	rb_rescue
+	rb_ensure
+	rb_apply
+	rb_funcall
+	rb_funcall2
+	rb_backtrace
+	rb_frame_last_func
+	f_load
+	rb_provide
+	f_require
+	class_new_instance
+	rb_extend_object
+	f_lambda
+	gc_mark_threads
+	thread_schedule
+	thread_wait_fd
+	thread_fd_writable
+	thread_wait_for
+	thread_alone
+	thread_select
+	thread_sleep
+	thread_sleep_forever
+	thread_create
+	thread_interrupt
+; file.c
+	file_open
+	eaccess
+	file_s_expand_path
+; gc.c
+	xmalloc
+	xcalloc
+	xrealloc
+	gc_s_enable
+	gc_s_disable
+	rb_global_variable
+	rb_newobj
+	data_object_alloc
+	gc_mark_locations
+	gc_mark_maybe
+	gc_mark
+	gc_force_recycle
+	gc_mark_frame
+	gc_gc
+; hash.c
+	rb_hash
+	hash_new
+	hash_aref
+	hash_aset
+; inits.c
+	rb_call_inits
+; io.c
+	eof_error
+	io_writable
+	io_readable
+	io_write
+	io_gets_method
+	io_gets
+	io_getc
+	io_ungetc
+	io_fptr_finalize
+	io_close
+	io_binmode
+	io_mode_flags
+	rb_fopen
+	rb_fdopen
+	io_unbuffered
+	io_reopen
+	f_gets
+	rb_str_setter
+; numeric.c
+	num_zerodiv
+	num_coerce_bin
+	float_new
+	flo_pow
+	num2int
+	num2fix
+	fix2str
+	fix_to_s
+	num_upto
+	fix_upto
+; object.c
+	rb_equal
+	rb_eql
+	obj_equal
+	any_to_s
+	rb_inspect
+	obj_is_instance_of
+	obj_is_kind_of
+	obj_alloc
+	rb_to_id
+	rb_class_of
+	rb_type
+	rb_special_const_p
+	rb_Integer
+	rb_Float
+	rb_String
+	rb_Array
+; parse.c
+	;;compile_string
+	;;compile_file
+	;;node_newnode
+	nodetype
+	nodeline
+	id_attrset
+	rb_intern
+	rb_id2name
+	rb_is_const_id
+	rb_is_instance_id
+	local_var_append
+	backref_get
+	backref_set
+	lastline_get
+	lastline_set
+; process.c
+	rb_proc_exec
+	rb_syswait
+; range.c
+	range_new
+	range_beg_end
+; re.c
+	str_cicmp
+	reg_search
+	reg_nth_defined
+	reg_nth_match
+	reg_last_match
+	reg_match_pre
+	reg_match_post
+	reg_match_last
+	reg_free
+	reg_new
+	reg_regcomp
+	reg_match
+	reg_match2
+	reg_regsub
+	rb_set_kcode
+; ruby.c
+	rb_require_modules
+	rb_load_file
+	ruby_script
+	ruby_prog_init
+	ruby_set_argv
+	ruby_process_options
+; signal.c
+	gc_mark_trap_list
+	rb_trap_exit
+	rb_trap_exec
+; st.c
+	st_init_table_with_size
+	st_init_table
+	st_init_numtable
+	st_init_strtable
+	st_free_table
+	st_lookup
+	st_insert
+	st_add_direct
+	st_find_or_add
+	st_copy
+	st_delete
+	st_delete_safe
+	st_foreach
+; string.c
+d45 6
+a50 68
+	obj_as_string
+	str_dup
+	str_plus
+	str_times
+	str_substr
+	str_modify
+	str_freeze
+	str_dup_freezed
+	str_taint
+	str_tainted
+	str_resize
+	str_cat
+	str_hash
+	str_cmp
+	str_upto
+	str_inspect
+	str_split
+; struct.c
+	struct_getmember
+	struct_define
+	struct_alloc
+	struct_new
+	struct_aref
+	struct_aset
+; time.c
+	time_new
+	time_timeval
+; util.c
+	scan_oct
+	scan_hex
+	add_suffix
+;variable.c
+	new_idhash
+	rb_class_path
+	rb_set_class_path
+	rb_path2class
+	rb_name_class
+	rb_autoload
+	f_autoload
+	rb_class2name
+	rb_global_entry
+	gc_mark_global_tbl
+	rb_define_hooked_variable
+	rb_define_variable
+	rb_define_readonly_variable
+	rb_define_virtual_variable
+	rb_gvar_get
+	rb_gvar_set
+	rb_gvar_set2
+	rb_gvar_defined
+	rb_alias_variable
+	rb_ivar_get
+	rb_ivar_set
+	rb_ivar_defined
+	rb_const_get_at
+	rb_const_get
+	mod_constants
+	rb_const_defined_at
+	rb_autoload_defined
+	rb_const_defined
+	rb_const_set
+	rb_define_const
+	rb_define_global_const
+	rb_iv_get
+	rb_iv_set
+; version.c
+	show_version
+	show_copyright
+d52 3
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d1 424
+a424 443
+LIBRARY rubymw.dll
+DESCRIPTION 'win32 rubymw.dll'
+EXPORTS
+;;global objects
+;array.c:
+	rb_cArray
+;bignum.c:
+	rb_cBignum
+;enum.c
+	rb_mEnumerable
+;error.c
+	rb_eException;
+	rb_eSystemExit
+	rb_eInterrupt
+	rb_eFatal;
+	rb_eStandardError;
+	rb_eRuntimeError;
+	rb_eSyntaxError;
+	rb_eTypeError;
+	rb_eArgError;
+	rb_eNameError;
+	rb_eIndexError;
+	rb_eLoadError;
+	rb_eSecurityError;
+	rb_eNotImpError;
+	rb_eSystemCallError;
+	rb_mErrno;
+;eval.c:
+	rb_cProc
+;file.c:
+	rb_cFile
+;hash.c:
+	rb_cHash
+;io.c:
+	rb_cIO
+;numeric.c:
+	rb_cNumeric
+	rb_cFloat
+	rb_cInteger
+	rb_cFixnum
+;object.c
+	rb_mKernel
+	rb_cObject
+	rb_cModule
+	rb_cClass
+	rb_cData
+
+	rb_cNilClass
+	rb_cTrueClass
+	rb_cFalseClass
+;re.c:
+	rb_cRegexp
+;string.c:
+	rb_cString
+	rb_cStruct
+
+; procedures/methods
+;missing/nt.c
+	NtInitialize
+	myfdopen
+	myaccept
+	mybind
+	myconnect
+	mygetpeername
+	mygetsockname
+	mygetsockopt
+	myioctlsocket
+	mylisten
+	myrecv
+	myrecvfrom
+	mysend
+	mysendto
+	mysetsockopt
+	myshutdown
+	mysocket
+	mygethostbyaddr
+	mygethostbyname
+	mygethostname
+	mygetprotobyname
+	mygetprotobynumber
+	mygetservbyname
+	mygetservbyport
+;array.c
+	rb_ary_freeze
+	rb_ary_new2
+	rb_ary_new
+	rb_ary_new3
+	rb_ary_new4
+	rb_assoc_new
+	rb_ary_store
+	rb_ary_push
+	rb_ary_pop
+	rb_ary_shift
+	rb_ary_unshift
+	rb_ary_entry
+	rb_ary_aref
+	rb_ary_each
+	rb_ary_join
+	rb_ary_to_s
+	rb_ary_reverse
+	rb_ary_sort_bang
+	rb_ary_sort
+	rb_ary_delete
+	rb_ary_delete_at
+	rb_ary_plus
+	rb_ary_concat
+	rb_ary_assoc
+	rb_ary_rassoc
+	rb_ary_includes
+;bignum.c
+	rb_big_clone
+	rb_big_2comp
+	rb_big_norm
+	rb_uint2big
+	rb_int2big
+	rb_uint2inum
+	rb_int2inum
+	rb_str2inum
+	rb_big2str
+	rb_big2ulong
+	rb_big2long
+	rb_dbl2big
+	rb_big2dbl
+	rb_big_plus
+	rb_big_minus
+	rb_big_mul
+	rb_big_pow
+	rb_big_and
+	rb_big_or
+	rb_big_xor
+	rb_big_lshift
+	rb_big_rand
+;class.c
+	rb_class_new
+	rb_singleton_class_new
+	rb_singleton_class_clone
+	rb_define_class_id
+	rb_define_class
+	rb_define_class_under
+	rb_module_new
+	rb_define_module_id
+	rb_define_module
+	rb_define_module_under
+	rb_include_module
+	rb_define_method_id
+	rb_define_method
+	rb_undef_method
+	rb_define_private_method
+	rb_define_protected_method
+	rb_singleton_class
+	rb_define_singleton_method
+	rb_define_module_function
+	rb_define_global_function
+	rb_define_alias
+	rb_define_attr
+	rb_scan_args
+; dln.c
+	dln_find_exe
+	dln_find_file
+	dln_load
+	dln_find_exe
+	dln_find_file
+; enum.c
+	rb_each
+	rb_enum_length
+; error.c
+	rb_compile_error
+	rb_compile_error_append
+	rb_warn
+	rb_warning
+	rb_bug
+	rb_check_type
+	rb_exc_new
+	rb_exc_new2
+	rb_exc_new3
+	rb_raise
+	rb_loaderror
+	rb_notimplement
+	rb_fatal
+	rb_sys_fail
+;eval.c
+	rb_clear_cache
+	rb_alias
+	rb_add_method
+	rb_remove_method
+	rb_disable_super
+	rb_enable_super
+	rb_method_boundp
+	rb_safe_level
+	rb_set_safe_level
+	rb_check_safe_str
+	rb_secure
+	ruby_init
+	ruby_options
+	ruby_run
+	rb_eval_string
+	rb_eval_cmd
+	rb_trap_eval
+	rb_test_false_or_nil
+	rb_respond_to
+	rb_exit
+	rb_raise
+	rb_fatal
+	rb_interrupt
+	rb_iterator_p
+	rb_iterate
+	rb_rescue
+	rb_ensure
+	rb_apply
+	rb_funcall
+	rb_funcall2
+	rb_backtrace
+	rb_frame_last_func
+	rb_load
+	rb_provide
+	rb_f_require
+	rb_obj_instance_eval
+	rb_obj_call_init
+	rb_class_new_instance
+	rb_extend_object
+	rb_f_global_variables
+	rb_set_end_proc
+	rb_f_autoload
+	rb_f_lambda
+	rb_gc_mark_threads
+	rb_thread_schedule
+	rb_thread_wait_fd
+	rb_thread_fd_writable
+	rb_thread_wait_for
+	rb_thread_alone
+	rb_thread_select
+	rb_thread_sleep
+	rb_thread_sleep_forever
+	rb_thread_create
+	rb_thread_scope_shared_p
+	rb_thread_interrupt
+	rb_thread_trap_eval
+	rb_catch
+	rb_throw
+	rb_yield
+; file.c
+	rb_file_open
+	eaccess
+	rb_file_s_expand_path
+; gc.c
+	xmalloc
+	xcalloc
+	xrealloc
+	rb_global_variable
+	rb_newobj
+	rb_data_object_alloc
+	rb_gc_mark_locations
+	rb_gc_mark_maybe
+	rb_gc_mark
+	rb_gc_force_recycle
+	rb_gc_mark_frame
+	rb_gc
+; hash.c
+	rb_hash_freeze
+	rb_hash
+	rb_hash_new
+	rb_hash_aref
+	rb_hash_aset
+; inits.c
+	rb_call_inits
+; io.c
+	rb_eof_error
+	rb_io_write
+	rb_io_gets
+	rb_io_getc
+	rb_io_ungetc
+	rb_io_fptr_finalize
+	rb_io_close
+	rb_io_binmode
+	rb_io_mode_flags
+	rb_fopen
+	rb_fdopen
+	rb_io_unbuffered
+	rb_io_reopen
+	rb_str_setter
+; numeric.c
+	rb_num_zerodiv
+	rb_num_coerce_bin
+	rb_float_new
+	rb_num2long
+	rb_num2ulong
+	rb_num2fix
+	rb_fix2str
+; object.c
+	rb_equal
+	rb_eql
+	rb_any_to_s
+	rb_inspect
+	rb_obj_is_instance_of
+	rb_obj_is_kind_of
+	rb_obj_alloc
+	rb_to_id
+	rb_class_of
+	rb_type
+	rb_special_const_p
+	rb_Integer
+	rb_Float
+	rb_String
+	rb_Array
+; parse.c
+	rb_node_newnode
+	rb_id_attrset
+	rb_intern
+	rb_id2name
+	rb_is_const_id
+	rb_is_instance_id
+	rb_backref_get
+	rb_backref_set
+	rb_lastline_get
+	rb_lastline_set
+; process.c
+	rb_proc_exec
+	rb_syswait
+; range.c
+	rb_range_new
+	rb_range_beg_end
+; re.c
+	rb_str_cicmp
+	rb_reg_search
+	rb_reg_nth_defined
+	rb_reg_nth_match
+	rb_reg_last_match
+	rb_reg_match_pre
+	rb_reg_match_post
+	rb_reg_match_last
+	rb_reg_new
+	rb_reg_regcomp
+	rb_reg_match
+	rb_reg_match2
+	rb_reg_regsub
+	rb_get_kcode
+	rb_set_kcode
+; ruby.c
+	ruby_require_modules
+	rb_load_file
+	ruby_script
+	ruby_prog_init
+	ruby_set_argv
+	ruby_process_options
+; signal.c
+	rb_gc_mark_trap_list
+	rb_trap_exit
+	rb_trap_exec
+; sprintf.c
+	rb_f_sprintf
+; st.c
+	st_init_table_with_size
+	st_init_table
+	st_init_numtable
+	st_init_strtable
+	st_free_table
+	st_lookup
+	st_insert
+	st_add_direct
+	st_copy
+	st_delete
+	st_delete_safe
+	st_foreach
+; string.c
+	rb_str_new
+	rb_str_new2
+	rb_tainted_str_new
+	rb_tainted_str_new2
+	rb_str_new3
+	rb_str_new4
+	rb_str_to_str
+	rb_obj_as_string
+	rb_str_dup
+	rb_str_plus
+	rb_str_times
+	rb_str_substr
+	rb_str_modify
+	rb_str_freeze
+	rb_str_dup_frozen
+	rb_str_resize
+	rb_str_cat
+	rb_str_hash
+	rb_str_cmp
+	rb_str_upto
+	rb_str_inspect
+	rb_str_split
+; struct.c
+	rb_struct_getmember
+	rb_struct_define
+	rb_struct_alloc
+	rb_struct_new
+	rb_struct_aref
+	rb_struct_aset
+; time.c
+	rb_time_new
+	rb_time_timeval
+; util.c
+	rb_class_of
+	rb_type
+	rb_special_const_p
+	rb_test_false_or_nil
+	ruby_scan_oct
+	ruby_scan_hex
+	rb_add_suffix
+;variable.c
+	rb_class_path
+	rb_set_class_path
+	rb_path2class
+	rb_name_class
+	rb_autoload
+	rb_f_autoload
+	rb_class2name
+	rb_global_entry
+	rb_gc_mark_global_tbl
+	rb_define_hooked_variable
+	rb_define_variable
+	rb_define_readonly_variable
+	rb_define_virtual_variable
+	rb_gvar_get
+	rb_gvar_set
+	rb_gvar_set2
+	rb_gvar_defined
+	rb_alias_variable
+	rb_ivar_get
+	rb_ivar_set
+	rb_ivar_defined
+	rb_const_get_at
+	rb_const_get
+	rb_mod_const_at
+	rb_mod_constants
+	rb_mod_const_of
+	rb_const_defined_at
+	rb_autoload_defined
+	rb_const_defined
+	rb_const_set
+	rb_define_const
+	rb_define_global_const
+	rb_iv_get
+	rb_iv_set
+; version.c
+	ruby_show_version
+	ruby_show_copyright
+
+@
+
+
+1.1.1.3.2.1
+log
+@990128
+@
+text
+@d404 1
+@
+
+
+1.1.1.3.2.2
+log
+@990215
+@
+text
+@d275 1
+d279 1
+@
+
+
+1.1.1.3.2.3
+log
+@990224
+@
+text
+@a33 3
+	ruby_setenv
+	ruby_setenv2
+	ruby_unsetenv
+@
+
+
+1.1.1.3.2.4
+log
+@990324
+@
+text
+@d35 1
+d322 1
+@
+
+
+1.1.1.3.2.5
+log
+@*** empty log message ***
+@
+text
+@d200 1
+@
+
+
+1.1.1.3.2.6
+log
+@rb_exec_end_proc, etc.
+@
+text
+@d337 1
+@
+
+
+1.1.1.3.2.7
+log
+@990624
+@
+text
+@a29 2
+        rb_thread_tick
+        rb_thread_critical
+a37 1
+        rb_io_check_closed
+a54 4
+;signal.c:
+        rb_trap_immediate
+        rb_trap_pending
+        rb_prohibit_interrupt
+a62 1
+	myfdclose
+a65 3
+        myfdset
+        myfdisset
+        myselect
+a84 1
+        myget_osfhandle
+d87 1
+a88 1
+	rb_ary_new2
+a120 1
+        rb_str2cstr
+a238 5
+        rb_thread_fd_close
+        rb_thread_stop
+        rb_thread_wakeup
+        rb_thread_run
+        rb_thread_create
+a295 1
+        rb_obj_taint
+a303 1
+        rb_num2dbl
+a336 3
+        rb_argv
+        rb_argv0
+        rb_progname
+@
+
+
+1.1.1.3.2.8
+log
+@990806
+@
+text
+@d5 1
+a5 1
+;array.c
+d7 1
+a7 1
+;bignum.c
+a8 4
+;compar.c
+	rb_mComparable
+;dir.c
+	rb_cDir
+d12 1
+a12 1
+	rb_eException
+d15 14
+a28 16
+	rb_eSignal
+	rb_eFatal
+	rb_eStandardError
+	rb_eRuntimeError
+	rb_eSyntaxError
+	rb_eTypeError
+	rb_eArgError
+	rb_eNameError
+	rb_eIndexError
+	rb_eLoadError
+	rb_eSecurityError
+	rb_eNotImpError
+	rb_eSystemCallError
+	rb_eZeroDivError
+	rb_mErrno
+;eval.c
+d30 3
+a32 4
+	rb_cThread
+	rb_thread_tick
+	rb_thread_critical
+;file.c
+d34 1
+a34 4
+	rb_mFileTest
+;gc.c
+	rb_mGC
+;hash.c
+d36 3
+a38 1
+;io.c
+d40 2
+a41 5
+	rb_eEOFError
+	rb_eIOError
+;math.c
+	rb_mMath
+;numeric.c
+a45 1
+	rb_eFloatDomainError
+d52 1
+d56 1
+a56 7
+;prec.c
+	rb_mPrecision
+;process.c
+	rb_mProcess
+;range.c
+	rb_cRange
+;re.c
+d58 5
+a62 11
+;ruby.c
+	ruby_debug
+	ruby_verbose
+	rb_progname
+	rb_argv
+	rb_argv0
+;signal.c
+	rb_trap_pending
+	rb_trap_immediate
+	rb_prohibit_interrupt
+;string.c
+a64 2
+;time.c
+	rb_cTime
+d66 2
+a67 16
+;;procedures/methods
+;missing/alloca.c
+	alloca
+;missing/crypt.c
+	definekey
+	encrypt
+	crypt
+;missing/fnmatch.c
+	fnmatch
+;missing/isinf.c
+	isinf
+;missing/isnan.c
+	isnan
+;missing/isnan.c
+	isnan
+;win32/win32.c
+d74 3
+a76 3
+	myfdset
+	myfdisset
+	myselect
+d96 1
+a96 1
+	myget_osfhandle
+a97 1
+	rb_mem_clear
+a113 2
+	rb_protect_inspect
+	rb_inspecting_p
+d133 1
+a151 1
+	rb_singleton_class_attached
+a159 6
+	rb_mod_included_modules
+	rb_mod_ancestors
+	rb_class_instance_methods
+	rb_class_protected_instance_methods
+	rb_class_private_instance_methods
+	rb_obj_singleton_methods
+d162 2
+a164 2
+	rb_define_private_method
+	rb_undef_method
+d172 3
+a174 1
+;dln.c
+d178 1
+a178 1
+;enum.c
+d181 1
+a181 1
+;error.c
+d198 1
+a199 1
+	rb_alias
+a203 5
+	rb_attr
+	rb_dvar_defined
+	rb_dvar_ref
+	rb_dvar_push
+	rb_dvar_asgn
+a211 2
+	rb_eval_string_protect
+	rb_eval_string_wrap
+d213 1
+d216 2
+a217 3
+	rb_iter_break
+	rb_exc_raise
+	rb_exc_fatal
+a218 1
+	rb_jump_tag
+a219 1
+	rb_yield
+a221 1
+	rb_protect
+a227 1
+	rb_obj_instance_eval
+a228 1
+	rb_load_protect
+d231 1
+d235 1
+d237 1
+a237 1
+	rb_exec_end_proc
+a239 1
+	rb_thread_fd_close
+a245 5
+	rb_thread_current
+	rb_thread_main
+	rb_thread_wakeup
+	rb_thread_run
+	rb_thread_stop
+a250 1
+	rb_thread_signal_raise
+d252 5
+a256 2
+	rb_thread_local_aref
+	rb_thread_local_aset
+d259 3
+a261 1
+;file.c
+d264 1
+a264 1
+;gc.c
+a271 2
+	rb_mark_tbl
+	rb_mark_hash
+d277 1
+a277 2
+	rb_gc_call_finalizer_at_exit
+;hash.c
+d283 1
+a283 5
+	rb_path_check
+	rb_env_path_tainted
+	ruby_setenv
+	ruby_unsetenv
+;inits.c
+d285 1
+a285 1
+;io.c
+a286 4
+	rb_io_check_closed
+	rb_io_check_readable
+	rb_io_check_writable
+	rb_read_check
+a287 1
+	rb_io_eof
+a289 1
+	rb_getc
+a292 1
+	rb_io_close_read
+a293 1
+	rb_io_mode_flags
+a295 2
+	rb_file_open
+	rb_file_sysopen
+a296 2
+	rb_p
+	rb_gets
+d298 1
+a298 1
+;numeric.c
+a303 2
+	rb_num2int
+	rb_fix2int
+d306 1
+a306 2
+	rb_fix_upto
+;object.c
+a308 2
+	rb_obj_id
+	rb_obj_clone
+a312 3
+	rb_obj_tainted
+	rb_obj_taint
+	rb_obj_untaint
+d314 1
+d316 3
+a318 1
+	rb_convert_type
+a320 2
+	rb_num2dbl
+	rb_str2cstr
+d323 2
+a324 4
+;parse.c
+	rb_compile_string
+	rb_compile_cstr
+	rb_compile_file
+a326 2
+	rb_parser_append_print
+	rb_parser_while_loop
+d335 1
+a335 1
+;process.c
+d338 1
+a338 1
+;range.c
+d340 1
+a340 2
+	rb_range_beg_len
+;re.c
+a341 1
+	rb_match_busy
+a352 2
+	rb_kcode
+	rb_reg_options
+d356 4
+a359 2
+;ruby.c
+	ruby_require_libraries
+d365 1
+a365 2
+;signal.c
+	rb_f_kill
+d369 1
+a369 2
+	rb_trap_restore_mask
+;sprintf.c
+d371 1
+a371 1
+;st.c
+a374 1
+	st_init_numtable_with_size
+a375 1
+	st_init_strtable_with_size
+a382 1
+	st_cleanup_safe
+d384 1
+a384 1
+;string.c
+a401 1
+	rb_str_concat
+d407 1
+a407 1
+;struct.c
+d414 1
+a414 1
+;time.c
+a415 1
+	rb_time_interval
+d417 1
+a417 1
+;util.c
+a423 2
+	ruby_mktemp
+	ruby_qsort
+a424 1
+	rb_mod_name
+a437 2
+	rb_f_trace_var
+	rb_f_untrace_var
+a441 1
+	rb_f_global_variables
+a442 3
+	rb_mark_generic_ivar
+	rb_mark_generic_ivar_tbl
+	rb_free_generic_ivar
+a445 2
+	rb_obj_instance_variables
+	rb_obj_remove_instance_variable
+a447 1
+	rb_mod_remove_const
+d459 1
+a459 1
+;version.c
+d462 1
+@
+
+
+1.1.1.3.2.9
+log
+@pre 1.4.0
+@
+text
+@d104 2
+a135 1
+	win32_getenv
+a278 1
+	rb_with_disable_interrupt
+a288 1
+	rb_require
+a548 1
+	rb_clone_generic_ivar
+@
+
+
+1.1.1.2.2.1
+log
+@pass_block, etc.
+@
+text
+@d326 1
+a326 1
+	ruby_require_modules
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b9_05_pre1
+@
+text
+@d1 424
+a424 424
+LIBRARY rubymw.dll
+CODE LOADONCALL
+DATA LOADONCALL
+DESCRIPTION 'win32 rubymw.dll'
+EXPORTS
+;global objects
+;array.c:
+	cArray
+;bignum.c:
+	cBignum
+;eval.c:
+	cProc
+;file.c:
+	cFile
+;hash.c:
+	cHash
+;io.c:
+	cIO
+;numeric.c:
+	cNumeric
+	cFloat
+	cInteger
+	cFixnum
+;object.c
+	cObject
+	cModule
+	cClass
+	cFixnum
+	cData
+;re.c:
+	cRegexp
+;string.c:
+	cString
+	cStruct
+
+; procedures/methods
+;missing/nt.c
+	NtInitialize
+	myfdopen
+	myaccept
+	mybind
+	myconnect
+	mygetpeername
+	mygetsockname
+	mygetsockopt
+	myioctlsocket
+	mylisten
+	myrecv
+	myrecvfrom
+	mysend
+	mysendto
+	mysetsockopt
+	myshutdown
+	mysocket
+	mygethostbyaddr
+	mygethostbyname
+	mygethostname
+	mygetprotobyname
+	mygetprotobynumber
+	mygetservbyname
+	mygetservbyport
+;array.c
+	memclear
+	ary_freeze
+	ary_new2
+	ary_new
+	ary_new3
+	ary_new4
+	assoc_new
+	ary_store
+	ary_push
+	ary_pop
+	ary_shift
+	ary_unshift
+	ary_entry
+	ary_each
+	ary_join
+	ary_to_s
+	ary_reverse
+	ary_sort_bang
+	ary_sort
+	ary_delete
+	ary_delete_at
+	ary_plus
+	ary_concat
+	ary_assoc
+	ary_rassoc
+	ary_includes
+;bignum.c
+	big_clone
+	big_2comp
+	big_norm
+	uint2big
+	int2big
+	uint2inum
+	int2inum
+	str2inum
+	big2str
+	big2int
+	big_to_i
+	dbl2big
+	big2dbl
+	big_to_f
+	big_plus
+	big_minus
+	big_mul
+	big_pow
+	big_and
+	big_or
+	big_xor
+	big_lshift
+	big_rand
+;class.c
+	class_new
+	singleton_class_new
+	singleton_class_clone
+	rb_define_class_id
+	rb_define_class
+	rb_define_class_under
+	module_new
+	rb_define_module_id
+	rb_define_module
+	rb_define_module_under
+	rb_include_module
+	rb_define_method_id
+	rb_define_method
+	rb_undef_method
+	rb_define_private_method
+	rb_singleton_class
+	rb_define_singleton_method
+	rb_define_module_function
+	rb_define_global_function
+	rb_define_alias
+	rb_define_attr
+	rb_scan_args
+; dln.c
+	dln_load
+	dln_find_exe
+	dln_find_file
+; enum.c
+	rb_each
+	enum_length
+; error.c
+	Error
+	Error_Append
+	Warning
+	Bug
+	rb_check_type
+	exc_new
+	exc_new2
+	exc_new3
+	Raise
+	TypeError
+	ArgError
+	NameError
+	IndexError
+	Fail
+	rb_notimplement
+	LoadError
+	Fatal
+	rb_sys_fail
+;eval.c
+	rb_clear_cache
+	rb_add_method
+	rb_alias
+	rb_method_boundp
+	dyna_var_defined
+	dyna_var_ref
+	dyna_var_asgn
+	rb_safe_level
+	rb_set_safe_level
+	rb_check_safe_str
+	rb_secure
+	ruby_init
+	ruby_options
+	ruby_run
+	rb_eval_string
+	rb_eval_cmd
+	rb_trap_eval
+	rb_test_false_or_nil
+	rb_respond_to
+	rb_exit
+	rb_raise
+	rb_fatal
+	rb_interrupt
+	iterator_p
+	rb_yield_0
+	rb_yield
+	rb_iterate
+	rb_rescue
+	rb_ensure
+	rb_apply
+	rb_funcall
+	rb_funcall2
+	rb_backtrace
+	rb_frame_last_func
+	f_load
+	rb_provide
+	f_require
+	class_new_instance
+	rb_extend_object
+	f_lambda
+	gc_mark_threads
+	thread_schedule
+	thread_wait_fd
+	thread_fd_writable
+	thread_wait_for
+	thread_alone
+	thread_select
+	thread_sleep
+	thread_sleep_forever
+	thread_create
+	thread_interrupt
+; file.c
+	file_open
+	eaccess
+	file_s_expand_path
+; gc.c
+	xmalloc
+	xcalloc
+	xrealloc
+	gc_s_enable
+	gc_s_disable
+	rb_global_variable
+	rb_newobj
+	data_object_alloc
+	gc_mark_locations
+	gc_mark_maybe
+	gc_mark
+	gc_force_recycle
+	gc_mark_frame
+	gc_gc
+; hash.c
+	rb_hash
+	hash_new
+	hash_aref
+	hash_aset
+; inits.c
+	rb_call_inits
+; io.c
+	eof_error
+	io_writable
+	io_readable
+	io_write
+	io_gets_method
+	io_gets
+	io_getc
+	io_ungetc
+	io_fptr_finalize
+	io_close
+	io_binmode
+	io_mode_flags
+	rb_fopen
+	rb_fdopen
+	io_unbuffered
+	io_reopen
+	f_gets
+	rb_str_setter
+; numeric.c
+	num_zerodiv
+	num_coerce_bin
+	float_new
+	flo_pow
+	num2int
+	num2fix
+	fix2str
+	fix_to_s
+	num_upto
+	fix_upto
+; object.c
+	rb_equal
+	rb_eql
+	obj_equal
+	any_to_s
+	rb_inspect
+	obj_is_instance_of
+	obj_is_kind_of
+	obj_alloc
+	rb_to_id
+	rb_class_of
+	rb_type
+	rb_special_const_p
+	rb_Integer
+	rb_Float
+	rb_String
+	rb_Array
+; parse.c
+	;;compile_string
+	;;compile_file
+	;;node_newnode
+	nodetype
+	nodeline
+	id_attrset
+	rb_intern
+	rb_id2name
+	rb_is_const_id
+	rb_is_instance_id
+	local_var_append
+	backref_get
+	backref_set
+	lastline_get
+	lastline_set
+; process.c
+	rb_proc_exec
+	rb_syswait
+; range.c
+	range_new
+	range_beg_end
+; re.c
+	str_cicmp
+	reg_search
+	reg_nth_defined
+	reg_nth_match
+	reg_last_match
+	reg_match_pre
+	reg_match_post
+	reg_match_last
+	reg_free
+	reg_new
+	reg_regcomp
+	reg_match
+	reg_match2
+	reg_regsub
+	rb_set_kcode
+; ruby.c
+	ruby_require_modules
+	rb_load_file
+	ruby_script
+	ruby_prog_init
+	ruby_set_argv
+	ruby_process_options
+; signal.c
+	gc_mark_trap_list
+	rb_trap_exit
+	rb_trap_exec
+; st.c
+	st_init_table_with_size
+	st_init_table
+	st_init_numtable
+	st_init_strtable
+	st_free_table
+	st_lookup
+	st_insert
+	st_add_direct
+	st_find_or_add
+	st_copy
+	st_delete
+	st_delete_safe
+	st_foreach
+; string.c
+	str_new
+	str_new2
+	str_new3
+	str_new4
+	obj_as_string
+	str_dup
+	str_plus
+	str_times
+	str_substr
+	str_modify
+	str_freeze
+	str_dup_freezed
+	str_taint
+	str_tainted
+	str_resize
+	str_cat
+	str_hash
+	str_cmp
+	str_upto
+	str_inspect
+	str_split
+; struct.c
+	struct_getmember
+	struct_define
+	struct_alloc
+	struct_new
+	struct_aref
+	struct_aset
+; time.c
+	time_new
+	time_timeval
+; util.c
+	scan_oct
+	scan_hex
+	add_suffix
+;variable.c
+	new_idhash
+	rb_class_path
+	rb_set_class_path
+	rb_path2class
+	rb_name_class
+	rb_autoload
+	f_autoload
+	rb_class2name
+	rb_global_entry
+	gc_mark_global_tbl
+	rb_define_hooked_variable
+	rb_define_variable
+	rb_define_readonly_variable
+	rb_define_virtual_variable
+	rb_gvar_get
+	rb_gvar_set
+	rb_gvar_set2
+	rb_gvar_defined
+	rb_alias_variable
+	rb_ivar_get
+	rb_ivar_set
+	rb_ivar_defined
+	rb_const_get_at
+	rb_const_get
+	mod_constants
+	rb_const_defined_at
+	rb_autoload_defined
+	rb_const_defined
+	rb_const_set
+	rb_define_const
+	rb_define_global_const
+	rb_iv_get
+	rb_iv_set
+; version.c
+	show_version
+	show_copyright
+
+
+@
+
+
+1.1.1.2.2.3
+log
+@prototypes
+@
+text
+@a128 1
+	rb_define_protected_method
+a145 1
+	Warn
+d164 1
+a165 4
+	rb_add_method
+	rb_remove_method
+	rb_disable_super
+	rb_enable_super
+d264 1
+a264 2
+	num2long
+	num2ulong
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_26
+@
+text
+@d99 1
+a99 2
+	big2ulong
+	big2long
+d368 1
+a368 1
+	str_dup_frozen
+@
+
+
+1.1.1.2.2.5
+log
+@1.2.2 release
+@
+text
+@d305 1
+d325 1
+@
+
+

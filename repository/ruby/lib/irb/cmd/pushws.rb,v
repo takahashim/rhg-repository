@@ -1,0 +1,63 @@
+head	1.1;
+access;
+symbols
+	irb_0_9:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.07.09.11.17.17;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* irb 0.9
+@
+text
+@#
+#   change-ws.rb - 
+#   	$Release Version: 0.9$
+#   	$Revision: 1.1 $
+#   	$Date: 2002/07/03 10:50:55 $
+#   	by Keiju ISHITSUKA(Nihon Rational Software Co.,Ltd)
+#
+# --
+#
+#   
+#
+
+require "irb/cmd/nop.rb"
+require "irb/ext/workspaces.rb"
+
+module IRB
+  module ExtendCommand
+    class Workspaces<Nop
+      def execute(*obj)
+	irb_context.workspaces.collect{|ws| ws.main}
+      end
+    end
+
+    class PushWorkspace<Workspaces
+      def execute(*obj)
+	irb_context.push_workspace(*obj)
+	super
+      end
+    end
+
+    class PopWorkspace<Workspaces
+      def execute(*obj)
+	irb_context.pop_workspace(*obj)
+	super
+      end
+    end
+  end
+end
+
+@

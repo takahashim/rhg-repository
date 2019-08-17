@@ -1,0 +1,471 @@
+head	1.13;
+access;
+symbols
+	V0_3_2:1.12
+	V0_1_4:1.8
+	V0_1_3:1.8
+	V0_1_2:1.8
+	V0_1_1:1.8
+	V0_1:1.8;
+locks; strict;
+comment	@# @;
+
+
+1.13
+date	2002.01.05.14.35.05;	author chad;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.11.03.04.15.17;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.11.02.00.17.06;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.03.28.16.38.54;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.15.21.37.31;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.15.21.29.45;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.15.17.37.53;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.03.01.11;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.15.02.56.08;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.12.20.38.42;	author andy;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.21.33.37;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@Replaced $rubyVersion global with Version class methods.  Replaced references to the former with the latter.  Deprecated tests for #indexes and #indices where appropriate.  Removed some duplication in several tests in ArrayBase and HashBase.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+Version.less_than("1.7") do
+  TimesClass = Time
+end
+Version.greater_or_equal("1.7") do
+  TimesClass = Process
+end
+
+class TestStruct__Tms < Rubicon::TestCase
+
+  MsWin32.dont do
+
+    # Burn up some CPU in the parent and the child
+    def setup
+      pid = fork
+      
+      name = pid ? "_parent" : "_child"
+      
+      Dir.rmdir(name) if File.exists?(name)
+      
+      t = Time.now
+      
+      while Time.now - t < 3
+	Dir.mkdir(name)
+	Dir.rmdir(name)
+      end
+      
+      exit unless pid
+      
+      Process.wait
+    end
+    
+    def test_times
+      assert(TimesClass.times.cstime > 0.0)
+      assert(TimesClass.times.cutime > 0.0)
+      assert(TimesClass.times.stime > 0.0)
+      assert(TimesClass.times.utime > 0.0)
+      assert(TimesClass.times['utime'] != 0)
+      assert(TimesClass.times['stime'] != 0)
+      assert(TimesClass.times['cutime'] != 0)
+      assert(TimesClass.times['cstime'] != 0)
+      assert_equals(4, TimesClass.times.members.length)
+    end
+  end
+
+end
+
+Rubicon::handleTests(TestStruct__Tms) if $0 == __FILE__
+@
+
+
+1.12
+log
+@Win32 changes to Kernel, etc... Thread is incomplete: we'll do something of
+a rewrite under Linux.
+@
+text
+@d4 6
+a9 1
+TimesClass = $rubyVersion >= "1.7" ? Process : Time
+@
+
+
+1.11
+log
+@Start adding MsWin32 support
+@
+text
+@d8 1
+a8 3
+  # Burn up some CPU in the parent and the child
+  def setup
+    pid = fork
+d10 30
+a39 9
+    name = pid ? "_parent" : "_child"
+
+    Dir.rmdir(name) if File.exists?(name)
+
+    t = Time.now
+
+    while Time.now - t < 3
+      Dir.mkdir(name)
+      Dir.rmdir(name)
+a40 40
+
+    exit unless pid
+
+    Process.wait
+  end
+
+  def cstime
+    assert(TimesClass.times.cstime > 0.0)
+  end
+
+  def cutime
+    assert(TimesClass.times.cutime > 0.0)
+  end
+
+  def stime
+    assert(TimesClass.times.stime > 0.0)
+  end
+
+  def utime
+    assert(TimesClass.times.utime > 0.0)
+  end
+
+  def s_aref
+    assert(TimesClass.times['utime'] != 0)
+    assert(TimesClass.times['stime'] != 0)
+    assert(TimesClass.times['cutime'] != 0)
+    assert(TimesClass.times['cstime'] != 0)
+  end
+
+  def s_members
+    assert_equals(4, TimesClass.times.members.length)
+  end
+  
+  def test_all
+    cstime()
+    cutime()
+    stime()
+    utime()
+    s_aref()
+    s_members()
+@
+
+
+1.10
+log
+@Move #times from Time to Process for 1.7
+
+Time#zone now returns UTC, rather than GMT
+@
+text
+@d8 1
+a8 4
+  def sillyCalculation(n)
+    a = 0.0; n.times {|i| a += Math.sin(1/(i+1)) }
+  end
+
+d16 3
+a18 1
+    5000.times {
+d21 1
+a21 1
+    }
+@
+
+
+1.9
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d4 1
+d30 1
+a30 1
+    assert(Time.times.cstime > 0.0)
+d34 1
+a34 1
+    assert(Time.times.cutime > 0.0)
+d38 1
+a38 1
+    assert(Time.times.stime > 0.0)
+d42 1
+a42 1
+    assert(Time.times.utime > 0.0)
+d46 4
+a49 4
+    assert(Time.times['utime'] != 0)
+    assert(Time.times['stime'] != 0)
+    assert(Time.times['cutime'] != 0)
+    assert(Time.times['cstime'] != 0)
+d53 1
+a53 1
+    assert_equals(4, Time.times.members.length)
+@
+
+
+1.8
+log
+@Various fixes
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.7
+log
+@Try again
+@
+text
+@d15 2
+@
+
+
+1.6
+log
+@Change how we burn time
+@
+text
+@d20 1
+a20 2
+    Process.wait if pid
+    puts Time.times.to_a if pid
+d22 1
+a24 17
+#     # find out how much it takes to burn up a couple of seconds or so
+#     n = 100
+#     loop do
+#       start = Time.now
+#       sillyCalculation(n)
+#       break if Time.now - start > 1
+#       n *= 2
+#     end
+#     fork { sillyCalculation(n) }
+#     Process.wait
+# #    200.times {
+# #      Dir.open(".") {}
+#       #fork { sillyCalculation(n/200) }
+# #      Process.wait
+# #    }
+#   end
+
+d26 1
+a26 1
+    assert(Time.times.cstime != 0)
+d30 1
+a30 1
+    assert(Time.times.cutime != 0)
+d34 1
+a34 1
+    assert(Time.times.stime != 0)
+d38 1
+a38 1
+    assert(Time.times.utime != 0)
+@
+
+
+1.5
+log
+@Tidy up the test output
+@
+text
+@d11 7
+a17 11
+    # find out how much it takes to burn up a couple of seconds or so
+    n = 100
+    loop do
+      start = Time.now
+      sillyCalculation(n)
+      break if Time.now - start > 1
+      n *= 2
+    end
+    200.times {
+      fork { sillyCalculation(n/200) }
+      Process.wait
+d19 4
+d24 17
+@
+
+
+1.4
+log
+@Remove spurious trace
+@
+text
+@d10 9
+a18 4
+  def burntime
+    # burn up user CPU
+    sillyCalculation(20000)
+    # and system CPU
+d20 1
+a20 1
+      fork { sillyCalculation(100) }
+d25 1
+a25 8
+  def setup
+    # Make a child process. Run the process in both the child
+    # and the parent to get decent times. RUn in parallel so
+    # those with MP boxes get home slightly faster
+    burntime
+  end
+
+  def test_cstime
+d29 1
+a29 1
+  def test_cutime
+d33 1
+a33 1
+  def test_stime
+d37 1
+a37 1
+  def test_utime
+d41 1
+a41 1
+  def test_s_aref
+d48 11
+a58 2
+  def test_s_members
+    assert_equals(4,Time.times.members.length)
+@
+
+
+1.3
+log
+@Ensure we actually burn some time so the tests don;t fail
+@
+text
+@a24 1
+    puts Time.times.to_a
+@
+
+
+1.2
+log
+@Odds and Sods.
+@
+text
+@d6 20
+a25 3
+  def test_00init
+    # Make a child process.
+    `ruby -e 'a = 0; 10000.times {|i| a += Math.sin(1/(i+1)) }'`
+@
+
+
+1.1
+log
+@Get everything to run through
+@
+text
+@d6 3
+a8 2
+  def test_cstime
+    assert_fail("untested")
+d11 2
+a12 2
+  def test_cstime=
+    assert_fail("untested")
+d16 1
+a16 5
+    assert_fail("untested")
+  end
+
+  def test_cutime=
+    assert_fail("untested")
+d20 1
+a20 5
+    assert_fail("untested")
+  end
+
+  def test_stime=
+    assert_fail("untested")
+d24 1
+a24 5
+    assert_fail("untested")
+  end
+
+  def test_utime=
+    assert_fail("untested")
+d28 4
+a31 1
+    assert_fail("untested")
+d35 1
+a35 5
+    assert_fail("untested")
+  end
+
+  def test_s_new
+    assert_fail("untested")
+@
+

@@ -1,0 +1,354 @@
+head	1.9;
+access;
+symbols
+	V0_3_2:1.9
+	V0_1_4:1.6
+	V0_1_3:1.6
+	V0_1_2:1.6
+	V0_1_1:1.6
+	V0_1:1.6
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2001.10.25.05.25.28;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.17.37.53;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.15.03.01.11;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.14.20.26.38;	author andy;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@Added many patches from Nobu Nakad for 1.7 features (plus some bug fixes)
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestRegexp < Rubicon::TestCase
+
+  def test_EQUAL # '=='
+    assert_equal(/.foo.*([a-z])/,/.foo.*([a-z])/)
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new(".foo.*([a-z])")
+    assert(!(a == b))
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE, "S")
+    assert(!(a == b))
+  end
+
+  def test_MATCH # '=~'
+    assert_equal(nil,/SIT/ =~ "insensitive")
+    assert_equal(5,/SIT/i =~ "insensitive")
+  end
+
+  def test_REV # '~'
+    $_ = "sit on it"
+    assert_equal(nil,~ /SIT/)
+    assert_equal(0,~ /SIT/i)
+  end
+
+  def test_VERY_EQUAL # '==='
+    gotit=false
+    case "insensitive"
+      when /SIT/
+        assert_fail("Shouldn't have matched")
+      when /SIT/i
+        gotit = true
+    end
+    assert(gotit)
+  end
+
+  def test_casefold?
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new(".foo.*([a-z])")
+    assert_equal(true, a.casefold?)
+    assert_equal(false, b.casefold?)
+  end
+
+  def test_clone
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = /SIT/.dup
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.clone
+
+        assert_equal(a, b)
+        assert_equal(a.frozen?, b.frozen?)
+        assert_equal(a.tainted?, b.tainted?)
+      end
+    end
+  end
+
+  def test_kcode
+    a = Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b = Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE, "S")
+    c = Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE, "n")
+    assert_equal(nil, a.kcode) if $KCODE == "NONE"
+    assert_equal("sjis", b.kcode)
+    assert_equal("none",    c.kcode)
+  end
+
+  def test_s_last_match
+    a = /SIT/
+    "STAND OUT" =~ a
+    "SIT IT OUT" =~ a
+    m = Regexp.last_match
+    assert_instance_of(MatchData, m)
+    assert_equal([0,3], m.offset(0))
+    assert_equal(1, m.length)
+    assert_equal(" IT OUT", m.post_match)
+  end
+
+  def test_match
+    a = Regexp.new("sit")
+    m = a.match("howsit going?")
+    assert_instance_of(MatchData,m)
+    assert_equal([3,6],m.offset(0))
+    assert_equal(1, m.length)
+  end
+
+  def test_source
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    assert_equal(".foo.*([a-z])", a.source)
+  end
+
+  def test_s_compile
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new("sit", true)
+    c=Regexp.new("sit")
+    assert(("POSIT" =~ b) != nil)
+    assert(("POSIT" =~ c) == nil)
+  end
+
+  def test_s_escape
+    assert_equal('\\\\\[\]\*\?\{\}\.', Regexp.escape('\\[]*?{}.'))
+  end
+
+  def test_s_new
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new("sit", true)
+    c=Regexp.new("sit")
+    assert(("POSIT" =~ b) != nil)
+    assert(("POSIT" =~ c) == nil)
+  end
+
+  def test_s_quote
+    assert_equal('\\\\\[\]\*\?\{\}\.', Regexp.quote('\\[]*?{}.'))
+  end
+
+end
+
+Rubicon::handleTests(TestRegexp) if $0 == __FILE__
+@
+
+
+1.8
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@a54 1
+        assert_equal(a.id, b.id)
+@
+
+
+1.7
+log
+@Many contributions from members of the ml
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.6
+log
+@Archive save
+@
+text
+@d48 2
+a49 1
+        a = /SIT/
+a50 1
+        a.taint  if taint
+@
+
+
+1.5
+log
+@Various fixes
+@
+text
+@d65 1
+a65 1
+    assert_equal("none", a.kcode) if $KCODE == "NONE"
+d67 1
+a67 1
+    assert_equal("none", c.kcode)
+@
+
+
+1.4
+log
+@Tidy up the test output
+@
+text
+@a45 1
+    skipping("segvs"); return
+d70 1
+a70 1
+  def test_last_match
+d74 1
+a74 1
+    m = a.last_match
+@
+
+
+1.3
+log
+@Remove spurious trace
+@
+text
+@d46 1
+@
+
+
+1.2
+log
+@Done.
+@
+text
+@d62 6
+a67 6
+    a=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE)
+    b=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE, "S")
+    c=Regexp.new(".foo.*([a-z])", Regexp::IGNORECASE, "n")
+    assert_equal("none",a.kcode) if $KCODE == "NONE"
+    assert_equal("sjis",b.kcode)
+    assert_equal("none",c.kcode)
+d75 1
+a75 1
+    assert_instance_of(MatchData,m)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 7
+a13 1
+    assert_fail("untested")
+d17 2
+a18 1
+    assert_fail("untested")
+d22 3
+a24 1
+    assert_fail("untested")
+d28 8
+a35 1
+    assert_fail("untested")
+d39 4
+a42 1
+    assert_fail("untested")
+d46 13
+a58 5
+    assert_fail("untested")
+  end
+
+  def test_inspect
+    assert_fail("untested")
+d62 6
+a67 1
+    assert_fail("untested")
+d71 8
+a78 1
+    assert_fail("untested")
+d82 5
+a86 1
+    assert_fail("untested")
+d90 2
+a91 1
+    assert_fail("untested")
+d95 5
+a99 1
+    assert_fail("untested")
+d103 1
+a103 1
+    assert_fail("untested")
+d107 5
+a111 1
+    assert_fail("untested")
+d115 1
+a115 1
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

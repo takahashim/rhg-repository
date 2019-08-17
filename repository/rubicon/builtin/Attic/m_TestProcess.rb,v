@@ -1,0 +1,151 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2000.06.23.19.31.57;	author dave;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.19.17.11.43;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestProcess < Rubicon::TestCase
+
+  def test_s_egid
+    assert_fail("untested")
+  end
+
+  def test_s_egid=
+    assert_fail("untested")
+  end
+
+  def test_s_euid
+    assert_fail("untested")
+  end
+
+  def test_s_euid=
+    assert_fail("untested")
+  end
+
+  def test_s_exit!
+    assert_fail("untested")
+  end
+
+  def test_s_fork
+    assert_fail("untested")
+  end
+
+  def test_s_getpgid
+    assert_fail("untested")
+  end
+
+  def test_s_getpgrp
+    assert_fail("untested")
+  end
+
+  def test_s_getpriority
+    assert_fail("untested")
+  end
+
+  def test_s_gid
+    assert_fail("untested")
+  end
+
+  def test_s_gid=
+    assert_fail("untested")
+  end
+
+  def test_s_kill
+    assert_fail("untested")
+  end
+
+  def test_s_pid
+    assert_fail("untested")
+  end
+
+  def test_s_ppid
+    assert_fail("untested")
+  end
+
+  def test_s_setpgid
+    assert_fail("untested")
+  end
+
+  def test_s_setpgrp
+    assert_fail("untested")
+  end
+
+  def test_s_setpriority
+    assert_fail("untested")
+  end
+
+  def test_s_setsid
+    assert_fail("untested")
+  end
+
+  def test_s_uid
+    assert_fail("untested")
+  end
+
+  def test_s_uid=
+    assert_fail("untested")
+  end
+
+  def test_s_wait
+    assert_fail("untested")
+  end
+
+  def test_s_wait2
+    assert_fail("untested")
+  end
+
+  def test_s_waitpid
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestProcess) if $0 == __FILE__
+@
+
+
+1.2
+log
+@Add wait2
+@
+text
+@@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@d90 4
+@
+

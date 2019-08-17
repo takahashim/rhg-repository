@@ -1,0 +1,225 @@
+head	1.1;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1.2.1
+	v1_6_4_preview3:1.1.2.1
+	ruby_1_6:1.1.0.2
+	SHELL_v0_6:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.05.17.10.35.32;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#
+#   shell/builtin-command.rb - 
+#   	$Release Version: 0.6.0 $
+#   	$Revision: 1.4 $
+#   	$Date: 2001/03/19 09:03:30 $
+#   	by Keiju ISHITSUKA(Nihon Rational Software Co.,Ltd)
+#
+# --
+#
+#   
+#
+
+require "shell/filter"
+
+class Shell
+  class BuiltInCommand<Filter
+    def wait?
+      false
+    end
+    def active?
+      true
+    end
+  end
+
+  class Echo < BuiltInCommand
+    def initialize(sh, *strings)
+      super sh
+      @@strings = strings
+    end
+    
+    def each(rs = nil)
+      rs =  @@shell.record_separator unless rs
+      for str  in @@strings
+	yield str + rs
+      end
+    end
+  end
+
+  class Cat < BuiltInCommand
+    def initialize(sh, *filenames)
+      super sh
+      @@cat_files = filenames
+    end
+
+    def each(rs = nil)
+      if @@cat_files.empty?
+	super
+      else
+	for src in @@cat_files
+	  @@shell.foreach(src, rs){|l| yield l}
+	end
+      end
+    end
+  end
+
+  class Glob < BuiltInCommand
+    def initialize(sh, pattern)
+      super sh
+
+      @@pattern = pattern
+      Thread.critical = true
+      back = Dir.pwd
+      begin
+	Dir.chdir @@shell.cwd
+	@@files = Dir[pattern]
+      ensure
+	Dir.chdir back
+	Thread.critical = false
+      end
+    end
+
+    def each(rs = nil)
+      rs =  @@shell.record_separator unless rs
+      for f  in @@files
+	yield f+rs
+      end
+    end
+  end
+
+#   class Sort < Cat
+#     def initialize(sh, *filenames)
+#       super
+#     end
+#
+#     def each(rs = nil)
+#       ary = []
+#       super{|l|	ary.push l}
+#       for l in ary.sort!
+# 	yield l
+#       end
+#     end
+#   end
+
+  class AppendIO < BuiltInCommand
+    def initialize(sh, io, filter)
+      super sh
+      @@input = filter
+      @@io = io
+    end
+
+    def input=(filter)
+      @@input.input=filter
+      for l in @@input
+	@@io << l
+      end
+    end
+
+  end
+
+  class AppendFile < AppendIO
+    def initialize(sh, to_filename, filter)
+      @@file_name = to_filename
+      io = sh.open(to_filename, "a")
+      super(sh, io, filter)
+    end
+
+    def input=(filter)
+      begin
+	super
+      ensure
+	@@io.close
+      end
+    end
+  end
+
+  class Tee < BuiltInCommand
+    def initialize(sh, filename)
+      super sh
+      @@to_filename = filename
+    end
+
+    def each(rs = nil)
+      to = @@shell.open(@@to_filename, "w")
+      begin
+	super{|l| to << l; yield l}
+      ensure
+	to.close
+      end
+    end
+  end
+
+  class Concat < BuiltInCommand
+    def initialize(sh, *jobs)
+      super(sh)
+      @@jobs = jobs
+    end
+
+    def each(rs = nil)
+      while job = @@jobs.shift
+	job.each{|l| yield l}
+      end
+    end
+  end
+end
+@
+
+
+1.1.2.1
+log
+@* doc/shell.rd*, lib/shell*: bring shell.rb 0.6 onto the ruby_1_6
+branch.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/05/17 10:02:48 $
+@
+
+
+1.1.1.1
+log
+@Import Keiju ISHITSUKA's shell.rb 0.6 with some minor changes:
+
+	- all Japanese code were converted to EUC
+	- shell.doc and shell.doc.jp were renamed to shell.rd and
+	shell.rd.jp, respectively.  (They will be converted to RD
+	shortly)
+@
+text
+@@

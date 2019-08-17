@@ -1,0 +1,1151 @@
+head	1.7;
+access;
+symbols
+	v1_6_7:1.3.2.2
+	v1_6_6:1.3.2.2
+	v1_6_5:1.3.2.1
+	v1_6_4:1.3.2.1
+	v1_7_1:1.4
+	v1_6_4_preview4:1.3.2.1
+	v1_6_4_preview3:1.3.2.1
+	v1_6_4_preview2:1.3.2.1
+	v1_6_4_preview1:1.3.2.1
+	v1_6_3:1.3.2.1
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.2.15
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.2.15
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.2.15
+	v1_2_4:1.1.1.1.2.15
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.15
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.15
+	v1_2_1repack:1.1.1.1.2.15
+	v1_2_1:1.1.1.1.2.15
+	v1_2_stable:1.1.1.1.2.15
+	v1_1d1:1.1.1.1.2.14.2.3
+	v1_1d0:1.1.1.1.2.14.2.2
+	v1_1c9_1:1.1.1.1.2.15
+	v1_1c9:1.1.1.1.2.14
+	v1_1c8:1.1.1.1.2.14
+	v1_1c7:1.1.1.1.2.14
+	v1_1c6:1.1.1.1.2.14
+	v1_1d-start:1.1.1.1.2.14
+	v1_1c5:1.1.1.1.2.14
+	v1_1dev:1.1.1.1.2.14.0.2
+	v1_1c4:1.1.1.1.2.14
+	v1_1c3:1.1.1.1.2.14
+	v1_1c2:1.1.1.1.2.14
+	v1_1c1:1.1.1.1.2.14
+	v1_1c0:1.1.1.1.2.14
+	v1_1b9_31:1.1.1.1.2.14
+	v1_1b9_30:1.1.1.1.2.14
+	v1_1b9_28:1.1.1.1.2.13
+	v1_1b9_27:1.1.1.1.2.12
+	v1_1b9_26:1.1.1.1.2.12
+	r1_1b9_25:1.1.1.1.2.12
+	r1_1b9_24:1.1.1.1.2.12
+	v1_1b9_23:1.1.1.1.2.11
+	v1_1b9_22:1.1.1.1.2.11
+	v1_1b9_20:1.1.1.1.2.11
+	v1_1b9_18:1.1.1.1.2.11
+	v1_1b9_16:1.1.1.1.2.10
+	v1_1b9_15:1.1.1.1.2.10
+	v1_1b9_13:1.1.1.1.2.10
+	v1_1b9_12:1.1.1.1.2.10
+	v1_1b9_11:1.1.1.1.2.10
+	v1_1b9_08:1.1.1.1.2.8
+	v1_1b9_07:1.1.1.1.2.7
+	r1_1b9:1.1.1.1.2.2
+	v1_1b8:1.1.1.1.2.2
+	v1_1b7:1.1.1.1.2.2
+	v1_1b6:1.1.1.1.2.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2002.10.02.15.32.45;	author nobu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.21.15.42.12;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.13.08.14.23;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.03.13.05.45.11;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.07.27.09.49.33;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.01.23.10.39.02;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.02.02.04.49.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.03.24.06.21.55;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.03.26.09.07.28;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.03.26.09.09.40;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.03.27.06.09.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7;
+
+1.1.1.1.2.7
+date	98.04.07.08.34.10;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.8;
+
+1.1.1.1.2.8
+date	98.04.07.08.41.26;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.9;
+
+1.1.1.1.2.9
+date	98.04.08.08.12.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.10;
+
+1.1.1.1.2.10
+date	98.04.14.04.55.53;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.11;
+
+1.1.1.1.2.11
+date	98.04.30.07.41.21;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.12;
+
+1.1.1.1.2.12
+date	98.06.08.01.40.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.13;
+
+1.1.1.1.2.13
+date	98.06.26.09.44.54;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.14;
+
+1.1.1.1.2.14
+date	98.07.08.07.16.56;	author matz;	state Exp;
+branches
+	1.1.1.1.2.14.2.1;
+next	1.1.1.1.2.15;
+
+1.1.1.1.2.15
+date	98.12.14.09.00.08;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.14.2.1
+date	98.11.25.03.31.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.14.2.2;
+
+1.1.1.1.2.14.2.2
+date	98.12.16.07.30.36;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.14.2.3;
+
+1.1.1.1.2.14.2.3
+date	98.12.22.09.01.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.03.13.05.48.35;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.11.21.15.36.37;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@* lib/delegate.rb (Delegator::initialize): use Object#class
+  instead of deprecated Object#type.
+@
+text
+@#  Delegation class that delegates even methods defined in super class,
+# which can not be covered with normal method_missing hack.
+#  
+#  Delegator is the abstract delegation class. Need to redefine
+# `__getobj__' method in the subclass.  SimpleDelegator is the 
+# concrete subclass for simple delegation.
+#
+# Usage:
+#   foo = Object.new
+#   foo2 = SimpleDelegator.new(foo)
+#   foo.hash == foo2.hash # => false
+#
+#   Foo = DelegateClass(Array)
+#
+#  class ExtArray<DelegateClass(Array)
+#    ...
+#  end
+
+class Delegator
+
+  def initialize(obj)
+    preserved = ::Kernel.instance_methods
+    preserved -= ["to_s","to_a","inspect","==","=~","==="]
+    for t in self.class.ancestors
+      preserved |= t.instance_methods
+      preserved |= t.private_instance_methods
+      preserved |= t.protected_instance_methods
+      break if t == Delegator
+    end
+    for method in obj.methods
+      next if preserved.include? method
+      begin
+	eval <<-EOS
+	  def self.#{method}(*args, &block)
+	    begin
+	      __getobj__.__send__(:#{method}, *args, &block)
+	    rescue Exception
+	      $@@.delete_if{|s| /:in `__getobj__'$/ =~ s} #`
+	      $@@.delete_if{|s| /^\\(eval\\):/ =~ s}
+	      raise
+	    end
+	  end
+	EOS
+      rescue SyntaxError
+        raise NameError, "invalid identifier %s" % method, caller(4)
+      end
+    end
+  end
+
+  def __getobj__
+    raise NotImplementError, "need to define `__getobj__'"
+  end
+
+end
+
+class SimpleDelegator<Delegator
+
+  def initialize(obj)
+    super
+    @@obj = obj
+  end
+
+  def __getobj__
+    @@obj
+  end
+
+  def __setobj__(obj)
+    @@obj = obj
+  end
+end
+
+# backward compatibility ^_^;;;
+Delegater = Delegator
+SimpleDelegater = SimpleDelegator
+
+#
+def DelegateClass(superclass)
+  klass = Class.new
+  methods = superclass.instance_methods(true)
+  methods -= ::Kernel.instance_methods
+  methods |= ["to_s","to_a","inspect","==","=~","==="]
+  klass.module_eval <<-EOS
+  def initialize(obj)
+    @@obj = obj
+  end
+  EOS
+  for method in methods
+    begin
+      klass.module_eval <<-EOS
+        def #{method}(*args, &block)
+	  begin
+	    @@obj.__send__(:#{method}, *args, &block)
+	  rescue
+	    $@@[0,2] = nil
+	    raise
+	  end
+	end
+      EOS
+    rescue SyntaxError
+      raise NameError, "invalid identifier %s" % method, caller(3)
+    end
+  end
+  return klass;
+end
+
+if __FILE__ == $0
+  class ExtArray<DelegateClass(Array)
+    def initialize()
+      super([])
+    end
+  end
+
+  ary = ExtArray.new
+  p ary.class
+  ary.push 25
+  p ary
+
+  foo = Object.new
+  def foo.test
+    25
+  end
+  def foo.error
+    raise 'this is OK'
+  end
+  foo2 = SimpleDelegator.new(foo)
+  p foo.test == foo2.test	# => true
+  foo2.error			# raise error!
+end
+@
+
+
+1.6
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* process.c (pst_wstopsig): returns nil unless WIFSTOPPED() is
+  non-zero.
+
+* process.c (pst_wtermsig): returns nil unless WIFSIGNALED() is
+  non-zero.
+
+* process.c (pst_wexitstatus): returns nil unless WIFEXITED() is
+  non-zero.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+
+* parse.y (call_args2): block_arg may follow the first argument in
+  call_args2.
+
+* eval.c (stack_check): should avoid stack length check during
+  raising SystemStackError exception.
+@
+text
+@d24 1
+a24 1
+    for t in self.type.ancestors
+d114 1
+a114 1
+  p ary.type
+@
+
+
+1.5
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d79 1
+a79 1
+  methods = superclass.instance_methods
+@
+
+
+1.4
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d32 10
+a41 8
+      eval <<-EOS
+	def self.#{method}(*args, &block)
+	  begin
+	    __getobj__.__send__(:#{method}, *args, &block)
+	  rescue Exception
+	    $@@.delete_if{|s| /:in `__getobj__'$/ =~ s} #`
+	    $@@.delete_if{|s| /^\\(eval\\):/ =~ s}
+	    raise
+d43 4
+a46 2
+	end
+      EOS
+d88 3
+a90 2
+    klass.module_eval <<-EOS
+	def #{method}(*args, &block)
+d98 4
+a101 3
+	EOS
+      end
+    return klass;
+d103 2
+@
+
+
+1.3
+log
+@matz
+@
+text
+@d11 1
+a11 1
+#   foo.hash == foo2.hash # => true
+@
+
+
+1.3.2.1
+log
+@* io.c (argf_seek): wrong calling sequence of rb_io_seek().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+
+* ruby.c (ruby_set_argv): clear ARGV contents before adding args.
+@
+text
+@d11 1
+a11 1
+#   foo.hash == foo2.hash # => false
+@
+
+
+1.3.2.2
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+@
+text
+@d75 1
+a75 1
+  methods = superclass.instance_methods(true)
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d42 1
+a42 1
+	EOS
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#  Delegater is the abstract delegation class. Need to redefine
+# `__getobj__' method in the subclass.  SimpleDelegater is the 
+d10 8
+a17 2
+#   foo = SimpleDelegater.new(foo)
+#   foo.type # => Object
+d19 1
+a19 1
+class Delegater
+d22 2
+a23 1
+    preserved = ["id", "equal?", "__getobj__"]
+d26 3
+a28 1
+      break if t == Delegater
+d32 11
+a42 1
+      eval "def self.#{method}(*args); __getobj__.send :#{method}, *args; end"
+d52 1
+a52 1
+class SimpleDelegater<Delegater
+d63 57
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d4 2
+a5 2
+#  Delegator is the abstract delegation class. Need to redefine
+# `__getobj__' method in the subclass.  SimpleDelegator is the 
+d10 2
+a11 8
+#   foo2 = SimpleDelegator.new(foo)
+#   foo.hash == foo2.hash # => true
+#
+#   Foo = DelegateClass(Array)
+#
+#  class ExtArray<DelegateClass(Array)
+#    ...
+#  end
+d13 1
+a13 1
+class Delegator
+d16 1
+a16 2
+    preserved = ::Kernel.instance_methods
+    preserved -= ["to_s","to_a","inspect","==","=~","==="]
+d19 1
+a19 3
+      preserved |= t.private_instance_methods
+      preserved |= t.protected_instance_methods
+      break if t == Delegator
+d23 1
+a23 17
+      eval <<-EOS
+	def self.#{method}(*args, &block)
+	  begin
+	    __getobj__.__send__(:#{method}, *args, &block)
+	  rescue Exception
+	    c = -caller(0).size
+	    if /:in `__getobj__'$/ =~ $@@[c-1]  #`
+	      n = 1
+	    else
+	      c -= 1
+	      n = 2
+	    end
+	    $@@[c,n] = nil
+	    raise
+	  end
+	end
+	EOS
+d33 1
+a33 1
+class SimpleDelegator<Delegator
+a43 57
+  def __setobj__(obj)
+    @@obj = obj
+  end
+end
+
+# backward compatibility ^_^;;;
+Delegater = Delegator
+SimpleDelegater = SimpleDelegator
+
+#
+def DelegateClass(superclass)
+  klass = Class.new
+  methods = superclass.instance_methods
+  methods -= ::Kernel.instance_methods
+  methods |= ["to_s","to_a","inspect","==","=~","==="]
+  klass.module_eval <<-EOS
+  def initialize(obj)
+    @@obj = obj
+  end
+  EOS
+  for method in methods
+    klass.module_eval <<-EOS
+	def #{method}(*args, &block)
+	  begin
+	    @@obj.__send__(:#{method}, *args, &block)
+	  rescue
+	    $@@[0,2] = nil
+	    raise
+	  end
+	end
+	EOS
+      end
+    return klass;
+  end
+
+if __FILE__ == $0
+  class ExtArray<DelegateClass(Array)
+    def initialize()
+      super([])
+    end
+  end
+
+  ary = ExtArray.new
+  p ary.type
+  ary.push 25
+  p ary
+
+  foo = Object.new
+  def foo.test
+    25
+  end
+  def foo.error
+    raise 'this is OK'
+  end
+  foo2 = SimpleDelegator.new(foo)
+  p foo.test == foo2.test	# => true
+  foo2.error			# raise error!
+@
+
+
+1.1.1.2.2.1
+log
+@990324
+@
+text
+@d37 8
+a44 2
+	    $@@.delete_if{|s| /:in `__getobj__'$/ =~ s} #`
+	    $@@.delete_if{|s| /^\\(eval\\):/ =~ s}
+@
+
+
+1.1.1.1.2.1
+log
+@tempfile.rb modified
+@
+text
+@a43 3
+  def __setobj__(obj)
+    @@obj = obj
+  end
+@
+
+
+1.1.1.1.2.2
+log
+@__FILE__,__LINE__
+@
+text
+@d10 1
+a10 1
+#   foo = SimpleDelegator.new(foo)
+d13 1
+a13 1
+class Delegator
+d19 1
+a19 1
+      break if t == Delegator
+d33 1
+a33 1
+class SimpleDelegator<Delegator
+a46 10
+end
+
+# backword compatibility ^_^;;;
+Delegater = Delegator
+SimpleDelegater = SimpleDelegator
+
+if __FILE__ == $0
+  foo = Object.new
+  foo = SimpleDelegator.new(foo)
+  p foo.type # => Object
+@
+
+
+1.1.1.1.2.3
+log
+@$: changed
+@
+text
+@d23 1
+a23 1
+      eval "def self.#{method}(*args); __getobj__.__send__ :#{method}, *args; end"
+@
+
+
+1.1.1.1.2.4
+log
+@String#dump
+@
+text
+@d23 1
+a23 1
+      eval "def self.#{method}(*args); __getobj__.__send__(:#{method}, *args){|x|yield}; end"
+@
+
+
+1.1.1.1.2.5
+log
+@1.1b9_05_pre1
+@
+text
+@d4 2
+a5 2
+#  Delegator is the abstract delegation class. Need to redefine
+# `__getobj__' method in the subclass.  SimpleDelegator is the 
+@
+
+
+1.1.1.1.2.6
+log
+@$:, remove top_protected
+@
+text
+@d23 1
+a23 1
+      eval "def self.#{method}(*args,&block); __getobj__.__send__(:#{method}, *args,&block); end"
+@
+
+
+1.1.1.1.2.7
+log
+@dynamic (nested) local variables
+@
+text
+@d11 1
+a11 1
+#   foo.hash == foo2.hash # => true
+d16 1
+a16 1
+    preserved = ["type", "id", "equal?", "__getobj__"]
+d55 2
+a56 2
+  foo2 = SimpleDelegator.new(foo)
+  p foo.hash == foo2.hash # => true
+@
+
+
+1.1.1.1.2.8
+log
+@1.1b9_07
+@
+text
+@d16 1
+a20 2
+    preserved |= ::Kernel.instance_methods
+    preserved -= ["to_s", "nil?", "to_a", "hash", "dup", "==", "=~"]
+@
+
+
+1.1.1.1.2.9
+log
+@local_variables/defined?(TOPLEVEL_CONST) in modules
+@
+text
+@d50 1
+a50 1
+# backward compatibility ^_^;;;
+@
+
+
+1.1.1.1.2.10
+log
+@signal delivered to main_thread
+@
+text
+@a15 1
+    preserved = ::Kernel.instance_methods
+d20 2
+a21 1
+    preserved -= ["__getobj__","to_s","nil?","to_a","hash","dup","==","=~"]
+@
+
+
+1.1.1.1.2.11
+log
+@new exception model
+@
+text
+@d10 1
+a10 1
+#   foo2 = SimpleDelegator.new(foo)
+@
+
+
+1.1.1.1.2.12
+log
+@regex.c
+@
+text
+@d24 1
+a24 11
+      eval <<EOS
+def self.#{method}(*args, &block)
+  begin
+    __getobj__.__send__(:#{method}, *args, &block)
+  rescue Exception
+    n = if /:in `__getobj__'$/ =~ $@@[0] then 1 else 2 end #`
+    $@@[1,n] = nil
+    raise
+  end
+end
+EOS
+a55 3
+  def foo.test
+    raise 'this is OK'
+  end
+d57 1
+a57 2
+  p foo.hash == foo2.hash	# => true
+  foo.test			# raise error!
+@
+
+
+1.1.1.1.2.13
+log
+@980626
+@
+text
+@a11 6
+#
+#   Foo = DelegateClass(Array)
+#
+#  class ExtArray<DelegateClass(Array)
+#    ...
+#  end
+d21 1
+a21 1
+    preserved -= ["__getobj__","to_s","to_a","inspect","hash","eql?","==","=~","==="]
+a63 26
+#
+def DelegateClass(superclass)
+  klass = Class.new
+  methods = superclass.instance_methods
+  methods -= ::Kernel.instance_methods
+  methods |= ["to_s","to_a","inspect","hash","eql?","==","=~","==="]
+  klass.module_eval <<EOS
+  def initialize(obj)
+    @@obj = obj
+  end
+EOS
+  for method in methods
+    klass.module_eval <<EOS
+    def #{method}(*args, &block)
+      begin
+	@@obj.__send__(:#{method}, *args, &block)
+      rescue
+	$@@[0,2] = nil
+	raise
+      end
+    end
+EOS
+  end
+  return klass;
+end
+
+a64 11
+  class ExtArray<DelegateClass(Array)
+    def initialize()
+      super([])
+    end
+  end
+
+  ary = ExtArray.new
+  p ary.type
+  ary.push 25
+  p ary
+
+a71 1
+
+@
+
+
+1.1.1.1.2.14
+log
+@wait
+@
+text
+@d27 1
+a27 1
+    preserved -= ["to_s","to_a","inspect","hash","eql?","==","=~","==="]
+@
+
+
+1.1.1.1.2.15
+log
+@1.1c final (hopefully)
+@
+text
+@a22 1
+    preserved -= ["to_s","to_a","inspect","==","=~","==="]
+a24 2
+      preserved |= t.private_instance_methods
+      preserved |= t.protected_instance_methods
+d27 1
+d35 2
+a36 8
+    c = -caller(0).size
+    if /:in `__getobj__'$/ =~ $@@[c-1]  #`
+      n = 1
+    else
+      c -= 2
+      n = 3
+    end
+    $@@[c,n] = nil
+d75 1
+a75 1
+  methods |= ["to_s","to_a","inspect","==","=~","==="]
+@
+
+
+1.1.1.1.2.14.2.1
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+    preserved -= ["to_s","to_a","inspect","==","=~","==="]
+@
+
+
+1.1.1.1.2.14.2.2
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@a22 1
+    preserved -= ["to_s","to_a","inspect","==","=~","==="]
+a24 2
+      preserved |= t.private_instance_methods
+      preserved |= t.protected_instance_methods
+d27 1
+d30 11
+a40 17
+      eval <<-EOS
+      def self.#{method}(*args, &block)
+	  begin
+	    __getobj__.__send__(:#{method}, *args, &block)
+	  rescue Exception
+	    c = -caller(0).size
+	    if /:in `__getobj__'$/ =~ $@@[c-1]  #`
+	      n = 1
+	    else
+	      c -= 1
+	      n = 2
+	    end
+	    $@@[c,n] = nil
+	    raise
+	  end
+      end
+      EOS
+d75 2
+a76 2
+  methods |= ["to_s","to_a","inspect","==","=~","==="]
+  klass.module_eval <<-EOS
+d80 1
+a80 1
+  EOS
+d82 1
+a82 1
+    klass.module_eval <<-EOS
+d91 1
+a91 1
+    EOS
+a109 3
+    25
+  end
+  def foo.error
+d113 3
+a115 2
+  p foo.test == foo2.test	# => true
+  foo2.error			# raise error!
+@
+
+
+1.1.1.1.2.14.2.3
+log
+@1.1d1
+@
+text
+@d33 1
+a33 1
+	def self.#{method}(*args, &block)
+d35 1
+a35 1
+	    __getobj__.__send__(:{method}, *args, &block)
+d47 2
+a48 2
+	end
+	EOS
+d91 6
+a96 9
+	def #{method}(*args, &block)
+	  begin
+	    @@obj.__send__(:{method}, *args, &block)
+	  rescue
+	    $@@[0,2] = nil
+	    raise
+	  end
+	end
+	EOS
+d98 2
+a99 1
+    return klass;
+d101 2
+@

@@ -1,0 +1,133 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.06.09.53;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@#
+#   e2mmap.rb - 
+#   	$Release Version: 1.0$
+#   	$Revision: 1.1 $
+#   	$Date: 1998/01/16 12:13:07 $
+#   	by Keiju ISHITSUKA
+#
+# --
+#
+#
+
+module Exception2MessageMapper
+  RCS_ID='-$Header: /home/cvs/ruby/lib/e2mmap1_0.rb,v 1.1 1998/01/16 12:13:07 matz Exp $-'
+  E2MM = Exception2MessageMapper
+  
+  def E2MM.extend_to(b)
+    c = eval("self", b)
+    c.extend(self)
+    c.bind(b)
+  end
+  
+  def bind(b)
+    eval "
+  @@binding = binding
+  E2MM_ErrorMSG = Hash.new
+  
+  # fail(err, *rest)
+  #	err:	例外
+  #	rest:	メッセージに渡すパラメータ
+  #
+  def fail!(*rest)
+    super
+  end
+  
+  def fail(err, *rest)
+    $! = err.new(sprintf(E2MM_ErrorMSG[err], *rest))
+    super()
+  end
+
+  public :fail
+  # def_exception(c, m)
+  #	    c:  exception
+  #	    m:  message_form
+  #	例外cのメッセージをmとする.
+  #
+  def def_e2message(c, m)
+    E2MM_ErrorMSG[c] = m
+  end
+  
+  # def_exception(c, m)
+  #	    c:  exception_name
+  #	    m:  message_form
+  #	    s:	例外スーパークラス(デフォルト: Exception)
+  #	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+  #
+  def def_exception(c, m)
+
+    c = c.id2name if c.kind_of?(Fixnum)
+    eval \"class \#{c} < Exception
+           end
+           E2MM_ErrorMSG[\#{c}] = '\#{m}'
+           \", @@binding
+  end
+", b
+    
+  end
+  
+  E2MM.extend_to(binding)
+  def_exception("ErrNotClassOrModule", "Not Class or Module")
+end
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.4 $
+#   	$Date: 1997/08/18 07:12:12 $
+d13 1
+a13 1
+  RCS_ID='-$Header: /home/keiju/var/src/var.lib/ruby/RCS/e2mmap.rb,v 1.4 1997/08/18 07:12:12 keiju Exp keiju $-'
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

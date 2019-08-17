@@ -1,0 +1,1055 @@
+head	1.9;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5.2.1
+	v1_6_5:1.5
+	v1_6_4:1.5
+	v1_7_1:1.5
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2
+	v1_1d0:1.1.1.1.4.2
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1.4.1
+	v1_1b9_16:1.1.1.1.4.1
+	v1_1b9_15:1.1.1.1.4.1
+	v1_1b9_13:1.1.1.1.4.1
+	v1_1b9_12:1.1.1.1.4.1
+	v1_1b9_11:1.1.1.1.4.1
+	v1_1b9_08:1.1.1.1.4.1
+	v1_1b9_07:1.1.1.1.4.1
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.9
+date	2002.05.30.06.12.29;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.04.25.13.57.01;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.10.22.06.48.16;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.10.16.03.27.11;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.08.07.05.02.10;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.07.18.06.00.44;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.17.08.37.53;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.07.09.08.40.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.24.21;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.10.22.06.46.07;	author matz;	state Exp;
+branches;
+next	1.5.2.2;
+
+1.5.2.2
+date	2002.06.04.07.11.56;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@* range.c (range_step): iteration done using "+" if elements are
+  Numeric.  Otherwise using "succ".
+
+* range.c (range_each): iteration done using "succ".  If the
+  elements does not respond to "succ", raise TypeError.  As a
+  result, all Enumerable methods, e.g. collect, require elements
+  to respond to "succ'.
+
+* range.c (range_member): comparison done using "each", if
+  elements are non-Numeric or no-"succ" objects.  Otherwise
+  compare using "<=>".
+
+* range.c (Init_Range): remove "size" and "length".
+@
+text
+@#
+#   complex.rb - 
+#   	$Release Version: 0.5 $
+#   	$Revision: 1.3 $
+#   	$Date: 1998/07/08 10:05:28 $
+#   	by Keiju ISHITSUKA(SHL Japan Inc.)
+#
+# --
+#   Usage:
+#      class Complex < Numeric
+#
+#   Complex(x, y) --> x + yi
+#   y.im          --> 0 + yi
+#
+#   Complex::polar
+#
+#   Complex::+
+#   Complex::-
+#   Complex::*
+#   Complex::/
+#   Complex::**
+#   Complex::%
+#   Complex::divmod -- obsolete
+#   Complex::abs
+#   Complex::abs2
+#   Complex::arg
+#   Complex::polar
+#   Complex::conjugate
+#   Complex::<=>
+#   Complex::==
+#   Complex::to_f
+#   Complex::to_r
+#   Complex::to_s
+#
+#   Complex::I
+#
+#   Numeric::im
+#
+#   Math.sqrt
+#   Math.exp
+#   Math.cos
+#   Math.sin
+#   Math.tan
+#   Math.log
+#   Math.log10
+#   Math.atan2
+#
+#
+
+def Complex(a, b = 0)
+  if a.kind_of?(Complex) and b == 0
+    a
+  elsif b.kind_of?(Complex)
+    if a.kind_of?(Complex)
+      Complex(a.real-b.image, a.image + b.real)
+    else
+      Complex(a-b.image, b.real)
+    end
+  elsif b == 0 and defined? Complex::Unify
+    a
+  else
+    Complex.new(a, b)
+  end
+end
+
+class Complex < Numeric
+  @@RCS_ID='-$Id: complex.rb,v 1.3 1998/07/08 10:05:28 keiju Exp keiju $-'
+
+  undef step
+
+  def Complex.generic?(other)
+    other.kind_of?(Integer) or
+    other.kind_of?(Float) or
+    (defined?(Rational) and other.kind_of?(Rational))
+  end
+
+  def Complex.polar(r, theta)
+    Complex(r*Math.cos(theta), r*Math.sin(theta))
+  end
+  
+  def initialize(a, b = 0)
+    raise "non numeric 1st arg `#{a.inspect}'" if !a.kind_of? Numeric
+    raise "non numeric 2nd arg `#{b.inspect}'" if !b.kind_of? Numeric
+    @@real = a
+    @@image = b
+  end
+  
+  def + (other)
+    if other.kind_of?(Complex)
+      re = @@real + other.real
+      im = @@image + other.image
+      Complex(re, im)
+    elsif Complex.generic?(other)
+      Complex(@@real + other, @@image)
+    else
+      x , y = other.coerce(self)
+      x + y
+    end
+  end
+  
+  def - (other)
+    if other.kind_of?(Complex)
+      re = @@real - other.real
+      im = @@image - other.image
+      Complex(re, im)
+    elsif Complex.generic?(other)
+      Complex(@@real - other, @@image)
+    else
+      x , y = other.coerce(self)
+      x - y
+    end
+  end
+  
+  def * (other)
+    if other.kind_of?(Complex)
+      re = @@real*other.real - @@image*other.image
+      im = @@real*other.image + @@image*other.real
+      Complex(re, im)
+    elsif Complex.generic?(other)
+      Complex(@@real * other, @@image * other)
+    else
+      x , y = other.coerce(self)
+      x * y
+    end
+  end
+  
+  def / (other)
+    if other.kind_of?(Complex)
+      self*other.conjugate/other.abs2
+    elsif Complex.generic?(other)
+      Complex(@@real/other, @@image/other)
+    else
+      x, y = other.coerce(self)
+      x/y
+    end
+  end
+  
+  def ** (other)
+    if other == 0
+      return Complex(1)
+    end
+    if other.kind_of?(Complex)
+      r, theta = polar
+      ore = other.real
+      oim = other.image
+      nr = Math.exp!(ore*Math.log!(r) - oim * theta)
+      ntheta = theta*ore + oim*Math.log!(r)
+      Complex.polar(nr, ntheta)
+    elsif other.kind_of?(Integer)
+      if other > 0
+	x = self
+	z = x
+	n = other - 1
+	while n != 0
+	  while (div, mod = n.divmod(2)
+		 mod == 0)
+	    x = Complex(x.real*x.real - x.image*x.image, 2*x.real*x.image)
+	    n = div
+	  end
+	  z *= x
+	  n -= 1
+	end
+	z
+      else
+	if defined? Rational
+	  (Rational(1) / self) ** -other
+	else
+	  self ** Float(other)
+	end
+      end
+    elsif Complex.generic?(other)
+      r, theta = polar
+      Complex.polar(r.power!(other), theta * other)
+    else
+      x, y = other.coerce(self)
+      x/y
+    end
+  end
+  
+  def % (other)
+    if other.kind_of?(Complex)
+      Complex(@@real % other.real, @@image % other.image)
+    elsif Complex.generic?(other)
+      Complex(@@real % other, @@image % other)
+    else
+      x , y = other.coerce(self)
+      x % y
+    end
+  end
+  
+#    def divmod(other)
+#      if other.kind_of?(Complex)
+#        rdiv, rmod = @@real.divmod(other.real)
+#        idiv, imod = @@image.divmod(other.image)
+#        return Complex(rdiv, idiv), Complex(rmod, rmod)
+#      elsif Complex.generic?(other)
+#        Complex(@@real.divmod(other), @@image.divmod(other))
+#      else
+#        x , y = other.coerce(self)
+#        x.divmod(y)
+#      end
+#    end
+  
+  def abs
+    Math.sqrt!((@@real*@@real + @@image*@@image).to_f)
+  end
+  
+  def abs2
+    @@real*@@real + @@image*@@image
+  end
+  
+  def arg
+    Math.atan2(@@image.to_f, @@real.to_f)
+  end
+  
+  def polar
+    return abs, arg
+  end
+  
+  def conjugate
+    Complex(@@real, -@@image)
+  end
+  
+  def <=> (other)
+    self.abs <=> other.abs
+  end
+  
+  def == (other)
+    if other.kind_of?(Complex)
+      @@real == other.real and @@image == other.image
+    elsif Complex.generic?(other)
+      @@real == other and @@image == 0
+    else
+      x , y = other.coerce(self)
+      x == y
+    end
+  end
+
+  def coerce(other)
+    if Complex.generic?(other)
+      return Complex.new(other), self
+    else
+      super
+    end
+  end
+
+  def denominator
+    @@real.denominator.lcm(@@image.denominator)
+  end
+  
+  def numerator
+    cd = denominator
+    Complex(@@real.numerator*(cd/@@real.denominator),
+	    @@image.numerator*(cd/@@image.denominator))
+  end
+  
+  def to_s
+    if @@real != 0
+      if defined?(Rational) and @@image.kind_of?(Rational) and @@image.denominator != 1
+	if @@image >= 0
+	  @@real.to_s+"+("+@@image.to_s+")i"
+	else
+	  @@real.to_s+"-("+(-@@image).to_s+")i"
+	end
+      else
+	if @@image >= 0
+	  @@real.to_s+"+"+@@image.to_s+"i"
+	else
+	  @@real.to_s+"-"+(-@@image).to_s+"i"
+	end
+      end
+    else
+      if defined?(Rational) and @@image.kind_of?(Rational) and @@image.denominator != 1
+	"("+@@image.to_s+")i"
+      else
+	@@image.to_s+"i"
+      end
+    end
+  end
+  
+  def hash
+    @@real.hash ^ @@image.hash
+  end
+  
+  def inspect
+    sprintf("Complex(%s, %s)", @@real.inspect, @@image.inspect)
+  end
+
+  
+  I = Complex(0,1)
+  
+  attr :real
+  attr :image
+  
+end
+
+class Numeric
+  def im
+    Complex(0, self)
+  end
+  
+  def real
+    self
+  end
+  
+  def image
+    0
+  end
+  
+  def arg
+    if self >= 0
+      return 0
+    else
+      return Math.atan2(1,1)*4
+    end
+  end
+  
+  def polar
+    return abs, arg
+  end
+  
+  def conjugate
+    self
+  end
+end
+
+class Fixnum
+  if not defined? Rational
+    alias power! **
+  end
+  
+  def ** (other)
+    if self < 0
+      Complex.new(self) ** other
+    else
+      if defined? Rational
+	if other >= 0
+	  self.power!(other)
+	else
+	  Rational.new!(self,1)**other
+	end
+      else
+	self.power!(other)
+      end
+    end
+  end
+end
+
+class Bignum
+  if not defined? Rational
+    alias power! **
+  end
+end
+
+class Float
+  alias power! **
+end
+
+module Math
+  alias sqrt! sqrt
+  alias exp! exp
+  alias cos! cos
+  alias sin! sin
+  alias tan! tan
+  alias log! log
+  alias atan! atan  
+  alias log10! log10
+  alias atan2! atan2
+
+  def sqrt(z)
+    if Complex.generic?(z)
+      if z >= 0
+	sqrt!(z)
+      else
+	Complex(0,sqrt!(-z))
+      end
+    else
+      z**Rational(1,2)
+    end
+  end
+  
+  def exp(z)
+    if Complex.generic?(z)
+      exp!(z)
+    else
+      Complex(exp!(z.real) * cos!(z.image), exp!(z.real) * sin!(z.image))
+    end
+  end
+  
+  def cosh!(x)
+    (exp!(x) + exp!(-x))/2.0
+  end
+  
+  def sinh!(x)
+    (exp!(x) - exp!(-x))/2.0
+  end
+  
+  def cos(z)
+    if Complex.generic?(z)
+      cos!(z)
+    else
+      Complex(cos!(z.real)*cosh!(z.image),
+	      -sin!(z.real)*sinh!(z.image))
+    end
+  end
+    
+  def sin(z)
+    if Complex.generic?(z)
+      sin!(z)
+    else
+      Complex(sin!(z.real)*cosh!(z.image),
+	      cos!(z.real)*sinh!(z.image))
+    end
+  end
+  
+  def tan(z)
+    if Complex.generic?(z)
+      tan!(z)
+    else
+      sin(z)/cos(z)
+    end
+  end
+  
+  def log(z)
+    if Complex.generic?(z) and z >= 0
+      log!(z)
+    else
+      r, theta = z.polar
+      Complex(log!(r.abs), theta)
+    end
+  end
+  
+  def log10(z)
+    if Complex.generic?(z)
+      log10!(z)
+    else
+      log(z)/log!(10)
+    end
+  end
+  
+  def atan2(x, y)
+    if Complex.generic?(x) and Complex.generic?(y)
+      atan2!(x, y)
+    else
+      fail "Not yet implemented."
+    end
+  end
+  
+  def atanh!(x)
+    log((1.0 + x.to_f) / ( 1.0 - x.to_f)) / 2.0
+  end
+  
+  def atan(z)
+    if Complex.generic?(z)
+      atan2!(z, 1)
+    elsif z.image == 0
+      atan2(z.real,1)
+    else
+      a = z.real
+      b = z.image
+      
+      c = (a*a + b*b - 1.0)
+      d = (a*a + b*b + 1.0)
+
+      Complex(atan2!((c + sqrt(c*c + 4.0*a*a)), 2.0*a),
+	      atanh!((-d + sqrt(d*d - 4.0*b*b))/(2.0*b)))
+    end
+  end
+  
+  module_function :sqrt
+  module_function :sqrt!
+  module_function :exp!
+  module_function :exp
+  module_function :cosh!
+  module_function :cos!
+  module_function :cos
+  module_function :sinh!
+  module_function :sin!
+  module_function :sin
+  module_function :tan!
+  module_function :tan
+  module_function :log!
+  module_function :log
+  module_function :log10!
+  module_function :log
+  module_function :atan2!
+  module_function :atan2
+#  module_function :atan!
+  module_function :atan
+  module_function :atanh!
+  
+end
+@
+
+
+1.8
+log
+@* various files: macro fix-up by Michal Rokos.
+@
+text
+@d366 1
+d369 1
+a369 1
+  
+@
+
+
+1.7
+log
+@* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+
+* eval.c (rb_call0): self in a block given to define_method now be
+  switched to the receiver of the method.
+
+* eval.c (proc_invoke): added new parameter to allow self
+  switching.
+@
+text
+@d68 3
+a70 1
+  
+@
+
+
+1.6
+log
+@* string.c (rb_str_index): wrong increment for non alphanumeric
+  string.
+@
+text
+@a30 1
+#   Complex::to_i
+a244 12
+  def to_i
+    Complex(@@real.to_i, @@image.to_i)
+  end
+  
+  def to_f
+    Complex(@@real.to_f, @@image.to_f)
+  end
+  
+  def to_r
+    Complex(@@real.to_r, @@image.to_r)
+  end
+  
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d293 1
+a293 1
+    @@real ^ @@image
+@
+
+
+1.5.2.1
+log
+@* string.c (rb_str_index): wrong increment for non alphanumeric
+  string.
+@
+text
+@d293 1
+a293 1
+    @@real.hash ^ @@image.hash
+@
+
+
+1.5.2.2
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+@
+text
+@a376 1
+  alias atan! atan  
+d379 1
+a379 1
+
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d128 1
+a128 1
+      self * other.conjugate / other.abs2
+d130 1
+a130 1
+      Complex(@@real / other, @@image / other)
+d132 2
+a133 2
+      x , y = other.coerce(self)
+      x / y
+d174 2
+a175 2
+      x , y = other.coerce(self)
+      x / y
+@
+
+
+1.3
+log
+@2000-01-17
+@
+text
+@a502 2
+
+
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d23 1
+a23 1
+#   Complex::divmod
+d54 6
+d190 12
+a201 12
+  def divmod(other)
+    if other.kind_of?(Complex)
+      rdiv, rmod = @@real.divmod(other.real)
+      idiv, imod = @@image.divmod(other.image)
+      return Complex(rdiv, idiv), Complex(rmod, rdiv)
+    elsif Complex.generic?(other)
+      Complex(@@real.divmod(other), @@image.divmod(other))
+    else
+      x , y = other.coerce(self)
+      x.divmod(y)
+    end
+  end
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d23 1
+a23 1
+#   Complex::divmod -- obsolete
+a53 6
+  elsif b.kind_of?(Complex)
+    if a.kind_of?(Complex)
+      Complex(a.real-b.image, a.image + b.real)
+    else
+      Complex(a-b.image, b.real)
+    end
+d184 12
+a195 12
+#    def divmod(other)
+#      if other.kind_of?(Complex)
+#        rdiv, rmod = @@real.divmod(other.real)
+#        idiv, imod = @@image.divmod(other.image)
+#        return Complex(rdiv, idiv), Complex(rmod, rmod)
+#      elsif Complex.generic?(other)
+#        Complex(@@real.divmod(other), @@image.divmod(other))
+#      else
+#        x , y = other.coerce(self)
+#        x.divmod(y)
+#      end
+#    end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1 $
+#   	$Date: 1996/11/11 04:25:19 $
+d62 1
+d75 2
+d89 1
+a89 1
+      x , y = a.coerce(self)
+d102 1
+a102 1
+      x , y = a.coerce(self)
+d115 1
+a115 1
+      x , y = a.coerce(self)
+d126 1
+a126 1
+      x , y = a.coerce(self)
+d168 1
+a168 1
+      x , y = a.coerce(self)
+d179 1
+a179 1
+      x , y = a.coerce(self)
+d192 1
+a192 1
+      x , y = a.coerce(self)
+d227 1
+a227 1
+      x , y = a.coerce(self)
+d290 5
+d407 1
+a407 1
+	      sin!(z.real)*sinh!(z.image))
+d416 1
+a416 1
+	      -cos!(z.real)*sinh!(z.image))
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 1998/07/08 10:05:28 $
+a61 1
+  @@RCS_ID='-$Id: complex.rb,v 1.3 1998/07/08 10:05:28 keiju Exp keiju $-'
+a286 5
+  def inspect
+    sprintf("Complex(%s, %s)", @@real.inspect, @@image.inspect)
+  end
+
+  
+d399 1
+a399 1
+	      -sin!(z.real)*sinh!(z.image))
+d408 1
+a408 1
+	      cos!(z.real)*sinh!(z.image))
+@
+
+
+1.1.1.2.2.1
+log
+@990209
+@
+text
+@a74 2
+    raise "non numeric 1st arg `#{a.inspect}'" if !a.kind_of? Numeric
+    raise "non numeric 2nd arg `#{b.inspect}'" if !b.kind_of? Numeric
+d87 1
+a87 1
+      x , y = other.coerce(self)
+d100 1
+a100 1
+      x , y = other.coerce(self)
+d113 1
+a113 1
+      x , y = other.coerce(self)
+d124 1
+a124 1
+      x , y = other.coerce(self)
+d166 1
+a166 1
+      x , y = other.coerce(self)
+d177 1
+a177 1
+      x , y = other.coerce(self)
+d190 1
+a190 1
+      x , y = other.coerce(self)
+d225 1
+a225 1
+      x , y = other.coerce(self)
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 1998/01/16 04:05:49 $
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_30
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 1998/07/08 10:05:28 $
+a61 1
+  @@RCS_ID='-$Id: complex.rb,v 1.3 1998/07/08 10:05:28 keiju Exp keiju $-'
+a286 5
+  def inspect
+    sprintf("Complex(%s, %s)", @@real.inspect, @@image.inspect)
+  end
+
+  
+d399 1
+a399 1
+	      -sin!(z.real)*sinh!(z.image))
+d408 1
+a408 1
+	      cos!(z.real)*sinh!(z.image))
+@

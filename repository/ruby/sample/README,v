@@ -1,0 +1,456 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.3.4.1
+	v1_6_6:1.3.4.1
+	v1_6_5:1.3.4.1
+	v1_6_4:1.3.4.1
+	v1_7_1:1.3
+	v1_6_4_preview4:1.3.4.1
+	v1_6_4_preview3:1.3.4.1
+	v1_6_4_preview2:1.3.4.1
+	v1_6_4_preview1:1.3.4.1
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.6
+	ruby_1_6:1.3.0.4
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.3
+	v1_4_5:1.3
+	v1_4_4:1.3
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.1
+	v1_3_6_repack:1.1.1.1.2.1
+	v1_3_6:1.1.1.1.2.1
+	v1_3_5:1.1.1.1.2.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1.2.1
+	v1_3_4_990624:1.1.1.1.2.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1.2.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1d1:1.1.4.1
+	v1_1d0:1.1.4.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1dev:1.1.0.4
+	v1_1c8:1.1.2.1
+	v1_1c7:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	99.09.16.09.40.33;	author matz;	state Exp;
+branches
+	1.3.4.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.19;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.09.09.11.52;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.37;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.06.09.09.21.37;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.09.09.11.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	98.11.25.03.31.19;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.4.1
+date	2001.03.26.08.56.08;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@1.4.1
+@
+text
+@README		this file
+biorhythm.rb	biorhythm calculator
+cal.rb		cal(1) clone
+cbreak.rb	no echo done by ioctl
+clnt.rb		socket client
+dbmtest.rb	test for dbm
+dir.rb		directory access
+dualstack-fetch.rb	IPv6 demo
+dualstack-httpd.rb	IPv6 demo
+dstore.rb	object database on dbm
+eval.rb		simple evaluator
+export.rb	method access example
+exyacc.rb	extrace BNF from yacc file
+fact.rb		factorial calculator
+fib.awk		Fibonacci number (AWK)
+fib.pl		Fibonacci number (Perl)
+fib.py		Fibonacci number (Python)
+fib.rb		Fibonacci number (Ruby)
+fib.scm		Fibonacci number (Scheme)
+freq.rb		count word occurrence
+from.rb		scan mail spool
+fullpath.rb	convert ls -lR to fullpath format
+getopts.test	test fot getopt.rb
+goodfriday.rb	print various christian calendar event.
+io.rb		io test
+irb.rb		interactive ruby
+less.rb		front end for less
+list.rb		stupid object sample
+list2.rb	stupid object sample
+list3.rb	stupid object sample
+mine.rb		simple mine sweeper	
+mkproto.rb	extract protptype from C
+mpart.rb	split file int multi part
+mrshtest.rb	test marshal
+observ.rb	observer design pattern sample
+occur.pl	count word occurrence (Perl)
+occur.rb	count word occurrence (Ruby)
+occur2.rb	count word occurrence - another style
+philos.rb	famous dining philosophers
+pi.rb		calculate PI
+rcs.awk		random character stereogram (AWK)
+rcs.rb		random character stereogram (Ruby)
+rcs.dat		data for random character stereogram
+rd2html.rb	rd (Ruby Document) to HTML translator
+regx.rb		regular expression tester
+sieve.rb	sieve of Eratosthenes
+svr.rb		socket server
+test.rb		test suite used by `make test'
+time.rb		/usr/bin/time clone
+trojan.rb	simple tool to find file that may be trojan horse.
+tsvr.rb		socket server using thread
+uumerge.rb	merge files and uudecode them
+@
+
+
+1.3.4.1
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+@
+text
+@d10 1
+d25 1
+d44 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@a24 1
+inf-ruby.el	program to run ruby under emacs
+d26 1
+a40 1
+rbc.rb		interactive ruby, to be removed by irb
+a45 3
+ruby-mode.el	ruby mode for emacs
+rubydb2x.el	ruby debugger support for emacs 19.2x or before
+rubydb3x.el	ruby debugger support for emacs 19.3x or later
+@
+
+
+1.1
+log
+@file README was initially added on branch v1_1r.
+@
+text
+@d1 56
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 60
+README		this file
+biorhythm.rb	biorhythm calculator
+cal.rb		cal(1) clone
+cbreak.rb	no echo done by ioctl
+clnt.rb		socket client
+dbmtest.rb	test for dbm
+dir.rb		directory access
+dstore.rb	object database on dbm
+eval.rb		simple evaluator
+export.rb	method access example
+exyacc.rb	extrace BNF from yacc file
+fact.rb		factorial calculator
+fib.awk		Fibonacci number (AWK)
+fib.pl		Fibonacci number (Perl)
+fib.py		Fibonacci number (Python)
+fib.rb		Fibonacci number (Ruby)
+fib.scm		Fibonacci number (Scheme)
+freq.rb		count word occurrence
+from.rb		scan mail spool
+fullpath.rb	convert ls -lR to fullpath format
+getopts.test	test fot getopt.rb
+goodfriday.rb	print various christian calendar event.
+inf-ruby.el	program to run ruby under emacs
+io.rb		io test
+less.rb		front end for less
+list.rb		stupid object sample
+list2.rb	stupid object sample
+list3.rb	stupid object sample
+mine.rb		simple mine sweeper	
+mkproto.rb	extract protptype from C
+mpart.rb	split file int multi part
+mrshtest.rb	test marshal
+observ.rb	observer design pattern sample
+occur.pl	count word occurrence (Perl)
+occur.rb	count word occurrence (Ruby)
+occur2.rb	count word occurrence - another style
+philos.rb	famous dining philosophers
+pi.rb		calculate PI
+rbc.rb		interactive ruby, to be removed by irb
+rcs.awk		random character stereogram (AWK)
+rcs.rb		random character stereogram (Ruby)
+rcs.dat		data for random character stereogram
+regx.rb		regular expression tester
+ruby-mode.el	ruby mode for emacs
+rubydb2x.el	ruby debugger support for emacs 19.2x or before
+rubydb3x.el	ruby debugger support for emacs 19.3x or later
+sieve.rb	sieve of Eratosthenes
+svr.rb		socket server
+test.rb		test suite used by `make test'
+time.rb		/usr/bin/time clone
+tkbiff.rb	mail notifier using Tk
+tkbrowse.rb	directory browser using Tk
+tkdialog.rb	dialog example
+tkfrom.rb	scan mail spool using Tk
+tkhello.rb	simple Tk example
+tkline.rb	simple Tk example
+tktimer.rb	stopwatch
+trojan.rb	simple tool to find file that may be trojan horse.
+tsvr.rb		socket server using thread
+uumerge.rb	merge files and uudecode them
+@
+
+
+1.1.1.1.2.1
+log
+@thread bugs
+@
+text
+@a7 2
+dualstack-fetch.rb	IPv6 demo
+dualstack-httpd.rb	IPv6 demo
+a42 1
+rd2html.rb	rd (Ruby Document) to HTML translator
+d51 7
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 60
+README		this file
+biorhythm.rb	biorhythm calculator
+cal.rb		cal(1) clone
+cbreak.rb	no echo done by ioctl
+clnt.rb		socket client
+dbmtest.rb	test for dbm
+dir.rb		directory access
+dstore.rb	object database on dbm
+eval.rb		simple evaluator
+export.rb	method access example
+exyacc.rb	extrace BNF from yacc file
+fact.rb		factorial calculator
+fib.awk		Fibonacci number (AWK)
+fib.pl		Fibonacci number (Perl)
+fib.py		Fibonacci number (Python)
+fib.rb		Fibonacci number (Ruby)
+fib.scm		Fibonacci number (Scheme)
+freq.rb		count word occurrence
+from.rb		scan mail spool
+fullpath.rb	convert ls -lR to fullpath format
+getopts.test	test fot getopt.rb
+goodfriday.rb	print various christian calendar event.
+inf-ruby.el	program to run ruby under emacs
+io.rb		io test
+less.rb		front end for less
+list.rb		stupid object sample
+list2.rb	stupid object sample
+list3.rb	stupid object sample
+mine.rb		simple mine sweeper	
+mkproto.rb	extract protptype from C
+mpart.rb	split file int multi part
+mrshtest.rb	test marshal
+observ.rb	observer design pattern sample
+occur.pl	count word occurrence (Perl)
+occur.rb	count word occurrence (Ruby)
+occur2.rb	count word occurrence - another style
+philos.rb	famous dining philosophers
+pi.rb		calculate PI
+rbc.rb		interactive ruby, to be removed by irb
+rcs.awk		random character stereogram (AWK)
+rcs.rb		random character stereogram (Ruby)
+rcs.dat		data for random character stereogram
+regx.rb		regular expression tester
+ruby-mode.el	ruby mode for emacs
+rubydb2x.el	ruby debugger support for emacs 19.2x or before
+rubydb3x.el	ruby debugger support for emacs 19.3x or later
+sieve.rb	sieve of Eratosthenes
+svr.rb		socket server
+test.rb		test suite used by `make test'
+time.rb		/usr/bin/time clone
+tkbiff.rb	mail notifier using Tk
+tkbrowse.rb	directory browser using Tk
+tkdialog.rb	dialog example
+tkfrom.rb	scan mail spool using Tk
+tkhello.rb	simple Tk example
+tkline.rb	simple Tk example
+tktimer.rb	stopwatch
+trojan.rb	simple tool to find file that may be trojan horse.
+tsvr.rb		socket server using thread
+uumerge.rb	merge files and uudecode them
+@
+
+
+1.1.2.1
+log
+@1.1c7
+@
+text
+@a0 60
+README		this file
+biorhythm.rb	biorhythm calculator
+cal.rb		cal(1) clone
+cbreak.rb	no echo done by ioctl
+clnt.rb		socket client
+dbmtest.rb	test for dbm
+dir.rb		directory access
+dstore.rb	object database on dbm
+eval.rb		simple evaluator
+export.rb	method access example
+exyacc.rb	extrace BNF from yacc file
+fact.rb		factorial calculator
+fib.awk		Fibonacci number (AWK)
+fib.pl		Fibonacci number (Perl)
+fib.py		Fibonacci number (Python)
+fib.rb		Fibonacci number (Ruby)
+fib.scm		Fibonacci number (Scheme)
+freq.rb		count word occurrence
+from.rb		scan mail spool
+fullpath.rb	convert ls -lR to fullpath format
+getopts.test	test fot getopt.rb
+goodfriday.rb	print various christian calendar event.
+inf-ruby.el	program to run ruby under emacs
+io.rb		io test
+less.rb		front end for less
+list.rb		stupid object sample
+list2.rb	stupid object sample
+list3.rb	stupid object sample
+mine.rb		simple mine sweeper	
+mkproto.rb	extract protptype from C
+mpart.rb	split file int multi part
+mrshtest.rb	test marshal
+observ.rb	observer design pattern sample
+occur.pl	count word occurrence (Perl)
+occur.rb	count word occurrence (Ruby)
+occur2.rb	count word occurrence - another style
+philos.rb	famous dining philosophers
+pi.rb		calculate PI
+rbc.rb		interactive ruby, to be removed by irb
+rcs.awk		random character stereogram (AWK)
+rcs.rb		random character stereogram (Ruby)
+rcs.dat		data for random character stereogram
+regx.rb		regular expression tester
+ruby-mode.el	ruby mode for emacs
+rubydb2x.el	ruby debugger support for emacs 19.2x or before
+rubydb3x.el	ruby debugger support for emacs 19.3x or later
+sieve.rb	sieve of Eratosthenes
+svr.rb		socket server
+test.rb		test suite used by `make test'
+time.rb		/usr/bin/time clone
+tkbiff.rb	mail notifier using Tk
+tkbrowse.rb	directory browser using Tk
+tkdialog.rb	dialog example
+tkfrom.rb	scan mail spool using Tk
+tkhello.rb	simple Tk example
+tkline.rb	simple Tk example
+tktimer.rb	stopwatch
+trojan.rb	simple tool to find file that may be trojan horse.
+tsvr.rb		socket server using thread
+uumerge.rb	merge files and uudecode them
+@
+

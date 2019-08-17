@@ -1,0 +1,385 @@
+head	1.9;
+access;
+symbols
+	release_0_9_8:1.9
+	autoconfiscation-branch:1.9.0.2
+	root-of-autoconfiscation:1.9
+	release_0_9_7:1.9
+	release_0_9_6:1.8
+	release_0_9_5:1.6
+	release_0_9_4:1.4
+	release_0_9_3:1.4;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2001.09.03.07.37.13;	author shugo;	state Exp;
+branches
+	1.9.2.1;
+next	1.8;
+
+1.8
+date	2001.07.23.03.24.09;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.07.10.03.03.07;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.09.09.54.37;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.08.09.54.34;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.04.10.07.45;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.25.10.09.43;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.25.05.11.54;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.25.05.03.42;	author shugo;	state Exp;
+branches;
+next	;
+
+1.9.2.1
+date	2001.10.19.07.07.46;	author shugo;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@$MAJOR, $MINOR, $TEENY =
+  open(File.join($srcdir, "eruby.h")).grep(/ERUBY_VERSION/)[0].scan(/(\d+).(\d+).(\d+)/)[0]
+$MAJOR_MINOR = format("%02d", ($MAJOR.to_i * 10 + $MINOR.to_i))
+AC_SUBST("MAJOR")
+AC_SUBST("MINOR")
+AC_SUBST("TEENY")
+AC_SUBST("MAJOR_MINOR")
+
+AC_MSG_CHECKING("whether we are using gcc")
+if $CC == "gcc" || `#{$CC} -v 2>&1` =~ /gcc/
+  $using_gcc = true
+  $CFLAGS += " -Wall"
+else
+  $using_gcc = false
+end
+AC_MSG_RESULT($using_gcc)
+
+AC_MSG_CHECKING("Ruby version")
+AC_MSG_RESULT(RUBY_VERSION)
+if RUBY_VERSION < "1.6"
+  AC_MSG_ERROR("eruby requires Ruby 1.6.x or later.")
+end
+
+AC_MSG_CHECKING("for default charset")
+$DEFAULT_CHARSET = "iso-8859-1"
+AC_ARG_WITH("charset",
+"  --with-charset=CHARSET  default charset is CHARSET [iso-8859-1]") { |withval|
+  $DEFAULT_CHARSET = withval
+}
+AC_MSG_RESULT($DEFAULT_CHARSET)
+AC_DEFINE("ERUBY_DEFAULT_CHARSET", $DEFAULT_CHARSET)
+
+AC_MSG_CHECKING("whether enable shared")
+$ENABLE_SHARED = false
+AC_ARG_ENABLE("shared",
+	      "  --enable-shared         build a shared library for eruby") { |enableval|
+  if enableval == "yes"
+    if PLATFORM =~ /-mswin32/
+      AC_MSG_ERROR("can't enable shared on mswin32")
+    end
+    $ENABLE_SHARED = true
+  end
+}
+AC_MSG_RESULT($ENABLE_SHARED)
+
+$LIBERUBY_A = "liberuby.a"
+$LIBERUBY = "${LIBERUBY_A}"
+$LIBERUBYARG="$(LIBERUBY_A)"
+
+$LIBERUBY_SO = "liberuby.#{CONFIG['DLEXT']}.$(MAJOR).$(MINOR).$(TEENY)"
+$LIBERUBY_ALIASES = "liberuby.#{CONFIG['DLEXT']}"
+
+if $ENABLE_SHARED
+  $LIBERUBY = "${LIBERUBY_SO}"
+  $LIBERUBYARG = "-L. -leruby"
+  case PLATFORM
+  when /-sunos4/
+    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+  when /-linux/
+    $DLDFLAGS = '-Wl,-soname,liberuby.so.$(MAJOR).$(MINOR)'
+    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+  when /-(freebsd|netbsd)/
+    $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR)"
+    if PLATFORM =~ /elf/ || PLATFORM =~ /-freebsd[3-9]/
+      $LIBERUBY_SO = "liberuby.so.$(MAJOR_MINOR)"
+      $LIBERUBY_ALIASES = "liberuby.so"
+    else
+      $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR) liberuby.so"
+    end
+  when /-solaris/
+    $XLDFLAGS = "-R$(prefix)/lib"
+  when /-hpux/
+    $XLDFLAGS = "-Wl,+s,+b,$(prefix)/lib"
+    $LIBERUBY_SO = "liberuby.sl.$(MAJOR).$(MINOR).$(TEENY)"
+    $LIBERUBY_ALIASES = 'liberuby.sl.$(MAJOR).$(MINOR) liberuby.sl'
+  when /-aix/
+    $DLDFLAGS = '-Wl,-bE:eruby.imp'
+    $LIBERUBYARG = "-L$(prefix)/lib -Wl,liberuby.so"
+    if $DLDFLAGS !~ /-Wl,/
+      $LIBRUBYARG.gsub!(/-Wl,/, '')
+      $XLDFLAGS.gsub!(/-Wl,/, '')
+      $DLDFLAGS.gsub!(/-Wl,/, '')
+    end
+    print "creating eruby.imp\n"
+    ifile = open("eruby.imp", "w")
+    begin
+      ifile.write <<EOIF
+#!
+ruby_filename
+eruby_mode
+eruby_noheader
+eruby_charset
+EOIF
+    ensure
+      ifile.close
+    end
+  end
+end
+
+if PLATFORM =~ /-mswin32/
+  $AR = "lib"
+  $AROPT = "/out:$@@"
+  $LIBERUBY_A = "liberuby.lib"
+  $LIBERUBY = "$(LIBERUBY_A)"
+  $LIBRUBYARG.gsub!(CONFIG["RUBY_SO_NAME"] + ".lib", CONFIG["LIBRUBY_A"])
+  if /nmake/i =~ $make
+    $LD = "$(CC)"
+    $VPATH = "{$(VPATH)}"
+  else
+    $LD = "env LIB='$(subst /,\\\\,$(libdir));$(LIB)' $(CC)"
+  end
+else
+  $AROPT = "rcu $@@"
+end
+
+AC_SUBST("LIBERUBY_A")
+AC_SUBST("LIBERUBY")
+AC_SUBST("LIBERUBYARG")
+AC_SUBST("LIBERUBY_SO")
+AC_SUBST("LIBERUBY_ALIASES")
+AC_SUBST("AROPT")
+
+$EXT_DLDFLAGS = CONFIG["DLDFLAGS"]
+if $RUBY_SHARED || RUBY_PLATFORM =~ /mswin32/
+  $EXT_LIBRUBYARG = "$(LIBRUBYARG)"
+else
+  $EXT_LIBRUBYARG = ""
+end
+
+$MKERUBY = ""
+if /mswin32/ =~ RUBY_PLATFORM
+  if /nmake/i =~ $make
+    $MKERUBY << "set LIB=$(libdir:/=\\);$(LIB)\n\t"
+  else
+    $MKERUBY << "\tenv LIB='$(subst /,\\\\,$(LIBPATH)); $(EXT_LIBRUBYARG) $(LIB)' \\\n\t"
+  end
+end
+$MKERUBY << "$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBRUBYARG) $(LIBS) -o $@@"
+
+if $DLEXT != $OBJEXT
+  $MKDLLIB = ""
+  if /mswin32/ =~ RUBY_PLATFORM
+    if /nmake/i =~ $make
+      $MKDLLIB << "set LIB=$(libdir:/=\\);$(LIB)\n\t"
+    else
+      $MKDLLIB << "\tenv LIB='$(subst /,\\\\,$(LIBPATH)); $(EXT_LIBRUBYARG) $(LIB)' \\\n\t"
+    end
+  end
+  $MKDLLIB << "$(LDSHARED) $(EXT_DLDFLAGS) -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(EXT_LIBRUBYARG) $(LIBS)"
+  if /mswin32/ =~ RUBY_PLATFORM && /nmake/i =~ $make
+    $MKDLLIB << " -link /INCREMENTAL:no /EXPORT:Init_eruby"
+  end
+else
+  case RUBY_PLATFORM
+  when "m68k-human"
+    $MKDLLIB = "ar cru $(DLLIB) $(EXT_OBJS) $(LIBS)"
+  else
+    $MKDLLIB = "ld $(DLL_DLDFLAGS) -r -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(EXT_LIBRUBYARG) $(LIBS)"
+  end
+end
+
+AC_SUBST("EXT_DLDFLAGS")
+AC_SUBST("EXT_LIBRUBYARG")
+AC_SUBST("MKERUBY")
+AC_SUBST("MKDLLIB")
+
+AC_CONFIG_HEADER("config.h")
+AC_OUTPUT("Makefile")
+
+# Local variables:
+# mode: Ruby
+# tab-width: 8
+# End:
+@
+
+
+1.9.2.1
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.8
+log
+@* hack for mswin32.
+@
+text
+@d169 5
+@
+
+
+1.7
+log
+@* eruby_lib.c (eruby_load): don't set eruby_charset and
+eruby_noheader.
+@
+text
+@d107 1
+a107 1
+    $LD = "(set LIB=$(libdir:/=\\);$(LIB))& $(CC)"
+d124 1
+a124 1
+if $RUBY_SHARED
+d130 10
+d144 1
+a144 1
+      $MKDLLIB << "set LIB=$(LIBPATH:/=\\); $(EXT_LIBRUBYARG) $(LIB)\n\t"
+d150 3
+d164 1
+@
+
+
+1.6
+log
+@* configure.rb.in: check for gcc.
+* eruby_lib.c (eruby_compiler_get_sourcefile): new method.
+* eruby_lib.c (eruby_compiler_set_sourcefile): ditto.
+@
+text
+@d1 8
+a22 8
+
+$MAJOR, $MINOR, $TEENY =
+  open(File.join($srcdir, "eruby.h")).grep(/ERUBY_VERSION/)[0].scan(/(\d+).(\d+).(\d+)/)[0]
+$MAJOR_MINOR = format("%02d", ($MAJOR.to_i * 10 + $MINOR.to_i))
+AC_SUBST("MAJOR")
+AC_SUBST("MINOR")
+AC_SUBST("TEENY")
+AC_SUBST("MAJOR_MINOR")
+@
+
+
+1.5
+log
+@* examples/httpd.conf: changed the example of Apache's LIBEXECDIR
+to /usr/local/apache/libexec.
+@
+text
+@d1 9
+@
+
+
+1.4
+log
+@* configure.rb.in: use DLL_DLDFLAGS for eruby.so.
+@
+text
+@d114 6
+a119 1
+$DLL_DLDFLAGS = CONFIG["DLDFLAGS"]
+d125 1
+a125 1
+      $MKDLLIB << "set LIB=$(LIBPATH:/=\\);$(LIB)\n\t"
+d127 1
+a127 1
+      $MKDLLIB << "\tenv LIB='$(subst /,\\\\,$(LIBPATH));$(LIB)' \\\n\t"
+d130 1
+a130 1
+  $MKDLLIB << "$(LDSHARED) $(DLL_DLDFLAGS) -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)"
+d136 1
+a136 1
+    $MKDLLIB = "ld $(DLL_DLDFLAGS) -r -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)"
+d140 2
+a141 1
+AC_SUBST("DLL_DLDFLAGS")
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d114 2
+d125 1
+a125 1
+  $MKDLLIB << "$(LDSHARED) $(DLDFLAGS) -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)"
+d131 1
+a131 1
+    $MKDLLIB = "ld $(DLDFLAGS) -r -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)"
+d135 1
+@
+
+
+1.2
+log
+@* configure.rb.in: check for MKDLLIB.
+@
+text
+@a68 7
+    if $RUBY_SHARED
+      $LIBRUBYARG = "-Wl," + $libdir + "/" + CONFIG["LIBRUBY_SO"]
+      $LIBRUBYARG.sub!(/\.so\.[.0-9]*$/, '.so')
+      $XLDFLAGS = ""
+    else
+      $XLDFLAGS = "-Wl,-bE:#{$topdir}/ruby.imp"
+    end
+@
+
+
+1.1
+log
+@* configure.rb.in: new file.
+@
+text
+@d121 21
+@

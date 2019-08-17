@@ -1,0 +1,174 @@
+head	1.5;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.3
+	v1_6_4_preview4:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	2002.06.11.01.27.48;	author H_Konishi;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.05.29.10.22.19;	author H_Konishi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.30.23.02.54;	author usa;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.30.09.10.30;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.03.20.23.10.05;	author usa;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.05.25.15.18.08;	author usa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@new platform [bccwin32] merged.
+@
+text
+@#ifdef __BORLANDC__
+#  ifndef WIN32_DIR_H_
+#    define WIN32_DIR_H_
+#    include <sys/types.h>
+#  endif
+#endif
+
+struct direct
+{
+    long d_namlen;
+    ino_t d_ino;
+    char d_name[256];
+};
+typedef struct {
+    char *start;
+    char *curr;
+    long size;
+    long nfiles;
+    struct direct dirstr;
+} DIR;
+
+
+DIR*           rb_w32_opendir(const char*);
+struct direct* rb_w32_readdir(DIR *);
+long           rb_w32_telldir(DIR *);
+void           rb_w32_seekdir(DIR *, long);
+void           rb_w32_rewinddir(DIR *);
+void           rb_w32_closedir(DIR *);
+
+#define opendir   rb_w32_opendir
+#define readdir   rb_w32_readdir
+#define telldir   rb_w32_telldir
+#define seekdir   rb_w32_seekdir
+#define rewinddir rb_w32_rewinddir
+#define closedir  rb_w32_closedir
+@
+
+
+1.4
+log
+@Wed May 29 18:55:47 2002  KONISHI Hiromasa <H_Konishi@@ruby-lang.org>
+
+	* function renames my* and win32_* to rb_w32_* in win32/win32.c
+	  fixed files win32/win32.c, win32/win32.h, win32/dir.h,
+	              hash.c, rubysig.h, signal.c, ext/socket/socket.c
+@
+text
+@d1 7
+@
+
+
+1.3
+log
+@* win32/dir.h: re-add.
+@
+text
+@d15 14
+a28 6
+DIR* opendir(const char*);
+struct direct* readdir(DIR *);
+long telldir(DIR *);
+void seekdir(DIR *, long);
+void rewinddir(DIR *);
+void closedir(DIR *);
+@
+
+
+1.2
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_finish): removed.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* string.c (rb_str_buf_finish): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@@
+
+
+1.1
+log
+@* win32/dir.h: replace missing/dir.h .
+* win32/win32.h: ditto.
+* win32/win32.c: ditto.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@* win32/dir.h: replace missing/dir.h .
+* dir.c: ditto.
+@
+text
+@@

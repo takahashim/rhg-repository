@@ -1,0 +1,181 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2002.02.24.08.20.22;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.14;	author knu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.08.16.07.35.43;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2002.02.24.08.20.50;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Merge from rough.
+- Avoid namespace pollution. (MD5_* -> rb_Digest_MD5_*, etc.)
+@
+text
+@/*	$NetBSD: sha1.h,v 1.2 1998/05/29 22:55:44 thorpej Exp $	*/
+/*	$RoughId: sha1.h,v 1.3 2002/02/24 08:14:32 knu Exp $	*/
+/*	$Id: sha1.h,v 1.1 2001/07/13 20:06:14 knu Exp $	*/
+
+/*
+ * SHA-1 in C
+ * By Steve Reid <steve@@edmweb.com>
+ * 100% Public Domain
+ */
+
+#ifndef _SYS_SHA1_H_
+#define	_SYS_SHA1_H_
+
+#include "defs.h"
+
+typedef struct {
+	uint32_t state[5];
+	uint32_t count[2];  
+	uint8_t buffer[64];
+} SHA1_CTX;
+
+#ifdef RUBY
+#define SHA1_Transform	rb_Digest_SHA1_Transform
+#define SHA1_Init	rb_Digest_SHA1_Init
+#define SHA1_Update	rb_Digest_SHA1_Update
+#define SHA1_Final	rb_Digest_SHA1_Final
+#define SHA1_Equal	rb_Digest_SHA1_Equal
+#ifndef _KERNEL
+#define SHA1_End	rb_Digest_SHA1_End
+#define SHA1_File	rb_Digest_SHA1_File
+#define SHA1_Data	rb_Digest_SHA1_Data
+#endif /* _KERNEL */
+#endif
+
+void	SHA1_Transform _((uint32_t state[5], const uint8_t buffer[64]));
+void	SHA1_Init _((SHA1_CTX *context));
+void	SHA1_Update _((SHA1_CTX *context, const uint8_t *data, size_t len));
+void	SHA1_Final _((uint8_t digest[20], SHA1_CTX *context));
+int	SHA1_Equal _((SHA1_CTX *pctx1, SHA1_CTX *pctx2));
+#ifndef _KERNEL
+char	*SHA1_End _((SHA1_CTX *, char *));
+char	*SHA1_File _((char *, char *));
+char	*SHA1_Data _((const uint8_t *, size_t, char *));
+#endif /* _KERNEL */
+
+#define SHA1_BLOCK_LENGTH		64
+#define SHA1_DIGEST_LENGTH		20
+#define SHA1_DIGEST_STRING_LENGTH	(SHA1_DIGEST_LENGTH * 2 + 1)
+  
+#endif /* _SYS_SHA1_H_ */
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d2 2
+a3 2
+/*	$RoughId: sha1.h,v 1.2 2001/07/13 19:49:10 knu Exp $	*/
+/*	$Id$	*/
+d21 13
+@
+
+
+1.1.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@d3 1
+a3 1
+/*	$Id: sha1.h,v 1.1 2001/07/13 20:06:14 knu Exp $	*/
+@
+
+
+1.1.2.2
+log
+@Merge from rough.
+- Avoid namespace pollution. (MD5_* -> rb_Digest_MD5_*, etc.)
+@
+text
+@d2 2
+a3 2
+/*	$RoughId: sha1.h,v 1.3 2002/02/24 08:14:32 knu Exp $	*/
+/*	$Id: sha1.h,v 1.1.2.1 2001/08/16 07:35:43 knu Exp $	*/
+a20 13
+
+#ifdef RUBY
+#define SHA1_Transform	rb_Digest_SHA1_Transform
+#define SHA1_Init	rb_Digest_SHA1_Init
+#define SHA1_Update	rb_Digest_SHA1_Update
+#define SHA1_Final	rb_Digest_SHA1_Final
+#define SHA1_Equal	rb_Digest_SHA1_Equal
+#ifndef _KERNEL
+#define SHA1_End	rb_Digest_SHA1_End
+#define SHA1_File	rb_Digest_SHA1_File
+#define SHA1_Data	rb_Digest_SHA1_Data
+#endif /* _KERNEL */
+#endif
+@
+
+

@@ -1,0 +1,207 @@
+head	1.3;
+access;
+symbols
+	V0_3_2:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.10.28.03.19.07;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.14.05.31.05;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.06.10.06.15.47;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@JRuby doesn't support Kernel#binding. As I originally used it outside any
+test fixture, this would cause the whole testsuite to fail. The use is now
+conditional on #binding being available.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestEval < Rubicon::TestCase
+
+  def testBasicEval
+    assert_equal(nil, eval(""))
+    $bad=false
+    eval 'while false; bad = true; print "foo\n" end'
+    assert(!$bad)
+
+    assert(eval('TRUE'))
+    assert(eval('true'))
+    assert(!eval('NIL'))
+    assert(!eval('nil'))
+    assert(!eval('FALSE'))
+    assert(!eval('false'))
+
+    foo = 'assert(true)'
+    eval foo
+
+    assert_equal('assert(true)', eval("foo"))
+    assert_equal(true, eval("true"))
+  end
+  
+  def testEvalScoping
+    i = 5
+    assert(eval("i == 5"))
+    assert_equal(5, eval("i"))
+    assert_not_nil(eval("defined? i"))
+  end
+
+  def evalWithBindingHelper
+    local1 = "local1"
+    lambda {
+      local2 = "local2"
+      return binding
+    }.call
+  end
+
+  def testEvalWithBinding
+    x = evalWithBindingHelper
+    assert_equal("local1", eval("local1", x)) # normal local var
+    assert_equal("local2", eval("local2", x)) # nested local var
+  end
+
+  def testEvalNameError
+    assert_exception(NameError) { eval("local1") }
+  end
+
+end
+
+module EvTest
+  EVTEST1 = 25
+  evtest2 = 125
+  if respond_to? :binding
+    BINDING = binding
+  end
+end
+
+class TestEval
+  
+  def testEvalModuleBinding
+    assert_equal(25,  eval("EVTEST1", EvTest::BINDING))	# constant in module
+    assert_equal(125, eval("evtest2", EvTest::BINDING))	# local var in module
+    assert_exception(NameError) { eval("EVTEST1") }
+  end
+
+  def testEvalWithProcBinding
+    x = proc{}
+    eval "i4 = 1", x
+    assert_equal(1, eval("i4", x))
+
+    x = proc{proc{}}.call
+    eval "i4 = 22", x
+    assert_equal(22, eval("i4", x))
+
+    $x = []
+    x = proc{proc{}}.call
+    eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+    assert_equal(8, $x[4].call)
+
+    x = binding
+    eval "i = 1", x
+    assert_equal(1, eval("i", x))
+                 
+    x = proc{binding}.call
+    eval "i = 22", x
+    assert_equal(22, eval("i", x))
+
+    $x = []
+    x = proc{binding}.call
+    eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+    assert_equal(8, $x[4].call)
+
+    x = proc{binding}.call
+    eval "for i6 in 1..1; j6=i6; end", x
+    assert_not_nil(eval("defined? i6", x))
+    assert_not_nil(eval("defined? j6", x))
+  end
+
+  def testProcNestedBinding
+    proc {
+      p = binding
+      eval "foo11 = 1", p
+      foo22 = 5
+      proc{foo11=22}.call
+      proc{foo22=55}.call
+      assert_equal(eval("foo11"), eval("foo11", p))
+      assert_equal(1, eval("foo11"))
+      assert_equal(eval("foo22"), eval("foo22", p))
+      assert_equal(55, eval("foo22"))
+    }.call
+  end
+
+  def testProcMoreFunWithBinding
+    p1 = proc{i7 = 0; proc{i7}}.call
+    assert_equal(0, p1.call)
+    eval "i7=5", p1
+    assert_equal(5, p1.call)
+    assert(!defined?(i7))
+    
+    p1 = proc{i7 = 0; proc{i7}}.call
+    i7 = nil
+    assert_equal(0, p1.call)
+    eval "i7=1", p1
+    assert_equal(1, p1.call)
+    eval "i7=5", p1
+    assert_equal(5, p1.call)
+    assert_equal(nil, i7)
+  end
+
+end
+
+# Run these tests if invoked directly
+
+Rubicon::handleTests(TestEval) if $0 == __FILE__
+@
+
+
+1.2
+log
+@Change many asserts to work with rubyunit-0.4.5.
+
+RubyUnit changed to only allow true or false as the first parameter
+to assert(). This means that tests such as
+
+   assert(defined? Array)
+
+failed.
+@
+text
+@d56 3
+a58 1
+  BINDING = binding
+@
+
+
+1.1
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d30 1
+a30 1
+    assert(eval("defined? i"))
+d96 2
+a97 2
+    assert(eval("defined? i6", x))
+    assert(eval("defined? j6", x))
+@

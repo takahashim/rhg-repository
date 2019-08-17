@@ -1,0 +1,2723 @@
+head	1.22;
+access;
+symbols
+	v1_6_7:1.13.2.5
+	v1_6_6:1.13.2.3
+	v1_6_5:1.13.2.3
+	v1_6_4:1.13
+	v1_7_1:1.15
+	v1_6_4_preview4:1.13
+	v1_6_4_preview3:1.13
+	v1_6_4_preview2:1.13
+	v1_6_4_preview1:1.13
+	v1_6_3:1.13
+	ruby_m17n:1.13.0.4
+	ruby_1_6:1.13.0.2
+	v1_6_2:1.13
+	v1_6_1:1.12
+	v1_6_0:1.12
+	v1_4_6:1.2.2.2
+	v1_4_5:1.2.2.2
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.5
+	v1_3_6_repack:1.1.1.2.2.5
+	v1_3_6:1.1.1.2.2.5
+	v1_3_5:1.1.1.2.2.4
+	v1_2_6repack:1.1.1.1.4.5
+	v1_3_4_990625:1.1.1.2.2.3
+	v1_3_4_990624:1.1.1.2.2.3
+	v1_2_6:1.1.1.1.4.4
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.4
+	v1_2_4:1.1.1.1.4.4
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.4
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.4
+	v1_2_1repack:1.1.1.1.4.4
+	v1_2_1:1.1.1.1.4.4
+	v1_2_stable:1.1.1.1.4.3
+	v1_1d1:1.1.1.1.4.3.2.3
+	v1_1d0:1.1.1.1.4.3.2.3
+	v1_1c9_1:1.1.1.1.4.3
+	v1_1c9:1.1.1.1.4.3
+	v1_1c8:1.1.1.1.4.3
+	v1_1c7:1.1.1.1.4.3
+	v1_1c6:1.1.1.1.4.3
+	v1_1d-start:1.1.1.1.4.3.2.1
+	v1_1c5:1.1.1.1.4.3
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.3
+	v1_1c1:1.1.1.1.4.3
+	v1_1c0:1.1.1.1.4.1
+	v1_1b9_31:1.1.1.1.4.1
+	v1_1b9_30:1.1.1.1.4.1
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.22
+date	2002.05.29.05.20.33;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.04.25.13.55.58;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.28.06.53.30;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.01.16.09.25.55;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.06.22.09.12.20;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.08.14.20.20;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.05.16.09.05.50;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.12.12.07.42.35;	author matz;	state Exp;
+branches
+	1.13.2.1
+	1.13.4.1;
+next	1.12;
+
+1.12
+date	2000.07.15.13.37.00;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.16.02.46.56;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.23.08.37.29;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.03.07.08.37.47;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.25.03.51.21;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.23.05.44.18;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.23.05.43.57;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.02.23.05.23.09;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.05.04.37.12;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.13.06.44.41;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.26;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.05.31.09.13.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.06.24.04.24.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.07.15.07.59.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.07.28.09.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.05.13.07.26.34;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.07.21.09.18.00;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.07.22.03.00.43;	author matz;	state Exp;
+branches
+	1.1.1.1.4.3.2.1;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	99.01.11.07.55.27;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	99.07.15.03.05.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.3.2.1
+date	98.09.08.07.09.17;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3.2.2;
+
+1.1.1.1.4.3.2.2
+date	98.11.25.03.31.17;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3.2.3;
+
+1.1.1.1.4.3.2.3
+date	98.12.16.07.30.33;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.12.08.05.35.57;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.03.23.04.14.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.13.2.1
+date	2001.06.11.06.26.17;	author matz;	state Exp;
+branches;
+next	1.13.2.2;
+
+1.13.2.2
+date	2001.06.22.08.16.31;	author matz;	state Exp;
+branches;
+next	1.13.2.3;
+
+1.13.2.3
+date	2001.06.22.08.37.01;	author matz;	state Exp;
+branches;
+next	1.13.2.4;
+
+1.13.2.4
+date	2002.01.21.07.43.41;	author matz;	state Exp;
+branches;
+next	1.13.2.5;
+
+1.13.2.5
+date	2002.02.28.06.52.47;	author matz;	state Exp;
+branches;
+next	;
+
+1.13.4.1
+date	2001.01.10.09.24.27;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@/* This is a public domain general purpose hash table package written by Peter Moore @@ UCB. */
+
+/* static	char	sccsid[] = "@@(#) st.c 5.1 89/12/14 Crucible"; */
+
+#include "config.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "st.h"
+
+#ifdef NT
+#include <malloc.h>
+#endif
+
+typedef struct st_table_entry st_table_entry;
+
+struct st_table_entry {
+    unsigned int hash;
+    char *key;
+    char *record;
+    st_table_entry *next;
+};
+
+#define ST_DEFAULT_MAX_DENSITY 5
+#define ST_DEFAULT_INIT_TABLE_SIZE 11
+
+    /*
+     * DEFAULT_MAX_DENSITY is the default for the largest we allow the
+     * average number of items per bin before increasing the number of
+     * bins
+     *
+     * DEFAULT_INIT_TABLE_SIZE is the default for the number of bins
+     * allocated initially
+     *
+     */
+static int numcmp();
+static int numhash();
+static struct st_hash_type type_numhash = {
+    numcmp,
+    numhash,
+};
+
+extern int strcmp();
+static int strhash();
+static struct st_hash_type type_strhash = {
+    strcmp,
+    strhash,
+};
+
+#ifdef RUBY_PLATFORM
+#define xmalloc ruby_xmalloc
+#define xcalloc ruby_xcalloc
+#define xrealloc ruby_xrealloc
+#define xfree ruby_xfree
+
+void *xmalloc();
+void *xcalloc();
+void *xrealloc();
+void xfree();
+#endif
+
+static void rehash();
+
+#define alloc(type) (type*)xmalloc((unsigned)sizeof(type))
+#define Calloc(n,s) (char*)xcalloc((n),(s))
+
+#define EQUAL(table,x,y) ((x)==(y) || (*table->type->compare)((x),(y)) == 0)
+
+#define do_hash(key,table) (unsigned int)(*(table)->type->hash)((key))
+#define do_hash_bin(key,table) (do_hash(key, table)%(table)->num_bins)
+
+/*
+ * MINSIZE is the minimum size of a dictionary.
+ */
+
+#define MINSIZE 8
+
+/*
+Table of prime numbers 2^n+a, 2<=n<=30.
+*/
+static long primes[] = {
+	8 + 3,
+	16 + 3,
+	32 + 5,
+	64 + 3,
+	128 + 3,
+	256 + 27,
+	512 + 9,
+	1024 + 9,
+	2048 + 5,
+	4096 + 3,
+	8192 + 27,
+	16384 + 43,
+	32768 + 3,
+	65536 + 45,
+	131072 + 29,
+	262144 + 3,
+	524288 + 21,
+	1048576 + 7,
+	2097152 + 17,
+	4194304 + 15,
+	8388608 + 9,
+	16777216 + 43,
+	33554432 + 35,
+	67108864 + 15,
+	134217728 + 29,
+	268435456 + 3,
+	536870912 + 11,
+	1073741824 + 85,
+	0
+};
+
+static int
+new_size(size)
+    int size;
+{
+    int i;
+
+#if 0
+    for (i=3; i<31; i++) {
+	if ((1<<i) > size) return 1<<i;
+    }
+    return -1;
+#else
+    int newsize;
+
+    for (i = 0, newsize = MINSIZE;
+	 i < sizeof(primes)/sizeof(primes[0]);
+	 i++, newsize <<= 1)
+    {
+	if (newsize > size) return primes[i];
+    }
+    /* Ran out of polynomials */
+    return -1;			/* should raise exception */
+#endif
+}
+
+#ifdef HASH_LOG
+static int collision = 0;
+static int init_st = 0;
+
+static void
+stat_col()
+{
+    FILE *f = fopen("/tmp/col", "w");
+    fprintf(f, "collision: %d\n", collision);
+    fclose(f);
+}
+#endif
+
+st_table*
+st_init_table_with_size(type, size)
+    struct st_hash_type *type;
+    int size;
+{
+    st_table *tbl;
+
+#ifdef HASH_LOG
+    if (init_st == 0) {
+	init_st = 1;
+	atexit(stat_col);
+    }
+#endif
+
+    size = new_size(size);	/* round up to prime number */
+
+    tbl = alloc(st_table);
+    tbl->type = type;
+    tbl->num_entries = 0;
+    tbl->num_bins = size;
+    tbl->bins = (st_table_entry **)Calloc(size, sizeof(st_table_entry*));
+
+    return tbl;
+}
+
+st_table*
+st_init_table(type)
+    struct st_hash_type *type;
+{
+    return st_init_table_with_size(type, 0);
+}
+
+st_table*
+st_init_numtable()
+{
+    return st_init_table(&type_numhash);
+}
+
+st_table*
+st_init_numtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_numhash, size);
+}
+
+st_table*
+st_init_strtable()
+{
+    return st_init_table(&type_strhash);
+}
+
+st_table*
+st_init_strtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_strhash, size);
+}
+
+void
+st_free_table(table)
+    st_table *table;
+{
+    register st_table_entry *ptr, *next;
+    int i;
+
+    for(i = 0; i < table->num_bins; i++) {
+	ptr = table->bins[i];
+	while (ptr != 0) {
+	    next = ptr->next;
+	    free(ptr);
+	    ptr = next;
+	}
+    }
+    free(table->bins);
+    free(table);
+}
+
+#define PTR_NOT_EQUAL(table, ptr, hash_val, key) \
+((ptr) != 0 && (ptr->hash != (hash_val) || !EQUAL((table), (key), (ptr)->key)))
+
+#ifdef HASH_LOG
+#define COLLISION collision++
+#else
+#define COLLISION
+#endif
+
+#define FIND_ENTRY(table, ptr, hash_val, bin_pos) do {\
+    bin_pos = hash_val%(table)->num_bins;\
+    ptr = (table)->bins[bin_pos];\
+    if (PTR_NOT_EQUAL(table, ptr, hash_val, key)) {\
+	COLLISION;\
+	while (PTR_NOT_EQUAL(table, ptr->next, hash_val, key)) {\
+	    ptr = ptr->next;\
+	}\
+	ptr = ptr->next;\
+    }\
+} while (0)
+
+int
+st_lookup(table, key, value)
+    st_table *table;
+    register char *key;
+    char **value;
+{
+    unsigned int hash_val, bin_pos;
+    register st_table_entry *ptr;
+
+    hash_val = do_hash(key, table);
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+
+    if (ptr == 0) {
+	return 0;
+    }
+    else {
+	if (value != 0)  *value = ptr->record;
+	return 1;
+    }
+}
+
+#define ADD_DIRECT(table, key, value, hash_val, bin_pos)\
+do {\
+    st_table_entry *entry;\
+    if (table->num_entries/(table->num_bins) > ST_DEFAULT_MAX_DENSITY) {\
+	rehash(table);\
+        bin_pos = hash_val % table->num_bins;\
+    }\
+    \
+    entry = alloc(st_table_entry);\
+    \
+    entry->hash = hash_val;\
+    entry->key = key;\
+    entry->record = value;\
+    entry->next = table->bins[bin_pos];\
+    table->bins[bin_pos] = entry;\
+    table->num_entries++;\
+} while (0)
+
+int
+st_insert(table, key, value)
+    register st_table *table;
+    register char *key;
+    char *value;
+{
+    unsigned int hash_val, bin_pos;
+    register st_table_entry *ptr;
+
+    hash_val = do_hash(key, table);
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+
+    if (ptr == 0) {
+	ADD_DIRECT(table, key, value, hash_val, bin_pos);
+	return 0;
+    }
+    else {
+	ptr->record = value;
+	return 1;
+    }
+}
+
+void
+st_add_direct(table, key, value)
+    st_table *table;
+    char *key;
+    char *value;
+{
+    unsigned int hash_val, bin_pos;
+
+    hash_val = do_hash(key, table);
+    bin_pos = hash_val % table->num_bins;
+    ADD_DIRECT(table, key, value, hash_val, bin_pos);
+}
+
+static void
+rehash(table)
+    register st_table *table;
+{
+    register st_table_entry *ptr, *next, **new_bins;
+    int i, old_num_bins = table->num_bins, new_num_bins;
+    unsigned int hash_val;
+
+    new_num_bins = new_size(old_num_bins+1);
+    new_bins = (st_table_entry**)Calloc(new_num_bins, sizeof(st_table_entry*));
+
+    for(i = 0; i < old_num_bins; i++) {
+	ptr = table->bins[i];
+	while (ptr != 0) {
+	    next = ptr->next;
+	    hash_val = ptr->hash % new_num_bins;
+	    ptr->next = new_bins[hash_val];
+	    new_bins[hash_val] = ptr;
+	    ptr = next;
+	}
+    }
+    free(table->bins);
+    table->num_bins = new_num_bins;
+    table->bins = new_bins;
+}
+
+st_table*
+st_copy(old_table)
+    st_table *old_table;
+{
+    st_table *new_table;
+    st_table_entry *ptr, *entry;
+    int i, num_bins = old_table->num_bins;
+
+    new_table = alloc(st_table);
+    if (new_table == 0) {
+	return 0;
+    }
+
+    *new_table = *old_table;
+    new_table->bins = (st_table_entry**)
+	Calloc((unsigned)num_bins, sizeof(st_table_entry*));
+
+    if (new_table->bins == 0) {
+	free(new_table);
+	return 0;
+    }
+
+    for(i = 0; i < num_bins; i++) {
+	new_table->bins[i] = 0;
+	ptr = old_table->bins[i];
+	while (ptr != 0) {
+	    entry = alloc(st_table_entry);
+	    if (entry == 0) {
+		free(new_table->bins);
+		free(new_table);
+		return 0;
+	    }
+	    *entry = *ptr;
+	    entry->next = new_table->bins[i];
+	    new_table->bins[i] = entry;
+	    ptr = ptr->next;
+	}
+    }
+    return new_table;
+}
+
+int
+st_delete(table, key, value)
+    register st_table *table;
+    register char **key;
+    char **value;
+{
+    unsigned int hash_val;
+    st_table_entry *tmp;
+    register st_table_entry *ptr;
+
+    hash_val = do_hash_bin(*key, table);
+    ptr = table->bins[hash_val];
+
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+	return 0;
+    }
+
+    if (EQUAL(table, *key, ptr->key)) {
+	table->bins[hash_val] = ptr->next;
+	table->num_entries--;
+	if (value != 0) *value = ptr->record;
+	*key = ptr->key;
+	free(ptr);
+	return 1;
+    }
+
+    for(; ptr->next != 0; ptr = ptr->next) {
+	if (EQUAL(table, ptr->next->key, *key)) {
+	    tmp = ptr->next;
+	    ptr->next = ptr->next->next;
+	    table->num_entries--;
+	    if (value != 0) *value = tmp->record;
+	    *key = tmp->key;
+	    free(tmp);
+	    return 1;
+	}
+    }
+
+    return 0;
+}
+
+int
+st_delete_safe(table, key, value, never)
+    register st_table *table;
+    register char **key;
+    char **value;
+    char *never;
+{
+    unsigned int hash_val;
+    register st_table_entry *ptr;
+
+    hash_val = do_hash_bin(*key, table);
+    ptr = table->bins[hash_val];
+
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+	return 0;
+    }
+
+    for(; ptr != 0; ptr = ptr->next) {
+	if ((ptr->key != never) && EQUAL(table, ptr->key, *key)) {
+	    table->num_entries--;
+	    *key = ptr->key;
+	    if (value != 0) *value = ptr->record;
+	    ptr->key = ptr->record = never;
+	    return 1;
+	}
+    }
+
+    return 0;
+}
+
+static int
+delete_never(key, value, never)
+    char *key, *value, *never;
+{
+    if (value == never) return ST_DELETE;
+    return ST_CONTINUE;
+}
+
+void
+st_cleanup_safe(table, never)
+    st_table *table;
+    char *never;
+{
+    int num_entries = table->num_entries;
+
+    st_foreach(table, delete_never, never);
+    table->num_entries = num_entries;
+}
+
+void
+st_foreach(table, func, arg)
+    st_table *table;
+    enum st_retval (*func)();
+    char *arg;
+{
+    st_table_entry *ptr, *last, *tmp;
+    enum st_retval retval;
+    int i;
+
+    for(i = 0; i < table->num_bins; i++) {
+	last = 0;
+	for(ptr = table->bins[i]; ptr != 0;) {
+	    retval = (*func)(ptr->key, ptr->record, arg);
+	    switch (retval) {
+	    case ST_CONTINUE:
+		last = ptr;
+		ptr = ptr->next;
+		break;
+	    case ST_STOP:
+		return;
+	    case ST_DELETE:
+		tmp = ptr;
+		if (last == 0) {
+		    table->bins[i] = ptr->next;
+		}
+		else {
+		    last->next = ptr->next;
+		}
+		ptr = ptr->next;
+		free(tmp);
+		table->num_entries--;
+	    }
+	}
+    }
+}
+
+static int
+strhash(string)
+    register char *string;
+{
+    register int c;
+
+#ifdef HASH_ELFHASH
+    register unsigned int h = 0, g;
+
+    while ((c = *string++) != '\0') {
+	h = ( h << 4 ) + c;
+	if ( g = h & 0xF0000000 )
+	    h ^= g >> 24;
+	h &= ~g;
+    }
+    return h;
+#elif HASH_PERL
+    register int val = 0;
+
+    while ((c = *string++) != '\0') {
+	val = val*33 + c;
+    }
+
+    return val + (val>>5);
+#else
+    register int val = 0;
+
+    while ((c = *string++) != '\0') {
+	val = val*997 + c;
+    }
+
+    return val + (val>>5);
+#endif
+}
+
+static int
+numcmp(x, y)
+    long x, y;
+{
+    return x != y;
+}
+
+static int
+numhash(n)
+    long n;
+{
+    return n;
+}
+@
+
+
+1.21
+log
+@* various files: macro fix-up by Michal Rokos.
+@
+text
+@d3 1
+a3 1
+static	char	sccsid[] = "@@(#) st.c 5.1 89/12/14 Crucible";
+@
+
+
+1.20
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d236 8
+a243 6
+#define FIND_ENTRY(table, ptr, hash_val, bin_pos) \
+bin_pos = hash_val%(table)->num_bins;\
+ptr = (table)->bins[bin_pos];\
+if (PTR_NOT_EQUAL(table, ptr, hash_val, key)) {\
+    COLLISION;\
+    while (PTR_NOT_EQUAL(table, ptr->next, hash_val, key)) {\
+d246 1
+a246 2
+    ptr = ptr->next;\
+}
+d270 1
+a270 1
+{\
+d285 1
+a285 1
+}
+@
+
+
+1.19
+log
+@* eval.c (rb_mod_include): load modules in argument order.
+
+* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d7 1
+@
+
+
+1.18
+log
+@* st.c: primes should be primes.
+
+* eval.c (is_defined): method defined? check should honor
+  protected too.
+
+* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d168 1
+a168 1
+    tbl->num_bins = size-1;
+d214 1
+a214 1
+    for(i = 0; i <= table->num_bins; i++) {
+d270 1
+a270 1
+    if (table->num_entries/(table->num_bins+1) > ST_DEFAULT_MAX_DENSITY) {\
+d331 1
+a331 2
+    new_num_bins--;
+    for(i = 0; i <= old_num_bins; i++) {
+d352 1
+a352 1
+    int i, num_bins = old_table->num_bins+1;
+d489 1
+a489 1
+    for(i = 0; i <= table->num_bins; i++) {
+@
+
+
+1.17
+log
+@* eval.c (rb_yield_0): no mvalue_to_svalue conversion here.
+
+* eval.c (massign): takes svalue, convert it to mvalue inside.
+
+* eval.c (rb_eval): parameters for yield/return are always
+  svalues now.
+
+* eval.c (svalue_to_mvalue): more strict conversion.
+
+* eval.c (mvalue_to_svalue): ditto.
+
+* st.c (new_size): prime hash size enabled.
+
+* ext/socket/socket.c (Init_socket): SO_* constants added.
+@
+text
+@d89 1
+a89 1
+	4096 + 83,
+d94 14
+a107 14
+	131072 + 9,
+	262144 + 39,
+	524288 + 39,
+	1048576 + 9,
+	2097152 + 5,
+	4194304 + 3,
+	8388608 + 33,
+	16777216 + 27,
+	33554432 + 9,
+	67108864 + 71,
+	134217728 + 39,
+	268435456 + 9,
+	536870912 + 5,
+	1073741824 + 83,
+@
+
+
+1.16
+log
+@* gc.c (Init_stack): avoid __builtin_frame_address(2) to retrieve
+  stack bottom line.
+
+* st.c (numhash): should shuffle bits by dividing by prime number.
+
+* eval.c (rb_eval): multiple assignment behavior fixed, which
+  results "*a = nil" makes "a == []" now.
+
+* eval.c (rb_f_require): should set SCOPE_PUBLIC before calling
+  dln_load().
+@
+text
+@d68 1
+a68 1
+#define do_hash_bin(key,table) (do_hash(key, table)&(table)->num_bins)
+d117 1
+a117 1
+#if 1
+d123 2
+d236 1
+a236 1
+bin_pos = hash_val&(table)->num_bins;\
+d272 1
+a272 1
+        bin_pos = hash_val & table->num_bins;\
+d316 1
+a316 1
+    bin_pos = hash_val & table->num_bins;
+d336 1
+a336 1
+	    hash_val = ptr->hash & new_num_bins;
+d563 1
+a563 1
+    return n / 7;
+@
+
+
+1.15
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d561 1
+a561 1
+    return n;
+@
+
+
+1.14
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d115 1
+a115 1
+    int i, newsize;
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d258 2
+a259 1
+    } else {
+d298 2
+a299 1
+    } else {
+d503 2
+a504 1
+		} else {
+@
+
+
+1.13.2.1
+log
+@* hash.c (ruby_setenv): readline library leaves their environment
+  strings uncopied.  "free" check revised.
+
+* st.c (numhash): should shuffle bits by dividing by prime number.
+@
+text
+@d558 1
+a558 1
+    return n/7;
+@
+
+
+1.13.2.2
+log
+@* st.c (new_size): prime hash size enabled.
+
+* ext/socket/socket.c (Init_socket): SO_* constants added.
+@
+text
+@d117 1
+a117 1
+#if 0
+d234 1
+a234 1
+bin_pos = hash_val%(table)->num_bins;\
+d269 1
+a269 1
+        bin_pos = hash_val % table->num_bins;\
+d312 1
+a312 1
+    bin_pos = hash_val % table->num_bins;
+d332 1
+a332 1
+	    hash_val = ptr->hash % new_num_bins;
+d558 1
+a558 1
+    return n;
+@
+
+
+1.13.2.3
+log
+@* st.c (new_size): a bug in bin_pos calculation
+@
+text
+@d68 1
+a68 1
+#define do_hash_bin(key,table) (do_hash(key, table)%(table)->num_bins)
+@
+
+
+1.13.2.4
+log
+@* eval.c (ruby_stop): should not trace error handler.
+
+* io.c (io_write): should not raise exception on O_NONBLOCK io.
+
+* dir.c (dir_set_pos): seek should return dir, pos= should not.
+@
+text
+@d89 1
+a89 1
+	4096 + 3,
+d94 14
+a107 14
+	131072 + 29,
+	262144 + 3,
+	524288 + 21,
+	1048576 + 7,
+	2097152 + 17,
+	4194304 + 15,
+	8388608 + 9,
+	16777216 + 43,
+	33554432 + 35,
+	67108864 + 15,
+	134217728 + 29,
+	268435456 + 3,
+	536870912 + 11,
+	1073741824 + 85,
+@
+
+
+1.13.2.5
+log
+@* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d166 1
+a166 1
+    tbl->num_bins = size;
+d212 1
+a212 1
+    for(i = 0; i < table->num_bins; i++) {
+d267 1
+a267 1
+    if (table->num_entries/(table->num_bins) > ST_DEFAULT_MAX_DENSITY) {\
+d327 2
+a328 1
+    for(i = 0; i < old_num_bins; i++) {
+d349 1
+a349 1
+    int i, num_bins = old_table->num_bins;
+d486 1
+a486 1
+    for(i = 0; i < table->num_bins; i++) {
+@
+
+
+1.13.4.1
+log
+@m17n baseline
+@
+text
+@d125 2
+a126 1
+	 i++, newsize <<= 1) {
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d65 1
+a65 1
+#define EQUAL(table, x, y) ((*table->type->compare)(x, y) == 0)
+d67 2
+a68 2
+#define do_hash(key, table) (unsigned int)(*(table)->type->hash)((key))
+#define do_hash_bin(key, table) (do_hash(key, table)&(table)->num_bins)
+@
+
+
+1.11
+log
+@remove configure from repositry
+@
+text
+@d549 1
+a549 1
+    int x, y;
+d556 1
+a556 1
+    int n;
+@
+
+
+1.10
+log
+@2000-03-23
+@
+text
+@d48 6
+a53 1
+#ifndef xmalloc
+d57 1
+d59 1
+@
+
+
+1.9
+log
+@2000-03-07
+@
+text
+@d438 1
+a438 1
+	if (EQUAL(table, ptr->key, *key)) {
+@
+
+
+1.8
+log
+@2000-02-25
+@
+text
+@a8 4
+#ifdef USE_CWGUSI
+#include <stdlib.h>
+#endif
+
+@
+
+
+1.7
+log
+@2000-02-23
+@
+text
+@d65 1
+a65 1
+#define do_hash_bin(key, table) (do_hash(key, table)%(table)->num_bins)
+d115 5
+a127 5
+#else
+    for (i=3; i<31; i++) {
+	if ((1<<i) > size) return 1<<i;
+    }
+    return -1;
+d131 1
+d142 1
+d151 1
+a151 1
+#if 0
+d163 1
+a163 1
+    tbl->num_bins = size;
+d209 1
+a209 1
+    for(i = 0; i < table->num_bins; i++) {
+d224 6
+d231 1
+a231 1
+bin_pos = hash_val%(table)->num_bins;\
+d234 1
+a234 1
+    collision++;\
+d264 1
+a264 1
+    if (table->num_entries/table->num_bins > ST_DEFAULT_MAX_DENSITY) {\
+d266 1
+a266 1
+        bin_pos = hash_val % table->num_bins;\
+d309 1
+a309 1
+    bin_pos = hash_val % table->num_bins;
+d321 1
+a321 1
+    new_num_bins = new_size(old_num_bins);
+d324 2
+a325 1
+    for(i = 0; i < old_num_bins; i++) {
+d329 1
+a329 1
+	    hash_val = ptr->hash % new_num_bins;
+d346 1
+a346 1
+    int i, num_bins = old_table->num_bins;
+d483 1
+a483 1
+    for(i = 0; i < table->num_bins; i++) {
+d513 21
+a534 1
+    register int c;
+d540 2
+a541 1
+    return val;
+@
+
+
+1.6
+log
+@2000-02-23
+@
+text
+@d114 1
+a114 1
+#if 0
+@
+
+
+1.5
+log
+@2000-02-23
+@
+text
+@d149 1
+d154 1
+@
+
+
+1.4
+log
+@20000105
+@
+text
+@d114 1
+d123 17
+d149 5
+d224 1
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+/* This is a general purpose hash table package written by Peter Moore @@ UCB. */
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d82 2
+a83 2
+	256 + 29,
+	512 + 17,
+@
+
+
+1.2.2.1
+log
+@19991208
+@
+text
+@d82 2
+a83 2
+	256 + 27,
+	512 + 9,
+@
+
+
+1.2.2.2
+log
+@2000-03-23
+@
+text
+@d407 1
+a407 1
+	if ((ptr->key != never) && EQUAL(table, ptr->key, *key)) {
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d9 17
+d52 1
+d56 1
+a58 2
+#define max(a,b) ((a) > (b) ? (a) : (b))
+#define nil(type) ((type*)0)
+d64 59
+a122 1
+#define do_hash(key, table) (*(table)->type->hash)((key), (table)->num_bins)
+d131 1
+a131 5
+    if (size == 0) size = ST_DEFAULT_INIT_TABLE_SIZE;
+    else size /= ST_DEFAULT_MAX_DENSITY*0.87;
+
+    if (size < ST_DEFAULT_INIT_TABLE_SIZE)
+	size = ST_DEFAULT_INIT_TABLE_SIZE;
+d138 1
+d156 7
+d168 7
+d182 1
+a182 1
+    for(i = 0; i < table->num_bins ; i++) {
+d184 1
+a184 1
+	while (ptr != nil(st_table_entry)) {
+d186 1
+a186 1
+	    free((char*)ptr);
+d190 2
+a191 2
+    free((char*)table->bins);
+    free((char*)table);
+d194 2
+a195 2
+#define PTR_NOT_EQUAL(table, ptr, key) \
+(ptr != nil(st_table_entry) && !EQUAL(table, key, (ptr)->key))
+d197 5
+a201 4
+#define FIND_ENTRY(table, ptr, hash_val) \
+ptr = (table)->bins[hash_val];\
+if (PTR_NOT_EQUAL(table, ptr, key)) {\
+    while (PTR_NOT_EQUAL(table, ptr->next, key)) {\
+d213 1
+a213 1
+    int hash_val;
+d217 1
+d219 1
+a219 3
+    FIND_ENTRY(table, ptr, hash_val);
+
+    if (ptr == nil(st_table_entry)) {
+d222 1
+a222 1
+	if (value != nil(char*))  *value = ptr->record;
+d227 1
+a227 1
+#define ADD_DIRECT(table, key, value, hash_val, tbl)\
+d229 1
+d232 1
+a232 1
+	hash_val = do_hash(key, table);\
+d235 1
+a235 1
+    tbl = alloc(st_table_entry);\
+d237 5
+a241 4
+    tbl->key = key;\
+    tbl->record = value;\
+    tbl->next = table->bins[hash_val];\
+    table->bins[hash_val] = tbl;\
+d251 1
+a251 2
+    int hash_val;
+    st_table_entry *tbl;
+d255 1
+d257 2
+a258 4
+    FIND_ENTRY(table, ptr, hash_val);
+
+    if (ptr == nil(st_table_entry)) {
+	ADD_DIRECT(table,key,value,hash_val,tbl);
+d272 1
+a272 2
+    int hash_val;
+    st_table_entry *tbl;
+d275 2
+a276 24
+    ADD_DIRECT(table, key, value, hash_val, tbl);
+}
+
+int
+st_find_or_add(table, key, slot)
+    st_table *table;
+    char *key;
+    char ***slot;
+{
+    int hash_val;
+    st_table_entry *tbl, *ptr;
+
+    hash_val = do_hash(key, table);
+
+    FIND_ENTRY(table, ptr, hash_val);
+
+    if (ptr == nil(st_table_entry)) {
+	ADD_DIRECT(table, key, (char*)0, hash_val, tbl)
+	if (slot != nil(char**)) *slot = &tbl->record;
+	return 0;
+    } else {
+	if (slot != nil(char**)) *slot = &ptr->record;
+	return 1;
+    }
+d283 3
+a285 2
+    register st_table_entry *ptr, *next, **old_bins = table->bins;
+    int i, old_num_bins = table->num_bins, hash_val;
+d287 2
+a288 1
+    table->num_bins = 1.79*old_num_bins;
+d290 3
+a292 11
+    if (table->num_bins%2 == 0) {
+	table->num_bins += 1;
+    }
+
+    table->num_entries = 0;
+    table->bins = (st_table_entry **)
+	Calloc((unsigned)table->num_bins, sizeof(st_table_entry*));
+
+    for(i = 0; i < old_num_bins ; i++) {
+	ptr = old_bins[i];
+	while (ptr != nil(st_table_entry)) {
+d294 3
+a296 4
+	    hash_val = do_hash(ptr->key, table);
+	    ptr->next = table->bins[hash_val];
+	    table->bins[hash_val] = ptr;
+	    table->num_entries++;
+d300 3
+a302 1
+    free((char*)old_bins);
+d310 1
+a310 1
+    st_table_entry *ptr, *tbl;
+d314 2
+a315 2
+    if (new_table == nil(st_table)) {
+	return nil(st_table);
+d322 3
+a324 3
+    if (new_table->bins == nil(st_table_entry*)) {
+	free((char*)new_table);
+	return nil(st_table);
+d327 2
+a328 2
+    for(i = 0; i < num_bins ; i++) {
+	new_table->bins[i] = nil(st_table_entry);
+d330 6
+a335 6
+	while (ptr != nil(st_table_entry)) {
+	    tbl = alloc(st_table_entry);
+	    if (tbl == nil(st_table_entry)) {
+		free((char*)new_table->bins);
+		free((char*)new_table);
+		return nil(st_table);
+d337 3
+a339 3
+	    *tbl = *ptr;
+	    tbl->next = new_table->bins[i];
+	    new_table->bins[i] = tbl;
+d352 1
+a352 1
+    int hash_val;
+d356 1
+a356 2
+    hash_val = do_hash(*key, table);
+
+d359 2
+a360 2
+    if (ptr == nil(st_table_entry)) {
+	if (value != nil(char*)) *value = nil(char);
+d367 1
+a367 1
+	if (value != nil(char*)) *value = ptr->record;
+d369 1
+a369 1
+	free((char*)ptr);
+d373 1
+a373 1
+    for(; ptr->next != nil(st_table_entry); ptr = ptr->next) {
+d378 1
+a378 1
+	    if (value != nil(char*)) *value = tmp->record;
+d380 1
+a380 1
+	    free((char*)tmp);
+d395 1
+a395 1
+    int hash_val;
+d398 1
+a398 2
+    hash_val = do_hash(*key, table);
+
+d401 2
+a402 2
+    if (ptr == nil(st_table_entry)) {
+	if (value != nil(char*)) *value = nil(char);
+d406 2
+a407 10
+    if (EQUAL(table, *key, ptr->key)) {
+	table->num_entries--;
+	*key = ptr->key;
+	if (value != nil(char*)) *value = ptr->record;
+	ptr->key = ptr->record = never;
+	return 1;
+    }
+
+    for(; ptr->next != nil(st_table_entry); ptr = ptr->next) {
+	if (EQUAL(table, ptr->next->key, *key)) {
+d410 1
+a410 1
+	    if (value != nil(char*)) *value = ptr->record;
+d419 19
+d449 2
+a450 2
+	last = nil(st_table_entry);
+	for(ptr = table->bins[i]; ptr != nil(st_table_entry);) {
+d461 1
+a461 1
+		if (last == nil(st_table_entry)) {
+d467 1
+a467 1
+		free((char*)tmp);
+d475 1
+a475 1
+strhash(string, modulus)
+a476 1
+    int modulus;
+d485 1
+a485 1
+    return ((val < 0) ? -val : val)%modulus;
+d496 1
+a496 1
+numhash(n, modulus)
+a497 1
+    int modulus;
+d499 1
+a499 1
+    return n % modulus;
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@a8 13
+#ifdef USE_CWGUSI
+#include <stdlib.h>
+#endif
+
+typedef struct st_table_entry st_table_entry;
+
+struct st_table_entry {
+    unsigned int hash;
+    char *key;
+    char *record;
+    st_table_entry *next;
+};
+
+d40 2
+d47 1
+a47 59
+#define do_hash(key, table) (unsigned int)(*(table)->type->hash)((key))
+#define do_hash_bin(key, table) (do_hash(key, table)%(table)->num_bins)
+
+/*
+ * MINSIZE is the minimum size of a dictionary.
+ */
+
+#define MINSIZE 8
+
+/*
+Table of prime numbers 2^n+a, 2<=n<=30.
+*/
+static long primes[] = {
+	8 + 3,
+	16 + 3,
+	32 + 5,
+	64 + 3,
+	128 + 3,
+	256 + 29,
+	512 + 17,
+	1024 + 9,
+	2048 + 5,
+	4096 + 83,
+	8192 + 27,
+	16384 + 43,
+	32768 + 3,
+	65536 + 45,
+	131072 + 9,
+	262144 + 39,
+	524288 + 39,
+	1048576 + 9,
+	2097152 + 5,
+	4194304 + 3,
+	8388608 + 33,
+	16777216 + 27,
+	33554432 + 9,
+	67108864 + 71,
+	134217728 + 39,
+	268435456 + 9,
+	536870912 + 5,
+	1073741824 + 83,
+	0
+};
+
+static int
+new_size(size)
+    int size;
+{
+    int i, newsize;
+
+    for (i = 0, newsize = MINSIZE;
+	 i < sizeof(primes)/sizeof(primes[0]);
+	 i++, newsize <<= 1)
+    {
+	if (newsize > size) return primes[i];
+    }
+    /* Ran out of polynomials */
+    return -1;			/* should raise exception */
+}
+d56 5
+a60 1
+    size = new_size(size);	/* round up to prime number */
+a66 1
+
+a83 7
+st_init_numtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_numhash, size);
+}
+
+st_table*
+a88 7
+st_table*
+st_init_strtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_strhash, size);
+}
+
+d98 1
+a98 1
+	while (ptr != 0) {
+d100 1
+a100 1
+	    free(ptr);
+d104 2
+a105 2
+    free(table->bins);
+    free(table);
+d108 2
+a109 2
+#define PTR_NOT_EQUAL(table, ptr, hash_val, key) \
+((ptr) != 0 && ptr->hash != (hash_val) && !EQUAL((table), (key), (ptr)->key))
+d111 4
+a114 5
+#define FIND_ENTRY(table, ptr, hash_val, bin_pos) \
+bin_pos = hash_val%(table)->num_bins;\
+ptr = (table)->bins[bin_pos];\
+if (PTR_NOT_EQUAL(table, ptr, hash_val, key)) {\
+    while (PTR_NOT_EQUAL(table, ptr->next, hash_val, key)) {\
+d126 1
+a126 1
+    unsigned int hash_val, bin_pos;
+a129 1
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+d131 3
+a133 1
+    if (ptr == 0) {
+d136 1
+a136 1
+	if (value != 0)  *value = ptr->record;
+d141 1
+a141 1
+#define ADD_DIRECT(table, key, value, hash_val, bin_pos)\
+a142 1
+    st_table_entry *tbl;\
+d145 1
+a145 1
+        bin_pos = hash_val % table->num_bins;\
+a149 1
+    tbl->hash = hash_val;\
+d152 2
+a153 2
+    tbl->next = table->bins[bin_pos];\
+    table->bins[bin_pos] = tbl;\
+d163 2
+a164 1
+    unsigned int hash_val, bin_pos;
+a167 1
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+d169 4
+a172 2
+    if (ptr == 0) {
+	ADD_DIRECT(table, key, value, hash_val, bin_pos);
+d186 2
+a187 1
+    unsigned int hash_val, bin_pos;
+d190 24
+a213 2
+    bin_pos = hash_val % table->num_bins;
+    ADD_DIRECT(table, key, value, hash_val, bin_pos);
+d220 8
+a227 3
+    register st_table_entry *ptr, *next, **new_bins;
+    int i, old_num_bins = table->num_bins, new_num_bins;
+    unsigned int hash_val;
+d229 3
+a231 2
+    new_num_bins = new_size(old_num_bins);
+    new_bins = (st_table_entry**)Calloc(new_num_bins, sizeof(st_table_entry*));
+d234 2
+a235 2
+	ptr = table->bins[i];
+	while (ptr != 0) {
+d237 4
+a240 3
+	    hash_val = ptr->hash % new_num_bins;
+	    ptr->next = new_bins[hash_val];
+	    new_bins[hash_val] = ptr;
+d244 1
+a244 3
+    free(table->bins);
+    table->num_bins = new_num_bins;
+    table->bins = new_bins;
+d256 2
+a257 2
+    if (new_table == 0) {
+	return 0;
+d264 3
+a266 3
+    if (new_table->bins == 0) {
+	free(new_table);
+	return 0;
+d270 1
+a270 1
+	new_table->bins[i] = 0;
+d272 1
+a272 1
+	while (ptr != 0) {
+d274 4
+a277 4
+	    if (tbl == 0) {
+		free(new_table->bins);
+		free(new_table);
+		return 0;
+d294 1
+a294 1
+    unsigned int hash_val;
+d298 2
+a299 1
+    hash_val = do_hash_bin(*key, table);
+d302 2
+a303 2
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+d310 1
+a310 1
+	if (value != 0) *value = ptr->record;
+d312 1
+a312 1
+	free(ptr);
+d316 1
+a316 1
+    for(; ptr->next != 0; ptr = ptr->next) {
+d321 1
+a321 1
+	    if (value != 0) *value = tmp->record;
+d323 1
+a323 1
+	    free(tmp);
+d338 1
+a338 1
+    unsigned int hash_val;
+d341 2
+a342 1
+    hash_val = do_hash_bin(*key, table);
+d345 2
+a346 2
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+d353 1
+a353 1
+	if (value != 0) *value = ptr->record;
+d358 1
+a358 1
+    for(; ptr->next != 0; ptr = ptr->next) {
+d362 1
+a362 1
+	    if (value != 0) *value = ptr->record;
+d382 2
+a383 2
+	last = 0;
+	for(ptr = table->bins[i]; ptr != 0;) {
+d394 1
+a394 1
+		if (last == 0) {
+d400 1
+a400 1
+		free(tmp);
+d408 1
+a408 1
+strhash(string)
+d410 1
+d419 1
+a419 1
+    return val;
+d430 1
+a430 1
+numhash(n)
+d432 1
+d434 1
+a434 1
+    return n;
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d189 1
+a189 1
+((ptr) != 0 && (ptr->hash != (hash_val) || !EQUAL((table), (key), (ptr)->key)))
+@
+
+
+1.1.1.2.2.2
+log
+@990531
+@
+text
+@a47 1
+#ifndef xmalloc
+a50 1
+#endif
+d223 1
+a223 1
+    st_table_entry *entry;\
+d229 1
+a229 1
+    entry = alloc(st_table_entry);\
+d231 5
+a235 5
+    entry->hash = hash_val;\
+    entry->key = key;\
+    entry->record = value;\
+    entry->next = table->bins[bin_pos];\
+    table->bins[bin_pos] = entry;\
+d304 1
+a304 1
+    st_table_entry *ptr, *entry;
+d325 2
+a326 2
+	    entry = alloc(st_table_entry);
+	    if (entry == 0) {
+d331 3
+a333 3
+	    *entry = *ptr;
+	    entry->next = new_table->bins[i];
+	    new_table->bins[i] = entry;
+@
+
+
+1.1.1.2.2.3
+log
+@990624
+@
+text
+@a12 4
+#ifdef NT
+#include <malloc.h>
+#endif
+
+@
+
+
+1.1.1.2.2.4
+log
+@990715
+@
+text
+@d406 10
+a415 2
+    for(; ptr != 0; ptr = ptr->next) {
+	if (EQUAL(table, ptr->key, *key)) {
+a424 19
+}
+
+static int
+delete_never(key, value, never)
+    char *key, *value, *never;
+{
+    if (value == never) return ST_DELETE;
+    return ST_CONTINUE;
+}
+
+void
+st_cleanup_safe(table, never)
+    st_table *table;
+    char *never;
+{
+    int num_entries = table->num_entries;
+
+    st_foreach(table, delete_never, never);
+    table->num_entries = num_entries;
+@
+
+
+1.1.1.2.2.5
+log
+@990728
+@
+text
+@d182 1
+a182 1
+    for(i = 0; i < table->num_bins; i++) {
+d290 1
+a290 1
+    for(i = 0; i < old_num_bins; i++) {
+d327 1
+a327 1
+    for(i = 0; i < num_bins; i++) {
+@
+
+
+1.1.1.1.4.1
+log
+@1.1b9_19
+@
+text
+@a8 4
+#ifdef USE_CWGUSI
+#include <stdlib.h>
+#endif
+
+@
+
+
+1.1.1.1.4.2
+log
+@st.c(rehash)
+@
+text
+@a51 1
+#define do_hash2(key, table, bins) (*(table)->type->hash)((key), bins)
+d225 1
+a225 1
+    int i, old_num_bins = table->num_bins, new_num_bins, hash_val;
+d227 1
+a227 1
+    new_num_bins = 1.79*old_num_bins;
+d229 2
+a230 2
+    if (new_num_bins%2 == 0) {
+	new_num_bins += 1;
+a232 1
+    table->num_bins = 0;
+d235 1
+a235 1
+	Calloc((unsigned)new_num_bins, sizeof(st_table_entry*));
+d241 1
+a241 1
+	    hash_val = do_hash2(ptr->key, table, new_num_bins);
+a247 1
+    table->num_bins = new_num_bins;
+@
+
+
+1.1.1.1.4.3
+log
+@rehash
+@
+text
+@d45 1
+d103 1
+a103 1
+	while (ptr != 0) {
+d105 1
+a105 1
+	    free(ptr);
+d109 2
+a110 2
+    free(table->bins);
+    free(table);
+d114 1
+a114 1
+(ptr != 0 && !EQUAL(table, key, (ptr)->key))
+d138 1
+a138 1
+    if (ptr == 0) {
+d141 1
+a141 1
+	if (value != 0)  *value = ptr->record;
+d176 1
+a176 1
+    if (ptr == 0) {
+d211 1
+a211 1
+    if (ptr == 0) {
+d213 1
+a213 1
+	if (slot != 0) *slot = &tbl->record;
+d216 1
+a216 1
+	if (slot != 0) *slot = &ptr->record;
+d225 1
+a225 1
+    register st_table_entry *ptr, *next, **new_bins;
+d234 3
+a236 1
+    new_bins = (st_table_entry **)
+d240 2
+a241 2
+	ptr = table->bins[i];
+	while (ptr != 0) {
+d244 3
+a246 2
+	    ptr->next = new_bins[hash_val];
+	    new_bins[hash_val] = ptr;
+a249 1
+    free(table->bins);
+d251 1
+a251 1
+    table->bins = new_bins;
+d263 2
+a264 2
+    if (new_table == 0) {
+	return 0;
+d271 3
+a273 3
+    if (new_table->bins == 0) {
+	free(new_table);
+	return 0;
+d277 1
+a277 1
+	new_table->bins[i] = 0;
+d279 1
+a279 1
+	while (ptr != 0) {
+d281 4
+a284 4
+	    if (tbl == 0) {
+		free(new_table->bins);
+		free(new_table);
+		return 0;
+d309 2
+a310 2
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+d317 1
+a317 1
+	if (value != 0) *value = ptr->record;
+d319 1
+a319 1
+	free(ptr);
+d323 1
+a323 1
+    for(; ptr->next != 0; ptr = ptr->next) {
+d328 1
+a328 1
+	    if (value != 0) *value = tmp->record;
+d330 1
+a330 1
+	    free(tmp);
+d352 2
+a353 2
+    if (ptr == 0) {
+	if (value != 0) *value = 0;
+d360 1
+a360 1
+	if (value != 0) *value = ptr->record;
+d365 1
+a365 1
+    for(; ptr->next != 0; ptr = ptr->next) {
+d369 1
+a369 1
+	    if (value != 0) *value = ptr->record;
+d389 2
+a390 2
+	last = 0;
+	for(ptr = table->bins[i]; ptr != 0;) {
+d401 1
+a401 1
+		if (last == 0) {
+d407 1
+a407 1
+		free(tmp);
+@
+
+
+1.1.1.1.4.4
+log
+@1.2.1 stable
+@
+text
+@a43 1
+#ifndef max
+a44 2
+#endif
+
+@
+
+
+1.1.1.1.4.5
+log
+@1.2.6 repack
+@
+text
+@d357 10
+a366 2
+    for(; ptr != 0; ptr = ptr->next) {
+	if (EQUAL(table, ptr->key, *key)) {
+@
+
+
+1.1.1.1.4.3.2.1
+log
+@1.1d series
+@
+text
+@a87 7
+st_init_numtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_numhash, size);
+}
+
+st_table*
+a90 7
+}
+
+st_table*
+st_init_strtable_with_size(size)
+    int size;
+{
+    return st_init_table_with_size(&type_strhash, size);
+@
+
+
+1.1.1.1.4.3.2.2
+log
+@*** empty log message ***
+@
+text
+@a12 9
+typedef struct st_table_entry st_table_entry;
+
+struct st_table_entry {
+    unsigned int hash;
+    char *key;
+    char *record;
+    st_table_entry *next;
+};
+
+d50 2
+a51 60
+#define do_hash(key, table) (unsigned int)(*(table)->type->hash)((key))
+#define do_hash_bin(key, table) (do_hash(key, table)%(table)->num_bins)
+
+/*
+ * MINSIZE is the minimum size of a dictionary.
+ */
+
+#define MINSIZE 8
+
+/*
+Table of irreducible polynomials to efficiently cycle through
+GF(2^n)-{0}, 2<=n<=30.
+*/
+static long polys[] = {
+	8 + 3,
+	16 + 3,
+	32 + 5,
+	64 + 3,
+	128 + 3,
+	256 + 29,
+	512 + 17,
+	1024 + 9,
+	2048 + 5,
+	4096 + 83,
+	8192 + 27,
+	16384 + 43,
+	32768 + 3,
+	65536 + 45,
+	131072 + 9,
+	262144 + 39,
+	524288 + 39,
+	1048576 + 9,
+	2097152 + 5,
+	4194304 + 3,
+	8388608 + 33,
+	16777216 + 27,
+	33554432 + 9,
+	67108864 + 71,
+	134217728 + 39,
+	268435456 + 9,
+	536870912 + 5,
+	1073741824 + 83,
+	0
+};
+
+static int
+new_size(size)
+    int size;
+{
+    int i, newsize;
+
+    for (i = 0, newsize = MINSIZE;
+	 i < sizeof(polys)/sizeof(polys[0]);
+	 i++, newsize <<= 1)
+    {
+	if (newsize > size) return polys[i];
+    }
+    /* Ran out of polynomials */
+    return -1;			/* should raise exception */
+}
+d60 5
+a64 1
+    size = new_size(size);	/* round up to prime number */
+a70 1
+
+d126 2
+a127 2
+#define PTR_NOT_EQUAL(table, ptr, hash_val, key) \
+((ptr) != 0 && ptr->hash != (hash_val) && !EQUAL((table), (key), (ptr)->key))
+d129 4
+a132 5
+#define FIND_ENTRY(table, ptr, hash_val, bin_pos) \
+bin_pos = hash_val%(table)->num_bins;\
+ptr = (table)->bins[bin_pos];\
+if (PTR_NOT_EQUAL(table, ptr, hash_val, key)) {\
+    while (PTR_NOT_EQUAL(table, ptr->next, hash_val, key)) {\
+d144 1
+a144 1
+    unsigned int hash_val, bin_pos;
+d148 2
+a149 1
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+d159 1
+a159 1
+#define ADD_DIRECT(table, key, value, hash_val, bin_pos)\
+a160 1
+    st_table_entry *tbl;\
+d163 1
+a163 1
+        bin_pos = hash_val % table->num_bins;\
+a167 1
+    tbl->hash = hash_val;\
+d170 2
+a171 2
+    tbl->next = table->bins[bin_pos];\
+    table->bins[bin_pos] = tbl;\
+d181 2
+a182 1
+    unsigned int hash_val, bin_pos;
+d186 2
+a187 1
+    FIND_ENTRY(table, ptr, hash_val, bin_pos);
+d190 1
+a190 1
+	ADD_DIRECT(table, key, value, hash_val, bin_pos);
+d204 1
+a204 1
+    unsigned int hash_val, bin_pos;
+d208 24
+a231 2
+    bin_pos = hash_val % table->num_bins;
+    ADD_DIRECT(table, key, value, hash_val, bin_pos);
+d239 1
+a239 2
+    int i, old_num_bins = table->num_bins, new_num_bins;
+    unsigned int hash_val;
+d241 8
+a248 2
+    new_num_bins = new_size(old_num_bins);
+    new_bins = (st_table_entry**)Calloc(new_num_bins, sizeof(st_table_entry*));
+d254 1
+a254 1
+	    hash_val = ptr->hash % new_num_bins;
+d312 1
+a312 1
+    unsigned int hash_val;
+d316 2
+a317 1
+    hash_val = do_hash_bin(*key, table);
+d356 1
+a356 1
+    unsigned int hash_val;
+d359 2
+a360 1
+    hash_val = do_hash_bin(*key, table);
+d426 1
+a426 1
+strhash(string)
+d428 1
+d437 1
+a437 1
+    return val;
+d448 1
+a448 1
+numhash(n)
+d450 1
+d452 1
+a452 1
+    return n;
+@
+
+
+1.1.1.1.4.3.2.3
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d69 2
+a70 1
+Table of prime numbers 2^n+a, 2<=n<=30.
+d72 1
+a72 1
+static long primes[] = {
+d111 1
+a111 1
+	 i < sizeof(primes)/sizeof(primes[0]);
+d114 1
+a114 1
+	if (newsize > size) return primes[i];
+@

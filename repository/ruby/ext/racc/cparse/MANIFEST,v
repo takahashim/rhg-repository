@@ -1,0 +1,47 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.08.05.13.38.49;	author aamine;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.22.07.20.31;	author aamine;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* MANIFEST: add lib/racc/parser.rb.
+* ext/racc/cparse/cparse.c: code refine.
+* ext/racc/cparse/MANIFEST: add depend.
+@
+text
+@MANIFEST
+cparse.c
+depend
+extconf.rb
+@
+
+
+1.1
+log
+@racc runtime imported.
+* lib/racc/parser.rb: new file.
+* ext/racc/MANIFEST, cparse.c, depend, extconf.rb: new files.
+* lib/README: add racc/parser.rb.
+* ext/Setup*: add racc/cparse.
+@
+text
+@d3 1
+@

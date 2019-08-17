@@ -1,0 +1,5637 @@
+head	1.50;
+access;
+symbols
+	v1_6_7:1.14.2.12
+	v1_6_6:1.14.2.6
+	v1_6_5:1.14.2.5
+	v1_6_4:1.14.2.4
+	v1_7_1:1.18
+	v1_6_4_preview4:1.14.2.4
+	v1_6_4_preview3:1.14.2.4
+	v1_6_4_preview2:1.14.2.4
+	v1_6_4_preview1:1.14.2.3
+	v1_6_3:1.14
+	ruby_m17n:1.14.0.4
+	ruby_1_6:1.14.0.2
+	v1_6_2:1.14
+	v1_6_1:1.12
+	v1_6_0:1.12
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.7
+	v1_3_6_repack:1.1.1.3.2.7
+	v1_3_6:1.1.1.3.2.7
+	v1_3_5:1.1.1.3.2.7
+	v1_2_6repack:1.1.1.2.2.20
+	v1_3_4_990625:1.1.1.3.2.7
+	v1_3_4_990624:1.1.1.3.2.7
+	v1_2_6:1.1.1.2.2.20
+	v1_3_4_990611:1.1.1.3.2.7
+	v1_3_4_990531:1.1.1.3.2.7
+	v1_3_3_990518:1.1.1.3.2.7
+	v1_3_3_990513:1.1.1.3.2.6
+	v1_3_3_990507:1.1.1.3.2.6
+	v1_2_5:1.1.1.2.2.19
+	v1_2_4:1.1.1.2.2.19
+	v1_3_1_990225:1.1.1.3.2.5
+	v1_3_1_990224:1.1.1.3.2.4
+	v1_3_1_990215:1.1.1.3.2.3
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.3
+	v1_3_1_990203:1.1.1.3.2.3
+	v1_3_1_990201:1.1.1.3.2.3
+	v1_3_1"_990201:1.1.1.3.2.3
+	v1_3_1_990128:1.1.1.3.2.2
+	v1_3_1_990127:1.1.1.3.2.2
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.19
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.19
+	v1_2_1repack:1.1.1.2.2.19
+	v1_2_1:1.1.1.2.2.19
+	v1_2_stable:1.1.1.2.2.19
+	v1_1d1:1.1.1.2.2.19.2.3
+	v1_1d0:1.1.1.2.2.19.2.3
+	v1_1c9_1:1.1.1.2.2.19
+	v1_1c9:1.1.1.2.2.19
+	v1_1c8:1.1.1.2.2.19
+	v1_1c7:1.1.1.2.2.19
+	v1_1c6:1.1.1.2.2.19
+	v1_1d-start:1.1.1.2.2.19.2.1
+	v1_1c5:1.1.1.2.2.19
+	v1_1dev:1.1.1.2.2.19.0.2
+	v1_1c4:1.1.1.2.2.19
+	v1_1c3:1.1.1.2.2.19
+	v1_1c2:1.1.1.2.2.19
+	v1_1c1:1.1.1.2.2.19
+	v1_1c0:1.1.1.2.2.19
+	v1_1b9_31:1.1.1.2.2.19
+	v1_1b9_30:1.1.1.2.2.19
+	v1_1b9_28:1.1.1.2.2.19
+	v1_1b9_27:1.1.1.2.2.19
+	v1_1b9_26:1.1.1.2.2.19
+	r1_1b9_25:1.1.1.2.2.19
+	r1_1b9_24:1.1.1.2.2.19
+	v1_1b9_23:1.1.1.2.2.18
+	v1_1b9_22:1.1.1.2.2.17
+	v1_1b9_20:1.1.1.2.2.16
+	v1_1b9_18:1.1.1.2.2.14
+	v1_1b9_16:1.1.1.2.2.14
+	v1_1b9_15:1.1.1.2.2.14
+	v1_1b9_13:1.1.1.2.2.14
+	v1_1b9_12:1.1.1.2.2.14
+	v1_1b9_11:1.1.1.2.2.13
+	v1_1b9_08:1.1.1.2.2.13
+	v1_1b9_07:1.1.1.2.2.13
+	r1_1b9:1.1.1.2.2.5
+	v1_1b8:1.1.1.2.2.5
+	v1_1b7:1.1.1.2.2.4
+	v1_1b6:1.1.1.2.2.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.50
+date	2002.10.30.08.04.31;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.10.01.08.14.01;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.09.28.02.41.05;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.09.25.07.03.01;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.09.05.09.42.56;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.09.04.06.37.35;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.08.27.08.31.05;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.07.11.08.22.10;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.05.28.18.11.07;	author michal;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.04.25.13.55.58;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.04.18.08.46.17;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.03.19.09.03.07;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.03.08.07.03.03;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.02.19.07.47.05;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.02.17.14.44.14;	author nobu;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.01.25.08.22.04;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.01.16.02.17.30;	author nobu;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.01.11.09.18.49;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.10.20.18.39;	author nobu;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.07.05.27.01;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.12.18.08.46.56;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.12.10.07.18.12;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.19.05.03.02;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.10.22.06.48.14;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.09.08.14.17.09;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.08.14.08.13.26;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.07.24.09.07.33;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.07.18.05.55.20;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.05.30.09.12.33;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.03.28.08.43.24;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.12.18.09.45.57;	author matz;	state Exp;
+branches
+	1.14.2.1;
+next	1.13;
+
+1.13
+date	2000.12.05.09.36.24;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.27.09.49.14;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.22.08.29.40;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.24.04.33.53;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.01.09.41.11;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.03.07.08.37.25;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.25.03.51.17;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.18.06.59.28;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.36.57;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.14.06.49.39;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.17.07.30.29;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.02;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.08;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.09;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.01.27.08.08.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.01.07.34.53;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.24.04.31.17;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.25.06.39.03;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.03.24.08.52.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.05.17.09.53.56;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.22.08.32.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.01.29.08.18.02;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.09.10.56.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.02.20.08.28.44;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.03.05.06.37.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.09.08.38.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.03.11.07.32.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.03.12.07.22.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.03.16.05.12.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.03.28.10.57.39;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.03.31.04.52.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.04.07.08.34.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.04.20.05.55.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.05.13.07.26.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.05.14.04.10.22;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.05.18.04.55.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.05.25.04.57.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.06.02.10.05.16;	author matz;	state Exp;
+branches
+	1.1.1.2.2.19.2.1;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	99.06.21.06.30.57;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.19.2.1
+date	98.09.08.07.08.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19.2.2;
+
+1.1.1.2.2.19.2.2
+date	98.10.06.03.28.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19.2.3;
+
+1.1.1.2.2.19.2.3
+date	98.11.25.03.31.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.23.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.14.2.1
+date	2001.03.28.08.44.36;	author matz;	state Exp;
+branches;
+next	1.14.2.2;
+
+1.14.2.2
+date	2001.04.03.05.43.49;	author matz;	state Exp;
+branches;
+next	1.14.2.3;
+
+1.14.2.3
+date	2001.04.06.05.42.39;	author matz;	state Exp;
+branches;
+next	1.14.2.4;
+
+1.14.2.4
+date	2001.04.11.07.41.32;	author matz;	state Exp;
+branches;
+next	1.14.2.5;
+
+1.14.2.5
+date	2001.09.06.07.47.46;	author matz;	state Exp;
+branches;
+next	1.14.2.6;
+
+1.14.2.6
+date	2001.12.18.08.40.30;	author matz;	state Exp;
+branches;
+next	1.14.2.7;
+
+1.14.2.7
+date	2002.01.07.05.24.03;	author matz;	state Exp;
+branches;
+next	1.14.2.8;
+
+1.14.2.8
+date	2002.01.10.23.38.56;	author nobu;	state Exp;
+branches;
+next	1.14.2.9;
+
+1.14.2.9
+date	2002.01.16.02.20.25;	author nobu;	state Exp;
+branches;
+next	1.14.2.10;
+
+1.14.2.10
+date	2002.01.25.08.23.31;	author matz;	state Exp;
+branches;
+next	1.14.2.11;
+
+1.14.2.11
+date	2002.01.28.08.42.35;	author matz;	state Exp;
+branches;
+next	1.14.2.12;
+
+1.14.2.12
+date	2002.02.20.04.28.50;	author matz;	state Exp;
+branches;
+next	1.14.2.13;
+
+1.14.2.13
+date	2002.03.15.08.55.58;	author matz;	state Exp;
+branches;
+next	1.14.2.14;
+
+1.14.2.14
+date	2002.04.10.08.47.39;	author matz;	state Exp;
+branches;
+next	1.14.2.15;
+
+1.14.2.15
+date	2002.07.11.08.24.53;	author matz;	state Exp;
+branches;
+next	1.14.2.16;
+
+1.14.2.16
+date	2002.09.25.07.07.36;	author matz;	state Exp;
+branches;
+next	1.14.2.17;
+
+1.14.2.17
+date	2002.10.26.15.57.20;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.50
+log
+@* eval.c (rb_mod_public_method_defined, etc.): new methods:
+  public_method_defined?, private_method_defined?,
+  protected_method_defined?
+
+* object.c (rb_obj_public_methods): new method
+  Object#public_methods.
+
+* class.c (ins_methods_i): Object#methods should list both public
+  and protected methods.
+
+* class.c (rb_class_public_instance_methods): new method
+  Module#public_instance_methods.
+@
+text
+@/**********************************************************************
+
+  class.c -
+
+  $Author: matz $
+  $Date: 2002/10/01 08:14:01 $
+  created at: Tue Aug 10 15:05:44 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "rubysig.h"
+#include "node.h"
+#include "st.h"
+#include <ctype.h>
+
+extern st_table *rb_class_tbl;
+
+VALUE
+rb_class_boot(super)
+    VALUE super;
+{
+    NEWOBJ(klass, struct RClass);
+    OBJSETUP(klass, rb_cClass, T_CLASS);
+
+    klass->super = super;
+    klass->iv_tbl = 0;
+    klass->m_tbl = 0;		/* safe GC */
+    klass->m_tbl = st_init_numtable();
+
+    OBJ_INFECT(klass, super);
+    return (VALUE)klass;
+}
+
+VALUE
+rb_class_new(super)
+    VALUE super;
+{
+    Check_Type(super, T_CLASS);
+    if (super == rb_cClass) {
+	rb_raise(rb_eTypeError, "can't make subclass of Class");
+    }
+    if (FL_TEST(super, FL_SINGLETON)) {
+	rb_raise(rb_eTypeError, "can't make subclass of virtual class");
+    }
+    return rb_class_boot(super);
+}
+
+static int
+clone_method(mid, body, tbl)
+    ID mid;
+    NODE *body;
+    st_table *tbl;
+{
+    st_insert(tbl, mid, NEW_METHOD(body->nd_body, body->nd_noex));
+    return ST_CONTINUE;
+}
+
+VALUE
+rb_mod_clone(module)
+    VALUE module;
+{
+    NEWOBJ(clone, struct RClass);
+    CLONESETUP(clone, module);
+
+    RCLASS(clone)->super = RCLASS(module)->super;
+    if (RCLASS(module)->iv_tbl) {
+	ID id;
+
+	RCLASS(clone)->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+	id = rb_intern("__classpath__");
+	st_delete(RCLASS(clone)->iv_tbl, &id, 0);
+	id = rb_intern("__classid__");
+	st_delete(RCLASS(clone)->iv_tbl, &id, 0);
+    }
+    if (RCLASS(module)->m_tbl) {
+	RCLASS(clone)->m_tbl = st_init_numtable();
+	st_foreach(RCLASS(module)->m_tbl, clone_method, RCLASS(clone)->m_tbl);
+    }
+
+    return (VALUE)clone;
+}
+
+VALUE
+rb_mod_dup(mod)
+    VALUE mod;
+{
+    VALUE dup = rb_mod_clone(mod);
+
+    RBASIC(dup)->flags = RBASIC(mod)->flags & (T_MASK|FL_TAINT|FL_SINGLETON);
+    return dup;
+}
+
+VALUE
+rb_singleton_class_clone(obj)
+    VALUE obj;
+{
+    VALUE klass = RBASIC(obj)->klass;
+
+    if (!FL_TEST(klass, FL_SINGLETON))
+	return klass;
+    else {
+	/* copy singleton(unnamed) class */
+	NEWOBJ(clone, struct RClass);
+	OBJSETUP(clone, 0, RBASIC(klass)->flags);
+
+	if (BUILTIN_TYPE(obj) == T_CLASS) {
+	    RBASIC(clone)->klass = (VALUE)clone;
+	}
+	else {
+	    RBASIC(clone)->klass = rb_singleton_class_clone(klass);
+	}
+
+	clone->super = RCLASS(klass)->super;
+	clone->iv_tbl = 0;
+	clone->m_tbl = 0;
+	if (RCLASS(klass)->iv_tbl) {
+	    clone->iv_tbl = st_copy(RCLASS(klass)->iv_tbl);
+	}
+	clone->m_tbl = st_init_numtable();
+	st_foreach(RCLASS(klass)->m_tbl, clone_method, clone->m_tbl);
+	rb_singleton_class_attached(RBASIC(clone)->klass, (VALUE)clone);
+	FL_SET(clone, FL_SINGLETON);
+	return (VALUE)clone;
+    }
+}
+
+void
+rb_singleton_class_attached(klass, obj)
+    VALUE klass, obj;
+{
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	if (!RCLASS(klass)->iv_tbl) {
+	    RCLASS(klass)->iv_tbl = st_init_numtable();
+	}
+	st_insert(RCLASS(klass)->iv_tbl, rb_intern("__attached__"), obj);
+    }
+}
+
+VALUE
+rb_make_metaclass(obj, super)
+    VALUE obj, super;
+{
+    VALUE klass = rb_class_boot(super);
+    FL_SET(klass, FL_SINGLETON);
+    RBASIC(obj)->klass = klass;
+    rb_singleton_class_attached(klass, obj);
+    if (BUILTIN_TYPE(obj) == T_CLASS && FL_TEST(obj, FL_SINGLETON)) {
+	RBASIC(klass)->klass = klass;
+	RCLASS(klass)->super = RBASIC(rb_class_real(RCLASS(obj)->super))->klass;
+    }
+    else {
+	VALUE metasuper = RBASIC(rb_class_real(super))->klass;
+
+	/* metaclass of a superclass may be NULL at boot time */
+	if (metasuper) {
+	    RBASIC(klass)->klass = metasuper;
+	}
+    }
+
+    return klass;
+}
+
+VALUE
+rb_define_class_id(id, super)
+    ID id;
+    VALUE super;
+{
+    VALUE klass;
+
+    if (!super) super = rb_cObject;
+    klass = rb_class_new(super);
+    rb_name_class(klass, id);
+    rb_make_metaclass(klass, RBASIC(super)->klass);
+
+    return klass;
+}
+
+VALUE
+rb_class_inherited(super, klass)
+    VALUE super, klass;
+{
+    if (!super) super = rb_cObject;
+    return rb_funcall(super, rb_intern("inherited"), 1, klass);
+}
+
+VALUE
+rb_define_class(name, super)
+    const char *name;
+    VALUE super;
+{
+    VALUE klass;
+    ID id;
+
+    id = rb_intern(name);
+    if (rb_autoload_defined(id)) {
+	rb_autoload_load(id);
+    }
+    if (rb_const_defined(rb_cObject, id)) {
+	klass = rb_const_get(rb_cObject, id);
+	if (TYPE(klass) != T_CLASS) {
+	    rb_raise(rb_eTypeError, "%s is not a class", name);
+	}
+	if (rb_class_real(RCLASS(klass)->super) != super) {
+	    rb_name_error(id, "%s is already defined", name);
+	}
+	return klass;
+    }
+    if (!super) {
+	rb_warn("no super class for `%s', Object assumed", name);
+    }
+    klass = rb_define_class_id(id, super);
+    rb_class_inherited(super, klass);
+    st_add_direct(rb_class_tbl, id, klass);
+
+    return klass;
+}
+
+VALUE
+rb_define_class_under(outer, name, super)
+    VALUE outer;
+    const char *name;
+    VALUE super;
+{
+    VALUE klass;
+    ID id;
+
+    id = rb_intern(name);
+    if (rb_const_defined_at(outer, id)) {
+	klass = rb_const_get(outer, id);
+	if (TYPE(klass) != T_CLASS) {
+	    rb_raise(rb_eTypeError, "%s is not a class", name);
+	}
+	if (rb_class_real(RCLASS(klass)->super) != super) {
+	    rb_name_error(id, "%s is already defined", name);
+	}
+	return klass;
+    }
+    if (!super) {
+	rb_warn("no super class for `%s::%s', Object assumed",
+		rb_class2name(outer), name);
+    }
+    klass = rb_define_class_id(id, super);
+    rb_set_class_path(klass, outer, name);
+    rb_class_inherited(super, klass);
+    rb_const_set(outer, id, klass);
+
+    return klass;
+}
+
+VALUE
+rb_module_new()
+{
+    NEWOBJ(mdl, struct RClass);
+    OBJSETUP(mdl, rb_cModule, T_MODULE);
+
+    mdl->super = 0;
+    mdl->iv_tbl = 0;
+    mdl->m_tbl = 0;
+    mdl->m_tbl = st_init_numtable();
+
+    return (VALUE)mdl;
+}
+
+VALUE
+rb_define_module_id(id)
+    ID id;
+{
+    VALUE mdl;
+
+    mdl = rb_module_new();
+    rb_name_class(mdl, id);
+
+    return mdl;
+}
+
+VALUE
+rb_define_module(name)
+    const char *name;
+{
+    VALUE module;
+    ID id;
+
+    id = rb_intern(name);
+    if (rb_autoload_defined(id)) {
+	rb_autoload_load(id);
+    }
+    if (rb_const_defined(rb_cObject, id)) {
+	module = rb_const_get(rb_cObject, id);
+	if (TYPE(module) == T_MODULE)
+	    return module;
+	rb_raise(rb_eTypeError, "%s is not a module", rb_class2name(CLASS_OF(module)));
+    }
+    module = rb_define_module_id(id);
+    st_add_direct(rb_class_tbl, id, module);
+
+    return module;
+}
+
+VALUE
+rb_define_module_under(outer, name)
+    VALUE outer;
+    const char *name;
+{
+    VALUE module;
+    ID id;
+
+    id = rb_intern(name);
+    if (rb_const_defined_at(outer, id)) {
+	module = rb_const_get(outer, id);
+	if (TYPE(module) == T_MODULE)
+	    return module;
+	rb_raise(rb_eTypeError, "%s::%s is not a module",
+		 rb_class2name(outer), rb_class2name(CLASS_OF(module)));
+    }
+    module = rb_define_module_id(id);
+    rb_const_set(outer, id, module);
+    rb_set_class_path(module, outer, name);
+
+    return module;
+}
+
+static VALUE
+include_class_new(module, super)
+    VALUE module, super;
+{
+    NEWOBJ(klass, struct RClass);
+    OBJSETUP(klass, rb_cClass, T_ICLASS);
+
+    if (BUILTIN_TYPE(module) == T_ICLASS) {
+	module = RBASIC(module)->klass;
+    }
+    if (!RCLASS(module)->iv_tbl) {
+	RCLASS(module)->iv_tbl = st_init_numtable();
+    }
+    klass->iv_tbl = RCLASS(module)->iv_tbl;
+    klass->m_tbl = RCLASS(module)->m_tbl;
+    klass->super = super;
+    if (TYPE(module) == T_ICLASS) {
+	RBASIC(klass)->klass = RBASIC(module)->klass;
+    }
+    else {
+	RBASIC(klass)->klass = module;
+    }
+    OBJ_INFECT(klass, module);
+    OBJ_INFECT(klass, super);
+
+    return (VALUE)klass;
+}
+
+void
+rb_include_module(klass, module)
+    VALUE klass, module;
+{
+    VALUE p, c;
+    int changed = 0;
+
+    rb_frozen_class_p(klass);
+    if (!OBJ_TAINTED(klass)) {
+	rb_secure(4);
+    }
+    
+    if (NIL_P(module)) return;
+    if (klass == module) return;
+
+    switch (TYPE(module)) {
+      case T_MODULE:
+      case T_CLASS:
+      case T_ICLASS:
+	break;
+      default:
+	Check_Type(module, T_MODULE);
+    }
+
+    OBJ_INFECT(klass, module);
+    c = klass;
+    while (module) {
+	int superclass_seen = Qfalse;
+
+	if (RCLASS(klass)->m_tbl == RCLASS(module)->m_tbl)
+	    rb_raise(rb_eArgError, "cyclic include detected");
+	/* ignore if the module included already in superclasses */
+	for (p = RCLASS(klass)->super; p; p = RCLASS(p)->super) {
+	    switch (BUILTIN_TYPE(p)) {
+	      case T_ICLASS:
+		if (RCLASS(p)->m_tbl == RCLASS(module)->m_tbl) {
+		    if (!superclass_seen) {
+			c = p;	/* move insertion point */
+		    }
+		    goto skip;
+		}
+		break;
+	      case T_CLASS:
+		superclass_seen = Qtrue;
+		break;
+	    }
+	}
+	c = RCLASS(c)->super = include_class_new(module, RCLASS(c)->super);
+	changed = 1;
+      skip:
+	module = RCLASS(module)->super;
+    }
+    if (changed) rb_clear_cache();
+}
+
+VALUE
+rb_mod_included_modules(mod)
+    VALUE mod;
+{
+    VALUE ary = rb_ary_new();
+    VALUE p;
+
+    for (p = RCLASS(mod)->super; p; p = RCLASS(p)->super) {
+	if (BUILTIN_TYPE(p) == T_ICLASS) {
+	    rb_ary_push(ary, RBASIC(p)->klass);
+	}
+    }
+    return ary;
+}
+
+VALUE
+rb_mod_include_p(mod, mod2)
+    VALUE mod;
+    VALUE mod2;
+{
+    VALUE p;
+
+    Check_Type(mod2, T_MODULE);
+    for (p = RCLASS(mod)->super; p; p = RCLASS(p)->super) {
+	if (BUILTIN_TYPE(p) == T_ICLASS) {
+	    if (RBASIC(p)->klass == mod2) return Qtrue;
+	}
+    }
+    return Qfalse;
+}
+
+VALUE
+rb_mod_ancestors(mod)
+    VALUE mod;
+{
+    VALUE ary = rb_ary_new();
+    VALUE p;
+
+    for (p = mod; p; p = RCLASS(p)->super) {
+	if (FL_TEST(p, FL_SINGLETON))
+	    continue;
+	if (BUILTIN_TYPE(p) == T_ICLASS) {
+	    rb_ary_push(ary, RBASIC(p)->klass);
+	}
+	else {
+	    rb_ary_push(ary, p);
+	}
+    }
+    return ary;
+}
+
+#define VISI_CHECK(x,f) (((x)&NOEX_MASK) == (f))
+
+static int
+ins_methods_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    else if (!VISI_CHECK(body->nd_noex, NOEX_PRIVATE)) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+ins_methods_prot_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    else if (VISI_CHECK(body->nd_noex, NOEX_PROTECTED)) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+ins_methods_priv_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    else if (VISI_CHECK(body->nd_noex, NOEX_PRIVATE)) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+ins_methods_pub_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    else if (VISI_CHECK(body->nd_noex, NOEX_PUBLIC)) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static VALUE
+method_list(mod, option, func)
+    VALUE mod;
+    int option;
+    int (*func)();
+{
+    VALUE ary;
+    VALUE klass;
+    VALUE *p, *q, *pend;
+
+    ary = rb_ary_new();
+    for (klass = mod; klass; klass = RCLASS(klass)->super) {
+	st_foreach(RCLASS(klass)->m_tbl, func, ary);
+	if (!option) break;
+    }
+    p = q = RARRAY(ary)->ptr; pend = p + RARRAY(ary)->len;
+    while (p < pend) {
+	if (*p == Qnil) {
+	    p+=2;
+	    continue;
+	}
+	*q++ = *p++;
+    }
+    RARRAY(ary)->len = q - RARRAY(ary)->ptr;
+    return ary;
+}
+
+VALUE
+rb_class_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_i);
+}
+
+VALUE
+rb_class_protected_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_prot_i);
+}
+
+VALUE
+rb_class_private_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_priv_i);
+}
+
+VALUE
+rb_class_public_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_pub_i);
+}
+
+VALUE
+rb_obj_singleton_methods(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE all;
+    VALUE ary;
+    VALUE klass;
+    VALUE *p, *q, *pend;
+
+    rb_scan_args(argc, argv, "01", &all);
+    ary = rb_ary_new();
+    klass = CLASS_OF(obj);
+    while (klass && FL_TEST(klass, FL_SINGLETON)) {
+	st_foreach(RCLASS(klass)->m_tbl, ins_methods_i, ary);
+	klass = RCLASS(klass)->super;
+    }
+    if (RTEST(all)) {
+	while (klass && TYPE(klass) == T_ICLASS) {
+	    st_foreach(RCLASS(klass)->m_tbl, ins_methods_i, ary);
+	    klass = RCLASS(klass)->super;
+	}
+    }
+    p = q = RARRAY(ary)->ptr; pend = p + RARRAY(ary)->len;
+    while (p < pend) {
+	if (*p == Qnil) {
+	    p+=2;
+	    continue;
+	}
+	*q++ = *p++;
+    }
+    RARRAY(ary)->len = q - RARRAY(ary)->ptr;
+
+    return ary;
+}
+
+void
+rb_define_method_id(klass, name, func, argc)
+    VALUE klass;
+    ID name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_add_method(klass, name, NEW_CFUNC(func,argc), NOEX_PUBLIC|NOEX_CFUNC);
+}
+
+void
+rb_define_method(klass, name, func, argc)
+    VALUE klass;
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    ID id = rb_intern(name);
+
+    rb_add_method(klass, id, NEW_CFUNC(func, argc), 
+		  ((name[0] == 'i' && id == rb_intern("initialize"))?
+		   NOEX_PRIVATE:NOEX_PUBLIC)|NOEX_CFUNC);
+}
+
+void
+rb_define_protected_method(klass, name, func, argc)
+    VALUE klass;
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PROTECTED|NOEX_CFUNC);
+}
+
+void
+rb_define_private_method(klass, name, func, argc)
+    VALUE klass;
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PRIVATE|NOEX_CFUNC);
+}
+
+void
+rb_undef_method(klass, name)
+    VALUE klass;
+    const char *name;
+{
+    rb_add_method(klass, rb_intern(name), 0, NOEX_UNDEF);
+}
+
+#define SPECIAL_SINGLETON(x,c) do {\
+    if (obj == (x)) {\
+	return c;\
+    }\
+} while (0)
+
+VALUE
+rb_singleton_class(obj)
+    VALUE obj;
+{
+    VALUE klass;
+
+    if (FIXNUM_P(obj) || SYMBOL_P(obj)) {
+	rb_raise(rb_eTypeError, "can't define singleton");
+    }
+    if (rb_special_const_p(obj)) {
+	SPECIAL_SINGLETON(Qnil, rb_cNilClass);
+	SPECIAL_SINGLETON(Qfalse, rb_cFalseClass);
+	SPECIAL_SINGLETON(Qtrue, rb_cTrueClass);
+	rb_bug("unknown immediate %ld", obj);
+    }
+
+    DEFER_INTS;
+    if (FL_TEST(RBASIC(obj)->klass, FL_SINGLETON) &&
+	rb_iv_get(RBASIC(obj)->klass, "__attached__") == obj) {
+	klass = RBASIC(obj)->klass;
+    }
+    else {
+	klass = rb_make_metaclass(obj, RBASIC(obj)->klass);
+    }
+    if (OBJ_TAINTED(obj)) {
+	OBJ_TAINT(klass);
+    }
+    else {
+	FL_UNSET(klass, FL_TAINT);
+    }
+    if (OBJ_FROZEN(obj)) OBJ_FREEZE(klass);
+    ALLOW_INTS;
+
+    return klass;
+}
+
+void
+rb_define_singleton_method(obj, name, func, argc)
+    VALUE obj;
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_define_method(rb_singleton_class(obj), name, func, argc);
+}
+
+void
+rb_define_module_function(module, name, func, argc)
+    VALUE module;
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_define_private_method(module, name, func, argc);
+    rb_define_singleton_method(module, name, func, argc);
+}
+
+void
+rb_define_global_function(name, func, argc)
+    const char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_define_module_function(rb_mKernel, name, func, argc);
+}
+
+void
+rb_define_alias(klass, name1, name2)
+    VALUE klass;
+    const char *name1, *name2;
+{
+    rb_alias(klass, rb_intern(name1), rb_intern(name2));
+}
+
+void
+rb_define_attr(klass, name, read, write)
+    VALUE klass;
+    const char *name;
+    int read, write;
+{
+    rb_attr(klass, rb_intern(name), read, write, Qfalse);
+}
+
+#ifdef HAVE_STDARG_PROTOTYPES
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+#include <varargs.h>
+#define va_init_list(a,b) va_start(a)
+#endif
+
+int
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_scan_args(int argc, const VALUE *argv, const char *fmt, ...)
+#else
+rb_scan_args(argc, argv, fmt, va_alist)
+    int argc;
+    const VALUE *argv;
+    const char *fmt;
+    va_dcl
+#endif
+{
+    int n, i = 0;
+    const char *p = fmt;
+    VALUE *var;
+    va_list vargs;
+
+    va_init_list(vargs, fmt);
+
+    if (*p == '*') goto rest_arg;
+
+    if (ISDIGIT(*p)) {
+	n = *p - '0';
+	if (n > argc)
+	    rb_raise(rb_eArgError, "wrong number of arguments (%d for %d)", argc, n);
+	for (i=0; i<n; i++) {
+	    var = va_arg(vargs, VALUE*);
+	    if (var) *var = argv[i];
+	}
+	p++;
+    }
+    else {
+	goto error;
+    }
+
+    if (ISDIGIT(*p)) {
+	n = i + *p - '0';
+	for (; i<n; i++) {
+	    var = va_arg(vargs, VALUE*);
+	    if (argc > i) {
+		if (var) *var = argv[i];
+	    }
+	    else {
+		if (var) *var = Qnil;
+	    }
+	}
+	p++;
+    }
+
+    if(*p == '*') {
+      rest_arg:
+	var = va_arg(vargs, VALUE*);
+	if (argc > i) {
+	    if (var) *var = rb_ary_new4(argc-i, argv+i);
+	    i = argc;
+	}
+	else {
+	    if (var) *var = rb_ary_new();
+	}
+	p++;
+    }
+
+    if (*p == '&') {
+	var = va_arg(vargs, VALUE*);
+	if (rb_block_given_p()) {
+	    *var = rb_f_lambda();
+	}
+	else {
+	    *var = Qnil;
+	}
+	p++;
+    }
+    va_end(vargs);
+
+    if (*p != '\0') {
+	goto error;
+    }
+
+    if (argc > i) {
+	rb_raise(rb_eArgError, "wrong number of arguments(%d for %d)", argc, i);
+    }
+
+    return argc;
+
+  error:
+    rb_fatal("bad scan arg format: %s", fmt);
+    return 0;
+}
+@
+
+
+1.49
+log
+@* range.c (range_check): need no Fixnum check.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/28 02:41:05 $
+d459 2
+d467 5
+a471 1
+    if ((body->nd_noex&(NOEX_PRIVATE|NOEX_PROTECTED)) == 0) {
+a474 3
+	    if (!body->nd_body) {
+		rb_ary_push(ary, Qnil);
+	    }
+d478 1
+a478 1
+    else if (body->nd_body && nd_type(body->nd_body) == NODE_ZSUPER) {
+d495 1
+a495 1
+    else if (body->nd_noex & NOEX_PROTECTED) {
+d519 25
+a543 1
+    else if (body->nd_noex & NOEX_PRIVATE) {
+d618 12
+@
+
+
+1.48
+log
+@
+* hash.c (rb_hash_become): Hash#become should check added
+  self-assignment.
+
+* class.c (rb_make_metaclass): metaclass of a superclass may be
+  NULL at boot time.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/25 07:03:01 $
+d159 1
+a159 1
+	    RBASIC(klass)->klass;
+@
+
+
+1.47
+log
+@* io.c (appendline): forget to terminate with nul.
+
+* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* class.c (rb_make_metaclass): class of metaclass should be
+  metaclass of superclass, unless class itself is a metaclass;
+  class of metaclass of metaclass should point back to self.
+  eh, confusing, isn't it.
+
+* class.c (rb_singleton_class): check if its class is singleton
+  AND attached to self.
+
+* eval.c (rb_eval): should define class/module under ruby_cbase.
+
+* eval.c (rb_eval): should set class/module path based on
+  ruby_cbase, not ruby_class.
+
+* eval.c (module_setup): use ruby_cbase instead of ruby_class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/05 09:42:56 $
+d155 6
+a160 1
+	RBASIC(klass)->klass = RBASIC(rb_class_real(super))->klass;
+@
+
+
+1.46
+log
+@* variable.c (rb_path2class): should not use rb_eval_string().
+
+* marshal.c (w_extended): should allow marshaling of object which
+  is extended by named module.
+
+* class.c (rb_make_metaclass): super may be T_ICLASS, need to skip.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/04 06:37:35 $
+d150 1
+a150 1
+    if (BUILTIN_TYPE(obj) == T_CLASS) {
+d152 4
+a155 3
+	if (FL_TEST(obj, FL_SINGLETON)) {
+	    RCLASS(klass)->super = RBASIC(rb_class_real(RCLASS(obj)->super))->klass;
+	}
+d703 1
+a703 2
+	(BUILTIN_TYPE(obj) == T_CLASS || /* metaclass (or metaclass of metaclass) */
+	 rb_iv_get(RBASIC(obj)->klass, "__attached__") == obj)) {
+@
+
+
+1.45
+log
+@* class.c (rb_make_metaclass): obj.meta.super.meta should be equal
+  to obj.meta.meta.super (ruby-bugs-ja:PR#324).
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* marshal.c (r_bytes): do not use alloca (ruby-bugs:PR#382).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/03 05:20:06 $
+d153 1
+a153 1
+	    RCLASS(klass)->super = RBASIC(RCLASS(obj)->super)->klass;
+@
+
+
+1.44
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/27 08:31:05 $
+d152 3
+@
+
+
+1.43
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/07/11 08:22:10 $
+d97 2
+a98 2
+rb_singleton_class_new(super)
+    VALUE super;
+d100 1
+a100 5
+    VALUE klass = rb_class_boot(super);
+
+    FL_SET(klass, FL_SINGLETON);
+    return klass;
+}
+a101 4
+VALUE
+rb_singleton_class_clone(klass)
+    VALUE klass;
+{
+d107 8
+a114 1
+	CLONESETUP(clone, klass);
+d124 1
+d143 2
+a144 2
+rb_make_metaclass(obj, klass)
+    VALUE obj, klass;
+d146 2
+a147 1
+    klass = rb_singleton_class_new(klass);
+d150 4
+a674 14
+#if 0
+
+#define SPECIAL_SINGLETON(x,c) do {
+    if (obj == (x)) {\
+	if (!FL_TEST(c, FL_SINGLETON)) {\
+	    c = rb_singleton_class_new(c);\
+	    rb_singleton_class_attached(c,obj);\
+	}\
+	return c;\
+    }\
+} while (0)
+
+#else
+
+a680 2
+#endif
+
+d699 2
+a700 2
+       ((BUILTIN_TYPE(obj) != T_CLASS && BUILTIN_TYPE(obj) != T_MODULE) ||
+       rb_iv_get(RBASIC(obj)->klass, "__attached__") == obj)) {
+a704 1
+	RBASIC(klass)->klass = CLASS_OF(RCLASS(klass)->super);
+@
+
+
+1.42
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* array.c (rb_ary_insert): type fixed.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* string.c (rb_str_become): was leaking memory.
+
+* class.c (rb_include_module): should not alter other
+  classes/modules by inclusion.  by this fix, local order may not
+  be preserved for some cases.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/05/28 18:11:07 $
+d92 1
+a92 4
+    DUPSETUP(dup, mod);
+    if (FL_TEST(mod, FL_SINGLETON)) {
+	FL_SET(dup, FL_SINGLETON);
+    }
+@
+
+
+1.41
+log
+@	* array.c: fixed format string for 'long' args (%d -> %ld).
+
+	* class.c: ditto.
+
+	* eval.c: ditto.
+
+	* numeric.c: ditto.
+
+	* pack.c: ditto.
+
+	* parse.y: ditto.
+
+	* range.c: ditto.
+
+	* string.c: ditto.
+
+	* util.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/04/25 13:55:58 $
+d321 3
+d369 2
+d375 2
+a376 1
+	    if (BUILTIN_TYPE(p) == T_ICLASS) {
+d378 3
+a380 1
+		    c = p;	/* move insertion point */
+d383 4
+d389 1
+a389 2
+	RCLASS(c)->super = include_class_new(module, RCLASS(c)->super);
+	c = RCLASS(c)->super;
+@
+
+
+1.40
+log
+@* various files: macro fix-up by Michal Rokos.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:17 $
+d697 1
+a697 1
+	rb_bug("unknown immediate %d", obj);
+@
+
+
+1.39
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d664 7
+a670 4
+#define SPECIAL_SINGLETON(x,c) if (obj == (x)) {\
+    if (!FL_TEST(c, FL_SINGLETON)) {\
+	c = rb_singleton_class_new(c);\
+	rb_singleton_class_attached(c,obj);\
+d672 1
+a672 2
+    return c;\
+}
+d676 5
+a680 3
+#define SPECIAL_SINGLETON(x,c) if (obj == (x)) {\
+    return c;\
+}
+@
+
+
+1.38
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/19 09:03:07 $
+d775 1
+a775 1
+rb_scan_args(int argc, VALUE *argv, const char *fmt, ...)
+d779 1
+a779 1
+    VALUE *argv;
+@
+
+
+1.37
+log
+@* re.c (rb_reg_search): should clear last_match if pos is out of
+  string range.
+
+* string.c (rb_str_index_m): ditto.
+
+* string.c (rb_str_rindex): ditto.
+
+* class.c (rb_define_class): should handle autoload.
+
+* class.c (rb_define_module): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/08 07:03:03 $
+d698 2
+a699 2
+	(BUILTIN_TYPE(obj) == T_CLASS || BUILTIN_TYPE(obj) == T_MODULE) &&
+	rb_iv_get(RBASIC(obj)->klass, "__attached__") == obj) {
+@
+
+
+1.36
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+
+* class.c (rb_mod_clone): should not call rb_obj_clone(), since
+  Module does not provide "allocate".
+
+* class.c (rb_singleton_class): should crate new singleton class
+  if obj is a class or module and attached object is different,
+  which means metaclass of singleton class is sought.
+
+* time.c (time_s_alloc): now follows allocation framework.
+
+* eval.c (rb_eval): should initialize outer class variables from
+  methods in singleton class definitions.
+
+* eval.c (assign): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/19 07:47:05 $
+d187 3
+d276 3
+@
+
+
+1.35
+log
+@* file.c (path_check_1): do not warn on world writable *parent*
+  directories.
+
+* class.c (rb_include_module): should preserve ancestor order in
+  the included class/module.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/17 14:44:14 $
+d65 2
+a66 1
+    VALUE clone = rb_obj_clone(module);
+d83 1
+a83 1
+    return clone;
+d656 2
+d666 8
+d691 3
+a693 1
+    if (FL_TEST(RBASIC(obj)->klass, FL_SINGLETON)) {
+d698 1
+@
+
+
+1.34
+log
+@* class.c (rb_define_class): warn unless superclass is specified
+  explicitly.
+
+* class.c (rb_define_class_under): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/25 08:22:04 $
+d364 2
+a365 1
+		if (RCLASS(p)->m_tbl == RCLASS(module)->m_tbl)
+d367 1
+@
+
+
+1.33
+log
+@* class.c (rb_include_module): detect cyclic module inclusion.
+
+* eval.c (rb_thread_cleanup): need not to free thread stacks at
+  process termination.
+
+* array.c (rb_ary_fetch): use the block to get the default value
+  if the block is given.
+
+* eval.c (rb_thread_schedule): should check time only if BOTH
+  WAIT_SELECT and WAIT_TIME.
+
+* eval.c (umethod_bind): should update rklass field.
+
+* hash.c (rb_hash_update): if a block is given, yields [key,
+  value1, value2] to the block to resolve conflict.
+
+* string.c (rb_str_split_m): no need to consider KANJI
+characters, if the length of separator is 1 (byte).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/16 02:17:30 $
+d196 3
+d225 4
+@
+
+
+1.32
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/11 09:18:49 $
+d352 2
+d356 3
+a358 3
+	    if (BUILTIN_TYPE(p) == T_ICLASS &&
+		RCLASS(p)->m_tbl == RCLASS(module)->m_tbl) {
+		goto skip;
+@
+
+
+1.31
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 20:18:39 $
+d173 1
+@
+
+
+1.30
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/07 05:27:01 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.29
+log
+@* string.c (rb_str_new2): NULL pointer check added.
+
+* class.c (rb_define_module_under): should locate predefined
+  module using rb_const_defined_at().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/18 08:46:56 $
+d145 10
+d164 1
+a164 4
+    /* make metaclass */
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+    rb_funcall(super, rb_intern("inherited"), 1, klass);
+d170 7
+d196 1
+d223 2
+a225 1
+    rb_set_class_path(klass, outer, name);
+d672 1
+a672 3
+	klass = rb_singleton_class_new(RBASIC(obj)->klass);
+	RBASIC(obj)->klass = klass;
+	rb_singleton_class_attached(klass, obj);
+@
+
+
+1.28
+log
+@* string.c (rb_str_replace): swap arguments of OBJ_INFECT.
+
+* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* time.c (time_plus): wrong boundary check.
+
+* time.c (time_minus): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/10 07:18:12 $
+d269 2
+a270 2
+    if (rb_const_defined(outer, id)) {
+	module = rb_const_get(rb_cObject, id);
+@
+
+
+1.27
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:02 $
+d173 7
+a179 1
+	rb_name_error(id, "%s is already defined", name);
+d199 7
+a205 1
+	rb_name_error(id, "%s is already defined", name);
+@
+
+
+1.26
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/22 06:48:14 $
+d90 2
+a91 1
+    OBJSETUP(dup, RBASIC(mod)->klass, BUILTIN_TYPE(mod));
+@
+
+
+1.25
+log
+@* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+
+* eval.c (rb_call0): self in a block given to define_method now be
+  switched to the receiver of the method.
+
+* eval.c (proc_invoke): added new parameter to allow self
+  switching.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d737 1
+a737 1
+	    rb_raise(rb_eArgError, "wrong # of arguments (%d for %d)", argc, n);
+d792 1
+a792 1
+	rb_raise(rb_eArgError, "wrong # of arguments(%d for %d)", argc, i);
+@
+
+
+1.24
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/08 14:17:09 $
+d69 2
+d72 4
+@
+
+
+1.23
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/14 08:13:26 $
+d65 1
+a65 2
+    NEWOBJ(clone, struct RClass);
+    CLONESETUP(clone, module);
+d67 1
+a67 1
+    clone->super = RCLASS(module)->super;
+d69 1
+a69 1
+	clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+d72 2
+a73 2
+	clone->m_tbl = st_init_numtable();
+	st_foreach(RCLASS(module)->m_tbl, clone_method, clone->m_tbl);
+d76 1
+a76 1
+    return (VALUE)clone;
+@
+
+
+1.22
+log
+@* range.c (range_step): new method.
+
+* string.c (rb_str_cmp): remove needless conditional.
+
+* string.c (rb_str_lstrip_bang) `return Qnil' was missing.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/24 09:07:33 $
+d294 1
+a294 1
+    VALUE p;
+d315 1
+d321 1
+a321 5
+		if (RCLASS(module)->super) {
+		    rb_include_module(p, RCLASS(module)->super);
+		}
+		if (changed) rb_clear_cache();
+		return;
+d324 4
+a327 2
+	RCLASS(klass)->super = include_class_new(module, RCLASS(klass)->super);
+	klass = RCLASS(klass)->super;
+a328 1
+	changed = 1;
+@
+
+
+1.21
+log
+@* eval.c (rb_provide_feature): should not tweak extension used for
+  loading.
+
+* io.c (io_fread): use fread(3) if PENDING_COUND is available.
+
+* class.c (rb_mod_include_p): Module#include? added. [new]
+
+* re.c (ignorecase_setter): give warning on modifying $=.
+
+* string.c (rb_str_casecmp): new method. [new]
+
+* string.c (rb_str_eql): separated from rb_str_equal(), make it
+  always be case sensitive. [new]
+
+* string.c (rb_str_hash): made it always be case sensitive.
+
+* eval.c (rb_f_require): should not include path in $" value
+
+* file.c (rb_find_file): should return 0 explicitly on failure.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/18 05:55:20 $
+d33 1
+d284 2
+d314 1
+@
+
+
+1.20
+log
+@* regex.c (NUM_FAILURE_ITEMS): was confusing NUM_REG_ITEMS and
+  NUM_NONREG_ITEMS, which have happened to be same value.
+
+* class.c (rb_class_new): subclass check moved to this function.
+
+* class.c (rb_class_boot): check less version of rb_class_new().
+
+* eval.c (proc_invoke): should preserve iter status for embedded
+  frame in the block.
+
+* file.c (rb_file_s_expand_path): may overrun buffer on stack.
+
+* string.c (rb_str_insert): forgot to call rb_str_modify().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+d344 16
+@
+
+
+1.19
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:33 $
+d22 1
+a22 1
+rb_class_new(super)
+d36 14
+d95 1
+a95 1
+    VALUE klass = rb_class_new(super);
+@
+
+
+1.18
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:10 $
+d152 1
+a152 1
+	rb_raise(rb_eNameError, "%s is already defined", name);
+d172 1
+a172 1
+	rb_raise(rb_eNameError, "%s is already defined", name);
+@
+
+
+1.17
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:24 $
+d487 3
+a489 1
+rb_obj_singleton_methods(obj)
+d492 1
+d497 1
+d503 6
+@
+
+
+1.16
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d36 41
+a86 10
+static int
+clone_method(mid, body, tbl)
+    ID mid;
+    NODE *body;
+    st_table *tbl;
+{
+    st_insert(tbl, mid, NEW_METHOD(body->nd_body, body->nd_noex));
+    return ST_CONTINUE;
+}
+
+d115 6
+a120 2
+    if (FL_TEST(klass, FL_SINGLETON))
+	rb_iv_set(klass, "__attached__", obj);
+d150 4
+a154 1
+
+d170 4
+d215 6
+d236 7
+d280 5
+a308 1
+	rb_frozen_class_p(klass);
+@
+
+
+1.15
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/18 09:45:57 $
+d70 3
+d223 1
+d245 1
+d250 1
+a250 2
+	RCLASS(klass)->super =
+	    include_class_new(module, RCLASS(klass)->super);
+d253 1
+d255 1
+a255 1
+    rb_clear_cache();
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:24 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.14.2.1
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/18 09:45:57 $
+a69 3
+	if (RCLASS(klass)->iv_tbl) {
+	    clone->iv_tbl = st_copy(RCLASS(klass)->iv_tbl);
+	}
+a219 1
+    int changed = 0;
+a240 1
+		if (changed) rb_clear_cache();
+d245 2
+a246 1
+	RCLASS(klass)->super = include_class_new(module, RCLASS(klass)->super);
+a248 1
+	changed = 1;
+d250 1
+a250 1
+    if (changed) rb_clear_cache();
+@
+
+
+1.14.2.2
+log
+@* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:44:36 $
+a224 4
+    rb_frozen_class_p(klass);
+    if (!OBJ_TAINTED(klass)) {
+	rb_secure(4);
+    }
+d249 1
+@
+
+
+1.14.2.3
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/03 05:43:49 $
+d36 10
+a56 41
+rb_mod_clone(module)
+    VALUE module;
+{
+    NEWOBJ(clone, struct RClass);
+    CLONESETUP(clone, module);
+
+    clone->super = RCLASS(module)->super;
+    if (RCLASS(module)->iv_tbl) {
+	clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+    }
+    if (RCLASS(module)->m_tbl) {
+	clone->m_tbl = st_init_numtable();
+	st_foreach(RCLASS(module)->m_tbl, clone_method, clone->m_tbl);
+    }
+
+    return (VALUE)clone;
+}
+
+VALUE
+rb_mod_dup(mod)
+    VALUE mod;
+{
+    VALUE dup = rb_mod_clone(mod);
+    OBJSETUP(dup, RBASIC(mod)->klass, BUILTIN_TYPE(mod));
+    if (FL_TEST(mod, FL_SINGLETON)) {
+	FL_SET(dup, FL_SINGLETON);
+    }
+    return dup;
+}
+
+VALUE
+rb_singleton_class_new(super)
+    VALUE super;
+{
+    VALUE klass = rb_class_new(super);
+
+    FL_SET(klass, FL_SINGLETON);
+    return klass;
+}
+
+VALUE
+a224 5
+    rb_frozen_class_p(klass);
+    if (!OBJ_TAINTED(klass)) {
+	rb_secure(4);
+    }
+    
+@
+
+
+1.14.2.4
+log
+@* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:39 $
+d115 2
+a116 6
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	if (!RCLASS(klass)->iv_tbl) {
+	    RCLASS(klass)->iv_tbl = st_init_numtable();
+	}
+	st_insert(RCLASS(klass)->iv_tbl, rb_intern("__attached__"), obj);
+    }
+d256 5
+@
+
+
+1.14.2.5
+log
+@* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/11 07:41:32 $
+d281 5
+a285 1
+		goto skip;
+d290 1
+a291 2
+      skip:
+	module = RCLASS(module)->super;
+@
+
+
+1.14.2.6
+log
+@* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* variable.c (find_class_path): should initialize iv_tbl if it's
+  NULL.
+
+* class.c (rb_define_class): should return the existing class if
+  the class is already defined and its superclass is ideintical to
+  the specified superclass.
+
+* class.c (rb_define_class_under): ditto.
+
+* class.c (rb_define_module): should return the existing module if
+  the module is already defined.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/06 07:47:46 $
+a149 10
+    if (rb_const_defined(rb_cObject, id)) {
+	klass = rb_const_get(rb_cObject, id);
+	if (TYPE(klass) != T_CLASS) {
+	    rb_raise(rb_eTypeError, "%s is not a class", name);
+	}
+	if (rb_class_real(RCLASS(klass)->super) != super) {
+	    rb_raise(rb_eNameError, "%s is already defined", name);
+	}
+	return klass;
+    }
+a166 10
+    if (rb_const_defined_at(outer, id)) {
+	klass = rb_const_get(outer, id);
+	if (TYPE(klass) != T_CLASS) {
+	    rb_raise(rb_eTypeError, "%s is not a class", name);
+	}
+	if (rb_class_real(RCLASS(klass)->super) != super) {
+	    rb_raise(rb_eNameError, "%s is already defined", name);
+	}
+	return klass;
+    }
+a207 6
+    if (rb_const_defined(rb_cObject, id)) {
+	module = rb_const_get(rb_cObject, id);
+	if (TYPE(module) == T_MODULE)
+	    return module;
+	rb_raise(rb_eTypeError, "%s is not a module", name);
+    }
+a222 7
+    if (rb_const_defined(outer, id)) {
+	module = rb_const_get(rb_cObject, id);
+	if (TYPE(module) == T_MODULE)
+	    return module;
+	rb_raise(rb_eTypeError, "%s::%s is not a module",
+		 rb_class2name(outer), rb_class2name(CLASS_OF(module)));
+    }
+@
+
+
+1.14.2.7
+log
+@* string.c (rb_str_new2): NULL pointer check added.
+
+* class.c (rb_define_module_under): should locate predefined
+  module using rb_const_defined_at().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/18 08:40:30 $
+d249 2
+a250 2
+    if (rb_const_defined_at(outer, id)) {
+	module = rb_const_get(outer, id);
+@
+
+
+1.14.2.8
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/07 05:24:03 $
+a123 10
+rb_make_metaclass(obj, klass)
+    VALUE obj, klass;
+{
+    klass = rb_singleton_class_new(klass);
+    RBASIC(obj)->klass = klass;
+    rb_singleton_class_attached(klass, obj);
+    return klass;
+}
+
+VALUE
+d133 4
+a136 1
+    rb_make_metaclass(klass, RBASIC(super)->klass);
+a141 7
+rb_class_inherited(super, klass)
+    VALUE super, klass;
+{
+    return rb_funcall(super, rb_intern("inherited"), 1, klass);
+}
+
+VALUE
+a160 1
+    rb_class_inherited(super, klass);
+d188 1
+a189 2
+    rb_class_inherited(super, klass);
+    rb_const_set(outer, id, klass);
+d605 3
+a607 1
+	klass = rb_make_metaclass(obj, RBASIC(obj)->klass);
+@
+
+
+1.14.2.9
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 23:38:56 $
+a151 1
+    if (!super) super = rb_cObject;
+@
+
+
+1.14.2.10
+log
+@* class.c (rb_include_module): detect cyclic module inclusion.
+
+* eval.c (rb_thread_schedule): should check time only if BOTH
+  WAIT_SELECT and WAIT_TIME.
+
+* string.c (rb_str_split_m): no need to consider KANJI
+characters, if the length of separator is 1 (byte).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/16 02:20:25 $
+a326 2
+	if (RCLASS(klass)->m_tbl == RCLASS(module)->m_tbl)
+	    rb_raise(rb_eArgError, "cyclic include detected");
+@
+
+
+1.14.2.11
+log
+@* eval.c (is_defined): defined?(Foo::Baz) should check constants
+  only, no methods.
+
+* eval.c (is_defined): should not dump core on defined?(a::b)
+  where a is not a class nor a module.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/25 08:23:31 $
+d307 1
+a307 1
+    VALUE p, c;
+a325 1
+    c = klass;
+d331 3
+a333 3
+	    if (BUILTIN_TYPE(p) == T_ICLASS) {
+		if (RCLASS(p)->m_tbl == RCLASS(module)->m_tbl)
+		    goto skip;
+d336 2
+a337 2
+	RCLASS(c)->super = include_class_new(module, RCLASS(c)->super);
+	c = RCLASS(c)->super;
+@
+
+
+1.14.2.12
+log
+@* hash.c (rb_any_cmp): should handle Qundef in keys.
+
+* eval.c (remove_method): should not remove a empty method to
+  implement "undef".
+
+* eval.c (rb_eval): should allow singleton class def for
+  true/false/nil.
+
+* parse.y (str_extend): backslash escape was done wrong.
+
+* class.c (rb_include_module): should preserve ancestor order in
+  the included class/module.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/28 08:42:35 $
+d333 1
+a333 2
+		if (RCLASS(p)->m_tbl == RCLASS(module)->m_tbl) {
+		    c = p;
+a334 1
+		}
+@
+
+
+1.14.2.13
+log
+@* class.c (rb_define_class): should handle autoload.
+
+* class.c (rb_define_module): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/20 04:28:50 $
+a164 3
+    if (rb_autoload_defined(id)) {
+	rb_autoload_load(id);
+    }
+a244 3
+    if (rb_autoload_defined(id)) {
+	rb_autoload_load(id);
+    }
+@
+
+
+1.14.2.14
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+
+* numeric.c (int_step): step may be a float less than 1.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/15 08:55:58 $
+d629 1
+a629 3
+    if (FL_TEST(RBASIC(obj)->klass, FL_SINGLETON) &&
+       ((BUILTIN_TYPE(obj) != T_CLASS && BUILTIN_TYPE(obj) != T_MODULE) ||
+       rb_iv_get(RBASIC(obj)->klass, "__attached__") == obj)) {
+@
+
+
+1.14.2.15
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+
+* re.c (rb_reg_expr_str): need to process backslashes properly.
+
+* parse.y (yylex): no here document after a dot.
+
+* parse.y (yylex): should have set lex_state properly after '`'.
+
+* parse.y (yylex): should have set lex_state properly after
+  tOP_ASGN.
+
+* bignum.c (rb_big2dbl): return canonical HUGE_VAL for infinity.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:47:39 $
+a292 3
+    if (BUILTIN_TYPE(module) == T_ICLASS) {
+	module = RBASIC(module)->klass;
+    }
+a333 2
+	int superclass_seen = Qfalse;
+
+d338 1
+a338 2
+	    switch (BUILTIN_TYPE(p)) {
+	      case T_ICLASS:
+d340 1
+a340 3
+		    if (!superclass_seen) {
+			c = p;	/* move insertion point */
+		    }
+a342 4
+		break;
+	      case T_CLASS:
+		superclass_seen = Qtrue;
+		break;
+d345 2
+a346 1
+	c = RCLASS(c)->super = include_class_new(module, RCLASS(c)->super);
+@
+
+
+1.14.2.16
+log
+@* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* variable.c (rb_path2class): should not use rb_eval_string().
+
+* parse.y (str_extend): expression substitution can contain string
+  terminator again.
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/07/11 08:24:53 $
+d646 1
+a646 1
+	klass = rb_make_metaclass(obj, CLASS_OF(obj));
+@
+
+
+1.14.2.17
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/25 07:07:36 $
+d636 1
+a636 1
+	rb_bug("unknown immediate %ld", (long)obj);
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:14 $
+d244 1
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/22 08:29:40 $
+a367 2
+    if (!OBJ_TAINTED(mod) && rb_safe_level() >= 4)
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+a428 2
+    if (rb_safe_level() >= 4 && !OBJ_TAINTED(obj))
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+@
+
+
+1.11
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:33:53 $
+d14 1
+d530 1
+d546 1
+@
+
+
+1.10
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:11 $
+d543 1
+@
+
+
+1.9
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:25 $
+d665 1
+a665 1
+	if (rb_iterator_p()) {
+@
+
+
+1.8
+log
+@2000-03-07
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/02/25 03:51:17 $
+d11 1
+a11 1
+************************************************/
+d505 8
+d519 3
+d523 4
+a526 1
+	rb_raise(rb_eTypeError, "can't define singleton");
+d528 1
+@
+
+
+1.7
+log
+@2000-02-25
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/18 06:59:28 $
+a17 4
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+
+d510 1
+@
+
+
+1.6
+log
+@2000-02-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:57 $
+d608 2
+d639 1
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:39 $
+d601 1
+a601 1
+    int n, i;
+a607 6
+    if (*p == '*') {
+	var = va_arg(vargs, VALUE*);
+	*var = rb_ary_new4(argc, argv);
+	return argc;
+    }
+
+d640 1
+d645 1
+d647 8
+a654 3
+    else if (*p == '\0') {
+	if (argc > i) {
+	    rb_raise(rb_eArgError, "wrong # of arguments(%d for %d)", argc, i);
+d656 1
+d658 3
+a660 1
+    else {
+d664 4
+a667 1
+    va_end(vargs);
+@
+
+
+1.4
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:29 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.3
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:02 $
+d133 1
+a133 1
+    rb_shvar_set(outer, id, klass);
+d189 1
+a189 1
+    rb_shvar_set(outer, id, module);
+d371 1
+a371 1
+    if (!FL_TEST(mod, FL_TAINT) && rb_safe_level() >= 4)
+d434 1
+a434 1
+    if (rb_safe_level() >= 4 && !FL_TEST(obj, FL_TAINT))
+d513 1
+d518 9
+a526 1
+	return RBASIC(obj)->klass;
+d528 5
+a532 3
+    RBASIC(obj)->klass = rb_singleton_class_new(RBASIC(obj)->klass);
+    rb_singleton_class_attached(RBASIC(obj)->klass, obj);
+    return RBASIC(obj)->klass;
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/17 09:53:56 $
+d133 1
+a133 1
+    rb_const_set(outer, id, klass);
+d189 1
+a189 1
+    rb_const_set(outer, id, module);
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 08:54:44 $
+d9 1
+a9 1
+  Copyright (C) 1993-1995 Yukihiro Matsumoto
+d16 5
+a21 1
+struct st_table *new_idhash();
+a23 3
+extern VALUE cClass;
+extern VALUE cModule;
+
+d25 2
+a26 2
+class_new(super)
+    struct RClass *super;
+d28 2
+a29 2
+    NEWOBJ(cls, struct RClass);
+    OBJSETUP(cls, cClass, T_CLASS);
+d31 4
+a34 4
+    cls->super = super;
+    cls->iv_tbl = 0;
+    cls->m_tbl = 0;		/* safe GC */
+    cls->m_tbl = new_idhash();
+d36 1
+a36 1
+    return (VALUE)cls;
+d40 2
+a41 2
+singleton_class_new(super)
+    struct RClass *super;
+d43 1
+a43 3
+    struct RClass *cls = (struct RClass*)class_new(super);
+
+    FL_SET(cls, FL_SINGLETON);
+d45 2
+a46 1
+    return (VALUE)cls;
+d60 2
+a61 2
+singleton_class_clone(class)
+    struct RClass *class;
+d63 2
+a64 2
+    if (!FL_TEST(class, FL_SINGLETON))
+	return (VALUE)class;
+d68 1
+a68 1
+	CLONESETUP(clone, class);
+d70 1
+a70 1
+	clone->super = class->super;
+d73 2
+a74 2
+	clone->m_tbl = new_idhash();
+	st_foreach(class->m_tbl, clone_method, clone->m_tbl);
+d80 8
+d91 1
+a91 1
+    struct RBasic *super;
+d93 1
+a93 1
+    struct RClass *cls;
+d95 3
+a97 3
+    if (!super) super = (struct RBasic*)cClass;
+    cls = (struct RClass*)class_new(super);
+    rb_name_class(cls, id);
+d99 3
+a101 1
+    RBASIC(cls)->class = singleton_class_new(super->class);
+d103 1
+a103 1
+    return (VALUE)cls;
+d108 1
+a108 1
+    char *name;
+d111 1
+a111 1
+    VALUE class;
+d115 1
+a115 2
+    class = rb_define_class_id(id, super);
+    st_add_direct(rb_class_tbl, id, class);
+d117 3
+a119 1
+    return class;
+d123 3
+a125 3
+rb_define_class_under(under, name, super)
+    VALUE under;
+    char *name;
+d128 1
+a128 1
+    VALUE class;
+d132 3
+a134 3
+    class = rb_define_class_id(id, super);
+    rb_const_set(under, id, class);
+    rb_set_class_path(class, under, name);
+d136 1
+a136 1
+    return class;
+d140 1
+a140 1
+module_new()
+d143 1
+a143 1
+    OBJSETUP(mdl, cModule, T_MODULE);
+d148 1
+a148 1
+    mdl->m_tbl = new_idhash();
+d157 1
+a157 2
+    extern st_table *rb_class_tbl;
+    struct RClass *mdl = (struct RClass*)module_new();
+d159 1
+d162 1
+a162 1
+    return (VALUE)mdl;
+d167 1
+a167 1
+    char *name;
+d180 3
+a182 3
+rb_define_module_under(under, name)
+    VALUE under;
+    char *name;
+d189 2
+a190 2
+    rb_const_set(under, id, module);
+    rb_set_class_path(module, under, name);
+d195 1
+a195 1
+static struct RClass *
+d197 1
+a197 1
+    struct RClass *module, *super;
+d199 2
+a200 2
+    NEWOBJ(cls, struct RClass);
+    OBJSETUP(cls, cClass, T_ICLASS);
+d202 6
+a207 3
+    cls->m_tbl = module->m_tbl;
+    cls->iv_tbl = module->iv_tbl;
+    cls->super = super;
+d209 1
+a209 1
+	RBASIC(cls)->class = RBASIC(module)->class;
+d212 1
+a212 1
+	RBASIC(cls)->class = (VALUE)module;
+d215 1
+a215 1
+    return cls;
+d219 2
+a220 2
+rb_include_module(class, module)
+    VALUE class, module;
+d222 1
+a222 1
+    struct RClass *p;
+d225 1
+d230 1
+a235 3
+    if (class == module) return;
+    rb_clear_cache();
+ 
+d238 6
+a243 2
+	for (p = RCLASS(class)->super; p; p = p->super) {
+	    if (BUILTIN_TYPE(p) == T_ICLASS && p->m_tbl == RCLASS(module)->m_tbl)
+d245 138
+d384 25
+d410 39
+a448 3
+	RCLASS(class)->super = include_class_new(module, RCLASS(class)->super);
+	class = (VALUE)RCLASS(class)->super;
+	module = (VALUE)RCLASS(module)->super;
+d450 3
+d456 2
+a457 2
+rb_define_method_id(class, name, func, argc)
+    struct RClass *class;
+d462 1
+a462 1
+    rb_add_method(class, name, NEW_CFUNC(func, argc), NOEX_PUBLIC);
+d466 3
+a468 3
+rb_define_method(class, name, func, argc)
+    VALUE class;
+    char *name;
+d472 5
+a476 1
+    rb_add_method(class, rb_intern(name), NEW_CFUNC(func, argc), NOEX_PUBLIC);
+d480 5
+a484 3
+rb_undef_method(class, name)
+    VALUE class;
+    char *name;
+d486 2
+a487 1
+    rb_add_method(class, rb_intern(name), 0, NOEX_PUBLIC);
+d491 3
+a493 3
+rb_define_private_method(class, name, func, argc)
+    struct RClass *class;
+    char *name;
+d497 10
+a506 1
+    rb_add_method(class, rb_intern(name), NEW_CFUNC(func, argc), NOEX_PRIVATE);
+d511 1
+a511 1
+    struct RBasic *obj;
+d513 2
+a514 2
+    if (rb_special_const_p((VALUE)obj)) {
+	TypeError("cannot define singleton");
+d516 2
+a517 2
+    if (FL_TEST(obj->class, FL_SINGLETON)) {
+	return (VALUE)obj->class;
+d519 3
+a521 1
+    return obj->class = singleton_class_new(obj->class);
+d527 1
+a527 1
+    char *name;
+d537 1
+a537 1
+    char *name;
+a544 2
+VALUE mKernel;
+
+d547 1
+a547 1
+    char *name;
+d551 1
+a551 1
+    rb_define_private_method(mKernel, name, func, argc);
+d555 3
+a557 3
+rb_define_alias(class, name1, name2)
+    VALUE class;
+    char *name1, *name2;
+d559 1
+a559 1
+    rb_alias(class, rb_intern(name1), rb_intern(name2));
+d563 6
+a568 22
+rb_define_attr(class, id, pub)
+    VALUE class;
+    ID id;
+    int pub;
+{
+    char *name;
+    char *buf;
+    ID attr, attreq, attriv;
+
+    name = rb_id2name(id);
+    attr = rb_intern(name);
+    buf = ALLOCA_N(char,strlen(name)+2);
+    sprintf(buf, "%s=", name);
+    attreq = rb_intern(buf);
+    sprintf(buf, "@@%s", name);
+    attriv = rb_intern(buf);
+    if (!rb_method_boundp(class, attr, NOEX_PRIVATE)) {
+	rb_add_method(class, attr, NEW_IVAR(attriv), 0);
+    }
+    if (pub && !rb_method_boundp(class, attreq, NOEX_PRIVATE)) {
+	rb_add_method(class, attreq, NEW_ATTRSET(attriv), 0);
+    }
+d571 4
+d576 2
+a577 1
+#include <ctype.h>
+d580 3
+d586 1
+a586 1
+    char *fmt;
+d588 1
+d591 1
+a591 1
+    char *p = fmt;
+d595 1
+a595 1
+    va_start(vargs);
+d599 1
+a599 1
+	*var = ary_new4(argc, argv);
+d603 1
+a603 1
+    if (isdigit(*p)) {
+d606 1
+a606 1
+	    ArgError("Wrong # of arguments (%d for %d)", argc, n);
+d609 1
+a609 1
+	    *var = argv[i];
+d617 1
+a617 1
+    if (isdigit(*p)) {
+d622 1
+a622 1
+		*var = argv[i];
+d625 1
+a625 1
+		*var = Qnil;
+d634 1
+a634 1
+	    *var = ary_new4(argc-i, argv+i);
+d637 1
+a637 1
+	    *var = ary_new();
+d642 1
+a642 1
+	    ArgError("Wrong # of arguments(%d for %d)", argc, i);
+d653 1
+a653 1
+    Fatal("bad scan arg format: %s", fmt);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+    VALUE super;
+d27 2
+a28 2
+    NEWOBJ(klass, struct RClass);
+    OBJSETUP(klass, cClass, T_CLASS);
+d30 4
+a33 4
+    klass->super = super;
+    klass->iv_tbl = 0;
+    klass->m_tbl = 0;		/* safe GC */
+    klass->m_tbl = new_idhash();
+d35 1
+a35 1
+    return (VALUE)klass;
+d40 1
+a40 1
+    VALUE super;
+d42 3
+a44 1
+    VALUE klass = class_new(super);
+d46 1
+a46 2
+    FL_SET(klass, FL_SINGLETON);
+    return klass;
+d60 2
+a61 2
+singleton_class_clone(klass)
+    VALUE klass;
+d63 2
+a64 2
+    if (!FL_TEST(klass, FL_SINGLETON))
+	return klass;
+d68 1
+a68 1
+	CLONESETUP(clone, klass);
+d70 1
+a70 1
+	clone->super = RCLASS(klass)->super;
+d74 1
+a74 1
+	st_foreach(RCLASS(klass)->m_tbl, clone_method, clone->m_tbl);
+a79 8
+void
+singleton_class_attached(klass, obj)
+    VALUE klass, obj;
+{
+    if (FL_TEST(klass, FL_SINGLETON))
+	rb_iv_set(klass, "__attached__", obj);
+}
+
+d83 1
+a83 1
+    VALUE super;
+d85 1
+a85 1
+    VALUE klass;
+d87 3
+a89 3
+    if (!super) super = cObject;
+    klass = class_new(super);
+    rb_name_class(klass, id);
+d91 1
+a91 3
+    RBASIC(klass)->class = singleton_class_new(RBASIC(super)->class);
+    singleton_class_attached(RBASIC(klass)->class, klass);
+    rb_funcall(super, rb_intern("inherited"), 1, klass);
+d93 1
+a93 1
+    return (VALUE)klass;
+d101 1
+a101 1
+    VALUE klass;
+d105 2
+a106 2
+    klass = rb_define_class_id(id, super);
+    st_add_direct(rb_class_tbl, id, klass);
+d108 1
+a108 1
+    return klass;
+d117 1
+a117 1
+    VALUE klass;
+d121 3
+a123 3
+    klass = rb_define_class_id(id, super);
+    rb_const_set(under, id, klass);
+    rb_set_class_path(klass, under, name);
+d125 1
+a125 1
+    return klass;
+d147 1
+a147 1
+    VALUE mdl = module_new();
+d151 1
+a151 1
+    return mdl;
+d184 1
+a184 1
+static VALUE
+d186 1
+a186 1
+    VALUE module, super;
+d188 2
+a189 2
+    NEWOBJ(klass, struct RClass);
+    OBJSETUP(klass, cClass, T_ICLASS);
+d191 3
+a193 3
+    klass->m_tbl = RCLASS(module)->m_tbl;
+    klass->iv_tbl = RCLASS(module)->iv_tbl;
+    klass->super = super;
+d195 1
+a195 1
+	RBASIC(klass)->class = RBASIC(module)->class;
+d198 1
+a198 1
+	RBASIC(klass)->class = module;
+d201 1
+a201 1
+    return (VALUE)klass;
+d205 2
+a206 2
+rb_include_module(klass, module)
+    VALUE klass, module;
+d208 1
+a208 1
+    VALUE p;
+d220 1
+a220 1
+    if (klass == module) return;
+d225 2
+a226 3
+	for (p = RCLASS(klass)->super; p; p = RCLASS(p)->super) {
+	    if (BUILTIN_TYPE(p) == T_ICLASS &&
+		RCLASS(p)->m_tbl == RCLASS(module)->m_tbl)
+d230 3
+a232 151
+	RCLASS(klass)->super =
+	    include_class_new(module, RCLASS(klass)->super);
+	klass = RCLASS(klass)->super;
+	module = RCLASS(module)->super;
+    }
+}
+
+VALUE
+mod_included_modules(mod)
+    VALUE mod;
+{
+    VALUE ary = ary_new();
+    VALUE p;
+
+    for (p = RCLASS(mod)->super; p; p = RCLASS(p)->super) {
+	if (BUILTIN_TYPE(p) == T_ICLASS) {
+	    ary_push(ary, RBASIC(p)->class);
+	}
+    }
+    return ary;
+}
+
+VALUE
+mod_ancestors(mod)
+    VALUE mod;
+{
+    VALUE ary = ary_new();
+    VALUE p;
+
+    for (p = mod; p; p = RCLASS(p)->super) {
+	if (BUILTIN_TYPE(p) == T_ICLASS) {
+	    ary_push(ary, RBASIC(p)->class);
+	}
+	else {
+	    ary_push(ary, p);
+	}
+    }
+    return ary;
+}
+
+static int
+ins_methods_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_noex) {
+	VALUE name = str_new2(rb_id2name(key));
+
+	if (!ary_includes(ary, name)) {
+	    if (!body->nd_body) {
+		ary_push(ary, Qnil);
+	    }
+	    ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	ary_push(ary, Qnil);
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+ins_methods_priv_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	ary_push(ary, Qnil);
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    else if (body->nd_noex) {
+	VALUE name = str_new2(rb_id2name(key));
+
+	if (!ary_includes(ary, name)) {
+	    ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	ary_push(ary, Qnil);
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static VALUE
+method_list(mod, option, func)
+    VALUE mod;
+    int option;
+    int (*func)();
+{
+    VALUE ary;
+    VALUE klass;
+    VALUE *p, *q, *pend;
+
+    ary = ary_new();
+    for (klass = mod; klass; klass = RCLASS(klass)->super) {
+	st_foreach(RCLASS(klass)->m_tbl, func, ary);
+	if (!option) break;
+    }
+    p = q = RARRAY(ary)->ptr; pend = p + RARRAY(ary)->len;
+    while (p < pend) {
+	if (*p == Qnil) {
+	    p+=2;
+	    continue;
+	}
+	*q++ = *p++;
+    }
+    RARRAY(ary)->len = q - RARRAY(ary)->ptr;
+    return ary;
+}
+
+VALUE
+class_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_i);
+}
+
+VALUE
+class_private_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_priv_i);
+}
+
+VALUE
+obj_singleton_methods(obj)
+    VALUE obj;
+{
+    VALUE ary;
+    VALUE klass;
+    VALUE *p, *q, *pend;
+
+    ary = ary_new();
+    klass = CLASS_OF(obj);
+    while (klass && FL_TEST(klass, FL_SINGLETON)) {
+	st_foreach(RCLASS(klass)->m_tbl, ins_methods_i, ary);
+	klass = RCLASS(klass)->super;
+a233 11
+    p = q = RARRAY(ary)->ptr; pend = p + RARRAY(ary)->len;
+    while (p < pend) {
+	if (*p == Qnil) {
+	    p+=2;
+	    continue;
+	}
+	*q++ = *p++;
+    }
+    RARRAY(ary)->len = q - RARRAY(ary)->ptr;
+
+    return ary;
+d237 2
+a238 2
+rb_define_method_id(klass, name, func, argc)
+    VALUE klass;
+d243 1
+a243 1
+    rb_add_method(klass, name, NEW_CFUNC(func, argc), NOEX_PUBLIC);
+d247 2
+a248 2
+rb_define_method(klass, name, func, argc)
+    VALUE klass;
+d253 1
+a253 1
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc), NOEX_PUBLIC);
+d257 2
+a258 2
+rb_undef_method(klass, name)
+    VALUE klass;
+d261 1
+a261 1
+    rb_add_method(klass, rb_intern(name), 0, NOEX_PUBLIC);
+d265 2
+a266 2
+rb_define_private_method(klass, name, func, argc)
+    VALUE klass;
+d271 1
+a271 1
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc), NOEX_PRIVATE);
+d276 1
+a276 1
+    VALUE obj;
+d278 1
+a278 1
+    if (rb_special_const_p(obj)) {
+d281 2
+a282 2
+    if (FL_TEST(RBASIC(obj)->class, FL_SINGLETON)) {
+	return (VALUE)RBASIC(obj)->class;
+d284 1
+a284 3
+    RBASIC(obj)->class = singleton_class_new(RBASIC(obj)->class);
+    singleton_class_attached(RBASIC(obj)->class, obj);
+    return RBASIC(obj)->class;
+d308 1
+a308 1
+extern VALUE mKernel;
+d320 2
+a321 2
+rb_define_alias(klass, name1, name2)
+    VALUE klass;
+d324 1
+a324 1
+    rb_alias(klass, rb_intern(name1), rb_intern(name2));
+d328 2
+a329 2
+rb_define_attr(klass, id, read, write)
+    VALUE klass;
+d331 1
+a331 1
+    int read, write;
+d344 2
+a345 2
+    if (read) {
+	rb_add_method(klass, attr, NEW_IVAR(attriv), 0);
+d347 2
+a348 2
+    if (write) {
+	rb_add_method(klass, attreq, NEW_ATTRSET(attriv), 0);
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:09 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a15 1
+#include <ctype.h>
+d17 2
+a18 3
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+d20 2
+a21 1
+extern st_table *rb_class_tbl;
+d24 1
+a24 1
+rb_class_new(super)
+d28 1
+a28 1
+    OBJSETUP(klass, rb_cClass, T_CLASS);
+d33 1
+a33 1
+    klass->m_tbl = st_init_numtable();
+d39 1
+a39 1
+rb_singleton_class_new(super)
+d42 1
+a42 1
+    VALUE klass = rb_class_new(super);
+d59 1
+a59 1
+rb_singleton_class_clone(klass)
+d72 1
+a72 1
+	clone->m_tbl = st_init_numtable();
+d80 1
+a80 1
+rb_singleton_class_attached(klass, obj)
+d94 2
+a95 2
+    if (!super) super = rb_cObject;
+    klass = rb_class_new(super);
+d98 2
+a99 2
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+d102 1
+a102 1
+    return klass;
+a114 1
+
+d121 2
+a122 2
+rb_define_class_under(outer, name, super)
+    VALUE outer;
+d131 2
+a132 2
+    rb_const_set(outer, id, klass);
+    rb_set_class_path(klass, outer, name);
+d138 1
+a138 1
+rb_module_new()
+d141 1
+a141 1
+    OBJSETUP(mdl, rb_cModule, T_MODULE);
+d146 1
+a146 1
+    mdl->m_tbl = st_init_numtable();
+d155 2
+a156 1
+    VALUE mdl;
+a157 1
+    mdl = rb_module_new();
+d178 2
+a179 2
+rb_define_module_under(outer, name)
+    VALUE outer;
+d187 2
+a188 2
+    rb_const_set(outer, id, module);
+    rb_set_class_path(module, outer, name);
+d198 1
+a198 1
+    OBJSETUP(klass, rb_cClass, T_ICLASS);
+d204 1
+a204 1
+	RBASIC(klass)->klass = RBASIC(module)->klass;
+d207 1
+a207 1
+	RBASIC(klass)->klass = module;
+a219 1
+    if (klass == module) return;
+a223 1
+      case T_ICLASS:
+d229 3
+d236 1
+a236 4
+		RCLASS(p)->m_tbl == RCLASS(module)->m_tbl) {
+		if (RCLASS(module)->super) {
+		    rb_include_module(p, RCLASS(module)->super);
+		}
+a237 1
+	    }
+d239 1
+a244 1
+    rb_clear_cache();
+d248 1
+a248 1
+rb_mod_included_modules(mod)
+d251 1
+a251 1
+    VALUE ary = rb_ary_new();
+d256 1
+a256 1
+	    rb_ary_push(ary, RBASIC(p)->klass);
+d263 1
+a263 1
+rb_mod_ancestors(mod)
+d266 1
+a266 1
+    VALUE ary = rb_ary_new();
+a269 2
+	if (FL_TEST(p, FL_SINGLETON))
+	    continue;
+d271 1
+a271 1
+	    rb_ary_push(ary, RBASIC(p)->klass);
+d274 1
+a274 1
+	    rb_ary_push(ary, p);
+d286 2
+a287 2
+    if ((body->nd_noex&(NOEX_PRIVATE|NOEX_PROTECTED)) == 0) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+d289 1
+a289 1
+	if (!rb_ary_includes(ary, name)) {
+d291 1
+a291 1
+		rb_ary_push(ary, Qnil);
+d293 1
+a293 25
+	    rb_ary_push(ary, name);
+	}
+    }
+    else if (body->nd_body && nd_type(body->nd_body) == NODE_ZSUPER) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+ins_methods_prot_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+    }
+    else if (body->nd_noex & NOEX_PROTECTED) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+d297 2
+a298 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d310 2
+a311 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d313 2
+a314 2
+    else if (body->nd_noex & NOEX_PRIVATE) {
+	VALUE name = rb_str_new2(rb_id2name(key));
+d316 2
+a317 2
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+d321 2
+a322 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d337 1
+a337 1
+    ary = rb_ary_new();
+d355 1
+a355 1
+rb_class_instance_methods(argc, argv, mod)
+d367 1
+a367 13
+rb_class_protected_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_prot_i);
+}
+
+VALUE
+rb_class_private_instance_methods(argc, argv, mod)
+d379 1
+a379 1
+rb_obj_singleton_methods(obj)
+d386 1
+a386 1
+    ary = rb_ary_new();
+d412 1
+a412 1
+    rb_add_method(klass, name, NEW_CFUNC(func,argc), NOEX_PUBLIC|NOEX_CFUNC);
+d422 1
+a422 5
+    ID id = rb_intern(name);
+
+    rb_add_method(klass, id, NEW_CFUNC(func, argc), 
+		  ((name[0] == 'i' && id == rb_intern("initialize"))?
+		   NOEX_PRIVATE:NOEX_PUBLIC)|NOEX_CFUNC);
+d426 1
+a426 1
+rb_define_protected_method(klass, name, func, argc)
+a428 2
+    VALUE (*func)();
+    int argc;
+d430 1
+a430 2
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PROTECTED|NOEX_CFUNC);
+d440 1
+a440 10
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PRIVATE|NOEX_CFUNC);
+}
+
+void
+rb_undef_method(klass, name)
+    VALUE klass;
+    char *name;
+{
+    rb_add_method(klass, rb_intern(name), 0, NOEX_UNDEF);
+d448 1
+a448 1
+	rb_raise(rb_eTypeError, "cannot define singleton");
+d450 2
+a451 2
+    if (FL_TEST(RBASIC(obj)->klass, FL_SINGLETON)) {
+	return RBASIC(obj)->klass;
+d453 3
+a455 3
+    RBASIC(obj)->klass = rb_singleton_class_new(RBASIC(obj)->klass);
+    rb_singleton_class_attached(RBASIC(obj)->klass, obj);
+    return RBASIC(obj)->klass;
+d479 2
+d487 1
+a487 1
+    rb_define_module_function(rb_mKernel, name, func, argc);
+d499 1
+a499 1
+rb_define_attr(klass, name, read, write)
+d501 1
+a501 1
+    char *name;
+d504 17
+a520 1
+    rb_attr(klass, rb_intern(name), read, write, Qfalse);
+a522 4
+#ifdef HAVE_STDARG_PROTOTYPES
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+d524 1
+a524 2
+#define va_init_list(a,b) va_start(a)
+#endif
+a526 3
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_scan_args(int argc, VALUE *argv, char *fmt, ...)
+#else
+a531 1
+#endif
+d538 1
+a538 1
+    va_init_list(vargs, fmt);
+d542 1
+a542 1
+	*var = rb_ary_new4(argc, argv);
+d546 1
+a546 1
+    if (ISDIGIT(*p)) {
+d549 1
+a549 1
+	    rb_raise(rb_eArgError, "Wrong # of arguments (%d for %d)", argc, n);
+d560 1
+a560 1
+    if (ISDIGIT(*p)) {
+d577 1
+a577 1
+	    *var = rb_ary_new4(argc-i, argv+i);
+d580 1
+a580 1
+	    *var = rb_ary_new();
+d585 1
+a585 1
+	    rb_raise(rb_eArgError, "Wrong # of arguments(%d for %d)", argc, i);
+d596 1
+a596 1
+    rb_fatal("bad scan arg format: %s", fmt);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d599 1
+a599 1
+	    rb_raise(rb_eArgError, "wrong # of arguments (%d for %d)", argc, n);
+@
+
+
+1.1.1.3.2.2
+log
+@990127
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:09 $
+a367 2
+    if (rb_safe_level() >= 4 && !FL_TEST(mod, FL_TAINT))
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+a428 2
+    if (rb_safe_level() >= 4 && !FL_TEST(obj, FL_TAINT))
+	rb_raise(rb_eSecurityError, "Insecure: can't get metainfo");
+@
+
+
+1.1.1.3.2.3
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/27 08:08:35 $
+d368 1
+a368 1
+    if (!FL_TEST(mod, FL_TAINT) && rb_safe_level() >= 4)
+@
+
+
+1.1.1.3.2.4
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:53 $
+d606 1
+a606 1
+	    if (var) *var = argv[i];
+d619 1
+a619 1
+		if (var) *var = argv[i];
+d622 1
+a622 1
+		if (var) *var = Qnil;
+d631 1
+a631 1
+	    if (var) *var = rb_ary_new4(argc-i, argv+i);
+d634 1
+a634 1
+	    if (var) *var = rb_ary_new();
+@
+
+
+1.1.1.3.2.5
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:17 $
+d511 1
+a511 1
+	rb_raise(rb_eTypeError, "can't define singleton");
+d639 1
+a639 1
+	    rb_raise(rb_eArgError, "wrong # of arguments(%d for %d)", argc, i);
+@
+
+
+1.1.1.3.2.6
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:03 $
+d108 1
+a108 1
+    const char *name;
+d125 1
+a125 1
+    const char *name;
+d167 1
+a167 1
+    const char *name;
+d182 1
+a182 1
+    const char *name;
+d465 1
+a465 1
+    const char *name;
+d479 1
+a479 1
+    const char *name;
+d490 1
+a490 1
+    const char *name;
+d501 1
+a501 1
+    const char *name;
+d524 1
+a524 1
+    const char *name;
+d534 1
+a534 1
+    const char *name;
+d544 1
+a544 1
+    const char *name;
+d554 1
+a554 1
+    const char *name1, *name2;
+d562 1
+a562 1
+    const char *name;
+d578 1
+a578 1
+rb_scan_args(int argc, VALUE *argv, const char *fmt, ...)
+d583 1
+a583 1
+    const char *fmt;
+d588 1
+a588 1
+    const char *p = fmt;
+@
+
+
+1.1.1.3.2.7
+log
+@arity/strict yield
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:24 $
+d202 1
+a202 3
+    if (!RCLASS(module)->iv_tbl) {
+	RCLASS(module)->iv_tbl = st_init_numtable();
+    }
+a203 1
+    klass->m_tbl = RCLASS(module)->m_tbl;
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 04:14:43 $
+@
+
+
+1.1.1.2.2.2
+log
+@initialize made private
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+d422 1
+a422 5
+    ID id = rb_intern(name);
+
+    rb_add_method(klass, id, NEW_CFUNC(func, argc), 
+		  (name[0] == 'i' && id == rb_intern("initialize"))?
+		  NOEX_PRIVATE:NOEX_PUBLIC);
+d426 1
+a426 1
+rb_define_private_method(klass, name, func, argc)
+a428 2
+    VALUE (*func)();
+    int argc;
+d430 1
+a430 1
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc), NOEX_PRIVATE);
+d434 1
+a434 1
+rb_undef_method(klass, name)
+d437 2
+d440 1
+a440 1
+    rb_add_method(klass, rb_intern(name), 0, NOEX_PUBLIC);
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/22 08:32:47 $
+a269 2
+	if (FL_TEST(p, FL_SINGLETON))
+	    continue;
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/29 08:18:02 $
+d98 2
+a99 2
+    RBASIC(klass)->klass = singleton_class_new(RBASIC(super)->klass);
+    singleton_class_attached(RBASIC(klass)->klass, klass);
+d102 1
+a102 1
+    return klass;
+d204 1
+a204 1
+	RBASIC(klass)->klass = RBASIC(module)->klass;
+d207 1
+a207 1
+	RBASIC(klass)->klass = module;
+d256 1
+a256 1
+	    ary_push(ary, RBASIC(p)->klass);
+d273 1
+a273 1
+	    ary_push(ary, RBASIC(p)->klass);
+d456 2
+a457 2
+    if (FL_TEST(RBASIC(obj)->klass, FL_SINGLETON)) {
+	return RBASIC(obj)->klass;
+d459 3
+a461 3
+    RBASIC(obj)->klass = singleton_class_new(RBASIC(obj)->klass);
+    singleton_class_attached(RBASIC(obj)->klass, obj);
+    return RBASIC(obj)->klass;
+@
+
+
+1.1.1.2.2.5
+log
+@1.1b8pre2
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:18 $
+d121 2
+a122 2
+rb_define_class_under(outer, name, super)
+    VALUE outer;
+d131 2
+a132 2
+    rb_const_set(outer, id, klass);
+    rb_set_class_path(klass, outer, name);
+d178 2
+a179 2
+rb_define_module_under(outer, name)
+    VALUE outer;
+d187 2
+a188 2
+    rb_const_set(outer, id, module);
+    rb_set_class_path(module, outer, name);
+@
+
+
+1.1.1.2.2.6
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/20 08:28:44 $
+a100 3
+    if (FL_TEST(super, FL_PRIMITIVE)) {
+	FL_SET(klass, FL_PRIMITIVE);
+    }
+@
+
+
+1.1.1.2.2.7
+log
+@1.1b9_00 picachu
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:42 $
+d301 1
+a301 1
+    else if (body->nd_body && nd_type(body->nd_body) == NODE_ZSUPER) {
+@
+
+
+1.1.1.2.2.8
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/09 08:38:23 $
+d101 3
+d417 1
+a417 1
+    rb_add_method(klass, name, NEW_CFUNC(func,argc), NOEX_PUBLIC|NOEX_CFUNC);
+d430 2
+a431 2
+		  ((name[0] == 'i' && id == rb_intern("initialize"))?
+		   NOEX_PRIVATE:NOEX_PUBLIC)|NOEX_CFUNC);
+d441 1
+a441 2
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PRIVATE|NOEX_CFUNC);
+@
+
+
+1.1.1.2.2.9
+log
+@range check
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:32:53 $
+d447 1
+a447 1
+    rb_add_method(klass, rb_intern(name), 0, NOEX_UNDEF);
+@
+
+
+1.1.1.2.2.10
+log
+@NOEX_UNDEF check
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/12 07:22:55 $
+d288 1
+a288 1
+    if ((body->nd_noex&NOEX_PRIVATE) == 0) {
+d315 1
+a315 1
+    else if (body->nd_noex & NOEX_PRIVATE) {
+@
+
+
+1.1.1.2.2.11
+log
+@1.1b9_05 bug fix
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/16 05:12:13 $
+d506 1
+a506 1
+rb_define_attr(klass, name, read, write)
+d508 1
+a508 1
+    char *name;
+d511 17
+a527 1
+    rb_attr(klass, rb_intern(name), read, write, FALSE);
+@
+
+
+1.1.1.2.2.12
+log
+@eval(..,file,line);String#center
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/28 10:57:39 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.13
+log
+@dynamic (nested) local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/31 04:52:07 $
+d288 1
+a288 1
+    if ((body->nd_noex&(NOEX_PRIVATE|NOEX_PROTECTED)) == 0) {
+a305 24
+ins_methods_prot_i(key, body, ary)
+    ID key;
+    NODE *body;
+    VALUE ary;
+{
+    if (!body->nd_body) {
+	ary_push(ary, Qnil);
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    else if (body->nd_noex & NOEX_PROTECTED) {
+	VALUE name = str_new2(rb_id2name(key));
+
+	if (!ary_includes(ary, name)) {
+	    ary_push(ary, name);
+	}
+    }
+    else if (nd_type(body->nd_body) == NODE_ZSUPER) {
+	ary_push(ary, Qnil);
+	ary_push(ary, str_new2(rb_id2name(key)));
+    }
+    return ST_CONTINUE;
+}
+
+static int
+a368 12
+class_protected_instance_methods(argc, argv, mod)
+    int argc;
+    VALUE *argv;
+    VALUE mod;
+{
+    VALUE option;
+
+    rb_scan_args(argc, argv, "01", &option);
+    return method_list(mod, RTEST(option), ins_methods_prot_i);
+}
+
+VALUE
+a428 11
+}
+
+void
+rb_define_protected_method(klass, name, func, argc)
+    VALUE klass;
+    char *name;
+    VALUE (*func)();
+    int argc;
+{
+    rb_add_method(klass, rb_intern(name), NEW_CFUNC(func, argc),
+		  NOEX_PROTECTED|NOEX_CFUNC);
+@
+
+
+1.1.1.2.2.14
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:34:05 $
+a219 1
+    if (klass == module) return;
+a223 1
+      case T_ICLASS:
+d229 3
+d236 1
+a236 4
+		RCLASS(p)->m_tbl == RCLASS(module)->m_tbl) {
+		if (RCLASS(module)->super) {
+		    rb_include_module(p, RCLASS(module)->super);
+		}
+a237 1
+	    }
+d239 1
+a244 1
+    rb_clear_cache();
+@
+
+
+1.1.1.2.2.15
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 05:55:33 $
+a16 4
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+
+a563 4
+#ifdef __STDC__
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+a564 2
+#define va_init_list(a,b) va_start(a)
+#endif
+a567 3
+#ifdef __STDC__
+rb_scan_args(int argc, VALUE *argv, char *fmt, ...)
+#else
+a572 1
+#endif
+d579 1
+a579 1
+    va_init_list(vargs, fmt);
+@
+
+
+1.1.1.2.2.16
+log
+@prototypes
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:00 $
+d568 1
+a568 1
+#ifdef HAVE_STDARG_PROTOTYPES
+d578 1
+a578 1
+#ifdef HAVE_STDARG_PROTOTYPES
+@
+
+
+1.1.1.2.2.17
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/14 04:10:22 $
+d21 1
+d575 1
+d601 1
+a601 1
+    if (ISDIGIT(*p)) {
+d615 1
+a615 1
+    if (ISDIGIT(*p)) {
+@
+
+
+1.1.1.2.2.18
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:55:57 $
+a15 1
+#include <ctype.h>
+@
+
+
+1.1.1.2.2.19
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:31 $
+d24 3
+d539 2
+@
+
+
+1.1.1.2.2.20
+log
+@1.2.6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:16 $
+d201 1
+a201 3
+    if (!RCLASS(module)->iv_tbl) {
+	RCLASS(module)->iv_tbl = st_init_numtable();
+    }
+a202 1
+    klass->m_tbl = RCLASS(module)->m_tbl;
+@
+
+
+1.1.1.2.2.19.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:16 $
+d25 1
+a25 1
+rb_class_new(super)
+d29 1
+a29 1
+    OBJSETUP(klass, rb_cClass, T_CLASS);
+d34 1
+a34 1
+    klass->m_tbl = st_init_numtable();
+d40 1
+a40 1
+rb_singleton_class_new(super)
+d43 1
+a43 1
+    VALUE klass = rb_class_new(super);
+d60 1
+a60 1
+rb_singleton_class_clone(klass)
+d73 1
+a73 1
+	clone->m_tbl = st_init_numtable();
+d81 1
+a81 1
+rb_singleton_class_attached(klass, obj)
+d95 2
+a96 2
+    if (!super) super = rb_cObject;
+    klass = rb_class_new(super);
+d99 2
+a100 2
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+d139 1
+a139 1
+rb_module_new()
+d142 1
+a142 1
+    OBJSETUP(mdl, rb_cModule, T_MODULE);
+d147 1
+a147 1
+    mdl->m_tbl = st_init_numtable();
+d157 1
+a157 1
+    VALUE mdl = rb_module_new();
+d195 1
+a195 1
+include_rb_class_new(module, super)
+d199 1
+a199 1
+    OBJSETUP(klass, rb_cClass, T_ICLASS);
+d244 1
+a244 1
+	    include_rb_class_new(module, RCLASS(klass)->super);
+d252 1
+a252 1
+rb_mod_included_modules(mod)
+d255 1
+a255 1
+    VALUE ary = rb_ary_new();
+d260 1
+a260 1
+	    rb_ary_push(ary, RBASIC(p)->klass);
+d267 1
+a267 1
+rb_mod_ancestors(mod)
+d270 1
+a270 1
+    VALUE ary = rb_ary_new();
+d277 1
+a277 1
+	    rb_ary_push(ary, RBASIC(p)->klass);
+d280 1
+a280 1
+	    rb_ary_push(ary, p);
+d293 1
+a293 1
+	VALUE name = rb_str_new2(rb_id2name(key));
+d295 1
+a295 1
+	if (!rb_ary_includes(ary, name)) {
+d297 1
+a297 1
+		rb_ary_push(ary, Qnil);
+d299 1
+a299 1
+	    rb_ary_push(ary, name);
+d303 2
+a304 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d316 2
+a317 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d320 1
+a320 1
+	VALUE name = rb_str_new2(rb_id2name(key));
+d322 2
+a323 2
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+d327 2
+a328 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d340 2
+a341 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d344 1
+a344 1
+	VALUE name = rb_str_new2(rb_id2name(key));
+d346 2
+a347 2
+	if (!rb_ary_includes(ary, name)) {
+	    rb_ary_push(ary, name);
+d351 2
+a352 2
+	rb_ary_push(ary, Qnil);
+	rb_ary_push(ary, rb_str_new2(rb_id2name(key)));
+d367 1
+a367 1
+    ary = rb_ary_new();
+d385 1
+a385 1
+rb_class_instance_methods(argc, argv, mod)
+d397 1
+a397 1
+rb_class_protected_instance_methods(argc, argv, mod)
+d409 1
+a409 1
+rb_class_private_instance_methods(argc, argv, mod)
+d421 1
+a421 1
+rb_obj_singleton_methods(obj)
+d428 1
+a428 1
+    ary = rb_ary_new();
+d506 1
+a506 1
+	rb_raise(rb_eTypeError, "cannot define singleton");
+d511 2
+a512 2
+    RBASIC(obj)->klass = rb_singleton_class_new(RBASIC(obj)->klass);
+    rb_singleton_class_attached(RBASIC(obj)->klass, obj);
+d543 1
+a543 1
+    rb_define_private_method(rb_mKernel, name, func, argc);
+d560 1
+a560 1
+    rb_attr(klass, rb_intern(name), read, write, Qfalse);
+d591 1
+a591 1
+	*var = rb_ary_new4(argc, argv);
+d598 1
+a598 1
+	    rb_raise(rb_eArgError, "Wrong # of arguments (%d for %d)", argc, n);
+d626 1
+a626 1
+	    *var = rb_ary_new4(argc-i, argv+i);
+d629 1
+a629 1
+	    *var = rb_ary_new();
+d634 1
+a634 1
+	    rb_raise(rb_eArgError, "Wrong # of arguments(%d for %d)", argc, i);
+d645 1
+a645 1
+    rb_fatal("bad scan arg format: %s", fmt);
+@
+
+
+1.1.1.2.2.19.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:33 $
+d156 2
+a157 1
+    VALUE mdl;
+a158 1
+    mdl = rb_module_new();
+d195 1
+a195 1
+include_class_new(module, super)
+d244 1
+a244 1
+	    include_class_new(module, RCLASS(klass)->super);
+@
+
+
+1.1.1.2.2.19.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:03 $
+a115 1
+
+d543 1
+a543 1
+    rb_define_module_function(rb_mKernel, name, func, argc);
+@

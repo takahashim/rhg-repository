@@ -1,0 +1,3821 @@
+head	1.16;
+access;
+symbols
+	v1_6_7:1.10.2.3
+	v1_6_6:1.10.2.2
+	v1_6_5:1.10.2.2
+	v1_6_4:1.10.2.1
+	v1_7_1:1.11
+	v1_6_4_preview4:1.10.2.1
+	v1_6_4_preview3:1.10.2.1
+	v1_6_4_preview2:1.10.2.1
+	v1_6_4_preview1:1.10.2.1
+	v1_6_3:1.10
+	ruby_m17n:1.10.0.4
+	ruby_1_6:1.10.0.2
+	v1_6_2:1.10
+	v1_6_1:1.8
+	v1_6_0:1.8
+	v1_4_6:1.3.2.5
+	v1_4_5:1.3.2.4
+	v1_4_4:1.3.2.3
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.16
+date	2002.10.02.06.02.16;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.06.28.14.40.25;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.06.04.07.03.33;	author nagai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.02.28.06.53.33;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.09.03.05.31.36;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.03.27.07.09.27;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.11.27.09.23.35;	author matz;	state Exp;
+branches
+	1.10.2.1;
+next	1.9;
+
+1.9
+date	2000.11.20.07.31.51;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.12.07.48.26;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.24.04.34.22;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.17.08.37.51;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.37.19;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.06.09.04.01;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.55;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.51;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.12.06.09.03.38;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.01.05.04.41.16;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.01.17.08.24.18;	author matz;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2000.06.13.09.50.57;	author matz;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	2000.06.23.08.38.45;	author matz;	state Exp;
+branches;
+next	;
+
+1.10.2.1
+date	2001.03.27.07.10.58;	author matz;	state Exp;
+branches;
+next	1.10.2.2;
+
+1.10.2.2
+date	2001.09.05.06.53.31;	author matz;	state Exp;
+branches;
+next	1.10.2.3;
+
+1.10.2.3
+date	2002.02.28.06.52.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.16
+log
+@* commit miss;  and tcltklib fix too.
+@
+text
+@#
+#		tkcanvas.rb - Tk canvas classes
+#			$Date: 2002/06/28 14:40:25 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+#			$Date: 2002/06/28 14:40:25 $
+#			by Hidetoshi Nagai <nagai@@ai.kyutech.ac.jp>
+
+require "tk"
+require 'tkfont'
+
+module TkTreatCItemFont
+  include TkTreatItemFont
+
+  ItemCMD = ['itemconfigure', TkComm::None]
+  def __conf_cmd(idx)
+    ItemCMD[idx]
+  end
+
+  def __item_pathname(tagOrId)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      self.path + ';' + tagOrId.id.to_s
+    else
+      self.path + ';' + tagOrId.to_s
+    end
+  end
+end
+
+class TkCanvas<TkWindow
+  include TkTreatCItemFont
+  include Scrollable
+
+  WidgetClassName = 'Canvas'.freeze
+  WidgetClassNames[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'canvas', @@path, *hash_kv(keys)
+    else
+      tk_call 'canvas', @@path
+    end
+  end
+
+  def tagid(tag)
+    if tag.kind_of?(TkcItem) || tag.kind_of?(TkcTag)
+      tag.id
+    else
+      tag
+    end
+  end
+  private :tagid
+
+  def addtag(tag, mode, *args)
+    tk_send 'addtag', tagid(tag), mode, *args
+  end
+  def addtag_above(tagOrId, target)
+    addtag(tagOrId, 'above', tagid(target))
+  end
+  def addtag_all(tagOrId)
+    addtag(tagOrId, 'all')
+  end
+  def addtag_below(tagOrId, target)
+    addtag(tagOrId, 'below', tagid(target))
+  end
+  def addtag_closest(tagOrId, x, y, halo=None, start=None)
+    addtag(tagOrId, 'closest', x, y, halo, start)
+  end
+  def addtag_enclosed(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'enclosed', x1, y1, x2, y2)
+  end
+  def addtag_overlapping(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'overlapping', x1, y1, x2, y2)
+  end
+  def addtag_withtag(tagOrId, tag)
+    addtag(tagOrId, 'withtag', tagid(tag))
+  end
+
+  def bbox(tagOrId, *tags)
+    list(tk_send('bbox', tagid(tagOrId), *tags.collect{|t| tagid(t)}))
+  end
+
+  def itembind(tag, context, cmd=Proc.new, args=nil)
+    _bind([path, "bind", tagid(tag)], context, cmd, args)
+  end
+
+  def itembind_append(tag, context, cmd=Proc.new, args=nil)
+    _bind_append([path, "bind", tagid(tag)], context, cmd, args)
+  end
+
+  def itembindinfo(tag, context=nil)
+    _bindinfo([path, "bind", tagid(tag)], context)
+  end
+
+  def canvasx(x, *args)
+    tk_tcl2ruby(tk_send('canvasx', x, *args))
+  end
+  def canvasy(y, *args)
+    tk_tcl2ruby(tk_send('canvasy', y, *args))
+  end
+
+  def coords(tag, *args)
+    if args == []
+      tk_split_list(tk_send('coords', tagid(tag)))
+    else
+      tk_send('coords', tagid(tag), *args)
+    end
+  end
+
+  def dchars(tag, first, last=None)
+    tk_send 'dchars', tagid(tag), first, last
+  end
+
+  def delete(*args)
+    tk_send 'delete', *args.collect{|t| tagid(t)}
+  end
+  alias remove delete
+
+  def dtag(tag, tag_to_del=None)
+    tk_send 'dtag', tagid(tag), tag_to_del
+  end
+
+  def find(mode, *args)
+    list(tk_send('find', mode, *args)).collect!{|id| 
+      TkcItem.id2obj(self, id)
+    }
+  end
+  def find_above(target)
+    find('above', tagid(target))
+  end
+  def find_all
+    find('all')
+  end
+  def find_below(target)
+    find('below', tagid(target))
+  end
+  def find_closest(x, y, halo=None, start=None)
+    find('closest', x, y, halo, start)
+  end
+  def find_enclosed(x1, y1, x2, y2)
+    find('enclosed', x1, y1, x2, y2)
+  end
+  def find_overlapping(x1, y1, x2, y2)
+    find('overlapping', x1, y1, x2, y2)
+  end
+  def find_withtag(tag)
+    find('withtag', tag)
+  end
+
+  def itemfocus(tagOrId=nil)
+    if tagOrId
+      tk_send 'focus', tagid(tagOrId)
+    else
+      ret = tk_send('focus')
+      if ret == ""
+	nil
+      else
+	TkcItem.id2obj(self, ret)
+      end
+    end
+  end
+
+  def gettags(tagOrId)
+    list(tk_send('gettags', tagid(tagOrId))).collect{|tag|
+      TkcTag.id2obj(self, tag)
+    }
+  end
+
+  def icursor(tagOrId, index)
+    tk_send 'icursor', tagid(tagOrId), index
+  end
+
+  def index(tagOrId, index)
+    tk_send 'index', tagid(tagOrId), index
+  end
+
+  def insert(tagOrId, index, string)
+    tk_send 'insert', tagid(tagOrId), index, string
+  end
+
+  def itemcget(tagOrId, option)
+    case option.to_s
+    when 'dash', 'activedash', 'disableddash'
+      conf = tk_send('itemcget', tagid(tagOrId), "-#{option}")
+      if conf =~ /^[0-9]/
+	list(conf)
+      else
+	conf
+      end
+    when 'text', 'label', 'show', 'data', 'file', 'maskdata', 'maskfile'
+      tk_send 'itemcget', tagid(tagOrId), "-#{option}"
+    else
+      tk_tcl2ruby tk_send('itemcget', tagid(tagOrId), "-#{option}")
+    end
+  end
+
+  def itemconfigure(tagOrId, key, value=None)
+    if key.kind_of? Hash
+      key = _symbolkey2str(key)
+      if ( key['font'] || key['kanjifont'] \
+	  || key['latinfont'] || key['asciifont'] )
+	tagfont_configure(tagOrId, key.dup)
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+      end
+
+    else
+      if ( key == 'font' || key == :font || 
+           key == 'kanjifont' || key == :kanjifont || 
+	   key == 'latinfont' || key == :latinfont || 
+           key == 'asciifont' || key == :asciifont )
+	tagfont_configure(tagid(tagOrId), {key=>value})
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+      end
+    end
+  end
+#  def itemconfigure(tagOrId, key, value=None)
+#    if key.kind_of? Hash
+#      tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+#    else
+#      tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+#    end
+#  end
+#  def itemconfigure(tagOrId, keys)
+#    tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(keys)
+#  end
+
+  def itemconfiginfo(tagOrId, key=nil)
+    if key
+      case key.to_s
+      when 'dash', 'activedash', 'disableddash'
+	conf = tk_split_simplelist(tk_send('itemconfigure', 
+					   tagid(tagOrId), "-#{key}"))
+	if conf[3] && conf[3] =~ /^[0-9]/
+	  conf[3] = list(conf[3])
+	end
+	if conf[4] && conf[4] =~ /^[0-9]/
+	  conf[4] = list(conf[4])
+	end
+      when 'text', 'label', 'show', 'data', 'file', 'maskdata', 'maskfile'
+	conf = tk_split_simplelist(tk_send('itemconfigure', 
+					   tagid(tagOrId), "-#{key}"))
+      else
+	conf = tk_split_list(tk_send('itemconfigure', 
+				     tagid(tagOrId), "-#{key}"))
+      end
+      conf[0] = conf[0][1..-1]
+      conf
+    else
+      tk_split_simplelist(tk_send('itemconfigure', 
+				  tagid(tagOrId))).collect{|conflist|
+	conf = tk_split_simplelist(conflist)
+	conf[0] = conf[0][1..-1]
+	case conf[0]
+	when 'text', 'label', 'show', 'data', 'file', 'maskdata', 'maskfile'
+	when 'dash', 'activedash', 'disableddash'
+	  if conf[3] && conf[3] =~ /^[0-9]/
+	    conf[3] = list(conf[3])
+	  end
+	  if conf[4] && conf[4] =~ /^[0-9]/
+	    conf[4] = list(conf[4])
+	  end
+	else
+	  if conf[3]
+	    if conf[3].index('{')
+	      conf[3] = tk_split_list(conf[3]) 
+	    else
+	      conf[3] = tk_tcl2ruby(conf[3]) 
+	    end
+	  end
+	  if conf[4]
+	    if conf[4].index('{')
+	      conf[4] = tk_split_list(conf[4]) 
+	    else
+	      conf[4] = tk_tcl2ruby(conf[4]) 
+	    end
+	  end
+	end
+	conf
+      }
+    end
+  end
+
+  def lower(tag, below=None)
+    tk_send 'lower', tagid(tag), tagid(below)
+  end
+
+  def move(tag, x, y)
+    tk_send 'move', tagid(tag), x, y
+  end
+
+  def postscript(keys)
+    tk_send "postscript", *hash_kv(keys)
+  end
+
+  def raise(tag, above=None)
+    tk_send 'raise', tagid(tag), tagid(above)
+  end
+
+  def scale(tag, x, y, xs, ys)
+    tk_send 'scale', tagid(tag), x, y, xs, ys
+  end
+
+  def scan_mark(x, y)
+    tk_send 'scan', 'mark', x, y
+  end
+  def scan_dragto(x, y)
+    tk_send 'scan', 'dragto', x, y
+  end
+
+  def select(mode, *args)
+    tk_send 'select', mode, *args
+  end
+  def select_adjust(tagOrId, index)
+    select('adjust', tagid(tagOrId), index)
+  end
+  def select_clear
+    select('clear')
+  end
+  def select_from(tagOrId, index)
+    select('from', tagid(tagOrId), index)
+  end
+  def select_item
+    select('item')
+  end
+  def select_to(tagOrId, index)
+    select('to', tagid(tagOrId), index)
+  end
+
+  def itemtype(tag)
+    TkcItem.type2class(tk_send('type', tagid(tag)))
+  end
+end
+
+module TkcTagAccess
+  include TkComm
+  include TkTreatTagFont
+
+  def addtag(tag)
+    @@c.addtag(tag, 'with', @@id)
+  end
+
+  def bbox
+    @@c.bbox(@@id)
+  end
+
+  def bind(seq, cmd=Proc.new, args=nil)
+    @@c.itembind @@id, seq, cmd, args
+  end
+
+  def bindinfo(seq=nil)
+    @@c.itembindinfo @@id, seq
+  end
+
+  def cget(option)
+    @@c.itemcget @@id, option
+  end
+
+  def configure(key, value=None)
+    @@c.itemconfigure @@id, key, value
+  end
+#  def configure(keys)
+#    @@c.itemconfigure @@id, keys
+#  end
+
+  def configinfo(key=nil)
+    @@c.itemconfiginfo @@id, key
+  end
+
+  def coords(*args)
+    @@c.coords @@id, *args
+  end
+
+  def dchars(first, last=None)
+    @@c.dchars @@id, first, last
+  end
+
+  def dtag(tag_to_del=None)
+    @@c.dtag @@id, tag_to_del
+  end
+
+  def find
+    @@c.find 'withtag', @@id
+  end
+  alias list find
+
+  def focus
+    @@c.itemfocus @@id
+  end
+
+  def gettags
+    @@c.gettags @@id
+  end
+
+  def icursor(index)
+    @@c.icursor @@id, index
+  end
+
+  def index(index)
+    @@c.index @@id, index
+  end
+
+  def insert(beforethis, string)
+    @@c.insert @@id, beforethis, string
+  end
+
+  def lower(belowthis=None)
+    @@c.lower @@id, belowthis
+  end
+
+  def move(xamount, yamount)
+    @@c.move @@id, xamount, yamount
+  end
+
+  def raise(abovethis=None)
+    @@c.raise @@id, abovethis
+  end
+
+  def scale(xorigin, yorigin, xscale, yscale)
+    @@c.scale @@id, xorigin, yorigin, xscale, yscale
+  end
+
+  def select_adjust(index)
+    @@c.select('adjust', @@id, index)
+  end
+  def select_from(index)
+    @@c.select('from', @@id, index)
+  end
+  def select_to(index)
+    @@c.select('to', @@id, index)
+  end
+
+  def itemtype
+    @@c.itemtype @@id
+  end
+
+  # Following operators support logical expressions of canvas tags
+  # (for Tk8.3+).
+  # If tag1.path is 't1' and tag2.path is 't2', then
+  #      ltag = tag1 & tag2; ltag.path => "(t1)&&(t2)"
+  #      ltag = tag1 | tag2; ltag.path => "(t1)||(t2)"
+  #      ltag = tag1 ^ tag2; ltag.path => "(t1)^(t2)"
+  #      ltag = - tag1;      ltag.path => "!(t1)"
+  def & (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')&&(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')&&(' + tag.to_s + ')')
+    end
+  end
+
+  def | (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')||(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')||(' + tag.to_s + ')')
+    end
+  end
+
+  def ^ (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')^(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')^(' + tag.to_s + ')')
+    end
+  end
+
+  def -@@
+    TkcTagString.new(@@c, '!(' + @@id + ')')
+  end
+end
+
+class TkcTag<TkObject
+  include TkcTagAccess
+
+  CTagID_TBL = {}
+  Tk_CanvasTag_ID = ['ctag0000']
+
+  def TkcTag.id2obj(canvas, id)
+    cpath = canvas.path
+    return id unless CTagID_TBL[cpath]
+    CTagID_TBL[cpath][id]? CTagID_TBL[cpath][id]: id
+  end
+
+  def initialize(parent, mode=nil, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = Tk_CanvasTag_ID[0]
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+    Tk_CanvasTag_ID[0] = Tk_CanvasTag_ID[0].succ
+    if mode
+      tk_call @@c.path, "addtag", @@id, mode, *args
+    end
+  end
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CTagID_TBL[@@cpath].delete(@@id) if CTagID_TBL[@@cpath]
+  end
+  alias remove  delete
+  alias destroy delete
+
+  def set_to_above(target)
+    @@c.addtag_above(@@id, target)
+  end
+  alias above set_to_above
+
+  def set_to_all
+    @@c.addtag_all(@@id)
+  end
+  alias all set_to_all
+
+  def set_to_below(target)
+    @@c.addtag_below(@@id, target)
+  end
+  alias below set_to_below
+
+  def set_to_closest(x, y, halo=None, start=None)
+    @@c.addtag_closest(@@id, x, y, halo, start)
+  end
+  alias closest set_to_closest
+
+  def set_to_enclosed(x1, y1, x2, y2)
+    @@c.addtag_enclosed(@@id, x1, y1, x2, y2)
+  end
+  alias enclosed set_to_enclosed
+
+  def set_to_overlapping(x1, y1, x2, y2)
+    @@c.addtag_overlapping(@@id, x1, y1, x2, y2)
+  end
+  alias overlapping set_to_overlapping
+
+  def set_to_withtag(target)
+    @@c.addtag_withtag(@@id, target)
+  end
+  alias withtag set_to_withtag
+end
+
+class TkcTagString<TkcTag
+  def self.new(parent, name, *args)
+    if CTagID_TBL[parent.path] && CTagID_TBL[parent.path][name]
+      return CTagID_TBL[parent.path][name]
+    else
+      super(parent, name, *args)
+    end
+  end
+
+  def initialize(parent, name, mode=nil, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = name
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+    if mode
+      tk_call @@c.path, "addtag", @@id, mode, *args
+    end
+  end
+end
+TkcNamedTag = TkcTagString
+
+class TkcTagAll<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = 'all'
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+  end
+end
+
+class TkcTagCurrent<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = 'current'
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+  end
+end
+
+class TkcGroup<TkcTag
+  Tk_cGroup_ID = ['tkcg00000']
+  def create_self(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = Tk_cGroup_ID[0]
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+    Tk_cGroup_ID[0] = Tk_cGroup_ID[0].succ
+    add(*args) if args != []
+  end
+  
+  def include(*tags)
+    for i in tags
+      i.addtag @@id
+    end
+  end
+
+  def exclude(*tags)
+    for i in tags
+      i.delete @@id
+    end
+  end
+end
+
+class TkcItem<TkObject
+  include TkcTagAccess
+
+  CItemTypeToClass = {}
+  CItemID_TBL = {}
+
+  def TkcItem.type2class(type)
+    CItemTypeToClass[type]
+  end
+
+  def TkcItem.id2obj(canvas, id)
+    cpath = canvas.path
+    return id unless CItemID_TBL[cpath]
+    CItemID_TBL[cpath][id]? CItemID_TBL[cpath][id]: id
+  end
+
+  def initialize(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@parent = @@c = parent
+    @@path = parent.path
+    fontkeys = {}
+    if args.size == 1 && args[0].kind_of?(Hash)
+      args[0] = _symbolkey2str(args[0])
+      coords = args[0].delete('coords')
+      if not coords.kind_of?(Array)
+        fail "coords parameter must be given by an Array"
+      end
+      args[0,0] = coords.flatten
+    end
+    if args[-1].kind_of? Hash
+      keys = _symbolkey2str(args.pop)
+      ['font', 'kanjifont', 'latinfont', 'asciifont'].each{|key|
+	fontkeys[key] = keys.delete(key) if keys.key?(key)
+      }
+      args += hash_kv(keys)
+    end
+    @@id = create_self(*args).to_i ;# 'canvas item id' is integer number
+    CItemID_TBL[@@path] = {} unless CItemID_TBL[@@path]
+    CItemID_TBL[@@path][@@id] = self
+    font_configure(fontkeys) unless fontkeys.empty?
+
+######## old version
+#    if args[-1].kind_of? Hash
+#      keys = args.pop
+#    end
+#    @@id = create_self(*args).to_i ;# 'canvas item id' is integer number
+#    CItemID_TBL[@@path] = {} unless CItemID_TBL[@@path]
+#    CItemID_TBL[@@path][@@id] = self
+#    if keys
+#      # tk_call @@path, 'itemconfigure', @@id, *hash_kv(keys)
+#      configure(keys) if keys
+#    end
+########
+  end
+  def create_self(*args); end
+  private :create_self
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CItemID_TBL[@@path].delete(@@id) if CItemID_TBL[@@path]
+  end
+  alias remove  delete
+  alias destroy delete
+end
+
+class TkcArc<TkcItem
+  CItemTypeToClass['arc'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'arc', *args)
+  end
+end
+class TkcBitmap<TkcItem
+  CItemTypeToClass['bitmap'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'bitmap', *args)
+  end
+end
+class TkcImage<TkcItem
+  CItemTypeToClass['image'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'image', *args)
+  end
+end
+class TkcLine<TkcItem
+  CItemTypeToClass['line'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'line', *args)
+  end
+end
+class TkcOval<TkcItem
+  CItemTypeToClass['oval'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'oval', *args)
+  end
+end
+class TkcPolygon<TkcItem
+  CItemTypeToClass['polygon'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'polygon', *args)
+  end
+end
+class TkcRectangle<TkcItem
+  CItemTypeToClass['rectangle'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'rectangle', *args)
+  end
+end
+class TkcText<TkcItem
+  CItemTypeToClass['text'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'text', *args)
+  end
+end
+class TkcWindow<TkcItem
+  CItemTypeToClass['window'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'window', *args)
+  end
+end
+
+class TkImage<TkObject
+  include Tk
+
+  Tk_IMGTBL = {}
+
+  Tk_Image_ID = ['i00000']
+  def initialize(keys=nil)
+    @@path = Tk_Image_ID[0]
+    Tk_Image_ID[0] = Tk_Image_ID[0].succ
+    tk_call 'image', 'create', @@type, @@path, *hash_kv(keys)
+    Tk_IMGTBL[@@path] = self
+  end
+
+  def delete
+    Tk_IMGTBL.delete(@@id) if @@id
+    tk_call('image', 'delete', @@path)
+  end
+  def height
+    number(tk_call('image', 'height', @@path))
+  end
+  def inuse
+    bool(tk_call('image', 'inuse', @@path))
+  end
+  def itemtype
+    tk_call('image', 'type', @@path)
+  end
+  def width
+    number(tk_call('image', 'width', @@path))
+  end
+
+  def TkImage.names
+    Tk.tk_call('image', 'names').split.collect!{|id|
+      (Tk_IMGTBL[id])? Tk_IMGTBL[id] : id
+    }
+  end
+
+  def TkImage.types
+    Tk.tk_call('image', 'types').split
+  end
+end
+
+class TkBitmapImage<TkImage
+  def initialize(*args)
+    @@type = 'bitmap'
+    super
+  end
+end
+
+class TkPhotoImage<TkImage
+  def initialize(*args)
+    @@type = 'photo'
+    super
+  end
+
+  def blank
+    tk_send 'blank'
+  end
+
+  def cget(option)
+    case option.to_s
+    when 'data', 'file'
+      tk_send 'cget', option
+    else
+      tk_tcl2ruby tk_send('cget', option)
+    end
+  end
+
+  def copy(source, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+
+    tk_send 'copy', source, *args
+  end
+
+  def data(keys=nil)
+    tk_send 'data', *hash_kv(keys)
+  end
+
+  def get(x, y)
+    tk_send 'get', x, y
+  end
+
+  def put(data, *to)
+    if to == []
+      tk_send 'put', data
+    else
+      tk_send 'put', data, '-to', *to
+    end
+  end
+
+  def read(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'read', file, *args
+  end
+
+  def redither
+    tk_send 'redither'
+  end
+
+  def write(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'write', file, *args
+  end
+end
+@
+
+
+1.15
+log
+@* re.c (rb_reg_expr_str): need to process backslashes properly.
+
+* object.c (rb_any_to_a): declare Object#to_a to be obsolete.
+
+* object.c (rb_Array): do not convert nil into [] automagically.
+
+* object.c (rb_Integer): use "to_int" instead of
+  "to_i". [experimental]
+
+* object.c (nil_to_f): new method.
+
+* object.c (rb_Integer): Symbols and nil should cause error.
+
+* object.c (rb_Float): nil should cause error.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2002/06/04 07:03:33 $
+d5 1
+a5 1
+#			$Date: 2002/06/04 07:03:33 $
+d507 1
+a507 1
+    CTagID_TBL[@@cpath][@@id] = nil if CTagID_TBL[@@cpath]
+d691 1
+a691 1
+    CItemID_TBL[@@path][@@id] = nil if CItemID_TBL[@@path]
+d766 1
+a766 1
+    Tk_IMGTBL[@@id] = nil if @@id
+@
+
+
+1.14
+log
+@* tkfont.rb:  Fix bugs on TkFont.init_widget_font for Tk8.x.
+
+* tkafter.rb: Add self to 1st argument of interval- and loop-proc
+    TkAfter#current_interval returns an interval (sleep) time value
+    TkAfter#current_args returns an array of arguments
+    TkAfter#return_value returns a return value of last loop-proc
+      e.g.
+         TkAfter.new(
+           proc{|obj| 500 - obj.current_interval}, 10,
+           [proc{|obj| p obj.current_args}, 'proc', 1],
+           proc{|obj| p obj.current_args; ['return', 2]},
+           [proc{|obj|
+              p obj.return_value
+              p ['proc', obj.current_args[0].call(obj.return_value[1],
+                                                  obj.current_args[1])]},
+            proc{|*args| args[0] + args[1]}, 1],
+           proc{p ['proc', 4]} ).start(100)
+
+* tk*.rb: Allow to use Symbols for parameters.
+    Allow new notation of constructor (also allow old notation).
+      e.g.
+        TkFrame.new('classname'=>'User'){|base|
+          pack
+          f = TkFrame.new(base, :classname=>'ButtonFrame').pack
+          TkButton.new(
+             :parent     => f,
+             :text       => 'Quit',
+             :command    => proc{exit}
+          ).pack(
+             :fill => :x,
+             :pady => 2
+          )
+        }
+
+* tkcanvas.rb: (TkcItem) Add 'coords' parameter to the canvas item
+    constructor (for new notation of constructor).
+      e.g.
+        c = TkCanvas.new.pack
+        l = TkcLine.new(c, :coords=>[[0,0], [100,100]])
+
+* tcltklib.c: New 'mainloop' and 'mainloop_watchdog'.
+    The priority of their event-loop can be controlled.
+    They accept an optional argument.
+    If it false, they don't exit although the root widget is destroyed.
+    This function is sometimes useful, if it is used with 'restart'.
+    'mainloop' can't treat Thread#join/value in a callback routine.
+    (e.g. TkButton.new(:command=>proc{p Thread.new{button.invoke}.value}) )
+    'mainloop_watchdog' can treat them, but watchdog thread is always running
+    (so, a little heavier than 'mainloop').
+    If the purpose of using Thread#join/value is to do something under some
+    safe-level, please use Proc object.
+    (e.g. :command=>proc{$SAFE=1;proc{$SAFE=2;button.invoke}.call;p $SAFE})
+
+* tk.rb: Support functions of new 'mainloop' and 'mainloop_watchdog'.
+
+* tk.rb: (Tk.restart) Add 'app-name' paramater and 'use' parameter.
+    'app-name' specifies the name and the resource class of the
+    application. If 'app-name' is specified to 'xxx', the application
+    class on the resource database is set to 'Xxx' and the application
+    name is changed by the same rule of Tk.appname method.  'use'
+    specifies the main window for embedding the root widget instead of
+    generating a new window.
+
+* tk.rb: Add new parameter 'widgetname' to the widget constructor to
+    support effective use of Resource Database.  For example, the
+    resource 'Xxx*quit.text: QUIT' can set the text of the button
+    generated by the following code.
+      e.g.
+        Tk.restart('Xxx')
+        TkButton.new(nil, 'widgetname'=>'quit', 'command'=>proc{exit}).pack
+        Tk.mainloop
+
+* tk.rb: TkOption::get always returns a tainted string.
+    Add TkOption::new_proc_class.
+    It generates a class to import procedures defined on the resource
+    database. For example, there is a following resource file.
+      ----< resource-test >------------
+      *CMD.foo: {|*args| p [$SAFE, :foo, args]}
+      *CMD.XXX.bar: {|*args| p [$SAFE, :bar, args]}
+      *Button.command: ruby {p self; p $SAFE; TkOption::CMD::XXX.bar(1,2,3)}
+      ---------------------------------
+    The following code is a sample of use of the resource file.
+      e.g.
+        require 'tk'
+        TkOption.readfile 'resource-test'
+        p TkOption.new_proc_class(:CMD, [:foo], 1)
+        p TkOption.new_proc_class(:XXX, [:bar], 2, false, TkOption::CMD)
+        TkButton.new(:text=>'test').pack
+        Tk.mainloop
+@
+text
+@d3 1
+a3 1
+#			$Date: 2002/02/28 06:53:33 $
+d5 1
+a5 1
+#			$Date: 2002/02/28 06:53:33 $
+d97 1
+a97 1
+    tk_tcl2ruby(tk_send 'canvasx', x, *args)
+d100 1
+a100 1
+    tk_tcl2ruby(tk_send 'canvasy', y, *args)
+d125 1
+a125 1
+    list(tk_send 'find', mode, *args).collect!{|id| 
+d194 1
+a194 1
+      tk_tcl2ruby tk_send 'itemcget', tagid(tagOrId), "-#{option}"
+d234 2
+a235 2
+	conf = tk_split_simplelist(tk_send 'itemconfigure', 
+				   tagid(tagOrId), "-#{key}")
+d243 2
+a244 2
+	conf = tk_split_simplelist(tk_send 'itemconfigure', 
+				   tagid(tagOrId), "-#{key}")
+d246 2
+a247 2
+	conf = tk_split_list(tk_send 'itemconfigure', 
+			     tagid(tagOrId), "-#{key}")
+d252 2
+a253 2
+      tk_split_simplelist(tk_send 'itemconfigure', 
+			  tagid(tagOrId)).collect{|conflist|
+d333 1
+a333 1
+    TkcItem.type2class(tk_send 'type', tagid(tag))
+d815 1
+a815 1
+      tk_tcl2ruby tk_send 'cget', option
+@
+
+
+1.13
+log
+@* eval.c (rb_mod_include): load modules in argument order.
+
+* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d1 1
+a1 1
+
+d3 1
+a3 1
+#			$Date: 2001/09/03 05:31:36 $
+d5 1
+a5 1
+#			$Date: 2001/09/03 05:31:36 $
+d183 1
+a183 1
+    case option
+d200 1
+d209 4
+a212 2
+      if ( key == 'font' || key == 'kanjifont' \
+	  || key == 'latinfont' || key == 'asciifont' )
+d232 1
+a232 1
+      case key
+d439 1
+a439 1
+  # Followings operators supports logical expressions of canvas tags
+d479 1
+a486 1
+  Tk_CanvasTag_ID = ['ctag0000']
+d507 1
+a507 1
+    CTagID_TBL[@@path][@@id] = nil if CTagID_TBL[@@path]
+d571 1
+d650 8
+d659 1
+a659 2
+      args = args.dup
+      keys = args.pop
+d811 1
+a811 1
+    case option
+@
+
+
+1.12
+log
+@* ruby.c (proc_options): should not alter origargv[].
+
+* ruby.c (set_arg0): long strings for $0 dumped core.
+
+* ruby.c (set_arg0): use setprogtitle() if it's available.
+
+* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+@
+text
+@d1 1
+a1 1
+#
+d3 1
+a3 1
+#			$Date: 2001/03/27 07:09:27 $
+d5 1
+a5 1
+#			$Date: 2001/03/27 07:09:27 $
+d12 5
+a16 12
+  def tagfont_configinfo(tagOrId)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    ret = TkFont.used_on(pathname)
+    if ret == nil
+      ret = TkFont.init_widget_font(pathname, 
+				    self.path, 'itemconfigure', tagOrId)
+    end
+    ret
+a17 1
+  alias tagfontobj tagfont_configinfo
+d19 1
+a19 1
+  def tagfont_configure(tagOrId, slot)
+d21 1
+a21 82
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    if (fnt = slot.delete('font'))
+      if fnt.kind_of? TkFont
+	return fnt.call_font_configure(pathname, 
+				       self.path,'itemconfigure',tagOrId,slot)
+      else
+	latintagfont_configure(tagOrId, fnt) if fnt
+      end
+    end
+    if (ltn = slot.delete('latinfont'))
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (ltn = slot.delete('asciifont'))
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (knj = slot.delete('kanjifont'))
+      kanjitagfont_configure(tagOrId, knj) if knj
+    end
+
+    tk_call(self.path, 'itemconfigure', tagOrId, *hash_kv(slot)) if slot != {}
+    self
+  end
+
+  def latintagfont_configure(tagOrId, ltn, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if ltn.kind_of? TkFont
+      conf = {}
+      ltn.latin_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.latin_replace(ltn)
+	fobj.latin_configure(keys) if keys
+      elsif keys
+	fobj.latin_configure(conf.update(keys))
+      else
+	fobj.latin_configure(conf)
+      end
+    else
+      fobj.latin_replace(ltn)
+    end
+  end
+  alias asciitagfont_configure latintagfont_configure
+
+  def kanjitagfont_configure(tagOrId, knj, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if knj.kind_of? TkFont
+      conf = {}
+      knj.kanji_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.kanji_replace(knj)
+	fobj.kanji_configure(keys) if keys
+      elsif keys
+	fobj.kanji_configure(conf.update(keys))
+      else
+	fobj.kanji_configure(conf)
+      end
+    else
+      fobj.kanji_replace(knj)
+    end
+  end
+
+  def tagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      window.tagfontobj(wintag).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.tagfontobj(wintag).latin_font, 
+				  window.tagfontobj(wintag).kanji_font)
+    else
+      window.tagfont(tagOrId).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.fontobj.latin_font, 
+				  window.fontobj.kanji_font)
+    end
+  end
+
+  def latintagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).latin_replace(window.tagfontobj(wintag).latin_font)
+d23 1
+a23 10
+      tagfontobj(tagOrId).latin_replace(window.fontobj.latin_font)
+    end
+  end
+  alias asciitagfont_copy latintagfont_copy
+
+  def kanjitagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).kanji_replace(window.tagfontobj(wintag).kanji_font)
+    else
+      tagfontobj(tagOrId).kanji_replace(window.fontobj.kanji_font)
+d38 6
+a43 2
+  def create_self
+    tk_call 'canvas', path
+d645 1
+d647 1
+d649 4
+d657 14
+a670 4
+    if keys
+      # tk_call @@path, 'itemconfigure', @@id, *hash_kv(keys)
+      configure(keys) if keys
+    end
+@
+
+
+1.11
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/11/27 09:23:35 $
+d5 1
+a5 1
+#			$Date: 2000/11/27 09:23:35 $
+d879 1
+a879 1
+    when 'data', 'flie'
+@
+
+
+1.10
+log
+@matz
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/06/12 07:48:26 $
+d5 1
+a5 1
+#			$Date: 2000/06/12 07:48:26 $
+d175 1
+a175 1
+    list(tk_send('bbox', tagid(tagOrId), *tags))
+d210 1
+a210 1
+    tk_send 'delete', *args
+d378 1
+a378 1
+    tk_send 'lower', tagid(tag), below
+d390 1
+a390 1
+    tk_send 'raise', tagid(tag), above
+@
+
+
+1.10.2.1
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/11/27 09:23:35 $
+d5 1
+a5 1
+#			$Date: 2000/11/27 09:23:35 $
+d175 1
+a175 1
+    list(tk_send('bbox', tagid(tagOrId), *tags.collect{|t| tagid(t)}))
+d210 1
+a210 1
+    tk_send 'delete', *args.collect{|t| tagid(t)}
+d378 1
+a378 1
+    tk_send 'lower', tagid(tag), tagid(below)
+d390 1
+a390 1
+    tk_send 'raise', tagid(tag), tagid(above)
+@
+
+
+1.10.2.2
+log
+@* ruby.c (proc_options): should not adjust argc/argv if -e option
+  is supplied.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/03/27 07:10:58 $
+d5 1
+a5 1
+#			$Date: 2001/03/27 07:10:58 $
+d879 1
+a879 1
+    when 'data', 'file'
+@
+
+
+1.10.2.3
+log
+@* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d1 1
+a1 1
+
+d3 1
+a3 1
+#			$Date: 2001/09/05 06:53:31 $
+d5 1
+a5 1
+#			$Date: 2001/09/05 06:53:31 $
+d12 61
+a72 1
+  include TkTreatItemFont
+d74 40
+a113 3
+  ItemCMD = ['itemconfigure', TkComm::None]
+  def __conf_cmd(idx)
+    ItemCMD[idx]
+d115 1
+d117 3
+a119 3
+  def __item_pathname(tagOrId)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      self.path + ';' + tagOrId.id.to_s
+d121 1
+a121 1
+      self.path + ';' + tagOrId.to_s
+d136 2
+a137 6
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'canvas', @@path, *hash_kv(keys)
+    else
+      tk_call 'canvas', @@path
+    end
+a738 1
+    fontkeys = {}
+a739 1
+      args = args.dup
+a740 4
+      ['font', 'kanjifont', 'latinfont', 'asciifont'].each{|key|
+	fontkeys[key] = keys.delete(key) if keys.key?(key)
+      }
+      args += hash_kv(keys)
+d745 4
+a748 14
+    font_configure(fontkeys) unless fontkeys.empty?
+
+######## old version
+#    if args[-1].kind_of? Hash
+#      keys = args.pop
+#    end
+#    @@id = create_self(*args).to_i ;# 'canvas item id' is integer number
+#    CItemID_TBL[@@path] = {} unless CItemID_TBL[@@path]
+#    CItemID_TBL[@@path][@@id] = self
+#    if keys
+#      # tk_call @@path, 'itemconfigure', @@id, *hash_kv(keys)
+#      configure(keys) if keys
+#    end
+########
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d277 13
+a289 1
+    tk_tcl2ruby tk_send 'itemcget', tagid(tagOrId), "-#{option}"
+d323 17
+a339 1
+      conf = tk_split_list(tk_send 'itemconfigure', tagid(tagOrId), "-#{key}")
+d343 3
+a345 1
+      tk_split_list(tk_send 'itemconfigure', tagid(tagOrId)).collect{|conf|
+d347 25
+d878 6
+a883 1
+    tk_tcl2ruby tk_send 'cget', option
+@
+
+
+1.8
+log
+@2000-06-12
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/05/24 04:34:22 $
+d5 1
+a5 1
+#			$Date: 2000/05/24 04:34:22 $
+d783 3
+@
+
+
+1.7
+log
+@2000-05-24
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/01/17 08:37:51 $
+d5 1
+a5 1
+#			$Date: 2000/01/17 08:37:51 $
+d220 1
+a220 1
+      TkcItem.id2obj(id)
+d253 1
+a253 1
+	TkcItem.id2obj(ret)
+d260 1
+a260 1
+      TkcTag.id2obj(tag)
+d474 35
+d516 4
+a519 2
+  def TkcTag.id2obj(id)
+    CTagID_TBL[id]? CTagID_TBL[id]: id
+d528 1
+d530 2
+a531 1
+    CTagID_TBL[@@id] = self
+d543 1
+a543 1
+    CTagID_TBL[@@id] = nil
+d569 1
+a569 1
+    @@c.addtag_enclosest(@@id, x1, y1, x2, y2)
+d584 24
+d614 1
+d616 2
+a617 1
+    CTagID_TBL[@@id] = self
+d627 1
+d629 2
+a630 1
+    CTagID_TBL[@@id] = self
+d641 1
+d643 2
+a644 1
+    CTagID_TBL[@@id] = self
+a661 1
+
+d672 4
+a675 2
+  def TkcItem.id2obj(id)
+    CItemID_TBL[id]? CItemID_TBL[id]: id
+d688 2
+a689 1
+    CItemID_TBL[@@id] = self
+d703 1
+a703 1
+    CItemID_TBL[@@id] = nil
+d833 4
+@
+
+
+1.6
+log
+@2000-01-17
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/01/05 04:37:19 $
+d5 1
+a5 1
+#			$Date: 2000/01/05 04:37:19 $
+d219 1
+a219 1
+    list(tk_send 'find', mode, *args).filter{|id| 
+a370 7
+
+  def xview(*index)
+    tk_send 'xview', *index
+  end
+  def yview(*index)
+    tk_send 'yview', *index
+  end
+d721 1
+a721 1
+    Tk.tk_call('image', 'names').split.filter{|id|
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/12/06 09:04:01 $
+d5 1
+a5 1
+#			$Date: 1999/12/06 09:04:01 $
+d492 1
+a492 1
+  $tk_canvas_tag = 'ctag0000'
+d498 1
+a498 1
+    @@path = @@id = $tk_canvas_tag
+d500 1
+a500 1
+    $tk_canvas_tag = $tk_canvas_tag.succ
+d575 1
+a575 1
+  $tk_group_id = 'tkg00000'
+d581 1
+a581 1
+    @@path = @@id = $tk_group_id
+d583 1
+a583 1
+    $tk_group_id = $tk_group_id.succ
+d705 1
+a705 1
+  $tk_image_id = 'i00000'
+d707 2
+a708 2
+    @@path = $tk_image_id
+    $tk_image_id = $tk_image_id.succ
+@
+
+
+1.4
+log
+@19991206
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/24 08:21:55 $
+d5 1
+a5 1
+#			$Date: 1999/08/24 08:21:55 $
+d33 1
+a33 2
+    if (fnt = slot['font'])
+      slot['font'] = nil
+d41 1
+a41 2
+    if (ltn = slot['latinfont'])
+      slot['latinfont'] = nil
+d44 1
+a44 2
+    if (ltn = slot['asciifont'])
+      slot['asciifont'] = nil
+d47 1
+a47 2
+    if (knj = slot['kanjifont'])
+      slot['kanjifont'] = nil
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/13 05:37:51 $
+d5 1
+a5 1
+#			$Date: 1999/08/13 05:37:51 $
+d132 1
+@
+
+
+1.3.2.1
+log
+@19991206
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/24 08:21:55 $
+d5 1
+a5 1
+#			$Date: 1999/08/24 08:21:55 $
+a131 1
+  include Scrollable
+@
+
+
+1.3.2.2
+log
+@20000105
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/12/06 09:03:38 $
+d5 1
+a5 1
+#			$Date: 1999/12/06 09:03:38 $
+d33 2
+a34 1
+    if (fnt = slot.delete('font'))
+d42 2
+a43 1
+    if (ltn = slot.delete('latinfont'))
+d46 2
+a47 1
+    if (ltn = slot.delete('asciifont'))
+d50 2
+a51 1
+    if (knj = slot.delete('kanjifont'))
+@
+
+
+1.3.2.3
+log
+@2000-01-17
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/01/05 04:41:16 $
+d5 1
+a5 1
+#			$Date: 2000/01/05 04:41:16 $
+d492 1
+a492 1
+  Tk_CanvasTag_ID = ['ctag0000']
+d498 1
+a498 1
+    @@path = @@id = Tk_CanvasTag_ID[0]
+d500 1
+a500 1
+    Tk_CanvasTag_ID[0] = Tk_CanvasTag_ID[0].succ
+d575 1
+a575 1
+  Tk_cGroup_ID = ['tkcg00000']
+d581 1
+a581 1
+    @@path = @@id = Tk_cGroup_ID[0]
+d583 1
+a583 1
+    Tk_cGroup_ID[0] = Tk_cGroup_ID[0].succ
+d705 1
+a705 1
+  Tk_Image_ID = ['i00000']
+d707 2
+a708 2
+    @@path = Tk_Image_ID[0]
+    Tk_Image_ID[0] = Tk_Image_ID[0].succ
+@
+
+
+1.3.2.4
+log
+@2000-06-13
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/01/17 08:24:18 $
+d5 1
+a5 1
+#			$Date: 2000/01/17 08:24:18 $
+d220 1
+a220 1
+      TkcItem.id2obj(self, id)
+d253 1
+a253 1
+	TkcItem.id2obj(self, ret)
+d260 1
+a260 1
+      TkcTag.id2obj(self, tag)
+a480 35
+
+  # Followings operators supports logical expressions of canvas tags
+  # (for Tk8.3+).
+  # If tag1.path is 't1' and tag2.path is 't2', then
+  #      ltag = tag1 & tag2; ltag.path => "(t1)&&(t2)"
+  #      ltag = tag1 | tag2; ltag.path => "(t1)||(t2)"
+  #      ltag = tag1 ^ tag2; ltag.path => "(t1)^(t2)"
+  #      ltag = - tag1;      ltag.path => "!(t1)"
+  def & (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')&&(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')&&(' + tag.to_s + ')')
+    end
+  end
+
+  def | (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')||(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')||(' + tag.to_s + ')')
+    end
+  end
+
+  def ^ (tag)
+    if tag.kind_of? TkObject
+      TkcTagString.new(@@c, '(' + @@id + ')^(' + tag.path + ')')
+    else
+      TkcTagString.new(@@c, '(' + @@id + ')^(' + tag.to_s + ')')
+    end
+  end
+
+  def -@@
+    TkcTagString.new(@@c, '!(' + @@id + ')')
+  end
+d488 2
+a489 4
+  def TkcTag.id2obj(canvas, id)
+    cpath = canvas.path
+    return id unless CTagID_TBL[cpath]
+    CTagID_TBL[cpath][id]? CTagID_TBL[cpath][id]: id
+a497 1
+    @@cpath = parent.path
+d499 1
+a499 2
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+d511 1
+a511 1
+    CTagID_TBL[@@path][@@id] = nil if CTagID_TBL[@@path]
+d537 1
+a537 1
+    @@c.addtag_enclosed(@@id, x1, y1, x2, y2)
+a551 24
+class TkcTagString<TkcTag
+  def self.new(parent, name, *args)
+    if CTagID_TBL[parent.path] && CTagID_TBL[parent.path][name]
+      return CTagID_TBL[parent.path][name]
+    else
+      super(parent, name, *args)
+    end
+  end
+
+  def initialize(parent, name, mode=nil, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@cpath = parent.path
+    @@path = @@id = name
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+    if mode
+      tk_call @@c.path, "addtag", @@id, mode, *args
+    end
+  end
+end
+
+a557 1
+    @@cpath = parent.path
+d559 1
+a559 2
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+a568 1
+    @@cpath = parent.path
+d570 1
+a570 2
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+a580 1
+    @@cpath = parent.path
+d582 1
+a582 2
+    CTagID_TBL[@@cpath] = {} unless CTagID_TBL[@@cpath]
+    CTagID_TBL[@@cpath][@@id] = self
+d600 1
+d611 2
+a612 4
+  def TkcItem.id2obj(canvas, id)
+    cpath = canvas.path
+    return id unless CItemID_TBL[cpath]
+    CItemID_TBL[cpath][id]? CItemID_TBL[cpath][id]: id
+d625 1
+a625 2
+    CItemID_TBL[@@path] = {} unless CItemID_TBL[@@path]
+    CItemID_TBL[@@path][@@id] = self
+d639 1
+a639 1
+    CItemID_TBL[@@path][@@id] = nil if CItemID_TBL[@@path]
+a768 4
+  end
+
+  def data(keys=nil)
+    tk_send 'data', *hash_kv(keys)
+@
+
+
+1.3.2.5
+log
+@000623
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/06/13 09:50:57 $
+d5 1
+a5 1
+#			$Date: 2000/06/13 09:50:57 $
+d370 7
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/01/20 04:59:34 $
+d5 1
+a5 1
+#			$Date: 1999/01/20 04:59:34 $
+d134 1
+a134 1
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+d182 5
+a186 8
+    id = install_bind(cmd, args)
+    begin
+      tk_send 'bind', tagid(tag), "<#{tk_event_sequence(context)}>", id
+    rescue
+      uninstall_cmd(cmd)
+      fail
+    end
+    # @@cmdtbl.push id
+d190 1
+a190 14
+    if context
+      (tk_send('bind', tagid(tag), 
+	       "<#{tk_event_sequence(context)}>")).collect{|cmdline|
+	if cmdline =~ /^rb_out (c\d+)\s+(.*)$/
+	  [Tk_CMDTBL[$1], $2]
+	else
+	  cmdline
+	end
+      }
+    else
+      tk_split_list(tk_send 'bind', tagid(tag)).filter{|seq|
+	seq[1..-2].gsub(/></,',')
+      }
+    end
+@
+
+
+1.1
+log
+@file tkcanvas.rb was initially added on branch v1_1r.
+@
+text
+@d1 829
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 829
+#
+#		tkcanvas.rb - Tk canvas classes
+#			$Date: 1998/11/17 09:12:44 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+#			$Date: 1998/11/17 09:12:44 $
+#			by Hidetoshi Nagai <nagai@@ai.kyutech.ac.jp>
+
+require "tk"
+require 'tkfont'
+
+module TkTreatCItemFont
+  def tagfont_configinfo(tagOrId)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    ret = TkFont.used_on(pathname)
+    if ret == nil
+      ret = TkFont.init_widget_font(pathname, 
+				    self.path, 'itemconfigure', tagOrId)
+    end
+    ret
+  end
+  alias tagfontobj tagfont_configinfo
+
+  def tagfont_configure(tagOrId, slot)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    if (fnt = slot['font'])
+      slot['font'] = nil
+      if fnt.kind_of? TkFont
+	return fnt.call_font_configure(pathname, 
+				       self.path,'itemconfigure',tagOrId,slot)
+      else
+	latintagfont_configure(tagOrId, fnt) if fnt
+      end
+    end
+    if (ltn = slot['latinfont'])
+      slot['latinfont'] = nil
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (ltn = slot['asciifont'])
+      slot['asciifont'] = nil
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (knj = slot['kanjifont'])
+      slot['kanjifont'] = nil
+      kanjitagfont_configure(tagOrId, knj) if knj
+    end
+
+    tk_call(self.path, 'itemconfigure', tagOrId, *hash_kv(slot)) if slot != {}
+    self
+  end
+
+  def latintagfont_configure(tagOrId, ltn, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if ltn.kind_of? TkFont
+      conf = {}
+      ltn.latin_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.latin_replace(ltn)
+	fobj.latin_configure(keys) if keys
+      elsif keys
+	fobj.latin_configure(conf.update(keys))
+      else
+	fobj.latin_configure(conf)
+      end
+    else
+      fobj.latin_replace(ltn)
+    end
+  end
+  alias asciitagfont_configure latintagfont_configure
+
+  def kanjitagfont_configure(tagOrId, knj, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if knj.kind_of? TkFont
+      conf = {}
+      knj.kanji_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.kanji_replace(knj)
+	fobj.kanji_configure(keys) if keys
+      elsif keys
+	fobj.kanji_configure(conf.update(keys))
+      else
+	fobj.kanji_configure(conf)
+      end
+    else
+      fobj.kanji_replace(knj)
+    end
+  end
+
+  def tagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      window.tagfontobj(wintag).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.tagfontobj(wintag).latin_font, 
+				  window.tagfontobj(wintag).kanji_font)
+    else
+      window.tagfont(tagOrId).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.fontobj.latin_font, 
+				  window.fontobj.kanji_font)
+    end
+  end
+
+  def latintagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).latin_replace(window.tagfontobj(wintag).latin_font)
+    else
+      tagfontobj(tagOrId).latin_replace(window.fontobj.latin_font)
+    end
+  end
+  alias asciitagfont_copy latintagfont_copy
+
+  def kanjitagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).kanji_replace(window.tagfontobj(wintag).kanji_font)
+    else
+      tagfontobj(tagOrId).kanji_replace(window.fontobj.kanji_font)
+    end
+  end
+end
+
+class TkCanvas<TkWindow
+  include TkTreatCItemFont
+
+  WidgetClassName = 'Canvas'.freeze
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self
+    tk_call 'canvas', path
+  end
+
+  def tagid(tag)
+    if tag.kind_of?(TkcItem) || tag.kind_of?(TkcTag)
+      tag.id
+    else
+      tag
+    end
+  end
+  private :tagid
+
+  def addtag(tag, mode, *args)
+    tk_send 'addtag', tagid(tag), mode, *args
+  end
+  def addtag_above(tagOrId, target)
+    addtag(tagOrId, 'above', tagid(target))
+  end
+  def addtag_all(tagOrId)
+    addtag(tagOrId, 'all')
+  end
+  def addtag_below(tagOrId, target)
+    addtag(tagOrId, 'below', tagid(target))
+  end
+  def addtag_closest(tagOrId, x, y, halo=None, start=None)
+    addtag(tagOrId, 'closest', x, y, halo, start)
+  end
+  def addtag_enclosed(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'enclosed', x1, y1, x2, y2)
+  end
+  def addtag_overlapping(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'overlapping', x1, y1, x2, y2)
+  end
+  def addtag_withtag(tagOrId, tag)
+    addtag(tagOrId, 'withtag', tagid(tag))
+  end
+
+  def bbox(tagOrId, *tags)
+    list(tk_send('bbox', tagid(tagOrId), *tags))
+  end
+
+  def itembind(tag, context, cmd=Proc.new, args=nil)
+    id = install_bind(cmd, args)
+    begin
+      tk_send 'bind', tagid(tag), "<#{tk_event_sequence(context)}>", id
+    rescue
+      uninstall_cmd(cmd)
+      fail
+    end
+    # @@cmdtbl.push id
+  end
+
+  def itembindinfo(tag, context=nil)
+    if context
+      (tk_send('bind', tagid(tag), 
+	       "<#{tk_event_sequence(context)}>")).collect{|cmdline|
+	if cmdline =~ /^rb_out (c\d+)\s+(.*)$/
+	  [Tk_CMDTBL[$1], $2]
+	else
+	  cmdline
+	end
+      }
+    else
+      tk_split_list(tk_send 'bind', tagid(tag)).filter{|seq|
+	seq[1..-2].gsub(/></,',')
+      }
+    end
+  end
+
+  def canvasx(x, *args)
+    tk_tcl2ruby(tk_send 'canvasx', x, *args)
+  end
+  def canvasy(y, *args)
+    tk_tcl2ruby(tk_send 'canvasy', y, *args)
+  end
+
+  def coords(tag, *args)
+    if args == []
+      tk_split_list(tk_send('coords', tagid(tag)))
+    else
+      tk_send('coords', tagid(tag), *args)
+    end
+  end
+
+  def dchars(tag, first, last=None)
+    tk_send 'dchars', tagid(tag), first, last
+  end
+
+  def delete(*args)
+    tk_send 'delete', *args
+  end
+  alias remove delete
+
+  def dtag(tag, tag_to_del=None)
+    tk_send 'dtag', tagid(tag), tag_to_del
+  end
+
+  def find(mode, *args)
+    list(tk_send 'find', mode, *args).filter{|id| 
+      TkcItem.id2obj(id)
+    }
+  end
+  def find_above(target)
+    find('above', tagid(target))
+  end
+  def find_all
+    find('all')
+  end
+  def find_below(target)
+    find('below', tagid(target))
+  end
+  def find_closest(x, y, halo=None, start=None)
+    find('closest', x, y, halo, start)
+  end
+  def find_enclosed(x1, y1, x2, y2)
+    find('enclosed', x1, y1, x2, y2)
+  end
+  def find_overlapping(x1, y1, x2, y2)
+    find('overlapping', x1, y1, x2, y2)
+  end
+  def find_withtag(tag)
+    find('withtag', tag)
+  end
+
+  def itemfocus(tagOrId=nil)
+    if tagOrId
+      tk_send 'focus', tagid(tagOrId)
+    else
+      ret = tk_send('focus')
+      if ret == ""
+	nil
+      else
+	TkcItem.id2obj(ret)
+      end
+    end
+  end
+
+  def gettags(tagOrId)
+    list(tk_send('gettags', tagid(tagOrId))).collect{|tag|
+      TkcTag.id2obj(tag)
+    }
+  end
+
+  def icursor(tagOrId, index)
+    tk_send 'icursor', tagid(tagOrId), index
+  end
+
+  def index(tagOrId, index)
+    tk_send 'index', tagid(tagOrId), index
+  end
+
+  def insert(tagOrId, index, string)
+    tk_send 'insert', tagid(tagOrId), index, string
+  end
+
+  def itemcget(tagOrId, option)
+    tk_tcl2ruby tk_send 'itemcget', tagid(tagOrId), "-#{option}"
+  end
+
+  def itemconfigure(tagOrId, key, value=None)
+    if key.kind_of? Hash
+      if ( key['font'] || key['kanjifont'] \
+	  || key['latinfont'] || key['asciifont'] )
+	tagfont_configure(tagOrId, key.dup)
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+      end
+
+    else
+      if ( key == 'font' || key == 'kanjifont' \
+	  || key == 'latinfont' || key == 'asciifont' )
+	tagfont_configure(tagid(tagOrId), {key=>value})
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+      end
+    end
+  end
+#  def itemconfigure(tagOrId, key, value=None)
+#    if key.kind_of? Hash
+#      tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+#    else
+#      tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+#    end
+#  end
+#  def itemconfigure(tagOrId, keys)
+#    tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(keys)
+#  end
+
+  def itemconfiginfo(tagOrId, key=nil)
+    if key
+      conf = tk_split_list(tk_send 'itemconfigure', tagid(tagOrId), "-#{key}")
+      conf[0] = conf[0][1..-1]
+      conf
+    else
+      tk_split_list(tk_send 'itemconfigure', tagid(tagOrId)).collect{|conf|
+	conf[0] = conf[0][1..-1]
+	conf
+      }
+    end
+  end
+
+  def lower(tag, below=None)
+    tk_send 'lower', tagid(tag), below
+  end
+
+  def move(tag, x, y)
+    tk_send 'move', tagid(tag), x, y
+  end
+
+  def postscript(keys)
+    tk_send "postscript", *hash_kv(keys)
+  end
+
+  def raise(tag, above=None)
+    tk_send 'raise', tagid(tag), above
+  end
+
+  def scale(tag, x, y, xs, ys)
+    tk_send 'scale', tagid(tag), x, y, xs, ys
+  end
+
+  def scan_mark(x, y)
+    tk_send 'scan', 'mark', x, y
+  end
+  def scan_dragto(x, y)
+    tk_send 'scan', 'dragto', x, y
+  end
+
+  def select(mode, *args)
+    tk_send 'select', mode, *args
+  end
+  def select_adjust(tagOrId, index)
+    select('adjust', tagid(tagOrId), index)
+  end
+  def select_clear
+    select('clear')
+  end
+  def select_from(tagOrId, index)
+    select('from', tagid(tagOrId), index)
+  end
+  def select_item
+    select('item')
+  end
+  def select_to(tagOrId, index)
+    select('to', tagid(tagOrId), index)
+  end
+
+  def itemtype(tag)
+    TkcItem.type2class(tk_send 'type', tagid(tag))
+  end
+
+  def xview(*index)
+    tk_send 'xview', *index
+  end
+  def yview(*index)
+    tk_send 'yview', *index
+  end
+end
+
+module TkcTagAccess
+  include TkComm
+  include TkTreatTagFont
+
+  def addtag(tag)
+    @@c.addtag(tag, 'with', @@id)
+  end
+
+  def bbox
+    @@c.bbox(@@id)
+  end
+
+  def bind(seq, cmd=Proc.new, args=nil)
+    @@c.itembind @@id, seq, cmd, args
+  end
+
+  def bindinfo(seq=nil)
+    @@c.itembindinfo @@id, seq
+  end
+
+  def cget(option)
+    @@c.itemcget @@id, option
+  end
+
+  def configure(key, value=None)
+    @@c.itemconfigure @@id, key, value
+  end
+#  def configure(keys)
+#    @@c.itemconfigure @@id, keys
+#  end
+
+  def configinfo(key=nil)
+    @@c.itemconfiginfo @@id, key
+  end
+
+  def coords(*args)
+    @@c.coords @@id, *args
+  end
+
+  def dchars(first, last=None)
+    @@c.dchars @@id, first, last
+  end
+
+  def dtag(tag_to_del=None)
+    @@c.dtag @@id, tag_to_del
+  end
+
+  def find
+    @@c.find 'withtag', @@id
+  end
+  alias list find
+
+  def focus
+    @@c.itemfocus @@id
+  end
+
+  def gettags
+    @@c.gettags @@id
+  end
+
+  def icursor(index)
+    @@c.icursor @@id, index
+  end
+
+  def index(index)
+    @@c.index @@id, index
+  end
+
+  def insert(beforethis, string)
+    @@c.insert @@id, beforethis, string
+  end
+
+  def lower(belowthis=None)
+    @@c.lower @@id, belowthis
+  end
+
+  def move(xamount, yamount)
+    @@c.move @@id, xamount, yamount
+  end
+
+  def raise(abovethis=None)
+    @@c.raise @@id, abovethis
+  end
+
+  def scale(xorigin, yorigin, xscale, yscale)
+    @@c.scale @@id, xorigin, yorigin, xscale, yscale
+  end
+
+  def select_adjust(index)
+    @@c.select('adjust', @@id, index)
+  end
+  def select_from(index)
+    @@c.select('from', @@id, index)
+  end
+  def select_to(index)
+    @@c.select('to', @@id, index)
+  end
+
+  def itemtype
+    @@c.itemtype @@id
+  end
+end
+
+class TkcTag<TkObject
+  include TkcTagAccess
+
+  CTagID_TBL = {}
+
+  def TkcTag.id2obj(id)
+    CTagID_TBL[id]? CTagID_TBL[id]: id
+  end
+
+  $tk_canvas_tag = 'ctag0000'
+  def initialize(parent, mode=nil, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = $tk_canvas_tag
+    CTagID_TBL[@@id] = self
+    $tk_canvas_tag = $tk_canvas_tag.succ
+    if mode
+      tk_call @@c.path, "addtag", @@id, mode, *args
+    end
+  end
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CTagID_TBL[@@id] = nil
+  end
+  alias remove  delete
+  alias destroy delete
+
+  def set_to_above(target)
+    @@c.addtag_above(@@id, target)
+  end
+  alias above set_to_above
+
+  def set_to_all
+    @@c.addtag_all(@@id)
+  end
+  alias all set_to_all
+
+  def set_to_below(target)
+    @@c.addtag_below(@@id, target)
+  end
+  alias below set_to_below
+
+  def set_to_closest(x, y, halo=None, start=None)
+    @@c.addtag_closest(@@id, x, y, halo, start)
+  end
+  alias closest set_to_closest
+
+  def set_to_enclosed(x1, y1, x2, y2)
+    @@c.addtag_enclosest(@@id, x1, y1, x2, y2)
+  end
+  alias enclosed set_to_enclosed
+
+  def set_to_overlapping(x1, y1, x2, y2)
+    @@c.addtag_overlapping(@@id, x1, y1, x2, y2)
+  end
+  alias overlapping set_to_overlapping
+
+  def set_to_withtag(target)
+    @@c.addtag_withtag(@@id, target)
+  end
+  alias withtag set_to_withtag
+end
+
+class TkcTagAll<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = 'all'
+    CTagID_TBL[@@id] = self
+  end
+end
+
+class TkcTagCurrent<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = 'current'
+    CTagID_TBL[@@id] = self
+  end
+end
+
+class TkcGroup<TkcTag
+  $tk_group_id = 'tkg00000'
+  def create_self(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = $tk_group_id
+    CTagID_TBL[@@id] = self
+    $tk_group_id = $tk_group_id.succ
+    add(*args) if args != []
+  end
+  
+  def include(*tags)
+    for i in tags
+      i.addtag @@id
+    end
+  end
+
+  def exclude(*tags)
+    for i in tags
+      i.delete @@id
+    end
+  end
+end
+
+
+class TkcItem<TkObject
+  include TkcTagAccess
+
+  CItemTypeToClass = {}
+  CItemID_TBL = {}
+
+  def TkcItem.type2class(type)
+    CItemTypeToClass[type]
+  end
+
+  def TkcItem.id2obj(id)
+    CItemID_TBL[id]? CItemID_TBL[id]: id
+  end
+
+  def initialize(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@parent = @@c = parent
+    @@path = parent.path
+    if args[-1].kind_of? Hash
+      keys = args.pop
+    end
+    @@id = create_self(*args).to_i ;# 'canvas item id' is integer number
+    CItemID_TBL[@@id] = self
+    if keys
+      # tk_call @@path, 'itemconfigure', @@id, *hash_kv(keys)
+      configure(keys) if keys
+    end
+  end
+  def create_self(*args); end
+  private :create_self
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CItemID_TBL[@@id] = nil
+  end
+  alias remove  delete
+  alias destroy delete
+end
+
+class TkcArc<TkcItem
+  CItemTypeToClass['arc'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'arc', *args)
+  end
+end
+class TkcBitmap<TkcItem
+  CItemTypeToClass['bitmap'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'bitmap', *args)
+  end
+end
+class TkcImage<TkcItem
+  CItemTypeToClass['image'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'image', *args)
+  end
+end
+class TkcLine<TkcItem
+  CItemTypeToClass['line'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'line', *args)
+  end
+end
+class TkcOval<TkcItem
+  CItemTypeToClass['oval'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'oval', *args)
+  end
+end
+class TkcPolygon<TkcItem
+  CItemTypeToClass['polygon'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'polygon', *args)
+  end
+end
+class TkcRectangle<TkcItem
+  CItemTypeToClass['rectangle'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'rectangle', *args)
+  end
+end
+class TkcText<TkcItem
+  CItemTypeToClass['text'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'text', *args)
+  end
+end
+class TkcWindow<TkcItem
+  CItemTypeToClass['window'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'window', *args)
+  end
+end
+
+class TkImage<TkObject
+  include Tk
+
+  Tk_IMGTBL = {}
+
+  $tk_image_id = 'i00000'
+  def initialize(keys=nil)
+    @@path = $tk_image_id
+    $tk_image_id = $tk_image_id.succ
+    tk_call 'image', 'create', @@type, @@path, *hash_kv(keys)
+    Tk_IMGTBL[@@path] = self
+  end
+
+  def delete
+    Tk_IMGTBL[@@id] = nil if @@id
+    tk_call('image', 'delete', @@path)
+  end
+  def height
+    number(tk_call('image', 'height', @@path))
+  end
+  def itemtype
+    tk_call('image', 'type', @@path)
+  end
+  def width
+    number(tk_call('image', 'width', @@path))
+  end
+
+  def TkImage.names
+    Tk.tk_call('image', 'names').split.filter{|id|
+      (Tk_IMGTBL[id])? Tk_IMGTBL[id] : id
+    }
+  end
+
+  def TkImage.types
+    Tk.tk_call('image', 'types').split
+  end
+end
+
+class TkBitmapImage<TkImage
+  def initialize(*args)
+    @@type = 'bitmap'
+    super
+  end
+end
+
+class TkPhotoImage<TkImage
+  def initialize(*args)
+    @@type = 'photo'
+    super
+  end
+
+  def blank
+    tk_send 'blank'
+  end
+
+  def cget(option)
+    tk_tcl2ruby tk_send 'cget', option
+  end
+
+  def copy(source, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+
+    tk_send 'copy', source, *args
+  end
+
+  def get(x, y)
+    tk_send 'get', x, y
+  end
+
+  def put(data, *to)
+    if to == []
+      tk_send 'put', data
+    else
+      tk_send 'put', data, '-to', *to
+    end
+  end
+
+  def read(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'read', file, *args
+  end
+
+  def redither
+    tk_send 'redither'
+  end
+
+  def write(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'write', file, *args
+  end
+end
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 829
+#
+#		tkcanvas.rb - Tk canvas classes
+#			$Date: 1998/10/06 02:45:15 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+#			$Date: 1998/10/06 02:45:15 $
+#			by Hidetoshi Nagai <nagai@@ai.kyutech.ac.jp>
+
+require "tk"
+require 'tkfont'
+
+module TkTreatCItemFont
+  def tagfont_configinfo(tagOrId)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    ret = TkFont.used_on(pathname)
+    if ret == nil
+      ret = TkFont.init_widget_font(pathname, 
+				    self.path, 'itemconfigure', tagOrId)
+    end
+    ret
+  end
+  alias tagfontobj tagfont_configinfo
+
+  def tagfont_configure(tagOrId, slot)
+    if tagOrId.kind_of?(TkcItem) || tagOrId.kind_of?(TkcTag)
+      pathname = self.path + ';' + tagOrId.id.to_s
+    else
+      pathname = self.path + ';' + tagOrId.to_s
+    end
+    if (fnt = slot['font'])
+      slot['font'] = nil
+      if fnt.kind_of? TkFont
+	return fnt.call_font_configure(pathname, 
+				       self.path,'itemconfigure',tagOrId,slot)
+      else
+	latintagfont_configure(tagOrId, fnt) if fnt
+      end
+    end
+    if (ltn = slot['latinfont'])
+      slot['latinfont'] = nil
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (ltn = slot['asciifont'])
+      slot['asciifont'] = nil
+      latintagfont_configure(tagOrId, ltn) if ltn
+    end
+    if (knj = slot['kanjifont'])
+      slot['kanjifont'] = nil
+      kanjitagfont_configure(tagOrId, knj) if knj
+    end
+
+    tk_call(self.path, 'itemconfigure', tagOrId, *hash_kv(slot)) if slot != {}
+    self
+  end
+
+  def latintagfont_configure(tagOrId, ltn, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if ltn.kind_of? TkFont
+      conf = {}
+      ltn.latin_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.latin_replace(ltn)
+	fobj.latin_configure(keys) if keys
+      elsif keys
+	fobj.latin_configure(conf.update(keys))
+      else
+	fobj.latin_configure(conf)
+      end
+    else
+      fobj.latin_replace(ltn)
+    end
+  end
+  alias asciitagfont_configure latintagfont_configure
+
+  def kanjitagfont_configure(tagOrId, knj, keys=nil)
+    fobj = tagfontobj(tagOrId)
+    if knj.kind_of? TkFont
+      conf = {}
+      knj.kanji_configinfo.each{|key,val| conf[key] = val if val != []}
+      if conf == {}
+	fobj.kanji_replace(knj)
+	fobj.kanji_configure(keys) if keys
+      elsif keys
+	fobj.kanji_configure(conf.update(keys))
+      else
+	fobj.kanji_configure(conf)
+      end
+    else
+      fobj.kanji_replace(knj)
+    end
+  end
+
+  def tagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      window.tagfontobj(wintag).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.tagfontobj(wintag).latin_font, 
+				  window.tagfontobj(wintag).kanji_font)
+    else
+      window.tagfont(tagOrId).configinfo.each{|key,value|
+	tagfontobj(tagOrId).configure(key,value)
+      }
+      tagfontobj(tagOrId).replace(window.fontobj.latin_font, 
+				  window.fontobj.kanji_font)
+    end
+  end
+
+  def latintagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).latin_replace(window.tagfontobj(wintag).latin_font)
+    else
+      tagfontobj(tagOrId).latin_replace(window.fontobj.latin_font)
+    end
+  end
+  alias asciitagfont_copy latintagfont_copy
+
+  def kanjitagfont_copy(tagOrId, window, wintag=nil)
+    if wintag
+      tagfontobj(tagOrId).kanji_replace(window.tagfontobj(wintag).kanji_font)
+    else
+      tagfontobj(tagOrId).kanji_replace(window.fontobj.kanji_font)
+    end
+  end
+end
+
+class TkCanvas<TkWindow
+  include TkTreatCItemFont
+
+  WidgetClassName = 'Canvas'.freeze
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self
+    tk_call 'canvas', path
+  end
+
+  def tagid(tag)
+    if tag.kind_of?(TkcItem) || tag.kind_of?(TkcTag)
+      tag.id
+    else
+      tag
+    end
+  end
+  private :tagid
+
+  def addtag(tag, mode, *args)
+    tk_send 'addtag', tagid(tag), mode, *args
+  end
+  def addtag_above(tagOrId, target)
+    addtag(tagOrId, 'above', tagid(target))
+  end
+  def addtag_all(tagOrId)
+    addtag(tagOrId, 'all')
+  end
+  def addtag_below(tagOrId, target)
+    addtag(tagOrId, 'below', tagid(target))
+  end
+  def addtag_closest(tagOrId, x, y, halo=None, start=None)
+    addtag(tagOrId, 'closest', x, y, halo, start)
+  end
+  def addtag_enclosed(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'enclosed', x1, y1, x2, y2)
+  end
+  def addtag_overlapping(tagOrId, x1, y1, x2, y2)
+    addtag(tagOrId, 'overlapping', x1, y1, x2, y2)
+  end
+  def addtag_withtag(tagOrId, tag)
+    addtag(tagOrId, 'withtag', tagid(tag))
+  end
+
+  def bbox(tagOrId, *tags)
+    list(tk_send('bbox', tagid(tagOrId), *tags))
+  end
+
+  def itembind(tag, context, cmd=Proc.new, args=nil)
+    id = install_bind(cmd, args)
+    begin
+      tk_send 'bind', tagid(tag), "<#{tk_event_sequence(context)}>", id
+    rescue
+      uninstall_cmd(cmd)
+      fail
+    end
+    # @@cmdtbl.push id
+  end
+
+  def itembindinfo(tag, context=nil)
+    if context
+      (tk_send('bind', tagid(tag), 
+	       "<#{tk_event_sequence(context)}>")).collect{|cmdline|
+	if cmdline =~ /^rb_out (c\d+)\s+(.*)$/
+	  [Tk_CMDTBL[$1], $2]
+	else
+	  cmdline
+	end
+      }
+    else
+      tk_split_list(tk_send 'bind', tagid(tag)).filter{|seq|
+	seq[1..-2].gsub(/></,',')
+      }
+    end
+  end
+
+  def canvasx(x, *args)
+    tk_tcl2ruby(tk_send 'canvasx', x, *args)
+  end
+  def canvasy(y, *args)
+    tk_tcl2ruby(tk_send 'canvasy', y, *args)
+  end
+
+  def coords(tag, *args)
+    if args == []
+      tk_split_list(tk_send('coords', tagid(tag)))
+    else
+      tk_send('coords', tagid(tag), *args)
+    end
+  end
+
+  def dchars(tag, first, last=None)
+    tk_send 'dchars', tagid(tag), first, last
+  end
+
+  def delete(*args)
+    tk_send 'delete', *args
+  end
+  alias remove delete
+
+  def dtag(tag, tag_to_del=None)
+    tk_send 'dtag', tagid(tag), tag_to_del
+  end
+
+  def find(mode, *args)
+    list(tk_send 'find', mode, *args).filter{|id| 
+      TkcItem.id2obj(id)
+    }
+  end
+  def find_above(target)
+    find('above', tagid(target))
+  end
+  def find_all
+    find('all')
+  end
+  def find_below(target)
+    find('below', tagid(target))
+  end
+  def find_closest(x, y, halo=None, start=None)
+    find('closest', x, y, halo, start)
+  end
+  def find_enclosed(x1, y1, x2, y2)
+    find('enclosed', x1, y1, x2, y2)
+  end
+  def find_overlapping(x1, y1, x2, y2)
+    find('overlapping', x1, y1, x2, y2)
+  end
+  def find_withtag(tag)
+    find('withtag', tag)
+  end
+
+  def itemfocus(tagOrId=nil)
+    if tagOrId
+      tk_send 'focus', tagid(tagOrId)
+    else
+      ret = tk_send('focus')
+      if ret == ""
+	nil
+      else
+	TkcItem.id2obj(ret)
+      end
+    end
+  end
+
+  def gettags(tagOrId)
+    list(tk_send('gettags', tagid(tagOrId))).collect{|tag|
+      TkcTag.id2obj(tag)
+    }
+  end
+
+  def icursor(tagOrId, index)
+    tk_send 'icursor', tagid(tagOrId), index
+  end
+
+  def index(tagOrId, index)
+    tk_send 'index', tagid(tagOrId), index
+  end
+
+  def insert(tagOrId, index, string)
+    tk_send 'insert', tagid(tagOrId), index, string
+  end
+
+  def itemcget(tagOrId, option)
+    tk_tcl2ruby tk_send 'itemcget', tagid(tagOrId), "-#{option}"
+  end
+
+  def itemconfigure(tagOrId, key, value=None)
+    if key.kind_of? Hash
+      if ( key['font'] || key['kanjifont'] \
+	  || key['latinfont'] || key['asciifont'] )
+	tagfont_configure(tagOrId, key.dup)
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+      end
+
+    else
+      if ( key == 'font' || key == 'kanjifont' \
+	  || key == 'latinfont' || key == 'asciifont' )
+	tagfont_configure(tagid(tagOrId), {key=>value})
+      else
+	tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+      end
+    end
+  end
+#  def itemconfigure(tagOrId, key, value=None)
+#    if key.kind_of? Hash
+#      tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(key)
+#    else
+#      tk_send 'itemconfigure', tagid(tagOrId), "-#{key}", value
+#    end
+#  end
+#  def itemconfigure(tagOrId, keys)
+#    tk_send 'itemconfigure', tagid(tagOrId), *hash_kv(keys)
+#  end
+
+  def itemconfiginfo(tagOrId, key=nil)
+    if key
+      conf = tk_split_list(tk_send 'itemconfigure', tagid(tagOrId), "-#{key}")
+      conf[0] = conf[0][1..-1]
+      conf
+    else
+      tk_split_list(tk_send 'itemconfigure', tagid(tagOrId)).collect{|conf|
+	conf[0] = conf[0][1..-1]
+	conf
+      }
+    end
+  end
+
+  def lower(tag, below=None)
+    tk_send 'lower', tagid(tag), below
+  end
+
+  def move(tag, x, y)
+    tk_send 'move', tagid(tag), x, y
+  end
+
+  def postscript(keys)
+    tk_send "postscript", *hash_kv(keys)
+  end
+
+  def raise(tag, above=None)
+    tk_send 'raise', tagid(tag), above
+  end
+
+  def scale(tag, x, y, xs, ys)
+    tk_send 'scale', tagid(tag), x, y, xs, ys
+  end
+
+  def scan_mark(x, y)
+    tk_send 'scan', 'mark', x, y
+  end
+  def scan_dragto(x, y)
+    tk_send 'scan', 'dragto', x, y
+  end
+
+  def select(mode, *args)
+    tk_send 'select', mode, *args
+  end
+  def select_adjust(tagOrId, index)
+    select('adjust', tagid(tagOrId), index)
+  end
+  def select_clear
+    select('clear')
+  end
+  def select_from(tagOrId, index)
+    select('from', tagid(tagOrId), index)
+  end
+  def select_item
+    select('item')
+  end
+  def select_to(tagOrId, index)
+    select('to', tagid(tagOrId), index)
+  end
+
+  def itemtype(tag)
+    TkcItem.type2class(tk_send 'type', tagid(tag))
+  end
+
+  def xview(*index)
+    tk_send 'xview', *index
+  end
+  def yview(*index)
+    tk_send 'yview', *index
+  end
+end
+
+module TkcTagAccess
+  include TkComm
+  include TkTreatTagFont
+
+  def addtag(tag)
+    @@c.addtag(tag, 'with', @@id)
+  end
+
+  def bbox
+    @@c.bbox(@@id)
+  end
+
+  def bind(seq, cmd=Proc.new, args=nil)
+    @@c.itembind @@id, seq, cmd, args
+  end
+
+  def bindinfo(seq=nil)
+    @@c.itembindinfo @@id, seq
+  end
+
+  def cget(option)
+    @@c.itemcget @@id, option
+  end
+
+  def configure(key, value=None)
+    @@c.itemconfigure @@id, key, value
+  end
+#  def configure(keys)
+#    @@c.itemconfigure @@id, keys
+#  end
+
+  def configinfo(key=nil)
+    @@c.itemconfiginfo @@id, key
+  end
+
+  def coords(*args)
+    @@c.coords @@id, *args
+  end
+
+  def dchars(first, last=None)
+    @@c.dchars @@id, first, last
+  end
+
+  def dtag(tag_to_del=None)
+    @@c.dtag @@id, tag_to_del
+  end
+
+  def find
+    @@c.find 'withtag', @@id
+  end
+  alias list find
+
+  def focus
+    @@c.itemfocus @@id
+  end
+
+  def gettags
+    @@c.gettags @@id
+  end
+
+  def icursor(index)
+    @@c.icursor @@id, index
+  end
+
+  def index(index)
+    @@c.index @@id, index
+  end
+
+  def insert(beforethis, string)
+    @@c.insert @@id, beforethis, string
+  end
+
+  def lower(belowthis=None)
+    @@c.lower @@id, belowthis
+  end
+
+  def move(xamount, yamount)
+    @@c.move @@id, xamount, yamount
+  end
+
+  def raise(abovethis=None)
+    @@c.raise @@id, abovethis
+  end
+
+  def scale(xorigin, yorigin, xscale, yscale)
+    @@c.scale @@id, xorigin, yorigin, xscale, yscale
+  end
+
+  def select_adjust(index)
+    @@c.select('adjust', @@id, index)
+  end
+  def select_from(index)
+    @@c.select('from', @@id, index)
+  end
+  def select_to(index)
+    @@c.select('to', @@id, index)
+  end
+
+  def itemtype
+    @@c.itemtype @@id
+  end
+end
+
+class TkcTag<TkObject
+  include TkcTagAccess
+
+  CTagID_TBL = {}
+
+  def TkcTag.id2obj(id)
+    CTagID_TBL[id]? CTagID_TBL[id]: id
+  end
+
+  $tk_canvas_tag = 'ctag0000'
+  def initialize(parent, mode=nil, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = $tk_canvas_tag
+    CTagID_TBL[@@id] = self
+    $tk_canvas_tag = $tk_canvas_tag.succ
+    if mode
+      tk_call @@c.path, "addtag", @@id, mode, *args
+    end
+  end
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CTagID_TBL[@@id] = nil
+  end
+  alias remove  delete
+  alias destroy delete
+
+  def set_to_above(target)
+    @@c.addtag_above(@@id, target)
+  end
+  alias above set_to_above
+
+  def set_to_all
+    @@c.addtag_all(@@id)
+  end
+  alias all set_to_all
+
+  def set_to_below(target)
+    @@c.addtag_below(@@id, target)
+  end
+  alias below set_to_below
+
+  def set_to_closest(x, y, halo=None, start=None)
+    @@c.addtag_closest(@@id, x, y, halo, start)
+  end
+  alias closest set_to_closest
+
+  def set_to_enclosed(x1, y1, x2, y2)
+    @@c.addtag_enclosest(@@id, x1, y1, x2, y2)
+  end
+  alias enclosed set_to_enclosed
+
+  def set_to_overlapping(x1, y1, x2, y2)
+    @@c.addtag_overlapping(@@id, x1, y1, x2, y2)
+  end
+  alias overlapping set_to_overlapping
+
+  def set_to_withtag(target)
+    @@c.addtag_withtag(@@id, target)
+  end
+  alias withtag set_to_withtag
+end
+
+class TkcTagAll<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = 'all'
+    CTagID_TBL[@@id] = self
+  end
+end
+
+class TkcTagCurrent<TkcTag
+  def initialize(parent)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = 'current'
+    CTagID_TBL[@@id] = self
+  end
+end
+
+class TkcGroup<TkcTag
+  $tk_group_id = 'tkg00000'
+  def create_self(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@c = parent
+    @@path = @@id = $tk_group_id
+    CTagID_TBL[@@id] = self
+    $tk_group_id = $tk_group_id.succ
+    add(*args) if args != []
+  end
+  
+  def include(*tags)
+    for i in tags
+      i.addtag @@id
+    end
+  end
+
+  def exclude(*tags)
+    for i in tags
+      i.delete @@id
+    end
+  end
+end
+
+
+class TkcItem<TkObject
+  include TkcTagAccess
+
+  CItemTypeToClass = {}
+  CItemID_TBL = {}
+
+  def TkcItem.type2class(type)
+    CItemTypeToClass[type]
+  end
+
+  def TkcItem.id2obj(id)
+    CItemID_TBL[id]? CItemID_TBL[id]: id
+  end
+
+  def initialize(parent, *args)
+    if not parent.kind_of?(TkCanvas)
+      fail format("%s need to be TkCanvas", parent.inspect)
+    end
+    @@parent = @@c = parent
+    @@path = parent.path
+    if args[-1].kind_of? Hash
+      keys = args.pop
+    end
+    @@id = create_self(*args).to_i ;# 'canvas item id' is integer number
+    CItemID_TBL[@@id] = self
+    if keys
+      # tk_call @@path, 'itemconfigure', @@id, *hash_kv(keys)
+      configure(keys) if keys
+    end
+  end
+  def create_self(*args); end
+  private :create_self
+  def id
+    return @@id
+  end
+
+  def delete
+    @@c.delete @@id
+    CItemID_TBL[@@id] = nil
+  end
+  alias remove  delete
+  alias destroy delete
+end
+
+class TkcArc<TkcItem
+  CItemTypeToClass['arc'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'arc', *args)
+  end
+end
+class TkcBitmap<TkcItem
+  CItemTypeToClass['bitmap'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'bitmap', *args)
+  end
+end
+class TkcImage<TkcItem
+  CItemTypeToClass['image'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'image', *args)
+  end
+end
+class TkcLine<TkcItem
+  CItemTypeToClass['line'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'line', *args)
+  end
+end
+class TkcOval<TkcItem
+  CItemTypeToClass['oval'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'oval', *args)
+  end
+end
+class TkcPolygon<TkcItem
+  CItemTypeToClass['polygon'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'polygon', *args)
+  end
+end
+class TkcRectangle<TkcItem
+  CItemTypeToClass['rectangle'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'rectangle', *args)
+  end
+end
+class TkcText<TkcItem
+  CItemTypeToClass['text'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'text', *args)
+  end
+end
+class TkcWindow<TkcItem
+  CItemTypeToClass['window'] = self
+  def create_self(*args)
+    tk_call(@@path, 'create', 'window', *args)
+  end
+end
+
+class TkImage<TkObject
+  include Tk
+
+  Tk_IMGTBL = {}
+
+  $tk_image_id = 'i00000'
+  def initialize(keys=nil)
+    @@path = $tk_image_id
+    $tk_image_id = $tk_image_id.succ
+    tk_call 'image', 'create', @@type, @@path, *hash_kv(keys)
+    Tk_IMGTBL[@@path] = self
+  end
+
+  def delete
+    Tk_IMGTBL[@@id] = nil if @@id
+    tk_call('image', 'delete', @@path)
+  end
+  def height
+    number(tk_call('image', 'height', @@path))
+  end
+  def itemtype
+    tk_call('image', 'type', @@path)
+  end
+  def width
+    number(tk_call('image', 'width', @@path))
+  end
+
+  def TkImage.names
+    Tk.tk_call('image', 'names').split.filter{|id|
+      (Tk_IMGTBL[id])? Tk_IMGTBL[id] : id
+    }
+  end
+
+  def TkImage.types
+    Tk.tk_call('image', 'types').split
+  end
+end
+
+class TkBitmapImage<TkImage
+  def initialize(*args)
+    @@type = 'bitmap'
+    super
+  end
+end
+
+class TkPhotoImage<TkImage
+  def initialize(*args)
+    @@type = 'photo'
+    super
+  end
+
+  def blank
+    tk_send 'blank'
+  end
+
+  def cget(option)
+    tk_tcl2ruby tk_send 'cget', option
+  end
+
+  def copy(source, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+
+    tk_send 'copy', source, *args
+  end
+
+  def get(x, y)
+    tk_send 'get', x, y
+  end
+
+  def put(data, *to)
+    if to == []
+      tk_send 'put', data
+    else
+      tk_send 'put', data, '-to', *to
+    end
+  end
+
+  def read(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'read', file, *args
+  end
+
+  def redither
+    tk_send 'redither'
+  end
+
+  def write(file, *opts)
+    args = opts.collect{|term|
+      if term.kind_of?(String) && term.include?(?\s)
+	term.split
+      else
+	term
+      end
+    }.flatten
+  
+    tk_send 'write', file, *args
+  end
+end
+@

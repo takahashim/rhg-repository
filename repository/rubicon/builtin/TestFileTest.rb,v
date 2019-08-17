@@ -1,0 +1,575 @@
+head	1.12;
+access;
+symbols
+	V0_3_2:1.7
+	V0_1_4:1.4
+	V0_1_3:1.4
+	V0_1_2:1.3
+	V0_1_1:1.2
+	V0_1:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.09.28.04.50.25;	author akr;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.11.28.00.10.21;	author chad;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.18.16.10.09;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.11.15.17.42.02;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.11.15.17.12.34;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.02.06.15.19;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.02.06.09.14;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.10.20.18.04.44;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.23.19.31.57;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* rubicon.rb: recognize HP-UX to treat it as an Unix variant.
+
+* builtin/TestIO.rb (test_pid): Use `exec' trick for all Unix
+variants.
+
+* builtin/TestFileTest.rb (TestFileTest::test_test): Use 02755 instead
+of 02644 for setgid bit because setgid bit without execution bit means
+mandatory locking for Solaris and it fails on NFS.
+(TestFileTest::test_test): /dev/tty is symlink on Solaris.
+
+* builtin/TestFloat.rb: Use 0.0/0.0 instead of Math::log(-1.0) to
+generate NaN because Math::log(-1.0) returns -Infinity instead of NaN
+on Solaris.
+
+* builtin/TestThreadGroup.rb (test_list): Avoid deadlock.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'stat'
+require 'FileInfoTest.rb'
+
+MsWin32.dont do
+  require 'socket'
+end
+
+class TestFileTest < FileInfoTest
+
+
+  # compares modified times
+  def test_CMP # '<=>'
+    assert(test(?=, @@file1, @@file1))
+    assert(test(?=, @@file2, @@file2))
+    assert(test(?>, @@file1, @@file2))
+    assert(test(?<, @@file2, @@file1))
+  end
+
+  def test_hlink
+    File.link(@@file1, "_link")
+    begin
+      assert(!test(?-, @@file1,  @@file2))
+      assert(test(?-,  @@file1,  @@file1))
+      assert(test(?-,  @@file1, "_link"))
+      assert(test(?-,  "_link", @@file1))
+    ensure
+      File.unlink("_link")
+    end
+  end
+
+  def test_skipped 
+    skipping "Tests for O R W X "
+  end
+
+  def test_test
+    fileg = "_test/_fileg"
+    File.open(fileg, File::CREAT, 02755) { }
+    
+    filek = "_test/_filek"
+    Dir.mkdir(filek, 01644)
+    File.chmod(01644, filek)
+
+    filel = filep = filer = fileu = nil
+
+    Windows.dont do
+      filel = "_test/_filel"
+      File.symlink(@@file1, filel)
+      
+      filep = "_test/_filep"
+      system "mkfifo #{filep}"
+      assert_equal(0, $?)
+
+      filer = "_test/_filer"
+      File.open(filer, File::CREAT, 0222) { }
+
+      fileu = "_test/_fileu"
+      File.open(fileu, File::CREAT, 04644) { }
+    end
+
+    
+    filew = "_test/_filew"
+    File.open(filew, File::CREAT, 0444) { }
+    
+    filez = "_test/_filez"
+    File.open(filez, File::CREAT|File::WRONLY, 0644) { |f| f.puts "hi" }
+    filez_size = $os <= WindowsNative ? 4 : 3
+
+    filesock = sock = nil
+    MsWin32.dont do
+      filesock = "_test/_filesock"
+      sock = UNIXServer.open(filesock)
+      filesock = nil unless sock
+    end
+
+    atime = Time.at(RubiconStat::atime(@@file1))
+    ctime = Time.at(RubiconStat::ctime(@@file1))
+    mtime = Time.at(RubiconStat::mtime(@@file1))
+
+    begin
+      tests = [
+        [ nil,          ?A,    @@file1,              atime ],
+        [ :blockdev?,   ?b,    ".",                 false ],
+        [ :chardev?,    ?c,    ".",                 false ],
+        [ nil,          ?C,    @@file1,              ctime ],
+        [ :directory?,  ?d,    ".",                 true  ],
+        [ :directory?,  ?d,    "/dev/fd0",          false ],
+        [ :exist?,      ?e,    filez,               true  ],
+        [ :exist?,      ?e,    "wombat",            false ],
+        [ :file?,       ?f,    ".",                 false ],
+        [ :file?,       ?f,    "/dev/fd0",          false ],
+        [ :file?,       ?f,    @@file1,              true  ],
+        [ :setgid?,     ?g,    @@file1,              false ],
+        [ :symlink?,    ?l,    ".",                 false ],
+        [ :symlink?,    ?l,    @@file1,              false ],
+        [ nil,          ?M,    @@file1,              mtime ],
+        [ :owned?,      ?o,    @@file1,              true  ],
+        [ :pipe?,       ?p,    ".",                 false ],
+        [ :readable?,   ?r,    @@file1,              true  ],
+        [ :size?,       ?s,    filez,               filez_size ],
+        [ :size?,       ?s,    @@file2,              nil   ],
+        [ :socket?,     ?S,    ".",                 false ],
+        [ :socket?,     ?S,    @@file1,              false ],
+        [ :setuid?,     ?u,    @@file1,              false ],
+        [ :writable?,   ?w,    @@file2,              true  ],
+        [ :executable?, ?x,    "/dev/fd0",          false ],
+        [ :zero?,       ?z,    filez,               false ],
+        [ :zero?,       ?z,    @@file2,              true  ],
+      ]
+
+      Solaris.dont do
+        tests << [ :symlink?,    ?l,    "/dev/tty",          false ]
+      end
+
+      Windows.dont do
+        tests << [ :pipe?,       ?p,    filep,               true  ]
+        tests << [ :symlink?,    ?l,    filel,               true  ]
+        tests << [ :readable?,   ?r,    filer,               Process.euid == 0 ]
+        tests << [ :setuid?,     ?u,    fileu,               true  ]
+        tests << [ :owned?,      ?o,    "/etc/passwd",       Process.euid == 0 ]
+      end
+
+      MsWin32.dont do 
+	tests << [ :socket?,     ?S,    filesock,            true  ]
+      end
+
+      Unix.or_variant do
+        tests << [ :blockdev?,   ?b,    "/dev/tty",          false ]
+        tests << [ :chardev?,    ?c,    "/dev/tty",          true  ]
+        tests << [ :directory?,  ?d,    "/dev/tty",          false ]
+        tests << [ :file?,       ?f,    "/dev/tty",          false ]
+        tests << [ :exist?,      ?e,    "/dev/tty",          true  ]
+        tests << [ :sticky?,     ?k,    "/dev/tty",          false ]
+        tests << [ :pipe?,       ?p,    "/dev/tty",          false ]
+        tests << [ :socket?,     ?S,    "/dev/tty",          false ]
+	tests << [ :executable?, ?x,    "/dev/tty",          false ]
+        tests << [ :executable?, ?x,    "/bin/echo",         true  ]
+        tests << [ :setgid?,     ?g,    fileg,               true  ]
+        tests << [ :sticky?,     ?k,    ".",                 false ]
+        tests << [ :sticky?,     ?k,    @@file1,              false ]
+        tests << [ :sticky?,     ?k,    filek,               true  ]
+      end
+
+      Linux.only do
+        tests << [ :chardev?,    ?c,    "/dev/fd0",          false ]
+        tests << [ :blockdev?,   ?b,    "/dev/fd0",          true  ]
+        tests << [ :grpowned?,   ?G,    @@file1,              true  ]
+        tests << [ :grpowned?,   ?G,    "/etc/passwd",       Process.egid == 0 ]
+      end
+
+      for meth, t, file, result in tests
+        if file
+          assert_equal(result, test(t, file), "test(?#{t.chr}, #{file})")
+          if meth
+            assert_equal(result, FileTest.send(meth, file), 
+                         "FileTest.#{meth}(#{file})")
+          end
+        end
+      end
+
+      Windows.known_problem do
+          assert_equal(Process.euid == 0, test(?w, filew), "test(?#{t.chr}, #{filew})")
+          assert_equal(Process.euid == 0, FileTest.send(:writable?, filew),
+                       "FileTest.writable?(#{filew})")
+      end
+
+    ensure
+      sock.close if sock
+    end
+  end
+end
+
+Rubicon::handleTests(TestFileTest) if $0 == __FILE__
+@
+
+
+1.11
+log
+@Guarded Win32 known problems that were previously exposed during Cygwin testing.
+@
+text
+@d38 1
+a38 1
+    File.open(fileg, File::CREAT, 02644) { }
+a94 1
+        [ :symlink?,    ?l,    "/dev/tty",          false ],
+d110 4
+@
+
+
+1.10
+log
+@Fixes by Chad for File/Dir stuff under cygwin
+@
+text
+@d158 1
+a158 1
+      Cygwin.known_problem do
+@
+
+
+1.9
+log
+@Good ol' Windows needed more tweaking in the ownership department.
+@
+text
+@d67 1
+a67 1
+    filez_size = $os <= Windows ? 4 : 3
+a105 1
+        [ :writable?,   ?w,    filew,               Process.euid == 0],
+d156 6
+@
+
+
+1.8
+log
+@Make work when run as root.
+
+THere were soe permissions issues (for example ?r is somewhat moot) when run
+as root. Also allow tests to run in a g+s or u+s directory when the
+current uid/gid isn;t the directory's.
+@
+text
+@a98 1
+        [ :owned?,      ?o,    "/etc/passwd",       Process.euid == 0 ],
+d106 1
+a106 1
+        [ :writable?,   ?w,    filew,               Process.euid == 0 ],
+d118 1
+@
+
+
+1.7
+log
+@The latest Windows changes introduced a bug under Linux
+@
+text
+@d99 1
+a99 1
+        [ :owned?,      ?o,    "/etc/passwd",       false ],
+d107 1
+a107 1
+        [ :writable?,   ?w,    filew,               false ],
+d117 1
+a117 1
+        tests << [ :readable?,   ?r,    filer,               false ]
+d146 1
+a146 1
+        tests << [ :grpowned?,   ?G,    "/etc/passwd",       false ]
+d151 1
+a151 1
+          assert_equal(result, test(t, file), "test(?#{t}, #{file})")
+@
+
+
+1.6
+log
+@Get more tests working under Win32, and tidy up some of the
+operating system dependencies a tad
+@
+text
+@d44 2
+d53 1
+d56 1
+d69 1
+a69 1
+    sock = nil
+@
+
+
+1.5
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d4 4
+a7 1
+require 'socket'
+a36 4
+    atime = Time.at(RubiconStat::atime(@@file1))
+    ctime = Time.at(RubiconStat::ctime(@@file1))
+    mtime = Time.at(RubiconStat::mtime(@@file1))
+
+d44 12
+a55 6
+    filel = "_test/_filel"
+    File.symlink(@@file1, filel)
+    
+    filep = "_test/_filep"
+    system "mkfifo #{filep}"
+    assert_equal(0, $?)
+a56 5
+    filer = "_test/_filer"
+    File.open(filer, File::CREAT, 0222) { }
+    
+    fileu = "_test/_fileu"
+    File.open(fileu, File::CREAT, 04644) { }
+d63 1
+d65 10
+a74 3
+    filesock = "_test/_filesock"
+    sock = UNIXServer.open(filesock)
+    filesock = nil unless sock
+a76 3
+    
+#    system "ls -l _test"
+
+a78 1
+        [ :blockdev?,   ?b,    "/dev/tty",          false ],
+a79 1
+        [ :chardev?,    ?c,    "/dev/tty",          true  ],
+a81 1
+        [ :directory?,  ?d,    "/dev/tty",          false ],
+a84 1
+        [ :exist?,      ?e,    "/dev/tty",          true  ],
+a85 1
+        [ :file?,       ?f,    "/dev/tty",          false ],
+a89 5
+        [ :setgid?,     ?g,    fileg,               true  ],
+        [ :sticky?,     ?k,    ".",                 false ],
+        [ :sticky?,     ?k,    "/dev/tty",          false ],
+        [ :sticky?,     ?k,    @@file1,              false ],
+        [ :sticky?,     ?k,    filek,               true  ],
+a92 1
+        [ :symlink?,    ?l,    filel,               true  ],
+a95 1
+        [ :pipe?,       ?p,    "/dev/tty",          false ],
+a96 1
+        [ :pipe?,       ?p,    filep,               true  ],
+d98 1
+a98 2
+        [ :readable?,   ?r,    filer,               false ],
+        [ :size?,       ?s,    filez,               3     ],
+a99 1
+        [ :socket?,     ?S,    "/dev/tty",          false ],
+a101 1
+        [ :socket?,     ?S,    filesock,            true  ],
+a102 1
+        [ :setuid?,     ?u,    fileu,               true  ],
+a104 2
+        [ :executable?, ?x,    "/dev/tty",          false ],
+        [ :executable?, ?x,    "/bin/echo",         true  ],
+d110 29
+a138 1
+      if $os == Linux
+d156 1
+a156 1
+      sock.close
+@
+
+
+1.4
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d1 1
+@
+
+
+1.3
+log
+@Make Aleksi's changes
+@
+text
+@d41 2
+a42 1
+    File.open(filek, File::CREAT, 01644) { }
+a74 1
+        [ :blockdev?,   ?b,    "/dev/fd0",          true  ],
+a76 1
+        [ :chardev?,    ?c,    "/dev/fd0",          false ],
+a89 2
+        [ :grpowned?,   ?G,    @@file1,              true  ],
+        [ :grpowned?,   ?G,    "/etc/passwd",       false ],
+d122 7
+@
+
+
+1.2
+log
+@Archive save
+@
+text
+@d3 1
+d61 6
+a67 1
+
+d70 64
+a133 61
+    tests = [
+      [ nil,          ?A,    @@file1,              atime ],
+      [ :blockdev?,   ?b,    "/dev/tty",          false ],
+      [ :blockdev?,   ?b,    ".",                 false ],
+      [ :blockdev?,   ?b,    "/dev/fd0",          true  ],
+      [ :chardev?,    ?c,    "/dev/tty",          true  ],
+      [ :chardev?,    ?c,    ".",                 false ],
+      [ :chardev?,    ?c,    "/dev/fd0",          false ],
+      [ nil,          ?C,    @@file1,              ctime ],
+      [ :directory?,  ?d,    "/dev/tty",          false ],
+      [ :directory?,  ?d,    ".",                 true  ],
+      [ :directory?,  ?d,    "/dev/fd0",          false ],
+      [ :exist?,      ?e,    filez,               true  ],
+      [ :exist?,      ?e,    "/dev/tty",          true  ],
+      [ :exist?,      ?e,    "wombat",            false ],
+      [ :file?,       ?f,    "/dev/tty",          false ],
+      [ :file?,       ?f,    ".",                 false ],
+      [ :file?,       ?f,    "/dev/fd0",          false ],
+      [ :file?,       ?f,    @@file1,              true  ],
+      [ :setgid?,     ?g,    @@file1,              false ],
+      [ :setgid?,     ?g,    fileg,               true  ],
+      [ :grpowned?,   ?G,    @@file1,              true  ],
+      [ :grpowned?,   ?G,    "/etc/passwd",       false ],
+      [ :sticky?,     ?k,    ".",                 false ],
+      [ :sticky?,     ?k,    "/dev/tty",          false ],
+      [ :sticky?,     ?k,    @@file1,              false ],
+      [ :sticky?,     ?k,    filek,               true  ],
+      [ :symlink?,    ?l,    ".",                 false ],
+      [ :symlink?,    ?l,    "/dev/tty",          false ],
+      [ :symlink?,    ?l,    @@file1,              false ],
+      [ :symlink?,    ?l,    filel,               true  ],
+      [ nil,          ?M,    @@file1,              mtime ],
+      [ :owned?,      ?o,    @@file1,              true  ],
+      [ :owned?,      ?o,    "/etc/passwd",       false ],
+      [ :pipe?,       ?p,    "/dev/tty",          false ],
+      [ :pipe?,       ?p,    ".",                 false ],
+      [ :pipe?,       ?p,    filep,               true  ],
+      [ :readable?,   ?r,    @@file1,              true  ],
+      [ :readable?,   ?r,    filer,               false ],
+      [ :size?,       ?s,    filez,               3     ],
+      [ :size?,       ?s,    @@file2,              nil   ],
+      [ :socket?,     ?S,    "/dev/tty",          false ],
+      [ :socket?,     ?S,    ".",                 false ],
+      [ :socket?,     ?S,    @@file1,              false ],
+      [ :socket?,     ?S,    "/tmp/.X11-unix/X0", true  ],
+      [ :setuid?,     ?u,    @@file1,              false ],
+      [ :setuid?,     ?u,    fileu,               true  ],
+      [ :writable?,   ?w,    filew,               false ],
+      [ :writable?,   ?w,    @@file2,              true  ],
+      [ :executable?, ?x,    "/dev/tty",          false ],
+      [ :executable?, ?x,    "/bin/echo",         true  ],
+      [ :executable?, ?x,    "/dev/fd0",          false ],
+      [ :zero?,       ?z,    filez,               false ],
+      [ :zero?,       ?z,    @@file2,              true  ],
+    ]
+
+    for meth, t, file, result in tests
+      assert_equal(result, test(t, file), "test(?#{t}, #{file})")
+      if meth
+        assert_equal(result, FileTest.send(meth, file), 
+                     "FileTest.#{meth}(#{file})")
+d135 3
+a138 1
+
+@
+
+
+1.1
+log
+@Archive save
+@
+text
+@d32 3
+a34 3
+    atime = RubiconStat::atime(@@file1)
+    ctime = RubiconStat::ctime(@@file1)
+    mtime = RubiconStat::mtime(@@file1)
+d65 1
+a65 1
+      [ nil,?A, @@file1,              atime ],
+d120 1
+a120 1
+    for meth,t,file,result in tests
+@

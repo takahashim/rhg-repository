@@ -1,0 +1,110 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.10.03.11.20.31;	author nobu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.06.14.12.21.50;	author H_Konishi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.06.11.01.27.46;	author H_Konishi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* bcc32/mkexports.rb: to work on cygwin via telnet.
+  [ruby-win32:358]
+
+* ext/tcltklib/tcltklib.c (ip_invoke): requires command name
+  argument.  [ruby-dev:18438]
+
+* eval.c (ruby_init, ruby_options): Init_stack() with local
+  location.  (ruby-bugs-ja:PR#277)
+
+* eval.c (rb_call0): disable trace call.  [ruby-dev:18074]
+
+* eval.c (eval, rb_load): enable trace call.  [ruby-dev:18074]
+
+* eval.c (rb_f_require): set source file name for extension
+  libraries.  [ruby-dev:18445]
+
+* ruby.c (translate_char): translate a character in a string;
+  DOSISH only.  [ruby-dev:18274]
+
+* ruby.c (ruby_init_loadpath): added argv[0] handling under
+  Human68K.  [ruby-dev:18274]
+
+* ruby.c (proc_options): translate directory separator in $0 to
+  '/'.  [ruby-dev:18274]
+@
+text
+@#!./miniruby -s
+
+SYM = {}
+STDIN.reopen(open("nul"))
+ARGV.each do |obj|
+  IO.foreach("|tdump -q -oiPUBDEF -oiPUBD32 #{obj.tr('/', '\\')}") do |l|
+    next unless /(?:PUBDEF|PUBD32)/ =~ l
+    SYM[$1] = true if /'(.*?)'/ =~ l
+  end
+end
+
+exports = []
+if $name
+  exports << "Name " + $name
+elsif $library
+  exports << "Library " + $library
+end
+exports << "Description " + $description.dump if $description
+exports << "EXPORTS" << SYM.keys.sort
+
+if $output
+  open($output, 'w') {|f| f.puts exports.join("\n")}
+else
+  puts exports.join("\n")
+end
+@
+
+
+1.2
+log
+@*bcc32 fix for win9x.
+@
+text
+@d4 7
+a10 8
+objs = ARGV.collect {|s| s.tr('/', '\\')}
+system("tdump -oiPUBDEF -oiPUBD32 #{objs.join(' ')} > pub.def")
+sleep(1)
+IO.foreach('pub.def'){|l|
+  next unless /(PUBDEF|PUBD32)/ =~ l
+  /'(.*?)'/ =~ l
+  SYM[$1] = true
+}
+@
+
+
+1.1
+log
+@new platform [bccwin32] merged.
+@
+text
+@d6 1
+a6 1
+
+@

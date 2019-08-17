@@ -1,0 +1,3643 @@
+head	1.24;
+access;
+symbols
+	v1_6_7:1.11.2.2
+	v1_6_6:1.11.2.2
+	v1_6_5:1.11.2.2
+	v1_6_4:1.11.2.2
+	v1_7_1:1.17
+	v1_6_4_preview4:1.11.2.2
+	v1_6_4_preview3:1.11.2.2
+	v1_6_4_preview2:1.11
+	v1_6_4_preview1:1.11
+	v1_6_3:1.11
+	ruby_m17n:1.11.0.4
+	ruby_1_6:1.11.0.2
+	v1_6_2:1.11
+	v1_6_1:1.10
+	v1_6_0:1.10
+	v1_4_6:1.3.2.2
+	v1_4_5:1.3.2.2
+	v1_4_4:1.3
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	v1_3_6_repack:1.1.2.1
+	v1_3_6:1.1.2.1
+	v1_3_5:1.1.2.1
+	v1_3_4_990625:1.1.2.1
+	v1_3_4_990624:1.1.2.1
+	v1_3_4_990611:1.1.2.1
+	v1_3_4_990531:1.1.2.1
+	v1_3_3_990518:1.1.2.1
+	v1_3_3_990513:1.1.2.1
+	v1_3_3_990507:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.24
+date	2002.09.24.06.01.31;	author michal;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.09.24.06.00.03;	author michal;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.02.27.04.52.19;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.12.13.08.19.09;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.12.10.07.24.00;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.10.03.07.52.09;	author nobu;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.10.03.07.19.13;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.05.06.16.37.38;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.05.06.15.02.47;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.05.02.04.22.18;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.02.13.06.05.14;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.02.13.05.09.04;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.02.08.09.19.19;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.11.08.05.29.33;	author matz;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2000.07.04.07.04.41;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.16.07.44.15;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.24.04.34.14;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.04.10.05.44.24;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.07.08.37.53;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.03.06.04.15.37;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.14.06.49.55;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.54;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.47;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.07.08.23.54;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.05.07.08.23.54;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.04.10.05.48.41;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.06.20.06.08.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.05.01.08.45.15;	author matz;	state Exp;
+branches;
+next	1.11.2.2;
+
+1.11.2.2
+date	2001.05.07.06.18.47;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.24
+log
+@make it compile
+@
+text
+@/************************************************
+
+  gdbm.c -
+
+  $Author: michal $
+  $Date: 2002/09/24 06:00:03 $
+  modified at: Mon Jan 24 15:59:52 JST 1994
+
+************************************************/
+
+#include "ruby.h"
+
+#include <gdbm.h>
+#include <fcntl.h>
+#include <errno.h>
+
+static VALUE rb_cGDBM, rb_eGDBMError, rb_eGDBMFatalError;
+
+#define MY_BLOCK_SIZE (2048)
+#define MY_FATAL_FUNC rb_gdbm_fatal
+static void
+rb_gdbm_fatal(msg)
+    char *msg;
+{
+    rb_raise(rb_eGDBMFatalError, msg);
+}
+
+struct dbmdata {
+    int  di_size;
+    GDBM_FILE di_dbm;
+};
+
+static void
+closed_dbm()
+{
+    rb_raise(rb_eRuntimeError, "closed GDBM file");
+}
+
+#define GetDBM(obj, dbmp) do {\
+    Data_Get_Struct(obj, struct dbmdata, dbmp);\
+    if (dbmp == 0) closed_dbm();\
+    if (dbmp->di_dbm == 0) closed_dbm();\
+} while (0)
+
+static void
+free_dbm(dbmp)
+    struct dbmdata *dbmp;
+{
+    if (dbmp) {
+	if (dbmp->di_dbm) gdbm_close(dbmp->di_dbm);
+	free(dbmp);
+    }
+}
+
+static VALUE
+fgdbm_close(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+
+    GetDBM(obj, dbmp);
+    gdbm_close(dbmp->di_dbm);
+    dbmp->di_dbm = 0;
+
+    return Qnil;
+}
+
+static VALUE
+fgdbm_s_alloc(klass)
+    VALUE klass;
+{
+    return Data_Wrap_Struct(klass, 0, free_dbm, 0);
+}
+
+static VALUE
+fgdbm_initialize(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE file, vmode, vflags;
+    GDBM_FILE dbm;
+    struct dbmdata *dbmp;
+    int mode, flags = 0;
+
+    if (rb_scan_args(argc, argv, "12", &file, &vmode, &vflags) == 1) {
+	mode = 0666;		/* default value */
+    }
+    else if (NIL_P(vmode)) {
+	mode = -1;		/* return nil if DB not exist */
+    }
+    else {
+	mode = NUM2INT(vmode);
+    }
+
+    if (!NIL_P(vflags))
+        flags = NUM2INT(vflags);
+
+    SafeStringValue(file);
+
+    dbm = 0;
+    if (mode >= 0)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			GDBM_WRCREAT|flags, mode, MY_FATAL_FUNC);
+    if (!dbm)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			GDBM_WRITER|flags, 0, MY_FATAL_FUNC);
+    if (!dbm)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			GDBM_READER|flags, 0, MY_FATAL_FUNC);
+
+    if (!dbm) {
+	if (mode == -1) return Qnil;
+
+	if (gdbm_errno == GDBM_FILE_OPEN_ERROR ||
+	    gdbm_errno == GDBM_CANT_BE_READER ||
+	    gdbm_errno == GDBM_CANT_BE_WRITER)
+	    rb_sys_fail(RSTRING(file)->ptr);
+	else
+	    rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+
+    dbmp = ALLOC(struct dbmdata);
+    free_dbm(DATA_PTR(obj));
+    DATA_PTR(obj) = dbmp;
+    dbmp->di_dbm = dbm;
+    dbmp->di_size = -1;
+
+    return obj;
+}
+
+static VALUE
+fgdbm_s_open(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE obj = Data_Wrap_Struct(klass, 0, free_dbm, 0);
+
+    if (NIL_P(fgdbm_initialize(argc, argv, obj))) {
+	return Qnil;
+    }
+
+    if (rb_block_given_p()) {
+        return rb_ensure(rb_yield, obj, fgdbm_close, obj);
+    }
+
+    return obj;
+}
+
+static VALUE
+rb_gdbm_fetch(dbm, key)
+    GDBM_FILE dbm;
+    datum key;
+{
+    datum val;
+    VALUE str;
+
+    val = gdbm_fetch(dbm, key);
+    if (val.dptr == 0)
+        return Qnil;
+
+    str = rb_obj_alloc(rb_cString);
+    RSTRING(str)->len = val.dsize;
+    RSTRING(str)->aux.capa = val.dsize;
+    RSTRING(str)->ptr = REALLOC_N(val.dptr,char,val.dsize+1);
+    RSTRING(str)->ptr[val.dsize] = '\0';
+
+    OBJ_TAINT(str);
+    return (VALUE)str;
+}
+
+static VALUE
+rb_gdbm_fetch2(dbm, keystr)
+    GDBM_FILE dbm;
+    VALUE keystr;
+{
+    datum key;
+
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    return rb_gdbm_fetch(dbm, key);
+}
+
+static VALUE
+rb_gdbm_fetch3(obj, keystr)
+    VALUE obj, keystr;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    return rb_gdbm_fetch2(dbm, keystr);
+}
+
+static VALUE
+rb_gdbm_firstkey(dbm)
+    GDBM_FILE dbm;
+{
+    datum key;
+    VALUE str;
+
+    key = gdbm_firstkey(dbm);
+    if (key.dptr == 0)
+        return Qnil;
+
+    str = rb_obj_alloc(rb_cString);
+    RSTRING(str)->len = key.dsize;
+    RSTRING(str)->aux.capa = key.dsize;
+    RSTRING(str)->ptr = REALLOC_N(key.dptr,char,key.dsize+1);
+    RSTRING(str)->ptr[RSTRING(str)->len] = '\0';
+
+    OBJ_TAINT(str);
+    return str;
+}
+
+static VALUE
+rb_gdbm_nextkey(dbm, keystr)
+    GDBM_FILE dbm;
+    VALUE keystr;
+{
+    datum key, key2;
+    VALUE str;
+
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+    key2 = gdbm_nextkey(dbm, key);
+    if (key2.dptr == 0)
+        return Qnil;
+
+    str = rb_obj_alloc(rb_cString);
+    RSTRING(str)->len = key2.dsize;
+    RSTRING(str)->aux.capa = key2.dsize;
+    RSTRING(str)->ptr = REALLOC_N(key2.dptr,char,key2.dsize+1);
+    RSTRING(str)->ptr[RSTRING(str)->len] = '\0';
+
+    OBJ_TAINT(str);
+    return str;
+}
+
+static VALUE
+fgdbm_fetch(obj, keystr, ifnone)
+    VALUE obj, keystr, ifnone;
+{
+    VALUE valstr;
+
+    valstr = rb_gdbm_fetch3(obj, keystr);
+    if (NIL_P(valstr)) {
+	if (ifnone == Qnil && rb_block_given_p())
+	    return rb_yield(keystr);
+	return ifnone;
+    }
+    return valstr;
+}
+
+static VALUE
+fgdbm_aref(obj, keystr)
+    VALUE obj, keystr;
+{
+    return rb_gdbm_fetch3(obj, keystr);
+}
+
+static VALUE
+fgdbm_fetch_m(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE keystr, valstr, ifnone;
+
+    rb_scan_args(argc, argv, "11", &keystr, &ifnone);
+    valstr = fgdbm_fetch(obj, keystr, ifnone);
+    if (argc == 1 && !rb_block_given_p() && NIL_P(valstr))
+	rb_raise(rb_eIndexError, "key not found");
+
+    return valstr;
+}
+
+static VALUE
+fgdbm_index(obj, valstr)
+    VALUE obj, valstr;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr2;
+
+    StringValue(valstr);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr2 = rb_gdbm_fetch2(dbm, keystr);
+        if (!NIL_P(valstr2) &&
+            RSTRING(valstr)->len == RSTRING(valstr2)->len &&
+            memcmp(RSTRING(valstr)->ptr, RSTRING(valstr2)->ptr,
+                   RSTRING(valstr)->len) == 0) {
+	    return keystr;
+        }
+    }
+    return Qnil;
+}
+
+static VALUE
+fgdbm_indexes(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE new;
+    int i;
+
+    new = rb_ary_new2(argc);
+    for (i=0; i<argc; i++) {
+	rb_ary_push(new, rb_gdbm_fetch3(obj, argv[i]));
+    }
+
+    return new;
+}
+
+static VALUE
+fgdbm_select(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE new = rb_ary_new2(argc);
+    int i;
+
+    if (rb_block_given_p()) {
+        GDBM_FILE dbm;
+        struct dbmdata *dbmp;
+        VALUE keystr;
+
+	if (argc > 0) {
+	    rb_raise(rb_eArgError, "wrong number arguments(%d for 0)", argc);
+	}
+        GetDBM(obj, dbmp);
+        dbm = dbmp->di_dbm;
+
+        for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+             keystr = rb_gdbm_nextkey(dbm, keystr)) {
+            VALUE assoc = rb_assoc_new(keystr, rb_gdbm_fetch2(dbm, keystr));
+
+            if (RTEST(rb_yield(assoc)))
+                rb_ary_push(new, assoc);
+        }
+    }
+    else {
+        for (i=0; i<argc; i++) {
+            rb_ary_push(new, rb_gdbm_fetch3(obj, argv[i]));
+        }
+    }
+
+    return new;
+}
+
+static VALUE
+rb_gdbm_delete(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    if (!gdbm_exists(dbm, key)) {
+	return Qnil;
+    }
+
+    if (gdbm_delete(dbm, key)) {
+	dbmp->di_size = -1;
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    else if (dbmp->di_size >= 0) {
+	dbmp->di_size--;
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_delete(obj, keystr)
+    VALUE obj, keystr;
+{
+    VALUE valstr;
+
+    valstr = fgdbm_fetch(obj, keystr, Qnil);
+    rb_gdbm_delete(obj, keystr);
+    return valstr;
+}
+
+static VALUE
+fgdbm_shift(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    keystr = rb_gdbm_firstkey(dbm);
+    if (NIL_P(keystr)) return Qnil;
+    valstr = rb_gdbm_fetch2(dbm, keystr);
+    rb_gdbm_delete(obj, keystr);
+
+    return rb_assoc_new(keystr, valstr);
+}
+
+static VALUE
+fgdbm_delete_if(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+    VALUE ret, ary = rb_ary_new();
+    int i, status = 0, n;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    n = dbmp->di_size;
+    dbmp->di_size = -1;
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr = rb_gdbm_fetch2(dbm, keystr);
+        ret = rb_protect(rb_yield, rb_assoc_new(keystr, valstr), &status);
+        if (status != 0) break;
+	if (RTEST(ret)) rb_ary_push(ary, keystr);
+    }
+
+    for (i = 0; i < RARRAY(ary)->len; i++)
+        rb_gdbm_delete(obj, RARRAY(ary)->ptr[i]);
+    if (status) rb_jump_tag(status);
+    if (n > 0) dbmp->di_size = n - RARRAY(ary)->len;
+
+    return obj;
+}
+
+static VALUE
+fgdbm_clear(obj)
+    VALUE obj;
+{
+    datum key, nextkey;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    dbmp->di_size = -1;
+
+#if 0
+    while (key = gdbm_firstkey(dbm), key.dptr) {
+	if (gdbm_delete(dbm, key)) {
+	    free(key.dptr);
+	    rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+	}
+	free(key.dptr); 
+    }
+#else
+    while (key = gdbm_firstkey(dbm), key.dptr) {
+        for (; key.dptr; key = nextkey) {
+            nextkey = gdbm_nextkey(dbm, key);
+            if (gdbm_delete(dbm, key)) {
+                free(key.dptr);
+                if (nextkey.dptr) free(nextkey.dptr);
+                rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+            }
+            free(key.dptr);
+        }
+    }
+#endif
+    dbmp->di_size = 0;
+
+    return obj;
+}
+
+static VALUE
+fgdbm_invert(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+    VALUE hash = rb_hash_new();
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+	valstr = rb_gdbm_fetch2(dbm, keystr);
+
+	rb_hash_aset(hash, valstr, keystr);
+    }
+    return hash;
+}
+
+static VALUE
+each_pair(obj)
+    VALUE obj;
+{
+    return rb_funcall(obj, rb_intern("each_pair"), 0, 0);
+}
+
+static VALUE fgdbm_store _((VALUE,VALUE,VALUE));
+
+static VALUE
+update_i(pair, dbm)
+    VALUE pair, dbm;
+{
+    Check_Type(pair, T_ARRAY);
+    if (RARRAY(pair)->len < 2) {
+	rb_raise(rb_eArgError, "pair must be [key, value]");
+    }
+    fgdbm_store(dbm, RARRAY(pair)->ptr[0], RARRAY(pair)->ptr[1]);
+    return Qnil;
+}
+
+static VALUE
+fgdbm_update(obj, other)
+    VALUE obj, other;
+{
+    rb_iterate(each_pair, other, update_i, obj);
+    return obj;
+}
+
+static VALUE
+fgdbm_replace(obj, other)
+    VALUE obj, other;
+{
+    fgdbm_clear(obj);
+    rb_iterate(each_pair, other, update_i, obj);
+    return obj;
+}
+
+static VALUE
+fgdbm_store(obj, keystr, valstr)
+    VALUE obj, keystr, valstr;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    StringValue(valstr);
+    val.dptr = RSTRING(valstr)->ptr;
+    val.dsize = RSTRING(valstr)->len;
+
+    GetDBM(obj, dbmp);
+    dbmp->di_size = -1;
+    dbm = dbmp->di_dbm;
+    if (gdbm_store(dbm, key, val, GDBM_REPLACE)) {
+	if (errno == EPERM) rb_sys_fail(0);
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+
+    return valstr;
+}
+
+static VALUE
+fgdbm_length(obj)
+    VALUE obj;
+{
+    datum key, nextkey;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int i = 0;
+
+    GetDBM(obj, dbmp);
+    if (dbmp->di_size > 0) return INT2FIX(dbmp->di_size);
+    dbm = dbmp->di_dbm;
+
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+        nextkey = gdbm_nextkey(dbm, key);
+        free(key.dptr);
+	i++;
+    }
+    dbmp->di_size = i;
+
+    return INT2FIX(i);
+}
+
+static VALUE
+fgdbm_empty_p(obj)
+    VALUE obj;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    GetDBM(obj, dbmp);
+    if (dbmp->di_size < 0) {
+	dbm = dbmp->di_dbm;
+
+	key = gdbm_firstkey(dbm);
+        if (key.dptr) {
+            free(key.dptr);
+            return Qfalse;
+	}
+        return Qtrue;
+    }
+
+    if (dbmp->di_size == 0) return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_each_value(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(rb_gdbm_fetch2(dbm, keystr));
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_each_key(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(keystr);
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_each_pair(obj)
+    VALUE obj;
+{
+    GDBM_FILE dbm;
+    struct dbmdata *dbmp;
+    VALUE keystr;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(rb_assoc_new(keystr, rb_gdbm_fetch2(dbm, keystr)));
+    }
+
+    return obj;
+}
+
+static VALUE
+fgdbm_keys(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_ary_push(ary, keystr);
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_values(obj)
+    VALUE obj;
+{
+    datum key, nextkey;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE valstr, ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+        nextkey = gdbm_nextkey(dbm, key);
+	valstr = rb_gdbm_fetch(dbm, key);
+        free(key.dptr);
+	rb_ary_push(ary, valstr);
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_has_key(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    if (gdbm_exists(dbm, key))
+        return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_has_value(obj, valstr)
+    VALUE obj, valstr;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr2;
+
+    StringValue(valstr);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr2 = rb_gdbm_fetch2(dbm, keystr);
+
+        if (!NIL_P(valstr2) &&
+            RSTRING(valstr)->len == RSTRING(valstr2)->len &&
+            memcmp(RSTRING(valstr)->ptr, RSTRING(valstr2)->ptr,
+                   RSTRING(valstr)->len) == 0) {
+	    return Qtrue;
+        }
+    }
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_to_a(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_ary_push(ary, rb_assoc_new(keystr, rb_gdbm_fetch2(dbm, keystr)));
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_reorganize(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    gdbm_reorganize(dbm);
+    return obj;
+}
+
+static VALUE
+fgdbm_sync(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    gdbm_sync(dbm);
+    return obj;
+}
+
+static VALUE
+fgdbm_set_cachesize(obj, val)
+    VALUE obj, val;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = FIX2INT(val);
+    if (gdbm_setopt(dbm, GDBM_CACHESIZE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+}
+
+static VALUE
+fgdbm_set_fastmode(obj, val)
+    VALUE obj, val;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = 0;
+    if (RTEST(val))
+        optval = 1;
+
+    if (gdbm_setopt(dbm, GDBM_FASTMODE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+}
+
+static VALUE
+fgdbm_set_syncmode(obj, val)
+    VALUE obj, val;
+{
+#if !defined(GDBM_SYNCMODE)
+    fgdbm_set_fastmode(obj, RTEST(val) ? Qfalse : Qtrue);
+    return val;
+#else
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = 0;
+    if (RTEST(val))
+        optval = 1;
+
+    if (gdbm_setopt(dbm, GDBM_FASTMODE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+#endif
+}
+
+static VALUE
+fgdbm_to_hash(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, hash;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    hash = rb_hash_new();
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_hash_aset(hash, keystr, rb_gdbm_fetch2(dbm, keystr));
+    }
+
+    return hash;
+}
+
+static VALUE
+fgdbm_reject(obj)
+    VALUE obj;
+{
+    return rb_hash_delete_if(fgdbm_to_hash(obj));
+}
+
+void
+Init_gdbm()
+{
+    rb_cGDBM = rb_define_class("GDBM", rb_cObject);
+    rb_eGDBMError = rb_define_class("GDBMError", rb_eStandardError);
+    rb_eGDBMFatalError = rb_define_class("GDBMFatalError", rb_eException);
+    rb_include_module(rb_cGDBM, rb_mEnumerable);
+
+    rb_define_singleton_method(rb_cGDBM, "allocate", fgdbm_s_alloc, 0);
+    rb_define_singleton_method(rb_cGDBM, "open", fgdbm_s_open, -1);
+
+    rb_define_method(rb_cGDBM, "initialize", fgdbm_initialize, -1);
+    rb_define_method(rb_cGDBM, "close", fgdbm_close, 0);
+    rb_define_method(rb_cGDBM, "[]", fgdbm_aref, 1);
+    rb_define_method(rb_cGDBM, "fetch", fgdbm_fetch_m, -1);
+    rb_define_method(rb_cGDBM, "[]=", fgdbm_store, 2);
+    rb_define_method(rb_cGDBM, "store", fgdbm_store, 2);
+    rb_define_method(rb_cGDBM, "index",  fgdbm_index, 1);
+    rb_define_method(rb_cGDBM, "indexes",  fgdbm_indexes, -1);
+    rb_define_method(rb_cGDBM, "indices",  fgdbm_indexes, -1);
+    rb_define_method(rb_cGDBM, "select",  fgdbm_select, -1);
+    rb_define_method(rb_cGDBM, "length", fgdbm_length, 0);
+    rb_define_method(rb_cGDBM, "size", fgdbm_length, 0);
+    rb_define_method(rb_cGDBM, "empty?", fgdbm_empty_p, 0);
+    rb_define_method(rb_cGDBM, "each", fgdbm_each_pair, 0);
+    rb_define_method(rb_cGDBM, "each_value", fgdbm_each_value, 0);
+    rb_define_method(rb_cGDBM, "each_key", fgdbm_each_key, 0);
+    rb_define_method(rb_cGDBM, "each_pair", fgdbm_each_pair, 0);
+    rb_define_method(rb_cGDBM, "keys", fgdbm_keys, 0);
+    rb_define_method(rb_cGDBM, "values", fgdbm_values, 0);
+    rb_define_method(rb_cGDBM, "shift", fgdbm_shift, 0);
+    rb_define_method(rb_cGDBM, "delete", fgdbm_delete, 1);
+    rb_define_method(rb_cGDBM, "delete_if", fgdbm_delete_if, 0);
+    rb_define_method(rb_cGDBM, "reject!", fgdbm_delete_if, 0);
+    rb_define_method(rb_cGDBM, "reject", fgdbm_reject, 0);
+    rb_define_method(rb_cGDBM, "clear", fgdbm_clear, 0);
+    rb_define_method(rb_cGDBM,"invert", fgdbm_invert, 0);
+    rb_define_method(rb_cGDBM,"update", fgdbm_update, 1);
+    rb_define_method(rb_cGDBM,"replace", fgdbm_replace, 1);
+    rb_define_method(rb_cGDBM,"reorganize", fgdbm_reorganize, 0);
+    rb_define_method(rb_cGDBM,"sync", fgdbm_sync, 0);
+    /* rb_define_method(rb_cGDBM,"setopt", fgdbm_setopt, 2); */
+    rb_define_method(rb_cGDBM,"cachesize=", fgdbm_set_cachesize, 1);
+    rb_define_method(rb_cGDBM,"fastmode=", fgdbm_set_fastmode, 1);
+    rb_define_method(rb_cGDBM,"syncmode=", fgdbm_set_syncmode, 1);
+
+    rb_define_method(rb_cGDBM, "include?", fgdbm_has_key, 1);
+    rb_define_method(rb_cGDBM, "has_key?", fgdbm_has_key, 1);
+    rb_define_method(rb_cGDBM, "member?", fgdbm_has_key, 1);
+    rb_define_method(rb_cGDBM, "has_value?", fgdbm_has_value, 1);
+    rb_define_method(rb_cGDBM, "key?", fgdbm_has_key, 1);
+    rb_define_method(rb_cGDBM, "value?", fgdbm_has_value, 1);
+
+    rb_define_method(rb_cGDBM, "to_a", fgdbm_to_a, 0);
+    rb_define_method(rb_cGDBM, "to_hash", fgdbm_to_hash, 0);
+
+    /* flags for gdbm_opn() */
+    /*
+    rb_define_const(rb_cGDBM, "READER",  INT2FIX(GDBM_READER));
+    rb_define_const(rb_cGDBM, "WRITER",  INT2FIX(GDBM_WRITER));
+    rb_define_const(rb_cGDBM, "WRCREAT", INT2FIX(GDBM_WRCREAT));
+    rb_define_const(rb_cGDBM, "NEWDB",   INT2FIX(GDBM_NEWDB));
+    */
+    rb_define_const(rb_cGDBM, "FAST", INT2FIX(GDBM_FAST));
+    /* this flag is obsolete in gdbm 1.8.
+       On gdbm 1.8, fast mode is default behavior. */
+
+    /* gdbm version 1.8 specific */
+#if defined(GDBM_SYNC)
+    rb_define_const(rb_cGDBM, "SYNC",    INT2FIX(GDBM_SYNC));
+#endif
+#if defined(GDBM_NOLOCK)
+    rb_define_const(rb_cGDBM, "NOLOCK",  INT2FIX(GDBM_NOLOCK));
+#endif
+    rb_define_const(rb_cGDBM, "VERSION",  rb_str_new2(gdbm_version));
+}
+@
+
+
+1.23
+log
+@cleanup for curses, gdbm [ruby-core:502], [ruby-core:503]
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/27 04:52:19 $
+a69 2
+    int argc;
+    VALUE *argv;
+@
+
+
+1.22
+log
+@* ext/dbm/dbm.c (fdbm_select): 1.7 behavior.
+
+* ext/gdbm/gdbm.c (fgdbm_select): ditto.
+
+* ext/sdbm/sdbm.c (fsdbm_select): ditto.
+
+* ext/dbm/dbm.c (fdbm_delete): adopt Hash#delete behavior.
+
+* ext/sdbm/sdbm.c (fsdbm_delete): ditto.
+
+* ext/gdbm/gdbm.c: need not to dup key to the block.
+
+* ext/sdbm/sdbm.c : replace RuntimeError with SDBMError.
+
+* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/13 08:19:09 $
+d39 1
+a39 1
+#define GetDBM(obj, dbmp) {\
+d43 1
+a43 1
+}
+d69 1
+a69 1
+fgdbm_s_new(argc, argv, klass)
+d74 1
+a74 3
+    VALUE obj = Data_Wrap_Struct(klass, 0, free_dbm, 0);
+    rb_obj_call_init(obj, argc, argv);
+    return obj;
+d126 1
+d926 1
+a926 1
+    rb_define_singleton_method(rb_cGDBM, "new", fgdbm_s_new, -1);
+@
+
+
+1.21
+log
+@* time.c (time_new_internal): avoid loop to calculate negative
+  div, mod.
+
+* time.c (time_cmp): should handle Bignums.
+
+* array.c (rb_ary_pop): should ELTS_SHARED flag check before
+  REALLOC.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/10 07:24:00 $
+d17 1
+a17 1
+static VALUE cGDBM, rb_eGDBMError, rb_eGDBMFatalError;
+d21 1
+a21 1
+void
+d55 12
+a66 1
+static VALUE fgdbm_close _((VALUE));
+a154 13
+fgdbm_close(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+
+    GetDBM(obj, dbmp);
+    gdbm_close(dbmp->di_dbm);
+    dbmp->di_dbm = 0;
+
+    return Qnil;
+}
+
+static VALUE
+d220 1
+a220 1
+    return (VALUE)str;
+d244 1
+a244 1
+    return (VALUE)str;
+d328 37
+d445 1
+a445 1
+        ret = rb_protect(rb_yield, rb_assoc_new(rb_str_dup(keystr), valstr), &status);
+d663 1
+a663 1
+        rb_yield(rb_str_dup(keystr));
+d682 1
+a682 2
+        rb_yield(rb_assoc_new(rb_str_dup(keystr), 
+                              rb_gdbm_fetch2(dbm, keystr)));
+d792 1
+a792 2
+        rb_ary_push(ary, rb_assoc_new(rb_str_dup(keystr),
+                                      rb_gdbm_fetch2(dbm, keystr)));
+d922 1
+a922 1
+    cGDBM = rb_define_class("GDBM", rb_cObject);
+d925 1
+a925 1
+    rb_include_module(cGDBM, rb_mEnumerable);
+d927 2
+a928 2
+    rb_define_singleton_method(cGDBM, "new", fgdbm_s_new, -1);
+    rb_define_singleton_method(cGDBM, "open", fgdbm_s_open, -1);
+d930 41
+a970 40
+    rb_define_method(cGDBM, "initialize", fgdbm_initialize, -1);
+    rb_define_method(cGDBM, "close", fgdbm_close, 0);
+    rb_define_method(cGDBM, "[]", fgdbm_aref, 1);
+    rb_define_method(cGDBM, "fetch", fgdbm_fetch_m, -1);
+    rb_define_method(cGDBM, "[]=", fgdbm_store, 2);
+    rb_define_method(cGDBM, "store", fgdbm_store, 2);
+    rb_define_method(cGDBM, "index",  fgdbm_index, 1);
+    rb_define_method(cGDBM, "indexes",  fgdbm_indexes, -1);
+    rb_define_method(cGDBM, "indices",  fgdbm_indexes, -1);
+    rb_define_method(cGDBM, "length", fgdbm_length, 0);
+    rb_define_alias(cGDBM,  "size", "length");
+    rb_define_method(cGDBM, "empty?", fgdbm_empty_p, 0);
+    rb_define_method(cGDBM, "each", fgdbm_each_pair, 0);
+    rb_define_method(cGDBM, "each_value", fgdbm_each_value, 0);
+    rb_define_method(cGDBM, "each_key", fgdbm_each_key, 0);
+    rb_define_method(cGDBM, "each_pair", fgdbm_each_pair, 0);
+    rb_define_method(cGDBM, "keys", fgdbm_keys, 0);
+    rb_define_method(cGDBM, "values", fgdbm_values, 0);
+    rb_define_method(cGDBM, "shift", fgdbm_shift, 0);
+    rb_define_method(cGDBM, "delete", fgdbm_delete, 1);
+    rb_define_method(cGDBM, "delete_if", fgdbm_delete_if, 0);
+    rb_define_method(cGDBM, "reject!", fgdbm_delete_if, 0);
+    rb_define_method(cGDBM, "reject", fgdbm_reject, 0);
+    rb_define_method(cGDBM, "clear", fgdbm_clear, 0);
+    rb_define_method(cGDBM,"invert", fgdbm_invert, 0);
+    rb_define_method(cGDBM,"update", fgdbm_update, 1);
+    rb_define_method(cGDBM,"replace", fgdbm_replace, 1);
+    rb_define_method(cGDBM,"reorganize", fgdbm_reorganize, 0);
+    rb_define_method(cGDBM,"sync", fgdbm_sync, 0);
+    /* rb_define_method(cGDBM,"setopt", fgdbm_setopt, 2); */
+    rb_define_method(cGDBM,"cachesize=", fgdbm_set_cachesize, 1);
+    rb_define_method(cGDBM,"fastmode=", fgdbm_set_fastmode, 1);
+    rb_define_method(cGDBM,"syncmode=", fgdbm_set_syncmode, 1);
+
+    rb_define_method(cGDBM, "include?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "has_key?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "member?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "has_value?", fgdbm_has_value, 1);
+    rb_define_method(cGDBM, "key?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "value?", fgdbm_has_value, 1);
+d972 2
+a973 2
+    rb_define_method(cGDBM, "to_a", fgdbm_to_a, 0);
+    rb_define_method(cGDBM, "to_hash", fgdbm_to_hash, 0);
+d977 4
+a980 4
+    rb_define_const(cGDBM, "READER",  INT2FIX(GDBM_READER));
+    rb_define_const(cGDBM, "WRITER",  INT2FIX(GDBM_WRITER));
+    rb_define_const(cGDBM, "WRCREAT", INT2FIX(GDBM_WRCREAT));
+    rb_define_const(cGDBM, "NEWDB",   INT2FIX(GDBM_NEWDB));
+d982 1
+a982 1
+    rb_define_const(cGDBM, "FAST", INT2FIX(GDBM_FAST));
+d988 1
+a988 1
+    rb_define_const(cGDBM, "SYNC",    INT2FIX(GDBM_SYNC));
+d991 1
+a991 1
+    rb_define_const(cGDBM, "NOLOCK",  INT2FIX(GDBM_NOLOCK));
+d993 1
+a993 1
+    rb_define_const(cGDBM, "VERSION",  rb_str_new2(gdbm_version));
+@
+
+
+1.20
+log
+@auxiliary routines update.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/03 07:52:09 $
+d162 1
+a162 1
+    VALUE str = rb_obj_alloc(rb_cString);
+d168 1
+a168 1
+    RSTRING(str)->ptr = 0;
+d209 1
+a209 1
+    VALUE str = rb_obj_alloc(rb_cString);
+d215 1
+a215 1
+    RSTRING(str)->ptr = 0;
+d231 1
+a231 1
+    VALUE str = rb_obj_alloc(rb_cString);
+d239 1
+a239 1
+    RSTRING(str)->ptr = 0;
+@
+
+
+1.19
+log
+@* ext/gdbm/gdbm.c (rb_gdbm_fetch): str is a VALUE now.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/03 07:19:13 $
+d170 1
+a170 1
+    RSTRING(str)->orig = 0;
+d217 1
+a217 1
+    RSTRING(str)->orig = 0;
+d241 1
+a241 1
+    RSTRING(str)->orig = 0;
+@
+
+
+1.18
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/05/06 16:37:38 $
+d172 1
+a172 1
+    RSTRING(str)->ptr[str->len] = '\0';
+@
+
+
+1.17
+log
+@rb_eGDBMFatalErrors -> rb_eGDBMFatalError
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/06 15:02:47 $
+d162 1
+a162 2
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+d168 5
+a172 5
+    str->ptr = 0;
+    str->len = val.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(val.dptr,char,val.dsize+1);
+    str->ptr[str->len] = '\0';
+d209 1
+a209 2
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+d215 5
+a219 5
+    str->ptr = 0;
+    str->len = key.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(key.dptr,char,key.dsize+1);
+    str->ptr[str->len] = '\0';
+d231 1
+a231 2
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+d239 5
+a243 5
+    str->ptr = 0;
+    str->len = key2.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(key2.dptr,char,key2.dsize+1);
+    str->ptr[str->len] = '\0';
+@
+
+
+1.16
+log
+@forgot some checkins.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:18 $
+d17 1
+a17 1
+static VALUE cGDBM, rb_eGDBMError, rb_eGDBMFatalErrors;
+d25 1
+a25 1
+    rb_raise(rb_eGDBMFatalErrors, msg);
+@
+
+
+1.15
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/13 06:05:14 $
+d17 1
+a17 1
+static VALUE cGDBM, rb_eGDBMError;
+d20 7
+a26 1
+#define MY_FATAL_FUNC (0)
+d194 12
+a255 3
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+d258 1
+a258 7
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    valstr = rb_gdbm_fetch(dbm, key);
+d261 1
+a261 1
+	    return rb_yield(rb_tainted_str_new(key.dptr, key.dsize));
+d271 1
+a271 1
+    return fgdbm_fetch(obj, keystr, Qnil);
+d326 1
+a326 1
+	rb_ary_push(new, fgdbm_fetch(obj, argv[i]));
+d366 1
+a366 3
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+d368 3
+a370 21
+    rb_secure(4);
+    StringValue(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    if (!gdbm_exists(dbm, key)) {
+	if (rb_block_given_p()) rb_yield(keystr);
+	return Qnil;
+    }
+
+    if (gdbm_delete(dbm, key)) {
+	dbmp->di_size = -1;
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    else if (dbmp->di_size >= 0) {
+	dbmp->di_size--;
+    }
+    return obj;
+d430 1
+a430 1
+    datum key;
+d439 1
+d447 13
+d894 1
+@
+
+
+1.14
+log
+@gdbm typo
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/13 05:09:04 $
+d17 1
+a17 1
+VALUE cGDBM, rb_eGDBMError;
+d86 1
+a86 1
+    Check_SafeStr(file);
+d150 2
+a151 2
+static datum
+gdbm_fetch_1(dbm, key)
+a154 1
+    static char *ptr;
+d156 2
+d160 12
+a171 2
+    if (ptr) free(ptr);
+    ptr = val.dptr;
+d173 59
+a231 1
+    return val;
+d238 1
+a238 1
+    datum key, value;
+d241 1
+d243 1
+a243 1
+    Check_Type(keystr, T_STRING);
+d249 2
+a250 2
+    value = gdbm_fetch_1(dbm, key);
+    if (value.dptr == 0) {
+d255 1
+a255 1
+    return rb_tainted_str_new(value.dptr, value.dsize);
+a284 1
+    datum key, val;
+d287 1
+d289 1
+a289 4
+    Check_Type(valstr, T_STRING);
+    val.dptr = RSTRING(valstr)->ptr;
+    val.dsize = RSTRING(valstr)->len;
+
+d292 10
+a301 5
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	if (val.dsize == RSTRING(valstr)->len &&
+	    memcmp(val.dptr, RSTRING(valstr)->ptr, val.dsize) == 0)
+	    return rb_tainted_str_new(key.dptr, key.dsize);
+d324 30
+d362 1
+a362 1
+    Check_Type(keystr, T_STRING);
+a387 1
+    datum key, val;
+d396 4
+a399 4
+    key = gdbm_firstkey(dbm); 
+    if (!key.dptr) return Qnil;
+    val = gdbm_fetch_1(dbm, key);
+    gdbm_delete(dbm, key);
+a400 2
+    keystr = rb_tainted_str_new(key.dptr, key.dsize);
+    valstr = rb_tainted_str_new(val.dptr, val.dsize);
+a407 1
+    datum key, val;
+d411 2
+d417 10
+a426 9
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+	if (RTEST(rb_yield(rb_assoc_new(keystr, valstr)))) {
+	    if (gdbm_delete(dbm, key)) {
+		rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+	    }
+	}
+d428 6
+d441 1
+a441 1
+    datum key, nextkey;
+d449 2
+a450 2
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+	nextkey = gdbm_nextkey(dbm, key);
+d452 1
+d455 1
+d457 2
+a465 1
+    datum key, val;
+d473 4
+a476 4
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+d529 1
+a529 2
+    keystr = rb_obj_as_string(keystr);
+
+d533 1
+a533 1
+    valstr = rb_obj_as_string(valstr);
+d552 1
+a552 1
+    datum key;
+d561 3
+a563 1
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+a577 1
+    int i = 0;
+d583 4
+a586 2
+	for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	    i++;
+d588 1
+d590 2
+a591 4
+    else {
+	i = dbmp->di_size;
+    }
+    if (i == 0) return Qtrue;
+a598 1
+    datum key, val;
+d601 1
+d605 5
+a609 3
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	rb_yield(rb_tainted_str_new(val.dptr, val.dsize));
+a617 1
+    datum key;
+d620 1
+d624 5
+a628 2
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	rb_yield(rb_tainted_str_new(key.dptr, key.dsize));
+a636 1
+    datum key, val;
+d639 1
+a639 1
+    VALUE keystr, valstr;
+d644 5
+a648 5
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+	rb_yield(rb_assoc_new(keystr, valstr));
+a657 1
+    datum key;
+d660 1
+a660 1
+    VALUE ary;
+d666 4
+a669 2
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	rb_ary_push(ary, rb_tainted_str_new(key.dptr, key.dsize));
+d679 1
+a679 1
+    datum key, val;
+d682 1
+a682 1
+    VALUE ary;
+d688 5
+a692 3
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	rb_ary_push(ary, rb_tainted_str_new(val.dptr, val.dsize));
+d706 1
+a706 1
+    Check_Type(keystr, T_STRING);
+a720 1
+    datum key, val;
+d723 1
+d725 1
+a725 4
+    Check_Type(valstr, T_STRING);
+    val.dptr = RSTRING(valstr)->ptr;
+    val.dsize = RSTRING(valstr)->len;
+
+d728 9
+a736 4
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	if (val.dsize == RSTRING(valstr)->len &&
+	    memcmp(val.dptr, RSTRING(valstr)->ptr, val.dsize) == 0)
+d738 1
+a746 1
+    datum key, val;
+d749 1
+a749 1
+    VALUE ary;
+d755 5
+a759 4
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	rb_ary_push(ary, rb_assoc_new(rb_tainted_str_new(key.dptr, key.dsize),
+				rb_tainted_str_new(val.dptr, val.dsize)));
+a798 1
+    VALUE hash;
+a816 1
+    VALUE hash;
+a841 1
+    VALUE hash;
+a861 1
+    datum key, val;
+d864 1
+a864 1
+    VALUE hash;
+d870 4
+a873 4
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch_1(dbm, key);
+	rb_hash_aset(hash, rb_tainted_str_new(key.dptr, key.dsize),
+		           rb_tainted_str_new(val.dptr, val.dsize));
+d914 1
+a914 1
+    rb_define_method(cGDBM, "shift", fgdbm_shift, 1);
+@
+
+
+1.13
+log
+@* io.c (rb_io_ctl): do not call ioctl/fcntl for f2, if f and f2
+  have same fileno.
+
+* eval.c (rb_load): raise LocaJumpError if unexpected local jumps
+  appear during load.
+
+* ext/socket/socket.c (bsock_close_read): don't call rb_thread_fd_close();
+  it's supposed to be called by io_io_close().
+
+* ext/socket/socket.c (bsock_close_read): do not modify f and f2.
+
+* ext/socket/socket.c (bsock_close_write): ditto.
+
+* ext/socket/socket.c (sock_new): avoid dup(2) on sockets.
+
+* parse.y (primary): preserve and clear in_single and in_def using
+  stack to prevent nested method errors in singleton class bodies.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/08 09:19:19 $
+d603 1
+a603 1
+    datum key;
+@
+
+
+1.12
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_options): new method to give an option values.
+
+* parse.y (cond0): disable special treating of integer literal in
+  conditional unless option -e is supplied.  changes current
+  behavior.  experimental.
+
+* parse.y (cond0): give warning for string/integer literals and
+  dot operators in conditionals unless option -e is supplied.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+
+* error.c (Init_Exception): make Interrupt a subclass of
+  SignalException.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/08 05:29:33 $
+d17 1
+a17 1
+VALUE cGDBM;
+d35 1
+d43 4
+a46 2
+    if (dbmp->di_dbm) gdbm_close(dbmp->di_dbm);
+    free(dbmp);
+d49 2
+d52 1
+a52 1
+fgdbm_s_open(argc, argv, klass)
+d57 12
+a68 1
+    VALUE file, vmode;
+d71 1
+a71 2
+    int mode;
+    VALUE obj;
+d73 1
+a73 1
+    if (rb_scan_args(argc, argv, "11", &file, &vmode) == 1) {
+d82 4
+d91 1
+a91 1
+			O_RDWR|O_CREAT, mode, MY_FATAL_FUNC);
+d94 1
+a94 1
+			O_RDWR, 0, MY_FATAL_FUNC);
+d97 1
+a97 1
+			O_RDONLY, 0, MY_FATAL_FUNC);
+d101 7
+a107 1
+	rb_sys_fail(RSTRING(file)->ptr);
+d110 2
+a111 1
+    obj = Data_Make_Struct(klass,struct dbmdata,0,free_dbm,dbmp);
+d119 19
+d150 15
+d179 1
+a179 1
+    value = gdbm_fetch(dbm, key);
+d201 1
+a201 1
+    VALUE keystr, ifnone;
+d204 5
+a208 1
+    return fgdbm_fetch(obj, keystr, ifnone);
+d226 1
+a226 1
+	val = gdbm_fetch(dbm, key);
+d255 1
+a255 1
+    datum key, value;
+d267 1
+a267 2
+    value = gdbm_fetch(dbm, key);
+    if (value.dptr == 0) {
+d274 1
+a274 1
+	rb_raise(rb_eRuntimeError, "gdbm_delete failed");
+d297 1
+a297 1
+    val = gdbm_fetch(dbm, key);
+d318 1
+a318 1
+	val = gdbm_fetch(dbm, key);
+d323 1
+a323 1
+		rb_raise(rb_eRuntimeError, "gdbm_delete failed");
+d345 1
+a345 1
+	    rb_raise(rb_eRuntimeError, "gdbm_delete failed");
+d364 1
+a364 1
+	val = gdbm_fetch(dbm, key);
+d433 1
+a433 1
+	rb_raise(rb_eRuntimeError, "gdbm_store failed");
+d495 1
+a495 1
+	val = gdbm_fetch(dbm, key);
+d530 1
+a530 1
+	val = gdbm_fetch(dbm, key);
+d573 1
+a573 1
+	val = gdbm_fetch(dbm, key);
+d603 1
+a603 1
+    datum key, val;
+d614 1
+a614 1
+	val = gdbm_fetch(dbm, key);
+d636 1
+a636 1
+	val = gdbm_fetch(dbm, key);
+d659 82
+d754 1
+a754 1
+	val = gdbm_fetch(dbm, key);
+d773 1
+d776 1
+d778 2
+a779 1
+    rb_define_singleton_method(cGDBM, "new", fgdbm_s_open, -1);
+d807 5
+d822 20
+@
+
+
+1.11
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/04 07:04:41 $
+d521 1
+a521 1
+    datum key, val;
+d531 2
+a532 2
+    val = gdbm_fetch(dbm, key);
+    if (val.dptr) return Qtrue;
+@
+
+
+1.11.2.1
+log
+@* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): inifinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe leve 4.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/13 06:05:14 $
+d17 1
+a17 1
+static VALUE cGDBM, rb_eGDBMError;
+a34 1
+    if (dbmp == 0) closed_dbm();\
+d42 2
+a43 4
+    if (dbmp) {
+	if (dbmp->di_dbm) gdbm_close(dbmp->di_dbm);
+	free(dbmp);
+    }
+a45 2
+static VALUE fgdbm_close _((VALUE));
+
+d47 1
+a47 1
+fgdbm_s_new(argc, argv, klass)
+d52 1
+a52 12
+    VALUE obj = Data_Wrap_Struct(klass, 0, free_dbm, 0);
+    rb_obj_call_init(obj, argc, argv);
+    return obj;
+}
+
+static VALUE
+fgdbm_initialize(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE file, vmode, vflags;
+d55 2
+a56 1
+    int mode, flags = 0;
+d58 1
+a58 1
+    if (rb_scan_args(argc, argv, "12", &file, &vmode, &vflags) == 1) {
+a66 5
+
+    if (!NIL_P(vflags))
+        flags = NUM2INT(vflags);
+
+    file = rb_str_to_str(file);
+d72 1
+a72 1
+			GDBM_WRCREAT|flags, mode, MY_FATAL_FUNC);
+d75 1
+a75 1
+			GDBM_WRITER|flags, 0, MY_FATAL_FUNC);
+d78 1
+a78 1
+			GDBM_READER|flags, 0, MY_FATAL_FUNC);
+d82 1
+a82 7
+
+	if (gdbm_errno == GDBM_FILE_OPEN_ERROR ||
+	    gdbm_errno == GDBM_CANT_BE_READER ||
+	    gdbm_errno == GDBM_CANT_BE_WRITER)
+	    rb_sys_fail(RSTRING(file)->ptr);
+	else
+	    rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+d85 1
+a85 2
+    dbmp = ALLOC(struct dbmdata);
+    DATA_PTR(obj) = dbmp;
+a92 19
+fgdbm_s_open(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE obj = Data_Wrap_Struct(klass, 0, free_dbm, 0);
+
+    if (NIL_P(fgdbm_initialize(argc, argv, obj))) {
+	return Qnil;
+    }
+
+    if (rb_block_given_p()) {
+        return rb_ensure(rb_yield, obj, fgdbm_close, obj);
+    }
+
+    return obj;
+}
+
+static VALUE
+a105 84
+rb_gdbm_fetch(dbm, key)
+    GDBM_FILE dbm;
+    datum key;
+{
+    datum val;
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+
+    val = gdbm_fetch(dbm, key);
+    if (val.dptr == 0)
+        return Qnil;
+
+    str->ptr = 0;
+    str->len = val.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(val.dptr,char,val.dsize+1);
+    str->ptr[str->len] = '\0';
+
+    OBJ_TAINT(str);
+    return (VALUE)str;
+}
+
+static VALUE
+rb_gdbm_fetch2(dbm, keystr)
+    GDBM_FILE dbm;
+    VALUE keystr;
+{
+    datum key;
+
+    keystr = rb_str_to_str(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    return rb_gdbm_fetch(dbm, key);
+}
+
+static VALUE
+rb_gdbm_firstkey(dbm)
+    GDBM_FILE dbm;
+{
+    datum key;
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+
+    key = gdbm_firstkey(dbm);
+    if (key.dptr == 0)
+        return Qnil;
+
+    str->ptr = 0;
+    str->len = key.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(key.dptr,char,key.dsize+1);
+    str->ptr[str->len] = '\0';
+
+    OBJ_TAINT(str);
+    return (VALUE)str;
+}
+
+static VALUE
+rb_gdbm_nextkey(dbm, keystr)
+    GDBM_FILE dbm;
+    VALUE keystr;
+{
+    datum key, key2;
+    NEWOBJ(str, struct RString);
+    OBJSETUP(str, rb_cString, T_STRING);
+
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+    key2 = gdbm_nextkey(dbm, key);
+    if (key2.dptr == 0)
+        return Qnil;
+
+    str->ptr = 0;
+    str->len = key2.dsize;
+    str->orig = 0;
+    str->ptr = REALLOC_N(key2.dptr,char,key2.dsize+1);
+    str->ptr[str->len] = '\0';
+
+    OBJ_TAINT(str);
+    return (VALUE)str;
+}
+
+static VALUE
+d109 1
+a109 1
+    datum key;
+a111 1
+    VALUE valstr;
+d113 1
+a113 1
+    keystr = rb_str_to_str(keystr);
+d119 2
+a120 2
+    valstr = rb_gdbm_fetch(dbm, key);
+    if (NIL_P(valstr)) {
+d125 1
+a125 1
+    return valstr;
+d141 1
+a141 1
+    VALUE keystr, valstr, ifnone;
+d144 1
+a144 5
+    valstr = fgdbm_fetch(obj, keystr, ifnone);
+    if (argc == 1 && !rb_block_given_p() && NIL_P(valstr))
+	rb_raise(rb_eIndexError, "key not found");
+
+    return valstr;
+d151 1
+a153 1
+    VALUE keystr, valstr2;
+d155 4
+a158 1
+    valstr = rb_str_to_str(valstr);
+d161 5
+a165 10
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr2 = rb_gdbm_fetch2(dbm, keystr);
+        if (!NIL_P(valstr2) &&
+            RSTRING(valstr)->len == RSTRING(valstr2)->len &&
+            memcmp(RSTRING(valstr)->ptr, RSTRING(valstr2)->ptr,
+                   RSTRING(valstr)->len) == 0) {
+	    return keystr;
+        }
+a187 30
+rb_gdbm_delete(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    keystr = rb_str_to_str(keystr);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    if (!gdbm_exists(dbm, key)) {
+	return Qnil;
+    }
+
+    if (gdbm_delete(dbm, key)) {
+	dbmp->di_size = -1;
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    else if (dbmp->di_size >= 0) {
+	dbmp->di_size--;
+    }
+    return obj;
+}
+
+static VALUE
+d191 1
+a191 1
+    datum key;
+d196 1
+a196 1
+    keystr = rb_str_to_str(keystr);
+d203 2
+a204 1
+    if (!gdbm_exists(dbm, key)) {
+d211 1
+a211 1
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+d223 1
+d232 4
+a235 4
+    keystr = rb_gdbm_firstkey(dbm);
+    if (NIL_P(keystr)) return Qnil;
+    valstr = rb_gdbm_fetch2(dbm, keystr);
+    rb_gdbm_delete(obj, keystr);
+d237 2
+d246 1
+a249 2
+    VALUE ret, ary = rb_ary_new();
+    int i, status = 0, n;
+d254 9
+a262 11
+    n = dbmp->di_size;
+    dbmp->di_size = -1;
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr = rb_gdbm_fetch2(dbm, keystr);
+        ret = rb_protect(rb_yield, rb_assoc_new(rb_str_dup(keystr), valstr), &status);
+        if (status != 0) goto delete;
+	if (RTEST(ret)) rb_ary_push(ary, keystr);
+	else dbmp->di_size++;
+a263 7
+
+ delete:
+    for (i = 0; i < RARRAY(ary)->len; i++)
+        rb_gdbm_delete(obj, RARRAY(ary)->ptr[i]);
+    if (status) rb_jump_tag(status);
+    if (n > 0) dbmp->di_size = n - RARRAY(ary)->len;
+
+d279 5
+a283 11
+
+    while (key = gdbm_firstkey(dbm), key.dptr) {
+        for (; key.dptr; key = nextkey) {
+            nextkey = gdbm_nextkey(dbm, key);
+            if (gdbm_delete(dbm, key)) {
+                free(key.dptr);
+                if (nextkey.dptr) free(nextkey.dptr);
+                rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+            }
+            free(key.dptr);
+        }
+a284 2
+    dbmp->di_size = 0;
+
+d292 1
+d300 4
+a303 4
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+	valstr = rb_gdbm_fetch2(dbm, keystr);
+
+d356 2
+a357 1
+    keystr = rb_str_to_str(keystr);
+d361 1
+a361 1
+    valstr = rb_str_to_str(valstr);
+d370 1
+a370 1
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+d380 1
+a380 1
+    datum key, nextkey;
+d389 1
+a389 3
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+        nextkey = gdbm_nextkey(dbm, key);
+        free(key.dptr);
+d404 1
+d410 2
+a411 4
+	key = gdbm_firstkey(dbm);
+        if (key.dptr) {
+            free(key.dptr);
+            return Qfalse;
+a412 1
+        return Qtrue;
+d414 4
+a417 2
+
+    if (dbmp->di_size == 0) return Qtrue;
+d425 1
+a427 1
+    VALUE keystr;
+d431 3
+a433 5
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(rb_gdbm_fetch2(dbm, keystr));
+d442 1
+a444 1
+    VALUE keystr;
+d448 2
+a449 5
+
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(rb_str_dup(keystr));
+d458 1
+d461 1
+a461 1
+    VALUE keystr;
+d466 5
+a470 5
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_yield(rb_assoc_new(rb_str_dup(keystr), 
+                              rb_gdbm_fetch2(dbm, keystr)));
+d480 1
+d483 1
+a483 1
+    VALUE keystr, ary;
+d489 2
+a490 4
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_ary_push(ary, keystr);
+d500 1
+a500 1
+    datum key, nextkey;
+d503 1
+a503 1
+    VALUE valstr, ary;
+d509 3
+a511 5
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+        nextkey = gdbm_nextkey(dbm, key);
+	valstr = rb_gdbm_fetch(dbm, key);
+        free(key.dptr);
+	rb_ary_push(ary, valstr);
+d521 1
+a521 1
+    datum key;
+d525 1
+a525 1
+    keystr = rb_str_to_str(keystr);
+d531 2
+a532 2
+    if (gdbm_exists(dbm, key))
+        return Qtrue;
+d540 1
+a542 1
+    VALUE keystr, valstr2;
+d544 4
+a547 1
+    valstr = rb_str_to_str(valstr);
+d550 4
+a553 9
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+	valstr2 = rb_gdbm_fetch2(dbm, keystr);
+
+        if (!NIL_P(valstr2) &&
+            RSTRING(valstr)->len == RSTRING(valstr2)->len &&
+            memcmp(RSTRING(valstr)->ptr, RSTRING(valstr2)->ptr,
+                   RSTRING(valstr)->len) == 0) {
+a554 1
+        }
+d563 1
+d566 1
+a566 1
+    VALUE keystr, ary;
+d572 4
+a575 5
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_ary_push(ary, rb_assoc_new(rb_str_dup(keystr),
+                                      rb_gdbm_fetch2(dbm, keystr)));
+a595 79
+fgdbm_sync(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    gdbm_sync(dbm);
+    return obj;
+}
+
+static VALUE
+fgdbm_set_cachesize(obj, val)
+    VALUE obj, val;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = FIX2INT(val);
+    if (gdbm_setopt(dbm, GDBM_CACHESIZE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+}
+
+static VALUE
+fgdbm_set_fastmode(obj, val)
+    VALUE obj, val;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = 0;
+    if (RTEST(val))
+        optval = 1;
+
+    if (gdbm_setopt(dbm, GDBM_FASTMODE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+}
+
+static VALUE
+fgdbm_set_syncmode(obj, val)
+    VALUE obj, val;
+{
+#if !defined(GDBM_SYNCMODE)
+    fgdbm_set_fastmode(obj, RTEST(val) ? Qfalse : Qtrue);
+    return val;
+#else
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int optval;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    optval = 0;
+    if (RTEST(val))
+        optval = 1;
+
+    if (gdbm_setopt(dbm, GDBM_FASTMODE, &optval, sizeof(optval)) == -1) {
+	rb_raise(rb_eGDBMError, "%s", gdbm_strerror(gdbm_errno));
+    }
+    return val;
+#endif
+}
+
+static VALUE
+d599 1
+d602 1
+a602 1
+    VALUE keystr, hash;
+d608 4
+a611 4
+    for (keystr = rb_gdbm_firstkey(dbm); RTEST(keystr);
+         keystr = rb_gdbm_nextkey(dbm, keystr)) {
+
+        rb_hash_aset(hash, keystr, rb_gdbm_fetch2(dbm, keystr));
+a627 1
+    rb_eGDBMError = rb_define_class("GDBMError", rb_eStandardError);
+a629 1
+    rb_define_singleton_method(cGDBM, "new", fgdbm_s_new, -1);
+d631 1
+a631 2
+
+    rb_define_method(cGDBM, "initialize", fgdbm_initialize, -1);
+d649 1
+a649 1
+    rb_define_method(cGDBM, "shift", fgdbm_shift, 0);
+a658 5
+    rb_define_method(cGDBM,"sync", fgdbm_sync, 0);
+    /* rb_define_method(cGDBM,"setopt", fgdbm_setopt, 2); */
+    rb_define_method(cGDBM,"cachesize=", fgdbm_set_cachesize, 1);
+    rb_define_method(cGDBM,"fastmode=", fgdbm_set_fastmode, 1);
+    rb_define_method(cGDBM,"syncmode=", fgdbm_set_syncmode, 1);
+a668 20
+
+    /* flags for gdbm_opn() */
+    /*
+    rb_define_const(cGDBM, "READER",  INT2FIX(GDBM_READER));
+    rb_define_const(cGDBM, "WRITER",  INT2FIX(GDBM_WRITER));
+    rb_define_const(cGDBM, "WRCREAT", INT2FIX(GDBM_WRCREAT));
+    rb_define_const(cGDBM, "NEWDB",   INT2FIX(GDBM_NEWDB));
+    */
+    rb_define_const(cGDBM, "FAST", INT2FIX(GDBM_FAST));
+    /* this flag is obsolete in gdbm 1.8.
+       On gdbm 1.8, fast mode is default behavior. */
+
+    /* gdbm version 1.8 specific */
+#if defined(GDBM_SYNC)
+    rb_define_const(cGDBM, "SYNC",    INT2FIX(GDBM_SYNC));
+#endif
+#if defined(GDBM_NOLOCK)
+    rb_define_const(cGDBM, "NOLOCK",  INT2FIX(GDBM_NOLOCK));
+#endif
+    rb_define_const(cGDBM, "VERSION",  rb_str_new2(gdbm_version));
+@
+
+
+1.11.2.2
+log
+@checkin leftovers
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/01 08:45:15 $
+a188 12
+rb_gdbm_fetch3(obj, keystr)
+    VALUE obj, keystr;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    return rb_gdbm_fetch2(dbm, keystr);
+}
+
+static VALUE
+d263 1
+a263 1
+    return rb_gdbm_fetch3(obj, keystr);
+d318 1
+a318 1
+	rb_ary_push(new, rb_gdbm_fetch3(obj, argv[i]));
+d582 1
+a582 1
+    datum key, nextkey;
+@
+
+
+1.10
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/16 07:44:15 $
+d75 1
+a75 1
+			O_RDWR, mode, MY_FATAL_FUNC);
+d78 1
+a78 1
+			O_RDONLY, mode, MY_FATAL_FUNC);
+@
+
+
+1.9
+log
+@2000-06-16
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:14 $
+d106 2
+a107 2
+fgdbm_fetch(obj, keystr)
+    VALUE obj, keystr;
+d121 3
+a123 1
+	return Qnil;
+d129 42
+d595 29
+d633 2
+a634 1
+    rb_define_method(cGDBM, "[]", fgdbm_fetch, 1);
+d636 2
+d652 2
+d662 1
+d668 1
+@
+
+
+1.8
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:44:24 $
+d98 1
+a98 2
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+    if (dbmp->di_dbm == 0) closed_dbm();
+d321 1
+a321 1
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+d341 1
+a341 1
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+d362 1
+a362 1
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+@
+
+
+1.7
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:53 $
+d162 1
+a162 1
+	if (rb_iterator_p()) rb_yield(keystr);
+@
+
+
+1.6
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/06 04:15:37 $
+d263 1
+a263 1
+    return obj;
+@
+
+
+1.5
+log
+@2000-03-06
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:55 $
+a15 3
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+@
+
+
+1.4
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:54 $
+a90 1
+    rb_obj_call_init(obj, argc, argv);
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:37:47 $
+d172 1
+a172 1
+	rb_raise(rb_eRuntimeError, "dbm_delete failed");
+d221 1
+a221 1
+		rb_raise(rb_eRuntimeError, "dbm_delete failed");
+d243 1
+a243 1
+	    rb_raise(rb_eRuntimeError, "dbm_delete failed");
+a315 5
+    if (valstr == Qnil) {
+	fgdbm_delete(obj, keystr);
+	return Qnil;
+    }
+
+a321 2
+    if (NIL_P(valstr)) return fgdbm_delete(obj, keystr);
+
+d331 1
+a331 1
+	rb_raise(rb_eRuntimeError, "dbm_store failed");
+@
+
+
+1.3.2.1
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:54 $
+d267 1
+a267 1
+    return hash;
+@
+
+
+1.3.2.2
+log
+@2000-06-20
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:48:41 $
+d102 2
+a103 1
+    GetDBM(obj, dbmp);
+d333 1
+a333 1
+    GetDBM(obj, dbmp);
+d353 1
+a353 1
+    GetDBM(obj, dbmp);
+d374 1
+a374 1
+    GetDBM(obj, dbmp);
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/07 08:23:54 $
+a336 3
+#ifdef HAVE_DBM_CLAERERR
+	gdbm_clearerr(dbm);
+#endif
+@
+
+
+1.1
+log
+@file gdbm.c was initially added on branch ruby_1_3.
+@
+text
+@d1 604
+@
+
+
+1.1.2.1
+log
+@gdbm module
+@
+text
+@a0 604
+/************************************************
+
+  gdbm.c -
+
+  $Author: igarashi $
+  $Date: Fri Apr 30 03:29:39 1999 $
+  modified at: Mon Jan 24 15:59:52 JST 1994
+
+************************************************/
+
+#include "ruby.h"
+
+#include <gdbm.h>
+#include <fcntl.h>
+#include <errno.h>
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+
+VALUE cGDBM;
+
+#define MY_BLOCK_SIZE (2048)
+#define MY_FATAL_FUNC (0)
+
+struct dbmdata {
+    int  di_size;
+    GDBM_FILE di_dbm;
+};
+
+static void
+closed_dbm()
+{
+    rb_raise(rb_eRuntimeError, "closed GDBM file");
+}
+
+#define GetDBM(obj, dbmp) {\
+    Data_Get_Struct(obj, struct dbmdata, dbmp);\
+    if (dbmp->di_dbm == 0) closed_dbm();\
+}
+
+static void
+free_dbm(dbmp)
+    struct dbmdata *dbmp;
+{
+    if (dbmp->di_dbm) gdbm_close(dbmp->di_dbm);
+    free(dbmp);
+}
+
+static VALUE
+fgdbm_s_open(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE file, vmode;
+    GDBM_FILE dbm;
+    struct dbmdata *dbmp;
+    int mode;
+    VALUE obj;
+
+    if (rb_scan_args(argc, argv, "11", &file, &vmode) == 1) {
+	mode = 0666;		/* default value */
+    }
+    else if (NIL_P(vmode)) {
+	mode = -1;		/* return nil if DB not exist */
+    }
+    else {
+	mode = NUM2INT(vmode);
+    }
+    Check_SafeStr(file);
+
+    dbm = 0;
+    if (mode >= 0)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			O_RDWR|O_CREAT, mode, MY_FATAL_FUNC);
+    if (!dbm)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			O_RDWR, mode, MY_FATAL_FUNC);
+    if (!dbm)
+	dbm = gdbm_open(RSTRING(file)->ptr, MY_BLOCK_SIZE, 
+			O_RDONLY, mode, MY_FATAL_FUNC);
+
+    if (!dbm) {
+	if (mode == -1) return Qnil;
+	rb_sys_fail(RSTRING(file)->ptr);
+    }
+
+    obj = Data_Make_Struct(klass,struct dbmdata,0,free_dbm,dbmp);
+    dbmp->di_dbm = dbm;
+    dbmp->di_size = -1;
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}
+
+static VALUE
+fgdbm_close(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+    if (dbmp->di_dbm == 0) closed_dbm();
+    gdbm_close(dbmp->di_dbm);
+    dbmp->di_dbm = 0;
+
+    return Qnil;
+}
+
+static VALUE
+fgdbm_fetch(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key, value;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    Check_Type(keystr, T_STRING);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    value = gdbm_fetch(dbm, key);
+    if (value.dptr == 0) {
+	return Qnil;
+    }
+    return rb_tainted_str_new(value.dptr, value.dsize);
+}
+
+static VALUE
+fgdbm_indexes(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE new;
+    int i;
+
+    new = rb_ary_new2(argc);
+    for (i=0; i<argc; i++) {
+	rb_ary_push(new, fgdbm_fetch(obj, argv[i]));
+    }
+
+    return new;
+}
+
+static VALUE
+fgdbm_delete(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key, value;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    Check_Type(keystr, T_STRING);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    value = gdbm_fetch(dbm, key);
+    if (value.dptr == 0) {
+	if (rb_iterator_p()) rb_yield(keystr);
+	return Qnil;
+    }
+
+    if (gdbm_delete(dbm, key)) {
+	dbmp->di_size = -1;
+	rb_raise(rb_eRuntimeError, "dbm_delete failed");
+    }
+    else if (dbmp->di_size >= 0) {
+	dbmp->di_size--;
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_shift(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    key = gdbm_firstkey(dbm); 
+    if (!key.dptr) return Qnil;
+    val = gdbm_fetch(dbm, key);
+    gdbm_delete(dbm, key);
+
+    keystr = rb_tainted_str_new(key.dptr, key.dsize);
+    valstr = rb_tainted_str_new(val.dptr, val.dsize);
+    return rb_assoc_new(keystr, valstr);
+}
+
+static VALUE
+fgdbm_delete_if(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+	if (RTEST(rb_yield(rb_assoc_new(keystr, valstr)))) {
+	    if (gdbm_delete(dbm, key)) {
+		rb_raise(rb_eRuntimeError, "dbm_delete failed");
+	    }
+	}
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_clear(obj)
+    VALUE obj;
+{
+    datum key, nextkey;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    dbmp->di_size = -1;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = nextkey) {
+	nextkey = gdbm_nextkey(dbm, key);
+	if (gdbm_delete(dbm, key)) {
+	    rb_raise(rb_eRuntimeError, "dbm_delete failed");
+	}
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_invert(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE keystr, valstr;
+    VALUE hash = rb_hash_new();
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+	rb_hash_aset(hash, valstr, keystr);
+    }
+    return obj;
+}
+
+static VALUE
+each_pair(obj)
+    VALUE obj;
+{
+    return rb_funcall(obj, rb_intern("each_pair"), 0, 0);
+}
+
+static VALUE fgdbm_store _((VALUE,VALUE,VALUE));
+
+static VALUE
+update_i(pair, dbm)
+    VALUE pair, dbm;
+{
+    Check_Type(pair, T_ARRAY);
+    if (RARRAY(pair)->len < 2) {
+	rb_raise(rb_eArgError, "pair must be [key, value]");
+    }
+    fgdbm_store(dbm, RARRAY(pair)->ptr[0], RARRAY(pair)->ptr[1]);
+    return Qnil;
+}
+
+static VALUE
+fgdbm_update(obj, other)
+    VALUE obj, other;
+{
+    rb_iterate(each_pair, other, update_i, obj);
+    return obj;
+}
+
+static VALUE
+fgdbm_replace(obj, other)
+    VALUE obj, other;
+{
+    fgdbm_clear(obj);
+    rb_iterate(each_pair, other, update_i, obj);
+    return obj;
+}
+
+static VALUE
+fgdbm_store(obj, keystr, valstr)
+    VALUE obj, keystr, valstr;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    if (valstr == Qnil) {
+	fgdbm_delete(obj, keystr);
+	return Qnil;
+    }
+
+    rb_secure(4);
+    keystr = rb_obj_as_string(keystr);
+
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    if (NIL_P(valstr)) return fgdbm_delete(obj, keystr);
+
+    valstr = rb_obj_as_string(valstr);
+    val.dptr = RSTRING(valstr)->ptr;
+    val.dsize = RSTRING(valstr)->len;
+
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+    dbmp->di_size = -1;
+    dbm = dbmp->di_dbm;
+    if (gdbm_store(dbm, key, val, GDBM_REPLACE)) {
+#ifdef HAVE_DBM_CLAERERR
+	gdbm_clearerr(dbm);
+#endif
+	if (errno == EPERM) rb_sys_fail(0);
+	rb_raise(rb_eRuntimeError, "dbm_store failed");
+    }
+
+    return valstr;
+}
+
+static VALUE
+fgdbm_length(obj)
+    VALUE obj;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int i = 0;
+
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+    if (dbmp->di_size > 0) return INT2FIX(dbmp->di_size);
+    dbm = dbmp->di_dbm;
+
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	i++;
+    }
+    dbmp->di_size = i;
+
+    return INT2FIX(i);
+}
+
+static VALUE
+fgdbm_empty_p(obj)
+    VALUE obj;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    int i = 0;
+
+    Data_Get_Struct(obj, struct dbmdata, dbmp);
+    if (dbmp->di_size < 0) {
+	dbm = dbmp->di_dbm;
+
+	for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	    i++;
+	}
+    }
+    else {
+	i = dbmp->di_size;
+    }
+    if (i == 0) return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_each_value(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	rb_yield(rb_tainted_str_new(val.dptr, val.dsize));
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_each_key(obj)
+    VALUE obj;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	rb_yield(rb_tainted_str_new(key.dptr, key.dsize));
+    }
+    return obj;
+}
+
+static VALUE
+fgdbm_each_pair(obj)
+    VALUE obj;
+{
+    datum key, val;
+    GDBM_FILE dbm;
+    struct dbmdata *dbmp;
+    VALUE keystr, valstr;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	keystr = rb_tainted_str_new(key.dptr, key.dsize);
+	valstr = rb_tainted_str_new(val.dptr, val.dsize);
+	rb_yield(rb_assoc_new(keystr, valstr));
+    }
+
+    return obj;
+}
+
+static VALUE
+fgdbm_keys(obj)
+    VALUE obj;
+{
+    datum key;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	rb_ary_push(ary, rb_tainted_str_new(key.dptr, key.dsize));
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_values(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	rb_ary_push(ary, rb_tainted_str_new(val.dptr, val.dsize));
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_has_key(obj, keystr)
+    VALUE obj, keystr;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    Check_Type(keystr, T_STRING);
+    key.dptr = RSTRING(keystr)->ptr;
+    key.dsize = RSTRING(keystr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    val = gdbm_fetch(dbm, key);
+    if (val.dptr) return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_has_value(obj, valstr)
+    VALUE obj, valstr;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    Check_Type(valstr, T_STRING);
+    val.dptr = RSTRING(valstr)->ptr;
+    val.dsize = RSTRING(valstr)->len;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	if (val.dsize == RSTRING(valstr)->len &&
+	    memcmp(val.dptr, RSTRING(valstr)->ptr, val.dsize) == 0)
+	    return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+fgdbm_to_a(obj)
+    VALUE obj;
+{
+    datum key, val;
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+    VALUE ary;
+
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+
+    ary = rb_ary_new();
+    for (key = gdbm_firstkey(dbm); key.dptr; key = gdbm_nextkey(dbm, key)) {
+	val = gdbm_fetch(dbm, key);
+	rb_ary_push(ary, rb_assoc_new(rb_tainted_str_new(key.dptr, key.dsize),
+				rb_tainted_str_new(val.dptr, val.dsize)));
+    }
+
+    return ary;
+}
+
+static VALUE
+fgdbm_reorganize(obj)
+    VALUE obj;
+{
+    struct dbmdata *dbmp;
+    GDBM_FILE dbm;
+
+    rb_secure(4);
+    GetDBM(obj, dbmp);
+    dbm = dbmp->di_dbm;
+    gdbm_reorganize(dbm);
+    return obj;
+}
+
+void
+Init_gdbm()
+{
+    cGDBM = rb_define_class("GDBM", rb_cObject);
+    rb_include_module(cGDBM, rb_mEnumerable);
+
+    rb_define_singleton_method(cGDBM, "open", fgdbm_s_open, -1);
+    rb_define_singleton_method(cGDBM, "new", fgdbm_s_open, -1);
+    rb_define_method(cGDBM, "close", fgdbm_close, 0);
+    rb_define_method(cGDBM, "[]", fgdbm_fetch, 1);
+    rb_define_method(cGDBM, "[]=", fgdbm_store, 2);
+    rb_define_method(cGDBM, "indexes",  fgdbm_indexes, -1);
+    rb_define_method(cGDBM, "indices",  fgdbm_indexes, -1);
+    rb_define_method(cGDBM, "length", fgdbm_length, 0);
+    rb_define_alias(cGDBM,  "size", "length");
+    rb_define_method(cGDBM, "empty?", fgdbm_empty_p, 0);
+    rb_define_method(cGDBM, "each", fgdbm_each_pair, 0);
+    rb_define_method(cGDBM, "each_value", fgdbm_each_value, 0);
+    rb_define_method(cGDBM, "each_key", fgdbm_each_key, 0);
+    rb_define_method(cGDBM, "each_pair", fgdbm_each_pair, 0);
+    rb_define_method(cGDBM, "keys", fgdbm_keys, 0);
+    rb_define_method(cGDBM, "values", fgdbm_values, 0);
+    rb_define_method(cGDBM, "shift", fgdbm_shift, 1);
+    rb_define_method(cGDBM, "delete", fgdbm_delete, 1);
+    rb_define_method(cGDBM, "delete_if", fgdbm_delete_if, 0);
+    rb_define_method(cGDBM, "clear", fgdbm_clear, 0);
+    rb_define_method(cGDBM,"invert", fgdbm_invert, 0);
+    rb_define_method(cGDBM,"update", fgdbm_update, 1);
+    rb_define_method(cGDBM,"replace", fgdbm_replace, 1);
+    rb_define_method(cGDBM,"reorganize", fgdbm_reorganize, 0);
+
+    rb_define_method(cGDBM, "include?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "has_key?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "has_value?", fgdbm_has_value, 1);
+    rb_define_method(cGDBM, "key?", fgdbm_has_key, 1);
+    rb_define_method(cGDBM, "value?", fgdbm_has_value, 1);
+
+    rb_define_method(cGDBM, "to_a", fgdbm_to_a, 0);
+}
+@

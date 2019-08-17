@@ -1,0 +1,9583 @@
+head	1.58;
+access;
+symbols
+	v1_6_7:1.20.2.8
+	v1_6_6:1.20.2.8
+	v1_6_5:1.20.2.5
+	v1_6_4:1.20.2.2
+	v1_7_1:1.23
+	v1_6_4_preview4:1.20.2.2
+	v1_6_4_preview3:1.20.2.2
+	v1_6_4_preview2:1.20.2.1
+	v1_6_4_preview1:1.20.2.1
+	v1_6_3:1.20
+	ruby_m17n:1.20.0.4
+	ruby_1_6:1.20.0.2
+	v1_6_2:1.20
+	v1_6_1:1.17
+	v1_6_0:1.17
+	v1_4_6:1.3.2.6
+	v1_4_5:1.3.2.5
+	v1_4_4:1.3.2.4
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.11
+	v1_3_6_repack:1.1.1.3.2.11
+	v1_3_6:1.1.1.3.2.11
+	v1_3_5:1.1.1.3.2.11
+	v1_2_6repack:1.1.1.2.2.25
+	v1_3_4_990625:1.1.1.3.2.10
+	v1_3_4_990624:1.1.1.3.2.10
+	v1_2_6:1.1.1.2.2.25
+	v1_3_4_990611:1.1.1.3.2.10
+	v1_3_4_990531:1.1.1.3.2.10
+	v1_3_3_990518:1.1.1.3.2.10
+	v1_3_3_990513:1.1.1.3.2.9
+	v1_3_3_990507:1.1.1.3.2.9
+	v1_2_5:1.1.1.2.2.25
+	v1_2_4:1.1.1.2.2.25
+	v1_3_1_990225:1.1.1.3.2.8
+	v1_3_1_990224:1.1.1.3.2.8
+	v1_3_1_990215:1.1.1.3.2.7
+	v1_3_1_990212:1.1.1.3.2.7
+	v1_3_1_990210:1.1.1.3.2.7
+	v1_3_1_:1.1.1.3.2.7
+	v1_3_1_990209:1.1.1.3.2.6
+	v1_3_1_990205:1.1.1.3.2.5
+	v1_3_1_990203:1.1.1.3.2.4
+	v1_3_1_990201:1.1.1.3.2.3
+	v1_3_1"_990201:1.1.1.3.2.3
+	v1_3_1_990128:1.1.1.3.2.2
+	v1_3_1_990127:1.1.1.3.2.2
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.25
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.25
+	v1_2_1repack:1.1.1.2.2.25
+	v1_2_1:1.1.1.2.2.25
+	v1_2_stable:1.1.1.2.2.25
+	v1_1d1:1.1.1.2.2.25.2.3
+	v1_1d0:1.1.1.2.2.25.2.3
+	v1_1c9_1:1.1.1.2.2.25
+	v1_1c9:1.1.1.2.2.25
+	v1_1c8:1.1.1.2.2.25
+	v1_1c7:1.1.1.2.2.25
+	v1_1c6:1.1.1.2.2.25
+	v1_1d-start:1.1.1.2.2.25.2.1
+	v1_1c5:1.1.1.2.2.25
+	v1_1dev:1.1.1.2.2.25.0.2
+	v1_1c4:1.1.1.2.2.25
+	v1_1c3:1.1.1.2.2.25
+	v1_1c2:1.1.1.2.2.25
+	v1_1c1:1.1.1.2.2.25
+	v1_1c0:1.1.1.2.2.25
+	v1_1b9_31:1.1.1.2.2.25
+	v1_1b9_30:1.1.1.2.2.24
+	v1_1b9_28:1.1.1.2.2.22
+	v1_1b9_27:1.1.1.2.2.22
+	v1_1b9_26:1.1.1.2.2.22
+	r1_1b9_25:1.1.1.2.2.21
+	r1_1b9_24:1.1.1.2.2.21
+	v1_1b9_23:1.1.1.2.2.20
+	v1_1b9_22:1.1.1.2.2.19
+	v1_1b9_20:1.1.1.2.2.18
+	v1_1b9_18:1.1.1.2.2.16
+	v1_1b9_16:1.1.1.2.2.14
+	v1_1b9_15:1.1.1.2.2.14
+	v1_1b9_13:1.1.1.2.2.14
+	v1_1b9_12:1.1.1.2.2.14
+	v1_1b9_11:1.1.1.2.2.14
+	v1_1b9_08:1.1.1.2.2.12
+	v1_1b9_07:1.1.1.2.2.12
+	r1_1b9:1.1.1.2.2.5
+	v1_1b8:1.1.1.2.2.5
+	v1_1b7:1.1.1.2.2.3
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.58
+date	2002.08.28.08.05.23;	author michal;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.08.27.08.31.06;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.08.19.05.56.05;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.08.13.09.21.13;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.07.29.06.14.04;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.07.26.06.12.38;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.06.10.10.06.12;	author nobu;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.06.04.07.34.14;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.05.28.18.11.07;	author michal;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.05.02.07.50.36;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.05.01.09.41.49;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.04.25.13.55.58;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.04.24.05.08.04;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.04.24.04.54.14;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.03.15.08.51.31;	author usa;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.03.14.06.23.44;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.01.11.09.18.50;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.11.19.05.03.03;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.11.01.05.11.22;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.10.29.05.07.18;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.10.10.08.21.13;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.10.02.04.31.18;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.09.08.14.17.09;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.09.03.05.37.42;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.08.06.05.33.17;	author usa;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.08.06.03.05.13;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.07.31.06.24.42;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.07.24.09.07.33;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.03.13.05.45.09;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.11.27.09.23.21;	author matz;	state Exp;
+branches
+	1.20.2.1
+	1.20.4.1;
+next	1.19;
+
+1.19
+date	2000.11.14.07.10.21;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.11.13.05.39.33;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.08.31.05.29.37;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.07.03.20.51;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.07.06.07.21.10;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.04.04.17.13;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.03.05.46.34;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.12.07.48.20;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.01.09.41.23;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.04.18.04.56.28;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.03.07.08.37.40;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.17.07.11.12;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.01.03.12.08;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.08.05.00.19;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.37.07;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.06.09.03.54;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.16.09.40.32;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.07;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.13;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.01.27.08.08.37;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.01.07.34.55;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.03.09.47.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.05.10.27.31;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.02.09.06.08.21;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.02.10.08.44.25;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.02.24.04.31.21;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.03.24.08.52.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.05.18.00.34.41;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.07.15.07.59.48;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.08.11.07.24.03;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.03.10.02.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.09.10.56.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.13.09.40.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.02.20.08.56.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.03.05.06.37.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.11.07.32.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.03.11.09.19.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.03.17.10.06.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.03.25.09.36.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.03.31.04.52.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.04.07.08.34.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.04.08.08.12.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.04.09.09.30.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.05.01.08.56.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.05.08.09.38.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.05.13.05.58.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.05.13.07.26.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.05.19.07.39.51;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.05.25.04.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	98.06.02.10.05.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	98.06.18.07.46.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	98.07.03.07.06.32;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	98.07.09.08.40.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	98.07.15.06.12.51;	author matz;	state Exp;
+branches
+	1.1.1.2.2.25.2.1;
+next	;
+
+1.1.1.2.2.25.2.1
+date	98.09.08.07.08.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.2;
+
+1.1.1.2.2.25.2.2
+date	98.10.06.03.28.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.3;
+
+1.1.1.2.2.25.2.3
+date	98.12.16.07.30.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.12.06.09.03.32;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.01.17.08.24.05;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.02.01.03.11.21;	author matz;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2000.02.17.08.28.58;	author matz;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	2000.05.01.09.42.29;	author matz;	state Exp;
+branches;
+next	1.3.2.6;
+
+1.3.2.6
+date	2000.07.10.08.01.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.20.2.1
+date	2001.04.03.05.43.49;	author matz;	state Exp;
+branches;
+next	1.20.2.2;
+
+1.20.2.2
+date	2001.04.24.06.44.13;	author matz;	state Exp;
+branches;
+next	1.20.2.3;
+
+1.20.2.3
+date	2001.08.24.06.36.14;	author matz;	state Exp;
+branches;
+next	1.20.2.4;
+
+1.20.2.4
+date	2001.09.03.05.29.18;	author matz;	state Exp;
+branches;
+next	1.20.2.5;
+
+1.20.2.5
+date	2001.09.08.14.05.50;	author matz;	state Exp;
+branches;
+next	1.20.2.6;
+
+1.20.2.6
+date	2001.10.02.04.25.52;	author matz;	state Exp;
+branches;
+next	1.20.2.7;
+
+1.20.2.7
+date	2001.10.29.05.04.40;	author matz;	state Exp;
+branches;
+next	1.20.2.8;
+
+1.20.2.8
+date	2001.11.01.05.09.51;	author matz;	state Exp;
+branches;
+next	1.20.2.9;
+
+1.20.2.9
+date	2002.04.10.08.47.39;	author matz;	state Exp;
+branches;
+next	1.20.2.10;
+
+1.20.2.10
+date	2002.06.04.07.11.52;	author matz;	state Exp;
+branches;
+next	1.20.2.11;
+
+1.20.2.11
+date	2002.06.10.10.15.00;	author nobu;	state Exp;
+branches;
+next	1.20.2.12;
+
+1.20.2.12
+date	2002.10.26.15.57.23;	author knu;	state Exp;
+branches;
+next	;
+
+1.20.4.1
+date	2002.07.09.05.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.58
+log
+@Int vs Long cleanup #3 (ruby-core:352)
+@
+text
+@/**********************************************************************
+
+  numeric.c -
+
+  $Author: matz $
+  $Date: 2002/08/27 08:31:06 $
+  created at: Fri Aug 13 18:33:09 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+#include <math.h>
+#include <stdio.h>
+#if defined(__FreeBSD__) && __FreeBSD__ < 4
+#include <floatingpoint.h>
+#endif
+
+static ID id_coerce, id_to_i, id_div;
+
+VALUE rb_cNumeric;
+VALUE rb_cFloat;
+VALUE rb_cInteger;
+VALUE rb_cFixnum;
+
+VALUE rb_eZeroDivError;
+VALUE rb_eFloatDomainError;
+
+void
+rb_num_zerodiv()
+{
+    rb_raise(rb_eZeroDivError, "divided by 0");
+}
+
+static VALUE
+num_coerce(x, y)
+    VALUE x, y;
+{
+    if (CLASS_OF(x) == CLASS_OF(y))
+	return rb_assoc_new(y, x);
+    return rb_assoc_new(rb_Float(y), rb_Float(x));
+}
+
+static VALUE
+coerce_body(x)
+    VALUE *x;
+{
+    return rb_funcall(x[1], id_coerce, 1, x[0]);
+}
+
+static VALUE
+coerce_rescue(x)
+    VALUE *x;
+{
+    rb_raise(rb_eTypeError, "%s can't be coerced into %s",
+	     rb_special_const_p(x[1])?
+	     RSTRING(rb_inspect(x[1]))->ptr:
+	     rb_class2name(CLASS_OF(x[1])),
+	     rb_class2name(CLASS_OF(x[0])));
+    return Qnil;		/* dummy */
+}
+
+static void
+do_coerce(x, y)
+    VALUE *x, *y;
+{
+    VALUE ary;
+    VALUE a[2];
+
+    a[0] = *x; a[1] = *y;
+
+    ary = rb_rescue(coerce_body, (VALUE)a, coerce_rescue, (VALUE)a);
+    if (TYPE(ary) != T_ARRAY || RARRAY(ary)->len != 2) {
+	rb_raise(rb_eTypeError, "coerce must return [x, y]");
+    }
+
+    *x = RARRAY(ary)->ptr[0];
+    *y = RARRAY(ary)->ptr[1];
+}
+
+VALUE
+rb_num_coerce_bin(x, y)
+    VALUE x, y;
+{
+    do_coerce(&x, &y);
+    return rb_funcall(x, rb_frame_last_func(), 1, y);
+}
+
+static VALUE
+num_become(x, y)
+    VALUE x, y;
+{
+    /* Numerics are immutable values, which should not be copied */
+    rb_raise(rb_eTypeError, "can't copy %s", rb_class2name(CLASS_OF(x)));
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+num_uplus(num)
+    VALUE num;
+{
+    return num;
+}
+
+static VALUE
+num_uminus(num)
+    VALUE num;
+{
+    VALUE zero;
+
+    zero = INT2FIX(0);
+    do_coerce(&zero, &num);
+
+    return rb_funcall(zero, '-', 1, num);
+}
+
+static VALUE
+num_div(x, y)
+    VALUE x, y;
+{
+    return rb_funcall(x, id_div, 1, y);
+}
+
+static VALUE
+num_divmod(x, y)
+    VALUE x, y;
+{
+    VALUE div, mod;
+
+    div = rb_funcall(x, id_div, 1, y);
+    if (TYPE(div) == T_FLOAT) {
+	double d = floor(RFLOAT(div)->value);
+
+	if (RFLOAT(div)->value > d) {
+	    div = rb_float_new(d);
+	}
+    }
+    mod = rb_funcall(x, '%', 1, y);
+    return rb_assoc_new(div, mod);
+}
+
+static VALUE
+num_modulo(x, y)
+    VALUE x, y;
+{
+    return rb_funcall(x, '%', 1, y);
+}
+
+static VALUE
+num_remainder(x, y)
+    VALUE x, y;
+{
+    VALUE z = rb_funcall(x, '%', 1, y);
+
+    if ((!rb_equal(z, INT2FIX(0))) &&
+	((RTEST(rb_funcall(x, '<', 1, INT2FIX(0))) &&
+	  RTEST(rb_funcall(y, '>', 1, INT2FIX(0)))) ||
+	 (RTEST(rb_funcall(x, '>', 1, INT2FIX(0))) &&
+	  RTEST(rb_funcall(y, '<', 1, INT2FIX(0)))))) {
+	return rb_funcall(z, '-', 1, y);
+    }
+    return z;
+}
+
+static VALUE
+num_int_p(num)
+    VALUE num;
+{
+    return Qfalse;
+}
+
+static VALUE
+num_abs(num)
+    VALUE num;
+{
+    if (RTEST(rb_funcall(num, '<', 1, INT2FIX(0)))) {
+	return rb_funcall(num, rb_intern("-@@"), 0);
+    }
+    return num;
+}
+
+static VALUE
+num_zero_p(num)
+    VALUE num;
+{
+    if (rb_equal(num, INT2FIX(0))) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+num_nonzero_p(num)
+    VALUE num;
+{
+    if (RTEST(rb_funcall(num, rb_intern("zero?"), 0, 0))) {
+	return Qnil;
+    }
+    return num;
+}
+
+static VALUE
+num_to_int(num)
+    VALUE num;
+{
+    return rb_funcall(num, id_to_i, 0, 0);
+}
+
+VALUE
+rb_float_new(d)
+    double d;
+{
+    NEWOBJ(flt, struct RFloat);
+    OBJSETUP(flt, rb_cFloat, T_FLOAT);
+
+    flt->value = d;
+    return (VALUE)flt;
+}
+
+static VALUE
+flo_to_s(flt)
+    VALUE flt;
+{
+    char buf[24];
+    char *fmt = "%.16g";
+    double value = RFLOAT(flt)->value;
+    double avalue, d1, d2;
+
+    if (isinf(value))
+	return rb_str_new2(value < 0 ? "-Infinity" : "Infinity");
+    else if(isnan(value))
+	return rb_str_new2("NaN");
+    
+    avalue = fabs(value);
+    if (avalue == 0.0) {
+	fmt = "%.1f";
+    }
+    else if (avalue < 1.0e-3) {
+	d1 = avalue;
+	while (d1 < 1.0) d1 *= 10.0;
+	d1 = modf(d1, &d2);
+	if (d1 == 0) fmt = "%.1e";
+    }    
+    else if (avalue >= 1.0e15) {
+	d1 = avalue;
+	while (d1 > 10.0) d1 /= 10.0;
+	d1 = modf(d1, &d2);
+	if (d1 == 0) fmt = "%.1e";
+	else fmt = "%.16e";
+    }    
+    else if ((d1 = modf(value, &d2)) == 0) {
+	fmt = "%.1f";
+    }
+    sprintf(buf, fmt, value);
+
+    return rb_str_new2(buf);
+}
+
+static VALUE
+flo_coerce(x, y)
+    VALUE x, y;
+{
+    return rb_assoc_new(rb_Float(y), x);
+}
+
+static VALUE
+flo_uminus(flt)
+    VALUE flt;
+{
+    return rb_float_new(-RFLOAT(flt)->value);
+}
+
+static VALUE
+flo_plus(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	return rb_float_new(RFLOAT(x)->value + (double)FIX2LONG(y));
+      case T_BIGNUM:
+	return rb_float_new(RFLOAT(x)->value + rb_big2dbl(y));
+      case T_FLOAT:
+	return rb_float_new(RFLOAT(x)->value + RFLOAT(y)->value);
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+flo_minus(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	return rb_float_new(RFLOAT(x)->value - (double)FIX2LONG(y));
+      case T_BIGNUM:
+	return rb_float_new(RFLOAT(x)->value - rb_big2dbl(y));
+      case T_FLOAT:
+	return rb_float_new(RFLOAT(x)->value - RFLOAT(y)->value);
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+flo_mul(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	return rb_float_new(RFLOAT(x)->value * (double)FIX2LONG(y));
+      case T_BIGNUM:
+	return rb_float_new(RFLOAT(x)->value * rb_big2dbl(y));
+      case T_FLOAT:
+	return rb_float_new(RFLOAT(x)->value * RFLOAT(y)->value);
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+flo_div(x, y)
+    VALUE x, y;
+{
+    long f_y;
+    double d;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	f_y = FIX2LONG(y);
+	return rb_float_new(RFLOAT(x)->value / (double)f_y);
+      case T_BIGNUM:
+	d = rb_big2dbl(y);
+	return rb_float_new(RFLOAT(x)->value / d);
+      case T_FLOAT:
+	return rb_float_new(RFLOAT(x)->value / RFLOAT(y)->value);
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static void
+flodivmod(x, y, divp, modp)
+    double x, y;
+    double *divp, *modp;
+{
+    double div, mod;
+
+#ifdef HAVE_FMOD
+    mod = fmod(x, y);
+#else
+    {
+	double z;
+
+	modf(x/y, &z);
+	mod = x - z * y;
+    }
+#endif
+    div = (x - mod) / y;
+    if (y*mod < 0) {
+	mod += y;
+	div -= 1.0;
+    }
+    if (modp) *modp = mod;
+    if (divp) *divp = div;
+}
+
+static VALUE
+flo_mod(x, y)
+    VALUE x, y;
+{
+    double fy, mod;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	fy = (double)FIX2LONG(y);
+	break;
+      case T_BIGNUM:
+	fy = rb_big2dbl(y);
+	break;
+      case T_FLOAT:
+	fy = RFLOAT(y)->value;
+	break;
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    flodivmod(RFLOAT(x)->value, fy, 0, &mod);
+    return rb_float_new(mod);
+}
+
+static VALUE
+flo_divmod(x, y)
+    VALUE x, y;
+{
+    double fy, div, mod;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	fy = (double)FIX2LONG(y);
+	break;
+      case T_BIGNUM:
+	fy = rb_big2dbl(y);
+	break;
+      case T_FLOAT:
+	fy = RFLOAT(y)->value;
+	break;
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    flodivmod(RFLOAT(x)->value, fy, &div, &mod);
+    return rb_assoc_new(rb_float_new(div), rb_float_new(mod));
+}
+
+static VALUE
+flo_pow(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        return rb_float_new(pow(RFLOAT(x)->value, (double)FIX2LONG(y)));
+      case T_BIGNUM:
+	return rb_float_new(pow(RFLOAT(x)->value, rb_big2dbl(y)));
+      case T_FLOAT:
+        return rb_float_new(pow(RFLOAT(x)->value, RFLOAT(y)->value));
+      default:
+        return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+num_eql(x, y)
+    VALUE x, y;
+{
+    if (TYPE(x) != TYPE(y)) return Qfalse;
+
+    return rb_equal(x, y);
+}
+
+static VALUE
+num_equal(x, y)
+    VALUE x, y;
+{
+    return rb_equal(y, x);
+}
+
+static VALUE
+flo_eq(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	if (RFLOAT(x)->value == FIX2LONG(y)) return Qtrue;
+	return Qfalse;
+      case T_BIGNUM:
+	return (RFLOAT(x)->value == rb_big2dbl(y))?Qtrue:Qfalse;
+      case T_FLOAT:
+	return (RFLOAT(x)->value == RFLOAT(y)->value)?Qtrue:Qfalse;
+      default:
+	return num_equal(x, y);
+    }
+}
+
+static VALUE
+flo_hash(num)
+    VALUE num;
+{
+    double d;
+    char *c;
+    int i, hash;
+
+    d = RFLOAT(num)->value;
+    if (d == 0) d = fabs(d);
+    c = (char*)&d;
+    for (hash=0, i=0; i<sizeof(double);i++) {
+	hash += c[i] * 971;
+    }
+    if (hash < 0) hash = -hash;
+    return INT2FIX(hash);
+}
+
+VALUE
+rb_dbl_cmp(a, b)
+    double a, b;
+{
+    if (a == b) return INT2FIX(0);
+    if (a > b) return INT2FIX(1);
+    if (a < b) return INT2FIX(-1);
+    rb_raise(rb_eFloatDomainError, "comparing NaN");
+}
+
+static VALUE
+flo_cmp(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return rb_dbl_cmp(a, b);
+}
+
+static VALUE
+flo_gt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a > b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_ge(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a >= b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_lt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a < b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_le(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a <= b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_eql(x, y)
+    VALUE x, y;
+{
+    if (TYPE(y) == T_FLOAT && RFLOAT(x)->value == RFLOAT(y)->value) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+flo_to_f(num)
+    VALUE num;
+{
+    return num;
+}
+
+static VALUE
+flo_abs(flt)
+    VALUE flt;
+{
+    double val = fabs(RFLOAT(flt)->value);
+    return rb_float_new(val);
+}
+
+static VALUE
+flo_zero_p(num)
+    VALUE num;
+{
+    if (RFLOAT(num)->value == 0.0) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+flo_is_nan_p(num)
+     VALUE num;
+{     
+
+  double value = RFLOAT(num)->value;
+
+  return isnan(value) ? Qtrue : Qfalse;
+}
+
+static VALUE
+flo_is_infinite_p(num)
+     VALUE num;
+{     
+  double value = RFLOAT(num)->value;
+
+  if (isinf(value)) {
+    return INT2FIX( value < 0 ? -1 : 1 );
+  }
+
+  return Qnil;
+}
+
+static VALUE
+flo_is_finite_p(num)
+     VALUE num;
+{     
+  double value = RFLOAT(num)->value;
+
+  if (isinf(value) || isnan(value))
+    return Qfalse;
+  
+  return Qtrue;
+}
+
+
+static VALUE
+flo_floor(num)
+    VALUE num;
+{
+    double f = floor(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return LONG2FIX(val);
+}
+
+static VALUE
+flo_ceil(num)
+    VALUE num;
+{
+    double f = ceil(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return LONG2FIX(val);
+}
+
+static VALUE
+flo_round(num)
+    VALUE num;
+{
+    double f = RFLOAT(num)->value;
+    long val;
+
+    if (f > 0.0) f = floor(f+0.5);
+    if (f < 0.0) f = ceil(f-0.5);
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return LONG2FIX(val);
+}
+
+static VALUE
+flo_truncate(num)
+    VALUE num;
+{
+    double f = RFLOAT(num)->value;
+    long val;
+
+    if (f > 0.0) f = floor(f);
+    if (f < 0.0) f = ceil(f);
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return LONG2FIX(val);
+}
+
+static VALUE
+num_floor(num)
+    VALUE num;
+{
+    return flo_floor(rb_Float(num));
+}
+
+static VALUE
+num_ceil(num)
+    VALUE num;
+{
+    return flo_ceil(rb_Float(num));
+}
+
+static VALUE
+num_round(num)
+    VALUE num;
+{
+    return flo_round(rb_Float(num));
+}
+
+static VALUE
+num_truncate(num)
+    VALUE num;
+{
+    return flo_truncate(rb_Float(num));
+}
+
+static VALUE
+num_step(argc, argv, from)
+    int argc;
+    VALUE *argv;
+    VALUE from;
+{
+    VALUE to, step;
+
+    if (rb_scan_args(argc, argv, "11", &to, &step) == 1) {
+	step = INT2FIX(1);
+    }
+    else if (rb_equal(step, INT2FIX(0))) {
+	rb_raise(rb_eArgError, "step cannot be 0");
+    }
+
+    if (FIXNUM_P(from) && FIXNUM_P(to) && FIXNUM_P(step)) {
+	long i, end, diff;
+
+	i = FIX2LONG(from);
+	end = FIX2LONG(to);
+	diff = FIX2LONG(step);
+
+	if (diff > 0) {
+	    while (i <= end) {
+		rb_yield(LONG2FIX(i));
+		i += diff;
+	    }
+	}
+	else {
+	    while (i >= end) {
+		rb_yield(LONG2FIX(i));
+		i += diff;
+	    }
+	}
+    }
+    else if (TYPE(from) == T_FLOAT || TYPE(to) == T_FLOAT || TYPE(step) == T_FLOAT) {
+	const double epsilon = 2.2204460492503131E-16;
+	double beg = NUM2DBL(from);
+	double end = NUM2DBL(to);
+	double unit = NUM2DBL(step);
+	double n = (end - beg)/unit;
+	long i;
+
+	n = floor(n + n*epsilon) + 1;
+	for (i=0; i<n; i++) {
+	    rb_yield(rb_float_new(i*unit+beg));
+	}
+    }
+    else {
+	VALUE i = from;
+	ID cmp;
+
+	if (RTEST(rb_funcall(step, '>', 1, INT2FIX(0)))) {
+	    cmp = '>';
+	}
+	else {
+	    cmp = '<';
+	}
+	for (;;) {
+	    if (RTEST(rb_funcall(i, cmp, 1, to))) break;
+	    rb_yield(i);
+	    i = rb_funcall(i, '+', 1, step);
+	}
+    }
+    return from;
+}
+
+long
+rb_num2long(val)
+    VALUE val;
+{
+    if (NIL_P(val)) {
+	rb_raise(rb_eTypeError, "no implicit conversion from nil to integer");
+    }
+
+    if (FIXNUM_P(val)) return FIX2LONG(val);
+
+    switch (TYPE(val)) {
+      case T_FLOAT:
+	if (RFLOAT(val)->value <= (double)LONG_MAX
+	    && RFLOAT(val)->value >= (double)LONG_MIN) {
+	    return (long)(RFLOAT(val)->value);
+	}
+	else {
+	    char buf[24];
+	    char *s;
+
+	    sprintf(buf, "%-.10g", RFLOAT(val)->value);
+	    if (s = strchr(buf, ' ')) *s = '\0';
+	    rb_raise(rb_eRangeError, "float %s out of range of integer", buf);
+	}
+
+      case T_BIGNUM:
+	return rb_big2long(val);
+
+      default:
+	val = rb_to_int(val);
+	return NUM2LONG(val);
+    }
+}
+
+unsigned long
+rb_num2ulong(val)
+    VALUE val;
+{
+    if (TYPE(val) == T_BIGNUM) {
+	return rb_big2ulong(val);
+    }
+    return (unsigned long)rb_num2long(val);
+}
+
+#if SIZEOF_INT < SIZEOF_LONG
+int
+rb_num2int(val)
+    VALUE val;
+{
+    long num = rb_num2long(val);
+
+    if (num < INT_MIN || INT_MAX < num) {
+	rb_raise(rb_eRangeError, "integer %ld too big to convert to `int'", num);
+    }
+    return (int)num;
+}
+
+int
+rb_fix2int(val)
+    VALUE val;
+{
+    long num = FIXNUM_P(val)?FIX2LONG(val):rb_num2long(val);
+
+    if (num < INT_MIN || INT_MAX < num) {
+	rb_raise(rb_eRangeError, "integer %ld too big to convert to `int'", num);
+    }
+    return (int)num;
+}
+#else
+int
+rb_num2int(val)
+    VALUE val;
+{
+    return rb_num2long(val);
+}
+
+int
+rb_fix2int(val)
+    VALUE val;
+{
+    return FIX2INT(val);
+}
+#endif
+
+VALUE
+rb_num2fix(val)
+    VALUE val;
+{
+    long v;
+
+    if (FIXNUM_P(val)) return val;
+
+    v = rb_num2long(val);
+    if (!FIXABLE(v))
+	rb_raise(rb_eRangeError, "integer %ld out of range of fixnum", v);
+    return LONG2FIX(v);
+}
+
+#if HAVE_LONG_LONG
+
+LONG_LONG
+rb_num2ll(val)
+    VALUE val;
+{
+    if (NIL_P(val)) {
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+    }
+
+    if (FIXNUM_P(val)) return (LONG_LONG)FIX2LONG(val);
+
+    switch (TYPE(val)) {
+    case T_FLOAT:
+	if (RFLOAT(val)->value <= (double)LLONG_MAX
+	    && RFLOAT(val)->value >= (double)LLONG_MIN) {
+	    return (LONG_LONG)(RFLOAT(val)->value);
+	}
+	else {
+	    char buf[24];
+	    char *s;
+
+	    sprintf(buf, "%-.10g", RFLOAT(val)->value);
+	    if (s = strchr(buf, ' ')) *s = '\0';
+	    rb_raise(rb_eRangeError, "float %s out of range of long long", buf);
+	}
+
+    case T_BIGNUM:
+	return rb_big2ll(val);
+
+    case T_STRING:
+	rb_raise(rb_eTypeError, "no implicit conversion from string");
+	return Qnil;            /* not reached */
+
+    case T_TRUE:
+    case T_FALSE:
+	rb_raise(rb_eTypeError, "no implicit conversion from boolean");
+	return Qnil;		/* not reached */
+
+      default:
+	  val = rb_to_int(val);
+	  return NUM2LL(val);
+    }
+}
+
+unsigned LONG_LONG
+rb_num2ull(val)
+    VALUE val;
+{
+    if (TYPE(val) == T_BIGNUM) {
+	return rb_big2ull(val);
+    }
+    return (unsigned LONG_LONG)rb_num2ll(val);
+}
+
+#endif  /* HAVE_LONG_LONG */
+
+static VALUE
+int_to_i(num)
+    VALUE num;
+{
+    return num;
+}
+
+static VALUE
+int_int_p(num)
+    VALUE num;
+{
+    return Qtrue;
+}
+
+static VALUE
+int_succ(num)
+    VALUE num;
+{
+    if (FIXNUM_P(num)) {
+	long i = FIX2LONG(num) + 1;
+	return LONG2NUM(i);
+    }
+    return rb_funcall(num, '+', 1, INT2FIX(1));
+}
+
+static VALUE
+int_chr(num)
+    VALUE num;
+{
+    char c;
+    long i = NUM2LONG(num);
+
+    if (i < 0 || 0xff < i)
+	rb_raise(rb_eRangeError, "%ld out of char range", i);
+    c = i;
+    return rb_str_new(&c, 1);
+}
+
+static VALUE
+rb_fix_induced_from(klass, x)
+    VALUE klass, x;
+{
+    return rb_num2fix(x);
+}
+
+static VALUE
+rb_int_induced_from(klass, x)
+    VALUE klass, x;
+{
+    switch (TYPE(x)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+       return x;
+    case T_FLOAT:
+       return rb_funcall(x, id_to_i, 0);
+    default:
+       rb_raise(rb_eTypeError, "failed to convert %s into Integer",
+                rb_class2name(CLASS_OF(x)));
+    }
+}
+
+static VALUE
+rb_flo_induced_from(klass, x)
+    VALUE klass, x;
+{
+    switch (TYPE(x)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+       return rb_funcall(x, rb_intern("to_f"), 0);
+    case T_FLOAT:
+       return x;
+    default:
+       rb_raise(rb_eTypeError, "failed to convert %s into Float",
+                rb_class2name(CLASS_OF(x)));
+    }
+}
+
+static VALUE
+fix_uminus(num)
+    VALUE num;
+{
+    return LONG2NUM(-FIX2LONG(num));
+}
+
+VALUE
+rb_fix2str(x, base)
+    VALUE x;
+    int base;
+{
+    char fmt[4], buf[22], *b = buf;
+    long val = FIX2LONG(x);
+
+    fmt[0] = '%'; fmt[1] = 'l'; fmt[3] = '\0';
+    if (base == 10) fmt[2] = 'd';
+    else if (base == 16) fmt[2] = 'x';
+    else if (base == 8) fmt[2] = 'o';
+    else rb_raise(rb_eArgError, "illegal radix %d", base);
+    if (val < 0) {
+	val = -val;
+	*b++ = '-';
+    }
+
+    sprintf(b, fmt, val);
+    return rb_str_new2(buf);
+}
+
+static VALUE
+fix_to_s(argc, argv, x)
+    int argc;
+    VALUE *argv;
+    VALUE x;
+{
+    VALUE b;
+    int base;
+
+    rb_scan_args(argc, argv, "01", &b);
+    if (argc == 0) base = 10;
+    else base = NUM2INT(b);
+
+    if (base == 2) {
+	/* rb_fix2str() does not handle binary */
+	return rb_big2str(rb_int2big(FIX2INT(x)), 2);
+    }
+    return rb_fix2str(x, base);
+}
+
+static VALUE
+fix_plus(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a + b;
+	r = LONG2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_plus(rb_int2big(a), rb_int2big(b));
+	}
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) + RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_minus(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a - b;
+	r = LONG2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_minus(rb_int2big(a), rb_int2big(b));
+	}
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) - RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_mul(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	if (a == 0) return x;
+
+	b = FIX2LONG(y);
+	c = a * b;
+	r = LONG2FIX(c);
+
+	if (FIX2LONG(r) != c || c/a != b) {
+	    r = rb_big_mul(rb_int2big(a), rb_int2big(b));
+	}
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) * RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static void
+fixdivmod(x, y, divp, modp)
+    long x, y;
+    long *divp, *modp;
+{
+    long div, mod;
+
+    if (y == 0) rb_num_zerodiv();
+    if (y < 0) {
+	if (x < 0)
+	    div = -x / -y;
+	else
+	    div = - (x / -y);
+    }
+    else {
+	if (x < 0)
+	    div = - (-x / y);
+	else
+	    div = x / y;
+    }
+    mod = x - div*y;
+    if ((mod < 0 && y > 0) || (mod > 0 && y < 0)) {
+	mod += y;
+	div -= 1;
+    }
+    if (divp) *divp = div;
+    if (modp) *modp = mod;
+}
+
+static VALUE
+fix_div(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long div;
+
+	fixdivmod(FIX2LONG(x), FIX2LONG(y), &div, 0);
+	return LONG2NUM(div);
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_mod(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long mod;
+
+	fixdivmod(FIX2LONG(x), FIX2LONG(y), 0, &mod);
+	return LONG2NUM(mod);
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_divmod(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long div, mod;
+
+	fixdivmod(FIX2LONG(x), FIX2LONG(y), &div, &mod);
+
+	return rb_assoc_new(LONG2NUM(div), LONG2NUM(mod));
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_pow(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a, b;
+
+	b = FIX2LONG(y);
+	if (b == 0) return INT2FIX(1);
+	if (b == 1) return x;
+	a = FIX2LONG(x);
+	if (b > 0) {
+	    return rb_big_pow(rb_int2big(a), y);
+	}
+	return rb_float_new(pow((double)a, (double)b));
+    }
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_equal(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	return (FIX2LONG(x) == FIX2LONG(y))?Qtrue:Qfalse;
+    }
+    else {
+	return num_equal(x, y);
+    }
+}
+
+static VALUE
+fix_cmp(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+
+	if (a == b) return INT2FIX(0);
+	if (a > b) return INT2FIX(1);
+	return INT2FIX(-1);
+    }
+    else {
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+fix_gt(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+
+	if (a > b) return Qtrue;
+	return Qfalse;
+    }
+    else {
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+fix_ge(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+
+	if (a >= b) return Qtrue;
+	return Qfalse;
+    }
+    else {
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+fix_lt(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+
+	if (a < b) return Qtrue;
+	return Qfalse;
+    }
+    else {
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+fix_le(x, y)
+    VALUE x, y;
+{
+    if (FIXNUM_P(y)) {
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+
+	if (a <= b) return Qtrue;
+	return Qfalse;
+    }
+    else {
+	return rb_num_coerce_bin(x, y);
+    }
+}
+
+static VALUE
+fix_rev(num)
+    VALUE num;
+{
+    long val = FIX2LONG(num);
+
+    val = ~val;
+    return LONG2NUM(val);
+}
+
+static VALUE
+fix_and(x, y)
+    VALUE x, y;
+{
+    long val;
+
+    if (TYPE(y) == T_BIGNUM) {
+	return rb_big_and(y, x);
+    }
+    val = FIX2LONG(x) & NUM2LONG(y);
+    return LONG2NUM(val);
+}
+
+static VALUE
+fix_or(x, y)
+    VALUE x, y;
+{
+    long val;
+
+    if (TYPE(y) == T_BIGNUM) {
+	return rb_big_or(y, x);
+    }
+    val = FIX2LONG(x) | NUM2LONG(y);
+    return LONG2NUM(val);
+}
+
+static VALUE
+fix_xor(x, y)
+    VALUE x, y;
+{
+    long val;
+
+    if (TYPE(y) == T_BIGNUM) {
+	return rb_big_xor(y, x);
+    }
+    val = FIX2LONG(x) ^ NUM2LONG(y);
+    return LONG2NUM(val);
+}
+
+static VALUE fix_rshift _((VALUE, VALUE));
+
+static VALUE
+fix_lshift(x, y)
+    VALUE x, y;
+{
+    long val, width;
+
+    val = NUM2LONG(x);
+    width = NUM2LONG(y);
+    if (width < 0)
+	return fix_rshift(x, LONG2FIX(-width));
+    if (width > (sizeof(VALUE)*CHAR_BIT-1)
+	|| ((unsigned long)val)>>(sizeof(VALUE)*CHAR_BIT-1-width) > 0) {
+	return rb_big_lshift(rb_int2big(val), y);
+    }
+    val = val << width;
+    return LONG2NUM(val);
+}
+
+static VALUE
+fix_rshift(x, y)
+    VALUE x, y;
+{
+    long i, val;
+
+    i = NUM2LONG(y);
+    if (i < 0)
+	return fix_lshift(x, LONG2FIX(-i));
+    if (i == 0) return x;
+    val = FIX2LONG(x);
+    if (i >= sizeof(long)*CHAR_BIT-1) {
+	if (val < 0) return INT2FIX(-1);
+	return INT2FIX(0);
+    }
+    val = RSHIFT(val, i);
+    return LONG2FIX(val);
+}
+
+static VALUE
+fix_aref(fix, idx)
+    VALUE fix, idx;
+{
+    long val = FIX2LONG(fix);
+    long i;
+
+    if (TYPE(idx) == T_BIGNUM) {
+	idx = rb_big_norm(idx);
+	if (!FIXNUM_P(idx)) {
+	    if (!RBIGNUM(idx)->sign || val >= 0)
+		return INT2FIX(0);
+	    return INT2FIX(1);
+	}
+    }
+    i = NUM2LONG(idx);
+
+    if (i < 0) return INT2FIX(0);
+    if (sizeof(VALUE)*CHAR_BIT-1 < i) {
+	if (val < 0) return INT2FIX(1);
+	return INT2FIX(0);
+    }
+    if (val & (1L<<i))
+	return INT2FIX(1);
+    return INT2FIX(0);
+}
+
+static VALUE
+fix_to_f(num)
+    VALUE num;
+{
+    double val;
+
+    val = (double)FIX2LONG(num);
+
+    return rb_float_new(val);
+}
+
+static VALUE
+fix_abs(fix)
+    VALUE fix;
+{
+    long i = FIX2LONG(fix);
+
+    if (i < 0) i = -i;
+
+    return LONG2NUM(i);
+}
+
+static VALUE
+fix_id2name(fix)
+    VALUE fix;
+{
+    char *name = rb_id2name(FIX2UINT(fix));
+    if (name) return rb_str_new2(name);
+    return Qnil;
+}
+
+static VALUE
+fix_size(fix)
+    VALUE fix;
+{
+    return INT2FIX(sizeof(long));
+}
+
+static VALUE
+int_upto(from, to)
+    VALUE from, to;
+{
+    if (FIXNUM_P(from) && FIXNUM_P(to)) {
+	long i, end;
+
+	end = FIX2LONG(to);
+	for (i = FIX2LONG(from); i <= end; i++) {
+	    rb_yield(LONG2FIX(i));
+	}
+    }
+    else {
+	VALUE i = from;
+
+	for (;;) {
+	    if (RTEST(rb_funcall(i, '>', 1, to))) break;
+	    rb_yield(i);
+	    i = rb_funcall(i, '+', 1, INT2FIX(1));
+	}
+    }
+    return from;
+}
+
+static VALUE
+int_downto(from, to)
+    VALUE from, to;
+{
+    if (FIXNUM_P(from) && FIXNUM_P(to)) {
+	long i, end;
+
+	end = FIX2LONG(to);
+	for (i=FIX2LONG(from); i >= end; i--) {
+	    rb_yield(LONG2FIX(i));
+	}
+    }
+    else {
+	VALUE i = from;
+
+	for (;;) {
+	    if (RTEST(rb_funcall(i, '<', 1, to))) break;
+	    rb_yield(i);
+	    i = rb_funcall(i, '-', 1, INT2FIX(1));
+	}
+    }
+    return from;
+}
+
+static VALUE
+int_dotimes(num)
+    VALUE num;
+{
+    if (FIXNUM_P(num)) {
+	long i, end;
+
+	end = FIX2LONG(num);
+	for (i=0; i<end; i++) {
+	    rb_yield(LONG2FIX(i));
+	}
+    }
+    else {
+	VALUE i = INT2FIX(0);
+
+	for (;;) {
+	    if (!RTEST(rb_funcall(i, '<', 1, num))) break;
+	    rb_yield(i);
+	    i = rb_funcall(i, '+', 1, INT2FIX(1));
+	}
+    }
+    return num;
+}
+
+static VALUE
+fix_zero_p(num)
+    VALUE num;
+{
+    if (FIX2LONG(num) == 0) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+
+void
+Init_Numeric()
+{
+#if defined(__FreeBSD__) && __FreeBSD__ < 4
+    /* allow divide by zero -- Inf */
+    fpsetmask(fpgetmask() & ~(FP_X_DZ|FP_X_INV|FP_X_OFL));
+#endif
+    id_coerce = rb_intern("coerce");
+    id_to_i = rb_intern("to_i");
+    id_div = rb_intern("div");
+
+    rb_eZeroDivError = rb_define_class("ZeroDivisionError", rb_eStandardError);
+    rb_eFloatDomainError = rb_define_class("FloatDomainError", rb_eRangeError);
+    rb_cNumeric = rb_define_class("Numeric", rb_cObject);
+
+    rb_include_module(rb_cNumeric, rb_mComparable);
+    rb_define_method(rb_cNumeric, "coerce", num_coerce, 1);
+    rb_define_method(rb_cNumeric, "become", num_become, 1);
+
+    rb_define_method(rb_cNumeric, "+@@", num_uplus, 0);
+    rb_define_method(rb_cNumeric, "-@@", num_uminus, 0);
+    rb_define_method(rb_cNumeric, "===", num_equal, 1);
+    rb_define_method(rb_cNumeric, "eql?", num_eql, 1);
+    rb_define_method(rb_cNumeric, "/", num_div, 1);
+    rb_define_method(rb_cNumeric, "divmod", num_divmod, 1);
+    rb_define_method(rb_cNumeric, "modulo", num_modulo, 1);
+    rb_define_method(rb_cNumeric, "remainder", num_remainder, 1);
+    rb_define_method(rb_cNumeric, "abs", num_abs, 0);
+    rb_define_method(rb_cNumeric, "to_int", num_to_int, 0);
+
+    rb_define_method(rb_cNumeric, "integer?", num_int_p, 0);
+    rb_define_method(rb_cNumeric, "zero?", num_zero_p, 0);
+    rb_define_method(rb_cNumeric, "nonzero?", num_nonzero_p, 0);
+
+    rb_define_method(rb_cNumeric, "floor", num_floor, 0);
+    rb_define_method(rb_cNumeric, "ceil", num_ceil, 0);
+    rb_define_method(rb_cNumeric, "round", num_round, 0);
+    rb_define_method(rb_cNumeric, "truncate", num_truncate, 0);
+    rb_define_method(rb_cNumeric, "step", num_step, -1);
+
+    rb_cInteger = rb_define_class("Integer", rb_cNumeric);
+    rb_undef_method(CLASS_OF(rb_cInteger), "allocate");
+    rb_undef_method(CLASS_OF(rb_cInteger), "new");
+
+    rb_define_method(rb_cInteger, "integer?", int_int_p, 0);
+    rb_define_method(rb_cInteger, "upto", int_upto, 1);
+    rb_define_method(rb_cInteger, "downto", int_downto, 1);
+    rb_define_method(rb_cInteger, "times", int_dotimes, 0);
+    rb_include_module(rb_cInteger, rb_mPrecision);
+    rb_define_method(rb_cInteger, "succ", int_succ, 0);
+    rb_define_method(rb_cInteger, "next", int_succ, 0);
+    rb_define_method(rb_cInteger, "chr", int_chr, 0);
+    rb_define_method(rb_cInteger, "to_i", int_to_i, 0);
+    rb_define_method(rb_cInteger, "to_int", int_to_i, 0);
+    rb_define_method(rb_cInteger, "floor", int_to_i, 0);
+    rb_define_method(rb_cInteger, "ceil", int_to_i, 0);
+    rb_define_method(rb_cInteger, "round", int_to_i, 0);
+    rb_define_method(rb_cInteger, "truncate", int_to_i, 0);
+
+    rb_cFixnum = rb_define_class("Fixnum", rb_cInteger);
+    rb_include_module(rb_cFixnum, rb_mPrecision);
+    rb_define_singleton_method(rb_cFixnum, "induced_from", rb_fix_induced_from, 1);
+    rb_define_singleton_method(rb_cInteger, "induced_from", rb_int_induced_from, 1);
+
+    rb_define_method(rb_cFixnum, "to_s", fix_to_s, -1);
+
+    rb_define_method(rb_cFixnum, "id2name", fix_id2name, 0);
+
+    rb_define_method(rb_cFixnum, "-@@", fix_uminus, 0);
+    rb_define_method(rb_cFixnum, "+", fix_plus, 1);
+    rb_define_method(rb_cFixnum, "-", fix_minus, 1);
+    rb_define_method(rb_cFixnum, "*", fix_mul, 1);
+    rb_define_method(rb_cFixnum, "/", fix_div, 1);
+    rb_define_method(rb_cFixnum, "div", fix_div, 1);
+    rb_define_method(rb_cFixnum, "%", fix_mod, 1);
+    rb_define_method(rb_cFixnum, "modulo", fix_mod, 1);
+    rb_define_method(rb_cFixnum, "divmod", fix_divmod, 1);
+    rb_define_method(rb_cFixnum, "**", fix_pow, 1);
+
+    rb_define_method(rb_cFixnum, "abs", fix_abs, 0);
+
+    rb_define_method(rb_cFixnum, "==", fix_equal, 1);
+    rb_define_method(rb_cFixnum, "<=>", fix_cmp, 1);
+    rb_define_method(rb_cFixnum, ">",  fix_gt, 1);
+    rb_define_method(rb_cFixnum, ">=", fix_ge, 1);
+    rb_define_method(rb_cFixnum, "<",  fix_lt, 1);
+    rb_define_method(rb_cFixnum, "<=", fix_le, 1);
+
+    rb_define_method(rb_cFixnum, "~", fix_rev, 0);
+    rb_define_method(rb_cFixnum, "&", fix_and, 1);
+    rb_define_method(rb_cFixnum, "|", fix_or,  1);
+    rb_define_method(rb_cFixnum, "^", fix_xor, 1);
+    rb_define_method(rb_cFixnum, "[]", fix_aref, 1);
+
+    rb_define_method(rb_cFixnum, "<<", fix_lshift, 1);
+    rb_define_method(rb_cFixnum, ">>", fix_rshift, 1);
+
+    rb_define_method(rb_cFixnum, "to_f", fix_to_f, 0);
+    rb_define_method(rb_cFixnum, "size", fix_size, 0);
+    rb_define_method(rb_cFixnum, "zero?", fix_zero_p, 0);
+
+    rb_cFloat  = rb_define_class("Float", rb_cNumeric);
+
+    rb_undef_method(CLASS_OF(rb_cFloat), "allocate");
+    rb_undef_method(CLASS_OF(rb_cFloat), "new");
+
+    rb_define_singleton_method(rb_cFloat, "induced_from", rb_flo_induced_from, 1);
+    rb_include_module(rb_cFloat, rb_mPrecision);
+
+    rb_define_method(rb_cFloat, "to_s", flo_to_s, 0);
+    rb_define_method(rb_cFloat, "coerce", flo_coerce, 1);
+    rb_define_method(rb_cFloat, "-@@", flo_uminus, 0);
+    rb_define_method(rb_cFloat, "+", flo_plus, 1);
+    rb_define_method(rb_cFloat, "-", flo_minus, 1);
+    rb_define_method(rb_cFloat, "*", flo_mul, 1);
+    rb_define_method(rb_cFloat, "/", flo_div, 1);
+    rb_define_method(rb_cFloat, "%", flo_mod, 1);
+    rb_define_method(rb_cFloat, "modulo", flo_mod, 1);
+    rb_define_method(rb_cFloat, "divmod", flo_divmod, 1);
+    rb_define_method(rb_cFloat, "**", flo_pow, 1);
+    rb_define_method(rb_cFloat, "==", flo_eq, 1);
+    rb_define_method(rb_cFloat, "<=>", flo_cmp, 1);
+    rb_define_method(rb_cFloat, ">",  flo_gt, 1);
+    rb_define_method(rb_cFloat, ">=", flo_ge, 1);
+    rb_define_method(rb_cFloat, "<",  flo_lt, 1);
+    rb_define_method(rb_cFloat, "<=", flo_le, 1);
+    rb_define_method(rb_cFloat, "eql?", flo_eql, 1);
+    rb_define_method(rb_cFloat, "hash", flo_hash, 0);
+    rb_define_method(rb_cFloat, "to_f", flo_to_f, 0);
+    rb_define_method(rb_cFloat, "abs", flo_abs, 0);
+    rb_define_method(rb_cFloat, "zero?", flo_zero_p, 0);
+
+    rb_define_method(rb_cFloat, "to_i", flo_truncate, 0);
+    rb_define_method(rb_cFloat, "to_int", flo_truncate, 0);
+    rb_define_method(rb_cFloat, "floor", flo_floor, 0);
+    rb_define_method(rb_cFloat, "ceil", flo_ceil, 0);
+    rb_define_method(rb_cFloat, "round", flo_round, 0);
+    rb_define_method(rb_cFloat, "truncate", flo_truncate, 0);
+
+    rb_define_method(rb_cFloat, "nan?",      flo_is_nan_p, 0);
+    rb_define_method(rb_cFloat, "infinite?", flo_is_infinite_p, 0);
+    rb_define_method(rb_cFloat, "finite?",   flo_is_finite_p, 0);
+}
+
+@
+
+
+1.57
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d1025 1
+a1025 1
+	return rb_int2inum(i);
+d1086 1
+a1086 1
+    return rb_int2inum(-FIX2LONG(num));
+d1388 1
+a1388 1
+    return rb_int2inum(val);
+d1401 1
+a1401 1
+    return rb_int2inum(val);
+d1414 1
+a1414 1
+    return rb_int2inum(val);
+d1427 1
+a1427 1
+    return rb_int2inum(val);
+d1447 1
+a1447 1
+    return rb_int2inum(val);
+d1515 1
+a1515 1
+    return rb_int2inum(i);
+@
+
+
+1.56
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/19 05:56:05 $
+d91 2
+a92 2
+num_clone(x)
+    VALUE x;
+d95 1
+a95 1
+    rb_raise(rb_eTypeError, "can't clone %s", rb_class2name(CLASS_OF(x)));
+d1633 1
+a1633 1
+    rb_define_method(rb_cNumeric, "clone", num_clone, 0);
+@
+
+
+1.55
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (ary_new): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* object.c (rb_class_allocate_instance): move singleton class
+  check from rb_obj_alloc().
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* ext/tcltklib/tcltklib.c (ip_init): allocation framework.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/13 09:21:13 $
+d704 1
+a704 1
+    return INT2FIX(val);
+d718 1
+a718 1
+    return INT2FIX(val);
+d735 1
+a735 1
+    return INT2FIX(val);
+d752 1
+a752 1
+    return INT2FIX(val);
+d807 1
+a807 1
+		rb_yield(INT2FIX(i));
+d813 1
+a813 1
+		rb_yield(INT2FIX(i));
+d945 1
+a945 1
+    return INT2FIX(v);
+d1142 1
+a1142 1
+	r = INT2FIX(c);
+d1166 1
+a1166 1
+	r = INT2FIX(c);
+d1192 1
+a1192 1
+	r = INT2FIX(c);
+d1242 1
+a1242 1
+	return INT2NUM(div);
+d1255 1
+a1255 1
+	return INT2NUM(mod);
+d1269 1
+a1269 1
+	return rb_assoc_new(INT2NUM(div), INT2NUM(mod));
+d1441 1
+a1441 1
+	return fix_rshift(x, INT2FIX(-width));
+d1458 1
+a1458 1
+	return fix_lshift(x, INT2FIX(-i));
+d1466 1
+a1466 1
+    return INT2FIX(val);
+d1543 1
+a1543 1
+	    rb_yield(INT2FIX(i));
+d1567 1
+a1567 1
+	    rb_yield(INT2FIX(i));
+d1591 1
+a1591 1
+	    rb_yield(INT2FIX(i));
+@
+
+
+1.54
+log
+@* hash.c (rb_hash_replace): should copy ifnone.
+
+* hash.c (rb_hash_dup): should preserve HASH_PROC_DEFAULT and
+  HASH_DELETED flags.
+
+* hash.c (rb_hash_shift): shift from empty hash should not return
+  its default proc.
+
+* hash.c (rb_hash_default_proc): new method. [new]
+
+* array.c (rb_ary_aref): no need for Bignum check.
+
+* array.c (rb_ary_aset): explicit Bignum check removd.
+
+* numeric.c (fix_aref): normalize bignum before bit-op.
+
+* bignum.c (rb_big_rand): max may be Bignum zero.
+
+* bignum.c (rb_cstr_to_inum): should normalize bignums, to avoid
+  returning fixable bignum value.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+
+* hash.c (rb_hash_equal): should check HASH_PROC_DEFAULT too.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/07/29 06:14:04 $
+d482 10
+d515 1
+a515 4
+    if (a == b) return INT2FIX(0);
+    if (a > b) return INT2FIX(1);
+    if (a < b) return INT2FIX(-1);
+    rb_raise(rb_eFloatDomainError, "comparing NaN");
+@
+
+
+1.53
+log
+@* numeric.c (num_to_int): default to_int implementaion for every
+  numeric class.
+
+* re.c (rb_reg_quote): initial part of the string was never copied
+  to the quoted string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/07/26 06:12:38 $
+d1467 1
+d1470 6
+a1475 3
+	if (!RBIGNUM(idx)->sign || val >= 0)
+	    return INT2FIX(0);
+	return INT2FIX(1);
+d1477 1
+a1477 2
+    else {
+	int i = NUM2INT(idx);
+d1479 3
+a1481 7
+	if (i < 0) return INT2FIX(0);
+	if (sizeof(VALUE)*CHAR_BIT-1 < i) {
+	    if (val < 0) return INT2FIX(1);
+	    return INT2FIX(0);
+	}
+	if (val & (1L<<i))
+	    return INT2FIX(1);
+d1484 3
+@
+
+
+1.52
+log
+@* random.c: replace with Mersenne Twister RNG.
+
+* eval.c (jump_tag_but_local_jump): preserve retval in
+  LocalJumpError exceptions.
+
+* parse.y (command): no more check for "super outside of method".
+
+* eval.c (rb_mod_define_method): should set last_class and
+  last_func in the block->frame.
+
+* eval.c (error_handle): should handle TAG_THROW as well.
+
+* parse.y (yylex): new decimal notation '0d4567'.
+
+* parse.y (yylex): new octal notation '0o777'.
+
+* parse.y (string_content): every string_content node should
+  return string only.  use NODE_EVSTR to coercing.
+
+* eval.c (rb_eval): NODE_EVSTR support.
+
+* re.c (rb_reg_quote): avoid unnecessary string allocation.
+
+* string.c (get_pat): quote metachracters before compiling a
+  string into a regex.
+
+* string.c (rb_str_split_m): special treatment of strings of size
+  1, but AWK emulation.  now uses get_pat().
+
+* string.c (rb_str_match_m): quote metacharacters.
+
+* string.c (rb_str_match2): ditto.
+
+* ext/socket/socket.c (sock_addrinfo): make all 3 versions of
+  getaddrinfo happy.  [ruby-core:00184]
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/06/10 10:06:12 $
+d203 7
+d848 1
+a848 1
+	rb_raise(rb_eTypeError, "no implicit conversion to integer from nil");
+a870 10
+#if 0
+      case T_STRING:
+	rb_raise(rb_eTypeError, "no implicit conversion to integer from string");
+	return Qnil;		/* not reached */
+
+      case T_TRUE:
+      case T_FALSE:
+	rb_raise(rb_eTypeError, "no implicit conversion to integer from boolean");
+	return Qnil;		/* not reached */
+#endif
+d1052 1
+a1052 1
+       return rb_funcall(x, rb_intern("to_i"), 0);
+d1635 1
+d1740 1
+@
+
+
+1.51
+log
+@* numeric.c (fix_lshift): negative shift count means right shift.
+
+* numeric.c (fix_rshift): return -1 when left side operand is
+  negative.
+
+* parse.y (yylex): `0_' should be an error. (ruby-bugs-ja:PR#239)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/06/04 07:34:14 $
+d864 1
+d873 1
+a873 1
+
+@
+
+
+1.50
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+
+* lib/tempfile.rb (Tempfile::size): added.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/05/28 18:11:07 $
+d1425 2
+d1435 2
+d1455 1
+d1457 1
+a1457 1
+	if (i < 0) return INT2FIX(-1);
+d1460 1
+a1460 1
+    val = RSHIFT(FIX2LONG(x), i);
+@
+
+
+1.49
+log
+@	* array.c: fixed format string for 'long' args (%d -> %ld).
+
+	* class.c: ditto.
+
+	* eval.c: ditto.
+
+	* numeric.c: ditto.
+
+	* pack.c: ditto.
+
+	* parse.y: ditto.
+
+	* range.c: ditto.
+
+	* string.c: ditto.
+
+	* util.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d643 2
+a644 1
+static VALUE flo_is_nan_p(num)
+d653 2
+a654 1
+static VALUE flo_is_infinite_p(num)
+d660 1
+a660 1
+    return INT2FIX( value < 0 ? -1 : +1 );
+d666 2
+a667 1
+static VALUE flo_is_finite_p(num)
+@
+
+
+1.48
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/02 07:50:36 $
+d894 1
+a894 1
+	rb_raise(rb_eRangeError, "integer %d too big to convert to `int'", num);
+d906 1
+a906 1
+	rb_raise(rb_eRangeError, "integer %d too big to convert to `int'", num);
+d936 1
+a936 1
+	rb_raise(rb_eRangeError, "integer %d out of range of fixnum", v);
+d1030 1
+a1030 1
+	rb_raise(rb_eRangeError, "%d out of char range", i);
+@
+
+
+1.47
+log
+@* error.c: use HAVE_DECL_SYS_NERR instead of platform names.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/01 09:41:49 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d219 1
+a219 1
+    char *fmt = "%.10g";
+d238 1
+a238 1
+    else if (avalue >= 1.0e10) {
+d243 1
+@
+
+
+1.46
+log
+@* numeric.c (num_step): better iteration condition for float
+  values;  suggested by Masahiro TANAKA <masa@@ir.isas.ac.jp>.
+
+* range.c (range_step): step (for Range#step method) <= 0 makes no
+  sence, thus ArgError will be raised.
+
+* range.c (range_each): Range#each method is special case for
+  Range#step(1)
+
+* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* enum.c (enum_partition): new method. [new]
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/25 13:55:58 $
+a790 1
+		printf("<<%g>>\n", i - end);
+@
+
+
+1.45
+log
+@* various files: macro fix-up by Michal Rokos.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 05:08:04 $
+d791 1
+d802 1
+d806 2
+a807 2
+	double n = beg;
+	long i = 0;
+d809 3
+a811 9
+	if (unit > 0) {
+	    for (i=0; n<=end; i++, n=beg+unit*i) {
+		rb_yield(rb_float_new(n));
+	    }
+	}
+	else {
+	    for (i=0; n>=end; i++, n=beg+unit*i) {
+		rb_yield(rb_float_new(n));
+	    }
+@
+
+
+1.44
+log
+@* numeric.c (num_step): try to reduce residual on Float operations.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 04:54:14 $
+d808 1
+a808 1
+	    for (i=0; n<=end; i++, n=unit*i+beg) {
+d813 1
+a813 1
+	    for (i=0; n>=end; i++, n=unit*i+beg) {
+@
+
+
+1.43
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+a771 2
+    VALUE i = from;
+    ID cmp;
+a798 1
+	return from;
+d800 17
+a816 3
+
+    if (RTEST(rb_funcall(step, '>', 1, INT2FIX(0)))) {
+	cmp = '>';
+d819 14
+a832 6
+	cmp = '<';
+    }
+    for (;;) {
+	if (RTEST(rb_funcall(i, cmp, 1, to))) break;
+	rb_yield(i);
+	i = rb_funcall(i, '+', 1, step);
+@
+
+
+1.42
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/22 07:26:35 $
+d156 1
+a156 1
+    if ((!RTEST(rb_equal(z, INT2FIX(0)))) &&
+d187 1
+a187 1
+    if (RTEST(rb_equal(num, INT2FIX(0)))) {
+d765 53
+d1508 10
+a1517 1
+    VALUE i = from;
+d1519 5
+a1523 4
+    for (;;) {
+	if (RTEST(rb_funcall(i, '>', 1, to))) break;
+	rb_yield(i);
+	i = rb_funcall(i, '+', 1, INT2FIX(1));
+d1532 2
+a1533 1
+    VALUE i = from;
+d1535 4
+a1538 4
+    for (;;) {
+	if (RTEST(rb_funcall(i, '<', 1, to))) break;
+	rb_yield(i);
+	i = rb_funcall(i, '-', 1, INT2FIX(1));
+d1540 2
+a1541 2
+    return from;
+}
+d1543 5
+a1547 21
+static VALUE
+int_step(from, to, step)
+    VALUE from, to, step;
+{
+    VALUE i = from;
+    ID cmp;
+
+    if (rb_equal(step, INT2FIX(0))) {
+	rb_raise(rb_eArgError, "step cannot be 0");
+    }
+
+    if (RTEST(rb_funcall(step, '>', 1, INT2FIX(0)))) {
+	cmp = '>';
+    }
+    else {
+	cmp = '<';
+    }
+    for (;;) {
+	if (RTEST(rb_funcall(i, cmp, 1, to))) break;
+	rb_yield(i);
+	i = rb_funcall(i, '+', 1, step);
+d1556 2
+a1557 59
+    VALUE i = INT2FIX(0);
+
+    for (;;) {
+	if (!RTEST(rb_funcall(i, '<', 1, num))) break;
+	rb_yield(i);
+	i = rb_funcall(i, '+', 1, INT2FIX(1));
+    }
+    return num;
+}
+
+static VALUE
+fix_upto(from, to)
+    VALUE from, to;
+{
+    long i, end;
+
+    if (!FIXNUM_P(to)) return int_upto(from, to);
+    end = FIX2LONG(to);
+    for (i = FIX2LONG(from); i <= end; i++) {
+	rb_yield(INT2FIX(i));
+    }
+
+    return from;
+}
+
+VALUE
+rb_fix_upto(from, to)
+    VALUE from, to;
+{
+    return fix_upto(from, to);
+}
+
+static VALUE
+fix_downto(from, to)
+    VALUE from, to;
+{
+    long i, end;
+
+    if (!FIXNUM_P(to)) return int_downto(from, to);
+    end = FIX2LONG(to);
+    for (i=FIX2LONG(from); i >= end; i--) {
+	rb_yield(INT2FIX(i));
+    }
+
+    return from;
+}
+
+static VALUE
+fix_step(from, to, step)
+    VALUE from, to, step;
+{
+    long i, end, diff;
+
+    if (!FIXNUM_P(to) || !FIXNUM_P(step))
+	return int_step(from, to, step);
+
+    i = FIX2LONG(from);
+    end = FIX2LONG(to);
+    diff = FIX2LONG(step);
+d1559 2
+a1560 5
+    if (diff == 0) {
+	rb_raise(rb_eArgError, "step cannot be 0");
+    }
+    if (diff > 0) {
+	while (i <= end) {
+a1561 1
+	    i += diff;
+d1565 6
+a1570 3
+	while (i >= end) {
+	    rb_yield(INT2FIX(i));
+	    i += diff;
+a1572 13
+    return from;
+}
+
+static VALUE
+fix_dotimes(num)
+    VALUE num;
+{
+    long i, end;
+
+    end = FIX2LONG(num);
+    for (i=0; i<end; i++) {
+	rb_yield(INT2FIX(i));
+    }
+d1623 1
+a1631 1
+    rb_define_method(rb_cInteger, "step", int_step, 2);
+a1682 1
+
+a1683 5
+
+    rb_define_method(rb_cFixnum, "upto", fix_upto, 1);
+    rb_define_method(rb_cFixnum, "downto", fix_downto, 1);
+    rb_define_method(rb_cFixnum, "step", fix_step, 2);
+    rb_define_method(rb_cFixnum, "times", fix_dotimes, 0);
+@
+
+
+1.41
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2002/03/15 08:51:31 $
+d1486 1
+a1486 1
+    if (NUM2INT(step) == 0) {
+@
+
+
+1.40
+log
+@* bignum.c, intern.h (rb_ull2big, rb_ll2big, rb_ull2inum, rb_ll2inum,
+  big2ull, rb_big2ull, rb_big2ll): use LONG_LONG macro instead of
+  long long.
+* numeric.c, intern.h, ruby.h (rb_num2ll, rb_num2ull): ditto.
+* ruby.h: use _I64_MAX and _I64_MIN if they are defined (for VC++).
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/14 06:23:44 $
+d947 4
+a1444 9
+fix_succ(fix)
+    VALUE fix;
+{
+    long i = FIX2LONG(fix) + 1;
+
+    return rb_int2inum(i);
+}
+
+static VALUE
+a1706 2
+    rb_define_method(rb_cFixnum, "succ", fix_succ, 0);
+    rb_define_method(rb_cFixnum, "next", fix_succ, 0);
+@
+
+
+1.39
+log
+@* re.c (rb_reg_match): should clear $~ if operand is nil.
+
+* re.c (rb_reg_match2): ditto.
+
+* configure: merge Jonathan Baker's large file support patch
+  [ruby-talk:35316], with read_all patch in [ruby-talk:35470].
+
+* eval.c (rb_f_abort): optional message argument that be printed
+  on termination. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/11 09:18:50 $
+d874 1
+a874 1
+long long
+d882 1
+a882 1
+    if (FIXNUM_P(val)) return (long long)FIX2LONG(val);
+d888 1
+a888 1
+	    return (long long)(RFLOAT(val)->value);
+d917 1
+a917 1
+unsigned long long
+d924 1
+a924 1
+    return (unsigned long long)rb_num2ll(val);
+@
+
+
+1.38
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:03 $
+d871 57
+@
+
+
+1.37
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/01 05:11:22 $
+d957 2
+a958 1
+    char fmt[4], buf[22];
+d965 4
+d970 1
+a970 1
+    sprintf(buf, fmt, FIX2LONG(x));
+@
+
+
+1.36
+log
+@* bignum.c (rb_big_aref): idx may be a Bignum.
+
+* numeric.c (fix_aref): negative index must return zero.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/29 05:07:18 $
+d963 1
+a963 1
+    else rb_fatal("fixnum cannot treat base %d", base);
+d970 4
+a973 2
+fix_to_s(in)
+    VALUE in;
+d975 12
+a986 1
+    return rb_fix2str(in, 10);
+a1358 7
+fix_type(fix)
+    VALUE fix;
+{
+    return rb_cFixnum;
+}
+
+static VALUE
+d1615 1
+a1615 2
+    rb_define_method(rb_cFixnum, "to_s", fix_to_s, 0);
+    rb_define_method(rb_cFixnum, "type", fix_type, 0);
+@
+
+
+1.35
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* variable.c (rb_cvar_set): empty iv_tbl may cause infinite loop.
+
+* variable.c (rb_cvar_get): ditto.
+
+* variable.c (cvar_override_check): ditto.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+
+* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/10 08:21:13 $
+d1316 2
+a1317 1
+	if (val >= 0) return INT2FIX(0);
+d1323 2
+a1324 1
+	if (i < 0 || sizeof(VALUE)*CHAR_BIT-1 < i) {
+@
+
+
+1.34
+log
+@* file.c (rb_stat_clone): should copy internal data too.
+
+* numeric.c (num_clone): Numeric should not be copied by clone.
+
+* object.c (rb_obj_clone): should check immediate values.
+
+* parse.y (command): `yield' should take command_args.
+
+* parse.y (parse_quotedwords): %w(...) is not a string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d156 5
+a160 4
+    if ((RTEST(rb_funcall(x, '<', 1, INT2FIX(0))) &&
+	 RTEST(rb_funcall(y, '>', 1, INT2FIX(0)))) ||
+	(RTEST(rb_funcall(x, '>', 1, INT2FIX(0))) &&
+	 RTEST(rb_funcall(y, '<', 1, INT2FIX(0))))) {
+a1313 1
+    int i = NUM2INT(idx);
+d1315 13
+a1327 2
+    if (i < 0 || sizeof(VALUE)*CHAR_BIT-1 < i) {
+	if (val < 0) return INT2FIX(1);
+a1329 3
+    if (val & (1L<<i))
+	return INT2FIX(1);
+    return INT2FIX(0);
+@
+
+
+1.33
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/02 04:31:18 $
+d94 3
+a96 2
+    /* Numerics are immutable values, which need not to copy */
+    return x;
+@
+
+
+1.32
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/08 14:17:09 $
+d1574 1
+d1646 1
+@
+
+
+1.31
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/03 05:37:42 $
+d768 1
+a768 1
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+d785 1
+a785 1
+	    rb_raise(rb_eRangeError, "float %s out of rang of integer", buf);
+d792 1
+a792 1
+	rb_raise(rb_eTypeError, "no implicit conversion from string");
+d797 1
+a797 1
+	rb_raise(rb_eTypeError, "no implicit conversion from boolean");
+@
+
+
+1.30
+log
+@* ruby.c (proc_options): should not alter origargv[].
+
+* ruby.c (set_arg0): long strings for $0 dumped core.
+
+* ruby.c (set_arg0): use setprogtitle() if it's available.
+
+* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/29 06:28:44 $
+d219 1
+a219 1
+    double d1, d2;
+d226 6
+a231 2
+    if (value < 1.0e-3) {
+	d1 = value;
+d236 2
+a237 2
+    else if (value >= 1.0e10) {
+	d1 = value;
+@
+
+
+1.29
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/08/06 05:33:17 $
+d217 1
+a217 1
+    char *s;
+d219 1
+d225 15
+a239 16
+    else
+	sprintf(buf, "%-.10g", value);
+    if (s = strchr(buf, ' ')) *s = '\0';
+    s = buf; if (s[0] == '-') s++;
+    if (strchr(s, '.') == 0) {
+	int len = strlen(buf);
+	char *ind = strchr(buf, 'e');
+
+	if (ind) {
+	    memmove(ind+2, ind, len-(ind-buf)+1);
+	    ind[0] = '.';
+	    ind[1] = '0';
+	}
+	else {
+	    strcat(buf, ".0");
+	}
+d241 1
+@
+
+
+1.28
+log
+@* numeric.c (num_divmod): fix typo.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/08/06 03:05:13 $
+d1569 2
+a1590 2
+
+    rb_undef_method(CLASS_OF(rb_cFixnum), "new");
+@
+
+
+1.27
+log
+@* string.c (rb_str_lstrip_bang): new method.
+
+* string.c (rb_str_rstrip_bang): new method.
+
+* string.c (rb_str_associate): should consider STR_ASSOC too.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+
+* process.c (proc_waitpid): now all arguments are optional.
+
+* process.c (Init_process): waitpid is now alias to wait.
+
+* process.c (Init_process): waitpid2 is now alias to wait2.
+
+* process.c (rb_waitpid): made public.
+
+* ext/pty/pty.c (pty_getpty): avoid disturbing SIGCHLD using
+  thread and rb_waitpid.
+
+* process.c (proc_getpgrp): now takes no argument on all
+  platforms.
+
+* process.c (proc_setpgrp): ditto.
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::pack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::pack_sockaddr_un(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::unpack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::unpack_sockaddr_un(). [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/31 06:24:42 $
+d130 1
+a130 1
+    div = rb_funcall(x, div, 1, y);
+@
+
+
+1.26
+log
+@* marshal.c (Init_marshal): new constant Marshal::MAJOR_VERSION
+  and Marshal::MINOR_VERSION.
+
+* marshal.c (marshal_load): ruby_verbose test should be wrapped by
+  RTEST().
+
+* hash.c (rb_hash_index): should return nil (not the default
+  value) if value is not in the hash.
+
+* numeric.c (num_div): new method added.  alias to '/' which
+  should be preserved even if '/' is redefined (e.g. by
+  mathn). [new]
+
+* bignum.c (rb_cstr2inum): "0 ff".hex should return 0, not 255.
+
+* file.c (rb_file_s_expand_path): fixed using CharNext().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/24 09:07:33 $
+d20 1
+a20 2
+static ID coerce;
+static ID to_i;
+d49 1
+a49 1
+    return rb_funcall(x[1], coerce, 1, x[0]);
+d121 1
+a121 1
+    return rb_funcall(x, '/', 1, y);
+d130 1
+a130 1
+    div = rb_funcall(x, '/', 1, y);
+d1537 3
+a1539 2
+    coerce = rb_intern("coerce");
+    to_i = rb_intern("to_i");
+d1553 1
+a1553 1
+    rb_define_method(rb_cNumeric, "div", num_div, 1);
+d1678 1
+@
+
+
+1.25
+log
+@* eval.c (rb_provide_feature): should not tweak extension used for
+  loading.
+
+* io.c (io_fread): use fread(3) if PENDING_COUND is available.
+
+* class.c (rb_mod_include_p): Module#include? added. [new]
+
+* re.c (ignorecase_setter): give warning on modifying $=.
+
+* string.c (rb_str_casecmp): new method. [new]
+
+* string.c (rb_str_eql): separated from rb_str_equal(), make it
+  always be case sensitive. [new]
+
+* string.c (rb_str_hash): made it always be case sensitive.
+
+* eval.c (rb_f_require): should not include path in $" value
+
+* file.c (rb_find_file): should return 0 explicitly on failure.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+d119 7
+d1553 1
+d1602 1
+@
+
+
+1.24
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d73 1
+@
+
+
+1.23
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:09 $
+d73 1
+a73 2
+    ary = rb_rescue2(coerce_body, (VALUE)a, coerce_rescue, (VALUE)a,
+		     rb_eStandardError, rb_eNameError, 0);
+@
+
+
+1.22
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d59 1
+a59 1
+	     STR2CSTR(rb_inspect(x[1])):
+d230 2
+a231 1
+	} else {
+d336 1
+a336 1
+	mod = x - z * x;
+d452 1
+d598 2
+a599 2
+    if (TYPE(y) == T_FLOAT) {
+	if (RFLOAT(x)->value == RFLOAT(y)->value) return Qtrue;
+d1300 1
+a1300 1
+    unsigned long val = FIX2LONG(fix);
+d1303 2
+a1304 1
+    if (i < 0 || sizeof(VALUE)*CHAR_BIT-1 < i)
+d1306 2
+a1307 1
+    if (val & (1<<i))
+@
+
+
+1.21
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:21 $
+d950 1
+a950 1
+    snprintf(buf, 22, fmt, FIX2LONG(x));
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/14 07:10:21 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.20.4.1
+log
+@several minor fixes.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:21 $
+d879 1
+a879 3
+int_chr(argc, argv, num)
+    int argc;
+    VALUE *argv;
+d882 1
+a882 2
+    m17n_encoding *enc;
+    char *buf;
+a883 1
+    int len;
+d885 1
+a885 11
+    if (argc > 0) {
+	VALUE ename;
+
+	rb_scan_args(argc, argv, "1", &ename);
+	enc = m17n_find_encoding(STR2CSTR(ename));
+    }
+    else {
+	enc = ruby_default_encoding;
+    }
+    if (i < 0) {
+      error:
+d887 2
+a888 11
+    }
+    len = m17n_codelen(enc, i);
+    if (len == 0 || len > m17n_mbmaxlen(enc)) goto error;
+    if (len == 1) {
+	char c = i;
+	return rb_str_new(&c, 1);
+    }
+    buf = ALLOCA_N(char, len);
+    m17n_mbcput(enc, i, buf);
+    if (i != m17n_codepoint(enc, buf, buf+len)) goto error;
+    return rb_str_new(buf, len);
+d1565 1
+a1565 1
+    rb_define_method(rb_cInteger, "chr", int_chr, -1);
+@
+
+
+1.20.2.1
+log
+@* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:21 $
+d335 1
+a335 1
+	mod = x - z * y;
+@
+
+
+1.20.2.2
+log
+@* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/03 05:43:49 $
+d1298 1
+a1298 1
+    long val = FIX2LONG(fix);
+d1301 1
+a1301 2
+    if (i < 0 || sizeof(VALUE)*CHAR_BIT-1 < i) {
+	if (val < 0) return INT2FIX(1);
+d1303 1
+a1303 2
+    }
+    if (val & (1L<<i))
+@
+
+
+1.20.2.3
+log
+@* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/24 06:44:13 $
+d1128 1
+a1128 1
+	return (x == y)?Qtrue:Qfalse;
+a1558 2
+    rb_undef_method(CLASS_OF(rb_cInteger), "new");
+
+d1579 2
+@
+
+
+1.20.2.4
+log
+@* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+
+* parse.y (yylex): ternary ? can be followed by newline.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/24 06:36:14 $
+d211 1
+a211 1
+    char *fmt = "%.10g";
+a212 1
+    double d1, d2;
+d218 15
+a232 15
+
+    if (value < 1.0e-3) {
+	d1 = value;
+	while (d1 < 1.0) d1 *= 10.0;
+	d1 = modf(d1, &d2);
+	if (d1 == 0) fmt = "%.1e";
+    }    
+    else if (value >= 1.0e10) {
+	d1 = value;
+	while (d1 > 10.0) d1 /= 10.0;
+	d1 = modf(d1, &d2);
+	if (d1 == 0) fmt = "%.1e";
+    }    
+    else if ((d1 = modf(value, &d2)) == 0) {
+	fmt = "%.1f";
+a233 1
+    sprintf(buf, fmt, value);
+@
+
+
+1.20.2.5
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/03 05:29:18 $
+d213 1
+a213 1
+    double avalue, d1, d2;
+d220 2
+a221 6
+    avalue = fabs(value);
+    if (avalue == 0.0) {
+	fmt = "%.1f";
+    }
+    else if (avalue < 1.0e-3) {
+	d1 = avalue;
+d226 2
+a227 2
+    else if (avalue >= 1.0e10) {
+	d1 = avalue;
+@
+
+
+1.20.2.6
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/08 14:05:50 $
+d778 1
+a778 1
+	    rb_raise(rb_eRangeError, "float %s out of range of integer", buf);
+@
+
+
+1.20.2.7
+log
+@* parse.y (str_extend): shuould allow interpolation of $-x.
+
+* bignum.c (rb_big_eq): convert Bignum to Float, instead of
+  reverse.
+
+* time.c (time_localtime): getting tm should not be prohibited for
+  frozen time objects.
+
+* time.c (time_gmtime): ditto.
+
+* version.c (Init_version): freeze RUBY_VERSION,
+  RUBY_RELEASE_DATE, and RUBY_PLATFORM.
+
+* file.c (Init_File): freeze File::SEPARATOR, ALT_SEPARATOR and
+  PATH_SEPARATOR.
+
+* file.c (rb_stat_cmp): should check operand type before calling
+  get_stat().
+
+* eval.c (rb_eval_cmd): should not invoke "call" with a block on
+  any occasion.
+
+* numeric.c (fix_aref): idx may be a Bignum.
+
+* numeric.c (num_remainder): a bug in Numeric#remainder.
+
+* eval.c (rb_exec_end_proc): END might be called within END
+  block.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/02 04:25:52 $
+d149 4
+a152 5
+    if ((!RTEST(rb_equal(z, INT2FIX(0)))) &&
+	((RTEST(rb_funcall(x, '<', 1, INT2FIX(0))) &&
+	  RTEST(rb_funcall(y, '>', 1, INT2FIX(0)))) ||
+	 (RTEST(rb_funcall(x, '>', 1, INT2FIX(0))) &&
+	  RTEST(rb_funcall(y, '<', 1, INT2FIX(0)))))) {
+d1305 1
+d1307 2
+a1308 13
+    if (TYPE(idx) == T_BIGNUM) {
+	if (val >= 0) return INT2FIX(0);
+	return INT2FIX(1);
+    }
+    else {
+	int i = NUM2INT(idx);
+
+	if (i < 0 || sizeof(VALUE)*CHAR_BIT-1 < i) {
+	    if (val < 0) return INT2FIX(1);
+	    return INT2FIX(0);
+	}
+	if (val & (1L<<i))
+	    return INT2FIX(1);
+d1311 3
+@
+
+
+1.20.2.8
+log
+@* bignum.c (rb_big_aref): idx may be a Bignum.
+
+* numeric.c (fix_aref): negative index must return zero.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/29 05:04:40 $
+d1308 1
+a1308 2
+	if (!RBIGNUM(idx)->sign || val >= 0)
+	    return INT2FIX(0);
+@
+
+
+1.20.2.9
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+
+* numeric.c (int_step): step may be a float less than 1.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/01 05:09:51 $
+d1414 1
+a1414 1
+    if (rb_equal(step, INT2FIX(0))) {
+@
+
+
+1.20.2.10
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:47:39 $
+d649 1
+a649 1
+    return INT2FIX( value < 0 ? -1 : 1 );
+@
+
+
+1.20.2.11
+log
+@* numeric.c (fix_lshift): negative shift count means right shift.
+  (ruby-bugs-ja:PR#248)
+
+* numeric.c (fix_rshift): return -1 when left side operand is
+  negative. (ruby-bugs-ja:PR#247)
+
+* parse.y (yylex): `0_' should be an error. (ruby-bugs-ja:PR#239)
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/06/04 07:11:52 $
+a1266 2
+static VALUE fix_rshift _((VALUE, VALUE));
+
+a1274 2
+    if (width < 0)
+	return fix_rshift(x, INT2FIX(-width));
+a1292 1
+    val = FIX2LONG(x);
+d1294 1
+a1294 1
+	if (val < 0) return INT2FIX(-1);
+d1297 1
+a1297 1
+    val = RSHIFT(val, i);
+@
+
+
+1.20.2.12
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/06/10 10:15:00 $
+d818 1
+a818 1
+	rb_raise(rb_eRangeError, "integer %ld too big to convert to `int'", num);
+d830 1
+a830 1
+	rb_raise(rb_eRangeError, "integer %ld too big to convert to `int'", num);
+d860 1
+a860 1
+	rb_raise(rb_eRangeError, "integer %ld out of range of fixnum", v);
+d893 1
+a893 1
+	rb_raise(rb_eRangeError, "%ld out of char range", i);
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/13 05:39:33 $
+d334 1
+a334 1
+	modf(x/y, &);
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/31 05:29:37 $
+d788 1
+a788 1
+	val = rb_Integer(val);
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/07 03:20:51 $
+d1567 1
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/06 07:21:10 $
+d73 2
+a74 1
+    ary = rb_rescue2(coerce_body, (VALUE)a, rb_eNameError, coerce_rescue, (VALUE)a);
+a749 16
+static VALUE
+to_integer(val)
+    VALUE val;
+{
+    return rb_funcall(val, to_i, 0);
+}
+
+static VALUE
+fail_to_integer(val)
+    VALUE val;
+{
+    rb_raise(rb_eTypeError, "failed to convert %s into Integer",
+	     rb_class2name(CLASS_OF(val)));
+    return Qnil;		/* dummy */
+}
+
+d788 1
+a788 4
+	val = rb_rescue(to_integer, val, fail_to_integer, val);
+	if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+	    rb_raise(rb_eTypeError, "`to_i' need to return integer");
+	}
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/04 04:17:13 $
+d1317 1
+a1317 1
+    int i = FIX2LONG(idx);
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/03 05:46:34 $
+d136 7
+d146 9
+a154 2
+    rb_warn("remainder is deprecated; use %% opearator");
+    return rb_funcall(x, '%', 1, y);
+d325 1
+a325 1
+    double mod;
+d337 5
+d343 1
+a343 3
+    if (divp) {
+	*divp = (x - mod) / y;
+    }
+d602 1
+a602 1
+flo_to_i(num)
+d605 10
+a614 2
+    double f = RFLOAT(num)->value;
+    long val;
+d616 6
+a621 2
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+d623 33
+a655 2
+    val = f;
+    return INT2FIX(val);
+d658 1
+d705 1
+a705 1
+flo_to_f(num)
+d708 11
+a718 1
+    return num;
+d722 2
+a723 2
+flo_abs(flt)
+    VALUE flt;
+d725 1
+a725 2
+    double val = fabs(RFLOAT(flt)->value);
+    return rb_float_new(val);
+d729 1
+a729 1
+flo_zero_p(num)
+d732 1
+a732 4
+    if (RFLOAT(num)->value == 0.0) {
+	return Qtrue;
+    }
+    return Qfalse;
+d735 5
+a739 7
+static VALUE flo_is_nan_p(num)
+     VALUE num;
+{     
+
+  double value = RFLOAT(num)->value;
+
+  return isnan(value) ? Qtrue : Qfalse;
+d742 5
+a746 10
+static VALUE flo_is_infinite_p(num)
+     VALUE num;
+{     
+  double value = RFLOAT(num)->value;
+
+  if (isinf(value)) {
+    return INT2FIX( value < 0 ? -1 : +1 );
+  }
+
+  return Qnil;
+a748 13
+
+static VALUE flo_is_finite_p(num)
+     VALUE num;
+{     
+  double value = RFLOAT(num)->value;
+
+  if (isinf(value) || isnan(value))
+    return Qfalse;
+  
+  return Qtrue;
+}
+
+
+d876 7
+d1074 4
+a1326 7
+fix_to_i(num)
+    VALUE num;
+{
+    return num;
+}
+
+static VALUE
+d1561 1
+d1569 5
+d1584 5
+d1608 1
+a1629 1
+    rb_define_method(rb_cFixnum, "to_i", fix_to_i, 0);
+d1657 1
+a1667 1
+    rb_define_method(rb_cFloat, "to_i", flo_to_i, 0);
+d1672 1
+d1676 1
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/12 07:48:20 $
+d73 1
+a73 1
+    ary = rb_rescue(coerce_body, (VALUE)a, coerce_rescue, (VALUE)a);
+d139 1
+a139 1
+    rb_warn("remainder is deprecated; use % opearator");
+d356 1
+a356 2
+    double fy;
+    VALUE div, mod;
+d1510 1
+@
+
+
+1.12
+log
+@2000-06-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:23 $
+d136 8
+d306 4
+a309 4
+static VALUE
+flo_modulo(x, y, modulo)
+    VALUE x, y;
+    int modulo;
+d311 1
+a311 15
+    double value, result;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	value = (double)FIX2LONG(y);
+	break;
+      case T_BIGNUM:
+	value = rb_big2dbl(y);
+	break;
+      case T_FLOAT:
+	value = RFLOAT(y)->value;
+	break;
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+d314 1
+a314 1
+    result = fmod(RFLOAT(x)->value, value);
+d317 1
+a317 2
+	double value1 = RFLOAT(x)->value;
+	double value2;
+d319 2
+a320 2
+	modf(value1/value, &value2);
+	result = value1 - value2 * value;
+d323 3
+a325 2
+    if (modulo && value*result<0.0) {
+	result += value;
+a326 1
+    return rb_float_new(result);
+d333 1
+a333 2
+    return flo_modulo(x,y,1);
+}
+d335 15
+a349 5
+static VALUE
+flo_remainder(x, y)
+    VALUE x, y;
+{
+    return flo_modulo(x,y,0);
+d356 2
+a357 1
+    double value, div, mod;
+d361 1
+a361 1
+	value = (double)FIX2LONG(y);
+d364 1
+a364 1
+	value = rb_big2dbl(y);
+d367 1
+a367 1
+	value = RFLOAT(y)->value;
+d372 1
+a372 17
+
+#ifdef HAVE_FMOD
+    mod = fmod(RFLOAT(x)->value, value);
+#else
+    {
+	double value1 = RFLOAT(x)->value;
+	double value2;
+
+	modf(value1/value, &value2);
+	mod = value1 - value2 * value;
+    }
+#endif
+    div = (RFLOAT(x)->value - mod) / value;
+    if (value*mod<0.0) {
+	mod += value;
+	div -= 1.0;
+    }
+d1000 25
+d1030 1
+a1030 1
+	long i;
+d1032 2
+a1033 4
+	i = FIX2LONG(y);
+	if (i == 0) rb_num_zerodiv();
+	i = FIX2LONG(x)/i;
+	return INT2NUM(i);	/* FIXNUM_MIN / -1 > FIXNUM_MAX */
+d1039 1
+a1039 1
+fix_modulo(x, y, modulo)
+d1042 2
+a1043 1
+    long i;
+d1045 2
+a1046 10
+    if (FIXNUM_P(y)) {
+	i = FIX2LONG(y);
+	if (i == 0) rb_num_zerodiv();
+	i = FIX2LONG(x)%i;
+	if (modulo &&
+	    (FIX2LONG(x) < 0) != (FIX2LONG(y) < 0) &&
+	    i != 0) {
+	    i += FIX2LONG(y);
+	}
+	return INT2FIX(i);
+d1052 1
+a1052 1
+fix_mod(x, y)
+d1055 4
+a1058 2
+    return fix_modulo(x, y, 1);
+}
+d1060 3
+a1062 5
+static VALUE
+fix_remainder(x, y)
+    VALUE x, y;
+{
+    return fix_modulo(x, y, 0);
+d1225 1
+a1225 2
+    long val;
+    int width;
+d1228 1
+a1228 1
+    width = NUM2INT(y);
+d1246 5
+d1546 1
+a1546 1
+    rb_define_method(rb_cFixnum, "remainder", fix_remainder, 1);
+a1595 1
+    rb_define_method(rb_cFloat, "remainder", flo_remainder, 1);
+@
+
+
+1.11
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/18 04:56:28 $
+d682 34
+d1607 4
+@
+
+
+1.10
+log
+@freebsd floating point
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/07 08:37:40 $
+d11 1
+a11 1
+************************************************/
+d16 1
+a16 1
+#if defined(FreeBSD) && __FreeBSD_version < 400012
+a30 4
+ID rb_frame_last_func();
+VALUE rb_float_new();
+double rb_big2dbl();
+
+d1450 1
+a1450 1
+#if defined(FreeBSD) && __FreeBSD_version < 400012
+d1458 1
+a1458 1
+    rb_eFloatDomainError = rb_define_class("FloatDomainError", rb_eStandardError);
+@
+
+
+1.9
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 07:11:12 $
+d16 1
+a16 1
+#ifdef __FreeBSD__
+d1454 1
+a1454 1
+#ifdef __FreeBSD__
+@
+
+
+1.8
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:08 $
+d724 1
+a724 1
+	    rb_raise(rb_eTypeError, "float %s out of rang of integer", buf);
+d766 1
+a766 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'", num);
+d778 1
+a778 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'", num);
+d808 1
+a808 1
+	rb_raise(rb_eTypeError, "integer %d out of range of fixnum", v);
+d834 1
+a834 1
+	rb_raise(rb_eTypeError, "%d out of char range", i);
+@
+
+
+1.7
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/08 05:00:19 $
+d46 2
+a47 2
+	return rb_assoc_new(x, y);
+    return rb_assoc_new(rb_Float(x), rb_Float(y));
+@
+
+
+1.6
+log
+@2000-01-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:07 $
+d334 1
+a334 2
+    if (modulo &&
+	(RFLOAT(x)->value < 0.0) != (result < 0.0) && result != 0.0) {
+d355 39
+d1558 1
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:54 $
+d1433 1
+@
+
+
+1.4
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.3
+log
+@1.4.1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:07 $
+d66 1
+d661 1
+d1174 4
+a1177 6
+    if (i < sizeof(long) * 8) {
+	val = RSHIFT(FIX2LONG(x), i);
+	return INT2FIX(val);
+    }
+
+    return INT2FIX(0);
+@
+
+
+1.3.2.1
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d1172 6
+a1177 4
+    if (i < 0)
+	return fix_lshift(x, INT2FIX(-i));
+    val = RSHIFT(FIX2LONG(x), i);
+    return INT2FIX(val);
+@
+
+
+1.3.2.2
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:32 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.3.2.3
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:05 $
+d333 2
+a334 1
+    if (modulo && value*result<0.0) {
+@
+
+
+1.3.2.4
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:11:21 $
+d46 2
+a47 2
+	return rb_assoc_new(y, x);
+    return rb_assoc_new(rb_Float(y), rb_Float(x));
+@
+
+
+1.3.2.5
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 08:28:58 $
+d16 1
+a16 1
+#if defined(__FreeBSD__) && __FreeBSD__ < 4
+d1413 1
+a1413 1
+#if defined(__FreeBSD__) && __FreeBSD__ < 4
+@
+
+
+1.3.2.6
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:42:29 $
+d1151 2
+a1152 1
+    long val, width;
+d1155 1
+a1155 1
+    width = NUM2LONG(y);
+a1172 5
+    if (i == 0) return x;
+    if (i >= sizeof(long)*CHAR_BIT-1) {
+	if (i < 0) return INT2FIX(-1);
+	return INT2FIX(0);
+    }
+d1182 1
+a1182 1
+    int i = NUM2INT(idx);
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/11 07:24:03 $
+a377 1
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:42 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 3
+a17 4
+#if defined (HAVE_STRING_H)
+#  include <string.h>
+#else
+#  include <strings.h>
+d23 4
+a26 4
+VALUE cNumeric;
+VALUE cFloat;
+VALUE cInteger;
+VALUE cFixnum;
+d28 2
+a29 1
+VALUE eZeroDiv;
+d32 2
+a33 2
+VALUE float_new();
+double big2dbl();
+d36 1
+a36 1
+num_zerodiv()
+d38 1
+a38 1
+    Raise(eZeroDiv, "divided by 0");
+d45 10
+a54 1
+    return assoc_new(f_float(x,x),f_float(y,y));
+d57 14
+a70 3
+VALUE
+num_coerce_bin(x, y)
+    VALUE x, y;
+d73 1
+d75 2
+a76 1
+    ary = rb_funcall(y, coerce, 1, x);
+d78 1
+a78 1
+	TypeError("coerce must return [x, y]");
+d81 3
+a83 2
+    x = RARRAY(ary)->ptr[0];
+    y = RARRAY(ary)->ptr[1];
+d85 5
+d94 8
+d112 1
+a112 6
+    VALUE ary, x, y;
+
+    ary = rb_funcall(num, coerce, 1, INT2FIX(0));
+    if (TYPE(ary) != T_ARRAY || RARRAY(ary)->len != 2) {
+	TypeError("coerce must return [x, y]");
+    }
+d114 2
+a115 2
+    x = RARRAY(ary)->ptr[0];
+    y = RARRAY(ary)->ptr[1];
+d117 1
+a117 1
+    return rb_funcall(x, '-', 1, y);
+d131 1
+a131 1
+	    div = float_new(d);
+d135 1
+a135 1
+    return assoc_new(div, mod);
+d142 1
+a142 1
+    return FALSE;
+d146 1
+a146 1
+num_chr(num)
+d149 5
+a153 2
+    char c;
+    int i = NUM2INT(num);
+d155 8
+a162 4
+    if (i < 0 || 0xff < i)
+	Fail("%d out of char range", i);
+    c = i;
+    return str_new(&c, 1);
+d166 1
+a166 1
+num_abs(num)
+d169 2
+a170 2
+    if (RTEST(rb_funcall(num, '<', 1, INT2FIX(0)))) {
+	return rb_funcall(num, rb_intern("-@@"), 0);
+d176 1
+a176 1
+float_new(d)
+d180 1
+a180 1
+    OBJSETUP(flt, cFloat, T_FLOAT);
+d188 1
+a188 1
+    struct RFloat *flt;
+d190 13
+a202 4
+    char buf[32];
+
+    sprintf(buf, "%g", flt->value);
+    if (strchr(buf, '.') == 0) {
+d215 1
+a215 1
+    return str_new2(buf);
+d222 1
+a222 1
+    return assoc_new(f_float(x, y), x);
+d227 1
+a227 1
+    struct RFloat *flt;
+d229 1
+a229 1
+    return float_new(-flt->value);
+d234 1
+a234 1
+    struct RFloat *x, *y;
+d238 1
+a238 1
+	return float_new(x->value + (double)FIX2INT(y));
+d240 1
+a240 1
+	return float_new(x->value + big2dbl(y));
+d242 1
+a242 3
+	return float_new(x->value + y->value);
+      case T_STRING:
+	return str_plus(obj_as_string(x), y);
+d244 1
+a244 1
+	return num_coerce_bin(x, y);
+d250 1
+a250 1
+    struct RFloat *x, *y;
+d254 1
+a254 1
+	return float_new(x->value - (double)FIX2INT(y));
+d256 1
+a256 1
+	return float_new(x->value - big2dbl(y));
+d258 1
+a258 1
+	return float_new(x->value - y->value);
+d260 1
+a260 1
+	return num_coerce_bin(x, y);
+d266 1
+a266 1
+    struct RFloat *x, *y;
+d270 1
+a270 1
+	return float_new(x->value * (double)FIX2INT(y));
+d272 1
+a272 1
+	return float_new(x->value * big2dbl(y));
+d274 1
+a274 3
+	return float_new(x->value * y->value);
+      case T_STRING:
+	return str_times(y, INT2FIX((int)x->value));
+d276 1
+a276 1
+	return num_coerce_bin(x, y);
+d282 1
+a282 1
+    struct RFloat *x, *y;
+d284 1
+a284 1
+    int f_y;
+d289 2
+a290 3
+	f_y = FIX2INT(y);
+	if (f_y == 0) num_zerodiv();
+	return float_new(x->value / (double)f_y);
+d292 2
+a293 3
+	d = big2dbl(y);
+	if (d == 0.0) num_zerodiv();
+	return float_new(x->value / d);
+d295 1
+a295 2
+	if (y->value == 0.0) num_zerodiv();
+	return float_new(x->value / y->value);
+d297 1
+a297 1
+	return num_coerce_bin(x, y);
+d302 3
+a304 2
+flo_mod(x, y)
+    struct RFloat *x, *y;
+d306 1
+a306 1
+    double value;
+d310 1
+a310 1
+	value = (double)FIX2INT(y);
+d313 1
+a313 1
+	value = big2dbl(y);
+d316 1
+a316 1
+	value = y->value;
+d319 1
+a319 1
+	return num_coerce_bin(x, y);
+d321 1
+d323 1
+a323 1
+    value = fmod(x->value, value);
+d326 1
+a326 1
+	double value1 = x->value;
+d330 1
+a330 1
+	value = value1 - value2 * value;
+d333 6
+d340 12
+a351 1
+    return float_new(value);
+d354 1
+a354 1
+VALUE
+d356 1
+a356 1
+    struct RFloat *x, *y;
+d360 1
+a360 1
+        return float_new(pow(x->value, (double)FIX2INT(y)));
+d362 1
+a362 1
+	return float_new(pow(x->value, big2dbl(y)));
+d364 1
+a364 1
+        return float_new(pow(x->value, y->value));
+d366 1
+a366 1
+        return num_coerce_bin(x, y);
+d374 1
+a374 1
+    if (TYPE(x) != TYPE(y)) return FALSE;
+d389 1
+a389 1
+    struct RFloat *x, *y;
+d393 2
+a394 2
+	if (x->value == FIX2INT(y)) return TRUE;
+	return FALSE;
+d396 1
+a396 1
+	return (x->value == big2dbl(y))?TRUE:FALSE;
+d398 1
+a398 1
+	return (x->value == y->value)?TRUE:FALSE;
+d406 1
+a406 1
+    struct RFloat *num;
+d412 1
+a412 1
+    d = num->value;
+d423 1
+a423 1
+    struct RFloat *x, *y;
+d427 1
+a427 1
+    a = x->value;
+d430 1
+a430 1
+	b = (double)FIX2INT(y);
+d434 1
+a434 1
+	b = big2dbl(y);
+d438 1
+a438 1
+	b = y->value;
+d442 1
+a442 1
+	return num_coerce_bin(x, y);
+d446 106
+a551 1
+    return INT2FIX(-1);
+d556 1
+a556 1
+    struct RFloat *x, *y;
+d559 1
+a559 1
+	if (x->value == y->value) return TRUE;
+d561 1
+d566 1
+a566 1
+    struct RFloat *num;
+d568 2
+a569 2
+    double f = num->value;
+    int val;
+d572 46
+a617 1
+	return dbl2big(f);
+d632 9
+a640 1
+    struct RFloat *flt;
+d642 4
+a645 2
+    double val = fabs(flt->value);
+    return float_new(val);
+d659 2
+a660 2
+    TypeError("failed to convert %s into Integer",
+	      rb_class2name(CLASS_OF(val)));
+d663 2
+a664 2
+int
+num2int(val)
+d667 5
+a671 1
+    if (NIL_P(val)) return 0;
+a673 3
+      case T_FIXNUM:
+	return FIX2INT(val);
+
+d675 3
+a677 3
+	if (RFLOAT(val)->value <= (double) LONG_MAX
+	    && RFLOAT(val)->value >= (double) LONG_MIN) {
+	    return (int)(RFLOAT(val)->value);
+d680 6
+a685 1
+	    Fail("float %g out of rang of integer", RFLOAT(val)->value);
+d689 10
+a698 1
+	return big2int(val);
+d702 4
+a705 1
+	return NUM2INT(val);
+d709 50
+d760 1
+a760 1
+num2fix(val)
+d763 1
+a763 1
+    int v;
+d765 1
+a765 4
+    if (NIL_P(val)) return INT2FIX(0);
+    switch (TYPE(val)) {
+      case T_FIXNUM:
+	return val;
+d767 4
+a770 8
+      case T_FLOAT:
+      case T_BIGNUM:
+      default:
+	v = num2int(val);
+	if (!FIXABLE(v))
+	    Fail("integer %d out of range of Fixnum", v);
+	return INT2FIX(v);
+    }
+d777 1
+a777 1
+    return TRUE;
+d788 52
+d843 1
+a843 1
+    return int2inum(-FIX2INT(num));
+d847 1
+a847 1
+fix2str(x, base)
+d851 1
+a851 1
+    char fmt[3], buf[12];
+d853 5
+a857 5
+    fmt[0] = '%'; fmt[2] = '\0';
+    if (base == 10) fmt[1] = 'd';
+    else if (base == 16) fmt[1] = 'x';
+    else if (base == 8) fmt[1] = 'o';
+    else Fatal("fixnum cannot treat base %d", base);
+d859 2
+a860 2
+    sprintf(buf, fmt, FIX2INT(x));
+    return str_new2(buf);
+d863 1
+a863 1
+VALUE
+d867 1
+a867 1
+    return fix2str(in, 10);
+d872 1
+a872 2
+    VALUE x;
+    struct RFloat *y;
+d874 11
+a884 15
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	{
+	    int a, b, c;
+	    VALUE r;
+
+	    a = FIX2INT(x);
+	    b = FIX2INT(y);
+	    c = a + b;
+	    r = INT2FIX(c);
+
+	    if (FIX2INT(r) != c) {
+		r = big_plus(int2big(a), int2big(b));
+	    }
+	    return r;
+d886 4
+a889 4
+      case T_FLOAT:
+	return float_new((double)FIX2INT(x) + y->value);
+      default:
+	return num_coerce_bin(x, y);
+d891 1
+d896 1
+a896 2
+    VALUE x;
+    struct RFloat *y;
+d898 11
+a908 15
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	{
+	    int a, b, c;
+	    VALUE r;
+
+	    a = FIX2INT(x);
+	    b = FIX2INT(y);
+	    c = a - b;
+	    r = INT2FIX(c);
+
+	    if (FIX2INT(r) != c) {
+		r = big_minus(int2big(a), int2big(b));
+	    }
+	    return r;
+d910 4
+a913 4
+      case T_FLOAT:
+	return float_new((double)FIX2INT(x) - y->value);
+      default:
+	return num_coerce_bin(x, y);
+d915 1
+d920 1
+a920 2
+    VALUE x;
+    struct RFloat *y;
+d922 13
+a934 17
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	{
+	    int a, b, c;
+	    VALUE r;
+
+	    a = FIX2INT(x);
+	    if (a == 0) return x;
+
+	    b = FIX2INT(y);
+	    c = a * b;
+	    r = INT2FIX(c);
+
+	    if (FIX2INT(r) != c || c/a != b) {
+		r = big_mul(int2big(a), int2big(b));
+	    }
+	    return r;
+d936 4
+a939 4
+      case T_FLOAT:
+	return float_new((double)FIX2INT(x) * y->value);
+      default:
+	return num_coerce_bin(x, y);
+d941 1
+d946 16
+a961 2
+    VALUE x;
+    struct RFloat *y;
+d963 1
+a963 1
+    int i;
+d965 9
+a973 4
+    if (TYPE(y) == T_FIXNUM) {
+	i = FIX2INT(y);
+	if (i == 0) num_zerodiv();
+	i = FIX2INT(x)/i;
+d976 1
+a976 1
+    return num_coerce_bin(x, y);
+d983 2
+a984 1
+    int i;
+d986 5
+a990 7
+    if (TYPE(y) == T_FIXNUM) {
+	i = FIX2INT(y);
+	if (i == 0) num_zerodiv();
+	i = FIX2INT(x)%i;
+	return INT2FIX(i);
+    }
+    return num_coerce_bin(x, y);
+d998 1
+a998 1
+	int a, b;
+d1000 1
+a1000 1
+	b = FIX2INT(y);
+d1002 2
+a1003 1
+	a = FIX2INT(x);
+d1005 1
+a1005 1
+	    return big_pow(int2big(a), y);
+d1007 1
+a1007 1
+	return float_new(pow((double)a, (double)b));
+d1009 1
+a1009 4
+    else if (NIL_P(y)) {
+	return INT2FIX(1);
+    }
+    return num_coerce_bin(x, y);
+d1017 1
+a1017 1
+	return (FIX2INT(x) == FIX2INT(y))?TRUE:FALSE;
+d1029 1
+a1029 1
+	int a = FIX2INT(x), b = FIX2INT(y);
+d1036 1
+a1036 1
+	return num_coerce_bin(x, y);
+d1045 1
+a1045 1
+	int a = FIX2INT(x), b = FIX2INT(y);
+d1047 2
+a1048 2
+	if (a > b) return TRUE;
+	return FALSE;
+d1051 1
+a1051 1
+	return num_coerce_bin(x, y);
+d1060 1
+a1060 1
+	int a = FIX2INT(x), b = FIX2INT(y);
+d1062 2
+a1063 2
+	if (a >= b) return TRUE;
+	return FALSE;
+d1066 1
+a1066 1
+	return num_coerce_bin(x, y);
+d1075 1
+a1075 1
+	int a = FIX2INT(x), b = FIX2INT(y);
+d1077 2
+a1078 2
+	if (a < b) return TRUE;
+	return FALSE;
+d1081 1
+a1081 1
+	return num_coerce_bin(x, y);
+d1090 1
+a1090 1
+	int a = FIX2INT(x), b = FIX2INT(y);
+d1092 2
+a1093 2
+	if (a <= b) return TRUE;
+	return FALSE;
+d1096 1
+a1096 1
+	return num_coerce_bin(x, y);
+d1104 1
+a1104 1
+    unsigned long val = FIX2UINT(num);
+d1107 1
+a1107 1
+    return INT2FIX(val);
+d1117 1
+a1117 1
+	return big_and(y, x);
+d1119 2
+a1120 2
+    val = NUM2INT(x) & NUM2INT(y);
+    return int2inum(val);
+d1130 1
+a1130 1
+	return big_or(y, x);
+d1132 2
+a1133 2
+    val = NUM2INT(x) | NUM2INT(y);
+    return INT2FIX(val);
+d1143 1
+a1143 1
+	return big_xor(y, x);
+d1145 2
+a1146 2
+    val = NUM2INT(x) ^ NUM2INT(y);
+    return INT2FIX(val);
+d1153 2
+a1154 1
+    long val, width;
+d1156 1
+a1156 1
+    val = NUM2INT(x);
+d1159 2
+a1160 2
+	|| (unsigned)val>>(sizeof(VALUE)*CHAR_BIT-1-width) > 0) {
+	return big_lshift(int2big(val), y);
+d1163 1
+a1163 1
+    return int2inum(val);
+d1172 3
+a1174 3
+    i = NUM2INT(y);
+    if (y < 32) {
+	val = RSHIFT(FIX2INT(x), i);
+d1185 2
+a1186 2
+    unsigned long val = FIX2INT(fix);
+    int i = FIX2INT(idx);
+d1208 1
+a1208 1
+    val = (double)FIX2INT(num);
+d1210 1
+a1210 1
+    return float_new(val);
+d1217 1
+a1217 1
+    return str_new2("Fixnum");
+d1224 1
+a1224 1
+    int i = FIX2INT(fix);
+d1228 1
+a1228 1
+    return int2inum(i);
+d1236 1
+a1236 1
+    if (name) return str_new2(name);
+d1244 1
+a1244 1
+    int i = FIX2INT(fix) + 1;
+d1246 1
+a1246 1
+    return int2inum(i);
+d1253 1
+a1253 1
+    return INT2FIX(sizeof(VALUE));
+d1256 2
+a1257 2
+VALUE
+num_upto(from, to)
+d1271 1
+a1271 1
+num_downto(from, to)
+d1285 1
+a1285 1
+num_step(from, to, step)
+d1291 2
+a1292 2
+    if (step == INT2FIX(0)) {
+	IndexError("step cannot be 0");
+d1310 1
+a1310 1
+num_dotimes(num)
+d1323 1
+a1323 1
+VALUE
+d1327 1
+a1327 1
+    int i, end;
+d1329 3
+a1331 3
+    if (!FIXNUM_P(to)) return num_upto(from, to);
+    end = FIX2INT(to);
+    for (i = FIX2INT(from); i <= end; i++) {
+d1338 7
+d1349 1
+a1349 1
+    int i, end;
+d1351 3
+a1353 3
+    if (!FIXNUM_P(to)) return num_downto(from, to);
+    end = FIX2INT(to);
+    for (i=FIX2INT(from); i >= end; i--) {
+d1364 1
+a1364 1
+    int i, end, diff;
+d1367 1
+a1367 1
+	return num_step(from, to, step);
+d1369 3
+a1371 2
+    end = FIX2INT(to);
+    diff = FIX2INT(step);
+d1374 1
+a1374 1
+	ArgError("step cannot be 0");
+d1376 2
+a1377 2
+    else if (diff > 0) {
+	for (i=FIX2INT(from); i <= end; i+=diff) {
+d1379 1
+d1383 1
+a1383 1
+	for (i=FIX2INT(from); i >= end; i+=diff) {
+d1385 1
+d1395 1
+a1395 1
+    int i, end;
+d1397 1
+a1397 1
+    end = FIX2INT(num);
+d1404 9
+a1412 2
+extern VALUE mComparable;
+extern VALUE eException;
+d1417 4
+d1424 114
+a1537 89
+    eZeroDiv = rb_define_class("ZeroDivisionError", eException);
+    cNumeric = rb_define_class("Numeric", cObject);
+
+    rb_include_module(cNumeric, mComparable);
+    rb_define_method(cNumeric, "coerce", num_coerce, 1);
+
+    rb_define_method(cNumeric, "+@@", num_uplus, 0);
+    rb_define_method(cNumeric, "-@@", num_uminus, 0);
+    rb_define_method(cNumeric, "eql?", num_eql, 1);
+    rb_define_method(cNumeric, "divmod", num_divmod, 1);
+    rb_define_method(cNumeric, "abs", num_abs, 0);
+
+    rb_define_method(cNumeric, "upto", num_upto, 1);
+    rb_define_method(cNumeric, "downto", num_downto, 1);
+    rb_define_method(cNumeric, "step", num_step, 2);
+    rb_define_method(cNumeric, "times", num_dotimes, 0);
+    rb_define_method(cNumeric, "integer?", num_int_p, 0);
+    rb_define_method(cNumeric, "chr", num_chr, 0);
+
+    cInteger = rb_define_class("Integer", cNumeric);
+    rb_define_method(cInteger, "integer?", int_int_p, 0);
+    rb_define_method(cInteger, "succ", int_succ, 0);
+
+    cFixnum = rb_define_class("Fixnum", cInteger);
+
+    rb_undef_method(CLASS_OF(cFixnum), "new");
+
+    rb_define_method(cFixnum, "to_s", fix_to_s, 0);
+    rb_define_method(cFixnum, "type", fix_type, 0);
+
+    rb_define_method(cFixnum, "id2name", fix_id2name, 0);
+
+    rb_define_method(cFixnum, "-@@", fix_uminus, 0);
+    rb_define_method(cFixnum, "+", fix_plus, 1);
+    rb_define_method(cFixnum, "-", fix_minus, 1);
+    rb_define_method(cFixnum, "*", fix_mul, 1);
+    rb_define_method(cFixnum, "/", fix_div, 1);
+    rb_define_method(cFixnum, "%", fix_mod, 1);
+    rb_define_method(cFixnum, "**", fix_pow, 1);
+
+    rb_define_method(cFixnum, "abs", fix_abs, 0);
+
+    rb_define_method(cFixnum, "==", fix_equal, 1);
+    rb_define_method(cFixnum, "<=>", fix_cmp, 1);
+    rb_define_method(cFixnum, ">",  fix_gt, 1);
+    rb_define_method(cFixnum, ">=", fix_ge, 1);
+    rb_define_method(cFixnum, "<",  fix_lt, 1);
+    rb_define_method(cFixnum, "<=", fix_le, 1);
+
+    rb_define_method(cFixnum, "~", fix_rev, 0);
+    rb_define_method(cFixnum, "&", fix_and, 1);
+    rb_define_method(cFixnum, "|", fix_or,  1);
+    rb_define_method(cFixnum, "^", fix_xor, 1);
+    rb_define_method(cFixnum, "[]", fix_aref, 1);
+
+    rb_define_method(cFixnum, "<<", fix_lshift, 1);
+    rb_define_method(cFixnum, ">>", fix_rshift, 1);
+
+    rb_define_method(cFixnum, "to_i", fix_to_i, 0);
+    rb_define_method(cFixnum, "to_f", fix_to_f, 0);
+
+    rb_define_method(cFixnum, "succ", fix_succ, 0);
+    rb_define_method(cFixnum, "size", fix_size, 0);
+
+    rb_define_method(cFixnum, "upto", fix_upto, 1);
+    rb_define_method(cFixnum, "downto", fix_downto, 1);
+    rb_define_method(cFixnum, "step", fix_step, 2);
+    rb_define_method(cFixnum, "times", fix_dotimes, 0);
+
+    cFloat  = rb_define_class("Float", cNumeric);
+
+    rb_undef_method(CLASS_OF(cFloat), "new");
+
+    rb_define_method(cFloat, "to_s", flo_to_s, 0);
+    rb_define_method(cFloat, "coerce", flo_coerce, 1);
+    rb_define_method(cFloat, "-@@", flo_uminus, 0);
+    rb_define_method(cFloat, "+", flo_plus, 1);
+    rb_define_method(cFloat, "-", flo_minus, 1);
+    rb_define_method(cFloat, "*", flo_mul, 1);
+    rb_define_method(cFloat, "/", flo_div, 1);
+    rb_define_method(cFloat, "%", flo_mod, 1);
+    rb_define_method(cFloat, "**", flo_pow, 1);
+    rb_define_method(cFloat, "==", flo_eq, 1);
+    rb_define_method(cFloat, "<=>", flo_cmp, 1);
+    rb_define_method(cFloat, "eql?", flo_eql, 1);
+    rb_define_method(cFloat, "hash", flo_hash, 0);
+    rb_define_method(cFloat, "to_i", flo_to_i, 0);
+    rb_define_method(cFloat, "to_f", flo_to_f, 0);
+    rb_define_method(cFloat, "abs", flo_abs, 0);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d15 5
+d45 1
+a45 1
+    return assoc_new(rb_Float(x),rb_Float(y));
+d119 1
+a119 1
+    INT i = NUM2INT(num);
+d150 1
+a150 1
+    VALUE flt;
+d154 1
+a154 1
+    sprintf(buf, "%g", RFLOAT(flt)->value);
+d175 1
+a175 1
+    return assoc_new(rb_Float(y), x);
+d180 1
+a180 1
+    VALUE flt;
+d182 1
+a182 1
+    return float_new(-RFLOAT(flt)->value);
+d187 1
+a187 1
+    VALUE x, y;
+d191 1
+a191 1
+	return float_new(RFLOAT(x)->value + (double)FIX2INT(y));
+d193 1
+a193 1
+	return float_new(RFLOAT(x)->value + big2dbl(y));
+d195 1
+a195 1
+	return float_new(RFLOAT(x)->value + RFLOAT(y)->value);
+d205 1
+a205 1
+    VALUE x, y;
+d209 1
+a209 1
+	return float_new(RFLOAT(x)->value - (double)FIX2INT(y));
+d211 1
+a211 1
+	return float_new(RFLOAT(x)->value - big2dbl(y));
+d213 1
+a213 1
+	return float_new(RFLOAT(x)->value - RFLOAT(y)->value);
+d221 1
+a221 1
+    VALUE x, y;
+d225 1
+a225 1
+	return float_new(RFLOAT(x)->value * (double)FIX2INT(y));
+d227 1
+a227 1
+	return float_new(RFLOAT(x)->value * big2dbl(y));
+d229 1
+a229 1
+	return float_new(RFLOAT(x)->value * RFLOAT(y)->value);
+d231 1
+a231 1
+	return str_times(y, INT2FIX((int)RFLOAT(x)->value));
+d239 1
+a239 1
+    VALUE x, y;
+d241 1
+a241 1
+    INT f_y;
+d248 1
+a248 1
+	return float_new(RFLOAT(x)->value / (double)f_y);
+d252 1
+a252 1
+	return float_new(RFLOAT(x)->value / d);
+d254 2
+a255 2
+	if (RFLOAT(y)->value == 0.0) num_zerodiv();
+	return float_new(RFLOAT(x)->value / RFLOAT(y)->value);
+d263 1
+a263 1
+    VALUE x, y;
+d275 1
+a275 1
+	value = RFLOAT(y)->value;
+d281 1
+a281 1
+    value = fmod(RFLOAT(x)->value, value);
+d284 1
+a284 1
+	double value1 = RFLOAT(x)->value;
+d297 1
+a297 1
+    VALUE x, y;
+d301 1
+a301 1
+        return float_new(pow(RFLOAT(x)->value, (double)FIX2INT(y)));
+d303 1
+a303 1
+	return float_new(pow(RFLOAT(x)->value, big2dbl(y)));
+d305 1
+a305 1
+        return float_new(pow(RFLOAT(x)->value, RFLOAT(y)->value));
+d330 1
+a330 1
+    VALUE x, y;
+d334 1
+a334 1
+	if (RFLOAT(x)->value == FIX2INT(y)) return TRUE;
+d337 1
+a337 1
+	return (RFLOAT(x)->value == big2dbl(y))?TRUE:FALSE;
+d339 1
+a339 1
+	return (RFLOAT(x)->value == RFLOAT(y)->value)?TRUE:FALSE;
+d347 1
+a347 1
+    VALUE num;
+d353 1
+a353 1
+    d = RFLOAT(num)->value;
+d364 1
+a364 1
+    VALUE x, y;
+d368 1
+a368 1
+    a = RFLOAT(x)->value;
+d379 1
+a379 1
+	b = RFLOAT(y)->value;
+d392 1
+a392 1
+    VALUE x, y;
+d395 1
+a395 1
+	if (RFLOAT(x)->value == RFLOAT(y)->value) return TRUE;
+a396 1
+    return FALSE;
+d401 1
+a401 1
+    VALUE num;
+d403 2
+a404 2
+    double f = RFLOAT(num)->value;
+    INT val;
+d422 1
+a422 1
+    VALUE flt;
+d424 1
+a424 1
+    double val = fabs(RFLOAT(flt)->value);
+d475 1
+a475 1
+    INT v;
+d518 1
+a518 1
+    char fmt[4], buf[22];
+d520 4
+a523 4
+    fmt[0] = '%'; fmt[1] = 'l'; fmt[3] = '\0';
+    if (base == 10) fmt[2] = 'd';
+    else if (base == 16) fmt[2] = 'x';
+    else if (base == 8) fmt[2] = 'o';
+d539 2
+a540 1
+    VALUE x, y;
+d545 1
+a545 1
+	    INT a, b, c;
+d559 1
+a559 1
+	return float_new((double)FIX2INT(x) + RFLOAT(y)->value);
+d567 2
+a568 1
+    VALUE x, y;
+d573 1
+a573 1
+	    INT a, b, c;
+d587 1
+a587 1
+	return float_new((double)FIX2INT(x) - RFLOAT(y)->value);
+d595 2
+a596 1
+    VALUE x, y;
+d601 1
+a601 1
+	    INT a, b, c;
+d617 1
+a617 1
+	return float_new((double)FIX2INT(x) * RFLOAT(y)->value);
+d625 2
+a626 1
+    VALUE x, y;
+d628 1
+a628 1
+    INT i;
+d643 1
+a643 1
+    INT i;
+d659 1
+a659 1
+	INT a, b;
+d692 1
+a692 1
+	INT a = FIX2INT(x), b = FIX2INT(y);
+d708 1
+a708 1
+	INT a = FIX2INT(x), b = FIX2INT(y);
+d723 1
+a723 1
+	INT a = FIX2INT(x), b = FIX2INT(y);
+d738 1
+a738 1
+	INT a = FIX2INT(x), b = FIX2INT(y);
+d753 1
+a753 1
+	INT a = FIX2INT(x), b = FIX2INT(y);
+d879 1
+a879 1
+    return cFixnum;
+d886 1
+a886 1
+    INT i = FIX2INT(fix);
+d906 1
+a906 1
+    INT i = FIX2INT(fix) + 1;
+d915 1
+a915 1
+    return INT2FIX(sizeof(INT));
+d954 1
+a954 1
+	ArgError("step cannot be 0");
+d989 1
+a989 1
+    INT i, end;
+d1004 1
+a1004 1
+    INT i, end;
+d1019 1
+a1019 1
+    INT i, end, diff;
+d1047 1
+a1047 1
+    INT i, end;
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:32 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a14 1
+#include <stdio.h>
+d19 4
+a22 4
+VALUE rb_cNumeric;
+VALUE rb_cFloat;
+VALUE rb_cInteger;
+VALUE rb_cFixnum;
+d24 1
+a24 1
+VALUE rb_eZeroDiv;
+d27 2
+a28 2
+VALUE rb_float_new();
+double rb_big2dbl();
+d31 1
+a31 1
+rb_num_zerodiv()
+d33 1
+a33 1
+    rb_raise(rb_eZeroDiv, "divided by 0");
+d40 1
+a40 3
+    if (CLASS_OF(x) == CLASS_OF(y))
+	return rb_assoc_new(x, y);
+    return rb_assoc_new(rb_Float(x), rb_Float(y));
+d43 3
+a45 21
+static VALUE
+coerce_body(x)
+    VALUE *x;
+{
+    return rb_funcall(x[1], coerce, 1, x[0]);
+}
+
+static VALUE
+coerce_rescue(x)
+    VALUE *x;
+{
+    rb_raise(rb_eTypeError, "%s can't be coerced into %s",
+	     rb_special_const_p(x[1])?
+	     STR2CSTR(rb_inspect(x[1])):
+	     rb_class2name(CLASS_OF(x[1])),
+	     rb_class2name(CLASS_OF(x[0])));
+}
+
+static void
+do_coerce(x, y)
+    VALUE *x, *y;
+a47 1
+    VALUE a[2];
+d49 1
+a49 2
+    a[0] = *x; a[1] = *y;
+    ary = rb_rescue(coerce_body, (VALUE)a, coerce_rescue, (VALUE)a);
+d51 1
+a51 1
+	rb_raise(rb_eTypeError, "coerce must return [x, y]");
+d54 2
+a55 3
+    *x = RARRAY(ary)->ptr[0];
+    *y = RARRAY(ary)->ptr[1];
+}
+a56 5
+VALUE
+rb_num_coerce_bin(x, y)
+    VALUE x, y;
+{
+    do_coerce(&x, &y);
+a60 8
+num_clone(x)
+    VALUE x;
+{
+    /* Numerics are immutable values, which need not to copy */
+    return x;
+}
+
+static VALUE
+d71 1
+a71 1
+    VALUE zero;
+d73 7
+a79 2
+    zero = INT2FIX(0);
+    do_coerce(&zero, &num);
+d81 1
+a81 1
+    return rb_funcall(zero, '-', 1, num);
+d95 1
+a95 1
+	    div = rb_float_new(d);
+d99 1
+a99 1
+    return rb_assoc_new(div, mod);
+d106 1
+a106 1
+    return Qfalse;
+d110 1
+a110 1
+num_abs(num)
+d113 2
+a114 5
+    if (RTEST(rb_funcall(num, '<', 1, INT2FIX(0)))) {
+	return rb_funcall(num, rb_intern("-@@"), 0);
+    }
+    return num;
+}
+d116 4
+a119 8
+static VALUE
+num_zero_p(num)
+    VALUE num;
+{
+    if (RTEST(rb_equal(num, INT2FIX(0)))) {
+	return Qtrue;
+    }
+    return Qfalse;
+d123 1
+a123 1
+num_nonzero_p(num)
+d126 2
+a127 2
+    if (RTEST(rb_funcall(num, rb_intern("zero?"), 0, 0))) {
+	return Qfalse;
+d133 1
+a133 1
+rb_float_new(d)
+d137 1
+a137 1
+    OBJSETUP(flt, rb_cFloat, T_FLOAT);
+d163 1
+a163 1
+    return rb_str_new2(buf);
+d170 1
+a170 1
+    return rb_assoc_new(rb_Float(y), x);
+d177 1
+a177 1
+    return rb_float_new(-RFLOAT(flt)->value);
+d186 1
+a186 1
+	return rb_float_new(RFLOAT(x)->value + (double)FIX2LONG(y));
+d188 1
+a188 1
+	return rb_float_new(RFLOAT(x)->value + rb_big2dbl(y));
+d190 3
+a192 1
+	return rb_float_new(RFLOAT(x)->value + RFLOAT(y)->value);
+d194 1
+a194 1
+	return rb_num_coerce_bin(x, y);
+d204 1
+a204 1
+	return rb_float_new(RFLOAT(x)->value - (double)FIX2LONG(y));
+d206 1
+a206 1
+	return rb_float_new(RFLOAT(x)->value - rb_big2dbl(y));
+d208 1
+a208 1
+	return rb_float_new(RFLOAT(x)->value - RFLOAT(y)->value);
+d210 1
+a210 1
+	return rb_num_coerce_bin(x, y);
+d220 1
+a220 1
+	return rb_float_new(RFLOAT(x)->value * (double)FIX2LONG(y));
+d222 1
+a222 1
+	return rb_float_new(RFLOAT(x)->value * rb_big2dbl(y));
+d224 3
+a226 1
+	return rb_float_new(RFLOAT(x)->value * RFLOAT(y)->value);
+d228 1
+a228 1
+	return rb_num_coerce_bin(x, y);
+d236 1
+a236 1
+    long f_y;
+d241 3
+a243 3
+	f_y = FIX2LONG(y);
+	if (f_y == 0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / (double)f_y);
+d245 3
+a247 3
+	d = rb_big2dbl(y);
+	if (d == 0.0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / d);
+d249 2
+a250 2
+	if (RFLOAT(y)->value == 0.0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / RFLOAT(y)->value);
+d252 1
+a252 1
+	return rb_num_coerce_bin(x, y);
+d257 1
+a257 1
+flo_modulo(x, y, modulo)
+a258 1
+    int modulo;
+d260 1
+a260 1
+    double value, result;
+d264 1
+a264 1
+	value = (double)FIX2LONG(y);
+d267 1
+a267 1
+	value = rb_big2dbl(y);
+d273 1
+a273 1
+	return rb_num_coerce_bin(x, y);
+a274 1
+
+d276 1
+a276 1
+    result = fmod(RFLOAT(x)->value, value);
+d283 1
+a283 1
+	result = value1 - value2 * value;
+a285 6
+    if (modulo &&
+	(RFLOAT(x)->value < 0.0) != (result < 0.0) && result != 0.0) {
+	result += value;
+    }
+    return rb_float_new(result);
+}
+d287 1
+a287 5
+static VALUE
+flo_mod(x, y)
+    VALUE x, y;
+{
+    return flo_modulo(x,y,1);
+d290 1
+a290 8
+static VALUE
+flo_remainder(x, y)
+    VALUE x, y;
+{
+    return flo_modulo(x,y,0);
+}
+
+static VALUE
+d296 1
+a296 1
+        return rb_float_new(pow(RFLOAT(x)->value, (double)FIX2LONG(y)));
+d298 1
+a298 1
+	return rb_float_new(pow(RFLOAT(x)->value, rb_big2dbl(y)));
+d300 1
+a300 1
+        return rb_float_new(pow(RFLOAT(x)->value, RFLOAT(y)->value));
+d302 1
+a302 1
+        return rb_num_coerce_bin(x, y);
+d310 1
+a310 1
+    if (TYPE(x) != TYPE(y)) return Qfalse;
+d329 2
+a330 2
+	if (RFLOAT(x)->value == FIX2LONG(y)) return Qtrue;
+	return Qfalse;
+d332 1
+a332 1
+	return (RFLOAT(x)->value == rb_big2dbl(y))?Qtrue:Qfalse;
+d334 1
+a334 1
+	return (RFLOAT(x)->value == RFLOAT(y)->value)?Qtrue:Qfalse;
+d366 1
+a366 1
+	b = (double)FIX2LONG(y);
+d370 1
+a370 1
+	b = rb_big2dbl(y);
+d378 1
+a378 1
+	return rb_num_coerce_bin(x, y);
+a385 104
+flo_gt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a > b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_ge(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a >= b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_lt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a < b)?Qtrue:Qfalse;
+}
+
+static VALUE
+flo_le(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2LONG(y);
+	break;
+
+      case T_BIGNUM:
+	b = rb_big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return rb_num_coerce_bin(x, y);
+    }
+    return (a <= b)?Qtrue:Qfalse;
+}
+
+static VALUE
+d390 1
+a390 1
+	if (RFLOAT(x)->value == RFLOAT(y)->value) return Qtrue;
+d392 1
+a392 1
+    return Qfalse;
+d400 1
+a400 46
+    long val;
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+flo_floor(num)
+    VALUE num;
+{
+    double f = floor(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+flo_ceil(num)
+    VALUE num;
+{
+    double f = ceil(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return rb_dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+flo_round(num)
+    VALUE num;
+{
+    double f = RFLOAT(num)->value;
+    long val;
+
+    if (f > 0.0) f = floor(f+0.5);
+    if (f < 0.0) f = ceil(f-0.5);
+d403 1
+a403 1
+	return rb_dbl2big(f);
+d421 1
+a421 11
+    return rb_float_new(val);
+}
+
+static VALUE
+flo_zero_p(num)
+    VALUE num;
+{
+    if (RFLOAT(num)->value == 0.0) {
+	return Qtrue;
+    }
+    return Qfalse;
+d435 2
+a436 2
+    rb_raise(rb_eTypeError, "failed to convert %s into Integer",
+	     rb_class2name(CLASS_OF(val)));
+d439 2
+a440 2
+long
+rb_num2long(val)
+d443 1
+a443 3
+    if (NIL_P(val)) {
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+    }
+d445 3
+a447 1
+    if (FIXNUM_P(val)) return FIX2LONG(val);
+a448 1
+    switch (TYPE(val)) {
+d450 3
+a452 3
+	if (RFLOAT(val)->value <= (double)LONG_MAX
+	    && RFLOAT(val)->value >= (double)LONG_MIN) {
+	    return (long)(RFLOAT(val)->value);
+d455 1
+a455 2
+	    rb_raise(rb_eTypeError, "float %g out of rang of integer",
+		     RFLOAT(val)->value);
+d459 1
+a459 5
+	return rb_big2long(val);
+
+      case T_STRING:
+	rb_raise(rb_eTypeError, "no implicit conversion from string");
+	return Qnil;		/* not reached */
+d463 1
+a463 4
+	if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+	    rb_raise(rb_eTypeError, "`to_i' need to return integer");
+	}
+	return NUM2LONG(val);
+d467 2
+a468 2
+unsigned long
+rb_num2ulong(val)
+d471 1
+a471 5
+    if (TYPE(val) == T_BIGNUM) {
+	return rb_big2ulong(val);
+    }
+    return (unsigned long)rb_num2long(val);
+}
+d473 4
+a476 6
+#if SIZEOF_INT < SIZEOF_LONG
+int
+rb_num2int(val)
+    VALUE val;
+{
+    long num = rb_num2long(val);
+d478 7
+a484 2
+    if (num < INT_MIN || INT_MAX < num) {
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'.", num);
+a485 42
+    return (int)num;
+}
+
+int
+rb_fix2int(val)
+    VALUE val;
+{
+    long num = FIXNUM_P(val)?FIX2LONG(val):rb_num2long(val);
+
+    if (num < INT_MIN || INT_MAX < num) {
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'.", num);
+    }
+    return (int)num;
+}
+#else
+int
+rb_num2int(val)
+    VALUE val;
+{
+    return rb_num2long(val);
+}
+
+int
+rb_fix2int(val)
+    VALUE val;
+{
+    return FIX2INT(val);
+}
+#endif
+
+VALUE
+rb_num2fix(val)
+    VALUE val;
+{
+    long v;
+
+    if (FIXNUM_P(val)) return val;
+
+    v = rb_num2long(val);
+    if (!FIXABLE(v))
+	rb_raise(rb_eTypeError, "integer %d out of range of fixnum", v);
+    return INT2FIX(v);
+d492 1
+a492 1
+    return Qtrue;
+a502 13
+int_chr(num)
+    VALUE num;
+{
+    char c;
+    long i = NUM2LONG(num);
+
+    if (i < 0 || 0xff < i)
+	rb_raise(rb_eTypeError, "%d out of char range", i);
+    c = i;
+    return rb_str_new(&c, 1);
+}
+
+static VALUE
+d506 1
+a506 1
+    return rb_int2inum(-FIX2LONG(num));
+d510 1
+a510 1
+rb_fix2str(x, base)
+d520 1
+a520 1
+    else rb_fatal("fixnum cannot treat base %d", base);
+d522 2
+a523 2
+    sprintf(buf, fmt, FIX2LONG(x));
+    return rb_str_new2(buf);
+d526 1
+a526 1
+static VALUE
+d530 1
+a530 1
+    return rb_fix2str(in, 10);
+d537 15
+a551 11
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a + b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_plus(rb_int2big(a), rb_int2big(b));
+d553 4
+a556 1
+	return r;
+a557 4
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) + RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+d564 15
+a578 11
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a - b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_minus(rb_int2big(a), rb_int2big(b));
+d580 4
+a583 1
+	return r;
+a584 4
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) - RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+d591 17
+a607 13
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	if (a == 0) return x;
+
+	b = FIX2LONG(y);
+	c = a * b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c || c/a != b) {
+	    r = rb_big_mul(rb_int2big(a), rb_int2big(b));
+d609 4
+a612 4
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) * RFLOAT(y)->value);
+a613 1
+    return rb_num_coerce_bin(x, y);
+d620 1
+a620 2
+    if (FIXNUM_P(y)) {
+	long i;
+d622 4
+a625 3
+	i = FIX2LONG(y);
+	if (i == 0) rb_num_zerodiv();
+	i = FIX2LONG(x)/i;
+d628 1
+a628 1
+    return rb_num_coerce_bin(x, y);
+d632 1
+a632 1
+fix_modulo(x, y, modulo)
+d635 1
+a635 1
+    long i;
+d637 4
+a640 9
+    if (FIXNUM_P(y)) {
+	i = FIX2LONG(y);
+	if (i == 0) rb_num_zerodiv();
+	i = FIX2LONG(x)%i;
+	if (modulo &&
+	    (FIX2LONG(x) < 0) != (FIX2LONG(y) < 0) &&
+	    i != 0) {
+	    i += FIX2LONG(y);
+	}
+d643 1
+a643 15
+    return rb_num_coerce_bin(x, y);
+}
+
+static VALUE
+fix_mod(x, y)
+    VALUE x, y;
+{
+    return fix_modulo(x, y, 1);
+}
+
+static VALUE
+fix_remainder(x, y)
+    VALUE x, y;
+{
+    return fix_modulo(x, y, 0);
+d651 1
+a651 1
+	long a, b;
+d653 1
+a653 1
+	b = FIX2LONG(y);
+d655 1
+a655 1
+	a = FIX2LONG(x);
+d657 1
+a657 1
+	    return rb_big_pow(rb_int2big(a), y);
+d659 1
+a659 1
+	return rb_float_new(pow((double)a, (double)b));
+d664 1
+a664 1
+    return rb_num_coerce_bin(x, y);
+d672 1
+a672 1
+	return (FIX2LONG(x) == FIX2LONG(y))?Qtrue:Qfalse;
+d684 1
+a684 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d691 1
+a691 1
+	return rb_num_coerce_bin(x, y);
+d700 1
+a700 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d702 2
+a703 2
+	if (a > b) return Qtrue;
+	return Qfalse;
+d706 1
+a706 1
+	return rb_num_coerce_bin(x, y);
+d715 1
+a715 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d717 2
+a718 2
+	if (a >= b) return Qtrue;
+	return Qfalse;
+d721 1
+a721 1
+	return rb_num_coerce_bin(x, y);
+d730 1
+a730 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d732 2
+a733 2
+	if (a < b) return Qtrue;
+	return Qfalse;
+d736 1
+a736 1
+	return rb_num_coerce_bin(x, y);
+d745 1
+a745 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d747 2
+a748 2
+	if (a <= b) return Qtrue;
+	return Qfalse;
+d751 1
+a751 1
+	return rb_num_coerce_bin(x, y);
+d759 1
+a759 1
+    unsigned long val = FIX2ULONG(num);
+d762 1
+a762 1
+    return rb_int2inum(val);
+d772 1
+a772 1
+	return rb_big_and(y, x);
+d774 2
+a775 2
+    val = FIX2LONG(x) & NUM2LONG(y);
+    return rb_int2inum(val);
+d785 1
+a785 1
+	return rb_big_or(y, x);
+d787 2
+a788 2
+    val = FIX2LONG(x) | NUM2LONG(y);
+    return rb_int2inum(val);
+d798 1
+a798 1
+	return rb_big_xor(y, x);
+d800 2
+a801 2
+    val = FIX2LONG(x) ^ NUM2LONG(y);
+    return rb_int2inum(val);
+d808 1
+a808 2
+    long val;
+    int width;
+d810 1
+a810 1
+    val = NUM2LONG(x);
+d813 2
+a814 2
+	|| ((unsigned long)val)>>(sizeof(VALUE)*CHAR_BIT-1-width) > 0) {
+	return rb_big_lshift(rb_int2big(val), y);
+d817 1
+a817 1
+    return rb_int2inum(val);
+d826 3
+a828 3
+    i = NUM2LONG(y);
+    if (i < sizeof(long) * 8) {
+	val = RSHIFT(FIX2LONG(x), i);
+d839 2
+a840 2
+    unsigned long val = FIX2LONG(fix);
+    int i = FIX2LONG(idx);
+d862 1
+a862 1
+    val = (double)FIX2LONG(num);
+d864 1
+a864 1
+    return rb_float_new(val);
+d871 1
+a871 1
+    return rb_cFixnum;
+d878 1
+a878 1
+    long i = FIX2LONG(fix);
+d882 1
+a882 1
+    return rb_int2inum(i);
+d890 1
+a890 1
+    if (name) return rb_str_new2(name);
+d898 1
+a898 1
+    long i = FIX2LONG(fix) + 1;
+d900 1
+a900 1
+    return rb_int2inum(i);
+d907 1
+a907 1
+    return INT2FIX(sizeof(long));
+d910 2
+a911 2
+static VALUE
+int_upto(from, to)
+d925 1
+a925 1
+int_downto(from, to)
+d939 1
+a939 1
+int_step(from, to, step)
+d945 2
+a946 2
+    if (NUM2INT(step) == 0) {
+	rb_raise(rb_eArgError, "step cannot be 0");
+d964 1
+a964 1
+int_dotimes(num)
+d977 1
+a977 1
+static VALUE
+d981 1
+a981 1
+    long i, end;
+d983 3
+a985 3
+    if (!FIXNUM_P(to)) return int_upto(from, to);
+    end = FIX2LONG(to);
+    for (i = FIX2LONG(from); i <= end; i++) {
+a991 7
+VALUE
+rb_fix_upto(from, to)
+    VALUE from, to;
+{
+    return fix_upto(from, to);
+}
+
+d996 1
+a996 1
+    long i, end;
+d998 3
+a1000 3
+    if (!FIXNUM_P(to)) return int_downto(from, to);
+    end = FIX2LONG(to);
+    for (i=FIX2LONG(from); i >= end; i--) {
+d1011 1
+a1011 1
+    long i, end, diff;
+d1014 1
+a1014 1
+	return int_step(from, to, step);
+d1016 2
+a1017 2
+    end = FIX2LONG(to);
+    diff = FIX2LONG(step);
+d1020 1
+a1020 1
+	rb_raise(rb_eArgError, "step cannot be 0");
+d1023 1
+a1023 1
+	for (i=FIX2LONG(from); i <= end; i+=diff) {
+d1028 1
+a1028 1
+	for (i=FIX2LONG(from); i >= end; i+=diff) {
+d1039 1
+a1039 1
+    long i, end;
+d1041 1
+a1041 1
+    end = FIX2LONG(num);
+d1048 2
+a1049 9
+static VALUE
+fix_zero_p(num)
+    VALUE num;
+{
+    if (FIX2LONG(num) == 0) {
+	return Qtrue;
+    }
+    return Qfalse;
+}
+d1057 5
+a1061 2
+    rb_eZeroDiv = rb_define_class("ZeroDivisionError", rb_eStandardError);
+    rb_cNumeric = rb_define_class("Numeric", rb_cObject);
+d1063 83
+a1145 103
+    rb_include_module(rb_cNumeric, rb_mComparable);
+    rb_define_method(rb_cNumeric, "coerce", num_coerce, 1);
+    rb_define_method(rb_cNumeric, "clone", num_clone, 0);
+
+    rb_define_method(rb_cNumeric, "+@@", num_uplus, 0);
+    rb_define_method(rb_cNumeric, "-@@", num_uminus, 0);
+    rb_define_method(rb_cNumeric, "eql?", num_eql, 1);
+    rb_define_method(rb_cNumeric, "divmod", num_divmod, 1);
+    rb_define_method(rb_cNumeric, "abs", num_abs, 0);
+
+    rb_define_method(rb_cNumeric, "integer?", num_int_p, 0);
+    rb_define_method(rb_cNumeric, "zero?", num_zero_p, 0);
+    rb_define_method(rb_cNumeric, "nonzero?", num_nonzero_p, 0);
+
+    rb_cInteger = rb_define_class("Integer", rb_cNumeric);
+    rb_define_method(rb_cInteger, "integer?", int_int_p, 0);
+    rb_define_method(rb_cInteger, "upto", int_upto, 1);
+    rb_define_method(rb_cInteger, "downto", int_downto, 1);
+    rb_define_method(rb_cInteger, "step", int_step, 2);
+    rb_define_method(rb_cInteger, "times", int_dotimes, 0);
+    rb_define_method(rb_cInteger, "succ", int_succ, 0);
+    rb_define_method(rb_cInteger, "next", int_succ, 0);
+    rb_define_method(rb_cInteger, "chr", int_chr, 0);
+
+    rb_cFixnum = rb_define_class("Fixnum", rb_cInteger);
+
+    rb_undef_method(CLASS_OF(rb_cFixnum), "new");
+
+    rb_define_method(rb_cFixnum, "to_s", fix_to_s, 0);
+    rb_define_method(rb_cFixnum, "type", fix_type, 0);
+
+    rb_define_method(rb_cFixnum, "id2name", fix_id2name, 0);
+
+    rb_define_method(rb_cFixnum, "-@@", fix_uminus, 0);
+    rb_define_method(rb_cFixnum, "+", fix_plus, 1);
+    rb_define_method(rb_cFixnum, "-", fix_minus, 1);
+    rb_define_method(rb_cFixnum, "*", fix_mul, 1);
+    rb_define_method(rb_cFixnum, "/", fix_div, 1);
+    rb_define_method(rb_cFixnum, "%", fix_mod, 1);
+    rb_define_method(rb_cFixnum, "remainder", fix_remainder, 1);
+    rb_define_method(rb_cFixnum, "**", fix_pow, 1);
+
+    rb_define_method(rb_cFixnum, "abs", fix_abs, 0);
+
+    rb_define_method(rb_cFixnum, "==", fix_equal, 1);
+    rb_define_method(rb_cFixnum, "<=>", fix_cmp, 1);
+    rb_define_method(rb_cFixnum, ">",  fix_gt, 1);
+    rb_define_method(rb_cFixnum, ">=", fix_ge, 1);
+    rb_define_method(rb_cFixnum, "<",  fix_lt, 1);
+    rb_define_method(rb_cFixnum, "<=", fix_le, 1);
+
+    rb_define_method(rb_cFixnum, "~", fix_rev, 0);
+    rb_define_method(rb_cFixnum, "&", fix_and, 1);
+    rb_define_method(rb_cFixnum, "|", fix_or,  1);
+    rb_define_method(rb_cFixnum, "^", fix_xor, 1);
+    rb_define_method(rb_cFixnum, "[]", fix_aref, 1);
+
+    rb_define_method(rb_cFixnum, "<<", fix_lshift, 1);
+    rb_define_method(rb_cFixnum, ">>", fix_rshift, 1);
+
+    rb_define_method(rb_cFixnum, "to_i", fix_to_i, 0);
+    rb_define_method(rb_cFixnum, "to_f", fix_to_f, 0);
+
+    rb_define_method(rb_cFixnum, "succ", fix_succ, 0);
+    rb_define_method(rb_cFixnum, "next", fix_succ, 0);
+    rb_define_method(rb_cFixnum, "size", fix_size, 0);
+
+    rb_define_method(rb_cFixnum, "upto", fix_upto, 1);
+    rb_define_method(rb_cFixnum, "downto", fix_downto, 1);
+    rb_define_method(rb_cFixnum, "step", fix_step, 2);
+    rb_define_method(rb_cFixnum, "times", fix_dotimes, 0);
+    rb_define_method(rb_cFixnum, "zero?", fix_zero_p, 0);
+
+    rb_cFloat  = rb_define_class("Float", rb_cNumeric);
+
+    rb_undef_method(CLASS_OF(rb_cFloat), "new");
+
+    rb_define_method(rb_cFloat, "to_s", flo_to_s, 0);
+    rb_define_method(rb_cFloat, "coerce", flo_coerce, 1);
+    rb_define_method(rb_cFloat, "-@@", flo_uminus, 0);
+    rb_define_method(rb_cFloat, "+", flo_plus, 1);
+    rb_define_method(rb_cFloat, "-", flo_minus, 1);
+    rb_define_method(rb_cFloat, "*", flo_mul, 1);
+    rb_define_method(rb_cFloat, "/", flo_div, 1);
+    rb_define_method(rb_cFloat, "%", flo_mod, 1);
+    rb_define_method(rb_cFloat, "remainder", flo_remainder, 1);
+    rb_define_method(rb_cFloat, "**", flo_pow, 1);
+    rb_define_method(rb_cFloat, "==", flo_eq, 1);
+    rb_define_method(rb_cFloat, "<=>", flo_cmp, 1);
+    rb_define_method(rb_cFloat, ">",  flo_gt, 1);
+    rb_define_method(rb_cFloat, ">=", flo_ge, 1);
+    rb_define_method(rb_cFloat, "<",  flo_lt, 1);
+    rb_define_method(rb_cFloat, "<=", flo_le, 1);
+    rb_define_method(rb_cFloat, "eql?", flo_eql, 1);
+    rb_define_method(rb_cFloat, "hash", flo_hash, 0);
+    rb_define_method(rb_cFloat, "to_i", flo_to_i, 0);
+    rb_define_method(rb_cFloat, "to_f", flo_to_f, 0);
+    rb_define_method(rb_cFloat, "abs", flo_abs, 0);
+    rb_define_method(rb_cFloat, "zero?", flo_zero_p, 0);
+
+    rb_define_method(rb_cFloat, "floor", flo_floor, 0);
+    rb_define_method(rb_cFloat, "ceil", flo_ceil, 0);
+    rb_define_method(rb_cFloat, "round", flo_round, 0);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:24 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+a780 21
+rb_fix_induced_from(klass, x)
+    VALUE klass, x;
+{
+    return rb_funcall(x, rb_intern("to_i"), 0);
+}
+
+static VALUE
+rb_int_induced_from(klass, x)
+    VALUE klass, x;
+{
+    return rb_funcall(x, rb_intern("to_i"), 0);
+}
+
+static VALUE
+rb_flo_induced_from(klass, x)
+    VALUE klass, x;
+{
+    return rb_funcall(x, rb_intern("to_f"), 0);
+}
+
+static VALUE
+a1382 1
+    rb_include_module(rb_cInteger, rb_mPrecision);
+a1387 3
+    rb_include_module(rb_cFixnum, rb_mPrecision);
+    rb_define_singleton_method(rb_cFixnum, "induced_from", rb_fix_induced_from, 1);
+    rb_define_singleton_method(rb_cInteger, "induced_from", rb_int_induced_from, 1);
+a1438 3
+
+    rb_define_singleton_method(rb_cFloat, "induced_from", rb_flo_induced_from, 1);
+    rb_include_module(rb_cFloat, rb_mPrecision);
+@
+
+
+1.1.1.3.2.2
+log
+@990127
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:13 $
+a1332 1
+    i = FIX2LONG(from);
+d1339 2
+a1340 2
+    if (diff > 0) {
+	while (i <= end) {
+a1341 1
+	    i += diff;
+d1345 1
+a1345 1
+	while (i >= end) {
+a1346 1
+	    i += diff;
+@
+
+
+1.1.1.3.2.3
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/27 08:08:37 $
+d186 1
+a186 1
+    char buf[24];
+d188 2
+a189 2
+    snprintf(buf, 24, "%.10g", RFLOAT(flt)->value);
+    if (strchr(buf, '.') == 0 && strcmp(buf, "Inf") != 0) {
+d707 1
+a707 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'", num);
+d719 1
+a719 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'", num);
+d784 1
+a784 1
+    return rb_num2fix(x);
+d821 1
+a821 1
+    snprintf(buf, 22, fmt, FIX2LONG(x));
+@
+
+
+1.1.1.3.2.4
+log
+@990203
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:55 $
+d189 1
+a189 3
+    if (strchr(buf, '.') == 0 &&
+	strcmp(buf, "Inf") != 0 &&
+	strcmp(buf, "NaN") != 0) {
+@
+
+
+1.1.1.3.2.5
+log
+@990205
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/03 09:47:58 $
+a186 1
+    char *s;
+d188 4
+a191 6
+    sprintf(buf, "%-.10g", RFLOAT(flt)->value);
+    if (s = strchr(buf, ' ')) *s = '\0';
+    s = buf; if (s[0] == '-') s++;
+    if (strchr(s, '.') == 0 &&
+	strcmp(s, "Inf") != 0 &&
+	strcmp(s, "NaN") != 0) {
+d279 1
+d283 1
+d286 1
+d671 2
+a672 6
+	    char buf[24];
+	    char *s;
+
+	    sprintf(buf, "%-.10g", RFLOAT(val)->value);
+	    if (s = strchr(buf, ' ')) *s = '\0';
+	    rb_raise(rb_eTypeError, "float %s out of rang of integer", buf);
+@
+
+
+1.1.1.3.2.6
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/05 10:27:31 $
+d797 1
+a797 10
+    switch (TYPE(x)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+       return x;
+    case T_FLOAT:
+       return rb_funcall(x, rb_intern("to_i"), 0);
+    default:
+       rb_raise(rb_eTypeError, "failed to convert %s into Integer",
+                rb_class2name(CLASS_OF(x)));
+    }
+d804 1
+a804 10
+    switch (TYPE(x)) {
+    case T_FIXNUM:
+    case T_BIGNUM:
+       return rb_funcall(x, rb_intern("to_f"), 0);
+    case T_FLOAT:
+       return x;
+    default:
+       rb_raise(rb_eTypeError, "failed to convert %s into Float",
+                rb_class2name(CLASS_OF(x)));
+    }
+@
+
+
+1.1.1.3.2.7
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:21 $
+a15 3
+#ifdef __FreeBSD__
+#include <floatingpoint.h>
+#endif
+a987 1
+	if (b == 1) return x;
+d994 3
+a1404 4
+#ifdef __FreeBSD__
+    /* allow divide by zero -- Inf */
+    fpsetmask(fpgetmask() & ~(FP_X_DZ|FP_X_INV));
+#endif
+@
+
+
+1.1.1.3.2.8
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/10 08:44:25 $
+d28 1
+a28 2
+VALUE rb_eZeroDivError;
+VALUE rb_eFloatDomainError;
+d37 1
+a37 1
+    rb_raise(rb_eZeroDivError, "divided by 0");
+a190 1
+    double value = RFLOAT(flt)->value;
+d192 1
+a192 6
+    if (isinf(value))
+	return rb_str_new2(value < 0 ? "-Infinity" : "Infinity");
+    else if(isnan(value))
+	return rb_str_new2("NaN");
+    else
+	sprintf(buf, "%-.10g", value);
+d195 3
+a197 1
+    if (strchr(s, '.') == 0) {
+a688 5
+      case T_TRUE:
+      case T_FALSE:
+	rb_raise(rb_eTypeError, "no implicit conversion from boolean");
+	return Qnil;		/* not reached */
+
+d1408 1
+a1408 1
+    fpsetmask(fpgetmask() & ~(FP_X_DZ|FP_X_INV|FP_X_OFL));
+d1413 1
+a1413 2
+    rb_eZeroDivError = rb_define_class("ZeroDivisionError", rb_eStandardError);
+    rb_eFloatDomainError = rb_define_class("FloatDomainError", rb_eStandardError);
+@
+
+
+1.1.1.3.2.9
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:21 $
+d170 1
+a170 1
+	return Qnil;
+@
+
+
+1.1.1.3.2.10
+log
+@arity bug
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:29 $
+d1103 1
+a1103 1
+    long val = FIX2LONG(num);
+@
+
+
+1.1.1.3.2.11
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/18 00:34:41 $
+d953 1
+a953 1
+	return INT2NUM(i);	/* FIXNUM_MIN / -1 > FIXNUM_MAX */
+@
+
+
+1.1.1.3.2.12
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:48 $
+d446 1
+a446 2
+    if (a < b) return INT2FIX(-1);
+    rb_raise(rb_eFloatDomainError, "comparing NaN");
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:46 $
+d827 1
+a827 1
+    if (i < sizeof(INT) * 8) {
+@
+
+
+1.1.1.2.2.3
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/03 10:02:56 $
+d43 3
+a45 17
+coerce_body(x)
+    VALUE *x;
+{
+    return rb_funcall(x[1], coerce, 1, x[0]);
+}
+
+coerce_rescue(x)
+    VALUE *x;
+{
+    TypeError("%s can't convert into %s",
+	      rb_class2name(CLASS_OF(x[1])),
+	      rb_class2name(CLASS_OF(x[0])));
+}
+
+static void
+do_coerce(x, y)
+    VALUE *x, *y;
+a47 2
+#if 0
+    VALUE a[2];
+d49 1
+a49 5
+    a[0] = *x; a[1] = *y;
+    ary = rb_rescue(coerce_body, a, coerce_rescue, a);
+#else
+    ary = rb_funcall(*y, coerce, 1, *x);
+#endif
+d54 2
+a55 9
+    *x = RARRAY(ary)->ptr[0];
+    *y = RARRAY(ary)->ptr[1];
+}
+
+VALUE
+num_coerce_bin(x, y)
+    VALUE x, y;
+{
+    VALUE ary;
+a56 1
+    do_coerce(&x, &y);
+d71 6
+a76 1
+    VALUE zero;
+d78 2
+a79 2
+    zero = INT2FIX(0);
+    do_coerce(&num, &zero);
+d81 1
+a81 1
+    return rb_funcall(zero, '-', 1, num);
+@
+
+
+1.1.1.2.2.4
+log
+@\s and assignment in conditional
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:21 $
+d52 1
+a52 1
+    TypeError("%s can't be coerced into %s",
+d62 1
+d67 3
+@
+
+
+1.1.1.2.2.5
+log
+@1.1b8
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/13 09:40:28 $
+d40 1
+a40 3
+    if (CLASS_OF(x) == CLASS_OF(y))
+	return assoc_new(x, y);
+    return assoc_new(rb_Float(x), rb_Float(y));
+@
+
+
+1.1.1.2.2.6
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/20 08:56:42 $
+a1099 1
+    rb_define_method(cInteger, "next", int_succ, 0);
+a1139 1
+    rb_define_method(cFixnum, "next", fix_succ, 0);
+a1145 1
+    FL_SET(cFixnum, FL_PRIMITIVE);
+a1166 1
+    FL_SET(cFloat, FL_PRIMITIVE);
+@
+
+
+1.1.1.2.2.7
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:45 $
+d1148 1
+d1170 1
+@
+
+
+1.1.1.2.2.8
+log
+@speed up patch 2
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:32:58 $
+a406 104
+flo_gt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2INT(y);
+	break;
+
+      case T_BIGNUM:
+	b = big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return num_coerce_bin(x, y);
+    }
+    return (a > b)?TRUE:FALSE;
+}
+
+static VALUE
+flo_ge(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2INT(y);
+	break;
+
+      case T_BIGNUM:
+	b = big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return num_coerce_bin(x, y);
+    }
+    return (a >= b)?TRUE:FALSE;
+}
+
+static VALUE
+flo_lt(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2INT(y);
+	break;
+
+      case T_BIGNUM:
+	b = big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return num_coerce_bin(x, y);
+    }
+    return (a < b)?TRUE:FALSE;
+}
+
+static VALUE
+flo_le(x, y)
+    VALUE x, y;
+{
+    double a, b;
+
+    a = RFLOAT(x)->value;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+	b = (double)FIX2INT(y);
+	break;
+
+      case T_BIGNUM:
+	b = big2dbl(y);
+	break;
+
+      case T_FLOAT:
+	b = RFLOAT(y)->value;
+	break;
+
+      default:
+	return num_coerce_bin(x, y);
+    }
+    return (a <= b)?TRUE:FALSE;
+}
+
+static VALUE
+a1163 4
+    rb_define_method(cFloat, ">",  flo_gt, 1);
+    rb_define_method(cFloat, ">=", flo_ge, 1);
+    rb_define_method(cFloat, "<",  flo_lt, 1);
+    rb_define_method(cFloat, "<=", flo_le, 1);
+@
+
+
+1.1.1.2.2.9
+log
+@modulo, frexp, ldexp
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 09:19:49 $
+d278 1
+a278 1
+flo_modulo(x, y, modulo)
+a279 1
+    int modulo;
+a295 1
+
+d307 1
+a307 5
+    if (modulo &&
+	(RFLOAT(x)->value < 0.0) != (RFLOAT(y)->value < 0.0) &&
+	value != 0.0) {
+	value += RFLOAT(y)->value;
+    }
+a310 14
+static VALUE
+flo_mod(x, y)
+    VALUE x, y;
+{
+    return flo_modulo(x,y,1);
+}
+
+static VALUE
+flo_remainder(x, y)
+    VALUE x, y;
+{
+    return flo_modulo(x,y,0);
+}
+
+d757 1
+a757 1
+fix_modulo(x, y, modulo)
+a765 5
+	if (modulo &&
+	    (FIX2INT(x) < 0) != (FIX2INT(y) < 0) &&
+	    i != 0) {
+	    i += FIX2INT(y);
+	}
+a771 14
+fix_mod(x, y)
+    VALUE x, y;
+{
+    return fix_modulo(x, y, 1);
+}
+
+static VALUE
+fix_remainder(x, y)
+    VALUE x, y;
+{
+    return fix_modulo(x, y, 0);
+}
+
+static VALUE
+a1220 1
+    rb_define_method(cFixnum, "remainder", fix_remainder, 1);
+a1264 1
+    rb_define_method(cFloat, "remainder", flo_remainder, 1);
+@
+
+
+1.1.1.2.2.10
+log
+@heredoc etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/17 10:06:57 $
+d282 1
+a282 1
+    double value, result;
+d299 1
+a299 1
+    result = fmod(RFLOAT(x)->value, value);
+d306 1
+a306 1
+	result = value1 - value2 * value;
+d310 3
+a312 2
+	(RFLOAT(x)->value < 0.0) != (result < 0.0) && result != 0.0) {
+	result += value;
+d314 1
+a314 1
+    return float_new(result);
+@
+
+
+1.1.1.2.2.11
+log
+@eval(..,file,line);String#center
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/25 09:36:58 $
+a590 12
+	if (sizeof(int) < sizeof(INT)) {
+#ifndef INT_MAX
+/* assuming 32bit(2's compliment) int */
+#  define INT_MAX       2147483647
+#  define INT_MIN       (- INT_MAX - 1)
+#endif
+	    INT i = FIX2INT(val);
+	    if (INT_MIN < i && i < INT_MAX) {
+		return i;
+	    }
+	    ArgError("Fixnum too big to convert into `int'");
+	}
+@
+
+
+1.1.1.2.2.12
+log
+@dynamic (nested) local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/31 04:52:08 $
+a152 20
+static VALUE
+num_zero_p(num)
+    VALUE num;
+{
+    if (RTEST(rb_equal(num, INT2FIX(0)))) {
+	return TRUE;
+    }
+    return FALSE;
+}
+
+static VALUE
+num_nonzero_p(num)
+    VALUE num;
+{
+    if (RTEST(rb_funcall(num, rb_intern("zero?"), 0, 0))) {
+	return FALSE;
+    }
+    return num;
+}
+
+a568 10
+flo_zero_p(num)
+    VALUE num;
+{
+    if (RFLOAT(num)->value == 0.0) {
+	return TRUE;
+    }
+    return FALSE;
+}
+
+static VALUE
+d592 5
+d601 1
+a601 1
+	    TypeError("Fixnum too big to convert into `int'");
+d606 2
+a607 2
+	if (RFLOAT(val)->value <= (double)INT_MAX
+	    && RFLOAT(val)->value >= (double)INT_MIN) {
+d611 1
+a611 1
+	    TypeError("float %g out of rang of integer", RFLOAT(val)->value);
+a616 4
+      case T_STRING:
+	TypeError("no implicit conversion from string");
+	return Qnil;		/* not reached */
+
+a618 3
+	if (!obj_is_kind_of(val, cInteger)) {
+	    TypeError("`to_i' need to return integer");
+	}
+a1222 10
+static VALUE
+fix_zero_p(num)
+    VALUE num;
+{
+    if (FIX2INT(num) == 0) {
+	return TRUE;
+    }
+    return FALSE;
+}
+
+a1249 2
+    rb_define_method(cNumeric, "zero?", num_zero_p, 0);
+    rb_define_method(cNumeric, "nonzero?", num_nonzero_p, 0);
+a1302 1
+    rb_define_method(cFixnum, "zero?", fix_zero_p, 0);
+a1328 1
+    rb_define_method(cFloat, "zero?", flo_zero_p, 0);
+@
+
+
+1.1.1.2.2.13
+log
+@local_variables/defined?(TOPLEVEL_CONST) in modules
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:34:08 $
+a54 2
+	      rb_special_const_p(x[1])?
+	      STR2CSTR(rb_inspect(x[1])):
+a643 4
+	return Qnil;		/* not reached */
+
+      case T_NIL:
+	TypeError("no implicit conversion from nil");
+@
+
+
+1.1.1.2.2.14
+log
+@1.1b9_09 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/08 08:12:37 $
+d615 1
+a615 1
+INT
+d619 1
+a619 3
+    if (NIL_P(val)) {
+	TypeError("no implicit conversion from nil");
+    }
+d623 7
+d648 4
+d667 4
+a670 1
+    if (FIXNUM_P(val)) return val;
+d672 8
+a679 4
+    v = num2int(val);
+    if (!FIXABLE(v))
+	Fail("integer %d out of range of fixnum", v);
+    return INT2FIX(v);
+@
+
+
+1.1.1.2.2.15
+log
+@exception model changed
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/09 09:30:21 $
+d1256 1
+a1256 1
+extern VALUE eStandardError;
+d1264 1
+a1264 1
+    eZeroDiv = rb_define_class("ZeroDivisionError", eStandardError);
+@
+
+
+1.1.1.2.2.16
+log
+@pack/unpack unsigned
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/01 08:56:34 $
+a651 10
+UINT
+num2uint(val)
+    VALUE val;
+{
+    if (TYPE(val) == T_BIGNUM) {
+	return big2uint(val);
+    }
+    return (UINT)num2int(val);
+}
+
+d959 1
+a959 1
+    return int2inum(val);
+d971 1
+a971 1
+    val = FIX2INT(x) & NUM2INT(y);
+d984 2
+a985 2
+    val = FIX2INT(x) | NUM2INT(y);
+    return int2inum(val);
+d997 2
+a998 2
+    val = FIX2INT(x) ^ NUM2INT(y);
+    return int2inum(val);
+@
+
+
+1.1.1.2.2.17
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/08 09:38:09 $
+d137 1
+a137 1
+    long i = NUM2LONG(num);
+d279 1
+a279 1
+    long f_y;
+d566 1
+a566 1
+    long val;
+d615 2
+a616 2
+long
+num2long(val)
+d628 3
+a630 3
+	if (RFLOAT(val)->value <= (double)LONG_MAX
+	    && RFLOAT(val)->value >= (double)LONG_MIN) {
+	    return (long)(RFLOAT(val)->value);
+d637 1
+a637 1
+	return big2long(val);
+d648 1
+a648 1
+	return NUM2LONG(val);
+d652 2
+a653 2
+unsigned long
+num2ulong(val)
+d657 1
+a657 26
+	return big2ulong(val);
+    }
+    return (unsigned long)num2long(val);
+}
+
+#if SIZEOF_INT < SIZEOF_LONG
+int
+num2int(val)
+    VALUE val;
+{
+    long num = num2int(val);
+
+    if (num < INT_MIN || INT_MAX < num) {
+	ArgError("integer %d too big to convert to `int'.", num);
+    }
+    return (int)num;
+}
+
+int
+fix2int(val)
+    VALUE val;
+{
+    long num = FIXNUM_P(val)?FIX2LONG(val):num2long(val);
+
+    if (num < INT_MIN || INT_MAX < num) {
+	ArgError("integer %d too big to convert to `int'.", num);
+d659 1
+a659 1
+    return (int)num;
+a660 1
+#endif
+d666 1
+a666 1
+    long v;
+d670 1
+a670 1
+    v = num2long(val);
+d728 1
+a728 1
+	    long a, b, c;
+d755 1
+a755 1
+	    long a, b, c;
+d782 1
+a782 1
+	    long a, b, c;
+d808 1
+a808 1
+    long i;
+d823 1
+a823 1
+    long i;
+d858 1
+a858 1
+	long a, b;
+d891 1
+a891 1
+	long a = FIX2INT(x), b = FIX2INT(y);
+d907 1
+a907 1
+	long a = FIX2INT(x), b = FIX2INT(y);
+d922 1
+a922 1
+	long a = FIX2INT(x), b = FIX2INT(y);
+d937 1
+a937 1
+	long a = FIX2INT(x), b = FIX2INT(y);
+d952 1
+a952 1
+	long a = FIX2INT(x), b = FIX2INT(y);
+d1034 1
+a1034 1
+    if (i < sizeof(long) * 8) {
+d1085 1
+a1085 1
+    long i = FIX2INT(fix);
+d1105 1
+a1105 1
+    long i = FIX2INT(fix) + 1;
+d1114 1
+a1114 1
+    return INT2FIX(sizeof(long));
+d1188 1
+a1188 1
+    long i, end;
+d1203 1
+a1203 1
+    long i, end;
+d1218 1
+a1218 1
+    long i, end, diff;
+d1246 1
+a1246 1
+    long i, end;
+@
+
+
+1.1.1.2.2.18
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:58:03 $
+a14 1
+#include <stdio.h>
+a44 1
+static VALUE
+a50 1
+static VALUE
+d69 1
+a69 1
+    ary = rb_rescue(coerce_body, (VALUE)a, coerce_rescue, (VALUE)a);
+@
+
+
+1.1.1.2.2.19
+log
+@1.1b9_22
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:23 $
+d670 1
+a670 1
+    long num = num2long(val);
+a687 14
+}
+#else
+int
+num2int(val)
+    VALUE val;
+{
+    return num2long(val);
+}
+
+int
+fix2int(val)
+    VALUE val;
+{
+    return FIX2INT(val);
+@
+
+
+1.1.1.2.2.20
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/19 07:39:51 $
+d85 2
+@
+
+
+1.1.1.2.2.21
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:43 $
+d1305 3
+@
+
+
+1.1.1.2.2.22
+log
+@1.1b9_26
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:26 $
+a576 45
+flo_floor(num)
+    VALUE num;
+{
+    double f = floor(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+flo_ceil(num)
+    VALUE num;
+{
+    double f = ceil(RFLOAT(num)->value);
+    long val;
+
+    if (!FIXABLE(f)) {
+	return dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+flo_round(num)
+    VALUE num;
+{
+    double f = RFLOAT(num)->value;
+    long val;
+
+    if (f > 0.0) f = floor(f+0.5);
+    if (f < 0.0) f = ceil(f-0.5);
+
+    if (!FIXABLE(f)) {
+	return dbl2big(f);
+    }
+    val = f;
+    return INT2FIX(val);
+}
+
+static VALUE
+a1412 4
+
+    rb_define_method(cFloat, "floor", flo_floor, 0);
+    rb_define_method(cFloat, "ceil", flo_ceil, 0);
+    rb_define_method(cFloat, "round", flo_round, 0);
+@
+
+
+1.1.1.2.2.23
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/18 07:46:53 $
+d103 1
+a103 1
+    do_coerce(&zero, &num);
+d230 1
+a230 1
+	return float_new(RFLOAT(x)->value + (double)FIX2LONG(y));
+d235 2
+d248 1
+a248 1
+	return float_new(RFLOAT(x)->value - (double)FIX2LONG(y));
+d264 1
+a264 1
+	return float_new(RFLOAT(x)->value * (double)FIX2LONG(y));
+d269 2
+d285 1
+a285 1
+	f_y = FIX2LONG(y);
+d309 1
+a309 1
+	value = (double)FIX2LONG(y);
+d359 1
+a359 1
+        return float_new(pow(RFLOAT(x)->value, (double)FIX2LONG(y)));
+d392 1
+a392 1
+	if (RFLOAT(x)->value == FIX2LONG(y)) return TRUE;
+d429 1
+a429 1
+	b = (double)FIX2LONG(y);
+d457 1
+a457 1
+	b = (double)FIX2LONG(y);
+d483 1
+a483 1
+	b = (double)FIX2LONG(y);
+d509 1
+a509 1
+	b = (double)FIX2LONG(y);
+d535 1
+a535 1
+	b = (double)FIX2LONG(y);
+d671 1
+a671 1
+	return FIX2LONG(val);
+d780 1
+a780 1
+    return int2inum(-FIX2LONG(num));
+d817 2
+a818 2
+	    a = FIX2LONG(x);
+	    b = FIX2LONG(y);
+d822 1
+a822 1
+	    if (FIX2LONG(r) != c) {
+d828 1
+a828 1
+	return float_new((double)FIX2LONG(x) + RFLOAT(y)->value);
+d844 2
+a845 2
+	    a = FIX2LONG(x);
+	    b = FIX2LONG(y);
+d849 1
+a849 1
+	    if (FIX2LONG(r) != c) {
+d855 1
+a855 1
+	return float_new((double)FIX2LONG(x) - RFLOAT(y)->value);
+d871 1
+a871 1
+	    a = FIX2LONG(x);
+d874 1
+a874 1
+	    b = FIX2LONG(y);
+d878 1
+a878 1
+	    if (FIX2LONG(r) != c || c/a != b) {
+d884 1
+a884 1
+	return float_new((double)FIX2LONG(x) * RFLOAT(y)->value);
+d897 1
+a897 1
+	i = FIX2LONG(y);
+d899 1
+a899 1
+	i = FIX2LONG(x)/i;
+d912 1
+a912 1
+	i = FIX2LONG(y);
+d914 1
+a914 1
+	i = FIX2LONG(x)%i;
+d916 1
+a916 1
+	    (FIX2LONG(x) < 0) != (FIX2LONG(y) < 0) &&
+d918 1
+a918 1
+	    i += FIX2LONG(y);
+d946 1
+a946 1
+	b = FIX2LONG(y);
+d948 1
+a948 1
+	a = FIX2LONG(x);
+d965 1
+a965 1
+	return (FIX2LONG(x) == FIX2LONG(y))?TRUE:FALSE;
+d977 1
+a977 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d993 1
+a993 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d1008 1
+a1008 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d1023 1
+a1023 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d1038 1
+a1038 1
+	long a = FIX2LONG(x), b = FIX2LONG(y);
+d1067 1
+a1067 1
+    val = FIX2LONG(x) & NUM2LONG(y);
+d1080 1
+a1080 1
+    val = FIX2LONG(x) | NUM2LONG(y);
+d1093 1
+a1093 1
+    val = FIX2LONG(x) ^ NUM2LONG(y);
+d1103 2
+a1104 2
+    val = NUM2LONG(x);
+    width = NUM2LONG(y);
+d1119 1
+a1119 1
+    i = NUM2LONG(y);
+d1121 1
+a1121 1
+	val = RSHIFT(FIX2LONG(x), i);
+d1132 2
+a1133 2
+    unsigned long val = FIX2LONG(fix);
+    int i = FIX2LONG(idx);
+d1155 1
+a1155 1
+    val = (double)FIX2LONG(num);
+d1171 1
+a1171 1
+    long i = FIX2LONG(fix);
+d1191 1
+a1191 1
+    long i = FIX2LONG(fix) + 1;
+d1277 2
+a1278 2
+    end = FIX2LONG(to);
+    for (i = FIX2LONG(from); i <= end; i++) {
+d1292 2
+a1293 2
+    end = FIX2LONG(to);
+    for (i=FIX2LONG(from); i >= end; i--) {
+d1309 2
+a1310 2
+    end = FIX2LONG(to);
+    diff = FIX2LONG(step);
+d1316 1
+a1316 1
+	for (i=FIX2LONG(from); i <= end; i+=diff) {
+d1321 1
+a1321 1
+	for (i=FIX2LONG(from); i >= end; i+=diff) {
+d1334 1
+a1334 1
+    end = FIX2LONG(num);
+d1345 1
+a1345 1
+    if (FIX2LONG(num) == 0) {
+@
+
+
+1.1.1.2.2.24
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:32 $
+d792 1
+a792 1
+    sprintf(buf, fmt, FIX2LONG(x));
+d1102 1
+a1102 1
+	|| (unsigned long)val>>(sizeof(VALUE)*CHAR_BIT-1-width) > 0) {
+@
+
+
+1.1.1.2.2.25
+log
+@1.1b9_31
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:18 $
+d1097 1
+a1097 2
+    long val;
+    int width;
+d1100 1
+a1100 1
+    width = NUM2INT(y);
+d1102 1
+a1102 1
+	|| ((unsigned long)val)>>(sizeof(VALUE)*CHAR_BIT-1-width) > 0) {
+@
+
+
+1.1.1.2.2.25.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:51 $
+d20 4
+a23 4
+VALUE rb_cNumeric;
+VALUE rb_cFloat;
+VALUE rb_cInteger;
+VALUE rb_cFixnum;
+d25 1
+a25 1
+VALUE rb_eZeroDiv;
+d28 2
+a29 2
+VALUE rb_float_new();
+double rb_big2dbl();
+d32 1
+a32 1
+rb_num_zerodiv()
+d34 1
+a34 1
+    rb_raise(rb_eZeroDiv, "divided by 0");
+d42 2
+a43 2
+	return rb_assoc_new(x, y);
+    return rb_assoc_new(rb_Float(x), rb_Float(y));
+d57 5
+a61 5
+    rb_raise(rb_eTypeError, "%s can't be coerced into %s",
+	     rb_special_const_p(x[1])?
+	     STR2CSTR(rb_inspect(x[1])):
+	     rb_class2name(CLASS_OF(x[1])),
+	     rb_class2name(CLASS_OF(x[0])));
+d74 1
+a74 1
+	rb_raise(rb_eTypeError, "coerce must return [x, y]");
+d82 1
+a82 1
+rb_num_coerce_bin(x, y)
+d119 1
+a119 1
+	    div = rb_float_new(d);
+d123 1
+a123 1
+    return rb_assoc_new(div, mod);
+d130 1
+a130 1
+    return Qfalse;
+d141 1
+a141 1
+	rb_raise(rb_eTypeError, "%d out of char range", i);
+d143 1
+a143 1
+    return rb_str_new(&c, 1);
+d161 1
+a161 1
+	return Qtrue;
+d163 1
+a163 1
+    return Qfalse;
+d171 1
+a171 1
+	return Qfalse;
+d177 1
+a177 1
+rb_float_new(d)
+d181 1
+a181 1
+    OBJSETUP(flt, rb_cFloat, T_FLOAT);
+d207 1
+a207 1
+    return rb_str_new2(buf);
+d214 1
+a214 1
+    return rb_assoc_new(rb_Float(y), x);
+d221 1
+a221 1
+    return rb_float_new(-RFLOAT(flt)->value);
+d230 1
+a230 1
+	return rb_float_new(RFLOAT(x)->value + (double)FIX2LONG(y));
+d232 1
+a232 1
+	return rb_float_new(RFLOAT(x)->value + rb_big2dbl(y));
+d234 1
+a234 1
+	return rb_float_new(RFLOAT(x)->value + RFLOAT(y)->value);
+d236 1
+a236 1
+	return rb_num_coerce_bin(x, y);
+d246 1
+a246 1
+	return rb_float_new(RFLOAT(x)->value - (double)FIX2LONG(y));
+d248 1
+a248 1
+	return rb_float_new(RFLOAT(x)->value - rb_big2dbl(y));
+d250 1
+a250 1
+	return rb_float_new(RFLOAT(x)->value - RFLOAT(y)->value);
+d252 1
+a252 1
+	return rb_num_coerce_bin(x, y);
+d262 1
+a262 1
+	return rb_float_new(RFLOAT(x)->value * (double)FIX2LONG(y));
+d264 1
+a264 1
+	return rb_float_new(RFLOAT(x)->value * rb_big2dbl(y));
+d266 1
+a266 1
+	return rb_float_new(RFLOAT(x)->value * RFLOAT(y)->value);
+d268 1
+a268 1
+	return rb_num_coerce_bin(x, y);
+d282 2
+a283 2
+	if (f_y == 0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / (double)f_y);
+d285 3
+a287 3
+	d = rb_big2dbl(y);
+	if (d == 0.0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / d);
+d289 2
+a290 2
+	if (RFLOAT(y)->value == 0.0) rb_num_zerodiv();
+	return rb_float_new(RFLOAT(x)->value / RFLOAT(y)->value);
+d292 1
+a292 1
+	return rb_num_coerce_bin(x, y);
+d308 1
+a308 1
+	value = rb_big2dbl(y);
+d314 1
+a314 1
+	return rb_num_coerce_bin(x, y);
+d332 1
+a332 1
+    return rb_float_new(result);
+d349 1
+a349 1
+static VALUE
+d355 1
+a355 1
+        return rb_float_new(pow(RFLOAT(x)->value, (double)FIX2LONG(y)));
+d357 1
+a357 1
+	return rb_float_new(pow(RFLOAT(x)->value, rb_big2dbl(y)));
+d359 1
+a359 1
+        return rb_float_new(pow(RFLOAT(x)->value, RFLOAT(y)->value));
+d361 1
+a361 1
+        return rb_num_coerce_bin(x, y);
+d369 1
+a369 1
+    if (TYPE(x) != TYPE(y)) return Qfalse;
+d388 2
+a389 2
+	if (RFLOAT(x)->value == FIX2LONG(y)) return Qtrue;
+	return Qfalse;
+d391 1
+a391 1
+	return (RFLOAT(x)->value == rb_big2dbl(y))?Qtrue:Qfalse;
+d393 1
+a393 1
+	return (RFLOAT(x)->value == RFLOAT(y)->value)?Qtrue:Qfalse;
+d429 1
+a429 1
+	b = rb_big2dbl(y);
+d437 1
+a437 1
+	return rb_num_coerce_bin(x, y);
+d457 1
+a457 1
+	b = rb_big2dbl(y);
+d465 1
+a465 1
+	return rb_num_coerce_bin(x, y);
+d467 1
+a467 1
+    return (a > b)?Qtrue:Qfalse;
+d483 1
+a483 1
+	b = rb_big2dbl(y);
+d491 1
+a491 1
+	return rb_num_coerce_bin(x, y);
+d493 1
+a493 1
+    return (a >= b)?Qtrue:Qfalse;
+d509 1
+a509 1
+	b = rb_big2dbl(y);
+d517 1
+a517 1
+	return rb_num_coerce_bin(x, y);
+d519 1
+a519 1
+    return (a < b)?Qtrue:Qfalse;
+d535 1
+a535 1
+	b = rb_big2dbl(y);
+d543 1
+a543 1
+	return rb_num_coerce_bin(x, y);
+d545 1
+a545 1
+    return (a <= b)?Qtrue:Qfalse;
+d553 1
+a553 1
+	if (RFLOAT(x)->value == RFLOAT(y)->value) return Qtrue;
+d555 1
+a555 1
+    return Qfalse;
+d566 1
+a566 1
+	return rb_dbl2big(f);
+d580 1
+a580 1
+	return rb_dbl2big(f);
+d594 1
+a594 1
+	return rb_dbl2big(f);
+d611 1
+a611 1
+	return rb_dbl2big(f);
+d629 1
+a629 1
+    return rb_float_new(val);
+d637 1
+a637 1
+	return Qtrue;
+d639 1
+a639 1
+    return Qfalse;
+d653 2
+a654 2
+    rb_raise(rb_eTypeError, "failed to convert %s into Integer",
+	     rb_class2name(CLASS_OF(val)));
+d658 1
+a658 1
+rb_num2long(val)
+d662 1
+a662 1
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+d665 3
+a667 1
+    if (FIXNUM_P(val)) return FIX2LONG(val);
+a668 1
+    switch (TYPE(val)) {
+d675 1
+a675 2
+	    rb_raise(rb_eTypeError, "float %g out of rang of integer",
+		     RFLOAT(val)->value);
+d679 1
+a679 1
+	return rb_big2long(val);
+d682 1
+a682 1
+	rb_raise(rb_eTypeError, "no implicit conversion from string");
+d687 2
+a688 2
+	if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+	    rb_raise(rb_eTypeError, "`to_i' need to return integer");
+d695 1
+a695 1
+rb_num2ulong(val)
+d699 1
+a699 1
+	return rb_big2ulong(val);
+d701 1
+a701 1
+    return (unsigned long)rb_num2long(val);
+d706 1
+a706 1
+rb_num2int(val)
+d709 1
+a709 1
+    long num = rb_num2long(val);
+d712 1
+a712 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'.", num);
+d718 1
+a718 1
+rb_fix2int(val)
+d721 1
+a721 1
+    long num = FIXNUM_P(val)?FIX2LONG(val):rb_num2long(val);
+d724 1
+a724 1
+	rb_raise(rb_eArgError, "integer %d too big to convert to `int'.", num);
+d730 1
+a730 1
+rb_num2int(val)
+d733 1
+a733 1
+    return rb_num2long(val);
+d737 1
+a737 1
+rb_fix2int(val)
+d745 1
+a745 1
+rb_num2fix(val)
+d752 1
+a752 1
+    v = rb_num2long(val);
+d754 1
+a754 1
+	rb_raise(rb_eTypeError, "integer %d out of range of fixnum", v);
+d762 1
+a762 1
+    return Qtrue;
+d776 1
+a776 1
+    return rb_int2inum(-FIX2LONG(num));
+d780 1
+a780 1
+rb_fix2str(x, base)
+d790 1
+a790 1
+    else rb_fatal("fixnum cannot treat base %d", base);
+d793 1
+a793 1
+    return rb_str_new2(buf);
+d796 1
+a796 1
+static VALUE
+d800 1
+a800 1
+    return rb_fix2str(in, 10);
+d807 15
+a821 11
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a + b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_plus(rb_int2big(a), rb_int2big(b));
+d823 4
+a826 4
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) + RFLOAT(y)->value);
+a827 1
+    return rb_num_coerce_bin(x, y);
+d834 15
+a848 11
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	b = FIX2LONG(y);
+	c = a - b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c) {
+	    r = rb_big_minus(rb_int2big(a), rb_int2big(b));
+d850 4
+a853 1
+	return r;
+a854 4
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) - RFLOAT(y)->value);
+    }
+    return rb_num_coerce_bin(x, y);
+d861 17
+a877 13
+    if (FIXNUM_P(y)) {
+	long a, b, c;
+	VALUE r;
+
+	a = FIX2LONG(x);
+	if (a == 0) return x;
+
+	b = FIX2LONG(y);
+	c = a * b;
+	r = INT2FIX(c);
+
+	if (FIX2LONG(r) != c || c/a != b) {
+	    r = rb_big_mul(rb_int2big(a), rb_int2big(b));
+d879 4
+a882 4
+	return r;
+    }
+    if (TYPE(y) == T_FLOAT) {
+	return rb_float_new((double)FIX2LONG(x) * RFLOAT(y)->value);
+a883 1
+    return rb_num_coerce_bin(x, y);
+d890 1
+a890 2
+    if (FIXNUM_P(y)) {
+	long i;
+d892 1
+d894 1
+a894 1
+	if (i == 0) rb_num_zerodiv();
+d898 1
+a898 1
+    return rb_num_coerce_bin(x, y);
+d907 1
+a907 1
+    if (FIXNUM_P(y)) {
+d909 1
+a909 1
+	if (i == 0) rb_num_zerodiv();
+d918 1
+a918 1
+    return rb_num_coerce_bin(x, y);
+d946 1
+a946 1
+	    return rb_big_pow(rb_int2big(a), y);
+d948 1
+a948 1
+	return rb_float_new(pow((double)a, (double)b));
+d953 1
+a953 1
+    return rb_num_coerce_bin(x, y);
+d961 1
+a961 1
+	return (FIX2LONG(x) == FIX2LONG(y))?Qtrue:Qfalse;
+d980 1
+a980 1
+	return rb_num_coerce_bin(x, y);
+d991 2
+a992 2
+	if (a > b) return Qtrue;
+	return Qfalse;
+d995 1
+a995 1
+	return rb_num_coerce_bin(x, y);
+d1006 2
+a1007 2
+	if (a >= b) return Qtrue;
+	return Qfalse;
+d1010 1
+a1010 1
+	return rb_num_coerce_bin(x, y);
+d1021 2
+a1022 2
+	if (a < b) return Qtrue;
+	return Qfalse;
+d1025 1
+a1025 1
+	return rb_num_coerce_bin(x, y);
+d1036 2
+a1037 2
+	if (a <= b) return Qtrue;
+	return Qfalse;
+d1040 1
+a1040 1
+	return rb_num_coerce_bin(x, y);
+d1051 1
+a1051 1
+    return rb_int2inum(val);
+d1061 1
+a1061 1
+	return rb_big_and(y, x);
+d1064 1
+a1064 1
+    return rb_int2inum(val);
+d1074 1
+a1074 1
+	return rb_big_or(y, x);
+d1077 1
+a1077 1
+    return rb_int2inum(val);
+d1087 1
+a1087 1
+	return rb_big_xor(y, x);
+d1090 1
+a1090 1
+    return rb_int2inum(val);
+d1104 1
+a1104 1
+	return rb_big_lshift(rb_int2big(val), y);
+d1107 1
+a1107 1
+    return rb_int2inum(val);
+d1154 1
+a1154 1
+    return rb_float_new(val);
+d1161 1
+a1161 1
+    return rb_cFixnum;
+d1172 1
+a1172 1
+    return rb_int2inum(i);
+d1180 1
+a1180 1
+    if (name) return rb_str_new2(name);
+d1190 1
+a1190 1
+    return rb_int2inum(i);
+d1200 1
+a1200 1
+static VALUE
+d1236 1
+a1236 1
+	rb_raise(rb_eArgError, "step cannot be 0");
+d1267 1
+a1267 1
+static VALUE
+a1281 7
+VALUE
+rb_fix_upto(from, to)
+    VALUE from, to;
+{
+    return fix_upto(from, to);
+}
+
+d1310 1
+a1310 1
+	rb_raise(rb_eArgError, "step cannot be 0");
+d1343 1
+a1343 1
+	return Qtrue;
+d1345 1
+a1345 1
+    return Qfalse;
+d1354 2
+a1355 2
+    rb_eZeroDiv = rb_define_class("ZeroDivisionError", rb_eStandardError);
+    rb_cNumeric = rb_define_class("Numeric", rb_cObject);
+d1357 2
+a1358 2
+    rb_include_module(rb_cNumeric, rb_mComparable);
+    rb_define_method(rb_cNumeric, "coerce", num_coerce, 1);
+d1360 99
+a1458 99
+    rb_define_method(rb_cNumeric, "+@@", num_uplus, 0);
+    rb_define_method(rb_cNumeric, "-@@", num_uminus, 0);
+    rb_define_method(rb_cNumeric, "eql?", num_eql, 1);
+    rb_define_method(rb_cNumeric, "divmod", num_divmod, 1);
+    rb_define_method(rb_cNumeric, "abs", num_abs, 0);
+
+    rb_define_method(rb_cNumeric, "upto", num_upto, 1);
+    rb_define_method(rb_cNumeric, "downto", num_downto, 1);
+    rb_define_method(rb_cNumeric, "step", num_step, 2);
+    rb_define_method(rb_cNumeric, "times", num_dotimes, 0);
+    rb_define_method(rb_cNumeric, "integer?", num_int_p, 0);
+    rb_define_method(rb_cNumeric, "chr", num_chr, 0);
+    rb_define_method(rb_cNumeric, "zero?", num_zero_p, 0);
+    rb_define_method(rb_cNumeric, "nonzero?", num_nonzero_p, 0);
+
+    rb_cInteger = rb_define_class("Integer", rb_cNumeric);
+    rb_define_method(rb_cInteger, "integer?", int_int_p, 0);
+    rb_define_method(rb_cInteger, "succ", int_succ, 0);
+    rb_define_method(rb_cInteger, "next", int_succ, 0);
+
+    rb_cFixnum = rb_define_class("Fixnum", rb_cInteger);
+
+    rb_undef_method(CLASS_OF(rb_cFixnum), "new");
+
+    rb_define_method(rb_cFixnum, "to_s", fix_to_s, 0);
+    rb_define_method(rb_cFixnum, "type", fix_type, 0);
+
+    rb_define_method(rb_cFixnum, "id2name", fix_id2name, 0);
+
+    rb_define_method(rb_cFixnum, "-@@", fix_uminus, 0);
+    rb_define_method(rb_cFixnum, "+", fix_plus, 1);
+    rb_define_method(rb_cFixnum, "-", fix_minus, 1);
+    rb_define_method(rb_cFixnum, "*", fix_mul, 1);
+    rb_define_method(rb_cFixnum, "/", fix_div, 1);
+    rb_define_method(rb_cFixnum, "%", fix_mod, 1);
+    rb_define_method(rb_cFixnum, "remainder", fix_remainder, 1);
+    rb_define_method(rb_cFixnum, "**", fix_pow, 1);
+
+    rb_define_method(rb_cFixnum, "abs", fix_abs, 0);
+
+    rb_define_method(rb_cFixnum, "==", fix_equal, 1);
+    rb_define_method(rb_cFixnum, "<=>", fix_cmp, 1);
+    rb_define_method(rb_cFixnum, ">",  fix_gt, 1);
+    rb_define_method(rb_cFixnum, ">=", fix_ge, 1);
+    rb_define_method(rb_cFixnum, "<",  fix_lt, 1);
+    rb_define_method(rb_cFixnum, "<=", fix_le, 1);
+
+    rb_define_method(rb_cFixnum, "~", fix_rev, 0);
+    rb_define_method(rb_cFixnum, "&", fix_and, 1);
+    rb_define_method(rb_cFixnum, "|", fix_or,  1);
+    rb_define_method(rb_cFixnum, "^", fix_xor, 1);
+    rb_define_method(rb_cFixnum, "[]", fix_aref, 1);
+
+    rb_define_method(rb_cFixnum, "<<", fix_lshift, 1);
+    rb_define_method(rb_cFixnum, ">>", fix_rshift, 1);
+
+    rb_define_method(rb_cFixnum, "to_i", fix_to_i, 0);
+    rb_define_method(rb_cFixnum, "to_f", fix_to_f, 0);
+
+    rb_define_method(rb_cFixnum, "succ", fix_succ, 0);
+    rb_define_method(rb_cFixnum, "next", fix_succ, 0);
+    rb_define_method(rb_cFixnum, "size", fix_size, 0);
+
+    rb_define_method(rb_cFixnum, "upto", fix_upto, 1);
+    rb_define_method(rb_cFixnum, "downto", fix_downto, 1);
+    rb_define_method(rb_cFixnum, "step", fix_step, 2);
+    rb_define_method(rb_cFixnum, "times", fix_dotimes, 0);
+    rb_define_method(rb_cFixnum, "zero?", fix_zero_p, 0);
+
+    rb_cFloat  = rb_define_class("Float", rb_cNumeric);
+
+    rb_undef_method(CLASS_OF(rb_cFloat), "new");
+
+    rb_define_method(rb_cFloat, "to_s", flo_to_s, 0);
+    rb_define_method(rb_cFloat, "coerce", flo_coerce, 1);
+    rb_define_method(rb_cFloat, "-@@", flo_uminus, 0);
+    rb_define_method(rb_cFloat, "+", flo_plus, 1);
+    rb_define_method(rb_cFloat, "-", flo_minus, 1);
+    rb_define_method(rb_cFloat, "*", flo_mul, 1);
+    rb_define_method(rb_cFloat, "/", flo_div, 1);
+    rb_define_method(rb_cFloat, "%", flo_mod, 1);
+    rb_define_method(rb_cFloat, "remainder", flo_remainder, 1);
+    rb_define_method(rb_cFloat, "**", flo_pow, 1);
+    rb_define_method(rb_cFloat, "==", flo_eq, 1);
+    rb_define_method(rb_cFloat, "<=>", flo_cmp, 1);
+    rb_define_method(rb_cFloat, ">",  flo_gt, 1);
+    rb_define_method(rb_cFloat, ">=", flo_ge, 1);
+    rb_define_method(rb_cFloat, "<",  flo_lt, 1);
+    rb_define_method(rb_cFloat, "<=", flo_le, 1);
+    rb_define_method(rb_cFloat, "eql?", flo_eql, 1);
+    rb_define_method(rb_cFloat, "hash", flo_hash, 0);
+    rb_define_method(rb_cFloat, "to_i", flo_to_i, 0);
+    rb_define_method(rb_cFloat, "to_f", flo_to_f, 0);
+    rb_define_method(rb_cFloat, "abs", flo_abs, 0);
+    rb_define_method(rb_cFloat, "zero?", flo_zero_p, 0);
+
+    rb_define_method(rb_cFloat, "floor", flo_floor, 0);
+    rb_define_method(rb_cFloat, "ceil", flo_ceil, 0);
+    rb_define_method(rb_cFloat, "round", flo_round, 0);
+@
+
+
+1.1.1.2.2.25.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:55 $
+a89 8
+num_clone(x)
+    VALUE x;
+{
+    /* Numerics are immutable values, which need not to copy */
+    return x;
+}
+
+static VALUE
+a1356 1
+    rb_define_method(rb_cNumeric, "clone", num_clone, 0);
+@
+
+
+1.1.1.2.2.25.2.3
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:12 $
+d1047 1
+a1047 1
+    unsigned long val = FIX2ULONG(num);
+@

@@ -1,0 +1,76 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.08.07.23.48.35;	author nobu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.08.07.00.47.41;	author nobu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.12.16.40.06;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* lib/optparse.rb (OptionParser::Switch::parse_arg): require block
+  always.
+
+* lib/optparse.rb (NilClass): must provide conversion block.
+@
+text
+@# -*- ruby -*-
+
+require 'optparse'
+require 'uri'
+
+OptionParser.accept(URI) {|s| URI.parse(s) if s}
+@
+
+
+1.2
+log
+@* lib/optparse/uri.rb: require standard uri module.  thanks to
+  Minero Aoki.
+@
+text
+@d6 1
+a6 1
+OptionParser.accept(URI) {|s| [URI.parse(s)] if s}
+@
+
+
+1.1
+log
+@import
+@
+text
+@d4 3
+a6 12
+unless defined?(URI)
+  begin
+    require 'URI/uri'		# Akira Yamada version.
+  rescue LoadError
+    require 'uri/uri'		# Tomoyuki Kosimizu version.
+  end
+end
+if URI.respond_to?(:parse)
+  OptionParser.accept(URI) {|s| [URI.parse(s)] if s}
+else
+  OptionParser.accept(URI) {|s| [URI.create(s)] if s}
+end
+@

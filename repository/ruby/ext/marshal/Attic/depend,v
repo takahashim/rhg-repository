@@ -1,0 +1,57 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.49;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@marshal.o: marshal.c ../../ruby.h ../../config.h ../../defines.h ../../io.h \
+  ../../st.h
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

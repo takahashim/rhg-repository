@@ -1,0 +1,491 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.7
+	v1_6_6:1.7
+	v1_6_5:1.7
+	v1_6_4:1.7
+	v1_7_1:1.8
+	v1_6_4_preview4:1.7
+	v1_6_4_preview3:1.7
+	v1_6_4_preview2:1.7
+	v1_6_4_preview1:1.7
+	v1_6_3:1.7
+	ruby_m17n:1.7.0.4
+	ruby_1_6:1.7.0.2
+	v1_6_2:1.7
+	v1_6_1:1.7
+	v1_6_0:1.7
+	v1_4_6:1.3.2.3
+	v1_4_5:1.3.2.3
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.3.2.1
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.3
+	v1_3_6:1.1.1.2.2.3
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.2.3
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.2.3
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.2.3
+	v1_2_4:1.1.1.1.2.2
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.2
+	v1_2_1repack:1.1.1.1.2.2
+	v1_2_1:1.1.1.1.2.2
+	v1_2_stable:1.1.1.1.2.2
+	v1_1d1:1.1.1.1.2.2
+	v1_1d0:1.1.1.1.2.2
+	v1_1c9_1:1.1.1.1.2.2
+	v1_1c9:1.1.1.1.2.2
+	v1_1c8:1.1.1.1.2.2
+	v1_1c7:1.1.1.1.2.2
+	v1_1c6:1.1.1.1.2.2
+	v1_1d-start:1.1.1.1.2.2
+	v1_1c5:1.1.1.1.2.2
+	v1_1dev:1.1.1.1.2.2.0.2
+	v1_1c4:1.1.1.1.2.2
+	v1_1c3:1.1.1.1.2.2
+	v1_1c2:1.1.1.1.2.2
+	v1_1c1:1.1.1.1.2.2
+	v1_1c0:1.1.1.1.2.2
+	v1_1b9_31:1.1.1.1.2.2
+	v1_1b9_30:1.1.1.1.2.2
+	v1_1b9_28:1.1.1.1.2.2
+	v1_1b9_27:1.1.1.1.2.2
+	v1_1b9_26:1.1.1.1.2.2
+	r1_1b9_25:1.1.1.1.2.2
+	r1_1b9_24:1.1.1.1.2.2
+	v1_1b9_23:1.1.1.1.2.2
+	v1_1b9_22:1.1.1.1.2.2
+	v1_1b9_20:1.1.1.1.2.2
+	v1_1b9_18:1.1.1.1.2.2
+	v1_1b9_16:1.1.1.1.2.2
+	v1_1b9_15:1.1.1.1.2.2
+	v1_1b9_13:1.1.1.1.2.2
+	v1_1b9_12:1.1.1.1.2.2
+	v1_1b9_11:1.1.1.1.2.2
+	v1_1b9_08:1.1.1.1.2.2
+	v1_1b9_07:1.1.1.1.2.2
+	r1_1b9:1.1.1.1.2.1
+	v1_1b8:1.1.1.1.2.1
+	v1_1b7:1.1.1.1.2.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.8
+date	2001.05.06.15.01.59;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.08.03.09.50.35;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.14.08.08.50;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.12.07.48.23;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.13.06.44.41;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.54;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.26;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.10.08.44.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.07.15.07.59.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.07.28.09.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.02.02.04.49.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.03.26.10.22.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.04.09.18.04.08;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.10.13.03.42.12;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.06.13.09.50.49;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.06.20.06.08.41;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@forgot some checkins.
+@
+text
+@#! ./miniruby
+
+load './rbconfig.rb'
+include Config
+
+unless File.exist? "./#{CONFIG['ruby_install_name']}#{CONFIG['EXEEXT']}"
+  print "./#{CONFIG['ruby_install_name']} is not found.\n"
+  print "Try `make' first, then `make test', please.\n"
+  exit 1
+end
+
+if File.exist? CONFIG['LIBRUBY_SO']
+  case RUBY_PLATFORM
+  when /-hpux/
+    dldpath = "SHLIB_PATH"
+  when /-aix/
+    dldpath = "LIBPATH"
+  when /-beos/
+    dldpath = "LIBRARY_PATH"
+  else
+    dldpath = "LD_LIBRARY_PATH"
+  end
+  x = ENV[dldpath]
+  x = x ? ".:"+x : "."
+  ENV[dldpath] = x
+end
+
+if /linux/ =~ RUBY_PLATFORM and File.exist? CONFIG['LIBRUBY_SO']
+  ENV["LD_PRELOAD"] = "./#{CONFIG['LIBRUBY_SO']}"
+end
+
+$stderr.reopen($stdout)
+error = ''
+
+`./#{CONFIG["ruby_install_name"]}#{CONFIG["EXEEXT"]} #{CONFIG["srcdir"]}/sample/test.rb`.each do |line|
+  if line =~ /^end of test/
+    print "test succeeded\n"
+    exit 0
+  end
+  error << line if line =~ %r:^(sample/test.rb|not):
+end
+print error
+print "test failed\n"
+exit 1
+@
+
+
+1.7
+log
+@matz - nakada win32 patch
+@
+text
+@d9 1
+a9 1
+  exit 0
+@
+
+
+1.6
+log
+@2000-06-14-2
+@
+text
+@d1 1
+a1 1
+#! ./miniruby -I.
+d3 1
+a3 1
+require 'rbconfig'
+d35 1
+a35 1
+`./#{CONFIG["ruby_install_name"]} #{CONFIG["srcdir"]}/sample/test.rb`.each do |line|
+@
+
+
+1.5
+log
+@2000-06-12
+@
+text
+@d6 1
+a6 1
+unless File.exist? "./#{CONFIG['ruby_install_name']}"
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d6 6
+d34 1
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d12 2
+@
+
+
+1.3.2.1
+log
+@19991013
+@
+text
+@a11 2
+  when /-beos/
+    dldpath = "LIBRARY_PATH"
+@
+
+
+1.3.2.2
+log
+@2000-06-13
+@
+text
+@a5 6
+unless File.exist? "./#{CONFIG['ruby_install_name']}"
+  print "./#{CONFIG['ruby_install_name']} is not found.\n"
+  print "Try `make' first, then `make test', please.\n"
+  exit 0
+end
+
+@
+
+
+1.3.2.3
+log
+@2000-06-20
+@
+text
+@d6 1
+a6 1
+unless File.exist? "./#{CONFIG['ruby_install_name']}#{CONFIG['EXEEXT']}"
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d35 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+d6 18
+d26 1
+a26 1
+`./ruby #{CONFIG["srcdir"]}/sample/test.rb`.each do |line|
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@a0 2
+#! ./miniruby -I.
+
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@a2 4
+x = ENV["LD_LIBRARY_PATH"]
+x = x ? x+":." : "."
+ENV["LD_LIBRARY_PATH"] = x
+
+d8 1
+a8 1
+`./#{CONFIG["ruby_install_name"]} #{CONFIG["srcdir"]}/sample/test.rb`.each do |line|
+@
+
+
+1.1.1.2.2.2
+log
+@990715
+@
+text
+@d3 4
+a8 19
+
+if File.exist? CONFIG['LIBRUBY_SO']
+  case RUBY_PLATFORM
+  when /-hpux/
+    dldpath = "SHLIB_PATH"
+  when /-aix/
+    dldpath = "LIBPATH"
+  else
+    dldpath = "LD_LIBRARY_PATH"
+  end
+  x = ENV[dldpath]
+  x = x ? ".:"+x : "."
+  ENV[dldpath] = x
+end
+
+if File.exist? CONFIG['LIBRUBY_SO']
+  ENV["LD_PRELOAD"] ||= ""
+  ENV["LD_PRELOAD"] += " ./#{CONFIG['LIBRUBY_SO']}"
+end
+@
+
+
+1.1.1.2.2.3
+log
+@990728
+@
+text
+@d20 3
+a22 2
+if /linux/ =~ RUBY_PLATFORM and File.exist? CONFIG['LIBRUBY_SO']
+  ENV["LD_PRELOAD"] = "./#{CONFIG['LIBRUBY_SO']}"
+@
+
+
+1.1.1.1.2.1
+log
+@__FILE__,__LINE__
+@
+text
+@a0 1
+#! ./miniruby
+@
+
+
+1.1.1.1.2.2
+log
+@protected methods
+@
+text
+@d1 1
+a1 2
+#! ./miniruby -I.
+
+@
+
+
+1.1.1.1.2.3
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+`./miniruby #{CONFIG["srcdir"]}/sample/test.rb`.each do |line|
+@
+

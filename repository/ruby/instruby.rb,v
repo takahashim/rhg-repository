@@ -1,0 +1,1848 @@
+head	1.24;
+access;
+symbols
+	v1_6_7:1.18.2.1
+	v1_6_6:1.18.2.1
+	v1_6_5:1.18.2.1
+	v1_6_4:1.18.2.1
+	v1_7_1:1.19
+	v1_6_4_preview4:1.18.2.1
+	v1_6_4_preview3:1.18.2.1
+	v1_6_4_preview2:1.18
+	v1_6_4_preview1:1.18
+	v1_6_3:1.18
+	ruby_m17n:1.18.0.4
+	ruby_1_6:1.18.0.2
+	v1_6_2:1.18
+	v1_6_1:1.17
+	v1_6_0:1.14
+	v1_4_6:1.2.2.4
+	v1_4_5:1.2.2.4
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.16
+	v1_3_6_repack:1.1.1.2.2.16
+	v1_3_6:1.1.1.2.2.16
+	v1_3_5:1.1.1.2.2.14
+	v1_2_6repack:1.1.1.1.2.13
+	v1_3_4_990625:1.1.1.2.2.14
+	v1_3_4_990624:1.1.1.2.2.14
+	v1_2_6:1.1.1.1.2.13
+	v1_3_4_990611:1.1.1.2.2.13
+	v1_3_4_990531:1.1.1.2.2.13
+	v1_3_3_990518:1.1.1.2.2.13
+	v1_3_3_990513:1.1.1.2.2.12
+	v1_3_3_990507:1.1.1.2.2.11
+	v1_2_5:1.1.1.1.2.12
+	v1_2_4:1.1.1.1.2.12
+	v1_3_1_990225:1.1.1.2.2.8
+	v1_3_1_990224:1.1.1.2.2.8
+	v1_3_1_990215:1.1.1.2.2.8
+	v1_3_1_990212:1.1.1.2.2.8
+	v1_3_1_990210:1.1.1.2.2.7
+	v1_3_1_:1.1.1.2.2.7
+	v1_3_1_990209:1.1.1.2.2.5
+	v1_3_1_990205:1.1.1.2.2.5
+	v1_3_1_990203:1.1.1.2.2.5
+	v1_3_1_990201:1.1.1.2.2.4
+	v1_3_1"_990201:1.1.1.2.2.4
+	v1_3_1_990128:1.1.1.2.2.3
+	v1_3_1_990127:1.1.1.2.2.2
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.10
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.10
+	v1_2_1repack:1.1.1.1.2.10
+	v1_2_1:1.1.1.1.2.10
+	v1_2_stable:1.1.1.1.2.10
+	v1_1d1:1.1.1.1.2.7.2.3
+	v1_1d0:1.1.1.1.2.7.2.2
+	v1_1c9_1:1.1.1.1.2.10
+	v1_1c9:1.1.1.1.2.10
+	v1_1c8:1.1.1.1.2.10
+	v1_1c7:1.1.1.1.2.9
+	v1_1c6:1.1.1.1.2.8
+	v1_1d-start:1.1.1.1.2.7
+	v1_1c5:1.1.1.1.2.7
+	v1_1dev:1.1.1.1.2.7.0.2
+	v1_1c4:1.1.1.1.2.7
+	v1_1c3:1.1.1.1.2.7
+	v1_1c2:1.1.1.1.2.6
+	v1_1c1:1.1.1.1.2.5
+	v1_1c0:1.1.1.1.2.5
+	v1_1b9_31:1.1.1.1.2.5
+	v1_1b9_30:1.1.1.1.2.5
+	v1_1b9_28:1.1.1.1.2.5
+	v1_1b9_27:1.1.1.1.2.5
+	v1_1b9_26:1.1.1.1.2.5
+	r1_1b9_25:1.1.1.1.2.5
+	r1_1b9_24:1.1.1.1.2.5
+	v1_1b9_23:1.1.1.1.2.5
+	v1_1b9_22:1.1.1.1.2.4
+	v1_1b9_20:1.1.1.1.2.4
+	v1_1b9_18:1.1.1.1.2.4
+	v1_1b9_16:1.1.1.1.2.4
+	v1_1b9_15:1.1.1.1.2.4
+	v1_1b9_13:1.1.1.1.2.4
+	v1_1b9_12:1.1.1.1.2.4
+	v1_1b9_11:1.1.1.1.2.4
+	v1_1b9_08:1.1.1.1.2.3
+	v1_1b9_07:1.1.1.1.2.3
+	r1_1b9:1.1.1.1.2.1
+	v1_1b8:1.1.1.1.2.1
+	v1_1b7:1.1.1.1.2.1
+	v1_1b6:1.1.1.1.2.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.24
+date	2002.10.23.17.40.14;	author nobu;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.10.22.04.19.26;	author nobu;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.09.08.09.04.15;	author eban;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.08.23.15.24.03;	author eban;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.06.11.01.27.46;	author H_Konishi;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.04.30.17.55.56;	author knu;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.12.18.09.46.04;	author matz;	state Exp;
+branches
+	1.18.2.1;
+next	1.17;
+
+1.17
+date	2000.09.04.04.43.26;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.09.01.09.18.11;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.09.01.03.31.00;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.08.03.09.50.33;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.25.14.46.44;	author eban;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.14.04.34.36;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.24.04.34.01;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.21.12.23.51;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.21.09.25.57;	author eban;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.04.12.05.06.21;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.15.05.01.16;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.13.07.18.36;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.03.09.08.59.54;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.02.17.07.48.10;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.17.07.11.11;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.01.27.08.08.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.01.28.07.55.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.02.01.07.34.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.02.01.08.54.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.02.09.08.10.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.02.10.08.44.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	99.02.12.11.17.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	99.03.24.08.52.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	99.04.26.09.42.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	99.05.06.08.31.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	99.05.10.08.22.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	99.05.14.08.56.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	99.06.24.04.23.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	99.07.22.10.37.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	99.07.28.09.26.41;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.01.20.04.16.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.03.26.10.22.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.03.30.09.32.48;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.04.07.09.47.28;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.05.25.09.42.27;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.07.29.09.50.30;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7;
+
+1.1.1.1.2.7
+date	98.08.27.03.55.17;	author matz;	state Exp;
+branches
+	1.1.1.1.2.7.2.1;
+next	1.1.1.1.2.8;
+
+1.1.1.1.2.8
+date	98.10.06.02.44.57;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.9;
+
+1.1.1.1.2.9
+date	98.11.09.09.11.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.10;
+
+1.1.1.1.2.10
+date	98.11.17.09.12.35;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.11;
+
+1.1.1.1.2.11
+date	99.02.09.03.29.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.12;
+
+1.1.1.1.2.12
+date	99.04.08.10.14.32;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.13;
+
+1.1.1.1.2.13
+date	99.04.20.08.20.54;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.7.2.1
+date	98.10.06.03.28.10;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7.2.2;
+
+1.1.1.1.2.7.2.2
+date	98.11.25.03.31.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7.2.3;
+
+1.1.1.1.2.7.2.3
+date	98.12.22.09.01.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.03.13.09.15.41;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.03.14.06.56.32;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.04.14.14.35.44;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.06.03.07.49.18;	author eban;	state Exp;
+branches;
+next	;
+
+1.18.2.1
+date	2001.04.30.18.39.34;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.24
+log
+@* configure.in (LIBPATHFLAG): should escape $.  [ruby-dev:18572]
+
+* mkconfig.rb: never substute escaped $$.
+
+* instruby.rb: not install LIBRUBY_SO unless enable-shared.
+  [ruby-dev:18569]
+@
+text
+@#!./miniruby
+
+load "./rbconfig.rb"
+include Config
+
+File.umask(0)
+
+while arg = ARGV.shift
+  case arg
+  when /^--/			# ignore
+  when /^-/
+    $dryrun = /n/ =~ arg
+  when /=/			# ignore
+  else
+    destdir ||= arg
+    break
+  end
+end
+destdir ||= ''
+
+$:.unshift CONFIG["srcdir"]+"/lib"
+require 'ftools'
+require 'shellwords'
+
+class Installer < File; end
+class << Installer
+  if $dryrun
+    def makedirs(*dirs)
+      String === dirs.last or dirs.pop
+      for dir in dirs
+	File.directory?(dir) or print "mkdir -p #{dir}\n"
+      end
+    end
+    def install(file, dir, mode = nil, verbose = false)
+      to = catname(file, dir)
+      unless FileTest.exist? to and cmp file, to
+	print "install#{' -m %#o'%mode if mode} #{file} #{dir}\n"
+      end
+    end
+    def makelink(orig, link, verbose = false)
+      unless File.symlink?(link) and File.readlink(link) == orig
+	print "ln -sf #{orig} #{link}\n"
+      end
+    end
+  else
+    require "ftools"
+    def makelink(orig, link, verbose = false)
+      if exist? link
+	delete link
+      end
+      symlink orig, link
+      print "link #{orig} -> #{link}\n"
+    end
+  end
+end
+
+exeext = CONFIG["EXEEXT"]
+
+ruby_install_name = CONFIG["ruby_install_name"]
+rubyw_install_name = CONFIG["rubyw_install_name"]
+
+version = CONFIG["ruby_version"]
+bindir = destdir+CONFIG["bindir"]
+libdir = destdir+CONFIG["libdir"]
+rubylibdir = destdir+CONFIG["rubylibdir"]
+archlibdir = destdir+CONFIG["archdir"]
+sitelibdir = destdir+CONFIG["sitelibdir"]
+sitearchlibdir = destdir+CONFIG["sitearchdir"]
+mandir = destdir+CONFIG["mandir"] + "/man1"
+configure_args = Shellwords.shellwords(CONFIG["configure_args"])
+enable_shared = configure_args.include?('--enable-shared')
+dll = CONFIG["LIBRUBY_SO"]
+lib = CONFIG["LIBRUBY"]
+arc = CONFIG["LIBRUBY_A"]
+
+Installer.makedirs bindir, libdir, rubylibdir, archlibdir, sitelibdir, sitearchlibdir, mandir, true
+
+Installer.install ruby_install_name+exeext, bindir+"/"+ruby_install_name+exeext, 0755, true
+if rubyw_install_name and !rubyw_install_name.empty?
+  Installer.install rubyw_install_name+exeext, bindir, 0755, true
+end
+Installer.install dll, bindir, 0755, true if enable_shared and dll != lib
+Installer.install lib, libdir, 0555, true unless lib == arc
+Installer.install arc, archlibdir, 0644, true
+Installer.install "config.h", archlibdir, 0644, true
+Installer.install "rbconfig.rb", archlibdir, 0644, true
+if CONFIG["ARCHFILE"]
+  for file in CONFIG["ARCHFILE"].split
+    Installer.install file, archlibdir, 0644, true
+  end
+end
+
+if dll == lib and dll != arc
+  for link in CONFIG["LIBRUBY_ALIASES"].split
+    Installer.makelink(dll, File.join(libdir, link), true)
+  end
+end
+
+Dir.chdir CONFIG["srcdir"]
+
+Installer.install "sample/irb.rb", "#{bindir}/irb", 0755, true
+
+Dir.glob("lib/**/*{.rb,help-message}") do |f|
+  dir = File.dirname(f).sub!(/\Alib/, rubylibdir) || rubylibdir
+  Installer.makedirs dir, true unless File.directory? dir
+  Installer.install f, dir, 0644, true
+end
+
+for f in Dir["*.h"]
+  Installer.install f, archlibdir, 0644, true
+end
+if RUBY_PLATFORM =~ /mswin32|mingw|bccwin32/
+  Installer.makedirs archlibdir + "/win32", true
+  Installer.install "win32/win32.h", archlibdir + "/win32", 0644, true
+end
+
+Installer.makedirs mandir, true
+Installer.install "ruby.1", mandir+"/"+ruby_install_name+".1", 0644, true
+
+# vi:set sw=2:
+@
+
+
+1.23
+log
+@* instruby.rb: add dryrun mode.
+
+* ext/extmk.rb (extmake): avoid Borland make's quirk behavior.
+
+* lib/mkmf.rb (link_command): opt is not a makefile macro.
+
+* bcc32/Makefile.sub ($(LIBRUBY_SO) $(LIBRUBY)): EXTOBJS were not
+  linked.
+
+* bcc32/Makefile.sub (ext/extinit.obj): missing.
+
+* bcc32/Makefile.sub (TRY_LINK): options have to place before any
+  non-option arguments.
+
+* win32/Makefile.sub (TRY_LINK): need -link and -libpath options.
+
+* bcc32/Makefile.sub, win32/Makefile.sub (RANLIB): logical
+  operator never work with command.com.
+@
+text
+@d23 1
+d70 2
+d82 1
+a82 1
+Installer.install dll, bindir, 0755, true unless dll == lib
+d103 1
+a103 1
+Dir.glob("lib/*{.rb,help-message}") do |f|
+@
+
+
+1.22
+log
+@* configure.in: modify program_prefix only if specified
+  --program-prefix.
+
+* configure.in: don't generate ext/extmk.rb.
+
+* Makefile.in: execute directly $(srcdir)/ext/extmk.rb.
+  remove -Cext option, "Dir::chdir 'ext'" in ext/extmk.rb.
+
+* {win32,bccwin32}/Makefile.sub: ditto.
+
+* instruby.rb: ditto.
+
+* ext/extmk.rb: renamed from ext/extmk.rb.in.
+
+* lib/mkmf.rb (module Logging): create log files (mkmf.log)
+  in each extension module directories.
+
+* ext/extmk.rb: ditto.
+
+* lib/mkmf.rb (macro_defined?): new method.
+
+* ext/.cvsignore: remove extmk.rb.
+
+* ext/*/.cvsignore: add "*.def".
+@
+text
+@d7 13
+a19 1
+destdir = ARGV[0] || ''
+d22 33
+a54 2
+require "ftools"
+require "find"
+a56 5
+if ENV["prefix"]
+  prefix = ENV["prefix"]
+else
+  prefix = CONFIG["prefix"]
+end
+d59 1
+a59 3
+version = "/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+arch = "/"+CONFIG["arch"]
+sitearch = "/"+CONFIG["sitearch"]
+d61 1
+d64 4
+a67 4
+rubylibdir = destdir+CONFIG["prefix"]+"/lib/ruby"+version
+archlibdir = rubylibdir+arch
+sitelibdir = destdir+CONFIG["sitedir"]+version
+sitearchlibdir = sitelibdir+sitearch
+d69 18
+a86 18
+wdir = Dir.getwd
+
+File.makedirs bindir, true
+File.install ruby_install_name+exeext,
+  "#{bindir}/#{ruby_install_name}#{exeext}", 0755, true
+rubyw = ruby_install_name.sub(/ruby/, '\&w')+exeext
+if File.exist? rubyw
+  File.install rubyw, "#{bindir}/#{rubyw}", 0755, true
+end
+for dll in Dir['*.dll']
+  File.install dll, "#{bindir}/#{dll}", 0755, true
+end
+File.makedirs libdir, true
+if CONFIG["LIBRUBY"] != CONFIG["LIBRUBY_A"]
+  for lib in [CONFIG["LIBRUBY"]]
+    if File.exist? lib
+      File.install lib, libdir, 0555, true
+    end
+d89 2
+a90 2
+Dir.chdir libdir
+if File.exist? CONFIG["LIBRUBY_SO"]
+d92 1
+a92 5
+    if File.exist? link
+       File.delete link
+    end
+    File.symlink CONFIG["LIBRUBY_SO"], link
+    print "link #{CONFIG['LIBRUBY_SO']} -> #{link}\n"
+a94 11
+Dir.chdir wdir
+File.makedirs rubylibdir, true
+File.makedirs archlibdir, true
+File.makedirs sitelibdir, true
+File.makedirs sitearchlibdir, true
+
+if RUBY_PLATFORM =~ /-aix/
+  File.install "ruby.imp", archlibdir, 0644, true
+end
+
+system "#{CONFIG['MINIRUBY']} #{CONFIG['srcdir']}/ext/extmk.rb install #{destdir}"
+d98 1
+a98 1
+File.install "sample/irb.rb", "#{bindir}/irb", 0755, true
+d100 4
+a103 5
+Find.find("lib") do |f|
+  next unless /\.rb$/ =~ f || /help-message$/ =~ f
+  dir = rubylibdir+"/"+File.dirname(f[4..-1])
+  File.makedirs dir, true unless File.directory? dir
+  File.install f, dir, 0644, true
+d107 1
+a107 1
+  File.install f, archlibdir, 0644, true
+d110 2
+a111 2
+  File.makedirs archlibdir + "/win32", true
+  File.install "win32/win32.h", archlibdir + "/win32", 0644, true
+a112 1
+File.install wdir+'/'+CONFIG['LIBRUBY_A'], archlibdir, 0644, true
+d114 3
+a116 5
+File.makedirs mandir, true
+File.install "ruby.1", mandir+"/"+ruby_install_name+".1", 0644, true
+Dir.chdir wdir
+File.install "config.h", archlibdir, 0644, true
+File.install "rbconfig.rb", archlibdir, 0644, true
+@
+
+
+1.21
+log
+@* instruby.rb: arch -> sitearch
+@
+text
+@d72 2
+a73 6
+Dir.chdir "ext"
+if defined? CROSS_COMPILING
+  system "#{CONFIG['MINIRUBY']} extmk.rb install #{destdir}"
+else
+  system "../miniruby#{exeext} extmk.rb install #{destdir}"
+end
+@
+
+
+1.20
+log
+@new platform [bccwin32] merged.
+@
+text
+@d23 1
+d30 1
+a30 1
+sitearchlibdir = sitelibdir+arch
+@
+
+
+1.19
+log
+@Install help-message's too.
+@
+text
+@d91 1
+a91 1
+if RUBY_PLATFORM =~ /mswin32|mingw/
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d82 1
+a82 1
+  next unless /\.rb$/ =~ f
+@
+
+
+1.18.2.1
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d82 1
+a82 1
+  next unless /\.rb$/ =~ f || /help-message$/ =~ f
+@
+
+
+1.17
+log
+@eban
+@
+text
+@d6 1
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d35 4
+a92 3
+  if File.exist? wdir+'/'+CONFIG["LIBRUBY"]
+    File.install wdir+'/'+CONFIG["LIBRUBY"], archlibdir, 0644, true
+  end
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d96 1
+a96 1
+File.install "ruby.1", mandir, 0644, true
+@
+
+
+1.14
+log
+@matz - nakada win32 patch
+@
+text
+@d1 1
+a1 1
+#!./miniruby -I.
+d3 1
+a3 1
+require "rbconfig.rb"
+@
+
+
+1.13
+log
+@eban
+@
+text
+@d89 2
+a90 2
+  if File.exist? wdir+'/rubymw.lib'
+    File.install wdir+'/rubymw.lib', archlibdir, 0644, true
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d39 5
+a43 3
+for lib in [CONFIG["LIBRUBY_SO"]]
+  if File.exist? lib
+    File.install lib, libdir, 0555, true
+@
+
+
+1.11
+log
+@2000-05-24
+@
+text
+@d72 2
+@
+
+
+1.10
+log
+@see ChangeLog.
+@
+text
+@d39 1
+a39 1
+for lib in ["libruby.so.LIB", CONFIG["LIBRUBY_SO"]]
+a58 4
+
+if RUBY_PLATFORM =~ /cygwin/ and File.exist? "import.h"
+  File.install "import.h", archlibdir, 0644, true
+end
+@
+
+
+1.9
+log
+@see ChangeLog
+@
+text
+@d86 1
+a86 1
+if RUBY_PLATFORM =~ /mswin32/
+@
+
+
+1.8
+log
+@mkmf
+@
+text
+@d69 5
+a73 1
+system "../miniruby#{exeext} extmk.rb install #{destdir}"
+@
+
+
+1.7
+log
+@2000-03-15
+@
+text
+@d27 1
+a27 1
+sitelibdir = destdir+CONFIG["prefix"]+"/lib/ruby/site_ruby"+version
+@
+
+
+1.6
+log
+@2000-03-13
+@
+text
+@d27 1
+a27 1
+sitelibdir = destdir+CONFIG["prefix"]+"/lib/site_ruby"+version
+@
+
+
+1.5
+log
+@2000-03-09
+@
+text
+@d21 1
+a21 1
+arch = version+"/"+CONFIG["arch"]
+d25 4
+a28 4
+scriptdir = destdir+CONFIG["prefix"]+"/lib/ruby"+version
+archlibdir = libdir+"/ruby"+arch
+sitelibdir = libdir+"/site_ruby"+version
+sitearchlibdir = libdir+"/site_ruby"+arch
+d55 1
+a55 1
+File.makedirs scriptdir, true
+d74 1
+a74 1
+  dir = scriptdir+"/"+File.dirname(f[4..-1])
+@
+
+
+1.4
+log
+@2000-02-17
+@
+text
+@d25 4
+a28 4
+rubydir = libdir+"/ruby"
+rubylibdir = rubydir+version
+archlibdir = rubydir+arch
+sitelibdir = rubydir+"/site_ruby"+version
+d55 1
+a55 1
+File.makedirs rubylibdir, true
+d58 1
+d74 1
+a74 1
+  dir = rubylibdir+"/"+File.dirname(f[4..-1])
+@
+
+
+1.3
+log
+@2000-02-17
+@
+text
+@d73 1
+a73 1
+  dir = pkglibdir+"/"+File.dirname(f[4..-1])
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d18 1
+d20 3
+d25 4
+a28 3
+#pkglibdir = libdir + "/" + ruby_install_name+"/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+pkglibdir = libdir + "/ruby/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+archdir = pkglibdir + "/" + CONFIG["arch"]
+d55 3
+a57 4
+File.makedirs pkglibdir, true
+File.makedirs archdir, true
+File.makedirs pkglibdir+"/site_ruby", true
+File.makedirs pkglibdir+"/site_ruby/"+CONFIG["arch"], true
+d60 1
+a60 1
+  File.install "import.h", archdir, 0644, true
+d64 1
+a64 1
+  File.install "ruby.imp", archdir, 0644, true
+d79 1
+a79 1
+  File.install f, archdir, 0644, true
+d82 2
+a83 2
+  File.makedirs archdir + "/win32", true
+  File.install "win32/win32.h", archdir + "/win32", 0644, true
+d85 1
+a85 1
+    File.install wdir+'/rubymw.lib', archdir, 0644, true
+d88 1
+a88 1
+File.install wdir+'/'+CONFIG['LIBRUBY_A'], archdir, 0644, true
+d93 2
+a94 2
+File.install "config.h", archdir, 0644, true
+File.install "rbconfig.rb", archdir, 0644, true
+@
+
+
+1.2.2.1
+log
+@2000-03-13
+@
+text
+@a17 1
+
+a18 3
+version = "/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+arch = "/"+CONFIG["arch"]
+
+d21 3
+a23 4
+rubylibdir = destdir+CONFIG["prefix"]+"/lib/ruby"+version
+archlibdir = rubylibdir+arch
+sitelibdir = destdir+CONFIG["prefix"]+"/lib/site_ruby"+version
+sitearchlibdir = sitelibdir+arch
+d50 4
+a53 4
+File.makedirs rubylibdir, true
+File.makedirs archlibdir, true
+File.makedirs sitelibdir, true
+File.makedirs sitearchlibdir, true
+d56 1
+a56 1
+  File.install "import.h", archlibdir, 0644, true
+d60 1
+a60 1
+  File.install "ruby.imp", archlibdir, 0644, true
+d69 1
+a69 1
+  dir = rubylibdir+"/"+File.dirname(f[4..-1])
+d75 1
+a75 1
+  File.install f, archlibdir, 0644, true
+d78 2
+a79 2
+  File.makedirs archlibdir + "/win32", true
+  File.install "win32/win32.h", archlibdir + "/win32", 0644, true
+d81 1
+a81 1
+    File.install wdir+'/rubymw.lib', archlibdir, 0644, true
+d84 1
+a84 1
+File.install wdir+'/'+CONFIG['LIBRUBY_A'], archlibdir, 0644, true
+d89 2
+a90 2
+File.install "config.h", archlibdir, 0644, true
+File.install "rbconfig.rb", archlibdir, 0644, true
+@
+
+
+1.2.2.2
+log
+@2000-03-14
+@
+text
+@d27 1
+a27 1
+sitelibdir = destdir+CONFIG["prefix"]+"/lib/ruby/site_ruby"+version
+@
+
+
+1.2.2.3
+log
+@000414
+@
+text
+@d27 1
+a27 1
+sitelibdir = destdir+CONFIG["sitedir"]+version
+@
+
+
+1.2.2.4
+log
+@see ChangeLog.
+@
+text
+@d60 4
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 1
+#!./miniruby
+d6 2
+d10 1
+d12 1
+a12 1
+binsuffix = CONFIG["binsuffix"]
+d19 44
+a62 8
+bindir = prefix + "/bin"
+libdir = prefix + "/lib/" + ruby_install_name
+archdir = libdir+"/"+CONFIG["arch"]
+mandir = CONFIG["mandir"] + "/man1"
+
+File.install "ruby#{binsuffix}",
+  "#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, TRUE
+File.makedirs libdir, TRUE
+d64 1
+a64 1
+system "../miniruby#{binsuffix} extmk.rb install"
+d66 16
+a81 6
+IO.foreach 'MANIFEST' do |$_|
+  $_.chop!
+  if /^lib/
+    File.install $_, libdir, 0644, TRUE
+  elsif /^[a-z]+\.h$/
+    File.install $_, archdir, 0644, TRUE
+a82 1
+  File.install "config.h", archdir, 0644, TRUE
+d84 7
+a90 2
+File.install "rbconfig.rb", archdir, 0644, TRUE
+File.install "ruby.1", mandir, 0644, TRUE
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d1 1
+a1 2
+#!./miniruby -I.
+
+a4 2
+destdir = ARGV[0] || ''
+
+d15 3
+a17 4
+bindir = CONFIG["bindir"]
+libdir = CONFIG["libdir"]
+pkglibdir = libdir + "/" + ruby_install_name
+archdir = pkglibdir + "/" + CONFIG["arch"]
+a18 1
+wdir = Dir.getwd
+a19 1
+File.makedirs "#{destdir}#{bindir}", true
+d21 2
+a22 12
+  "#{destdir}#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, true
+for dll in Dir['*.dll']
+  File.install dll, "#{destdir}#{bindir}/#{dll}", 0755, true
+end
+File.makedirs "#{destdir}#{libdir}", true
+for lib in ["libruby.so", "libruby.so.LIB"]
+  if File.exist? lib
+    File.install lib, "#{destdir}#{libdir}", 0644, true
+  end
+end
+File.makedirs "#{destdir}#{pkglibdir}", true
+File.makedirs "#{destdir}#{archdir}", true
+d24 1
+a24 1
+system "../miniruby#{binsuffix} extmk.rb install #{destdir}"
+d26 8
+a33 7
+for f in Dir["lib/*.rb"]
+  File.install f, "#{destdir}#{pkglibdir}", 0644, true
+end
+
+File.makedirs(archdir,true)
+for f in Dir["*.h"]
+  File.install f, "#{destdir}#{archdir}", 0644, true
+d35 2
+a36 7
+File.install "libruby.a", "#{destdir}#{archdir}", 0644, true
+
+File.makedirs "#{destdir}#{mandir}", true
+File.install "ruby.1", "#{destdir}#{mandir}", 0644, true
+Dir.chdir wdir
+File.install "config.h", "#{destdir}#{archdir}", 0644, true
+File.install "rbconfig.rb", "#{destdir}#{archdir}", 0644, true
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d32 1
+a32 1
+for lib in ["libruby.so.LIB", CONFIG["LIBRUBY_SO"]]
+a36 11
+pwd = Dir.pwd
+Dir.chdir libdir
+if File.exist? CONFIG["LIBRUBY_SO"]
+  for alias in [CONFIG["LIBRUBY_SO"]]
+    if File.exist? alias
+       File.delete alias
+    end
+    File.symlink CONFIG["LIBRUBY_SO"], alias
+    print "link #{CONFIG['LIBRUBY_SO']} -> #{alias}\n"
+end
+Dir.chdir pwd
+@
+
+
+1.1.1.2.2.2
+log
+@990127
+@
+text
+@d40 3
+a42 3
+  for link in CONFIG["LIBRUBY_ALIASES"].split
+    if File.exist? link
+       File.delete link
+d44 2
+a45 3
+    File.symlink CONFIG["LIBRUBY_SO"], link
+    print "link #{CONFIG['LIBRUBY_SO']} -> #{link}\n"
+  end
+d61 1
+a61 1
+File.install CONFIG['LIBRUBY_A'], "#{destdir}#{archdir}", 0644, true
+@
+
+
+1.1.1.2.2.3
+log
+@990128
+@
+text
+@d62 1
+a62 1
+File.install pwd+'/'+CONFIG['LIBRUBY_A'], "#{destdir}#{archdir}", 0644, true
+@
+
+
+1.1.1.2.2.4
+log
+@990201
+@
+text
+@d18 2
+a19 2
+bindir = destdir+CONFIG["bindir"]
+libdir = destdir+CONFIG["libdir"]
+d22 1
+a22 1
+mandir = destdir+CONFIG["mandir"] + "/man1"
+d25 1
+a25 1
+File.makedirs bindir, true
+d27 1
+a27 1
+  "#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, true
+d29 1
+a29 1
+  File.install dll, "#{bindir}/#{dll}", 0755, true
+d31 1
+a31 1
+File.makedirs libdir, true
+d34 1
+a34 1
+    File.install lib, libdir, 0644, true
+d37 1
+d48 3
+a50 3
+Dir.chdir wdir
+File.makedirs pkglibdir, true
+File.makedirs archdir, true
+d55 1
+a55 1
+  File.install f, pkglibdir, 0644, true
+d58 1
+d60 1
+a60 1
+  File.install f, archdir, 0644, true
+d62 1
+a62 1
+File.install pwd+'/'+CONFIG['LIBRUBY_A'], archdir, 0644, true
+d64 2
+a65 2
+File.makedirs mandir, true
+File.install "ruby.1", mandir, 0644, true
+d67 2
+a68 2
+File.install "config.h", archdir, 0644, true
+File.install "rbconfig.rb", archdir, 0644, true
+@
+
+
+1.1.1.2.2.5
+log
+@990201
+@
+text
+@d60 1
+a60 1
+File.install wdir+'/'+CONFIG['LIBRUBY_A'], archdir, 0644, true
+@
+
+
+1.1.1.2.2.6
+log
+@990209
+@
+text
+@d20 1
+a20 1
+pkglibdir = libdir + "/" + ruby_install_name+"/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+@
+
+
+1.1.1.2.2.7
+log
+@*** empty log message ***
+@
+text
+@d20 1
+a20 2
+#pkglibdir = libdir + "/" + ruby_install_name+"/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+pkglibdir = libdir + "/ruby/"+CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+@
+
+
+1.1.1.2.2.8
+log
+@990212
+@
+text
+@d27 1
+a27 1
+File.install ruby_install_name+binsuffix,
+@
+
+
+1.1.1.2.2.9
+log
+@990324
+@
+text
+@a9 1
+require "find"
+d54 2
+a55 6
+
+Find.find("lib") do |f|
+  next unless /\.rb$/ =~ f
+  dir = pkglibdir+"/"+File.dirname(f[4..-1])
+  File.makedirs dir, true unless File.directory? dir
+  File.install f, dir, 0644, true
+@
+
+
+1.1.1.2.2.10
+log
+@aix shlib link
+@
+text
+@a62 3
+if PLATFORM =~ /ibm-aix/
+  File.install "ruby.imp", archdir, 0644, true
+end
+@
+
+
+1.1.1.2.2.11
+log
+@small fixes
+@
+text
+@d63 1
+a63 1
+if PLATFORM =~ /-aix/
+@
+
+
+1.1.1.2.2.12
+log
+@regexp,range,squeeze
+@
+text
+@a51 5
+
+if PLATFORM =~ /-aix/
+  File.install "ruby.imp", archdir, 0644, true
+end
+
+d63 3
+@
+
+
+1.1.1.2.2.13
+log
+@moving
+@
+text
+@a51 2
+File.makedirs pkglibdir+"/site_ruby", true
+File.makedirs pkglibdir+"/site_ruby/"+CONFIG["arch"], true
+@
+
+
+1.1.1.2.2.14
+log
+@990624
+@
+text
+@d36 1
+a36 1
+    File.install lib, libdir, 0555, true
+@
+
+
+1.1.1.2.2.15
+log
+@backtrace may be Qnil
+@
+text
+@d55 1
+a55 5
+if RUBY_PLATFORM =~ /cygwin/ and File.exist? "import.h"
+  File.install "import.h", archdir, 0644, true
+end
+
+if RUBY_PLATFORM =~ /-aix/
+@
+
+
+1.1.1.2.2.16
+log
+@990728
+@
+text
+@d12 1
+a12 1
+exeext = CONFIG["EXEEXT"]
+d28 2
+a29 2
+File.install ruby_install_name+exeext,
+  "#{bindir}/#{ruby_install_name}#{exeext}", 0755, true
+d64 1
+a64 1
+system "../miniruby#{exeext} extmk.rb install #{destdir}"
+a75 7
+end
+if RUBY_PLATFORM =~ /mswin32/
+  File.makedirs archdir + "/win32", true
+  File.install "win32/win32.h", archdir + "/win32", 0644, true
+  if File.exist? wdir+'/rubymw.lib'
+    File.install wdir+'/rubymw.lib', archdir, 0644, true
+  end
+@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a35 1
+File.makedirs mandir, TRUE
+@
+
+
+1.1.1.1.2.2
+log
+@protected methods
+@
+text
+@d1 1
+a1 2
+#!./miniruby -I.
+
+@
+
+
+1.1.1.1.2.3
+log
+@gw32 b19 patch
+@
+text
+@a22 1
+File.install "rubygw32.dll", "#{bindir}/rubygw32.dll", 0755, TRUE
+@
+
+
+1.1.1.1.2.4
+log
+@1.1b9_08
+@
+text
+@d23 1
+a23 3
+for dll in Dir['*.dll']
+  File.install dll, "#{bindir}/#{dll}", 0755, TRUE
+end
+@
+
+
+1.1.1.1.2.5
+log
+@*** empty log message ***
+@
+text
+@a25 5
+for lib in ["libruby.so", "libruby.so.LIB"]
+  if File.exist? lib
+    File.install lib, "#{prefix}/lib", 0644, TRUE
+  end
+end
+@
+
+
+1.1.1.1.2.6
+log
+@sync ev
+@
+text
+@a20 1
+File.makedirs bindir, TRUE
+@
+
+
+1.1.1.1.2.7
+log
+@1.1c3
+@
+text
+@d19 1
+a19 1
+mandir = prefix + "/man/man1"
+@
+
+
+1.1.1.1.2.7.2.1
+log
+@join 1.1c6
+@
+text
+@a26 1
+File.makedirs "#{prefix}/lib", TRUE
+@
+
+
+1.1.1.1.2.7.2.2
+log
+@*** empty log message ***
+@
+text
+@d16 2
+a17 2
+bindir = CONFIG["bindir"]
+libdir = CONFIG["libdir"] + "/" + ruby_install_name
+d19 1
+a19 2
+mandir = CONFIG["mandir"] + "/man1"
+wdir = Dir.getwd
+d27 1
+a27 1
+File.makedirs "#{libdir}", TRUE
+d30 1
+a30 1
+    File.install lib, "#{libdir}", 0644, TRUE
+d37 8
+a44 5
+for f in Dir["lib/*.rb"]
+  File.install f, "#{libdir}", 0644, TRUE
+end
+for f in Dir["*.h"]
+  File.install f, "#{archdir}", 0644, TRUE
+d46 1
+d48 1
+a48 4
+File.install "ruby.1", "#{mandir}", 0644, TRUE
+Dir.chdir wdir
+File.install "config.h", "#{archdir}", 0644, TRUE
+File.install "rbconfig.rb", "#{archdir}", 0644, TRUE
+@
+
+
+1.1.1.1.2.7.2.3
+log
+@1.1d1
+@
+text
+@d28 1
+a28 2
+File.makedirs libdir, TRUE
+File.makedirs archdir, TRUE
+d34 1
+a40 2
+
+File.makedirs(archdir,TRUE)
+@
+
+
+1.1.1.1.2.8
+log
+@1.1c6
+@
+text
+@a26 1
+File.makedirs "#{prefix}/lib", TRUE
+@
+
+
+1.1.1.1.2.9
+log
+@1.1c7
+@
+text
+@d16 2
+a17 2
+bindir = CONFIG["bindir"]
+libdir = CONFIG["libdir"] + "/" + ruby_install_name
+d19 1
+a19 2
+mandir = CONFIG["mandir"] + "/man1"
+wdir = Dir.getwd
+d27 1
+a27 1
+File.makedirs "#{libdir}", TRUE
+d30 1
+a30 1
+    File.install lib, "#{libdir}", 0644, TRUE
+d40 1
+a40 1
+    File.install $_, "#{libdir}", 0644, TRUE
+d42 1
+a42 1
+    File.install $_, "#{archdir}", 0644, TRUE
+d44 1
+d46 1
+d48 1
+a48 4
+File.install "ruby.1", "#{mandir}", 0644, TRUE
+Dir.chdir wdir
+File.install "config.h", "#{archdir}", 0644, TRUE
+File.install "rbconfig.rb", "#{archdir}", 0644, TRUE
+@
+
+
+1.1.1.1.2.10
+log
+@1.1c8
+@
+text
+@a5 2
+destdir = ARGV[0] || ''
+
+d17 2
+a18 3
+libdir = CONFIG["libdir"]
+pkglibdir = libdir + "/" + ruby_install_name
+archdir = pkglibdir + "/" + CONFIG["arch"]
+d22 1
+a22 1
+File.makedirs "#{destdir}#{bindir}", TRUE
+d24 1
+a24 1
+  "#{destdir}#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, TRUE
+d26 1
+a26 1
+  File.install dll, "#{destdir}#{bindir}/#{dll}", 0755, TRUE
+d28 1
+a28 1
+File.makedirs "#{destdir}#{libdir}", TRUE
+d31 1
+a31 1
+    File.install lib, "#{destdir}#{libdir}", 0644, TRUE
+d34 1
+a34 2
+File.makedirs "#{destdir}#{pkglibdir}", TRUE
+File.makedirs "#{destdir}#{archdir}", TRUE
+d36 1
+a36 1
+system "../miniruby#{binsuffix} extmk.rb install #{destdir}"
+d41 1
+a41 1
+    File.install $_, "#{destdir}#{pkglibdir}", 0644, TRUE
+d43 1
+a43 1
+    File.install $_, "#{destdir}#{archdir}", 0644, TRUE
+d46 2
+a47 2
+File.makedirs "#{destdir}#{mandir}", TRUE
+File.install "ruby.1", "#{destdir}#{mandir}", 0644, TRUE
+d49 2
+a50 2
+File.install "config.h", "#{destdir}#{archdir}", 0644, TRUE
+File.install "rbconfig.rb", "#{destdir}#{archdir}", 0644, TRUE
+@
+
+
+1.1.1.1.2.11
+log
+@990209
+@
+text
+@d6 2
+d25 1
+a25 1
+File.makedirs bindir, TRUE
+d27 1
+a27 1
+  "#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, TRUE
+d29 1
+a29 1
+  File.install dll, "#{bindir}/#{dll}", 0755, TRUE
+d31 1
+a31 1
+File.makedirs libdir, TRUE
+d34 1
+a34 1
+    File.install lib, "#{libdir}", 0644, TRUE
+d37 2
+a38 2
+File.makedirs pkglibdir, TRUE
+File.makedirs archdir, TRUE
+d40 1
+a40 1
+system "../miniruby#{binsuffix} extmk.rb install"
+d45 1
+a45 1
+    File.install $_, "#{pkglibdir}", 0644, TRUE
+d47 1
+a47 1
+    File.install $_, "#{archdir}", 0644, TRUE
+d50 2
+a51 2
+File.makedirs mandir, TRUE
+File.install "ruby.1", "#{mandir}", 0644, TRUE
+d53 2
+a54 2
+File.install "config.h", "#{archdir}", 0644, TRUE
+File.install "rbconfig.rb", "#{archdir}", 0644, TRUE
+@
+
+
+1.1.1.1.2.12
+log
+@1.2.4
+@
+text
+@a5 2
+destdir = ARGV[0] || ''
+
+d16 2
+a17 2
+bindir = destdir+CONFIG["bindir"]
+libdir = destdir+CONFIG["libdir"]
+d20 1
+a20 1
+mandir = destdir+CONFIG["mandir"] + "/man1"
+d23 3
+a25 3
+File.makedirs bindir, true
+File.install ruby_install_name+binsuffix,
+  "#{bindir}/#{ruby_install_name}#{binsuffix}", 0755, true
+d27 1
+a27 1
+  File.install dll, "#{bindir}/#{dll}", 0755, true
+d32 1
+a32 1
+    File.install lib, libdir, 0644, true
+d35 2
+a36 2
+File.makedirs pkglibdir, true
+File.makedirs archdir, true
+d38 1
+a38 1
+system "../miniruby#{binsuffix} extmk.rb install #{destdir}"
+d40 7
+a46 2
+for f in Dir["lib/*.rb"]
+  File.install f, pkglibdir, 0644, true
+d48 2
+a49 8
+
+for f in Dir["*.h"]
+  File.install f, archdir, 0644, true
+end
+File.install "#{wdir}/lib#{ruby_install_name}.a", archdir, 0644, true
+
+File.makedirs mandir, true
+File.install "ruby.1", mandir, 0644, true
+d51 2
+a52 2
+File.install "config.h", archdir, 0644, true
+File.install "rbconfig.rb", archdir, 0644, true
+@
+
+
+1.1.1.1.2.13
+log
+@to open CVS
+@
+text
+@d49 1
+a49 1
+File.install "#{wdir}/libruby.a", archdir, 0644, true
+@

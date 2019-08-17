@@ -1,0 +1,204 @@
+head	1.6;
+access;
+symbols
+	V0_3_2:1.4
+	V0_1_4:1.2
+	V0_1_3:1.2
+	V0_1_2:1.2
+	V0_1_1:1.2
+	V0_1:1.2
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2002.09.28.04.50.25;	author akr;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.15.03.54.59;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.10.25.03.51.46;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.07.15.37.26;	author andy;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* rubicon.rb: recognize HP-UX to treat it as an Unix variant.
+
+* builtin/TestIO.rb (test_pid): Use `exec' trick for all Unix
+variants.
+
+* builtin/TestFileTest.rb (TestFileTest::test_test): Use 02755 instead
+of 02644 for setgid bit because setgid bit without execution bit means
+mandatory locking for Solaris and it fails on NFS.
+(TestFileTest::test_test): /dev/tty is symlink on Solaris.
+
+* builtin/TestFloat.rb: Use 0.0/0.0 instead of Math::log(-1.0) to
+generate NaN because Math::log(-1.0) returns -Infinity instead of NaN
+on Solaris.
+
+* builtin/TestThreadGroup.rb (test_list): Avoid deadlock.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestThreadGroup < Rubicon::TestCase
+
+  def test_00sanity
+    tg = ThreadGroup::Default
+    assert_equal(Thread.current, tg.list[0])
+  end
+
+  def test_add
+    tg = ThreadGroup.new
+    tg.add(Thread.current)
+    assert_equal(1, tg.list.length)
+    assert_equal(0, ThreadGroup::Default.list.length)
+    ThreadGroup::Default.add(Thread.current)
+    assert_equal(0, tg.list.length)
+    assert_equal(1, ThreadGroup::Default.list.length)
+  end
+
+  def test_list
+    tg = ThreadGroup.new
+    10.times do
+      Thread.critical = true
+      t = Thread.new { Thread.stop }
+      tg.add(t)
+    end
+    assert_equals(10, tg.list.length)
+    tg.list.each {|t| t.wakeup; t.join }
+  end
+
+  def test_s_new
+    tg = ThreadGroup.new
+    assert_equal(0, tg.list.length)
+  end
+
+end
+
+Rubicon::handleTests(TestThreadGroup) if $0 == __FILE__
+@
+
+
+1.5
+log
+@Fix strange hang on dblack's machine.
+
+A test in ThreadGroup was leaving 10 threads each doing a sleep 60. On his
+machine, this caused some I/O tests to abort. Reap these sleeping threads,
+and the hang goes away.
+
+Also include umask in some file permission calculations
+@
+text
+@d25 1
+@
+
+
+1.4
+log
+@Remove order dependency in tests
+@
+text
+@d25 1
+a25 1
+      t = Thread.new { sleep 60 }
+d28 2
+a29 1
+    assert_equals(tg.list.length, 10)
+@
+
+
+1.3
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d9 1
+a9 1
+    assert_equal( Thread.current, tg.list[0])
+d17 3
+d24 1
+a24 1
+    10.times {
+d27 2
+a28 2
+    }
+    assert_equals(tg.list.length,10)
+@
+
+
+1.2
+log
+@New file
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 5
+d12 4
+a15 1
+    assert_fail("untested")
+d19 6
+a24 1
+    assert_fail("untested")
+d28 2
+a29 1
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

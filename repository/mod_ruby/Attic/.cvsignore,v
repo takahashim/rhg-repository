@@ -1,0 +1,84 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.09.44.42;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.09.44.42;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.22.05.02.43;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file .cvsignore was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@* autoconfiscated
+@
+text
+@a0 26
+*.lo
+*.la
+*.bak
+*.orig
+*.rej
+*.sav
+*~
+.deps
+.libs
+Makefile
+Makefile.in
+config.cache
+config.h
+config.h.in
+config.log
+config.status
+config.guess
+config.sub
+configure
+aclocal.m4
+libtool
+ltmain.sh
+stamp-h
+stamp-h.in
+stamp-h1
+mod_ruby-*.tar.gz
+@
+
+
+1.1.2.2
+log
+@* mod_ruby.c: use config.h for VERSION.
+@
+text
+@a25 3
+conftest
+conftest.c
+libruby.module
+@
+
+

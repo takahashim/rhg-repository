@@ -1,0 +1,69 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.22.22.07.33;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestComparable < Rubicon::TestCase
+
+  def test_EQUAL # '=='
+    assert_fail("untested")
+  end
+
+  def test_GE # '>='
+    assert_fail("untested")
+  end
+
+  def test_GT # '>'
+    assert_fail("untested")
+  end
+
+  def test_LE # '<='
+    assert_fail("untested")
+  end
+
+  def test_LT # '<'
+    assert_fail("untested")
+  end
+
+  def test_between?
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestComparable) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

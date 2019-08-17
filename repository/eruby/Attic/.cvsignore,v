@@ -1,0 +1,98 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.07.11.24;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.07.11.24;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.22.07.37.19;	author shugo;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2001.10.30.06.13.47;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file .cvsignore was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 26
+*.lo
+*.la
+*.bak
+*.orig
+*.rej
+*.sav
+*~
+.deps
+.libs
+Makefile
+Makefile.in
+config.cache
+config.h
+config.log
+config.status
+config.guess
+config.sub
+configure
+aclocal.m4
+libtool
+ltmain.sh
+stamp-h
+stamp-h.in
+stamp-h1
+eruby
+eruby-*.tar.gz
+@
+
+
+1.1.2.2
+log
+@* fix bootstrap script.
+@
+text
+@a13 1
+config.h.in
+@
+
+
+1.1.2.3
+log
+@* use VERSION instead of ERUBY_VERSION.
+@
+text
+@a25 2
+conftest
+conftest.c
+@
+
+

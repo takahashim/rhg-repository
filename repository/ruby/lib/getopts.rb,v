@@ -1,0 +1,925 @@
+head	1.7;
+access;
+symbols
+	v1_6_7:1.4
+	v1_6_6:1.4
+	v1_6_5:1.4
+	v1_6_4:1.4
+	v1_7_1:1.5
+	v1_6_4_preview4:1.4
+	v1_6_4_preview3:1.4
+	v1_6_4_preview2:1.4
+	v1_6_4_preview1:1.4
+	v1_6_3:1.4
+	ruby_m17n:1.4.0.4
+	ruby_1_6:1.4.0.2
+	v1_6_2:1.4
+	v1_6_1:1.4
+	v1_6_0:1.4
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2
+	v1_2_6repack:1.1.1.1.4.3
+	v1_3_4_990625:1.1.1.2
+	v1_3_4_990624:1.1.1.2
+	v1_2_6:1.1.1.1.4.3
+	v1_3_4_990611:1.1.1.2
+	v1_3_4_990531:1.1.1.2
+	v1_3_3_990518:1.1.1.2
+	v1_3_3_990513:1.1.1.2
+	v1_3_3_990507:1.1.1.2
+	v1_2_5:1.1.1.1.4.3
+	v1_2_4:1.1.1.1.4.3
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.3
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.3
+	v1_2_1repack:1.1.1.1.4.3
+	v1_2_1:1.1.1.1.4.3
+	v1_2_stable:1.1.1.1.4.3
+	v1_1d1:1.1.1.1.4.3
+	v1_1d0:1.1.1.1.4.3
+	v1_1c9_1:1.1.1.1.4.3
+	v1_1c9:1.1.1.1.4.3
+	v1_1c8:1.1.1.1.4.3
+	v1_1c7:1.1.1.1.4.3
+	v1_1c6:1.1.1.1.4.3
+	v1_1d-start:1.1.1.1.4.3
+	v1_1c5:1.1.1.1.4.3
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.3
+	v1_1c1:1.1.1.1.4.3
+	v1_1c0:1.1.1.1.4.3
+	v1_1b9_31:1.1.1.1.4.3
+	v1_1b9_30:1.1.1.1.4.3
+	v1_1b9_28:1.1.1.1.4.3
+	v1_1b9_27:1.1.1.1.4.3
+	v1_1b9_26:1.1.1.1.4.3
+	r1_1b9_25:1.1.1.1.4.3
+	r1_1b9_24:1.1.1.1.4.3
+	v1_1b9_23:1.1.1.1.4.3
+	v1_1b9_22:1.1.1.1.4.3
+	v1_1b9_20:1.1.1.1.4.3
+	v1_1b9_18:1.1.1.1.4.3
+	v1_1b9_16:1.1.1.1.4.3
+	v1_1b9_15:1.1.1.1.4.3
+	v1_1b9_13:1.1.1.1.4.3
+	v1_1b9_12:1.1.1.1.4.3
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.2
+	v1_1b8:1.1.1.1.4.2
+	v1_1b7:1.1.1.1.4.2
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2002.03.13.09.44.58;	author knu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.03.04.21.15.47;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.05.06.15.04.52;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.03.23.08.37.33;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	2000.02.23.05.23.12;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.06.10.03.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.04.20.05.55.37;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	2002.03.13.09.53.53;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@* lib/getopts.rb: single_options can be nil[*], and is not not
+  optional. ([*]Pointed out by gotoken)
+@
+text
+@#
+#               getopts.rb - 
+#                       $Release Version: $
+#                       $Revision: 1.6 $
+#                       $Date: 2002/03/04 21:15:47 $
+#                       by Yasuo OHBA(SHL Japan Inc. Technology Dept.)
+#
+# --
+# this is obsolete; use getoptlong
+#
+# 2000-03-21
+# modified by Minero Aoki <aamine@@dp.u-netsurf.ne.jp>
+#
+# 2002-03-05
+# rewritten by Akinori MUSHA <knu@@ruby-lang.org>
+#
+
+$RCS_ID=%q$Header: /src/ruby/lib/getopts.rb,v 1.6 2002/03/04 21:15:47 knu Exp $
+
+
+def getopts(single_options, *options)
+  boolopts = {}
+  valopts = {}
+
+  #
+  # set defaults
+  #
+  single_options.scan(/.:?/) do |opt|
+    if opt.size == 1
+      boolopts[opt] = false
+    else
+      valopts[opt[0, 1]] = nil
+    end
+  end if single_options
+
+  options.each do |arg|
+    opt, val = arg.split(':', 2)
+
+    if val
+      valopts[opt] = val.empty? ? nil : val
+    else
+      boolopts[opt] = false
+    end
+  end
+
+  #
+  # scan
+  #
+  c = 0
+  argv = ARGV
+
+  while arg = argv.shift
+    case arg
+    when /\A--(.*)/
+      if $1.empty?			# xinit -- -bpp 24
+	break
+      end
+
+      opt, val = $1.split('=', 2)
+
+      if opt.size == 1
+	argv.unshift arg
+	return nil
+      elsif valopts.key? opt		# imclean --src +trash
+	valopts[opt] = val || argv.shift or return nil
+      elsif boolopts.key? opt		# ruby --verbose
+	boolopts[opt] = true
+      else
+	argv.unshift arg
+	return nil
+      end
+
+      c += 1
+    when /\A-(.+)/
+      opts = $1
+
+      until opts.empty?
+	opt = opts.slice!(0, 1)
+
+	if valopts.key? opt
+	  val = opts
+
+	  if val.empty?			# ruby -e 'p $:'
+	    valopts[opt] = argv.shift or return nil
+	  else				# cc -ohello ...
+	    valopts[opt] = val
+	  end
+
+	  c += 1
+	  break
+	elsif boolopts.key? opt
+	  boolopts[opt] = true		# ruby -h
+	  c += 1
+	else
+	  argv.unshift arg
+	  return nil
+	end
+      end
+    else
+      argv.unshift arg
+      break
+    end
+  end
+
+  #
+  # set
+  #
+  boolopts.each do |opt, val|
+    eval "$OPT_#{opt} = val"
+  end
+  valopts.each do |opt, val|
+    eval "$OPT_#{opt} = val"
+  end
+
+  c
+end
+@
+
+
+1.6
+log
+@* lib/getopts.rb: Rewrite to fix some bugs and complete features.
+  - Accept options with the colon in the first argument;
+    getopts("a:bcd:") is equivalent to getopts("bc", "a:", "d:").
+  - Do not discard the argument that caused an error.
+  - Do not discard '-', which commonly stands for stdin.
+  - Allow specifying a long option with a value using '='.
+    (command --long-option=value)
+  - Stop reading options when it meets a non-option argument.
+@
+text
+@d4 2
+a5 2
+#                       $Revision: 1.5 $
+#                       $Date: 2001/05/06 15:04:52 $
+d18 1
+a18 1
+$RCS_ID=%q$Header: /src/ruby/lib/getopts.rb,v 1.5 2001/05/06 15:04:52 matz Exp $
+d21 1
+a21 1
+def getopts(single_options = '', *options)
+d34 1
+a34 1
+  end
+@
+
+
+1.5
+log
+@forgot some checkins.
+@
+text
+@d4 2
+a5 2
+#                       $Revision: 1.4 $
+#                       $Date: 2000/03/23 08:37:33 $
+d14 3
+d18 1
+a18 1
+$RCS_ID=%q$Header: /ruby/ruby/lib/getopts.rb,v 1.4 2000/03/23 08:37:33 matz Exp $
+d21 1
+a21 6
+def getopts( single_opts, *options )
+  single_opts_exp = (single_opts && !single_opts.empty?) ?
+                        /[#{single_opts}]/ : nil
+  single_colon_exp = nil
+  single_colon = nil
+  opt = arg = val = nil
+a23 2
+  argv = ARGV
+  newargv = []
+d26 1
+a26 1
+  # set default
+d28 6
+a33 20
+  if single_opts then
+    single_opts.each_byte do |byte|
+      boolopts[ byte.chr ] = false
+  end
+end
+  unless options.empty? then
+    single_colon = ''
+
+    options.each do |opt|
+      m = /\A([^:]+):(.*)\z/.match( opt )
+      if m then
+        valopts[ m[1] ] = m[2].empty? ? 0 : m[2]
+      else
+        boolopts[ opt ] = false
+end
+  end
+    valopts.each do |opt, dflt|
+      if opt.size == 1 then
+        single_colon << opt
+end
+d36 7
+a42 4
+    if single_colon.empty? then
+      single_colon = single_colon_exp = nil
+      else
+      single_colon_exp = /[#{single_colon}]/
+d45 1
+a45 1
+  
+d50 3
+a52 2
+  arg = argv.shift
+  while arg do
+d54 6
+a59 3
+    when /\A--?\z/                      # xinit -- -bpp 24
+      newargv.concat argv
+      break
+d61 7
+a67 7
+    when /\A--(.*)/
+      opt = $1
+      if valopts.key? opt  then         # imclean --src +trash
+        return nil if argv.empty?
+        valopts[ opt ] = argv.shift
+      elsif boolopts.key? opt then      # ruby --verbose
+        boolopts[ opt ] = true
+d69 1
+d72 1
+d74 2
+d77 2
+a78 17
+    when /\A-(.+)/
+      arg = $1
+      0.upto( arg.size - 1 ) do |idx|
+        opt = arg[idx, 1]
+        if single_opts and single_opts_exp === opt then
+          boolopts[ opt ] = true        # ruby -h
+          c += 1
+
+        elsif single_colon and single_colon_exp === opt then
+          val = arg[ (idx+1)..-1 ]
+          if val.empty? then            # ruby -e 'p $:'
+            return nil if argv.empty?
+            valopts[ opt ] = argv.shift
+          else                          # cc -ohello ...
+            valopts[ opt ] = val
+      end
+          c += 1
+d80 2
+a81 5
+          break
+          else
+          return nil
+          end
+        end
+d83 15
+a97 2
+    else                                # ruby test.rb
+      newargv.push arg
+d99 5
+a104 3
+    arg = argv.shift
+    end
+    
+d110 1
+a110 1
+    end
+d112 1
+a112 1
+    eval "$OPT_#{opt} = #{val == 0 ? 'nil' : 'val'}"
+a113 1
+  argv.replace newargv
+@
+
+
+1.4
+log
+@2000-03-23
+@
+text
+@d4 2
+a5 2
+#                       $Revision: 1.3 $
+#                       $Date: 2000/02/23 05:23:12 $
+d15 1
+a15 1
+$RCS_ID=%q$Header: /home/cvs/ruby/lib/getopts.rb,v 1.3 2000/02/23 05:23:12 matz Exp $
+d80 2
+a81 2
+              return nil
+            end
+@
+
+
+1.4.2.1
+log
+@* lib/getopts.rb: Merge from 1.7.  Rewrite to fix some bugs and
+  complete features.
+    - Accept options with the colon in the first argument;
+      getopts("a:bcd:") is equivalent to getopts("bc", "a:", "d:").
+    - Do not discard the argument that caused an error.
+    - Do not discard '-', which commonly stands for stdin or stdout.
+    - Allow specifying a long option with a value using '='.
+      (command --long-option=value)
+    - Stop reading options when it meets a non-option argument.
+@
+text
+@d4 2
+a5 2
+#                       $Revision: 1.4 $
+#                       $Date: 2000/03/23 08:37:33 $
+a13 3
+# 2002-03-05
+# rewritten by Akinori MUSHA <knu@@ruby-lang.org>
+#
+d15 1
+a15 1
+$RCS_ID=%q$Header: /src/ruby/lib/getopts.rb,v 1.4 2000/03/23 08:37:33 matz Exp $
+d18 6
+a23 1
+def getopts(single_options, *options)
+d26 2
+d30 1
+a30 1
+  # set defaults
+d32 21
+a52 7
+  single_options.scan(/.:?/) do |opt|
+    if opt.size == 1
+      boolopts[opt] = false
+    else
+      valopts[opt[0, 1]] = nil
+    end
+  end if single_options
+d54 4
+a57 7
+  options.each do |arg|
+    opt, val = arg.split(':', 2)
+
+    if val
+      valopts[opt] = val.empty? ? nil : val
+    else
+      boolopts[opt] = false
+d60 1
+a60 1
+
+d65 6
+a70 1
+  argv = ARGV
+a71 2
+  while arg = argv.shift
+    case arg
+d73 6
+a78 13
+      if $1.empty?			# xinit -- -bpp 24
+	break
+      end
+
+      opt, val = $1.split('=', 2)
+
+      if opt.size == 1
+	argv.unshift arg
+	return nil
+      elsif valopts.key? opt		# imclean --src +trash
+	valopts[opt] = val || argv.shift or return nil
+      elsif boolopts.key? opt		# ruby --verbose
+	boolopts[opt] = true
+d80 3
+a82 3
+	argv.unshift arg
+	return nil
+      end
+a83 1
+      c += 1
+d85 16
+a100 1
+      opts = $1
+d102 5
+a106 2
+      until opts.empty?
+	opt = opts.slice!(0, 1)
+d108 3
+a110 2
+	if valopts.key? opt
+	  val = opts
+d112 1
+a112 19
+	  if val.empty?			# ruby -e 'p $:'
+	    valopts[opt] = argv.shift or return nil
+	  else				# cc -ohello ...
+	    valopts[opt] = val
+	  end
+
+	  c += 1
+	  break
+	elsif boolopts.key? opt
+	  boolopts[opt] = true		# ruby -h
+	  c += 1
+	else
+	  argv.unshift arg
+	  return nil
+	end
+      end
+    else
+      argv.unshift arg
+      break
+d114 1
+a114 2
+  end
+
+d120 1
+a120 1
+  end
+d122 1
+a122 1
+    eval "$OPT_#{opt} = val"
+d124 1
+@
+
+
+1.3
+log
+@2000-02-23
+@
+text
+@d2 5
+a6 5
+#		getopts.rb - 
+#			$Release Version: $
+#			$Revision: 1.2 $
+#			$Date: 1999/08/13 05:45:16 $
+#			by Yasuo OHBA(SHL Japan Inc. Technology Dept.)
+d11 2
+d15 1
+a15 1
+$RCS_ID=%q$Header: /home/cvs/ruby/lib/getopts.rb,v 1.2 1999/08/13 05:45:16 matz Exp $
+a16 8
+def isSingle(lopt)
+  if lopt.index(":")
+    if lopt.split(":")[0].length == 1
+      return true
+    end
+  end
+  return nil
+end
+d18 10
+a27 3
+def getOptionName(lopt)
+  return lopt.split(":")[0]
+end
+d29 6
+a34 4
+def getDefaultOption(lopt)
+  od = lopt.split(":")[1]
+  if od
+    return od
+a35 1
+  return nil
+d37 9
+a45 3
+
+def setOption(name, value)
+  eval("$OPT_" + name + " = " + 'value')
+a46 5
+
+def setDefaultOption(lopt)
+  d = getDefaultOption(lopt)
+  if d
+    setOption(getOptionName(lopt), d)
+d48 3
+a51 5
+
+def setNewArgv(newargv)
+  ARGV.clear
+  for na in newargv
+    ARGV << na
+a52 1
+end
+d54 2
+a55 11
+
+def getopts(single_opts, *options)
+  if options
+    single_colon = ""
+    long_opts = []
+    sc = 0
+    for o in options
+      setDefaultOption(o)
+      if isSingle(o)
+	single_colon[sc, 0] = getOptionName(o)
+	sc += 1
+d57 1
+a57 2
+	long_opts.push(o)
+      end
+d61 9
+a69 9
+  opts = {}
+  count = 0
+  newargv = []
+  while ARGV.length != 0
+    compare = nil
+    case ARGV[0]
+    when /^--?$/
+      ARGV.shift
+      newargv += ARGV
+d71 28
+a98 20
+    when /^--.*/
+      compare = ARGV[0][2, (ARGV[0].length - 2)]
+      if long_opts != ""
+	for lo in long_opts
+	  if lo.index(":") && getOptionName(lo) == compare
+	    if ARGV.length <= 1
+	      return nil
+	    end
+	    setOption(compare, ARGV[1])
+	    opts[compare] = true
+	    ARGV.shift
+	    count += 1
+	    break
+	  elsif lo == compare
+	    setOption(compare, true)
+	    opts[compare] = true
+	    count += 1
+	    break
+	  end
+	end
+d100 10
+a109 2
+      if compare.length <= 1
+	return nil
+d111 2
+a112 27
+    when /^-.*/
+      for idx in 1..(ARGV[0].length - 1)
+	compare = ARGV[0][idx, 1]
+	if single_opts && compare =~ "[" + single_opts + "]"
+	  setOption(compare, true)
+	  opts[compare] = true
+	  count += 1
+	elsif single_colon != "" && compare =~ "[" + single_colon + "]"
+	  if ARGV[0][idx..-1].length > 1
+	    setOption(compare, ARGV[0][(idx + 1)..-1])
+	    opts[compare] = true
+	    count += 1
+	  elsif ARGV.length <= 1
+	    return nil
+	  else
+	    setOption(compare, ARGV[1])
+	    opts[compare] = true
+	    ARGV.shift
+	    count += 1
+	  end
+	  break
+	end
+      end
+    else
+      compare = ARGV[0]
+      opts[compare] = true
+      newargv << ARGV[0]
+d115 5
+a119 3
+    ARGV.shift
+    if !opts.has_key?(compare)
+      return nil
+d121 2
+d124 3
+a126 2
+  setNewArgv(newargv)
+  return count
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d4 2
+a5 2
+#			$Revision: 1.1.1.2.2.1 $
+#			$Date: 1999/07/22 10:37:25 $
+d9 1
+a10 1
+#	
+d13 1
+a13 1
+$RCS_ID=%q$Header: /home/cvs/ruby/lib/getopts.rb,v 1.1.1.2.2.1 1999/07/22 10:37:25 matz Exp $
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a0 1
+#!/usr/local/bin/ruby
+d4 2
+a5 2
+#			$Revision: 1.1 $
+#			$Date: 1996/11/10 05:01:15 $
+d13 1
+a13 1
+$RCS_ID="$Header: /home/jammy/current/ruby/RCS/getopts.rb,v 1.1 1996/11/10 05:01:15 jammy Exp $"
+d18 1
+a18 1
+      return TRUE
+d90 1
+a90 1
+	    opts[compare] = TRUE
+d95 2
+a96 2
+	    setOption(compare, TRUE)
+	    opts[compare] = TRUE
+d109 2
+a110 2
+	  setOption(compare, TRUE)
+	  opts[compare] = TRUE
+d115 1
+a115 1
+	    opts[compare] = TRUE
+d121 1
+a121 1
+	    opts[compare] = TRUE
+d130 1
+a130 1
+      opts[compare] = TRUE
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d1 1
+d5 2
+a6 2
+#			$Revision: 1.1.1.1.4.3 $
+#			$Date: 1998/04/20 05:55:37 $
+d14 1
+a14 1
+$RCS_ID=%q$Header: /home/cvsroot/ruby/lib/getopts.rb,v 1.1.1.1.4.3 1998/04/20 05:55:37 matz Exp $
+@
+
+
+1.1.1.2.2.1
+log
+@backtrace may be Qnil
+@
+text
+@d4 2
+a5 2
+#			$Revision: 1.1.1.2 $
+#			$Date: 1999/01/20 04:59:35 $
+d13 1
+a13 1
+$RCS_ID=%q$Header: /home/cvs/ruby/lib/getopts.rb,v 1.1.1.2 1999/01/20 04:59:35 matz Exp $
+d18 1
+a18 1
+      return true
+d90 1
+a90 1
+	    opts[compare] = true
+d95 2
+a96 2
+	    setOption(compare, true)
+	    opts[compare] = true
+d109 2
+a110 2
+	  setOption(compare, true)
+	  opts[compare] = true
+d115 1
+a115 1
+	    opts[compare] = true
+d121 1
+a121 1
+	    opts[compare] = true
+d130 1
+a130 1
+      opts[compare] = true
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d5 2
+a6 2
+#			$Revision: 1.1.1.1 $
+#			$Date: 1998/01/16 04:05:49 $
+d14 1
+a14 1
+$RCS_ID="$Header: /home/cvsroot/ruby/lib/getopts.rb,v 1.1.1.1 1998/01/16 04:05:49 matz Exp $"
+@
+
+
+1.1.1.1.4.2
+log
+@-ko for keiju's files
+@
+text
+@d5 2
+a6 2
+#			$Revision: 1.1 $
+#			$Date: 1996/11/10 05:01:15 $
+d14 1
+a14 1
+$RCS_ID=%q$Header: /home/jammy/current/ruby/RCS/getopts.rb,v 1.1 1996/11/10 05:01:15 jammy Exp $
+@
+
+
+1.1.1.1.4.3
+log
+@*** empty log message ***
+@
+text
+@d1 1
+@

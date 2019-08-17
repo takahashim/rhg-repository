@@ -1,0 +1,201 @@
+head	1.7;
+access;
+symbols
+	V0_3_2:1.6
+	V0_1_4:1.4
+	V0_1_3:1.4
+	V0_1_2:1.4
+	V0_1_1:1.4
+	V0_1:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2001.11.15.17.12.34;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.10.12.19.27.47;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.09.20.02.34.03;	author andy;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.23.19.31.57;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@Make work when run as root.
+
+THere were soe permissions issues (for example ?r is somewhat moot) when run
+as root. Also allow tests to run in a g+s or u+s directory when the
+current uid/gid isn;t the directory's.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class FileInfoTest < Rubicon::TestCase
+  def setup
+    setupTestDir
+
+    @@file1 = "_test/_touched1"
+    @@file2 = "_test/_touched2"
+
+    [ @@file1, @@file2 ].each { |file|
+      File.delete file if File.exist?(file)
+    }
+
+    touch("-a -t 122512341999 #@@file1")
+    @@aTime1 = Time.local(1999, 12, 25, 12, 34, 00)
+
+    touch("-m -t 010112341997 #@@file1")
+    @@mTime1 = Time.local(1997,  1,  1, 12, 34, 00)
+
+    File.chown(Process.euid, Process.egid, @@file1)
+
+    # File two is before file 1 in access time, and
+    # after in modification time
+
+    touch("-a -t 010212342000 #@@file2")
+    @@aTime2 = Time.local(2000, 1, 2, 12, 34, 00)
+
+    touch("-m -t 020312341995 #@@file2")
+    @@mTime2 = Time.local(1995,  2,  3, 12, 34, 00)
+  end
+
+  def teardown
+    [ @@file1, @@file2 ].each { |file|
+      File.delete file if File.exist?(file)
+    }
+    teardownTestDir
+  end
+end
+@
+
+
+1.6
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d21 2
+@
+
+
+1.5
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d15 1
+a15 1
+    sys("../util/test_touch -a -t 122512341999 #@@file1")
+d18 1
+a18 1
+    sys("../util/test_touch -m -t 010112341997 #@@file1")
+d24 1
+a24 1
+    sys("../util/test_touch -a -t 010212342000 #@@file2")
+d27 1
+a27 1
+    sys("../util/test_touch -m -t 020312341995 #@@file2")
+@
+
+
+1.4
+log
+@Add our own touch utility
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.3
+log
+@Fixed problem with different versions of "touch"
+@
+text
+@d14 1
+a14 2
+    #sys("touch -a -t 122512341999 #@@file1")
+    sys_touch("a", "1225", "1234", "1999", @@file1)
+d17 1
+a17 2
+    #sys("touch -m -t 010112341997 #@@file1")
+    sys_touch("m", "0101", "1234", "1997", @@file1)
+d23 1
+a23 2
+    #sys("touch -a -t 010212342000 #@@file2")
+    sys_touch("a", "0102", "1234", "2000", @@file2)
+d26 1
+a26 1
+    sys_touch("m", "0203", "1234", "1995", @@file2)
+@
+
+
+1.2
+log
+@Archive save
+@
+text
+@d14 2
+a15 1
+    sys("touch -a -t 122512341999 #@@file1")
+d18 2
+a19 1
+    sys("touch -m -t 010112341997 #@@file1")
+d25 2
+a26 1
+    sys("touch -a -t 010212342000 #@@file2")
+d29 1
+a29 1
+    sys("touch -m -t 020312341995 #@@file2")
+@
+
+
+1.1
+log
+@Archive save
+@
+text
+@d10 3
+a12 1
+    sys("touch #@@file1")  # in case it needs creating
+@
+

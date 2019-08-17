@@ -1,0 +1,1065 @@
+head	1.12;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.10.28.17.01.23;	author nobu;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.10.27.14.05.25;	author H_Konishi;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.10.27.09.04.55;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.10.24.12.58.42;	author nobu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.10.22.06.24.19;	author nobu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.10.22.04.19.26;	author nobu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.10.21.14.03.46;	author nobu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.10.04.05.18.05;	author eban;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.09.28.00.53.05;	author H_Konishi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.09.10.09.30.50;	author eban;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.09.08.12.59.08;	author eban;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.09.08.09.04.15;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* ext/extmk.rb (extmake): use dummy_makefile to create dummy
+  Makefile.
+
+* lib/mkmf.rb (find_executable0): EXEEXT is optional.
+
+* lib/mkmf.rb (dummy_makefile): make dummy Makefile content.
+
+* lib/mkmf.rb (create_makefile): define EXTLIB replacing -l.
+
+* lib/mkmf.rb ($bccwin): detect Borland make by help message.
+
+* lib/mkmf.rb (CLEANINGS): common rules to clean.
+@
+text
+@#! /usr/local/bin/ruby -s
+# -*- ruby -*-
+
+$force_static = nil
+$install = nil
+$destdir = nil
+$clean = nil
+$nodynamic = nil
+$extinit = nil
+$extobjs = nil
+
+$extlist = []
+
+$:.replace ["."]
+require 'rbconfig'
+
+srcdir = Config::CONFIG["srcdir"]
+
+$:.replace [srcdir, srcdir+"/lib", "."]
+
+require 'mkmf'
+require 'ftools'
+require 'shellwords'
+
+$topdir = File.expand_path(".")
+$top_srcdir = srcdir
+$hdrdir = $top_srcdir
+
+def extmake(target)
+  print "#{$message} #{target}\n"
+  $stdout.flush
+  if $force_static or $static_ext[target]
+    $static = target
+  else
+    $static = false
+  end
+
+  unless $ignore
+    return if $nodynamic and not $static
+  end
+
+  init_mkmf
+
+  begin
+    dir = Dir.pwd
+    File.mkpath target unless File.directory?(target)
+    Dir.chdir target
+    $target = target
+    $mdir = target
+    $srcdir = File.join($top_srcdir, "ext", $mdir)
+    unless $ignore
+      if $static ||
+	older("./Makefile", *MTIMES + %W"#{$srcdir}/makefile.rb #{$srcdir}/extconf.rb")
+      then
+	$defs = []
+	Logging::logfile 'mkmf.log'
+	Config::CONFIG["srcdir"] = $srcdir
+	if File.exist?("#{$srcdir}/makefile.rb")
+	  load "#{$srcdir}/makefile.rb"
+	elsif File.exist?("#{$srcdir}/extconf.rb")
+	  load "#{$srcdir}/extconf.rb"
+	else
+	  create_makefile(target)
+	end
+	Config::CONFIG["srcdir"] = $top_srcdir
+      end
+    end
+    if File.exist?("./Makefile")
+      if $static
+	$extlist.push [$static, $target, File.basename($target)]
+      end
+      unless system *ARGV
+	$ignore or $continue or exit(1)
+      end
+    else
+      open("./Makefile", "w") {|f|
+        f.print dummy_makefile($srcdir)
+      }
+    end
+    if $static
+      $extflags ||= ""
+      $extlibs ||= ""
+      $extflags += " " + $DLDFLAGS if $DLDFLAGS
+      $extflags += " " + $LDFLAGS unless $LDFLAGS == ""
+      $extlibs += " " + $libs unless $libs == ""
+      $extlibs += " " + $LOCAL_LIBS unless $LOCAL_LIBS == ""
+    end
+  rescue SystemExit
+    # ignore
+  ensure
+    rm_f "conftest*"
+    Dir.chdir dir
+  end
+end
+
+if ARGV[0] == "static"
+  ARGV.shift
+  $force_static = true
+end
+
+$make = ARGV[0] if ARGV[0]
+ARGV << $make if ARGV.empty? and $make
+if mflags = ENV["MAKEFLAGS"]
+  mflags, = mflags.split(nil, 2)
+else
+  mflags = ENV["MFLAGS"] || ""
+end
+$continue = mflags.include?(?k)
+$dryrun = mflags.include?(?n)
+
+unless $message
+  if ARGV.size > 1 and /^[a-z]+$/ =~ ($message = ARGV[-1])
+    $message = $message.sub(/^(?:dist|real)(?=(?:clean)?$)/, '\1')
+    case $message
+    when "clean"
+      $ignore ||= true
+    when "install"
+      $ignore ||= true
+      ARGV[1, 0] = ["INSTALL_PROG=install -m 0755", "INSTALL_DATA=install -m 0644"] if $dryrun
+    end
+    $message.sub!(/e?$/, "ing")
+  else
+    $message = "compiling"
+  end
+end
+
+EXEEXT = CONFIG['EXEEXT']
+if defined? CROSS_COMPILING
+  $ruby = CONFIG['MINIRUBY']
+elsif $nmake
+  $ruby = '$(topdir:/=\\)\\miniruby' + EXEEXT
+else
+  $ruby = '$(topdir)/miniruby' + EXEEXT
+end
+$ruby << " -I$(topdir) -I$(hdrdir)/lib"
+$config_h = '$(topdir)/config.h'
+
+MTIMES = [File.mtime(__FILE__)]
+
+# get static-link modules
+$static_ext = {}
+for dir in ["ext", File::join($top_srcdir, "ext")]
+  setup = File::join(dir, CONFIG['setup'])
+  if File.file? setup
+    f = open(setup) 
+    while line = f.gets()
+      line.chomp!
+      line.sub!(/#.*$/, '')
+      next if /^\s*$/ =~ line
+      target, opt = line.split(nil, 3)
+      if target == 'option'
+	case opt
+	when 'nodynamic'
+	  $nodynamic = true
+	end
+	next
+      end
+      target = target.downcase if /mswin32|bccwin32/ =~ RUBY_PLATFORM
+      $static_ext[target] = true
+    end
+    MTIMES << f.mtime
+    $setup = setup
+    f.close
+    break
+  end
+end
+
+File::makedirs('ext')
+Dir::chdir('ext')
+
+ext_prefix = "#{$top_srcdir}/ext"
+Dir.glob("#{ext_prefix}/**/MANIFEST") do |d|
+  d = File.dirname(d)
+  d.slice!(0, ext_prefix.length + 1)
+  extmake(d)
+end
+
+if $ignore
+  Dir.chdir ".."
+  exit
+end
+
+if $extlist.size > 0
+  $extinit ||= ""
+  $extobjs ||= ""
+  for s,t,i in $extlist
+    f = format("%s/%s.%s", s, i, $LIBEXT)
+    if File.exist?(f)
+      $extinit += "\tInit_#{i}();\n\trb_provide(\"#{t}.so\");\n"
+      $extobjs += "ext/#{f} "
+    end
+  end
+
+  src = "void Init_ext() {\n#$extinit}\n"
+  if older("extinit.c", *MTIMES) || IO.read("extinit.c") != src
+    open("extinit.c", "w") {|f| f.print src}
+  end
+
+  $extobjs = "ext/extinit.#{$OBJEXT} " + $extobjs
+  if RUBY_PLATFORM =~ /m68k-human|beos/
+    $extlibs.gsub!("-L/usr/local/lib", "") if $extlibs
+  end
+  conf = [
+    ['SETUP', $setup], ['EXTOBJS', $extobjs],
+    ['EXTLIBS', $extlibs], ['EXTLDFLAGS', $extflags]
+  ].map {|n, v|
+    "#{n}=#{v}" if v and !(v = v.strip).empty?
+  }.compact
+  puts conf
+  $stdout.flush
+  ARGV.concat(conf)
+end
+rubies = []
+%w[RUBY RUBYW].each {|r|
+  r = CONFIG[r+"_INSTALL_NAME"] and !r.empty? and rubies << r+EXEEXT
+}
+
+Dir.chdir ".."
+puts "making #{rubies.join(', ')}"
+$stdout.flush
+ARGV.concat(rubies)
+host = (defined?(CROSS_COMPILING) ? CROSS_COMPILING : RUBY_PLATFORM)
+/mswin|bccwin|mingw|djgpp|human|os2|macos/ =~ host or exec(*ARGV)
+system(*ARGV.quote) or exit($?.exitstatus)
+
+#Local variables:
+# mode: ruby
+#end:
+@
+
+
+1.11
+log
+@ext/extmk.rb(78) : The unnecessary error when installing by bccwin32  is controlled.
+lib/mkmf.rb(773) : Also in the case of bccwin32, the path was added.
+@
+text
+@d77 1
+a77 4
+        f.print configuration($srcdir), makerules(nil), "install:\n"
+        if /bccwin32/ =~ RUBY_PLATFORM
+          f.print "\t@@\n"
+        end
+@
+
+
+1.10
+log
+@* djgpp/*: sync with the latest.
+* ext/extmk.rb, lib/mkmf.rb: flush $stdout.
+* io.c (READ_DATA_PENDING_COUNT, READ_DATA_PENDING_PTR):
+  undef these macros on DJGPP.
+@
+text
+@d78 3
+@
+
+
+1.9
+log
+@* configure.in (LIBPATHFLAG): avoid $ substitution.
+  [ruby-dev:18577]
+
+* ext/extmk.rb (extmake): expand $srcdir.
+
+* ext/win32ole/extconf.rb: should not override $CFLAGS, but
+  append.
+
+* lib/mkmf.rb (config_string): use given config hash.
+@
+text
+@d210 1
+d220 1
+@
+
+
+1.8
+log
+@* ext/extmk.rb (extmake): add install: target to dummy Makefile.
+@
+text
+@d53 1
+a53 1
+	older("./Makefile", *MTIMES + %w"#{$srcdir}/makefile.rb #{$srcdir}/extconf.rb")
+@
+
+
+1.7
+log
+@* instruby.rb: add dryrun mode.
+
+* ext/extmk.rb (extmake): avoid Borland make's quirk behavior.
+
+* lib/mkmf.rb (link_command): opt is not a makefile macro.
+
+* bcc32/Makefile.sub ($(LIBRUBY_SO) $(LIBRUBY)): EXTOBJS were not
+  linked.
+
+* bcc32/Makefile.sub (ext/extinit.obj): missing.
+
+* bcc32/Makefile.sub (TRY_LINK): options have to place before any
+  non-option arguments.
+
+* win32/Makefile.sub (TRY_LINK): need -link and -libpath options.
+
+* bcc32/Makefile.sub, win32/Makefile.sub (RANLIB): logical
+  operator never work with command.com.
+@
+text
+@d77 1
+a77 1
+        f.print configuration($srcdir), makerules(nil)
+@
+
+
+1.6
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@d203 6
+a208 3
+  conf = ['SETUP='+$setup, 'EXTOBJS='+$extobjs.strip]
+  conf << 'EXTLIBS='+$extlibs.strip if $extlibs
+  conf << 'EXTLDFLAGS='+$extflags.strip if $extflags
+@
+
+
+1.5
+log
+@* configure.in (RUBY_PROG_GNU_LD): check whether the linker is GNU ld.
+* ext/extmk.rb (create_makefile): add -Wl,-no-undefined to $DLDFLAGS
+  on Linux if GNU ld is used and --enable-shared is specified.
+@
+text
+@d1 1
+a1 1
+#! /usr/local/bin/ruby
+a11 18
+if ARGV[0] == 'static'
+  $force_static = true
+  ARGV.shift
+elsif ARGV[0] == 'install'
+  $install = true
+  $destdir = ARGV[1] || ''
+  ARGV.shift
+elsif ARGV[0] == 'clean'
+  $clean = "clean"
+  ARGV.shift
+elsif ARGV[0] == 'distclean'
+  $clean = "distclean"
+  ARGV.shift
+elsif ARGV[0] == 'realclean'
+  $clean = "realclean"
+  ARGV.shift
+end
+
+a21 1
+require 'find'
+d27 1
+a27 307
+
+# avoid warning for $VERBOSE mode
+Object.class_eval do remove_method :create_makefile end
+
+def create_makefile(target)
+  $target = target
+  if target.include?('/')
+    target_prefix, target = File.split(target)
+    target_prefix[0,0] = '/'
+  else
+    target_prefix = ""
+  end
+  rm_f "conftest*"
+  if CONFIG["DLEXT"] == $OBJEXT
+    libs = $libs.split
+    for lib in libs
+      lib.sub!(/-l(.*)/, %%"lib\\1.#{$LIBEXT}"%)
+    end
+    $defs.push(format("-DEXTLIB='%s'", libs.join(",")))
+  end
+
+  $DLDFLAGS = CONFIG["DLDFLAGS"].dup
+  if /linux/ =~ RUBY_PLATFORM and $configure_args['--enable-shared'] and CONFIG["GNU_LD"] == "yes"
+    $DLDFLAGS << " -Wl,-no-undefined"
+  end
+
+  if $configure_args['--enable-shared'] or CONFIG["LIBRUBY"] != CONFIG["LIBRUBY_A"]
+    $libs = CONFIG["LIBRUBYARG"] + " " + $libs
+    $LIBPATH.unshift $topdir
+  end
+
+  defflag = ''
+  if RUBY_PLATFORM =~ /cygwin|mingw/ and not $static
+    if not File.exist? target + '.def'
+      open(target + '.def', 'wb') do |f|
+        f.print "EXPORTS\n", "Init_", target, "\n"
+      end
+    end
+    defflag = target + ".def"
+  elsif RUBY_PLATFORM =~ /bccwin32/
+    deffile = target + '.def'
+    if not File.exist? target + '.def'
+      open(deffile, 'wb') do |f|
+        f.print "EXPORTS\n", "_Init_", target, "\n"
+      end
+    end
+  end
+
+  if RUBY_PLATFORM =~ /mswin32|bccwin32/
+    libpath = $LIBPATH.join(';')
+  else
+    $LIBPATH.each {|d| $DLDFLAGS << " -L" << d}
+    if /netbsdelf/ =~ RUBY_PLATFORM
+      $LIBPATH.each {|d| $DLDFLAGS << " -Wl,-R" + d unless d == $topdir}
+    end
+  end
+
+  $srcdir = File.join($top_srcdir,"ext",$mdir)
+  mfile = open("Makefile", "w")
+  mfile.binmode if /mingw/ =~ RUBY_PLATFORM
+  mfile.printf <<EOL, if $static then "" else CONFIG["CCDLFLAGS"] end, $defs.join(" ")
+SHELL = /bin/sh
+
+#### Start of system configuration section. ####
+
+srcdir = #{$srcdir}
+VPATH = #{$srcdir}
+
+topdir = #{$topdir}
+hdrdir = #{$top_srcdir}
+
+CC = #{CONFIG['CC']}
+
+CFLAGS   = %s #{CFLAGS} #$CFLAGS
+CPPFLAGS = -I$(topdir) -I$(hdrdir) %s #$CPPFLAGS
+#{
+if /bccwin32/ =~ RUBY_PLATFORM
+  "DLDFLAGS = #$LDFLAGS -L" + '"$(libdir:/=\\);$(topdir:/=\\)"' + "\n" +
+  "LDSHARED = #{CONFIG['LDSHARED']}\n"
+else
+  "DLDFLAGS = #$DLDFLAGS #$LDFLAGS\n" +
+  "LDSHARED = #{CONFIG['LDSHARED']} #{defflag}\n"
+end
+}
+EOL
+  mfile.puts "LIBPATH = #{libpath}" if libpath
+
+  mfile.puts ".SUFFIXES: .#{CONFIG['OBJEXT']}" unless #{CONFIG['OBJEXT']} == "o"
+
+  mfile.printf "\
+
+RUBY_INSTALL_NAME = #{CONFIG['RUBY_INSTALL_NAME']}
+RUBY_SO_NAME = #{CONFIG['RUBY_SO_NAME']}
+ruby_version = #{Config::CONFIG["ruby_version"]}
+
+prefix = #{CONFIG['prefix']}
+exec_prefix = #{CONFIG['exec_prefix']}
+libdir = #{CONFIG['libdir']}
+rubylibdir = $(libdir)/ruby/$(ruby_version)
+#pkglibdir = $(libdir)/$(RUBY_INSTALL_NAME)/#{CONFIG['MAJOR']}.#{CONFIG['MINOR']}
+pkglibdir = $(libdir)/ruby/#{CONFIG['MAJOR']}.#{CONFIG['MINOR']}
+archdir = $(pkglibdir)/#{CONFIG['arch']}
+target_prefix = #{target_prefix}
+#{CONFIG['SET_MAKE']}
+
+#### End of system configuration section. ####
+
+"
+  mfile.printf "LOCAL_LIBS = %s %s\n", $LOCAL_LIBS, $local_flags
+  if /bccwin32/ =~ RUBY_PLATFORM
+    mfile.printf "LIBS = $(topdir:/=\\)\\%s\n", $libs
+  else
+    mfile.printf "LIBS = %s\n", $libs
+  end
+  mfile.printf "OBJS = "
+  if !$objs then
+    $objs = []
+    for f in Dir["#{$top_srcdir}/ext/#{$mdir}/*.{#{SRC_EXT.join(%q{,})}}"]
+      f = File.basename(f)
+      f.sub!(/(#{SRC_EXT.join(%q{|})})$/, $OBJEXT)
+      $objs.push f
+    end
+  else
+    for i in $objs
+      i.sub!(/\.o\z/, ".#{$OBJEXT}")
+    end
+  end
+  mfile.printf $objs.join(" ")
+  mfile.printf "\n"
+
+  if /bccwin32/ =~ RUBY_PLATFORM
+    ruby_interpreter = '$(topdir:/=\)/miniruby' + CONFIG['EXEEXT']
+  else
+    ruby_interpreter = "$(topdir)/miniruby" + CONFIG['EXEEXT']
+    if /nmake/i =~ $make
+      ruby_interpreter = '$(topdir:/=\)\miniruby' + CONFIG['EXEEXT']
+    end
+  end
+  if defined? CROSS_COMPILING
+    ruby_interpreter = CONFIG['MINIRUBY']
+  end
+
+  mfile.printf <<EOS
+TARGET = #{target}
+DLLIB = $(TARGET).#{$static ? $LIBEXT : CONFIG['DLEXT']}
+
+RUBY = #{ruby_interpreter} -I$(topdir) -I$(hdrdir)/lib
+RM = $(RUBY) -rftools -e "File::rm_f(*ARGV.map do|x|Dir[x]end.flatten.uniq)"
+MAKEDIRS = $(RUBY) -r ftools -e 'File::makedirs(*ARGV)'
+INSTALL_PROG = $(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0555, true)'
+INSTALL_DATA = $(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0644, true)'
+
+EXEEXT = CONFIG['EXEEXT']
+
+all:		$(DLLIB)
+
+clean:
+		@@$(RM) *.#{$OBJEXT} *.so *.sl *.#{$LIBEXT} $(DLLIB)
+#{
+if /bccwin32/ =~ RUBY_PLATFORM
+  "		@@$(RM) *.def *.ilc *.ild *.ilf *.ils *.map *.tds *.bak $(CLEANFILES)\n" +
+  "		@@if exist $(target).def.org ren $(target).def.org $(target).def"
+else
+  "		@@$(RM) *.ilk *.exp *.pdb *.bak $(CLEANFILES)"
+end
+}
+
+distclean:	clean
+		@@$(RM) Makefile extconf.h conftest.*
+		@@$(RM) core ruby$(EXEEXT) *~ $(DISTCLEANFILES)
+
+realclean:	distclean
+EOS
+
+  mfile.printf <<EOS
+
+install:
+	@@$(MAKEDIRS) $(DESTDIR)$(libdir) $(DESTDIR)$(pkglibdir) $(DESTDIR)$(archdir)$(target_prefix)
+EOS
+  unless $static
+    mfile.printf "\
+	@@$(INSTALL_PROG) $(DLLIB) $(DESTDIR)$(archdir)$(target_prefix)/$(DLLIB)
+"
+  end
+  save_srcdir = Config::CONFIG['srcdir']
+  Config::CONFIG['srcdir'] = $srcdir
+  install_rb(mfile, '$(DESTDIR)$(rubylibdir)$(target_prefix)', '$(srcdir)')
+  Config::CONFIG['srcdir'] = save_srcdir
+  mfile.printf "\n"
+
+  unless /mswin32/ =~ RUBY_PLATFORM
+    if /bccwin32/ =~ RUBY_PLATFORM
+      src = '$(<:\\=/)'
+    else
+      src = '$<'
+    end
+    copt = cxxopt = ''
+  else
+    if /nmake/i =~ $make
+      src = '$(<:\\=/)'
+    else
+      src = '$(subst /,\\\\,$<)'
+    end
+    copt = '-Tc'
+    cxxopt = '-Tp'
+  end
+  unless /nmake/i =~ $make
+    if /bccwin32/ =~ RUBY_PLATFORM
+    mfile.print "
+{$(srcdir)}.cc{}.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+{$(srcdir)}.cpp{}.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+{$(srcdir)}.cxx{}.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+{$(srcdir)}.c{}.#{CONFIG['OBJEXT']}:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c #{copt}#{src}
+"
+    end
+    mfile.puts "
+.cc.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.cpp.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.cxx.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.C.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.c.#{CONFIG['OBJEXT']}:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c #{copt}#{src}
+"
+  else
+    mfile.print "
+{$(srcdir)}.c{}.#{CONFIG['OBJEXT']}:
+	$(CC) -I. -I$(<D) $(CFLAGS) $(CPPFLAGS) -c #{copt}#{src}
+.c.#{CONFIG['OBJEXT']}:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c #{copt}#{src}
+{$(srcdir)}.cc{}.#{CONFIG['OBJEXT']}:
+	$(CXX) -I. -I$(<D) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.cc.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+{$(srcdir)}.cpp{}.#{CONFIG['OBJEXT']}:
+	$(CXX) -I. -I$(<D) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.cpp.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+{$(srcdir)}.cxx{}.#{CONFIG['OBJEXT']}:
+	$(CXX) -I. -I$(<D) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+.cxx.#{CONFIG['OBJEXT']}:
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c #{cxxopt}#{src}
+"
+  end
+
+  if $static
+    if CONFIG['AR'] =~ /^lib\b/i
+      mfile.printf "\
+$(DLLIB): $(OBJS)
+	#{CONFIG['AR']} /OUT:$(DLLIB) $(OBJS)
+"
+    else
+      mfile.printf "\
+$(DLLIB): $(OBJS)
+	#{CONFIG['AR']} cru $(DLLIB) $(OBJS)
+	@@-#{CONFIG['RANLIB']} $(DLLIB) 2> /dev/null || true
+"
+    end
+  elsif CONFIG['DLEXT'] != $OBJEXT
+    mfile.print "$(DLLIB): $(OBJS)\n"
+    if /bccwin32/ =~ RUBY_PLATFORM 
+      mfile.print "\t$(LDSHARED) $(DLDFLAGS) C0D32.OBJ $(OBJS), $@@,, CW32.LIB IMPORT32.LIB WS2_32.LIB $(LIBS), #{deffile}\n"
+    else
+      if /mswin32/ =~ RUBY_PLATFORM
+        if /nmake/i =~ $make
+          mfile.print "\tset LIB=$(LIBPATH:/=\\);$(LIB)\n"
+        else
+          mfile.print "\tenv LIB='$(subst /,\\\\,$(LIBPATH));$(LIB)' \\\n"
+        end
+      end
+      mfile.print "\t$(LDSHARED) $(DLDFLAGS) #{OUTFLAG}$(DLLIB) $(OBJS) $(LIBS) $(LOCAL_LIBS)\n"
+    end
+  elsif RUBY_PLATFORM == "m68k-human"
+    mfile.printf "\
+$(DLLIB): $(OBJS)
+	ar cru $(DLLIB) $(OBJS)
+"
+  else
+    mfile.printf "\
+$(DLLIB): $(OBJS)
+	ld $(DLDFLAGS) -r -o $(DLLIB) $(OBJS)
+"
+  end
+
+  if File.exist?("#{$srcdir}/depend")
+    dfile = open("#{$srcdir}/depend", "r")
+    mfile.printf "###\n"
+    while line = dfile.gets()
+      line.gsub!(/\.o\b/, ".#{$OBJEXT}")
+      if /bccwin32/ =~ RUBY_PLATFORM
+        line.gsub!(/(\s)([^\s\/]+\.[ch])/, '\1{$(srcdir)}\2')
+      else
+        line.gsub!(/(\s)([^\s\/]+\.[ch])/, '\1{$(srcdir)}\2') if /nmake/i =~ $make
+      end
+      mfile.printf "%s", line.gsub(/\$\(hdrdir\)\/config.h/, '$(topdir)/config.h')
+    end
+    dfile.close
+  end
+  mfile.close
+end
+d30 2
+d38 1
+a38 1
+  unless $install or $clean
+d42 1
+a42 19
+  $OBJEXT = CONFIG['OBJEXT']
+  $LIBEXT = "a"
+  $objs = nil
+  $libs = CONFIG['DLDLIBS'].dup
+  $local_flags = ""
+  if /mswin32/ =~ RUBY_PLATFORM
+    $LIBEXT = "lib"
+    $local_flags = "-link /INCREMENTAL:no /EXPORT:Init_$(TARGET)"
+  elsif /bccwin32/ =~ RUBY_PLATFORM
+    $LIBEXT = "lib"
+  end
+  $LOCAL_LIBS = ""		# to be assigned in extconf.rb
+  $CFLAGS = ""
+  $CPPFLAGS = CONFIG['CPPFLAGS']
+  $LDFLAGS = ""
+  $LIBPATH = [$libdir]
+  $INCFLAGS = "-I#{$topdir}"
+
+  dir_config("opt")
+d50 4
+a53 7
+    unless $install or $clean
+      if $static_ext.size > 0 ||
+	!File.exist?("./Makefile") ||
+	older("./Makefile", $setup) ||
+	older("./Makefile", "#{$top_srcdir}/ext/extmk.rb") ||
+	older("./Makefile", "#{$top_srcdir}/ext/#{target}/makefile.rb") ||
+	older("./Makefile", "#{$top_srcdir}/ext/#{target}/extconf.rb")
+d57 5
+a61 4
+	if File.exist?("#{$top_srcdir}/ext/#{target}/makefile.rb")
+	  load "#{$top_srcdir}/ext/#{target}/makefile.rb"
+	elsif File.exist?("#{$top_srcdir}/ext/#{target}/extconf.rb")
+	  load "#{$top_srcdir}/ext/#{target}/extconf.rb"
+d65 1
+d70 1
+a70 1
+ 	$extlist.push [$static, $target, File.basename($target)]
+d72 2
+a73 14
+      if $install
+        if /bccwin32/ =~ RUBY_PLATFORM
+          system "#{$make} -DDESTDIR=#{$destdir} install"
+        else
+          system "#{$make} install DESTDIR=#{$destdir}"
+        end
+      elsif $clean
+	system "#{$make} #{$clean}"
+      else
+	unless system "#{$make} all"
+	  if ENV["MAKEFLAGS"] != "k" and ENV["MFLAGS"] != "-k"
+	    exit
+	  end
+	end
+d75 4
+d81 1
+d83 2
+a84 2
+      $extlibs += " " + $DLDFLAGS if $DLDFLAGS
+      $extlibs += " " + $LDFLAGS unless $LDFLAGS == ""
+d88 2
+d96 14
+a109 2
+$make = ENV["MAKE"]
+$make ||= with_config("make-prog", "make")
+d111 28
+a138 2
+File::makedirs('ext')
+Dir::chdir('ext')
+d142 2
+a143 1
+for setup in [CONFIG['setup'], File::join($top_srcdir, "ext", CONFIG['setup'])]
+d150 6
+a155 2
+      if /^option +nodynamic/ =~ line
+	$nodynamic = true
+a157 1
+      target = line.split[0]
+d161 1
+d168 3
+d172 2
+a173 4
+for d in Dir["#{ext_prefix}/**/*"]
+  File.directory?(d) || next
+  File.file?(d + "/MANIFEST") || next
+  
+a174 11
+  if $install
+    print "installing ", d, "\n"
+  elsif $clean
+    print "cleaning ", d, "\n"
+  else
+    print "compiling ", d, "\n"
+    if RUBY_PLATFORM =~ /-aix/ and older("../ruby.imp", "../miniruby")
+      load "#{$top_srcdir}/ext/aix_mksym.rb"
+    end
+  end
+  $stdout.flush
+d178 1
+a178 1
+if $install or $clean
+a181 4
+$extinit = "" unless $extinit
+
+ruby = CONFIG["RUBY_INSTALL_NAME"] + CONFIG["EXEEXT"]
+miniruby = "miniruby" + CONFIG["EXEEXT"]
+a182 1
+$extobjs = "" unless $extobjs
+d184 2
+d189 2
+a190 9
+      $extinit += format("\
+\tInit_%s();\n\
+\trb_provide(\"%s.so\");\n\
+", i, t)
+      $extobjs += "ext/"
+      $extobjs += f
+      $extobjs += " "
+    else
+      false
+d194 3
+a196 17
+  if older("extinit.c", $setup) || older("extinit.c", "#{$top_srcdir}/ext/extmk.rb")
+    f = open("extinit.c", "w")
+    f.printf "void Init_ext() {\n"
+    f.printf $extinit
+    f.printf "}\n"
+    f.close
+  end
+  if older("extinit.#{$OBJEXT}", "extinit.c")
+    cmd = CONFIG["CC"] + " " + CFLAGS + " -c extinit.c"
+    print cmd, "\n"
+    system cmd or exit 1
+  end
+
+  Dir.chdir ".."
+
+  if older(ruby, $setup) or older(ruby, miniruby)
+    rm_f ruby
+d203 17
+a219 8
+  system format(%[#{$make} #{ruby} EXTOBJS='%s' EXTLIBS='%s'], $extobjs, $extlibs)
+else
+  Dir.chdir ".."
+  if older(ruby, miniruby)
+    rm_f ruby
+    system("#{$make} #{ruby}")
+  end
+end
+@
+
+
+1.4
+log
+@* ext/extmk.rb: The condition judgment without necessity was deleted.
+@
+text
+@d47 1
+d68 3
+@
+
+
+1.3
+log
+@* ext/extmk.rb, lib/mkmf.rb ($INCFLAGS): new var for -I$(topdir).
+* lib/mkmf.rb: add #define WIN32_LEAN_AND_MEAN to improve compile
+  times.
+@
+text
+@d157 1
+a157 1
+  if !$objs or (/bccwin32/ =~ RUBY_PLATFORM) then
+@
+
+
+1.2
+log
+@* time.c (time_free): prototype; struct time_object -> void *.
+  avoid GCC warnings.
+* lib/mkmf.rb, ext/extmk.rb ($LINK, $CPP): move to lib/mkmf.rb.
+@
+text
+@d44 1
+a44 1
+$topdir = $hdrdir = File.expand_path(".")
+d377 1
+@
+
+
+1.1
+log
+@* configure.in: modify program_prefix only if specified
+  --program-prefix.
+
+* configure.in: don't generate ext/extmk.rb.
+
+* Makefile.in: execute directly $(srcdir)/ext/extmk.rb.
+  remove -Cext option, "Dir::chdir 'ext'" in ext/extmk.rb.
+
+* {win32,bccwin32}/Makefile.sub: ditto.
+
+* instruby.rb: ditto.
+
+* ext/extmk.rb: renamed from ext/extmk.rb.in.
+
+* lib/mkmf.rb (module Logging): create log files (mkmf.log)
+  in each extension module directories.
+
+* ext/extmk.rb: ditto.
+
+* lib/mkmf.rb (macro_defined?): new method.
+
+* ext/.cvsignore: remove extmk.rb.
+
+* ext/*/.cvsignore: add "*.def".
+@
+text
+@d35 1
+a35 1
+$top_srcdir = Config::CONFIG["srcdir"]
+d37 1
+a37 1
+$:.replace [$top_srcdir, $top_srcdir+"/lib", "."]
+d44 2
+a45 4
+$topdir = File.expand_path(".")
+
+$LINK = "#{CONFIG['CC']} #{OUTFLAG}conftest -I#$topdir -I#$top_srcdir #{CFLAGS} %s %s #{CONFIG['LDFLAGS']} %s conftest.c %s %s #{CONFIG['LIBS']}"
+$CPP = "#{CONFIG['CPP']} #{CONFIG['CPPFLAGS']} %s -I#$topdir -I#$top_srcdir #{CFLAGS} %s %s %s conftest.c"
+@

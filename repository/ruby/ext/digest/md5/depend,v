@@ -1,0 +1,75 @@
+head	1.2;
+access;
+symbols
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.09.26.16.27.23;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.18.09.23.10;	author nobu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2002.03.25.02.28.50;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* ext/digest/md5: Use OpenSSL's MD5 engine if available.  It is
+  much faster than what we have now (md5.[ch]).  Add a knob
+  (--with-bundled-md5) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@md5.o: md5.c md5.h $(srcdir)/../defs.h $(hdrdir)/ruby.h $(topdir)/config.h \
+  $(hdrdir)/defines.h $(hdrdir)/intern.h
+md5init.o: md5init.c $(srcdir)/../digest.h $(hdrdir)/ruby.h \
+  $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/intern.h md5.h \
+  $(srcdir)/../defs.h
+md5ossl.o: md5ossl.h
+@
+
+
+1.1
+log
+@* ext/digest: add depend file.
+
+* ext/digest/md5: ditto.
+
+* ext/digest/rmd160: ditto.
+
+* ext/digest/sha1: ditto.
+
+* ext/digest/sha2: ditto.
+
+* ext/iconv/MANIFEST: ditto.
+
+* ext/stringio/MANIFEST: ditto.
+
+* ext/syslog: ditto.
+@
+text
+@d6 1
+@
+
+
+1.1.2.1
+log
+@add depend files
+@
+text
+@@

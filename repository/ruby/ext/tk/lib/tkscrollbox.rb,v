@@ -1,0 +1,259 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.2
+	v1_3_6_repack:1.1.1.1.2.2
+	v1_3_6:1.1.1.1.2.2
+	v1_3_5:1.1.1.1.2.2
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1.2.2
+	v1_3_4_990624:1.1.1.1.2.2
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1.2.2
+	v1_3_4_990531:1.1.1.1.2.2
+	v1_3_3_990518:1.1.1.1.2.2
+	v1_3_3_990513:1.1.1.1.2.2
+	v1_3_3_990507:1.1.1.1.2.2
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1.2.2
+	v1_3_1_990224:1.1.1.1.2.2
+	v1_3_1_990215:1.1.1.1.2.2
+	v1_3_1_990212:1.1.1.1.2.2
+	v1_3_1_990210:1.1.1.1.2.2
+	v1_3_1_:1.1.1.1.2.2
+	v1_3_1_990209:1.1.1.1.2.2
+	v1_3_1_990205:1.1.1.1.2.2
+	v1_3_1_990203:1.1.1.1.2.2
+	v1_3_1_990201:1.1.1.1.2.2
+	v1_3_1"_990201:1.1.1.1.2.2
+	v1_3_1_990128:1.1.1.1.2.2
+	v1_3_1_990127:1.1.1.1.2.2
+	v1_3_1_990126:1.1.1.1.2.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.52;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.01.26.10.08.17;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.01.27.08.08.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@#
+#		tkscrollbox.rb - Tk Listbox with Scrollbar
+#                                 as an example of Composite Widget
+#			$Date: 1999/01/27 08:08:39 $
+#			by Yukihiro Matsumoto <matz@@netlab.co.jp>
+
+require 'tk.rb'
+
+class TkScrollbox<TkListbox
+  include TkComposite
+  def initialize_composite(keys=nil)
+    list = TkListbox.new(@@frame)
+    scroll = TkScrollbar.new(@@frame)
+    @@path = list.path
+
+    list.configure 'yscroll', scroll.path+" set"
+    list.pack 'side'=>'left','fill'=>'both','expand'=>'yes'
+    scroll.configure 'command', list.path+" yview"
+    scroll.pack 'side'=>'right','fill'=>'y'
+
+    delegate('DEFAULT', list)
+    delegate('foreground', list)
+    delegate('background', list, scroll)
+    delegate('borderwidth', @@frame)
+    delegate('relief', @@frame)
+
+    configure keys if keys
+  end
+end
+@
+
+
+1.1
+log
+@file tkscrollbox.rb was initially added on branch v1_1r.
+@
+text
+@d1 29
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 27
+#
+#		tkscrollbox.rb - Tk Listbox with Scrollbar
+#                                 as an example of Composite Widget
+#			$Date: 1998/11/17 09:12:44 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+
+require 'tk.rb'
+
+class TkScrollbox<TkListbox
+  include TkComposite
+  def initialize_composite
+    list = TkListbox.new(@@frame)
+    scroll = TkScrollbar.new(@@frame)
+    @@path = list.path
+
+    list.configure 'yscroll', scroll.path+" set"
+    list.pack 'side'=>'left','fill'=>'both','expand'=>'yes'
+    scroll.configure 'command', list.path+" yview"
+    scroll.pack 'side'=>'right','fill'=>'y'
+
+    delegate('DEFAULT', list)
+    delegate('foreground', list)
+    delegate('background', list, scroll)
+    delegate('borderwidth', @@frame)
+    delegate('relief', @@frame)
+  end
+end
+@
+
+
+1.1.1.1.2.1
+log
+@990126
+@
+text
+@d4 1
+a4 1
+#			$Date: 1999/01/20 04:59:34 $
+d11 1
+a11 1
+  def initialize_composite(keys=nil)
+a25 2
+
+    configure keys if keys
+@
+
+
+1.1.1.1.2.2
+log
+@990127
+@
+text
+@d4 2
+a5 2
+#			$Date: 1999/01/26 10:08:17 $
+#			by Yukihiro Matsumoto <matz@@netlab.co.jp>
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 27
+#
+#		tkscrollbox.rb - Tk Listbox with Scrollbar
+#                                 as an example of Composite Widget
+#			$Date: 1998/01/16 12:36:06 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+
+require 'tk.rb'
+
+class TkScrollbox<TkListbox
+  include TkComposite
+  def initialize_composite
+    list = TkListbox.new(@@frame)
+    scroll = TkScrollbar.new(@@frame)
+    @@path = list.path
+
+    list.configure 'yscroll', scroll.path+" set"
+    list.pack 'side'=>'left','fill'=>'both','expand'=>'yes'
+    scroll.configure 'command', list.path+" yview"
+    scroll.pack 'side'=>'right','fill'=>'y'
+
+    delegate('DEFAULT', list)
+    delegate('foreground', list)
+    delegate('background', list, scroll)
+    delegate('borderwidth', @@frame)
+    delegate('relief', @@frame)
+  end
+end
+@
+

@@ -1,0 +1,88 @@
+head	1.1;
+branch	1.1.1;
+access;
+symbols
+	onigd20020424:1.1.1.1
+	onigd20020416:1.1.1.1
+	onigd20020401:1.1.1.1
+	onigd20020325:1.1.1.1
+	onigd20020313:1.1.1.1
+	onigd20020306:1.1.1.1
+	onigd20020304:1.1.1.1
+	onigd20020225:1.1.1.1
+	KOSAKO:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.04.03.14.06;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.03.04.03.14.06;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@--- re.c.orig	Wed Feb 13 18:01:09 2002
++++ re.c	Thu Feb 21 20:51:03 2002
+@@@@ -413,6 +413,7 @@@@ make_regexp(s, len, flags)
+ {
+     Regexp *rp;
+     char *err;
++    int r;
+ 
+     /* Handle escaped characters first. */
+ 
+@@@@ -421,11 +422,12 @@@@ make_regexp(s, len, flags)
+        from that.
+     */
+ 
+-    rp = ALLOC(Regexp);
+-    MEMZERO((char *)rp, Regexp, 1);
+-    rp->buffer = ALLOC_N(char, 16);
+-    rp->allocated = 16;
+-    rp->fastmap = ALLOC_N(char, 256);
++    r = re_alloc_pattern(&rp);
++    if (r) {
++      err = re_error_code_to_str(r);
++      rb_reg_raise(s, len, err, 0);
++    }
++      
+     if (flags) {
+ 	rp->options = flags;
+     }
+@@@@ -569,8 +571,7 @@@@ rb_reg_prepare_re(re)
+ 	if (FL_TEST(re, KCODE_FIXED))
+ 	    kcode_set_option(re);
+ 	rb_reg_check(re);
+-	RREGEXP(re)->ptr->fastmap_accurate = 0;
+-	err = re_compile_pattern(RREGEXP(re)->str, RREGEXP(re)->len, RREGEXP(re)->ptr);
++	err = re_recompile_pattern(RREGEXP(re)->str, RREGEXP(re)->len, RREGEXP(re)->ptr);
+ 	if (err != NULL) {
+ 	    rb_reg_raise(RREGEXP(re)->str, RREGEXP(re)->len, err, re);
+ 	}
+@
+
+
+1.1.1.1
+log
+@This is the initial import of Oni Guruma, a GNU regex compatible
+regular expression library, snapshotted at 2002-02-25.
+
+Copyright (C) 2002  K.Kosako (kosako@@sofnec.co.jp)
+@
+text
+@@

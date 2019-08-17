@@ -1,0 +1,3862 @@
+head	1.36;
+access;
+symbols
+	V0_3_2:1.25
+	V0_1_4:1.9
+	V0_1_3:1.9
+	V0_1_2:1.8
+	V0_1_1:1.8
+	V0_1:1.8;
+locks; strict;
+comment	@# @;
+
+
+1.36
+date	2002.10.07.08.00.23;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.08.10.16.17.09;	author dave;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.06.28.14.31.38;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.03.08.08.27.23;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.01.28.19.09.33;	author nobu;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.01.21.08.27.20;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.05.14.35.05;	author chad;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.12.10.08.33.19;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.19.13.08.10;	author dave;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.16.17.36.31;	author dave;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.15.03.54.59;	author dave;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.11.14.05.31.05;	author dave;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.11.14.04.55.12;	author dave;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.11.13.03.49.01;	author dave;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.11.12.04.51.37;	author dave;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.11.11.04.00.10;	author dave;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.11.04.15.19.05;	author dave;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.11.03.04.15.17;	author dave;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.10.25.05.25.28;	author dave;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.07.27.05.49.26;	author dave;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.10.07.05.22;	author dave;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.02.06.19.08.39;	author dave;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.02.04.04.43.55;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.01.17.07.30.25;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.23.19.31.57;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.22.05.05.54;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.21.20.21.55;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.20.04.05.11;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.20.03.26.57;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.19.17.11.43;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.21.58;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.36
+log
+@* replace "type" by "class" since Object#type is deprecated in
+  1.7.3.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestKernel < Rubicon::TestCase
+
+  def test_EQUAL # '=='
+    o1 = Object.new
+    o2 = Object.new
+    assert(o1 == o1)
+    assert(o2 == o2)
+    assert(o1 != o2)
+    assert(!(o1 == o2))
+  end
+
+  def test_MATCH # '=~'
+    o1 = Object.new
+    o2 = Object.new
+    assert(!(o1 =~ o1))
+    assert(!(o2 =~ o2))
+    assert(o1 !~ o2)
+    assert(!(o1 =~ o2))
+  end
+
+  def test_VERY_EQUAL # '==='
+    o1 = Object.new
+    o2 = Object.new
+    assert(o1 === o1)
+    assert(o2 === o2)
+    assert(!(o1 === o2))
+  end
+
+  def test___id__
+    # naive test - no 2 ids the same
+    objs = []
+    ObjectSpace.each_object { |obj| objs << obj.__id__ }
+    objs.sort!
+    0.upto(objs.size-2) {|i| assert(objs[i] != objs[i+1]) }
+
+    assert_equal(1.__id__, (3-2).__id__)
+    assert_instance_of(Fixnum, 1.__id__)
+  end
+
+  class SendTest
+    def send_test1
+      "send1"
+    end
+    
+    def send_test2(a, b)
+      a + b
+    end
+  end
+
+  def test___send__
+    t = SendTest.new
+    assert_equal("send1", t.__send__(:send_test1))
+    assert_equal(99,      t.__send__("send_test2", 44, 55))
+  end
+
+  def test_class
+    assert_instance_of(Class, 1.class)
+    assert_equal(Fixnum, 1.class)
+    assert_equal(Class, TestKernel.class)
+    assert_equal(Class, TestKernel.class.class)
+    assert_equal(Module, Enumerable.class)
+  end
+
+  class CloneTest
+    attr_accessor :str
+  end
+
+  def test_clone
+    s1 = CloneTest.new
+    s1.str = "hello"
+    s2 = s1.clone
+    assert(s1.str    == s2.str)
+    assert(s1.str.id == s2.str.id)
+    assert(s1.id     != s2.id)
+
+    foo = Object.new
+    def foo.test
+      "test"
+    end
+    bar = foo.clone
+    def bar.test2
+      "test2"
+    end
+
+    assert_equal("test2", bar.test2)
+    assert_equal("test",  bar.test)
+    assert_equal("test",  foo.test)
+    Version.less_than("1.7") do
+      assert_exception(NameError) { foo.test2 }
+    end
+    Version.greater_or_equal("1.7") do
+      assert_exception(NoMethodError) { foo.test2 }
+    end
+  end
+
+  class DisplayTest
+    attr :val
+    def write(obj)
+      @@val = "!#{obj.to_s}!"
+    end
+  end
+
+  def test_display
+    dt = DisplayTest.new
+    assert_nil("hello".display(dt))
+    assert_equal("!hello!", dt.val)
+
+    save = $>
+    begin
+      $> = dt
+      assert_nil("hello".display)
+      assert_equal("!hello!", dt.val)
+    ensure
+      $> = save
+    end
+  end
+
+  def test_dup
+    s1 = CloneTest.new
+    s1.str = "hello"
+    s2 = s1.dup
+    assert(s1.str    == s2.str)
+    assert(s1.str.id == s2.str.id)
+    assert(s1.id     != s2.id)
+  end
+
+  def test_eql?
+    o1 = Object.new
+    o2 = Object.new
+    assert(o1.eql?(o1))
+    assert(o2.eql?(o2))
+    assert(!(o1.eql?(o2)))
+  end
+
+  def test_equal?
+    o1 = Object.new
+    o2 = Object.new
+    assert(o1.equal?(o1))
+    assert(o2.equal?(o2))
+    assert(!(o1.equal?(o2)))
+  end
+
+  module ExtendTest1
+    def et1
+      "et1"
+    end
+    def et3
+      "et3.1"
+    end
+  end
+
+  module ExtendTest2
+    def et2
+      "et2"
+    end
+    def et3
+      "et3.2"
+    end
+  end
+
+  def test_extend
+    s = "hello"
+    assert(!defined?(s.et1))
+    s.extend(ExtendTest1)
+    assert_not_nil(defined?(s.et1))
+    assert(!defined?(s.et2))
+    assert_equal("et1", s.et1)
+    assert_equal("et3.1", s.et3)
+
+    s.extend(ExtendTest2)
+    assert_not_nil(defined?(s.et2))
+    assert_equal("et1", s.et1)
+    assert_equal("et2", s.et2)
+    assert_equal("et3.2", s.et3)
+
+    t = "goodbye"
+    t.extend(ExtendTest1)
+    t.extend(ExtendTest2)
+    assert_equal("et1", t.et1)
+    assert_equal("et2", t.et2)
+    assert_equal("et3.2", t.et3)
+
+    t = "goodbye"
+    t.extend(ExtendTest2)
+    t.extend(ExtendTest1)
+    assert_equal("et1", t.et1)
+    assert_equal("et2", t.et2)
+    assert_equal("et3.1", t.et3)
+  end
+
+  def test_freeze
+    s = "hello"
+    s[3] = "x"
+    eval %q{ def s.m1() "m1" end }
+    assert_equal("m1", s.m1)
+    s.freeze
+    assert(s.frozen?)
+    assert_exception(TypeError) { s[3] = 'y' }
+    assert_exception(TypeError) { eval %q{ def s.m1() "m1" end } }
+    assert_equal("helxo", s)
+  end
+
+  def test_frozen?
+    s = "hello"
+    assert(!s.frozen?)
+    assert(!self.frozen?)
+    s.freeze
+    assert(s.frozen?)
+  end
+
+  def test_hash
+    assert_instance_of(Fixnum, "hello".hash)
+    s1 = "hello"
+    s2 = "hello"
+    assert(s1.id != s2.id)
+    assert(s1.eql?(s2))
+    assert(s1.hash == s2.hash)
+    s1[2] = 'x'
+    assert(s1.hash != s2.hash)
+  end
+
+  def test_id
+    objs = []
+    ObjectSpace.each_object { |obj| objs << obj.id }
+    s1 = objs.size
+    assert_equal(s1, objs.uniq.size)
+
+    assert_equal(1.id, (3-2).id)
+    assert_instance_of(Fixnum, 1.id)
+  end
+
+  def test_inspect
+    assert_instance_of(String, 1.inspect)
+    assert_instance_of(String, /a/.inspect)
+    assert_instance_of(String, "hello".inspect)
+    assert_instance_of(String, self.inspect)
+  end
+
+  def test_instance_eval
+    s = "hello"
+    assert_equal(s, s.instance_eval { self } ) 
+    assert_equal("HELLO", s.instance_eval("upcase"))
+  end
+
+  def test_instance_of?
+    s = "hello"
+    assert(s.instance_of?(String))
+    assert(!s.instance_of?(Object))
+    assert(!s.instance_of?(Class))
+    assert(self.instance_of?(TestKernel))
+  end
+
+  class IVTest1
+  end
+  class IVTest2
+    def initialize
+      @@var1 = 1
+      @@var2 = 2
+    end
+  end
+    
+  def test_instance_variables
+    o = IVTest1.new
+    assert_equal([], o.instance_variables)
+    o = IVTest2.new
+    assert_set_equal(%w(@@var1 @@var2), o.instance_variables)
+  end
+
+  def test_is_a?
+    s = "hello"
+    assert(s.is_a?(String))
+    assert(s.is_a?(Object))
+    assert(!s.is_a?(Class))
+    assert(self.is_a?(TestKernel))
+    assert(TestKernel.is_a?(Class))
+    assert(TestKernel.is_a?(Module))
+    assert(TestKernel.is_a?(Object))
+
+    a = []
+    assert(a.is_a?(Array))
+    assert(a.is_a?(Enumerable))
+  end
+
+  def test_kind_of?
+    s = "hello"
+    assert(s.kind_of?(String))
+    assert(s.kind_of?(Object))
+    assert(!s.kind_of?(Class))
+    assert(self.kind_of?(TestKernel))
+    assert(TestKernel.kind_of?(Class))
+    assert(TestKernel.kind_of?(Module))
+    assert(TestKernel.kind_of?(Object))
+
+    a = []
+    assert(a.kind_of?(Array))
+    assert(a.kind_of?(Enumerable))
+  end
+
+  def MethodTest1
+    "mt1"
+  end
+  def MethodTest2(a, b, c)
+    a + b + c
+  end
+
+  def test_method
+    assert_exception(NameError) { self.method(:wombat) }
+    m = self.method("MethodTest1")
+    assert_instance_of(Method, m)
+    assert_equal("mt1", m.call)
+    assert_exception(ArgumentError) { m.call(1, 2, 3) }
+
+    m = self.method("MethodTest2")
+    assert_instance_of(Method, m)
+    assert_equal(6, m.call(1, *[2, 3]))
+    assert_exception(ArgumentError) { m.call(1, 3) }
+  end
+
+  class MethodMissing
+    def method_missing(m, *a)
+      return [m, a]
+    end
+    def mm
+      return "mm"
+    end
+  end
+      
+  def test_method_missing
+    mm = MethodMissing.new
+    assert_equal("mm", mm.mm)
+    assert_equal([ :dave, []], mm.dave)
+    assert_equal([ :dave, [1, 2, 3]], mm.dave(1, *[2, 3]))
+  end
+
+  class MethodsTest
+    def MethodsTest.singleton
+    end
+    def one
+    end
+    def two
+    end
+    def three
+    end
+    def four
+    end
+    private :two
+    protected :three
+  end
+
+  def test_methods
+    assert_set_equal(TestKernel.instance_methods(true), self.methods)
+    assert_set_equal(%w(one four)  + Object.instance_methods(true), 
+        MethodsTest.new.methods)
+  end
+
+  def test_nil?
+    assert(!self.nil?)
+    assert(nil.nil?)
+    a = []
+    assert(a[99].nil?)
+  end
+
+  class PrivateMethods < MethodsTest
+    def five
+    end
+    def six
+    end
+    def seven
+    end
+    private :six
+    protected :seven
+    end
+
+  def test_private_methods
+    assert_set_equal(%w(two six) + Object.new.private_methods,
+                  PrivateMethods.new.private_methods)
+  end
+
+  def test_protected_methods
+    assert_set_equal(%w(three seven) + Object.new.protected_methods,
+                  PrivateMethods.new.protected_methods)
+  end
+
+  def test_public_methods
+    assert_set_equal(TestKernel.instance_methods(true), self.public_methods)
+    assert_set_equal(%w(one four)  + Object.instance_methods(true), 
+        MethodsTest.new.public_methods)
+  end
+
+  def test_respond_to?
+    assert(self.respond_to?(:test_respond_to?))
+    assert(!self.respond_to?(:TEST_respond_to?))
+           
+    mt = PrivateMethods.new
+    # public
+    assert(mt.respond_to?("five"))
+    assert(mt.respond_to?(:one))
+
+    assert(mt.respond_to?("five", true))
+    assert(mt.respond_to?(:one, false))
+    # protected
+    assert(mt.respond_to?("seven"))
+    assert(mt.respond_to?(:three))
+
+    assert(mt.respond_to?("seven", true))
+    assert(mt.respond_to?(:three, false))
+    #private
+    assert(!mt.respond_to?(:two))
+    assert(!mt.respond_to?("six"))
+ 
+    assert(mt.respond_to?(:two, true))
+    assert(mt.respond_to?("six", true))
+  end
+
+  def test_send
+    t = SendTest.new
+    assert_equal("send1", t.send(:send_test1))
+    assert_equal(99,      t.send("send_test2", 44, 55))
+  end
+
+  def test_singleton_methods
+    assert_equal(%w(singleton), MethodsTest.singleton_methods)
+    assert_equal(%w(singleton), PrivateMethods.singleton_methods)
+    
+    mt = MethodsTest.new
+    assert_equal([], mt.singleton_methods)
+    eval "def mt.wombat() end"
+    assert_equal(%w(wombat), mt.singleton_methods)
+  end
+
+  def test_taint
+    a = "hello"
+    assert(!a.tainted?)
+    assert_equal(a, a.taint)
+    assert(a.tainted?)
+  end
+
+  def test_tainted?
+    a = "hello"
+    assert(!a.tainted?)
+    assert_equal(a, a.taint)
+    assert(a.tainted?)
+  end
+
+  def test_to_a
+    Version.less_than("1.7.2") do
+      o = Object.new
+      assert_equal([o], o.to_a)   # rest tested in individual classes
+    end
+  end
+
+  def test_to_s
+    o = Object.new
+    assert_match(o.to_s, /^#<Object:0x[0-9a-f]+>/)
+  end
+
+  def test_type
+    assert_instance_of(Class, self.class)
+    assert_equal(TestKernel, self.class)
+    assert_equal(String, "hello".class)
+    assert_equal(Bignum, (10**40).class)
+  end
+
+  def test_untaint
+    a = "hello"
+    assert(!a.tainted?)
+    assert_equal(a, a.taint)
+    assert(a.tainted?)
+    assert_equal(a, a.untaint)
+    assert(!a.tainted?)
+    
+    a = "hello"
+    assert(!a.tainted?)
+    assert_equal(a, a.untaint)
+    assert(!a.tainted?)
+  end
+
+  class Caster
+    def to_a
+      [4, 5, 6]
+    end
+    def to_f
+      2.34
+    end
+    def to_i
+      99
+    end
+    def to_s
+      "Hello"
+    end
+  end
+
+  def test_s_Array
+    Version.less_than("1.7.2") do
+      assert_equal([], Array(nil))
+    end
+    assert_equal([1, 2, 3], Array([1, 2, 3]))
+    assert_equal([1, 2, 3], Array(1..3))
+    assert_equal([4, 5, 6], Array(Caster.new))
+  end
+
+  def test_s_Float
+    assert_instance_of(Float, Float(1))
+    assert_flequal(1, Float(1))
+    assert_flequal(1.23, Float('1.23'))
+    assert_flequal(2.34, Float(Caster.new))
+  end
+
+  def test_s_Integer
+    assert_instance_of(Fixnum, Integer(1))
+    assert_instance_of(Bignum, Integer(10**30))
+    assert_equal(123,    Integer(123.99))
+    assert_equal(-123,   Integer(-123.99))
+    a = Integer(1.0e30) - 10**30
+    assert(a.abs < 10**20)
+    assert_equal(99, Integer(Caster.new))
+  end
+
+  def test_s_String
+    assert_instance_of(String, String(123))
+    assert_equal("123", String(123))
+    assert_equal("123.45", String(123.45))
+    assert_equal("123",    String([1, 2, 3]))
+    assert_equal("Hello",  String(Caster.new))
+  end
+
+  def test_s_BACKTICK
+    assert_equal("hello\n", `echo hello`)
+    assert_equal(0, $?)
+    assert_equal("", `not_a_valid_command 2>/dev/null`)
+    assert($? != 0)
+
+    assert_equal("hello\n", %x{echo hello})
+    assert_equal(0, $?)
+    assert_equal("", %x{not_a_valid_command 2>/dev/null})
+    assert($? != 0)
+  end
+
+  def test_s_abort
+    p = IO.popen("#$interpreter -e 'abort;exit 99'")
+    p.close
+    assert_equal(1<<8, $?)
+  end
+
+  def test_s_at_exit
+    script = %{at_exit {puts "world"};at_exit {puts "cruel"};puts "goodbye";exit 99}
+
+    p = IO.popen("#$interpreter -e '#{script}'")
+
+    begin
+      assert_equal("goodbye\n", p.gets)
+      assert_equal("cruel\n", p.gets)
+      assert_equal("world\n", p.gets)
+    ensure
+      p.close
+      assert_equal(99<<8, $?)
+    end
+  end
+
+  def test_s_autoload
+    File.open("_dummy.rb", "w") do |f|
+     f.print <<-EOM
+      module Module_Test
+        VAL = 123
+      end
+      EOM
+    end
+    assert(!defined? Module_Test)
+    autoload(:Module_Test, "./_dummy.rb")
+    assert_not_nil(defined? Module_Test::VAL)
+    assert_equal(123, Module_Test::VAL)
+    assert($".include?("./_dummy.rb"))#"
+    File.delete("./_dummy.rb")
+  end
+
+  def bindproc(val)
+    return binding
+  end
+
+  def test_s_binding
+    val = 123
+    b = binding
+    assert_instance_of(Binding, b)
+    assert_equal(123, eval("val", b))
+    b = bindproc(321)
+    assert_equal(321, eval("val", b))
+  end
+
+  def blocker1
+    return block_given?
+  end
+
+  def blocker2(&p)
+    return block_given?
+  end
+
+  def test_s_block_given?
+    assert(!blocker1())
+    assert(!blocker2())
+    assert(blocker1() { 1 })
+    assert(blocker2() { 1 })
+  end
+
+  def callcc_test(n)
+    cont = nil
+    callcc { |cont|
+      return [cont, n]
+    }
+    n -= 1
+    return [n.zero? ? nil : cont, n ]
+  end
+
+  def test_s_callcc
+    res = nil
+    cont = nil
+    assert_equal(2, 
+                 callcc { |cont|
+                   res = 1
+                   res = 2
+                 })
+    assert_equal(2, res)
+
+    res = nil 
+    assert_equal(99, 
+                 callcc { |cont|
+                   res = 1
+                   cont.call 99
+                   res = 2
+                 })
+    assert_equal(1, res)
+
+    # Test gotos!
+    callcc { |cont| res = 0 }
+    res += 1
+    cont.call if res < 4
+    assert_equal(4, res)
+    
+    # Test reactivating procedures
+    n = 4
+    cont, res = callcc_test(4)
+    assert_equal(n, res)
+    n -= 1
+    puts cont.call if cont
+  end
+
+  def caller_test
+    return caller
+  end
+
+  def test_s_caller
+    c = caller_test
+    assert_match(c[0], %r{TestKernel.rb:#{__LINE__-1}:in `test_s_caller'})
+  end #`
+
+  def catch_test
+    throw :c, 456;
+    789;
+  end
+
+  def test_s_catch
+    assert_equal(123, catch(:c) { a = 1; 123 })
+    assert_equal(321, catch(:c) { a = 1; throw :c, 321; 123 })
+    assert_equal(456, catch(:c) { a = 1; catch_test; 123 })
+
+    assert_equal(456, catch(:c) { catch(:d) { catch_test; 123 } } )
+  end
+
+  def test_s_chomp
+    $_ = "hello"
+    assert_equal("hello", chomp)
+    assert_equal("hello", chomp('aaa'))
+    assert_equal("he",    chomp('llo'))
+    assert_equal("he",    $_)
+
+    a  = "hello\n"
+    $_ = a
+    assert_equal("hello",   chomp)
+    assert_equal("hello",   $_)
+    assert_equal("hello\n", a)
+  end
+
+  def test_s_chomp!
+    $_ = "hello"
+    assert_equal(nil,     chomp!)
+    assert_equal(nil,     chomp!('aaa'))
+    assert_equal("he",    chomp!('llo'))
+    assert_equal("he",    $_)
+
+    a  = "hello\n"
+    $_ = a
+    assert_equal("hello", chomp!)
+    assert_equal("hello", $_)
+    assert_equal("hello", a)
+  end
+
+  def test_s_chop
+    a  = "hi"
+    $_ = a
+    assert_equal("h",  chop)
+    assert_equal("h",  $_)
+    assert_equal("",   chop)
+    assert_equal("",   $_)
+    assert_equal("",   chop)
+    assert_equal("hi", a)
+
+    $_ = "hi\n"
+    assert_equal("hi", chop)
+
+    $_ = "hi\r\n"
+    assert_equal("hi", chop)
+    $_ = "hi\n\r"
+    assert_equal("hi\n", chop)
+  end
+
+  def test_s_chop!
+    a  = "hi"
+    $_ = a
+    assert_equal("h",  chop!)
+    assert_equal("h",  $_)
+    assert_equal("",   chop!)
+    assert_equal("",   $_)
+    assert_equal(nil,   chop!)
+    assert_equal("",   $_)
+    assert_equal("", a)
+
+    $_ = "hi\n"
+    assert_equal("hi", chop!)
+
+    $_ = "hi\r\n"
+    assert_equal("hi", chop!)
+    $_ = "hi\n\r"
+    assert_equal("hi\n", chop!)
+  end
+
+  def test_s_eval
+    assert_equal(123, eval("100 + 20 + 3"))
+    val = 123
+    assert_equal(123, eval("val", binding))
+    assert_equal(321, eval("val", bindproc(321)))
+    skipping("Check of eval with file name")
+    begin
+      eval "1
+            burble", binding, "gumby", 321
+    rescue Exception => detail
+    end
+  end
+
+  def test_s_exec
+    open("xyzzy.dat", "w") { |f| f.puts "stuff" }
+    tf = Tempfile.new("tf")
+    begin
+
+      # all in one string - wildcards get expanded
+      tf.puts 'exec("echo xy*y.dat")'
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |p|
+        assert_equal("xyzzy.dat\n", p.gets)
+      end
+
+      # with two parameters, the '*' doesn't get expanded
+      tf.open
+      tf.puts 'exec("echo", "xy*y.dat")'
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |p|
+        assert_equal("xy*y.dat\n", p.gets)
+      end
+
+    ensure
+      tf.close(true)
+      File.unlink "xyzzy.dat" if p
+    end
+
+  end
+
+  def test_s_exit
+    begin
+      exit
+      assert_fail("No exception raised")
+    rescue SystemExit
+      assert(true)
+    rescue Exception
+      assert_fail("Bad exception: #$!")
+    end
+
+    p = IO.popen("#$interpreter -e 'exit'")
+    p.close
+    assert_equal(0, $?)
+
+    p = IO.popen("#$interpreter -e 'exit 123'")
+    p.close
+    assert_equal(123 << 8, $?)
+  end
+
+  def test_s_exit!
+    tf = Tempfile.new("tf")
+    tf.puts %{
+      begin
+	exit! 99
+	exit 1
+      rescue SystemExit
+	exit 2
+      rescue Exception
+	exit 3
+      end
+      exit 4}
+    
+    tf.close
+    IO.popen("#$interpreter #{tf.path}").close
+    assert_equal(99<<8, $?)
+    
+    IO.popen("#$interpreter -e 'exit!'").close
+    assert_equal(0xff << 8, $?)
+
+    IO.popen("#$interpreter -e 'exit! 123'").close
+    assert_equal(123 << 8, $?)
+  ensure
+    tf.close(true)
+  end
+
+
+  def test_s_fail
+    begin
+      fail
+    rescue StandardError
+      assert(true)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    begin
+      fail "Wombat"
+    rescue StandardError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    assert_exception(NotImplementedError) { fail NotImplementedError }
+
+    begin
+      fail "Wombat"
+      assert_fail("No exception")
+    rescue StandardError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    begin
+      fail NotImplementedError, "Wombat"
+      assert_fail("No exception")
+    rescue NotImplementedError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    bt = %w(one two three)
+    begin
+      fail NotImplementedError, "Wombat", bt
+      assert_fail("No exception")
+    rescue NotImplementedError => detail
+      assert_equal("Wombat", detail.message)
+      assert_equal(bt, detail.backtrace)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+  end
+
+  MsWin32.dont do
+    def test_s_fork
+      f = fork
+      if f.nil?
+	File.open("_pid", "w") {|f| f.puts $$}
+	exit 99
+      end
+      begin
+	Process.wait
+	assert_equal(99<<8, $?)
+	File.open("_pid") do |file|
+	  assert_equal(file.gets.to_i, f)
+	end
+      ensure
+	File.delete("_pid")
+      end
+      
+      f = fork do
+	File.open("_pid", "w") {|f| f.puts $$}
+      end
+      begin
+	Process.wait
+	assert_equal(0<<8, $?)
+	File.open("_pid") do |file|
+	  assert_equal(file.gets.to_i, f)
+	end
+      ensure
+	File.delete("_pid")
+      end
+    end
+  end
+
+
+  def test_s_format
+    assert_equals("00123", format("%05d", 123))
+    assert_equals("123  |00000001", format("%-5s|%08x", 123, 1))
+    x = format("%3s %-4s%%foo %.0s%5d %#x%c%3.1f %b %x %X %#b %#x %#X",
+      "hi",
+      123,
+      "never seen",
+      456,
+      0,
+      ?A,
+      3.0999,
+      11,
+      171,
+      171,
+      11,
+      171,
+      171)
+
+    assert_equal(' hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB', x)
+  end
+
+  def setupFiles
+    setupTestDir
+    File.open("_test/_file1", "w") do |f|
+      f.puts "0: Line 1"
+      f.puts "1: Line 2"
+    end
+    File.open("_test/_file2", "w") do |f|
+      f.puts "2: Line 1"
+      f.puts "3: Line 2"
+    end
+    ARGV.replace ["_test/_file1", "_test/_file2" ]
+  end
+
+  def teardownFiles
+    teardownTestDir
+  end
+
+  def test_s_gets1
+    setupFiles
+    begin
+      count = 0
+      while gets
+        num = $_[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(4, count)
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_gets2      
+    setupFiles
+    begin
+      count = 0
+      while gets(nil)
+        split(/\n/).each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+      end
+      assert_equal(4, count)
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_gets3
+    setupFiles
+    begin
+      count = 0
+      while gets(' ')
+        count += 1
+      end
+      assert_equal(10, count)
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_global_variables
+    g1 = global_variables
+    assert_instance_of(Array, g1)
+    assert_instance_of(String, g1[0])
+    assert(!g1.include?("$fred"))
+    eval "$fred = 1"
+    g2 = global_variables
+    assert(g2.include?("$fred"))
+    assert_equal(["$fred"], g2 - g1)
+  end
+
+  def test_s_gsub
+    $_ = "hello"
+    assert_equal("h*ll*", gsub(/[aeiou]/, '*'))
+    assert_equal("h*ll*", $_)
+
+    $_ = "hello"
+    assert_equal("h<e>ll<o>", gsub(/([aeiou])/, '<\1>'))
+    assert_equal("h<e>ll<o>", $_)
+
+    $_ = "hello"
+    assert_equal("104 101 108 108 111 ", gsub(/./) {
+                   |s| s[0].to_s+' '})
+    assert_equal("104 101 108 108 111 ", $_)
+
+    $_ = "hello"
+    assert_equal("HELL-o", gsub(/(hell)(.)/) {
+                   |s| $1.upcase + '-' + $2
+                   })
+    assert_equal("HELL-o", $_)
+
+    $_ = "hello"
+    $_.taint
+    assert_equal(true, (gsub(/./,'X').tainted?))
+    assert_equal(true, $_.tainted?)
+  end
+
+  def test_s_gsub!
+    $_ = "hello"
+    assert_equal("h*ll*", gsub!(/[aeiou]/, '*'))
+    assert_equal("h*ll*", $_)
+
+    $_ = "hello"
+    assert_equal("h<e>ll<o>", gsub!(/([aeiou])/, '<\1>'))
+    assert_equal("h<e>ll<o>", $_)
+
+    $_ = "hello"
+    assert_equal("104 101 108 108 111 ", gsub!(/./) {
+                   |s| s[0].to_s+' '})
+    assert_equal("104 101 108 108 111 ", $_)
+
+    $_ = "hello"
+    assert_equal("HELL-o", gsub!(/(hell)(.)/) {
+                   |s| $1.upcase + '-' + $2
+                   })
+    assert_equal("HELL-o", $_)
+
+    $_ = "hello"
+    assert_equal(nil, gsub!(/x/, 'y'))
+    assert_equal("hello", $_)
+
+    $_ = "hello"
+    $_.taint
+    assert_equal(true, (gsub!(/./,'X').tainted?))
+    assert_equal(true, $_.tainted?)
+  end
+
+  def iterator_test(&b)
+    return iterator?
+  end
+    
+  def test_s_iterator?
+    assert(iterator_test { 1 })
+    assert(!iterator_test)
+  end
+
+  def test_s_lambda
+    a = lambda { "hello" }
+    assert_equal("hello", a.call)
+    a = lambda { |s| "there " + s  }
+    assert_equal("there Dave", a.call("Dave"))
+  end
+
+  def test_s_load
+    File.open("_dummy_load.rb", "w") do |f|
+     f.print <<-EOM
+      module Module_Load
+        VAL = 234
+      end
+      EOM
+    end
+    assert(!defined? Module_Load)
+    load("./_dummy_load.rb")
+    assert_not_nil(defined? Module_Load::VAL)
+    assert_equal(234, Module_Load::VAL)
+    assert(!$".include?("./_dummy_load.rb"))#"
+
+    # Prove it's reloaded
+    File.open("_dummy_load.rb", "w") do |f|
+     f.print <<-EOM
+      module Module_Load
+        VAL1 = 456
+      end
+      EOM
+    end
+    load("./_dummy_load.rb")
+    assert_equal(456, Module_Load::VAL1)
+
+    # check that the sandbox works
+    File.open("_dummy_load.rb", "w") do |f|
+     f.print <<-EOM
+      GLOBAL_VAL = 789
+      EOM
+    end
+    load("./_dummy_load.rb", true)
+    assert(!defined? GLOBAL_VAL)
+    load("./_dummy_load.rb", false)
+    assert_not_nil(defined? GLOBAL_VAL)
+    assert_equal(789, GLOBAL_VAL)
+    File.delete("./_dummy_load.rb")
+  end
+
+  def local_variable_test(c)
+    d = 2
+    local_variables
+  end
+
+  def test_s_local_variables
+    assert_set_equal(%w(a), local_variables)
+    eval "b = 1"
+    assert_set_equal(%w(a b), local_variables)
+    assert_set_equal(%w(c d), local_variable_test(1))
+    a = 1
+  end
+
+  # This is a lame test--can we do better?
+  def test_s_loop
+    a = 0
+    loop do
+      a += 1
+      break if a > 4
+    end
+    assert_equal(5, a)
+  end
+
+  # regular files
+  def test_s_open1
+    setupTestDir
+    begin
+      file1 = "_test/_file1"
+      
+      assert_exception(Errno::ENOENT) { File.open("_gumby") }
+      
+      # test block/non block forms
+      
+      f = open(file1)
+      begin
+        assert_instance_of(File, f)
+      ensure
+        f.close
+      end
+      
+      assert_nil(open(file1) { |f| assert_equal(File, f.class)})
+      
+      # test modes
+      
+      modes = [
+        %w( r w r+ w+ a a+ ),
+        [ File::RDONLY, 
+          File::WRONLY | File::CREAT,
+          File::RDWR,
+          File::RDWR   + File::TRUNC + File::CREAT,
+          File::WRONLY + File::APPEND + File::CREAT,
+          File::RDWR   + File::APPEND + File::CREAT
+        ]]
+
+      for modeset in modes
+        sys("rm -f #{file1}")
+        sys("touch #{file1}")
+        
+        mode = modeset.shift      # "r"
+        
+        # file: empty
+        open(file1, mode) { |f| 
+          assert_nil(f.gets)
+          assert_exception(IOError) { f.puts "wombat" }
+        }
+        
+        mode = modeset.shift      # "w"
+        
+        # file: empty
+        open(file1, mode) { |f| 
+          assert_nil(f.puts("wombat"))
+          assert_exception(IOError) { f.gets }
+        }
+        
+        mode = modeset.shift      # "r+"
+        
+        # file: wombat
+        open(file1, mode) { |f| 
+          assert_equal("wombat\n", f.gets)
+          assert_nil(f.puts("koala"))
+          f.rewind
+          assert_equal("wombat\n", f.gets)
+          assert_equal("koala\n", f.gets)
+        }
+        
+        mode = modeset.shift      # "w+"
+        
+        # file: wombat/koala
+        open(file1, mode) { |f| 
+          assert_nil(f.gets)
+          assert_nil(f.puts("koala"))
+          f.rewind
+          assert_equal("koala\n", f.gets)
+        }
+        
+        mode = modeset.shift      # "a"
+        
+        # file: koala
+        open(file1, mode) { |f| 
+          assert_nil(f.puts("wombat"))
+          assert_exception(IOError) { f.gets }
+        }
+        
+        mode = modeset.shift      # "a+"
+        
+        # file: koala/wombat
+        open(file1, mode) { |f| 
+          assert_nil(f.puts("wallaby"))
+          f.rewind
+          assert_equal("koala\n", f.gets)
+          assert_equal("wombat\n", f.gets)
+          assert_equal("wallaby\n", f.gets)
+        }
+        
+      end
+      
+      # Now try creating files
+      
+      filen = "_test/_filen"
+      
+      open(filen, "w") {}
+      begin
+        assert(File.exists?(filen))
+      ensure
+        File.delete(filen)
+      end
+
+      Version.greater_or_equal("1.7") do
+        open(filen, "w", 0444) {}
+        begin
+          assert(File.exists?(filen))
+          Cygwin.known_problem do
+            assert_equal(0444 & ~File.umask, File.stat(filen).mode & 0777)
+          end
+        ensure
+          File.delete(filen)
+        end
+      end
+
+    ensure
+      teardownTestDir           # also does a chdir
+    end
+  end
+
+  def setup_s_open2
+    setupTestDir
+    @@file  = "_test/_10lines"
+    File.open(@@file, "w") do |f|
+      10.times { |i| f.printf "%02d: This is a line\n", i }
+    end
+  end
+
+  # pipes
+  def test_s_open2
+    setup_s_open2
+
+    begin
+      assert_nil(open("| echo hello") do |f|
+                   assert_equal("hello\n", f.gets)
+                 end)
+
+      # READ
+      p = open("|#$interpreter -e 'puts readlines' <#@@file")
+      begin
+        count = 0
+        p.each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+        assert_equal(10, count)
+      ensure
+        p.close
+      end
+
+
+      # READ with block
+      res = open("|#$interpreter -e 'puts readlines' <#@@file") do |p|
+        count = 0
+        p.each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+        assert_equal(10, count)
+      end
+      assert_nil(res)
+
+      # WRITE
+      MsWin32.only do
+	fail "This hangs the tests as the background process never terminates"
+      end
+
+      p = open("|#$interpreter -e 'puts readlines' >#@@file", "w")
+      begin
+        5.times { |i| p.printf "Line %d\n", i }
+      ensure
+        p.close
+      end
+      
+      count = 0
+      IO.foreach(@@file) do |line|
+        num = line.chomp[-1,1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(5, count)
+
+      # Spawn an interpreter
+      MsWin32.dont do
+	parent = $$
+	p = open("|-")
+	if p
+	  begin
+	    assert_equal(parent, $$)
+	    assert_equal("Hello\n", p.gets)
+	  ensure
+	    p.close
+	  end
+	else
+	  assert_equal(parent, Process.ppid)
+	  puts "Hello"
+	  exit
+	end
+      end
+
+      # Spawn an interpreter - WRITE
+      MsWin32.dont do
+	parent = $$
+	pipe = open("|-", "w")
+	
+	if pipe
+	  begin
+	    assert_equal(parent, $$)
+	    pipe.puts "12"
+	    Process.wait
+	    assert_equal(12, $?>>8)
+	  ensure
+	    pipe.close
+	  end
+	else
+	  buff = $stdin.gets
+	  exit buff.to_i
+	end
+      end
+
+      # Spawn an interpreter - READWRITE
+      MsWin32.dont do
+	parent = $$
+	p = open("|-", "w+")
+	
+	if p
+	  begin
+	    assert_equal(parent, $$)
+	    p.puts "Hello\n"
+	    assert_equal("Goodbye\n", p.gets)
+	    Process.wait
+	  ensure
+	    p.close
+	  end
+	else
+	  puts "Goodbye" if $stdin.gets == "Hello\n"
+	  exit
+	end
+      end
+    ensure
+      teardownTestDir
+    end
+  end
+
+    
+  def test_s_p
+    tf = Tempfile.new("tf")
+    begin
+      tf.puts %{
+	class PTest2
+	  def inspect
+	    "ptest2"
+	  end
+	end
+        p 1
+        p PTest2.new
+        exit}
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |pipe|
+	assert_equal("1\n", pipe.gets)
+        assert_equal("ptest2\n", pipe.gets)
+      end
+    ensure
+        tf.close(true)
+    end
+  end
+
+  def test_s_print
+    tf = Tempfile.new("tf")
+    begin
+      tf.puts %{
+	class PrintTest
+	  def to_s
+	    "printtest"
+	  end
+	end
+	print 1
+	print PrintTest.new
+	print "\n"
+	$, = ":"
+      print 1, "cat", PrintTest.new, "\n"
+	exit}
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |pipe|
+	assert_equal("1printtest\n", pipe.gets)
+	assert_equal("1:cat:printtest:\n", pipe.gets)
+      end
+    ensure
+      tf.close(true)
+    end
+  end
+
+  def test_s_printf
+    tf = Tempfile.new("tf")
+    begin
+      tf.puts %{
+        printf("%05d\n", 123)
+        printf("%-5s|%08x\n", 123, 1)
+        printf("%3s %-4s%%foo %.0s%5d %#x%c%3.1f %b %x %X %#b %#x %#X\n",
+                "hi",
+                123,
+                "never seen",
+                456,
+                0,
+                ?A,
+                3.0999,
+                11,
+                171,
+                171,
+                11,
+                171,
+                171)
+        exit}
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |pipe|
+	assert_equal("00123\n", pipe.gets)
+	assert_equal("123  |00000001\n", pipe.gets)
+	assert_equal(" hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB\n",
+                     pipe.gets)
+      end
+    ensure
+        tf.close(true)
+    end
+  end
+
+
+  def test_s_proc
+    a = proc { "hello" }
+    assert_equal("hello", a.call)
+    a = proc { |s| "there " + s  }
+    assert_equal("there Dave", a.call("Dave"))
+  end
+
+  def test_s_putc
+    setupTestDir
+    fname = "_test/_op"
+    begin
+      File.open(fname, "wb") do |file|
+        file.putc "A"
+        0.upto(255) { |ch| file.putc ch }
+      end
+      
+      File.open(fname, "rb") do |file|
+        assert_equal(?A, file.getc)
+        0.upto(255) { |ch| assert_equal(ch, file.getc) }
+      end
+    ensure
+      teardownTestDir
+    end
+  end
+
+  class PrintTest
+    def to_s
+      "printtest"
+    end
+  end
+
+  def test_s_puts
+    setupTestDir
+    fname = "_test/_op"
+    begin
+      File.open(fname, "w") do |file|
+        file.puts "line 1", "line 2"
+        file.puts PrintTest.new
+        file.puts 4
+      end
+      
+      File.open(fname) do |file|
+        assert_equal("line 1\n",  file.gets)
+        assert_equal("line 2\n",  file.gets)
+        assert_equal("printtest\n",  file.gets)
+        assert_equal("4\n",  file.gets)
+      end
+    ensure
+      teardownTestDir
+    end
+  end
+
+  def test_s_raise
+    begin
+      raise
+    rescue StandardError
+      assert(true)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    begin
+      raise "Wombat"
+    rescue StandardError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      assert_fail("Wrong exception raised")
+    end
+
+    assert_exception(NotImplementedError) { raise NotImplementedError }
+
+    begin
+      raise "Wombat"
+      assert_fail("No exception")
+    rescue StandardError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      assert_fail("Wrong exception")
+    end
+
+    begin
+      raise NotImplementedError, "Wombat"
+      assert_fail("No exception")
+    rescue NotImplementedError => detail
+      assert_equal("Wombat", detail.message)
+    rescue Exception
+      raise
+    end
+
+    bt = %w(one two three)
+    begin
+      raise NotImplementedError, "Wombat", bt
+      assert_fail("No exception")
+    rescue NotImplementedError => detail
+      assert_equal("Wombat", detail.message)
+      assert_equal(bt, detail.backtrace)
+    rescue Exception
+      raise
+    end
+
+    if defined? Process.kill
+      x = 0
+      trap "SIGINT", proc {|sig| x = 2}
+      Process.kill "SIGINT", $$
+      sleep 0.1
+      assert_equal(2, x)
+      
+      trap "SIGINT", proc {raise "Interrupt"}
+      
+      x = nil
+      begin
+        Process.kill "SIGINT", $$
+        sleep 0.1
+      rescue
+        x = $!
+      end
+      assert_not_nil(x)
+      assert_not_nil(/Interrupt/ =~ x)
+    end
+    
+  end
+
+  def rand_test(limit, result_type, bucket_scale, bucket_max, average)
+
+    n = rand(limit)
+    assert_instance_of(result_type, n)
+
+    repeat = 10000
+    sum = 0
+    min = 2**30
+    max = -1
+    buckets = [0] * bucket_max
+    sumstep = 0
+
+    repeat.times do
+      last, n = n, rand(limit)
+      sumstep += (n-last).abs
+      min = n if min > n
+      max = n if max < n
+      sum += n
+      buckets[bucket_scale.call(n)] += 1
+    end
+    
+    # Normalize the limit
+    limit = limit.to_i
+    limit = 1 if limit == 0
+
+    # Check the mean is about right
+    assert(min >= 0.0)
+    assert(max < limit)
+    avg = Float(sum) / Float(repeat)
+
+    if (avg < Float(average)*.95 or avg > Float(average)*1.05) 
+      $stderr.puts "
+         I am about to fail a test, but the failure may be purely
+         a statistical coincidence. Try a difference see and see if
+         if still happens."
+      assert_fail("Average out of range (got #{avg}, expected #{average}")
+    end
+
+    # Now do the same for the average difference
+    avgstep = Float(sumstep) / Float(repeat)
+    expstep = Float(limit)/3.0
+
+    if (avgstep < Float(expstep)*.95 or avgstep > Float(expstep)*1.05) 
+      $stderr.puts "
+         I am about to fail a test, but the failure may be purely
+         a statistical coincidence. Try a difference see and see if
+         if still happens."
+      assert_fail("Avg. step out of range (got #{avgstep}, expected #{expstep}")
+    end
+
+    # check that no bucket has les than repeats/100/2 or more than
+    # repeats/100*1.5
+
+    expected = repeat/bucket_max
+    low = expected/2
+    high = (expected*3)/2
+
+    buckets.each_with_index do |item, index|
+      assert(item > low && item < high, 
+             "Bucket[#{index}] has #{item} entries. Expected roughly #{expected}")
+    end
+  end
+  
+  # Now the same, but with integers
+  def test_s_rand
+    rand_test(  0, Float,  proc {|n| (100*n).to_i }, 100,    .5)
+    rand_test(100, Fixnum, proc {|n| n },            100,  49.5)
+    rand_test( 50, Fixnum, proc {|n| n },             50,  24.5)
+    rand_test(500, Fixnum, proc {|n| n/5 },          100, 249)
+  end
+
+  def test_s_readline1
+    setupFiles
+    begin
+      count = 0
+      4.times do |count|
+        line = readline
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_exception(EOFError) { readline }
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_readline2
+    setupFiles
+    begin
+      count = 0
+      contents = readline(nil)
+      contents.split(/\n/).each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(2, count)
+
+      contents = readline(nil)
+      contents.split(/\n/).each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(4, count)
+      assert_exception(EOFError) { readline }
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_readline3
+    setupFiles
+    begin
+      count = 0
+      10.times do |count|
+        thing = readline(' ')
+        count += 1
+      end
+      assert_exception(EOFError) { readline }
+    ensure
+      teardownFiles
+    end
+  end
+  
+  def test_s_readlines1
+    setupFiles
+    begin
+      lines = readlines
+      assert_equal(4, lines.size)
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_readlines2
+    setupFiles
+    begin
+      lines = readlines(nil)
+      assert_equal(2, lines.size)
+    ensure
+      teardownFiles
+    end
+  end
+
+  def test_s_require
+    assert_exception(LoadError) { require("gumby") }
+
+    File.open("_dummy_req.rb", "w") do |f|
+     f.print <<-EOM
+      module Module_Require
+        VAL = 234
+      end
+      EOM
+    end
+    assert(!defined? Module_Require)
+    assert_not_nil(require("./_dummy_req.rb"))
+    assert_not_nil(defined? Module_Require::VAL)
+    assert_equal(234, Module_Require::VAL)
+    assert($".include?("./_dummy_req.rb"))#"
+
+    # Prove it isn;t reloaded
+    File.open("_dummy_req.rb", "w") do |f|
+     f.print <<-EOM
+      module Module_Require
+        VAL1 = 456
+      end
+      EOM
+    end
+    assert(!require("./_dummy_req.rb"))
+    assert(!defined? Module_Require::VAL1)
+    File.delete("./_dummy_req.rb")
+  end
+
+  def test_s_scan
+    $_ = "cruel world"
+    assert_equal(["cruel","world"],          scan(/\w+/))
+    assert_equal(["cru", "el ","wor"],       scan(/.../))
+    assert_equal([["cru"], ["el "],["wor"]], scan(/(...)/))
+
+    res=[]
+    assert_equal($_, scan(/\w+/) { |w| res << w })
+    assert_equal(["cruel","world"], res)
+
+    res=[]
+    assert_equal($_, scan(/.../) { |w| res << w })
+    assert_equal(["cru", "el ","wor"], res)
+
+    res=[]
+    assert_equal($_, scan(/(...)/) { |w| res << w })
+    assert_equal([["cru"], ["el "],["wor"]], res)
+    
+    assert_equal("cruel world", $_)
+  end
+
+  # Need a better test here
+  def test_s_select
+    assert_nil(select(nil, nil, nil, 0))
+    assert_exception(ArgumentError) { select(nil, nil, nil, -1) }
+    
+    tf = Tempfile.new("tf")
+    tf.close
+    begin
+      File.open(tf.path) do |file|
+	res = select([file], [$stdout, $stderr], [], 1)
+	assert_equal([[file], [$stdout, $stderr], []], res)
+      end
+    ensure
+      tf.close(true)
+    end
+  end
+
+  def trace_func(*params)
+    params.slice!(4)     # Can't check the binding
+    @@res << params
+  end
+
+  def trace_func_test(file, line)
+    __LINE__
+  end
+
+  def test_s_set_trace_func
+    @@res = []
+    line = __LINE__
+    set_trace_func(proc {|*a| trace_func(*a) })
+    innerLine = trace_func_test(__FILE__, __LINE__)
+    set_trace_func(nil)
+    assert_equal(["line", __FILE__, line+2, :test_s_set_trace_func, TestKernel],
+                 @@res.shift)
+    if defined? Object.allocate
+      assert_equal(["c-call", __FILE__, line+2, :allocate, String],
+		   @@res.shift)
+      assert_equal(["c-return", __FILE__, line+2, :allocate, String],
+		   @@res.shift)
+    end
+    assert_equal(["call", __FILE__, innerLine-1, :trace_func_test, TestKernel],
+                 @@res.shift)
+    assert_equal(["line", __FILE__, innerLine, :trace_func_test, TestKernel],
+                 @@res.shift)
+    assert_equal("return", @@res.shift[0])
+  end
+
+  class SMATest
+    @@@@sms = []
+    def SMATest.singleton_method_added(id)
+      @@@@sms << id.id2name
+    end
+    def getsms() @@@@sms end
+    def SMATest.b() end
+  end
+  def SMATest.c() end
+
+  def test_s_singleton_method_added
+    assert_set_equal(%w(singleton_method_added b c), SMATest.new.getsms)
+  end
+
+  def test_s_sleep
+    s1 = Time.now
+    11.times { sleep .1 }
+    s2 = Time.now
+    assert((s2-s1) >= 1)
+    assert((s2-s1) <= 3)
+
+    duration = sleep(.1)
+    assert_instance_of(Fixnum, duration)
+    assert(duration >= 0 && duration < 2)
+
+    # Does Thread.run interrupt a sleep
+    pThread = Thread.current
+    Thread.new { sleep 1; pThread.run }
+    s1 = Time.now
+    duration = sleep 999
+    s2 = Time.now
+    assert(duration >= 0 && duration <= 2, "#{duration} not in 0..2")
+    assert((s2-s1) >= 0)
+    assert((s2-s1) <= 3)
+  end
+
+  def test_s_split
+    assert_equal(nil,$;)
+    $_ =  " a   b\t c "
+    assert_equal(["a", "b", "c"], split)
+    assert_equal(["a", "b", "c"], split(" "))
+
+    $_ = " a | b | c "
+    assert_equal([" a "," b "," c "], split("|"))
+
+    $_ =  "aXXbXXcXX"
+    assert_equal(["a", "b", "c"], split(/X./))
+
+    $_ = "abc"
+    assert_equal(["a", "b", "c"], split(//))
+
+    $_ = "a|b|c"
+    assert_equal(["a|b|c"],            split('|',1))
+    assert_equal(["a", "b|c"],         split('|',2))
+    assert_equal(["a","b","c"],        split('|',3))
+
+    $_ = "a|b|c|"
+    assert_equal(["a","b","c",""],     split('|',-1))
+
+    $_ = "a|b|c||"
+    assert_equal(["a","b","c","",""],  split('|',-1))
+
+    $_ = "a||b|c|"
+    assert_equal(["a","", "b", "c"],    split('|'))
+    assert_equal(["a","", "b", "c",""], split('|',-1))
+  end
+
+  def test_s_sprintf
+    assert_equals("00123", sprintf("%05d", 123))
+    assert_equals("123  |00000001", sprintf("%-5s|%08x", 123, 1))
+    x = sprintf("%3s %-4s%%foo %.0s%5d %#x%c%3.1f %b %x %X %#b %#x %#X",
+                "hi",
+                123,
+                "never seen",
+                456,
+                0,
+                ?A,
+                3.0999,
+                11,
+                171,
+                171,
+                11,
+                171,
+                171)
+
+    assert_equal(' hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB', x)
+  end
+
+  def test_s_srand
+    # Check that srand with an argument always returns the same value
+    [ 0, 123, 45678980].each do |seed|
+      srand(seed)
+      expected = rand(2**30)
+      5.times do
+        assert_equal(seed, srand(seed))
+        assert_equal(expected, rand(2**30))
+      end
+    end
+
+    # Now check that the seed is random if called with no argument
+    keys = {}
+    values = {}
+    dups = 0
+    100.times do
+      oldSeed = srand
+      dups += 1 if keys[oldSeed]
+      keys[oldSeed] = 1
+      value = rand(2**30)
+      dups += 1 if values[value]
+      values[value] = 1
+    end
+
+    # this is a crap shoot, but more than 2 dups is suspicious
+    assert(dups <= 2, "srand may not be randomized.")
+
+    # and check that the seed is randomized for different runs of Ruby
+    values = {}
+    5.times do
+      val = `ruby -e "puts rand(2**30)"`
+      assert($? == 0)
+      val = val.to_i
+      assert_nil(values[val])
+      values[val] = 1
+    end
+  end
+
+  def test_s_sub
+    $_ = "hello"
+    assert_equal("hello", sub(/x/,'*'))
+    assert_equal("hello", $_)
+
+    $_ = "hello"
+    assert_equal("h*llo", sub(/[aeiou]/,'*'))
+    assert_equal("h*llo", $_)
+
+    $_ = "hello"
+    assert_equal("h<e>llo", sub(/([aeiou])/,'<\1>'))
+    assert_equal("h<e>llo", $_)
+
+    $_ = "hello"
+    assert_equal("104 ello", sub(/./) { |s| s[0].to_s+' '})
+    assert_equal("104 ello", $_)
+
+    $_ = "hello"
+    assert_equal("HELL-o", sub(/(hell)(.)/) {|s| $1.upcase + '-' + $2})
+    assert_equal("HELL-o", $_)
+
+    $_ = "hello".taint
+    assert(sub(/./,'X').tainted?)
+  end
+
+  def test_s_sub!
+    $_ = "hello"
+    assert_equal(nil,     sub!(/x/,'*'))
+    assert_equal("hello", $_)
+
+    $_ = "hello"
+    assert_equal("h*llo", sub!(/[aeiou]/,'*'))
+    assert_equal("h*llo", $_)
+
+    $_ = "hello"
+    assert_equal("h<e>llo", sub!(/([aeiou])/,'<\1>'))
+    assert_equal("h<e>llo", $_)
+
+    $_ = "hello"
+    assert_equal("104 ello", sub!(/./) { |s| s[0].to_s+' '})
+    assert_equal("104 ello", $_)
+
+    $_ = "hello"
+    assert_equal("HELL-o", sub!(/(hell)(.)/) {|s| $1.upcase + '-' + $2})
+    assert_equal("HELL-o", $_)
+
+    $_ = "hello".taint
+    assert(sub!(/./,'X').tainted?)
+  end
+
+  def test_s_syscall
+    skipping("platform specific")
+  end
+
+  def test_s_system
+    open("xyzzy.dat", "w") { |f| f.puts "stuff" }
+    tf = Tempfile.new("tf")
+    begin
+
+      # all in one string - wildcards get expanded
+      tf.puts 'system("echo xy*y.dat")'
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |p|
+        assert_equal("xyzzy.dat\n", p.gets)
+      end
+
+      # with two parameters, the '*' doesn't get expanded
+      tf.open
+      tf.puts 'system("echo", "xy*y.dat")'
+      tf.close
+      IO.popen("#$interpreter #{tf.path}") do |p|
+        assert_equal("xy*y.dat\n", p.gets)
+      end
+
+    ensure
+      tf.close(true)
+      File.unlink "xyzzy.dat" if p
+    end
+
+    system("____this_is_a_bad command____")
+    assert($? != 0)
+  end
+
+#  def test_s_test
+#    # in TestKernelTest
+#  end
+
+  def test_s_throw
+    # tested by test_s_catch
+  end
+
+  def test_s_trace_var
+    val = nil
+    p = proc { |val| }
+    trace_var(:$_, p)
+    $_ = "123"
+    assert_equal($_, val)
+    $_ = nil
+    assert_equal($_, val)
+    untrace_var("$_")
+    $_ = "123"
+    assert_equal(nil, val)
+    assert_equal("123", $_)
+  end
+
+  def test_s_trap
+
+    res = nil
+    lastProc = proc { res = 1 }
+
+    # 1. Check that an exception is thrown if we wait for a child and
+    # there is no child.
+
+    # "IGNORE" discards child termination status (but apparently not
+    # under Cygwin/W2k
+
+    Unix.only do
+      trap "CHLD", "IGNORE"
+      pid = fork
+      exit unless pid
+      sleep 1                     # ensure child has exited (ish)
+      assert_exception(Errno::ECHILD) { Process.wait }
+    end
+
+    # 2. check that we run a proc as a handler when a child
+    # terminates
+
+    MsWin32.dont do
+      trap("SIGCHLD", lastProc)
+      fork { ; }
+      Process.wait
+      assert_equal(1, res)
+    end
+
+    # 3. Reset the signal handler (checking it returns the previous
+    # value) and ensure that the proc doesn't get called
+
+    MsWin32.dont do
+      assert_equal(lastProc, trap("SIGCHLD", "DEFAULT"))
+      res = nil
+      fork { ; }
+      Process.wait
+      assert_nil(res)
+    end
+
+    # 4. test EXIT handling
+    IO.popen(%{#$interpreter -e 'trap "EXIT", "exit! 123";exit 99'}).close
+    assert_equal(123<<8, $?)
+  end
+
+  def test_s_untrace_var1
+    trace_var(:$_, "puts 99")
+    p = proc { |val| }
+    trace_var("$_", p)
+    assert_set_equal(["puts 99", p], untrace_var(:$_))
+    assert_equal([], untrace_var(:$_))
+  end
+
+  def test_s_untrace_var2
+    trace_var(:$_, "puts 99")
+    p = proc { |val| }
+    trace_var("$_", p)
+    assert_set_equal(["puts 99", p], untrace_var(:$_))
+  end
+
+  def test_gvar_alias
+    $foo = 3
+    eval "alias $bar $foo"
+    assert_equal(3, $bar)
+
+    Version.greater_or_equal("1.7") do
+      $bar = 4
+      assert_equal(4, $foo)
+    end
+    
+  end
+
+  def test_svar_alias
+    eval "alias $foo $_"
+    $_ = 1
+    assert_equal(1, $foo)
+    $foo = 2
+    assert_equal(2, $_)
+  end
+
+end
+
+Rubicon::handleTests(TestKernel) if $0 == __FILE__
+@
+
+
+1.35
+log
+@Fixup for Ruby 1.7 (g)sub semantics - no longer pass a string as first
+parameter
+@
+text
+@d461 4
+a464 4
+    assert_instance_of(Class, self.type)
+    assert_equal(TestKernel, self.type)
+    assert_equal(String, "hello".type)
+    assert_equal(Bignum, (10**40).type)
+d1023 1
+a1023 1
+    assert_equal(true, (gsub(/./, 'X').tainted?))
+d1053 1
+a1053 1
+    assert_equal(true, (gsub!(/./, 'X').tainted?))
+d1152 1
+a1152 1
+      assert_nil(open(file1) { |f| assert_equal(File, f.type)})
+d1977 1
+a1977 1
+    assert(sub(/./, 'X').tainted?)
+d2002 1
+a2002 1
+    assert(sub!(/./, 'X').tainted?)
+@
+
+
+1.34
+log
+@several updates to follow the latest.
+@
+text
+@d1011 1
+a1011 1
+    assert_equal("104 101 108 108 111 ", gsub('.') {
+d1023 1
+a1023 1
+    assert_equal(true, (gsub('.','X').tainted?))
+d1037 1
+a1037 1
+    assert_equal("104 101 108 108 111 ", gsub!('.') {
+d1053 1
+a1053 1
+    assert_equal(true, (gsub!('.','X').tainted?))
+d1969 1
+a1969 1
+    assert_equal("104 ello", sub('.') { |s| s[0].to_s+' '})
+d1977 1
+a1977 1
+    assert(sub('.','X').tainted?)
+d1994 1
+a1994 1
+    assert_equal("104 ello", sub!('.') { |s| s[0].to_s+' '})
+d2002 1
+a2002 1
+    assert(sub!('.','X').tainted?)
+@
+
+
+1.33
+log
+@* builtin/TestKernel.rb (TestKernel::test_extend): should handle
+  extend order change.
+@
+text
+@d133 3
+a135 3
+    assert(o1.eql? o1)
+    assert(o2.eql? o2)
+    assert(!(o1.eql? o2))
+d141 3
+a143 3
+    assert(o1.equal? o1)
+    assert(o2.equal? o2)
+    assert(!(o1.equal? o2))
+d449 4
+a452 2
+    o = Object.new
+    assert_equal([o], o.to_a)   # rest tested in individual classes
+d497 3
+a499 1
+    assert_equal([], Array(nil))
+d1182 1
+a1182 1
+          assert_nil(f.puts "wombat")
+d1191 1
+a1191 1
+          assert_nil(f.puts "koala")
+d1202 1
+a1202 1
+          assert_nil(f.puts "koala")
+d1211 1
+a1211 1
+          assert_nil(f.puts "wombat")
+d1219 1
+a1219 1
+          assert_nil(f.puts "wallaby")
+@
+
+
+1.32
+log
+@* builtin/TestFile.rb (TestFile::test_s_expand_path): avoid
+  warnings in 1.7.
+
+* builtin/TestKernel.rb (TestKernel::test_s_open1): 1.7 feature.
+
+* language/TestBlocksProcs.rb (TestBlocksProcs::testYield): ditto.
+
+* language/TestFloats.rb (TestFloats::test_number_to_string):
+  strict number check.
+
+* language/TestFloats.rb (TestFloats::test_malformed): ditto.
+
+* language/TestFloats.rb (TestFloats::test_string_to_number): ditto.
+@
+text
+@d180 2
+a181 1
+    t.extend(ExtendTest1, ExtendTest2)
+d187 2
+a188 1
+    t.extend(ExtendTest2, ExtendTest1)
+@
+
+
+1.31
+log
+@* builtin/TestKernel.rb: should not close io twice.
+@
+text
+@d1232 10
+a1241 6
+      
+      open(filen, "w", 0444) {}
+      begin
+        assert(File.exists?(filen))
+        Cygwin.known_problem do
+          assert_equal(0444 & ~File.umask, File.stat(filen).mode & 0777)
+a1242 2
+      ensure
+        File.delete(filen)
+@
+
+
+1.30
+log
+@Replaced $rubyVersion global with Version class methods.  Replaced references to the former with the latter.  Deprecated tests for #indexes and #indices where appropriate.  Removed some duplication in several tests in ArrayBase and HashBase.
+@
+text
+@a1290 1
+      p.close
+a1292 1
+      
+@
+
+
+1.29
+log
+@Array#to_s behavior restoration
+@
+text
+@d91 1
+a91 1
+    if $rubyVersion < "1.7"
+d93 2
+a94 1
+    else
+d2119 1
+a2119 1
+    if $rubyVersion >= "1.7"
+@
+
+
+1.28
+log
+@Revery the array behavior. There seems to be a genuine Ruby bug in TestKernel.
+@
+text
+@d519 2
+a520 6
+    if $rubyVersion < "1.7.2"
+      assert_equal("123",    String([1, 2, 3]))
+    else
+      assert_equal("1\n2\n3",    String([1, 2, 3]))
+    end
+    assert_equal("Hello",    String(Caster.new))
+d1494 2
+a1495 1
+        file.puts [ PrintTest.new, 4 ]
+@
+
+
+1.27
+log
+@Added support for 'known problems'.
+
+This is only used for those problems that really will never get
+fixed.
+@
+text
+@d519 5
+a523 1
+    assert_equal("123",    String([1, 2, 3]))
+d1504 2
+a1505 6
+        if $rubyVersion < "1.7.2"
+          assert_equal("printtest\n",  file.gets)
+          assert_equal("4\n",  file.gets)
+        else
+          assert_equal("printtest4\n",  file.gets)
+        end
+@
+
+
+1.26
+log
+@Fix strange hang on dblack's machine.
+
+A test in ThreadGroup was leaving 10 threads each doing a sleep 60. On his
+machine, this caused some I/O tests to abort. Reap these sleeping threads,
+and the hang goes away.
+
+Also include umask in some file permission calculations
+@
+text
+@d1226 5
+a1230 2
+      assert(File.exists?(filen))
+      File.delete(filen)
+d1233 9
+a1241 3
+      assert(File.exists?(filen))
+      assert_equal(0444 & ~File.umask, File.stat(filen).mode & 0777)
+      File.delete(filen)
+@
+
+
+1.25
+log
+@Change many asserts to work with rubyunit-0.4.5.
+
+RubyUnit changed to only allow true or false as the first parameter
+to assert(). This means that tests such as
+
+   assert(defined? Array)
+
+failed.
+@
+text
+@d1231 1
+a1231 1
+      assert_equal(0444, File.stat(filen).mode & 0777)
+@
+
+
+1.24
+log
+@New array behavior with puts.
+
+As of 1.7.2, array contents are no longer joined with "\n" when
+being output by puts.
+@
+text
+@d167 1
+a167 1
+    assert(defined?(s.et1))
+d173 1
+a173 1
+    assert(defined?(s.et2))
+d566 1
+a566 1
+    assert(defined? Module_Test::VAL)
+d1076 1
+a1076 1
+    assert(defined? Module_Load::VAL)
+d1100 1
+a1100 1
+    assert(defined? GLOBAL_VAL)
+d1560 1
+a1560 1
+      x = false
+d1567 2
+a1568 2
+      assert(x)
+      assert(/Interrupt/ =~ x)
+d1730 2
+a1731 2
+    assert(require("./_dummy_req.rb"))
+    assert(defined? Module_Require::VAL)
+@
+
+
+1.23
+log
+@Yet more tidying.
+
+Get stuff working across Cygwin and MsRuby.
+@
+text
+@d1491 6
+a1496 2
+        assert_equal("printtest\n",  file.gets)
+        assert_equal("4\n",  file.gets)
+@
+
+
+1.22
+log
+@AllTests now returns an exit code != 0 on failure.
+
+Various changes to make rubicon run from crontab.
+
+Remove warnings about bare regex's under 1.7.
+@
+text
+@d2016 3
+@
+
+
+1.21
+log
+@Added ts's regexp tests, Matt's array tests. Tidy a tad
+@
+text
+@d1231 1
+a1231 1
+      assert_equal(0444, File.stat(filen).mode)
+@
+
+
+1.20
+log
+@Continue makig the tests Windows-agnostic. Include patch from Masaki
+Suketa which fixes some bad tests (assert(...) being used in place
+of assert_equals(...))
+@
+text
+@d1231 1
+a1231 1
+      assert(0444, File.stat(filen).mode)
+@
+
+
+1.19
+log
+@Win32 changes to Kernel, etc... Thread is incomplete: we'll do something of
+a rewrite under Linux.
+@
+text
+@d746 1
+a746 1
+    int1 = $interpreter.gsub(/\\/) { $& + $& }
+d748 6
+a753 4
+      # With separate parameters, don't do expansion
+      str = %{#$interpreter -e 'exec("echo", "xy*y.dat")'}
+      IO.popen(str) do |p|
+	assert_equal("xy*y.dat", p.gets.chomp)
+d756 6
+a761 4
+      # all in one line, do expansion
+      str = %{#$interpreter -e 'exec("echo xy*y.dat")'}
+      IO.popen(str) do |p|
+	assert_equal("xyzzy.dat", p.gets.chomp)
+d763 1
+a763 1
+      
+d765 1
+d768 1
+d1994 1
+d1996 6
+a2001 5
+      p = IO.popen(%{#$interpreter -e 'system("echo xy*y.dat")'})
+      begin
+	assert_equal("xyzzy.dat\n", p.gets)
+      ensure
+	p.close
+d2004 6
+a2009 6
+      # With separate parameters, don't do expansion
+      p = IO.popen(%{#$interpreter -e 'system("echo", "xy*y.dat")'})
+      begin
+	assert_equal("xyzzy.dat\n", p.gets)
+      ensure
+	p.close
+d2011 1
+d2013 1
+d2042 3
+a2062 2
+      res = nil
+      lastProc = proc { res = 1 }
+@
+
+
+1.18
+log
+@Added many patches from Nobu Nakad for 1.7 features (plus some bug fixes)
+@
+text
+@a3 1
+
+d536 3
+a538 8
+    f = fork
+    if !f
+      abort
+      exit 99                   # should not get here
+    else
+      Process.wait
+      assert_equal(1<<8, $?)
+    end
+d542 1
+a542 1
+    p = IO.popen("-")
+d544 9
+a552 14
+    if !p
+      at_exit { puts "world" }
+      at_exit { puts "cruel" }
+      puts "goodbye"
+      exit 99
+    else
+      begin
+        assert_equal("goodbye\n", p.gets)
+        assert_equal("cruel\n", p.gets)
+        assert_equal("world\n", p.gets)
+      ensure
+        p.close
+        assert_equal(99<<8, $?)
+      end
+d746 1
+d748 10
+a757 10
+      p = IO.popen("-")
+      if p.nil?
+        exec("echo xy*y.dat")
+        exit
+      else
+        begin
+          assert_equal("xyzzy.dat\n", p.gets)
+        ensure
+          p.close
+        end
+a759 12
+      # With separate parameters, don't do expansion
+      p = IO.popen("-")
+      if p.nil?
+        exec("echo", "zy*y.dat")
+        exit
+      else
+        begin
+          assert_equal("zy*y.dat\n", p.gets)
+        ensure
+          p.close
+        end
+      end
+d775 2
+a776 5
+    f = fork
+    if f.nil?
+      exit
+    end
+    Process.wait
+d779 2
+a780 5
+    f = fork
+    if f.nil?
+      exit 123
+    end
+    Process.wait
+d785 2
+a786 3
+    f = fork
+
+    if f.nil?
+d788 2
+a789 2
+        exit! 99
+        exit 1
+d791 1
+a791 1
+        exit 2
+d793 1
+a793 1
+        exit 3
+d795 4
+a798 3
+      exit 4
+    end
+    Process.wait
+d800 2
+a801 6
+
+    f = fork
+    if f.nil?
+      exit!
+    end
+    Process.wait
+d804 1
+a804 5
+    f = fork
+    if f.nil?
+      exit! 123
+    end
+    Process.wait
+d806 2
+d810 1
+d861 19
+a879 11
+  def test_s_fork
+    f = fork
+    if f.nil?
+      File.open("_pid", "w") {|f| f.puts $$}
+      exit 99
+    end
+    begin
+      Process.wait
+      assert_equal(99<<8, $?)
+      File.open("_pid") do |file|
+        assert_equal(file.gets.to_i, f)
+d881 8
+a888 12
+    ensure
+      File.delete("_pid")
+    end
+
+    f = fork do
+      File.open("_pid", "w") {|f| f.puts $$}
+    end
+    begin
+      Process.wait
+      assert_equal(0<<8, $?)
+      File.open("_pid") do |file|
+        assert_equal(file.gets.to_i, f)
+a889 2
+    ensure
+      File.delete("_pid")
+d893 1
+d1235 2
+a1236 7
+    begin    
+      File.open(@@file, "w") { |f|
+        10.times { |i| f.printf "%02d: This is a line\n", i }
+      }
+    rescue Exception
+      puts $!
+      exit!
+d1248 1
+a1248 1
+      
+d1250 1
+a1250 1
+      p = open("|cat #@@file")
+d1263 1
+d1265 1
+a1265 1
+    res = open("|cat #@@file") do |p|
+d1278 6
+a1283 1
+      p = open("|cat >#@@file", "w")
+d1297 1
+a1297 1
+      
+d1299 15
+a1313 13
+      parent = $$
+      p = open("|-")
+      if p
+        begin
+          assert_equal(parent, $$)
+          assert_equal("Hello\n", p.gets)
+        ensure
+          p.close
+        end
+      else
+        assert_equal(parent, Process.ppid)
+        puts "Hello"
+        exit
+d1317 17
+a1333 15
+      parent = $$
+      pipe = open("|-", "w")
+      
+      if pipe
+        begin
+          assert_equal(parent, $$)
+          pipe.puts "12"
+          Process.wait
+          assert_equal(12, $?>>8)
+        ensure
+          pipe.close
+        end
+      else
+        buff = $stdin.gets
+        exit buff.to_i
+d1335 1
+a1335 1
+      
+d1337 17
+a1353 15
+      parent = $$
+      p = open("|-", "w+")
+      
+      if p
+        begin
+          assert_equal(parent, $$)
+          p.puts "Hello\n"
+          assert_equal("Goodbye\n", p.gets)
+          Process.wait
+        ensure
+          p.close
+        end
+      else
+        puts "Goodbye" if $stdin.gets == "Hello\n"
+        exit
+a1359 5
+  class PTest2
+    def inspect
+      "ptest2"
+    end
+  end
+d1362 8
+a1369 2
+    IO.popen("-") do |pipe|
+      if !pipe
+d1372 4
+a1375 4
+        exit
+      end
+      begin
+        assert_equal("1\n", pipe.gets)
+a1376 2
+      ensure
+        pipe.close
+d1378 2
+a1379 6
+    end
+  end
+
+  class PrintTest
+    def to_s
+      "printtest"
+d1384 18
+a1401 14
+    IO.popen("-") do |pipe|
+      if !pipe
+        print 1
+        print PrintTest.new
+        print "\n"
+        $, = ":"
+        print 1, "cat", PrintTest.new, "\n"
+        exit
+      end
+      begin
+        assert_equal("1printtest\n", pipe.gets)
+        assert_equal("1:cat:printtest:\n", pipe.gets)
+      ensure
+        pipe.close
+d1403 2
+d1409 3
+a1411 2
+    IO.popen("-") do |pipe|
+      if !pipe
+d1428 6
+a1433 6
+        exit
+      end
+      begin
+        assert_equal("00123\n", pipe.gets)
+        assert_equal("123  |00000001\n", pipe.gets)
+        assert_equal(" hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB\n",
+a1434 2
+      ensure
+        pipe.close
+d1436 2
+d1441 1
+d1453 1
+a1453 1
+      File.open(fname, "w") do |file|
+d1458 1
+a1458 1
+      File.open(fname) do |file|
+d1467 6
+d1764 9
+a1772 3
+    File.open(".") do |file|
+      res = select([file], [$stdout, $stderr], [], 1)
+      assert_equal([[file], [$stdout, $stderr], []], res)
+d1989 5
+a1993 10
+      p = IO.popen("-")
+      if p.nil?
+        system("echo xy*y.dat")
+        exit
+      else
+        begin
+          assert_equal("xyzzy.dat\n", p.gets)
+        ensure
+          p.close
+        end
+d1995 1
+a1995 1
+      
+d1997 5
+a2001 10
+      p = IO.popen("-")
+      if p.nil?
+        system("echo", "zy*y.dat")
+        exit
+      else
+        begin
+          assert_equal("zy*y.dat\n", p.gets)
+        ensure
+          p.close
+        end
+d2038 1
+a2038 1
+    if $os != Cygwin
+d2048 9
+a2056 6
+    res = nil
+    lastProc = proc { res = 1 }
+    trap("SIGCHLD", lastProc)
+    fork { ; }
+    Process.wait
+    assert_equal(1, res)
+d2061 8
+a2068 6
+    assert_equal(lastProc, trap("SIGCHLD", "DEFAULT"))
+    res = nil
+    fork { ; }
+    Process.wait
+    assert_nil(res)
+    
+d2070 2
+a2071 6
+    fork {
+      trap "EXIT", "exit!"      # sets return code to -1
+      exit 99
+    }
+    Process.wait
+    assert_equal(255<<8, $?)
+@
+
+
+1.17
+log
+@Start to get tests running better under Windows. Start some basic work
+on File and Dir, We seem to be bumping up against some Cygwin bugs
+though; utime and IGNORED signals don't seem to work correctly. Once I get the
+tests stabilized I'll publish a list and hopefully those who know about
+these things will be able to comment.
+@
+text
+@d1800 7
+a1806 1
+                 @@res[0])
+d1808 1
+a1808 1
+                 @@res[1])
+d1810 2
+a1811 2
+                 @@res[2])
+    assert_equal("return", @@res[3][0])
+d2104 20
+@
+
+
+1.16
+log
+@Add in the Ruby 1.7 tests
+@
+text
+@d2044 1
+a2044 1
+    # 1. Check that an exception s thrown if we wait for a child and
+d2047 10
+a2056 7
+    # "IGNORE" discards child termination status
+    trap "CHLD", "IGNORE"
+    pid = fork
+    exit unless pid
+    sleep 1                     # ensure child has exited (ish)
+    assert_exception(Errno::ECHILD) { Process.wait }
+    res = nil
+d2060 1
+@
+
+
+1.15
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d92 5
+a96 1
+    assert_exception(NameError) { foo.test2 }
+@
+
+
+1.14
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d79 14
+d656 1
+a656 1
+  end
+d752 12
+a763 8
+    p = IO.popen("-")
+    if p.nil?
+      exec "echo TestKer*l.rb"
+    else
+      begin
+        assert_equal("TestKernel.rb\n", p.gets)
+      ensure
+        p.close
+d765 12
+a776 11
+    end
+
+    # With separate parameters, don't do expansion
+    p = IO.popen("-")
+    if p.nil?
+      exec "echo", "TestKer*l.rb"
+    else
+      begin
+        assert_equal("TestKer*l.rb\n", p.gets)
+      ensure
+        p.close
+d778 2
+a1541 1
+
+d1550 21
+d1985 12
+a1996 9
+    p = IO.popen("-")
+    if p.nil?
+      system("echo TestKer*l.rb")
+      exit
+    else
+      begin
+        assert_equal("TestKernel.rb\n", p.gets)
+      ensure
+        p.close
+d1998 12
+a2009 12
+    end
+
+    # With separate parameters, don't do expansion
+    p = IO.popen("-")
+    if p.nil?
+      system("echo", "TestKer*l.rb")
+      exit
+    else
+      begin
+        assert_equal("TestKer*l.rb\n", p.gets)
+      ensure
+        p.close
+d2011 2
+@
+
+
+1.13
+log
+@Split out testing of Array semantics from TestArray
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.12
+log
+@Add more confitional tests to handle logic changes between Ruby versions
+@
+text
+@d35 1
+a35 8
+    ObjectSpace.each_object do |obj|
+      begin
+        objs << obj.__id__ 
+      rescue NotImplementedError
+      end
+    end
+
+    # See if this is faster than using uniq
+a38 2
+#    assert_equal(s1, objs.uniq.size)
+
+d206 1
+a206 6
+    ObjectSpace.each_object do |obj|
+      begin
+        objs << obj.id 
+      rescue NotImplementedError
+      end
+    end
+@
+
+
+1.11
+log
+@* builtin/TestKernel.rb: replace NotImplementError by
+  NotImplementedError.
+@
+text
+@d35 6
+a40 1
+    ObjectSpace.each_object { |obj| objs << obj.__id__ }
+d215 6
+a220 1
+    ObjectSpace.each_object { |obj| objs << obj.id }
+@
+
+
+1.10
+log
+@Many contributions from members of the ml
+@
+text
+@d839 1
+a839 1
+    assert_exception(NotImplementError) { fail NotImplementError }
+d851 1
+a851 1
+      fail NotImplementError, "Wombat"
+d853 1
+a853 1
+    rescue NotImplementError => detail
+d861 1
+a861 1
+      fail NotImplementError, "Wombat", bt
+d863 1
+a863 1
+    rescue NotImplementError => detail
+d1502 1
+a1502 1
+    assert_exception(NotImplementError) { raise NotImplementError }
+d1514 1
+a1514 1
+      raise NotImplementError, "Wombat"
+d1516 1
+a1516 1
+    rescue NotImplementError => detail
+d1525 1
+a1525 1
+      raise NotImplementError, "Wombat", bt
+d1527 1
+a1527 1
+    rescue NotImplementError => detail
+@
+
+
+1.9
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d36 6
+a41 2
+    s1 = objs.size
+    assert_equal(s1, objs.uniq.size)
+@
+
+
+1.8
+log
+@Archive save
+@
+text
+@d1992 4
+d2000 1
+d2004 2
+d2011 4
+a2015 1
+
+d2021 1
+a2021 1
+    # test EXIT handling
+@
+
+
+1.7
+log
+@Archive save
+@
+text
+@d640 1
+a640 2
+    assert_equal(%{TestKernel.rb:#{__LINE__-1}:in `test_s_caller'},
+                c[0])
+d653 1
+a653 1
+    assert_equal(456, catch(:c) { catch (:d) { catch_test; 123 } } )
+d819 16
+a834 2
+    assert_exception(StandardError) { fail }
+    assert_exception(StandardError) { fail "Wombat" }
+d843 1
+a843 1
+      assert_fail("Wrong exception")
+d852 1
+a852 1
+      raise
+a856 1
+
+a860 1
+      puts
+d863 1
+a863 1
+      raise
+d1482 16
+a1497 2
+    assert_exception(StandardError) { raise }
+    assert_exception(StandardError) { raise "Wombat" }
+a1524 1
+      puts
+d1727 1
+d1733 1
+a1733 1
+      res = select([file], [$stdout, $stderr], [file,$stdout,$stderr], 1)
+d1759 1
+a1759 2
+    assert_equal(["return", __FILE__, line+3, :test_s_set_trace_func, TestKernel],
+                 @@res[3])
+d1793 1
+a1793 1
+    assert(duration >= 0 && duration < 2)
+d1864 1
+d1867 1
+a1867 1
+      assert_nil(keys[oldSeed])
+d1870 1
+a1870 1
+      assert_nil(values[value])
+d1874 3
+d1992 1
+d1994 3
+a1996 2
+    fork { ; }
+    Process.wait
+d1998 1
+a1999 1
+
+d2004 1
+a2004 1
+    assert_equal(lastProc, trap("SIGCHLD", "SIG_IGN"))
+@
+
+
+1.6
+log
+@Archive save
+@
+text
+@d97 1
+a97 1
+    rescue
+d537 8
+a544 5
+      assert_equal("goodbye\n", p.gets)
+      assert_equal("cruel\n", p.gets)
+      assert_equal("world\n", p.gets)
+      p.close
+      assert_equal(99<<8, $?)
+d592 9
+d602 30
+a631 1
+    assert_fail("untested")
+d740 1
+a740 1
+      exec "echo TestKer*.rb"
+d752 1
+a752 1
+      exec "echo", "TestKer*.rb"
+d755 1
+a755 1
+        assert_equal("TestKer*.rb\n", p.gets)
+d1054 36
+a1089 1
+    assert_fail("untested")
+d1341 1
+a1341 1
+    rescue
+d1359 6
+a1364 2
+      assert_equal("1\n", pipe.gets)
+      assert_equal("ptest2\n", pipe.gets)
+d1384 6
+a1389 2
+      assert_equal("1printtest\n", pipe.gets)
+      assert_equal("1:cat:printtest:\n", pipe.gets)
+d1414 8
+a1421 4
+      assert_equal("00123\n", pipe.gets)
+      assert_equal("123  |00000001\n", pipe.gets)
+      assert_equal(" hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB\n",
+                   pipe.gets)
+d1507 1
+a1507 1
+  def rand_test(limit, result_type, bucket_scale, average)
+a1513 1
+    sumsq = 0
+d1516 2
+a1517 1
+    buckets = [0] * 100
+d1520 2
+a1521 1
+      n = rand(limit)
+d1525 1
+a1525 2
+      sumsq += (n*n)
+      buckets[bucket_scale(n)] += 1
+d1528 5
+d1534 1
+a1534 1
+    assert(max < 1)
+d1536 1
+a1536 1
+    puts avg
+d1545 12
+d1560 1
+a1560 1
+    expected = repeat/100
+a1567 5
+    
+    # Calculate T-test
+    variance = (sumsq - sum*sum/repeat)/(repeat-1)
+    t = (avg - 0.5)*Math.sqrt(repeat)/Math.sqrt(variance)
+    puts "Variance = #{variance}, t = #{t}"
+d1572 4
+a1575 2
+    rand_test(0,   Float, proc {|n| (100*n).to_i }, .5)
+    rand_test(100, Fixnum, proc {|n| n }, 49.5)
+d1654 26
+a1679 1
+    assert_fail("untested")
+d1704 16
+a1719 1
+    assert_fail("untested")
+d1723 22
+a1744 1
+    assert_fail("untested")
+d1746 1
+d1749 1
+a1749 1
+    assert_fail("untested")
+d1753 19
+a1771 1
+    assert_fail("untested")
+d1827 31
+a1857 1
+    assert_fail("untested")
+d1861 22
+a1882 1
+    assert_fail("untested")
+d1886 22
+a1907 1
+    assert_fail("untested")
+d1911 1
+a1911 1
+    assert_fail("untested")
+d1915 24
+a1938 1
+    assert_fail("untested")
+d1941 3
+a1943 3
+  def test_s_test
+    assert_fail("untested")
+  end
+d1946 1
+a1946 1
+    assert_fail("untested")
+d1950 11
+a1960 1
+    assert_fail("untested")
+d1964 24
+a1987 1
+    assert_fail("untested")
+d1990 13
+a2002 2
+  def test_s_untrace_var
+    assert_fail("untested")
+@
+
+
+1.5
+log
+@Archive save
+@
+text
+@d1310 25
+a1334 1
+    assert_fail("untested")
+d1345 15
+a1359 1
+    assert_fail("untested")
+d1363 17
+a1379 1
+    assert_fail("untested")
+d1419 52
+d1472 43
+a1514 1
+    assert_fail("untested")
+d1517 22
+a1538 2
+  def test_s_readline
+    assert_fail("untested")
+d1541 8
+a1548 2
+  def test_s_readlines
+    assert_fail("untested")
+d1556 18
+a1573 1
+    assert_fail("untested")
+d1593 28
+a1620 1
+    assert_fail("untested")
+d1624 18
+a1641 1
+    assert_fail("untested")
+@
+
+
+1.4
+log
+@Archive
+@
+text
+@d127 18
+d146 25
+a170 1
+    assert_fail("untested")
+d174 9
+a182 1
+    assert_fail("untested")
+d186 5
+a190 1
+    assert_fail("untested")
+d194 8
+a201 1
+    assert_fail("untested")
+d215 4
+a218 1
+    assert_fail("untested")
+d222 3
+a224 1
+    assert_fail("untested")
+d228 5
+a232 1
+    assert_fail("untested")
+d235 9
+d245 4
+a248 1
+    assert_fail("untested")
+d252 12
+a263 1
+    assert_fail("untested")
+d267 19
+a285 1
+    assert_fail("untested")
+d289 41
+a329 1
+    assert_fail("untested")
+d333 3
+a335 1
+    assert_fail("untested")
+d339 4
+a342 1
+    assert_fail("untested")
+d345 11
+d357 2
+a358 1
+    assert_fail("untested")
+d362 2
+a363 1
+    assert_fail("untested")
+d367 3
+a369 1
+    assert_fail("untested")
+d373 22
+a394 1
+    assert_fail("untested")
+d404 7
+a410 1
+    assert_fail("untested")
+d414 4
+a417 1
+    assert_fail("untested")
+d421 4
+a424 1
+    assert_fail("untested")
+d428 2
+a429 1
+    assert_fail("untested")
+d433 2
+a434 1
+    assert_fail("untested")
+d438 4
+a441 1
+    assert_fail("untested")
+d445 11
+a455 1
+    assert_fail("untested")
+d1016 5
+d1022 5
+a1026 1
+    assert_fail("untested")
+d1029 1
+d1031 116
+a1146 1
+    assert_fail("untested")
+d1149 11
+a1159 2
+  def test_s_method_missing
+    assert_fail("untested")
+d1162 106
+a1267 2
+  def test_s_open
+    assert_fail("untested")
+d1270 6
+d1277 15
+a1291 1
+    assert_fail("untested")
+d1295 12
+a1306 1
+    assert_fail("untested")
+@
+
+
+1.3
+log
+@Archive
+@
+text
+@d7 6
+a12 1
+    assert_fail("untested")
+d16 6
+a21 1
+    assert_fail("untested")
+d25 5
+a29 1
+    assert_fail("untested")
+d33 18
+a50 1
+    assert_fail("untested")
+d54 3
+a56 1
+    assert_fail("untested")
+d60 9
+a68 1
+    assert_fail("untested")
+d72 13
+a84 1
+    assert_fail("untested")
+d88 12
+a99 1
+    assert_fail("untested")
+d103 6
+a108 1
+    assert_fail("untested")
+d112 5
+a116 1
+    assert_fail("untested")
+d120 5
+a124 1
+    assert_fail("untested")
+d144 7
+a150 1
+    assert_fail("untested")
+d206 3
+a208 1
+    assert_fail("untested")
+d334 1
+a334 1
+    assert(!defined? Module_Test::VAL)
+d787 4
+a790 1
+    assert_fail("untested")
+d826 4
+a829 1
+    assert_fail("untested")
+@
+
+
+1.2
+log
+@Add wait2
+@
+text
+@d384 1
+a388 2
+      puts "Error:"
+      puts detail
+d393 22
+a414 1
+    assert_fail("untested")
+d418 22
+a439 1
+    assert_fail("untested")
+d443 29
+a471 1
+    assert_fail("untested")
+d475 35
+a509 1
+    assert_fail("untested")
+d513 27
+a539 1
+    assert_fail("untested")
+d543 50
+a592 1
+    assert_fail("untested")
+d595 15
+a609 2
+  def test_s_getc
+    assert_fail("untested")
+d612 11
+a622 2
+  def test_s_gets
+    assert_fail("untested")
+d626 8
+a633 1
+    assert_fail("untested")
+d637 23
+a659 1
+    assert_fail("untested")
+d663 27
+a689 1
+    assert_fail("untested")
+d692 4
+d697 2
+a698 1
+    assert_fail("untested")
+d750 34
+a783 1
+    assert_fail("untested")
+@
+
+
+1.1
+log
+@Yes... Dave has taken on Kernel
+@
+text
+@d154 15
+d170 4
+a173 1
+    assert_fail("untested")
+d177 4
+a180 1
+    assert_fail("untested")
+d184 7
+a190 1
+    assert_fail("untested")
+d194 17
+a210 5
+    assert_fail("untested")
+  end
+
+  def test_s_`
+    assert_fail("untested")
+d214 8
+a221 1
+    assert_fail("untested")
+d225 14
+a238 1
+    assert_fail("untested")
+d242 17
+a258 1
+    assert_fail("untested")
+d262 14
+a275 1
+    assert_fail("untested")
+d279 4
+a282 1
+    assert_fail("untested")
+d289 4
+d294 8
+a301 1
+    assert_fail("untested")
+d305 5
+a309 1
+    assert_fail("untested")
+d313 11
+a323 1
+    assert_fail("untested")
+d327 11
+a337 1
+    assert_fail("untested")
+d341 16
+a356 1
+    assert_fail("untested")
+d360 17
+a376 1
+    assert_fail("untested")
+d380 11
+a390 1
+    assert_fail("untested")
+@

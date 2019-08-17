@@ -1,0 +1,362 @@
+head	1.17;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.17
+date	2002.04.05.18.55.58;	author knu;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.05.05.26.18;	author knu;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.06.05.04.03.15;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.06.04.16.34.38;	author knu;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.05.07.16.56.35;	author knu;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.01.30.18.39.20;	author knu;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.01.17.05.07.52;	author knu;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.01.15.08.09.27;	author knu;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.01.14.10.10.02;	author knu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.01.13.11.56.40;	author knu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.01.13.02.56.12;	author knu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.01.12.10.47.20;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.01.11.21.00.43;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.01.11.10.53.02;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.01.11.10.16.18;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.12.22.04.32.17;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.12.22.04.32.16;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.17
+log
+@Now every committer has his @@ruby-lang.org address, so use it as
+sender address.
+@
+text
+@# The "loginfo" file controls where "cvs commit" log information
+# is sent.  The first entry on a line is a regular expression which must match
+# the directory that the change is being made to, relative to the
+# $CVSROOT.  If a match is found, then the remainder of the line is a filter
+# program that should expect log information on its standard input.
+#
+# If the repository name does not match any of the regular expressions in this
+# file, the "DEFAULT" line is used, if it is specified.
+#
+# If the name ALL appears as a regular expression it is always used
+# in addition to the first matching regex or DEFAULT.
+#
+# You may specify a format string as part of the
+# filter.  The string is composed of a `%' followed
+# by a single format character, or followed by a set of format
+# characters surrounded by `{' and `}' as separators.  The format
+# characters are:
+#
+#   s = file name
+#   V = old version number (pre-checkin)
+#   v = new version number (post-checkin)
+#
+# $Id: loginfo,v 1.16 2001/06/05 05:26:18 knu Exp $
+#
+
+^CVSROOT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org -d ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org -d ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+@
+
+
+1.16
+log
+@Set Reply-To: to ruby-cvs@@ruby-lang.org.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.15 2001/06/05 04:03:15 shugo Exp $
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org -d ruby-lang.org -S cvs-admin@@ruby-lang.org -R ruby-cvs@@ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+@
+
+
+1.15
+log
+@ruby-cvs@@ -> cvs-admin@@ to avoid fml's error.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.14 2001/06/04 16:34:38 knu Exp $
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org -d ruby-lang.org -S cvs-admin@@ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+@
+
+
+1.14
+log
+@Change cvs mails' sender address to ruby-cvs@@ruby-lang.org.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.13 2001/05/07 16:56:35 knu Exp $
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org -d ruby-lang.org -S ruby-cvs@@ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+@
+
+
+1.13
+log
+@Update to cvsmailer 0.19.  Turn CVSweb links on.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.12 2001/01/30 18:39:20 knu Exp $
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org -d ruby-lang.org -p ruby-cvs -x X-Ruby- -w 'http://www.ruby-lang.org/cgi-bin/cvsweb.cgi@@?cvsroot=src&@@'
+@
+
+
+1.12
+log
+@Modify for cvsmailer 0.15.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.11 2001/01/17 05:07:52 knu Exp $
+d26 1
+a26 1
+^CVSROOT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs X-Ruby-
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org ruby-lang.org localhost ruby-cvs X-Ruby-
+@
+
+
+1.11
+log
+@Drop cvs-admin@@ruby-lang.org from the list of recipients of commit mails.
+@
+text
+@d23 2
+a24 1
+# $Id: loginfo,v 1.10 2001/01/15 08:09:27 knu Exp $
+d26 1
+a26 1
+^CVSROOT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+d28 1
+a28 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s ruby-cvs@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.10
+log
+@Send commit mails to ruby-cvs@@ruby-lang.org.
+@
+text
+@d23 1
+a23 1
+# $Id: loginfo,v 1.9 2001/01/14 10:10:02 knu Exp $
+d27 1
+a27 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org,ruby-cvs@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.9
+log
+@Use loginfo_ruby.rb.
+@
+text
+@d23 1
+a23 1
+# $Id$
+d27 1
+a27 1
+DEFAULT $CVSROOT/CVSROOT/loginfo_ruby.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.8
+log
+@Send all commit mails to cvs-admin@@ruby-lang.org for the time being.
+@
+text
+@d23 1
+a23 4
+# For example:
+#DEFAULT (echo ""; id; echo %s; date; cat) >> $CVSROOT/CVSROOT/commitlog
+# or
+#DEFAULT (echo ""; id; echo %{sVv}; date; cat) >> $CVSROOT/CVSROOT/commitlog
+d25 1
+a25 1
+^CVSROOT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+d27 1
+a27 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb $CVSROOT $USER %s cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.7
+log
+@Sync with www/CVSROOT.
+@
+text
+@d30 1
+a30 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb $CVSROOT $USER %s knu@@ruby-lang.org,ruby-comitters@@cvs.ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.6
+log
+@Change the commit mail format.  Now the cvs user name is included.
+
+Send CVSROOT commit mails to cvs-admin@@ruby-lang.org.
+@
+text
+@d28 1
+a28 1
+^CVSROOT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb %s $USER cvs-admin@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+d30 1
+a30 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb %s $USER knu@@ruby-lang.org,ruby-comitters@@cvs.ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.5
+log
+@Fix wrong paths to *info.rb.
+
+Add myself manually until ruby-committers@@ mailing list is set up.
+@
+text
+@d28 1
+a28 1
+^CVSROOT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb %s knu@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+d30 1
+a30 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/loginfo.rb %s knu@@ruby-lang.org,ruby-comitters@@cvs.ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.4
+log
+@Activate commit mails.
+@
+text
+@d28 1
+a28 1
+^CVSROOT /usr/bin/ruby $CVSROOT/loginfo.rb %s knu@@ruby-lang.org ruby-lang.org localhost ruby-cvs
+d30 1
+a30 1
+DEFAULT /usr/bin/ruby $CVSROOT/loginfo.rb %s ruby-comitters@@cvs.ruby-lang.org ruby-lang.org localhost ruby-cvs
+@
+
+
+1.3
+log
+@Add cvsmailer files to checkoutlist.
+
+Stop committer mails until it's all set up.
+@
+text
+@d27 4
+a30 2
+#^CVSROOT $CVSROOT/CVSROOT/mailto-committers.pl %{sVv} cvs-admin@@cvs.ruby-lang.org
+#^proj $CVSROOT/CVSROOT/mailto-committers.pl %{sVv} ruby-committers@@cvs.ruby-lang.org
+@
+
+
+1.2
+log
+@default settings
+@
+text
+@d27 2
+a28 2
+^CVSROOT $CVSROOT/CVSROOT/mailto-committers.pl %{sVv} cvs-admin@@cvs.ruby-lang.org
+^proj $CVSROOT/CVSROOT/mailto-committers.pl %{sVv} ruby-committers@@cvs.ruby-lang.org
+@
+
+
+1.1
+log
+@initial checkin
+@
+text
+@d27 2
+@

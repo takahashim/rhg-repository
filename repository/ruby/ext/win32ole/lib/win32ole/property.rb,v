@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.06.01.12.34.29;	author suke;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge win32ole from rough
+@
+text
+@# OLEProperty
+# helper class of Property with arguments.
+class OLEProperty
+  def initialize(obj, dispid, gettypes, settypes)
+    @@obj = obj
+    @@dispid = dispid
+    @@gettypes = gettypes
+    @@settypes = settypes
+  end
+  def [](*args)
+    @@obj._getproperty(@@dispid, args, @@gettypes)
+  end
+  def []=(*args)
+    @@obj._setproperty(@@dispid, args, @@settypes)
+  end
+end
+@

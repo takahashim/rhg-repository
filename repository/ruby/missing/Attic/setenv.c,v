@@ -1,0 +1,350 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_2_6repack:1.1.1.2.2.2
+	v1_2_6:1.1.1.2.2.2
+	v1_2_5:1.1.1.2.2.2
+	v1_2_4:1.1.1.2.2.2
+	v1_2_2:1.1.1.2.2.2
+	v1_2_2_pr1:1.1.1.2.2.1
+	v1_2_1repack:1.1.1.2
+	v1_2_1:1.1.1.2
+	v1_2_stable:1.1.1.2
+	v1_1d1:1.1.1.2.4.1
+	v1_1d0:1.1.1.2
+	v1_1c9_1:1.1.1.2
+	v1_1c9:1.1.1.2
+	v1_1c8:1.1.1.2
+	v1_1c7:1.1.1.2
+	v1_1c6:1.1.1.2
+	v1_1d-start:1.1.1.2
+	v1_1c5:1.1.1.2
+	v1_1dev:1.1.1.2.0.4
+	v1_1c4:1.1.1.2
+	v1_1c3:1.1.1.2
+	v1_1c2:1.1.1.2
+	v1_1c1:1.1.1.2
+	v1_1c0:1.1.1.2
+	v1_1b9_31:1.1.1.2
+	v1_1b9_30:1.1.1.2
+	v1_1b9_28:1.1.1.2
+	v1_1b9_27:1.1.1.2
+	v1_1b9_26:1.1.1.2
+	r1_1b9_25:1.1.1.2
+	r1_1b9_24:1.1.1.2
+	v1_1b9_23:1.1.1.2
+	v1_1b9_22:1.1.1.2
+	v1_1b9_20:1.1.1.2
+	v1_1b9_18:1.1.1.2
+	v1_1b9_16:1.1.1.2
+	v1_1b9_15:1.1.1.2
+	v1_1b9_13:1.1.1.2
+	v1_1b9_12:1.1.1.2
+	v1_1b9_11:1.1.1.2
+	v1_1b9_08:1.1.1.2
+	v1_1b9_07:1.1.1.2
+	r1_1b9:1.1.1.2
+	v1_1b8:1.1.1.2
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	99.08.13.06.09.53;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.20;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1
+	1.1.1.2.4.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.18.09.08.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.01.21.09.04.58;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.4.1
+date	98.12.22.09.01.55;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@/* 
+ *    Copyright (c) 1991, Larry Wall
+ *
+ *    You may distribute under the terms of either the GNU General Public
+ *    License or the Artistic License, as specified in the README file.
+ */
+
+#include "ruby.h"
+
+#ifndef NT
+extern char **environ;
+#endif
+extern char **origenviron;
+
+#ifndef NT
+char *strdup();
+#endif
+
+static int
+envix(nam)
+char *nam;
+{
+    register int i, len = strlen(nam);
+
+    for (i = 0; environ[i]; i++) {
+	if (memcmp(environ[i],nam,len) == 0 && environ[i][len] == '=')
+	    break;			/* memcmp must come first to avoid */
+    }					/* potential SEGV's */
+    return i;
+}
+
+void
+setenv(nam,val)
+char *nam, *val;
+{
+    register int i=envix(nam);		/* where does it go? */
+
+    if (environ == origenviron) {	/* need we copy environment? */
+	int j;
+	int max;
+	char **tmpenv;
+
+	/*SUPPRESS 530*/
+	for (max = i; environ[max]; max++) ;
+	tmpenv = ALLOC_N(char*, max+2);
+	for (j=0; j<max; j++)		/* copy environment */
+	    tmpenv[j] = strdup(environ[j]);
+	tmpenv[max] = 0;
+	environ = tmpenv;		/* tell exec where it is now */
+    }
+    if (!val) {
+	while (environ[i]) {
+	    environ[i] = environ[i+1];
+	    i++;
+	}
+	return;
+    }
+    if (!environ[i]) {			/* does not exist yet */
+	REALLOC_N(environ, char*, i+2);	/* just expand it a bit */
+	environ[i+1] = 0;	/* make sure it's null terminated */
+    }
+    else {
+	free(environ[i]);
+    }
+    environ[i] = ALLOC_N(char, strlen(nam) + strlen(val) + 2);
+#ifndef MSDOS
+    (void)sprintf(environ[i],"%s=%s",nam,val);/* all that work just for this */
+#else
+    /* MS-DOS requires environment variable names to be in uppercase */
+    /* [Tom Dinger, 27 August 1990: Well, it doesn't _require_ it, but
+     * some utilities and applications may break because they only look
+     * for upper case strings. (Fixed strupr() bug here.)]
+     */
+    strcpy(environ[i],nam); strupr(environ[i]);
+    (void)sprintf(environ[i] + strlen(nam),"=%s",val);
+#endif /* MSDOS */
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+#ifndef NT
+d12 1
+a12 1
+#endif
+d15 1
+a15 1
+#ifndef NT
+d17 1
+a17 5
+#endif
+
+#ifdef USE_WIN32_RTL_ENV
+#include <stdlib.h>
+#endif
+a31 1
+#ifndef WIN32
+d33 1
+a33 1
+setenv(nam,val, n)
+a34 1
+int n;
+a77 66
+#else /* if WIN32 */
+void
+setenv(nam,val, n)
+char *nam, *val;
+int n;
+{
+#ifdef USE_WIN32_RTL_ENV
+
+    register char *envstr;
+    STRLEN namlen = strlen(nam);
+    STRLEN vallen;
+    char *oldstr = environ[envix(nam)];
+
+    /* putenv() has totally broken semantics in both the Borland
+     * and Microsoft CRTLs.  They either store the passed pointer in
+     * the environment without making a copy, or make a copy and don't
+     * free it. And on top of that, they dont free() old entries that
+     * are being replaced/deleted.  This means the caller must
+     * free any old entries somehow, or we end up with a memory
+     * leak every time setenv() is called.  One might think
+     * one could directly manipulate environ[], like the UNIX code
+     * above, but direct changes to environ are not allowed when
+     * calling putenv(), since the RTLs maintain an internal
+     * *copy* of environ[]. Bad, bad, *bad* stink.
+     * GSAR 97-06-07
+     */
+
+    if (!val) {
+	if (!oldstr)
+	    return;
+	val = "";
+	vallen = 0;
+    }
+    else
+	vallen = strlen(val);
+    envstr = ALLOC_N(char, namelen + vallen + 3);
+    (void)sprintf(envstr,"%s=%s",nam,val);
+    (void)putenv(envstr);
+    if (oldstr)
+	free(oldstr);
+#ifdef _MSC_VER
+    free(envstr);		/* MSVCRT leaks without this */
+#endif
+
+#else /* !USE_WIN32_RTL_ENV */
+
+    /* The sane way to deal with the environment.
+     * Has these advantages over putenv() & co.:
+     *  * enables us to store a truly empty value in the
+     *    environment (like in UNIX).
+     *  * we don't have to deal with RTL globals, bugs and leaks.
+     *  * Much faster.
+     * Why you may want to enable USE_WIN32_RTL_ENV:
+     *  * environ[] and RTL functions will not reflect changes,
+     *    which might be an issue if extensions want to access
+     *    the env. via RTL.  This cuts both ways, since RTL will
+     *    not see changes made by extensions that call the Win32
+     *    functions directly, either.
+     * GSAR 97-06-07
+     */
+    SetEnvironmentVariable(nam,val);
+
+#endif
+}
+
+#endif /* WIN32 */
+@
+
+
+1.1.1.2.2.1
+log
+@1.2.2 PR1
+@
+text
+@d8 1
+a8 6
+void *xmalloc ();
+void *xcalloc ();
+void *xrealloc ();
+#define ALLOC_N(type,n) (type*)xmalloc(sizeof(type)*(n))
+#define ALLOC(type) (type*)xmalloc(sizeof(type))
+#define REALLOC_N(var,type,n) (var)=(type*)xrealloc((char*)(var),sizeof(type)*(n))
+d85 1
+a85 1
+int
+a146 1
+    return 1;
+@
+
+
+1.1.1.2.2.2
+log
+@1.2.2 release
+@
+text
+@d15 1
+a15 4
+#if defined(NT) && defined(_MSC_VER)
+extern char **_environ;
+#define environ _environ
+#else
+@
+
+
+1.1.1.2.4.1
+log
+@1.1d1
+@
+text
+@d13 1
+a13 1
+extern char **rb_origenviron;
+d44 1
+a44 1
+    if (environ == rb_origenviron) {	/* need we copy environment? */
+@
+

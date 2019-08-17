@@ -1,0 +1,91 @@
+head	1.3;
+access;
+symbols
+	V0_3_2:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.11.09.06.06.12;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.03.12.32;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.06.23.53.49;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Map exception classes into strings.
+
+The class names aren;t transportable across systems.
+@
+text
+@# Accumulate a running set of results, and report them at the end
+
+#
+# This is a temporary hack - we have made changes to xmarshal
+# to allow rubicon to run without having to have xmlparser 
+# installed
+#
+
+XMARSHAL_DUMP_ONLY = true
+require "rubicon_xmarshal"
+  
+class ResultDisplay
+
+  def initialize(gatherer)
+    @@gatherer = gatherer
+  end
+
+  def reportOn(op)
+    # map errors to the corresponding string - for some reason
+    # dump doesn't handle them
+
+    @@gatherer.results.each_value do |res|
+      res.failures.each {|f| f.err = f.err.class.name + ": " + f.err.to_s }
+      res.errors.each   {|f| f.err = f.err.class.name + ": " + f.err.to_s }
+    end
+
+    XMarshal.dump(@@gatherer, op)
+  end
+end
+
+
+@
+
+
+1.2
+log
+@Check in a hacked copy of xmarshal until we can get our changes into
+the core version
+@
+text
+@d19 8
+@
+
+
+1.1
+log
+@iMake the output format pluggable as a first step towards decent
+publishing of the results.
+@
+text
+@d3 6
+d10 1
+a10 1
+require "xmarshal"
+@
+

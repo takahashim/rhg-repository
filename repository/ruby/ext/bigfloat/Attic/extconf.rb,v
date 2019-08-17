@@ -1,0 +1,80 @@
+head	1.3;
+access;
+symbols
+	v1_1_8:1.1.1.1
+	SHIGEO:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.04.17.15.00.23;	author knu;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2002.03.25.16.51.22;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.22.04.48.58;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.03.22.04.48.58;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* ext/Setup*, ext/bigfloat/*: Back out the import of BigFloat in
+  favor of its forthcoming successor, BigDecimal.
+@
+text
+@require 'mkmf'
+create_makefile('bigfloat')
+@
+
+
+1.2
+log
+@* ext/bigfloat/extconf.rb: Downcase the module name. (BigFloat.so
+  -> bigfloat.so)
+
+* ext/bigfloat/bigfloat.c (BigFloat_inspect): Alter the inspect
+  format not to look like an array. (pointed out by akr)
+
+* ext/bigfloat/bigfloat.c (BigFloat_hash): Implement BigFloat#hash.
+
+* ext/bigfloat/bigfloat.c (BigFloat_dump, BigFloat_load):
+  Support marshaling.
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+create_makefile('BigFloat')
+@
+
+
+1.1.1.1
+log
+@Import Shigeo Kobayashi's BigFloat module.
+@
+text
+@@

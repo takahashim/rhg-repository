@@ -1,0 +1,647 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.6.2.3
+	v1_6_6:1.6.2.3
+	v1_6_5:1.6.2.3
+	v1_6_4:1.6.2.1
+	v1_7_1:1.7
+	v1_6_4_preview4:1.6.2.1
+	v1_6_4_preview3:1.6.2.1
+	v1_6_4_preview2:1.6
+	v1_6_4_preview1:1.6
+	v1_6_3:1.6
+	ruby_m17n:1.6.0.4
+	ruby_1_6:1.6.0.2
+	v1_6_2:1.6
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.1
+	v1_3_6_repack:1.1.1.1.2.1
+	v1_3_6:1.1.1.1.2.1
+	v1_3_5:1.1.1.1.2.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1.2.1
+	v1_3_4_990624:1.1.1.1.2.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1.2.1
+	v1_3_4_990531:1.1.1.1.2.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1d1:1.1.4.1
+	v1_1d0:1.1.4.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1c7:1.1.2.1
+	v1_1dev:1.1.0.4
+	v1_1c6:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.8
+date	2002.01.29.07.16.07;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.05.16.09.05.54;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.11.08.05.29.37;	author matz;	state Exp;
+branches
+	1.6.2.1;
+next	1.5;
+
+1.5
+date	2000.10.25.04.48.41;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.10.20.16.37.01;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.25.03.51.23;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.10.06.02.45.13;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.05.31.09.13.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.10.06.02.45.13;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	98.10.06.03.28.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.6.2.1
+date	2001.05.16.06.01.16;	author matz;	state Exp;
+branches;
+next	1.6.2.2;
+
+1.6.2.2
+date	2001.06.29.08.32.54;	author matz;	state Exp;
+branches;
+next	1.6.2.3;
+
+1.6.2.3
+date	2001.07.02.08.43.29;	author matz;	state Exp;
+branches;
+next	1.6.2.4;
+
+1.6.2.4
+date	2002.09.11.07.51.48;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* file.c (rb_stat_rdev_major): added. [new]
+
+* file.c (rb_stat_rdev_minor): added. [new]
+
+* file.c (rb_stat_inspect): print mode in octal.
+@
+text
+@# Usage:
+#	require "open3"
+#
+#	in, out, err = Open3.popen3('nroff -man')
+#  or
+#	include Open3
+#	in, out, err = popen3('nroff -man')
+#
+
+module Open3
+  #[stdin, stdout, stderr] = popen3(command);
+  def popen3(*cmd)
+    pw = IO::pipe   # pipe[0] for read, pipe[1] for write
+    pr = IO::pipe
+    pe = IO::pipe
+
+    pid = fork{
+      # child
+      fork{
+	# grandchild
+	pw[1].close
+	STDIN.reopen(pw[0])
+	pw[0].close
+
+	pr[0].close
+	STDOUT.reopen(pr[1])
+	pr[1].close
+
+	pe[0].close
+	STDERR.reopen(pe[1])
+	pe[1].close
+
+	exec(*cmd)
+      }
+      exit!
+    }
+
+    pw[0].close
+    pr[1].close
+    pe[1].close
+    Process.waitpid(pid)
+    pi = [pw[1], pr[0], pe[0]]
+    pw[1].sync = true
+    if defined? yield
+      begin
+	return yield(*pi)
+      ensure
+	pi.each{|p| p.close unless p.closed?}
+      end
+    end
+    pi
+  end
+  module_function :popen3
+end
+
+if $0 == __FILE__
+  a = Open3.popen3("nroff -man")
+  Thread.start do
+    while line = gets
+      a[0].print line
+    end
+    a[0].close
+  end
+  while line = a[1].gets
+    print ":", line
+  end
+end
+@
+
+
+1.7
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d43 1
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d35 1
+@
+
+
+1.6.2.1
+log
+@array.c typo fixed.
+@
+text
+@a34 1
+      exit!
+@
+
+
+1.6.2.2
+log
+@* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+@
+text
+@d35 1
+a35 2
+      Process.wait
+      exit! $?>>8
+@
+
+
+1.6.2.3
+log
+@* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+@
+text
+@d35 2
+a36 1
+      exit!
+@
+
+
+1.6.2.4
+log
+@* lib/open3.rb: Merge from 1.7: Turn sync on for the writer
+  handle.
+
+* lib/ping.rb: Merge from 1.7: Fix a typo.
+@
+text
+@a42 1
+    pw[1].sync = true
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d44 1
+a44 1
+	return yield *pi
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d12 1
+a12 1
+  def popen3(cmd)
+d19 5
+a23 3
+      pw[1].close
+      STDIN.reopen(pw[0])
+      pw[0].close
+d25 3
+a27 3
+      pr[0].close
+      STDOUT.reopen(pr[1])
+      pr[1].close
+d29 3
+a31 3
+      pe[0].close
+      STDERR.reopen(pe[1])
+      pe[1].close
+d33 2
+a34 2
+      exec(cmd)
+      _exit 127
+d40 2
+a41 5
+    Thread.start do
+      sleep 1
+      Process.waitpid(pid)
+    end
+    pi = [ pw[1], pr[0], pe[0] ]
+d43 5
+a47 1
+      return yield *pi
+@
+
+
+1.3
+log
+@2000-02-25
+@
+text
+@d17 2
+a18 2
+    pid = fork
+    if pid == nil then # child
+d32 13
+a44 6
+      exit
+    else
+      pw[0].close
+      pr[1].close
+      pe[1].close
+      pi = [ pw[1], pr[0], pe[0] ]
+d46 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d46 2
+a47 2
+    while gets
+      a[0].print $_
+d51 2
+a52 2
+  while a[1].gets
+    print ":", $_
+a54 1
+
+@
+
+
+1.1
+log
+@file open3.rb was initially added on branch v1_1r.
+@
+text
+@d1 55
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 55
+# Usage:
+#	require "open3"
+#
+#	in, out, err = Open3.popen3('nroff -man')
+#  or
+#	include Open3
+#	in, out, err = popen3('nroff -man')
+#
+
+module Open3
+  #[stdin, stdout, stderr] = popen3(command);
+  def popen3(cmd)
+    pw = pipe   # pipe[0] for read, pipe[1] for write
+    pr = pipe
+    pe = pipe
+
+    pid = fork
+    if pid == nil then # child
+      pw[1].close
+      STDIN.reopen(pw[0])
+      pw[0].close
+
+      pr[0].close
+      STDOUT.reopen(pr[1])
+      pr[1].close
+
+      pe[0].close
+      STDERR.reopen(pe[1])
+      pe[1].close
+
+      exec(cmd)
+      exit
+    else
+      pw[0].close
+      pr[1].close
+      pe[1].close
+      pi = [ pw[1], pr[0], pe[0] ]
+    end
+  end
+  module_function :popen3
+end
+
+if $0 == __FILE__
+  a = Open3.popen3("nroff -man")
+  Thread.start do
+    while gets
+      a[0].print $_
+    end
+    a[0].close
+  end
+  while a[1].gets
+    print ":", $_
+  end
+end
+
+@
+
+
+1.1.1.1.2.1
+log
+@990531
+@
+text
+@d13 3
+a15 3
+    pw = IO::pipe   # pipe[0] for read, pipe[1] for write
+    pr = IO::pipe
+    pe = IO::pipe
+@
+
+
+1.1.4.1
+log
+@join 1.1c6
+@
+text
+@a0 55
+# Usage:
+#	require "open3"
+#
+#	in, out, err = Open3.popen3('nroff -man')
+#  or
+#	include Open3
+#	in, out, err = popen3('nroff -man')
+#
+
+module Open3
+  #[stdin, stdout, stderr] = popen3(command);
+  def popen3(cmd)
+    pw = pipe   # pipe[0] for read, pipe[1] for write
+    pr = pipe
+    pe = pipe
+
+    pid = fork
+    if pid == nil then # child
+      pw[1].close
+      STDIN.reopen(pw[0])
+      pw[0].close
+
+      pr[0].close
+      STDOUT.reopen(pr[1])
+      pr[1].close
+
+      pe[0].close
+      STDERR.reopen(pe[1])
+      pe[1].close
+
+      exec(cmd)
+      exit
+    else
+      pw[0].close
+      pr[1].close
+      pe[1].close
+      pi = [ pw[1], pr[0], pe[0] ]
+    end
+  end
+  module_function :popen3
+end
+
+if $0 == __FILE__
+  a = Open3.popen3("nroff -man")
+  Thread.start do
+    while gets
+      a[0].print $_
+    end
+    a[0].close
+  end
+  while a[1].gets
+    print ":", $_
+  end
+end
+
+@
+
+
+1.1.2.1
+log
+@1.1c6
+@
+text
+@a0 55
+# Usage:
+#	require "open3"
+#
+#	in, out, err = Open3.popen3('nroff -man')
+#  or
+#	include Open3
+#	in, out, err = popen3('nroff -man')
+#
+
+module Open3
+  #[stdin, stdout, stderr] = popen3(command);
+  def popen3(cmd)
+    pw = pipe   # pipe[0] for read, pipe[1] for write
+    pr = pipe
+    pe = pipe
+
+    pid = fork
+    if pid == nil then # child
+      pw[1].close
+      STDIN.reopen(pw[0])
+      pw[0].close
+
+      pr[0].close
+      STDOUT.reopen(pr[1])
+      pr[1].close
+
+      pe[0].close
+      STDERR.reopen(pe[1])
+      pe[1].close
+
+      exec(cmd)
+      exit
+    else
+      pw[0].close
+      pr[1].close
+      pe[1].close
+      pi = [ pw[1], pr[0], pe[0] ]
+    end
+  end
+  module_function :popen3
+end
+
+if $0 == __FILE__
+  a = Open3.popen3("nroff -man")
+  Thread.start do
+    while gets
+      a[0].print $_
+    end
+    a[0].close
+  end
+  while a[1].gets
+    print ":", $_
+  end
+end
+
+@

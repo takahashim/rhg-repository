@@ -1,0 +1,410 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.8.1
+	v1_3_6_repack:1.1.1.1.8.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.1.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.1.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.1.1
+	v1_2_4:1.1.1.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.8
+	v1_2_2:1.1.1.1
+	RUBY_1_3:1.1.1.1
+	v1_2_2_pr1:1.1.1.1
+	v1_2_1repack:1.1.1.1
+	v1_2_1:1.1.1.1
+	v1_2_stable:1.1.1.1
+	v1_1d1:1.1.1.1
+	v1_1d0:1.1.1.1
+	v1_1c9_1:1.1.1.1
+	v1_1c9:1.1.1.1
+	v1_1c8:1.1.1.1
+	v1_1c7:1.1.1.1
+	v1_1c6:1.1.1.1
+	v1_1d-start:1.1.1.1
+	v1_1c5:1.1.1.1
+	v1_1dev:1.1.1.1.0.6
+	v1_1c4:1.1.1.1
+	v1_1c3:1.1.1.1
+	v1_1c2:1.1.1.1
+	v1_1c1:1.1.1.1
+	v1_1c0:1.1.1.1
+	v1_1b9_31:1.1.1.1
+	v1_1b9_30:1.1.1.1
+	v1_1b9_28:1.1.1.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.8.1;
+next	;
+
+1.1.1.1.8.1
+date	99.07.28.10.32.08;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a0 238
+#! /bin/sh
+#
+# install - install a program, script, or datafile
+# This comes from X11R5.
+#
+# Calling this script install-sh is preferred over install.sh, to prevent
+# `make' implicit rules from creating a file called install from it
+# when there is no Makefile.
+#
+# This script is compatible with the BSD install script, but was written
+# from scratch.
+#
+
+
+# set DOITPROG to echo to test this script
+
+# Don't use :- since 4.3BSD and earlier shells don't like it.
+doit="${DOITPROG-}"
+
+
+# put in absolute paths if you don't have them in your path; or use env. vars.
+
+mvprog="${MVPROG-mv}"
+cpprog="${CPPROG-cp}"
+chmodprog="${CHMODPROG-chmod}"
+chownprog="${CHOWNPROG-chown}"
+chgrpprog="${CHGRPPROG-chgrp}"
+stripprog="${STRIPPROG-strip}"
+rmprog="${RMPROG-rm}"
+mkdirprog="${MKDIRPROG-mkdir}"
+
+tranformbasename=""
+transform_arg=""
+instcmd="$mvprog"
+chmodcmd="$chmodprog 0755"
+chowncmd=""
+chgrpcmd=""
+stripcmd=""
+rmcmd="$rmprog -f"
+mvcmd="$mvprog"
+src=""
+dst=""
+dir_arg=""
+
+while [ x"$1" != x ]; do
+    case $1 in
+	-c) instcmd="$cpprog"
+	    shift
+	    continue;;
+
+	-d) dir_arg=true
+	    shift
+	    continue;;
+
+	-m) chmodcmd="$chmodprog $2"
+	    shift
+	    shift
+	    continue;;
+
+	-o) chowncmd="$chownprog $2"
+	    shift
+	    shift
+	    continue;;
+
+	-g) chgrpcmd="$chgrpprog $2"
+	    shift
+	    shift
+	    continue;;
+
+	-s) stripcmd="$stripprog"
+	    shift
+	    continue;;
+
+	-t=*) transformarg=`echo $1 | sed 's/-t=//'`
+	    shift
+	    continue;;
+
+	-b=*) transformbasename=`echo $1 | sed 's/-b=//'`
+	    shift
+	    continue;;
+
+	*)  if [ x"$src" = x ]
+	    then
+		src=$1
+	    else
+		# this colon is to work around a 386BSD /bin/sh bug
+		:
+		dst=$1
+	    fi
+	    shift
+	    continue;;
+    esac
+done
+
+if [ x"$src" = x ]
+then
+	echo "install:	no input file specified"
+	exit 1
+else
+	true
+fi
+
+if [ x"$dir_arg" != x ]; then
+	dst=$src
+	src=""
+	
+	if [ -d $dst ]; then
+		instcmd=:
+	else
+		instcmd=mkdir
+	fi
+else
+
+# Waiting for this to be detected by the "$instcmd $src $dsttmp" command
+# might cause directories to be created, which would be especially bad 
+# if $src (and thus $dsttmp) contains '*'.
+
+	if [ -f $src -o -d $src ]
+	then
+		true
+	else
+		echo "install:  $src does not exist"
+		exit 1
+	fi
+	
+	if [ x"$dst" = x ]
+	then
+		echo "install:	no destination specified"
+		exit 1
+	else
+		true
+	fi
+
+# If destination is a directory, append the input filename; if your system
+# does not like double slashes in filenames, you may need to add some logic
+
+	if [ -d $dst ]
+	then
+		dst="$dst"/`basename $src`
+	else
+		true
+	fi
+fi
+
+## this sed command emulates the dirname command
+dstdir=`echo $dst | sed -e 's,[^/]*$,,;s,/$,,;s,^$,.,'`
+
+# Make sure that the destination directory exists.
+#  this part is taken from Noah Friedman's mkinstalldirs script
+
+# Skip lots of stat calls in the usual case.
+if [ ! -d "$dstdir" ]; then
+defaultIFS='	
+'
+IFS="${IFS-${defaultIFS}}"
+
+oIFS="${IFS}"
+# Some sh's can't handle IFS=/ for some reason.
+IFS='%'
+set - `echo ${dstdir} | sed -e 's@@/@@%@@g' -e 's@@^%@@/@@'`
+IFS="${oIFS}"
+
+pathcomp=''
+
+while [ $# -ne 0 ] ; do
+	pathcomp="${pathcomp}${1}"
+	shift
+
+	if [ ! -d "${pathcomp}" ] ;
+        then
+		$mkdirprog "${pathcomp}"
+	else
+		true
+	fi
+
+	pathcomp="${pathcomp}/"
+done
+fi
+
+if [ x"$dir_arg" != x ]
+then
+	$doit $instcmd $dst &&
+
+	if [ x"$chowncmd" != x ]; then $doit $chowncmd $dst; else true ; fi &&
+	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd $dst; else true ; fi &&
+	if [ x"$stripcmd" != x ]; then $doit $stripcmd $dst; else true ; fi &&
+	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd $dst; else true ; fi
+else
+
+# If we're going to rename the final executable, determine the name now.
+
+	if [ x"$transformarg" = x ] 
+	then
+		dstfile=`basename $dst`
+	else
+		dstfile=`basename $dst $transformbasename | 
+			sed $transformarg`$transformbasename
+	fi
+
+# don't allow the sed command to completely eliminate the filename
+
+	if [ x"$dstfile" = x ] 
+	then
+		dstfile=`basename $dst`
+	else
+		true
+	fi
+
+# Make a temp file name in the proper directory.
+
+	dsttmp=$dstdir/#inst.$$#
+
+# Move or copy the file name to the temp name
+
+	$doit $instcmd $src $dsttmp &&
+
+	trap "rm -f ${dsttmp}" 0 &&
+
+# and set any options; do chmod last to preserve setuid bits
+
+# If any of these fail, we abort the whole thing.  If we want to
+# ignore errors from any of these, just make sure not to ignore
+# errors from the above "$doit $instcmd $src $dsttmp" command.
+
+	if [ x"$chowncmd" != x ]; then $doit $chowncmd $dsttmp; else true;fi &&
+	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd $dsttmp; else true;fi &&
+	if [ x"$stripcmd" != x ]; then $doit $stripcmd $dsttmp; else true;fi &&
+	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd $dsttmp; else true;fi &&
+
+# Now rename the file to the real destination.
+
+	$doit $rmcmd -f $dstdir/$dstfile &&
+	$doit $mvcmd $dsttmp $dstdir/$dstfile 
+
+fi &&
+
+
+exit 0
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.8.1
+log
+@990728 repack
+@
+text
+@d1 238
+@
+

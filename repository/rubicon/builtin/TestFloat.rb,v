@@ -1,0 +1,666 @@
+head	1.12;
+access;
+symbols
+	V0_3_2:1.10
+	V0_1_4:1.6
+	V0_1_3:1.6
+	V0_1_2:1.6
+	V0_1_1:1.6
+	V0_1:1.6
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.09.28.04.50.25;	author akr;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.11.27.18.10.07;	author chad;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.14.05.31.05;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.19.17.11.43;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.15.02.56.08;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.14.21.16.08;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.08.20.07.31;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.05.21.33.37;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* rubicon.rb: recognize HP-UX to treat it as an Unix variant.
+
+* builtin/TestIO.rb (test_pid): Use `exec' trick for all Unix
+variants.
+
+* builtin/TestFileTest.rb (TestFileTest::test_test): Use 02755 instead
+of 02644 for setgid bit because setgid bit without execution bit means
+mandatory locking for Solaris and it fails on NFS.
+(TestFileTest::test_test): /dev/tty is symlink on Solaris.
+
+* builtin/TestFloat.rb: Use 0.0/0.0 instead of Math::log(-1.0) to
+generate NaN because Math::log(-1.0) returns -Infinity instead of NaN
+on Solaris.
+
+* builtin/TestThreadGroup.rb (test_list): Avoid deadlock.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestFloat < Rubicon::TestCase
+
+  BIG = 3.1415926e43
+  SML = 3.18309891613572e-44   # = 1/BIG
+
+  ###########################################################################
+
+  def test_UMINUS
+    [ -99.0, -1.0, 0.0, +1.0 , +99.0].each { |n| assert_flequal(0.0, -n + n) }
+  end
+
+  def test_CMP # '<=>'
+    assert_flequal(0, BIG <=> BIG)
+    assert_flequal(0, SML <=> SML)
+    assert_flequal(0, 1.0 <=> 1.0)
+
+    assert_flequal(1, BIG <=> SML)
+    assert_flequal(1, BIG <=> 0.0)
+    assert_flequal(1, BIG <=> 1.0)
+    assert_flequal(1, SML <=> 0.0)
+
+    assert_flequal(-1, SML <=> BIG)
+    assert_flequal(-1, SML <=> 0.1)
+    assert_flequal(-1, SML <=> 1)
+
+    # and negatives:
+    assert_flequal(1, 1.0 <=> -1.0)
+    assert_flequal(-1, -1.0 <=> 1.0)
+  end
+
+  def test_DIV # '/'
+    assert_flequal(0.0, 0.0/3.0)
+    assert_flequal(1.0, 3.0/3.0)
+    assert_flequal(1.5, 4.5/3.0)
+    assert_flequal(.333333333, 1.0/3.0)
+
+    assert_flequal(0.0, -0.0/3.0)
+    assert_flequal(-1.0, -3.0/3.0)
+    assert_flequal(-1.5, -4.5/3.0)
+    assert_flequal(-.333333333, -1.0/3.0)
+
+    assert_flequal(0.0,  0.0/-3.0)
+    assert_flequal(-1.0, 3.0/-3.0)
+    assert_flequal(-1.5, 4.5/-3.0)
+    assert_flequal(-.333333333, 1.0/-3.0)
+
+    assert_flequal(0.0, -0.0/-3.0)
+    assert_flequal(1.0, -3.0/-3.0)
+    assert_flequal(1.5, -4.5/-3.0)
+    assert_flequal(.333333333, -1.0/-3.0)
+
+    
+  end
+
+  def test_nan?
+    a = 1.0/0.0
+    b = 0.0/0.0
+    assert(!a.nan?)
+    assert(b.nan?)
+    assert(!99.0.nan?)
+  end
+
+  def test_infinite?
+    a = 1.0/0.0
+    b = -1.0/0.0
+
+    assert_equal(1, a.infinite?)
+    assert_equal(-1, b.infinite?)
+    assert(!99.0.infinite?)
+  end
+
+  def test_finite?
+    a = 1.0/0.0
+    b = 0.0/0.0
+    assert(!a.finite?)
+    assert(!b.finite?)
+    assert(99.0.finite?)
+  end
+
+  def test_EQUAL # '=='
+    assert(0.0 ==  0.0)
+    assert(BIG == BIG)
+    assert(SML == SML)
+    assert(-1.0 == -1.0)
+    assert(!(0.0 == 1e-6))
+  end
+
+  def test_GE # '>='
+    assert(0.0 >= 0.0)
+    assert(1.0 >= 0.0)
+    assert(BIG >= 0.0)
+    assert(SML >= 0.0)
+    assert(0.0 >= -1.0)
+    assert(1.0 >= -1.0)
+    assert(-1.0 >= -2.0)
+
+    assert(!(0.0 >= 1.0))
+    assert(!(0.0 >= BIG))
+    assert(!(SML >= BIG))
+  end
+
+  def test_GT # '>'
+    assert(1.0 > 0.0)
+    assert(BIG > 0.0)
+    assert(SML > 0.0)
+    assert(0.0 > -1.0)
+    assert(1.0 > -1.0)
+    assert(-1.0 > -2.0)
+
+    assert(!(0.0 > 0.0))
+    assert(!(0.0 > 1.0))
+    assert(!(0.0 > BIG))
+    assert(!(SML > BIG))
+  end
+
+  def test_LE # '<='
+    assert(0.0 <= 0.0)
+    assert(0.0 <= 1.0)
+    assert(0.0 <= BIG)
+    assert(0.0 <= SML)
+    assert(-1.0 <= 0.0)
+    assert(-2.0 <= -1.0)
+
+    assert(!(1.0 <= 0.0))
+    assert(!(BIG <= 0.0))
+    assert(!(SML <= 0.0))
+  end
+
+  def test_LT # '<'
+    assert(0.0 < 1.0)
+    assert(0.0 < BIG)
+    assert(0.0 < SML)
+    assert(-1.0 < 0.0)
+    assert(-2.0 < -1.0)
+
+    assert(!(0.0 < 0.0))
+    assert(!(1.0 < 0.0))
+    assert(!(BIG < 0.0))
+    assert(!(SML < 0.0))
+  end
+
+  def test_MINUS # '-'
+    assert_flequal(0.0, 0.0-0.0)
+    assert_flequal(0.0, 1.0-1.0)
+    assert_flequal(0.0, -1.0 - (-1.0))
+    assert_flequal(-2.0, -1.0 - (1.0))
+    assert_flequal(2.0, 1.0 - (-1.0))
+    
+    assert_flequal(77, 100.0 - 20.0 - 3.0)
+  end
+
+  def test_MOD # '%'
+    assert_flequal(0.0,  0.0%123.0)
+
+    assert_flequal(1.0,  13.0%4.0)
+    assert_flequal(-3.0, 13.0%(-4.0))
+    assert_flequal(3.0,  (-13.0)%4.0)
+    assert_flequal(-1.0, (-13.0)%(-4.0))
+
+    assert_flequal(1.5,  13.5%4.0)
+    assert_flequal(-2.5, 13.5%(-4.0))
+    assert_flequal(2.5,  (-13.5)%4.0)
+    assert_flequal(-1.5, (-13.5)%(-4.0))
+
+    assert_flequal(0.4,  13.4 % 1)
+  end
+
+  def test_MUL # '*'
+    assert_flequal(0.0, 0.0*BIG)
+    assert_flequal(BIG, 1.0*BIG)
+    assert_flequal(SML, 1.0*SML)
+    assert_flequal(1.0, BIG*SML)
+    assert_flequal(-1.0, -1.0 *  1.0)
+    assert_flequal( 1.0, -1.0 * -1.0)
+  end
+
+  def test_PLUS # '+'
+    assert_flequal(0.0, 0.0 + 0.0)
+    assert_flequal(1.0, 0.0 + 1.0)
+    assert_flequal(1.0, 1.0 + 0.0)
+    assert_flequal(0.0, 1.0 + (-1.0))
+    assert_flequal(-1.0, 0.0 + (-1.0))
+    assert_flequal(-2.0, -1.0 + (-1.0))
+    assert_flequal(0.0, -1.0 + (1.0))
+
+    assert_flequal(3.0, 0.0 + 3)
+  end
+
+  def test_POW # '**'
+    assert_flequal(1e40, 10**40)
+    assert_flequal(1e-40, 10**-40)
+    assert_not_nil((10.0**10.0**10.0).infinite?)
+    assert_flequal(0.0, 10.0**-(1000.0))
+    assert_flequal(1.4142135623731, 2.0**0.5)
+  end
+
+  def test_abs
+    assert_flequal(1.0, 1.0.abs)
+    assert_flequal(1.0, (-1.0).abs)
+  end
+
+  def test_ceil
+    assert_flequal(2.0,  (1.2).ceil)
+    assert_flequal(2.0,  (2.0).ceil)
+    assert_flequal(-1.0, (-1.2).ceil)
+    assert_flequal(-2.0, (-2.0).ceil)
+    assert_flequal(3,      2.6.ceil)
+    assert_flequal(-2,    -2.6.ceil)
+  end
+
+  def test_divmod
+    vals = { 
+      [  13.0,  4.0 ] => [3.0,   1.0],
+      [  13.0, -4.0 ] => [-4.0, -3.0],
+      [ -13.0,  4.0 ] => [-4.0,  3.0],
+      [ -13.0, -4.0 ] => [3.0,  -1.0],
+    }
+
+    vals.each { |ip, op|
+      res = ip[0].divmod(ip[1])
+      assert_flequal(op[0], res[0], "#{ip.join('.divmod ')}")
+      assert_flequal(op[1], res[1], "#{ip.join('.divmod ')}")
+    }
+
+  end
+
+  def test_floor
+    assert_flequal(1.0,  (1.2).floor)
+    assert_flequal(2.0,  (2.0).floor)
+    assert_flequal(-2.0, (-1.2).floor)
+    assert_flequal(2,    2.6.floor)
+    assert_flequal(-3,  -2.6.floor)
+  end
+
+  def test_remainder
+    assert_flequal(0.0,  0.0.remainder(123.0))
+
+    assert_flequal(1.0,  13.0.remainder(4.0))
+    assert_flequal(1.0,  13.0.remainder(-4.0))
+    assert_flequal(-1.0, (-13.0).remainder(4.0))
+    assert_flequal(-1.0, (-13.0).remainder(-4.0))
+
+    assert_flequal(1.5,  13.5.remainder(4.0))
+    assert_flequal(1.5,  13.5.remainder(-4.0))
+    assert_flequal(-1.5,  (-13.5).remainder(4.0))
+    assert_flequal(-1.5,  (-13.5).remainder(-4.0))
+  end
+
+  def test_round
+    assert_instance_of(Fixnum, 1.5.round)
+    assert_instance_of(Bignum, 1.5e20.round)
+    assert_equal(1,   1.49.round)
+    assert_equal(2,   1.5.round)
+    assert_equal(-1, -1.49.round)
+    assert_equal(-2, -1.5.round)
+    assert_equal(3,   2.6.round)
+  end
+
+  def test_to_f
+    a = BIG.to_f
+    assert_equal(a, BIG)
+    assert_equal(a.id, BIG.id)
+  end
+
+  def test_to_i
+    assert_instance_of(Fixnum, 1.23.to_i)
+    assert_equal(1,   1.4.to_i)
+    assert_equal(1,   1.9.to_i)
+    assert_equal(-1, -1.4.to_i)
+    assert_equal(-1, -1.9.to_i)
+  end
+
+  def test_to_s
+    assert_equal("Infinity",   (1.0/0.0).to_s)
+    assert_equal("-Infinity",  (-1.0/0.0).to_s)
+    assert_equal("NaN",        (0.0/0.0).to_s)
+
+    assert_equal("1.23456",    1.23456.to_s)
+    assert_equal("-1.23456",  -1.23456.to_s)
+    assert_flequal(1.23e+45,   Float(1.23e+45.to_s))
+    assert_flequal(1.23e-45,   Float(1.23e-45.to_s))
+  end
+  
+  def test_truncate
+    assert_flequal(2, 2.6.truncate)
+    assert_flequal(-2, -2.6.truncate)
+    assert_flequal(-2, -2.4.truncate)
+  end
+
+  def test_zero?
+    assert(0.0.zero?)
+    assert(!0.1.zero?)
+  end
+
+  def test_s_induced_from
+    assert_flequal(1.0, Float.induced_from(1))
+    assert_flequal(1.0, Float.induced_from(1.0))
+  end
+
+end
+
+Rubicon::handleTests(TestFloat) if $0 == __FILE__
+@
+
+
+1.11
+log
+@test_to_s was failing under MsWin32.  Fixed now.
+@
+text
+@d61 1
+a61 1
+    b = Math::log(-1.0)
+d78 1
+a78 1
+    b = Math::log(-1.0)
+d280 1
+a280 1
+    assert_equal("NaN",        (Math::log(-1)).to_s)
+@
+
+
+1.10
+log
+@Change many asserts to work with rubyunit-0.4.5.
+
+RubyUnit changed to only allow true or false as the first parameter
+to assert(). This means that tests such as
+
+   assert(defined? Array)
+
+failed.
+@
+text
+@d284 2
+a285 2
+    assert_equal("1.23e+45",   1.23e45.to_s)
+    assert_equal("1.23e-45",   1.23e-45.to_s)
+@
+
+
+1.9
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d196 1
+a196 1
+    assert((10.0**10.0**10.0).infinite?)
+@
+
+
+1.8
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d168 2
+d211 2
+d235 2
+a236 1
+    assert_flequal(-2.0, (-2.0).floor)
+d260 1
+d286 6
+@
+
+
+1.7
+log
+@Many contributions from members of the ml
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.6
+log
+@Add wait2
+@
+text
+@d28 4
+d87 1
+d96 3
+d109 3
+d124 2
+d136 2
+d149 2
+d174 2
+d182 4
+@
+
+
+1.5
+log
+@Ensure we actually burn some time so the tests don;t fail
+@
+text
+@a8 11
+  def assert_flequal(exp, actual, msg='')
+    if exp == 0.0
+      error = 1e-7
+    else
+      error = exp.abs/1e7
+    end
+
+    assert((exp - actual).abs < error, 
+           "#{msg} Expected #{'%f' % exp} got #{'%f' % actual}")
+  end
+
+@
+
+
+1.4
+log
+@Archive save
+@
+text
+@d251 1
+a251 1
+    assert_instance_of(Fixnum, 1.23.to_)
+@
+
+
+1.3
+log
+@Finish with float
+@
+text
+@d236 2
+a237 2
+    assert_instance_of(1.5.round, Fixnum)
+    assert_instance_of(1.5e20.round, Bignum)
+d251 1
+a251 1
+    assert_instance_of(1.23.to_i, Fixnum)
+@
+
+
+1.2
+log
+@Get everything to run through
+@
+text
+@d6 16
+d23 1
+a23 1
+    assert_fail("untested")
+d27 12
+a38 1
+    assert_fail("untested")
+d42 46
+a87 1
+    assert_fail("untested")
+d91 4
+a94 1
+    assert_fail("untested")
+d98 8
+a105 1
+    assert_fail("untested")
+d109 8
+a116 1
+    assert_fail("untested")
+d120 8
+a127 1
+    assert_fail("untested")
+d131 8
+a138 1
+    assert_fail("untested")
+d142 5
+a146 1
+    assert_fail("untested")
+d150 11
+a160 1
+    assert_fail("untested")
+d164 4
+a167 1
+    assert_fail("untested")
+d171 5
+a175 1
+    assert_fail("untested")
+d179 5
+a183 1
+    assert_fail("untested")
+d187 2
+a188 1
+    assert_fail("untested")
+d192 4
+a195 5
+    assert_fail("untested")
+  end
+
+  def test_coerce
+    assert_fail("untested")
+d199 12
+a210 2
+    assert_fail("untested")
+  end
+a211 2
+  def test_eql?
+    assert_fail("untested")
+d215 4
+a218 1
+    assert_fail("untested")
+d221 2
+a222 3
+  def test_hash
+    assert_fail("untested")
+  end
+d224 9
+a232 2
+  def test_remainder
+    assert_fail("untested")
+d236 6
+a241 1
+    assert_fail("untested")
+d245 3
+a247 1
+    assert_fail("untested")
+d251 5
+a255 1
+    assert_fail("untested")
+d259 8
+a266 1
+    assert_fail("untested")
+d270 2
+a271 1
+    assert_fail("untested")
+d275 2
+a276 1
+    assert_fail("untested")
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  def test_-@@
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

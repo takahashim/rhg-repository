@@ -1,0 +1,220 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_2_6repack:1.1.1.1
+	v1_2_6:1.1.1.1
+	v1_2_5:1.1.1.1
+	v1_2_4:1.1.1.1
+	v1_2_2:1.1.1.1
+	v1_2_2_pr1:1.1.1.1
+	v1_2_1repack:1.1.1.1
+	v1_2_1:1.1.1.1
+	v1_2_stable:1.1.1.1
+	v1_1c9_1:1.1.1.1
+	v1_1c9:1.1.1.1
+	v1_1c8:1.1.1.1
+	v1_1c7:1.1.1.1
+	v1_1c6:1.1.1.1
+	v1_1d-start:1.1.1.1
+	v1_1c5:1.1.1.1
+	v1_1dev:1.1.1.1.0.6
+	v1_1c4:1.1.1.1
+	v1_1c3:1.1.1.1
+	v1_1c2:1.1.1.1
+	v1_1c1:1.1.1.1
+	v1_1c0:1.1.1.1
+	v1_1b9_31:1.1.1.1
+	v1_1b9_30:1.1.1.1
+	v1_1b9_28:1.1.1.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@; @;
+
+
+1.2
+date	99.08.13.06.09.53;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1.6.1;
+next	;
+
+1.1.1.1.6.1
+date	98.12.16.07.30.36;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@(require 'gud)
+(provide 'rubydb)
+
+;; ======================================================================
+;; rubydb functions
+
+;;; History of argument lists passed to rubydb.
+(defvar gud-rubydb-history nil)
+
+(defun gud-rubydb-massage-args (file args)
+  (cons "-r" (cons "debug" args)))
+
+;; There's no guarantee that Emacs will hand the filter the entire
+;; marker at once; it could be broken up across several strings.  We
+;; might even receive a big chunk with several markers in it.  If we
+;; receive a chunk of text which looks like it might contain the
+;; beginning of a marker, we save it here between calls to the
+;; filter.
+(defvar gud-rubydb-marker-acc "")
+
+(defun gud-rubydb-marker-filter (string)
+  (setq gud-marker-acc (concat gud-marker-acc string))
+  (let ((output ""))
+
+    ;; Process all the complete markers in this chunk.
+    (while (string-match "\032\032\\([^:\n]*\\):\\([0-9]*\\):.*\n"
+			 gud-marker-acc)
+      (setq
+
+       ;; Extract the frame position from the marker.
+       gud-last-frame
+       (cons (substring gud-marker-acc (match-beginning 1) (match-end 1))
+	     (string-to-int (substring gud-marker-acc
+				       (match-beginning 2)
+				       (match-end 2))))
+
+       ;; Append any text before the marker to the output we're going
+       ;; to return - we don't include the marker in this text.
+       output (concat output
+		      (substring gud-marker-acc 0 (match-beginning 0)))
+
+       ;; Set the accumulator to the remaining text.
+       gud-marker-acc (substring gud-marker-acc (match-end 0))))
+
+    ;; Does the remaining text look like it might end with the
+    ;; beginning of another marker?  If it does, then keep it in
+    ;; gud-marker-acc until we receive the rest of it.  Since we
+    ;; know the full marker regexp above failed, it's pretty simple to
+    ;; test for marker starts.
+    (if (string-match "\032.*\\'" gud-marker-acc)
+	(progn
+	  ;; Everything before the potential marker start can be output.
+	  (setq output (concat output (substring gud-marker-acc
+						 0 (match-beginning 0))))
+
+	  ;; Everything after, we save, to combine with later input.
+	  (setq gud-marker-acc
+		(substring gud-marker-acc (match-beginning 0))))
+
+      (setq output (concat output gud-marker-acc)
+	    gud-marker-acc ""))
+
+    output))
+
+(defun gud-rubydb-find-file (f)
+  (save-excursion
+    (let ((buf (find-file-noselect f)))
+      (set-buffer buf)
+      (gud-make-debug-menu)
+      buf)))
+
+(defvar rubydb-command-name "ruby"
+  "File name for executing ruby.")
+
+;;;###autoload
+(defun rubydb (command-line)
+  "Run rubydb on program FILE in buffer *gud-FILE*.
+The directory containing FILE becomes the initial working directory
+and source-file directory for your debugger."
+  (interactive
+   (list (read-from-minibuffer "Run rubydb (like this): "
+			       (if (consp gud-rubydb-history)
+				   (car gud-rubydb-history)
+				 (concat rubydb-command-name " "))
+			       nil nil
+			       '(gud-rubydb-history . 1))))
+
+  (gud-common-init command-line 'gud-rubydb-massage-args
+		   'gud-rubydb-marker-filter 'gud-rubydb-find-file)
+
+  (gud-def gud-break  "b %l"         "\C-b" "Set breakpoint at current line.")
+;  (gud-def gud-remove "clear %l"     "\C-d" "Remove breakpoint at current line")
+  (gud-def gud-step   "s"            "\C-s" "Step one source line with display.")
+  (gud-def gud-next   "n"            "\C-n" "Step one line (skip functions).")
+  (gud-def gud-cont   "c"            "\C-r" "Continue with display.")
+  (gud-def gud-finish "finish"       "\C-f" "Finish executing current function.")
+  (gud-def gud-up     "up %p"        "<" "Up N stack frames (numeric arg).")
+  (gud-def gud-down   "down %p"      ">" "Down N stack frames (numeric arg).")
+  (gud-def gud-print  "p %e"         "\C-p" "Evaluate ruby expression at point.")
+
+  (setq comint-prompt-regexp "^(rdb:-) ")
+  (setq paragraph-start comint-prompt-regexp)
+  (run-hooks 'rubydb-mode-hook)
+  )
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.6.1
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@@
+

@@ -1,0 +1,9883 @@
+head	1.93;
+access;
+symbols
+	v1_6_7:1.37.2.19
+	v1_6_6:1.37.2.15
+	v1_6_5:1.37.2.12
+	v1_6_4:1.37.2.9
+	v1_7_1:1.51
+	v1_6_4_preview4:1.37.2.8
+	v1_6_4_preview3:1.37.2.8
+	v1_6_4_preview2:1.37.2.7
+	v1_6_4_preview1:1.37.2.7
+	v1_6_3:1.37.2.5
+	ruby_m17n:1.37.0.4
+	ruby_1_6:1.37.0.2
+	v1_6_2:1.37
+	v1_6_1:1.29
+	v1_6_0:1.26
+	v1_4_6:1.2.2.3
+	v1_4_5:1.2.2.3
+	v1_4_4:1.2.2.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.10
+	v1_3_6_repack:1.1.1.3.2.8
+	v1_3_6:1.1.1.3.2.8
+	v1_3_5:1.1.1.3.2.8
+	v1_2_6repack:1.1.1.2.2.34
+	v1_3_4_990625:1.1.1.3.2.8
+	v1_3_4_990624:1.1.1.3.2.8
+	v1_2_6:1.1.1.2.2.34
+	v1_3_4_990611:1.1.1.3.2.8
+	v1_3_4_990531:1.1.1.3.2.6
+	v1_3_3_990518:1.1.1.3.2.5
+	v1_3_3_990513:1.1.1.3.2.4
+	v1_3_3_990507:1.1.1.3.2.4
+	v1_2_5:1.1.1.2.2.33
+	v1_2_4:1.1.1.2.2.33
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.2
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.2
+	v1_3_1_990210:1.1.1.3.2.2
+	v1_3_1_:1.1.1.3.2.2
+	v1_3_1_990209:1.1.1.3.2.2
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.2
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.33
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.33
+	v1_2_1repack:1.1.1.2.2.33
+	v1_2_1:1.1.1.2.2.33
+	v1_2_stable:1.1.1.2.2.33
+	v1_1d1:1.1.1.2.2.33.2.3
+	v1_1d0:1.1.1.2.2.33.2.3
+	v1_1c9_1:1.1.1.2.2.33
+	v1_1c9:1.1.1.2.2.33
+	v1_1c8:1.1.1.2.2.33
+	v1_1c7:1.1.1.2.2.33
+	v1_1c6:1.1.1.2.2.33
+	v1_1d-start:1.1.1.2.2.33.2.1
+	v1_1c5:1.1.1.2.2.33
+	v1_1dev:1.1.1.2.2.33.0.2
+	v1_1c4:1.1.1.2.2.33
+	v1_1c3:1.1.1.2.2.33
+	v1_1c2:1.1.1.2.2.32
+	v1_1c1:1.1.1.2.2.32
+	v1_1c0:1.1.1.2.2.32
+	v1_1b9_31:1.1.1.2.2.32
+	v1_1b9_30:1.1.1.2.2.31
+	v1_1b9_28:1.1.1.2.2.30
+	v1_1b9_27:1.1.1.2.2.30
+	v1_1b9_26:1.1.1.2.2.30
+	r1_1b9_25:1.1.1.2.2.29
+	r1_1b9_24:1.1.1.2.2.29
+	v1_1b9_23:1.1.1.2.2.27
+	v1_1b9_22:1.1.1.2.2.27
+	v1_1b9_20:1.1.1.2.2.26
+	v1_1b9_18:1.1.1.2.2.25
+	v1_1b9_16:1.1.1.2.2.23
+	v1_1b9_15:1.1.1.2.2.22
+	v1_1b9_13:1.1.1.2.2.20
+	v1_1b9_12:1.1.1.2.2.20
+	v1_1b9_11:1.1.1.2.2.18
+	v1_1b9_08:1.1.1.2.2.16
+	v1_1b9_07:1.1.1.2.2.16
+	r1_1b9:1.1.1.2.2.10
+	v1_1b8:1.1.1.2.2.8
+	v1_1b7:1.1.1.2.2.7
+	v1_1b6:1.1.1.2.2.3
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.93
+date	2002.10.30.08.04.32;	author matz;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2002.10.29.21.35.28;	author knu;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2002.10.23.10.17.29;	author nobu;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2002.10.17.07.26.59;	author matz;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2002.10.04.17.54.29;	author matz;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2002.10.02.06.02.14;	author matz;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2002.09.04.06.37.35;	author matz;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2002.08.27.08.31.06;	author matz;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2002.08.19.05.56.05;	author matz;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2002.08.12.07.39.08;	author matz;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2002.07.02.09.58.13;	author michal;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2002.06.28.14.39.59;	author matz;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2002.05.21.05.39.19;	author matz;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2002.04.24.04.54.14;	author matz;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2002.04.11.10.02.59;	author matz;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.03.08.07.03.03;	author matz;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.02.25.09.16.25;	author matz;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.02.04.08.07.01;	author matz;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.02.01.10.23.22;	author nobu;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.02.01.06.02.59;	author matz;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.01.28.08.44.37;	author matz;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.01.23.07.30.39;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.01.16.02.17.30;	author nobu;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.01.11.09.18.50;	author matz;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.01.10.20.18.39;	author nobu;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.01.04.14.14.34;	author matz;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2001.12.10.18.21.31;	author nobu;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2001.12.10.07.18.12;	author matz;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2001.11.29.15.57.25;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2001.10.16.03.27.06;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2001.10.10.08.21.13;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2001.10.02.04.31.19;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2001.08.20.04.29.56;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2001.07.24.09.07.33;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.07.18.05.55.20;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.07.14.15.17.18;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.06.05.07.50.59;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.05.16.09.05.50;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.05.07.09.26.24;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.03.28.08.43.25;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.03.26.08.57.10;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.03.21.03.41.41;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.03.13.05.45.09;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.02.15.06.00.55;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.01.29.05.10.42;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.01.18.08.43.07;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.01.15.07.00.54;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.01.09.16.55.50;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2000.12.25.06.29.04;	author matz;	state Exp;
+branches
+	1.37.2.1
+	1.37.4.1;
+next	1.36;
+
+1.36
+date	2000.12.08.07.10.25;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2000.11.14.07.10.22;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2000.11.13.05.39.34;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.10.16.09.13.19;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.10.13.09.01.57;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.10.10.07.03.20;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.10.05.09.57.01;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.09.26.07.07.12;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.09.15.06.00.26;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.09.12.05.37.24;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.08.31.05.29.45;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.08.09.04.32.17;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.07.17.09.38.00;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.07.15.00.33.12;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.07.06.07.21.12;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.06.29.07.41.54;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.06.22.08.29.46;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.05.25.05.55.04;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.05.24.04.34.03;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.05.09.04.52.59;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.01.09.41.24;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.04.10.05.44.15;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.03.23.08.37.28;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.03.09.08.59.54;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.03.08.06.23.14;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.07.08.37.41;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.29.08.05.26;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.23.05.23.07;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.01.03.12.08;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.18.06.09.03;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.37.07;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.12.14.06.49.46;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.06.09.03.55;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.17.07.30.33;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.07;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.13;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.55;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.25.06.39.08;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.03.24.08.52.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.05.17.09.54.03;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.05.25.08.26.00;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.06.09.09.21.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.06.11.06.29.56;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.07.30.09.29.08;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.08.06.06.48.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.22.10.07.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.01.23.10.01.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.01.27.05.23.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.01.29.08.18.02;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.02.03.10.02.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.02.09.10.56.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.02.18.01.56.40;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.02.23.05.36.38;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.02.26.08.27.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.03.05.06.37.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.03.11.07.32.59;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.03.13.09.04.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.03.28.10.57.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.04.02.10.03.50;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.04.07.08.34.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.04.08.08.12.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.04.16.07.42.44;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.04.20.05.55.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.04.20.06.20.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	98.04.22.08.57.32;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	98.04.24.09.33.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	98.04.27.10.03.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	98.04.30.07.41.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	98.05.06.03.08.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.26;
+
+1.1.1.2.2.26
+date	98.05.13.07.26.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.27;
+
+1.1.1.2.2.27
+date	98.05.18.04.56.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.28;
+
+1.1.1.2.2.28
+date	98.05.29.09.32.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29;
+
+1.1.1.2.2.29
+date	98.06.02.10.05.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.30;
+
+1.1.1.2.2.30
+date	98.06.16.04.23.38;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.31;
+
+1.1.1.2.2.31
+date	98.07.03.07.06.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.32;
+
+1.1.1.2.2.32
+date	98.07.13.04.37.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.33;
+
+1.1.1.2.2.33
+date	98.08.27.03.55.21;	author matz;	state Exp;
+branches
+	1.1.1.2.2.33.2.1;
+next	1.1.1.2.2.34;
+
+1.1.1.2.2.34
+date	99.06.21.06.31.04;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.33.2.1
+date	98.09.08.07.08.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.33.2.2;
+
+1.1.1.2.2.33.2.2
+date	98.11.25.03.31.14;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.33.2.3;
+
+1.1.1.2.2.33.2.3
+date	98.12.16.07.30.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.24.06;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.03.02.03.51.41;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.03.23.04.14.19;	author matz;	state Exp;
+branches;
+next	;
+
+1.37.2.1
+date	2001.01.09.16.58.18;	author matz;	state Exp;
+branches;
+next	1.37.2.2;
+
+1.37.2.2
+date	2001.01.10.05.05.09;	author matz;	state Exp;
+branches;
+next	1.37.2.3;
+
+1.37.2.3
+date	2001.01.15.07.33.12;	author matz;	state Exp;
+branches;
+next	1.37.2.4;
+
+1.37.2.4
+date	2001.01.15.13.20.21;	author eban;	state Exp;
+branches;
+next	1.37.2.5;
+
+1.37.2.5
+date	2001.01.23.09.54.35;	author matz;	state Exp;
+branches;
+next	1.37.2.6;
+
+1.37.2.6
+date	2001.03.28.08.44.37;	author matz;	state Exp;
+branches;
+next	1.37.2.7;
+
+1.37.2.7
+date	2001.04.06.05.42.40;	author matz;	state Exp;
+branches;
+next	1.37.2.8;
+
+1.37.2.8
+date	2001.04.24.06.44.13;	author matz;	state Exp;
+branches;
+next	1.37.2.9;
+
+1.37.2.9
+date	2001.06.01.06.46.09;	author matz;	state Exp;
+branches;
+next	1.37.2.10;
+
+1.37.2.10
+date	2001.07.13.05.50.04;	author matz;	state Exp;
+branches;
+next	1.37.2.11;
+
+1.37.2.11
+date	2001.07.27.08.54.49;	author matz;	state Exp;
+branches;
+next	1.37.2.12;
+
+1.37.2.12
+date	2001.08.11.14.10.23;	author nobu;	state Exp;
+branches;
+next	1.37.2.13;
+
+1.37.2.13
+date	2001.10.02.04.25.52;	author matz;	state Exp;
+branches;
+next	1.37.2.14;
+
+1.37.2.14
+date	2001.12.04.04.53.31;	author matz;	state Exp;
+branches;
+next	1.37.2.15;
+
+1.37.2.15
+date	2001.12.18.08.40.31;	author matz;	state Exp;
+branches;
+next	1.37.2.16;
+
+1.37.2.16
+date	2002.01.07.05.40.10;	author matz;	state Exp;
+branches;
+next	1.37.2.17;
+
+1.37.2.17
+date	2002.01.10.23.38.57;	author nobu;	state Exp;
+branches;
+next	1.37.2.18;
+
+1.37.2.18
+date	2002.01.16.02.20.25;	author nobu;	state Exp;
+branches;
+next	1.37.2.19;
+
+1.37.2.19
+date	2002.02.04.08.09.10;	author matz;	state Exp;
+branches;
+next	1.37.2.20;
+
+1.37.2.20
+date	2002.05.01.09.37.58;	author matz;	state Exp;
+branches;
+next	1.37.2.21;
+
+1.37.2.21
+date	2002.09.25.07.07.37;	author matz;	state Exp;
+branches;
+next	1.37.2.22;
+
+1.37.2.22
+date	2002.10.26.15.57.23;	author knu;	state Exp;
+branches;
+next	;
+
+1.37.4.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.93
+log
+@* eval.c (rb_mod_public_method_defined, etc.): new methods:
+  public_method_defined?, private_method_defined?,
+  protected_method_defined?
+
+* object.c (rb_obj_public_methods): new method
+  Object#public_methods.
+
+* class.c (ins_methods_i): Object#methods should list both public
+  and protected methods.
+
+* class.c (rb_class_public_instance_methods): new method
+  Module#public_instance_methods.
+@
+text
+@/**********************************************************************
+
+  object.c -
+
+  $Author: knu $
+  $Date: 2002/10/29 21:35:28 $
+  created at: Thu Jul 15 12:01:24 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "st.h"
+#include "util.h"
+#include <stdio.h>
+#include <errno.h>
+#include <ctype.h>
+#include <math.h>
+
+VALUE rb_mKernel;
+VALUE rb_cObject;
+VALUE rb_cModule;
+VALUE rb_cClass;
+VALUE rb_cData;
+
+VALUE rb_cNilClass;
+VALUE rb_cTrueClass;
+VALUE rb_cFalseClass;
+VALUE rb_cSymbol;
+
+static ID eq, eql;
+static ID inspect;
+static ID become;
+static ID alloc;
+
+VALUE
+rb_equal(obj1, obj2)
+    VALUE obj1, obj2;
+{
+    VALUE result;
+
+    if (obj1 == obj2) return Qtrue;
+    result = rb_funcall(obj1, eq, 1, obj2);
+    if (RTEST(result)) return Qtrue;
+    return Qfalse;
+}
+
+int
+rb_eql(obj1, obj2)
+    VALUE obj1, obj2;
+{
+    return RTEST(rb_funcall(obj1, eql, 1, obj2));
+}
+
+static VALUE
+rb_obj_equal(obj1, obj2)
+    VALUE obj1, obj2;
+{
+    if (obj1 == obj2) return Qtrue;
+    return Qfalse;
+}
+
+VALUE
+rb_obj_id(obj)
+    VALUE obj;
+{
+    if (SPECIAL_CONST_P(obj)) {
+	return LONG2NUM((long)obj);
+    }
+    return (VALUE)((long)obj|FIXNUM_FLAG);
+}
+
+VALUE
+rb_class_real(cl)
+    VALUE cl;
+{
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+	cl = RCLASS(cl)->super;
+    }
+    return cl;
+}
+
+VALUE
+rb_obj_type(obj)
+    VALUE obj;
+{
+    rb_warn("Object#type is deprecated; use Object#class");
+    return rb_class_real(CLASS_OF(obj));
+}
+
+VALUE
+rb_obj_class(obj)
+    VALUE obj;
+{
+    return rb_class_real(CLASS_OF(obj));
+}
+
+static void
+copy_object(dest, obj)
+    VALUE dest, obj;
+{
+    if (OBJ_FROZEN(dest)) {
+        rb_raise(rb_eTypeError, "[bug] frozen object (%s) allocated", rb_class2name(CLASS_OF(dest)));
+    }
+    RBASIC(dest)->flags &= ~(T_MASK|FL_EXIVAR);
+    RBASIC(dest)->flags |= RBASIC(obj)->flags & (T_MASK|FL_EXIVAR|FL_TAINT);
+    rb_funcall(dest, become, 1, obj);
+    if (FL_TEST(obj, FL_EXIVAR)) {
+	rb_copy_generic_ivar(dest, obj);
+    }
+    switch (TYPE(obj)) {
+      case T_OBJECT:
+      case T_CLASS:
+      case T_MODULE:
+	if (ROBJECT(dest)->iv_tbl) {
+	    st_free_table(ROBJECT(dest)->iv_tbl);
+	    ROBJECT(dest)->iv_tbl = 0;
+	}
+	if (ROBJECT(obj)->iv_tbl) {
+	    ROBJECT(dest)->iv_tbl = st_copy(ROBJECT(obj)->iv_tbl);
+	}
+    }
+}
+
+VALUE
+rb_obj_clone(obj)
+    VALUE obj;
+{
+    VALUE clone;
+
+    if (rb_special_const_p(obj)) {
+        rb_raise(rb_eTypeError, "can't clone %s", rb_class2name(CLASS_OF(obj)));
+    }
+    clone = rb_obj_alloc(rb_obj_class(obj));
+    copy_object(clone, obj);
+    RBASIC(clone)->klass = rb_singleton_class_clone(obj);
+    RBASIC(clone)->flags = RBASIC(obj)->flags | FL_TEST(clone, FL_TAINT);
+
+    return clone;
+}
+
+VALUE
+rb_obj_dup(obj)
+    VALUE obj;
+{
+    VALUE dup;
+
+    if (rb_special_const_p(obj)) {
+        rb_raise(rb_eTypeError, "can't dup %s", rb_class2name(CLASS_OF(obj)));
+    }
+    dup = rb_obj_alloc(rb_obj_class(obj));
+    copy_object(dup, obj);
+
+    return dup;
+}
+
+VALUE
+rb_obj_become(obj, orig)
+    VALUE obj, orig;
+{
+    if (obj == orig) return obj;
+    rb_check_frozen(obj);
+    if (TYPE(obj) != TYPE(orig) || rb_obj_class(obj) != rb_obj_class(orig)) {
+	rb_raise(rb_eTypeError, "become should take same class object");
+    }
+    return obj;
+}
+
+static VALUE
+rb_any_to_a(obj)
+    VALUE obj;
+{
+    rb_warn("default `to_a' will be obsolete");
+    return rb_ary_new3(1, obj);
+}
+
+VALUE
+rb_any_to_s(obj)
+    VALUE obj;
+{
+    char *cname = rb_class2name(CLASS_OF(obj));
+    VALUE str;
+
+    str = rb_str_new(0, strlen(cname)+6+16+1); /* 6:tags 16:addr 1:nul */
+    sprintf(RSTRING(str)->ptr, "#<%s:0x%lx>", cname, obj);
+    RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+    if (OBJ_TAINTED(obj)) OBJ_TAINT(str);
+
+    return str;
+}
+
+VALUE
+rb_inspect(obj)
+    VALUE obj;
+{
+    return rb_obj_as_string(rb_funcall(obj, inspect, 0, 0));
+}
+
+static int
+inspect_i(id, value, str)
+    ID id;
+    VALUE value;
+    VALUE str;
+{
+    VALUE str2;
+    char *ivname;
+
+    /* need not to show internal data */
+    if (CLASS_OF(value) == 0) return ST_CONTINUE;
+    if (!rb_is_instance_id(id)) return ST_CONTINUE;
+    if (RSTRING(str)->ptr[0] == '-') { /* first element */
+	RSTRING(str)->ptr[0] = '#';
+	rb_str_cat2(str, " ");
+    }
+    else {
+	rb_str_cat2(str, ", ");
+    }
+    ivname = rb_id2name(id);
+    rb_str_cat2(str, ivname);
+    rb_str_cat2(str, "=");
+    str2 = rb_inspect(value);
+    rb_str_append(str, str2);
+    OBJ_INFECT(str, str2);
+
+    return ST_CONTINUE;
+}
+
+static VALUE
+inspect_obj(obj, str)
+    VALUE obj, str;
+{
+    st_foreach(ROBJECT(obj)->iv_tbl, inspect_i, str);
+    rb_str_cat2(str, ">");
+    RSTRING(str)->ptr[0] = '#';
+    OBJ_INFECT(str, obj);
+
+    return str;
+}
+
+static VALUE
+rb_obj_inspect(obj)
+    VALUE obj;
+{
+    if (TYPE(obj) == T_OBJECT
+	&& ROBJECT(obj)->iv_tbl
+	&& ROBJECT(obj)->iv_tbl->num_entries > 0) {
+	VALUE str;
+	char *c;
+
+	c = rb_class2name(CLASS_OF(obj));
+	if (rb_inspecting_p(obj)) {
+	    str = rb_str_new(0, strlen(c)+10+16+1); /* 10:tags 16:addr 1:nul */
+	    sprintf(RSTRING(str)->ptr, "#<%s:0x%lx ...>", c, obj);
+	    RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+	    return str;
+	}
+	str = rb_str_new(0, strlen(c)+6+16+1); /* 6:tags 16:addr 1:nul */
+	sprintf(RSTRING(str)->ptr, "-<%s:0x%lx", c, obj);
+	RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+	return rb_protect_inspect(inspect_obj, obj, str);
+    }
+    return rb_funcall(obj, rb_intern("to_s"), 0, 0);
+}
+
+VALUE
+rb_obj_is_instance_of(obj, c)
+    VALUE obj, c;
+{
+    switch (TYPE(c)) {
+      case T_MODULE:
+      case T_CLASS:
+      case T_ICLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "class or module required");
+    }
+
+    if (rb_obj_class(obj) == c) return Qtrue;
+    return Qfalse;
+}
+
+VALUE
+rb_obj_is_kind_of(obj, c)
+    VALUE obj, c;
+{
+    VALUE cl = CLASS_OF(obj);
+
+    switch (TYPE(c)) {
+      case T_MODULE:
+      case T_CLASS:
+      case T_ICLASS:
+	break;
+
+      default:
+	rb_raise(rb_eTypeError, "class or module required");
+    }
+
+    while (cl) {
+	if (cl == c || RCLASS(cl)->m_tbl == RCLASS(c)->m_tbl)
+	    return Qtrue;
+	cl = RCLASS(cl)->super;
+    }
+    return Qfalse;
+}
+
+static VALUE
+rb_obj_dummy()
+{
+    return Qnil;
+}
+
+VALUE
+rb_obj_tainted(obj)
+    VALUE obj;
+{
+    if (OBJ_TAINTED(obj))
+	return Qtrue;
+    return Qfalse;
+}
+
+VALUE
+rb_obj_taint(obj)
+    VALUE obj;
+{
+    rb_secure(4);
+    if (!OBJ_TAINTED(obj)) {
+	if (OBJ_FROZEN(obj)) {
+	    rb_error_frozen("object");
+	}
+	OBJ_TAINT(obj);
+    }
+    return obj;
+}
+
+VALUE
+rb_obj_untaint(obj)
+    VALUE obj;
+{
+    rb_secure(3);
+    if (OBJ_TAINTED(obj)) {
+	if (OBJ_FROZEN(obj)) {
+	    rb_error_frozen("object");
+	}
+	FL_UNSET(obj, FL_TAINT);
+    }
+    return obj;
+}
+
+VALUE
+rb_obj_freeze(obj)
+    VALUE obj;
+{
+    if (!OBJ_FROZEN(obj)) {
+	if (rb_safe_level() >= 4 && !OBJ_TAINTED(obj)) {
+	    rb_raise(rb_eSecurityError, "Insecure: can't freeze object");
+	}
+	OBJ_FREEZE(obj);
+    }
+    return obj;
+}
+
+static VALUE
+rb_obj_frozen_p(obj)
+    VALUE obj;
+{
+    if (OBJ_FROZEN(obj)) return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+nil_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(0);
+}
+
+static VALUE
+nil_to_f(obj)
+    VALUE obj;
+{
+    return rb_float_new(0.0);
+}
+
+static VALUE
+nil_to_s(obj)
+    VALUE obj;
+{
+    return rb_str_new2("");
+}
+
+static VALUE
+nil_to_a(obj)
+    VALUE obj;
+{
+    return rb_ary_new2(0);
+}
+
+static VALUE
+nil_inspect(obj)
+    VALUE obj;
+{
+    return rb_str_new2("nil");
+}
+
+#ifdef NIL_PLUS
+static VALUE
+nil_plus(x, y)
+    VALUE x, y;
+{
+    switch (TYPE(y)) {
+      case T_NIL:
+      case T_FIXNUM:
+      case T_FLOAT:
+      case T_BIGNUM:
+      case T_STRING:
+      case T_ARRAY:
+	return y;
+      default:
+	rb_raise(rb_eTypeError, "tried to add %s(%s) to nil",
+		 RSTRING(rb_inspect(y))->ptr,
+		 rb_class2name(CLASS_OF(y)));
+    }
+    /* not reached */
+}
+#endif
+
+static VALUE
+main_to_s(obj)
+    VALUE obj;
+{
+    return rb_str_new2("main");
+}
+
+static VALUE
+true_to_s(obj)
+    VALUE obj;
+{
+    return rb_str_new2("true");
+}
+
+static VALUE
+true_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+}
+
+static VALUE
+true_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return Qtrue;
+}
+
+static VALUE
+true_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qfalse:Qtrue;
+}
+
+static VALUE
+false_to_s(obj)
+    VALUE obj;
+{
+    return rb_str_new2("false");
+}
+
+static VALUE
+false_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return Qfalse;
+}
+
+static VALUE
+false_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+}
+
+static VALUE
+false_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+}
+
+static VALUE
+rb_true(obj)
+    VALUE obj;
+{
+    return Qtrue;
+}
+
+static VALUE
+rb_false(obj)
+    VALUE obj;
+{
+    return Qfalse;
+}
+
+static VALUE
+sym_to_i(sym)
+    VALUE sym;
+{
+    ID id = SYM2ID(sym);
+
+    return LONG2FIX(id);
+}
+
+static VALUE
+sym_inspect(sym)
+    VALUE sym;
+{
+    VALUE str;
+    char *name;
+    ID id = SYM2ID(sym);
+
+    name = rb_id2name(id);
+    str = rb_str_new(0, strlen(name)+1);
+    RSTRING(str)->ptr[0] = ':';
+    strcpy(RSTRING(str)->ptr+1, name);
+    if (rb_is_junk_id(id)) {
+	str = rb_str_dump(str);
+	strncpy(RSTRING(str)->ptr, ":\"", 2);
+    }
+    return str;
+}
+
+static VALUE
+sym_to_s(sym)
+    VALUE sym;
+{
+    return rb_str_new2(rb_id2name(SYM2ID(sym)));
+}
+
+static VALUE
+sym_intern(sym)
+    VALUE sym;
+{
+    return sym;
+}
+
+static VALUE
+rb_mod_to_s(klass)
+    VALUE klass;
+
+{
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	VALUE s = rb_str_new2("#<");
+	VALUE v = rb_iv_get(klass, "__attached__");
+
+	rb_str_cat2(s, "Class:");
+	switch (TYPE(v)) {
+	  case T_CLASS: case T_MODULE:
+	    rb_str_append(s, rb_inspect(v));
+	    break;
+	  default:
+	    rb_str_append(s, rb_any_to_s(v));
+	    break;
+	}
+	rb_str_cat2(s, ">");
+
+	return s;
+    }
+    return rb_str_dup(rb_class_path(klass));
+}
+
+static VALUE
+rb_mod_eqq(mod, arg)
+    VALUE mod, arg;
+{
+    return rb_obj_is_kind_of(arg, mod);
+}
+
+static VALUE
+rb_mod_le(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return Qtrue;
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "compared with non class/module");
+    }
+
+    while (mod) {
+	if (RCLASS(mod)->m_tbl == RCLASS(arg)->m_tbl)
+	    return Qtrue;
+	mod = RCLASS(mod)->super;
+    }
+    return Qfalse;
+}
+
+static VALUE
+rb_mod_lt(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return Qfalse;
+    return rb_mod_le(mod, arg);
+}
+
+static VALUE
+rb_mod_ge(mod, arg)
+    VALUE mod, arg;
+{
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "compared with non class/module");
+    }
+
+    return rb_mod_le(arg, mod);
+}
+
+static VALUE
+rb_mod_gt(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return Qfalse;
+    return rb_mod_ge(mod, arg);
+}
+
+static VALUE
+rb_mod_cmp(mod, arg)
+    VALUE mod, arg;
+{
+    VALUE start = mod;
+
+    if (mod == arg) return INT2FIX(0);
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	rb_raise(rb_eTypeError, "<=> requires Class or Module (%s given)",
+		 rb_class2name(CLASS_OF(arg)));
+	break;
+    }
+
+    if (rb_mod_le(mod, arg)) {
+	return INT2FIX(-1);
+    }
+
+    while (arg) {
+	if (RCLASS(arg)->m_tbl == RCLASS(start)->m_tbl)
+	    return INT2FIX(1);
+	arg = RCLASS(arg)->super;
+    }
+    return Qnil;
+}
+
+static VALUE
+rb_mod_initialize(module)
+    VALUE module;
+{
+    if (rb_block_given_p()) {
+	rb_mod_module_eval(0, 0, module);
+    }
+    return Qnil;
+}
+
+static VALUE
+rb_class_initialize(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    return rb_mod_initialize(klass);
+}
+
+static VALUE
+rb_module_s_alloc(klass)
+    VALUE klass;
+{
+    VALUE mod = rb_module_new();
+
+    RBASIC(mod)->klass = klass;
+    return mod;
+}
+
+static VALUE
+rb_class_s_new(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE super, klass;
+
+    if (rb_scan_args(argc, argv, "01", &super) == 0) {
+	super = rb_cObject;
+    }
+    klass = rb_class_new(super);
+    rb_make_metaclass(klass, RBASIC(super)->klass);
+    rb_obj_call_init(klass, argc, argv);
+    rb_class_inherited(super, klass);
+
+    return klass;
+}
+
+VALUE
+rb_obj_alloc(klass)
+    VALUE klass;
+{
+    VALUE obj = rb_funcall(klass, alloc, 0, 0);
+
+    if (rb_obj_class(obj) != rb_class_real(klass)) {
+	rb_raise(rb_eTypeError, "wrong instance allocation");
+    }
+    return obj;
+}
+
+static VALUE
+rb_class_allocate_instance(klass)
+    VALUE klass;
+{
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	rb_raise(rb_eTypeError, "can't create instance of virtual class");
+    }
+    if (rb_frame_last_func() != alloc) {
+	return rb_obj_alloc(klass);
+    }
+    else {
+	NEWOBJ(obj, struct RObject);
+	OBJSETUP(obj, klass, T_OBJECT);
+	return (VALUE)obj;
+    }
+}
+
+VALUE
+rb_class_new_instance(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE obj;
+
+    obj = rb_obj_alloc(klass);
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}
+
+static VALUE
+rb_class_superclass(klass)
+    VALUE klass;
+{
+    VALUE super = RCLASS(klass)->super;
+
+    while (TYPE(super) == T_ICLASS) {
+	super = RCLASS(super)->super;
+    }
+    if (!super) {
+	return Qnil;
+    }
+    return super;
+}
+
+ID
+rb_to_id(name)
+    VALUE name;
+{
+    ID id;
+
+    switch (TYPE(name)) {
+      case T_STRING:
+	return rb_intern(RSTRING(name)->ptr);
+      case T_FIXNUM:
+	id = FIX2LONG(name);
+	if (!rb_id2name(id)) {
+	    rb_raise(rb_eArgError, "%ld is not a symbol", id);
+	}
+	break;
+      case T_SYMBOL:
+	id = SYM2ID(name);
+	break;
+      default:
+	rb_raise(rb_eTypeError, "%s is not a symbol", RSTRING(rb_inspect(name))->ptr);
+    }
+    return id;
+}
+
+static VALUE
+rb_mod_attr(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE name, pub;
+
+    rb_scan_args(argc, argv, "11", &name, &pub);
+    rb_attr(klass, rb_to_id(name), 1, RTEST(pub), Qtrue);
+    return Qnil;
+}
+
+static VALUE
+rb_mod_attr_reader(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_attr(klass, rb_to_id(argv[i]), 1, 0, Qtrue);
+    }
+    return Qnil;
+}
+
+static VALUE
+rb_mod_attr_writer(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_attr(klass, rb_to_id(argv[i]), 0, 1, Qtrue);
+    }
+    return Qnil;
+}
+
+static VALUE
+rb_mod_attr_accessor(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_attr(klass, rb_to_id(argv[i]), 1, 1, Qtrue);
+    }
+    return Qnil;
+}
+
+static VALUE
+rb_mod_const_get(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_name_error(id, "wrong constant name %s", rb_id2name(id));
+    }
+    return rb_const_get(mod, id);
+}
+
+static VALUE
+rb_mod_const_set(mod, name, value)
+    VALUE mod, name, value;
+{
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_name_error(id, "wrong constant name %s", rb_id2name(id));
+    }
+    rb_const_set(mod, id, value);
+    return value;
+}
+
+static VALUE
+rb_mod_const_defined(mod, name)
+    VALUE mod, name;
+{
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_name_error(id, "wrong constant name %s", rb_id2name(id));
+    }
+    return rb_const_defined_at(mod, id);
+}
+
+static VALUE
+rb_obj_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = Qtrue;
+    return rb_class_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+static VALUE
+rb_obj_protected_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = Qtrue;
+    return rb_class_protected_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+static VALUE
+rb_obj_private_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = Qtrue;
+    return rb_class_private_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+static VALUE
+rb_obj_public_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = Qtrue;
+    return rb_class_public_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+static VALUE
+convert_type(val, tname, method, raise)
+    VALUE val;
+    const char *tname, *method;
+    int raise;
+{
+    ID m;
+
+    m = rb_intern(method);
+    if (!rb_respond_to(val, m)) {
+	if (raise) {
+	    rb_raise(rb_eTypeError, "cannot convert %s into %s",
+		     NIL_P(val) ? "nil" :
+		     val == Qtrue ? "true" :
+		     val == Qfalse ? "false" :
+		     rb_class2name(CLASS_OF(val)), 
+		     tname);
+	}
+	else {
+	    return Qnil;
+	}
+    }
+    return rb_funcall(val, m, 0);
+}
+
+VALUE
+rb_convert_type(val, type, tname, method)
+    VALUE val;
+    int type;
+    const char *tname, *method;
+{
+    VALUE v;
+
+    if (TYPE(val) == type) return val;
+    v = convert_type(val, tname, method, Qtrue);
+    if (TYPE(v) != type) {
+	rb_raise(rb_eTypeError, "%s#%s should return %s",
+		 rb_class2name(CLASS_OF(val)), method, tname);
+    }
+    return v;
+}
+
+VALUE
+rb_check_convert_type(val, type, tname, method)
+    VALUE val;
+    int type;
+    const char *tname, *method;
+{
+    VALUE v;
+
+    /* always convert T_DATA */
+    if (TYPE(val) == type && type != T_DATA) return val;
+    v = convert_type(val, tname, method, Qfalse);
+    if (NIL_P(v)) return Qnil;
+    if (TYPE(v) != type) {
+	rb_raise(rb_eTypeError, "%s#%s should return %s",
+		 rb_class2name(CLASS_OF(val)), method, tname);
+    }
+    return v;
+}
+
+
+static VALUE
+rb_to_integer(val, method)
+    VALUE val;
+    char *method;
+{
+    VALUE v = convert_type(val, "Integer", method, Qtrue);
+    if (!rb_obj_is_kind_of(v, rb_cInteger)) {
+	rb_raise(rb_eTypeError, "%s#%s should return Integer",
+		 rb_class2name(CLASS_OF(val)), method);
+    }
+    return v;
+}
+
+VALUE
+rb_to_int(val)
+    VALUE val;
+{
+    return rb_to_integer(val, "to_int");
+}
+
+VALUE
+rb_Integer(val)
+    VALUE val;
+{
+    switch (TYPE(val)) {
+      case T_FLOAT:
+	if (RFLOAT(val)->value <= (double)FIXNUM_MAX
+	    && RFLOAT(val)->value >= (double)FIXNUM_MIN) {
+	    break;
+	}
+	return rb_dbl2big(RFLOAT(val)->value);
+
+      case T_FIXNUM:
+      case T_BIGNUM:
+	return val;
+
+      case T_STRING:
+	return rb_str_to_inum(val, 0, Qtrue);
+
+      default:
+	break;
+    }
+    if (rb_respond_to(val, rb_intern("to_int"))) {
+	return rb_to_integer(val, "to_int");
+    }
+    return rb_to_integer(val, "to_i");
+}
+
+static VALUE
+rb_f_integer(obj, arg)
+    VALUE obj, arg;
+{
+    return rb_Integer(arg);
+}
+
+double
+rb_cstr_to_dbl(p, badcheck)
+    const char *p;
+    int badcheck;
+{
+    const char *q;
+    char *end;
+    double d;
+
+    if (!p) return 0.0;
+    q = p;
+    if (badcheck) {
+	while (ISSPACE(*p)) p++;
+    }
+    else {
+	while (ISSPACE(*p) || *p == '_') p++;
+    }
+    d = strtod(p, &end);
+    if (p == end) {
+	if (badcheck) {
+	  bad:
+	    rb_invalid_str(q, "Float()");
+	}
+	return d;
+    }
+    if (*end) {
+	char *buf = ALLOCA_N(char, strlen(p)+1);
+	char *n = buf;
+
+	while (p < end) *n++ = *p++;
+	while (*p) {
+	    if (*p == '_') {
+		/* remove underscores between digits */
+		if (badcheck) {
+		    if (n == buf || !ISDIGIT(n[-1])) goto bad;
+		    ++p;
+		    if (!ISDIGIT(*p)) goto bad;
+		}
+		else {
+		    while (*++p == '_');
+		    continue;
+		}
+	    }
+	    *n++ = *p++;
+	}
+	*n = '\0';
+	p = buf;
+	d = strtod(p, &end);
+	if (badcheck) {
+	    if (p == end) goto bad;
+	    while (*end && ISSPACE(*end)) end++;
+	    if (*end) goto bad;
+	}
+    }
+    if (errno == ERANGE) {
+	errno = 0;
+	rb_raise(rb_eArgError, "Float %s out of range", q);
+    }
+    return d;
+}
+
+double
+rb_str_to_dbl(str, badcheck)
+    VALUE str;
+    int badcheck;
+{
+    char *s;
+    long len;
+
+    StringValue(str);
+    s = RSTRING(str)->ptr;
+    len = RSTRING(str)->len;
+    if (s) {
+	if (s[len]) {		/* no sentinel somehow */
+	    char *p = ALLOCA_N(char, len+1);
+
+	    MEMCPY(p, s, char, len);
+	    p[len] = '\0';
+	    s = p;
+	}
+	if (badcheck && len != strlen(s)) {
+	    rb_raise(rb_eArgError, "string for Float contains null byte");
+	}
+    }
+    return rb_cstr_to_dbl(s, badcheck);
+}
+
+VALUE
+rb_Float(val)
+    VALUE val;
+{
+    switch (TYPE(val)) {
+      case T_FIXNUM:
+	return rb_float_new((double)FIX2LONG(val));
+
+      case T_FLOAT:
+	return val;
+
+      case T_BIGNUM:
+	return rb_float_new(rb_big2dbl(val));
+
+      case T_STRING:
+	return rb_float_new(rb_str_to_dbl(val, Qtrue));
+
+      case T_NIL:
+	rb_raise(rb_eTypeError, "cannot convert nil into Float");
+	break;
+
+      default:
+      {
+	  VALUE f = rb_convert_type(val, T_FLOAT, "Float", "to_f");
+	  if (isnan(RFLOAT(f)->value)) {
+	      rb_raise(rb_eArgError, "invalid value for Float()");
+	  }
+	  return f;
+      }
+    }
+}
+
+static VALUE
+rb_f_float(obj, arg)
+    VALUE obj, arg;
+{
+    return rb_Float(arg);
+}
+
+double
+rb_num2dbl(val)
+    VALUE val;
+{
+    switch (TYPE(val)) {
+      case T_FLOAT:
+	return RFLOAT(val)->value;
+
+      case T_STRING:
+	rb_raise(rb_eTypeError, "no implicit conversion to float from string");
+	break;
+
+      case T_NIL:
+	rb_raise(rb_eTypeError, "no implicit conversion to float from nil");
+	break;
+
+      default:
+	break;
+    }
+
+    return RFLOAT(rb_Float(val))->value;
+}
+
+char*
+rb_str2cstr(str, len)
+    VALUE str;
+    long *len;
+{
+    StringValue(str);
+    if (len) *len = RSTRING(str)->len;
+    else if (RTEST(ruby_verbose) && RSTRING(str)->len != strlen(RSTRING(str)->ptr)) {
+	rb_warn("string contains \\0 character");
+    }
+    return RSTRING(str)->ptr;
+}
+
+VALUE
+rb_String(val)
+    VALUE val;
+{
+    return rb_convert_type(val, T_STRING, "String", "to_s");
+}
+
+static VALUE
+rb_f_string(obj, arg)
+    VALUE obj, arg;
+{
+    return rb_String(arg);
+}
+
+VALUE
+rb_Array(val)
+    VALUE val;
+{
+    ID to_ary;
+
+    if (NIL_P(val)) {
+	rb_raise(rb_eTypeError, "cannot convert nil into Array");
+    }
+    if (TYPE(val) == T_ARRAY) return val;
+    to_ary = rb_intern("to_ary");
+    if (rb_respond_to(val, to_ary)) {
+	val = rb_funcall(val, to_ary, 0);
+    }
+    else {
+	val = rb_funcall(val, rb_intern("to_a"), 0);
+    }
+    if (TYPE(val) != T_ARRAY) {
+	rb_raise(rb_eTypeError, "`to_a' did not return Array");
+    }
+    return val;
+}
+
+static VALUE
+rb_f_array(obj, arg)
+    VALUE obj, arg;
+{
+    return rb_Array(arg);
+}
+
+static VALUE
+boot_defclass(name, super)
+    char *name;
+    VALUE super;
+{
+    extern st_table *rb_class_tbl;
+    VALUE obj = rb_class_boot(super);
+    ID id = rb_intern(name);
+
+    rb_name_class(obj, id);
+    st_add_direct(rb_class_tbl, id, obj);
+    return obj;
+}
+
+VALUE ruby_top_self;
+
+void
+Init_Object()
+{
+    VALUE metaclass;
+
+    alloc = rb_intern("allocate");
+
+    rb_cObject = boot_defclass("Object", 0);
+    rb_cModule = boot_defclass("Module", rb_cObject);
+    rb_cClass =  boot_defclass("Class",  rb_cModule);
+
+    metaclass = rb_make_metaclass(rb_cObject, rb_cClass);
+    metaclass = rb_make_metaclass(rb_cModule, metaclass);
+    metaclass = rb_make_metaclass(rb_cClass, metaclass);
+
+    rb_mKernel = rb_define_module("Kernel");
+    rb_include_module(rb_cObject, rb_mKernel);
+    rb_define_private_method(rb_cObject, "initialize", rb_obj_dummy, 0);
+    rb_define_private_method(rb_cClass, "inherited", rb_obj_dummy, 1);
+    rb_define_private_method(rb_cModule, "included", rb_obj_dummy, 1);
+    rb_define_private_method(rb_cModule, "method_added", rb_obj_dummy, 1);
+    rb_define_private_method(rb_cModule, "method_removed", rb_obj_dummy, 1);
+    rb_define_private_method(rb_cModule, "method_undefined", rb_obj_dummy, 1);
+
+    /*
+     * Ruby's Class Hierarchy Chart
+     *
+     *                           +------------------+
+     *                           |                  |
+     *             Object---->(Object)              |
+     *              ^  ^        ^  ^                |
+     *              |  |        |  |                |
+     *              |  |  +-----+  +---------+      |
+     *              |  |  |                  |      |
+     *              |  +-----------+         |      |
+     *              |     |        |         |      |
+     *       +------+     |     Module--->(Module)  |
+     *       |            |        ^         ^      |
+     *  OtherClass-->(OtherClass)  |         |      |
+     *                             |         |      |
+     *                           Class---->(Class)  |
+     *                             ^                |
+     *                             |                |
+     *                             +----------------+
+     *
+     *   + All metaclasses are instances of the class `Class'.
+     */
+
+    rb_define_method(rb_mKernel, "nil?", rb_false, 0);
+    rb_define_method(rb_mKernel, "==", rb_obj_equal, 1);
+    rb_define_method(rb_mKernel, "equal?", rb_obj_equal, 1);
+    rb_define_method(rb_mKernel, "===", rb_obj_equal, 1); 
+    rb_define_method(rb_mKernel, "=~", rb_false, 1);
+
+    rb_define_method(rb_mKernel, "eql?", rb_obj_equal, 1);
+
+    rb_define_method(rb_mKernel, "hash", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "id", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "__id__", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "type", rb_obj_type, 0);
+    rb_define_method(rb_mKernel, "class", rb_obj_class, 0);
+
+    rb_define_method(rb_mKernel, "clone", rb_obj_clone, 0);
+    rb_define_method(rb_mKernel, "dup", rb_obj_dup, 0);
+    rb_define_method(rb_mKernel, "become", rb_obj_become, 1);
+
+    rb_define_method(rb_mKernel, "taint", rb_obj_taint, 0);
+    rb_define_method(rb_mKernel, "tainted?", rb_obj_tainted, 0);
+    rb_define_method(rb_mKernel, "untaint", rb_obj_untaint, 0);
+    rb_define_method(rb_mKernel, "freeze", rb_obj_freeze, 0);
+    rb_define_method(rb_mKernel, "frozen?", rb_obj_frozen_p, 0);
+
+    rb_define_method(rb_mKernel, "to_a", rb_any_to_a, 0); /* to be removed */
+    rb_define_method(rb_mKernel, "to_s", rb_any_to_s, 0);
+    rb_define_method(rb_mKernel, "inspect", rb_obj_inspect, 0);
+    rb_define_method(rb_mKernel, "methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "public_methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "singleton_methods", rb_obj_singleton_methods, -1);
+    rb_define_method(rb_mKernel, "protected_methods", rb_obj_protected_methods, 0);
+    rb_define_method(rb_mKernel, "private_methods", rb_obj_private_methods, 0);
+    rb_define_method(rb_mKernel, "public_methods", rb_obj_public_methods, 0);
+    rb_define_method(rb_mKernel, "instance_variables", rb_obj_instance_variables, 0);
+    rb_define_private_method(rb_mKernel, "remove_instance_variable",
+			     rb_obj_remove_instance_variable, 1);
+
+    rb_define_method(rb_mKernel, "instance_of?", rb_obj_is_instance_of, 1);
+    rb_define_method(rb_mKernel, "kind_of?", rb_obj_is_kind_of, 1);
+    rb_define_method(rb_mKernel, "is_a?", rb_obj_is_kind_of, 1);
+
+    rb_define_global_function("singleton_method_added", rb_obj_dummy, 1);
+    rb_define_global_function("singleton_method_removed", rb_obj_dummy, 1);
+    rb_define_global_function("singleton_method_undefined", rb_obj_dummy, 1);
+
+    rb_define_global_function("sprintf", rb_f_sprintf, -1);
+    rb_define_global_function("format", rb_f_sprintf, -1);
+
+    rb_define_global_function("Integer", rb_f_integer, 1);
+    rb_define_global_function("Float", rb_f_float, 1);
+
+    rb_define_global_function("String", rb_f_string, 1);
+    rb_define_global_function("Array", rb_f_array, 1);
+
+    rb_cNilClass = rb_define_class("NilClass", rb_cObject);
+    rb_define_method(rb_cNilClass, "to_i", nil_to_i, 0);
+    rb_define_method(rb_cNilClass, "to_f", nil_to_f, 0);
+    rb_define_method(rb_cNilClass, "to_s", nil_to_s, 0);
+    rb_define_method(rb_cNilClass, "to_a", nil_to_a, 0);
+    rb_define_method(rb_cNilClass, "inspect", nil_inspect, 0);
+    rb_define_method(rb_cNilClass, "&", false_and, 1);
+    rb_define_method(rb_cNilClass, "|", false_or, 1);
+    rb_define_method(rb_cNilClass, "^", false_xor, 1);
+
+    rb_define_method(rb_cNilClass, "nil?", rb_true, 0);
+    rb_undef_method(CLASS_OF(rb_cNilClass), "allocate");
+    rb_undef_method(CLASS_OF(rb_cNilClass), "new");
+    rb_define_global_const("NIL", Qnil);
+
+    rb_cSymbol = rb_define_class("Symbol", rb_cObject);
+    rb_define_singleton_method(rb_cSymbol, "all_symbols", rb_sym_all_symbols, 0);
+    rb_undef_method(CLASS_OF(rb_cSymbol), "allocate");
+    rb_undef_method(CLASS_OF(rb_cSymbol), "new");
+
+    rb_define_method(rb_cSymbol, "to_i", sym_to_i, 0);
+    rb_define_method(rb_cSymbol, "to_int", sym_to_i, 0);
+    rb_define_method(rb_cSymbol, "inspect", sym_inspect, 0);
+    rb_define_method(rb_cSymbol, "to_s", sym_to_s, 0);
+    rb_define_method(rb_cSymbol, "id2name", sym_to_s, 0);
+    rb_define_method(rb_cSymbol, "intern", sym_intern, 0);
+
+    rb_define_method(rb_cModule, "===", rb_mod_eqq, 1);
+    rb_define_method(rb_cModule, "==", rb_obj_equal, 1);
+    rb_define_method(rb_cModule, "<=>",  rb_mod_cmp, 1);
+    rb_define_method(rb_cModule, "<",  rb_mod_lt, 1);
+    rb_define_method(rb_cModule, "<=", rb_mod_le, 1);
+    rb_define_method(rb_cModule, ">",  rb_mod_gt, 1);
+    rb_define_method(rb_cModule, ">=", rb_mod_ge, 1);
+    rb_define_method(rb_cModule, "clone", rb_mod_clone, 0);
+    rb_define_method(rb_cModule, "dup", rb_mod_dup, 0);
+    rb_define_method(rb_cModule, "to_s", rb_mod_to_s, 0);
+    rb_define_method(rb_cModule, "included_modules", rb_mod_included_modules, 0);
+    rb_define_method(rb_cModule, "include?", rb_mod_include_p, 1);
+    rb_define_method(rb_cModule, "name", rb_mod_name, 0);
+    rb_define_method(rb_cModule, "ancestors", rb_mod_ancestors, 0);
+
+    rb_define_private_method(rb_cModule, "attr", rb_mod_attr, -1);
+    rb_define_private_method(rb_cModule, "attr_reader", rb_mod_attr_reader, -1);
+    rb_define_private_method(rb_cModule, "attr_writer", rb_mod_attr_writer, -1);
+    rb_define_private_method(rb_cModule, "attr_accessor", rb_mod_attr_accessor, -1);
+
+    rb_define_singleton_method(rb_cModule, "allocate", rb_module_s_alloc, 0);
+    rb_define_method(rb_cModule, "initialize", rb_mod_initialize, 0);
+    rb_define_method(rb_cModule, "instance_methods", rb_class_instance_methods, -1);
+    rb_define_method(rb_cModule, "public_instance_methods", rb_class_public_instance_methods, -1);
+    rb_define_method(rb_cModule, "protected_instance_methods", rb_class_protected_instance_methods, -1);
+    rb_define_method(rb_cModule, "private_instance_methods", rb_class_private_instance_methods, -1);
+
+    rb_define_method(rb_cModule, "constants", rb_mod_constants, 0);
+    rb_define_method(rb_cModule, "const_get", rb_mod_const_get, 1);
+    rb_define_method(rb_cModule, "const_set", rb_mod_const_set, 2);
+    rb_define_method(rb_cModule, "const_defined?", rb_mod_const_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_const", rb_mod_remove_const, 1);
+    rb_define_method(rb_cModule, "class_variables", rb_mod_class_variables, 0);
+    rb_define_private_method(rb_cModule, "remove_class_variable", rb_mod_remove_cvar, 1);
+
+    rb_define_method(rb_cClass, "allocate", rb_class_allocate_instance, 0);
+    rb_define_method(rb_cClass, "new", rb_class_new_instance, -1);
+    rb_define_method(rb_cClass, "initialize", rb_class_initialize, -1);
+    rb_define_method(rb_cClass, "superclass", rb_class_superclass, 0);
+    rb_undef_method(CLASS_OF(rb_cClass), "allocate");
+    rb_define_singleton_method(rb_cClass, "new", rb_class_s_new, -1);
+    rb_undef_method(rb_cClass, "extend_object");
+    rb_undef_method(rb_cClass, "append_features");
+
+    rb_cData = rb_define_class("Data", rb_cObject);
+    rb_undef_method(CLASS_OF(rb_cData), "allocate");
+
+    ruby_top_self = rb_obj_alloc(rb_cObject);
+    rb_global_variable(&ruby_top_self);
+    rb_define_singleton_method(ruby_top_self, "to_s", main_to_s, 0);
+
+    rb_cTrueClass = rb_define_class("TrueClass", rb_cObject);
+    rb_define_method(rb_cTrueClass, "to_s", true_to_s, 0);
+    rb_define_method(rb_cTrueClass, "&", true_and, 1);
+    rb_define_method(rb_cTrueClass, "|", true_or, 1);
+    rb_define_method(rb_cTrueClass, "^", true_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cTrueClass), "allocate");
+    rb_undef_method(CLASS_OF(rb_cTrueClass), "new");
+    rb_define_global_const("TRUE", Qtrue);
+
+    rb_cFalseClass = rb_define_class("FalseClass", rb_cObject);
+    rb_define_method(rb_cFalseClass, "to_s", false_to_s, 0);
+    rb_define_method(rb_cFalseClass, "&", false_and, 1);
+    rb_define_method(rb_cFalseClass, "|", false_or, 1);
+    rb_define_method(rb_cFalseClass, "^", false_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cFalseClass), "allocate");
+    rb_undef_method(CLASS_OF(rb_cFalseClass), "new");
+    rb_define_global_const("FALSE", Qfalse);
+
+    eq = rb_intern("==");
+    eql = rb_intern("eql?");
+    inspect = rb_intern("inspect");
+    become = rb_intern("become");
+}
+@
+
+
+1.92
+log
+@* eval.c, file.c, gc.c, io.c, object.c, ruby.c, ruby.h, struct.c,
+  ext/socket/socket.c: differentiate long and int; use proper
+  printf type specifiers and do casts where appropriate.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/10/23 10:17:29 $
+d914 10
+d1342 1
+d1414 1
+a1414 1
+    rb_define_method(rb_cModule, "public_instance_methods", rb_class_instance_methods, -1);
+@
+
+
+1.91
+log
+@* eval.c (rb_eval): added NODE_DSYM, symbol literal with
+  interpolation.
+
+* node.h: ditto.
+
+* intern.h: prototypes; rb_is_junk_id, rb_str_dump, rb_str_intern
+
+* object.c (sym_inspect): escape and quote for non-alphanumeric
+  symbols.
+
+* parse.y (dsym, tokadd_string, yylex): extended symbol literals.
+
+* parse.y (rb_is_junk_id): added.
+
+* string.c (rb_str_dump, rb_str_intern) : make extern.
+
+* lib/mkmf.rb (create_makefile): deffile should be removed by
+  distclean, not clean.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/10/17 07:26:59 $
+d779 1
+a779 1
+	    rb_raise(rb_eArgError, "%d is not a symbol", id);
+@
+
+
+1.90
+log
+@* object.c (rb_str_to_dbl): RString ptr might be NULL.
+
+* object.c (rb_cstr_to_dbl): p pointer might be NULL.
+
+* bignum.c (rb_str_to_inum): RString ptr might be NULL.
+
+* bignum.c (rb_cstr_to_inum): str pointer might be NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/04 17:54:29 $
+d522 1
+d524 1
+a524 1
+    name = rb_id2name(SYM2ID(sym));
+d528 4
+@
+
+
+1.89
+log
+@
+* bignum.c (rb_big_rshift): num should be initialized by carry
+  bits if x is negative.
+
+* bignum.c (bigdivmod): len for bignum zero is 1, not 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/10/02 06:02:14 $
+d1034 1
+d1097 11
+a1107 9
+    if (s[len]) {		/* no sentinel somehow */
+	char *p = ALLOCA_N(char, len+1);
+
+	MEMCPY(p, s, char, len);
+	p[len] = '\0';
+	s = p;
+    }
+    if (badcheck && len != strlen(s)) {
+	rb_raise(rb_eArgError, "string for Float contains null byte");
+@
+
+
+1.88
+log
+@* commit miss;  and tcltklib fix too.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/04 06:37:35 $
+d90 1
+a90 1
+    rb_warn("`type' is deprecated; use `class'");
+@
+
+
+1.87
+log
+@* class.c (rb_make_metaclass): obj.meta.super.meta should be equal
+  to obj.meta.meta.super (ruby-bugs-ja:PR#324).
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* marshal.c (r_bytes): do not use alloca (ruby-bugs:PR#382).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/03 05:20:06 $
+d87 8
+d1303 1
+a1303 1
+    rb_define_method(rb_mKernel, "type", rb_obj_class, 0);
+@
+
+
+1.86
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/27 08:31:06 $
+d97 4
+a100 1
+    RBASIC(dest)->flags &= ~(T_MASK|FL_EXIVAR|FL_TAINT);
+d102 1
+d130 1
+d132 1
+a132 3
+    copy_object(clone, obj);
+    rb_funcall(clone, become, 1, obj);
+    RBASIC(clone)->flags = RBASIC(obj)->flags;
+a147 1
+    rb_funcall(dup, become, 1, obj);
+@
+
+
+1.85
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d93 23
+a120 1
+    int frozen;
+d125 3
+a127 4
+    clone = rb_obj_alloc(rb_class_real(RBASIC(obj)->klass));
+    CLONESETUP(clone, obj);
+    frozen = OBJ_FROZEN(obj);
+    FL_UNSET(clone, FL_FREEZE);	   /* temporarily remove frozen flag */
+d129 1
+a129 2
+    if (frozen) OBJ_FREEZE(clone); /* restore frozen status */
+    OBJ_INFECT(clone, obj);
+d143 2
+a144 2
+    dup = rb_obj_alloc(rb_class_real(RBASIC(obj)->klass));
+    DUPSETUP(dup, obj);
+a145 1
+    OBJ_INFECT(dup, obj);
+d154 3
+a156 4
+    long type;
+
+    if ((type = TYPE(obj)) != TYPE(orig) ||
+	rb_obj_class(obj) != rb_obj_class(orig)) {
+a157 6
+    }
+    if (type == T_OBJECT) {
+	if (ROBJECT(obj)->iv_tbl) st_free_table(ROBJECT(obj)->iv_tbl);
+	if (ROBJECT(orig)->iv_tbl) {
+	    ROBJECT(obj)->iv_tbl = st_copy(ROBJECT(orig)->iv_tbl);
+	}
+@
+
+
+1.84
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/19 05:56:05 $
+d36 1
+a36 1
+static ID clone;
+d98 1
+d104 6
+a109 4
+    CLONESETUP(clone,obj);
+    if (TYPE(clone) == T_OBJECT && ROBJECT(obj)->iv_tbl) {
+	ROBJECT(clone)->iv_tbl = st_copy(ROBJECT(obj)->iv_tbl);
+    }
+d123 22
+a144 9
+    dup = rb_funcall(obj, clone, 0, 0);
+    if (TYPE(dup) != TYPE(obj)) {
+	rb_raise(rb_eTypeError, "dupulicated object must be same type");
+    }
+    if (!SPECIAL_CONST_P(dup)) {
+	OBJSETUP(dup, rb_obj_class(obj), BUILTIN_TYPE(obj));
+	OBJ_INFECT(dup, obj);
+	if (FL_TEST(obj, FL_EXIVAR)) {
+	    FL_SET(dup, FL_EXIVAR);
+d147 1
+a147 1
+    return dup;
+d1028 1
+a1028 1
+	char *buf = ALLOCA_N(char, strlen(p));
+d1286 1
+d1422 1
+a1422 1
+    clone = rb_intern("clone");
+@
+
+
+1.83
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (ary_new): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* object.c (rb_class_allocate_instance): move singleton class
+  check from rb_obj_alloc().
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* ext/tcltklib/tcltklib.c (ip_init): allocation framework.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/12 07:39:08 $
+d71 1
+a71 1
+	return INT2NUM((long)obj);
+d475 1
+a475 1
+    return INT2FIX(id);
+d734 1
+a734 1
+	id = FIX2INT(name);
+d1053 1
+a1053 1
+    int len;
+d1136 1
+a1136 1
+    int *len;
+@
+
+
+1.82
+log
+@* bignum.c (rb_big_cmp): use dbl2big() for Floats, instead of
+  big2dbl().
+
+* bignum.c (Init_Bignum): rb_big_zero_p() removed.  There may be
+  Bignum zero.
+
+* eval.c (rb_call0): new argument added for original method name.
+  preserve original method name in frame->orig_func.
+
+* eval.c (is_defined): use frame->orig_func, not last_func.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (method_call): supply data->oid also to rb_call0().
+
+* object.c (rb_class_allocate_instance): call rb_obj_alloc() when
+  called from alias, thus invoke original "allocate".
+
+* eval.c (remove_method): removing allocate from classes should
+  cause NameError.
+
+* hash.c (rb_hash_equal): should check default values.
+
+* ext/socket/socket.c (s_recvfrom): update RSTRING len.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/07/02 09:58:13 $
+d670 1
+a670 6
+    VALUE obj;
+
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	rb_raise(rb_eTypeError, "can't create instance of virtual class");
+    }
+    obj = rb_funcall(klass, alloc, 0, 0);
+d682 3
+@
+
+
+1.81
+log
+@object.c: rb_Integer reformat, nil#to_f added to rb_define_method.
+parse.y: Clean unused vars.
+range.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/06/28 14:39:59 $
+d687 8
+a694 4
+    NEWOBJ(obj, struct RObject);
+    OBJSETUP(obj, klass, T_OBJECT);
+
+    return (VALUE)obj;
+@
+
+
+1.80
+log
+@* re.c (rb_reg_expr_str): need to process backslashes properly.
+
+* object.c (rb_any_to_a): declare Object#to_a to be obsolete.
+
+* object.c (rb_Array): do not convert nil into [] automagically.
+
+* object.c (rb_Integer): use "to_int" instead of
+  "to_i". [experimental]
+
+* object.c (nil_to_f): new method.
+
+* object.c (rb_Integer): Symbols and nil should cause error.
+
+* object.c (rb_Float): nil should cause error.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/21 05:39:19 $
+a953 2
+    VALUE v;
+
+d962 1
+a968 3
+      case T_FIXNUM:
+	return val;
+
+a971 1
+    
+d975 1
+a975 3
+    else {
+	return rb_to_integer(val, "to_i");
+    }
+d1306 1
+@
+
+
+1.79
+log
+@* object.c (Init_Object): should do exact match for Module#==.
+
+* compar.c (cmp_eq): returns 'false' if <=> returns 'nil'.
+
+* compar.c (cmp_gt,cmp_ge,cmp_lt,cmp_le,cmp_between): ditto.
+
+* pack.c (pack_pack): should propagate taintedness.
+
+* pack.c (pack_unpack): ditto.
+
+* eval.c (rb_thread_schedule): need to preserve errno before
+  calling rb_trap_exec().
+
+* regex.c (calculate_must_string): a bug in charset/charset_not
+  parsing.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/14 06:22:26 $
+d21 1
+d138 1
+d343 7
+d929 1
+d954 2
+d976 7
+a982 1
+    return rb_to_integer(val, "to_i");
+d1094 2
+a1095 1
+	return rb_float_new(0.0);
+d1098 7
+a1104 1
+	return rb_convert_type(val, T_FLOAT, "Float", "to_f");
+d1171 3
+d1282 1
+a1282 1
+    rb_define_method(rb_mKernel, "to_a", rb_any_to_a, 0);
+@
+
+
+1.78
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 04:54:14 $
+d607 1
+a607 2
+    rb_raise(rb_eArgError, "non related class/module");
+    return Qnil;		/* not reached */
+d1310 1
+@
+
+
+1.77
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/11 10:02:59 $
+d17 1
+d994 1
+a994 1
+      bad:
+@
+
+
+1.76
+log
+@* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+
+* dir.c (glob_helper): should have proceed link when link->path
+  was non existing symbolic link.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/08 07:03:03 $
+d870 1
+a870 1
+	    rb_raise(rb_eTypeError, "failed to convert %s into %s",
+d909 2
+a910 1
+    if (TYPE(val) == type) return val;
+@
+
+
+1.75
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+
+* class.c (rb_mod_clone): should not call rb_obj_clone(), since
+  Module does not provide "allocate".
+
+* class.c (rb_singleton_class): should crate new singleton class
+  if obj is a class or module and attached object is different,
+  which means metaclass of singleton class is sought.
+
+* time.c (time_s_alloc): now follows allocation framework.
+
+* eval.c (rb_eval): should initialize outer class variables from
+  methods in singleton class definitions.
+
+* eval.c (assign): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/25 09:16:25 $
+d1119 1
+a1119 1
+    else if (ruby_verbose && RSTRING(str)->len != strlen(RSTRING(str)->ptr)) {
+@
+
+
+1.74
+log
+@* eval.c (method_inspect): should not dump core for unbound
+  singleton methods.
+
+* object.c (rb_mod_to_s): better description.
+
+* hash.c (env_select): should path the assoc list.
+
+* process.c (rb_syswait): thread kludge; should be fixed to
+  support native thread.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/04 08:07:01 $
+d100 1
+a100 1
+    clone = rb_obj_alloc(RBASIC(obj)->klass);
+d661 6
+a666 1
+    VALUE obj = rb_funcall(klass, alloc, 0, 0);
+a691 3
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	rb_raise(rb_eTypeError, "can't create instance of virtual class");
+    }
+@
+
+
+1.73
+log
+@* object.c (rb_class_real): should not follow ICLASS link
+
+* variable.c (classname): should follow ICLASS link explicitly.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/01 10:23:22 $
+d503 1
+d506 8
+a513 1
+	rb_str_cat2(s, rb_class2name(klass));
+@
+
+
+1.72
+log
+@* intern.h: prototypes for new functions; rb_cstr_to_inum(),
+  rb_str_to_inum(), rb_cstr_to_dbl(), rb_str_to_dbl()
+
+* bignum.c (rb_cstr_to_inum): changed from rb_cstr2inum(), and
+  added argument badcheck to be consistent with parser. [new]
+
+* bignum.c (rb_str_to_inum): ditto.
+
+* bignum.c (rb_cstr2inum): wapper of rb_cstr_to_inum() now.
+
+* bignum.c (rb_str2inum): ditto.
+
+* object.c (rb_cstr_to_dbl): float number parser. [new]
+
+* object.c (rb_str_to_dbl): ditto.
+
+* object.c (rb_Float): use rb_cstr_to_dbl() for strict check.
+
+* object.c (rb_Integer): use rb_str_to_inum() for strict check.
+
+* string.c (rb_str_to_f): use rb_str_to_dbl() with less check.
+
+* string.c (rb_str_to_i): use rb_str_to_inum() with less check.
+
+* string.c (rb_str_hex): ditto.
+
+* string.c (rb_str_oct): ditto.
+
+* sprintf.c (rb_f_sprintf): ditto.
+
+* time.c (obj2long): ditto.
+
+* parse.y (yylex): use rb_cstr_to_inum() for strict check.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/01 06:02:59 $
+a77 3
+    if (TYPE(cl) == T_ICLASS) {
+	cl = RBASIC(cl)->klass;
+    }
+@
+
+
+1.71
+log
+@* file.c (rb_stat_inspect): print dev, rdev in hexadecimal.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/28 08:44:37 $
+d948 1
+a948 1
+	return rb_str2inum(val, 0);
+d966 84
+d1065 1
+a1065 47
+        {
+	    char *q, *p, *end;
+	    double d;
+
+	    q = p = StringValuePtr(val);
+	    while (*p && ISSPACE(*p)) p++;
+	    d = strtod(p, &end);
+	    if (p == end) {
+	      bad:
+		rb_invalid_str(q, "Float()");
+	    }
+	    if (*end) {
+		if (*end == '_') {
+		    char *buf = ALLOCA_N(char, strlen(p));
+		    char *n = buf, *last = p;
+
+		    while (p < end) *n++ = *p++;
+		    while (*p) {
+			if (*p == '_' && (n > buf && ISDIGIT(n[-1]))) {
+			    /* remove underscores between digits */
+			    last = ++p;
+			    while (*p == '_') ++p;
+			    if (!ISDIGIT(*p)) {
+				while (last < p) *n++ = *last++;
+				continue;
+			    }
+			    last = p;
+			}
+			*n++ = *p++;
+		    }
+		    while (*last && (*last == '_' || ISSPACE(*last)))
+			last++;
+		    if (!*last) goto bad;
+		    *n = '\0';
+		    p = buf;
+		    d = strtod(p, &end);
+		    if (p == end) goto bad;
+		}
+		while (*end && ISSPACE(*end)) end++;
+		if (*end) goto bad;
+	    }
+	    if (errno == ERANGE) {
+		errno = 0;
+		rb_raise(rb_eArgError, "Float %s out of range", p);
+	    }
+	    return rb_float_new(d);
+	}
+@
+
+
+1.70
+log
+@* eval.c (is_defined): defined?(Foo::Baz) should check constants
+  only, no methods.
+
+* eval.c (is_defined): should not dump core on defined?(a::b)
+  where a is not a class nor a module.
+
+* object.c (Init_Object): remove dup and clone from TrueClass,
+  FalseClass, and NilClass.
+
+* array.c (rb_ary_fill): Array#fill takes block to get the value to
+  fill.
+
+* string.c (rb_str_to_i): to_i(0) auto-detects base radix.
+
+* array.c (rb_ary_initialize): fill by the block evaluation value
+  if block is given.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/23 07:30:39 $
+d118 3
+a1244 2
+    rb_undef_method(rb_cNilClass, "clone");
+    rb_undef_method(rb_cNilClass, "dup");
+a1319 2
+    rb_undef_method(rb_cTrueClass, "clone");
+    rb_undef_method(rb_cTrueClass, "dup");
+a1328 2
+    rb_undef_method(rb_cFalseClass, "clone");
+    rb_undef_method(rb_cFalseClass, "dup");
+@
+
+
+1.69
+log
+@* array.c (Init_Array): remove Array#filter.
+
+* object.c (rb_mod_initialize): should accept zero argument.
+
+* object.c (rb_mod_cmp): should raise ArgumentError if
+  inheritance/inclusion relation between two classes/modules is
+  not defined. [new]
+
+* io.c (rb_io_fsync): new method. [new]
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/16 02:17:30 $
+d1242 2
+d1319 2
+d1330 2
+@
+
+
+1.68
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/11 09:18:50 $
+d524 1
+a537 1
+
+d576 2
+a578 1
+
+d592 8
+a599 1
+    return INT2FIX(1);
+d603 1
+a603 3
+rb_mod_initialize(argc, argv, module)
+    int argc;
+    VALUE *argv;
+d613 9
+d1280 1
+a1280 1
+    rb_define_method(rb_cModule, "initialize", rb_mod_initialize, -1);
+d1296 1
+@
+
+
+1.67
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 20:18:39 $
+a968 1
+	  again:
+d977 1
+a977 1
+		    char *n = buf, *last;
+d979 1
+d981 2
+a982 1
+			if (*p == '_') {
+d984 6
+a989 1
+			    continue;
+d998 2
+a999 1
+		    goto again;
+@
+
+
+1.66
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/04 14:14:34 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+a833 6
+struct arg_to {
+    VALUE val;
+    const char *s;
+    ID m;
+};
+
+a839 1
+    struct arg_to arg1, arg2;
+@
+
+
+1.65
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/10 18:21:31 $
+d627 1
+a627 3
+    /* make metaclass */
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+d629 1
+a629 1
+    rb_funcall(super, rb_intern("inherited"), 1, klass);
+d1130 3
+a1132 6
+    metaclass = RBASIC(rb_cObject)->klass = rb_singleton_class_new(rb_cClass);
+    rb_singleton_class_attached(metaclass, rb_cObject);
+    metaclass = RBASIC(rb_cModule)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cModule);
+    metaclass = RBASIC(rb_cClass)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cClass);
+@
+
+
+1.64
+log
+@* object.c (rb_class_real): follow included modules.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/12/10 07:18:12 $
+d839 1
+d843 4
+a846 2
+to_type(arg)
+    struct arg_to *arg;
+d848 2
+a849 2
+    return rb_funcall(arg->val, rb_intern(arg->s), 0);
+}
+d851 15
+a865 11
+static VALUE
+fail_to_type(arg)
+    struct arg_to *arg;
+{
+    rb_raise(rb_eTypeError, "failed to convert %s into %s",
+	     NIL_P(arg->val) ? "nil" :
+	     arg->val == Qtrue ? "true" :
+	     arg->val == Qfalse ? "false" :
+	     rb_class2name(CLASS_OF(arg->val)), 
+	     arg->s);
+    return Qnil;		/* not reached */
+d874 1
+a874 1
+    struct arg_to arg1, arg2;
+d877 2
+a878 5
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = tname;
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+    if (TYPE(val) != type) {
+d880 1
+a880 1
+		 rb_class2name(CLASS_OF(arg1.val)), method, tname);
+d882 1
+a882 1
+    return val;
+d891 1
+a891 1
+    struct arg_to arg1, arg2;
+d894 3
+a896 5
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = tname;
+    val = rb_rescue(to_type, (VALUE)&arg1, 0, 0);
+    if (!NIL_P(val) && TYPE(val) != type) {
+d898 1
+a898 1
+		 rb_class2name(CLASS_OF(arg1.val)), method, tname);
+d900 1
+a900 1
+    return val;
+d908 2
+a909 8
+    struct arg_to arg1, arg2;
+
+
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = "Integer";
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+    if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+d911 1
+a911 1
+		 rb_class2name(CLASS_OF(arg1.val)), method);
+d913 1
+a913 1
+    return val;
+d982 1
+a982 1
+		rb_raise(rb_eArgError, "invalid value for Float(): \"%s\"", q);
+@
+
+
+1.63
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/29 15:57:25 $
+d78 3
+@
+
+
+1.62
+log
+@* string.c (rb_str_equal): object with to_str must be treated as a
+  string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/16 03:27:06 $
+a315 1
+
+d1294 1
+a1294 1
+    rb_undef_method(CLASS_OF(rb_cData), "new");
+@
+
+
+1.61
+log
+@* string.c (rb_str_index): wrong increment for non alphanumeric
+  string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/10 08:21:13 $
+d873 20
+@
+
+
+1.60
+log
+@* file.c (rb_stat_clone): should copy internal data too.
+
+* numeric.c (num_clone): Numeric should not be copied by clone.
+
+* object.c (rb_obj_clone): should check immediate values.
+
+* parse.y (command): `yield' should take command_args.
+
+* parse.y (parse_quotedwords): %w(...) is not a string.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d598 3
+a600 1
+    rb_mod_module_eval(0, 0, module);
+@
+
+
+1.59
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/02 04:31:19 $
+d97 3
+d593 1
+a593 1
+rb_mod_initialize(argc, argv)
+d596 1
+d598 1
+@
+
+
+1.58
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/20 04:29:56 $
+d35 1
+a96 3
+    if (TYPE(obj) != T_OBJECT) {
+	rb_raise(rb_eTypeError, "can't clone %s", rb_class2name(CLASS_OF(obj)));
+    }
+d99 1
+a99 1
+    if (ROBJECT(obj)->iv_tbl) {
+a453 10
+VALUE
+rb_obj_alloc(klass)
+    VALUE klass;
+{
+    NEWOBJ(obj, struct RObject);
+    OBJSETUP(obj, klass, T_OBJECT);
+
+    return (VALUE)obj;
+}
+
+d598 1
+a598 1
+rb_module_s_new(klass)
+a603 1
+    rb_obj_call_init(klass, 0, 0);
+d627 39
+d1101 2
+d1209 1
+d1214 2
+a1216 1
+    rb_define_singleton_method(rb_cSymbol, "all_symbols", rb_sym_all_symbols, 0);
+d1244 1
+a1244 1
+    rb_define_singleton_method(rb_cModule, "new", rb_module_s_new, 0);
+d1259 1
+d1262 1
+d1279 1
+d1288 1
+@
+
+
+1.57
+log
+@* range.c (range_step): 'iter' here should be an array.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+
+* variable.c (rb_cvar_get): class variable override check added.
+
+* variable.c (rb_cvar_set): ditto
+
+* variable.c (rb_cvar_declare): ditto.
+
+* parse.y (parse_regx): handle backslash escaping of delimiter here.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/24 09:07:33 $
+a356 7
+static VALUE
+nil_type(obj)
+    VALUE obj;
+{
+    return rb_cNilClass;
+}
+
+a393 7
+true_type(obj)
+    VALUE obj;
+{
+    return rb_cTrueClass;
+}
+
+static VALUE
+a421 7
+false_type(obj)
+    VALUE obj;
+{
+    return rb_cFalseClass;
+}
+
+static VALUE
+a466 7
+sym_type(sym)
+    VALUE sym;
+{
+    return rb_cSymbol;
+}
+
+static VALUE
+d986 1
+a986 1
+	rb_raise(rb_eTypeError, "no implicit conversion from String");
+d990 1
+a990 1
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+a1171 1
+    rb_define_method(rb_cNilClass, "type", nil_type, 0);
+a1187 1
+    rb_define_method(rb_cSymbol, "type", sym_type, 0);
+a1243 1
+    rb_define_method(rb_cTrueClass, "type", true_type, 0);
+a1251 1
+    rb_define_method(rb_cFalseClass, "type", false_type, 0);
+@
+
+
+1.56
+log
+@* eval.c (rb_provide_feature): should not tweak extension used for
+  loading.
+
+* io.c (io_fread): use fread(3) if PENDING_COUND is available.
+
+* class.c (rb_mod_include_p): Module#include? added. [new]
+
+* re.c (ignorecase_setter): give warning on modifying $=.
+
+* string.c (rb_str_casecmp): new method. [new]
+
+* string.c (rb_str_eql): separated from rb_str_equal(), make it
+  always be case sensitive. [new]
+
+* string.c (rb_str_hash): made it always be case sensitive.
+
+* eval.c (rb_f_require): should not include path in $" value
+
+* file.c (rb_find_file): should return 0 explicitly on failure.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/18 05:55:20 $
+d84 1
+a84 1
+rb_obj_type(obj)
+d119 1
+a119 1
+	OBJSETUP(dup, rb_obj_type(obj), BUILTIN_TYPE(obj));
+d236 1
+a236 1
+    if (rb_obj_type(obj) == c) return Qtrue;
+d1158 2
+a1159 2
+    rb_define_method(rb_mKernel, "type", rb_obj_type, 0);
+    rb_define_method(rb_mKernel, "class", rb_obj_type, 0);
+@
+
+
+1.55
+log
+@* regex.c (NUM_FAILURE_ITEMS): was confusing NUM_REG_ITEMS and
+  NUM_NONREG_ITEMS, which have happened to be same value.
+
+* class.c (rb_class_new): subclass check moved to this function.
+
+* class.c (rb_class_boot): check less version of rb_class_new().
+
+* eval.c (proc_invoke): should preserve iter status for embedded
+  frame in the block.
+
+* file.c (rb_file_s_expand_path): may overrun buffer on stack.
+
+* string.c (rb_str_insert): forgot to call rb_str_modify().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/14 15:17:18 $
+d959 1
+a959 1
+		rb_raise(rb_eArgError, "invalid value for Float: \"%s\"", q);
+d1235 1
+@
+
+
+1.54
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+a657 4
+    Check_Type(super, T_CLASS);
+    if (FL_TEST(super, FL_SINGLETON)) {
+	rb_raise(rb_eTypeError, "can't make subclass of virtual class");
+    }
+a668 7
+rb_class_s_inherited()
+{
+    rb_raise(rb_eTypeError, "can't make subclass of Class");
+    return Qnil;		/* dummy */
+}
+
+static VALUE
+d1088 1
+a1088 1
+    VALUE obj = rb_class_new(super);
+a1262 1
+    rb_define_singleton_method(rb_cClass, "inherited", rb_class_s_inherited, 1);
+@
+
+
+1.53
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 07:50:59 $
+d73 3
+a75 3
+static VALUE
+rb_obj_type(obj)
+    VALUE obj;
+a76 2
+    VALUE cl = CLASS_OF(obj);
+
+d84 7
+d121 3
+d877 1
+a877 1
+    val = rb_rescue2(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+@
+
+
+1.52
+log
+@* error.c (Init_Exception): NameError went under StandardError,
+  and NoMethodError went under NameError.
+
+* parse.y (rb_intern): non identifier symbols should be
+  categorized as ID_JUNK. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d772 1
+a772 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+d784 1
+a784 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+d797 1
+a797 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+d869 1
+a869 2
+    val = rb_rescue2(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2,
+		     rb_eStandardError, rb_eNameError, 0);
+d888 1
+a888 2
+    val = rb_rescue2(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2,
+		     rb_eStandardError, rb_eNameError, 0);
+@
+
+
+1.51
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/16 09:05:50 $
+d772 1
+a772 1
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+d784 1
+a784 1
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+d797 1
+a797 1
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+@
+
+
+1.50
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:24:54 $
+a811 2
+VALUE rb_obj_singleton_methods();
+
+d1180 1
+a1180 1
+    rb_define_method(rb_mKernel, "singleton_methods", rb_obj_singleton_methods, 0);
+@
+
+
+1.49
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/07 09:26:24 $
+d19 1
+@
+
+
+1.48
+log
+@* parse.y (arg): "||=" should not warn for uninitialized instance
+  variables.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (eval): preserve and restore ruby_cref as well.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d133 1
+a133 1
+    str = rb_str_new(0, strlen(cname)+6+16+1); /* 6:tags 16:addr 1:eos */
+d201 1
+a201 1
+	    str = rb_str_new(0, strlen(c)+10+16+1); /* 10:tags 16:addr 1:eos */
+d206 1
+a206 1
+	str = rb_str_new(0, strlen(c)+6+16+1); /* 6:tags 16:addr 1:eos */
+d525 1
+d527 9
+d1124 4
+d1155 2
+a1156 2
+    rb_define_alias(rb_mKernel, "equal?", "==");
+    rb_define_alias(rb_mKernel, "===", "==");
+d1193 2
+a1260 1
+    rb_define_private_method(rb_cModule, "method_added", rb_obj_dummy, 1);
+@
+
+
+1.47
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:25 $
+a222 11
+
+      case T_NIL:
+	if (NIL_P(obj)) return Qtrue;
+	return Qfalse;
+
+      case T_FALSE:
+	return RTEST(obj) ? Qfalse : Qtrue;
+
+      case T_TRUE:
+	return RTEST(obj) ? Qtrue : Qfalse;
+
+@
+
+
+1.46
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/26 08:57:10 $
+d229 1
+a229 2
+	if (obj) return Qfalse;
+	return Qtrue;
+d232 1
+a232 2
+	if (obj) return Qtrue;
+	return Qfalse;
+d381 1
+a381 1
+		 STR2CSTR(rb_inspect(y)),
+a533 30
+rb_mod_clone(module)
+    VALUE module;
+{
+    NEWOBJ(clone, struct RClass);
+    CLONESETUP(clone, module);
+
+    clone->super = RCLASS(module)->super;
+    if (RCLASS(module)->iv_tbl) {
+	clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+    }
+    if (RCLASS(module)->m_tbl) {
+	clone->m_tbl = st_copy(RCLASS(module)->m_tbl);
+    }
+
+    return (VALUE)clone;
+}
+
+static VALUE
+rb_mod_dup(mod)
+    VALUE mod;
+{
+    VALUE dup = rb_mod_clone(mod);
+    OBJSETUP(dup, RBASIC(mod)->klass, BUILTIN_TYPE(mod));
+    if (FL_TEST(mod, FL_SINGLETON)) {
+	FL_SET(dup, FL_SINGLETON);
+    }
+    return dup;
+}
+
+static VALUE
+d705 1
+a705 1
+	rb_raise(rb_eTypeError, "%s is not a symbol", STR2CSTR(rb_inspect(name)));
+d769 6
+a774 1
+    return rb_const_get(mod, rb_to_id(name));
+d781 6
+a786 1
+    rb_const_set(mod, rb_to_id(name), value);
+d794 6
+a799 1
+    return rb_const_defined_at(mod, rb_to_id(name));
+d960 1
+a960 1
+	    q = p = STR2CSTR(val);
+d1040 1
+a1040 3
+    if (TYPE(str) != T_STRING) {
+	str = rb_str_to_str(str);
+    }
+d1216 2
+@
+
+
+1.45
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* file.c (rb_file_flock): do not trap EINTR.
+
+* missing/flock.c (flock): returns the value from lockf(2)
+  directly.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/md5/md5.h: replace by independent md5 implementation
+  contributed by L. Peter Deutsch (thanks).
+
+* ext/md5/md5init.c: adopted to Deutsch's md5 implementation.
+
+* pack.c (pack_unpack): string from P/p should be tainted.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+
+* object.c (sym_intern): new method.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 03:41:41 $
+d1061 3
+@
+
+
+1.44
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:09 $
+d529 7
+d1238 1
+@
+
+
+1.43
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/15 06:00:55 $
+d515 1
+a515 1
+    str = rb_str_new(0, strlen(name)+2);
+@
+
+
+1.42
+log
+@* process.c (proc_waitall): new method based on a patch from Brian
+  Fundakowski Feldman <green@@green.dyndns.org>.
+
+* process.c (last_status_set): objectify $? value (Process::Status).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/29 05:10:42 $
+d516 2
+a517 2
+    sprintf(RSTRING(str)->ptr, ":%s", name);
+    RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+@
+
+
+1.41
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/18 08:43:07 $
+a29 3
+
+VALUE rb_f_sprintf();
+VALUE rb_obj_alloc();
+@
+
+
+1.40
+log
+@* io.c (rb_io_s_read): new method to call IO#read from
+  pathname.  In addition, it accepts third optional argument to
+  specify starting point.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:00:54 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.39
+log
+@Mon Jan 15 16:00:07 2001  Yukihiro Matsumoto  <matz@@ruby-lang.org>
+
+	* pack.c (pack_unpack): should check associated pointer packed by
+	  pack("P").  restriction added.
+
+Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+
+	* re.c (rb_reg_s_last_match): should explicitly return nth match.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 16:55:50 $
+d291 1
+a291 1
+    if (OBJ_TAINTED(obj)) {
+d305 1
+a305 1
+    if (!OBJ_TAINTED(obj)) {
+d318 1
+a318 1
+    if (OBJ_FROZEN(obj)) {
+@
+
+
+1.38
+log
+@* string.c (rb_str_reverse_bang): forgot to call rb_str_modify().
+
+* object.c (rb_obj_taint): check frozen status before modifying
+  taint status.
+
+* object.c (rb_obj_untaint): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/25 06:29:04 $
+d165 1
+d186 1
+d210 1
+a210 1
+	sprintf(RSTRING(str)->ptr, "-<%s:0x%lx ", c, obj);
+d291 5
+a295 2
+    if (OBJ_FROZEN(obj)) {
+	rb_error_frozen("object");
+a296 1
+    OBJ_TAINT(obj);
+d305 5
+a309 2
+    if (OBJ_FROZEN(obj)) {
+	rb_error_frozen("object");
+a310 1
+    FL_UNSET(obj, FL_TAINT);
+d318 7
+a324 4
+    if (rb_safe_level() >= 4 && !OBJ_TAINTED(obj))
+	rb_raise(rb_eSecurityError, "Insecure: can't freeze object");
+	
+    OBJ_FREEZE(obj);
+d550 2
+a551 2
+rb_mod_dup(module)
+    VALUE module;
+d553 5
+a557 2
+    VALUE dup = rb_mod_clone(module);
+    OBJSETUP(dup, RBASIC(module)->klass, BUILTIN_TYPE(module));
+@
+
+
+1.37
+log
+@001225
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/08 07:10:25 $
+d289 3
+d301 3
+@
+
+
+1.37.4.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:45 $
+a16 1
+#include "m17n.h"
+a288 3
+    if (OBJ_FROZEN(obj)) {
+	rb_error_frozen("object");
+    }
+a297 3
+    if (OBJ_FROZEN(obj)) {
+	rb_error_frozen("object");
+    }
+a953 1
+	    m17n_encoding *enc = rb_m17n_get_encoding(val);
+d956 1
+a956 1
+	    while (*p && m17n_isspace(enc, *p)) p++;
+d975 1
+a975 1
+		    while (*last && (*last == '_' || m17n_isspace(enc, *last)))
+d982 1
+a982 1
+		while (*end && m17n_isspace(enc, *end)) end++;
+@
+
+
+1.37.2.1
+log
+@* string.c (rb_str_reverse_bang): forgot to call rb_str_modify().
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/25 06:29:04 $
+a288 3
+    if (OBJ_FROZEN(obj)) {
+	rb_error_frozen("object");
+    }
+a297 7
+Tue Jan  9 17:41:40 2001  Yukihiro Matsumoto  <matz@@ruby-lang.org>
+
+	* object.c (rb_obj_taint): check frozen status before modifying
+	  taint status.
+
+	* object.c (rb_obj_untaint): ditto.
+
+@
+
+
+1.37.2.2
+log
+@* gc.c: wrap inline by #if.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 16:58:18 $
+d301 7
+@
+
+
+1.37.2.3
+log
+@Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 05:05:09 $
+a164 1
+	rb_str_cat2(str, " ");
+a184 1
+    RSTRING(str)->ptr[0] = '#';
+a542 3
+    if (FL_TEST(mod, FL_SINGLETON)) {
+	FL_SET(dup, FL_SINGLETON);
+    }
+@
+
+
+1.37.2.4
+log
+@typo
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:33:12 $
+d545 1
+a545 1
+    if (FL_TEST(module, FL_SINGLETON)) {
+@
+
+
+1.37.2.5
+log
+@* gc.c (rb_gc_call_finalizer_at_exit): should finalize objects in
+  deferred_final_list too.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/01/15 13:20:21 $
+d540 2
+a541 2
+rb_mod_dup(mod)
+    VALUE mod;
+d543 3
+a545 3
+    VALUE dup = rb_mod_clone(mod);
+    OBJSETUP(dup, RBASIC(mod)->klass, BUILTIN_TYPE(mod));
+    if (FL_TEST(mod, FL_SINGLETON)) {
+@
+
+
+1.37.2.6
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/01/23 09:54:35 $
+a1046 3
+    else if (ruby_verbose && RSTRING(str)->len != strlen(RSTRING(str)->ptr)) {
+	rb_warn("string contains \\0 character");
+    }
+@
+
+
+1.37.2.7
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:44:37 $
+d232 2
+a233 1
+	return RTEST(obj) ? Qfalse : Qtrue;
+d236 2
+a237 1
+	return RTEST(obj) ? Qtrue : Qfalse;
+d519 30
+@
+
+
+1.37.2.8
+log
+@* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:40 $
+d755 1
+a755 6
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+    }
+    return rb_const_get(mod, id);
+d762 1
+a762 6
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+    }
+    rb_const_set(mod, id, value);
+d770 1
+a770 6
+    ID id = rb_to_id(name);
+
+    if (!rb_is_const_id(id)) {
+	rb_raise(rb_eNameError, "wrong constant name %s", name);
+    }
+    return rb_const_defined_at(mod, id);
+@
+
+
+1.37.2.9
+log
+@* file.c (rb_file_s_unlink): should not allow if $SAFE >= 2.
+
+* object.c (rb_obj_taint): backport from 1.7.
+
+* object.c (rb_obj_untaint): add frozen status check (backport from 1.7).
+
+* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/24 06:44:13 $
+d289 2
+a290 5
+    if (!OBJ_TAINTED(obj)) {
+	if (OBJ_FROZEN(obj)) {
+	    rb_error_frozen("object");
+	}
+	OBJ_TAINT(obj);
+d292 1
+d301 1
+a301 6
+    if (OBJ_TAINTED(obj)) {
+	if (OBJ_FROZEN(obj)) {
+	    rb_error_frozen("object");
+	}
+	FL_UNSET(obj, FL_TAINT);
+    }
+@
+
+
+1.37.2.10
+log
+@* eval.c: wrapper modifies updated to 1.7 changes.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/01 06:46:09 $
+a117 3
+	if (FL_TEST(obj, FL_EXIVAR)) {
+	    FL_SET(dup, FL_EXIVAR);
+	}
+@
+
+
+1.37.2.11
+log
+@* eval.c (rb_eval): add CHECK_INTS before next, redo, retry to
+  avoid potential uninterruptable infinite loop.
+
+* file.c (rb_file_s_expand_path): should not expand "." and ".."
+  not following dirsep.
+
+* eval.c (rb_provide_feature): should not tweak extension used for
+  loading.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/13 05:50:04 $
+d768 1
+a768 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+d780 1
+a780 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+d793 1
+a793 1
+	rb_raise(rb_eNameError, "wrong constant name %s", rb_id2name(id));
+@
+
+
+1.37.2.12
+log
+@* object.c (rb_obj_inspect): merge from 1.7: remove useless space.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/27 08:54:49 $
+d213 1
+a213 1
+	sprintf(RSTRING(str)->ptr, "-<%s:0x%lx", c, obj);
+@
+
+
+1.37.2.13
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/08/11 14:10:23 $
+d75 2
+a76 2
+VALUE
+rb_obj_class(obj)
+d116 1
+a116 1
+	OBJSETUP(dup, rb_obj_class(obj), BUILTIN_TYPE(obj));
+d244 1
+a244 1
+    if (rb_obj_class(obj) == c) return Qtrue;
+d362 7
+d406 7
+d441 7
+d493 7
+d1159 2
+a1160 2
+    rb_define_method(rb_mKernel, "type", rb_obj_class, 0);
+    rb_define_method(rb_mKernel, "class", rb_obj_class, 0);
+d1199 1
+d1214 1
+d1271 1
+d1280 1
+@
+
+
+1.37.2.14
+log
+@* io.c (io_fread): EAGAIN/EWOULDBLOCK should not terminate and
+  throw away the input.
+
+* time.c (time_new_internal): underflow adjustment must not use
+  negative div/mod.
+
+* time.c (time_cmp): should consider tv_usec on non Fixnum number
+  comparison.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/02 04:25:52 $
+a841 21
+	rb_raise(rb_eTypeError, "%s#%s should return %s",
+		 rb_class2name(CLASS_OF(arg1.val)), method, tname);
+    }
+    return val;
+}
+
+VALUE
+rb_check_convert_type(val, type, tname, method)
+    VALUE val;
+    int type;
+    const char *tname, *method;
+{
+    struct arg_to arg1, arg2;
+
+    if (TYPE(val) == type) return val;
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = tname;
+    val = rb_rescue2(to_type, (VALUE)&arg1, 0, 0,
+		     rb_eStandardError, rb_eNameError, 0);
+    if (!NIL_P(val) && TYPE(val) != type) {
+@
+
+
+1.37.2.15
+log
+@* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* variable.c (find_class_path): should initialize iv_tbl if it's
+  NULL.
+
+* class.c (rb_define_class): should return the existing class if
+  the class is already defined and its superclass is ideintical to
+  the specified superclass.
+
+* class.c (rb_define_class_under): ditto.
+
+* class.c (rb_define_module): should return the existing module if
+  the module is already defined.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/04 04:53:31 $
+d76 2
+a77 2
+rb_class_real(cl)
+    VALUE cl;
+d79 2
+a80 3
+    if (TYPE(cl) == T_ICLASS) {
+	cl = RBASIC(cl)->klass;
+    }
+a84 7
+}
+
+VALUE
+rb_obj_class(obj)
+    VALUE obj;
+{
+    return rb_class_real(CLASS_OF(obj));
+@
+
+
+1.37.2.16
+log
+@* object.c (convert_type): backport from 1.7 to avoid NameError
+  messages with -d option.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/18 08:40:31 $
+d810 5
+d816 2
+a817 4
+convert_type(val, tname, method, raise)
+    VALUE val;
+    const char *tname, *method;
+    int raise;
+d819 2
+a820 1
+    ID m;
+d822 11
+a832 15
+    m = rb_intern(method);
+    if (!rb_respond_to(val, m)) {
+	if (raise) {
+	    rb_raise(rb_eTypeError, "failed to convert %s into %s",
+		     NIL_P(val) ? "nil" :
+		     val == Qtrue ? "true" :
+		     val == Qfalse ? "false" :
+		     rb_class2name(CLASS_OF(val)), 
+		     tname);
+	}
+	else {
+	    return Qnil;
+	}
+    }
+    return rb_funcall(val, m, 0);
+d841 1
+a841 1
+    VALUE v;
+d844 6
+a849 2
+    v = convert_type(val, tname, method, Qtrue);
+    if (TYPE(v) != type) {
+d851 1
+a851 1
+		 rb_class2name(CLASS_OF(val)), method, tname);
+d853 1
+a853 1
+    return v;
+d862 1
+a862 1
+    VALUE v;
+d865 6
+a870 3
+    v = convert_type(val, tname, method, Qfalse);
+    if (NIL_P(v)) return Qnil;
+    if (TYPE(v) != type) {
+d872 1
+a872 1
+		 rb_class2name(CLASS_OF(val)), method, tname);
+d874 1
+a874 1
+    return v;
+d882 9
+a890 2
+    VALUE v = convert_type(val, "Integer", method, Qtrue);
+    if (!rb_obj_is_kind_of(v, rb_cInteger)) {
+d892 1
+a892 1
+		 rb_class2name(CLASS_OF(val)), method);
+d894 1
+a894 1
+    return v;
+@
+
+
+1.37.2.17
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/07 05:40:10 $
+d631 3
+a633 1
+    rb_make_metaclass(klass, RBASIC(super)->klass);
+d635 1
+a635 1
+    rb_class_inherited(super, klass);
+d1099 6
+a1104 3
+    metaclass = rb_make_metaclass(rb_cObject, rb_cClass);
+    metaclass = rb_make_metaclass(rb_cModule, metaclass);
+    metaclass = rb_make_metaclass(rb_cClass, metaclass);
+@
+
+
+1.37.2.18
+log
+@* object.c (rb_Float): remove underscores between digits.
+
+* bignum.c (rb_cstr2inum): reject prefix followed by spaces only.
+
+* class.c (rb_class_inherited): should use Object when no super
+  class.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 23:38:57 $
+d943 1
+d952 1
+a952 1
+		    char *n = buf, *last = p;
+a953 1
+		    while (p < end) *n++ = *p++;
+d955 1
+a955 2
+			if (*p == '_' && (n > buf && ISDIGIT(n[-1]))) {
+			    /* remove underscores between digits */
+a956 3
+			    while (*p == '_') ++p;
+			    if (!ISDIGIT(*p)) {
+				while (last < p) *n++ = *last++;
+a958 2
+			    last = p;
+			}
+d966 1
+a966 2
+		    d = strtod(p, &end);
+		    if (p == end) goto bad;
+@
+
+
+1.37.2.19
+log
+@* object.c (rb_class_real): should not follow ICLASS link
+
+* variable.c (classname): should follow ICLASS link explicitly.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/16 02:20:25 $
+d79 3
+@
+
+
+1.37.2.20
+log
+@* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* eval.c (rb_thread_cleanup): current thread may be THREAD_STOPPED,
+  for example when terminated from signal handler.
+
+* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+
+* pack.c (pack_unpack): should treat 'U' in character unit, not in
+  byte unit.
+
+* marshal.c (w_uclass): should check based on rb_obj_class(), not
+  CLASS_OF().
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+
+* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/04 08:09:10 $
+d1029 1
+a1029 1
+    else if (RTEST(ruby_verbose) && RSTRING(str)->len != strlen(RSTRING(str)->ptr)) {
+@
+
+
+1.37.2.21
+log
+@* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* variable.c (rb_path2class): should not use rb_eval_string().
+
+* parse.y (str_extend): expression substitution can contain string
+  terminator again.
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/01 09:37:58 $
+d117 2
+a118 2
+    if (TYPE(dup) != TYPE(obj) || rb_obj_class(dup) != rb_obj_class(obj)) {
+	rb_raise(rb_eTypeError, "dupulicated object must be same class");
+@
+
+
+1.37.2.22
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/25 07:07:37 $
+d669 1
+a669 1
+	    rb_raise(rb_eArgError, "%lu is not a symbol", id);
+@
+
+
+1.36
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/14 07:10:22 $
+d18 1
+d949 42
+@
+
+
+1.35
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/13 05:39:34 $
+d1206 1
+@
+
+
+1.34
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/16 09:13:19 $
+d888 2
+a889 2
+	rb_raise(rb_eTypeError, "%s#%s_i should return Integer",
+		 method, rb_class2name(CLASS_OF(arg1.val)));
+d1169 1
+@
+
+
+1.33
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/13 09:01:57 $
+d874 27
+a904 2
+    struct arg_to arg1, arg2;
+
+d925 1
+a925 11
+
+    arg1.val = arg2.val = val;
+    arg1.s = "to_i";
+    arg2.s = "Integer";
+    val = rb_rescue2(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2,
+		     rb_eStandardError, rb_eNameError, 0);
+    if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+	rb_raise(rb_eTypeError, "%s#to_i should return Integer",
+		 rb_class2name(CLASS_OF(arg1.val)));
+    }
+    return val;
+@
+
+
+1.32
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/10 07:03:20 $
+d201 1
+a201 1
+	    str = rb_str_new(0, strlen(c)+8+16+1); /* 8:tags 16:addr 1:eos */
+d206 1
+a206 1
+	str = rb_str_new(0, strlen(c)+4+16+1); /* 4:tags 16:addr 1:eos */
+d501 1
+a502 1
+    name = rb_id2name(SYM2ID(sym));
+@
+
+
+1.31
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/05 09:57:01 $
+d137 1
+d203 1
+d208 1
+d504 1
+@
+
+
+1.30
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/26 07:07:12 $
+a131 1
+    char *s;
+d135 2
+a136 3
+    s = ALLOCA_N(char, strlen(cname)+6+16+1); /* 6:tags 16:addr 1:eos */
+    sprintf(s, "#<%s:0x%lx>", cname, obj);
+    str = rb_str_new2(s);
+d196 1
+a196 1
+	char *c, *b;
+d200 3
+a202 3
+	    b = ALLOCA_N(char, strlen(c)+8+16+1); /* 8:tags 16:addr 1:eos */
+	    sprintf(b, "#<%s:0x%lx ...>", c, obj);
+	    return rb_str_new2(b);
+d204 2
+a205 3
+	b = ALLOCA_N(char, strlen(c)+4+16+1); 	  /* 4:tags 16:addr 1:eos */
+	sprintf(b, "-<%s:0x%lx ", c, obj);
+	str = rb_str_new2(b);
+d495 2
+a496 1
+    char *name, *buf;
+d498 1
+d500 2
+a501 4
+    buf = ALLOCA_N(char, strlen(name)+2);
+    sprintf(buf, ":%s", name);
+
+    return rb_str_new2(buf);
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/15 06:00:26 $
+d116 1
+@
+
+
+1.28
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/12 05:37:24 $
+a115 1
+	OBJ_INFECT(dup, obj);
+a472 1
+    obj->iv_tbl = 0;
+d532 9
+d1163 1
+@
+
+
+1.27
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/31 05:29:45 $
+d1179 1
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/09 04:32:17 $
+d993 2
+d996 7
+a1002 1
+    val = rb_funcall(val, rb_intern("to_a"), 0);
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/17 09:38:00 $
+d856 6
+a861 2
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+    Check_Type(val, type);
+d895 2
+a896 1
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+d898 2
+a899 1
+	rb_raise(rb_eTypeError, "to_i should return Integer");
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/15 00:33:12 $
+a95 1
+    ROBJECT(clone)->iv_tbl = 0;	/* avoid GC crash */
+a522 2
+    clone->iv_tbl = 0;
+    clone->m_tbl = 0;		/* avoid GC crashing  */
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/06 07:21:12 $
+d35 1
+d45 2
+a46 3
+    if (result == Qfalse || NIL_P(result))
+	return Qfalse;
+    return Qtrue;
+d53 1
+a53 1
+    return rb_funcall(obj1, eql, 1, obj2) == Qtrue;
+a63 7
+static VALUE
+rb_obj_hash(obj)
+    VALUE obj;
+{
+    return ((long)obj)|FIXNUM_FLAG;
+}
+
+d68 1
+a68 1
+    if (rb_special_const_p(obj)) {
+d71 1
+a71 1
+    return (long)obj|FIXNUM_FLAG;
+d105 1
+a105 1
+static VALUE
+d109 1
+a109 3
+    if (TYPE(obj) == T_OBJECT) {
+	VALUE klass = CLASS_OF(obj);
+	VALUE dup;
+d111 7
+a117 8
+	while (TYPE(klass) == T_ICLASS || FL_TEST(klass, FL_SINGLETON)) {
+	    klass = (VALUE)RCLASS(klass)->super;
+	}
+	dup = rb_obj_alloc(klass);
+	if (ROBJECT(obj)->iv_tbl) {
+	    ROBJECT(dup)->iv_tbl = st_copy(ROBJECT(obj)->iv_tbl);
+	}
+	return dup;
+d119 1
+a119 1
+    return rb_funcall(obj, rb_intern("clone"), 0, 0);
+a218 2
+    VALUE cl;
+
+d241 1
+a241 5
+    cl = CLASS_OF(obj);
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+	cl = RCLASS(cl)->super;
+    }
+    if (c == cl) return Qtrue;
+d1074 1
+a1074 1
+    rb_define_method(rb_mKernel, "hash", rb_obj_hash, 0);
+d1204 1
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/29 07:41:54 $
+d234 1
+d270 1
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/22 08:29:46 $
+d721 2
+@
+
+
+1.20
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/25 05:55:04 $
+d896 2
+a897 2
+      case T_NIL:
+	return INT2FIX(0);
+@
+
+
+1.19
+log
+@2000-05-25
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:03 $
+d116 3
+a118 1
+    VALUE dup;
+d120 4
+a123 2
+    if (TYPE(obj) == T_OBJECT) {
+	dup = rb_obj_alloc(RBASIC(obj)->klass);
+@
+
+
+1.18
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:52:59 $
+d103 1
+a106 2
+	RBASIC(clone)->klass = rb_singleton_class_clone(RBASIC(obj)->klass);
+	RBASIC(clone)->flags = RBASIC(obj)->flags;
+d116 9
+d635 8
+d1164 1
+@
+
+
+1.17
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:24 $
+d162 1
+a162 1
+    if (RSTRING(str)->ptr[0] == '-') {
+a163 1
+	rb_str_cat2(str, ": ");
+d197 1
+a197 1
+	char *b;
+d199 1
+a199 1
+	b = rb_class2name(CLASS_OF(obj));
+d201 3
+a203 3
+	    char *buf = ALLOCA_N(char, strlen(b)+8);
+	    sprintf(buf, "#<%s:...>", b);
+	    return rb_str_new2(buf);
+d205 3
+a207 2
+	str = rb_str_new2("-<");
+	rb_str_cat2(str, b);
+d633 1
+d655 1
+d1091 1
+a1091 1
+			     rb_obj_remove_instance_variable, 0);
+@
+
+
+1.16
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:44:15 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.15
+log
+@2000-04-10
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/23 08:37:28 $
+d10 2
+d13 1
+a13 1
+************************************************/
+d834 1
+d1068 1
+@
+
+
+1.14
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/09 08:59:54 $
+d162 1
+a162 1
+	rb_str_cat(str, ": ", 2);
+d165 1
+a165 1
+	rb_str_cat(str, ", ", 2);
+d168 2
+a169 2
+    rb_str_cat(str, ivname, strlen(ivname));
+    rb_str_cat(str, "=", 1);
+d171 1
+a171 1
+    rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d182 1
+a182 1
+    rb_str_cat(str, ">", 1);
+d205 1
+a205 1
+	rb_str_cat(str, b, strlen(b));
+d497 1
+a497 1
+sym_to_s(sym)
+d510 1
+a510 1
+sym_id2name(sym)
+d1120 1
+d1122 1
+a1122 1
+    rb_define_method(rb_cSymbol, "id2name", sym_id2name, 0);
+@
+
+
+1.13
+log
+@2000-03-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/08 06:23:14 $
+d652 1
+@
+
+
+1.12
+log
+@2000-03-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:41 $
+d510 7
+d1120 1
+a1120 1
+    rb_define_method(rb_cSymbol, "id2name", sym_to_s, 0);
+@
+
+
+1.11
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/29 08:05:26 $
+d500 7
+a506 1
+    return rb_str_new2(rb_id2name(SYM2ID(sym)));
+d1109 1
+a1109 1
+    rb_undef_method(CLASS_OF(rb_cNilClass), "new");
+@
+
+
+1.10
+log
+@2000-02-29
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/23 05:23:07 $
+d26 1
+d481 23
+d671 2
+a672 1
+    if (TYPE(name) == T_STRING) {
+d674 9
+a682 4
+    }
+    id = NUM2UINT(name);
+    if (!rb_id2name(id)) {
+	rb_raise(rb_eArgError, "%d is not a symbol", id);
+d1101 7
+@
+
+
+1.9
+log
+@2000-02-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:08 $
+d269 1
+a269 2
+rb_obj_dummy(obj)
+    VALUE obj;
+d589 1
+d982 1
+a982 1
+    rb_define_private_method(rb_cObject, "initialize", rb_obj_dummy, -1);
+@
+
+
+1.8
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/18 06:09:03 $
+d171 1
+d182 1
+@
+
+
+1.7
+log
+@2000-01-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:07 $
+d300 19
+d1026 2
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:46 $
+a61 7
+rb_any_to_a(obj)
+    VALUE obj;
+{
+    return rb_ary_new3(1, obj);
+}
+
+static VALUE
+d65 1
+a65 1
+    return (long)obj|FIXNUM_FLAG;
+d115 7
+@
+
+
+1.5
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:55 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d804 1
+a804 1
+	return rb_str2inum(RSTRING(val)->ptr, 0);
+a828 2
+
+double rb_big2dbl _((VALUE));
+@
+
+
+1.4
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:33 $
+d286 1
+d692 1
+a692 1
+rb_mod_shvar_get(mod, name)
+d695 1
+a695 1
+    return rb_shvar_get(mod, rb_to_id(name));
+d699 1
+a699 1
+rb_mod_shvar_set(mod, name, value)
+d702 1
+a702 1
+    rb_shvar_set(mod, rb_to_id(name), value);
+d707 1
+a707 1
+rb_mod_shvar_defined(mod, name)
+d710 1
+a710 1
+    return rb_shvar_defined_at(mod, rb_to_id(name));
+d1074 5
+a1078 11
+    rb_define_method(rb_cModule, "shared_variable", rb_mod_shvars, 0);
+    rb_define_method(rb_cModule, "shared_variable_get", rb_mod_shvar_get, 1);
+    rb_define_method(rb_cModule, "shared_variable_set", rb_mod_shvar_set, 2);
+    rb_define_method(rb_cModule, "shared_variable_defined?", rb_mod_shvar_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_shared_variable", rb_mod_remove_shvar, 1);
+    /* to be remove at 1.6*/
+    rb_define_method(rb_cModule, "constants", rb_mod_shvars, 0);
+    rb_define_method(rb_cModule, "const_get", rb_mod_shvar_get, 1);
+    rb_define_method(rb_cModule, "const_set", rb_mod_shvar_set, 2);
+    rb_define_method(rb_cModule, "const_defined?", rb_mod_shvar_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_const", rb_mod_remove_shvar, 1);
+@
+
+
+1.3
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:07 $
+d601 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/06 06:48:20 $
+d690 1
+a690 1
+rb_mod_const_get(mod, name)
+d693 1
+a693 1
+    return rb_const_get_at(mod, rb_to_id(name));
+d697 1
+a697 1
+rb_mod_const_set(mod, name, value)
+d700 1
+a700 1
+    rb_const_set(mod, rb_to_id(name), value);
+d705 1
+a705 1
+rb_mod_const_defined(mod, name)
+d708 1
+a708 1
+    return rb_const_defined_at(mod, rb_to_id(name));
+d1072 11
+a1082 5
+    rb_define_method(rb_cModule, "constants", rb_mod_constants, 0);
+    rb_define_method(rb_cModule, "const_get", rb_mod_const_get, 1);
+    rb_define_method(rb_cModule, "const_set", rb_mod_const_set, 2);
+    rb_define_method(rb_cModule, "const_defined?", rb_mod_const_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_const", rb_mod_remove_const, 1);
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:07 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.2
+log
+@2000-03-02
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:06 $
+a567 1
+    VALUE klass;
+@
+
+
+1.2.2.3
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/02 03:51:41 $
+a593 1
+    rb_funcall(super, rb_intern("inherited"), 1, klass);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 08:54:49 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d17 9
+a25 10
+VALUE mKernel;
+VALUE cObject;
+VALUE cModule;
+VALUE cClass;
+VALUE cFixnum;
+VALUE cData;
+
+static VALUE cNilClass;
+static VALUE cTrueClass;
+static VALUE cFalseClass;
+d27 2
+a28 5
+struct st_table *new_idhash();
+
+VALUE f_sprintf();
+
+VALUE obj_alloc();
+d39 1
+d41 3
+a43 3
+    if (result == FALSE || NIL_P(result))
+	return FALSE;
+    return TRUE;
+d50 1
+a50 1
+    return rb_funcall(obj1, eql, 1, obj2);
+d53 2
+a54 2
+VALUE
+obj_equal(obj1, obj2)
+d57 2
+a58 2
+    if (obj1 == obj2) return TRUE;
+    return FALSE;
+d62 1
+a62 1
+any_to_a(obj)
+d65 1
+a65 1
+    return ary_new3(1, obj);
+d69 8
+a76 1
+obj_id(obj)
+d79 4
+a82 1
+    return obj | FIXNUM_FLAG;
+d86 2
+a87 2
+obj_type(obj)
+    struct RBasic *obj;
+d89 6
+a94 1
+    return rb_class_path(CLASS_OF(obj));
+d97 2
+a98 2
+static VALUE
+obj_clone(obj)
+d104 1
+a104 1
+	TypeError("can't clone %s", rb_class2name(CLASS_OF(obj)));
+d106 2
+a107 2
+
+    clone = obj_alloc(RBASIC(obj)->class);
+d110 2
+a112 2
+    RBASIC(clone)->class = singleton_class_clone(RBASIC(obj)->class);
+    RBASIC(clone)->flags = RBASIC(obj)->flags;
+d118 1
+a118 1
+obj_dup(obj)
+d125 1
+a125 1
+any_to_s(obj)
+d128 8
+a135 1
+    char buf[256];
+d137 1
+a137 2
+    sprintf(buf, "#<%s:0x%x>", rb_class2name(CLASS_OF(obj)), obj);
+    return str_new2(buf);
+d144 1
+a144 1
+    return obj_as_string(rb_funcall(obj, inspect, 0, 0));
+d151 1
+a151 1
+    struct RString *str;
+d158 4
+a161 3
+    if (str->ptr[0] == '-') {
+	str->ptr[0] = '#';
+	str_cat(str, ": ", 2);
+d164 1
+a164 1
+	str_cat(str, ", ", 2);
+d167 4
+a170 9
+    str_cat(str, ivname, strlen(ivname));
+    str_cat(str, "=", 1);
+    if (TYPE(value) == T_OBJECT) {
+	str2 = any_to_s(value);
+    }
+    else {
+	str2 = rb_inspect(value);
+    }
+    str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d176 12
+a187 2
+obj_inspect(obj)
+    struct RObject *obj;
+d190 2
+a191 1
+	&& obj->iv_tbl && obj->iv_tbl->num_entries > 0) {
+a194 1
+	str = str_new2("-<");
+d196 8
+a203 5
+	str_cat(str, b, strlen(b));
+	st_foreach(obj->iv_tbl, inspect_i, str);
+	str_cat(str, ">", 1);
+
+	return str;
+d209 1
+a209 1
+obj_is_instance_of(obj, c)
+d212 1
+a212 1
+    struct RClass *class = (struct RClass*)CLASS_OF(obj);
+d220 2
+a221 2
+	if (NIL_P(obj)) return TRUE;
+	return FALSE;
+d224 2
+a225 2
+	if (obj) return FALSE;
+	return TRUE;
+d228 2
+a229 2
+	if (obj) return TRUE;
+	return FALSE;
+d232 1
+a232 1
+	TypeError("class or module required");
+d235 3
+a237 2
+    while (FL_TEST(class, FL_SINGLETON)) {
+	class = class->super;
+d239 2
+a240 2
+    if (c == (VALUE)class) return TRUE;
+    return FALSE;
+d244 1
+a244 1
+obj_is_kind_of(obj, c)
+d247 1
+a247 1
+    struct RClass *class = (struct RClass*)CLASS_OF(obj);
+a253 12
+      case T_NIL:
+	if (NIL_P(obj)) return TRUE;
+	return FALSE;
+
+      case T_FALSE:
+	if (obj) return FALSE;
+	return TRUE;
+
+      case T_TRUE:
+	if (obj) return TRUE;
+	return FALSE;
+
+d255 1
+a255 1
+	TypeError("class or module required");
+d258 4
+a261 4
+    while (class) {
+	if ((VALUE)class == c || RCLASS(class)->m_tbl == RCLASS(c)->m_tbl)
+	    return TRUE;
+	class = class->super;
+d263 1
+a263 1
+    return FALSE;
+d267 1
+a267 1
+obj_initialize(obj)
+d273 26
+d300 2
+a301 2
+obj_s_added(obj, id)
+    VALUE obj, id;
+d303 1
+a303 1
+    return Qnil;
+d310 8
+a317 1
+    return str_new2("");
+d324 1
+a324 1
+    return str_new2("nil");
+d331 1
+a331 1
+    return str_new2("nil");
+d334 1
+d340 1
+d348 3
+a350 2
+	TypeError("tried to add %s(%s) to nil",
+		  RSTRING(obj_as_string(y))->ptr, rb_class2name(CLASS_OF(y)));
+d354 1
+d360 1
+a360 1
+    return str_new2("main");
+d367 1
+a367 1
+    return str_new2("TRUE");
+d374 22
+a395 1
+    return str_new2("TRUE");
+d402 1
+a402 1
+    return str_new2("FALSE");
+d409 22
+a430 1
+    return str_new2("FALSE");
+d437 1
+a437 1
+    return TRUE;
+d444 1
+a444 1
+    return FALSE;
+d448 2
+a449 2
+obj_alloc(class)
+    VALUE class;
+d452 1
+a452 1
+    OBJSETUP(obj, class, T_OBJECT);
+d459 2
+a460 2
+mod_clone(module)
+    struct RClass *module;
+d463 1
+a463 1
+    OBJSETUP(clone, CLASS_OF(module), TYPE(module));
+d465 1
+a465 1
+    clone->super = module->super;
+d468 6
+a473 1
+    clone->m_tbl = st_copy(module->m_tbl);
+d479 9
+a487 2
+mod_to_s(class)
+    VALUE class;
+d489 1
+a489 1
+    return rb_class_path(class);
+d493 1
+a493 1
+mod_eqq(mod, arg)
+d496 15
+a510 1
+    return obj_is_kind_of(arg, mod);
+d513 30
+a542 2
+VALUE module_new();
+VALUE class_new_instance();
+d545 32
+a576 1
+class_s_new(argc, argv, class)
+d580 1
+a580 1
+    VALUE super, cls;
+d582 3
+a584 2
+    rb_scan_args(argc, argv, "01", &super);
+    if (NIL_P(super)) super = cObject;
+d587 1
+a587 1
+	TypeError("can't make subclass of virtual class");
+d589 1
+a589 1
+    cls = class_new(super);
+d591 2
+a592 1
+    RBASIC(cls)->class = singleton_class_new(RBASIC(super)->class);
+d594 7
+a600 1
+    return cls;
+d604 2
+a605 2
+class_superclass(class)
+    struct RClass *class;
+d607 1
+a607 1
+    struct RClass *super = class->super;
+d610 1
+a610 1
+	super = super->super;
+d615 1
+a615 1
+    return (VALUE)super;
+d622 2
+d627 5
+a631 2
+    Check_Type(name, T_FIXNUM);
+    return FIX2UINT(name);
+d635 1
+a635 1
+mod_attr(argc, argv, class)
+d638 1
+a638 1
+    VALUE class;
+d643 1
+a643 1
+    rb_define_attr(class, rb_to_id(name), RTEST(pub));
+d648 4
+a651 2
+f_integer(obj, arg)
+    VALUE obj, arg;
+d655 13
+a667 8
+    switch (TYPE(arg)) {
+      case T_FLOAT:
+	if (RFLOAT(arg)->value <= (double)FIXNUM_MAX
+	    && RFLOAT(arg)->value >= (double)FIXNUM_MIN) {
+	    i = (int)RFLOAT(arg)->value;
+	    break;
+	}
+	return dbl2big(RFLOAT(arg)->value);
+d669 5
+a673 2
+      case T_BIGNUM:
+	return arg;
+d675 7
+a681 2
+      case T_STRING:
+	return str2inum(RSTRING(arg)->ptr, 0);
+d683 2
+a684 2
+      default:
+	i = NUM2INT(arg);
+d686 1
+a686 1
+    return INT2NUM(i);
+d690 54
+a743 1
+to_flo(val)
+d745 6
+d752 1
+a752 1
+    return rb_funcall(val, rb_intern("to_f"), 0);
+d756 13
+a768 1
+fail_to_flo(val)
+d770 2
+d773 9
+a781 1
+    TypeError("failed to convert %s into Float", rb_class2name(CLASS_OF(val)));
+a783 2
+double big2dbl();
+
+d785 2
+a786 2
+f_float(obj, arg)
+    VALUE obj, arg;
+d788 1
+d790 1
+a790 1
+    switch (TYPE(arg)) {
+d792 5
+a796 1
+	return arg;
+d799 7
+a805 1
+	return float_new(big2dbl(arg));
+d808 9
+a816 1
+	return rb_rescue(to_flo, arg, fail_to_flo, arg);
+d818 1
+d822 1
+a822 1
+f_string(obj, arg)
+d825 25
+a849 1
+    return rb_funcall(arg, rb_intern("to_s"), 0);
+d853 1
+a853 1
+f_array(obj, arg)
+d856 1
+a856 1
+    return rb_funcall(arg, rb_intern("to_a"), 0);
+d859 3
+a861 4
+static VALUE
+boot_defclass(name, super)
+    char *name;
+    VALUE super;
+d863 18
+a880 3
+    extern st_table *rb_class_tbl;
+    struct RClass *obj = (struct RClass*)class_new(super);
+    ID id = rb_intern(name);
+d882 10
+a891 3
+    rb_name_class(obj, id);
+    st_add_direct(rb_class_tbl, id, obj);
+    return (VALUE)obj;
+d895 2
+a896 2
+rb_class_of(obj)
+    VALUE obj;
+d898 2
+a899 4
+    if (FIXNUM_P(obj)) return cFixnum;
+    if (obj == Qnil) return cNilClass;
+    if (obj == FALSE) return cFalseClass;
+    if (obj == TRUE) return cTrueClass;
+d901 5
+a905 1
+    return RBASIC(obj)->class;
+d908 3
+a910 3
+int
+rb_type(obj)
+    VALUE obj;
+d912 7
+a918 4
+    if (FIXNUM_P(obj)) return T_FIXNUM;
+    if (obj == Qnil) return T_NIL;
+    if (obj == FALSE) return T_FALSE;
+    if (obj == TRUE) return T_TRUE;
+d920 5
+a924 1
+    return BUILTIN_TYPE(obj);
+d927 4
+a930 3
+int
+rb_special_const_p(obj)
+    VALUE obj;
+d932 3
+a934 4
+    if (FIXNUM_P(obj)) return TRUE;
+    if (obj == Qnil) return TRUE;
+    if (obj == FALSE) return TRUE;
+    if (obj == TRUE) return TRUE;
+d936 3
+a938 1
+    return FALSE;
+d941 1
+a941 1
+VALUE TopSelf;
+d948 15
+a962 10
+    cObject = boot_defclass("Object", 0);
+    cModule = boot_defclass("Module", cObject);
+    cClass =  boot_defclass("Class",  cModule);
+
+    metaclass = RBASIC(cObject)->class = singleton_class_new(cClass);
+    metaclass = RBASIC(cModule)->class = singleton_class_new(metaclass);
+    metaclass = RBASIC(cClass)->class = singleton_class_new(metaclass);
+
+    mKernel = rb_define_module("Kernel");
+    rb_include_module(cObject, mKernel);
+d988 122
+a1109 73
+    rb_define_method(mKernel, "nil?", rb_false, 0);
+    rb_define_method(mKernel, "==", obj_equal, 1);
+    rb_define_alias(mKernel, "equal?", "==");
+    rb_define_alias(mKernel, "===", "==");
+
+    rb_define_method(mKernel, "eql?", obj_equal, 1);
+
+    rb_define_method(mKernel, "hash", obj_id, 0);
+    rb_define_method(mKernel, "id", obj_id, 0);
+    rb_define_method(mKernel, "type", obj_type, 0);
+
+    rb_define_method(mKernel, "clone", obj_clone, 0);
+    rb_define_method(mKernel, "dup", obj_dup, 0);
+
+    rb_define_method(mKernel, "to_a", any_to_a, 0);
+    rb_define_method(mKernel, "to_s", any_to_s, 0);
+    rb_define_method(mKernel, "inspect", obj_inspect, 0);
+
+    rb_define_method(mKernel, "instance_of?", obj_is_instance_of, 1);
+    rb_define_method(mKernel, "kind_of?", obj_is_kind_of, 1);
+    rb_define_method(mKernel, "is_a?", obj_is_kind_of, 1);
+
+    rb_define_global_function("sprintf", f_sprintf, -1);
+    rb_define_alias(mKernel, "format", "sprintf");
+
+    rb_define_global_function("Integer", f_integer, 1);
+    rb_define_global_function("Float", f_float, 1);
+
+    rb_define_global_function("String", f_string, 1);
+    rb_define_global_function("Array", f_array, 1);
+
+    cNilClass = rb_define_class("NilClass", cObject);
+    rb_define_method(cNilClass, "type", nil_type, 0);
+    rb_define_method(cNilClass, "to_s", nil_to_s, 0);
+    rb_define_method(cNilClass, "inspect", nil_inspect, 0);
+    rb_define_method(cNilClass, "=~", rb_equal, 1);
+
+    rb_define_method(cNilClass, "nil?", rb_true, 0);
+    rb_undef_method(CLASS_OF(cNilClass), "new");
+
+    /* default addition */
+    rb_define_method(cNilClass, "+", nil_plus, 1);
+
+    rb_define_global_function("initialize", obj_initialize, -1);
+    rb_define_global_function("singleton_method_added", obj_s_added, 1);
+
+    rb_define_method(cModule, "===", mod_eqq, 1);
+    rb_define_method(cModule, "to_s", mod_to_s, 0);
+
+    rb_define_private_method(cModule, "attr", mod_attr, -1);
+    rb_define_singleton_method(cModule, "new", module_new, 0);
+
+    rb_define_method(cClass, "new", class_new_instance, -1);
+    rb_define_method(cClass, "superclass", class_superclass, 0);
+    rb_undef_method(cClass, "extend_object");
+
+    cData = rb_define_class("Data", cObject);
+
+    TopSelf = obj_alloc(cObject);
+    rb_global_variable(&TopSelf);
+    rb_define_singleton_method(TopSelf, "to_s", main_to_s, 0);
+
+    cTrueClass = rb_define_class("TrueClass", cObject);
+    rb_define_method(cTrueClass, "to_s", true_to_s, 0);
+    rb_define_method(cTrueClass, "type", true_type, 0);
+    rb_undef_method(CLASS_OF(cTrueClass), "new");
+    rb_define_global_const("TRUE", TRUE);
+
+    cFalseClass = rb_define_class("FalseClass", cObject);
+    rb_define_method(cFalseClass, "to_s", false_to_s, 0);
+    rb_define_method(cFalseClass, "type", false_type, 0);
+    rb_undef_method(CLASS_OF(cFalseClass), "new");
+    rb_define_global_const("FALSE", FALSE);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+extern VALUE cFixnum;
+d75 1
+a75 1
+    return INT2NUM((int)obj);
+d80 1
+a80 1
+    VALUE obj;
+d82 1
+a82 6
+    VALUE cl = CLASS_OF(obj);
+
+    if (FL_TEST(cl, FL_SINGLETON)) {
+	cl = RCLASS(cl)->super;
+    }
+    return cl;
+d94 1
+a95 1
+    CLONESETUP(clone,obj);
+d98 1
+a100 1
+    }
+d133 1
+a133 1
+    VALUE str;
+d140 2
+a141 2
+    if (RSTRING(str)->ptr[0] == '-') {
+	RSTRING(str)->ptr[0] = '#';
+d163 1
+a163 1
+    VALUE obj;
+d166 1
+a166 2
+	&& ROBJECT(obj)->iv_tbl
+	&& ROBJECT(obj)->iv_tbl->num_entries > 0) {
+d173 1
+a173 1
+	st_foreach(ROBJECT(obj)->iv_tbl, inspect_i, str);
+d185 1
+a185 1
+    VALUE cl;
+d208 2
+a209 3
+    cl = CLASS_OF(obj);
+    while (FL_TEST(cl, FL_SINGLETON)) {
+	cl = RCLASS(cl)->super;
+d211 1
+a211 1
+    if (c == cl) return TRUE;
+d219 1
+a219 1
+    VALUE cl = CLASS_OF(obj);
+d242 2
+a243 2
+    while (cl) {
+	if (cl == c || RCLASS(cl)->m_tbl == RCLASS(c)->m_tbl)
+d245 1
+a245 1
+	cl = RCLASS(cl)->super;
+d251 1
+a251 1
+obj_dummy(obj)
+d258 2
+a259 2
+nil_to_s(obj)
+    VALUE obj;
+d261 1
+a261 1
+    return str_new2("");
+d265 1
+a265 1
+nil_to_a(obj)
+d268 1
+a268 1
+    return ary_new2(0);
+d282 1
+a282 1
+    return cNilClass;
+d314 1
+a314 1
+    return str_new2("true");
+d321 1
+a321 1
+    return cTrueClass;
+d328 1
+a328 1
+    return str_new2("false");
+d335 1
+a335 1
+    return cFalseClass;
+d365 1
+a365 1
+    VALUE module;
+d370 1
+a370 1
+    clone->super = RCLASS(module)->super;
+d373 1
+a373 1
+    clone->m_tbl = st_copy(RCLASS(module)->m_tbl);
+a391 74
+static VALUE
+mod_le(mod, arg)
+    VALUE mod, arg;
+{
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	TypeError("compared with non class/module");
+    }
+
+    while (mod) {
+	if (RCLASS(mod)->m_tbl == RCLASS(arg)->m_tbl)
+	    return TRUE;
+	mod = RCLASS(mod)->super;
+    }
+
+    return FALSE;
+}
+
+static VALUE
+mod_lt(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return FALSE;
+    return mod_le(mod, arg);
+}
+
+static VALUE
+mod_ge(mod, arg)
+    VALUE mod, arg;
+{
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	TypeError("compared with non class/module");
+    }
+
+    return mod_lt(arg, mod);
+}
+
+static VALUE
+mod_gt(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return FALSE;
+    return mod_ge(mod, arg);
+}
+
+static VALUE
+mod_cmp(mod, arg)
+    VALUE mod, arg;
+{
+    if (mod == arg) return INT2FIX(0);
+
+    switch (TYPE(arg)) {
+      case T_MODULE:
+      case T_CLASS:
+	break;
+      default:
+	TypeError("<=> requires Class or Module (%s given)",
+		  rb_class2name(CLASS_OF(arg)));
+	break;
+    }
+
+    if (mod_le(mod, arg)) {
+	return INT2FIX(-1);
+    }
+    return INT2FIX(1);
+}
+
+d396 1
+a396 1
+class_s_new(argc, argv)
+d400 1
+a400 1
+    VALUE super, klass;
+d408 1
+a408 1
+    klass = class_new(super);
+d410 1
+a410 2
+    RBASIC(klass)->class = singleton_class_new(RBASIC(super)->class);
+    singleton_class_attached(RBASIC(klass)->class, klass);
+d412 1
+a412 1
+    return klass;
+a414 6
+VALUE mod_name();
+VALUE mod_included_modules();
+VALUE mod_ancestors();
+VALUE class_instance_methods();
+VALUE class_private_instance_methods();
+
+d416 2
+a417 2
+class_superclass(cl)
+    VALUE cl;
+d419 1
+a419 1
+    VALUE super = RCLASS(cl)->super;
+d422 1
+a422 1
+	super = RCLASS(super)->super;
+d427 1
+a427 1
+    return super;
+d450 1
+a450 29
+    rb_define_attr(class, rb_to_id(name), 1, RTEST(pub));
+    return Qnil;
+}
+
+static VALUE
+mod_attr_reader(argc, argv, class)
+    int argc;
+    VALUE *argv;
+    VALUE class;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_define_attr(class, rb_to_id(argv[i]), 1, 0);
+    }
+    return Qnil;
+}
+
+static VALUE
+mod_attr_writer(argc, argv, class)
+    int argc;
+    VALUE *argv;
+    VALUE class;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_define_attr(class, rb_to_id(argv[i]), 0, 1);
+    }
+a454 63
+mod_attr_accessor(argc, argv, class)
+    int argc;
+    VALUE *argv;
+    VALUE class;
+{
+    int i;
+
+    for (i=0; i<argc; i++) {
+	rb_define_attr(class, rb_to_id(argv[i]), 1, 1);
+    }
+    return Qnil;
+}
+
+VALUE mod_constants();
+
+static VALUE
+mod_const_get(mod, name)
+    VALUE mod, name;
+{
+    return rb_const_get_at(mod, rb_to_id(name));
+}
+
+static VALUE
+mod_const_set(mod, name, value)
+    VALUE mod, name, value;
+{
+    rb_const_set(mod, rb_to_id(name), value);
+    return value;
+}
+
+static VALUE
+mod_const_defined(mod, name)
+    VALUE mod, name;
+{
+    return rb_const_defined_at(mod, rb_to_id(name));
+}
+
+static VALUE
+obj_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = TRUE;
+    return class_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+VALUE obj_singleton_methods();
+
+static VALUE
+obj_private_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = TRUE;
+    return class_private_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+VALUE obj_instance_variables();
+VALUE obj_remove_instance_variable();
+
+static VALUE
+a480 7
+VALUE
+rb_Integer(val)
+    VALUE val;
+{
+    return f_integer(Qnil, val);
+}
+
+d497 1
+a497 1
+static VALUE
+d501 1
+a502 3
+      case T_FIXNUM:
+	return float_new((double)FIX2INT(arg));
+
+a513 15
+VALUE
+rb_Float(val)
+    VALUE val;
+{
+    return f_float(Qnil, val);
+}
+
+double
+num2dbl(val)
+    VALUE val;
+{
+    VALUE v = rb_Float(val);
+    return RFLOAT(v)->value;
+}
+
+a520 7
+VALUE
+rb_String(val)
+    VALUE val;
+{
+    return f_string(Qnil, val);
+}
+
+d525 1
+a525 20
+    if (TYPE(arg) == T_ARRAY) return arg;
+    arg = rb_funcall(arg, rb_intern("to_a"), 0);
+    if (TYPE(arg) != T_ARRAY) {
+	TypeError("`to_a' did not return Array");
+    }
+    return arg;
+}
+
+VALUE
+rb_Array(val)
+    VALUE val;
+{
+    return f_array(Qnil, val);
+}
+
+VALUE
+rb_to_a(val)			/* backward compatibility */
+    VALUE val;
+{
+    return f_array(Qnil, val);
+d534 1
+a534 1
+    VALUE obj = class_new(super);
+d554 24
+a589 1
+    singleton_class_attached(metaclass, cObject);
+a590 1
+    singleton_class_attached(metaclass, cModule);
+a591 1
+    singleton_class_attached(metaclass, cClass);
+a594 1
+    rb_define_private_method(cClass, "inherited", obj_dummy, 1);
+a623 1
+    rb_define_method(mKernel, "=~", rb_false, 1);
+a636 5
+    rb_define_method(mKernel, "methods", obj_methods, 0);
+    rb_define_method(mKernel, "singleton_methods", obj_singleton_methods, 0);
+    rb_define_method(mKernel, "private_methods", obj_private_methods, 0);
+    rb_define_method(mKernel, "instance_variables", obj_instance_variables, 0);
+    rb_define_method(mKernel, "remove_instance_variable", obj_remove_instance_variable, 0);
+a653 1
+    rb_define_method(cNilClass, "to_a", nil_to_a, 0);
+d655 1
+a658 1
+    rb_define_global_const("NIL", Qnil);
+d663 2
+a664 2
+    rb_define_global_function("initialize", obj_dummy, -1);
+    rb_define_global_function("singleton_method_added", obj_dummy, 1);
+a666 6
+    rb_define_method(cModule, "<=>",  mod_cmp, 1);
+    rb_define_method(cModule, "<",  mod_lt, 1);
+    rb_define_method(cModule, "<=", mod_le, 1);
+    rb_define_method(cModule, ">",  mod_gt, 1);
+    rb_define_method(cModule, ">=", mod_ge, 1);
+    rb_define_method(cModule, "clone", mod_clone, 0);
+a667 3
+    rb_define_method(cModule, "included_modules", mod_included_modules, 0);
+    rb_define_method(cModule, "name", mod_name, 0);
+    rb_define_method(cModule, "ancestors", mod_ancestors, 0);
+a669 4
+    rb_define_private_method(cModule, "attr_reader", mod_attr_reader, -1);
+    rb_define_private_method(cModule, "attr_writer", mod_attr_writer, -1);
+    rb_define_private_method(cModule, "attr_accessor", mod_attr_accessor, -1);
+
+a670 8
+    rb_define_method(cModule, "instance_methods", class_instance_methods, -1);
+    rb_define_method(cModule, "private_instance_methods", class_private_instance_methods, -1);
+
+    rb_define_method(cModule, "constants", mod_constants, 0);
+    rb_define_method(cModule, "const_get", mod_const_get, 1);
+    rb_define_method(cModule, "const_set", mod_const_set, 2);
+    rb_define_method(cModule, "const_defined?", mod_const_defined, 1);
+    rb_define_private_method(cModule, "method_added", obj_dummy, 1);
+a673 1
+    rb_define_singleton_method(cClass, "new", class_s_new, -1);
+a674 3
+    rb_undef_method(cClass, "append_features");
+
+    rb_define_singleton_method(cClass, "new", class_s_new, -1);
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:32 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d17 10
+a26 9
+VALUE rb_mKernel;
+VALUE rb_cObject;
+VALUE rb_cModule;
+VALUE rb_cClass;
+VALUE rb_cData;
+
+VALUE rb_cNilClass;
+VALUE rb_cTrueClass;
+VALUE rb_cFalseClass;
+d28 5
+a32 2
+VALUE rb_f_sprintf();
+VALUE rb_obj_alloc();
+a42 1
+    if (obj1 == obj2) return Qtrue;
+d44 3
+a46 3
+    if (result == Qfalse || NIL_P(result))
+	return Qfalse;
+    return Qtrue;
+d56 2
+a57 2
+static VALUE
+rb_obj_equal(obj1, obj2)
+d60 2
+a61 2
+    if (obj1 == obj2) return Qtrue;
+    return Qfalse;
+d65 1
+a65 1
+rb_any_to_a(obj)
+d68 1
+a68 1
+    return rb_ary_new3(1, obj);
+d72 1
+a72 8
+rb_obj_hash(obj)
+    VALUE obj;
+{
+    return (long)obj|FIXNUM_FLAG;
+}
+
+VALUE
+rb_obj_id(obj)
+d75 1
+a75 4
+    if (rb_special_const_p(obj)) {
+	return INT2NUM((long)obj);
+    }
+    return (long)obj|FIXNUM_FLAG;
+d79 1
+a79 1
+rb_obj_type(obj)
+d84 1
+a84 1
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+d90 2
+a91 2
+VALUE
+rb_obj_clone(obj)
+d97 1
+a97 1
+	rb_raise(rb_eTypeError, "can't clone %s", rb_class2name(CLASS_OF(obj)));
+d99 1
+a99 1
+    clone = rb_obj_alloc(RBASIC(obj)->klass);
+d103 2
+a104 2
+	RBASIC(clone)->klass = rb_singleton_class_clone(RBASIC(obj)->klass);
+	RBASIC(clone)->flags = RBASIC(obj)->flags;
+d111 1
+a111 1
+rb_obj_dup(obj)
+d118 1
+a118 1
+rb_any_to_s(obj)
+d121 1
+a121 3
+    char *s;
+    char *cname = rb_class2name(CLASS_OF(obj));
+    VALUE str;
+d123 2
+a124 6
+    s = ALLOCA_N(char, strlen(cname)+6+16+1); /* 6:tags 16:addr 1:eos */
+    sprintf(s, "#<%s:0x%x>", cname, obj);
+    str = rb_str_new2(s);
+    if (OBJ_TAINTED(obj)) OBJ_TAINT(str);
+
+    return str;
+d131 1
+a131 1
+    return rb_obj_as_string(rb_funcall(obj, inspect, 0, 0));
+a144 1
+    if (!rb_is_instance_id(id)) return ST_CONTINUE;
+d147 1
+a147 1
+	rb_str_cat(str, ": ", 2);
+d150 1
+a150 1
+	rb_str_cat(str, ", ", 2);
+d153 9
+a161 4
+    rb_str_cat(str, ivname, strlen(ivname));
+    rb_str_cat(str, "=", 1);
+    str2 = rb_inspect(value);
+    rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d167 1
+a167 11
+inspect_obj(obj, str)
+    VALUE obj, str;
+{
+    st_foreach(ROBJECT(obj)->iv_tbl, inspect_i, str);
+    rb_str_cat(str, ">", 1);
+
+    return str;
+}
+
+static VALUE
+rb_obj_inspect(obj)
+d176 1
+d178 5
+a182 8
+	if (rb_inspecting_p(obj)) {
+	    char *buf = ALLOCA_N(char, strlen(b)+8);
+	    sprintf(buf, "#<%s:...>", b);
+	    return rb_str_new2(buf);
+	}
+	str = rb_str_new2("-<");
+	rb_str_cat(str, b, strlen(b));
+	return rb_protect_inspect(inspect_obj, obj, str);
+d188 1
+a188 1
+rb_obj_is_instance_of(obj, c)
+d199 2
+a200 2
+	if (NIL_P(obj)) return Qtrue;
+	return Qfalse;
+d203 2
+a204 2
+	if (obj) return Qfalse;
+	return Qtrue;
+d207 2
+a208 2
+	if (obj) return Qtrue;
+	return Qfalse;
+d211 1
+a211 1
+	rb_raise(rb_eTypeError, "class or module required");
+d215 1
+a215 1
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+d218 2
+a219 2
+    if (c == cl) return Qtrue;
+    return Qfalse;
+d223 1
+a223 1
+rb_obj_is_kind_of(obj, c)
+d233 12
+d246 1
+a246 1
+	rb_raise(rb_eTypeError, "class or module required");
+d251 1
+a251 1
+	    return Qtrue;
+d254 1
+a254 1
+    return Qfalse;
+d258 1
+a258 1
+rb_obj_dummy(obj)
+a263 33
+VALUE
+rb_obj_tainted(obj)
+    VALUE obj;
+{
+    if (OBJ_TAINTED(obj))
+	return Qtrue;
+    return Qfalse;
+}
+
+VALUE
+rb_obj_taint(obj)
+    VALUE obj;
+{
+    OBJ_TAINT(obj);
+    return obj;
+}
+
+VALUE
+rb_obj_untaint(obj)
+    VALUE obj;
+{
+    rb_secure(3);
+    FL_UNSET(obj, FL_TAINT);
+    return obj;
+}
+
+static VALUE
+nil_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(0);
+}
+
+d268 1
+a268 1
+    return rb_str_new2("");
+d275 1
+a275 1
+    return rb_ary_new2(0);
+d282 1
+a282 1
+    return rb_str_new2("nil");
+d289 1
+a289 1
+    return rb_cNilClass;
+a291 1
+#ifdef NIL_PLUS
+a296 1
+      case T_NIL:
+d304 2
+a305 3
+	rb_raise(rb_eTypeError, "tried to add %s(%s) to nil",
+		 STR2CSTR(rb_inspect(y)),
+		 rb_class2name(CLASS_OF(y)));
+a308 1
+#endif
+d314 1
+a314 1
+    return rb_str_new2("main");
+d321 1
+a321 8
+    return rb_str_new2("true");
+}
+
+static VALUE
+true_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(1);
+d328 1
+a328 22
+    return rb_cTrueClass;
+}
+
+static VALUE
+true_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+}
+
+static VALUE
+true_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return Qtrue;
+}
+
+static VALUE
+true_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qfalse:Qtrue;
+d335 1
+a335 8
+    return rb_str_new2("false");
+}
+
+static VALUE
+false_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(0);
+d342 1
+a342 22
+    return rb_cFalseClass;
+}
+
+static VALUE
+false_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return Qfalse;
+}
+
+static VALUE
+false_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+}
+
+static VALUE
+false_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?Qtrue:Qfalse;
+d349 1
+a349 1
+    return Qtrue;
+d356 1
+a356 1
+    return Qfalse;
+d360 2
+a361 2
+rb_obj_alloc(klass)
+    VALUE klass;
+d364 1
+a364 1
+    OBJSETUP(obj, klass, T_OBJECT);
+d371 1
+a371 1
+rb_mod_clone(module)
+a379 1
+    clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+d386 2
+a387 2
+rb_mod_to_s(klass)
+    VALUE klass;
+d389 1
+a389 1
+    return rb_str_dup(rb_class_path(klass));
+d393 1
+a393 1
+rb_mod_eqq(mod, arg)
+d396 1
+a396 1
+    return rb_obj_is_kind_of(arg, mod);
+d400 1
+a400 1
+rb_mod_le(mod, arg)
+d408 1
+a408 1
+	rb_raise(rb_eTypeError, "compared with non class/module");
+d413 1
+a413 1
+	    return Qtrue;
+d417 1
+a417 1
+    return Qfalse;
+d421 1
+a421 1
+rb_mod_lt(mod, arg)
+d424 2
+a425 2
+    if (mod == arg) return Qfalse;
+    return rb_mod_le(mod, arg);
+d429 1
+a429 1
+rb_mod_ge(mod, arg)
+d437 1
+a437 1
+	rb_raise(rb_eTypeError, "compared with non class/module");
+d440 1
+a440 1
+    return rb_mod_lt(arg, mod);
+d444 1
+a444 1
+rb_mod_gt(mod, arg)
+d447 2
+a448 2
+    if (mod == arg) return Qfalse;
+    return rb_mod_ge(mod, arg);
+d452 1
+a452 1
+rb_mod_cmp(mod, arg)
+d462 2
+a463 2
+	rb_raise(rb_eTypeError, "<=> requires Class or Module (%s given)",
+		 rb_class2name(CLASS_OF(arg)));
+d467 1
+a467 1
+    if (rb_mod_le(mod, arg)) {
+d473 2
+a474 11
+static VALUE
+rb_module_s_new(klass)
+{
+    VALUE mod = rb_module_new();
+
+    RBASIC(mod)->klass = klass;
+    rb_obj_call_init(mod);
+    return mod;
+}
+
+VALUE rb_class_new_instance();
+d477 1
+a477 1
+rb_class_s_new(argc, argv)
+d483 2
+a484 3
+    if (rb_scan_args(argc, argv, "01", &super) == 0) {
+	super = rb_cObject;
+    }
+d487 1
+a487 1
+	rb_raise(rb_eTypeError, "can't make subclass of virtual class");
+d489 1
+a489 1
+    klass = rb_class_new(super);
+d491 2
+a492 3
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+    rb_obj_call_init(klass);
+d497 5
+a501 5
+static VALUE
+rb_class_s_inherited()
+{
+    rb_raise(rb_eTypeError, "can't make subclass of Class");
+}
+d504 2
+a505 2
+rb_class_superclass(klass)
+    VALUE klass;
+d507 1
+a507 1
+    VALUE super = RCLASS(klass)->super;
+a521 2
+    ID id;
+
+d525 2
+a526 5
+    id = NUM2UINT(name);
+    if (!rb_id2name(id)) {
+	rb_raise(rb_eArgError, "%d is not a symbol", id);
+    }
+    return id;
+d530 1
+a530 1
+rb_mod_attr(argc, argv, klass)
+d533 1
+a533 1
+    VALUE klass;
+d538 1
+a538 1
+    rb_attr(klass, rb_to_id(name), 1, RTEST(pub), Qtrue);
+d543 1
+a543 1
+rb_mod_attr_reader(argc, argv, klass)
+d546 1
+a546 1
+    VALUE klass;
+d551 1
+a551 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 0, Qtrue);
+d557 1
+a557 1
+rb_mod_attr_writer(argc, argv, klass)
+d560 1
+a560 1
+    VALUE klass;
+d565 1
+a565 1
+	rb_attr(klass, rb_to_id(argv[i]), 0, 1, Qtrue);
+d571 1
+a571 1
+rb_mod_attr_accessor(argc, argv, klass)
+d574 1
+a574 1
+    VALUE klass;
+d579 1
+a579 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 1, Qtrue);
+d584 2
+d587 1
+a587 1
+rb_mod_const_get(mod, name)
+d594 1
+a594 1
+rb_mod_const_set(mod, name, value)
+d602 1
+a602 1
+rb_mod_const_defined(mod, name)
+d609 1
+a609 1
+rb_obj_methods(obj)
+d614 2
+a615 2
+    argv[0] = Qtrue;
+    return rb_class_instance_methods(1, argv, CLASS_OF(obj));
+d618 1
+a618 1
+VALUE rb_obj_singleton_methods();
+d621 1
+a621 1
+rb_obj_protected_methods(obj)
+d626 2
+a627 2
+    argv[0] = Qtrue;
+    return rb_class_protected_instance_methods(1, argv, CLASS_OF(obj));
+d630 3
+d634 2
+a635 2
+rb_obj_private_methods(obj)
+    VALUE obj;
+d637 1
+a637 1
+    VALUE argv[1];
+d639 1
+a639 11
+    argv[0] = Qtrue;
+    return rb_class_private_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+VALUE
+rb_Integer(val)
+    VALUE val;
+{
+    long i;
+
+    switch (TYPE(val)) {
+d641 3
+a643 3
+	if (RFLOAT(val)->value <= (double)FIXNUM_MAX
+	    && RFLOAT(val)->value >= (double)FIXNUM_MIN) {
+	    i = (long)RFLOAT(val)->value;
+d646 1
+a646 1
+	return rb_dbl2big(RFLOAT(val)->value);
+d649 1
+a649 1
+	return val;
+d652 1
+a652 4
+	return rb_str2inum(RSTRING(val)->ptr, 0);
+
+      case T_NIL:
+	return INT2FIX(0);
+d655 1
+a655 1
+	i = NUM2LONG(val);
+d660 3
+a662 3
+static VALUE
+rb_f_integer(obj, arg)
+    VALUE obj, arg;
+d664 1
+a664 1
+    return rb_Integer(arg);
+d667 2
+a668 1
+struct arg_to {
+a669 6
+    char *s;
+};
+
+static VALUE
+to_type(arg)
+    struct arg_to *arg;
+d671 1
+a671 1
+    return rb_funcall(arg->val, rb_intern(arg->s), 0);
+d675 1
+a675 13
+fail_to_type(arg)
+    struct arg_to *arg;
+{
+    rb_raise(rb_eTypeError, "failed to convert %s into %s",
+	     NIL_P(arg->val) ? "nil" :
+	     arg->val == Qtrue ? "true" :
+	     arg->val == Qfalse ? "false" :
+	     rb_class2name(CLASS_OF(arg->val)), 
+	     arg->s);
+}
+
+VALUE
+rb_convert_type(val, type, tname, method)
+a676 2
+    int type;
+    char *tname, *method;
+d678 1
+a678 9
+    struct arg_to arg1, arg2;
+
+    if (TYPE(val) == type) return val;
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = tname;
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+    Check_Type(val, type);
+    return val;
+d681 1
+a681 1
+double rb_big2dbl _((VALUE));
+d683 3
+a685 3
+VALUE
+rb_Float(val)
+    VALUE val;
+d687 1
+a687 1
+    switch (TYPE(val)) {
+d689 1
+a689 1
+	return rb_float_new((double)FIX2LONG(val));
+d692 1
+a692 1
+	return val;
+d695 1
+a695 1
+	return rb_float_new(rb_big2dbl(val));
+d698 1
+a698 1
+	return rb_convert_type(val, T_FLOAT, "Float", "to_f");
+d702 3
+a704 3
+static VALUE
+rb_f_float(obj, arg)
+    VALUE obj, arg;
+d706 1
+a706 1
+    return rb_Float(arg);
+d710 1
+a710 1
+rb_num2dbl(val)
+d717 3
+a719 4
+char*
+rb_str2cstr(str, len)
+    VALUE str;
+    int *len;
+d721 1
+a721 5
+    if (TYPE(str) != T_STRING) {
+	str = rb_str_to_str(str);
+    }
+    if (len) *len = RSTRING(str)->len;
+    return RSTRING(str)->ptr;
+d728 1
+a728 1
+    return rb_convert_type(val, T_STRING, "String", "to_s");
+d732 1
+a732 1
+rb_f_string(obj, arg)
+d735 6
+a740 1
+    return rb_String(arg);
+d747 1
+a747 6
+    if (TYPE(val) == T_ARRAY) return val;
+    val = rb_funcall(val, rb_intern("to_a"), 0);
+    if (TYPE(val) != T_ARRAY) {
+	rb_raise(rb_eTypeError, "`to_a' did not return Array");
+    }
+    return val;
+d750 3
+a752 3
+static VALUE
+rb_f_array(obj, arg)
+    VALUE obj, arg;
+d754 1
+a754 1
+    return rb_Array(arg);
+d763 1
+a763 1
+    VALUE obj = rb_class_new(super);
+d768 1
+a768 1
+    return obj;
+d771 13
+a783 1
+VALUE ruby_top_self;
+d790 14
+a803 15
+    rb_cObject = boot_defclass("Object", 0);
+    rb_cModule = boot_defclass("Module", rb_cObject);
+    rb_cClass =  boot_defclass("Class",  rb_cModule);
+
+    metaclass = RBASIC(rb_cObject)->klass = rb_singleton_class_new(rb_cClass);
+    rb_singleton_class_attached(metaclass, rb_cObject);
+    metaclass = RBASIC(rb_cModule)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cModule);
+    metaclass = RBASIC(rb_cClass)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cClass);
+
+    rb_mKernel = rb_define_module("Kernel");
+    rb_include_module(rb_cObject, rb_mKernel);
+    rb_define_private_method(rb_cObject, "initialize", rb_obj_dummy, -1);
+    rb_define_private_method(rb_cClass, "inherited", rb_obj_dummy, 1);
+d829 42
+a870 51
+    rb_define_method(rb_mKernel, "nil?", rb_false, 0);
+    rb_define_method(rb_mKernel, "==", rb_obj_equal, 1);
+    rb_define_alias(rb_mKernel, "equal?", "==");
+    rb_define_alias(rb_mKernel, "===", "==");
+    rb_define_method(rb_mKernel, "=~", rb_false, 1);
+
+    rb_define_method(rb_mKernel, "eql?", rb_obj_equal, 1);
+
+    rb_define_method(rb_mKernel, "hash", rb_obj_hash, 0);
+    rb_define_method(rb_mKernel, "id", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "__id__", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "type", rb_obj_type, 0);
+
+    rb_define_method(rb_mKernel, "clone", rb_obj_clone, 0);
+    rb_define_method(rb_mKernel, "dup", rb_obj_dup, 0);
+
+    rb_define_method(rb_mKernel, "taint", rb_obj_taint, 0);
+    rb_define_method(rb_mKernel, "tainted?", rb_obj_tainted, 0);
+    rb_define_method(rb_mKernel, "untaint", rb_obj_untaint, 0);
+
+    rb_define_method(rb_mKernel, "to_a", rb_any_to_a, 0);
+    rb_define_method(rb_mKernel, "to_s", rb_any_to_s, 0);
+    rb_define_method(rb_mKernel, "inspect", rb_obj_inspect, 0);
+    rb_define_method(rb_mKernel, "methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "public_methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "singleton_methods", rb_obj_singleton_methods, 0);
+    rb_define_method(rb_mKernel, "protected_methods", rb_obj_protected_methods, 0);
+    rb_define_method(rb_mKernel, "private_methods", rb_obj_private_methods, 0);
+    rb_define_method(rb_mKernel, "instance_variables", rb_obj_instance_variables, 0);
+    rb_define_private_method(rb_mKernel, "remove_instance_variable",
+			     rb_obj_remove_instance_variable, 0);
+
+    rb_define_method(rb_mKernel, "instance_of?", rb_obj_is_instance_of, 1);
+    rb_define_method(rb_mKernel, "kind_of?", rb_obj_is_kind_of, 1);
+    rb_define_method(rb_mKernel, "is_a?", rb_obj_is_kind_of, 1);
+
+    rb_define_global_function("sprintf", rb_f_sprintf, -1);
+    rb_define_global_function("format", rb_f_sprintf, -1);
+
+    rb_define_global_function("Integer", rb_f_integer, 1);
+    rb_define_global_function("Float", rb_f_float, 1);
+
+    rb_define_global_function("String", rb_f_string, 1);
+    rb_define_global_function("Array", rb_f_array, 1);
+
+    rb_cNilClass = rb_define_class("NilClass", rb_cObject);
+    rb_define_method(rb_cNilClass, "type", nil_type, 0);
+    rb_define_method(rb_cNilClass, "to_i", nil_to_i, 0);
+    rb_define_method(rb_cNilClass, "to_s", nil_to_s, 0);
+    rb_define_method(rb_cNilClass, "to_a", nil_to_a, 0);
+    rb_define_method(rb_cNilClass, "inspect", nil_inspect, 0);
+d872 2
+a873 2
+    rb_define_method(rb_cNilClass, "nil?", rb_true, 0);
+    rb_undef_method(CLASS_OF(rb_cNilClass), "new");
+d877 57
+a933 69
+#ifdef NIL_PLUS
+    rb_define_method(rb_cNilClass, "+", nil_plus, 1);
+#endif
+
+    rb_define_global_function("singleton_method_added", rb_obj_dummy, 1);
+
+    rb_define_method(rb_cModule, "===", rb_mod_eqq, 1);
+    rb_define_method(rb_cModule, "<=>",  rb_mod_cmp, 1);
+    rb_define_method(rb_cModule, "<",  rb_mod_lt, 1);
+    rb_define_method(rb_cModule, "<=", rb_mod_le, 1);
+    rb_define_method(rb_cModule, ">",  rb_mod_gt, 1);
+    rb_define_method(rb_cModule, ">=", rb_mod_ge, 1);
+    rb_define_method(rb_cModule, "clone", rb_mod_clone, 0);
+    rb_define_method(rb_cModule, "to_s", rb_mod_to_s, 0);
+    rb_define_method(rb_cModule, "included_modules", rb_mod_included_modules, 0);
+    rb_define_method(rb_cModule, "name", rb_mod_name, 0);
+    rb_define_method(rb_cModule, "ancestors", rb_mod_ancestors, 0);
+
+    rb_define_private_method(rb_cModule, "attr", rb_mod_attr, -1);
+    rb_define_private_method(rb_cModule, "attr_reader", rb_mod_attr_reader, -1);
+    rb_define_private_method(rb_cModule, "attr_writer", rb_mod_attr_writer, -1);
+    rb_define_private_method(rb_cModule, "attr_accessor", rb_mod_attr_accessor, -1);
+
+    rb_define_singleton_method(rb_cModule, "new", rb_module_s_new, 0);
+    rb_define_method(rb_cModule, "instance_methods", rb_class_instance_methods, -1);
+    rb_define_method(rb_cModule, "public_instance_methods", rb_class_instance_methods, -1);
+    rb_define_method(rb_cModule, "protected_instance_methods", rb_class_protected_instance_methods, -1);
+    rb_define_method(rb_cModule, "private_instance_methods", rb_class_private_instance_methods, -1);
+
+    rb_define_method(rb_cModule, "constants", rb_mod_constants, 0);
+    rb_define_method(rb_cModule, "const_get", rb_mod_const_get, 1);
+    rb_define_method(rb_cModule, "const_set", rb_mod_const_set, 2);
+    rb_define_method(rb_cModule, "const_defined?", rb_mod_const_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_const", rb_mod_remove_const, 1);
+    rb_define_private_method(rb_cModule, "method_added", rb_obj_dummy, 1);
+
+    rb_define_method(rb_cClass, "new", rb_class_new_instance, -1);
+    rb_define_method(rb_cClass, "superclass", rb_class_superclass, 0);
+    rb_define_singleton_method(rb_cClass, "new", rb_class_s_new, -1);
+    rb_undef_method(rb_cClass, "extend_object");
+    rb_undef_method(rb_cClass, "append_features");
+    rb_define_singleton_method(rb_cClass, "inherited", rb_class_s_inherited, 1);
+
+    rb_cData = rb_define_class("Data", rb_cObject);
+    rb_undef_method(CLASS_OF(rb_cData), "new");
+
+    ruby_top_self = rb_obj_alloc(rb_cObject);
+    rb_global_variable(&ruby_top_self);
+    rb_define_singleton_method(ruby_top_self, "to_s", main_to_s, 0);
+
+    rb_cTrueClass = rb_define_class("TrueClass", rb_cObject);
+    rb_define_method(rb_cTrueClass, "to_s", true_to_s, 0);
+    rb_define_method(rb_cTrueClass, "to_i", true_to_i, 0);
+    rb_define_method(rb_cTrueClass, "type", true_type, 0);
+    rb_define_method(rb_cTrueClass, "&", true_and, 1);
+    rb_define_method(rb_cTrueClass, "|", true_or, 1);
+    rb_define_method(rb_cTrueClass, "^", true_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cTrueClass), "new");
+    rb_define_global_const("TRUE", Qtrue);
+
+    rb_cFalseClass = rb_define_class("FalseClass", rb_cObject);
+    rb_define_method(rb_cFalseClass, "to_s", false_to_s, 0);
+    rb_define_method(rb_cFalseClass, "to_i", false_to_i, 0);
+    rb_define_method(rb_cFalseClass, "type", false_type, 0);
+    rb_define_method(rb_cFalseClass, "&", false_and, 1);
+    rb_define_method(rb_cFalseClass, "|", false_or, 1);
+    rb_define_method(rb_cFalseClass, "^", false_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cFalseClass), "new");
+    rb_define_global_const("FALSE", Qfalse);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:24 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d585 2
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:13 $
+d50 1
+a50 1
+    return rb_funcall(obj1, eql, 1, obj2) == Qtrue;
+@
+
+
+1.1.1.3.2.3
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:55 $
+d371 7
+d413 7
+d582 1
+a582 1
+    rb_obj_call_init(mod, 0, 0);
+d604 1
+a604 1
+    rb_obj_call_init(klass, argc, argv);
+d755 37
+a832 44
+VALUE
+rb_Integer(val)
+    VALUE val;
+{
+    struct arg_to arg1, arg2;
+
+    switch (TYPE(val)) {
+      case T_FLOAT:
+	if (RFLOAT(val)->value <= (double)FIXNUM_MAX
+	    && RFLOAT(val)->value >= (double)FIXNUM_MIN) {
+	    break;
+	}
+	return rb_dbl2big(RFLOAT(val)->value);
+
+      case T_BIGNUM:
+	return val;
+
+      case T_STRING:
+	return rb_str2inum(RSTRING(val)->ptr, 0);
+
+      case T_NIL:
+	return INT2FIX(0);
+
+      default:
+	break;
+    }
+
+    arg1.val = arg2.val = val;
+    arg1.s = "to_i";
+    arg2.s = "Integer";
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+    if (!rb_obj_is_kind_of(val, rb_cInteger)) {
+	rb_raise(rb_eTypeError, "to_i should return Integer");
+    }
+    return val;
+}
+
+static VALUE
+rb_f_integer(obj, arg)
+    VALUE obj, arg;
+{
+    return rb_Integer(arg);
+}
+
+a848 3
+      case T_NIL:
+	return rb_float_new(0.0);
+
+d865 2
+a866 17
+    switch (TYPE(val)) {
+      case T_FLOAT:
+	return RFLOAT(val)->value;
+
+      case T_STRING:
+	rb_raise(rb_eTypeError, "no implicit conversion from String");
+	break;
+
+      case T_NIL:
+	rb_raise(rb_eTypeError, "no implicit conversion from nil");
+	break;
+
+      default:
+	break;
+    }
+
+    return RFLOAT(rb_Float(val))->value;
+d1084 1
+d1094 1
+@
+
+
+1.1.1.3.2.4
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:08 $
+d743 1
+a743 1
+    const char *s;
+d769 1
+a769 1
+    const char *tname, *method;
+@
+
+
+1.1.1.3.2.5
+log
+@arity/strict yield
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:29 $
+a1021 2
+    rb_define_global_function("singleton_method_added", rb_obj_dummy, 1);
+
+a1036 3
+    rb_define_method(rb_cNilClass, "&", false_and, 1);
+    rb_define_method(rb_cNilClass, "|", false_or, 1);
+    rb_define_method(rb_cNilClass, "^", false_xor, 1);
+d1041 7
+@
+
+
+1.1.1.3.2.6
+log
+@regexp null pattern
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/17 09:54:03 $
+d133 1
+a133 1
+    sprintf(s, "#<%s:0x%lx>", cname, obj);
+@
+
+
+1.1.1.3.2.7
+log
+@thread bugs
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/25 08:26:00 $
+d463 1
+a463 1
+    CLONESETUP(clone, module);
+@
+
+
+1.1.1.3.2.8
+log
+@990611
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/09 09:21:16 $
+d568 1
+d590 1
+@
+
+
+1.1.1.3.2.9
+log
+@class/module comparison
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/11 06:29:56 $
+d529 1
+a529 1
+    return rb_mod_le(arg, mod);
+@
+
+
+1.1.1.3.2.10
+log
+@990806
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/30 09:29:08 $
+d468 2
+a469 6
+    if (RCLASS(module)->iv_tbl) {
+	clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+    }
+    if (RCLASS(module)->m_tbl) {
+	clone->m_tbl = st_copy(RCLASS(module)->m_tbl);
+    }
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@use STR2CSTR
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:46 $
+a721 9
+}
+
+char*
+str2cstr(str)
+    VALUE str;
+{
+    if (NIL_P(str)) return NULL;
+    Check_Type(str, T_STRING);
+    return RSTRING(str)->ptr;
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/22 10:07:52 $
+d389 1
+a389 1
+    return str_dup(rb_class_path(class));
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/23 10:01:07 $
+d683 1
+a683 1
+VALUE
+@
+
+
+1.1.1.2.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/27 05:23:41 $
+d84 1
+a84 1
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+@
+
+
+1.1.1.2.2.6
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/29 08:18:02 $
+d103 2
+a104 2
+	RBASIC(clone)->class = singleton_class_clone(RBASIC(obj)->class);
+	RBASIC(clone)->flags = RBASIC(obj)->flags;
+@
+
+
+1.1.1.2.2.7
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/03 10:02:56 $
+d99 1
+a99 1
+    clone = obj_alloc(RBASIC(obj)->klass);
+d103 1
+a103 1
+	RBASIC(clone)->klass = singleton_class_clone(RBASIC(obj)->klass);
+d491 2
+a492 2
+    RBASIC(klass)->klass = singleton_class_new(RBASIC(super)->klass);
+    singleton_class_attached(RBASIC(klass)->klass, klass);
+d777 1
+a777 1
+    return obj;
+d789 1
+a789 1
+    return RBASIC(obj)->klass;
+d803 1
+a803 1
+    metaclass = RBASIC(cObject)->klass = singleton_class_new(cClass);
+d805 1
+a805 1
+    metaclass = RBASIC(cModule)->klass = singleton_class_new(metaclass);
+d807 1
+a807 1
+    metaclass = RBASIC(cClass)->klass = singleton_class_new(metaclass);
+@
+
+
+1.1.1.2.2.8
+log
+@1.1b8pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:21 $
+d360 2
+a361 2
+obj_alloc(klass)
+    VALUE klass;
+d364 1
+a364 1
+    OBJSETUP(obj, klass, T_OBJECT);
+d386 2
+a387 2
+mod_to_s(klass)
+    VALUE klass;
+d389 1
+a389 1
+    return str_dup(rb_class_path(klass));
+d504 2
+a505 2
+class_superclass(klass)
+    VALUE klass;
+d507 1
+a507 1
+    VALUE super = RCLASS(klass)->super;
+d530 1
+a530 1
+mod_attr(argc, argv, klass)
+d533 1
+a533 1
+    VALUE klass;
+d538 1
+a538 1
+    rb_define_attr(klass, rb_to_id(name), 1, RTEST(pub));
+d543 1
+a543 1
+mod_attr_reader(argc, argv, klass)
+d546 1
+a546 1
+    VALUE klass;
+d551 1
+a551 1
+	rb_define_attr(klass, rb_to_id(argv[i]), 1, 0);
+d557 1
+a557 1
+mod_attr_writer(argc, argv, klass)
+d560 1
+a560 1
+    VALUE klass;
+d565 1
+a565 1
+	rb_define_attr(klass, rb_to_id(argv[i]), 0, 1);
+d571 1
+a571 1
+mod_attr_accessor(argc, argv, klass)
+d574 1
+a574 1
+    VALUE klass;
+d579 1
+a579 1
+	rb_define_attr(klass, rb_to_id(argv[i]), 1, 1);
+@
+
+
+1.1.1.2.2.9
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 01:56:40 $
+d215 1
+a215 1
+    while (FL_TEST(cl, FL_SINGLETON) || TYPE(cl) == T_ICLASS) {
+@
+
+
+1.1.1.2.2.10
+log
+@1.1b8_00?
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/23 05:36:38 $
+d233 12
+a264 7
+nil_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(0);
+}
+
+static VALUE
+a324 7
+true_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(1);
+}
+
+static VALUE
+a338 7
+false_to_i(obj)
+    VALUE obj;
+{
+    return INT2FIX(0);
+}
+
+static VALUE
+a876 1
+    rb_define_method(cNilClass, "to_i", nil_to_i, 0);
+a933 1
+    rb_define_method(cTrueClass, "to_i", true_to_i, 0);
+a939 1
+    rb_define_method(cFalseClass, "to_i", false_to_i, 0);
+@
+
+
+1.1.1.2.2.11
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/26 08:27:11 $
+d372 3
+a374 7
+    if (FL_TEST(klass, FL_PRIMITIVE)) {
+	TypeError("allocating normal object for primitive class");
+    }
+    else {
+	NEWOBJ(obj, struct RObject);
+	OBJSETUP(obj, klass, T_OBJECT);
+	obj->iv_tbl = 0;
+d376 1
+a376 2
+	return (VALUE)obj;
+    }
+a822 3
+    FL_SET(cModule, FL_PRIMITIVE);
+    FL_SET(cClass, FL_PRIMITIVE);
+
+a893 1
+    FL_SET(cNilClass, FL_PRIMITIVE);
+a936 1
+    rb_undef_method(CLASS_OF(cData), "new");
+a947 1
+    FL_SET(cTrueClass, FL_PRIMITIVE);
+a954 1
+    FL_SET(cFalseClass, FL_PRIMITIVE);
+@
+
+
+1.1.1.2.2.12
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:45 $
+d372 7
+a378 3
+    NEWOBJ(obj, struct RObject);
+    OBJSETUP(obj, klass, T_OBJECT);
+    obj->iv_tbl = 0;
+d380 2
+a381 1
+    return (VALUE)obj;
+d828 3
+d902 1
+d958 1
+d966 1
+@
+
+
+1.1.1.2.2.13
+log
+@1.1b9_02
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:32:59 $
+a388 1
+    clone->iv_tbl = st_copy(RCLASS(module)->iv_tbl);
+@
+
+
+1.1.1.2.2.14
+log
+@1.1b9_05 bug fix
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/13 09:04:31 $
+d548 1
+a548 1
+    rb_attr(klass, rb_to_id(name), 1, RTEST(pub), TRUE);
+d561 1
+a561 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 0, TRUE);
+d575 1
+a575 1
+	rb_attr(klass, rb_to_id(argv[i]), 0, 1, TRUE);
+d589 1
+a589 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 1, TRUE);
+a857 1
+    rb_define_method(mKernel, "__id__", obj_id, 0);
+@
+
+
+1.1.1.2.2.15
+log
+@call initialize
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/28 10:57:41 $
+a333 21
+true_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?TRUE:FALSE;
+}
+
+static VALUE
+true_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return TRUE;
+}
+
+static VALUE
+true_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?FALSE:TRUE;
+}
+
+static VALUE
+a354 21
+false_and(obj, obj2)
+    VALUE obj, obj2;
+{
+    return FALSE;
+}
+
+static VALUE
+false_or(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?TRUE:FALSE;
+}
+
+static VALUE
+false_xor(obj, obj2)
+    VALUE obj, obj2;
+{
+    return RTEST(obj2)?TRUE:FALSE;
+}
+
+static VALUE
+d483 1
+a483 8
+VALUE module_s_new()
+{
+    VALUE mod = module_new();
+
+    obj_call_init(mod);
+    return mod;
+}
+
+a502 1
+    obj_call_init(klass);
+d920 1
+a920 1
+    rb_define_singleton_method(cModule, "new", module_s_new, 0);
+d936 2
+a948 3
+    rb_define_method(cTrueClass, "&", true_and, 1);
+    rb_define_method(cTrueClass, "|", true_or, 1);
+    rb_define_method(cTrueClass, "^", true_xor, 1);
+a955 3
+    rb_define_method(cFalseClass, "&", false_and, 1);
+    rb_define_method(cFalseClass, "|", false_or, 1);
+    rb_define_method(cFalseClass, "^", false_xor, 1);
+@
+
+
+1.1.1.2.2.16
+log
+@dynamic (nested) local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/02 10:03:50 $
+a560 1
+VALUE class_protected_instance_methods();
+a680 10
+obj_protected_methods(obj)
+    VALUE obj;
+{
+    VALUE argv[1];
+
+    argv[0] = TRUE;
+    return class_protected_instance_methods(1, argv, CLASS_OF(obj));
+}
+
+static VALUE
+a917 1
+    rb_define_method(mKernel, "public_methods", obj_methods, 0);
+a918 1
+    rb_define_method(mKernel, "protected_methods", obj_protected_methods, 0);
+a971 2
+    rb_define_method(cModule, "public_instance_methods", class_instance_methods, -1);
+    rb_define_method(cModule, "protected_instance_methods", class_protected_instance_methods, -1);
+@
+
+
+1.1.1.2.2.17
+log
+@local_variables/defined?(TOPLEVEL_CONST) in modules
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/07 08:34:08 $
+a291 1
+      case T_NIL:
+d300 1
+a300 2
+		  STR2CSTR(rb_inspect(y)),
+		  rb_class2name(CLASS_OF(y)));
+a723 3
+
+      case T_NIL:
+	return INT2FIX(0);
+@
+
+
+1.1.1.2.2.18
+log
+@flock,flatten,signal to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/08 08:12:37 $
+d121 1
+a121 2
+    char *s;
+    char *cname = rb_class2name(CLASS_OF(obj));
+d123 2
+a124 3
+    s = ALLOCA_N(char, strlen(cname)+6+16+1); /* 6:tags 16:addr 1:eos */
+    sprintf(s, "#<%s:0x%x>", cname, obj);
+    return str_new2(s);
+@
+
+
+1.1.1.2.2.19
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/16 07:42:44 $
+a706 1
+VALUE mod_remove_const();
+d941 1
+a941 2
+    rb_define_private_method(mKernel, "remove_instance_variable",
+			     obj_remove_instance_variable, 0);
+a999 1
+    rb_define_private_method(cModule, "remove_const", mod_remove_const, 1);
+@
+
+
+1.1.1.2.2.20
+log
+@1.1b9_12
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 05:55:36 $
+a743 8
+}
+
+int
+rb_obj2int(obj)
+    VALUE obj;
+{
+    VALUE i = f_integer(Qnil, obj);
+    return NUM2INT(i);
+@
+
+
+1.1.1.2.2.21
+log
+@1.1b9_14
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 06:20:34 $
+d744 8
+@
+
+
+1.1.1.2.2.22
+log
+@gtk/nested local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/22 08:57:32 $
+a796 15
+to_s(obj)
+    VALUE obj;
+{
+    return rb_funcall(obj, rb_intern("to_s"), 0);
+}
+
+static VALUE
+fail_to_str(val)
+    VALUE val;
+{
+    TypeError("failed to convert %s into Sting",
+	      rb_class2name(CLASS_OF(val)));
+}
+
+static VALUE
+d800 1
+a800 8
+    return rb_rescue(to_s, arg, fail_to_str, arg);
+}
+
+static VALUE
+to_str(obj)
+    VALUE obj;
+{
+    return rb_funcall(obj, rb_intern("to_str"), 0);
+d808 1
+a808 4
+    if (TYPE(str) != T_STRING) {
+	str = rb_rescue(to_str, str, fail_to_str, str);
+	Check_Type(str, T_STRING);
+    }
+@
+
+
+1.1.1.2.2.23
+log
+@tcltklib/gtk
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/24 09:33:16 $
+d746 2
+a747 1
+struct arg_to {
+a748 6
+    char *s;
+};
+
+static VALUE
+to_type(arg)
+    struct arg_to *arg;
+d750 1
+a750 1
+    return rb_funcall(arg->val, rb_intern(arg->s), 0);
+d754 1
+a754 9
+fail_to_type(arg)
+    struct arg_to *arg;
+{
+    TypeError("failed to convert %s into %s",
+	      rb_class2name(CLASS_OF(arg->val)), arg->s);
+}
+
+VALUE
+rb_convert_type(val, type, tname, method)
+a755 2
+    int type;
+    char *tname, *method;
+d757 1
+a757 9
+    struct arg_to arg1, arg2;
+
+    if (TYPE(val) == type) return val;
+    arg1.val = arg2.val = val;
+    arg1.s = method;
+    arg2.s = tname;
+    val = rb_rescue(to_type, &arg1, fail_to_type, &arg2);
+    Check_Type(val, type);
+    return val;
+d777 1
+a777 1
+	return rb_convert_type(arg, T_FLOAT, "Float", "to_f");
+d797 15
+d815 8
+a822 1
+    return rb_convert_type(arg, T_STRING, "String", "to_s");
+d826 1
+a826 1
+str2cstr(str, len)
+a827 1
+    int *len;
+d831 2
+a832 1
+	str = rb_convert_type(str, T_STRING, "String", "to_str");
+a833 1
+    if (len) *len = RSTRING(str)->len;
+@
+
+
+1.1.1.2.2.24
+log
+@new exception model
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/27 10:03:58 $
+d529 1
+a529 2
+VALUE
+module_s_new()
+@
+
+
+1.1.1.2.2.25
+log
+@new exception model
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/30 07:41:12 $
+d834 1
+a834 1
+	str = str_to_str(str);
+@
+
+
+1.1.1.2.2.26
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/06 03:08:55 $
+a17 3
+#ifdef __MACOS__ /* name conflict AERegistory.h */
+VALUE cRubyObject;
+#else
+a18 1
+#endif
+d779 1
+a779 1
+    val = rb_rescue(to_type, (VALUE)&arg1, fail_to_type, (VALUE)&arg2);
+@
+
+
+1.1.1.2.2.27
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:24 $
+d32 2
+d35 1
+d788 1
+a788 1
+double big2dbl _((VALUE));
+@
+
+
+1.1.1.2.2.28
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:08 $
+a289 1
+#ifdef NIL_PLUS
+a308 1
+#endif
+a998 1
+#ifdef NIL_PLUS
+a999 1
+#endif
+@
+
+
+1.1.1.2.2.29
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/29 09:32:09 $
+d25 1
+@
+
+
+1.1.1.2.2.30
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:27 $
+d532 1
+a532 1
+module_s_new(klass)
+a535 1
+    RBASIC(mod)->klass = klass;
+a563 6
+static VALUE
+class_s_inherited()
+{
+    TypeError("can't make subclass of Class");
+}
+
+a1041 1
+    rb_define_singleton_method(cClass, "inherited", class_s_inherited, 1);
+@
+
+
+1.1.1.2.2.31
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:38 $
+d801 1
+a801 1
+	return float_new((double)FIX2LONG(arg));
+@
+
+
+1.1.1.2.2.32
+log
+@str2cstr
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:33 $
+d550 2
+a551 3
+    if (rb_scan_args(argc, argv, "01", &super) == 0) {
+	super = cObject;
+    }
+d773 1
+a773 5
+	      NIL_P(arg->val) ? "nil" :
+	      arg->val == TRUE ? "true" :
+	      arg->val == FALSE ? "false" :
+	      rb_class2name(CLASS_OF(arg->val)), 
+	      arg->s);
+d841 1
+@
+
+
+1.1.1.2.2.33
+log
+@1.1c3
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/13 04:37:49 $
+a71 7
+obj_hash(obj)
+    VALUE obj;
+{
+    return (long)obj|FIXNUM_FLAG;
+}
+
+static VALUE
+d75 1
+a75 1
+    return INT2NUM((long)obj);
+d966 1
+a966 1
+    rb_define_method(mKernel, "hash", obj_hash, 0);
+@
+
+
+1.1.1.2.2.34
+log
+@1.2.6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:21 $
+d439 1
+a439 1
+    CLONESETUP(clone, module);
+@
+
+
+1.1.1.2.2.33.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:21 $
+d17 13
+a29 9
+VALUE rb_mKernel;
+VALUE rb_cObject;
+VALUE rb_cModule;
+VALUE rb_cClass;
+VALUE rb_cData;
+
+VALUE rb_cNilClass;
+VALUE rb_cTrueClass;
+VALUE rb_cFalseClass;
+d31 2
+a32 2
+VALUE rb_f_sprintf();
+VALUE rb_obj_alloc();
+d44 3
+a46 3
+    if (result == Qfalse || NIL_P(result))
+	return Qfalse;
+    return Qtrue;
+d57 1
+a57 1
+rb_obj_equal(obj1, obj2)
+d60 2
+a61 2
+    if (obj1 == obj2) return Qtrue;
+    return Qfalse;
+d65 1
+a65 1
+rb_any_to_a(obj)
+d68 1
+a68 1
+    return rb_ary_new3(1, obj);
+d72 1
+a72 1
+rb_obj_hash(obj)
+d79 1
+a79 1
+rb_obj_id(obj)
+d86 1
+a86 1
+rb_obj_type(obj)
+d98 1
+a98 1
+rb_obj_clone(obj)
+d104 1
+a104 1
+	rb_raise(rb_eTypeError, "can't clone %s", rb_class2name(CLASS_OF(obj)));
+d106 1
+a106 1
+    clone = rb_obj_alloc(RBASIC(obj)->klass);
+d110 1
+a110 1
+	RBASIC(clone)->klass = rb_singleton_class_clone(RBASIC(obj)->klass);
+d118 1
+a118 1
+rb_obj_dup(obj)
+d125 1
+a125 1
+rb_any_to_s(obj)
+d133 1
+a133 1
+    return rb_str_new2(s);
+d140 1
+a140 1
+    return rb_obj_as_string(rb_funcall(obj, inspect, 0, 0));
+d156 1
+a156 1
+	rb_str_cat(str, ": ", 2);
+d159 1
+a159 1
+	rb_str_cat(str, ", ", 2);
+d162 2
+a163 2
+    rb_str_cat(str, ivname, strlen(ivname));
+    rb_str_cat(str, "=", 1);
+d165 1
+a165 1
+	str2 = rb_any_to_s(value);
+d170 1
+a170 1
+    rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d176 1
+a176 1
+rb_obj_inspect(obj)
+d185 1
+a185 1
+	str = rb_str_new2("-<");
+d187 1
+a187 1
+	rb_str_cat(str, b, strlen(b));
+d189 1
+a189 1
+	rb_str_cat(str, ">", 1);
+d197 1
+a197 1
+rb_obj_is_instance_of(obj, c)
+d208 2
+a209 2
+	if (NIL_P(obj)) return Qtrue;
+	return Qfalse;
+d212 2
+a213 2
+	if (obj) return Qfalse;
+	return Qtrue;
+d216 2
+a217 2
+	if (obj) return Qtrue;
+	return Qfalse;
+d220 1
+a220 1
+	rb_raise(rb_eTypeError, "class or module required");
+d227 2
+a228 2
+    if (c == cl) return Qtrue;
+    return Qfalse;
+d232 1
+a232 1
+rb_obj_is_kind_of(obj, c)
+d243 1
+a243 1
+	rb_raise(rb_eTypeError, "class or module required");
+d248 1
+a248 1
+	    return Qtrue;
+d251 1
+a251 1
+    return Qfalse;
+d255 1
+a255 1
+rb_obj_dummy(obj)
+d272 1
+a272 1
+    return rb_str_new2("");
+d279 1
+a279 1
+    return rb_ary_new2(0);
+d286 1
+a286 1
+    return rb_str_new2("nil");
+d293 1
+a293 1
+    return rb_cNilClass;
+d310 3
+a312 3
+	rb_raise(rb_eTypeError, "tried to add %s(%s) to nil",
+		 STR2CSTR(rb_inspect(y)),
+		 rb_class2name(CLASS_OF(y)));
+d322 1
+a322 1
+    return rb_str_new2("main");
+d329 1
+a329 1
+    return rb_str_new2("true");
+d343 1
+a343 1
+    return rb_cTrueClass;
+d350 1
+a350 1
+    return RTEST(obj2)?Qtrue:Qfalse;
+d357 1
+a357 1
+    return Qtrue;
+d364 1
+a364 1
+    return RTEST(obj2)?Qfalse:Qtrue;
+d371 1
+a371 1
+    return rb_str_new2("false");
+d385 1
+a385 1
+    return rb_cFalseClass;
+d392 1
+a392 1
+    return Qfalse;
+d399 1
+a399 1
+    return RTEST(obj2)?Qtrue:Qfalse;
+d406 1
+a406 1
+    return RTEST(obj2)?Qtrue:Qfalse;
+d413 1
+a413 1
+    return Qtrue;
+d420 1
+a420 1
+    return Qfalse;
+d424 1
+a424 1
+rb_obj_alloc(klass)
+d435 1
+a435 1
+rb_mod_clone(module)
+d451 1
+a451 1
+rb_mod_to_s(klass)
+d454 1
+a454 1
+    return rb_str_dup(rb_class_path(klass));
+d458 1
+a458 1
+rb_mod_eqq(mod, arg)
+d461 1
+a461 1
+    return rb_obj_is_kind_of(arg, mod);
+d465 1
+a465 1
+rb_mod_le(mod, arg)
+d473 1
+a473 1
+	rb_raise(rb_eTypeError, "compared with non class/module");
+d478 1
+a478 1
+	    return Qtrue;
+d482 1
+a482 1
+    return Qfalse;
+d486 1
+a486 1
+rb_mod_lt(mod, arg)
+d489 2
+a490 2
+    if (mod == arg) return Qfalse;
+    return rb_mod_le(mod, arg);
+d494 1
+a494 1
+rb_mod_ge(mod, arg)
+d502 1
+a502 1
+	rb_raise(rb_eTypeError, "compared with non class/module");
+d505 1
+a505 1
+    return rb_mod_lt(arg, mod);
+d509 1
+a509 1
+rb_mod_gt(mod, arg)
+d512 2
+a513 2
+    if (mod == arg) return Qfalse;
+    return rb_mod_ge(mod, arg);
+d517 1
+a517 1
+rb_mod_cmp(mod, arg)
+d527 2
+a528 2
+	rb_raise(rb_eTypeError, "<=> requires Class or Module (%s given)",
+		 rb_class2name(CLASS_OF(arg)));
+d532 1
+a532 1
+    if (rb_mod_le(mod, arg)) {
+d538 2
+a539 2
+static VALUE
+rb_module_s_new(klass)
+d541 1
+a541 1
+    VALUE mod = rb_module_new();
+d544 1
+a544 1
+    rb_obj_call_init(mod);
+d548 1
+a548 1
+VALUE rb_class_new_instance();
+d551 1
+a551 1
+rb_class_s_new(argc, argv)
+d558 1
+a558 1
+	super = rb_cObject;
+d562 1
+a562 1
+	rb_raise(rb_eTypeError, "can't make subclass of virtual class");
+d564 1
+a564 1
+    klass = rb_class_new(super);
+d566 3
+a568 3
+    RBASIC(klass)->klass = rb_singleton_class_new(RBASIC(super)->klass);
+    rb_singleton_class_attached(RBASIC(klass)->klass, klass);
+    rb_obj_call_init(klass);
+d574 1
+a574 1
+rb_class_s_inherited()
+d576 1
+a576 1
+    rb_raise(rb_eTypeError, "can't make subclass of Class");
+d579 6
+a584 6
+VALUE rb_mod_name();
+VALUE rb_mod_included_modules();
+VALUE rb_mod_ancestors();
+VALUE rb_class_instance_methods();
+VALUE rb_class_protected_instance_methods();
+VALUE rb_class_private_instance_methods();
+d587 1
+a587 1
+rb_class_superclass(klass)
+d613 1
+a613 1
+rb_mod_attr(argc, argv, klass)
+d621 1
+a621 1
+    rb_attr(klass, rb_to_id(name), 1, RTEST(pub), Qtrue);
+d626 1
+a626 1
+rb_mod_attr_reader(argc, argv, klass)
+d634 1
+a634 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 0, Qtrue);
+d640 1
+a640 1
+rb_mod_attr_writer(argc, argv, klass)
+d648 1
+a648 1
+	rb_attr(klass, rb_to_id(argv[i]), 0, 1, Qtrue);
+d654 1
+a654 1
+rb_mod_attr_accessor(argc, argv, klass)
+d662 1
+a662 1
+	rb_attr(klass, rb_to_id(argv[i]), 1, 1, Qtrue);
+d667 1
+a667 1
+VALUE rb_mod_constants();
+d670 1
+a670 1
+rb_mod_const_get(mod, name)
+d677 1
+a677 1
+rb_mod_const_set(mod, name, value)
+d685 1
+a685 1
+rb_mod_const_defined(mod, name)
+d692 1
+a692 1
+rb_obj_methods(obj)
+d697 2
+a698 2
+    argv[0] = Qtrue;
+    return rb_class_instance_methods(1, argv, CLASS_OF(obj));
+d701 1
+a701 1
+VALUE rb_obj_singleton_methods();
+d704 1
+a704 1
+rb_obj_protected_methods(obj)
+d709 2
+a710 2
+    argv[0] = Qtrue;
+    return rb_class_protected_instance_methods(1, argv, CLASS_OF(obj));
+d714 1
+a714 1
+rb_obj_private_methods(obj)
+d719 2
+a720 2
+    argv[0] = Qtrue;
+    return rb_class_private_instance_methods(1, argv, CLASS_OF(obj));
+d723 4
+d728 1
+a728 1
+rb_f_integer(obj, arg)
+d731 1
+a731 1
+    long i;
+d737 1
+a737 1
+	    i = (long)RFLOAT(arg)->value;
+d740 1
+a740 1
+	return rb_dbl2big(RFLOAT(arg)->value);
+d746 1
+a746 1
+	return rb_str2inum(RSTRING(arg)->ptr, 0);
+d752 1
+a752 1
+	i = NUM2LONG(arg);
+d761 1
+a761 1
+    return rb_f_integer(Qnil, val);
+d780 6
+a785 6
+    rb_raise(rb_eTypeError, "failed to convert %s into %s",
+	     NIL_P(arg->val) ? "nil" :
+	     arg->val == Qtrue ? "true" :
+	     arg->val == Qfalse ? "false" :
+	     rb_class2name(CLASS_OF(arg->val)), 
+	     arg->s);
+d805 1
+a805 1
+double rb_big2dbl _((VALUE));
+d807 2
+a808 2
+static VALUE
+rb_f_float(obj, arg)
+d813 1
+a813 1
+	return rb_float_new((double)FIX2LONG(arg));
+d819 1
+a819 1
+	return rb_float_new(rb_big2dbl(arg));
+d830 1
+a830 1
+    return rb_f_float(Qnil, val);
+d834 1
+a834 1
+rb_num2dbl(val)
+d842 1
+a842 1
+rb_f_string(obj, arg)
+d849 1
+a849 1
+rb_str2cstr(str, len)
+d854 1
+a854 1
+	str = rb_str_to_str(str);
+d864 1
+a864 1
+    return rb_f_string(Qnil, val);
+d868 1
+a868 1
+rb_f_array(obj, arg)
+d874 1
+a874 1
+	rb_raise(rb_eTypeError, "`to_a' did not return Array");
+d883 8
+a890 1
+    return rb_f_array(Qnil, val);
+d899 1
+a899 1
+    VALUE obj = rb_class_new(super);
+d907 13
+a919 1
+VALUE rb_top_self;
+d926 14
+a939 14
+    rb_cObject = boot_defclass("Object", 0);
+    rb_cModule = boot_defclass("Module", rb_cObject);
+    rb_cClass =  boot_defclass("Class",  rb_cModule);
+
+    metaclass = RBASIC(rb_cObject)->klass = rb_singleton_class_new(rb_cClass);
+    rb_singleton_class_attached(metaclass, rb_cObject);
+    metaclass = RBASIC(rb_cModule)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cModule);
+    metaclass = RBASIC(rb_cClass)->klass = rb_singleton_class_new(metaclass);
+    rb_singleton_class_attached(metaclass, rb_cClass);
+
+    rb_mKernel = rb_define_module("Kernel");
+    rb_include_module(rb_cObject, rb_mKernel);
+    rb_define_private_method(rb_cClass, "inherited", rb_obj_dummy, 1);
+d965 47
+a1011 47
+    rb_define_method(rb_mKernel, "nil?", rb_false, 0);
+    rb_define_method(rb_mKernel, "==", rb_obj_equal, 1);
+    rb_define_alias(rb_mKernel, "equal?", "==");
+    rb_define_alias(rb_mKernel, "===", "==");
+    rb_define_method(rb_mKernel, "=~", rb_false, 1);
+
+    rb_define_method(rb_mKernel, "eql?", rb_obj_equal, 1);
+
+    rb_define_method(rb_mKernel, "hash", rb_obj_hash, 0);
+    rb_define_method(rb_mKernel, "id", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "__id__", rb_obj_id, 0);
+    rb_define_method(rb_mKernel, "type", rb_obj_type, 0);
+
+    rb_define_method(rb_mKernel, "clone", rb_obj_clone, 0);
+    rb_define_method(rb_mKernel, "dup", rb_obj_dup, 0);
+
+    rb_define_method(rb_mKernel, "to_a", rb_any_to_a, 0);
+    rb_define_method(rb_mKernel, "to_s", rb_any_to_s, 0);
+    rb_define_method(rb_mKernel, "inspect", rb_obj_inspect, 0);
+    rb_define_method(rb_mKernel, "methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "public_methods", rb_obj_methods, 0);
+    rb_define_method(rb_mKernel, "singleton_methods", rb_obj_singleton_methods, 0);
+    rb_define_method(rb_mKernel, "protected_methods", rb_obj_protected_methods, 0);
+    rb_define_method(rb_mKernel, "private_methods", rb_obj_private_methods, 0);
+    rb_define_method(rb_mKernel, "instance_variables", rb_obj_instance_variables, 0);
+    rb_define_private_method(rb_mKernel, "remove_instance_variable",
+			     rb_obj_remove_instance_variable, 0);
+
+    rb_define_method(rb_mKernel, "instance_of?", rb_obj_is_instance_of, 1);
+    rb_define_method(rb_mKernel, "kind_of?", rb_obj_is_kind_of, 1);
+    rb_define_method(rb_mKernel, "is_a?", rb_obj_is_kind_of, 1);
+
+    rb_define_global_function("sprintf", rb_f_sprintf, -1);
+    rb_define_alias(rb_mKernel, "format", "sprintf");
+
+    rb_define_global_function("Integer", rb_f_integer, 1);
+    rb_define_global_function("Float", rb_f_float, 1);
+
+    rb_define_global_function("String", rb_f_string, 1);
+    rb_define_global_function("Array", rb_f_array, 1);
+
+    rb_cNilClass = rb_define_class("NilClass", rb_cObject);
+    rb_define_method(rb_cNilClass, "type", nil_type, 0);
+    rb_define_method(rb_cNilClass, "to_i", nil_to_i, 0);
+    rb_define_method(rb_cNilClass, "to_s", nil_to_s, 0);
+    rb_define_method(rb_cNilClass, "to_a", nil_to_a, 0);
+    rb_define_method(rb_cNilClass, "inspect", nil_inspect, 0);
+d1013 2
+a1014 2
+    rb_define_method(rb_cNilClass, "nil?", rb_true, 0);
+    rb_undef_method(CLASS_OF(rb_cNilClass), "new");
+d1019 1
+a1019 1
+    rb_define_method(rb_cNilClass, "+", nil_plus, 1);
+d1022 2
+a1023 2
+    rb_define_global_function("initialize", rb_obj_dummy, -1);
+    rb_define_global_function("singleton_method_added", rb_obj_dummy, 1);
+d1025 63
+a1087 63
+    rb_define_method(rb_cModule, "===", rb_mod_eqq, 1);
+    rb_define_method(rb_cModule, "<=>",  rb_mod_cmp, 1);
+    rb_define_method(rb_cModule, "<",  rb_mod_lt, 1);
+    rb_define_method(rb_cModule, "<=", rb_mod_le, 1);
+    rb_define_method(rb_cModule, ">",  rb_mod_gt, 1);
+    rb_define_method(rb_cModule, ">=", rb_mod_ge, 1);
+    rb_define_method(rb_cModule, "clone", rb_mod_clone, 0);
+    rb_define_method(rb_cModule, "to_s", rb_mod_to_s, 0);
+    rb_define_method(rb_cModule, "included_modules", rb_mod_included_modules, 0);
+    rb_define_method(rb_cModule, "name", rb_mod_name, 0);
+    rb_define_method(rb_cModule, "ancestors", rb_mod_ancestors, 0);
+
+    rb_define_private_method(rb_cModule, "attr", rb_mod_attr, -1);
+    rb_define_private_method(rb_cModule, "attr_reader", rb_mod_attr_reader, -1);
+    rb_define_private_method(rb_cModule, "attr_writer", rb_mod_attr_writer, -1);
+    rb_define_private_method(rb_cModule, "attr_accessor", rb_mod_attr_accessor, -1);
+
+    rb_define_singleton_method(rb_cModule, "new", rb_module_s_new, 0);
+    rb_define_method(rb_cModule, "instance_methods", rb_class_instance_methods, -1);
+    rb_define_method(rb_cModule, "public_instance_methods", rb_class_instance_methods, -1);
+    rb_define_method(rb_cModule, "protected_instance_methods", rb_class_protected_instance_methods, -1);
+    rb_define_method(rb_cModule, "private_instance_methods", rb_class_private_instance_methods, -1);
+
+    rb_define_method(rb_cModule, "constants", rb_mod_constants, 0);
+    rb_define_method(rb_cModule, "const_get", rb_mod_const_get, 1);
+    rb_define_method(rb_cModule, "const_set", rb_mod_const_set, 2);
+    rb_define_method(rb_cModule, "const_defined?", rb_mod_const_defined, 1);
+    rb_define_private_method(rb_cModule, "remove_const", rb_mod_remove_const, 1);
+    rb_define_private_method(rb_cModule, "method_added", rb_obj_dummy, 1);
+
+    rb_define_method(rb_cClass, "new", rb_class_new_instance, -1);
+    rb_define_method(rb_cClass, "superclass", rb_class_superclass, 0);
+    rb_define_singleton_method(rb_cClass, "new", rb_class_s_new, -1);
+    rb_undef_method(rb_cClass, "extend_object");
+    rb_undef_method(rb_cClass, "append_features");
+    rb_define_singleton_method(rb_cClass, "inherited", rb_class_s_inherited, 1);
+
+    rb_cData = rb_define_class("Data", rb_cObject);
+    rb_undef_method(CLASS_OF(rb_cData), "new");
+
+    rb_top_self = rb_obj_alloc(rb_cObject);
+    rb_global_variable(&rb_top_self);
+    rb_define_singleton_method(rb_top_self, "to_s", main_to_s, 0);
+
+    rb_cTrueClass = rb_define_class("TrueClass", rb_cObject);
+    rb_define_method(rb_cTrueClass, "to_s", true_to_s, 0);
+    rb_define_method(rb_cTrueClass, "to_i", true_to_i, 0);
+    rb_define_method(rb_cTrueClass, "type", true_type, 0);
+    rb_define_method(rb_cTrueClass, "&", true_and, 1);
+    rb_define_method(rb_cTrueClass, "|", true_or, 1);
+    rb_define_method(rb_cTrueClass, "^", true_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cTrueClass), "new");
+    rb_define_global_const("TRUE", Qtrue);
+
+    rb_cFalseClass = rb_define_class("FalseClass", rb_cObject);
+    rb_define_method(rb_cFalseClass, "to_s", false_to_s, 0);
+    rb_define_method(rb_cFalseClass, "to_i", false_to_i, 0);
+    rb_define_method(rb_cFalseClass, "type", false_type, 0);
+    rb_define_method(rb_cFalseClass, "&", false_and, 1);
+    rb_define_method(rb_cFalseClass, "|", false_or, 1);
+    rb_define_method(rb_cFalseClass, "^", false_xor, 1);
+    rb_undef_method(CLASS_OF(rb_cFalseClass), "new");
+    rb_define_global_const("FALSE", Qfalse);
+@
+
+
+1.1.1.2.2.33.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:56 $
+a256 26
+VALUE
+rb_obj_tainted(obj)
+    VALUE obj;
+{
+    if (FL_TEST(obj, FL_TAINT))
+	return Qtrue;
+    return Qfalse;
+}
+
+VALUE
+rb_obj_taint(obj)
+    VALUE obj;
+{
+    FL_SET(obj, FL_TAINT);
+    return obj;
+}
+
+VALUE
+rb_obj_untaint(obj)
+    VALUE obj;
+{
+    rb_secure(3);
+    FL_UNSET(obj, FL_TAINT);
+    return obj;
+}
+
+a953 4
+    rb_define_method(rb_mKernel, "taint", rb_obj_taint, 0);
+    rb_define_method(rb_mKernel, "tainted?", rb_obj_tainted, 0);
+    rb_define_method(rb_mKernel, "untaint", rb_obj_untaint, 0);
+
+d971 1
+a971 1
+    rb_define_global_function("format", rb_f_sprintf, -1);
+@
+
+
+1.1.1.2.2.33.2.3
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:14 $
+d52 1
+a52 1
+static VALUE
+d601 7
+a626 2
+    ID id;
+
+d630 2
+a631 5
+    id = NUM2UINT(name);
+    if (!rb_id2name(id)) {
+	rb_raise(rb_eArgError, "%d is not a symbol", id);
+    }
+    return id;
+d689 2
+a937 1
+    rb_define_private_method(rb_cObject, "initialize", rb_obj_dummy, -1);
+d1025 1
+@

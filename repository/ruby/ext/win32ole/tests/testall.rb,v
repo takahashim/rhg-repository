@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.06.01.12.34.30;	author suke;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge win32ole from rough
+@
+text
+@require 'rubyunit'
+require 'win32ole'
+puts "Now Test Win32OLE version #{WIN32OLE::VERSION}"
+RUNIT::CUI::TestRunner.quiet_mode = true
+require "testWIN32OLE"
+require "testOLETYPE"
+require "testOLEPARAM"
+require "testOLEMETHOD"
+require "testOLEVARIABLE"
+require "testVARIANT"
+require "testOLEEVENT"
+@

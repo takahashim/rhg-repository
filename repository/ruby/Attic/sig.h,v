@@ -1,0 +1,204 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	r1_1b9_25:1.1.1.1.4.3
+	r1_1b9_24:1.1.1.1.4.3
+	v1_1b9_23:1.1.1.1.4.3
+	v1_1b9_22:1.1.1.1.4.3
+	v1_1b9_20:1.1.1.1.4.2
+	v1_1b9_18:1.1.1.1.4.2
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.2
+	v1_1b9_12:1.1.1.1.4.2
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	99.08.13.06.09.52;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.03.16.06.37.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.05.18.04.56.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.06.16.04.23.45;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove obsolete files
+@
+text
+@/************************************************
+
+  sig.h -
+
+  $Author: matz $
+  $Date: 1998/01/16 12:13:06 $
+  created at: Wed Aug 16 01:15:38 JST 1995
+
+************************************************/
+#ifndef SIG_H
+#define SIG_H
+
+extern int trap_immediate;
+#define TRAP_BEG (trap_immediate=1)
+#define TRAP_END (trap_immediate=0)
+
+extern int prohibit_interrupt;
+#define DEFER_INTS {prohibit_interrupt++;}
+#define ALLOW_INTS {prohibit_interrupt--; CHECK_INTS;}
+#define ENABLE_INTS {prohibit_interrupt--;}
+
+extern int trap_pending;
+#ifdef THREAD
+extern int thread_critical;
+#if defined(HAVE_SETITIMER) && !defined(__BOW__)
+extern int thread_pending;
+void thread_schedule();
+# define CHECK_INTS if (!prohibit_interrupt) {\
+    if (trap_pending) rb_trap_exec();\
+    if (thread_pending && !thread_critical) thread_schedule();\
+}
+# else
+/* pseudo preemptive thread switching */
+extern int thread_tick;
+#define THREAD_TICK 500
+void thread_schedule();
+# define CHECK_INTS if (!prohibit_interrupt) {\
+    if (trap_pending) rb_trap_exec();\
+    if (!thread_critical) {\
+	if (thread_tick-- <= 0) {\
+	    thread_tick = THREAD_TICK;\
+	    thread_schedule();\
+	}\
+    }\
+}
+# endif
+#else
+# define CHECK_INTS if (!prohibit_interrupt) {\
+    if (trap_pending) rb_trap_exec();\
+}
+#endif
+
+#endif
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date$
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 04:05:48 $
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_03 pre2
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+a22 2
+void trap_restore_mask _((void));
+
+@
+
+
+1.1.1.1.4.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/16 06:37:12 $
+a26 1
+void thread_schedule _((void));
+d29 1
+d38 1
+@
+
+
+1.1.1.1.4.4
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:18 $
+@
+
+

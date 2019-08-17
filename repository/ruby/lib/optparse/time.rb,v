@@ -1,0 +1,52 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.08.07.13.13.34;	author nobu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.12.16.40.06;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* lib/optparse/time.rb: prior time.rb.
+@
+text
+@require 'optparse'
+require 'time'
+
+OptionParser.accept(Time) do |s|
+  begin
+    (Time.httpdate(s) rescue Time.parse(s)) if s
+  rescue
+    raise OptionParser::InvalidArgument, s
+  end
+end
+@
+
+
+1.1
+log
+@import
+@
+text
+@d2 1
+a2 1
+require 'parsedate'
+d6 1
+a6 1
+    Time::mktime(*ParseDate::parsedate(s)[0...6])
+@

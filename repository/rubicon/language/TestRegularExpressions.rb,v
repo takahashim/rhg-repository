@@ -1,0 +1,268 @@
+head	1.7;
+access;
+symbols
+	V0_3_2:1.6
+	V0_1_4:1.1
+	V0_1_3:1.1
+	V0_1_2:1.1
+	V0_1_1:1.1
+	V0_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2002.08.16.00.50.33;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.14.05.31.05;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.13.03.49.02;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.11.21.33.48;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.11.04.00.10;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.10.06.15.47;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.30.21.14.10;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@JRuby tests
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestRegularExpressions < Rubicon::TestCase
+
+  def testBasics
+    assert("abc" !~ /^$/)
+    assert("abc\n" !~ /^$/)
+    assert("abc" !~ /^d*$/)
+    assert(("abc" =~ /d*$/) == 3)
+    assert_equal(0, "" =~ /^$/)
+    assert_equal(0, "\n" =~ /^$/)
+    assert_equal(2, "a\n\n" =~ /^$/)
+    assert("abcabc" =~ /.*a/ && $& == "abca")
+    assert("abcabc" =~ /.*c/ && $& == "abcabc")
+    assert("abcabc" =~ /.*?a/ && $& == "a")
+    assert("abcabc" =~ /.*?c/ && $& == "abc")
+    assert(/(.|\n)*?\n(b|\n)/ =~ "a\nb\n\n" && $& == "a\nb")
+    
+    assert(/^(ab+)+b/ =~ "ababb" && $& == "ababb")
+    assert(/^(?:ab+)+b/ =~ "ababb" && $& == "ababb")
+    assert(/^(ab+)+/ =~ "ababb" && $& == "ababb")
+    assert(/^(?:ab+)+/ =~ "ababb" && $& == "ababb")
+    
+    assert(/(\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+    assert(/(?:\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+
+    x = "ABCD\nABCD\n"
+    x.gsub!(/((.|\n)*?)B((.|\n)*?)D/) {$1+$3}
+    assert_equal("AC\nAC\n", x)
+
+    assert_equal(0, "foobar" =~ /foo(?=(bar)|(baz))/)
+    assert_equal(0, "foobaz" =~ /foo(?=(bar)|(baz))/)
+  end
+
+  def testReferences
+    x = "a.gif"
+    assert_equal("gif",     x.sub(/.*\.([^\.]+)/, '\1'))
+    assert_equal("b.gif",   x.sub(/.*\.([^\.]+)/, 'b.\1'))
+    assert_equal("",        x.sub(/.*\.([^\.]+)/, '\2'))
+    assert_equal("ab",      x.sub(/.*\.([^\.]+)/, 'a\2b'))
+    assert_equal("<a.gif>", x.sub(/.*\.([^\.]+)/, '<\&>'))
+  end
+
+  def testGlobal
+    file_name = nil
+    start = File.dirname($0)
+    for base in [".", "language"]
+      file_name = File.join(start, base, 'regexp.test')
+      break if File.exist? file_name
+      file_name = nil
+    end
+
+    fail("Could not find file containing regular expression tests") unless file_name
+
+    lineno =  0
+    IO.foreach(file_name) do |line|
+      lineno += 1
+      line.sub!(/\r?\n\z/, '')
+      next if /^#/ =~ line || /^$/ =~ line
+      pat, subject, result, repl, expect = line.split /\t/, 6
+      begin
+	for mes in [subject, expect]
+	  if mes
+	    mes.gsub!(/\\n/, "\n")
+	    mes.gsub!(/\\000/, "\0")
+	    mes.gsub!(/\\255/, "\255") #"
+	  end
+	end
+
+	reg = Regexp.new(pat, false).match subject
+        
+	case result
+	when 'y'
+          assert_not_nil(reg, "Expected a match: #{lineno}: '#{line}'")
+          if repl != '-'
+            eu = eval('"' + repl + '"')
+            assert(expect == eu, "Expected '#{expect.inspect}, " +
+		   "got '#{eu.inspect}'\n" +
+		   "#{lineno}: '#{line.inspect}'")
+          end
+	when 'n'
+	  assert(!reg, "Did not expect a match: #{lineno} '#{line}'")
+	when 'c'
+          assert_fail("'#{line}' should not have compiled")
+	end
+      rescue RegexpError
+        assert_equal('c', result, 
+                     "Regular expression did not compile: #{lineno} '#{line}'")
+	fail_msg = $!.to_s
+        p expect
+        p fail_msg
+#        assert_not_nil(expect === fail_msg, "Expected error: '#{expect}'")
+#      rescue
+#	assert_fail("#$!: #{lineno}: '#{line}'")
+      end
+    end
+  end
+
+end
+
+# Run these tests if invoked directly
+
+Rubicon::handleTests(TestRegularExpressions) if $0 == __FILE__
+@
+
+
+1.6
+log
+@Change many asserts to work with rubyunit-0.4.5.
+
+RubyUnit changed to only allow true or false as the first parameter
+to assert(). This means that tests such as
+
+   assert(defined? Array)
+
+failed.
+@
+text
+@d91 3
+a93 1
+        assert_equal(expect, fail_msg)
+@
+
+
+1.5
+log
+@Yet more tidying.
+
+Get stuff working across Cygwin and MsRuby.
+@
+text
+@d11 3
+a13 3
+    assert("" =~ /^$/)
+    assert("\n" =~ /^$/)
+    assert("a\n\n" =~ /^$/)
+d32 2
+a33 2
+    assert("foobar" =~ /foo(?=(bar)|(baz))/)
+    assert("foobaz" =~ /foo(?=(bar)|(baz))/)
+d75 1
+a75 1
+          assert(reg, "Expected a match: #{lineno}: '#{line}'")
+@
+
+
+1.4
+log
+@Fixes to File and IO by Tanaka Akira
+@
+text
+@d59 1
+a59 1
+      line.chomp!
+d78 3
+a80 1
+            assert_equal(expect, eu, "#{lineno}: '#{line}'")
+d92 2
+a93 2
+      rescue
+	assert_fail("#$!: #{lineno}: '#{line}'")
+@
+
+
+1.3
+log
+@Added ts's regexp tests, Matt's array tests. Tidy a tad
+@
+text
+@a49 1
+      puts file_name
+@
+
+
+1.2
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d45 52
+@
+
+
+1.1
+log
+@Initial load of files
+@
+text
+@d1 2
+a2 11
+#!/usr/bin/env ruby
+# $Id$
+#
+# This file is part of Rubicon, a set of regression tests for the Ruby
+# language and its built-in classes and modules.
+#
+# Initial development by Dave Thomas and Andy Hunt.
+#
+# Copyright (c) 2000 The Pragmatic Programmers, LLC (www.pragmaticprogrammer.com)
+# Distributed according to the terms specified in the Ruby distribution README file.
+#
+d4 27
+a30 1
+require '../rubicon'
+d32 12
+a43 1
+class TestRegularExpressions < Rubicon::TestCase
+@

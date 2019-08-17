@@ -1,0 +1,2411 @@
+head	1.6;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5
+	v1_6_5:1.5
+	v1_6_4:1.5
+	v1_7_1:1.5
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.3.2.1
+	v1_4_5:1.3.2.1
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.1
+	v1_3_6_repack:1.1.1.1.2.1
+	v1_3_6:1.1.1.1.2.1
+	v1_3_5:1.1.1.1.2.1
+	v1_2_6repack:1.1.4.2
+	v1_3_4_990625:1.1.1.1.2.1
+	v1_3_4_990624:1.1.1.1.2.1
+	v1_2_6:1.1.4.2
+	v1_3_4_990611:1.1.1.1.2.1
+	v1_3_4_990531:1.1.1.1.2.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.4.1
+	v1_2_4:1.1.4.1
+	v1_1r:1.1.0.4
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_1d1:1.1.2.1
+	v1_1dev:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2002.01.04.09.01.39;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.03.09.08.59.58;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.02.01.03.12.19;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.01.09.48.02;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.12.22.09.01.55;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.05.25.08.26.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.12.22.09.01.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	99.04.08.09.12.09;	author matz;	state Exp;
+branches;
+next	1.1.4.2;
+
+1.1.4.2
+date	99.06.21.06.31.12;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.03.09.09.04.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2002.01.04.09.03.11;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@The author of getoptlong.rb has agreed on changing the license from
+GPL to Ruby's.
+@
+text
+@#                                                         -*- Ruby -*-
+# Copyright (C) 1998, 1999, 2000  Motoyuki Kasahara
+#
+# You may redistribute it and/or modify it under the same license
+# terms as Ruby.
+#
+
+#
+# Documents and latest version of `getoptlong.rb' are found at:
+#    http://www.sra.co.jp/people/m-kasahr/ruby/getoptlong/
+#
+
+#
+# Parse command line options just like GNU getopt_long().
+#
+class GetoptLong
+  #
+  # Orderings.
+  #
+  ORDERINGS = [REQUIRE_ORDER = 0, PERMUTE = 1, RETURN_IN_ORDER = 2]
+
+  #
+  # Argument flags.
+  #
+  ARGUMENT_FLAGS = [NO_ARGUMENT = 0, REQUIRED_ARGUMENT = 1,
+    OPTIONAL_ARGUMENT = 2]
+
+  #
+  # Status codes.
+  #
+  STATUS_YET, STATUS_STARTED, STATUS_TERMINATED = 0, 1, 2
+
+  #
+  # Error types.
+  #
+  class AmbigousOption   < StandardError; end
+  class NeedlessArgument < StandardError; end
+  class MissingArgument  < StandardError; end
+  class InvalidOption    < StandardError; end
+
+  #
+  # Initializer.
+  #
+  def initialize(*arguments)
+    #
+    # Current ordering.
+    #
+    if ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = PERMUTE
+    end
+
+    #
+    # Hash table of option names.
+    # Keyes of the table are option names, and their values are canonical
+    # names of the options.
+    #
+    @@canonical_names = Hash.new
+
+    #
+    # Hash table of argument flags.
+    # Keyes of the table are option names, and their values are argument
+    # flags of the options.
+    #
+    @@argument_flags = Hash.new
+
+    #
+    # Whether error messages are output to stderr.
+    #
+    @@quiet = FALSE
+
+    #
+    # Status code.
+    #
+    @@status = STATUS_YET
+
+    #
+    # Error code.
+    #
+    @@error = nil
+
+    #
+    # Error message.
+    #
+    @@error_message = nil
+
+    #
+    # Rest of catinated short options.
+    #
+    @@rest_singles = ''
+
+    #
+    # List of non-option-arguments.
+    # Append them to ARGV when option processing is terminated.
+    #
+    @@non_option_arguments = Array.new
+
+    if 0 < arguments.length
+      set_options(*arguments)
+    end
+  end
+
+  #
+  # Set ordering.
+  #
+  def ordering=(ordering)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      set_error(ArgumentError, "argument error")
+      raise RuntimeError,
+	"invoke ordering=, but option processing has already started"
+    end
+
+    #
+    # Check ordering.
+    #
+    if !ORDERINGS.include?(ordering)
+      raise ArgumentError, "invalid ordering `#{ordering}'"
+    end
+    if ordering == PERMUTE && ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = ordering
+    end
+  end
+
+  #
+  # Return ordering.
+  #
+  attr_reader :ordering
+
+  #
+  # Set options
+  #
+  def set_options(*arguments)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      raise RuntimeError, 
+	"invoke set_options, but option processing has already started"
+    end
+
+    #
+    # Clear tables of option names and argument flags.
+    #
+    @@canonical_names.clear
+    @@argument_flags.clear
+
+    arguments.each do |arg|
+      #
+      # Each argument must be an Array.
+      #
+      if !arg.is_a?(Array)
+	raise ArgumentError, "the option list contains non-Array argument"
+      end
+
+      #
+      # Find an argument flag and it set to `argument_flag'.
+      #
+      argument_flag = nil
+      arg.each do |i|
+	if ARGUMENT_FLAGS.include?(i)
+	  if argument_flag != nil
+	    raise ArgumentError, "too many argument-flags"
+	  end
+	  argument_flag = i
+	end
+      end
+      raise ArgumentError, "no argument-flag" if argument_flag == nil
+
+      canonical_name = nil
+      arg.each do |i|
+	#
+	# Check an option name.
+	#
+	next if i == argument_flag
+	begin
+	  if !i.is_a?(String) || i !~ /^-([^-]|-.+)$/
+	    raise ArgumentError, "an invalid option `#{i}'"
+	  end
+	  if (@@canonical_names.include?(i))
+	    raise ArgumentError, "option redefined `#{i}'"
+	  end
+	rescue
+	  @@canonical_names.clear
+	  @@argument_flags.clear
+	  raise
+	end
+
+	#
+	# Register the option (`i') to the `@@canonical_names' and 
+	# `@@canonical_names' Hashes.
+	#
+	if canonical_name == nil
+	  canonical_name = i
+	end
+	@@canonical_names[i] = canonical_name
+	@@argument_flags[i] = argument_flag
+      end
+      raise ArgumentError, "no option name" if canonical_name == nil
+    end
+    return self
+  end
+
+  #
+  # Set/Unset `quit' mode.
+  #
+  attr_writer :quiet
+
+  #
+  # Return the flag of `quiet' mode.
+  #
+  attr_reader :quiet
+
+  #
+  # `quiet?' is an alias of `quiet'.
+  #
+  alias quiet? quiet
+
+  #
+  # Termintate option processing.
+  #
+  def terminate
+    return nil if @@status == STATUS_TERMINATED
+    raise RuntimeError, "an error has occured" if @@error != nil
+
+    @@status = STATUS_TERMINATED
+    @@non_option_arguments.reverse_each do |argument|
+      ARGV.unshift(argument)
+    end
+
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    return self
+  end
+
+  #
+  # Examine whether option processing is termintated or not.
+  #
+  def terminated?
+    return @@status == STATUS_TERMINATED
+  end
+
+  #
+  # Set an error (protected).
+  #
+  def set_error(type, message)
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet
+
+    @@error = type
+    @@error_message = message
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    raise type, message
+  end
+  protected :set_error
+
+  #
+  # Examine whether an option processing is failed.
+  #
+  attr_reader :error
+
+  #
+  # `error?' is an alias of `error'.
+  #
+  alias error? error
+
+  #
+  # Return an error message.
+  #
+  def error_message
+    return @@error_message
+  end
+
+  #
+  # Get next option name and its argument as an array.
+  #
+  def get
+    option_name, option_argument = nil, ''
+
+    #
+    # Check status.
+    #
+    return nil if @@error != nil
+    case @@status
+    when STATUS_YET
+      @@status = STATUS_STARTED
+    when STATUS_TERMINATED
+      return nil
+    end
+
+    #
+    # Get next option argument.
+    #
+    if 0 < @@rest_singles.length
+      argument = '-' + @@rest_singles
+    elsif (ARGV.length == 0)
+      terminate
+      return nil
+    elsif @@ordering == PERMUTE
+      while 0 < ARGV.length && ARGV[0] !~ /^-./
+	@@non_option_arguments.push(ARGV.shift)
+      end
+      if ARGV.length == 0
+	terminate
+	return nil
+      end
+      argument = ARGV.shift
+    elsif @@ordering == REQUIRE_ORDER 
+      if (ARGV[0] !~ /^-./)
+	terminate
+	return nil
+      end
+      argument = ARGV.shift
+    else
+      argument = ARGV.shift
+    end
+
+    #
+    # Check the special argument `--'.
+    # `--' indicates the end of the option list.
+    #
+    if argument == '--' && @@rest_singles.length == 0
+      terminate
+      return nil
+    end
+
+    #
+    # Check for long and short options.
+    #
+    if argument =~ /^(--[^=]+)/ && @@rest_singles.length == 0
+      #
+      # This is a long style option, which start with `--'.
+      #
+      pattern = $1
+      if @@canonical_names.include?(pattern)
+	option_name = pattern
+      else
+	#
+	# The option `option_name' is not registered in `@@canonical_names'.
+	# It may be an abbreviated.
+	#
+	match_count = 0
+	@@canonical_names.each_key do |key|
+	  if key.index(pattern) == 0
+	    option_name = key
+	    match_count += 1
+	  end
+	end
+	if 2 <= match_count
+	  set_error(AmbigousOption, "option `#{argument}' is ambiguous")
+	elsif match_count == 0
+	  set_error(InvalidOption, "unrecognized option `#{argument}'")
+	end
+      end
+
+      #
+      # Check an argument to the option.
+      #
+      if @@argument_flags[option_name] == REQUIRED_ARGUMENT
+	if argument =~ /=(.*)$/
+	  option_argument = $1
+	elsif 0 < ARGV.length
+	  option_argument = ARGV.shift
+	else
+	  set_error(MissingArgument,
+	            "option `#{argument}' requires an argument")
+	end
+      elsif @@argument_flags[option_name] == OPTIONAL_ARGUMENT
+	if argument =~ /=(.*)$/
+	  option_argument = $1
+	elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	  option_argument = ARGV.shift
+	else
+	  option_argument = ''
+	end
+      elsif argument =~ /=(.*)$/
+	set_error(NeedlessArgument,
+		  "option `#{option_name}' doesn't allow an argument")
+      end
+
+    elsif argument =~ /^(-(.))(.*)/
+      #
+      # This is a short style option, which start with `-' (not `--').
+      # Short options may be catinated (e.g. `-l -g' is equivalent to
+      # `-lg').
+      #
+      option_name, ch, @@rest_singles = $1, $2, $3
+
+      if @@canonical_names.include?(option_name)
+	#
+	# The option `option_name' is found in `@@canonical_names'.
+	# Check its argument.
+	#
+	if @@argument_flags[option_name] == REQUIRED_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    option_argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length
+	    option_argument = ARGV.shift
+	  else
+	    # 1003.2 specifies the format of this message.
+	    set_error(MissingArgument, "option requires an argument -- #{ch}")
+	  end
+	elsif @@argument_flags[option_name] == OPTIONAL_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    option_argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	    option_argument = ARGV.shift
+	  else
+	    option_argument = ''
+	  end
+	end
+      else
+	#
+	# This is an invalid option.
+	# 1003.2 specifies the format of this message.
+	#
+	if ENV.include?('POSIXLY_CORRECT')
+	  set_error(InvalidOption, "illegal option -- #{ch}")
+	else
+	  set_error(InvalidOption, "invalid option -- #{ch}")
+	end
+      end
+    else
+      #
+      # This is a non-option argument.
+      # Only RETURN_IN_ORDER falled into here.
+      #
+      return '', argument
+    end
+
+    return @@canonical_names[option_name], option_argument
+  end
+
+  #
+  # `get_option' is an alias of `get'.
+  #
+  alias get_option get
+
+  #
+  # Iterator version of `get'.
+  #
+  def each
+    loop do
+      option_name, option_argument = get_option
+      break if option_name == nil
+      yield option_name, option_argument
+    end
+  end
+
+  #
+  # `each_option' is an alias of `each'.
+  #
+  alias each_option each
+end
+@
+
+
+1.5
+log
+@2000-03-09
+@
+text
+@d4 2
+a5 9
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+@
+
+
+1.5.2.1
+log
+@The author of getoptlong.rb has agreed on changing the license from
+GPL to Ruby's.
+@
+text
+@d4 9
+a12 2
+# You may redistribute it and/or modify it under the same license
+# terms as Ruby.
+@
+
+
+1.4
+log
+@2000-02-01
+@
+text
+@d2 1
+a2 1
+# Copyright (C) 1998  Motoyuki Kasahara
+d235 1
+a235 1
+    return if @@status == STATUS_TERMINATED
+d296 1
+a296 1
+    name, argument = nil, ''
+d301 1
+a301 1
+    return if @@error != nil
+d313 1
+a313 1
+      $_ = '-' + @@rest_singles
+d325 1
+a325 1
+      $_ = ARGV.shift
+d331 1
+a331 1
+      $_ = ARGV.shift
+d333 1
+a333 1
+      $_ = ARGV.shift
+d340 1
+a340 1
+    if $_ == '--' && @@rest_singles.length == 0
+d348 1
+a348 1
+    if /^(--[^=]+)/ && @@rest_singles.length == 0
+d354 1
+a354 1
+	name = pattern
+d357 1
+a357 1
+	# The option `name' is not registered in `@@canonical_names'.
+d363 1
+a363 1
+	    name = key
+d368 1
+a368 1
+	  set_error(AmbigousOption, "option `#{$_}' is ambiguous")
+d370 1
+a370 1
+	  set_error(InvalidOption, "unrecognized option `#{$_}'")
+d377 3
+a379 3
+      if @@argument_flags[name] == REQUIRED_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+d381 1
+a381 1
+	  argument = ARGV.shift
+d383 2
+a384 1
+	  set_error(MissingArgument, "option `#{$_}' requires an argument")
+d386 3
+a388 3
+      elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+d390 1
+a390 1
+	  argument = ARGV.shift
+d392 1
+a392 1
+	  argument = ''
+d394 1
+a394 1
+      elsif /=(.*)$/
+d396 1
+a396 1
+		  "option `#{name}' doesn't allow an argument")
+d399 1
+a399 1
+    elsif /^(-(.))(.*)/
+d405 1
+a405 1
+      name, ch, @@rest_singles = $1, $2, $3
+d407 1
+a407 1
+      if @@canonical_names.include?(name)
+d409 1
+a409 1
+	# The option `name' is found in `@@canonical_names'.
+d412 1
+a412 1
+	if @@argument_flags[name] == REQUIRED_ARGUMENT
+d414 1
+a414 1
+	    argument = @@rest_singles
+d417 1
+a417 1
+	    argument = ARGV.shift
+d422 1
+a422 1
+	elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+d424 1
+a424 1
+	    argument = @@rest_singles
+d427 1
+a427 1
+	    argument = ARGV.shift
+d429 1
+a429 1
+	    argument = ''
+d448 1
+a448 1
+      return '', $_
+d451 1
+a451 1
+    return @@canonical_names[name], argument
+d464 3
+a466 3
+      name, argument = get_option
+      break if name == nil
+      yield name, argument
+@
+
+
+1.3
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d38 1
+a38 1
+  STATUS_YET, STATUS_STARTED, STATUS_TERMINATED = 0..2
+@
+
+
+1.3.2.1
+log
+@2000-03-09
+@
+text
+@d2 1
+a2 1
+# Copyright (C) 1998, 1999, 2000  Motoyuki Kasahara
+d235 1
+a235 1
+    return nil if @@status == STATUS_TERMINATED
+d296 1
+a296 1
+    option_name, option_argument = nil, ''
+d301 1
+a301 1
+    return nil if @@error != nil
+d313 1
+a313 1
+      argument = '-' + @@rest_singles
+d325 1
+a325 1
+      argument = ARGV.shift
+d331 1
+a331 1
+      argument = ARGV.shift
+d333 1
+a333 1
+      argument = ARGV.shift
+d340 1
+a340 1
+    if argument == '--' && @@rest_singles.length == 0
+d348 1
+a348 1
+    if argument =~ /^(--[^=]+)/ && @@rest_singles.length == 0
+d354 1
+a354 1
+	option_name = pattern
+d357 1
+a357 1
+	# The option `option_name' is not registered in `@@canonical_names'.
+d363 1
+a363 1
+	    option_name = key
+d368 1
+a368 1
+	  set_error(AmbigousOption, "option `#{argument}' is ambiguous")
+d370 1
+a370 1
+	  set_error(InvalidOption, "unrecognized option `#{argument}'")
+d377 3
+a379 3
+      if @@argument_flags[option_name] == REQUIRED_ARGUMENT
+	if argument =~ /=(.*)$/
+	  option_argument = $1
+d381 1
+a381 1
+	  option_argument = ARGV.shift
+d383 1
+a383 2
+	  set_error(MissingArgument,
+	            "option `#{argument}' requires an argument")
+d385 3
+a387 3
+      elsif @@argument_flags[option_name] == OPTIONAL_ARGUMENT
+	if argument =~ /=(.*)$/
+	  option_argument = $1
+d389 1
+a389 1
+	  option_argument = ARGV.shift
+d391 1
+a391 1
+	  option_argument = ''
+d393 1
+a393 1
+      elsif argument =~ /=(.*)$/
+d395 1
+a395 1
+		  "option `#{option_name}' doesn't allow an argument")
+d398 1
+a398 1
+    elsif argument =~ /^(-(.))(.*)/
+d404 1
+a404 1
+      option_name, ch, @@rest_singles = $1, $2, $3
+d406 1
+a406 1
+      if @@canonical_names.include?(option_name)
+d408 1
+a408 1
+	# The option `option_name' is found in `@@canonical_names'.
+d411 1
+a411 1
+	if @@argument_flags[option_name] == REQUIRED_ARGUMENT
+d413 1
+a413 1
+	    option_argument = @@rest_singles
+d416 1
+a416 1
+	    option_argument = ARGV.shift
+d421 1
+a421 1
+	elsif @@argument_flags[option_name] == OPTIONAL_ARGUMENT
+d423 1
+a423 1
+	    option_argument = @@rest_singles
+d426 1
+a426 1
+	    option_argument = ARGV.shift
+d428 1
+a428 1
+	    option_argument = ''
+d447 1
+a447 1
+      return '', argument
+d450 1
+a450 1
+    return @@canonical_names[option_name], option_argument
+d463 3
+a465 3
+      option_name, option_argument = get_option
+      break if option_name == nil
+      yield option_name, option_argument
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d306 1
+a306 1
+      return
+d323 1
+a323 1
+	return
+@
+
+
+1.1
+log
+@file getoptlong.rb was initially added on branch v1_1dev.
+@
+text
+@d1 473
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 473
+#                                                         -*- Ruby -*-
+# Copyright (C) 1998  Motoyuki Kasahara
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+#
+# Documents and latest version of `getoptlong.rb' are found at:
+#    http://www.sra.co.jp/people/m-kasahr/ruby/getoptlong/
+#
+
+#
+# Parse command line options just like GNU getopt_long().
+#
+class GetoptLong
+  #
+  # Orderings.
+  #
+  ORDERINGS = [REQUIRE_ORDER = 0, PERMUTE = 1, RETURN_IN_ORDER = 2]
+
+  #
+  # Argument flags.
+  #
+  ARGUMENT_FLAGS = [NO_ARGUMENT = 0, REQUIRED_ARGUMENT = 1,
+    OPTIONAL_ARGUMENT = 2]
+
+  #
+  # Status codes.
+  #
+  STATUS_YET, STATUS_STARTED, STATUS_TERMINATED = 0..2
+
+  #
+  # Error types.
+  #
+  class AmbigousOption   < StandardError; end
+  class NeedlessArgument < StandardError; end
+  class MissingArgument  < StandardError; end
+  class InvalidOption    < StandardError; end
+
+  #
+  # Initializer.
+  #
+  def initialize(*arguments)
+    #
+    # Current ordering.
+    #
+    if ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = PERMUTE
+    end
+
+    #
+    # Hash table of option names.
+    # Keyes of the table are option names, and their values are canonical
+    # names of the options.
+    #
+    @@canonical_names = Hash.new
+
+    #
+    # Hash table of argument flags.
+    # Keyes of the table are option names, and their values are argument
+    # flags of the options.
+    #
+    @@argument_flags = Hash.new
+
+    #
+    # Whether error messages are output to stderr.
+    #
+    @@quiet_flag = FALSE
+
+    #
+    # Status code.
+    #
+    @@status = STATUS_YET
+
+    #
+    # Error code.
+    #
+    @@error = nil
+
+    #
+    # Error message.
+    #
+    @@error_message = nil
+
+    #
+    # Rest of catinated short options.
+    #
+    @@rest_singles = ''
+
+    #
+    # List of non-option-arguments.
+    # Append them to ARGV when option processing is terminated.
+    #
+    @@non_option_arguments = Array.new
+
+    if 0 < arguments.length
+      set_options(*arguments)
+    end
+  end
+
+  #
+  # Set ordering.
+  #
+  def ordering=(ordering)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      set_error(ArgumentError, "argument error")
+      raise RuntimeError,
+	"invoke ordering=, but option processing has already started"
+    end
+
+    #
+    # Check ordering.
+    #
+    if !ORDERINGS.include?(ordering)
+      raise ArgumentError, "invalid ordering `#{ordering}'"
+    end
+    if ordering == PERMUTE && ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = ordering
+    end
+  end
+
+  #
+  # Return ordering.
+  #
+  attr_reader :ordering
+
+  #
+  # Set options
+  #
+  def set_options(*arguments)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      raise RuntimeError, 
+	"invoke set_options, but option processing has already started"
+    end
+
+    #
+    # Clear tables of option names and argument flags.
+    #
+    @@canonical_names.clear
+    @@argument_flags.clear
+
+    arguments.each do |arg|
+      #
+      # Each argument must be an Array.
+      #
+      if !arg.is_a?(Array)
+	raise ArgumentError, "the option list contains non-Array argument"
+      end
+
+      #
+      # Find an argument flag and it set to `argument_flag'.
+      #
+      argument_flag = nil
+      arg.each do |i|
+	if ARGUMENT_FLAGS.include?(i)
+	  if argument_flag != nil
+	    raise ArgumentError, "too many argument-flags"
+	  end
+	  argument_flag = i
+	end
+      end
+      raise ArgumentError, "no argument-flag" if argument_flag == nil
+
+      canonical_name = nil
+      arg.each do |i|
+	#
+	# Check an option name.
+	#
+	next if i == argument_flag
+	begin
+	  if !i.is_a?(String) || i !~ /^-([^-]|-.+)$/
+	    raise ArgumentError, "an invalid option `#{i}'"
+	  end
+	  if (@@canonical_names.include?(i))
+	    raise ArgumentError, "option redefined `#{i}'"
+	  end
+	rescue
+	  @@canonical_names.clear
+	  @@argument_flags.clear
+	  raise
+	end
+
+	#
+	# Register the option (`i') to the `@@canonical_names' and 
+	# `@@canonical_names' Hashes.
+	#
+	if canonical_name == nil
+	  canonical_name = i
+	end
+	@@canonical_names[i] = canonical_name
+	@@argument_flags[i] = argument_flag
+      end
+      raise ArgumentError, "no option name" if canonical_name == nil
+    end
+    return self
+  end
+
+  #
+  # Set/Unset `quit' mode.
+  #
+  attr_writer :quiet
+
+  #
+  # Return the flag of `quiet' mode.
+  #
+  attr_reader :quiet
+
+  #
+  # `quiet?' is an alias of `quiet'.
+  #
+  alias quiet? quiet
+
+  #
+  # Termintate option processing.
+  #
+  def terminate
+    return if @@status == STATUS_TERMINATED
+    raise RuntimeError, "an error has occured" if @@error != nil
+
+    @@status = STATUS_TERMINATED
+    @@non_option_arguments.reverse_each do |argument|
+      ARGV.unshift(argument)
+    end
+
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    return self
+  end
+
+  #
+  # Examine whether option processing is termintated or not.
+  #
+  def terminated?
+    return @@status == STATUS_TERMINATED
+  end
+
+  #
+  # Set an error (protected).
+  #
+  def set_error(type, message)
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet_flag
+
+    @@error = type
+    @@error_message = message
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    raise type, message
+  end
+  protected :set_error
+
+  #
+  # Examine whether an option processing is failed.
+  #
+  attr_reader :error
+
+  #
+  # `error?' is an alias of `error'.
+  #
+  alias error? error
+
+  #
+  # Return an error message.
+  #
+  def error_message
+    return @@error_message
+  end
+
+  #
+  # Get next option name and its argument as an array.
+  #
+  def get
+    name, argument = nil, ''
+
+    #
+    # Check status.
+    #
+    return if @@error != nil
+    case @@status
+    when STATUS_YET
+      @@status = STATUS_STARTED
+    when STATUS_TERMINATED
+      return
+    end
+
+    #
+    # Get next option argument.
+    #
+    if 0 < @@rest_singles.length
+      $_ = '-' + @@rest_singles
+    elsif (ARGV.length == 0)
+      terminate
+      return nil
+    elsif @@ordering == PERMUTE
+      while 0 < ARGV.length && ARGV[0] !~ /^-./
+	@@non_option_arguments.push(ARGV.shift)
+      end
+      if ARGV.length == 0
+	terminate
+	return
+      end
+      $_ = ARGV.shift
+    elsif @@ordering == REQUIRE_ORDER 
+      if (ARGV[0] !~ /^-./)
+	terminate
+	return nil
+      end
+      $_ = ARGV.shift
+    else
+      $_ = ARGV.shift
+    end
+
+    #
+    # Check the special argument `--'.
+    # `--' indicates the end of the option list.
+    #
+    if $_ == '--' && @@rest_singles.length == 0
+      terminate
+      return nil
+    end
+
+    #
+    # Check for long and short options.
+    #
+    if /^(--[^=]+)/ && @@rest_singles.length == 0
+      #
+      # This is a long style option, which start with `--'.
+      #
+      pattern = $1
+      if @@canonical_names.include?(pattern)
+	name = pattern
+      else
+	#
+	# The option `name' is not registered in `@@canonical_names'.
+	# It may be an abbreviated.
+	#
+	match_count = 0
+	@@canonical_names.each_key do |key|
+	  if key.index(pattern) == 0
+	    name = key
+	    match_count += 1
+	  end
+	end
+	if 2 <= match_count
+	  set_error(AmbigousOption, "option `#{$_}' is ambiguous")
+	elsif match_count == 0
+	  set_error(InvalidOption, "unrecognized option `#{$_}'")
+	end
+      end
+
+      #
+      # Check an argument to the option.
+      #
+      if @@argument_flags[name] == REQUIRED_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length
+	  argument = ARGV.shift
+	else
+	  set_error(MissingArgument, "option `#{$_}' requires an argument")
+	end
+      elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	  argument = ARGV.shift
+	else
+	  argument = ''
+	end
+      elsif /=(.*)$/
+	set_error(NeedlessArgument,
+		  "option `#{name}' doesn't allow an argument")
+      end
+
+    elsif /^(-(.))(.*)/
+      #
+      # This is a short style option, which start with `-' (not `--').
+      # Short options may be catinated (e.g. `-l -g' is equivalent to
+      # `-lg').
+      #
+      name, ch, @@rest_singles = $1, $2, $3
+
+      if @@canonical_names.include?(name)
+	#
+	# The option `name' is found in `@@canonical_names'.
+	# Check its argument.
+	#
+	if @@argument_flags[name] == REQUIRED_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length
+	    argument = ARGV.shift
+	  else
+	    # 1003.2 specifies the format of this message.
+	    set_error(MissingArgument, "option requires an argument -- #{ch}")
+	  end
+	elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	    argument = ARGV.shift
+	  else
+	    argument = ''
+	  end
+	end
+      else
+	#
+	# This is an invalid option.
+	# 1003.2 specifies the format of this message.
+	#
+	if ENV.include?('POSIXLY_CORRECT')
+	  set_error(InvalidOption, "illegal option -- #{ch}")
+	else
+	  set_error(InvalidOption, "invalid option -- #{ch}")
+	end
+      end
+    else
+      #
+      # This is a non-option argument.
+      # Only RETURN_IN_ORDER falled into here.
+      #
+      return '', $_
+    end
+
+    return @@canonical_names[name], argument
+  end
+
+  #
+  # `get_option' is an alias of `get'.
+  #
+  alias get_option get
+
+  #
+  # Iterator version of `get'.
+  #
+  def each
+    loop do
+      name, argument = get_option
+      break if name == nil
+      yield name, argument
+    end
+  end
+
+  #
+  # `each_option' is an alias of `each'.
+  #
+  alias each_option each
+end
+@
+
+
+1.1.4.2
+log
+@1.2.6
+@
+text
+@d78 1
+a78 1
+    @@quiet = FALSE
+d262 1
+a262 1
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 473
+#                                                         -*- Ruby -*-
+# Copyright (C) 1998  Motoyuki Kasahara
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+#
+# Documents and latest version of `getoptlong.rb' are found at:
+#    http://www.sra.co.jp/people/m-kasahr/ruby/getoptlong/
+#
+
+#
+# Parse command line options just like GNU getopt_long().
+#
+class GetoptLong
+  #
+  # Orderings.
+  #
+  ORDERINGS = [REQUIRE_ORDER = 0, PERMUTE = 1, RETURN_IN_ORDER = 2]
+
+  #
+  # Argument flags.
+  #
+  ARGUMENT_FLAGS = [NO_ARGUMENT = 0, REQUIRED_ARGUMENT = 1,
+    OPTIONAL_ARGUMENT = 2]
+
+  #
+  # Status codes.
+  #
+  STATUS_YET, STATUS_STARTED, STATUS_TERMINATED = 0..2
+
+  #
+  # Error types.
+  #
+  class AmbigousOption   < StandardError; end
+  class NeedlessArgument < StandardError; end
+  class MissingArgument  < StandardError; end
+  class InvalidOption    < StandardError; end
+
+  #
+  # Initializer.
+  #
+  def initialize(*arguments)
+    #
+    # Current ordering.
+    #
+    if ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = PERMUTE
+    end
+
+    #
+    # Hash table of option names.
+    # Keyes of the table are option names, and their values are canonical
+    # names of the options.
+    #
+    @@canonical_names = Hash.new
+
+    #
+    # Hash table of argument flags.
+    # Keyes of the table are option names, and their values are argument
+    # flags of the options.
+    #
+    @@argument_flags = Hash.new
+
+    #
+    # Whether error messages are output to stderr.
+    #
+    @@quiet_flag = FALSE
+
+    #
+    # Status code.
+    #
+    @@status = STATUS_YET
+
+    #
+    # Error code.
+    #
+    @@error = nil
+
+    #
+    # Error message.
+    #
+    @@error_message = nil
+
+    #
+    # Rest of catinated short options.
+    #
+    @@rest_singles = ''
+
+    #
+    # List of non-option-arguments.
+    # Append them to ARGV when option processing is terminated.
+    #
+    @@non_option_arguments = Array.new
+
+    if 0 < arguments.length
+      set_options(*arguments)
+    end
+  end
+
+  #
+  # Set ordering.
+  #
+  def ordering=(ordering)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      set_error(ArgumentError, "argument error")
+      raise RuntimeError,
+	"invoke ordering=, but option processing has already started"
+    end
+
+    #
+    # Check ordering.
+    #
+    if !ORDERINGS.include?(ordering)
+      raise ArgumentError, "invalid ordering `#{ordering}'"
+    end
+    if ordering == PERMUTE && ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = ordering
+    end
+  end
+
+  #
+  # Return ordering.
+  #
+  attr_reader :ordering
+
+  #
+  # Set options
+  #
+  def set_options(*arguments)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      raise RuntimeError, 
+	"invoke set_options, but option processing has already started"
+    end
+
+    #
+    # Clear tables of option names and argument flags.
+    #
+    @@canonical_names.clear
+    @@argument_flags.clear
+
+    arguments.each do |arg|
+      #
+      # Each argument must be an Array.
+      #
+      if !arg.is_a?(Array)
+	raise ArgumentError, "the option list contains non-Array argument"
+      end
+
+      #
+      # Find an argument flag and it set to `argument_flag'.
+      #
+      argument_flag = nil
+      arg.each do |i|
+	if ARGUMENT_FLAGS.include?(i)
+	  if argument_flag != nil
+	    raise ArgumentError, "too many argument-flags"
+	  end
+	  argument_flag = i
+	end
+      end
+      raise ArgumentError, "no argument-flag" if argument_flag == nil
+
+      canonical_name = nil
+      arg.each do |i|
+	#
+	# Check an option name.
+	#
+	next if i == argument_flag
+	begin
+	  if !i.is_a?(String) || i !~ /^-([^-]|-.+)$/
+	    raise ArgumentError, "an invalid option `#{i}'"
+	  end
+	  if (@@canonical_names.include?(i))
+	    raise ArgumentError, "option redefined `#{i}'"
+	  end
+	rescue
+	  @@canonical_names.clear
+	  @@argument_flags.clear
+	  raise
+	end
+
+	#
+	# Register the option (`i') to the `@@canonical_names' and 
+	# `@@canonical_names' Hashes.
+	#
+	if canonical_name == nil
+	  canonical_name = i
+	end
+	@@canonical_names[i] = canonical_name
+	@@argument_flags[i] = argument_flag
+      end
+      raise ArgumentError, "no option name" if canonical_name == nil
+    end
+    return self
+  end
+
+  #
+  # Set/Unset `quit' mode.
+  #
+  attr_writer :quiet
+
+  #
+  # Return the flag of `quiet' mode.
+  #
+  attr_reader :quiet
+
+  #
+  # `quiet?' is an alias of `quiet'.
+  #
+  alias quiet? quiet
+
+  #
+  # Termintate option processing.
+  #
+  def terminate
+    return if @@status == STATUS_TERMINATED
+    raise RuntimeError, "an error has occured" if @@error != nil
+
+    @@status = STATUS_TERMINATED
+    @@non_option_arguments.reverse_each do |argument|
+      ARGV.unshift(argument)
+    end
+
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    return self
+  end
+
+  #
+  # Examine whether option processing is termintated or not.
+  #
+  def terminated?
+    return @@status == STATUS_TERMINATED
+  end
+
+  #
+  # Set an error (protected).
+  #
+  def set_error(type, message)
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet_flag
+
+    @@error = type
+    @@error_message = message
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    raise type, message
+  end
+  protected :set_error
+
+  #
+  # Examine whether an option processing is failed.
+  #
+  attr_reader :error
+
+  #
+  # `error?' is an alias of `error'.
+  #
+  alias error? error
+
+  #
+  # Return an error message.
+  #
+  def error_message
+    return @@error_message
+  end
+
+  #
+  # Get next option name and its argument as an array.
+  #
+  def get
+    name, argument = nil, ''
+
+    #
+    # Check status.
+    #
+    return if @@error != nil
+    case @@status
+    when STATUS_YET
+      @@status = STATUS_STARTED
+    when STATUS_TERMINATED
+      return
+    end
+
+    #
+    # Get next option argument.
+    #
+    if 0 < @@rest_singles.length
+      $_ = '-' + @@rest_singles
+    elsif (ARGV.length == 0)
+      terminate
+      return nil
+    elsif @@ordering == PERMUTE
+      while 0 < ARGV.length && ARGV[0] !~ /^-./
+	@@non_option_arguments.push(ARGV.shift)
+      end
+      if ARGV.length == 0
+	terminate
+	return
+      end
+      $_ = ARGV.shift
+    elsif @@ordering == REQUIRE_ORDER 
+      if (ARGV[0] !~ /^-./)
+	terminate
+	return nil
+      end
+      $_ = ARGV.shift
+    else
+      $_ = ARGV.shift
+    end
+
+    #
+    # Check the special argument `--'.
+    # `--' indicates the end of the option list.
+    #
+    if $_ == '--' && @@rest_singles.length == 0
+      terminate
+      return nil
+    end
+
+    #
+    # Check for long and short options.
+    #
+    if /^(--[^=]+)/ && @@rest_singles.length == 0
+      #
+      # This is a long style option, which start with `--'.
+      #
+      pattern = $1
+      if @@canonical_names.include?(pattern)
+	name = pattern
+      else
+	#
+	# The option `name' is not registered in `@@canonical_names'.
+	# It may be an abbreviated.
+	#
+	match_count = 0
+	@@canonical_names.each_key do |key|
+	  if key.index(pattern) == 0
+	    name = key
+	    match_count += 1
+	  end
+	end
+	if 2 <= match_count
+	  set_error(AmbigousOption, "option `#{$_}' is ambiguous")
+	elsif match_count == 0
+	  set_error(InvalidOption, "unrecognized option `#{$_}'")
+	end
+      end
+
+      #
+      # Check an argument to the option.
+      #
+      if @@argument_flags[name] == REQUIRED_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length
+	  argument = ARGV.shift
+	else
+	  set_error(MissingArgument, "option `#{$_}' requires an argument")
+	end
+      elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	  argument = ARGV.shift
+	else
+	  argument = ''
+	end
+      elsif /=(.*)$/
+	set_error(NeedlessArgument,
+		  "option `#{name}' doesn't allow an argument")
+      end
+
+    elsif /^(-(.))(.*)/
+      #
+      # This is a short style option, which start with `-' (not `--').
+      # Short options may be catinated (e.g. `-l -g' is equivalent to
+      # `-lg').
+      #
+      name, ch, @@rest_singles = $1, $2, $3
+
+      if @@canonical_names.include?(name)
+	#
+	# The option `name' is found in `@@canonical_names'.
+	# Check its argument.
+	#
+	if @@argument_flags[name] == REQUIRED_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length
+	    argument = ARGV.shift
+	  else
+	    # 1003.2 specifies the format of this message.
+	    set_error(MissingArgument, "option requires an argument -- #{ch}")
+	  end
+	elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	    argument = ARGV.shift
+	  else
+	    argument = ''
+	  end
+	end
+      else
+	#
+	# This is an invalid option.
+	# 1003.2 specifies the format of this message.
+	#
+	if ENV.include?('POSIXLY_CORRECT')
+	  set_error(InvalidOption, "illegal option -- #{ch}")
+	else
+	  set_error(InvalidOption, "invalid option -- #{ch}")
+	end
+      end
+    else
+      #
+      # This is a non-option argument.
+      # Only RETURN_IN_ORDER falled into here.
+      #
+      return '', $_
+    end
+
+    return @@canonical_names[name], argument
+  end
+
+  #
+  # `get_option' is an alias of `get'.
+  #
+  alias get_option get
+
+  #
+  # Iterator version of `get'.
+  #
+  def each
+    loop do
+      name, argument = get_option
+      break if name == nil
+      yield name, argument
+    end
+  end
+
+  #
+  # `each_option' is an alias of `each'.
+  #
+  alias each_option each
+end
+@
+
+
+1.1.1.1.2.1
+log
+@regexp null pattern
+@
+text
+@d78 1
+a78 1
+    @@quiet = FALSE
+d262 1
+a262 1
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet
+@
+
+
+1.1.2.1
+log
+@1.1d1
+@
+text
+@a0 473
+#                                                         -*- Ruby -*-
+# Copyright (C) 1998  Motoyuki Kasahara
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+#
+# Documents and latest version of `getoptlong.rb' are found at:
+#    http://www.sra.co.jp/people/m-kasahr/ruby/getoptlong/
+#
+
+#
+# Parse command line options just like GNU getopt_long().
+#
+class GetoptLong
+  #
+  # Orderings.
+  #
+  ORDERINGS = [REQUIRE_ORDER = 0, PERMUTE = 1, RETURN_IN_ORDER = 2]
+
+  #
+  # Argument flags.
+  #
+  ARGUMENT_FLAGS = [NO_ARGUMENT = 0, REQUIRED_ARGUMENT = 1,
+    OPTIONAL_ARGUMENT = 2]
+
+  #
+  # Status codes.
+  #
+  STATUS_YET, STATUS_STARTED, STATUS_TERMINATED = 0..2
+
+  #
+  # Error types.
+  #
+  class AmbigousOption   < StandardError; end
+  class NeedlessArgument < StandardError; end
+  class MissingArgument  < StandardError; end
+  class InvalidOption    < StandardError; end
+
+  #
+  # Initializer.
+  #
+  def initialize(*arguments)
+    #
+    # Current ordering.
+    #
+    if ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = PERMUTE
+    end
+
+    #
+    # Hash table of option names.
+    # Keyes of the table are option names, and their values are canonical
+    # names of the options.
+    #
+    @@canonical_names = Hash.new
+
+    #
+    # Hash table of argument flags.
+    # Keyes of the table are option names, and their values are argument
+    # flags of the options.
+    #
+    @@argument_flags = Hash.new
+
+    #
+    # Whether error messages are output to stderr.
+    #
+    @@quiet_flag = FALSE
+
+    #
+    # Status code.
+    #
+    @@status = STATUS_YET
+
+    #
+    # Error code.
+    #
+    @@error = nil
+
+    #
+    # Error message.
+    #
+    @@error_message = nil
+
+    #
+    # Rest of catinated short options.
+    #
+    @@rest_singles = ''
+
+    #
+    # List of non-option-arguments.
+    # Append them to ARGV when option processing is terminated.
+    #
+    @@non_option_arguments = Array.new
+
+    if 0 < arguments.length
+      set_options(*arguments)
+    end
+  end
+
+  #
+  # Set ordering.
+  #
+  def ordering=(ordering)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      set_error(ArgumentError, "argument error")
+      raise RuntimeError,
+	"invoke ordering=, but option processing has already started"
+    end
+
+    #
+    # Check ordering.
+    #
+    if !ORDERINGS.include?(ordering)
+      raise ArgumentError, "invalid ordering `#{ordering}'"
+    end
+    if ordering == PERMUTE && ENV.include?('POSIXLY_CORRECT')
+      @@ordering = REQUIRE_ORDER
+    else
+      @@ordering = ordering
+    end
+  end
+
+  #
+  # Return ordering.
+  #
+  attr_reader :ordering
+
+  #
+  # Set options
+  #
+  def set_options(*arguments)
+    #
+    # The method is failed if option processing has already started.
+    #
+    if @@status != STATUS_YET
+      raise RuntimeError, 
+	"invoke set_options, but option processing has already started"
+    end
+
+    #
+    # Clear tables of option names and argument flags.
+    #
+    @@canonical_names.clear
+    @@argument_flags.clear
+
+    arguments.each do |arg|
+      #
+      # Each argument must be an Array.
+      #
+      if !arg.is_a?(Array)
+	raise ArgumentError, "the option list contains non-Array argument"
+      end
+
+      #
+      # Find an argument flag and it set to `argument_flag'.
+      #
+      argument_flag = nil
+      arg.each do |i|
+	if ARGUMENT_FLAGS.include?(i)
+	  if argument_flag != nil
+	    raise ArgumentError, "too many argument-flags"
+	  end
+	  argument_flag = i
+	end
+      end
+      raise ArgumentError, "no argument-flag" if argument_flag == nil
+
+      canonical_name = nil
+      arg.each do |i|
+	#
+	# Check an option name.
+	#
+	next if i == argument_flag
+	begin
+	  if !i.is_a?(String) || i !~ /^-([^-]|-.+)$/
+	    raise ArgumentError, "an invalid option `#{i}'"
+	  end
+	  if (@@canonical_names.include?(i))
+	    raise ArgumentError, "option redefined `#{i}'"
+	  end
+	rescue
+	  @@canonical_names.clear
+	  @@argument_flags.clear
+	  raise
+	end
+
+	#
+	# Register the option (`i') to the `@@canonical_names' and 
+	# `@@canonical_names' Hashes.
+	#
+	if canonical_name == nil
+	  canonical_name = i
+	end
+	@@canonical_names[i] = canonical_name
+	@@argument_flags[i] = argument_flag
+      end
+      raise ArgumentError, "no option name" if canonical_name == nil
+    end
+    return self
+  end
+
+  #
+  # Set/Unset `quit' mode.
+  #
+  attr_writer :quiet
+
+  #
+  # Return the flag of `quiet' mode.
+  #
+  attr_reader :quiet
+
+  #
+  # `quiet?' is an alias of `quiet'.
+  #
+  alias quiet? quiet
+
+  #
+  # Termintate option processing.
+  #
+  def terminate
+    return if @@status == STATUS_TERMINATED
+    raise RuntimeError, "an error has occured" if @@error != nil
+
+    @@status = STATUS_TERMINATED
+    @@non_option_arguments.reverse_each do |argument|
+      ARGV.unshift(argument)
+    end
+
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    return self
+  end
+
+  #
+  # Examine whether option processing is termintated or not.
+  #
+  def terminated?
+    return @@status == STATUS_TERMINATED
+  end
+
+  #
+  # Set an error (protected).
+  #
+  def set_error(type, message)
+    $stderr.print("#{$0}: #{message}\n") if !@@quiet_flag
+
+    @@error = type
+    @@error_message = message
+    @@canonical_names = nil
+    @@argument_flags = nil
+    @@rest_singles = nil
+    @@non_option_arguments = nil
+
+    raise type, message
+  end
+  protected :set_error
+
+  #
+  # Examine whether an option processing is failed.
+  #
+  attr_reader :error
+
+  #
+  # `error?' is an alias of `error'.
+  #
+  alias error? error
+
+  #
+  # Return an error message.
+  #
+  def error_message
+    return @@error_message
+  end
+
+  #
+  # Get next option name and its argument as an array.
+  #
+  def get
+    name, argument = nil, ''
+
+    #
+    # Check status.
+    #
+    return if @@error != nil
+    case @@status
+    when STATUS_YET
+      @@status = STATUS_STARTED
+    when STATUS_TERMINATED
+      return
+    end
+
+    #
+    # Get next option argument.
+    #
+    if 0 < @@rest_singles.length
+      $_ = '-' + @@rest_singles
+    elsif (ARGV.length == 0)
+      terminate
+      return nil
+    elsif @@ordering == PERMUTE
+      while 0 < ARGV.length && ARGV[0] !~ /^-./
+	@@non_option_arguments.push(ARGV.shift)
+      end
+      if ARGV.length == 0
+	terminate
+	return
+      end
+      $_ = ARGV.shift
+    elsif @@ordering == REQUIRE_ORDER 
+      if (ARGV[0] !~ /^-./)
+	terminate
+	return nil
+      end
+      $_ = ARGV.shift
+    else
+      $_ = ARGV.shift
+    end
+
+    #
+    # Check the special argument `--'.
+    # `--' indicates the end of the option list.
+    #
+    if $_ == '--' && @@rest_singles.length == 0
+      terminate
+      return nil
+    end
+
+    #
+    # Check for long and short options.
+    #
+    if /^(--[^=]+)/ && @@rest_singles.length == 0
+      #
+      # This is a long style option, which start with `--'.
+      #
+      pattern = $1
+      if @@canonical_names.include?(pattern)
+	name = pattern
+      else
+	#
+	# The option `name' is not registered in `@@canonical_names'.
+	# It may be an abbreviated.
+	#
+	match_count = 0
+	@@canonical_names.each_key do |key|
+	  if key.index(pattern) == 0
+	    name = key
+	    match_count += 1
+	  end
+	end
+	if 2 <= match_count
+	  set_error(AmbigousOption, "option `#{$_}' is ambiguous")
+	elsif match_count == 0
+	  set_error(InvalidOption, "unrecognized option `#{$_}'")
+	end
+      end
+
+      #
+      # Check an argument to the option.
+      #
+      if @@argument_flags[name] == REQUIRED_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length
+	  argument = ARGV.shift
+	else
+	  set_error(MissingArgument, "option `#{$_}' requires an argument")
+	end
+      elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	if /=(.*)$/
+	  argument = $1
+	elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	  argument = ARGV.shift
+	else
+	  argument = ''
+	end
+      elsif /=(.*)$/
+	set_error(NeedlessArgument,
+		  "option `#{name}' doesn't allow an argument")
+      end
+
+    elsif /^(-(.))(.*)/
+      #
+      # This is a short style option, which start with `-' (not `--').
+      # Short options may be catinated (e.g. `-l -g' is equivalent to
+      # `-lg').
+      #
+      name, ch, @@rest_singles = $1, $2, $3
+
+      if @@canonical_names.include?(name)
+	#
+	# The option `name' is found in `@@canonical_names'.
+	# Check its argument.
+	#
+	if @@argument_flags[name] == REQUIRED_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length
+	    argument = ARGV.shift
+	  else
+	    # 1003.2 specifies the format of this message.
+	    set_error(MissingArgument, "option requires an argument -- #{ch}")
+	  end
+	elsif @@argument_flags[name] == OPTIONAL_ARGUMENT
+	  if 0 < @@rest_singles.length
+	    argument = @@rest_singles
+	    @@rest_singles = ''
+	  elsif 0 < ARGV.length && ARGV[0] !~ /^-./
+	    argument = ARGV.shift
+	  else
+	    argument = ''
+	  end
+	end
+      else
+	#
+	# This is an invalid option.
+	# 1003.2 specifies the format of this message.
+	#
+	if ENV.include?('POSIXLY_CORRECT')
+	  set_error(InvalidOption, "illegal option -- #{ch}")
+	else
+	  set_error(InvalidOption, "invalid option -- #{ch}")
+	end
+      end
+    else
+      #
+      # This is a non-option argument.
+      # Only RETURN_IN_ORDER falled into here.
+      #
+      return '', $_
+    end
+
+    return @@canonical_names[name], argument
+  end
+
+  #
+  # `get_option' is an alias of `get'.
+  #
+  alias get_option get
+
+  #
+  # Iterator version of `get'.
+  #
+  def each
+    loop do
+      name, argument = get_option
+      break if name == nil
+      yield name, argument
+    end
+  end
+
+  #
+  # `each_option' is an alias of `each'.
+  #
+  alias each_option each
+end
+@
+

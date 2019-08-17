@@ -1,0 +1,1384 @@
+head	1.19;
+access;
+symbols
+	release_0_1_1:1.13
+	release_0_1_0:1.13
+	start:1.1.1.1
+	shugo:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.19
+date	2001.04.19.06.02.39;	author shugo;	state dead;
+branches;
+next	1.18;
+
+1.18
+date	2000.12.06.05.52.29;	author shugo;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.10.16.05.41.57;	author shugo;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.10.12.05.41.38;	author shugo;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.10.11.04.51.36;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.09.14.08.18.28;	author shugo;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.09.06.10.04.23;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.08.31.02.54.42;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.08.30.08.47.36;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.08.30.08.30.53;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.08.30.07.32.42;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.08.28.10.12.03;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.30.02.36.05;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.24.04.58.07;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.18.08.09.13;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.03.31.09.53.13;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.03.28.05.39.42;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.10.04.44.39;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.19
+log
+@* eruby_lib.c: renamed from eruby.c.
+* eruby_lib.c (eruby_init): new class ERuby::Compiler.
+* eruby_ext.c: new file for eruby extention library.
+* examples/test.rb: example for eruby extention library.
+@
+text
+@/*
+ * $Id: eruby.c,v 1.18 2000/12/06 05:52:29 shugo Exp $
+ * Copyright (C) 2000  ZetaBITS, Inc.
+ * Copyright (C) 2000  Information-technology Promotion Agency, Japan
+ */
+
+#include "ruby.h"
+#include "rubysig.h"
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <sys/stat.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#include <signal.h>
+
+#include "eruby.h"
+#include "config.h"
+
+static VALUE mERuby;
+
+char *eruby_filename = NULL;
+int eruby_mode = MODE_UNKNOWN;
+int eruby_noheader = 0;
+VALUE eruby_charset;
+VALUE eruby_default_charset;
+
+#define ERUBY_BEGIN_DELIMITER "<%"
+#define ERUBY_END_DELIMITER "%>"
+#define ERUBY_EXPR_CHAR '='
+#define ERUBY_COMMENT_CHAR '#'
+#define ERUBY_LINE_BEG_CHAR '%'
+
+enum embedded_program_type {
+    EMBEDDED_STMT,
+    EMBEDDED_EXPR,
+    EMBEDDED_COMMENT,
+};
+
+#define EOP (-2)
+
+#if defined(_MSC_VER)
+#define SIGQUIT 3
+#endif
+
+static char *readline(FILE *f)
+{
+    char buff[BUFSIZ];
+    char *line;
+    int buff_len, line_len = 0;
+
+    line = (char *) malloc(BUFSIZ);
+    if (line == NULL)
+	return NULL;
+    for (;;) {
+	if (fgets(buff, BUFSIZ, f) == NULL) {
+	    if (ferror(f)) {
+		free(line);
+		return NULL;
+	    }
+	    return line;
+	}
+	strcpy(line + line_len, buff);
+	buff_len = strlen(buff);
+	line_len += buff_len;
+	if (buff[buff_len - 1] == '\n' || buff_len < BUFSIZ - 1) {
+	    break;
+	}
+	else {
+	    char *tmp;
+	    tmp = (char *) realloc(line, line_len + BUFSIZ);
+	    if (tmp == NULL) {
+		free(line);
+		return NULL;
+	    }
+	    line = tmp;
+	}
+    }
+    return line;
+}
+
+static void usage(char *progname)
+{
+    fprintf(stderr, "\
+usage: %s [switches] [inputfile]\n\n\
+  -d, --debug		set debugging flags (set $DEBUG to true)\n\
+  -K[kcode]		specifies KANJI (Japanese) code-set\n\
+  -M[mode]		specifies runtime mode\n\
+			  f: filter mode\n\
+			  c: CGI mode\n\
+			  n: NPH-CGI mode\n\
+  -C [charset]		specifies charset parameter for Content-Type\n\
+  -n, --noheader	disables CGI header output\n\
+  -v, --verbose		enables verbose mode\n\
+  --version		print version information and exit\n\
+\n", progname);
+}
+
+static void show_version()
+{
+    fprintf(stderr, "eRuby version %s\n", ERUBY_VERSION);
+    ruby_show_version();
+}
+
+static int set_mode(char *mode)
+{
+    switch (*mode) {
+    case 'f':
+	eruby_mode = MODE_FILTER;
+	break;
+    case 'c':
+	eruby_mode = MODE_CGI;
+	break;
+    case 'n':
+	eruby_mode = MODE_NPHCGI;
+	break;
+    default:
+	fprintf(stderr, "invalid mode -- %s\n", mode);
+	return -1;
+    }
+    return 0;
+}
+
+const char *eruby_version()
+{
+    return ERUBY_VERSION;
+}
+
+int eruby_parse_options(int argc, char **argv)
+{
+    unsigned char *s;
+    int i;
+
+    for (i = 1; i < argc; i++) {
+	if (argv[i][0] != '-' || argv[i][1] == '\0') {
+	    eruby_filename = argv[i];
+	    break;
+	}
+	s = argv[i];
+      again:
+	while (isspace(*s))
+	    s++;
+	if (*s == '-') s++;
+	switch (*s) {
+	case 'M':
+	    if (set_mode(++s) == -1)
+		return 2;
+	    s++;
+	    goto again;
+	case 'K':
+	    s++;
+	    if (*s == '\0') {
+		fprintf(stderr, "%s: no arg given for -K\n", argv[0]);
+		return 2;
+	    }
+	    rb_set_kcode(s);
+	    s++;
+	    goto again;
+	case 'C':
+	    s++;
+	    if (isspace(*s)) s++;
+	    if (*s == '\0') {
+		i++;
+		if (i == argc) {
+		    fprintf(stderr, "%s: no arg given for -C\n", argv[0]);
+		    return 2;
+		}
+		eruby_charset = rb_str_new2(argv[i]);
+		break;
+	    }
+	    else {
+		unsigned char *p = s;
+		while (*p && !isspace(*p)) p++;
+		eruby_charset = rb_str_new(s, p - s);
+		s = p;
+		goto again;
+	    }
+	case 'd':
+	    ruby_debug = Qtrue;
+	    s++;
+	    goto again;
+	case 'v':
+	    ruby_verbose = Qtrue;
+	    s++;
+	    goto again;
+	case 'n':
+	    eruby_noheader = 1;
+	    s++;
+	    goto again;
+	case '\0':
+	    break;
+	case 'h':
+	    usage(argv[0]);
+	    return 1;
+	case '-':
+	    s++;
+	    if (strncmp(s , "debug", 5) == 0
+		&& (s[5] == '\0' || isspace(s[5]))) {
+		ruby_debug = Qtrue;
+		s += 5;
+		goto again;
+	    }
+	    else if (strncmp(s, "noheader", 8) == 0
+		     && (s[8] == '\0' || isspace(s[8]))) {
+		eruby_noheader = 1;
+		s += 8;
+		goto again;
+	    }
+	    else if (strncmp(s, "version", 7) == 0
+		     && (s[7] == '\0' || isspace(s[7]))) {
+		show_version();
+		return 1;
+	    }
+	    else if (strncmp(s, "verbose", 7) == 0
+		     && (s[7] == '\0' || isspace(s[7]))) {
+		ruby_verbose = Qtrue;
+		s += 7;
+		goto again;
+	    }
+	    else if (strncmp(s, "help", 4) == 0
+		     && (s[4] == '\0' || isspace(s[4]))) {
+		usage(argv[0]);
+		return 1;
+	    }
+	    else {
+		fprintf(stderr, "%s: invalid option -- %s\n", argv[0], s);
+		fprintf(stderr, "try `%s --help' for more information.\n", argv[0]);
+		return 1;
+	    }
+	default:
+	    fprintf(stderr, "%s: invalid option -- %s\n", argv[0], s);
+	    fprintf(stderr, "try `%s --help' for more information.\n", argv[0]);
+	    return 2;
+	}
+    }
+
+    return 0;
+}
+
+static int parse_embedded_program(FILE *in, FILE *out,
+				  enum embedded_program_type type)
+{
+    int c, prevc = EOF;
+
+    if (type == EMBEDDED_EXPR)
+	fputs("print((", out);
+    for (;;) {
+	TRAP_BEG;
+	c = getc(in);
+	TRAP_END;
+      again:
+	if (c == ERUBY_END_DELIMITER[0]) {
+	    TRAP_BEG;
+	    c = getc(in);
+	    TRAP_END;
+	    if (c == ERUBY_END_DELIMITER[1]) {
+		if (prevc == ERUBY_END_DELIMITER[0]) {
+		    if (type != EMBEDDED_COMMENT)
+			putc(ERUBY_END_DELIMITER[1], out);
+		    prevc = ERUBY_END_DELIMITER[1];
+		    continue;
+		}
+		if (type == EMBEDDED_EXPR)
+		    fputs(")); ", out);
+		else if (type == EMBEDDED_STMT && prevc != '\n')
+		    fputs("; ", out);
+		return ERUBY_OK;
+	    }
+	    else if (c == EOF) {
+		if (ferror(in))
+		    return ERUBY_SYSTEM_ERROR;
+		else
+		    return ERUBY_MISSING_END_DELIMITER;
+	    }
+	    else {
+		if (type != EMBEDDED_COMMENT)
+		    putc(ERUBY_END_DELIMITER[0], out);
+		prevc = ERUBY_END_DELIMITER[0];
+		goto again;
+	    }
+	}
+	else {
+	    switch (c) {
+	    case EOF:
+		if (ferror(in))
+		    return ERUBY_SYSTEM_ERROR;
+		else
+		    return ERUBY_MISSING_END_DELIMITER;
+	    case '\n':
+		putc(c, out);
+		prevc = c;
+		break;
+	    default:
+		if (type != EMBEDDED_COMMENT)
+		    putc(c, out);
+		prevc = c;
+		break;
+	    }
+	}
+    }
+    return ERUBY_MISSING_END_DELIMITER;
+}
+
+static int parse_embedded_line(FILE *in, FILE *out)
+{
+    int c;
+
+    for (;;) {
+	TRAP_BEG;
+	c = getc(in);
+	TRAP_END;
+	switch (c) {
+	case EOF:
+	    if (ferror(in))
+		return ERUBY_SYSTEM_ERROR;
+	    else
+		return ERUBY_MISSING_END_DELIMITER;
+	case '\n':
+	    putc(c, out);
+	    return ERUBY_OK;
+	    break;
+	default:
+	    putc(c, out);
+	    break;
+	}
+    }
+    return ERUBY_MISSING_END_DELIMITER;
+}
+
+int eruby_compile(FILE *in, FILE *out)
+{
+    int c, prevc = EOF;
+    int err;
+
+    TRAP_BEG;
+    c = getc(in);
+    TRAP_END;
+    if (c == '#') {
+	TRAP_BEG;
+	c = getc(in);
+	TRAP_END;
+	if (c == '!') {
+	    unsigned char *p;
+	    char *argv[2];
+	    char *line = readline(in);
+
+	    if (line == NULL)
+		return ERUBY_SYSTEM_ERROR;
+	    if (line[strlen(line) - 1] == '\n') {
+		line[strlen(line) - 1] = '\0';
+		putc('\n', out);
+	    }
+	    argv[0] = "eruby";
+	    p = line;
+	    while (isspace(*p)) p++;
+	    while (*p && !isspace(*p)) p++;
+	    while (isspace(*p)) p++;
+	    argv[1] = p;
+	    if (eruby_parse_options(2, argv) != 0) {
+		free(line);
+		return ERUBY_INVALID_OPTION;
+	    }
+	    free(line);
+	}
+	else {
+	    while (c != EOF) {
+		TRAP_BEG;
+		c = getc(in);
+		TRAP_END;
+		if (c == '\n') {
+		    putc(c, out);
+		    break;
+		}
+	    }
+	}
+    }
+    else {
+	ungetc(c, in);
+    }
+
+    for (;;) {
+	TRAP_BEG;
+	c = getc(in);
+	TRAP_END;
+      again:
+	if (c == ERUBY_BEGIN_DELIMITER[0]) {
+	    TRAP_BEG;
+	    c = getc(in);
+	    TRAP_END;
+	    if (c == ERUBY_BEGIN_DELIMITER[1]) {
+		TRAP_BEG;
+		c = getc(in);
+		TRAP_END;
+		if (c == EOF) {
+		    return ERUBY_MISSING_END_DELIMITER;
+		}
+		else if (c == ERUBY_BEGIN_DELIMITER[1]) { /* <%% => <% */
+		    if (prevc < 0) fputs("print \"", out);
+		    fwrite(ERUBY_BEGIN_DELIMITER, 1, 2, out);
+		    prevc = ERUBY_BEGIN_DELIMITER[1];
+		    continue;
+		}
+		else {
+		    if (prevc >= 0)
+			fputs("\"; ", out);
+		    if (c == ERUBY_COMMENT_CHAR) {
+			err = parse_embedded_program(in, out, EMBEDDED_COMMENT);
+		    }
+		    else if (c == ERUBY_EXPR_CHAR) {
+			err = parse_embedded_program(in, out, EMBEDDED_EXPR);
+		    }
+		    else {
+			if (ungetc(c, in) == EOF)
+			    return ERUBY_SYSTEM_ERROR;
+			err = parse_embedded_program(in, out, EMBEDDED_STMT);
+		    }
+		    if (err) return err;
+		    prevc = EOP;
+		}
+	    } else {
+		if (prevc < 0) fputs("print \"", out);
+		putc(ERUBY_BEGIN_DELIMITER[0], out);
+		prevc = ERUBY_BEGIN_DELIMITER[0];
+		goto again;
+	    }
+	}
+	else if (c == ERUBY_LINE_BEG_CHAR && prevc == EOF) {
+	    TRAP_BEG;
+	    c = getc(in);
+	    TRAP_END;
+	    if (c == EOF) {
+		return ERUBY_MISSING_END_DELIMITER;
+	    }
+	    else if (c == ERUBY_LINE_BEG_CHAR) { /* %% => % */
+		if (prevc < 0) fputs("print \"", out);
+		fputc(c, out);
+		prevc = c;
+	    }
+	    else {
+		if (ungetc(c, in) == EOF)
+		    return ERUBY_SYSTEM_ERROR;
+		err = parse_embedded_line(in, out);
+		if (err) return err;
+		prevc = EOF;
+	    }
+	}
+	else {
+	    switch (c) {
+	    case EOF:
+		goto end;
+	    case '\n':
+		if (prevc < 0) fputs("print \"", out);
+		fputs("\\n\"\n", out);
+		prevc = EOF;
+		break;
+	    case '\t':
+		if (prevc < 0) fputs("print \"", out);
+		fputs("\\t", out);
+		prevc = c;
+		break;
+	    case '\\':
+	    case '"':
+	    case '#':
+		if (prevc < 0) fputs("print \"", out);
+		putc('\\', out);
+		putc(c, out);
+		prevc = c;
+		break;
+	    default:
+		if (prevc < 0) fputs("print \"", out);
+		putc(c, out);
+		prevc = c;
+		break;
+	    }
+	}
+    }
+  end:
+    if (ferror(in))
+	return ERUBY_SYSTEM_ERROR;
+    if (prevc != EOF) {
+	putc('"', out);
+    }
+    return ERUBY_OK;
+}
+
+#ifndef S_ISDIR
+# define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+#ifndef W_OK
+# define W_OK 2
+#endif
+
+static char *check_dir(char *dir)
+{
+    struct stat st;
+
+    if (dir == NULL) return NULL;
+    if (stat(dir, &st) < 0) return NULL;
+    if (!S_ISDIR(st.st_mode)) return NULL;
+    if (eaccess(dir, W_OK) < 0) return NULL;
+    return dir;
+}
+
+static char *eruby_mktemp(char *file)
+{
+    char *dir;
+    char *tmp;
+    char *buf;
+
+    dir = check_dir(getenv("TMP"));
+    if (!dir) dir = check_dir(getenv("TMPDIR"));
+    if (!dir) dir = "/tmp";
+
+    if ((tmp = strrchr(file, '/')) != NULL)
+	file = tmp + 1;
+
+    buf = ALLOC_N(char, strlen(dir) + strlen(file) + 10);
+    sprintf(buf, "%s/%s.XXXXXX", dir, file);
+    dir = mktemp(buf);
+    if (dir == NULL) free(buf);
+
+    return dir;
+}
+
+VALUE eruby_compile_file(char *filename)
+{
+    char *tmp;
+    VALUE scriptname;
+    FILE *in, *out;
+    int fd;
+    int err;
+
+    if (strcmp(filename, "-") == 0) {
+	in = stdin;
+    }
+    else {
+	if ((in = fopen(filename, "r")) == NULL)
+	    rb_sys_fail(filename);
+    }
+  retry:
+    if ((tmp = eruby_mktemp(filename)) == NULL) {
+	fclose(in);
+	rb_fatal("can't mktemp");
+    }
+    fd = open(tmp, O_CREAT | O_EXCL | O_WRONLY, 00600);
+    if (fd < 0) {
+	free(tmp);
+	if (errno == EEXIST)
+	    goto retry;
+	fclose(in);
+	rb_fatal("cannot open temporary file: %s", tmp);
+    }
+    scriptname = rb_str_new2(tmp);
+    free(tmp);
+    if ((out = fdopen(fd, "w")) == NULL) {
+	close(fd);
+	rb_fatal("cannot open temporary file: %s", RSTRING(scriptname)->ptr);
+    }
+    err = eruby_compile(in, out);
+    if (in != stdin) fclose(in);
+    fclose(out);
+    switch (err) {
+    case ERUBY_MISSING_END_DELIMITER:
+	rb_raise(rb_eSyntaxError, "missing end delimiter");
+	break;
+    case ERUBY_INVALID_OPTION:
+	rb_raise(rb_eSyntaxError, "invalid #! line");
+	break;
+    case ERUBY_SYSTEM_ERROR:
+	rb_sys_fail(filename);
+	break;
+    default:
+	return scriptname;
+    }
+}
+
+VALUE eruby_load(char *filename, int wrap, int *state)
+{
+    VALUE scriptname;
+    int status;
+
+    scriptname = rb_protect(eruby_compile_file, (VALUE) filename, &status);
+    if (state) *state = status;
+    if (status)	return Qnil;
+    rb_load_protect(scriptname, wrap, &status);
+    if (state) *state = status;
+    return scriptname;
+}
+
+static VALUE noheader_getter()
+{
+    return eruby_noheader ? Qtrue : Qfalse;
+}
+
+static void noheader_setter(VALUE val)
+{
+    eruby_noheader = RTEST(val);
+}
+
+static VALUE eruby_get_noheader(VALUE self)
+{
+    return eruby_noheader ? Qtrue : Qfalse;
+}
+
+static VALUE eruby_set_noheader(VALUE self, VALUE val)
+{
+    eruby_noheader = RTEST(val);
+    return val;
+}
+
+static VALUE eruby_get_charset(VALUE self)
+{
+    return eruby_charset;
+}
+
+static VALUE eruby_set_charset(VALUE self, VALUE val)
+{
+    Check_Type(val, T_STRING);
+    eruby_charset = val;
+    return val;
+}
+
+void eruby_init()
+{
+    rb_define_virtual_variable("$NOHEADER", noheader_getter, noheader_setter);
+
+    mERuby = rb_define_module("ERuby");
+    rb_define_module_function(mERuby, "noheader", eruby_get_noheader, 0);
+    rb_define_module_function(mERuby, "noheader=", eruby_set_noheader, 1);
+    rb_define_module_function(mERuby, "charset", eruby_get_charset, 0);
+    rb_define_module_function(mERuby, "charset=", eruby_set_charset, 1);
+
+    eruby_charset = eruby_default_charset = rb_str_new2(ERUBY_DEFAULT_CHARSET);
+    rb_str_freeze(eruby_charset);
+    rb_global_variable(&eruby_charset);
+    rb_global_variable(&eruby_default_charset);
+}
+
+/*
+ * Local variables:
+ * mode: C
+ * tab-width: 8
+ * End:
+ */
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.17 2000/10/16 05:41:57 shugo Exp $
+@
+
+
+1.17
+log
+@shugo
+@
+text
+@d2 3
+a4 2
+ * $Id: eruby.c,v 1.16 2000/10/12 05:41:38 shugo Exp $
+ * Copyright (C) 1999  Network Applied Communication Laboratory, Inc.
+d126 5
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.15 2000/10/11 04:51:36 shugo Exp $
+d7 1
+d246 1
+d248 1
+d251 1
+d253 1
+d307 1
+d309 1
+d333 1
+d335 1
+d337 1
+d339 1
+d365 1
+d367 1
+d380 1
+d382 1
+d385 1
+d387 1
+d389 1
+d391 1
+d426 1
+d428 1
+d540 2
+a541 1
+    if ((tmp = eruby_mktemp(filename)) == NULL)
+d543 2
+a544 1
+    fd = open(tmp, O_CREAT | O_EXCL | O_WRONLY, 0600);
+d549 1
+d554 2
+a555 1
+    if ((out = fdopen(fd, "w")) == NULL)
+d557 1
+d579 1
+a579 2
+    void (*sigint)(int);
+    void (*sigquit)(int);
+d581 5
+a585 7
+    sigint = signal(SIGINT, SIG_DFL);
+    sigquit = signal(SIGQUIT, SIG_DFL);
+    scriptname = rb_protect(eruby_compile_file, (VALUE) filename, state);
+    signal(SIGINT, sigint);
+    signal(SIGQUIT, sigquit);
+    if (*state)	return Qnil;
+    rb_load_protect(scriptname, wrap, state);
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.14 2000/09/14 08:18:28 shugo Exp $
+d30 5
+a34 5
+static char eruby_begin_delimiter[] = "<%";
+static char eruby_end_delimiter[] = "%>";
+static char eruby_expr_char = '=';
+static char eruby_comment_char = '#';
+static char eruby_line_beg_char = '%';
+d247 1
+a247 1
+	if (c == eruby_end_delimiter[0]) {
+d249 2
+a250 2
+	    if (c == eruby_end_delimiter[1]) {
+		if (prevc == eruby_end_delimiter[0]) {
+d252 2
+a253 2
+			putc(eruby_end_delimiter[1], out);
+		    prevc = eruby_end_delimiter[1];
+d270 2
+a271 2
+		    putc(eruby_end_delimiter[0], out);
+		prevc = eruby_end_delimiter[0];
+d369 1
+a369 1
+	if (c == eruby_begin_delimiter[0]) {
+d371 1
+a371 1
+	    if (c == eruby_begin_delimiter[1]) {
+d376 1
+a376 1
+		else if (c == eruby_begin_delimiter[1]) { /* <%% => <% */
+d378 2
+a379 2
+		    fwrite(eruby_begin_delimiter, 1, 2, out);
+		    prevc = eruby_begin_delimiter[1];
+d385 1
+a385 1
+		    if (c == eruby_comment_char) {
+d388 1
+a388 1
+		    else if (c == eruby_expr_char) {
+d401 2
+a402 2
+		putc(eruby_begin_delimiter[0], out);
+		prevc = eruby_begin_delimiter[0];
+d406 1
+a406 1
+	else if (c == eruby_line_beg_char && prevc == EOF) {
+d411 1
+a411 1
+	    else if (c == eruby_line_beg_char) { /* %% => % */
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.13 2000/09/06 10:04:23 shugo Exp $
+d137 1
+a137 1
+    again:
+d246 1
+a246 1
+    again:
+d368 1
+a368 1
+    again:
+d454 1
+a454 1
+ end:
+d518 1
+a518 1
+ retry:
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.12 2000/08/31 02:54:42 shugo Exp $
+d43 4
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.11 2000/08/30 08:47:36 shugo Exp $
+d28 1
+d605 2
+a606 1
+    eruby_charset = rb_str_new2(ERUBY_DEFAULT_CHARSET);
+d608 1
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.10 2000/08/30 08:30:53 shugo Exp $
+d17 1
+d548 2
+d551 2
+d554 2
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.9 2000/08/30 07:32:42 shugo Exp $
+d188 2
+a189 1
+	    if (strcmp("debug", s) == 0) {
+d192 1
+d194 2
+a195 1
+	    else if (strcmp("noheader", s) == 0) {
+d198 1
+d200 2
+a201 1
+	    else if (strcmp("version", s) == 0) {
+d205 2
+a206 1
+	    else if (strcmp("verbose", s) == 0) {
+d209 1
+d211 2
+a212 1
+	    else if (strcmp("help", s) == 0) {
+a220 1
+	    break;
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.8 2000/08/28 10:12:03 shugo Exp $
+d190 1
+d194 1
+d202 1
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.7 2000/05/30 02:36:05 shugo Exp $
+d22 3
+d42 54
+a95 1
+static int parse_options(FILE *in, FILE *out)
+d97 22
+a118 1
+    int c;
+d120 4
+a123 4
+    do {
+	c = getc(in);
+	if (c == EOF) return 0;
+    } while (!isspace(c));
+d125 6
+a130 2
+    for (;;) {
+	c = getc(in);
+d132 14
+a145 22
+	switch (c) {
+	case EOF:
+	    return 0;
+	case '\n':
+	    putc(c, out);
+	    return 0;
+	case '-':
+	    c = getc(in);
+	    switch (c) {
+	    case 'K':
+	    {
+		char tmp[1];
+
+		c = getc(in);
+		if (c == EOF || c == '\n')
+		    return -1;
+		tmp[0] = c;
+		rb_set_kcode(tmp);
+		while (c != EOF && !isspace(c)) {
+		    c = getc(in);
+		}
+		goto again;
+d147 11
+a157 32
+	    case 'C':
+	    {
+		int term;
+		char tmp[1];
+		VALUE charset = rb_str_new("", 0);
+
+		c = getc(in);
+		while (isspace(c)) {
+		    if (c == '\n') return -1;
+		    c = getc(in);
+		}
+		if (c == EOF) {
+		    return -1;
+		}
+		else if (c == '"' || c == '\'') {
+		    term = c;
+		    c = getc(in);
+		    while (c != EOF && c != term) {
+			tmp[0] = c;
+			rb_str_cat(charset, tmp, 1);
+			c = getc(in);
+		    }
+		    eruby_charset = charset;
+		}
+		else {
+		    while (c != EOF && !isspace(c)) {
+			tmp[0] = c;
+			rb_str_cat(charset, tmp, 1);
+			c = getc(in);
+		    }
+		    eruby_charset = charset;
+		    goto again;
+d159 1
+d162 6
+a167 2
+	    default:
+		return -1;
+d169 13
+d183 27
+a209 5
+	case ' ':
+	case '\t':
+	case '\v':
+	case '\f':
+	case '\r':
+d212 3
+a214 1
+	    return -1;
+d314 18
+a331 1
+	    if (parse_options(in, out) == -1)
+d333 2
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.6 2000/05/24 04:58:07 shugo Exp $
+d8 5
+d39 88
+d218 12
+a229 5
+	do {
+	    c = getc(in);
+	    if (c == '\n') {
+		putc('\n', out);
+		break;
+d231 1
+a231 1
+	} while (c != EOF);
+d379 1
+d389 1
+d391 8
+a398 1
+	rb_fatal("Can't mktemp");
+d401 2
+a402 2
+    if ((out = fopen(RSTRING(scriptname)->ptr, "w")) == NULL)
+	rb_fatal("Cannot open temporary file: %s", RSTRING(scriptname)->ptr);
+d409 3
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.5 2000/05/18 08:09:13 shugo Exp $
+d233 8
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.4 2000/03/31 09:53:13 shugo Exp $
+a99 1
+    again:
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.3 2000/03/28 05:39:42 shugo Exp $
+d14 1
+d16 1
+d18 1
+d322 23
+d348 9
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.2 1999/08/10 04:44:39 shugo Exp $
+d54 1
+a54 1
+		return 0;
+d106 1
+a106 1
+	    return 0;
+a155 1
+			if (err) return err;
+a158 1
+			if (err) return err;
+d163 1
+a164 1
+		    err = parse_embedded_program(in, out, EMBEDDED_STMT);
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: eruby.c,v 1.1 1999/06/21 07:14:11 shugo Exp $
+d15 1
+a15 6
+char eruby_begin_delimiter1	= '<';
+char eruby_begin_delimiter2	= '%';
+char eruby_end_delimiter1	= '%';
+char eruby_end_delimiter2	= '>';
+char eruby_expr_char		= '=';
+char eruby_comment_char		= '#';
+d17 7
+a23 1
+enum embedded_string_type {
+d29 4
+a32 2
+static int compile_embedded_string(FILE *in, FILE *out,
+				   enum embedded_string_type type)
+d41 1
+a41 3
+	if (c == eruby_end_delimiter1) {
+	    if (prevc == eruby_end_delimiter1)
+		continue;
+d43 7
+a49 1
+	    if (c == eruby_end_delimiter2) {
+d58 1
+a58 1
+		    return SYSTEM_ERROR;
+d60 1
+a60 1
+		    return MISSING_END_DELIMITER;
+d64 2
+a65 2
+		    putc(eruby_end_delimiter1, out);
+		prevc = eruby_end_delimiter1;
+d73 1
+a73 1
+		    return SYSTEM_ERROR;
+d75 1
+a75 1
+		    return MISSING_END_DELIMITER;
+d88 26
+a113 1
+    return MISSING_END_DELIMITER;
+d138 1
+a138 1
+	if (c == eruby_begin_delimiter1) {
+d140 4
+a143 3
+	    if (c == eruby_begin_delimiter2) {
+		if (prevc != EOF) {
+		    fputs("\"; ", out);
+d145 4
+a148 6
+		c = getc(in);
+		if (c == eruby_begin_delimiter2) {
+		    if (prevc == EOF) fputs("print \"", out);
+		    putc(eruby_begin_delimiter1, out);
+		    putc(eruby_begin_delimiter2, out);
+		    prevc = eruby_begin_delimiter2;
+a150 8
+		else if (c == eruby_comment_char) {
+		    err = compile_embedded_string(in, out, EMBEDDED_COMMENT);
+		    if (err) return err;
+		}
+		else if (c == eruby_expr_char) {
+		    err = compile_embedded_string(in, out, EMBEDDED_EXPR);
+		    if (err) return err;
+		}
+d152 15
+a166 3
+		    if (ungetc(c, in) == EOF)
+			return SYSTEM_ERROR;
+		    err = compile_embedded_string(in, out, EMBEDDED_STMT);
+d168 1
+a169 1
+		prevc = EOF;
+d171 3
+a173 3
+		if (prevc == EOF) fputs("print \"", out);
+		putc(eruby_begin_delimiter1, out);
+		prevc = eruby_begin_delimiter1;
+d177 18
+d200 1
+a200 1
+		if (prevc == EOF) fputs("print \"", out);
+d205 1
+a205 1
+		if (prevc == EOF) fputs("print \"", out);
+d212 1
+a212 1
+		if (prevc == EOF) fputs("print \"", out);
+d218 1
+a218 1
+		if (prevc == EOF) fputs("print \"", out);
+d227 1
+a227 1
+	return SYSTEM_ERROR;
+d231 1
+a231 1
+    return 0;
+d290 1
+a290 1
+    case MISSING_END_DELIMITER:
+d293 1
+a293 1
+    case SYSTEM_ERROR:
+d309 15
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+ * $Id$
+d89 14
+d121 2
+a122 2
+		    if (err = compile_embedded_string(in, out, EMBEDDED_COMMENT))
+			return err;
+d125 2
+a126 2
+		    if (err = compile_embedded_string(in, out, EMBEDDED_EXPR))
+			return err;
+d131 2
+a132 2
+		    if (err = compile_embedded_string(in, out, EMBEDDED_STMT))
+			return err;
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

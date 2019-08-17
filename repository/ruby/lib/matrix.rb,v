@@ -1,0 +1,2898 @@
+head	1.15;
+access;
+symbols
+	v1_6_7:1.11.2.3
+	v1_6_6:1.11.2.3
+	v1_6_5:1.11.2.1
+	v1_6_4:1.11
+	v1_7_1:1.11
+	v1_6_4_preview4:1.11
+	v1_6_4_preview3:1.11
+	v1_6_4_preview2:1.11
+	v1_6_4_preview1:1.11
+	v1_6_3:1.11
+	ruby_m17n:1.11.0.4
+	ruby_1_6:1.11.0.2
+	v1_6_2:1.11
+	v1_6_1:1.11
+	v1_6_0:1.10
+	v1_4_6:1.5
+	v1_4_5:1.5
+	v1_4_4:1.5
+	ruby_1_4_3:1.5
+	ruby1_4_3:1.5
+	v1_4_3:1.5
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.5
+	ruby_1_4:1.5.0.2
+	v1_4_2:1.4
+	v1_4_1:1.4
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.3
+	v1_3_6:1.1.1.2.2.3
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.4.9
+	v1_3_4_990625:1.1.1.2.2.2
+	v1_3_4_990624:1.1.1.2.2.2
+	v1_2_6:1.1.1.1.4.9
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.4.9
+	v1_2_4:1.1.1.1.4.9
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.9
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.9
+	v1_2_1repack:1.1.1.1.4.9
+	v1_2_1:1.1.1.1.4.9
+	v1_2_stable:1.1.1.1.4.9
+	v1_1d1:1.1.1.1.4.9
+	v1_1d0:1.1.1.1.4.9
+	v1_1c9_1:1.1.1.1.4.9
+	v1_1c9:1.1.1.1.4.9
+	v1_1c8:1.1.1.1.4.9
+	v1_1c7:1.1.1.1.4.9
+	v1_1c6:1.1.1.1.4.9
+	v1_1d-start:1.1.1.1.4.9
+	v1_1c5:1.1.1.1.4.9
+	v1_1dev:1.1.1.1.4.9.0.2
+	v1_1c4:1.1.1.1.4.9
+	v1_1c3:1.1.1.1.4.9
+	v1_1c2:1.1.1.1.4.7
+	v1_1c1:1.1.1.1.4.6
+	v1_1c0:1.1.1.1.4.5
+	v1_1b9_31:1.1.1.1.4.5
+	v1_1b9_30:1.1.1.1.4.4
+	v1_1b9_28:1.1.1.1.4.3
+	v1_1b9_27:1.1.1.1.4.3
+	v1_1b9_26:1.1.1.1.4.3
+	r1_1b9_25:1.1.1.1.4.3
+	r1_1b9_24:1.1.1.1.4.3
+	v1_1b9_23:1.1.1.1.4.3
+	v1_1b9_22:1.1.1.1.4.3
+	v1_1b9_20:1.1.1.1.4.3
+	v1_1b9_18:1.1.1.1.4.3
+	v1_1b9_16:1.1.1.1.4.3
+	v1_1b9_15:1.1.1.1.4.3
+	v1_1b9_13:1.1.1.1.4.3
+	v1_1b9_12:1.1.1.1.4.3
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.2
+	v1_1b8:1.1.1.1.4.2
+	v1_1b7:1.1.1.1.4.2
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.15
+date	2002.10.02.16.45.34;	author nobu;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.12.09.14.07.47;	author keiju;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.11.03.13.41.57;	author keiju;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.06.27.15.35.04;	author keiju;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.09.01.03.31.04;	author matz;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2000.07.10.04.49.21;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.28.08.27.00;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.12.09.07.52;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.17.08.58.20;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.07.08.37.59;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.12.04.53.35;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.01.09.48.02;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.56;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.24.04.31.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.06.10.03.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.04.20.05.55.37;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.07.09.08.40.36;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	98.07.15.06.13.00;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.6;
+
+1.1.1.1.4.6
+date	98.07.24.04.42.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.7;
+
+1.1.1.1.4.7
+date	98.08.10.05.41.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.8;
+
+1.1.1.1.4.8
+date	98.08.14.03.56.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.9;
+
+1.1.1.1.4.9
+date	98.08.27.03.55.44;	author matz;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.06.27.15.46.04;	author keiju;	state Exp;
+branches;
+next	1.11.2.2;
+
+1.11.2.2
+date	2001.11.03.13.38.34;	author keiju;	state Exp;
+branches;
+next	1.11.2.3;
+
+1.11.2.3
+date	2001.12.09.14.11.30;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.15
+log
+@use Object#class instead of deprecated Object#type.
+@
+text
+@#!/usr/local/bin/ruby
+#
+#   matrix.rb - 
+#   	$Release Version: 1.0$
+#   	$Revision: 1.11 $
+#   	$Date: 1999/10/06 11:01:53 $
+#       Original Version from Smalltalk-80 version
+#	   on July 23, 1985 at 8:37:17 am
+#   	by Keiju ISHITSUKA
+#
+# --
+#
+#   Matrix[[1,2,3],
+#	      :
+#	   [3,4,5]]
+#   Matrix[row0,
+#          row1,
+#	    :
+#          rown]
+#
+#
+# module ExceptionForMatrix::
+#   Exceptions:
+#	ErrDimensionMismatch
+#	    number of column/row do not match
+#	ErrNotRegular
+#	    not a regular matrix
+#	ErrOperationNotDefined
+#	    specified operator is not defined (yet)
+#
+# class Matrix
+#   include ExceptionForMatrix
+#
+#   Methods:
+#   class methods:
+#	Matrix.[](*rows)
+#	    creates a matrix where `rows' indicates rows. 
+#	    `rows' is an array of arrays, 
+#	    e.g, Matrix[[11, 12], [21, 22]]
+#	Matrix.rows(rows, copy = true)
+#	    creates a matrix where `rows' indicates rows. 
+#           if optional argument `copy' is false, use the array as
+#	    internal structure of the metrix without copying.
+#	Matrix.columns(columns)
+#           creates a new matrix using `columns` as set of colums vectors.
+#	Matrix.diagonal(*values)
+#	    creates a matrix where `columns' indicates columns. 
+#	Matrix.scalar(n, value)
+#	    creates a diagonal matrix such that the diagal compornents is
+#	    given by `values'.
+#	Matrix.scalar(n, value)
+#	    creates an n-by-n scalar matrix such that the diagal compornent is 
+#	    given by `value'.
+#	Matrix.identity(n)
+#	Matrix.unit(n)
+#	Matrix.I(n)
+#	    creates an n-by-n unit matrix.
+#	Matrix.zero(n)
+#	    creates an n-by-n zero matrix.
+#	Matrix.row_vector(row)
+#	    creates a 1-by-n matrix such the row vector is `row'. 
+#	    `row' is specifed as a Vector or an Array.
+#	Matrix.column_vector(column)
+#	    creates a 1-by-n matrix such that column vector is `column'. 
+#	    `column' is specifed as a Vector or an Array.
+#   accessing:
+#	[](i, j)
+#	    returns (i,j) compornent
+#	row_size
+#	    returns the number of rows
+#	column_size
+#	    returns the number of columns
+#	row(i)
+#	    returns the i-th row vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all row vectors. 
+#	column(j)
+#	    returns the jth column vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all column vectors. 
+#	collect
+#	map
+#	    creates a matrix which is the result of iteration of given
+#	    block over all compornents. 
+#	minor(*param)
+#	    returns sub matrix. parameter is specified as the following:
+#	    1. from_row, row_size, from_col, size_col
+#	    2. from_row..to_row, from_col..to_col
+#   TESTING:
+#	regular?
+#	    Is regular?
+#	singular?
+#	    Is singular? i.e. Is non-regular?
+#	square?
+#	    Is square?
+#   ARITHMETIC:
+#	*(m)
+#	    times
+#	+(m)
+#	    plus
+#	-(m)
+#	    minus
+#	/(m)
+#	    self * m.inv
+#	inverse
+#	inv
+#	    inverse
+#	**
+#	    power
+#   Matrix functions:
+#	determinant
+#	det
+#	    returns the determinant
+#	rank
+#	    returns the rank
+#	trace
+#	tr
+#	    returns the trace
+#	transpose
+#	t
+#	    returns the transposed
+#   CONVERTING:
+#	coerce(other)
+#	row_vectors
+#	    array of row vectors
+#	column_vectors
+#	    array of column vectors
+#	to_a
+#	    converts each element to Array
+#	to_f
+#	    converts each element to Float
+#	to_i
+#	    converts each element to Integer
+#	to_r
+#	    converts each element to Rational
+#   PRINTING:
+#	to_s
+#	    returns string representation
+#	inspect
+#
+# class Vector
+#   include ExceptionForMatrix
+#
+#   INSTANCE CREATION:
+#	Vector.[](*array)
+#	Vector.elements(array, copy = true)
+#   ACCSESSING:
+#	[](i)
+#	size
+#   ENUMRATIONS:
+#	each2(v)
+#	collect2(v)
+#   ARITHMETIC:
+#	*(x) "is matrix or number"
+#	+(v)
+#	-(v)
+#   VECTOR FUNCTIONS:
+#	inner_product(v)
+#	collect
+#	map
+#	map2(v)
+#	r
+#   CONVERTING:
+#	covector
+#	to_a
+#	to_f
+#	to_i
+#	to_r
+#	coerce(other)
+#   PRINTING:
+#	to_s
+#	inspect
+
+require "e2mmap.rb"
+
+module ExceptionForMatrix
+  extend Exception2MessageMapper
+  def_e2message(TypeError, "wrong argument type %s (expected %s)")
+  def_e2message(ArgumentError, "Wrong # of arguments(%d for %d)")
+  
+  def_exception("ErrDimensionMismatch", "\#{self.name} dimension mismatch")
+  def_exception("ErrNotRegular", "Not Regular Matrix")
+  def_exception("ErrOperationNotDefined", "This operation(%s) can\\'t defined")
+end
+
+class Matrix
+  @@RCS_ID='-$Id: matrix.rb,v 1.11 1999/10/06 11:01:53 keiju Exp keiju $-'
+  
+#  extend Exception2MessageMapper
+  include ExceptionForMatrix
+  
+  # instance creations
+  private_class_method :new
+  
+  def Matrix.[](*rows)
+    new(:init_rows, rows, false)
+  end
+  
+  def Matrix.rows(rows, copy = true)
+    new(:init_rows, rows, copy)
+  end
+  
+  def Matrix.columns(columns)
+    rows = (0 .. columns[0].size - 1).collect {
+      |i|
+      (0 .. columns.size - 1).collect {
+	|j|
+	columns[j][i]
+      }
+    }
+    Matrix.rows(rows, false)
+  end
+  
+  def Matrix.diagonal(*values)
+    size = values.size
+    rows = (0 .. size  - 1).collect {
+      |j|
+      row = Array.new(size).fill(0, 0, size)
+      row[j] = values[j]
+      row
+    }
+    rows(rows, false)
+  end
+  
+  def Matrix.scalar(n, value)
+    Matrix.diagonal(*Array.new(n).fill(value, 0, n))
+  end
+
+  def Matrix.identity(n)
+    Matrix.scalar(n, 1)
+  end
+  class << Matrix 
+    alias unit identity
+    alias I identity
+  end
+  
+  def Matrix.zero(n)
+    Matrix.scalar(n, 0)
+  end
+  
+  def Matrix.row_vector(row)
+    case row
+    when Vector
+      Matrix.rows([row.to_a], false)
+    when Array
+      Matrix.rows([row.dup], false)
+    else
+      Matrix.row([[row]], false)
+    end
+  end
+  
+  def Matrix.column_vector(column)
+    case column
+    when Vector
+      Matrix.columns([column.to_a])
+    when Array
+      Matrix.columns([column])
+    else
+      Matrix.columns([[column]])
+    end
+  end
+
+  # initializing
+  def initialize(init_method, *argv)
+    self.send(init_method, *argv)
+  end
+  
+  def init_rows(rows, copy)
+    if copy
+      @@rows = rows.collect{|row| row.dup}
+    else
+      @@rows = rows
+    end
+    self
+  end
+  private :init_rows
+  
+  #accessing
+  def [](i, j)
+    @@rows[i][j]
+  end
+
+  def row_size
+    @@rows.size
+  end
+  
+  def column_size
+    @@rows[0].size
+  end
+
+  def row(i)
+    if block_given?
+      for e in @@rows[i]
+	yield e
+
+      end
+    else
+      Vector.elements(@@rows[i])
+    end
+  end
+
+  def column(j)
+    if block_given?
+      0.upto(row_size - 1) do
+	|i|
+	yield @@rows[i][j]
+      end
+    else
+      col = (0 .. row_size - 1).collect {
+	|i|
+	@@rows[i][j]
+      }
+      Vector.elements(col, false)
+    end
+  end
+  
+  def collect
+    rows = @@rows.collect{|row| row.collect{|e| yield e}}
+    Matrix.rows(rows, false)
+  end
+  alias map collect
+  
+  #
+  # param:  (from_row, row_size, from_col, size_col)
+  #	    (from_row..to_row, from_col..to_col)
+  #
+  def minor(*param)
+    case param.size
+    when 2
+      from_row = param[0].first
+      size_row = param[0].size
+      from_col = param[1].first
+      size_col = param[1].size
+    when 4
+      from_row = param[0]
+      size_row = param[1]
+      from_col = param[2]
+      size_col = param[3]
+    else
+      Matrix.Raise ArgumentError, param.inspect
+    end
+    
+    rows = @@rows[from_row, size_row].collect{
+      |row|
+      row[from_col, size_col]
+    }
+    Matrix.rows(rows, false)
+  end
+  
+  # TESTING
+  def regular?
+    square? and rank == column_size
+  end
+  
+  def singular?
+    not regular?
+  end
+
+  def square?
+    column_size == row_size
+  end
+  
+  # COMPARING
+  def ==(other)
+    return false unless Matrix === other
+    
+    other.compare_by_row_vectors(@@rows)
+  end
+  alias eql? ==
+  
+  def compare_by_row_vectors(rows)
+    return false unless @@rows.size == rows.size
+    
+    0.upto(@@rows.size - 1) do
+      |i|
+      return false unless @@rows[i] == rows[i]
+    end
+    true
+  end
+  
+  def clone
+    Matrix.rows(@@rows)
+  end
+  
+  def hash
+    value = 0
+    for row in @@rows
+      for e in row
+	value ^= e.hash
+      end
+    end
+    return value
+  end
+  
+  # ARITHMETIC
+  
+  def *(m) # m is matrix or vector or number
+    case(m)
+    when Numeric
+      rows = @@rows.collect {
+	|row|
+	row.collect {
+	  |e|
+	  e * m
+	}
+      }
+      return Matrix.rows(rows, false)
+    when Vector
+      m = Matrix.column_vector(m)
+      r = self * m
+      return r.column(0)
+    when Matrix
+      Matrix.Raise ErrDimensionMismatch if column_size != m.row_size
+    
+      rows = (0 .. row_size - 1).collect {
+	|i|
+	(0 .. m.column_size - 1).collect {
+	  |j|
+	  vij = 0
+	  0.upto(column_size - 1) do
+	    |k|
+	    vij += self[i, k] * m[k, j]
+	  end
+	  vij
+	}
+      }
+      return Matrix.rows(rows, false)
+    else
+      x, y = m.coerce(self)
+      return x * y
+    end
+  end
+  
+  def +(m)
+    case m
+    when Numeric
+      Matrix.Raise ErrOperationNotDefined, "+"
+    when Vector
+      m = Matrix.column_vector(m)
+    when Matrix
+    else
+      x, y = m.coerce(self)
+      return x + y
+    end
+    
+    Matrix.Raise ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+    
+    rows = (0 .. row_size - 1).collect {
+      |i|
+      (0 .. column_size - 1).collect {
+	|j|
+	self[i, j] + m[i, j]
+      }
+    }
+    Matrix.rows(rows, false)
+  end
+
+  def -(m)
+    case m
+    when Numeric
+      Matrix.Raise ErrOperationNotDefined, "-"
+    when Vector
+      m = Matrix.column_vector(m)
+    when Matrix
+    else
+      x, y = m.coerce(self)
+      return x - y
+    end
+    
+    Matrix.Raise ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+    
+    rows = (0 .. row_size - 1).collect {
+      |i|
+      (0 .. column_size - 1).collect {
+	|j|
+	self[i, j] - m[i, j]
+      }
+    }
+    Matrix.rows(rows, false)
+  end
+  
+  def /(other)
+    case other
+    when Numeric
+      rows = @@rows.collect {
+	|row|
+	row.collect {
+	  |e|
+	  e / other
+	}
+      }
+      return Matrix.rows(rows, false)
+    when Matrix
+      return self * other.inverse
+    else
+      x, y = other.coerce(self)
+      rerurn x / y
+    end
+  end
+
+  def inverse
+    Matrix.Raise ErrDimensionMismatch unless square?
+    Matrix.I(row_size).inverse_from(self)
+  end
+  alias inv inverse
+  
+  def inverse_from(src)
+    size = row_size - 1
+    a = src.to_a
+    
+    for k in 0..size
+      if (akk = a[k][k]) == 0
+	i = k
+	begin
+	  Matrix.Raise ErrNotRegular if (i += 1) > size
+	end while a[i][k] == 0
+	a[i], a[k] = a[k], a[i]
+	@@rows[i], @@rows[k] = @@rows[k], @@rows[i]
+	akk = a[k][k]
+      end
+      
+      for i in 0 .. size
+	next if i == k
+	q = a[i][k] / akk
+	a[i][k] = 0
+	
+	(k + 1).upto(size) do	
+	  |j|
+	  a[i][j] -= a[k][j] * q
+	end
+	0.upto(size) do
+	  |j|
+	  @@rows[i][j] -= @@rows[k][j] * q
+	end
+      end
+      
+      (k + 1).upto(size) do
+	|j|
+	a[k][j] /= akk
+      end
+      0.upto(size) do
+	|j|
+	@@rows[k][j] /= akk
+      end
+    end
+    self
+  end
+  #alias reciprocal inverse
+  
+  def ** (other)
+    if other.kind_of?(Integer)
+      x = self
+      if other <= 0
+	x = self.inverse
+	return Matrix.identity(self.column_size) if other == 0
+	other = -other
+      end
+      z = x
+      n = other  - 1
+      while n != 0
+	while (div, mod = n.divmod(2)
+	       mod == 0)
+	  x = x * x
+	  n = div
+	end
+	z *= x
+	n -= 1
+      end
+      z
+    elsif other.kind_of?(Float) || defined?(Rational) && other.kind_of?(Rational)
+      Matrix.Raise ErrOperationNotDefined, "**"
+    else
+      Matrix.Raise ErrOperationNotDefined, "**"
+    end
+  end
+  
+  # Matrix functions
+  
+  def determinant
+    return 0 unless square?
+    
+    size = row_size - 1
+    a = to_a
+    
+    det = 1
+    k = 0
+    begin 
+      if (akk = a[k][k]) == 0
+	i = k
+	begin
+	  return 0 if (i += 1) > size
+	end while a[i][k] == 0
+	a[i], a[k] = a[k], a[i]
+	akk = a[k][k]
+	det *= -1
+      end
+      (k + 1).upto(size) do
+	|i|
+	q = a[i][k] / akk
+	(k + 1).upto(size) do
+	  |j|
+	  a[i][j] -= a[k][j] * q
+	end
+      end
+      det *= akk
+    end while (k += 1) <= size
+    det
+  end
+  alias det determinant
+	
+  def rank
+    if column_size > row_size
+      a = transpose.to_a
+      a_column_size = row_size
+      a_row_size = column_size
+    else
+      a = to_a
+      a_column_size = column_size
+      a_row_size = row_size
+    end
+    rank = 0
+    k = 0
+    begin
+      if (akk = a[k][k]) == 0
+	i = k
+	exists = true
+	begin
+	  if (i += 1) > a_column_size - 1
+	    exists = false
+	    break
+	  end
+	end while a[i][k] == 0
+	if exists
+	  a[i], a[k] = a[k], a[i]
+	  akk = a[k][k]
+	else
+	  i = k
+	  exists = true
+	  begin
+	    if (i += 1) > a_row_size - 1
+	      exists = false
+	      break
+	    end
+	  end while a[k][i] == 0
+	  if exists
+	    k.upto(a_column_size - 1) do
+	      |j|
+	      a[j][k], a[j][i] = a[j][i], a[j][k]
+	    end
+	    akk = a[k][k]
+	  else
+	    next
+	  end
+	end
+      end
+      (k + 1).upto(a_row_size - 1) do
+	|i|
+	q = a[i][k] / akk
+	(k + 1).upto(a_column_size - 1) do
+	  |j|
+	  a[i][j] -= a[k][j] * q
+	end
+      end
+      rank += 1
+    end while (k += 1) <= a_column_size - 1
+    return rank
+  end
+
+  def trace
+    tr = 0
+    0.upto(column_size - 1) do
+      |i|
+      tr += @@rows[i][i]
+    end
+    tr
+  end
+  alias tr trace
+  
+  def transpose
+    Matrix.columns(@@rows)
+  end
+  alias t transpose
+  
+  # CONVERTING
+  
+  def coerce(other)
+    case other
+    when Numeric
+      return Scalar.new(other), self
+    else
+      raise TypeError, "#{self.class} can't be coerced into #{other.class}"
+    end
+  end
+
+  def row_vectors
+    rows = (0 .. row_size - 1).collect {
+      |i|
+      row(i)
+    }
+    rows
+  end
+  
+  def column_vectors
+    columns = (0 .. column_size - 1).collect {
+      |i|
+      column(i)
+    }
+    columns
+  end
+  
+  def to_a
+    @@rows.collect{|row| row.collect{|e| e}}
+  end
+  
+  def to_f
+    collect{|e| e.to_f}
+  end
+  
+  def to_i
+    collect{|e| e.to_i}
+  end
+  
+  def to_r
+    collect{|e| e.to_r}
+  end
+  
+  # PRINTING
+  def to_s
+    "Matrix[" + @@rows.collect{
+      |row|
+      "[" + row.collect{|e| e.to_s}.join(", ") + "]"
+    }.join(", ")+"]"
+  end
+  
+  def inspect
+    "Matrix"+@@rows.inspect
+  end
+  
+  # Private CLASS
+  
+  class Scalar < Numeric
+    include ExceptionForMatrix
+    
+    def initialize(value)
+      @@value = value
+    end
+    
+    # ARITHMETIC
+    def +(other)
+      case other
+      when Numeric
+	Scalar.new(@@value + other)
+      when Vector, Matrix
+	Scalar.Raise WrongArgType, other.class, "Numeric or Scalar"
+      when Scalar
+	Scalar.new(@@value + other.value)
+      else
+	x, y = other.coerce(self)
+	x + y
+      end
+    end
+    
+    def -(other)
+      case other
+      when Numeric
+	Scalar.new(@@value - other)
+      when Vector, Matrix
+	Scalar.Raise WrongArgType, other.class, "Numeric or Scalar"
+      when Scalar
+	Scalar.new(@@value - other.value)
+      else
+	x, y = other.coerce(self)
+	x - y
+      end
+    end
+    
+    def *(other)
+      case other
+      when Numeric
+	Scalar.new(@@value * other)
+      when Vector, Matrix
+	other.collect{|e| @@value * e}
+      else
+	x, y = other.coerce(self)
+	x * y
+      end
+    end
+    
+    def / (other)
+      case other
+      when Numeric
+	Scalar.new(@@value / other)
+      when Vector
+	Scalar.Raise WrongArgType, other.class, "Numeric or Scalar or Matrix"
+      when Matrix
+	self * _M.inverse
+      else
+	x, y = other.coerce(self)
+	x / y
+      end
+    end
+    
+    def ** (other)
+      case other
+      when Numeric
+	Scalar.new(@@value ** other)
+      when Vector
+	Scalar.Raise WrongArgType, other.class, "Numeric or Scalar or Matrix"
+      when Matrix
+	other.powered_by(self)
+      else
+	x, y = other.coerce(self)
+	x ** y
+      end
+    end
+  end
+end
+
+#----------------------------------------------------------------------
+#
+#    - 
+#
+#----------------------------------------------------------------------
+class Vector
+  include ExceptionForMatrix
+  
+  #INSTANCE CREATION
+  
+  private_class_method :new
+  def Vector.[](*array)
+    new(:init_elements, array, copy = false)
+  end
+  
+  def Vector.elements(array, copy = true)
+    new(:init_elements, array, copy)
+  end
+  
+  def initialize(method, array, copy)
+    self.send(method, array, copy)
+  end
+  
+  def init_elements(array, copy)
+    if copy
+      @@elements = array.dup
+    else
+      @@elements = array
+    end
+  end
+  
+  # ACCSESSING
+	 
+  def [](i)
+    @@elements[i]
+  end
+  
+  def size
+    @@elements.size
+  end
+  
+  # ENUMRATIONS
+  def each2(v)
+    Vector.Raise ErrDimensionMismatch if size != v.size
+    0.upto(size - 1) do
+      |i|
+      yield @@elements[i], v[i]
+    end
+  end
+  
+  def collect2(v)
+    Vector.Raise ErrDimensionMismatch if size != v.size
+    (0 .. size - 1).collect do
+      |i|
+      yield @@elements[i], v[i]
+    end
+  end
+
+  # COMPARING
+  def ==(other)
+    return false unless Vector === other
+    
+    other.compare_by(@@elements)
+  end
+  alias eqn? ==
+  
+  def compare_by(elements)
+    @@elements == elements
+  end
+  
+  def clone
+    Vector.elements(@@elements)
+  end
+  
+  def hash
+    @@elements.hash
+  end
+  
+  # ARITHMETIC
+  
+  def *(x) #x is matrix or number
+    case x
+    when Numeric
+      els = @@elements.collect{|e| e * x}
+      Vector.elements(els, false)
+    when Matrix
+      Matrix.column_vector(self) * x
+    else
+      s, x = x.coerce(self)
+      s * x
+    end
+  end
+
+  def +(v)
+    case v
+    when Vector
+      Vector.Raise ErrDimensionMismatch if size != v.size
+      els = collect2(v) {
+	|v1, v2|
+	v1 + v2
+      }
+      Vector.elements(els, false)
+    when Matrix
+      Matrix.column_vector(self) + v
+    else
+      s, x = v.coerce(self)
+      s + x
+    end
+  end
+
+  def -(v)
+    case v
+    when Vector
+      Vector.Raise ErrDimensionMismatch if size != v.size
+      els = collect2(v) {
+	|v1, v2|
+	v1 - v2
+      }
+      Vector.elements(els, false)
+    when Matrix
+      Matrix.column_vector(self) - v
+    else
+      s, x = v.coerce(self)
+      s - x
+    end
+  end
+  
+  # VECTOR FUNCTIONS
+  
+  def inner_product(v)
+    Vector.Raise ErrDimensionMismatch if size != v.size
+    
+    p = 0
+    each2(v) {
+      |v1, v2|
+      p += v1 * v2
+    }
+    p
+  end
+  
+  def collect
+    els = @@elements.collect {
+      |v|
+      yield v
+    }
+    Vector.elements(els, false)
+  end
+  alias map collect
+  
+  def map2(v)
+    els = collect2(v) {
+      |v1, v2|
+      yield v1, v2
+    }
+    Vector.elements(els, false)
+  end
+  
+  def r
+    v = 0
+    for e in @@elements
+      v += e*e
+    end
+    return Math.sqrt(v)
+  end
+  
+  # CONVERTING
+  def covector
+    Matrix.row_vector(self)
+  end
+  
+  def to_a
+    @@elements.dup
+  end
+  
+  def to_f
+    collect{|e| e.to_f}
+  end
+  
+  def to_i
+    collect{|e| e.to_i}
+  end
+  
+  def to_r
+    collect{|e| e.to_r}
+  end
+  
+  def coerce(other)
+    case other
+    when Numeric
+      return Scalar.new(other), self
+    else
+      raise TypeError, "#{self.class} can't be coerced into #{other.class}"
+    end
+  end
+  
+  # PRINTING
+  
+  def to_s
+    "Vector[" + @@elements.join(", ") + "]"
+  end
+  
+  def inspect
+    str = "Vector"+@@elements.inspect
+  end
+end
+@
+
+
+1.14
+log
+@* matrix.rb: Vector#* bug. reported from Massimiliano Mirra
+ <info@@chromatic-harp.com>.
+@
+text
+@d691 1
+a691 1
+      raise TypeError, "#{type} can't be coerced into #{other.type}"
+d754 1
+a754 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar"
+d768 1
+a768 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar"
+d794 1
+a794 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar or Matrix"
+d808 1
+a808 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar or Matrix"
+d1010 1
+a1010 1
+      raise TypeError, "#{type} can't be coerced into #{other.type}"
+@
+
+
+1.13
+log
+@* matrix.rb (Matrix#column_vectors, Matrix#row_vectors): ditto bug.
+  this bug report and fix by tsutomu@@nucba.ac.jp.
+
+* forwardable.rb: change raise to Kernel::raise
+@
+text
+@d905 1
+a905 1
+      self.covector * x
+d907 1
+a907 1
+      s, x = X.coerce(self)
+@
+
+
+1.12
+log
+@
+
+* lib/matrix.rb: resolve 'ruby -w' warnings.
+* lib/irb/locale.rb: resolve 'ruby -w' warnings.
+* lib/irb/multi-irb.rb: resolve 'ruby -w' warnings.
+* lib/irb/ruby-lex.rb: fix problem for "\\M-\\..." and "\\C-\\..."
+  and resolve 'ruby -w' warnings.
+* lib/irb/ruby-token.rb: fix typo
+* lib/shell/command-processor.rb: resolve 'ruby -w' warnings.
+@
+text
+@d397 1
+a397 1
+  def *(m) #is matrix or vector or number"
+d696 1
+a696 1
+    rows = (0 .. column_size - 1).collect {
+d704 1
+a704 1
+    columns = (0 .. row_size - 1).collect {
+d899 1
+a899 1
+  def *(x)
+@
+
+
+1.11
+log
+@matz
+@
+text
+@a221 1
+    self
+d899 1
+a899 1
+  def *(x) "is matrix or number"
+@
+
+
+1.11.2.1
+log
+@
+* lib/matrix.rb: resolve 'ruby -w' warnings.
+* lib/irb/locale.rb: resolve 'ruby -w' warnings.
+* lib/irb/multi-irb.rb: resolve 'ruby -w' warnings.
+* lib/irb/ruby-lex.rb: fix problem for "\\M-\\..." and "\\C-\\..."
+  and resolve 'ruby -w' warnings.
+* lib/irb/ruby-token.rb: fix typo
+* lib/shell/command-processor.rb: resolve 'ruby -w' warnings.
+@
+text
+@d222 1
+d900 1
+a900 1
+  def *(x)
+@
+
+
+1.11.2.2
+log
+@* matrix.rb (Matrix#column_vectors, Matrix#row_vectors): ditto bug.
+  this bug report and fix by tsutomu@@nucba.ac.jp.
+
+* forwardable.rb: change raise to Kernel::raise
+@
+text
+@d397 1
+a397 1
+  def *(m) # m is matrix or vector or number
+d696 1
+a696 1
+    rows = (0 .. row_size - 1).collect {
+d704 1
+a704 1
+    columns = (0 .. column_size - 1).collect {
+d899 1
+a899 1
+  def *(x) #x is matrix or number
+@
+
+
+1.11.2.3
+log
+@* matrix.rb: Vector#* bug. reported from Massimiliano Mirra
+ <info@@chromatic-harp.com>.
+@
+text
+@d905 1
+a905 1
+      Matrix.column_vector(self) * x
+d907 1
+a907 1
+      s, x = x.coerce(self)
+@
+
+
+1.10
+log
+@matz
+@
+text
+@d615 2
+d619 2
+d629 1
+a629 1
+	  if (i += 1) > column_size - 1
+d641 1
+a641 1
+	    if (i += 1) > row_size - 1
+d647 1
+a647 1
+	    k.upto(column_size - 1) do
+d657 1
+a657 1
+      (k + 1).upto(row_size - 1) do
+d660 1
+a660 1
+	(k + 1).upto(column_size - 1) do
+d666 1
+a666 1
+    end while (k += 1) <= column_size - 1
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d40 1
+a40 1
+#	Matrix.rows(rows, copy = TRUE)
+d146 1
+a146 1
+#	Vector.elements(array, copy = TRUE)
+d196 1
+a196 1
+    new(:init_rows, rows, FALSE)
+d199 1
+a199 1
+  def Matrix.rows(rows, copy = TRUE)
+d211 1
+a211 1
+    Matrix.rows(rows, FALSE)
+d223 1
+a223 1
+    rows(rows, FALSE)
+d245 1
+a245 1
+      Matrix.rows([row.to_a], FALSE)
+d247 1
+a247 1
+      Matrix.rows([row.dup], FALSE)
+d249 1
+a249 1
+      Matrix.row([[row]], FALSE)
+d314 1
+a314 1
+      Vector.elements(col, FALSE)
+d320 1
+a320 1
+    Matrix.rows(rows, FALSE)
+d348 1
+a348 1
+    Matrix.rows(rows, FALSE)
+d366 1
+a366 1
+    return FALSE unless Matrix === other
+d373 1
+a373 1
+    return FALSE unless @@rows.size == rows.size
+d377 1
+a377 1
+      return FALSE unless @@rows[i] == rows[i]
+d379 1
+a379 1
+    TRUE
+d408 1
+a408 1
+      return Matrix.rows(rows, FALSE)
+d428 1
+a428 1
+      return Matrix.rows(rows, FALSE)
+d456 1
+a456 1
+    Matrix.rows(rows, FALSE)
+d480 1
+a480 1
+    Matrix.rows(rows, FALSE)
+d493 1
+a493 1
+      return Matrix.rows(rows, FALSE)
+d828 1
+a828 1
+    new(:init_elements, array, copy = FALSE)
+d831 1
+a831 1
+  def Vector.elements(array, copy = TRUE)
+d876 1
+a876 1
+    return FALSE unless Vector === other
+d900 1
+a900 1
+      Vector.elements(els, FALSE)
+d917 1
+a917 1
+      Vector.elements(els, FALSE)
+d934 1
+a934 1
+      Vector.elements(els, FALSE)
+d961 1
+a961 1
+    Vector.elements(els, FALSE)
+d970 1
+a970 1
+    Vector.elements(els, FALSE)
+@
+
+
+1.8
+log
+@2000-05-12
+@
+text
+@d293 1
+a293 1
+    if iterator?
+d304 1
+a304 1
+    if iterator?
+@
+
+
+1.7
+log
+@2000-03-17
+@
+text
+@a422 1
+	    p [k,j,m[k,j]]
+@
+
+
+1.6
+log
+@2000-03-07
+@
+text
+@d423 1
+@
+
+
+1.5
+log
+@19991012
+@
+text
+@a20 2
+#   column: 列
+#   row:    行
+@
+
+
+1.4
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d1 1
+d5 2
+a6 2
+#   	$Revision: 1.9 $
+#   	$Date: 1999/08/24 10:25:00 $
+d42 1
+a42 1
+#	Matrix.rows(rows, copy = true)
+d148 1
+a148 1
+#	Vector.elements(array, copy = true)
+d189 1
+a189 1
+  @@RCS_ID='-$Id: matrix.rb,v 1.8 1999/02/17 12:34:19 keiju Exp keiju $-'
+d198 1
+a198 1
+    new(:init_rows, rows, false)
+d201 1
+a201 1
+  def Matrix.rows(rows, copy = true)
+d213 1
+a213 1
+    Matrix.rows(rows, false)
+d224 2
+a225 1
+    rows(rows, false)
+d247 1
+a247 1
+      Matrix.rows([row.to_a], false)
+d249 1
+a249 1
+      Matrix.rows([row.dup], false)
+d251 1
+a251 1
+      Matrix.row([[row]], false)
+d316 1
+a316 1
+      Vector.elements(col, false)
+d322 1
+a322 1
+    Matrix.rows(rows, false)
+d350 1
+a350 1
+    Matrix.rows(rows, false)
+d368 1
+a368 1
+    return false unless Matrix === other
+d375 1
+a375 1
+    return false unless @@rows.size == rows.size
+d379 1
+a379 1
+      return false unless @@rows[i] == rows[i]
+d381 1
+a381 1
+    true
+d410 1
+a410 1
+      return Matrix.rows(rows, false)
+d430 1
+a430 1
+      return Matrix.rows(rows, false)
+d458 1
+a458 1
+    Matrix.rows(rows, false)
+d482 1
+a482 1
+    Matrix.rows(rows, false)
+d495 1
+a495 1
+      return Matrix.rows(rows, false)
+d624 2
+a625 2
+	i = -1
+	nothing = false
+d628 1
+a628 1
+	    nothing = true
+d632 22
+a653 3
+	next if nothing
+	a[i], a[k] = a[k], a[i]
+	akk = a[k][k]
+d830 1
+a830 1
+    new(:init_elements, array, copy = false)
+d833 1
+a833 1
+  def Vector.elements(array, copy = true)
+d878 1
+a878 1
+    return false unless Vector === other
+d898 1
+a898 1
+  def *(x) # is matrix or number
+d902 1
+a902 1
+      Vector.elements(els, false)
+d919 1
+a919 1
+      Vector.elements(els, false)
+d936 1
+a936 1
+      Vector.elements(els, false)
+d963 1
+a963 1
+    Vector.elements(els, false)
+d972 1
+a972 1
+    Vector.elements(els, false)
+a1022 1
+
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.8 $
+#   	$Date: 1999/02/17 12:34:19 $
+d596 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@a0 1
+#!/usr/local/bin/ruby
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+a6 2
+#   	$Revision: 1.0 $
+#   	$Date: 97/05/23 11:35:28 $
+d24 151
+d179 1
+a179 2
+  Exception2MessageMapper.extend_to(binding)
+  
+d183 1
+a183 1
+  def_exception("ErrDimensionMismatch", "\#{self.type} dimemsion mismatch")
+d189 1
+a189 1
+  RCS_ID='-$Header: ruby-mode,v 1.2 91/04/20 17:24:57 keiju Locked $-'
+d191 1
+d198 1
+a198 1
+    new(:init_rows, rows, FALSE)
+d201 1
+a201 1
+  def Matrix.rows(rows, copy = TRUE)
+d213 1
+a213 1
+    Matrix.rows(rows, FALSE)
+d224 1
+a224 2
+    self
+    rows(rows, FALSE)
+d246 1
+a246 1
+      Matrix.rows([row.to_a], FALSE)
+d248 1
+a248 1
+      Matrix.rows([row.dup], FALSE)
+d250 1
+a250 1
+      Matrix.row([[row]], FALSE)
+d297 1
+d315 1
+a315 1
+      Vector.elements(col, FALSE)
+d321 1
+a321 1
+    Matrix.rows(rows, FALSE)
+d342 1
+a342 1
+      Matrix.fail ArgumentError, param.inspect
+d349 1
+a349 1
+    Matrix.rows(rows, FALSE)
+d365 32
+d409 1
+a409 1
+      return Matrix.rows(rows, FALSE)
+d415 1
+a415 1
+      Matrix.fail ErrDimensionMismatch if column_size != m.row_size
+d429 1
+a429 1
+      return Matrix.rows(rows, FALSE)
+d439 1
+a439 1
+      Matrix.fail ErrOperationNotDefined, "+"
+d448 1
+a448 1
+    Matrix.fail ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+d457 1
+a457 1
+    Matrix.rows(rows, FALSE)
+d463 1
+a463 1
+      Matrix.fail ErrOperationNotDefined, "-"
+d472 1
+a472 1
+    Matrix.fail ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+d481 20
+a500 1
+    Matrix.rows(rows, FALSE)
+d504 1
+a504 1
+    Matrix.fail ErrDimensionMismatch unless square?
+d517 1
+a517 1
+	  fail ErrNotRegular if (i += 1) > size
+d573 1
+a573 1
+      fail ErrOperationNotDefined, "**"
+d575 1
+a575 1
+      fail ErrOperationNotDefined, "**"
+d623 1
+a623 1
+	nothing = FALSE
+d626 1
+a626 1
+	    nothing = TRUE
+d668 2
+d732 1
+a732 1
+	Scalar.fail WrongArgType, other.type, "Numeric or Scalar"
+d746 1
+a746 1
+	Scalar.fail WrongArgType, other.type, "Numeric or Scalar"
+d772 1
+a772 1
+	Scalar.fail WrongArgType, other.type, "Numeric or Scalar or Matrix"
+d786 1
+a786 1
+	Scalar.fail WrongArgType, other.type, "Numeric or Scalar or Matrix"
+a803 1
+
+d809 1
+a809 1
+    new(:init_elements, array, copy = FALSE)
+d812 1
+a812 1
+  def Vector.elements(array, copy = TRUE)
+d840 1
+a840 1
+    Vector.fail ErrDimensionMismatch if size != v.size
+d848 1
+a848 1
+    Vector.fail ErrDimensionMismatch if size != v.size
+d855 20
+d877 1
+a877 1
+  def *(x) "is matrix or number"
+d881 1
+a881 1
+      Vector.elements(els, FALSE)
+d885 1
+a885 1
+      s, x = X.corece(self)
+d893 1
+a893 1
+      Vector.fail ErrDimensionMismatch if size != v.size
+d898 1
+a898 1
+      Vector.elements(els, FALSE)
+d902 1
+a902 1
+      s, x = v.corece(self)
+d910 1
+a910 1
+      Vector.fail ErrDimensionMismatch if size != v.size
+d915 1
+a915 1
+      Vector.elements(els, FALSE)
+d919 1
+a919 1
+      s, x = v.corece(self)
+d927 1
+a927 1
+    Vector.fail ErrDimensionMismatch if size != v.size
+d942 1
+a942 1
+    Vector.elements(els, FALSE)
+d951 1
+a951 1
+    Vector.elements(els, FALSE)
+d959 1
+a959 1
+    return v.sqrt
+d987 2
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d1 1
+d5 2
+a6 2
+#   	$Revision: 1.6 $
+#   	$Date: 1998/07/31 03:39:49 $
+d21 2
+a23 151
+# module ExceptionForMatrix::
+#   Exceptions:
+#	ErrDimensionMismatch
+#	    number of column/row do not match
+#	ErrNotRegular
+#	    not a regular matrix
+#	ErrOperationNotDefined
+#	    specified operator is not defined (yet)
+#
+# class Matrix
+#   include ExceptionForMatrix
+#
+#   Methods:
+#   class methods:
+#	Matrix.[](*rows)
+#	    creates a matrix where `rows' indicates rows. 
+#	    `rows' is an array of arrays, 
+#	    e.g, Matrix[[11, 12], [21, 22]]
+#	Matrix.rows(rows, copy = TRUE)
+#	    creates a matrix where `rows' indicates rows. 
+#           if optional argument `copy' is false, use the array as
+#	    internal structure of the metrix without copying.
+#	Matrix.columns(columns)
+#           creates a new matrix using `columns` as set of colums vectors.
+#	Matrix.diagonal(*values)
+#	    creates a matrix where `columns' indicates columns. 
+#	Matrix.scalar(n, value)
+#	    creates a diagonal matrix such that the diagal compornents is
+#	    given by `values'.
+#	Matrix.scalar(n, value)
+#	    creates an n-by-n scalar matrix such that the diagal compornent is 
+#	    given by `value'.
+#	Matrix.identity(n)
+#	Matrix.unit(n)
+#	Matrix.I(n)
+#	    creates an n-by-n unit matrix.
+#	Matrix.zero(n)
+#	    creates an n-by-n zero matrix.
+#	Matrix.row_vector(row)
+#	    creates a 1-by-n matrix such the row vector is `row'. 
+#	    `row' is specifed as a Vector or an Array.
+#	Matrix.column_vector(column)
+#	    creates a 1-by-n matrix such that column vector is `column'. 
+#	    `column' is specifed as a Vector or an Array.
+#   accessing:
+#	[](i, j)
+#	    returns (i,j) compornent
+#	row_size
+#	    returns the number of rows
+#	column_size
+#	    returns the number of columns
+#	row(i)
+#	    returns the i-th row vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all row vectors. 
+#	column(j)
+#	    returns the jth column vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all column vectors. 
+#	collect
+#	map
+#	    creates a matrix which is the result of iteration of given
+#	    block over all compornents. 
+#	minor(*param)
+#	    returns sub matrix. parameter is specified as the following:
+#	    1. from_row, row_size, from_col, size_col
+#	    2. from_row..to_row, from_col..to_col
+#   TESTING:
+#	regular?
+#	    Is regular?
+#	singular?
+#	    Is singular? i.e. Is non-regular?
+#	square?
+#	    Is square?
+#   ARITHMETIC:
+#	*(m)
+#	    times
+#	+(m)
+#	    plus
+#	-(m)
+#	    minus
+#	/(m)
+#	    self * m.inv
+#	inverse
+#	inv
+#	    inverse
+#	**
+#	    power
+#   Matrix functions:
+#	determinant
+#	det
+#	    returns the determinant
+#	rank
+#	    returns the rank
+#	trace
+#	tr
+#	    returns the trace
+#	transpose
+#	t
+#	    returns the transposed
+#   CONVERTING:
+#	coerce(other)
+#	row_vectors
+#	    array of row vectors
+#	column_vectors
+#	    array of column vectors
+#	to_a
+#	    converts each element to Array
+#	to_f
+#	    converts each element to Float
+#	to_i
+#	    converts each element to Integer
+#	to_r
+#	    converts each element to Rational
+#   PRINTING:
+#	to_s
+#	    returns string representation
+#	inspect
+#
+# class Vector
+#   include ExceptionForMatrix
+#
+#   INSTANCE CREATION:
+#	Vector.[](*array)
+#	Vector.elements(array, copy = TRUE)
+#   ACCSESSING:
+#	[](i)
+#	size
+#   ENUMRATIONS:
+#	each2(v)
+#	collect2(v)
+#   ARITHMETIC:
+#	*(x) "is matrix or number"
+#	+(v)
+#	-(v)
+#   VECTOR FUNCTIONS:
+#	inner_product(v)
+#	collect
+#	map
+#	map2(v)
+#	r
+#   CONVERTING:
+#	covector
+#	to_a
+#	to_f
+#	to_i
+#	to_r
+#	coerce(other)
+#   PRINTING:
+#	to_s
+#	inspect
+d39 2
+a40 2
+  @@RCS_ID='-$Id: matrix.rb,v 1.6 1998/07/31 03:39:49 keiju Exp keiju $-'
+
+a146 1
+
+a213 32
+  # COMPARING
+  def ==(other)
+    return FALSE unless Matrix === other
+    
+    other.compare_by_row_vectors(@@rows)
+  end
+  alias eql? ==
+  
+  def compare_by_row_vectors(rows)
+    return FALSE unless @@rows.size == rows.size
+    
+    0.upto(@@rows.size - 1) do
+      |i|
+      return FALSE unless @@rows[i] == rows[i]
+    end
+    TRUE
+  end
+  
+  def clone
+    Matrix.rows(@@rows)
+  end
+  
+  def hash
+    value = 0
+    for row in @@rows
+      for e in row
+	value ^= e.hash
+      end
+    end
+    return value
+  end
+  
+a299 19
+  
+  def /(other)
+    case other
+    when Numeric
+      rows = @@rows.collect {
+	|row|
+	row.collect {
+	  |e|
+	  e / other
+	}
+      }
+      return Matrix.rows(rows, FALSE)
+    when Matrix
+      return self * other.inverse
+    else
+      x, y = other.coerce(self)
+      rerurn x / y
+    end
+  end
+d600 1
+d606 1
+a606 1
+    new(:init_elements, array, FALSE)
+a651 20
+  # COMPARING
+  def ==(other)
+    return FALSE unless Vector === other
+    
+    other.compare_by(@@elements)
+  end
+  alias eqn? ==
+  
+  def compare_by(elements)
+    @@elements == elements
+  end
+  
+  def clone
+    Vector.elements(@@elements)
+  end
+  
+  def hash
+    @@elements.hash
+  end
+  
+d736 1
+a736 1
+    return Math.sqrt(v)
+@
+
+
+1.1.1.2.2.1
+log
+@990224
+@
+text
+@a0 1
+#!/usr/local/bin/ruby
+d4 2
+a5 2
+#   	$Revision: 1.8 $
+#   	$Date: 1999/02/17 12:34:19 $
+a19 2
+#   column: 列
+#   row:    行
+d176 2
+a177 1
+  extend Exception2MessageMapper
+d181 1
+a181 1
+  def_exception("ErrDimensionMismatch", "\#{self.name} dimension mismatch")
+d187 2
+a188 3
+  @@RCS_ID='-$Id: matrix.rb,v 1.8 1999/02/17 12:34:19 keiju Exp keiju $-'
+  
+#  extend Exception2MessageMapper
+d340 1
+a340 1
+      Matrix.Raise ArgumentError, param.inspect
+d413 1
+a413 1
+      Matrix.Raise ErrDimensionMismatch if column_size != m.row_size
+d437 1
+a437 1
+      Matrix.Raise ErrOperationNotDefined, "+"
+d446 1
+a446 1
+    Matrix.Raise ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+d461 1
+a461 1
+      Matrix.Raise ErrOperationNotDefined, "-"
+d470 1
+a470 1
+    Matrix.Raise ErrDimensionMismatch unless row_size == m.row_size and column_size == m.column_size
+d502 1
+a502 1
+    Matrix.Raise ErrDimensionMismatch unless square?
+d515 1
+a515 1
+	  Matrix.Raise ErrNotRegular if (i += 1) > size
+d571 1
+a571 1
+      Matrix.Raise ErrOperationNotDefined, "**"
+d573 1
+a573 1
+      Matrix.Raise ErrOperationNotDefined, "**"
+a665 2
+    else
+      raise TypeError, "#{type} can't be coerced into #{other.type}"
+d728 1
+a728 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar"
+d742 1
+a742 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar"
+d768 1
+a768 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar or Matrix"
+d782 1
+a782 1
+	Scalar.Raise WrongArgType, other.type, "Numeric or Scalar or Matrix"
+d805 1
+a805 1
+    new(:init_elements, array, copy = FALSE)
+d836 1
+a836 1
+    Vector.Raise ErrDimensionMismatch if size != v.size
+d844 1
+a844 1
+    Vector.Raise ErrDimensionMismatch if size != v.size
+d881 1
+a881 1
+      s, x = X.coerce(self)
+d889 1
+a889 1
+      Vector.Raise ErrDimensionMismatch if size != v.size
+d898 1
+a898 1
+      s, x = v.coerce(self)
+d906 1
+a906 1
+      Vector.Raise ErrDimensionMismatch if size != v.size
+d915 1
+a915 1
+      s, x = v.coerce(self)
+d923 1
+a923 1
+    Vector.Raise ErrDimensionMismatch if size != v.size
+a982 2
+    else
+      raise TypeError, "#{type} can't be coerced into #{other.type}"
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d224 1
+d878 1
+a878 1
+  def *(x) # is matrix or number
+@
+
+
+1.1.1.2.2.3
+log
+@backtrace may be Qnil
+@
+text
+@d42 1
+a42 1
+#	Matrix.rows(rows, copy = true)
+d148 1
+a148 1
+#	Vector.elements(array, copy = true)
+d198 1
+a198 1
+    new(:init_rows, rows, false)
+d201 1
+a201 1
+  def Matrix.rows(rows, copy = true)
+d213 1
+a213 1
+    Matrix.rows(rows, false)
+d224 1
+a224 1
+    rows(rows, false)
+d246 1
+a246 1
+      Matrix.rows([row.to_a], false)
+d248 1
+a248 1
+      Matrix.rows([row.dup], false)
+d250 1
+a250 1
+      Matrix.row([[row]], false)
+d315 1
+a315 1
+      Vector.elements(col, false)
+d321 1
+a321 1
+    Matrix.rows(rows, false)
+d349 1
+a349 1
+    Matrix.rows(rows, false)
+d367 1
+a367 1
+    return false unless Matrix === other
+d374 1
+a374 1
+    return false unless @@rows.size == rows.size
+d378 1
+a378 1
+      return false unless @@rows[i] == rows[i]
+d380 1
+a380 1
+    true
+d409 1
+a409 1
+      return Matrix.rows(rows, false)
+d429 1
+a429 1
+      return Matrix.rows(rows, false)
+d457 1
+a457 1
+    Matrix.rows(rows, false)
+d481 1
+a481 1
+    Matrix.rows(rows, false)
+d494 1
+a494 1
+      return Matrix.rows(rows, false)
+d623 1
+a623 1
+	nothing = false
+d626 1
+a626 1
+	    nothing = true
+d809 1
+a809 1
+    new(:init_elements, array, copy = false)
+d812 1
+a812 1
+  def Vector.elements(array, copy = true)
+d857 1
+a857 1
+    return false unless Vector === other
+d881 1
+a881 1
+      Vector.elements(els, false)
+d898 1
+a898 1
+      Vector.elements(els, false)
+d915 1
+a915 1
+      Vector.elements(els, false)
+d942 1
+a942 1
+    Vector.elements(els, false)
+d951 1
+a951 1
+    Vector.elements(els, false)
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d5 2
+a6 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 1998/01/16 04:05:49 $
+d39 1
+a39 1
+  RCS_ID='-$Header: /home/cvsroot/ruby/lib/matrix.rb,v 1.1.1.1 1998/01/16 04:05:49 matz Exp $-'
+@
+
+
+1.1.1.1.4.2
+log
+@-ko for keiju's files
+@
+text
+@d5 2
+a6 2
+#   	$Revision: 1.0 $
+#   	$Date: 97/05/23 11:35:28 $
+d39 1
+a39 1
+  RCS_ID='-$Header: matrix.rb,v 1.2 91/04/20 17:24:57 keiju Locked $-'
+@
+
+
+1.1.1.1.4.3
+log
+@*** empty log message ***
+@
+text
+@d1 1
+@
+
+
+1.1.1.1.4.4
+log
+@1.1b9_30
+@
+text
+@a0 1
+#!/usr/local/bin/ruby
+d4 2
+a5 2
+#   	$Revision: 1.4 $
+#   	$Date: 1998/07/08 06:39:13 $
+a22 144
+# module ExceptionForMatrix::
+#   Exceptions:
+#	ErrDimensionMismatch
+#	    行または列数が一致していない.
+#	ErrNotRegular
+#	    正則行列でない.
+#	ErrOperationNotDefined
+#	    その演算子はまだ定義されていない.
+#
+# class Matrix
+#   include ExceptionForMatrix
+#
+#   Methods:
+#   class methods:
+#	Matrix.[](*rows)
+#	    rowsで渡された行列を生成する. rowsは配列の配列
+#	    Matrix[[11, 12], [21, 22]]
+#	Matrix.rows(rows, copy = TRUE)
+#	    rowsを行ベクトルの集合として行列を生成する. copy=FALSE の
+#	    時はその配列をそのまま用いる.
+#	Matrix.columns(columns)
+#	    rowsを列ベクトルの集合として行列を生成する. 
+#	Matrix.diagonal(*values)
+#	    valuesを対角成分とした対角行列を生成する.
+#	Matrix.scalar(n, value)
+#	    valueを対角成分とするn次ののスカラー行列を生成する.
+#	Matrix.identity(n)
+#	Matrix.unit(n)
+#	Matrix.I(n)
+#	    n次の単位行列を生成する.
+#	Matrix.zero(n)
+#	    n次の0-行列を生成する.
+#	Matrix.row_vector(row)
+#	    rowを行ベクトルとする1-n行列を生成する. rowはVectorかArray
+#	    が可能.
+#	Matrix.column_vector(column)
+#	    columnを列ベクトルとするn-1行列を生成する. rowはVectorかArray
+#	    が可能.
+#   accessing:
+#	[](i, j)
+#	    行列の(i, j)成分を返す.
+#	row_size
+#	    行数を返す.
+#	column_size
+#	    列数を返す.
+#	row(i)
+#	    i番目の行ベクトルを返す. イテレータとして使われた時は, 行
+#	    ベクトルを順番にイテーレータブロックに渡す.
+#	column(j)
+#	    j番目の列ベクトルを返す. 列ベクトルを順番にイテーレータブ
+#	    ロックに渡す. 
+#	collect
+#	map
+#	    全ての要素をイテレートしその戻り値を値とする行列を新たに生
+#	    成する.
+#	minor(*param)
+#	    マイナー行列を返す. パラメータとしては, 以下のパターンがあ
+#	    る:
+#	    1. from_row, row_size, from_col, size_col
+#	    2. from_row..to_row, from_col..to_col
+#   TESTING:
+#	regular?
+#	    正則かどうか?
+#	singular?
+#	    正則ではないかどうか?
+#	square?
+#	    正方行列かどうか?
+#   ARITHMETIC:
+#	*(m)
+#	    乗法
+#	+(m)
+#	    加法
+#	-(m)
+#	    減法
+#	/(m)
+#	    self * m.inv
+#	inverse
+#	inv
+#	    逆行列
+#	**
+#	    冪乗
+#   Matrix functions:
+#	determinant
+#	det
+#	    行列式
+#	rank
+#	    ランク
+#	trace
+#	tr
+#	    トレース
+#	transpose
+#	t
+#	    転置行列
+#   CONVERTING:
+#	coerce(other)
+#	row_vectors
+#	    rowベクトルの配列
+#	column_vectors
+#	    columベクトルの配列
+#	to_a
+#	    (2重)配列に変換
+#	to_f
+#	    各要素をFloatに変換
+#	to_i
+#	    各要素をIntegerに変換
+#	to_r
+#	    各要素をRationalに変換
+#   PRINTING:
+#	to_s
+#	    文字列としての表現
+#	inspect
+#
+# class Vector
+#   include ExceptionForMatrix
+#
+#   INSTANCE CREATION:
+#	Vector.[](*array)
+#	Vector.elements(array, copy = TRUE)
+#   ACCSESSING:
+#	[](i)
+#	size
+#   ENUMRATIONS:
+#	each2(v)
+#	collect2(v)
+#   ARITHMETIC:
+#	*(x) "is matrix or number"
+#	+(v)
+#	-(v)
+#   VECTOR FUNCTIONS:
+#	inner_product(v)
+#	collect
+#	map
+#	map2(v)
+#	r
+#   CONVERTING:
+#	covector
+#	to_a
+#	to_f
+#	to_i
+#	to_r
+#	coerce(other)
+#   PRINTING:
+#	to_s
+#	inspect
+d38 1
+a38 1
+  @@RCS_ID='-$Id: matrix.rb,v 1.4 1998/07/08 06:39:13 keiju Exp keiju $-'
+a145 1
+
+a212 32
+  # COMPARING
+  def ==(other)
+    return FALSE unless Matrix === other
+    
+    other.compare_by_row_vectors(@@rows)
+  end
+  alias eqn? ==
+  
+  def compare_by_row_vectors(rows)
+    return FALSE unless @@rows.size == rows.size
+    
+    0.upto(@@rows.size - 1) do
+      |i|
+      return FALSE unless @@rows[i] == rows[i]
+    end
+    TRUE
+  end
+  
+  def clone
+    Matrix.rows(@@rows)
+  end
+  
+  def hash
+    value = 0
+    for row in @@rows
+      for e in row
+	value ^= e.hash
+      end
+    end
+    return value
+  end
+  
+a298 19
+  
+  def /(other)
+    case other
+    when Numeric
+      rows = @@rows.collect {
+	|row|
+	row.collect {
+	  |e|
+	  e / other
+	}
+      }
+      return Matrix.rows(rows, FALSE)
+    when Matrix
+      return self * other.inverse
+    else
+      x, y = other.coerce(self)
+      rerurn x / y
+    end
+  end
+d322 1
+a322 1
+	continue if i == k
+d427 1
+a427 1
+	continue if nothing
+d599 1
+a650 20
+  # COMPARING
+  def ==(other)
+    return FALSE unless Vector === other
+    
+    other.compare_by(@@elements)
+  end
+  alias eqn? ==
+  
+  def compare_by(elements)
+    @@elements == elements
+  end
+  
+  def clone
+    Vector.elements(@@rows)
+  end
+  
+  def hash
+    @@elements.hash
+  end
+  
+d735 1
+a735 1
+    return Math.sqrt(v)
+@
+
+
+1.1.1.1.4.5
+log
+@1.1b9_31
+@
+text
+@d5 2
+a6 2
+#   	$Revision: 1.5 $
+#   	$Date: 1998/07/14 14:35:18 $
+d183 2
+a184 2
+  @@RCS_ID='-$Id: matrix.rb,v 1.5 1998/07/14 14:35:18 keiju Exp keiju $-'
+
+d860 1
+a860 1
+    Vector.elements(@@elements)
+@
+
+
+1.1.1.1.4.6
+log
+@1.1c1
+@
+text
+@d1 1
+@
+
+
+1.1.1.1.4.7
+log
+@1.1c2
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.6 $
+#   	$Date: 1998/07/31 03:39:49 $
+d182 1
+a182 1
+  @@RCS_ID='-$Id: matrix.rb,v 1.6 1998/07/31 03:39:49 keiju Exp keiju $-'
+d364 1
+a364 1
+  alias eql? ==
+d518 1
+a518 1
+	next if i == k
+d623 1
+a623 1
+	next if nothing
+@
+
+
+1.1.1.1.4.8
+log
+@*** empty log message ***
+@
+text
+@d20 2
+d26 1
+a26 1
+#	    number of column/row do not match
+d28 1
+a28 1
+#	    not a regular matrix
+d30 1
+a30 1
+#	    specified operator is not defined (yet)
+@
+
+
+1.1.1.1.4.9
+log
+@1.1c3
+@
+text
+@d36 2
+a37 3
+#	    creates a matrix where `rows' indicates rows. 
+#	    `rows' is an array of arrays, 
+#	    e.g, Matrix[[11, 12], [21, 22]]
+d39 2
+a40 3
+#	    creates a matrix where `rows' indicates rows. 
+#           if optional argument `copy' is false, use the array as
+#	    internal structure of the metrix without copying.
+d42 1
+a42 1
+#           creates a new matrix using `columns` as set of colums vectors.
+d44 1
+a44 1
+#	    creates a matrix where `columns' indicates columns. 
+d46 1
+a46 5
+#	    creates a diagonal matrix such that the diagal compornents is
+#	    given by `values'.
+#	Matrix.scalar(n, value)
+#	    creates an n-by-n scalar matrix such that the diagal compornent is 
+#	    given by `value'.
+d50 1
+a50 1
+#	    creates an n-by-n unit matrix.
+d52 1
+a52 1
+#	    creates an n-by-n zero matrix.
+d54 2
+a55 2
+#	    creates a 1-by-n matrix such the row vector is `row'. 
+#	    `row' is specifed as a Vector or an Array.
+d57 2
+a58 2
+#	    creates a 1-by-n matrix such that column vector is `column'. 
+#	    `column' is specifed as a Vector or an Array.
+d61 1
+a61 1
+#	    returns (i,j) compornent
+d63 1
+a63 1
+#	    returns the number of rows
+d65 1
+a65 1
+#	    returns the number of columns
+d67 2
+a68 3
+#	    returns the i-th row vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all row vectors. 
+d70 2
+a71 3
+#	    returns the jth column vector. 
+#	    when the block is supplied for the method, the block is iterated
+#	    over all column vectors. 
+d74 2
+a75 2
+#	    creates a matrix which is the result of iteration of given
+#	    block over all compornents. 
+d77 2
+a78 1
+#	    returns sub matrix. parameter is specified as the following:
+d83 1
+a83 1
+#	    Is regular?
+d85 1
+a85 1
+#	    Is singular? i.e. Is non-regular?
+d87 1
+a87 1
+#	    Is square?
+d90 1
+a90 1
+#	    times
+d92 1
+a92 1
+#	    plus
+d94 1
+a94 1
+#	    minus
+d99 1
+a99 1
+#	    inverse
+d101 1
+a101 1
+#	    power
+d105 1
+a105 1
+#	    returns the determinant
+d107 1
+a107 1
+#	    returns the rank
+d110 1
+a110 1
+#	    returns the trace
+d113 1
+a113 1
+#	    returns the transposed
+d117 1
+a117 1
+#	    array of row vectors
+d119 1
+a119 1
+#	    array of column vectors
+d121 1
+a121 1
+#	    converts each element to Array
+d123 1
+a123 1
+#	    converts each element to Float
+d125 1
+a125 1
+#	    converts each element to Integer
+d127 1
+a127 1
+#	    converts each element to Rational
+d130 1
+a130 1
+#	    returns string representation
+@

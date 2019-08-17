@@ -1,0 +1,49 @@
+head	1.1;
+access;
+symbols
+	irb_0_9:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.07.09.11.17.17;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* irb 0.9
+@
+text
+@
+module IRB
+  module ExtendCommand
+    class Fork<Nop
+      def execute(&block)
+	pid = send ExtendCommand.irb_original_method_name("fork")
+	unless pid 
+	  class<<self
+	    alias_method :exit, ExtendCommand.irb_original_method_name('exit')
+	  end
+	  if iterator?
+	    begin
+	      yield
+	    ensure
+	      exit
+	    end
+	  end
+	end
+	pid
+      end
+    end
+  end
+end
+
+
+@

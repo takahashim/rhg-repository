@@ -1,0 +1,194 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.09.44.42;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.09.44.42;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.22.05.02.43;	author shugo;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2001.10.22.07.38.13;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file Makefile.am was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@* autoconfiscated
+@
+text
+@a0 50
+## Process this file with automake to produce Makefile.in
+
+EXTRA_DIST		= ruby.m4 \
+			  README.ja \
+			  README.en \
+			  COPYING \
+			  examples/httpd.conf
+
+noinst_LTLIBRARIES	= libruby.la
+EXTRA_LTLIBRARIES	= mod_ruby.la
+apachelib_LIBRARIES	= @@apachelib_LIBRARIES@@
+
+libruby_la_SOURCES	= mod_ruby.c \
+			  ruby_config.c \
+			  apachelib.c \
+			  array_header.c \
+			  table.c \
+			  connection.c \
+			  server.c \
+			  request.c \
+			  mod_ruby.h \
+			  ruby_config.h \
+			  apchelib.h
+libruby_la_CFLAGS	= $(RUBY_CFLAGS) \
+			  $(APACHE_CFLAGS) $(APACHE_INCLUDES)
+libruby_la_LDFLAGS	= -static
+
+mod_ruby_la_SOURCES	= 
+mod_ruby_la_LIBADD	= $(RUBY_LIBS) libruby.la
+mod_ruby_la_LDFLAGS	= -module -avoid-version
+
+install-data-local:
+	if test -n "$(APACHE_SRCDIR)"; then \
+	  $(mkinstalldirs) $(APACHE_SRCDIR)/src/modules/ruby; \
+	  chown $(APACHE_SRC_UID):$(APACHE_SRC_GID) \
+	    $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    $(srcdir)/mod_ruby.c $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    $(srcdir)/ruby_shared_stub.c $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    $(srcdir)/Makefile.tmpl $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    $(srcdir)/Makefile.libdir $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    .libs/libruby.a $(APACHE_SRCDIR)/src/modules/ruby; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) \
+	    libruby.module $(APACHE_SRCDIR)/src/modules/ruby; \
+	fi
+
+@
+
+
+1.1.2.2
+log
+@* mod_ruby.c: use config.h for VERSION.
+@
+text
+@a2 2
+rubyapachedir		= $(rubydir)/apache
+
+a6 5
+			  lib/apache/ruby-run.rb \
+			  lib/apache/eruby-run.rb \
+			  lib/apache/erb-run.rb \
+			  lib/apache/rd2html.rb \
+			  lib/auto-reload.rb \
+d9 3
+a11 3
+noinst_LTLIBRARIES	= libmodruby.la @@opt_noinst_LTLIBRARIES@@
+
+EXTRA_LTLIBRARIES	= mod_ruby.la libruby.la
+d13 1
+a13 3
+apachelib_LTLIBRARIES	= @@opt_apachelib_LTLIBRARIES@@
+
+libmodruby_la_SOURCES	= mod_ruby.c \
+d23 2
+a24 2
+			  apachelib.h
+libmodruby_la_CFLAGS	= $(RUBY_CFLAGS) \
+d26 1
+a26 6
+libmodruby_la_LDFLAGS	= -static
+
+libruby_la_SOURCES		= 
+libruby_la_LIBADD		= $(RUBY_LIBS) libmodruby.la
+libruby_la_LDFLAGS		= -static
+libruby_la_DEPENDENCIES		= libmodruby.la
+d28 3
+a30 11
+mod_ruby_la_SOURCES		= 
+mod_ruby_la_LIBADD		= $(RUBY_LIBS) libmodruby.la
+mod_ruby_la_LDFLAGS		= -module -avoid-version -rpath $(apachelibdir)
+mod_ruby_la_DEPENDENCIES	= libmodruby.la
+
+rubyapache_DATA		= lib/apache/ruby-run.rb \
+			  lib/apache/eruby-run.rb \
+			  lib/apache/erb-run.rb \
+			  lib/apache/rd2html.rb
+
+ruby_DATA		= lib/auto-reload.rb
+d33 1
+a33 2
+	@@if test -n "$(APACHE_SRCDIR)"; then \
+	  echo "$(mkinstalldirs) $(APACHE_SRCDIR)/src/modules/ruby"; \
+d35 14
+a48 14
+	  echo "chown $(APACHE_SRC_UID):$(APACHE_SRC_GID) $(APACHE_SRCDIR)/src/modules/ruby"; \
+	  chown $(APACHE_SRC_UID):$(APACHE_SRC_GID) $(APACHE_SRCDIR)/src/modules/ruby; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) .libs/libruby.a $(APACHE_SRCDIR)/src/modules/ruby/libruby.a"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) .libs/libruby.a $(APACHE_SRCDIR)/src/modules/ruby/libruby.a; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/mod_ruby.c $(APACHE_SRCDIR)/src/modules/ruby/mod_ruby.c"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/mod_ruby.c $(APACHE_SRCDIR)/src/modules/ruby/mod_ruby.c; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/ruby_shared_stub.c $(APACHE_SRCDIR)/src/modules/ruby/ruby_shared_stub.c"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/ruby_shared_stub.c $(APACHE_SRCDIR)/src/modules/ruby/ruby_shared_stub.c; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/Makefile.tmpl $(APACHE_SRCDIR)/src/modules/ruby/Makefile.tmpl"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/Makefile.tmpl $(APACHE_SRCDIR)/src/modules/ruby/Makefile.tmpl; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/Makefile.libdir $(APACHE_SRCDIR)/src/modules/ruby/Makefile.libdir"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/Makefile.libdir $(APACHE_SRCDIR)/src/modules/ruby/Makefile.libdir; \
+	  echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) libruby.module $(APACHE_SRCDIR)/src/modules/ruby/libruby.module"; \
+	  $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) libruby.module $(APACHE_SRCDIR)/src/modules/ruby/libruby.module; \
+d50 1
+@
+
+
+1.1.2.3
+log
+@* Makefile.am: new variable module_sources.
+@
+text
+@a53 5
+module_sources		= mod_ruby.c \
+			  ruby_shared_stub.c \
+			  Makefile.tmpl \
+			  Makefile.libdir
+
+d62 8
+a71 4
+	  for p in $(module_sources); do \
+	    echo "$(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/$$p $(APACHE_SRCDIR)/src/modules/ruby/$$p"; \
+	    $(INSTALL_DATA) -o $(APACHE_SRC_UID) -g $(APACHE_SRC_GID) $(srcdir)/$$p $(APACHE_SRCDIR)/src/modules/ruby/$$p; \
+	  done; \
+@
+
+

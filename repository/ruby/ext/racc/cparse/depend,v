@@ -1,0 +1,28 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.22.07.20.31;	author aamine;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@racc runtime imported.
+* lib/racc/parser.rb: new file.
+* ext/racc/MANIFEST, cparse.c, depend, extconf.rb: new files.
+* lib/README: add racc/parser.rb.
+* ext/Setup*: add racc/cparse.
+@
+text
+@cparse.o: cparse.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h
+@

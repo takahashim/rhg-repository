@@ -1,0 +1,1415 @@
+head	1.18;
+access;
+symbols
+	v1_6_7:1.14.2.4
+	v1_6_6:1.14.2.4
+	v1_6_5:1.14.2.4
+	v1_6_4:1.14
+	v1_7_1:1.14
+	v1_6_4_preview4:1.14
+	v1_6_4_preview3:1.14
+	v1_6_4_preview2:1.14
+	v1_6_4_preview1:1.14
+	v1_6_3:1.14
+	ruby_m17n:1.14.0.4
+	ruby_1_6:1.14.0.2
+	v1_6_2:1.14
+	v1_6_1:1.11
+	v1_6_0:1.9
+	v1_4_6:1.4.2.1
+	v1_4_5:1.4.2.1
+	v1_4_4:1.4
+	ruby_1_4_3:1.4
+	ruby1_4_3:1.4
+	v1_4_3:1.4
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.4
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.3
+	v1_3_6:1.1.1.2.2.3
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.4.4
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.4.4
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2
+	v1_2_5:1.1.1.1.4.4
+	v1_2_4:1.1.1.1.4.4
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.4
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.4
+	v1_2_1repack:1.1.1.1.4.4
+	v1_2_1:1.1.1.1.4.4
+	v1_2_stable:1.1.1.1.4.4
+	v1_1d1:1.1.1.1.4.3.2.1
+	v1_1d0:1.1.1.1.4.3.2.1
+	v1_1c9_1:1.1.1.1.4.4
+	v1_1c9:1.1.1.1.4.4
+	v1_1c8:1.1.1.1.4.4
+	v1_1c7:1.1.1.1.4.4
+	v1_1c6:1.1.1.1.4.4
+	v1_1d-start:1.1.1.1.4.3
+	v1_1c5:1.1.1.1.4.4
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.3
+	v1_1c1:1.1.1.1.4.3
+	v1_1c0:1.1.1.1.4.3
+	v1_1b9_31:1.1.1.1.4.3
+	v1_1b9_30:1.1.1.1.4.3
+	v1_1b9_28:1.1.1.1.4.3
+	v1_1b9_27:1.1.1.1.4.3
+	v1_1b9_26:1.1.1.1.4.3
+	r1_1b9_25:1.1.1.1.4.3
+	r1_1b9_24:1.1.1.1.4.3
+	v1_1b9_23:1.1.1.1.4.3
+	v1_1b9_22:1.1.1.1.4.3
+	v1_1b9_20:1.1.1.1.4.3
+	v1_1b9_18:1.1.1.1.4.3
+	v1_1b9_16:1.1.1.1.4.3
+	v1_1b9_15:1.1.1.1.4.3
+	v1_1b9_13:1.1.1.1.4.3
+	v1_1b9_12:1.1.1.1.4.3
+	v1_1b9_11:1.1.1.1.4.3
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.18
+date	2001.09.06.08.12.24;	author eban;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.09.06.04.33.06;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.09.05.08.50.19;	author eban;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.09.05.08.45.47;	author eban;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.12.05.09.36.52;	author matz;	state Exp;
+branches
+	1.14.2.1;
+next	1.13;
+
+1.13
+date	2000.12.04.15.03.56;	author eban;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.11.08.05.29.37;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.09.25.17.51.29;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.09.19.07.54.27;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.07.10.04.49.21;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.28.08.27.00;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.12.07.48.30;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.08.08.49.00;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.04.08.39.39;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.18.04.48.51;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.09.01.09.48.02;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.05.10.08.22.50;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.07.28.09.26.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.08.13.05.17.43;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.03.05.06.37.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.03.26.09.09.40;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.04.09.09.58.00;	author matz;	state Exp;
+branches
+	1.1.1.1.4.3.2.1;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.09.08.09.17.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.3.2.1
+date	98.10.06.03.28.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	2000.06.13.09.51.01;	author matz;	state Exp;
+branches;
+next	;
+
+1.14.2.1
+date	2001.09.05.08.45.44;	author eban;	state Exp;
+branches;
+next	1.14.2.2;
+
+1.14.2.2
+date	2001.09.05.08.49.50;	author eban;	state Exp;
+branches;
+next	1.14.2.3;
+
+1.14.2.3
+date	2001.09.06.04.34.36;	author eban;	state Exp;
+branches;
+next	1.14.2.4;
+
+1.14.2.4
+date	2001.09.06.08.11.48;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.18
+log
+@* lib/jcode.rb: fixup quote handing.
+@
+text
+@# jcode.rb - ruby code to handle japanese (EUC/SJIS) string
+
+if $VERBOSE && $KCODE == "NONE"
+  STDERR.puts "Warning: $KCODE is NONE."
+end
+
+$vsave, $VERBOSE = $VERBOSE, false
+class String
+  printf STDERR, "feel free for some warnings:\n" if $VERBOSE
+
+  def _regex_quote(str)
+    str.gsub(/(\\[][\-\\])|\\(.)|([][\\])/) do
+      $1 || $2 || '\\' + $3
+    end
+  end
+  private :_regex_quote
+
+  PATTERN_SJIS = '[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]'
+  PATTERN_EUC = '[\xa1-\xfe][\xa1-\xfe]'
+  PATTERN_UTF8 = '[\xc0-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf][\x80-\xbf]'
+
+  RE_SJIS = Regexp.new(PATTERN_SJIS, 'n')
+  RE_EUC = Regexp.new(PATTERN_EUC, 'n')
+  RE_UTF8 = Regexp.new(PATTERN_UTF8, 'n')
+
+  SUCC = {}
+  SUCC['s'] = Hash.new(1)
+  for i in 0 .. 0x3f
+    SUCC['s'][i.chr] = 0x40 - i
+  end
+  SUCC['s']["\x7e"] = 0x80 - 0x7e
+  SUCC['s']["\xfd"] = 0x100 - 0xfd
+  SUCC['s']["\xfe"] = 0x100 - 0xfe
+  SUCC['s']["\xff"] = 0x100 - 0xff
+  SUCC['e'] = Hash.new(1)
+  for i in 0 .. 0xa0
+    SUCC['e'][i.chr] = 0xa1 - i
+  end
+  SUCC['e']["\xfe"] = 2
+  SUCC['u'] = Hash.new(1)
+  for i in 0 .. 0x7f
+    SUCC['u'][i.chr] = 0x80 - i
+  end
+  SUCC['u']["\xbf"] = 0x100 - 0xbf
+
+  def mbchar?
+    case $KCODE[0]
+    when ?s, ?S
+      self =~ RE_SJIS
+    when ?e, ?E
+      self =~ RE_EUC
+    when ?u, ?U
+      self =~ RE_UTF8
+    else
+      nil
+    end
+  end
+
+  def end_regexp
+    case $KCODE[0]
+    when ?s, ?S
+      /#{PATTERN_SJIS}$/o
+    when ?e, ?E
+      /#{PATTERN_EUC}$/o
+    when ?u, ?U
+      /#{PATTERN_UTF8}$/o
+    else
+      /.$/o
+    end
+  end
+
+  alias original_succ! succ!
+  private :original_succ!
+
+  alias original_succ succ
+  private :original_succ
+
+  def succ!
+    reg = end_regexp
+    if self =~ reg
+      succ_table = SUCC[$KCODE[0,1].downcase]
+      begin
+	self[-1] += succ_table[self[-1]]
+	self[-2] += 1 if self[-1] == 0
+      end while self !~ reg
+      self
+    else
+      original_succ!
+    end
+  end
+
+  def succ
+    (str = self.dup).succ! or str
+  end
+
+  private
+
+  def _expand_ch str
+    a = []
+    str.scan(/(?:\\(.)|([^\\]))-(?:\\(.)|([^\\]))|(?:\\(.)|(.))/m) do
+      from = $1 || $2
+      to = $3 || $4
+      one = $5 || $6
+      if one
+	a.push one
+      elsif from.length != to.length
+	next
+      elsif from.length == 1
+	from[0].upto(to[0]) { |c| a.push c.chr }
+      else
+	from.upto(to) { |c| a.push c }
+      end
+    end
+    a
+  end
+
+  def expand_ch_hash from, to
+    h = {}
+    afrom = _expand_ch(from)
+    ato = _expand_ch(to)
+    afrom.each_with_index do |x,i| h[x] = ato[i] || ato[-1] end
+    h
+  end
+
+  HashCache = {}
+  TrPatternCache = {}
+  DeletePatternCache = {}
+  SqueezePatternCache = {}
+
+  public
+
+  def tr!(from, to)
+    return self.delete!(from) if to.length == 0
+
+    pattern = TrPatternCache[from] ||= /[#{_regex_quote(from)}]/
+    if from[0] == ?^
+      last = /.$/.match(to)[0]
+      self.gsub!(pattern, last)
+    else
+      h = HashCache[from + "1-0" + to] ||= expand_ch_hash(from, to)
+      self.gsub!(pattern) do |c| h[c] end
+    end
+  end
+
+  def tr(from, to)
+    (str = self.dup).tr!(from, to) or str
+  end
+
+  def delete!(del)
+    self.gsub!(DeletePatternCache[del] ||= /[#{_regex_quote(del)}]+/, '')
+  end
+
+  def delete(del)
+    (str = self.dup).delete!(del) or str
+  end
+
+  def squeeze!(del=nil)
+    pattern =
+      if del
+	SqueezePatternCache[del] ||= /([#{_regex_quote(del)}])\1+/
+      else
+	/(.|\n)\1+/
+      end
+    self.gsub!(pattern, '\1')
+  end
+
+  def squeeze(del=nil)
+    (str = self.dup).squeeze!(del) or str
+  end
+
+  def tr_s!(from, to)
+    return self.delete!(from) if to.length == 0
+
+    pattern = SqueezePatternCache[from] ||= /([#{_regex_quote(from)}])\1+/
+    if from[0] == ?^
+      last = /.$/.match(to)[0]
+      self.gsub!(pattern, last)
+    else
+      h = HashCache[from + "1-0" + to] ||= expand_ch_hash(from, to)
+      self.gsub!(pattern) do h[$1] end
+    end
+  end
+
+  def tr_s(from, to)
+    (str = self.dup).tr_s!(from,to) or str
+  end
+
+  def chop!
+    self.gsub!(/(?:.|\r?\n)\z/, '')
+  end
+
+  def chop
+    (str = self.dup).chop! or str
+  end
+
+  def jlength
+    self.gsub(/[^\Wa-zA-Z_\d]/, ' ').length
+  end
+  alias jsize jlength
+
+  def jcount(str)
+    self.delete("^#{str}").jlength
+  end
+
+  def each_char
+    if block_given?
+      scan(/./m) do |x|
+        yield x
+      end
+    else
+      scan(/./m)
+    end
+  end
+
+end
+$VERBOSE = $vsave
+@
+
+
+1.17
+log
+@* lib/jcode.rb (_regexp_quote): fix quote handling, again.
+@
+text
+@d12 1
+a12 1
+    str.gsub(/(\\[-\\])|\\(.)|([][\\])/) do
+d100 7
+a106 4
+    str.scan(/(?:\\([-\\]))|(.)-(.)|(.)/m) do
+      if s = $1 || $4
+	a.push s
+      elsif $2.length != $3.length
+d108 2
+a109 2
+      elsif $2.length == 1
+	$2[0].upto($3[0]) { |c| a.push c.chr }
+d111 1
+a111 1
+	$2.upto($3) { |c| a.push c }
+@
+
+
+1.16
+log
+@typo fix
+@
+text
+@d12 3
+a14 1
+    str.gsub(/[][\\]/, '\\\\\&')
+d100 7
+a106 7
+    str.scan(/(.)-(.)|(.)/m) do |r|
+      if $3
+	a.push $3
+      elsif $1.length != $2.length
+ 	next
+      elsif $1.length == 1
+ 	$1[0].upto($2[0]) { |c| a.push c.chr }
+d108 1
+a108 1
+ 	$1.upto($2) { |c| a.push c }
+d137 1
+a137 1
+      h = HashCache[from + "::" + to] ||= expand_ch_hash(from, to)
+d171 1
+a171 1
+    pattern = SqueezePatternCache[from] ||= /([#{_regex_quote(from)}])\1+"/
+d176 1
+a176 1
+      h = HashCache[from + "::" + to] ||= expand_ch_hash(from, to)
+@
+
+
+1.15
+log
+@* lib/jcode.rb (_regexp_quote): fix quote handling.
+@
+text
+@d12 1
+a12 1
+    str.gsub(/[][\\]/, '\\\\\&)
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d12 1
+a12 3
+    str.gsub(/[][.\\|*?+{}()]/){|s|
+      if s == "\\" then "\\\\" else "\\\\#{s}" end
+    }
+@
+
+
+1.14.2.1
+log
+@* lib/jcode.rb (_regexp_quote): fix quote handling.
+@
+text
+@d12 3
+a14 1
+    str.gsub(/[][\\]/, '\\\\\&)
+@
+
+
+1.14.2.2
+log
+@typo fix
+@
+text
+@d12 1
+a12 1
+    str.gsub(/[][\\]/, '\\\\\&')
+@
+
+
+1.14.2.3
+log
+@* lib/jcode.rb (_regexp_quote): fix quote handling, again.
+@
+text
+@d12 1
+a12 3
+    str.gsub(/(\\[-\\])|\\(.)|([][\\])/) do
+      $1 || $2 || '\\' + $3
+    end
+d98 7
+a104 7
+    str.scan(/(?:\\([-\\]))|(.)-(.)|(.)/m) do
+      if s = $1 || $4
+	a.push s
+      elsif $2.length != $3.length
+	next
+      elsif $2.length == 1
+	$2[0].upto($3[0]) { |c| a.push c.chr }
+d106 1
+a106 1
+	$2.upto($3) { |c| a.push c }
+d135 1
+a135 1
+      h = HashCache[from + "1-0" + to] ||= expand_ch_hash(from, to)
+d169 1
+a169 1
+    pattern = SqueezePatternCache[from] ||= /([#{_regex_quote(from)}])\1+/
+d174 1
+a174 1
+      h = HashCache[from + "1-0" + to] ||= expand_ch_hash(from, to)
+@
+
+
+1.14.2.4
+log
+@* lib/jcode.rb: fixup quote handing.
+@
+text
+@d12 1
+a12 1
+    str.gsub(/(\\[][\-\\])|\\(.)|([][\\])/) do
+d100 4
+a103 7
+    str.scan(/(?:\\(.)|([^\\]))-(?:\\(.)|([^\\]))|(?:\\(.)|(.))/m) do
+      from = $1 || $2
+      to = $3 || $4
+      one = $5 || $6
+      if one
+	a.push one
+      elsif from.length != to.length
+d105 2
+a106 2
+      elsif from.length == 1
+	from[0].upto(to[0]) { |c| a.push c.chr }
+d108 1
+a108 1
+	from.upto(to) { |c| a.push c }
+@
+
+
+1.13
+log
+@eban
+@
+text
+@d3 4
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d8 1
+a8 1
+    str.gsub(/[][.\\|*?+{}()]/n){|s|
+@
+
+
+1.11
+log
+@matz
+@
+text
+@d8 2
+a9 2
+    str.gsub(/\W/){|s|
+      if s == "-" then s elsif s == "\\" then "\\\\" else "\\\\#{s}" end
+d96 1
+a96 1
+    str.scan(/(.|\n)-(.|\n)|(.|\n)/) do |r|
+@
+
+
+1.10
+log
+@000919
+@
+text
+@d8 3
+a10 1
+    a = str.gsub(/\W/){|s| if s == "-" then s else "\\\\#{s}" end}
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d7 5
+d126 1
+a126 1
+    pattern = TrPatternCache[from] ||= /[#{Regexp::quote(from)}]/
+d141 1
+a141 1
+    self.gsub!(DeletePatternCache[del] ||= /[#{Regexp::quote(del)}]+/, '')
+d151 1
+a151 1
+	SqueezePatternCache[del] ||= /([#{Regexp::quote(del)}])\1+/
+d165 1
+a165 1
+    pattern = SqueezePatternCache[from] ||= /([#{Regexp::quote(from)}])\1+"/ #"
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d3 1
+a3 1
+$vsave, $VERBOSE = $VERBOSE, FALSE
+@
+
+
+1.7
+log
+@2000-06-12
+@
+text
+@d192 1
+a192 1
+    if iterator?
+@
+
+
+1.6
+log
+@2000-02-08
+@
+text
+@a110 4
+  def bsquote(str)
+    str.gsub(/\\/, '\\\\\\\\')
+  end
+
+d121 1
+a121 1
+    pattern = TrPatternCache[from] ||= /[#{bsquote(from)}]/
+d136 1
+a136 1
+    self.gsub!(DeletePatternCache[del] ||= /[#{bsquote(del)}]+/, '')
+d146 1
+a146 1
+	SqueezePatternCache[del] ||= /([#{bsquote(del)}])\1+/
+d160 1
+a160 1
+    pattern = SqueezePatternCache[from] ||= /([#{bsquote(from)}])\1+"/ #"
+d193 1
+a193 1
+      scan(/./) do |x|
+d197 1
+a197 1
+      scan(/./)
+@
+
+
+1.5
+log
+@19991104
+@
+text
+@d164 1
+a164 1
+    pattern = SqueezePatternCache[from] ||= /([#{bsquote(from)}])\1+"/
+@
+
+
+1.4
+log
+@990918-repack
+@
+text
+@d7 25
+a31 2
+  def jlength
+    self.split(//).length
+d33 1
+a33 3
+
+  alias original_succ succ
+  private :original_succ
+d38 1
+a38 1
+      self =~ /[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]/n
+d40 3
+a42 1
+      self =~ /[\xa1-\xfe][\xa1-\xfe]/n
+d44 1
+a44 1
+      false
+d48 10
+a57 8
+  def succ
+    if self[-2] and self[-2, 2].mbchar?
+      s = self.dup
+      s[-1] += 1
+      s[-1] += 1 unless s[-2, 2].mbchar?
+      return s
+    else
+      original_succ
+d61 15
+a75 14
+  def upto(to)
+    return if self > to
+
+    curr = self
+    tail = self[-2..-1]
+    if tail.length == 2 and tail  =~ /^.$/ then
+      if self[0..-2] == to[0..-2]
+	first = self[-2].chr
+	for c in self[-1] .. to[-1]
+	  if (first+c.chr).mbchar?
+	    yield self[0..-2]+c.chr
+	  end
+	end
+      end
+d77 1
+a77 6
+      loop do
+	yield curr
+	return if curr == to
+	curr = curr.succ
+	return if curr.length > to.length
+      end
+d79 4
+a82 1
+    return nil
+d186 5
+d193 10
+@
+
+
+1.4.2.1
+log
+@2000-06-13
+@
+text
+@d87 4
+d101 1
+a101 1
+    pattern = TrPatternCache[from] ||= /[#{Regexp::quote(from)}]/
+d116 1
+a116 1
+    self.gsub!(DeletePatternCache[del] ||= /[#{Regexp::quote(del)}]+/, '')
+d126 1
+a126 1
+	SqueezePatternCache[del] ||= /([#{Regexp::quote(del)}])\1+/
+d140 1
+a140 1
+    pattern = SqueezePatternCache[from] ||= /([#{Regexp::quote(from)}])\1+"/
+a165 3
+  def each_char(&block)
+    scan(/.|\n/, &block)
+  end
+a166 1
+
+@
+
+
+1.3
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d107 1
+a107 1
+      self.gsub!(pattern) do |c| p [c,h[c]]; h[c] end
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d107 1
+a107 1
+      self.gsub!(pattern) do |c| h[c] end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 6
+a19 5
+  def mbchar?(c)
+    if $KCODE =~ /^s/i
+      c =~ /[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]/n
+    elsif $KCODE =~ /^e/i
+      c =~ /[\xa1-\xfe][\xa1-\xfe]/n
+d21 1
+a21 1
+      FALSE
+d26 1
+a26 1
+    if self[-2] && self[-2] & 0x80 != 0
+d29 1
+a29 1
+      s[-1] += 1 if !mbchar?(s)
+d45 1
+a45 1
+	  if mbchar?(first+c.chr)
+d61 3
+a63 1
+  def _expand_ch
+d65 1
+a65 1
+    self.scan(/(.|\n)-(.|\n)|(.|\n)/) do |r|
+d79 19
+d101 4
+a104 15
+    if from =~ /^\^/
+      comp=TRUE
+      from = $'
+    end
+    afrom = from._expand_ch
+    ato = to._expand_ch
+    i = 0
+    if comp
+      self.gsub!(/(.|\n)/) do |c|
+	unless afrom.include?(c)
+	  ato[-1]
+	else
+	  c
+	end
+      end
+d106 2
+a107 7
+      self.gsub!(/(.|\n)/) do |c|
+	if i = afrom.index(c)
+	  if i < ato.size then ato[i] else ato[-1] end
+	else
+	  c
+	end
+      end
+d112 1
+a112 1
+    self.dup.tr!(from, to)
+d116 1
+a116 16
+    if del =~ /^\^/
+      comp=TRUE
+      del = $'
+    end
+    adel = del._expand_ch
+    if comp
+      self.gsub!(/(.|\n)/) do |c|
+	next unless adel.include?(c)
+	c
+      end
+    else
+      self.gsub!(/(.|\n)/) do |c|
+	next if adel.include?(c)
+	c
+      end
+    end
+d120 1
+a120 1
+    self.dup.delete!(del)
+d124 3
+a126 11
+    if del
+      if del =~ /^\^/
+	comp=TRUE
+	del = $'
+      end
+      adel = del._expand_ch
+      if comp
+	self.gsub!(/(.|\n)\1+/) do
+	  next unless adel.include?($1)
+	  $&
+	end
+d128 1
+a128 4
+	for c in adel
+	  cq = Regexp.quote(c)
+	  self.gsub!(/#{cq}(#{cq})+/, cq)
+	end
+d130 1
+a130 4
+      self
+    else
+      self.gsub!(/(.|\n)\1+/, '\1')
+    end
+d134 1
+a134 1
+    self.dup.squeeze!(del)
+d139 8
+a146 24
+    if from =~ /^\^/
+      comp=TRUE
+      from = $'
+    end
+    afrom = from._expand_ch
+    ato = to._expand_ch
+    i = 0
+    c = nil
+    last = nil
+    self.gsub!(/(.|\n)/) do |c|
+      if comp
+	unless afrom.include?(c)
+	  ato[-1]
+	else
+	  c
+	end
+      elsif i = afrom.index(c)
+	c = if i < ato.size then ato[i] else ato[-1] end
+	next if c == last
+	last = c
+      else
+	last = nil
+        c
+      end
+d151 1
+a151 1
+    self.dup.tr_s!(from,to)
+a153 3
+  alias original_chop! chop!
+  private :original_chop!
+
+d155 1
+a155 4
+    if self =~ /(.)$/ and $1.size == 2
+      original_chop!
+    end
+    original_chop!
+d159 1
+a159 1
+    self.dup.chop!
+d161 5
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d14 1
+a14 1
+  def mbchar?
+d16 1
+a16 1
+      self =~ /[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]/n
+d18 1
+a18 1
+      self =~ /[\xa1-\xfe][\xa1-\xfe]/n
+d20 1
+a20 1
+      false
+d28 1
+a28 1
+      s[-1] += 1 if !s.mbchar?
+a33 1
+  alias next succ
+d44 1
+a44 1
+	  if (first+c.chr).mbchar?
+d106 1
+a106 1
+    (str = self.dup).tr!(from, to) or str
+d129 1
+a129 1
+    (str = self.dup).delete!(del) or str
+d157 1
+a157 1
+    (str = self.dup).squeeze!(del) or str
+d190 1
+a190 1
+    (str = self.dup).tr_s!(from,to) or str
+d204 1
+a204 1
+    (str = self.dup).chop! or str
+@
+
+
+1.1.1.2.2.1
+log
+@regexp,range,squeeze
+@
+text
+@d175 1
+a175 3
+	  c = ato[-1]
+	  next if c == last
+	  last = c
+a176 1
+	  last = nil
+@
+
+
+1.1.1.2.2.2
+log
+@backtrace may be Qnil
+@
+text
+@d3 1
+a3 1
+$vsave, $VERBOSE = $VERBOSE, false
+a60 2
+  ExpandChCache = {}
+
+a61 1
+    return ExpandChCache[self] if ExpandChCache.key? self
+a73 1
+    ExpandChCache[self] = a
+d81 1
+a81 1
+      comp=true
+d112 1
+a112 1
+      comp=true
+d136 1
+a136 1
+	comp=true
+d164 1
+a164 1
+      comp=true
+@
+
+
+1.1.1.2.2.3
+log
+@990728
+@
+text
+@d3 1
+a3 1
+$vsave, $VERBOSE = $VERBOSE, FALSE
+d15 1
+a15 2
+    case $KCODE[0]
+    when ?s, ?S
+d17 1
+a17 1
+    when ?e, ?E
+d25 1
+a25 1
+    if self[-2] and self[-2, 2].mbchar?
+d28 1
+a28 1
+      s[-1] += 1 unless s[-2, 2].mbchar?
+d34 1
+d61 1
+a61 1
+  private
+d63 2
+a64 1
+  def _expand_ch str
+d66 1
+a66 1
+    str.scan(/(.|\n)-(.|\n)|(.|\n)/) do |r|
+d77 1
+a80 22
+  HashCache = {}
+
+  def expand_ch_hash from, to = ""
+    key = from.intern.to_s + ":" + to.intern.to_s
+    return HashCache[key] if HashCache.key? key
+    afrom = _expand_ch(from)
+    h = {}
+    if to.length != 0
+      ato = _expand_ch(to)
+      afrom.each_with_index do |x,i| h[x] = ato[i] || ato[-1] end
+    else
+      afrom.each do |x| h[x] = true end
+    end
+    HashCache[key] = h
+  end
+
+  def bsquote(str)
+    str.gsub(/\\/, '\\\\\\\\')
+  end
+
+  public
+
+d84 15
+a98 4
+    pattern = /[#{bsquote(from)}]/
+    if from[0] == ?^
+      last = /.$/.match(to)[0]
+      self.gsub!(pattern, last)
+d100 7
+a106 2
+      h = expand_ch_hash(from, to)
+      self.gsub!(pattern) do |c| h[c] end
+d115 16
+a130 2
+    pattern = /[#{bsquote(del)}]+/
+    self.gsub!(pattern, '')
+d138 11
+a148 3
+    pattern =
+      if del
+        /([#{bsquote(del)}])\1+/
+d150 4
+a153 1
+	/(.|\n)\1+/
+d155 4
+a158 1
+    self.gsub!(pattern, '\1')
+d167 27
+a193 8
+
+    pattern = /([#{bsquote(from)}])\1+/
+    if from[0] == ?^
+      last = /.$/.match(to)[0]
+      self.gsub!(pattern, last)
+    else
+      h = expand_ch_hash(from, to)
+      self.gsub!(pattern) do h[$1] end
+d201 3
+d205 4
+a208 1
+    self.gsub!(/(?:.|\n)\z/, '')
+a213 5
+
+  def jcount(str)
+    self.delete("^#{str}").jlength
+  end
+
+@
+
+
+1.1.1.2.2.4
+log
+@pre 1.4.0
+@
+text
+@d79 6
+a84 1
+  def expand_ch_hash from, to
+d86 7
+a92 4
+    afrom = _expand_ch(from)
+    ato = _expand_ch(to)
+    afrom.each_with_index do |x,i| h[x] = ato[i] || ato[-1] end
+    h
+a98 5
+  HashCache = {}
+  TrPatternCache = {}
+  DeletePatternCache = {}
+  SqueezePatternCache = {}
+
+d104 1
+a104 1
+    pattern = TrPatternCache[from] ||= /[#{bsquote(from)}]/
+d109 1
+a109 1
+      h = HashCache[from + "::" + to] ||= expand_ch_hash(from, to)
+d119 2
+a120 1
+    self.gsub!(DeletePatternCache[del] ||= /[#{bsquote(del)}]+/, '')
+d130 1
+a130 1
+	SqueezePatternCache[del] ||= /([#{bsquote(del)}])\1+/
+d144 1
+a144 1
+    pattern = SqueezePatternCache[from] ||= /([#{bsquote(from)}])\1+"/
+d149 1
+a149 1
+      h = HashCache[from + "::" + to] ||= expand_ch_hash(from, to)
+d159 1
+a159 1
+    self.gsub!(/(?:.|\r?\n)\z/, '')
+@
+
+
+1.1.1.1.4.1
+log
+@block arg etc.
+@
+text
+@a33 1
+  alias next succ
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_05_pre1
+@
+text
+@d14 1
+a14 1
+  def mbchar?
+d16 1
+a16 1
+      self =~ /[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]/n
+d18 1
+a18 1
+      self =~ /[\xa1-\xfe][\xa1-\xfe]/n
+d28 1
+a28 1
+      s[-1] += 1 if !s.mbchar?
+d45 1
+a45 1
+	  if first+c.chr.mbchar?
+@
+
+
+1.1.1.1.4.3
+log
+@1.1b9_09
+@
+text
+@d20 1
+a20 1
+      false
+d45 1
+a45 1
+	  if (first+c.chr).mbchar?
+@
+
+
+1.1.1.1.4.3.2.1
+log
+@join 1.1c6
+@
+text
+@d107 1
+a107 1
+    (str = self.dup).tr!(from, to) or str
+d130 1
+a130 1
+    (str = self.dup).delete!(del) or str
+d158 1
+a158 1
+    (str = self.dup).squeeze!(del) or str
+d191 1
+a191 1
+    (str = self.dup).tr_s!(from,to) or str
+d205 1
+a205 1
+    (str = self.dup).chop! or str
+@
+
+
+1.1.1.1.4.4
+log
+@1.1c5
+@
+text
+@d107 1
+a107 1
+    (str = self.dup).tr!(from, to) or str
+d130 1
+a130 1
+    (str = self.dup).delete!(del) or str
+d158 1
+a158 1
+    (str = self.dup).squeeze!(del) or str
+d191 1
+a191 1
+    (str = self.dup).tr_s!(from,to) or str
+d205 1
+a205 1
+    (str = self.dup).chop! or str
+@
+

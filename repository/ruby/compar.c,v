@@ -1,0 +1,935 @@
+head	1.14;
+access;
+symbols
+	v1_6_7:1.8
+	v1_6_6:1.8
+	v1_6_5:1.8
+	v1_6_4:1.8
+	v1_7_1:1.9
+	v1_6_4_preview4:1.8
+	v1_6_4_preview3:1.8
+	v1_6_4_preview2:1.8
+	v1_6_4_preview1:1.8
+	v1_6_3:1.8
+	ruby_m17n:1.8.0.4
+	ruby_1_6:1.8.0.2
+	v1_6_2:1.8
+	v1_6_1:1.8
+	v1_6_0:1.7
+	v1_4_6:1.3.2.1
+	v1_4_5:1.3.2.1
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2.2.1
+	v1_3_1_990127:1.1.1.2.2.1
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2.2.1
+	v1_1d0:1.1.1.1.4.2.2.1
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2.2.1
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1.4.1
+	v1_1b9_16:1.1.1.1.4.1
+	v1_1b9_15:1.1.1.1.4.1
+	v1_1b9_13:1.1.1.1.4.1
+	v1_1b9_12:1.1.1.1.4.1
+	v1_1b9_11:1.1.1.1.4.1
+	v1_1b9_08:1.1.1.1.4.1
+	v1_1b9_07:1.1.1.1.4.1
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.14
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.05.22.05.57.08;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.05.21.05.39.18;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.04.18.08.46.17;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.09.12.05.37.19;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.08.31.05.29.34;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.07.31.04.36.37;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.01.09.41.11;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.05.04.36.57;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.16.09.40.31;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.02;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.07.08.07.16.54;	author matz;	state Exp;
+branches
+	1.1.1.1.4.2.2.1;
+next	;
+
+1.1.1.1.4.2.2.1
+date	98.09.08.07.08.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.01.17.08.23.53;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@/**********************************************************************
+
+  compar.c -
+
+  $Author: matz $
+  $Date: 2002/05/22 05:57:08 $
+  created at: Thu Aug 26 14:39:48 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+
+VALUE rb_mComparable;
+
+static ID cmp;
+
+static VALUE
+cmp_equal(x, y)
+    VALUE x, y;
+{
+    VALUE c = rb_funcall(x, cmp, 1, y);
+
+    if (NIL_P(c)) return Qfalse;
+    if (c == INT2FIX(0)) return Qtrue;
+    if (TYPE(c) == T_BIGNUM) {
+	if (rb_big_norm(c) == INT2FIX(0)) return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+cmp_gt(x, y)
+    VALUE x, y;
+{
+    VALUE c = rb_funcall(x, cmp, 1, y);
+
+    if (NIL_P(c)) return Qfalse;
+    if (FIXNUM_P(c) && FIX2INT(c) > 0) return Qtrue;
+    if (TYPE(c) == T_BIGNUM) {
+	if (rb_big_norm(x) == INT2FIX(0)) return Qfalse;
+	if (RBIGNUM(c)->sign) return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+cmp_ge(x, y)
+    VALUE x, y;
+{
+    VALUE c = rb_funcall(x, cmp, 1, y);
+
+    if (NIL_P(c)) return Qfalse;
+    if (FIXNUM_P(c) && FIX2INT(c) >= 0) return Qtrue;
+    if (TYPE(c) == T_BIGNUM) {
+	if (rb_big_norm(x) == INT2FIX(0)) return Qtrue;
+	if (RBIGNUM(c)->sign) return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+cmp_lt(x, y)
+    VALUE x, y;
+{
+    VALUE c = rb_funcall(x, cmp, 1, y);
+
+    if (FIXNUM_P(c) && FIX2INT(c) < 0) return Qtrue;
+    if (TYPE(c) == T_BIGNUM) {
+	if (rb_big_norm(x) == INT2FIX(0)) return Qfalse;
+	if (!RBIGNUM(c)->sign) return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+cmp_le(x, y)
+    VALUE x, y;
+{
+    VALUE c = rb_funcall(x, cmp, 1, y);
+
+    if (NIL_P(c)) return Qfalse;
+    if (FIXNUM_P(c) && FIX2INT(c) <= 0) return Qtrue;
+    if (TYPE(c) == T_BIGNUM) {
+	if (rb_big_norm(x) == INT2FIX(0)) return Qtrue;
+	if (!RBIGNUM(c)->sign) return Qtrue;
+    }
+    return Qfalse;
+}
+
+static VALUE
+cmp_between(x, min, max)
+    VALUE x, min, max;
+{
+    if (cmp_lt(x, min)) return Qfalse;
+    if (cmp_gt(x, max)) return Qfalse;
+    return Qtrue;
+}
+
+void
+Init_Comparable()
+{
+    rb_mComparable = rb_define_module("Comparable");
+    rb_define_method(rb_mComparable, "==", cmp_equal, 1);
+    rb_define_method(rb_mComparable, ">", cmp_gt, 1);
+    rb_define_method(rb_mComparable, ">=", cmp_ge, 1);
+    rb_define_method(rb_mComparable, "<", cmp_lt, 1);
+    rb_define_method(rb_mComparable, "<=", cmp_le, 1);
+    rb_define_method(rb_mComparable, "between?", cmp_between, 2);
+
+    cmp = rb_intern("<=>");
+}
+@
+
+
+1.13
+log
+@minor bug fixes.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/21 05:39:18 $
+d26 4
+a29 1
+    if (NUM2LONG(c) == 0) return Qtrue;
+d40 5
+a44 1
+    if (NUM2LONG(c) > 0) return Qtrue;
+d55 5
+a59 1
+    if (NUM2LONG(c) >= 0) return Qtrue;
+d69 5
+a73 2
+    if (NIL_P(c)) return Qfalse;
+    if (NUM2LONG(c) < 0) return Qtrue;
+d84 5
+a88 1
+    if (NUM2LONG(c) <= 0) return Qtrue;
+d96 2
+a97 8
+    VALUE c = rb_funcall(x, cmp, 1, min);
+
+    if (NIL_P(c)) return Qfalse;
+    if (NUM2LONG(c) < 0) return Qfalse;
+
+    c = rb_funcall(x, cmp, 1, max);
+    if (NIL_P(c)) return Qfalse;
+    if (NUM2LONG(c) > 0) return Qfalse;
+@
+
+
+1.12
+log
+@* object.c (Init_Object): should do exact match for Module#==.
+
+* compar.c (cmp_eq): returns 'false' if <=> returns 'nil'.
+
+* compar.c (cmp_gt,cmp_ge,cmp_lt,cmp_le,cmp_between): ditto.
+
+* pack.c (pack_pack): should propagate taintedness.
+
+* pack.c (pack_unpack): ditto.
+
+* eval.c (rb_thread_schedule): need to preserve errno before
+  calling rb_trap_exec().
+
+* regex.c (calculate_must_string): a bug in charset/charset_not
+  parsing.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:17 $
+d25 1
+a25 1
+    if (NIL_P(c)) return Qnil;
+@
+
+
+1.11
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+a19 17
+cmp_eq(a)
+    VALUE *a;
+{
+    VALUE c = rb_funcall(a[0], cmp, 1, a[1]);
+    int t = NUM2INT(c);
+
+    if (t == 0) return Qtrue;
+    return Qfalse;
+}
+
+static VALUE
+cmp_failed()
+{
+    return Qfalse;
+}
+
+static VALUE
+d23 1
+a23 1
+    VALUE a[2];
+d25 3
+a27 4
+    if (x == y) return Qtrue;
+
+    a[0] = x; a[1] = y;
+    return rb_rescue(cmp_eq, (VALUE)a, cmp_failed, 0);
+a34 1
+    int t = NUM2INT(c);
+d36 2
+a37 1
+    if (t > 0) return Qtrue;
+a45 1
+    int t = NUM2INT(c);
+d47 2
+a48 1
+    if (t >= 0) return Qtrue;
+a56 1
+    int t = NUM2INT(c);
+d58 2
+a59 1
+    if (t < 0) return Qtrue;
+a67 1
+    int t = NUM2INT(c);
+d69 2
+a70 1
+    if (t <= 0) return Qtrue;
+d79 3
+a81 2
+    long t = NUM2LONG(c);
+    if (t < 0) return Qfalse;
+d84 2
+a85 2
+    t = NUM2LONG(c);
+    if (t > 0) return Qfalse;
+@
+
+
+1.10
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.9
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/12 05:37:19 $
+d45 1
+a45 2
+    return rb_rescue2(cmp_eq, (VALUE)a, cmp_failed, 0,
+		      rb_eStandardError, rb_eNameError, 0);
+@
+
+
+1.8
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/31 05:29:34 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/31 04:36:37 $
+a36 8
+cmp_eq2(a)
+    VALUE *a;
+{
+    return rb_rescue2(cmp_eq, (VALUE)a, cmp_failed, 0,
+		      rb_eStandardError, rb_eNameError, 0);
+}
+
+static VALUE
+d45 2
+a46 1
+    return rb_rescue2(cmp_eq2, (VALUE)a, cmp_failed, 0, rb_eScriptError, 0);
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:11 $
+d40 2
+a41 1
+    return rb_rescue(cmp_eq, (VALUE)a, cmp_failed, 0);
+d53 1
+a53 1
+    return rb_rescue2(cmp_eq2, (VALUE)a, rb_eScriptError, cmp_failed, 0);
+@
+
+
+1.5
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:57 $
+d37 7
+d52 1
+a52 1
+    return rb_rescue(cmp_eq, (VALUE)a, cmp_failed, 0);
+@
+
+
+1.4
+log
+@20000105
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 1999/09/16 09:40:31 $
+d11 1
+a11 1
+************************************************/
+@
+
+
+1.3
+log
+@1.4.1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.3.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:31 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:09 $
+d20 2
+a21 2
+cmp_eq(x, y)
+    VALUE x, y;
+d23 1
+a23 1
+    VALUE c = rb_funcall(x, cmp, 1, y);
+d31 18
+d110 1
+a110 1
+    rb_define_method(rb_mComparable, "==", cmp_eq, 1);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 09:19:05 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 1
+a15 1
+VALUE mComparable;
+d26 2
+a27 2
+    if (t == 0) return TRUE;
+    return FALSE;
+d37 2
+a38 2
+    if (t > 0) return TRUE;
+    return FALSE;
+d48 2
+a49 2
+    if (t >= 0) return TRUE;
+    return FALSE;
+d59 2
+a60 2
+    if (t < 0) return TRUE;
+    return FALSE;
+d70 2
+a71 2
+    if (t <= 0) return TRUE;
+    return FALSE;
+d79 2
+a80 2
+    int t = NUM2INT(c);
+    if (t < 0) return FALSE;
+d83 3
+a85 3
+    t = NUM2INT(c);
+    if (t > 0) return FALSE;
+    return TRUE;
+d91 7
+a97 7
+    mComparable = rb_define_module("Comparable");
+    rb_define_method(mComparable, "==", cmp_eq, 1);
+    rb_define_method(mComparable, ">", cmp_gt, 1);
+    rb_define_method(mComparable, ">=", cmp_ge, 1);
+    rb_define_method(mComparable, "<", cmp_lt, 1);
+    rb_define_method(mComparable, "<=", cmp_le, 1);
+    rb_define_method(mComparable, "between?", cmp_between, 2);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:34 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d15 1
+a15 1
+VALUE rb_mComparable;
+d26 2
+a27 2
+    if (t == 0) return Qtrue;
+    return Qfalse;
+d37 2
+a38 2
+    if (t > 0) return Qtrue;
+    return Qfalse;
+d48 2
+a49 2
+    if (t >= 0) return Qtrue;
+    return Qfalse;
+d59 2
+a60 2
+    if (t < 0) return Qtrue;
+    return Qfalse;
+d70 2
+a71 2
+    if (t <= 0) return Qtrue;
+    return Qfalse;
+d79 2
+a80 2
+    long t = NUM2LONG(c);
+    if (t < 0) return Qfalse;
+d83 3
+a85 3
+    t = NUM2LONG(c);
+    if (t > 0) return Qfalse;
+    return Qtrue;
+d91 7
+a97 7
+    rb_mComparable = rb_define_module("Comparable");
+    rb_define_method(rb_mComparable, "==", cmp_eq, 1);
+    rb_define_method(rb_mComparable, ">", cmp_gt, 1);
+    rb_define_method(rb_mComparable, ">=", cmp_ge, 1);
+    rb_define_method(rb_mComparable, "<", cmp_lt, 1);
+    rb_define_method(rb_mComparable, "<=", cmp_le, 1);
+    rb_define_method(rb_mComparable, "between?", cmp_between, 2);
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:56 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.1.4.2
+log
+@wait
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+d79 1
+a79 1
+    long t = NUM2LONG(c);
+d83 1
+a83 1
+    t = NUM2LONG(c);
+@
+
+
+1.1.1.1.4.2.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/08 07:16:54 $
+d15 1
+a15 1
+VALUE rb_mComparable;
+d26 2
+a27 2
+    if (t == 0) return Qtrue;
+    return Qfalse;
+d37 2
+a38 2
+    if (t > 0) return Qtrue;
+    return Qfalse;
+d48 2
+a49 2
+    if (t >= 0) return Qtrue;
+    return Qfalse;
+d59 2
+a60 2
+    if (t < 0) return Qtrue;
+    return Qfalse;
+d70 2
+a71 2
+    if (t <= 0) return Qtrue;
+    return Qfalse;
+d80 1
+a80 1
+    if (t < 0) return Qfalse;
+d84 2
+a85 2
+    if (t > 0) return Qfalse;
+    return Qtrue;
+d91 7
+a97 7
+    rb_mComparable = rb_define_module("Comparable");
+    rb_define_method(rb_mComparable, "==", cmp_eq, 1);
+    rb_define_method(rb_mComparable, ">", cmp_gt, 1);
+    rb_define_method(rb_mComparable, ">=", cmp_ge, 1);
+    rb_define_method(rb_mComparable, "<", cmp_lt, 1);
+    rb_define_method(rb_mComparable, "<=", cmp_le, 1);
+    rb_define_method(rb_mComparable, "between?", cmp_between, 2);
+@

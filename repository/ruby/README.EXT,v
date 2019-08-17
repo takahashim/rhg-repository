@@ -1,0 +1,5204 @@
+head	1.13;
+access;
+symbols
+	v1_6_7:1.10.2.2
+	v1_6_6:1.10.2.2
+	v1_6_5:1.10.2.1
+	v1_6_4:1.10.2.1
+	v1_7_1:1.11
+	v1_6_4_preview4:1.10.2.1
+	v1_6_4_preview3:1.10.2.1
+	v1_6_4_preview2:1.10
+	v1_6_4_preview1:1.10
+	v1_6_3:1.10
+	ruby_m17n:1.10.0.4
+	ruby_1_6:1.10.0.2
+	v1_6_2:1.10
+	v1_6_1:1.9
+	v1_6_0:1.9
+	v1_4_6:1.5.2.1
+	v1_4_5:1.5.2.1
+	v1_4_4:1.5
+	ruby_1_4_3:1.5
+	ruby1_4_3:1.5
+	v1_4_3:1.5
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.5
+	ruby_1_4:1.5.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.7
+	v1_3_6_repack:1.1.1.2.2.6
+	v1_3_6:1.1.1.2.2.6
+	v1_3_5:1.1.1.2.2.6
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2.2.6
+	v1_3_4_990624:1.1.1.2.2.6
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2.2.6
+	v1_3_4_990531:1.1.1.2.2.6
+	v1_3_3_990518:1.1.1.2.2.6
+	v1_3_3_990513:1.1.1.2.2.6
+	v1_3_3_990507:1.1.1.2.2.6
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2.2.4
+	v1_3_1_990224:1.1.1.2.2.4
+	v1_3_1_990215:1.1.1.2.2.4
+	v1_3_1_990212:1.1.1.2.2.4
+	v1_3_1_990210:1.1.1.2.2.4
+	v1_3_1_:1.1.1.2.2.4
+	v1_3_1_990209:1.1.1.2.2.3
+	v1_3_1_990205:1.1.1.2.2.2
+	v1_3_1_990203:1.1.1.2.2.2
+	v1_3_1_990201:1.1.1.2.2.2
+	v1_3_1"_990201:1.1.1.2.2.2
+	v1_3_1_990128:1.1.1.2.2.1
+	v1_3_1_990127:1.1.1.2.2.1
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2.2.2
+	v1_1d0:1.1.1.1.4.2.2.2
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2.2.1
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.2
+	v1_1b9_27:1.1.1.1.4.2
+	v1_1b9_26:1.1.1.1.4.2
+	r1_1b9_25:1.1.1.1.4.2
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.13
+date	2002.10.23.08.20.35;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.11.29.15.29.03;	author usa;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.05.10.18.35.33;	author knu;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.10.05.09.57.00;	author matz;	state Exp;
+branches
+	1.10.2.1;
+next	1.9;
+
+1.9
+date	2000.07.10.04.49.09;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.07.07.03.20.51;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.01.09.41.10;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.06.04.15.29;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.12.04.53.32;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	99.10.04.04.51.04;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.52;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.01;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.21;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.01.07.34.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.02.09.06.08.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.02.10.08.44.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.03.24.08.52.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.04.09.17.57.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.08.06.06.48.01;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.05.14.04.10.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.06.11.10.02.52;	author matz;	state Exp;
+branches
+	1.1.1.1.4.2.2.1;
+next	;
+
+1.1.1.1.4.2.2.1
+date	98.09.08.07.08.26;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2.2.2;
+
+1.1.1.1.4.2.2.2
+date	98.12.16.07.30.28;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2000.05.01.09.42.17;	author matz;	state Exp;
+branches;
+next	;
+
+1.10.2.1
+date	2001.05.10.18.38.11;	author knu;	state Exp;
+branches;
+next	1.10.2.2;
+
+1.10.2.2
+date	2001.11.29.15.30.54;	author usa;	state Exp;
+branches;
+next	1.10.2.3;
+
+1.10.2.3
+date	2002.10.23.08.19.22;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@README.EXT: grammer updates by Simon Cozens.
+@
+text
+@.\" README.EXT -  -*- Text -*- created at: Mon Aug  7 16:45:54 JST 1995
+
+This document explains how to make extension libraries for Ruby.
+
+1. Basic knowledge
+
+In C, variables have types and data do not have types.  In contrast,
+Ruby variables do not have a static type, and data themselves have
+types, so data will need to be converted between the languages.
+
+Data in Ruby are represented by C type `VALUE'.  Each VALUE data has
+its data-type.
+
+To retrieve C data from a VALUE, you need to:
+
+ (1) Identify the VALUE's data type
+ (2) Convert the VALUE into C data
+
+Converting to the wrong data type may cause serious problems.
+
+
+1.1 Data-types
+
+The Ruby interpreter has the following data types:
+
+	T_NIL		nil
+	T_OBJECT	ordinary object
+	T_CLASS		class
+	T_MODULE	module
+	T_FLOAT		floating point number
+	T_STRING	string
+	T_REGEXP	regular expression
+	T_ARRAY		array
+	T_FIXNUM	Fixnum(31bit integer)
+	T_HASH		associative array
+	T_STRUCT	(Ruby) structure
+	T_BIGNUM	multi precision integer
+	T_TRUE		true
+	T_FALSE		false
+	T_DATA		data
+	T_SYMBOL        symbol
+
+In addition, there are several other types used internally:
+
+	T_ICLASS
+	T_MATCH
+	T_UNDEF
+	T_VARMAP
+	T_SCOPE
+	T_NODE
+
+Most of the types are represented by C structures.
+
+1.2 Check Data Type of the VALUE
+
+The macro TYPE() defined in ruby.h shows the data type of the VALUE.
+TYPE() returns the constant number T_XXXX described above.  To handle
+data types, your code will look something like this:
+
+  switch (TYPE(obj)) {
+    case T_FIXNUM:
+      /* process Fixnum */
+      break;
+    case T_STRING:
+      /* process String */
+      break;
+    case T_ARRAY:
+      /* process Array */
+      break;
+    default:
+      /* raise exception */
+      rb_raise(rb_eTypeError, "not valid value");
+      break;
+  }
+
+There is the data-type check function
+
+  void Check_Type(VALUE value, int type)
+
+which raises an exception if the VALUE does not have the type specified.
+
+There are also faster check macros for fixnums and nil.
+
+  FIXNUM_P(obj)
+  NIL_P(obj)
+
+1.3 Convert VALUE into C data
+
+The data for type T_NIL, T_FALSE, T_TRUE are nil, true, false
+respectively.  They are singletons for the data type.
+
+The T_FIXNUM data is a 31bit length fixed integer (63bit length on
+some machines), which can be convert to a C integer by using the
+FIX2INT() macro.  There is also NUM2INT() which converts any Ruby
+numbers into C integers.  The NUM2INT() macro includes a type check, so
+an exception will be raised if the conversion failed.
+
+Other data types have corresponding C structures, e.g. struct RArray
+for T_ARRAY etc. The VALUE of the type which has corresponding structure
+can be cast to retrieve the pointer to the struct.  The casting macro
+will be of the form RXXXX for each data type; for instance, RARRAY(obj). 
+See "ruby.h".
+
+For example, `RSTRING(size)->len' is the way to get the size of the
+Ruby String object.  The allocated region can be accessed by
+`RSTRING(str)->ptr'.  For arrays, use `RARRAY(ary)->len' and
+`RARRAY(ary)->ptr' respectively.
+
+Notice: Do not change the value of the structure directly, unless you
+are responsible for the result.  This ends up being the cause of interesting
+bugs.
+
+1.4 Convert C data into VALUE
+
+To convert C data to Ruby values:
+
+  * FIXNUM
+
+    left shift 1 bit, and turn on LSB.
+
+  * Other pointer values
+
+    cast to VALUE.
+
+You can determine whether a VALUE is pointer or not by checking its LSB.  
+
+Notice Ruby does not allow arbitrary pointer values to be a VALUE.  They
+should be pointers to the structures which Ruby knows about.  The known
+structures are defined in <ruby.h>.
+
+To convert C numbers to Ruby values, use these macros.
+
+  INT2FIX()	for integers within 31bits.
+  INT2NUM()	for arbitrary sized integer.
+
+INT2NUM() converts an integer into a Bignum if it is out of the FIXNUM
+range, but is a bit slower.
+
+1.5 Manipulating Ruby data
+
+As I already mentioned, it is not recommended to modify an object's internal
+structure.  To manipulate objects, use the functions supplied by the Ruby
+interpreter. Some (not all) of the useful functions are listed below:
+
+ String functions
+
+  rb_str_new(const char *ptr, long len)
+
+    Creates a new Ruby string.
+
+  rb_str_new2(const char *ptr)
+
+    Creates a new Ruby string from a C string.  This is equivalent to
+    rb_str_new(ptr, strlen(ptr)).
+
+  rb_tainted_str_new(const char *ptr, long len)
+
+    Creates a new tainted Ruby string.  Strings from external data
+    sources should be tainted.
+
+  rb_tainted_str_new2(const char *ptr)
+
+    Creates a new tainted Ruby string from a C string.
+
+  rb_str_cat(VALUE str, const char *ptr, long len)
+
+    Appends len bytes of data from ptr to the Ruby string.
+
+ Array functions
+
+  rb_ary_new()
+
+    Creates an array with no elements.
+
+  rb_ary_new2(long len)
+
+    Creates an array with no elements, allocating internal buffer
+    for len elements.
+
+  rb_ary_new3(long n, ...)
+
+    Creates an n-element array from the arguments.
+
+  rb_ary_new4(long n, VALUE *elts)
+
+    Creates an n-element array from a C array.
+
+  rb_ary_push(VALUE ary, VALUE val)
+  rb_ary_pop(VALUE ary)
+  rb_ary_shift(VALUE ary)
+  rb_ary_unshift(VALUE ary, VALUE val)
+
+    Array operations.  The first argument to each functions must be an 
+    array.  They may dump core if other types given.
+
+2. Extending Ruby with C
+
+2.1 Addding new features to Ruby
+
+You can add new features (classes, methods, etc.) to the Ruby
+interpreter.  Ruby provides APIs for defining the following things:
+
+ * Classes, Modules
+ * Methods, Singleton Methods
+ * Constants
+
+2.1.1 Class/module definition
+
+To define a class or module, use the functions below:
+
+  VALUE rb_define_class(const char *name, VALUE super)
+  VALUE rb_define_module(const char *name)
+
+These functions return the newly created class or module.  You may
+want to save this reference into a variable to use later.
+
+To define nested classes or modules, use the functions below:
+
+  VALUE rb_define_class_under(VALUE outer, const char *name, VALUE super)
+  VALUE rb_define_module_under(VALUE outer, const char *name)
+
+2.1.2 Method/singleton method definition
+
+To define methods or singleton methods, use these functions:
+
+  void rb_define_method(VALUE klass, const char *name, 
+		        VALUE (*func)(), int argc)
+
+  void rb_define_singleton_method(VALUE object, const char *name, 
+			          VALUE (*func)(), int argc)
+
+The `argc' represents the number of the arguments to the C function,
+which must be less than 17.  But I believe you don't need that much. :-)
+
+If `argc' is negative, it specifies the calling sequence, not number of
+the arguments.  
+
+If argc is -1, the function will be called as:
+
+  VALUE func(int argc, VALUE *argv, VALUE obj)
+
+where argc is the actual number of arguments, argv is the C array of
+the arguments, and obj is the receiver.
+
+If argc is -2, the arguments are passed in a Ruby array. The function
+will be called like:
+
+  VALUE func(VALUE obj, VALUE args)
+
+where obj is the receiver, and args is the Ruby array containing
+actual arguments.
+
+There are two more functions to define methods.  One is to define
+private methods:
+
+  void rb_define_private_method(VALUE klass, const char *name, 
+			        VALUE (*func)(), int argc)
+
+The other is to define module functions, which are private AND singleton
+methods of the module.  For example, sqrt is the module function
+defined in Math module.  It can be call in the form like:
+
+  Math.sqrt(4)
+
+or
+
+  include Math
+  sqrt(4)
+
+To define module functions, use:
+
+  void rb_define_module_function(VALUE module, const char *name, 
+				 VALUE (*func)(), int argc)
+
+Oh, in addition, function-like methods, which are private methods defined
+in the Kernel module, can be defined using:
+
+  void rb_define_global_function(const char *name, VALUE (*func)(), int argc)
+
+To define alias to the method,
+
+  void rb_define_alias(VALUE module, const char* new, const char* old);
+
+2.1.3 Constant definition
+
+We have 2 functions to define constants:
+
+  void rb_define_const(VALUE klass, const char *name, VALUE val)
+  void rb_define_global_const(const char *name, VALUE val)
+
+The former is to define a constant under specified class/module.  The
+latter is to define a global constant.
+
+2.2 Use Ruby features from C
+
+There are several ways to invoke Ruby's features from C code.
+
+2.2.1 Evaluate Ruby Programs in a String
+
+The easiest way to use Ruby's functionality from a C program is to
+evaluate the string as Ruby program.  This function will do the job.
+
+  VALUE rb_eval_string(const char *str)
+
+Evaluation is done under the current context, thus current local variables
+of the innermost method (which is defined by Ruby) can be accessed.
+
+2.2.2 ID or Symbol
+
+You can invoke methods directly, without parsing the string.  First I
+need to explain about symbols (whose data type is ID).  ID is the
+integer number to represent Ruby's identifiers such as variable names.
+It can be accessed from Ruby in the form:
+
+ :Identifier
+
+You can get the symbol value from a string within C code by using
+
+  rb_intern(const char *name)
+
+2.2.3 Invoke Ruby method from C
+
+To invoke methods directly, you can use the function below
+
+  VALUE rb_funcall(VALUE recv, ID mid, int argc, ...)
+
+This function invokes a method on the recv, with the method name
+specified by the symbol mid.
+
+2.2.4 Accessing the variables and constants
+
+You can access class variables and instance variables using access
+functions.  Also, global variables can be shared between both environments.
+There's no way to access Ruby's local variables.
+
+The functions to access/modify instance variables are below:
+
+  VALUE rb_ivar_get(VALUE obj, ID id)
+  VALUE rb_ivar_set(VALUE obj, ID id, VALUE val)
+
+id must be the symbol, which can be retrieved by rb_intern().
+
+To access the constants of the class/module:
+
+  VALUE rb_const_get(VALUE obj, ID id)
+
+See 2.1.3 for defining new constant.
+
+3. Information sharing between Ruby and C
+
+3.1 Ruby constants that C can be accessed from C
+
+The following Ruby constants can be referred from C.
+
+  Qtrue
+  Qfalse
+
+Boolean values.  Qfalse is false in C also (i.e. 0).
+
+  Qnil
+
+Ruby nil in C scope.
+
+3.2 Global variables shared between C and Ruby
+
+Information can be shared between the two environments using shared global
+variables.  To define them, you can use functions listed below:
+
+  void rb_define_variable(const char *name, VALUE *var)
+
+This function defines the variable which is shared by both environments.
+The value of the global variable pointed to by `var' can be accessed
+through Ruby's global variable named `name'.
+
+You can define read-only (from Ruby, of course) variables using the
+function below.
+
+  void rb_define_readonly_variable(const char *name, VALUE *var)
+
+You can defined hooked variables.  The accessor functions (getter and
+setter) are called on access to the hooked variables.
+
+  void rb_define_hooked_variable(constchar *name, VALUE *var,
+				 VALUE (*getter)(), void (*setter)())
+
+If you need to supply either setter or getter, just supply 0 for the
+hook you don't need.  If both hooks are 0, rb_define_hooked_variable()
+works just like rb_define_variable().
+
+  void rb_define_virtual_variable(const char *name,
+				  VALUE (*getter)(), void (*setter)())
+
+This function defines a Ruby global variable without a corresponding C
+variable.  The value of the variable will be set/get only by hooks.
+
+The prototypes of the getter and setter functions are as follows:
+
+  (*getter)(ID id, void *data, struct global_entry* entry);
+  (*setter)(VALUE val, ID id, void *data, struct global_entry* entry);
+
+3.3 Encapsulate C data into Ruby object
+
+To wrap and objectify a C pointer as a Ruby object (so called
+DATA), use Data_Wrap_Struct().
+
+  Data_Wrap_Struct(klass, mark, free, ptr)
+
+Data_Wrap_Struct() returns a created DATA object.  The klass argument
+is the class for the DATA object.  The mark argument is the function
+to mark Ruby objects pointed by this data.  The free argument is the
+function to free the pointer allocation.  The functions mark and
+free will be called from garbage collector.
+
+You can allocate and wrap the structure in one step.
+
+  Data_Make_Struct(klass, type, mark, free, sval)
+
+This macro returns an allocated Data object, wrapping the pointer to
+the structure, which is also allocated.  This macro works like:
+
+  (sval = ALLOC(type), Data_Wrap_Struct(klass, mark, free, sval))
+
+Arguments klass, mark, and free work like their counterparts in
+Data_Wrap_Struct().  A pointer to the allocated structure will be
+assigned to sval, which should be a pointer of the type specified.
+
+To retrieve the C pointer from the Data object, use the macro
+Data_Get_Struct().
+
+  Data_Get_Struct(obj, type, sval)
+
+A pointer to the structure will be assigned to the variable sval.
+
+See the example below for details. 
+
+4. Example - Creating dbm extension
+
+OK, here's the example of making an extension library.  This is the
+extension to access DBMs.  The full source is included in the ext/
+directory in the Ruby's source tree.
+
+(1) make the directory
+
+  % mkdir ext/dbm
+
+Make a directory for the extension library under ext directory.
+
+(2) create MANIFEST file
+
+  % cd ext/dbm
+  % touch MANIFEST
+
+There should be MANIFEST file in the directory for the extension
+library.  Make an empty file for now.
+
+(3) design the library
+
+You need to design the library features, before making it.
+
+(4) write C code.
+
+You need to write C code for your extension library.  If your library
+has only one source file, choosing ``LIBRARY.c'' as a file name is
+preferred.  On the other hand, in case your library has multiple source
+files, avoid choosing ``LIBRARY.c'' for a file name.  It may conflict
+with an intermediate file ``LIBRARY.o'' on some platforms.
+
+Ruby will execute the initializing function named ``Init_LIBRARY'' in
+the library.  For example, ``Init_dbm()'' will be executed when loading
+the library.
+
+Here's the example of an initializing function.
+
+--
+Init_dbm()
+{
+    /* define DBM class */
+    cDBM = rb_define_class("DBM", rb_cObject);
+    /* DBM includes Enumerate module */
+    rb_include_module(cDBM, rb_mEnumerable);
+
+    /* DBM has class method open(): arguments are received as C array */
+    rb_define_singleton_method(cDBM, "open", fdbm_s_open, -1);
+
+    /* DBM instance method close(): no args */
+    rb_define_method(cDBM, "close", fdbm_close, 0);
+    /* DBM instance method []: 1 argument */
+    rb_define_method(cDBM, "[]", fdbm_fetch, 1);
+		:
+
+}
+--
+
+The dbm extension wraps the dbm struct in the C environment using 
+Data_Make_Struct.
+
+--
+struct dbmdata {
+    int  di_size;
+    DBM *di_dbm;
+};
+
+
+obj = Data_Make_Struct(klass, struct dbmdata, 0, free_dbm, dbmp);
+--
+
+This code wraps the dbmdata structure into a Ruby object.  We avoid wrapping
+DBM* directly, because we want to cache size information.
+
+To retrieve the dbmdata structure from a Ruby object, we define the
+following macro:
+
+--
+#define GetDBM(obj, dbmp) {\
+    Data_Get_Struct(obj, struct dbmdata, dbmp);\
+    if (dbmp->di_dbm == 0) closed_dbm();\
+}
+--
+
+This sort of complicated macro does the retrieving and close checking for
+the DBM.
+
+There are three kinds of way to receive method arguments.  First,
+methods with a fixed number of arguments receive arguments like this:
+
+--
+static VALUE
+fdbm_delete(obj, keystr)
+    VALUE obj, keystr;
+{
+	:
+}
+--
+
+The first argument of the C function is the self, the rest are the
+arguments to the method.
+
+Second, methods with an arbitrary number of arguments receive
+arguments like this:
+
+--
+static VALUE
+fdbm_s_open(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+	:
+    if (rb_scan_args(argc, argv, "11", &file, &vmode) == 1) {
+	mode = 0666;		/* default value */
+    }
+	:
+}
+--
+
+The first argument is the number of method arguments, the second
+argument is the C array of the method arguments, and the third
+argument is the receiver of the method.
+
+You can use the function rb_scan_args() to check and retrieve the
+arguments.  For example, "11" means that the method requires at least one
+argument, and at most receives two arguments.
+
+Methods with an arbitrary number of arguments can receive arguments
+by Ruby's array, like this:
+
+--
+static VALUE
+fdbm_indexes(obj, args)
+    VALUE obj, args;
+{
+	:
+}
+--
+
+The first argument is the receiver, the second one is the Ruby array
+which contains the arguments to the method.
+
+** Notice
+
+GC should know about global variables which refer to Ruby's objects, but
+are not exported to the Ruby world.  You need to protect them by
+
+  void rb_global_variable(VALUE *var)
+
+(5) prepare extconf.rb
+
+If the file named extconf.rb exists, it will be executed to generate
+Makefile.  If not, the compilation scheme will try to generate Makefile
+anyway.
+
+extconf.rb is the file for check compilation conditions etc.  You
+need to put
+
+  require 'mkmf'
+
+at the top of the file.  You can use the functions below to check
+various conditions.
+
+  have_library(lib, func): check whether library containing function exists.
+  have_func(func, header): check whether function exists
+  have_header(header): check whether header file exists
+  create_makefile(target): generate Makefile
+
+The value of the variables below will affect the Makefile.
+
+  $CFLAGS: included in CFLAGS make variable (such as -I)
+  $LDFLAGS: included in LDFLAGS make variable (such as -L)
+
+If a compilation condition is not fulfilled, you should not call
+``create_makefile''.  The Makefile will not generated, compilation will
+not be done.
+
+(6) prepare depend (optional)
+
+If the file named depend exists, Makefile will include that file to
+check dependencies.  You can make this file by invoking
+
+  % gcc -MM *.c > depend
+
+It's no harm.  Prepare it.
+
+(7) put file names into MANIFEST (optional)
+
+  % find * -type f -print > MANIFEST
+  % vi MANIFEST
+
+Append file names into MANIFEST.  The compilation scheme requires
+MANIFEST only to exist, but it's better to take this step in order
+to distinguish which files are required.
+
+(8) generate Makefile
+
+Try generating the Makefile by:
+
+  ruby extconf.rb
+
+You don't need this step if you put the extension library under the ext
+directory of the ruby source tree.  In that case, compilation of the
+interpreter will do this step for you.
+
+(9) make
+
+Type
+
+  make
+
+to compile your extension.  You don't need this step either if you have
+put extension library under the ext directory of the ruby source tree.
+
+(9) debug
+
+You may need to rb_debug the extension.  Extensions can be linked
+statically by the adding directory name in the ext/Setup file so that
+you can inspect the extension with the debugger.
+
+(10) done, now you have the extension library
+
+You can do anything you want with your library.  The author of Ruby
+will not claim any restrictions on your code depending on the Ruby API.
+Feel free to use, modify, distribute or sell your program.
+
+Appendix A. Ruby source files overview
+
+ruby language core
+
+  class.c
+  error.c
+  eval.c
+  gc.c
+  object.c
+  parse.y
+  variable.c
+
+utility functions
+
+  dln.c
+  regex.c
+  st.c
+  util.c
+
+ruby interpreter implementation
+
+  dmyext.c
+  inits.c
+  main.c
+  ruby.c
+  version.c
+
+class library
+
+  array.c
+  bignum.c
+  compar.c
+  dir.c
+  enum.c
+  file.c
+  hash.c
+  io.c
+  marshal.c
+  math.c
+  numeric.c
+  pack.c
+  prec.c
+  process.c
+  random.c
+  range.c
+  re.c
+  signal.c
+  sprintf.c
+  string.c
+  struct.c
+  time.c
+
+Appendix B. Ruby extension API reference
+
+** Types
+
+ VALUE
+
+The type for the Ruby object.  Actual structures are defined in ruby.h,
+such as struct RString, etc.  To refer the values in structures, use
+casting macros like RSTRING(obj).
+
+** Variables and constants
+
+ Qnil
+
+const: nil object
+
+ Qtrue
+
+const: true object(default true value)
+
+ Qfalse
+
+const: false object
+
+** C pointer wrapping
+
+ Data_Wrap_Struct(VALUE klass, void (*mark)(), void (*free)(), void *sval)
+
+Wrap a C pointer into a Ruby object.  If object has references to other
+Ruby objects, they should be marked by using the mark function during
+the GC process.  Otherwise, mark should be 0.  When this object is no
+longer referred by anywhere, the pointer will be discarded by free
+function.
+
+ Data_Make_Struct(klass, type, mark, free, sval)
+
+This macro allocates memory using malloc(), assigns it to the variable
+sval, and returns the DATA encapsulating the pointer to memory region.
+
+ Data_Get_Struct(data, type, sval)
+
+This macro retrieves the pointer value from DATA, and assigns it to
+the variable sval. 
+
+** defining class/module
+
+ VALUE rb_define_class(const char *name, VALUE super)
+
+Defines a new Ruby class as a subclass of super.
+
+ VALUE rb_define_class_under(VALUE module, const char *name, VALUE super)
+
+Creates a new Ruby class as a subclass of super, under the module's
+namespace.
+
+ VALUE rb_define_module(const char *name)
+
+Defines a new Ruby module.
+
+ VALUE rb_define_module_under(VALUE module, const char *name, VALUE super)
+
+Defines a new Ruby module under the module's namespace.
+
+ void rb_include_module(VALUE klass, VALUE module)
+
+Includes module into class.  If class already includes it, just
+ignored.
+
+ void rb_extend_object(VALUE object, VALUE module)
+
+Extend the object with the module's attributes.
+
+** Defining Global Variables
+
+ void rb_define_variable(const char *name, VALUE *var)
+
+Defines a global variable which is shared between C and Ruby.  If name
+contains a character which is not allowed to be part of the symbol,
+it can't be seen from Ruby programs.
+
+ void rb_define_readonly_variable(const char *name, VALUE *var)
+
+Defines a read-only global variable.  Works just like
+rb_define_variable(), except defined variable is read-only.
+
+ void rb_define_virtual_variable(const char *name,
+				 VALUE (*getter)(), VALUE (*setter)())
+
+Defines a virtual variable, whose behavior is defined by a pair of C
+functions.  The getter function is called when the variable is
+referred.  The setter function is called when the value is set to the
+variable.  The prototype for getter/setter functions are:
+
+	VALUE getter(ID id)
+	void setter(VALUE val, ID id)
+
+The getter function must return the value for the access.
+
+ void rb_define_hooked_variable(const char *name, VALUE *var,
+				VALUE (*getter)(), VALUE (*setter)())
+
+Defines hooked variable.  It's a virtual variable with a C variable.  
+The getter is called as
+
+	VALUE getter(ID id, VALUE *var)
+
+returning a new value.  The setter is called as
+
+	void setter(VALUE val, ID id, VALUE *var)
+
+GC requires C global variables which hold Ruby values to be marked.
+
+ void rb_global_variable(VALUE *var)
+
+Tells GC to protect these variables.
+
+** Constant Definition
+
+ void rb_define_const(VALUE klass, const char *name, VALUE val)
+
+Defines a new constant under the class/module.
+
+ void rb_define_global_const(const char *name, VALUE val)
+
+Defines a global constant.  This is just the same as
+
+     rb_define_const(cKernal, name, val)
+
+** Method Definition
+
+ rb_define_method(VALUE klass, const char *name, VALUE (*func)(), int argc)
+
+Defines a method for the class.  func is the function pointer.  argc
+is the number of arguments.  if argc is -1, the function will receive
+3 arguments: argc, argv, and self.  if argc is -2, the function will
+receive 2 arguments, self and args, where args is a Ruby array of
+the method arguments.
+
+ rb_define_private_method(VALUE klass, const char *name, VALUE (*func)(), int argc)
+
+Defines a private method for the class.  Arguments are same as
+rb_define_method().
+
+ rb_define_singleton_method(VALUE klass, const char *name, VALUE (*func)(), int argc)
+
+Defines a singleton method.  Arguments are same as rb_define_method().
+
+ rb_scan_args(int argc, VALUE *argv, const char *fmt, ...)
+
+Retrieve argument from argc, argv.  The fmt is the format string for
+the arguments, such as "12" for 1 non-optional argument, 2 optional
+arguments.  If `*' appears at the end of fmt, it means the rest of
+the arguments are assigned to the corresponding variable, packed in
+an array.
+
+** Invoking Ruby method
+
+ VALUE rb_funcall(VALUE recv, ID mid, int narg, ...)
+
+Invokes a method.  To retrieve mid from a method name, use rb_intern().
+
+ VALUE rb_funcall2(VALUE recv, ID mid, int argc, VALUE *argv)
+
+Invokes a method, passing arguments by an array of values.
+
+ VALUE rb_eval_string(const char *str)
+
+Compiles and executes the string as a Ruby program.
+
+ ID rb_intern(const char *name)
+
+Returns ID corresponding to the name.
+
+ char *rb_id2name(ID id)
+
+Returns the name corresponding ID.
+
+ char *rb_class2name(VALUE klass)
+
+Returns the name of the class.
+
+ int rb_respond_to(VALUE object, ID id)
+
+Returns true if the object responds to the message specified by id.
+
+** Instance Variables
+
+ VALUE rb_iv_get(VALUE obj, const char *name)
+
+Retrieve the value of the instance variable.  If the name is not
+prefixed by `@@', that variable shall be inaccessible from Ruby.
+
+ VALUE rb_iv_set(VALUE obj, const char *name, VALUE val)
+
+Sets the value of the instance variable.
+
+** Control Structure
+
+ VALUE rb_iterate(VALUE (*func1)(), void *arg1, VALUE (*func2)(), void *arg2)
+
+Calls the function func1, supplying func2 as the block.  func1 will be
+called with the argument arg1.  func2 receives the value from yield as
+the first argument, arg2 as the second argument.
+ 
+ VALUE rb_yield(VALUE val)
+
+Evaluates the block with value val.
+
+ VALUE rb_rescue(VALUE (*func1)(), void *arg1, VALUE (*func2)(), void *arg2)
+
+Calls the function func1, with arg1 as the argument.  If an exception
+occurs during func1, it calls func2 with arg2 as the argument.  The
+return value of rb_rescue() is the return value from func1 if no
+exception occurs, from func2 otherwise.
+
+ VALUE rb_ensure(VALUE (*func1)(), void *arg1, void (*func2)(), void *arg2)
+
+Calls the function func1 with arg1 as the argument, then calls func2
+with arg2 if execution terminated.  The return value from
+rb_ensure() is that of func1.
+
+** Exceptions and Errors
+
+ void rb_warn(const char *fmt, ...)
+
+Prints a warning message according to a printf-like format.
+
+ void rb_warning(const char *fmt, ...)
+
+Prints a warning message according to a printf-like format, if
+$VERBOSE is true.
+
+ void rb_raise(VALUE exception, const char *fmt, ...)
+
+Raises a class exception.  The fmt is a format string just like printf().
+
+ void rb_fatal(const char *fmt, ...)
+
+Raises a fatal error, terminates the interpreter.  No exception handling
+will be done for fatal errors, but ensure blocks will be executed.
+
+ void rb_bug(const char *fmt, ...)
+
+Terminates the interpreter immediately.  This function should be
+called under the situation caused by the bug in the interpreter.  No
+exception handling nor ensure execution will be done.
+
+** Initialize and Starts the Interpreter
+
+The embedding API functions are below (not needed for extension libraries):
+
+ void ruby_init()
+
+Initializes the interpreter.
+
+ void ruby_options(int argc, char **argv)
+
+Process command line arguments for the interpreter.
+
+ void ruby_run()
+
+Starts execution of the interpreter.
+
+ void ruby_script(char *name)
+
+Specifies the name of the script ($0).
+
+Appendix C. Functions Available in extconf.rb
+
+These functions are available in extconf.rb:
+
+ have_library(lib, func)
+
+Checks whether the library exists, containing the specified function.
+Returns true if the library exists.
+
+ find_library(lib, func, path...)
+
+Checks whether a library which contains the specified function exists in
+path.  Returns true if the library exists.
+
+ have_func(func, header)
+
+Checks whether func exists with header.  Returns true if the function
+exists.  To check functions in an additional library, you need to
+check that library first using have_library().
+
+ have_header(header)
+
+Checks whether header exists.  Returns true if the header file exists.
+
+ create_makefile(target)
+
+Generates the Makefile for the extension library.  If you don't invoke
+this method, the compilation will not be done.
+
+ with_config(withval[, default=nil])
+
+Parses the command line options and returns the value specified by
+--with-<withval>.
+
+ dir_config(target[, default_dir])
+ dir_config(target[, default_include, default_lib])
+
+Parses the command line options and adds the directories specified by
+--with-<target>-dir, --with-<target>-include, and/or --with-<target>-lib
+to $CFLAGS and/or $LDFLAGS.  --with-<target>-dir=/path is equivalent to
+--with-<target>-include=/path/include --with-<target>-lib=/path/lib.
+Returns an array of the added directories ([include_dir, lib_dir]).
+
+/*
+ * Local variables:
+ * fill-column: 70
+ * end:
+ */
+@
+
+
+1.12
+log
+@* README.EXT: Appendix B is duplicated.
+* README.EXT.ja: ditto.
+@
+text
+@d8 2
+a9 2
+Ruby variables do not have static type and data themselves have
+types.  So, data need to be converted across the languages.
+d11 2
+a12 2
+Data in Ruby represented C type `VALUE'.  Each VALUE data have its
+data-type.
+d14 1
+a14 1
+To retrieve an C data from the VALUE, you need to:
+d16 2
+a17 2
+ (1) Identify VALUE's data type
+ (2) Convert VALUE into C data
+d19 1
+a19 1
+Converting to wrong data type may cause serious problems.
+d24 1
+a24 1
+Ruby interpreter has data-types as below:
+d43 1
+a43 1
+Otherwise, there are several other types used internally:
+d56 1
+a56 1
+The macro TYPE() defined in ruby.h shows data-type of the VALUE.
+d58 1
+a58 1
+data-types, the code will be like:
+d76 1
+a76 1
+There is the data-type check function.
+d80 1
+a80 1
+It raises an exception, if the VALUE does not have the type specified.
+d82 1
+a82 1
+There are faster check-macros for fixnums and nil.
+d92 5
+a96 5
+The T_FIXNUM data is the 31bit length fixed integer (63bit length on
+some machines), which can be convert to the C integer by using
+FIX2INT() macro.  There also be NUM2INT() which converts any Ruby
+numbers into C integer.  The NUM2INT() macro includes type check, so
+the exception will be raised if conversion failed.
+d99 1
+a99 1
+for T_ARRAY etc.  VALUE of the type which has corresponding structure
+d101 2
+a102 1
+RXXXX for each data type like RARRAY(obj).  see "ruby.h".
+d106 1
+a106 1
+`RSTRING(str)->ptr'.  For arrays, `RARRAY(ary)->len' and
+d110 1
+a110 1
+are responsible about the result.  It will be the cause of interesting
+d115 1
+a115 1
+To convert C data to the values of Ruby:
+d125 1
+a125 1
+You can determine whether VALUE is pointer or not, by checking LSB.  
+d127 2
+a128 2
+Notice Ruby does not allow arbitrary pointer value to be VALUE.  They
+should be pointers to the structures which Ruby knows.  The known
+d131 1
+a131 1
+To convert C numbers to Ruby value, use these macros.
+d136 2
+a137 2
+INT2NUM() converts integers into Bignums, if it is out of FIXNUM
+range, but bit slower.
+d139 1
+a139 1
+1.5 Manipulate Ruby data
+d141 3
+a143 3
+As I already told, it is not recommended to modify object's internal
+structure.  To manipulate objects, use functions supplied by Ruby
+interpreter.  Useful functions are listed below (not all):
+d153 1
+a153 1
+    Creates a new Ruby string from C string.  This is equivalent to
+d159 1
+a159 1
+    should be tainted.
+d163 1
+a163 1
+    Creates a new tainted Ruby string from C string.
+d167 1
+a167 1
+    Appends len bytes data from ptr to the Ruby string.
+d173 1
+a173 1
+    Creates an array with no element.
+d177 1
+a177 1
+    Creates an array with no element, with allocating internal buffer
+d182 1
+a182 1
+    Creates an n-elements array from arguments.
+d186 1
+a186 1
+    Creates an n-elements array from C array.
+d196 1
+a196 1
+2. Extend Ruby with C
+d198 1
+a198 1
+2.1 Add new features to Ruby
+d201 1
+a201 1
+interpreter.  Ruby provides the API to define things below:
+d209 1
+a209 1
+To define class or module, use functions below:
+d215 1
+a215 1
+want to save this reference into the variable to use later.
+d217 1
+a217 1
+To define nested class or module, use functions below:
+d224 1
+a224 1
+To define methods or singleton methods, use functions below:
+d235 1
+a235 1
+If `argc' is negative, it specifies calling sequence, not number of
+d238 1
+a238 1
+If argc is -1, the function will be called like:
+d245 1
+a245 1
+if argc is -2, the arguments are passed in Ruby array. The function
+d253 2
+a254 2
+There're two more functions to define method.  One is to define
+private method:
+d259 2
+a260 2
+The other is to define module function, which is private AND singleton
+method of the module.  For example, sqrt is the module function
+d270 1
+a270 1
+To define module function
+d275 2
+a276 2
+Oh, in addition, function-like method, which is private method defined
+in Kernel module, can be defined using:
+d291 2
+a292 2
+The former is to define constant under specified class/module.  The
+latter is to define global constant.
+d298 1
+a298 1
+2.2.1 Evaluate Ruby Program in String
+d300 2
+a301 2
+Easiest way to call Ruby's function from C program is to evaluate the
+string as Ruby program.  This function will do the job.
+d305 1
+a305 1
+Evaluation is done under current context, thus current local variables
+d311 1
+a311 1
+need to explain about symbols (which data type is ID).  ID is the
+d313 1
+a313 1
+It can be accessed from Ruby in the form like:
+d317 1
+a317 1
+You can get the symbol value from string within C code, by using
+d327 2
+a328 2
+This function invokes the method of the recv, which name is specified
+by the symbol mid.
+d332 2
+a333 2
+You can access class variables, and instance variables using access
+functions.  Also, global variables can be shared between both worlds.
+d351 1
+a351 1
+3.1 Ruby constant that C can be accessed from C
+d353 1
+a353 1
+Following Ruby constants can be referred from C.
+d358 1
+a358 1
+Boolean values.  Qfalse is false in the C also (i.e. 0).
+d366 1
+a366 1
+Information can be shared between two worlds, using shared global
+d371 2
+a372 2
+This function defines the variable which is shared by the both world.
+The value of the global variable pointed by `var', can be accessed
+d375 1
+a375 1
+You can define read-only (from Ruby, of course) variable by the
+d393 1
+a393 1
+This function defines the Ruby global variable without corresponding C
+d396 1
+a396 1
+The prototypes of the getter and setter functions are as following:
+d403 1
+a403 1
+To wrapping and objectify the C pointer as Ruby object (so called
+d411 2
+a412 2
+function to free the pointer allocation.  The functions, mark and
+free, will be called from garbage collector.
+d423 3
+a425 3
+Arguments, klass, mark, free, works like their counterpart of
+Data_Wrap_Struct().  The pointer to allocated structure will be
+assigned to sval, which should be the pointer to the type specified.
+d432 1
+a432 1
+The pointer to the structure will be assigned to the variable sval.
+d434 1
+a434 1
+See example below for detail. 
+d438 2
+a439 2
+OK, here's the example to make extension library.  This is the
+extension to access dbm.  The full source is included in ext/
+d454 1
+a454 1
+library.  Make empty file now.
+d464 1
+a464 1
+preferred.  On the other hand, in case your library has plural source
+d466 1
+a466 1
+with intermediate file ``LIBRARY.o'' on some platforms.
+d494 2
+a495 1
+The dbm extension wrap dbm struct in C world using Data_Make_Struct.
+d507 1
+a507 1
+This code wraps dbmdata structure into Ruby object.  We avoid wrapping
+d510 2
+a511 1
+To retrieve dbmdata structure from Ruby object, we define the macro below:
+d520 1
+a520 1
+This sort of complicated macro do the retrieving and close check for
+d523 2
+a524 2
+There are three kind of way to receiving method arguments.  First, the
+methods with fixed number of arguments receives arguments like this:
+d538 1
+a538 1
+Second, the methods with arbitrary number of arguments receives
+d556 2
+a557 2
+The first argument is the number of method arguments.  the second
+argument is the C array of the method arguments.  And the third
+d561 1
+a561 1
+arguments.  For example "11" means, the method requires at least one
+d564 1
+a564 1
+The methods with arbitrary number of arguments can receives arguments
+d581 2
+a582 2
+GC should know about global variables which refers Ruby's objects, but
+not exported to the Ruby world.  You need to protect them by
+d588 3
+a590 3
+If there exists the file named extconf.rb, it will be executed to
+generate Makefile.  If not, compilation scheme try to generate
+Makefile anyway.
+d592 1
+a592 1
+The extconf.rb is the file to check compilation condition etc.  You
+d597 2
+a598 2
+at the top of the file.  You can use the functions below to check the
+condition.
+d605 1
+a605 1
+The value of variables below will affect Makefile.
+d610 2
+a611 2
+If compilation condition is not fulfilled, you do not call
+``create_makefile''.  Makefile will not generated, compilation will
+d617 1
+a617 1
+check dependency.  You can make this file by invoking
+d629 2
+a630 2
+MANIFEST only to be exist.  But, you'd better take this step to
+distinguish required files.
+d634 1
+a634 1
+Try generate Makefile by:
+d638 1
+a638 1
+You don't need this step, if you put extension library under ext
+d648 2
+a649 2
+to compile your extension.  You don't need this step neither, if you
+put extension library under ext directory of the ruby source tree.
+d653 3
+a655 3
+You may need to rb_debug the extension.  The extensions can be linked
+statically by adding directory name in the ext/Setup file, so that you
+can inspect the extension with the debugger.
+d660 1
+a660 1
+will not claim any restriction about your code depending Ruby API.
+d721 1
+a721 1
+The type for Ruby object.  Actual structures are defined in ruby.h,
+d743 5
+a747 4
+Wrap C pointer into Ruby object.  If object has references to other
+Ruby object, they should be marked by using mark function during GC
+process.  Otherwise, mark should be 0.  When this object is no longer
+referred by anywhere, the pointer will be discarded by free function.
+d763 1
+a763 1
+Defines new Ruby class as subclass of super.
+d767 1
+a767 1
+Creates new Ruby class as subclass of super, under the module's
+d772 1
+a772 1
+Defines new Ruby module.
+d776 1
+a776 1
+Defines new Ruby module, under the module's namespace.
+d781 1
+a781 1
+ignore.
+d785 1
+a785 1
+Extend the object with module's attribute.
+d792 1
+a792 1
+contains the character which is not allowed to be part of the symbol,
+d803 1
+a803 1
+Defines a virtual variable, whose behavior is defined by pair of C
+d816 2
+a817 2
+Defines hooked variable.  It's virtual variable with C variable.  The
+getter is called as
+d821 1
+a821 1
+returning new value.  The setter is called as
+d825 1
+a825 1
+GC requires to mark the C global variables which hold Ruby values.
+d839 1
+a839 1
+Defines global constant.  This is just work as
+d849 2
+a850 2
+3 arguments argc, argv, and self.  if argc is -2, the function will
+receive 2 arguments, self and args, where args is the Ruby array of
+d867 2
+a868 2
+the arguments are assigned to corresponding variable, packed in
+array.
+d874 1
+a874 1
+Invokes the method.  To retrieve mid from method name, use rb_intern().
+d878 1
+a878 1
+Invokes method, passing arguments by array of values.
+d882 1
+a882 1
+Compiles and executes the string as Ruby program.
+d886 1
+a886 1
+Returns ID corresponding the name.
+d925 1
+a925 1
+Calls the function func1, with arg1 as the argument.  If exception
+d933 1
+a933 1
+with arg2, whenever execution terminated.  The return value from
+d940 1
+a940 1
+Prints warning message according to the printf-like format.
+d944 1
+a944 1
+Prints warning message according to the printf-like format, if
+d949 1
+a949 2
+Raises an exception of class exception.  The fmt is the format string
+just like printf().
+d953 2
+a954 2
+Raises fatal error, terminates the interpreter.  No exception handling
+will be done for fatal error, but ensure blocks will be executed.
+d964 1
+a964 1
+The embedding API are below (not needed for extension libraries):
+d988 1
+a988 1
+Checks whether library which contains specified function exists.
+d993 1
+a993 1
+Checks whether library which contains specified function exists in
+d999 1
+a999 1
+exists.  To check functions in the additional library, you need to
+@
+
+
+1.11
+log
+@* Document find_library(), with_config() and dir_config().
+@
+text
+@d979 1
+a979 1
+Appendix B. Functions Available in extconf.rb
+@
+
+
+1.10
+log
+@matz
+@
+text
+@d988 5
+d1001 1
+a1001 1
+Checks for the header files.  Returns true if the header file exists.
+d1007 14
+@
+
+
+1.10.2.1
+log
+@* Document find_library(), with_config() and dir_config().
+@
+text
+@a987 5
+ find_library(lib, func, path...)
+
+Checks whether library which contains specified function exists in
+path.  Returns true if the library exists.
+
+d996 1
+a996 1
+Checks whether header exists.  Returns true if the header file exists.
+a1001 14
+
+ with_config(withval[, default=nil])
+
+Parses the command line options and returns the value specified by
+--with-<withval>.
+
+ dir_config(target[, default_dir])
+ dir_config(target[, default_include, default_lib])
+
+Parses the command line options and adds the directories specified by
+--with-<target>-dir, --with-<target>-include, and/or --with-<target>-lib
+to $CFLAGS and/or $LDFLAGS.  --with-<target>-dir=/path is equivalent to
+--with-<target>-include=/path/include --with-<target>-lib=/path/lib.
+Returns an array of the added directories ([include_dir, lib_dir]).
+@
+
+
+1.10.2.2
+log
+@* README.EXT: Appendix B is duplicated.
+* README.EXT.ja: ditto.
+@
+text
+@d979 1
+a979 1
+Appendix C. Functions Available in extconf.rb
+@
+
+
+1.10.2.3
+log
+@* eval.c (rb_eval): local_vars[-1] should protect body, not a
+  local_tbl.
+
+* marshal.c (w_object): check if klass is really a class.
+@
+text
+@d8 2
+a9 2
+Ruby variables do not have a static type, and data themselves have
+types, so data will need to be converted between the languages.
+d11 2
+a12 2
+Data in Ruby are represented by C type `VALUE'.  Each VALUE data has
+its data-type.
+d14 1
+a14 1
+To retrieve C data from a VALUE, you need to:
+d16 2
+a17 2
+ (1) Identify the VALUE's data type
+ (2) Convert the VALUE into C data
+d19 1
+a19 1
+Converting to the wrong data type may cause serious problems.
+d24 1
+a24 1
+The Ruby interpreter has the following data types:
+d43 1
+a43 1
+In addition, there are several other types used internally:
+d56 1
+a56 1
+The macro TYPE() defined in ruby.h shows the data type of the VALUE.
+d58 1
+a58 1
+data types, your code will look something like this:
+d76 1
+a76 1
+There is the data-type check function
+d80 1
+a80 1
+which raises an exception if the VALUE does not have the type specified.
+d82 1
+a82 1
+There are also faster check macros for fixnums and nil.
+d92 5
+a96 5
+The T_FIXNUM data is a 31bit length fixed integer (63bit length on
+some machines), which can be convert to a C integer by using the
+FIX2INT() macro.  There is also NUM2INT() which converts any Ruby
+numbers into C integers.  The NUM2INT() macro includes a type check, so
+an exception will be raised if the conversion failed.
+d99 1
+a99 1
+for T_ARRAY etc. The VALUE of the type which has corresponding structure
+d101 1
+a101 2
+will be of the form RXXXX for each data type; for instance, RARRAY(obj). 
+See "ruby.h".
+d105 1
+a105 1
+`RSTRING(str)->ptr'.  For arrays, use `RARRAY(ary)->len' and
+d109 1
+a109 1
+are responsible for the result.  This ends up being the cause of interesting
+d114 1
+a114 1
+To convert C data to Ruby values:
+d124 1
+a124 1
+You can determine whether a VALUE is pointer or not by checking its LSB.  
+d126 2
+a127 2
+Notice Ruby does not allow arbitrary pointer values to be a VALUE.  They
+should be pointers to the structures which Ruby knows about.  The known
+d130 1
+a130 1
+To convert C numbers to Ruby values, use these macros.
+d135 2
+a136 2
+INT2NUM() converts an integer into a Bignum if it is out of the FIXNUM
+range, but is a bit slower.
+d138 1
+a138 1
+1.5 Manipulating Ruby data
+d140 3
+a142 3
+As I already mentioned, it is not recommended to modify an object's internal
+structure.  To manipulate objects, use the functions supplied by the Ruby
+interpreter. Some (not all) of the useful functions are listed below:
+d152 1
+a152 1
+    Creates a new Ruby string from a C string.  This is equivalent to
+d158 1
+a158 1
+    sources should be tainted.
+d162 1
+a162 1
+    Creates a new tainted Ruby string from a C string.
+d166 1
+a166 1
+    Appends len bytes of data from ptr to the Ruby string.
+d172 1
+a172 1
+    Creates an array with no elements.
+d176 1
+a176 1
+    Creates an array with no elements, allocating internal buffer
+d181 1
+a181 1
+    Creates an n-element array from the arguments.
+d185 1
+a185 1
+    Creates an n-element array from a C array.
+d195 1
+a195 1
+2. Extending Ruby with C
+d197 1
+a197 1
+2.1 Addding new features to Ruby
+d200 1
+a200 1
+interpreter.  Ruby provides APIs for defining the following things:
+d208 1
+a208 1
+To define a class or module, use the functions below:
+d214 1
+a214 1
+want to save this reference into a variable to use later.
+d216 1
+a216 1
+To define nested classes or modules, use the functions below:
+d223 1
+a223 1
+To define methods or singleton methods, use these functions:
+d234 1
+a234 1
+If `argc' is negative, it specifies the calling sequence, not number of
+d237 1
+a237 1
+If argc is -1, the function will be called as:
+d244 1
+a244 1
+If argc is -2, the arguments are passed in a Ruby array. The function
+d252 2
+a253 2
+There are two more functions to define methods.  One is to define
+private methods:
+d258 2
+a259 2
+The other is to define module functions, which are private AND singleton
+methods of the module.  For example, sqrt is the module function
+d269 1
+a269 1
+To define module functions, use:
+d274 2
+a275 2
+Oh, in addition, function-like methods, which are private methods defined
+in the Kernel module, can be defined using:
+d290 2
+a291 2
+The former is to define a constant under specified class/module.  The
+latter is to define a global constant.
+d297 1
+a297 1
+2.2.1 Evaluate Ruby Programs in a String
+d299 2
+a300 2
+The easiest way to use Ruby's functionality from a C program is to
+evaluate the string as Ruby program.  This function will do the job.
+d304 1
+a304 1
+Evaluation is done under the current context, thus current local variables
+d310 1
+a310 1
+need to explain about symbols (whose data type is ID).  ID is the
+d312 1
+a312 1
+It can be accessed from Ruby in the form:
+d316 1
+a316 1
+You can get the symbol value from a string within C code by using
+d326 2
+a327 2
+This function invokes a method on the recv, with the method name
+specified by the symbol mid.
+d331 2
+a332 2
+You can access class variables and instance variables using access
+functions.  Also, global variables can be shared between both environments.
+d350 1
+a350 1
+3.1 Ruby constants that C can be accessed from C
+d352 1
+a352 1
+The following Ruby constants can be referred from C.
+d357 1
+a357 1
+Boolean values.  Qfalse is false in C also (i.e. 0).
+d365 1
+a365 1
+Information can be shared between the two environments using shared global
+d370 2
+a371 2
+This function defines the variable which is shared by both environments.
+The value of the global variable pointed to by `var' can be accessed
+d374 1
+a374 1
+You can define read-only (from Ruby, of course) variables using the
+d392 1
+a392 1
+This function defines a Ruby global variable without a corresponding C
+d395 1
+a395 1
+The prototypes of the getter and setter functions are as follows:
+d402 1
+a402 1
+To wrap and objectify a C pointer as a Ruby object (so called
+d410 2
+a411 2
+function to free the pointer allocation.  The functions mark and
+free will be called from garbage collector.
+d422 3
+a424 3
+Arguments klass, mark, and free work like their counterparts in
+Data_Wrap_Struct().  A pointer to the allocated structure will be
+assigned to sval, which should be a pointer of the type specified.
+d431 1
+a431 1
+A pointer to the structure will be assigned to the variable sval.
+d433 1
+a433 1
+See the example below for details. 
+d437 2
+a438 2
+OK, here's the example of making an extension library.  This is the
+extension to access DBMs.  The full source is included in the ext/
+d453 1
+a453 1
+library.  Make an empty file for now.
+d463 1
+a463 1
+preferred.  On the other hand, in case your library has multiple source
+d465 1
+a465 1
+with an intermediate file ``LIBRARY.o'' on some platforms.
+d493 1
+a493 2
+The dbm extension wraps the dbm struct in the C environment using 
+Data_Make_Struct.
+d505 1
+a505 1
+This code wraps the dbmdata structure into a Ruby object.  We avoid wrapping
+d508 1
+a508 2
+To retrieve the dbmdata structure from a Ruby object, we define the
+following macro:
+d517 1
+a517 1
+This sort of complicated macro does the retrieving and close checking for
+d520 2
+a521 2
+There are three kinds of way to receive method arguments.  First,
+methods with a fixed number of arguments receive arguments like this:
+d535 1
+a535 1
+Second, methods with an arbitrary number of arguments receive
+d553 2
+a554 2
+The first argument is the number of method arguments, the second
+argument is the C array of the method arguments, and the third
+d558 1
+a558 1
+arguments.  For example, "11" means that the method requires at least one
+d561 1
+a561 1
+Methods with an arbitrary number of arguments can receive arguments
+d578 2
+a579 2
+GC should know about global variables which refer to Ruby's objects, but
+are not exported to the Ruby world.  You need to protect them by
+d585 3
+a587 3
+If the file named extconf.rb exists, it will be executed to generate
+Makefile.  If not, the compilation scheme will try to generate Makefile
+anyway.
+d589 1
+a589 1
+extconf.rb is the file for check compilation conditions etc.  You
+d594 2
+a595 2
+at the top of the file.  You can use the functions below to check
+various conditions.
+d602 1
+a602 1
+The value of the variables below will affect the Makefile.
+d607 2
+a608 2
+If a compilation condition is not fulfilled, you should not call
+``create_makefile''.  The Makefile will not generated, compilation will
+d614 1
+a614 1
+check dependencies.  You can make this file by invoking
+d626 2
+a627 2
+MANIFEST only to exist, but it's better to take this step in order
+to distinguish which files are required.
+d631 1
+a631 1
+Try generating the Makefile by:
+d635 1
+a635 1
+You don't need this step if you put the extension library under the ext
+d645 2
+a646 2
+to compile your extension.  You don't need this step either if you have
+put extension library under the ext directory of the ruby source tree.
+d650 3
+a652 3
+You may need to rb_debug the extension.  Extensions can be linked
+statically by the adding directory name in the ext/Setup file so that
+you can inspect the extension with the debugger.
+d657 1
+a657 1
+will not claim any restrictions on your code depending on the Ruby API.
+d718 1
+a718 1
+The type for the Ruby object.  Actual structures are defined in ruby.h,
+d740 4
+a743 5
+Wrap a C pointer into a Ruby object.  If object has references to other
+Ruby objects, they should be marked by using the mark function during
+the GC process.  Otherwise, mark should be 0.  When this object is no
+longer referred by anywhere, the pointer will be discarded by free
+function.
+d759 1
+a759 1
+Defines a new Ruby class as a subclass of super.
+d763 1
+a763 1
+Creates a new Ruby class as a subclass of super, under the module's
+d768 1
+a768 1
+Defines a new Ruby module.
+d772 1
+a772 1
+Defines a new Ruby module under the module's namespace.
+d777 1
+a777 1
+ignored.
+d781 1
+a781 1
+Extend the object with the module's attributes.
+d788 1
+a788 1
+contains a character which is not allowed to be part of the symbol,
+d799 1
+a799 1
+Defines a virtual variable, whose behavior is defined by a pair of C
+d812 2
+a813 2
+Defines hooked variable.  It's a virtual variable with a C variable.  
+The getter is called as
+d817 1
+a817 1
+returning a new value.  The setter is called as
+d821 1
+a821 1
+GC requires C global variables which hold Ruby values to be marked.
+d835 1
+a835 1
+Defines a global constant.  This is just the same as
+d845 2
+a846 2
+3 arguments: argc, argv, and self.  if argc is -2, the function will
+receive 2 arguments, self and args, where args is a Ruby array of
+d863 2
+a864 2
+the arguments are assigned to the corresponding variable, packed in
+an array.
+d870 1
+a870 1
+Invokes a method.  To retrieve mid from a method name, use rb_intern().
+d874 1
+a874 1
+Invokes a method, passing arguments by an array of values.
+d878 1
+a878 1
+Compiles and executes the string as a Ruby program.
+d882 1
+a882 1
+Returns ID corresponding to the name.
+d921 1
+a921 1
+Calls the function func1, with arg1 as the argument.  If an exception
+d929 1
+a929 1
+with arg2 if execution terminated.  The return value from
+d936 1
+a936 1
+Prints a warning message according to a printf-like format.
+d940 1
+a940 1
+Prints a warning message according to a printf-like format, if
+d945 2
+a946 1
+Raises a class exception.  The fmt is a format string just like printf().
+d950 2
+a951 2
+Raises a fatal error, terminates the interpreter.  No exception handling
+will be done for fatal errors, but ensure blocks will be executed.
+d961 1
+a961 1
+The embedding API functions are below (not needed for extension libraries):
+d985 1
+a985 1
+Checks whether the library exists, containing the specified function.
+d990 1
+a990 1
+Checks whether a library which contains the specified function exists in
+d996 1
+a996 1
+exists.  To check functions in an additional library, you need to
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d41 1
+d47 1
+d146 1
+a146 1
+  rb_str_new(char *ptr, int len)
+d150 1
+a150 1
+  rb_str_new2(char *ptr)
+d155 1
+a155 1
+  rb_tainted_str_new(char *ptr, int len)
+d160 1
+a160 1
+  rb_tainted_str_new2(char *ptr)
+d164 1
+a164 1
+  rb_str_cat(VALUE str, char *ptr, int len)
+d174 1
+a174 1
+  rb_ary_new2(int len)
+d179 1
+a179 1
+  rb_ary_new3(int n, ...)
+d183 1
+a183 1
+  rb_ary_new4(int n, VALUE *elts)
+a190 1
+  rb_ary_entry(VALUE ary, int idx)
+d210 2
+a211 2
+  VALUE rb_define_class(char *name, VALUE super)
+  VALUE rb_define_module(char *name)
+d218 2
+a219 2
+  VALUE rb_define_class_under(VALUE outer, char *name, VALUE super)
+  VALUE rb_define_module_under(VALUE outer, char *name)
+d225 1
+a225 1
+  void rb_define_method(VALUE klass, char *name, 
+d228 1
+a228 1
+  void rb_define_singleton_method(VALUE object, char *name, 
+d255 1
+a255 1
+  void rb_define_private_method(VALUE klass, char *name, 
+d271 1
+a271 1
+  void rb_define_module_function(VALUE module, char *name, 
+d277 1
+a277 1
+  void rb_define_global_function(char *name, VALUE (*func)(), int argc)
+d287 2
+a288 2
+  void rb_define_const(VALUE klass, char *name, VALUE val)
+  void rb_define_global_const(char *name, VALUE val)
+d302 1
+a302 1
+  VALUE rb_eval_string(char *str)
+d318 1
+a318 4
+  rb_intern(char *name)
+
+In addition, the symbols for one character operators (e.g +) is the
+code for that character.
+d368 1
+a368 1
+  void rb_define_variable(char *name, VALUE *var)
+d377 1
+a377 1
+  void rb_define_readonly_variable(char *name, VALUE *var)
+d382 2
+a383 2
+  void rb_define_hooked_variable(char *name, VALUE *var,
+				 VALUE (*getter)(), VALUE (*setter)())
+d389 2
+a390 2
+  void rb_define_virtual_variable(char *name,
+				  VALUE (*getter)(), VALUE (*setter)())
+d757 1
+a757 1
+ VALUE rb_define_class(char *name, VALUE super)
+d761 1
+a761 1
+ VALUE rb_define_class_under(VALUE module, char *name, VALUE super)
+d766 1
+a766 1
+ VALUE rb_define_module(char *name)
+d770 1
+a770 1
+ VALUE rb_define_module_under(VALUE module, char *name, VALUE super)
+d785 1
+a785 1
+ void rb_define_variable(char *name, VALUE *var)
+d791 1
+a791 1
+ void rb_define_readonly_variable(char *name, VALUE *var)
+d796 1
+a796 1
+ void rb_define_virtual_variable(char *name,
+d809 1
+a809 1
+ void rb_define_hooked_variable(char *name, VALUE *var,
+d829 1
+a829 1
+ void rb_define_const(VALUE klass, char *name, VALUE val)
+d833 1
+a833 1
+ void rb_define_global_const(char *name, VALUE val)
+d841 1
+a841 1
+ rb_define_method(VALUE klass, char *name, VALUE (*func)(), int argc)
+d849 1
+a849 1
+ rb_define_private_method(VALUE klass, char *name, VALUE (*func)(), int argc)
+d854 1
+a854 1
+ rb_define_singleton_method(VALUE klass, char *name, VALUE (*func)(), int argc)
+d858 1
+a858 1
+ rb_scan_args(int argc, VALUE *argv, char *fmt, ...)
+d876 1
+a876 1
+ VALUE rb_eval_string(char *str)
+d880 1
+a880 1
+ ID rb_intern(char *name)
+d898 1
+a898 1
+ VALUE rb_iv_get(VALUE obj, char *name)
+d903 1
+a903 1
+ VALUE rb_iv_set(VALUE obj, char *name, VALUE val)
+d934 1
+a934 1
+ void rb_warn(char *fmt, ...)
+d938 1
+a938 1
+ void rb_warning(char *fmt, ...)
+d943 1
+a943 1
+ void rb_raise(VALUE exception, char *fmt, ...)
+d948 1
+a948 1
+ void rb_fatal(char *fmt, ...)
+d953 1
+a953 1
+ void rb_bug(char *fmt, ...)
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d153 9
+d278 3
+@
+
+
+1.7
+log
+@2000-05-01
+@
+text
+@d588 1
+a588 1
+  have_func(func): check whether function exists
+d978 1
+a978 1
+ have_func(func)
+d980 3
+a982 3
+Checks whether func exists.  Returns true if the function exists.  To
+check functions in the additional library, you need to check that
+library first using have_library().
+@
+
+
+1.6
+log
+@2000-03-06
+@
+text
+@d884 1
+a884 1
+Returns true if the object reponds to the message specified by id.
+@
+
+
+1.5
+log
+@19991012
+@
+text
+@d70 1
+a70 1
+      Fail("not valid value");
+d206 5
+d395 1
+a395 1
+  Data_Wrap_Struct(klass,mark,free,ptr)
+d397 1
+a397 1
+Data_Wrap_Struct() returns a created DATA object.  The class argument
+d492 1
+a492 1
+obj = Data_Make_Struct(klass,struct dbmdata,0,free_dbm,dbmp);
+d606 1
+a606 1
+ % gcc -MM *.c > depend
+a664 2
+  fnmatch.c
+  glob.c
+d687 1
+d691 1
+d787 1
+a787 1
+				VALUE (*getter)(), VALUE (*setter)())
+d791 1
+a791 1
+referred. The setter function is called when the value is set to the
+d882 1
+a882 1
+  int rb_respond_to(VALUE object, ID id)
+@
+
+
+1.5.2.1
+log
+@2000-05-01
+@
+text
+@d879 1
+a879 1
+Returns true if the object responds to the message specified by id.
+@
+
+
+1.4
+log
+@19991004
+@
+text
+@d877 4
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@a894 1
+
+d944 1
+a944 1
+ void ruby_init(int argc, char **argv, char **envp)
+d947 4
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d3 1
+a3 1
+This document explains how to make extention libraries for Ruby.
+d19 1
+a19 1
+Converting to wrong data type may cause serious promblems.
+d27 1
+a27 1
+	T_OBJECT	ordinaly object
+d35 1
+a35 1
+	T_HASH		assosiative array
+d91 1
+a91 1
+some machines), which can be conver to the C integer by using
+d130 1
+a130 1
+  INT2FIX()	for intergers within 31bits.
+d142 1
+a142 1
+ String funtions
+d203 1
+a203 1
+These functions return the newly created class ot module.  You may
+d210 1
+a210 1
+  void rb_define_method(VALUE class, char *name, 
+d240 1
+a240 1
+  void rb_define_private_method(VALUE class, char *name, 
+d269 1
+a269 1
+  void rb_define_const(VALUE class, char *name, VALUE val)
+d333 1
+a333 1
+3. Informatin sharing between Ruby and C
+d356 1
+a356 1
+The value of the global variable pointerd by `var', can be accessed
+d390 1
+a390 1
+  Data_Wrap_Struct(class,mark,free,ptr)
+d400 1
+a400 1
+  Data_Make_Struct(class, type, mark, free, sval)
+d405 1
+a405 1
+  (sval = ALLOC(type), Data_Wrap_Struct(class, mark, free, sval))
+d407 1
+a407 1
+Arguments, class, mark, free, works like thier counterpart of
+d448 2
+a449 2
+preferred.  On the other hand, in case your library has prural source
+files, avoid chooing ``LIBRARY.c'' for a file name.  It may conflict
+d453 1
+a453 1
+the library.  For exapmle, ``Init_dbm()'' will be executed when loading
+d487 1
+a487 1
+obj = Data_Make_Struct(class,struct dbmdata,0,free_dbm,dbmp);
+d520 1
+a520 1
+Second, the methods with arbtrary number of arguments receives
+d525 1
+a525 1
+fdbm_s_open(argc, argv, class)
+d528 1
+a528 1
+    VALUE class;
+d543 1
+a543 1
+arguments.  For exapmle "11" means, the method requires at least one
+d546 1
+a546 1
+The methods with arbtrary number of arguments can receives arguments
+d579 1
+a579 1
+at the top of the file.  You can use the funcitons below to check the
+d723 1
+a723 1
+ Data_Wrap_Struct(VALUE class, void (*mark)(), void (*free)(), void *sval)
+d730 1
+a730 1
+ Data_Make_Struct(class, type, mark, free, sval)
+d757 1
+a757 1
+Defines new Ruby module, under the modules's namespace.
+d759 1
+a759 1
+ void rb_include_module(VALUE class, VALUE module)
+d820 1
+a820 1
+Defines global contant.  This is just work as
+d826 1
+a826 1
+ rb_define_method(VALUE class, char *name, VALUE (*func)(), int argc)
+d834 1
+a834 1
+ rb_define_private_method(VALUE class, char *name, VALUE (*func)(), int argc)
+d839 1
+a839 1
+ rb_define_singleton_method(VALUE class, char *name, VALUE (*func)(), int argc)
+d846 2
+a847 2
+the arguments, such as "12" for 1 non-optinal argument, 2 optinal
+aruguments.  If `*' appears at the end of fmt, it means the rest of
+d873 1
+a873 1
+ char *rb_class2name(VALUE class)
+d937 1
+a937 1
+Termintates the interpreter immediately.  This function should be
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+This document explains how to make extention modules for ruby.
+d5 1
+a5 1
+1．Basic knowledge
+d8 1
+a8 1
+ruby variables do not have static type and data themselves have
+d11 1
+a11 1
+Data in ruby represented C type `VALUE'.  Each VALUE data have its
+a13 5
+rubyのデータはVALUEというCの型で表現されます．VALUE型のデー
+タはそのデータタイプを自分で知っています．このデータタイプと
+いうのはデータ(オブジェクト)の実際の構造を意味していて，ruby
+のクラスとはまた違ったものです．
+
+d36 1
+a36 1
+	T_STRUCT	(ruby) structure
+d87 22
+a108 31
+データタイプがT_NIL, T_FALSE, T_TRUEである時，データはそれぞ
+れnil, FALSE, TRUEです．このデータタイプのオブジェクトはひと
+つずつしか存在しません．
+
+データタイプがT_FIXNUMの時，これは31bitのサイズを持つ整数で
+す．FIXNUMをCの整数に変換するためにはマクロ「FIX2INT()」を使
+います．それから，FIXNUMに限らずrubyのデータを整数に変換する
+「NUM2INT()」というマクロがあります．このマクロはデータタイ
+プのチェック無しで使えます(整数に変換できない場合には例外が
+発生する)．
+
+それ以外のデータタイプは対応するCの構造体があります．対応す
+る構造体のあるVALUEはそのままキャスト(型変換)すれば構造体の
+ポインタに変換できます．
+
+構造体は「struct RXxxxx」という名前でruby.hで定義されていま
+す．例えば文字列は「struct RString」です．実際に使う可能性が
+あるのは文字列と配列くらいだと思います．
+
+ruby.hでは構造体へキャストするマクロも「RXXXXX()」(全部大文
+字にしたもの)という名前で提供されています(例: RSTRING())．
+
+例えば，文字列strの長さを得るためには「RSTRING(str)->len」と
+し，文字列strをchar*として得るためには「RSTRING(str)->ptr」
+とします．配列の場合には，それぞれ「RARRAT(str)->len」，
+「RARRAT(str)->ptr」となります．
+
+rubyの構造体を直接アクセスする時に気をつけなければならないこ
+とは，配列や文字列の構造体の中身は参照するだけで，直接変更し
+ないことです．直接変更した場合，オブジェクトの内容の整合性が
+とれなくなって，思わぬバグの原因になります．
+d112 1
+a112 1
+VALUEの実際の構造は
+d114 1
+a114 1
+  * FIXNUMの場合
+d116 1
+a116 1
+    1bit右シフトして，LSBを立てる．
+d118 1
+a118 1
+  * その他のポインタの場合
+d120 1
+a120 1
+    そのままVALUEにキャストする．
+d122 1
+a122 3
+となっています．よって，LSBをチェックすればVALUEがFIXNUMかど
+うかわかるわけです(ポインタのLSBが立っていないことを仮定して
+いる)．
+d124 3
+a126 5
+ですから，FIXNUM以外のrubyのオブジェクトの構造体は単にVALUE
+にキャストするだけでVALUEに変換出来ます．ただし，任意の構造
+体がVALUEにキャスト出来るわけではありません．キャストするの
+はrubyの知っている構造体(ruby.hで定義されているstruct RXxxx
+のもの)だけにしておいてください．
+d128 1
+a128 3
+FIXNUMに関しては変換マクロを経由する必要があります．Cの整数
+からVALUEに変換するマクロは以下のものがあります．必要に応じ
+て使い分けてください．
+d130 2
+a131 2
+  INT2FIX()	もとの整数が31bit以内に収まる時
+  INT2NUM()	任意の整数からVALUEへ
+d133 2
+a134 2
+INT2NUM()は整数がFIXNUMの範囲に収まらない場合，Bignumに変換
+してくれます(が，少し遅い)．
+d136 1
+a136 1
+1.5 Manipulate ruby data
+d138 3
+a140 6
+先程も述べた通り，rubyの構造体をアクセスする時に内容の更新を
+行うことは勧められません．で，rubyのデータを操作する時には
+rubyが用意している関数を用いてください．
+
+ここではもっとも使われるであろう文字列と配列の生成/操作を行
+い関数をあげます(全部ではないです)．
+d144 1
+a144 1
+  str_new(char *ptr, int len)
+d146 1
+a146 1
+    Creates a new ruby string.
+d148 1
+a148 1
+  str_new2(char *ptr)
+d150 2
+a151 2
+    Creates a new ruby string from C string.  This is equivalent to
+    str_new(ptr, strlen(ptr)).
+d153 1
+a153 1
+  str_cat(VALUE str, char *ptr, int len)
+d155 1
+a155 1
+    Appends len bytes data from ptr to the ruby string.
+d159 1
+a159 1
+  ary_new()
+d163 1
+a163 1
+  ary_new2(int len)
+d168 1
+a168 1
+  ary_new3(int n, ...)
+d172 1
+a172 1
+  ary_new4(int n, VALUE *elts)
+d176 5
+a180 5
+  ary_push(VALUE ary)
+  ary_pop(VALUE ary, VALUE val)
+  ary_shift(VALUE ary)
+  ary_unshift(VALUE ary, VALUE val)
+  ary_entry(VALUE ary, int idx)
+d185 1
+a185 6
+2. Extend ruby with C
+
+原理的にrubyで書けることはCでも書けます．rubyそのものがCで記
+述されているんですから，当然といえば当然なんですけど．ここで
+はrubyの拡張に使うことが多いだろうと予測される機能を中心に紹
+介します．
+d187 1
+a187 1
+2.1 Add new features to ruby
+d189 2
+a190 3
+rubyで提供されている関数を使えばrubyインタプリタに新しい機能
+を追加することができます．rubyでは以下の機能を追加する関数が
+提供されています．
+d192 3
+a194 5
+ * クラス，モジュール
+ * メソッド，特異メソッドなど
+ * 定数
+
+では順に紹介します．
+d198 1
+a198 1
+クラスやモジュールを定義するためには，以下の関数を使います．
+d203 2
+a204 3
+これらの関数は新しく定義されたクラスやモジュールを返します．
+メソッドや定数の定義にこれらの値が必要なので，ほとんどの場合
+は戻り値を変数に格納しておく必要があるでしょう．
+d208 1
+a208 1
+メソッドや特異メソッドを定義するには以下の関数を使います．
+d214 7
+a220 1
+			         VALUE (*func)(), int argc)
+d222 1
+d224 1
+a224 4
+念のため説明すると「特異メソッド」とは，その特定のオブジェク
+トに対してだけ有効なメソッドです．rubyではよくSmalltalkにお
+けるクラスメソッドとして，クラスに対する特異メソッドが使われ
+ます．
+d226 2
+a227 4
+これらの関数の argcという引数はCの関数へ渡される引数の数(と
+形式)を決めます．argcが正の時は関数に引き渡す引数の数を意味
+します．16個以上の引数は使えません(が，要りませんよね，そん
+なに)．
+d229 2
+a230 3
+argcが負の時は引数の数ではなく，形式を指定したことになります．
+argcが-1の時は引数を配列に入れて渡されます．argcが-2の時は引
+数はrubyの配列として渡されます．
+d232 7
+a238 2
+メソッドを定義する関数はもう二つあります．ひとつはprivateメ
+ソッドを定義する関数で，引数はrb_define_method()と同じです．
+d243 3
+a245 7
+privateメソッドとは関数形式でしか呼び出すことの出来ないメソッ
+ドです．
+
+もうひとつはモジュール関数を定義するものです．モジュール関数
+とはモジュールの特異メソッドであり，同時にprivateメソッドで
+もあるものです．例をあげるとMathモジュールのsqrt()などがあげ
+られます．このメソッドは
+d249 1
+a249 1
+という形式でも
+d254 1
+a254 2
+という形式でも使えます．モジュール関数を定義する関数は以下の
+通りです．
+d259 2
+a260 2
+関数的メソッド(Kernelモジュールのprivaet method)を定義するた
+めの関数は以下の通りです．
+d267 1
+a267 2
+拡張モジュールが必要な定数はあらかじめ定義しておいた方が良い
+でしょう．定数を定義する関数は二つあります．
+d272 2
+a273 4
+前者は特定のクラス/モジュールに属する定数を定義するもの，後
+者はグローバルな定数を定義するものです．
+
+2.2 Use ruby features from C
+d275 1
+a275 3
+既に『1.5 rubyのデータを操作する』で一部紹介したような関数を
+使えば，rubyの機能を実現している関数を直接呼び出すことが出来
+ます．
+d277 1
+a277 2
+# このような関数の一覧表はいまのところありません．ソースを見
+# るしかないですね．
+d279 1
+a279 1
+それ以外にもrubyの機能を呼び出す方法はいくつかあります．
+d281 2
+a282 4
+2.2.1 rubyのプログラムをevalする
+
+Cからrubyの機能を呼び出すもっとも簡単な方法として，文字列で
+与えられたrubyのプログラムを評価する関数があります．
+d286 2
+a287 2
+この評価は現在の環境で行われます．つまり，現在のローカル変数
+などを受け継ぎます．
+d291 4
+a294 5
+Cから文字列を経由せずにrubyのメソッドを呼び出すこともできま
+す．その前に，rubyインタプリタ内でメソッドや変数名を指定する
+時に使われているIDについて説明しておきましょう．
+
+IDとは変数名，メソッド名を表す整数です．rubyの中では
+d296 1
+a296 1
+ :識別子
+d298 1
+a298 1
+でアクセスできます．Cからこの整数を得るためには関数
+d302 2
+a303 2
+を使います．また一文字の演算子はその文字コードがそのままシン
+ボルになっています．
+d305 1
+a305 1
+2.2.3 Invoke ruby method from C
+d307 1
+a307 2
+Cから文字列を経由せずにrubyのメソッドを呼び出すためには以下
+の関数を使います．
+d311 2
+a312 2
+この関数はオブジェクトrecvのmidで指定されるメソッドを呼び出
+します．
+d314 1
+a314 1
+2.2.4 変数/定数を参照/更新する
+d316 3
+a318 3
+Cから関数を使って参照・更新できるのは，クラス定数，インスタ
+ンス変数です．大域変数は一部のものはCの大域変数としてアクセ
+スできます．ローカル変数を参照する方法は公開していません．
+d320 1
+a320 2
+オブジェクトのインスタンス変数を参照・更新する関数は以下の通
+りです．
+d325 1
+a325 1
+idはrb_intern()で得られるものを使ってください．
+d327 1
+a327 1
+クラス定数を参照するには以下の関数を使ってください．
+d331 1
+a331 4
+クラス定数を新しく定義するためには『2.1.3 定数定義』で紹介さ
+れている関数を使ってください．
+
+3. Informatin sharing between ruby and C
+d333 1
+a333 1
+C言語とrubyの間で情報を共有する方法について解説します．
+d335 1
+a335 1
+3.1 Ruby constant that Cから参照できるrubyの定数
+d337 1
+a337 1
+Following ruby constants can be referred from C.
+d339 2
+a340 2
+  TRUE
+  FALSE
+d342 1
+a342 1
+Boolean values.  FALSE is false in the C also (i.e. 0).
+d348 1
+a348 1
+3.2 Global variables shared between C and ruby
+d350 2
+a351 3
+Cとrubyで大域変数を使って情報を共有できます．共有できる大域
+変数にはいくつかの種類があります．そのなかでもっとも良く使わ
+れると思われるのはrb_define_variable()です．
+d355 3
+a357 3
+この関数はrubyとCとで共有する大域変数を定義します．変数名が
+`$'で始まらない時には自動的に追加されます．この変数の値を変
+更すると自動的にrubyの対応する変数の値も変わります．
+d359 2
+a360 2
+またruby側からは更新できない変数もあります．このread onlyの
+変数は以下の関数で定義します．
+d364 2
+a365 3
+これら変数の他にhookをつけた大域変数を定義できます．hook付き
+の大域変数は以下の関数を用いて定義します．hook付き大域変数の
+値の参照や設定はhookで行う必要があります．
+d370 3
+a372 9
+この関数はCの関数によってhookのつけられた大域変数を定義しま
+す．変数が参照された時には関数getterが，変数に値がセットされ
+た時には関数setterが呼ばれる．hookを指定しない場合はgetterや
+setterに0を指定します．
+
+# getterもsetterも0ならばrb_define_variable()と同じになる．
+
+それから，Cの関数によって実現されるrubyの大域変数を定義する
+関数があります．
+d377 2
+a378 2
+この関数によって定義されたrubyの大域変数が参照された時には
+getterが，変数に値がセットされた時にはsetterが呼ばれます．
+d385 1
+a385 1
+3.3 Encapsulate C data into ruby object
+d387 2
+a388 7
+Cの世界で定義されたデータ(構造体)をrubyのオブジェクトとして
+取り扱いたい場合がありえます．このような場合には，Dataという
+rubyオブジェクトにCの構造体(へのポインタ)をくるむことでruby
+オブジェクトとして取り扱えるようになります．
+
+Dataオブジェクトを生成して構造体をrubyオブジェクトにカプセル
+化するためには，以下のマクロを使います．
+d392 5
+a396 1
+このマクロの戻り値は生成されたDataオブジェクトです．
+d398 1
+a398 4
+classはこのDataオブジェクトのクラスです．ptrはカプセル化する
+Cの構造体へのポインタです．markはこの構造体がrubyのオブジェ
+クトへの参照がある時に使う関数です．そのような参照を含まない
+時には0を指定します．
+d400 1
+a400 1
+# そのような参照は勧められません．
+d402 2
+a403 7
+freeはこの構造体がもう不要になった時に呼ばれる関数です．この
+関数がガーベージコレクタから呼ばれます．
+
+Cの構造体の割当とDataオブジェクトの生成を同時に行うマクロと
+して以下のものが提供されています．
+
+  Data_Make_Struct(class, type, mark, free, sval)
+d405 1
+a405 1
+このマクロの戻り値は生成されたDataオブジェクトです．
+d407 3
+a409 3
+class, mark, freeはData_Wrap_Structと同じ働きをします．type
+は割り当てるC構造体の型です．割り当てられた構造体は変数sval
+に代入されます．この変数の型は (type*) である必要があります．
+d411 2
+a412 2
+Dataオブジェクトからポインタを取り出すのは以下のマクロを用い
+ます．
+d416 1
+a416 1
+Cの構造体へのポインタは変数svalに代入されます．
+d418 1
+a418 2
+これらのDataの使い方はちょっと分かりにくいので，後で説明する
+例題を参照してください．
+d420 1
+a420 1
+4．Example - Create dbm module
+d422 3
+a424 3
+ここまでの説明でとりあえず拡張モジュールは作れるはずです．
+rubyのextディレクトリにすでに含まれているdbmモジュールを例に
+して段階的に説明します．
+d430 1
+a430 3
+rubyを展開したディレクトリの下，extディレクトリの中に拡張モ
+ジュール用のディレクトリを作ります．名前は適当に選んで構いま
+せん．
+d437 2
+a438 6
+拡張モジュールのディレクトリの下にはMANIFESTというファイルが
+必要なので，とりあえず空のファイルを作っておきます．後でこの
+ファイルには必要なファイル一覧が入ることになります．
+
+MANIFESTというファイルは，makeの時にディレクトリが拡張モジュー
+ルを含んでいるかどうか判定するために使われれています．
+d442 1
+a442 4
+まあ，当然なんですけど，どういう機能を実現するかどうかまず設
+計する必要があります．どんなクラスをつくるか，そのクラスには
+どんなメソッドがあるか，クラスが提供する定数などについて設計
+します．dbmクラスについてはext/dbm.docを参照してください．
+d446 11
+a456 11
+拡張モジュール本体となるC言語のソースを書きます．C言語のソー
+スがひとつの時には「モジュール名.c」を選ぶと良いでしょう．C
+言語のソースが複数の場合には逆に「モジュール名.c」というファ
+イル名は避ける必要があります．オブジェクトファイルとモジュー
+ル生成時に中間的に生成される「モジュール名.o」というファイル
+とが衝突するからです．
+
+rubyは拡張モジュールをロードする時に「Init_モジュール名」と
+いう関数を自動的に実行します．dbmモジュールの場合「Init_dbm」
+です．この関数の中でクラス，モジュール，メソッド，定数などの
+定義を行います．dbm.cから一部引用します．
+d461 4
+a464 4
+    /* DBMクラスを定義する */
+    cDBM = rb_define_class("DBM", cObject);
+    /* DBMはEnumerateモジュールをインクルードする */
+    rb_include_module(cDBM, mEnumerable);
+d466 1
+a466 1
+    /* DBMクラスのクラスメソッドopen(): 引数はCの配列で受ける */
+d469 1
+a469 1
+    /* DBMクラスのメソッドclose(): 引数はなし */
+d471 1
+a471 1
+    /* DBMクラスのメソッド[]: 引数は1個 */
+a474 2
+    /* DBMデータを格納するインスタンス変数名のためのID */
+    id_dbm = rb_intern("dbm");
+d478 1
+a478 5
+DBMモジュールはdbmのデータと対応するオブジェクトになるはずで
+すから，Cの世界のdbmをrubyの世界に取り込む必要があります．
+
+
+dbm.cではData_Make_Structを以下のように使っています．
+d490 2
+a491 3
+ここではdbmstruct構造体へのポインタをDataにカプセル化してい
+ます．DBM*を直接カプセル化しないのはclose()した時の処理を考
+えてのことです．
+d493 1
+a493 2
+Dataオブジェクトからdbmstruct構造体のポインタを取り出すため
+に以下のマクロを使っています．
+d502 5
+a506 8
+ちょっと複雑なマクロですが，要するにdbmdata構造体のポインタ
+の取り出しと，closeされているかどうかのチェックをまとめてい
+るだけです．
+
+DBMクラスにはたくさんメソッドがありますが，分類すると3種類の
+引数の受け方があります．ひとつは引数の数が固定のもので，例と
+してはdeleteメソッドがあります．deleteメソッドを実装している
+fdbm_delete()はこのようになっています．
+d517 2
+a518 2
+引数の数が固定のタイプは第1引数がself，第2引数以降がメソッド
+の引数となります．
+d520 2
+a521 4
+引数の数が不定のものはCの配列で受けるものとrubyの配列で受け
+るものとがあります．dbmモジュールの中で，Cの配列で受けるもの
+はDBMのクラスメソッドであるopen()です．これを実装している関
+数fdbm_s_open()はこうなっています．
+d538 7
+a544 13
+このタイプの関数は第1引数が与えられた引数の数，第2引数が与え
+られた引数の入っている配列になります．selfは第3引数として与
+えられます．
+
+この配列で与えられた引数を解析するための関数がopen()でも使わ
+れているrb_scan_args()です．第3引数に指定したフォーマットに
+従い，第4変数以降に指定した変数に値を代入してくれます．この
+フォーマットは，第1文字目が省略できない引数の数，第2文字目が
+省略できる引数の数，第3文字目が対応する相手が無いあまりの引
+数があるかどうかを示す"*"です．2文字目と3文字目は省略できま
+す．dbm.cの例では，フォーマットは"11"ですから，引数は最低1つ
+で，2つまで許されるという意味になります．省略されている時の
+変数の値はnil(C言語のレベルではQnil)になります．
+d546 2
+a547 2
+rubyの配列で引数を受け取るものはindexesがあります．実装はこ
+うです．
+d552 1
+a552 2
+    VALUE obj;
+    struct RArray *args;
+d558 7
+a564 9
+第1引数はself，第2引数はrubyの配列です．ここではキャストを減
+らすため struct RArray* で受けていますが，VALUEでも同じこと
+です．
+
+** 注意事項
+
+rubyと共有はしないがrubyのオブジェクトを格納する可能性のある
+Cの大域変数は以下の関数を使ってrubyインタプリタに変数の存在
+を教えてあげてください．でないとGCでトラブルを起こします．
+d570 21
+a590 2
+もしディレクトリに「extconf.rb」というファイルが存在すれば，
+make時に実行されます．なければ適当にMakefileが生成されます．
+d592 3
+a594 17
+extconf.rbはモジュールのコンパイルに必要な条件のチェックなど
+を行うことが目的です．extconf.rbの中では以下のruby関数を使う
+ことが出来ます．
+
+  have_library(lib, func): ライブラリの存在チェック
+  have_func(func): 関数の存在チェック
+  have_header(header): ヘッダファイルの存在チェック
+  create_makefile(target): Makefileの生成
+
+以下の変数を使うことができます．
+
+  $CFLAGS: コンパイル時に追加的に指定するフラグ(-Iなど)
+  $LDFLAGS: リンク時に追加的に指定するフラグ(-Lなど)
+
+モジュールをコンパイルする条件が揃わなず，そのモジュールはコ
+ンパイルしない時にはcreate_makefileを呼ばなければMakefileは
+生成されず，コンパイルも行われません．
+d598 2
+a599 2
+もし，ディレクトリにdependというファイルが存在すれば，
+Makefileが依存関係をチェックしてくれます．
+d603 1
+a603 1
+などで作ることが出来ます．あって損は無いでしょう．
+d605 1
+a605 1
+(7) MANIFESTファイルにファイル名を入れる
+d607 1
+a607 1
+  % ls > MANIFEST
+d610 22
+a631 12
+*.o, *~など不必要なファイル以外はMANIFESTに追加しておきます．
+make時にはMANIFESTの内容は参照しませんので，空のままでも問題
+は起きませんが，パッケージングの時に参照することがあるのと，
+必要なファイルを区別できるので，用意しておいた方が良いでしょ
+う．
+
+(8) make
+
+rubyのディレクトリでmakeを実行するとMakefileを生成からmake，
+必要によってはそのモジュールのrubyへのリンクまで自動的に実行
+してくれます．extconf.rbを書き換えるなどしてMakefileの再生成
+が必要な時はまたrubyディレクトリでmakeしてください．
+d635 3
+a637 5
+まあ，デバッグしないと動かないでしょうね．ext/Setupにディレ
+クトリ名を書くと静的にリンクするのでデバッガが使えるようにな
+ります．その分コンパイルが遅くなりますけど．
+
+(10) done, now you have the extension module
+d639 1
+a639 3
+後はこっそり使うなり，広く公開するなり，売るなり，ご自由にお
+使いください．rubyの作者は拡張モジュールに関して一切の権利を
+主張しません．
+d641 3
+a643 1
+Appendix A. rubyのソースコードの分類
+d645 1
+a645 4
+rubyのソースはいくつかに分類することが出来ます．このうちクラ
+スライブラリの部分は基本的に拡張モジュールと同じ作り方になっ
+ています．これらのソースは今までの説明でほとんど理解できると
+思います．
+d647 1
+a647 1
+coore ruby language
+d697 1
+a697 1
+Appendix B. 拡張用関数リファレンス
+d699 1
+a699 3
+C言語からrubyの機能を利用するAPIは以下の通りである．
+
+** 型
+d703 3
+a705 4
+rubyオブジェクトを表現する型．必要に応じてキャストして用いる．
+組み込み型を表現するCの型はruby.hに記述してあるRで始まる構造
+体である．VALUE型をこれらにキャストするためにRで始まる構造体
+名を全て大文字にした名前のマクロが用意されている．
+d713 1
+a713 1
+ TRUE
+d715 1
+a715 1
+const: TRUE object(default true value)
+d717 1
+a717 1
+ FALSE
+d719 1
+a719 1
+const: FALSE object
+d721 1
+a721 1
+** Cデータのカプセル化
+d725 4
+a728 5
+Cの任意のポインタをカプセル化したrubyオブジェクトを返す．こ
+のポインタがrubyからアクセスされなくなった時，freeで指定した
+関数が呼ばれる．また，このポインタの指すデータが他のrubyオブ
+ジェクトを指している場合，markに指定する関数でマークする必要
+がある．
+d732 2
+a733 2
+type型のメモリをmallocし，変数svalに代入した後，それをカプセ
+ル化したデータを返すマクロ．
+d737 2
+a738 1
+dataからtype型のポインタを取り出し変数svalに代入するマクロ．
+d740 1
+a740 1
+** クラス/モジュール定義
+d744 1
+a744 1
+superのサブクラスとして新しいrubyクラスを定義する．
+d748 2
+a749 2
+superのサブクラスとして新しいrubyクラスを定義し，moduleの定
+数として定義する．
+d753 1
+a753 1
+新しいrubyモジュールを定義する．
+d757 1
+a757 1
+新しいrubyモジュールを定義し，moduleの定数として定義する．
+d761 2
+a762 2
+モジュールをインクルードする．classがすでにmoduleをインクルー
+ドしている時には何もしない(多重インクルードの禁止)．
+d766 1
+a766 1
+オブジェクトをモジュール(で定義されているメソッド)で拡張する．
+d768 1
+a768 1
+** 大域変数定義
+d772 3
+a774 4
+rubyとCとで共有するグローバル変数を定義する．変数名が`$'で始
+まらない時には自動的に追加される．nameとしてrubyの識別子とし
+て許されない文字(例えば` ')を含む場合にはrubyプログラムから
+は見えなくなる．
+d778 2
+a779 2
+rubyとCとで共有するread onlyのグローバル変数を定義する．read
+onlyであること以外はrb_define_variable()と同じ．
+d784 9
+a792 2
+関数によって実現されるruby変数を定義する．変数が参照された時
+にはgetterが，変数に値がセットされた時にはsetterが呼ばれる．
+d797 10
+a806 4
+関数によってhookのつけられたグローバル変数を定義する．変数が
+参照された時にはgetterが，関数に値がセットされた時にはsetter
+が呼ばれる．getterやsetterに0を指定した時にはhookを指定しな
+いのと同じ事になる．
+d810 1
+a810 2
+GCのため，rubyプログラムからはアクセスされないが, rubyオブジェ
+クトを含む大域変数をマークする．
+d812 1
+a812 1
+** クラス定数
+d814 1
+a814 1
+ void rb_define_const(VALUE class, char *name, VALUE val)
+d816 1
+a816 1
+クラス定数を定義する．
+d820 1
+a820 1
+大域定数を定義する．
+d824 1
+a824 3
+と同じ意味．
+
+** メソッド定義
+d828 5
+a832 5
+メソッドを定義する．argcはselfを除く引数の数．argcが-1の時, 
+関数には引数の数(selfを含まない)を第1引数, 引数の配列を第2引
+数とする形式で与えられる(第3引数はself)．argcが-2の時, 第1引
+数がself, 第2引数がargs(argsは引数を含むrubyの配列)という形
+式で与えられる．
+d836 2
+a837 1
+privateメソッドを定義する．引数はrb_define_method()と同じ．
+d841 1
+a841 1
+特異メソッドを定義する．引数はrb_define_method()と同じ．
+d843 1
+a843 1
+ rb_scan_args(int atgc, VALUE *argv, char *fmt, ...)
+d845 5
+a849 7
+argc,argv形式で与えられた引数を分解する．fmtは必須引数の数, 
+付加引数の数, 残りの引数があるかを指定する文字列で, "数字数
+字*"という形式である． 2 番目の数字と"*"はそれぞれ省略可能で
+ある．必須引数が一つもない場合は0を指定する．第3引数以降は変
+数へのポインタで, 該当する要素がその変数に格納される．付加引
+数に対応する引数が与えられていない場合は変数にQnilが代入され
+る．
+d851 1
+a851 1
+** rubyメソッド呼び出し
+d855 1
+a855 1
+メソッド呼び出し．文字列からmidを得るためにはrb_intern()を使う．
+d859 1
+a859 1
+メソッド呼び出し．引数をargc,argv形式で渡す．
+d863 1
+a863 1
+文字列をrubyとスクリプトしてコンパイル・実行する．
+d867 1
+a867 1
+文字列に対応するIDを返す．
+d871 1
+a871 1
+IDに対応する文字列を返す(デバッグ用)．
+d875 1
+a875 2
+classの名前を返す(デバッグ用)．classが名前を持たない時には, 
+祖先を遡って名前を持つクラスの名前を返す．
+d877 1
+a877 1
+** インスタンス変数
+d881 2
+a882 3
+objのインスタンス変数の値を得る．`@@'で始まらないインスタンス
+変数は rubyプログラムからアクセスできない「隠れた」インスタ
+ンス変数になる．
+d886 1
+a886 1
+objのインスタンス変数をvalにセットする．
+d888 1
+a888 1
+** 制御構造
+d892 4
+a895 3
+func2をブロックとして設定し, func1をイテレータとして呼ぶ． 
+func1には arg1が引数として渡され, func2には第1引数にイテレー
+タから与えられた値, 第2引数にarg2が渡される．
+d899 1
+a899 1
+valを値としてイテレータブロックを呼び出す．
+d903 4
+a906 4
+関数func1をarg1を引数に呼び出す．func1の実行中に例外が発生し
+た時には func2をarg2を引数として呼ぶ．戻り値は例外が発生しな
+かった時はfunc1の戻り値, 例外が発生した時にはfunc2の戻り値で
+ある．
+d910 7
+a916 3
+関数func1をarg1を引数として実行し, 実行終了後(たとえ例外が発
+生しても) func2をarg2を引数として実行する．戻り値はfunc1の戻
+り値である(例外が発生した時は戻らない)．
+d918 1
+a918 1
+** 例外・エラー
+d920 1
+a920 1
+ void Warning(char *fmt, ...)
+d922 2
+a923 1
+verbose時に標準エラー出力に警告情報を表示する．引数はprintf()と同じ．
+d925 1
+a925 1
+ void Fail(char *fmt, ...)
+d927 2
+a928 1
+例外を発生させる．引数はprintf()と同じ．
+d930 1
+a930 1
+ void Fatal(char *fmt, ...)
+d932 2
+a933 3
+致命的例外を発生させる．通常の例外処理は行なわれず, インター
+プリタが終了する(ただしensureで指定されたコードは終了前に実
+行される)．
+d935 1
+a935 1
+ void Bug(char *fmt, ...)
+d937 3
+a939 3
+インタープリタなどプログラムのバグでしか発生するはずのない状
+況の時呼ぶ．インタープリタはコアダンプし直ちに終了する．例外
+処理は一切行なわれない．
+d941 1
+a941 1
+** rubyの初期化・実行
+d943 1
+a943 2
+rubyをアプリケーションに埋め込む場合には以下のインタフェース
+を使う．通常の拡張モジュールには必要ない．
+d947 1
+a947 1
+rubyインタプリタの初期化を行なう．
+d951 1
+a951 1
+rubyインタプリタを実行する．
+d955 1
+a955 1
+rubyのスクリプト名($0)を設定する．
+d957 1
+a957 1
+Appendix B. extconf.rbで使える関数たち
+d959 1
+a959 2
+extconf.rbの中では利用可能なコンパイル条件チェックの関数は以
+下の通りである．
+d963 2
+a964 2
+関数funcを定義しているライブラリlibの存在をチェックする．ラ
+イブラリが存在する時，TRUEを返す．
+d968 3
+a970 3
+関数funcの存在をチェックする．funcが標準ではリンクされないラ
+イブラリ内のものである時には先にhave_libraryでそのライブラリ
+をチェックしておく事．関数が存在する時TRUEを返す．
+d974 1
+a974 2
+ヘッダファイルの存在をチェックする．ヘッダファイルが存在する
+時TRUEを返す．
+d978 2
+a979 3
+拡張モジュール用のMakefileを生成する．この関数を呼ばなければ
+そのモジュールはコンパイルされない．targetはモジュール名を表
+す．
+d983 1
+a983 1
+ * fill-column: 60
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d3 1
+a3 1
+This document explains how to make extention modules for Ruby.
+d8 1
+a8 1
+Ruby variables do not have static type and data themselves have
+d11 1
+a11 1
+Data in Ruby represented C type `VALUE'.  Each VALUE data have its
+d14 5
+d41 1
+a41 1
+	T_STRUCT	(Ruby) structure
+d92 31
+a122 22
+The data for type T_NIL, T_FALSE, T_TRUE are nil, true, false
+respectively.  They are singletons for the data type.
+
+The T_FIXNUM data is the 31bit length fixed integer (63bit length on
+some machines), which can be conver to the C integer by using
+FIX2INT() macro.  There also be NUM2INT() which converts any Ruby
+numbers into C integer.  The NUM2INT() macro includes type check, so
+the exception will be raised if conversion failed.
+
+Other data types have corresponding C structures, e.g. struct RArray
+for T_ARRAY etc.  VALUE of the type which has corresponding structure
+can be cast to retrieve the pointer to the struct.  The casting macro
+RXXXX for each data type like RARRAY(obj).  see "ruby.h".
+
+For example, `RSTRING(size)->len' is the way to get the size of the
+Ruby String object.  The allocated region can be accessed by
+`RSTRING(str)->ptr'.  For arrays, `RARRAY(ary)->len' and
+`RARRAY(ary)->ptr' respectively.
+
+Notice: Do not change the value of the structure directly, unless you
+are responsible about the result.  It will be the cause of interesting
+bugs.
+d140 1
+a140 1
+ですから，FIXNUM以外のRubyのオブジェクトの構造体は単にVALUE
+d143 1
+a143 1
+はRubyの知っている構造体(ruby.hで定義されているstruct RXxxx
+d156 5
+a160 1
+1.5 Manipulate Ruby data
+d162 2
+a163 3
+As I already told, it is not recommended to modify object's internal
+structure.  To manipulate objects, use functions supplied by Ruby
+interpreter.  Useful functions are listed below (not all):
+d167 1
+a167 1
+  rb_str_new(char *ptr, int len)
+d169 1
+a169 1
+    Creates a new Ruby string.
+d171 1
+a171 1
+  rb_str_new2(char *ptr)
+d173 2
+a174 2
+    Creates a new Ruby string from C string.  This is equivalent to
+    rb_str_new(ptr, strlen(ptr)).
+d176 1
+a176 1
+  rb_str_cat(VALUE str, char *ptr, int len)
+d178 1
+a178 1
+    Appends len bytes data from ptr to the Ruby string.
+d182 1
+a182 1
+  rb_ary_new()
+d186 1
+a186 1
+  rb_ary_new2(int len)
+d191 1
+a191 1
+  rb_ary_new3(int n, ...)
+d195 1
+a195 1
+  rb_ary_new4(int n, VALUE *elts)
+d199 5
+a203 5
+  rb_ary_push(VALUE ary, VALUE val)
+  rb_ary_pop(VALUE ary)
+  rb_ary_shift(VALUE ary)
+  rb_ary_unshift(VALUE ary, VALUE val)
+  rb_ary_entry(VALUE ary, int idx)
+d208 1
+a208 1
+2. Extend Ruby with C
+d210 1
+a210 1
+原理的にRubyで書けることはCでも書けます．RubyそのものがCで記
+d212 1
+a212 1
+はRubyの拡張に使うことが多いだろうと予測される機能を中心に紹
+d215 1
+a215 1
+2.1 Add new features to Ruby
+d217 2
+a218 2
+Rubyで提供されている関数を使えばRubyインタプリタに新しい機能
+を追加することができます．Rubyでは以下の機能を追加する関数が
+d221 3
+a223 3
+ * Classes, Modules
+ * Methods, Singleton Methods
+ * Constants
+d229 1
+a229 1
+To define class or module, use functions below:
+d234 3
+a236 2
+These functions return the newly created class ot module.  You may
+want to save this reference into the variable to use later.
+d240 1
+a240 1
+To define methods or singleton methods, use functions below:
+d246 1
+a246 1
+			          VALUE (*func)(), int argc)
+a247 2
+The `argc' represents the number of the arguments to the C function,
+which must be less than 17.  But I believe you don't need that much. :-)
+d249 4
+a252 6
+If `argc' is negative, it specifies calling sequence, not number of
+the arguments.  
+
+If argc is -1, the function will be called like:
+
+  VALUE func(int argc, VALUE *argv, VALUE obj)
+d254 8
+a261 2
+where argc is the actual number of arguments, argv is the C array of
+the arguments, and obj is the receiver.
+d263 2
+a264 10
+if argc is -2, the arguments are passed in Ruby array. The function
+will be called like:
+
+  VALUE func(VALUE obj, VALUE args)
+
+where obj is the receiver, and args is the Ruby array containing
+actual arguments.
+
+There're two more functions to define method.  One is to define
+private method:
+d269 7
+a275 3
+The other is to define module function, which is private AND singleton
+method of the module.  For example, sqrt is the module function
+defined in Math module.  It can be call in the form like:
+d279 1
+a279 1
+or
+d284 2
+a285 1
+To define module function
+d290 2
+a291 2
+Oh, in addition, function-like method, which is private method defined
+in Kernel module, can be defined using:
+d298 2
+a299 1
+We have 2 functions to define constants:
+d304 4
+a307 2
+The former is to define constant under specified class/module.  The
+latter is to define global constant.
+d309 6
+a314 1
+2.2 Use Ruby features from C
+d316 1
+a316 1
+There are several ways to invoke Ruby's features from C code.
+d318 1
+a318 1
+2.2.1 Evaluate Ruby Program in String
+d320 2
+a321 2
+Easiest way to call Ruby's function from C program is to evaluate the
+string as Ruby program.  This function will do the job.
+d325 2
+a326 2
+Evaluation is done under current context, thus current local variables
+of the innermost method (which is defined by Ruby) can be accessed.
+d330 5
+a334 4
+You can invoke methods directly, without parsing the string.  First I
+need to explain about symbols (which data type is ID).  ID is the
+integer number to represent Ruby's identifiers such as variable names.
+It can be accessed from Ruby in the form like:
+d336 1
+a336 1
+ :Identifier
+d338 1
+a338 1
+You can get the symbol value from string within C code, by using
+d342 2
+a343 2
+In addition, the symbols for one character operators (e.g +) is the
+code for that character.
+d345 1
+a345 1
+2.2.3 Invoke Ruby method from C
+d347 2
+a348 1
+To invoke methods directly, you can use the function below
+d352 2
+a353 2
+This function invokes the method of the recv, which name is specified
+by the symbol mid.
+d355 1
+a355 1
+2.2.4 Accessing the variables and constants
+d361 2
+a362 1
+The functions to access/modify instance variables are below:
+d367 1
+a367 1
+id must be the symbol, which can be retrieved by rb_intern().
+d369 1
+a369 1
+To access the constants of the class/module:
+d373 2
+a374 1
+See 2.1.3 for defining new constant.
+d376 1
+a376 1
+3. Informatin sharing between Ruby and C
+d378 1
+a378 1
+C言語とRubyの間で情報を共有する方法について解説します．
+d380 1
+a380 1
+3.1 Ruby constant that Cから参照できるRubyの定数
+d382 1
+a382 1
+Following Ruby constants can be referred from C.
+d384 2
+a385 2
+  Qtrue
+  Qfalse
+d387 1
+a387 1
+Boolean values.  Qfalse is false in the C also (i.e. 0).
+d393 1
+a393 1
+3.2 Global variables shared between C and Ruby
+d395 1
+a395 1
+CとRubyで大域変数を使って情報を共有できます．共有できる大域
+d401 1
+a401 1
+この関数はRubyとCとで共有する大域変数を定義します．変数名が
+d403 1
+a403 1
+更すると自動的にRubyの対応する変数の値も変わります．
+d405 1
+a405 1
+またRuby側からは更新できない変数もあります．このread onlyの
+d424 1
+a424 1
+それから，Cの関数によって実現されるRubyの大域変数を定義する
+d430 1
+a430 1
+この関数によって定義されたRubyの大域変数が参照された時には
+d438 1
+a438 1
+3.3 Encapsulate C data into Ruby object
+d440 1
+a440 1
+Cの世界で定義されたデータ(構造体)をRubyのオブジェクトとして
+d442 1
+a442 1
+RubyオブジェクトにCの構造体(へのポインタ)をくるむことでRuby
+d445 1
+a445 1
+Dataオブジェクトを生成して構造体をRubyオブジェクトにカプセル
+d453 1
+a453 1
+Cの構造体へのポインタです．markはこの構造体がRubyのオブジェ
+d485 2
+a486 2
+ここまでの説明でとりあえず拡張ライブラリは作れるはずです．
+Rubyのextディレクトリにすでに含まれているdbmモジュールを例に
+d493 3
+a495 1
+Make a directory for the extension library under ext directory.
+d502 6
+a507 2
+There should be MANIFEST file in the directory for the extension
+library.  Make empty file now.
+d511 4
+a514 1
+You need to design the library features, before making it.
+d518 1
+a518 1
+拡張ライブラリ本体となるC言語のソースを書きます．C言語のソー
+d525 1
+a525 1
+Rubyは拡張ライブラリをロードする時に「Init_モジュール名」と
+d533 4
+a536 4
+    /* define DBM class */
+    cDBM = rb_define_class("DBM", rb_cObject);
+    /* DBM includes Enumerate module */
+    rb_include_module(cDBM, rb_mEnumerable);
+d538 1
+a538 1
+    /* DBM has class method open(): arguments are received as C array */
+d541 1
+a541 1
+    /* DBM instance method close(): no args */
+d543 1
+a543 1
+    /* DBM instance method []: 1 argument */
+d547 2
+d553 1
+a553 1
+すから，Cの世界のdbmをRubyの世界に取り込む必要があります．
+d603 1
+a603 1
+引数の数が不定のものはCの配列で受けるものとRubyの配列で受け
+d637 1
+a637 1
+Rubyの配列で引数を受け取るものはindexesがあります．実装はこ
+d650 1
+a650 1
+第1引数はself，第2引数はRubyの配列です．ここではキャストを減
+d654 1
+a654 1
+** Notice
+d656 3
+a658 2
+GC should know about global variables which refers Ruby's objects, but
+not exported to the Ruby world.  You need to protect them by
+d668 1
+a668 1
+を行うことが目的です．extconf.rbの中では以下のRuby関数を使う
+d707 2
+a708 2
+Rubyのディレクトリでmakeを実行するとMakefileを生成からmake，
+必要によってはそのモジュールのRubyへのリンクまで自動的に実行
+d710 1
+a710 1
+が必要な時はまたRubyディレクトリでmakeしてください．
+d714 3
+a716 3
+You may need to rb_debug the module.  The modules can be linked 
+statically by adding directory name in the ext/Setup file,
+so that you can inspect the module by the debugger.
+d718 1
+a718 1
+(10) done, now you have the extension library
+d721 1
+a721 1
+使いください．Rubyの作者は拡張ライブラリに関して一切の権利を
+d724 1
+a724 1
+Appendix A. Rubyのソースコードの分類
+d726 2
+a727 2
+Rubyのソースはいくつかに分類することが出来ます．このうちクラ
+スライブラリの部分は基本的に拡張ライブラリと同じ作り方になっ
+d731 1
+a731 1
+ruby language core
+d783 1
+a783 1
+C言語からRubyの機能を利用するAPIは以下の通りである．
+d789 1
+a789 1
+Rubyオブジェクトを表現する型．必要に応じてキャストして用いる．
+d800 1
+a800 1
+ Qtrue
+d802 1
+a802 1
+const: Qtrue object(default true value)
+d804 1
+a804 1
+ Qfalse
+d806 1
+a806 1
+const: Qfalse object
+d812 3
+a814 3
+Cの任意のポインタをカプセル化したRubyオブジェクトを返す．こ
+のポインタがRubyからアクセスされなくなった時，freeで指定した
+関数が呼ばれる．また，このポインタの指すデータが他のRubyオブ
+d831 1
+a831 1
+superのサブクラスとして新しいRubyクラスを定義する．
+d835 1
+a835 1
+superのサブクラスとして新しいRubyクラスを定義し，moduleの定
+d840 1
+a840 1
+新しいRubyモジュールを定義する．
+d844 1
+a844 1
+新しいRubyモジュールを定義し，moduleの定数として定義する．
+d855 1
+a855 1
+** Defining Global Variables
+d859 4
+a862 3
+Defines a global variable which is shared between C and Ruby.  If name
+contains the character which is not allowed to be part of the symbol,
+it can't be seen from Ruby programs.
+d866 2
+a867 2
+Defines a read-only global variable.  Works just like
+rb_define_variable(), except defined variable is read-only.
+d872 2
+a873 9
+Defines a virtual variable, whose behavior is defined by pair of C
+functions.  The getter function is called when the variable is
+referred. The setter function is called when the value is set to the
+variable.  The prototype for getter/setter functions are:
+
+	VALUE getter(ID id)
+	void setter(VALUE val, ID id)
+
+The getter function must return the value for the access.
+d878 4
+a881 10
+Defines hooked variable.  It's virtual variable with C variable.  The
+getter is called as
+
+	VALUE getter(ID id, VALUE *var)
+
+returning new value.  The setter is called as
+
+	void setter(VALUE val, ID id, VALUE *var)
+
+GC requires to mark the C global variables which hold Ruby values.
+d885 2
+a886 1
+Tells GC to protect these variables.
+d888 1
+a888 1
+** Constant Definition
+d890 1
+a890 1
+ void rb_define_const(VALUE klass, char *name, VALUE val)
+d892 1
+a892 1
+Defines a new constant under the class/module.
+d896 1
+a896 1
+Defines global contant.  This is just work as
+d900 3
+a902 1
+** Method Definition
+d909 1
+a909 1
+数がself, 第2引数がargs(argsは引数を含むRubyの配列)という形
+d930 1
+a930 1
+** Rubyメソッド呼び出し
+d942 1
+a942 1
+文字列をRubyとスクリプトしてコンパイル・実行する．
+d962 1
+a962 1
+変数は Rubyプログラムからアクセスできない「隠れた」インスタ
+d996 1
+a996 1
+ void rb_warning(char *fmt, ...)
+d998 1
+a998 1
+rb_verbose時に標準エラー出力に警告情報を表示する．引数はprintf()と同じ．
+d1000 1
+a1000 1
+ void rb_raise(rb_eRuntimeError, char *fmt, ...)
+d1004 1
+a1004 1
+ void rb_fatal(char *fmt, ...)
+d1010 1
+a1010 1
+ void rb_bug(char *fmt, ...)
+d1016 1
+a1016 1
+** Initialize and Starts the Interpreter
+d1018 2
+a1019 1
+The embedding API are below (not needed for extension libraries):
+d1023 1
+a1023 1
+Initializes the interpreter.
+d1027 1
+a1027 1
+Starts execution of the interpreter.
+d1031 1
+a1031 1
+Specifies the name of the script ($0).
+d1033 1
+a1033 1
+Appendix B. Functions Available in extconf.rb
+d1040 2
+a1041 2
+Checks whether library which contains specified function exists.
+Returns true if the library exists.
+d1045 3
+a1047 3
+Checks whether func exists.  Returns true if the function exists.  To
+check functions in the additional library, you need to check that
+library first using have_library().
+d1051 2
+a1052 1
+Checks for the header files.  Returns true if the header file exists.
+d1056 3
+a1058 2
+Generates the Makefile for the extension library.  If you don't invoke
+this method, the compilation will not be done.
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d136 2
+a137 2
+  INT2FIX()	for intergers within 31bits.
+  INT2NUM()	for arbitrary sized integer.
+d139 2
+a140 2
+INT2NUM() converts integers into Bignums, if it is out of FIXNUM
+range, but bit slower.
+d208 2
+d646 2
+a647 2
+If the file named depend exists, Makefile will include that file to
+check dependency.  You can make this file by invoking
+d651 1
+a651 1
+It's no harm.  Prepare it.
+d655 1
+a655 1
+  % find * -type f -print > MANIFEST
+d658 5
+a662 3
+Append file names into MANIFEST.  The compilation scheme requires
+MANIFEST only to be exist.  But, you'd better take this step to
+distinguish required files.
+d679 3
+a681 3
+You can do anything you want with your library.  The author of Ruby
+will not claim any restriction about your code depending Ruby API.
+Feel free to use, modify, distribute or sell your program.
+d740 1
+a740 1
+Appendix B. Ruby extension API reference
+d767 1
+a767 1
+** C pointer wrapping
+d786 1
+a786 1
+** defining class/module
+d790 1
+a790 1
+Defines new Ruby class as subclass of super.
+d794 2
+a795 2
+Creates new Ruby class as subclass of super, under the module's
+namespace.
+d799 1
+a799 1
+Defines new Ruby module.
+d803 1
+a803 1
+Defines new Ruby module, under the modules's namespace.
+d807 2
+a808 2
+Includes module into class.  If class already includes it, just
+ignore.
+d812 1
+a812 1
+Extend the object with module's attribute.
+d874 5
+a878 5
+Defines a method for the class.  func is the function pointer.  argc
+is the number of arguments.  if argc is -1, the function will receive
+3 arguments argc, argv, and self.  if argc is -2, the function will
+receive 2 arguments, self and args, where args is the Ruby array of
+the method arguments.
+d882 1
+a882 2
+Defines a private method for the class.  Arguments are same as
+rb_define_method().
+d886 1
+a886 1
+Defines a singleton method.  Arguments are same as rb_define_method().
+d902 1
+a902 1
+Invokes the method.  To retrieve mid from method name, use rb_intern().
+d906 1
+a906 1
+Invokes method, passing arguments by array of values.
+d910 1
+a910 1
+Compiles and executes the string as Ruby program.
+d914 1
+a914 1
+Returns ID corresponding the name.
+d918 1
+a918 1
+Returns the name corresponding ID.
+d922 2
+a923 1
+Returns the name of the class.
+d925 1
+a925 1
+** Instance Variables
+d929 3
+a931 2
+Retrieve the value of the instance variable.  If the name is not
+prefixed by `@@', that variable shall be inaccessible from Ruby.
+d935 1
+a935 1
+Sets the value of the instance variable.
+d937 1
+a937 1
+** Control Structure
+d1027 1
+a1027 1
+ * fill-column: 70
+@
+
+
+1.1.1.2.2.2
+log
+@990201
+@
+text
+@d132 3
+a134 1
+To convert C numbers to Ruby value, use these macros.
+d200 3
+a202 2
+You can add new features (classes, methods, etc.) to the Ruby
+interpreter.  Ruby provides the API to define things below:
+d328 3
+a330 3
+You can access class variables, and instance variables using access
+functions.  Also, global variables can be shared between both worlds.
+There's no way to access Ruby's local variables.
+d347 3
+a349 1
+3.1 Ruby constant that C can be accessed from C
+d370 3
+a372 3
+This function defines the variable which is shared by the both world.
+The value of the global variable pointerd by `var', can be accessed
+through Ruby's global variable named `name'.
+d374 2
+a375 2
+You can define read-only (from Ruby, of course) variable by the
+function below.
+d414 2
+a415 1
+To wrapping and objectify the C pointer, use Data_Wrap_Struct().
+d419 1
+a419 1
+Data_Wrap_Struct() returns a created Data object.
+d436 1
+a436 2
+This macro returns an allocated Data object, wrapping the pointer to
+the structure, which is also allocated.
+d438 3
+a440 3
+Arguments, class, mark, free, works like thier counterpart of
+Data_Wrap_Struct().  The pointer to allocated structure will be
+assigned to sval, which should be the pointer to the type specified.
+d442 2
+a443 2
+To retrieve the C pointer from the Data object, use the macro
+Data_Get_Struct().
+d447 1
+a447 1
+The pointer to the structure will be assigned to the variable sval.
+d449 2
+a450 1
+See example below for detail. 
+d601 2
+a602 1
+    VALUE obj, args;
+d608 3
+a610 2
+The first argument is the receiver, the second one is the Ruby array
+which contains the arguments to the method.
+d621 2
+a622 3
+If there exists the file named extconf.rb, it will be executed to
+generate Makefile.  If not, compilation scheme try to generate
+Makefile anyway.
+@
+
+
+1.1.1.2.2.3
+log
+@990209
+@
+text
+@d112 1
+a112 1
+To convert C data to the values of Ruby:
+d114 1
+a114 1
+  * FIXNUM
+d116 1
+a116 1
+    right shift 1 bit, and turn on LSB.
+d118 1
+a118 1
+  * Other pointer values
+d120 1
+a120 1
+    cast to VALUE.
+d122 3
+a124 1
+You can determine whether VALUE is pointer or not, by checking LSB.  
+d126 5
+a130 3
+Notice Ruby does not allow arbitrary pointer value to be VALUE.  They
+should be pointers to the structures which Ruby knows.  The known
+structures are defined in <ruby.h>.
+d359 3
+a361 2
+Information can be shared between two worlds, using shared global
+variables.  To define them, you can use functions listed below:
+d374 3
+a376 2
+You can defined hooked variables.  The accessor functions (getter and
+setter) are called on access to the hooked variables.
+d381 9
+a389 3
+If you need to supply either setter or getter, just supply 0 for the
+hook you don't need.  If both hooks are 0, rb_define_hooked_variable()
+works just like rb_define_variable().
+d394 2
+a395 2
+This function defines the Ruby global variable without corresponding C
+variable.  The value of the variable will be set/get only by hooks.
+d404 6
+a409 2
+To wrapping and objectify the C pointer as Ruby object (so called
+DATA), use Data_Wrap_Struct().
+d413 6
+a418 5
+Data_Wrap_Struct() returns a created DATA object.  The class argument
+is the class for the DATA object.  The mark argument is the function
+to mark Ruby objects pointed by this data.  The free argument is the
+function to free the pointer allocation.  The functions, mark and
+free, will be called from garbage collector.
+d420 7
+a426 1
+You can allocate and wrap the structure in one step.
+d431 1
+a431 3
+the structure, which is also allocated.  This macro works like:
+
+  (sval = ALLOC(type), Data_Wrap_Struct(class, mark, free, sval))
+d448 3
+a450 3
+OK, here's the example to make extension library.  This is the
+extension to access dbm.  The full source is included in ext/
+directory in the Ruby's source tree.
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d116 1
+a116 1
+    left shift 1 bit, and turn on LSB.
+d729 1
+a729 1
+const: true object(default true value)
+d733 1
+a733 1
+const: false object
+d747 2
+a748 2
+This macro allocates memory using malloc(), assigns it to the variable
+sval, and returns the DATA encapsulating the pointer to memory region.
+d752 1
+a752 2
+This macro retrieves the pointer value from DATA, and assigns it to
+the variable sval. 
+d908 3
+a910 4
+Calls the function func1, supplying func2 as the block.  func1 will be
+called with the argument arg1.  func2 receives the value from yield as
+the first argument, arg2 as the second argument.
+
+d914 1
+a914 1
+Evaluates the block with value val.
+d918 4
+a921 4
+Calls the function func1, with arg1 as the argument.  If exception
+occurs during func1, it calls func2 with arg2 as the argument.  The
+return value of rb_rescue() is the return value from func1 if no
+exception occurs, from func2 otherwise.
+d925 3
+a927 7
+Calls the function func1 with arg1 as the argument, then calls func2
+with arg2, whenever execution terminated.  The return value from
+rb_ensure() is that of func1.
+
+** Exceptions and Errors
+
+ void rb_warn(char *fmt, ...)
+d929 1
+a929 1
+Prints warning message according to the printf-like format.
+d933 1
+a933 2
+Prints warning message according to the printf-like format, if
+$VERBOSE is true.
+d935 1
+a935 1
+ void rb_raise(VALUE exception, char *fmt, ...)
+d937 1
+a937 2
+Raises an exception of class exception.  The fmt is the format string
+just like printf().
+d941 3
+a943 2
+Raises fatal error, terminates the interpreter.  No exception handling
+will be done for fatal error, but ensure blocks will be executed.
+d947 3
+a949 3
+Termintates the interpreter immediately.  This function should be
+called under the situation caused by the bug in the interpreter.  No
+exception handling nor ensure execution will be done.
+d969 2
+a970 1
+These functions are available in extconf.rb:
+@
+
+
+1.1.1.2.2.5
+log
+@990324
+@
+text
+@d3 1
+a3 1
+This document explains how to make extention libraries for Ruby.
+d187 5
+d425 1
+a425 1
+4．Example - Creating dbm extension
+d451 11
+a461 11
+You need to write C code for your extension library.  If your library
+has only one source file, choosing ``LIBRARY.c'' as a file name is
+preferred.  On the other hand, in case your library has prural source
+files, avoid chooing ``LIBRARY.c'' for a file name.  It may conflict
+with intermediate file ``LIBRARY.o'' on some platforms.
+
+Ruby will execute the initializing function named ``Init_LIBRARY'' in
+the library.  For exapmle, ``Init_dbm()'' will be executed when loading
+the library.
+
+Here's the example of an initializing function.
+d483 5
+a487 1
+The dbm extension wrap dbm struct in C world using Data_Make_Struct.
+d596 17
+a612 21
+The extconf.rb is the file to check compilation condition etc.  You
+need to put
+
+  require 'mkmf'
+
+at the top of the file.  You can use the funcitons below to check the
+condition.
+
+  have_library(lib, func): check whether library containing function exists.
+  have_func(func): check whether function exists
+  have_header(header): check whether header file exists
+  create_makefile(target): generate Makefile
+
+The value of variables below will affect Makefile.
+
+  $CFLAGS: included in CFLAGS make variable (such as -I)
+  $LDFLAGS: included in LDFLAGS make variable (such as -L)
+
+If compilation condition is not fulfilled, you do not call
+``create_makefile''.  Makefile will not generated, compilation will
+not be done.
+d623 1
+a623 1
+(7) put file names into MANIFEST (optional)
+d632 1
+a632 9
+(8) generate Makefile
+
+Try generate Makefile by:
+
+  ruby extconf.rb
+
+You don't need this step, if you put extension library under ext
+directory of the ruby source tree.  In that case, compilation of the
+interpreter will do this step for you.
+d634 4
+a637 8
+(9) make
+
+Type
+
+  make
+
+to compile your extension.  You don't need this step neither, if you
+put extension library under ext directory of the ruby source tree.
+d641 3
+a643 3
+You may need to rb_debug the extension.  The extensions can be linked
+statically by adding directory name in the ext/Setup file, so that you
+can inspect the extension with the debugger.
+d651 6
+a656 1
+Appendix A. Ruby source files overview
+d868 1
+a868 1
+** Invoking Ruby method
+@
+
+
+1.1.1.2.2.6
+log
+@*** empty log message ***
+@
+text
+@d490 3
+a492 2
+This code wraps dbmdata structure into Ruby object.  We avoid wrapping
+DBM* directly, because we want to cache size information.
+d494 2
+a495 1
+To retrieve dbmdata structure from Ruby object, we define the macro below:
+d504 8
+a511 5
+This sort of complicated macro do the retrieving and close check for
+the DBM.
+
+There are three kind of way to receiving method arguments.  First, the
+methods with fixed number of arguments receives arguments like this:
+d522 2
+a523 2
+The first argument of the C function is the self, the rest are the
+arguments to the method.
+d525 4
+a528 2
+Second, the methods with arbtrary number of arguments receives
+arguments like this:
+d545 13
+a557 7
+The first argument is the number of method arguments.  the second
+argument is the C array of the method arguments.  And the third
+argument is the receiver of the method.
+
+You can use the function rb_scan_args() to check and retrieve the
+arguments.  For exapmle "11" means, the method requires at least one
+argument, and at most receives two arguments.
+d559 2
+a560 2
+The methods with arbtrary number of arguments can receives arguments
+by Ruby's array, like this:
+d712 3
+a714 1
+** Types
+d718 4
+a721 3
+The type for Ruby object.  Actual structures are defined in ruby.h,
+such as struct RString, etc.  To refer the values in structures, use
+casting macros like RSTRING(obj).
+d741 5
+a745 4
+Wrap C pointer into Ruby object.  If object has references to other
+Ruby object, they should be marked by using mark function during GC
+process.  Otherwise, mark should be 0.  When this object is no longer
+referred by anywhere, the pointer will be discarded by free function.
+d860 1
+a860 1
+ rb_scan_args(int argc, VALUE *argv, char *fmt, ...)
+d862 7
+a868 5
+Retrieve argument from argc, argv.  The fmt is the format string for
+the arguments, such as "12" for 1 non-optinal argument, 2 optinal
+aruguments.  If `*' appears at the end of fmt, it means the rest of
+the arguments are assigned to corresponding variable, packed in
+array.
+@
+
+
+1.1.1.2.2.7
+log
+@990806
+@
+text
+@d5 1
+a5 1
+1. Basic knowledge
+d420 1
+a420 1
+4. Example - Creating dbm extension
+@
+
+
+1.1.1.1.4.1
+log
+@prototypes
+@
+text
+@d3 1
+a3 1
+This document explains how to make extention modules for Ruby.
+d8 1
+a8 1
+Ruby variables do not have static type and data themselves have
+d11 1
+a11 1
+Data in Ruby represented C type `VALUE'.  Each VALUE data have its
+d14 5
+d41 1
+a41 1
+	T_STRUCT	(Ruby) structure
+d93 1
+a93 1
+れnil, false, trueです．このデータタイプのオブジェクトはひと
+d98 1
+a98 1
+います．それから，FIXNUMに限らずRubyのデータを整数に変換する
+d119 1
+a119 1
+Rubyの構造体を直接アクセスする時に気をつけなければならないこ
+d140 1
+a140 1
+ですから，FIXNUM以外のRubyのオブジェクトの構造体は単にVALUE
+d143 1
+a143 1
+はRubyの知っている構造体(ruby.hで定義されているstruct RXxxx
+d156 1
+a156 1
+1.5 Manipulate Ruby data
+d158 3
+a160 3
+先程も述べた通り，Rubyの構造体をアクセスする時に内容の更新を
+行うことは勧められません．で，Rubyのデータを操作する時には
+Rubyが用意している関数を用いてください．
+d169 1
+a169 1
+    Creates a new Ruby string.
+d173 1
+a173 1
+    Creates a new Ruby string from C string.  This is equivalent to
+d178 1
+a178 1
+    Appends len bytes data from ptr to the Ruby string.
+d208 1
+a208 1
+2. Extend Ruby with C
+d210 1
+a210 1
+原理的にRubyで書けることはCでも書けます．RubyそのものがCで記
+d212 1
+a212 1
+はRubyの拡張に使うことが多いだろうと予測される機能を中心に紹
+d215 1
+a215 1
+2.1 Add new features to Ruby
+d217 2
+a218 2
+Rubyで提供されている関数を使えばRubyインタプリタに新しい機能
+を追加することができます．Rubyでは以下の機能を追加する関数が
+d250 1
+a250 1
+トに対してだけ有効なメソッドです．RubyではよくSmalltalkにお
+d261 1
+a261 1
+数はRubyの配列として渡されます．
+d307 1
+a307 1
+2.2 Use Ruby features from C
+d309 2
+a310 2
+既に『1.5 Rubyのデータを操作する』で一部紹介したような関数を
+使えば，Rubyの機能を実現している関数を直接呼び出すことが出来
+d316 1
+a316 1
+それ以外にもRubyの機能を呼び出す方法はいくつかあります．
+d318 1
+a318 1
+2.2.1 Rubyのプログラムをevalする
+d320 2
+a321 2
+CからRubyの機能を呼び出すもっとも簡単な方法として，文字列で
+与えられたRubyのプログラムを評価する関数があります．
+d330 2
+a331 2
+Cから文字列を経由せずにRubyのメソッドを呼び出すこともできま
+す．その前に，Rubyインタプリタ内でメソッドや変数名を指定する
+d334 1
+a334 1
+IDとは変数名，メソッド名を表す整数です．Rubyの中では
+d345 1
+a345 1
+2.2.3 Invoke Ruby method from C
+d347 1
+a347 1
+Cから文字列を経由せずにRubyのメソッドを呼び出すためには以下
+d376 1
+a376 1
+3. Informatin sharing between Ruby and C
+d378 1
+a378 1
+C言語とRubyの間で情報を共有する方法について解説します．
+d380 1
+a380 1
+3.1 Ruby constant that Cから参照できるRubyの定数
+d382 1
+a382 1
+Following Ruby constants can be referred from C.
+d393 1
+a393 1
+3.2 Global variables shared between C and Ruby
+d395 1
+a395 1
+CとRubyで大域変数を使って情報を共有できます．共有できる大域
+d401 1
+a401 1
+この関数はRubyとCとで共有する大域変数を定義します．変数名が
+d403 1
+a403 1
+更すると自動的にRubyの対応する変数の値も変わります．
+d405 1
+a405 1
+またRuby側からは更新できない変数もあります．このread onlyの
+d424 1
+a424 1
+それから，Cの関数によって実現されるRubyの大域変数を定義する
+d430 1
+a430 1
+この関数によって定義されたRubyの大域変数が参照された時には
+d438 1
+a438 1
+3.3 Encapsulate C data into Ruby object
+d440 1
+a440 1
+Cの世界で定義されたデータ(構造体)をRubyのオブジェクトとして
+d442 1
+a442 1
+RubyオブジェクトにCの構造体(へのポインタ)をくるむことでRuby
+d445 1
+a445 1
+Dataオブジェクトを生成して構造体をRubyオブジェクトにカプセル
+d453 1
+a453 1
+Cの構造体へのポインタです．markはこの構造体がRubyのオブジェ
+d486 1
+a486 1
+Rubyのextディレクトリにすでに含まれているdbmモジュールを例に
+d493 1
+a493 1
+Rubyを展開したディレクトリの下，extディレクトリの中に拡張モ
+d525 1
+a525 1
+Rubyは拡張モジュールをロードする時に「Init_モジュール名」と
+d553 1
+a553 1
+すから，Cの世界のdbmをRubyの世界に取り込む必要があります．
+d603 1
+a603 1
+引数の数が不定のものはCの配列で受けるものとRubyの配列で受け
+d637 1
+a637 1
+Rubyの配列で引数を受け取るものはindexesがあります．実装はこ
+d650 1
+a650 1
+第1引数はself，第2引数はRubyの配列です．ここではキャストを減
+d656 2
+a657 2
+Rubyと共有はしないがRubyのオブジェクトを格納する可能性のある
+Cの大域変数は以下の関数を使ってRubyインタプリタに変数の存在
+d668 1
+a668 1
+を行うことが目的です．extconf.rbの中では以下のRuby関数を使う
+d707 2
+a708 2
+Rubyのディレクトリでmakeを実行するとMakefileを生成からmake，
+必要によってはそのモジュールのRubyへのリンクまで自動的に実行
+d710 1
+a710 1
+が必要な時はまたRubyディレクトリでmakeしてください．
+d714 3
+a716 3
+You may need to debug the module.  The modules can be linked 
+statically by adding directory name in the ext/Setup file,
+so that you can inspect the module by the debugger.
+d721 1
+a721 1
+使いください．Rubyの作者は拡張モジュールに関して一切の権利を
+d724 1
+a724 1
+Appendix A. Rubyのソースコードの分類
+d726 1
+a726 1
+Rubyのソースはいくつかに分類することが出来ます．このうちクラ
+d731 1
+a731 1
+ruby language core
+d783 1
+a783 1
+C言語からRubyの機能を利用するAPIは以下の通りである．
+d789 1
+a789 1
+Rubyオブジェクトを表現する型．必要に応じてキャストして用いる．
+d812 3
+a814 3
+Cの任意のポインタをカプセル化したRubyオブジェクトを返す．こ
+のポインタがRubyからアクセスされなくなった時，freeで指定した
+関数が呼ばれる．また，このポインタの指すデータが他のRubyオブ
+d831 1
+a831 1
+superのサブクラスとして新しいRubyクラスを定義する．
+d835 1
+a835 1
+superのサブクラスとして新しいRubyクラスを定義し，moduleの定
+d840 1
+a840 1
+新しいRubyモジュールを定義する．
+d844 1
+a844 1
+新しいRubyモジュールを定義し，moduleの定数として定義する．
+d859 3
+a861 3
+RubyとCとで共有するグローバル変数を定義する．変数名が`$'で始
+まらない時には自動的に追加される．nameとしてRubyの識別子とし
+て許されない文字(例えば` ')を含む場合にはRubyプログラムから
+d866 1
+a866 1
+RubyとCとで共有するread onlyのグローバル変数を定義する．read
+d872 1
+a872 1
+関数によって実現されるRuby変数を定義する．変数が参照された時
+d885 1
+a885 1
+GCのため，Rubyプログラムからはアクセスされないが, Rubyオブジェ
+d909 1
+a909 1
+数がself, 第2引数がargs(argsは引数を含むRubyの配列)という形
+d930 1
+a930 1
+** Rubyメソッド呼び出し
+d942 1
+a942 1
+文字列をRubyとスクリプトしてコンパイル・実行する．
+d962 1
+a962 1
+変数は Rubyプログラムからアクセスできない「隠れた」インスタ
+d1016 1
+a1016 1
+** Rubyの初期化・実行
+d1018 1
+a1018 1
+Rubyをアプリケーションに埋め込む場合には以下のインタフェース
+d1023 1
+a1023 1
+Rubyインタプリタの初期化を行なう．
+d1027 1
+a1027 1
+Rubyインタプリタを実行する．
+d1031 1
+a1031 2
+Rubyのスクリプト名($0)を設定する．
+
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_25
+@
+text
+@d194 2
+a195 2
+  ary_push(VALUE ary, VALUE val)
+  ary_pop(VALUE ary)
+@
+
+
+1.1.1.1.4.2.2.1
+log
+@1.1d series
+@
+text
+@d162 1
+a162 1
+  rb_str_new(char *ptr, int len)
+d166 1
+a166 1
+  rb_str_new2(char *ptr)
+d169 1
+a169 1
+    rb_str_new(ptr, strlen(ptr)).
+d171 1
+a171 1
+  rb_str_cat(VALUE str, char *ptr, int len)
+d177 1
+a177 1
+  rb_ary_new()
+d181 1
+a181 1
+  rb_ary_new2(int len)
+d186 1
+a186 1
+  rb_ary_new3(int n, ...)
+d190 1
+a190 1
+  rb_ary_new4(int n, VALUE *elts)
+d194 5
+a198 5
+  rb_ary_push(VALUE ary, VALUE val)
+  rb_ary_pop(VALUE ary)
+  rb_ary_shift(VALUE ary)
+  rb_ary_unshift(VALUE ary, VALUE val)
+  rb_ary_entry(VALUE ary, int idx)
+d379 2
+a380 2
+  Qtrue
+  Qfalse
+d382 1
+a382 1
+Boolean values.  Qfalse is false in the C also (i.e. 0).
+d529 1
+a529 1
+    cDBM = rb_define_class("DBM", rb_cObject);
+d531 1
+a531 1
+    rb_include_module(cDBM, rb_mEnumerable);
+d707 1
+a707 1
+(9) rb_debug
+d709 1
+a709 1
+You may need to rb_debug the module.  The modules can be linked 
+d795 1
+a795 1
+ Qtrue
+d797 1
+a797 1
+const: Qtrue object(default true value)
+d799 1
+a799 1
+ Qfalse
+d801 1
+a801 1
+const: Qfalse object
+d991 1
+a991 1
+ void rb_warning(char *fmt, ...)
+d993 1
+a993 1
+rb_verbose時に標準エラー出力に警告情報を表示する．引数はprintf()と同じ．
+d995 1
+a995 1
+ void rb_raise(rb_eRuntimeError, char *fmt, ...)
+d999 1
+a999 1
+ void rb_fatal(char *fmt, ...)
+d1005 1
+a1005 1
+ void rb_bug(char *fmt, ...)
+d1037 1
+a1037 1
+イブラリが存在する時，Qtrueを返す．
+@
+
+
+1.1.1.1.4.2.2.2
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d87 31
+a117 22
+The data for type T_NIL, T_FALSE, T_TRUE are nil, true, false
+respectively.  They are singletons for the data type.
+
+The T_FIXNUM data is the 31bit length fixed integer (63bit length on
+some machines), which can be conver to the C integer by using
+FIX2INT() macro.  There also be NUM2INT() which converts any Ruby
+numbers into C integer.  The NUM2INT() macro includes type check, so
+the exception will be raised if conversion failed.
+
+Other data types have corresponding C structures, e.g. struct RArray
+for T_ARRAY etc.  VALUE of the type which has corresponding structure
+can be cast to retrieve the pointer to the struct.  The casting macro
+RXXXX for each data type like RARRAY(obj).  see "ruby.h".
+
+For example, `RSTRING(size)->len' is the way to get the size of the
+Ruby String object.  The allocated region can be accessed by
+`RSTRING(str)->ptr'.  For arrays, `RARRAY(ary)->len' and
+`RARRAY(ary)->ptr' respectively.
+
+Notice: Do not change the value of the structure directly, unless you
+are responsible about the result.  It will be the cause of interesting
+bugs.
+d153 6
+a158 3
+As I already told, it is not recommended to modify object's internal
+structure.  To manipulate objects, use functions supplied by Ruby
+interpreter.  Useful functions are listed below (not all):
+d216 3
+a218 3
+ * Classes, Modules
+ * Methods, Singleton Methods
+ * Constants
+d224 1
+a224 1
+To define class or module, use functions below:
+d229 3
+a231 2
+These functions return the newly created class ot module.  You may
+want to save this reference into the variable to use later.
+d235 1
+a235 1
+To define methods or singleton methods, use functions below:
+d241 1
+a241 1
+			          VALUE (*func)(), int argc)
+a242 2
+The `argc' represents the number of the arguments to the C function,
+which must be less than 17.  But I believe you don't need that much. :-)
+d244 4
+a247 9
+If `argc' is negative, it specifies calling sequence, not number of
+the arguments.  
+
+If argc is -1, the function will be called like:
+
+  VALUE func(int argc, VALUE *argv, VALUE obj)
+
+where argc is the actual number of arguments, argv is the C array of
+the arguments, and obj is the receiver.
+d249 8
+a256 2
+if argc is -2, the arguments are passed in Ruby array. The function
+will be called like:
+d258 2
+a259 7
+  VALUE func(VALUE obj, VALUE args)
+
+where obj is the receiver, and args is the Ruby array containing
+actual arguments.
+
+There're two more functions to define method.  One is to define
+private method:
+d264 7
+a270 3
+The other is to define module function, which is private AND singleton
+method of the module.  For example, sqrt is the module function
+defined in Math module.  It can be call in the form like:
+d274 1
+a274 1
+or
+d279 2
+a280 1
+To define module function
+d285 2
+a286 2
+Oh, in addition, function-like method, which is private method defined
+in Kernel module, can be defined using:
+d293 2
+a294 1
+We have 2 functions to define constants:
+d299 2
+a300 2
+The former is to define constant under specified class/module.  The
+latter is to define global constant.
+d304 6
+a309 1
+There are several ways to invoke Ruby's features from C code.
+d311 1
+a311 1
+2.2.1 Evaluate Ruby Program in String
+d313 4
+a316 2
+Easiest way to call Ruby's function from C program is to evaluate the
+string as Ruby program.  This function will do the job.
+d320 2
+a321 2
+Evaluation is done under current context, thus current local variables
+of the innermost method (which is defined by Ruby) can be accessed.
+d325 5
+a329 4
+You can invoke methods directly, without parsing the string.  First I
+need to explain about symbols (which data type is ID).  ID is the
+integer number to represent Ruby's identifiers such as variable names.
+It can be accessed from Ruby in the form like:
+d331 1
+a331 1
+ :Identifier
+d333 1
+a333 1
+You can get the symbol value from string within C code, by using
+d337 2
+a338 2
+In addition, the symbols for one character operators (e.g +) is the
+code for that character.
+d342 2
+a343 1
+To invoke methods directly, you can use the function below
+d347 2
+a348 2
+This function invokes the method of the recv, which name is specified
+by the symbol mid.
+d350 1
+a350 1
+2.2.4 Accessing the variables and constants
+d356 2
+a357 1
+The functions to access/modify instance variables are below:
+d362 1
+a362 1
+id must be the symbol, which can be retrieved by rb_intern().
+d364 1
+a364 1
+To access the constants of the class/module:
+d368 2
+a369 1
+See 2.1.3 for defining new constant.
+d480 1
+a480 1
+ここまでの説明でとりあえず拡張ライブラリは作れるはずです．
+d488 3
+a490 1
+Make a directory for the extension library under ext directory.
+d497 6
+a502 2
+There should be MANIFEST file in the directory for the extension
+library.  Make empty file now.
+d506 4
+a509 1
+You need to design the library features, before making it.
+d513 1
+a513 1
+拡張ライブラリ本体となるC言語のソースを書きます．C言語のソー
+d520 1
+a520 1
+Rubyは拡張ライブラリをロードする時に「Init_モジュール名」と
+d528 1
+a528 1
+    /* define DBM class */
+d530 1
+a530 1
+    /* DBM includes Enumerate module */
+d533 1
+a533 1
+    /* DBM has class method open(): arguments are received as C array */
+d536 1
+a536 1
+    /* DBM instance method close(): no args */
+d538 1
+a538 1
+    /* DBM instance method []: 1 argument */
+d542 2
+d649 1
+a649 1
+** Notice
+d651 3
+a653 2
+GC should know about global variables which refers Ruby's objects, but
+not exported to the Ruby world.  You need to protect them by
+d707 1
+a707 1
+(9) debug
+d713 1
+a713 1
+(10) done, now you have the extension library
+d716 1
+a716 1
+使いください．Rubyの作者は拡張ライブラリに関して一切の権利を
+d722 1
+a722 1
+スライブラリの部分は基本的に拡張ライブラリと同じ作り方になっ
+d850 1
+a850 1
+** Defining Global Variables
+d854 4
+a857 3
+Defines a global variable which is shared between C and Ruby.  If name
+contains the character which is not allowed to be part of the symbol,
+it can't be seen from Ruby programs.
+d861 2
+a862 2
+Defines a read-only global variable.  Works just like
+rb_define_variable(), except defined variable is read-only.
+d867 2
+a868 9
+Defines a virtual variable, whose behavior is defined by pair of C
+functions.  The getter function is called when the variable is
+referred. The setter function is called when the value is set to the
+variable.  The prototype for getter/setter functions are:
+
+	VALUE getter(ID id)
+	void setter(VALUE val, ID id)
+
+The getter function must return the value for the access.
+d873 4
+a876 10
+Defines hooked variable.  It's virtual variable with C variable.  The
+getter is called as
+
+	VALUE getter(ID id, VALUE *var)
+
+returning new value.  The setter is called as
+
+	void setter(VALUE val, ID id, VALUE *var)
+
+GC requires to mark the C global variables which hold Ruby values.
+d880 2
+a881 1
+Tells GC to protect these variables.
+d883 1
+a883 1
+** Constant Definition
+d885 1
+a885 1
+ void rb_define_const(VALUE klass, char *name, VALUE val)
+d887 1
+a887 1
+Defines a new constant under the class/module.
+d891 1
+a891 1
+Defines global contant.  This is just work as
+d895 3
+a897 1
+** Method Definition
+d1011 1
+a1011 1
+** Initialize and Starts the Interpreter
+d1013 2
+a1014 1
+The embedding API are below (not needed for extension libraries):
+d1018 1
+a1018 1
+Initializes the interpreter.
+d1022 1
+a1022 1
+Starts execution of the interpreter.
+d1026 2
+a1027 1
+Specifies the name of the script ($0).
+d1029 1
+a1029 1
+Appendix B. Functions Available in extconf.rb
+d1036 2
+a1037 2
+Checks whether library which contains specified function exists.
+Returns true if the library exists.
+d1041 3
+a1043 3
+Checks whether func exists.  Returns true if the function exists.  To
+check functions in the additional library, you need to check that
+library first using have_library().
+d1047 2
+a1048 1
+Checks for the header files.  Returns true if the header file exists.
+d1052 3
+a1054 2
+Generates the Makefile for the extension library.  If you don't invoke
+this method, the compilation will not be done.
+@

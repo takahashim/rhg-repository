@@ -1,0 +1,55 @@
+head	1.2;
+access;
+symbols
+	V0_3_2:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.06.23.53.49;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@iMake the output format pluggable as a first step towards decent
+publishing of the results.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+tests = Rubicon::BulkTestRunner.new(ARGV, "Language")
+
+if ARGV.size.zero?
+  Dir["Test*.rb"].each { |file| tests.addFile(file) }
+else
+  ARGV.each { |file| tests.addFile(file) }
+end
+
+tests.run
+@
+
+
+1.1
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d4 1
+a4 1
+tests = Rubicon::BulkTestRunner.new("Language")
+@
+

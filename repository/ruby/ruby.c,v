@@ -1,0 +1,7721 @@
+head	1.69;
+access;
+symbols
+	v1_6_7:1.36.2.17
+	v1_6_6:1.36.2.16
+	v1_6_5:1.36.2.13
+	v1_6_4:1.36.2.7
+	v1_7_1:1.47
+	v1_6_4_preview4:1.36.2.5
+	v1_6_4_preview3:1.36.2.5
+	v1_6_4_preview2:1.36.2.4
+	v1_6_4_preview1:1.36.2.4
+	v1_6_3:1.36.2.4
+	ruby_m17n:1.36.0.4
+	ruby_1_6:1.36.0.2
+	v1_6_2:1.36
+	v1_6_1:1.33
+	v1_6_0:1.32
+	v1_4_6:1.3.2.9
+	v1_4_5:1.3.2.7
+	v1_4_4:1.3.2.4
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.13
+	ruby_1_4_3_pre1:1.3.2.1
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.15
+	v1_3_6_repack:1.1.1.3.2.14
+	v1_3_6:1.1.1.3.2.14
+	v1_3_5:1.1.1.3.2.14
+	v1_2_6repack:1.1.1.2.2.30
+	v1_3_4_990625:1.1.1.3.2.13
+	v1_3_4_990624:1.1.1.3.2.13
+	v1_2_6:1.1.1.2.2.30
+	v1_3_4_990611:1.1.1.3.2.13
+	v1_3_4_990531:1.1.1.3.2.13
+	v1_3_3_990518:1.1.1.3.2.12
+	v1_3_3_990513:1.1.1.3.2.10
+	v1_3_3_990507:1.1.1.3.2.10
+	v1_2_5:1.1.1.2.2.28
+	v1_2_4:1.1.1.2.2.28
+	v1_3_1_990225:1.1.1.3.2.5
+	v1_3_1_990224:1.1.1.3.2.5
+	v1_3_1_990215:1.1.1.3.2.5
+	v1_3_1_990212:1.1.1.3.2.5
+	v1_3_1_990210:1.1.1.3.2.5
+	v1_3_1_:1.1.1.3.2.5
+	v1_3_1_990209:1.1.1.3.2.5
+	v1_3_1_990205:1.1.1.3.2.4
+	v1_3_1_990203:1.1.1.3.2.3
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.27
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.26
+	v1_2_1repack:1.1.1.2.2.26
+	v1_2_1:1.1.1.2.2.26
+	v1_2_stable:1.1.1.2.2.26
+	v1_1d1:1.1.1.2.2.25.2.5
+	v1_1d0:1.1.1.2.2.25.2.4
+	v1_1c9_1:1.1.1.2.2.26
+	v1_1c9:1.1.1.2.2.25
+	v1_1c8:1.1.1.2.2.25
+	v1_1c7:1.1.1.2.2.25
+	v1_1c6:1.1.1.2.2.25
+	v1_1d-start:1.1.1.2.2.25.2.1
+	v1_1c5:1.1.1.2.2.25
+	v1_1dev:1.1.1.2.2.25.0.2
+	v1_1c4:1.1.1.2.2.25
+	v1_1c3:1.1.1.2.2.24
+	v1_1c2:1.1.1.2.2.24
+	v1_1c1:1.1.1.2.2.24
+	v1_1c0:1.1.1.2.2.23
+	v1_1b9_31:1.1.1.2.2.23
+	v1_1b9_30:1.1.1.2.2.23
+	v1_1b9_28:1.1.1.2.2.23
+	v1_1b9_27:1.1.1.2.2.22
+	v1_1b9_26:1.1.1.2.2.22
+	r1_1b9_25:1.1.1.2.2.22
+	r1_1b9_24:1.1.1.2.2.22
+	v1_1b9_23:1.1.1.2.2.22
+	v1_1b9_22:1.1.1.2.2.21
+	v1_1b9_20:1.1.1.2.2.20
+	v1_1b9_18:1.1.1.2.2.18
+	v1_1b9_16:1.1.1.2.2.14
+	v1_1b9_15:1.1.1.2.2.14
+	v1_1b9_13:1.1.1.2.2.14
+	v1_1b9_12:1.1.1.2.2.14
+	v1_1b9_11:1.1.1.2.2.13
+	v1_1b9_08:1.1.1.2.2.12
+	v1_1b9_07:1.1.1.2.2.12
+	r1_1b9:1.1.1.2.2.5
+	v1_1b8:1.1.1.2.2.5
+	v1_1b7:1.1.1.2.2.4
+	v1_1b6:1.1.1.2.2.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.69
+date	2002.10.29.21.35.28;	author knu;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.10.03.11.20.30;	author nobu;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.09.22.12.52.18;	author nobu;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.09.02.12.19.30;	author aamine;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.08.27.11.00.24;	author nobu;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.08.12.13.39.22;	author knu;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.05.29.05.20.33;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.05.23.07.41.53;	author nobu;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.05.23.05.35.26;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.05.22.12.32.15;	author nobu;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.03.07.11.19.37;	author nobu;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.02.10.07.55.40;	author nobu;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.12.17.07.52.35;	author nobu;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.10.02.04.31.19;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.09.03.09.59.41;	author eban;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.09.03.05.37.42;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.09.01.03.34.04;	author nobu;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.09.01.01.23.17;	author nobu;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.07.14.15.17.19;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.07.02.08.46.22;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.05.28.16.07.34;	author eban;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.03.13.05.45.09;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.02.28.06.30.03;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.02.27.07.52.11;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.02.09.14.11.23;	author eban;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.01.29.05.10.42;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.01.10.04.49.41;	author eban;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.01.10.02.30.41;	author eban;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.01.09.07.26.17;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2000.12.13.03.48.30;	author eban;	state Exp;
+branches
+	1.36.2.1
+	1.36.4.1;
+next	1.35;
+
+1.35
+date	2000.11.20.07.31.45;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2000.10.02.07.48.32;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.09.21.06.37.16;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.08.15.06.22.42;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.08.03.09.50.33;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.08.02.09.22.25;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.08.01.09.25.33;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.07.29.14.04.38;	author eban;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.07.27.09.49.22;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.07.24.09.58.08;	author eban;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.07.07.03.20.52;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.06.28.08.26.54;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.06.19.03.37.52;	author eban;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.05.30.04.24.03;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.05.24.04.34.08;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.05.12.09.07.44;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.05.09.04.53.04;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.05.01.09.41.28;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.04.10.05.44.18;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.03.07.08.37.45;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.02.17.07.11.17;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.01.05.04.37.11;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	99.12.07.09.23.27;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	99.12.06.09.03.59;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	99.12.02.06.58.50;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	99.11.25.09.03.07;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	99.11.17.07.30.34;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	99.10.21.07.58.14;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.10.21.07.52.15;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.10.18.09.03.00;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.16.10.33.06;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.15.08.52.17;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.54;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.25;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.15;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.57;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.03.09.48.00;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.05.10.27.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.09.06.08.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.03.24.08.52.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.04.16.06.03.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.04.16.07.18.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.04.30.07.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.05.14.08.56.12;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.05.18.06.06.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.13;
+
+1.1.1.3.2.13
+date	99.05.31.09.13.27;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.14;
+
+1.1.1.3.2.14
+date	99.07.15.07.59.55;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.15;
+
+1.1.1.3.2.15
+date	99.08.06.06.48.21;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.16;
+
+1.1.1.3.2.16
+date	99.08.13.05.17.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.19.07.34.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.03.10.02.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.09.10.56.22;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.02.18.10.01.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.03.11.07.33.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.19.06.22.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.03.24.06.21.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.03.27.06.09.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.03.27.10.19.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.03.30.09.41.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.03.31.04.52.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.04.16.07.42.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.04.20.05.55.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.04.30.12.39.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.05.01.08.56.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.05.06.03.08.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.05.08.09.38.14;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.05.13.05.58.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.05.13.07.26.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	98.05.18.04.56.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	98.05.25.04.57.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	98.06.26.09.44.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	98.07.24.04.42.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	98.09.03.07.43.41;	author matz;	state Exp;
+branches
+	1.1.1.2.2.25.2.1;
+next	1.1.1.2.2.26;
+
+1.1.1.2.2.26
+date	98.12.14.09.00.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.27;
+
+1.1.1.2.2.27
+date	99.01.21.09.04.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.28;
+
+1.1.1.2.2.28
+date	99.04.08.10.14.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.29;
+
+1.1.1.2.2.29
+date	99.04.20.08.20.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.30;
+
+1.1.1.2.2.30
+date	99.06.21.06.31.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.25.2.1
+date	98.09.08.07.09.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.2;
+
+1.1.1.2.2.25.2.2
+date	98.10.06.03.28.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.3;
+
+1.1.1.2.2.25.2.3
+date	98.11.25.03.31.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.4;
+
+1.1.1.2.2.25.2.4
+date	98.12.16.07.30.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25.2.5;
+
+1.1.1.2.2.25.2.5
+date	98.12.22.09.01.53;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.10.15.08.44.37;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.01.05.04.41.10;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.01.17.08.24.11;	author matz;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2000.02.17.08.29.03;	author matz;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	2000.03.23.04.14.20;	author matz;	state Exp;
+branches;
+next	1.3.2.6;
+
+1.3.2.6
+date	2000.05.12.09.06.15;	author matz;	state Exp;
+branches;
+next	1.3.2.7;
+
+1.3.2.7
+date	2000.05.30.04.21.23;	author matz;	state Exp;
+branches;
+next	1.3.2.8;
+
+1.3.2.8
+date	2000.06.30.09.13.33;	author matz;	state Exp;
+branches;
+next	1.3.2.9;
+
+1.3.2.9
+date	2000.07.24.09.56.37;	author eban;	state Exp;
+branches;
+next	1.3.2.10;
+
+1.3.2.10
+date	2000.07.29.14.05.15;	author eban;	state Exp;
+branches;
+next	1.3.2.11;
+
+1.3.2.11
+date	2000.08.29.06.38.26;	author matz;	state Exp;
+branches;
+next	;
+
+1.36.2.1
+date	2001.02.02.11.39.51;	author matz;	state Exp;
+branches;
+next	1.36.2.2;
+
+1.36.2.2
+date	2001.02.09.14.11.20;	author eban;	state Exp;
+branches;
+next	1.36.2.3;
+
+1.36.2.3
+date	2001.02.27.08.04.23;	author matz;	state Exp;
+branches;
+next	1.36.2.4;
+
+1.36.2.4
+date	2001.03.13.05.48.33;	author matz;	state Exp;
+branches;
+next	1.36.2.5;
+
+1.36.2.5
+date	2001.04.24.06.44.13;	author matz;	state Exp;
+branches;
+next	1.36.2.6;
+
+1.36.2.6
+date	2001.05.28.16.07.01;	author eban;	state Exp;
+branches;
+next	1.36.2.7;
+
+1.36.2.7
+date	2001.06.01.06.46.09;	author matz;	state Exp;
+branches;
+next	1.36.2.8;
+
+1.36.2.8
+date	2001.07.06.06.36.59;	author matz;	state Exp;
+branches;
+next	1.36.2.9;
+
+1.36.2.9
+date	2001.07.16.09.29.55;	author matz;	state Exp;
+branches;
+next	1.36.2.10;
+
+1.36.2.10
+date	2001.09.01.01.25.09;	author nobu;	state Exp;
+branches;
+next	1.36.2.11;
+
+1.36.2.11
+date	2001.09.01.01.31.39;	author nobu;	state Exp;
+branches;
+next	1.36.2.12;
+
+1.36.2.12
+date	2001.09.03.05.29.19;	author matz;	state Exp;
+branches;
+next	1.36.2.13;
+
+1.36.2.13
+date	2001.09.03.09.59.57;	author eban;	state Exp;
+branches;
+next	1.36.2.14;
+
+1.36.2.14
+date	2001.10.02.04.25.52;	author matz;	state Exp;
+branches;
+next	1.36.2.15;
+
+1.36.2.15
+date	2001.11.13.08.22.27;	author matz;	state Exp;
+branches;
+next	1.36.2.16;
+
+1.36.2.16
+date	2001.12.17.08.13.17;	author nobu;	state Exp;
+branches;
+next	1.36.2.17;
+
+1.36.2.17
+date	2002.02.10.07.54.43;	author nobu;	state Exp;
+branches;
+next	1.36.2.18;
+
+1.36.2.18
+date	2002.03.07.11.19.28;	author nobu;	state Exp;
+branches;
+next	1.36.2.19;
+
+1.36.2.19
+date	2002.05.22.12.32.07;	author nobu;	state Exp;
+branches;
+next	1.36.2.20;
+
+1.36.2.20
+date	2002.05.23.05.36.28;	author matz;	state Exp;
+branches;
+next	1.36.2.21;
+
+1.36.2.21
+date	2002.05.23.05.54.23;	author eban;	state Exp;
+branches;
+next	1.36.2.22;
+
+1.36.2.22
+date	2002.09.02.15.20.12;	author aamine;	state Exp;
+branches;
+next	1.36.2.23;
+
+1.36.2.23
+date	2002.09.05.04.12.40;	author nobu;	state Exp;
+branches;
+next	;
+
+1.36.4.1
+date	2002.07.09.05.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.69
+log
+@* eval.c, file.c, gc.c, io.c, object.c, ruby.c, ruby.h, struct.c,
+  ext/socket/socket.c: differentiate long and int; use proper
+  printf type specifiers and do casts where appropriate.
+@
+text
+@/**********************************************************************
+
+  ruby.c -
+
+  $Author: nobu $
+  $Date: 2002/10/03 11:20:30 $
+  created at: Tue Aug 10 12:47:31 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#if defined _WIN32 || defined __CYGWIN__
+#include <windows.h>
+#endif
+#include "ruby.h"
+#include "dln.h"
+#include "node.h"
+#include <stdio.h>
+#include <sys/types.h>
+#include <ctype.h>
+
+#ifdef __hpux
+#include <sys/pstat.h>
+#endif
+
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#ifndef HAVE_STRING_H
+char *strchr _((const char*,const char));
+char *strrchr _((const char*,const char));
+char *strstr _((const char*,const char*));
+#endif
+
+#include "util.h"
+
+#ifndef HAVE_STDLIB_H
+char *getenv();
+#endif
+
+VALUE ruby_debug = Qfalse;
+VALUE ruby_verbose = Qfalse;
+static int sflag = 0;
+static int xflag = 0;
+extern int ruby_yydebug;
+
+char *ruby_inplace_mode = Qfalse;
+
+static void load_stdin _((void));
+static void load_file _((char *, int));
+static void forbid_setid _((const char *));
+
+static VALUE do_loop = Qfalse, do_print = Qfalse;
+static VALUE do_check = Qfalse, do_line = Qfalse;
+static VALUE do_split = Qfalse;
+
+static char *script;
+
+static int origargc;
+static char **origargv;
+
+static void
+usage(name)
+    const char *name;
+{
+    /* This message really ought to be max 23 lines.
+     * Removed -h because the user already knows that option. Others? */
+
+    static char *usage_msg[] = {
+"-0[octal]       specify record separator (\\0, if no argument)",
+"-a              autosplit mode with -n or -p (splits $_ into $F)",
+"-c              check syntax only",
+"-Cdirectory     cd to directory, before executing your script",
+"-d              set debugging flags (set $DEBUG to true)",
+"-e 'command'    one line of script. Several -e's allowed. Omit [programfile]",
+"-Fpattern       split() pattern for autosplit (-a)",
+"-i[extension]   edit ARGV files in place (make backup if extension supplied)",
+"-Idirectory     specify $LOAD_PATH directory (may be used more than once)",
+"-Kkcode         specifies KANJI (Japanese) code-set",
+"-l              enable line ending processing",
+"-n              assume 'while gets(); ... end' loop around your script",
+"-p              assume loop like -n but print line also like sed",
+"-rlibrary       require the library, before executing your script",
+"-s              enable some switch parsing for switches after script name",
+"-S              look for the script using PATH environment variable",
+"-T[level]       turn on tainting checks",
+"-v              print version number, then turn on verbose mode",
+"-w              turn warnings on for your script",
+"-x[directory]   strip off text before #!ruby line and perhaps cd to directory",
+"--copyright     print the copyright",
+"--version       print the version",
+NULL
+};
+    char **p = usage_msg;
+
+    printf("Usage: %s [switches] [--] [programfile] [arguments]\n", name);
+    while (*p)
+	printf("  %s\n", *p++);
+}
+
+extern VALUE rb_load_path;
+
+#define STATIC_FILE_LENGTH 255
+
+#if defined _WIN32 || defined __CYGWIN__ || defined __DJGPP__
+static char *
+rubylib_mangle(s, l)
+    char *s;
+    unsigned int l;
+{
+    static char *newp, *oldp;
+    static int newl, oldl, notfound;
+    static char newsub[STATIC_FILE_LENGTH+1];
+
+    if (!newp && !notfound) {
+	newp = getenv("RUBYLIB_PREFIX");
+	if (newp) {
+	    char *s;
+
+	    oldp = newp;
+	    while (*newp && !ISSPACE(*newp) && *newp != ';') {
+		newp++; oldl++;		/* Skip digits. */
+	    }
+	    while (*newp && (ISSPACE(*newp) || *newp == ';')) {
+		newp++;			/* Skip whitespace. */
+	    }
+	    newl = strlen(newp);
+	    if (newl == 0 || oldl == 0 || newl > STATIC_FILE_LENGTH) {
+		rb_fatal("malformed RUBYLIB_PREFIX");
+	    }
+	    strcpy(newsub, newp);
+	    s = newsub;
+	    while (*s) {
+		if (*s == '\\') *s = '/';
+		s++;
+	    }
+	}
+	else {
+	    notfound = 1;
+	}
+    }
+    if (l == 0) {
+	l = strlen(s);
+    }
+    if (!newp || l < oldl || strncasecmp(oldp, s, oldl) != 0) {
+	static char ret[STATIC_FILE_LENGTH+1];
+	strncpy(ret, s, l);
+	ret[l] = 0;
+	return ret;
+    }
+    if (l + newl - oldl > STATIC_FILE_LENGTH || newl > STATIC_FILE_LENGTH) {
+	rb_fatal("malformed RUBYLIB_PREFIX");
+    }
+    strcpy(newsub + newl, s + oldl);
+    newsub[l + newl - oldl] = 0;
+    return newsub;
+}
+#define rubylib_mangled_path(s, l) rb_str_new2(rubylib_mangle((s), (l)))
+#define rubylib_mangled_path2(s) rb_str_new2(rubylib_mangle((s), 0))
+#else
+#define rubylib_mangled_path(s, l) rb_str_new((s), (l))
+#define rubylib_mangled_path2(s) rb_str_new2(s)
+#endif
+
+void
+ruby_incpush(path)
+    const char *path;
+{
+    const char sep = PATH_SEP_CHAR;
+
+    if (path == 0) return;
+#if defined(__CYGWIN__)
+    {
+	char rubylib[FILENAME_MAX];
+	conv_to_posix_path(path, rubylib, FILENAME_MAX);
+	path = rubylib;
+    }
+#endif
+    if (strchr(path, sep)) {
+	const char *p, *s;
+	VALUE ary = rb_ary_new();
+
+	p = path;
+	while (*p) {
+	    while (*p == sep) p++;
+	    if (s = strchr(p, sep)) {
+		rb_ary_push(ary, rubylib_mangled_path(p, (int)(s-p)));
+		p = s + 1;
+	    }
+	    else {
+		rb_ary_push(ary, rubylib_mangled_path2(p));
+		break;
+	    }
+	}
+	rb_ary_concat(rb_load_path, ary);
+    }
+    else {
+	rb_ary_push(rb_load_path, rubylib_mangled_path2(path));
+    }
+}
+
+#if defined DOSISH || defined __CYGWIN__
+#define LOAD_RELATIVE 1
+#endif
+
+#ifdef DOSISH
+static inline void translate_char _((char *, int, int));
+
+static inline void
+translate_char(p, from, to)
+    char *p;
+    int from, to;
+{
+    while (*p) {
+	if ((unsigned char)*p == from)
+	    *p = to;
+#ifdef CharNext		/* defined as CharNext[AW] on Windows. */
+	p = CharNext(p);
+#else
+	p += mblen(p, MB_CUR_MAX);
+#endif
+    }
+}
+#endif
+
+void
+ruby_init_loadpath()
+{
+#if defined LOAD_RELATIVE
+    char libpath[FILENAME_MAX+1];
+    char *p;
+    int rest;
+#if defined _WIN32 || defined __CYGWIN__
+# if defined LIBRUBY_SO
+    HMODULE libruby = GetModuleHandle(LIBRUBY_SO);
+# else
+    HMODULE libruby = NULL;
+# endif
+    GetModuleFileName(libruby, libpath, sizeof libpath);
+#elif defined(DJGPP)
+    extern char *__dos_argv0;
+    strncpy(libpath, __dos_argv0, FILENAME_MAX);
+#elif defined(__human68k__)
+    extern char **_argv;
+    strncpy(libpath, _argv[0], FILENAME_MAX);
+#elif defined(__EMX__)
+    _execname(libpath, FILENAME_MAX);
+#endif
+
+#ifdef DOSISH
+    translate_char(libpath, '\\', '/');
+#endif
+    p = strrchr(libpath, '/');
+    if (p) {
+	*p = 0;
+	if (p-libpath > 3 && !strcasecmp(p-4, "/bin")) {
+	    p -= 4;
+	    *p = 0;
+	}
+    }
+    else {
+	strcpy(libpath, ".");
+	p = libpath + 1;
+    }
+
+    rest = FILENAME_MAX - (p - libpath);
+
+#define RUBY_RELATIVE(path) (strncpy(p, (path), rest), libpath)
+#else
+#define RUBY_RELATIVE(path) (path)
+#endif
+
+    if (rb_safe_level() == 0) {
+	ruby_incpush(getenv("RUBYLIB"));
+    }
+
+#ifdef RUBY_SEARCH_PATH
+    ruby_incpush(RUBY_RELATIVE(RUBY_SEARCH_PATH));
+#endif
+
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_LIB2));
+#ifdef RUBY_SITE_THIN_ARCHLIB
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_THIN_ARCHLIB));
+#endif
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_ARCHLIB));
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_LIB));
+
+    ruby_incpush(RUBY_RELATIVE(RUBY_LIB));
+#ifdef RUBY_THIN_ARCHLIB
+    ruby_incpush(RUBY_RELATIVE(RUBY_THIN_ARCHLIB));
+#endif
+    ruby_incpush(RUBY_RELATIVE(RUBY_ARCHLIB));
+
+    if (rb_safe_level() == 0) {
+	ruby_incpush(".");
+    }
+}
+
+struct req_list {
+    char *name;
+    struct req_list *next;
+};
+static struct req_list req_list_head, *req_list_last = &req_list_head;
+
+static void
+add_modules(mod)
+    const char *mod;
+{
+    struct req_list *list;
+
+    list = ALLOC(struct req_list);
+    list->name = ALLOC_N(char, strlen(mod)+1);
+    strcpy(list->name, mod);
+    list->next = 0;
+    req_list_last->next = list;
+    req_list_last = list;
+}
+
+extern void Init_ext _((void));
+
+static void
+require_libraries()
+{
+    extern NODE *ruby_eval_tree;
+    extern NODE *ruby_eval_tree_begin;
+    NODE *save[3];
+    struct req_list *list = req_list_head.next;
+    struct req_list *tmp;
+
+    Init_ext();		/* should be called here for some reason :-( */
+    save[0] = ruby_eval_tree;
+    save[1] = ruby_eval_tree_begin;
+    save[2] = NEW_NEWLINE(0);
+    ruby_eval_tree = ruby_eval_tree_begin = 0;
+    req_list_last = 0;
+    while (list) {
+	ruby_current_node = 0;
+	rb_require(list->name);
+	tmp = list->next;
+	free(list->name);
+	free(list);
+	list = tmp;
+	ruby_current_node = save[2];
+	ruby_set_current_source();
+    }
+    req_list_head.next = 0;
+    ruby_eval_tree = save[0];
+    ruby_eval_tree_begin = save[1];
+    rb_gc_force_recycle((VALUE)save[2]);
+    ruby_current_node = 0;
+}
+
+static void
+process_sflag()
+{
+    if (sflag) {
+	long n;
+	VALUE *args;
+
+	n = RARRAY(rb_argv)->len;
+	args = RARRAY(rb_argv)->ptr;
+	while (n > 0) {
+	    VALUE v = *args++;
+	    char *s = StringValuePtr(v);
+	    char *p;
+
+	    if (s[0] != '-') break;
+	    n--;
+	    if (s[1] == '-' && s[2] == '\0') break;
+
+	    s[0] = '$';
+	    if (p = strchr(s, '=')) {
+		*p++ = '\0';
+		rb_gv_set(s, rb_str_new2(p));
+	    }
+	    else {
+		rb_gv_set(s, Qtrue);
+	    }
+	    s[0] = '-';
+	}
+	n = RARRAY(rb_argv)->len - n;
+	while (n--) {
+	    rb_ary_shift(rb_argv);
+	}
+    }
+    sflag = 0;
+}
+
+static void proc_options _((int argc, char **argv));
+
+static char*
+moreswitches(s)
+    char *s;
+{
+    int argc; char *argv[3];
+    char *p = s;
+
+    argc = 2; argv[0] = argv[2] = 0;
+    while (*s && !ISSPACE(*s))
+	s++;
+    argv[1] = ALLOCA_N(char, s-p+2);
+    argv[1][0] = '-';
+    strncpy(argv[1]+1, p, s-p);
+    argv[1][s-p+1] = '\0';
+    proc_options(argc, argv);
+    while (*s && ISSPACE(*s))
+	s++;
+    return s;
+}
+
+static void
+proc_options(argc, argv)
+    int argc;
+    char **argv;
+{
+    char *argv0 = argv[0];
+    int do_search;
+    char *s;
+
+    int version = 0;
+    int copyright = 0;
+    int verbose = 0;
+    VALUE e_script = Qfalse;
+
+    if (argc == 0) return;
+
+    do_search = Qfalse;
+
+    for (argc--,argv++; argc > 0; argc--,argv++) {
+	if (argv[0][0] != '-' || !argv[0][1]) break;
+
+	s = argv[0]+1;
+      reswitch:
+	switch (*s) {
+	  case 'a':
+	    do_split = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 'p':
+	    do_print = Qtrue;
+	    /* through */
+	  case 'n':
+	    do_loop = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 'd':
+	    ruby_debug = Qtrue;
+	    ruby_verbose = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 'y':
+	    ruby_yydebug = 1;
+	    s++;
+	    goto reswitch;
+
+	  case 'v':
+	    if (argv0 == 0 || verbose) {
+		s++;
+		goto reswitch;
+	    }
+	    ruby_show_version();
+	    verbose = 1;
+	  case 'w':
+	    ruby_verbose = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 'c':
+	    do_check = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 's':
+	    forbid_setid("-s");
+	    sflag = 1;
+	    s++;
+	    goto reswitch;
+
+	  case 'h':
+	    usage(origargv[0]);
+	    exit(0);
+
+	  case 'l':
+	    do_line = Qtrue;
+	    rb_output_rs = rb_rs;
+	    s++;
+	    goto reswitch;
+
+	  case 'S':
+	    forbid_setid("-S");
+	    do_search = Qtrue;
+	    s++;
+	    goto reswitch;
+
+	  case 'e':
+	    forbid_setid("-e");
+	    if (!*++s) {
+		s = argv[1];
+		argc--,argv++;
+	    }
+	    if (!s) {
+		fprintf(stderr, "%s: no code specified for -e\n", origargv[0]);
+		exit(2);
+	    }
+	    if (!e_script) {
+		e_script = rb_str_new(0,0);
+		if (script == 0) script = "-e";
+	    }
+	    rb_str_cat2(e_script, s);
+	    rb_str_cat2(e_script, "\n");
+	    break;
+
+	  case 'r':
+	    forbid_setid("-r");
+	    if (*++s) {
+		add_modules(s);
+	    }
+	    else if (argv[1]) {
+		add_modules(argv[1]);
+		argc--,argv++;
+	    }
+	    break;
+
+	  case 'i':
+	    forbid_setid("-i");
+	    if (ruby_inplace_mode) free(ruby_inplace_mode);
+	    ruby_inplace_mode = strdup(s+1);
+	    break;
+
+	  case 'x':
+	    xflag = Qtrue;
+	    s++;
+	    if (*s && chdir(s) < 0) {
+		rb_fatal("Can't chdir to %s", s);
+	    }
+	    break;
+
+	  case 'C':
+	  case 'X':
+	    s++;
+	    if (!*s) {
+		s = argv[1];
+		argc--,argv++;
+	    }
+	    if (!s || !*s) {
+		rb_fatal("Can't chdir");
+	    }
+	    if (chdir(s) < 0) {
+		rb_fatal("Can't chdir to %s", s);
+	    }
+	    break;
+
+	  case 'F':
+	    if (*++s) {
+		rb_fs = rb_str_new2(s);
+	    }
+	    break;
+
+	  case 'K':
+	    if (*++s) {
+		rb_set_kcode(s);
+		s++;
+	    }
+	    goto reswitch;
+
+	  case 'T':
+	    {
+		int numlen;
+		int v = 1;
+
+		if (*++s) {
+		    v = scan_oct(s, 2, &numlen);
+		    if (numlen == 0) v = 1;
+		    s += numlen;
+		}
+		rb_set_safe_level(v);
+	    }
+	    goto reswitch;
+
+	  case 'I':
+	    forbid_setid("-I");
+	    if (*++s)
+		ruby_incpush(s);
+	    else if (argv[1]) {
+		ruby_incpush(argv[1]);
+		argc--,argv++;
+	    }
+	    break;
+
+	  case '0':
+	    {
+		int numlen;
+		int v;
+		char c;
+
+		v = scan_oct(s, 4, &numlen);
+		s += numlen;
+		if (v > 0377) rb_rs = Qnil;
+		else if (v == 0 && numlen >= 2) {
+		    rb_rs = rb_str_new2("\n\n");
+		}
+		else {
+		    c = v & 0xff;
+		    rb_rs = rb_str_new(&c, 1);
+		}
+	    }
+	    goto reswitch;
+
+	  case '-':
+	    if (!s[1] || s[1] == '\r' && !s[2]) {
+		argc--,argv++;
+		goto switch_end;
+	    }
+	    s++;
+	    if (strcmp("copyright", s) == 0)
+		copyright = 1;
+	    else if (strcmp("debug", s) == 0) {
+		ruby_debug = Qtrue;
+                ruby_verbose = Qtrue;
+            }
+	    else if (strcmp("version", s) == 0)
+		version = 1;
+	    else if (strcmp("verbose", s) == 0) {
+		verbose = 1;
+		ruby_verbose = Qtrue;
+	    }
+	    else if (strcmp("yydebug", s) == 0)
+		ruby_yydebug = 1;
+	    else if (strcmp("help", s) == 0) {
+		usage(origargv[0]);
+		exit(0);
+	    }
+	    else {
+		fprintf(stderr, "%s: invalid option --%s  (-h will show valid options)\n",
+			origargv[0], s);
+		exit(2);
+	    }
+	    break;
+
+	  default:
+	    fprintf(stderr, "%s: invalid option -%c  (-h will show valid options)\n",
+		    origargv[0], *s);
+	    exit(2);
+
+	  case 0:
+	    break;
+	}
+    }
+
+  switch_end:
+    if (argv0 == 0) return;
+
+    if (rb_safe_level() == 0 && (s = getenv("RUBYOPT"))) {
+	while (ISSPACE(*s)) s++;
+	if (*s == '-' && *(s+1) == 'T') {
+	    int numlen;
+	    int v = 1;
+
+	    s += 2;
+	    if (*++s) {
+		v = scan_oct(s, 2, &numlen);
+		if (numlen == 0) v = 1;
+	    }
+	    rb_set_safe_level(v);
+	}
+	else {
+	    while (s && *s) {
+		if (*s == '-') {
+		    s++;
+		    if (ISSPACE(*s)) {
+			do {s++;} while (ISSPACE(*s));
+			continue;
+		    }
+		}
+		if (!*s) break;
+		if (!strchr("IdvwrK", *s))
+		    rb_raise(rb_eRuntimeError, "Illegal switch in RUBYOPT: -%c", *s);
+		s = moreswitches(s);
+	    }
+	}
+    }
+
+    if (version) {
+	ruby_show_version();
+	exit(0);
+    }
+    if (copyright) {
+	ruby_show_copyright();
+    }
+
+    if (rb_safe_level() >= 4) {
+      OBJ_TAINT(rb_argv);
+      OBJ_TAINT(rb_load_path);
+    }
+
+    if (!e_script && argc == 0) { /* no more args */
+	if (verbose) exit(0);
+	script = "-";
+    }
+    else {
+	if (!e_script) {
+	    script = argv[0];
+	}
+	if (script[0] == '\0') {
+	    script = "-";
+	}
+	else {
+	    if (do_search) {
+		char *path = getenv("RUBYPATH");
+
+		script = 0;
+		if (path) {
+		    script = dln_find_file(argv[0], path);
+		}
+		if (!script) {
+		    script = dln_find_file(argv[0], getenv("PATH"));
+		}
+		if (!script) script = argv[0];
+	    }
+	}
+	if (!e_script) {
+	    argc--; argv++;
+	}
+#ifdef DOSISH
+	translate_char(script, '\\', '/');
+#endif
+    }
+
+    ruby_script(script);
+    ruby_set_argv(argc, argv);
+    process_sflag();
+
+    ruby_init_loadpath();
+    ruby_sourcefile = rb_source_filename(argv0);
+    if (e_script) {
+	require_libraries();
+	rb_compile_string(script, e_script, 1);
+    }
+    else if (strlen(script) == 1 && script[0] == '-') {
+	load_stdin();
+    }
+    else {
+	load_file(script, 1);
+    }
+
+    process_sflag();
+    xflag = 0;
+
+    if (rb_safe_level() >= 4) {
+      FL_UNSET(rb_argv, FL_TAINT);
+      FL_UNSET(rb_load_path, FL_TAINT);
+    }
+}
+
+extern int ruby__end__seen;
+
+static void
+load_file(fname, script)
+    char *fname;
+    int script;
+{
+    extern VALUE rb_stdin;
+    VALUE f;
+    int line_start = 1;
+
+    if (strcmp(fname, "-") == 0) {
+	f = rb_stdin;
+    }
+    else {
+	FILE *fp = fopen(fname, "r");
+
+	if (fp == NULL) {
+	    rb_load_fail(fname);
+	}
+	fclose(fp);
+
+	f = rb_file_open(fname, "r");
+#if defined DOSISH || defined __CYGWIN__
+	{
+	    char *ext = strrchr(fname, '.');
+	    if (ext && strcasecmp(ext, ".exe") == 0)
+		rb_io_binmode(f);
+	}
+#endif
+    }
+
+    if (script) {
+	VALUE c = 1;		/* something not nil */
+	VALUE line;
+	char *p;
+
+	if (xflag) {
+	    forbid_setid("-x");
+	    xflag = Qfalse;
+	    while (!NIL_P(line = rb_io_gets(f))) {
+		line_start++;
+		if (RSTRING(line)->len > 2
+		    && RSTRING(line)->ptr[0] == '#'
+		    && RSTRING(line)->ptr[1] == '!') {
+		    if (p = strstr(RSTRING(line)->ptr, "ruby")) {
+			goto start_read;
+		    }
+		}
+	    }
+	    rb_raise(rb_eLoadError, "No Ruby script found in input");
+	}
+
+	c = rb_io_getc(f);
+	if (c == INT2FIX('#')) {
+	    line = rb_io_gets(f);
+	    if (NIL_P(line)) return;
+	    line_start++;
+
+	    if (RSTRING(line)->len > 2 && RSTRING(line)->ptr[0] == '!') {
+		if ((p = strstr(RSTRING(line)->ptr, "ruby")) == 0) {
+		    /* not ruby script, kick the program */
+		    char **argv;
+		    char *path;
+		    char *pend = RSTRING(line)->ptr + RSTRING(line)->len;
+
+		    p = RSTRING(line)->ptr + 1;	/* skip `#!' */
+		    if (pend[-1] == '\n') pend--; /* chomp line */
+		    if (pend[-1] == '\r') pend--;
+		    *pend = '\0';
+		    while (p < pend && ISSPACE(*p))
+			p++;
+		    path = p;	/* interpreter path */
+		    while (p < pend && !ISSPACE(*p))
+			p++;
+		    *p++ = '\0';
+		    if (p < pend) {
+			argv = ALLOCA_N(char*, origargc+3);
+			argv[1] = p;
+			MEMCPY(argv+2, origargv+1, char*, origargc);
+		    }
+		    else {
+			argv = origargv;
+		    }
+		    argv[0] = path;
+		    execv(path, argv);
+
+		    ruby_sourcefile = rb_source_filename(fname);
+		    ruby_sourceline = 1;
+		    rb_fatal("Can't exec %s", path);
+		}
+
+	      start_read:
+		p += 4;
+		RSTRING(line)->ptr[RSTRING(line)->len-1] = '\0';
+		if (RSTRING(line)->ptr[RSTRING(line)->len-2] == '\r')
+		    RSTRING(line)->ptr[RSTRING(line)->len-2] = '\0';
+		if (p = strstr(p, " -")) {
+		    p++;	/* skip space before `-' */
+		    while (*p == '-') {
+			p = moreswitches(p+1);
+		    }
+		}
+	    }
+	}
+	else if (!NIL_P(c)) {
+	    rb_io_ungetc(f, c);
+	}
+	require_libraries();	/* Why here? unnatural */
+	if (NIL_P(c)) return;
+    }
+    rb_compile_file(fname, f, line_start);
+    if (script && ruby__end__seen) {
+	rb_define_global_const("DATA", f);
+    }
+    else if (f != rb_stdin) {
+	rb_io_close(f);
+    }
+
+    if (ruby_parser_stack_on_heap()) {
+        rb_gc();
+    }
+}
+
+void
+rb_load_file(fname)
+    char *fname;
+{
+    load_file(fname, 0);
+}
+
+static void
+load_stdin()
+{
+    forbid_setid("program input from stdin");
+    load_file("-", 1);
+}
+
+VALUE rb_progname;
+VALUE rb_argv;
+VALUE rb_argv0;
+
+static void
+set_arg0(val, id)
+    VALUE val;
+    ID id;
+{
+    char *s;
+    long i;
+    static int len;
+
+    if (origargv == 0) rb_raise(rb_eRuntimeError, "$0 not initialized");
+    StringValue(val);
+    s = RSTRING(val)->ptr;
+    i = RSTRING(val)->len;
+#ifdef __hpux
+    if (i >= PST_CLEN) {
+      union pstun j;
+      j.pst_command = s;
+      i = PST_CLEN;
+      RSTRING(val)->len = i;
+      *(s + i) = '\0';
+      pstat(PSTAT_SETCMD, j, PST_CLEN, 0, 0);
+    }
+    else {
+      union pstun j;
+      j.pst_command = s;
+      pstat(PSTAT_SETCMD, j, i, 0, 0);
+    }
+    rb_progname = rb_tainted_str_new(s, i);
+#elif defined(HAVE_SETPROCTITLE)
+    setproctitle("%.*s", (int)i, s);
+    rb_progname = rb_tainted_str_new(s, i);
+#else
+    if (len == 0) {
+	char *s = origargv[0];
+	int i;
+
+	s += strlen(s);
+	/* See if all the arguments are contiguous in memory */
+	for (i = 1; i < origargc; i++) {
+	    if (origargv[i] == s + 1) {
+		s++;
+		s += strlen(s);	/* this one is ok too */
+	    }
+	    else {
+		break;
+	    }
+	}
+	len = s - origargv[0];
+    }
+
+    if (i >= len) {
+	i = len;
+	memcpy(origargv[0], s, i);
+	origargv[0][i] = '\0';
+    }
+    else {
+	memcpy(origargv[0], s, i);
+	s = origargv[0]+i;
+	*s++ = '\0';
+	while (++i < len)
+	    *s++ = ' ';
+	for (i = 1; i < origargc; i++)
+	    origargv[i] = 0;
+    }
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+#endif
+}
+
+void
+ruby_script(name)
+    char *name;
+{
+    if (name) {
+	rb_progname = rb_tainted_str_new2(name);
+	ruby_sourcefile = rb_source_filename(name);
+    }
+}
+
+static int uid, euid, gid, egid;
+
+static void
+init_ids()
+{
+    uid = (int)getuid();
+    euid = (int)geteuid();
+    gid = (int)getgid();
+    egid = (int)getegid();
+#ifdef VMS
+    uid |= gid << 16;
+    euid |= egid << 16;
+#endif
+    if (uid && (euid != uid || egid != gid)) {
+	rb_set_safe_level(1);
+    }
+}
+
+static void
+forbid_setid(s)
+    const char *s;
+{
+    if (euid != uid)
+        rb_raise(rb_eSecurityError, "No %s allowed while running setuid", s);
+    if (egid != gid)
+        rb_raise(rb_eSecurityError, "No %s allowed while running setgid", s);
+    if (rb_safe_level() > 0)
+        rb_raise(rb_eSecurityError, "No %s allowed in tainted mode", s);
+}
+
+void
+ruby_prog_init()
+{
+    init_ids();
+
+    ruby_sourcefile = rb_source_filename("ruby");
+    rb_define_variable("$VERBOSE", &ruby_verbose);
+    rb_define_variable("$-v", &ruby_verbose);
+    rb_define_variable("$-w", &ruby_verbose);
+    rb_define_variable("$DEBUG", &ruby_debug);
+    rb_define_variable("$-d", &ruby_debug);
+    rb_define_readonly_variable("$-p", &do_print);
+    rb_define_readonly_variable("$-l", &do_line);
+
+    rb_define_hooked_variable("$0", &rb_progname, 0, set_arg0);
+
+    rb_argv = rb_ary_new();
+    rb_define_readonly_variable("$*", &rb_argv);
+    rb_define_global_const("ARGV", rb_argv);
+    rb_define_readonly_variable("$-a", &do_split);
+    rb_global_variable(&rb_argv0);
+
+#ifdef MSDOS
+    /*
+     * There is no way we can refer to them from ruby, so close them to save
+     * space.
+     */
+    (void)fclose(stdaux);
+    (void)fclose(stdprn);
+#endif
+}
+
+void
+ruby_set_argv(argc, argv)
+    int argc;
+    char **argv;
+{
+    int i;
+
+#if defined(USE_DLN_A_OUT)
+    if (origargv) dln_argv0 = origargv[0];
+    else          dln_argv0 = argv[0];
+#endif
+    rb_ary_clear(rb_argv);
+    for (i=0; i < argc; i++) {
+	rb_ary_push(rb_argv, rb_tainted_str_new2(argv[i]));
+    }
+}
+
+void
+ruby_process_options(argc, argv)
+    int argc;
+    char **argv;
+{
+    origargc = argc; origargv = argv;
+
+    ruby_script(argv[0]);	/* for the time being */
+    rb_argv0 = rb_progname;
+#if defined(USE_DLN_A_OUT)
+    dln_argv0 = argv[0];
+#endif
+    proc_options(argc, argv);
+
+    if (do_check && ruby_nerrs == 0) {
+	printf("Syntax OK\n");
+	exit(0);
+    }
+    if (do_print) {
+	rb_parser_append_print();
+    }
+    if (do_loop) {
+	rb_parser_while_loop(do_line, do_split);
+    }
+}
+@
+
+
+1.68
+log
+@* bcc32/mkexports.rb: to work on cygwin via telnet.
+  [ruby-win32:358]
+
+* ext/tcltklib/tcltklib.c (ip_invoke): requires command name
+  argument.  [ruby-dev:18438]
+
+* eval.c (ruby_init, ruby_options): Init_stack() with local
+  location.  (ruby-bugs-ja:PR#277)
+
+* eval.c (rb_call0): disable trace call.  [ruby-dev:18074]
+
+* eval.c (eval, rb_load): enable trace call.  [ruby-dev:18074]
+
+* eval.c (rb_f_require): set source file name for extension
+  libraries.  [ruby-dev:18445]
+
+* ruby.c (translate_char): translate a character in a string;
+  DOSISH only.  [ruby-dev:18274]
+
+* ruby.c (ruby_init_loadpath): added argv[0] handling under
+  Human68K.  [ruby-dev:18274]
+
+* ruby.c (proc_options): translate directory separator in $0 to
+  '/'.  [ruby-dev:18274]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/22 12:52:18 $
+d933 1
+a933 1
+    setproctitle("%.*s", i, s);
+@
+
+
+1.67
+log
+@* eval.c (call_trace_func): should not call trace function while
+  compilation.
+
+* eval.c (rb_call0): also inside c-func.
+
+* parse.y (yycompile): ditto.
+
+* ruby.c (require_libraries): preserve source file/line for each
+  require.
+@
+text
+@d5 2
+a6 2
+  $Author: aamine $
+  $Date: 2002/09/02 12:19:30 $
+d206 1
+a206 1
+#if defined _WIN32 || defined __CYGWIN__ || defined __DJGPP__ || defined __EMX__
+d210 20
+d247 3
+a249 1
+#define CharNext(p) ((p) + mblen(p, MB_CUR_MAX))
+d254 2
+a255 2
+#ifndef CharNext		/* defined as CharNext[AW] on Windows. */
+#define CharNext(p) ((p) + 1)
+a256 5
+
+    for (p = libpath; *p; p = CharNext(p))
+	if (*p == '\\')
+	    *p = '/';
+
+d731 3
+@
+
+
+1.66
+log
+@* gc.c (gc_sweep): does reclaim nodes in also compile time, if we can.
+* ruby.c (load_file): omit GC if we can.
+* parse.y (ruby_parser_stack_on_heap): new function.
+* intern.h (ruby_parser_stack_on_heap): added.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/27 11:00:24 $
+d324 1
+d330 2
+d336 1
+a336 2
+    ruby_current_node = save[2];
+    ruby_set_current_source();
+a337 1
+    rb_gc_force_recycle((VALUE)save[2]);
+@
+
+
+1.65
+log
+@* ruby.c (require_libraries): prevent ruby_sorcefile from GC.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d859 4
+a862 1
+    rb_gc();
+@
+
+
+1.64
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/08/12 13:39:22 $
+d313 1
+a313 2
+    char *orig_sourcefile = ruby_sourcefile;
+    NODE *save[2];
+a317 1
+    ruby_sourcefile = 0;
+d320 1
+d333 4
+a336 1
+    ruby_sourcefile = orig_sourcefile;
+@
+
+
+1.63
+log
+@* ruby.c (set_arg0): Correct the position of #endif.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/29 05:20:33 $
+d341 1
+a341 1
+	int n;
+d884 1
+a884 1
+    int i;
+@
+
+
+1.62
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/05/23 07:41:53 $
+d942 1
+a943 1
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+@
+
+
+1.61
+log
+@* ruby.c (proc_options): option parsing problem.
+  (ruby-bugs-ja:PR#233)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/23 05:35:26 $
+d49 1
+a49 1
+extern int yydebug;
+d439 1
+a439 1
+	    yydebug = 1;
+d615 1
+a615 1
+		yydebug = 1;
+@
+
+
+1.60
+log
+@* ruby.c (proc_options): removed "-*-" support for #! line.
+
+* io.c (rb_io_s_sysopen): new method to get a raw file
+  descriptor. [new]
+
+* ext/socket/socket.c (tcp_sysaccept): new method to return an
+  accepted socket fd (integer). [new]
+
+* ext/socket/socket.c (unix_sysaccept,sock_sysaccept): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/05/22 12:32:15 $
+a563 1
+		s += numlen;
+d575 1
+a575 1
+	    goto reswitch;
+@
+
+
+1.59
+log
+@* ruby.c (proc_options): -T consumes digits only.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d564 1
+d576 1
+a576 1
+	    break;
+a627 5
+	  case '*':
+	  case ' ':
+	    if (s[1] == '-') s+=2;
+	    break;
+
+a655 1
+		while (ISSPACE(*s)) s++;
+d658 4
+a661 1
+		    if (ISSPACE(*s)) continue;
+@
+
+
+1.58
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/07 11:19:37 $
+d561 1
+d565 1
+a565 1
+	    break;
+@
+
+
+1.57
+log
+@* gc.c (rb_source_filename): added. holds unique strings for file
+  names with GC space.
+
+* gc.c (rb_gc_mark): mark source file name.
+
+* gc.c (gc_sweep): ditto.
+
+* gc.c (Init_GC): initialize source file name table.
+
+* intern.h (rb_source_filename): added.
+
+* eval.c (rb_eval_string): use rb_source_filename().
+
+* parse.y (yycompile): ditto.
+
+* ruby.c (proc_options): ditto.
+
+* ruby.c (load_file): ditto.
+
+* ruby.c (ruby_script): ditto.
+
+* ruby.c (ruby_prog_init): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/10 07:55:40 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.56
+log
+@* ruby.c (load_file): avoid SEGV on '#' only input.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/17 07:52:35 $
+d720 1
+a720 1
+    ruby_sourcefile = argv0;
+d828 1
+a828 1
+		    ruby_sourcefile = fname;
+d954 1
+a954 1
+	ruby_sourcefile = name;
+d993 1
+a993 1
+    ruby_sourcefile = "ruby";
+@
+
+
+1.55
+log
+@* intern.h: add prototypes.
+  rb_gc_enable(), rb_gc_disable(), rb_gc_start(), rb_str_new5()
+  rb_str_buf_append(), rb_str_buf_cat(), rb_str_buf_cat2(),
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/02 04:31:19 $
+d797 1
+@
+
+
+1.54
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/09/03 09:59:41 $
+d289 2
+a290 2
+} req_list_head;
+struct req_list *req_list_last = &req_list_head;
+d308 1
+a308 1
+void
+@
+
+
+1.53
+log
+@* ruby.c (proc_option): fix shift ARGV issue
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/09/03 05:37:42 $
+d603 4
+a606 2
+	    else if (strcmp("debug", s) == 0)
+		ruby_debug = 1;
+@
+
+
+1.52
+log
+@* ruby.c (proc_options): should not alter origargv[].
+
+* ruby.c (set_arg0): long strings for $0 dumped core.
+
+* ruby.c (set_arg0): use setprogtitle() if it's available.
+
+* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/09/01 03:34:04 $
+d708 3
+a710 1
+	argc--; argv++;
+@
+
+
+1.51
+log
+@commit miss.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/01 01:23:17 $
+d63 1
+a63 1
+static int origargc, origarglen;
+a669 5
+    if (e_script) {
+	argc++, argv--;
+	argv[0] = script;
+    }
+
+d688 3
+a690 1
+	script = argv[0];
+d882 1
+a882 1
+    int len = origarglen;
+d888 1
+a888 14
+#ifndef __hpux
+    if (i >= len) {
+	memcpy(origargv[0], s, len);
+	origargv[0][len] = '\0';
+    }
+    else {
+	memcpy(origargv[0], s, i);
+	s = origargv[0]+i;
+	*s++ = '\0';
+	while (++i < len)
+	    *s++ = ' ';
+    }
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+#else
+d903 36
+d940 1
+d1038 1
+a1038 13
+#ifndef __hpux
+    if (origarglen == 0) {
+	int i;
+	char *s = origargv[0];
+	s += strlen(s);
+	/* See if all the arguments are contiguous in memory */
+	for (i = 1; i < origargc; i++) {
+	    if (origargv[i] == s + 1)
+		s += strlen(++s);	/* this one is ok too */
+	}
+	origarglen = s - origargv[0];
+    }
+#endif
+@
+
+
+1.50
+log
+@* ruby.c (set_arg0): prevent SEGV when val is longer than the
+  original arguments.
+
+* ruby.c (ruby_process_options): initialize total length of
+  original arguments at first.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/14 15:17:19 $
+d885 1
+a885 1
+    static int len;
+@
+
+
+1.49
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:22 $
+d63 1
+a63 1
+static int origargc;
+a887 12
+#ifndef __hpux
+    if (len == 0) {
+	s = origargv[0];
+	s += strlen(s);
+	/* See if all the arguments are contiguous in memory */
+	for (i = 1; i < origargc; i++) {
+	    if (origargv[i] == s + 1)
+		s += strlen(++s);	/* this one is ok too */
+	}
+	len = s - origargv[0];
+    }
+#endif
+d892 3
+a894 3
+    if (i < len) {
+	memcpy(origargv[0], s, i);
+	origargv[0][i] = '\0';
+d1017 13
+@
+
+
+1.48
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d773 1
+a773 1
+	VALUE c;
+@
+
+
+1.47
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/05/28 16:07:34 $
+d268 1
+a272 1
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_LIB2));
+d275 1
+a279 2
+
+    ruby_incpush(RUBY_RELATIVE(RUBY_LIB));
+@
+
+
+1.46
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/02 04:22:11 $
+d684 5
+d734 5
+@
+
+
+1.45
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:09 $
+d15 1
+a15 1
+#ifdef _WIN32
+d109 1
+a109 1
+#if defined(_WIN32) || defined(DJGPP)
+d176 1
+a176 1
+#if defined(__CYGWIN32__)
+d206 4
+d213 1
+a213 1
+#if defined(_WIN32) || defined(DJGPP) || defined(__EMX__)
+d217 7
+a223 2
+#if defined(_WIN32)
+    GetModuleFileName(NULL, libpath, sizeof libpath);
+@
+
+
+1.44
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/28 06:30:03 $
+d141 2
+a142 1
+	} else {
+d238 2
+a239 1
+    } else {
+d339 2
+a340 1
+	    char *s = STR2CSTR(*args++);
+d882 3
+a884 1
+    s = rb_str2cstr(val, &i);
+d886 3
+a888 3
+    if (i > len) {
+	memcpy(origargv[0], s, len);
+	origargv[0][len] = '\0';
+d906 2
+a907 1
+    } else {
+@
+
+
+1.43
+log
+@* string.c (rb_str_delete_bang): delete! should take at least 1
+  argument.
+
+* ruby.c (load_file): add rb_gc() after loading to avoid
+  extraordinary memory growth.
+
+* dir.c (rb_glob_helper): "./foo" should match "foo", not "./foo".
+
+* eval.c (ev_const_get): retrieve Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* eval.c (ev_const_defined): check Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* time.c (time_timeval): negative time interval shoule not be
+  allowed.
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+
+* eval.c (rb_yield_0): should check based on rb_block_given_p()
+  and rb_f_block_given_p().
+
+* configure.in (frame-address): --enable-frame-address to allow
+  __builtin_frame_address() to be used.
+
+* eval.c (stack_length): use __builtin_frame_address() based on
+  the macro USE_BUILTIN_FRAME_ADDRESS.
+
+* gc.c (rb_gc): ditto.
+
+* gc.c (Init_stack): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/27 07:52:11 $
+d433 1
+a433 1
+	    if (verbose) {
+d993 1
+@
+
+
+1.42
+log
+@* time.c (time_timeval): negative time interval shoule not be
+  allowed.
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/02/09 14:11:23 $
+d836 1
+@
+
+
+1.41
+log
+@ruby.c (ruby_init_loadpath): convert '\' to '/'
+before finding executable file path.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/01/29 05:10:42 $
+d433 4
+@
+
+
+1.40
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/01/10 04:49:41 $
+d217 1
+d221 10
+a230 1
+    p = strrchr(libpath, '\\');
+d233 1
+a233 1
+	if (p-libpath > 3 && !strcasecmp(p-4, "\\bin")) {
+a241 8
+#if !defined(__CYGWIN32__)
+#ifndef CharNext		/* defined as CharNext[AW] on Windows. */
+#define CharNext(p) ((p) + 1)
+#endif
+    for (p = libpath; *p; p = CharNext(p))
+	if (*p == '\\')
+	    *p = '/';
+#endif
+@
+
+
+1.39
+log
+@eban
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 02:30:41 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.38
+log
+@* ruby.c (load_file): typo(rb_load_fail -> rb_load_failed).
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/01/09 07:26:17 $
+d731 1
+a731 1
+	    rb_load_failed(fname);
+@
+
+
+1.37
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/12/13 03:48:30 $
+d731 1
+a731 1
+	    rb_load_fail(fname);
+@
+
+
+1.36
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/11/20 07:31:45 $
+d731 1
+a731 1
+	    rb_raise(rb_eLoadError, "No such file to load -- %s", fname);
+@
+
+
+1.36.4.1
+log
+@several minor fixes.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/12/13 03:48:30 $
+a39 1
+#include "m17n.h"
+@
+
+
+1.36.2.1
+log
+@* eval.c (POP_VARS): propagate DVAR_DONT_RECYCLE, if
+  SCOPE_DONT_RECYCLE of ruby_scope is set.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/12/13 03:48:30 $
+d731 1
+a731 1
+	    rb_load_fail(fname);
+@
+
+
+1.36.2.2
+log
+@ruby.c (ruby_init_loadpath): convert '\' to '/'
+before finding executable file path.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/02 11:39:51 $
+a216 1
+#define CharNext(p) ((p) + mblen(p, MB_CUR_MAX))
+d220 1
+a220 10
+
+#ifndef CharNext		/* defined as CharNext[AW] on Windows. */
+#define CharNext(p) ((p) + 1)
+#endif
+
+    for (p = libpath; *p; p = CharNext(p))
+	if (*p == '\\')
+	    *p = '/';
+
+    p = strrchr(libpath, '/');
+d223 1
+a223 1
+	if (p-libpath > 3 && !strcasecmp(p-4, "/bin")) {
+d232 8
+@
+
+
+1.36.2.3
+log
+@* eval.c (ev_const_get): retrieve Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/02/09 14:11:20 $
+a432 4
+	    if (verbose) {
+		s++;
+		goto reswitch;
+	    }
+@
+
+
+1.36.2.4
+log
+@* io.c (argf_seek): wrong calling sequence of rb_io_seek().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+
+* ruby.c (ruby_set_argv): clear ARGV contents before adding args.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/27 08:04:23 $
+a991 1
+    rb_ary_clear(rb_argv);
+@
+
+
+1.36.2.5
+log
+@* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:48:33 $
+d880 3
+a882 3
+    if (i < len) {
+	memcpy(origargv[0], s, i);
+	origargv[0][i] = '\0';
+@
+
+
+1.36.2.6
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/24 06:44:13 $
+d15 1
+a15 1
+#if defined _WIN32 || defined __CYGWIN__
+d109 1
+a109 1
+#if defined _WIN32 || defined __CYGWIN__ || defined __DJGPP__
+d175 1
+a175 1
+#if defined(__CYGWIN__)
+a204 4
+#if defined _WIN32 || defined __CYGWIN__ || defined __DJGPP__ || defined __EMX__
+#define LOAD_RELATIVE 1
+#endif
+
+d208 1
+a208 1
+#if defined LOAD_RELATIVE
+d212 2
+a213 7
+#if defined _WIN32 || defined __CYGWIN__
+# if defined LIBRUBY_SO
+    HMODULE libruby = GetModuleHandle(LIBRUBY_SO);
+# else
+    HMODULE libruby = NULL;
+# endif
+    GetModuleFileName(libruby, libpath, sizeof libpath);
+@
+
+
+1.36.2.7
+log
+@* file.c (rb_file_s_unlink): should not allow if $SAFE >= 2.
+
+* object.c (rb_obj_taint): backport from 1.7.
+
+* object.c (rb_obj_untaint): add frozen status check (backport from 1.7).
+
+* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/05/28 16:07:01 $
+a680 5
+    if (rb_safe_level() >= 4) {
+      OBJ_TAINT(rb_argv);
+      OBJ_TAINT(rb_load_path);
+    }
+
+a725 5
+
+    if (rb_safe_level() >= 4) {
+      FL_UNSET(rb_argv, FL_TAINT);
+      FL_UNSET(rb_load_path, FL_TAINT);
+    }
+@
+
+
+1.36.2.8
+log
+@* eval.c (rb_f_require): move rb_file_s_expand_path from
+  rb_find_file_noext().
+
+* file.c (rb_find_file_noext): move rb_file_s_expand_path to
+  rb_f_require().
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/06/01 06:46:09 $
+d771 1
+a771 1
+	VALUE c = 1;		/* something not nil */
+@
+
+
+1.36.2.9
+log
+@* ruby.c (ruby_init_loadpath): proper load path order.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/06 06:36:59 $
+a265 1
+    ruby_incpush(RUBY_RELATIVE(RUBY_SITE_LIB2));
+d270 1
+a272 1
+    ruby_incpush(RUBY_RELATIVE(RUBY_LIB));
+d278 2
+a854 1
+    rb_gc();
+@
+
+
+1.36.2.10
+log
+@* ruby.c (set_arg0): prevent SEGV when val is longer than the
+  original arguments.
+
+* ruby.c (ruby_process_options): initialize total length of
+  original arguments at first.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/16 09:29:55 $
+d63 1
+a63 1
+static int origargc, origarglen;
+d885 12
+d899 3
+a901 3
+    if (i >= len) {
+	memcpy(origargv[0], s, len);
+	origargv[0][len] = '\0';
+a1022 13
+#ifndef __hpux
+    if (origarglen == 0) {
+	int i;
+	char *s = origargv[0];
+	s += strlen(s);
+	/* See if all the arguments are contiguous in memory */
+	for (i = 1; i < origargc; i++) {
+	    if (origargv[i] == s + 1)
+		s += strlen(++s);	/* this one is ok too */
+	}
+	origarglen = s - origargv[0];
+    }
+#endif
+@
+
+
+1.36.2.11
+log
+@commit miss.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/09/01 01:25:09 $
+d882 1
+a882 1
+    int len = origarglen;
+@
+
+
+1.36.2.12
+log
+@* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+
+* parse.y (yylex): ternary ? can be followed by newline.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/01 01:31:39 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d63 1
+a63 1
+static int origargc;
+d667 5
+d690 1
+a690 3
+	if (!e_script) {
+	    script = argv[0];
+	}
+d882 1
+a882 1
+    static int len;
+d886 14
+a899 1
+#ifdef __hpux
+a911 2
+#elif defined(HAVE_SETPROCTITLE)
+    setproctitle("%.*s", i, s);
+a912 28
+#else
+    if (len == 0) {
+	char *s = origargv[0];
+	int i;
+
+	s += strlen(s);
+	/* See if all the arguments are contiguous in memory */
+	for (i = 1; i < origargc; i++) {
+	    if (origargv[i] == s + 1)
+		s += strlen(++s);	/* this one is ok too */
+	}
+	len = s - origargv[0];
+    }
+    if (i >= len) {
+	i = len;
+	memcpy(origargv[0], s, i);
+	origargv[0][i] = '\0';
+    }
+    else {
+	memcpy(origargv[0], s, i);
+	s = origargv[0]+i;
+	*s++ = '\0';
+	while (++i < len)
+	    *s++ = ' ';
+	for (i = 1; i < origargc; i++)
+	    origargv[i] = 0;
+    }
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+a913 1
+    rb_progname = rb_tainted_str_new(s, i);
+d1011 13
+@
+
+
+1.36.2.13
+log
+@* ruby.c (proc_option): fix shift ARGV issue
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/09/03 05:29:19 $
+d705 1
+a705 3
+	if (!e_script) {
+	    argc--; argv++;
+	}
+@
+
+
+1.36.2.14
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/09/03 09:59:57 $
+d600 2
+a601 4
+	    else if (strcmp("debug", s) == 0) {
+		ruby_debug = Qtrue;
+                ruby_verbose = Qtrue;
+            }
+@
+
+
+1.36.2.15
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/02 04:25:52 $
+a899 1
+    rb_progname = rb_tainted_str_new(s, i);
+d932 1
+@
+
+
+1.36.2.16
+log
+@* intern.h: add prototypes.
+  rb_str_dup_frozen()
+
+* ruby.h: added declaration.
+  rb_defout, rb_stdin, rb_stdout, rb_stderr, ruby_errinfo
+
+* rubyio.h: changed double include guard macro to RUBYIO_H.
+
+* array.c (inspect_call): make static.
+
+* eval.c (dvar_asgn): ditto.
+
+* io.c (rb_io_close_read): ditto.
+
+* lex.c (rb_reserved_word): ditto.
+
+* ruby.c: (req_list_head, req_list_last): ditto.
+
+* ruby.c (require_libraries): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:22:27 $
+d287 2
+a288 2
+};
+static struct req_list req_list_head, *req_list_last = &req_list_head;
+d306 1
+a306 1
+static void
+@
+
+
+1.36.2.17
+log
+@* ruby.c (load_file): avoid SEGV on '#' only input.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/17 08:13:17 $
+a793 1
+	    if (NIL_P(line)) return;
+@
+
+
+1.36.2.18
+log
+@* gc.c (rb_source_filename): added. holds unique strings for file
+  names with GC space.
+
+* gc.c (rb_gc_mark): mark source file name.
+
+* gc.c (gc_sweep): ditto.
+
+* gc.c (Init_GC): initialize source file name table.
+
+* intern.h (rb_source_filename): added.
+
+* eval.c (rb_eval_string): use rb_source_filename().
+
+* parse.y (yycompile): ditto.
+
+* ruby.c (proc_options): ditto.
+
+* ruby.c (load_file): ditto.
+
+* ruby.c (ruby_script): ditto.
+
+* ruby.c (ruby_prog_init): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/10 07:54:43 $
+d717 1
+a717 1
+    ruby_sourcefile = rb_source_filename(argv0);
+d825 1
+a825 1
+		    ruby_sourcefile = rb_source_filename(fname);
+d942 1
+a942 1
+	ruby_sourcefile = rb_source_filename(name);
+d981 1
+a981 1
+    ruby_sourcefile = rb_source_filename("ruby");
+@
+
+
+1.36.2.19
+log
+@* ruby.c (proc_options): -T consumes digits only.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/07 11:19:28 $
+a557 1
+		    s += numlen;
+d561 1
+a561 1
+	    goto reswitch;
+@
+
+
+1.36.2.20
+log
+@* ruby.c (proc_options): removed "-*-" support for #! line.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/22 12:32:07 $
+d622 5
+@
+
+
+1.36.2.21
+log
+@* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/23 05:36:28 $
+d441 1
+a441 1
+	    if (argv0 == 0 || verbose) {
+@
+
+
+1.36.2.22
+log
+@* gc.c (gc_sweep): does reclaim nodes in also compile time, if we can.
+* ruby.c (load_file): omit GC if we can.
+* parse.y (ruby_parser_stack_on_heap): new function.
+* intern.h (ruby_parser_stack_on_heap): added.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/05/23 05:54:23 $
+d852 1
+a852 4
+
+    if (ruby_parser_stack_on_heap()) {
+        rb_gc();
+    }
+@
+
+
+1.36.2.23
+log
+@* eval.c (rb_eval): overriding false constant with class/module
+  definition should be error.  (PR#327)
+
+* eval.c (rb_call0): preset source file/line to pass correct ones
+  to trace_func at end of empty method.  [ruby-dev:18035]
+
+* ruby.c (require_libraries): not clear source file.
+  [ruby-dev:18074]
+@
+text
+@d5 2
+a6 2
+  $Author: aamine $
+  $Date: 2002/09/02 15:20:12 $
+d317 1
+@
+
+
+1.35
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/02 07:48:32 $
+d579 1
+a579 1
+	    if (!s[1]) {
+@
+
+
+1.34
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/21 06:37:16 $
+d211 1
+a211 1
+    size_t rest;
+@
+
+
+1.33
+log
+@matz - net library bug (by me)
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/15 06:22:42 $
+d208 1
+a208 1
+#if defined(_WIN32) || defined(DJGPP)
+d217 2
+@
+
+
+1.32
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/03 09:50:33 $
+d819 1
+@
+
+
+1.31
+log
+@matz - nakada win32 patch
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/02 09:22:25 $
+a95 1
+"\n",
+d100 1
+a100 1
+    printf("\nUsage: %s [switches] [--] [programfile] [arguments]", name);
+d102 1
+a102 1
+	printf("\n  %s", *p++);
+@
+
+
+1.30
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/01 09:25:33 $
+d209 37
+d251 1
+a251 1
+    ruby_incpush(RUBY_SEARCH_PATH);
+d255 1
+a255 1
+    ruby_incpush(RUBY_SITE_THIN_ARCHLIB);
+d257 3
+a259 3
+    ruby_incpush(RUBY_SITE_ARCHLIB);
+    ruby_incpush(RUBY_SITE_LIB2);
+    ruby_incpush(RUBY_SITE_LIB);
+d262 1
+a262 1
+    ruby_incpush(RUBY_THIN_ARCHLIB);
+d264 1
+a264 1
+    ruby_incpush(RUBY_ARCHLIB);
+d266 1
+a266 4
+    ruby_incpush(RUBY_LIB);
+#if defined(_WIN32) || defined(DJGPP)
+    ruby_incpush(ruby_libpath());
+#endif
+a939 39
+
+#if defined(_WIN32) || defined(DJGPP)
+static char *
+ruby_libpath()
+{
+    static char libpath[FILENAME_MAX+1];
+    char *p;
+#if defined(_WIN32)
+    GetModuleFileName(NULL, libpath, sizeof libpath);
+#elif defined(DJGPP)
+    extern char *__dos_argv0;
+    strcpy(libpath, __dos_argv0);
+#endif
+    p = strrchr(libpath, '\\');
+    if (p) {
+	*p = 0;
+	if (!strcasecmp(p-4, "\\bin"))
+	    p -= 4;
+    } else {
+	strcpy(libpath, ".");
+	p = libpath + 1;
+    }
+
+    strcpy(p, "\\lib");
+#if defined(__CYGWIN32__)
+    p = (char *)malloc(strlen(libpath)+10);
+    if (!p)
+	return 0;
+    cygwin32_conv_to_posix_path(libpath, p);
+    strcpy(libpath, p);
+    free(p);
+#else
+    for (p = libpath; *p; p++)
+	if (*p == '\\')
+	    *p = '/';
+#endif
+    return libpath;
+}
+#endif
+@
+
+
+1.29
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/07/29 14:04:38 $
+d169 2
+a170 2
+static void
+incpush(path)
+d206 2
+a207 2
+static void
+ruby_path_init()
+d210 1
+a210 1
+	incpush(getenv("RUBYLIB"));
+d214 1
+a214 1
+    incpush(RUBY_SEARCH_PATH);
+d218 1
+a218 1
+    incpush(RUBY_SITE_THIN_ARCHLIB);
+d220 3
+a222 3
+    incpush(RUBY_SITE_ARCHLIB);
+    incpush(RUBY_SITE_LIB2);
+    incpush(RUBY_SITE_LIB);
+d225 1
+a225 1
+    incpush(RUBY_THIN_ARCHLIB);
+d227 1
+a227 1
+    incpush(RUBY_ARCHLIB);
+d229 1
+a229 1
+    incpush(RUBY_LIB);
+d231 1
+a231 1
+    incpush(ruby_libpath());
+d235 1
+a235 1
+	incpush(".");
+a362 1
+    version = Qfalse;
+d517 1
+a517 1
+		incpush(s);
+d519 1
+a519 1
+		incpush(argv[1]);
+d661 1
+a661 1
+    ruby_path_init();
+@
+
+
+1.28
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/07/27 09:49:22 $
+d85 1
+a85 1
+"-n              assume 'while gets; ...; end' loop around your script",
+d91 2
+a92 2
+"-v              enables verbose mode",
+"-w              turn warnings on for compilation of your script",
+d170 1
+a170 1
+addpath(path)
+d199 1
+a199 1
+	rb_load_path = rb_ary_plus(ary, rb_load_path);
+d202 34
+a235 1
+	rb_ary_unshift(rb_load_path, rubylib_mangled_path2(path));
+a270 5
+    if (rb_safe_level() == 0) {
+	rb_ary_push(rb_load_path, rb_str_new2("."));
+	addpath(getenv("RUBYLIB"));
+    }
+
+d518 1
+a518 1
+		addpath(s);
+d520 1
+a520 1
+		addpath(argv[1]);
+d662 1
+a959 21
+
+    addpath(RUBY_LIB);
+#if defined(_WIN32) || defined(DJGPP)
+    addpath(ruby_libpath());
+#endif
+
+    addpath(RUBY_ARCHLIB);
+#ifdef RUBY_THIN_ARCHLIB
+    addpath(RUBY_THIN_ARCHLIB);
+#endif
+
+    addpath(RUBY_SITE_LIB);
+    addpath(RUBY_SITE_LIB2);
+    addpath(RUBY_SITE_ARCHLIB);
+#ifdef RUBY_SITE_THIN_ARCHLIB
+    addpath(RUBY_SITE_THIN_ARCHLIB);
+#endif
+
+#ifdef RUBY_SEARCH_PATH
+    addpath(RUBY_SEARCH_PATH);
+#endif
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/07/24 09:58:08 $
+d118 1
+a118 1
+    static char ret[STATIC_FILE_LENGTH+1];
+d136 2
+a137 2
+	    strcpy(ret, newp);
+	    s = ret;
+d150 1
+d158 3
+a160 3
+    strcpy(ret + newl, s + oldl);
+    ret[l + newl - oldl] = 0;
+    return ret;
+@
+
+
+1.26
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/07/07 03:20:52 $
+a51 3
+# ifndef strdup
+char *strdup();
+# endif
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/28 08:26:54 $
+d122 1
+a122 1
+    
+d127 1
+a127 1
+	    
+a148 3
+    if (!newp) {
+	return s;
+    }
+d152 4
+a155 2
+    if (l < oldl || strncasecmp(oldp, s, oldl) != 0) {
+	return s;
+d161 1
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/06/19 03:37:52 $
+d258 1
+a641 1
+	require_libraries();
+d928 1
+@
+
+
+1.23
+log
+@2000-06-19
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/30 04:24:03 $
+d228 2
+d240 6
+a262 2
+extern void Init_ext _((void));
+
+a634 5
+#if 0
+    Init_ext();		/* should be called here for some reason :-( */
+    require_libraries();
+#endif
+
+d637 1
+d641 1
+a647 5
+    if (rb_safe_level() == 0) {
+	rb_ary_push(rb_load_path, rb_str_new2("."));
+	addpath(getenv("RUBYLIB"));
+    }
+
+a649 5
+
+#if 1
+    Init_ext();		/* should be called here for some reason :-( */
+    require_libraries();
+#endif
+d756 1
+a756 5
+	else if (NIL_P(c)) {
+	    rb_io_close(f);
+	    return;
+	}
+	else {
+d759 1
+@
+
+
+1.22
+log
+@2000-05-30
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:08 $
+d682 7
+@
+
+
+1.21
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:07:44 $
+d232 1
+d234 1
+a234 1
+    NODE *save;
+d239 3
+a241 1
+    save = ruby_eval_tree;
+d250 2
+a251 1
+    ruby_eval_tree = save;
+d629 1
+d632 1
+d652 5
+@
+
+
+1.20
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:53:04 $
+a642 1
+
+@
+
+
+1.19
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:28 $
+d294 1
+a294 1
+    int argc; char *argv[3]; char **argvp = argv;
+d639 6
+a925 4
+    if (rb_safe_level() == 0) {
+	addpath(".");
+    }
+
+a945 4
+
+    if (rb_safe_level() == 0) {
+	addpath(getenv("RUBYLIB"));
+    }
+@
+
+
+1.18
+log
+@2000-05-01
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/04/10 05:44:18 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+d13 1
+a13 1
+************************************************/
+@
+
+
+1.17
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:45 $
+d10 2
+@
+
+
+1.16
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 07:11:17 $
+d406 2
+a407 2
+	    rb_str_cat(e_script, s, strlen(s));
+	    rb_str_cat(e_script, "\n", 1);
+@
+
+
+1.15
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:11 $
+a30 4
+#ifdef USE_CWGUSI
+#include "macruby_missing.h"
+#endif
+
+a705 1
+#ifndef USE_CWGUSI
+d719 1
+a719 1
+#endif
+@
+
+
+1.14
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/07 09:23:27 $
+a110 7
+#ifndef RUBY_LIB
+#define RUBY_LIB "/usr/local/lib/ruby"
+#endif
+#ifndef RUBY_SITE_LIB
+#define RUBY_SITE_LIB "/usr/local/lib/site_ruby"
+#endif
+
+d211 1
+a211 1
+    const char *name;
+d223 2
+a224 1
+    list->name = mod;
+d245 1
+d743 5
+a747 1
+	else if (!NIL_P(c)) {
+a931 1
+#ifdef RUBY_ARCHLIB
+a932 1
+#endif
+d938 1
+a938 1
+#ifdef RUBY_SITE_ARCHLIB
+a939 1
+#endif
+@
+
+
+1.13
+log
+@991207
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:59 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d82 1
+a98 1
+"-Xdirectory     cd to directory, before executing your script",
+d444 1
+d451 4
+a454 1
+	    if (*s && chdir(s) < 0) {
+@
+
+
+1.12
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/02 06:58:50 $
+d76 1
+a76 1
+     * Removed -h because the user already knows that opton. Others? */
+a623 1
+    process_sflag();
+d626 1
+@
+
+
+1.11
+log
+@19991292
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/25 09:03:07 $
+d292 1
+d307 4
+a310 2
+    argv[1] = ALLOCA_N(char, s - p + 2);
+    sprintf(argv[1], "-%s", p);
+d456 3
+a458 1
+	    rb_fs = rb_str_new2(s+1);
+d462 4
+a465 3
+	    s++;
+	    rb_set_kcode(s);
+	    s++;
+a642 1
+    sflag = 0;
+@
+
+
+1.10
+log
+@19991125
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:34 $
+d269 2
+a270 2
+	while (n--) {
+	    char *s = STR2CSTR(*args);
+d273 2
+a274 1
+	    if (s[0] != '-') continue;
+@
+
+
+1.9
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/21 07:58:14 $
+a119 2
+static VALUE e_script;
+
+d325 1
+@
+
+
+1.8
+log
+@#! option
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/21 07:52:15 $
+d281 1
+a281 1
+		rb_gvar_set2(s, rb_str_new2(p));
+d284 1
+a284 1
+		rb_gvar_set2(s, Qtrue);
+@
+
+
+1.7
+log
+@RUBYOPT
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/18 09:03:00 $
+d732 1
+@
+
+
+1.6
+log
+@19991018
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/16 10:33:06 $
+d295 20
+d551 28
+a731 4
+		    int argc; char *argv[3]; char **argvp = argv;
+		    char *s = ++p;
+
+		    argc = 2; argv[0] = argv[2] = 0;
+d733 1
+a733 8
+			while (*s && !ISSPACE(*s))
+			    s++;
+			*s = '\0';
+			argv[1] = p;
+			proc_options(argc, argv);
+			p = ++s;
+			while (*p && ISSPACE(*p))
+			    p++;
+@
+
+
+1.5
+log
+@ruby -v
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/15 08:52:17 $
+d658 1
+a670 1
+#ifndef USE_CWGUSI
+@
+
+
+1.4
+log
+@-r debug, -s, etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:54 $
+a46 2
+static int version, copyright;
+
+d49 3
+a51 1
+static int sflag = Qfalse;
+a57 3
+extern int yydebug;
+static int xflag = Qfalse;
+
+d242 1
+d257 1
+d304 4
+d334 1
+a334 1
+	    ruby_verbose |= 1;
+d345 1
+a345 1
+	    ruby_verbose = 2;
+d347 1
+a347 1
+	    ruby_verbose |= 1;
+d358 1
+a358 1
+	    sflag = Qtrue;
+d496 4
+a499 2
+	    else if (strcmp("verbose", s) == 0)
+		ruby_verbose = 2;
+a543 3
+    if (ruby_verbose) ruby_verbose = Qtrue;
+    if (ruby_debug) ruby_debug = Qtrue;
+
+d545 1
+a545 1
+	if (ruby_verbose == 3) exit(0);
+d577 1
+d589 2
+a590 2
+    sflag = Qfalse;
+    xflag = Qfalse;
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:14 $
+d123 1
+a123 2
+static FILE *e_fp;
+static char *e_tmpname;
+d178 2
+d181 2
+a182 1
+#define rubylib_mangle(s, l) (s)
+d207 1
+a207 1
+		rb_ary_push(ary, rb_str_new(rubylib_mangle(p, (int)(s-p)), (int)(s-p)));
+d211 1
+a211 1
+		rb_ary_push(ary, rb_str_new2(rubylib_mangle(p, 0)));
+d218 1
+a218 1
+	rb_ary_unshift(rb_load_path, rb_str_new2(rubylib_mangle(path, 0)));
+d242 1
+a242 1
+ruby_require_libraries()
+d244 2
+d249 2
+d258 1
+d264 39
+a302 7
+proc_options(argcp, argvp)
+    int *argcp;
+    char ***argvp;
+{
+    int argc = *argcp;
+    char **argv = *argvp;
+    int script_given, do_search;
+a308 2
+    script_given = 0;
+    e_tmpname = NULL;
+d385 3
+a387 8
+	    if (!e_fp) {
+		e_tmpname = ruby_mktemp();
+		if (!e_tmpname) rb_fatal("Can't mktemp");
+		e_fp = fopen(e_tmpname, "w");
+		if (!e_fp) {
+		    rb_fatal("Cannot open temporary file: %s", e_tmpname);
+		}
+		if (script == 0) script = e_tmpname;
+d389 2
+a390 2
+	    fputs(s, e_fp);
+	    putc('\n', e_fp);
+d524 1
+a524 1
+    if (*argvp[0] == 0) return;
+d526 1
+a526 4
+    if (e_fp) {
+	if (fflush(e_fp) || ferror(e_fp) || fclose(e_fp))
+	    rb_fatal("Cannot write to temp file for -e");
+	e_fp = NULL;
+d528 1
+a528 1
+	argv[0] = e_tmpname;
+d539 10
+a548 4
+    Init_ext();		/* should be called here for some reason :-( */
+    if (script_given == Qfalse) {
+	if (argc == 0) {	/* no more args */
+	    if (ruby_verbose == 3) exit(0);
+a549 1
+	    load_stdin();
+d552 2
+a553 8
+	    script = argv[0];
+	    if (script[0] == '\0') {
+		script = "-";
+		load_stdin();
+	    }
+	    else {
+		if (do_search) {
+		    char *path = getenv("RUBYPATH");
+d555 6
+a560 8
+		    script = 0;
+		    if (path) {
+			script = dln_find_file(argv[0], path);
+		    }
+		    if (!script) {
+			script = dln_find_file(argv[0], getenv("PATH"));
+		    }
+		    if (!script) script = argv[0];
+d562 1
+a562 1
+		load_file(script, 1);
+a563 1
+	    argc--; argv++;
+d565 1
+a566 2
+    if (ruby_verbose) ruby_verbose = Qtrue;
+    if (ruby_debug) ruby_debug = Qtrue;
+d568 3
+a570 3
+    xflag = Qfalse;
+    *argvp = argv;
+    *argcp = argc;
+d572 2
+a573 2
+    if (sflag) {
+	char *s;
+d575 8
+a582 17
+	argc = *argcp; argv = *argvp;
+	for (; argc > 0 && argv[0][0] == '-'; argc--,argv++) {
+	    if (argv[0][1] == '-') {
+		argc--,argv++;
+		break;
+	    }
+	    argv[0][0] = '$';
+	    if (s = strchr(argv[0], '=')) {
+		*s++ = '\0';
+		rb_gvar_set2(argv[0], rb_str_new2(s));
+	    }
+	    else {
+		rb_gvar_set2(argv[0], Qtrue);
+	    }
+	    argv[0][0] = '-';
+	}
+	*argcp = argc; *argvp = argv;
+d585 3
+d690 1
+a690 1
+			proc_options(&argc, &argvp);
+d951 1
+a951 3
+    proc_options(&argc, &argv);
+    ruby_script(script);
+    ruby_set_argv(argc, argv);
+a961 8
+    }
+    if (e_fp) {
+	fclose(e_fp);
+	e_fp = NULL;
+    }
+    if (e_tmpname) {
+	unlink(e_tmpname);
+	e_tmpname = NULL;
+@
+
+
+1.3.2.1
+log
+@19991015
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:54 $
+a178 2
+#define rubylib_mangled_path(s, l) rb_str_new2(rubylib_mangle((s), (l)))
+#define rubylib_mangled_path2(s) rb_str_new2(rubylib_mangle((s), 0))
+d180 1
+a180 2
+#define rubylib_mangled_path(s, l) rb_str_new((s), (l))
+#define rubylib_mangled_path2(s) rb_str_new2(s)
+d205 1
+a205 1
+		rb_ary_push(ary, rubylib_mangled_path(p, (int)(s-p)));
+d209 1
+a209 1
+		rb_ary_push(ary, rubylib_mangled_path2(p));
+d216 1
+a216 1
+	rb_ary_unshift(rb_load_path, rubylib_mangled_path2(path));
+@
+
+
+1.3.2.2
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/15 08:44:37 $
+d395 1
+a395 4
+	    if (!s || !*s) {
+		rb_fatal("Can't chdir");
+	    }
+	    if (chdir(s) < 0) {
+@
+
+
+1.3.2.3
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:41:10 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.3.2.4
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:11 $
+d686 1
+a686 5
+	else if (NIL_P(c)) {
+	    rb_io_close(f);
+	    return;
+	}
+	else {
+@
+
+
+1.3.2.5
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 08:29:03 $
+d79 1
+a79 1
+     * Removed -h because the user already knows that option. Others? */
+d114 7
+d566 1
+a566 1
+		rb_gv_set(argv[0], rb_str_new2(s));
+d569 1
+a569 1
+		rb_gv_set(argv[0], Qtrue);
+d875 1
+d877 1
+d883 1
+a883 1
+    addpath(RUBY_SITE_LIB2);
+d885 1
+@
+
+
+1.3.2.6
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/23 04:14:20 $
+a638 6
+    if (rb_safe_level() == 0) {
+	rb_ary_push(rb_load_path, rb_str_new2("."));
+	addpath(getenv("RUBYLIB"));
+    }
+
+
+d859 4
+d883 4
+@
+
+
+1.3.2.7
+log
+@2000-05-30
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:06:15 $
+a542 5
+    if (rb_safe_level() == 0) {
+	rb_ary_push(rb_load_path, rb_str_new2("."));
+	addpath(getenv("RUBYLIB"));
+    }
+
+d639 5
+@
+
+
+1.3.2.8
+log
+@mktemp() vulnerability removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/30 04:21:23 $
+a21 1
+#include <fcntl.h>
+a344 1
+		int fd;
+d347 1
+a347 5
+		fd = open(e_tmpname, O_CREAT|O_EXCL|O_RDWR, 0600);
+		if (fd < 0) {
+		    rb_fatal("Cannot open temporary file: %s", e_tmpname);
+		}
+		e_fp = fdopen(fd, "w");
+@
+
+
+1.3.2.9
+log
+@eban
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/30 09:13:33 $
+d131 1
+a131 1
+
+d136 1
+a136 1
+
+d158 3
+d164 2
+a165 4
+    if (!newp || l < oldl || strncasecmp(oldp, s, oldl) != 0) {
+	strncpy(ret, s, l);
+	ret[l] = 0;
+	return ret;
+a170 1
+    ret[l + newl - oldl] = 0;
+@
+
+
+1.3.2.10
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/07/24 09:56:37 $
+d130 1
+a130 1
+    static char newsub[STATIC_FILE_LENGTH+1];
+d148 2
+a149 2
+	    strcpy(newsub, newp);
+	    s = newsub;
+a161 1
+	static char ret[STATIC_FILE_LENGTH+1];
+d169 3
+a171 3
+    strcpy(newsub + newl, s + oldl);
+    newsub[l + newl - oldl] = 0;
+    return newsub;
+@
+
+
+1.3.2.11
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/29 14:05:15 $
+d408 3
+a410 4
+	    if (*++s) {
+		rb_set_kcode(s);
+		s++;
+	    }
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:17:42 $
+d90 1
+a90 1
+"-K[kcode]       specifies KANJI (Japanese) code-set",
+d101 1
+a101 1
+"-X[directory]   cd to directory, before executing your script",
+a606 6
+#if defined(__EMX__) || defined(OS2)
+/*
+		if (p = strstr(RSTRING(line)->ptr, "extproc"))
+		    line = io_gets(f);
+*/
+#endif /* __EMX__ */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:51 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d13 3
+a16 1
+#include "re.h"
+d18 1
+d20 1
+a21 2
+#include <sys/types.h>
+#include <fcntl.h>
+d23 16
+a38 6
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+char *strchr();
+char *strrchr();
+char *strstr();
+d41 3
+d45 1
+d49 3
+a51 4
+int debug = FALSE;
+int verbose = FALSE;
+int tainting = FALSE;
+static int sflag = FALSE;
+d53 2
+a54 1
+char *inplace = FALSE;
+d56 1
+a57 1
+extern char *sourcefile;
+d59 1
+a59 1
+extern int nerrs;
+d61 1
+a61 4
+static int xflag = FALSE;
+extern VALUE RS, RS_default, ORS, FS;
+
+static void load_stdin();
+d63 1
+a63 1
+static void forbid_setid _((char *));
+d65 3
+a67 3
+static int do_loop = FALSE, do_print = FALSE;
+static int do_check = FALSE, do_line = FALSE;
+static int do_split = FALSE;
+d71 43
+d117 5
+d123 56
+a178 2
+#if defined(MSDOS) || defined(NT)
+#define RUBY_LIB_SEP ';'
+d180 1
+a180 1
+#define RUBY_LIB_SEP ':'
+a182 3
+extern VALUE rb_load_path;
+VALUE Frequire();
+
+d185 1
+a185 1
+    char *path;
+d187 2
+d190 10
+a199 3
+    if (strchr(path, RUBY_LIB_SEP)) {
+	char *p, *s;
+	VALUE ary = ary_new();
+d203 3
+a205 3
+	    while (*p == RUBY_LIB_SEP) p++;
+	    if (s = strchr(p, RUBY_LIB_SEP)) {
+		ary_push(ary, str_new(p, (int)(s-p)));
+d209 1
+a209 1
+		ary_push(ary, str_new2(p));
+d213 1
+a213 1
+	rb_load_path = ary_plus(ary, rb_load_path);
+d216 1
+a216 1
+	ary_unshift(rb_load_path, str_new2(path));
+d221 1
+a221 1
+    char *name;
+d223 2
+a224 1
+} *req_list;
+d228 1
+a228 1
+    char *mod;
+d234 3
+a236 2
+    list->next = req_list;
+    req_list = list;
+d240 1
+a240 1
+rb_require_modules()
+d242 1
+a242 1
+    struct req_list *list = req_list;
+a243 2
+    extern void *eval_tree; /* hack to save syntax tree */
+    void *save;
+d245 1
+a245 2
+    req_list = 0;
+    save = eval_tree;
+d247 1
+a247 1
+	f_require(Qnil, str_new2(list->name));
+a251 1
+    eval_tree = save;
+d254 2
+d268 2
+a269 2
+    version = FALSE;
+    do_search = FALSE;
+d271 1
+d280 1
+a280 1
+	    do_split = TRUE;
+d285 1
+a285 1
+	    do_print = TRUE;
+d288 1
+a288 1
+	    do_loop = TRUE;
+d293 2
+a294 1
+	    debug = TRUE;
+d304 2
+a305 2
+	    show_version();
+	    verbose = 2;
+d307 1
+a307 1
+	    verbose |= 1;
+d312 1
+a312 1
+	    do_check = TRUE;
+d318 1
+a318 1
+	    sflag = TRUE;
+d322 4
+d327 2
+a328 2
+	    do_line = TRUE;
+	    ORS = RS;
+d334 1
+a334 1
+	    do_search = TRUE;
+d340 2
+a341 4
+	    script_given++;
+	    if (script == 0) script = "-e";
+	    if (argv[1]) {
+		compile_string("-e", argv[1], strlen(argv[1]));
+d344 12
+a355 2
+	    else {
+		compile_string("-e", "", 0);
+d357 2
+d374 2
+a375 2
+	    if (inplace) free(inplace);
+	    inplace = strdup(s+1);
+d379 1
+a379 1
+	    xflag = TRUE;
+d382 1
+a382 1
+		Fatal("Can't chdir to %s", s);
+d393 1
+a393 1
+		Fatal("Can't chdir to %s", s);
+d398 1
+a398 1
+	    FS = str_new2(s+1);
+a416 1
+		tainting = TRUE;
+d438 1
+a438 1
+		if (v > 0377) RS = Qnil;
+d440 1
+a440 1
+		    RS = str_new2("\n\n");
+d444 1
+a444 1
+		    RS = str_new(&c, 1);
+d458 1
+a458 1
+		debug = 1;
+d462 1
+a462 1
+		verbose = 2;
+d465 4
+d470 3
+a472 1
+		Fatal("Unrecognized long option: --%s",s);
+d476 5
+d482 3
+a484 1
+	    Fatal("Unrecognized switch: -%s",s);
+d494 8
+d503 1
+a503 1
+	show_version();
+d507 1
+a507 1
+	show_copyright();
+d510 2
+a511 1
+    if (script_given == FALSE) {
+d513 1
+a513 1
+	    if (verbose == 3) exit(0);
+d527 1
+d529 1
+a529 1
+			script = dln_find_file(script, path);
+d532 1
+a532 1
+			script = dln_find_file(script, getenv("PATH"));
+d541 2
+a542 1
+    if (verbose) verbose = TRUE;
+d544 1
+a544 1
+    xflag = FALSE;
+d560 1
+a560 1
+		rb_gvar_set2(argv[0], str_new2(s));
+d563 1
+a563 1
+		rb_gvar_set2(argv[0], TRUE);
+d565 1
+d572 2
+d587 8
+a594 1
+	f = file_open(fname, "r");
+d600 1
+a600 1
+	VALUE rs = RS;
+a601 1
+	RS = RS_default;
+d604 2
+a605 2
+	    xflag = FALSE;
+	    while (!NIL_P(line = io_gets(f))) {
+d607 6
+d616 1
+a616 1
+		    if (strstr(RSTRING(line)->ptr, "ruby")) {
+d621 1
+a621 2
+	    RS = rs;
+	    LoadError("No Ruby script found in input");
+d624 1
+a624 1
+	c = io_getc(f);
+d626 1
+a626 1
+	    line = io_gets(f);
+d629 33
+a661 4
+	    if (RSTRING(line)->len > 2
+		&& RSTRING(line)->ptr[0] == '!') {
+
+		char *p;
+d664 19
+a682 13
+		if (p = strstr(RSTRING(line)->ptr, "ruby -")) {
+		    int argc; char *argv[2]; char **argvp = argv;
+		    UCHAR *s;
+
+		    s = RSTRING(line)->ptr;
+		    while (isspace(*s++))
+			;
+		    *s = '\0';
+		    RSTRING(line)->ptr[RSTRING(line)->len-1] = '\0';
+		    if (RSTRING(line)->ptr[RSTRING(line)->len-2] == '\r')
+			RSTRING(line)->ptr[RSTRING(line)->len-2] = '\0';
+		    argc = 2; argv[0] = 0; argv[1] = p + 5;
+		    proc_options(&argc, &argvp);
+d687 1
+a687 1
+	    io_ungetc(f, c);
+a688 1
+	RS = rs;
+d690 7
+a696 2
+    compile_file(fname, f, line_start);
+    if (f != rb_stdin) io_close(f);
+d713 3
+a715 5
+VALUE Progname;
+VALUE Argv;
+
+static int origargc;
+static char **origargv;
+d726 2
+a727 2
+    if (origargv == 0) Fail("$0 not initialized");
+    Check_Type(val, T_STRING);
+d738 3
+a740 2
+    s = RSTRING(val)->ptr;
+    i = RSTRING(val)->len;
+d752 16
+a767 1
+    Progname = str_taint(str_new2(origargv[0]));
+d775 2
+a776 2
+	Progname = str_taint(str_new2(name));
+	sourcefile = name;
+d800 1
+a800 1
+    char *s;
+d803 1
+a803 1
+        Fatal("No %s allowed while running setuid", s);
+d805 41
+a845 1
+        Fatal("No %s allowed while running setgid", s);
+d847 1
+d854 5
+a858 5
+    sourcefile = "ruby";
+    rb_define_variable("$VERBOSE", &verbose);
+    rb_define_variable("$-v", &verbose);
+    rb_define_variable("$DEBUG", &debug);
+    rb_define_variable("$-d", &debug);
+d863 1
+a863 1
+	addpath(getenv("RUBYLIB"));
+d866 8
+d878 10
+a887 2
+#ifdef RUBY_ARCHLIB
+    addpath(RUBY_ARCHLIB);
+d889 1
+a889 1
+    addpath(RUBY_LIB);
+d891 1
+a891 1
+	addpath(".");
+d894 1
+a894 1
+    rb_define_hooked_variable("$0", &Progname, 0, set_arg0);
+d896 3
+a898 3
+    Argv = ary_new();
+    rb_define_readonly_variable("$*", &Argv);
+    rb_define_global_const("ARGV", Argv);
+d900 1
+d924 1
+a924 1
+	ary_push(Argv, str_taint(str_new2(argv[i])));
+a932 3
+    extern VALUE errat;
+    int i;
+
+d935 1
+d943 1
+a943 1
+    if (do_check && nerrs == 0) {
+d948 1
+a948 1
+	yyappend_print();
+d951 9
+a959 1
+	yywhile_loop(do_line, do_split);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@a12 3
+#ifdef _WIN32
+#include <windows.h>
+#endif
+d21 3
+a23 4
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#ifndef HAVE_STRING_H
+d33 2
+a34 2
+VALUE debug = FALSE;
+VALUE verbose = FALSE;
+d52 3
+a54 3
+static VALUE do_loop = FALSE, do_print = FALSE;
+static VALUE do_check = FALSE, do_line = FALSE;
+static VALUE do_split = FALSE;
+a57 6
+static int origargc;
+static char **origargv;
+
+extern int   sourceline;
+extern char *sourcefile;
+
+d121 2
+d125 1
+d132 1
+a333 5
+	  case '*':
+	  case ' ':
+	    if (s[1] == '-') s+=2;
+	    break;
+
+a368 1
+		    script = 0;
+d370 1
+a370 1
+			script = dln_find_file(argv[0], path);
+d373 1
+a373 1
+			script = dln_find_file(argv[0], getenv("PATH"));
+a459 31
+		if ((p = strstr(RSTRING(line)->ptr, "ruby")) == 0) {
+		    /* not ruby script, kick the program */
+		    char **argv;
+		    char *path;
+		    char *pend = RSTRING(line)->ptr + RSTRING(line)->len;
+
+		    p = RSTRING(line)->ptr + 2;	/* skip `#!' */
+		    if (pend[-1] == '\n') pend--; /* chomp line */
+		    if (pend[-1] == '\r') pend--;
+		    *pend = '\0';
+		    while (p < pend && isspace(*p))
+			p++;
+		    path = p;	/* interpreter path */
+		    while (p < pend && !isspace(*p))
+			p++;
+		    *p++ = '\0';
+		    if (p < pend) {
+			argv = ALLOCA_N(char*, origargc+3);
+			argv[1] = p;
+			MEMCPY(argv+2, origargv+1, char*, origargc);
+		    }
+		    else {
+			argv = origargv;
+		    }
+		    argv[0] = path;
+		    execv(path, argv);
+		    sourcefile = fname;
+		    sourceline = 1;
+		    Fatal("Can't exec %s", path);
+		}
+
+d466 2
+a467 2
+		    while (isspace(*s))
+			s++;
+d500 5
+a504 3
+VALUE rb_progname;
+VALUE rb_argv;
+VALUE rb_argv0;
+d540 1
+a540 1
+    rb_progname = str_taint(str_new2(origargv[0]));
+d548 1
+a548 1
+	rb_progname = str_taint(str_new2(name));
+a580 34
+#if defined(_WIN32) || defined(DJGPP)
+static char *
+ruby_libpath()
+{
+    static char libpath[FILENAME_MAX+1];
+    char *p;
+#if defined(_WIN32)
+    GetModuleFileName(NULL, libpath, sizeof libpath);
+#elif defined(DJGPP)
+    extern char *__dos_argv0;
+    strcpy(libpath, __dos_argv0);
+#endif
+    p = strrchr(libpath, '\\');
+    if (p)
+	*p = 0;
+    if (!strcasecmp(p-4, "\\bin"))
+	p -= 4;
+    strcpy(p, "\\lib");
+#if defined(__CYGWIN32__)
+    p = (char *)malloc(strlen(libpath)+10);
+    if (!p)
+	return 0;
+    cygwin32_conv_to_posix_path(libpath, p);
+    strcpy(libpath, p);
+    free(p);
+#else
+    for (p = libpath; *p; p++)
+	if (*p == '\\')
+	    *p = '/';
+#endif
+    return libpath;
+}
+#endif
+
+a593 4
+#if defined(_WIN32) || defined(DJGPP)
+    addpath(ruby_libpath());
+#endif
+
+d610 1
+a610 1
+    rb_define_hooked_variable("$0", &rb_progname, 0, set_arg0);
+d612 3
+a614 3
+    rb_argv = ary_new();
+    rb_define_readonly_variable("$*", &rb_argv);
+    rb_define_global_const("ARGV", rb_argv);
+a615 1
+    rb_global_variable(&rb_argv0);
+d639 1
+a639 1
+	ary_push(rb_argv, str_taint(str_new2(argv[i])));
+a652 1
+    rb_argv0 = str_taint(str_new2(argv[0]));
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/22 09:01:53 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d17 1
+a18 1
+#include "node.h"
+d20 1
+a22 5
+#include <ctype.h>
+
+#ifdef __hpux
+#include <sys/pstat.h>
+#endif
+a26 5
+
+#ifdef USE_CWGUSI
+#include "macruby_missing.h"
+#endif
+
+d28 3
+a30 3
+char *strchr _((char*,char));
+char *strrchr _((char*,char));
+char *strstr _((char*,char*));
+a32 3
+#include "util.h"
+
+#ifndef HAVE_STDLIB_H
+a33 1
+#endif
+d37 4
+a40 4
+VALUE rb_debug = Qfalse;
+VALUE rb_verbose = Qfalse;
+int rb_tainting = Qfalse;
+static int sflag = Qfalse;
+d42 1
+a42 1
+char *ruby_inplace_mode = Qfalse;
+d45 1
+d47 4
+a50 1
+static int xflag = Qfalse;
+d52 1
+a52 1
+static void load_stdin _((void));
+d56 3
+a58 3
+static VALUE do_loop = Qfalse, do_print = Qfalse;
+static VALUE do_check = Qfalse, do_line = Qfalse;
+static VALUE do_split = Qfalse;
+d65 3
+d71 5
+a75 2
+#ifndef RUBY_SITE_LIB
+#define RUBY_SITE_LIB "/usr/local/lib/site_ruby"
+d79 1
+a79 3
+
+static FILE *e_fp;
+static char *e_tmpname;
+a84 2
+    const char sep = RUBY_PATH_SEP[0];
+
+d86 1
+a86 8
+#if defined(__CYGWIN32__)
+    {
+	char rubylib[FILENAME_MAX];
+	conv_to_posix_path(path, rubylib);
+	path = rubylib;
+    }
+#endif
+    if (strchr(path, sep)) {
+d88 1
+a88 1
+	VALUE ary = rb_ary_new();
+d92 3
+a94 3
+	    while (*p == sep) p++;
+	    if (s = strchr(p, sep)) {
+		rb_ary_push(ary, rb_str_new(p, (int)(s-p)));
+d98 1
+a98 1
+		rb_ary_push(ary, rb_str_new2(p));
+d102 1
+a102 1
+	rb_load_path = rb_ary_plus(ary, rb_load_path);
+d105 1
+a105 1
+	rb_ary_unshift(rb_load_path, rb_str_new2(path));
+d112 1
+a112 2
+} req_list_head;
+struct req_list *req_list_last = &req_list_head;
+d122 2
+a123 3
+    list->next = 0;
+    req_list_last->next = list;
+    req_list_last = list;
+d127 1
+a127 1
+ruby_require_modules()
+d129 1
+a129 1
+    struct req_list *list = req_list_head.next;
+d132 1
+a132 1
+    req_list_last = 0;
+d134 1
+a134 1
+	rb_f_require(Qnil, rb_str_new2(list->name));
+a140 2
+extern void Init_ext _((void));
+
+d153 2
+a154 2
+    version = Qfalse;
+    do_search = Qfalse;
+a155 1
+    e_tmpname = NULL;
+d164 1
+a164 1
+	    do_split = Qtrue;
+d169 1
+a169 1
+	    do_print = Qtrue;
+d172 1
+a172 1
+	    do_loop = Qtrue;
+d177 1
+a177 2
+	    rb_debug = Qtrue;
+	    rb_verbose |= 1;
+d187 2
+a188 2
+	    ruby_show_version();
+	    rb_verbose = 2;
+d190 1
+a190 1
+	    rb_verbose |= 1;
+d195 1
+a195 1
+	    do_check = Qtrue;
+d201 1
+a201 1
+	    sflag = Qtrue;
+d206 2
+a207 2
+	    do_line = Qtrue;
+	    rb_output_rs = rb_rs;
+d213 1
+a213 1
+	    do_search = Qtrue;
+d219 5
+a223 8
+	    if (!e_fp) {
+		e_tmpname = ruby_mktemp();
+		if (!e_tmpname) rb_fatal("Can't mktemp");
+		e_fp = fopen(e_tmpname, "w");
+		if (!e_fp) {
+		    rb_fatal("Cannot open temporary file: %s", e_tmpname);
+		}
+		if (script == 0) script = e_tmpname;
+d225 2
+a226 3
+	    if (argv[1]) {
+		fputs(argv[1], e_fp);
+		argc--, argv++;
+a227 1
+	    putc('\n', e_fp);
+d243 2
+a244 2
+	    if (ruby_inplace_mode) free(ruby_inplace_mode);
+	    ruby_inplace_mode = strdup(s+1);
+d248 1
+a248 1
+	    xflag = Qtrue;
+d251 1
+a251 1
+		rb_fatal("Can't chdir to %s", s);
+d262 1
+a262 1
+		rb_fatal("Can't chdir to %s", s);
+d267 1
+a267 1
+	    rb_fs = rb_str_new2(s+1);
+d286 1
+a286 1
+		rb_tainting = Qtrue;
+d308 1
+a308 1
+		if (v > 0377) rb_rs = Qnil;
+d310 1
+a310 1
+		    rb_rs = rb_str_new2("\n\n");
+d314 1
+a314 1
+		    rb_rs = rb_str_new(&c, 1);
+d328 1
+a328 1
+		rb_debug = 1;
+d332 1
+a332 1
+		rb_verbose = 2;
+d336 1
+a336 1
+		rb_fatal("Unrecognized long option: --%s",s);
+d346 1
+a346 1
+	    rb_fatal("Unrecognized switch: -%s",s);
+a355 8
+    if (e_fp) {
+	if (fflush(e_fp) || ferror(e_fp) || fclose(e_fp))
+	    rb_fatal("Cannot write to temp file for -e");
+	e_fp = NULL;
+	argc++, argv--;
+	argv[0] = e_tmpname;
+    }
+
+d357 1
+a357 1
+	ruby_show_version();
+d361 1
+a361 1
+	ruby_show_copyright();
+d364 1
+a364 2
+    Init_ext();		/* should be called here for some reason :-( */
+    if (script_given == Qfalse) {
+d366 1
+a366 1
+	    if (rb_verbose == 3) exit(0);
+d394 1
+a394 2
+    if (rb_verbose) rb_verbose = Qtrue;
+    if (rb_debug) rb_debug = Qtrue;
+d396 1
+a396 1
+    xflag = Qfalse;
+d412 1
+a412 1
+		rb_gvar_set2(argv[0], rb_str_new2(s));
+d415 1
+a415 1
+		rb_gvar_set2(argv[0], Qtrue);
+a416 1
+	    argv[0][0] = '-';
+a422 2
+extern int ruby__end__seen;
+
+d436 1
+a436 8
+	FILE *fp = fopen(fname, "r");
+
+	if (fp == NULL) {
+	    rb_raise(rb_eLoadError, "No such file to load -- %s", fname);
+	}
+	fclose(fp);
+
+	f = rb_file_open(fname, "r");
+d442 1
+a442 1
+	char *p;
+d444 1
+d447 2
+a448 2
+	    xflag = Qfalse;
+	    while (!NIL_P(line = rb_io_gets(f))) {
+d453 1
+a453 1
+		    if (p = strstr(RSTRING(line)->ptr, "ruby")) {
+d458 2
+a459 1
+	    rb_raise(rb_eLoadError, "No Ruby script found in input");
+d462 1
+a462 1
+	c = rb_io_getc(f);
+d464 1
+a464 1
+	    line = rb_io_gets(f);
+d467 5
+a471 1
+	    if (RSTRING(line)->len > 2 && RSTRING(line)->ptr[0] == '!') {
+d482 1
+a482 1
+		    while (p < pend && ISSPACE(*p))
+d485 1
+a485 1
+		    while (p < pend && !ISSPACE(*p))
+a496 1
+#ifndef USE_CWGUSI
+d498 3
+a500 4
+#endif
+		    ruby_sourcefile = fname;
+		    ruby_sourceline = 1;
+		    rb_fatal("Can't exec %s", path);
+d504 1
+a504 5
+		p += 4;
+		RSTRING(line)->ptr[RSTRING(line)->len-1] = '\0';
+		if (RSTRING(line)->ptr[RSTRING(line)->len-2] == '\r')
+		    RSTRING(line)->ptr[RSTRING(line)->len-2] = '\0';
+		if (p = strstr(p, " -")) {
+d506 1
+a506 1
+		    char *s = ++p;
+d508 9
+a516 11
+		    argc = 2; argv[0] = 0;
+		    while (*p == '-') {
+			while (*s && !ISSPACE(*s))
+			    s++;
+			*s = '\0';
+			argv[1] = p;
+			proc_options(&argc, &argvp);
+			p = ++s;
+			while (*p && ISSPACE(*p))
+			    p++;
+		    }
+d521 1
+a521 1
+	    rb_io_ungetc(f, c);
+d523 1
+d525 2
+a526 7
+    rb_compile_file(fname, f, line_start);
+    if (script && ruby__end__seen) {
+	rb_define_global_const("DATA", f);
+    }
+    else if (f != rb_stdin) {
+	rb_io_close(f);
+    }
+d556 2
+a557 2
+    if (origargv == 0) rb_raise(rb_eRuntimeError, "$0 not initialized");
+#ifndef __hpux
+d568 2
+a569 3
+#endif
+    s = rb_str2cstr(val, &i);
+#ifndef __hpux
+d581 1
+a581 16
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+#else
+    if (i >= PST_CLEN) {
+      union pstun j;
+      j.pst_command = s;
+      i = PST_CLEN;
+      RSTRING(val)->len = i;
+      *(s + i) = '\0';
+      pstat(PSTAT_SETCMD, j, PST_CLEN, 0, 0);
+    } else {
+      union pstun j;
+      j.pst_command = s;
+      pstat(PSTAT_SETCMD, j, i, 0, 0);
+    }
+    rb_progname = rb_tainted_str_new(s, i);
+#endif
+d589 2
+a590 2
+	rb_progname = rb_tainted_str_new2(name);
+	ruby_sourcefile = name;
+d617 1
+a617 1
+        rb_raise(rb_eSecurityError, "No %s allowed while running setuid", s);
+d619 1
+a619 3
+        rb_raise(rb_eSecurityError, "No %s allowed while running setgid", s);
+    if (rb_safe_level() > 0)
+        rb_raise(rb_eSecurityError, "No %s allowed in tainted mode", s);
+d661 5
+a665 5
+    ruby_sourcefile = "ruby";
+    rb_define_variable("$VERBOSE", &rb_verbose);
+    rb_define_variable("$-v", &rb_verbose);
+    rb_define_variable("$DEBUG", &rb_debug);
+    rb_define_variable("$-d", &rb_debug);
+a668 5
+    if (rb_safe_level() == 0) {
+	addpath(".");
+    }
+
+    addpath(RUBY_LIB);
+a671 3
+#ifdef __MACOS__
+    setup_macruby_libpath();
+#endif
+d673 4
+a676 3
+#ifdef RUBY_ARCHLIB
+    addpath(RUBY_ARCHLIB);
+#endif
+d681 2
+a682 3
+    addpath(RUBY_SITE_LIB);
+#ifdef RUBY_SITE_ARCHLIB
+    addpath(RUBY_SITE_ARCHLIB);
+d684 1
+a684 4
+#ifdef RUBY_SITE_THIN_ARCHLIB
+    addpath(RUBY_SITE_THIN_ARCHLIB);
+#endif
+
+d686 1
+a686 1
+	addpath(getenv("RUBYLIB"));
+d691 1
+a691 1
+    rb_argv = rb_ary_new();
+d719 1
+a719 1
+	rb_ary_push(rb_argv, rb_tainted_str_new2(argv[i]));
+d728 3
+d733 1
+a733 1
+    rb_argv0 = rb_progname;
+d741 1
+a741 1
+    if (do_check && ruby_nerrs == 0) {
+d746 1
+a746 1
+	rb_parser_append_print();
+d749 1
+a749 9
+	rb_parser_while_loop(do_line, do_split);
+    }
+    if (e_fp) {
+	fclose(e_fp);
+	e_fp = NULL;
+    }
+    if (e_tmpname) {
+	unlink(e_tmpname);
+	e_tmpname = NULL;
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d745 3
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:15 $
+d50 3
+a52 2
+VALUE ruby_debug = Qfalse;
+VALUE ruby_verbose = Qfalse;
+a73 40
+static void
+usage(name)
+    char *name;
+{
+    /* This message really ought to be max 23 lines.
+     * Removed -h because the user already knows that opton. Others? */
+
+    static char *usage_msg[] = {
+"-0[octal]       specify record separator (\0, if no argument)",
+"-a              autosplit mode with -n or -p (splits $_ into $F)",
+"-c              check syntax only",
+"-d              set debugging flags (set $DEBUG to true)",
+"-e 'command'    one line of script. Several -e's allowed. Omit [programfile]",
+"-Fpattern       split() pattern for autosplit (-a)",
+"-i[extension]   edit ARGV files in place (make backup if extension supplied)",
+"-Idirectory     specify $LOAD_PATH directory (may be used more than once)",
+"-K[kcode]       specifies KANJI (Japanese) code-set",
+"-l              enable line ending processing",
+"-n              assume 'while gets; ...; end' loop around your script",
+"-p              assume loop like -n but print line also like sed",
+"-rlibrary       require the library, before executing your script",
+"-s              enable some switch parsing for switches after script name",
+"-S              look for the script using PATH environment variable",
+"-T[level]       turn on tainting checks",
+"-v              enables verbose mode",
+"-w              turn warnings on for compilation of your script",
+"-x[directory]   strip off text before #!ruby line and perhaps cd to directory",
+"-X[directory]   cd to directory, before executing your script",
+"--copyright     print the copyright",
+"--version       print the version",
+"\n",
+NULL
+};
+    char **p = usage_msg;
+
+    printf("\nUsage: %s [switches] [--] [programfile] [arguments]", name);
+    while (*p)
+	printf("\n  %s", *p++);
+}
+
+d196 2
+a197 2
+	    ruby_debug = Qtrue;
+	    ruby_verbose |= 1;
+d208 1
+a208 1
+	    ruby_verbose = 2;
+d210 1
+a210 1
+	    ruby_verbose |= 1;
+a224 4
+	  case 'h':
+	    usage(origargv[0]);
+	    exit(0);
+
+d311 1
+d353 1
+a353 1
+		ruby_debug = 1;
+d357 1
+a357 1
+		ruby_verbose = 2;
+a359 4
+	    else if (strcmp("help", s) == 0) {
+		usage(origargv[0]);
+		exit(0);
+	    }
+d361 1
+a361 3
+		printf("%s: invalid option --%s  (-h will show valid options)\n",
+		       origargv[0], s);
+		exit(2);
+d371 1
+a371 3
+	    printf("%s: invalid option -%c  (-h will show valid options)\n",
+		   origargv[0], *s);
+	    exit(2);
+d400 1
+a400 1
+	    if (ruby_verbose == 3) exit(0);
+d428 2
+a429 2
+    if (ruby_verbose) ruby_verbose = Qtrue;
+    if (ruby_debug) ruby_debug = Qtrue;
+d731 4
+a734 4
+    rb_define_variable("$VERBOSE", &ruby_verbose);
+    rb_define_variable("$-v", &ruby_verbose);
+    rb_define_variable("$DEBUG", &ruby_debug);
+    rb_define_variable("$-d", &ruby_debug);
+@
+
+
+1.1.1.3.2.3
+log
+@990203
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:57 $
+d81 1
+a81 1
+"-0[octal]       specify record separator (\\0, if no argument)",
+@
+
+
+1.1.1.3.2.4
+log
+@990205
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/03 09:48:00 $
+a281 4
+	    if (!argv[1]) {
+		fprintf(stderr, "%s: no code specified for -e\n", origargv[0]);
+		exit(2);
+	    }
+d291 4
+a294 1
+	    fputs(argv[1], e_fp);
+a295 1
+	    argc--, argv++;
+d407 2
+a408 2
+		fprintf(stderr, "%s: invalid option --%s  (-h will show valid options)\n",
+			origargv[0], s);
+d419 2
+a420 2
+	    fprintf(stderr, "%s: invalid option -%c  (-h will show valid options)\n",
+		    origargv[0], *s);
+@
+
+
+1.1.1.3.2.5
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/05 10:27:33 $
+d282 1
+a282 5
+	    if (!*++s) {
+		s = argv[1];
+		argc--,argv++;
+	    }
+	    if (!s) {
+d295 1
+a295 1
+	    fputs(s, e_fp);
+d297 1
+@
+
+
+1.1.1.3.2.6
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:23 $
+d37 3
+a39 3
+char *strchr _((const char*,const char));
+char *strrchr _((const char*,const char));
+char *strstr _((const char*,const char*));
+a54 1
+# ifndef strdup
+a55 1
+# endif
+d62 1
+a62 1
+static void forbid_setid _((const char *));
+d75 1
+a75 1
+    const char *name;
+d127 1
+a127 1
+    const char *path;
+d140 1
+a140 1
+	const char *p, *s;
+d163 1
+a163 1
+    const char *name;
+d170 1
+a170 1
+    const char *mod;
+d605 1
+a605 1
+		    int argc; char *argv[3]; char **argvp = argv;
+d608 1
+a608 1
+		    argc = 2; argv[0] = argv[2] = 0;
+d736 1
+a736 1
+    const char *s;
+@
+
+
+1.1.1.3.2.7
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:33 $
+a550 6
+#if defined(__EMX__) || defined(OS2)
+/*
+		if (p = strstr(RSTRING(line)->ptr, "extproc"))
+		    line = io_gets(f);
+*/
+#endif /* __EMX__ */
+@
+
+
+1.1.1.3.2.8
+log
+@prepare to alpha
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:43 $
+a126 57
+#define STATIC_FILE_LENGTH 255
+
+#if defined(_WIN32) || defined(DJGPP)
+static char *
+rubylib_mangle(s, l)
+    char *s;
+    unsigned int l;
+{
+    static char *newp, *oldp;
+    static int newl, oldl, notfound;
+    static char ret[STATIC_FILE_LENGTH+1];
+    
+    if (!newp && !notfound) {
+	newp = getenv("RUBYLIB_PREFIX");
+	if (newp) {
+	    char *s;
+	    
+	    oldp = newp;
+	    while (*newp && !ISSPACE(*newp) && *newp != ';') {
+		newp++; oldl++;		/* Skip digits. */
+	    }
+	    while (*newp && (ISSPACE(*newp) || *newp == ';')) {
+		newp++;			/* Skip whitespace. */
+	    }
+	    newl = strlen(newp);
+	    if (newl == 0 || oldl == 0) {
+		Fatal("malformed RUBYLIB_PREFIX");
+	    }
+	    strcpy(ret, newp);
+	    s = ret;
+	    while (*s) {
+		if (*s == '\\') *s = '/';
+		s++;
+	    }
+	} else {
+	    notfound = 1;
+	}
+    }
+    if (!newp) {
+	return s;
+    }
+    if (l == 0) {
+	l = strlen(s);
+    }
+    if (l < oldl || strncasecmp(oldp, s, oldl) != 0) {
+	return s;
+    }
+    if (l + newl - oldl > STATIC_FILE_LENGTH || newl > STATIC_FILE_LENGTH) {
+	Fatal("malformed RUBYLIB_PREFIX");
+    }
+    strcpy(ret + newl, s + oldl);
+    return ret;
+}
+#else
+#define rubylib_mangle(s, l) (s)
+#endif
+
+d149 1
+a149 1
+		rb_ary_push(ary, rb_str_new2(rubylib_mangle(p, (int)(s-p))));
+d153 1
+a153 1
+		rb_ary_push(ary, rb_str_new2(rubylib_mangle(p, 0)));
+d160 1
+a160 1
+	rb_ary_unshift(rb_load_path, rb_str_new2(rubylib_mangle(path, 0)));
+@
+
+
+1.1.1.3.2.9
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 06:03:35 $
+d152 1
+a152 1
+	    if (newl == 0 || oldl == 0 || newl > STATIC_FILE_LENGTH) {
+@
+
+
+1.1.1.3.2.10
+log
+@glibc 2.1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 07:18:23 $
+d153 1
+a153 1
+		rb_fatal("malformed RUBYLIB_PREFIX");
+d175 1
+a175 1
+	rb_fatal("malformed RUBYLIB_PREFIX");
+@
+
+
+1.1.1.3.2.11
+log
+@moving
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/30 07:55:46 $
+d206 1
+a206 1
+		rb_ary_push(ary, rb_str_new(rubylib_mangle(p, (int)(s-p)), (int)(s-p)));
+@
+
+
+1.1.1.3.2.12
+log
+@mbc bug in regex
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/14 08:56:12 $
+d194 1
+a194 1
+	conv_to_posix_path(path, rubylib, FILENAME_MAX);
+@
+
+
+1.1.1.3.2.13
+log
+@990531
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/18 06:06:16 $
+d241 1
+a241 1
+ruby_require_libraries()
+d824 1
+a824 1
+    if (p) {
+d826 2
+a827 7
+	if (!strcasecmp(p-4, "\\bin"))
+	    p -= 4;
+    } else {
+	strcpy(libpath, ".");
+	p = libpath + 1;
+    }
+
+@
+
+
+1.1.1.3.2.14
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/31 09:13:27 $
+d637 1
+a637 1
+		    p = RSTRING(line)->ptr + 1;	/* skip `#!' */
+a884 4
+#endif
+
+#ifdef RUBY_SEARCH_PATH
+    addpath(RUBY_SEARCH_PATH);
+@
+
+
+1.1.1.3.2.15
+log
+@990806
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:55 $
+d21 1
+d188 1
+a188 1
+    const char sep = PATH_SEP_CHAR;
+@
+
+
+1.1.1.3.2.16
+log
+@pre 1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/06 06:48:21 $
+d247 1
+a247 1
+	rb_require(list->name);
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:58 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@Mon Jan 19 16:33:52 JST 1998
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+d478 1
+a478 1
+		    p = RSTRING(line)->ptr + 1;	/* skip `#!' */
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/19 07:34:00 $
+d59 1
+a59 1
+static int do_search = FALSE;
+a60 1
+static char *e_body;
+a64 12
+#if defined(NeXT) && defined(__DYNAMIC__)
+
+#include <mach-o/dyld.h>
+extern char *** environ_pointer;
+#define environ (*environ_pointer)
+#else
+#ifndef NT
+extern char **environ;
+#endif
+#endif
+static char **origenviron;
+
+d127 1
+a127 1
+ruby_require_modules()
+d148 1
+a148 1
+    int script_given;
+d222 1
+a222 1
+		e_body = argv[1];
+d226 1
+a226 1
+		e_body = "";
+d368 1
+d374 1
+d377 13
+a389 1
+		script = argv[0];
+d396 1
+a422 35
+void
+ruby_load_script()
+{
+    if (script[0] == '-') {
+	if (script[1] == '\0') {
+	    load_stdin();
+	}
+	else if (script[1] == 'e') {
+	    compile_string("-e", e_body, strlen(e_body));
+	}
+    }
+    else {
+	if (do_search) {
+	    char *path = getenv("RUBYPATH");
+	    char *s = 0;
+
+	    if (path) {
+		s = dln_find_file(script, path);
+	    }
+	    if (!s) {
+		s = dln_find_file(script, getenv("PATH"));
+	    }
+	    if (s) script = s;
+	}
+	load_file(script, 1);
+    }
+    xflag = FALSE;
+    if (do_print) {
+	yyappend_print();
+    }
+    if (do_loop) {
+	yywhile_loop(do_line, do_split);
+    }
+}
+
+a516 3
+#if 0
+		    proc_sflag(&argc, &argvp);
+#endif
+d556 1
+a556 1
+    if (origargv == 0) ArgError("$0 not initialized");
+a565 8
+	/* can grab env area too? */
+	if (origenviron && origenviron[0] == s + 1) {
+	    setenv("NoNe  SuCh", "Ruby Compiler :-)", 1);
+	    /* force copy of environment */
+	    for (i = 0; origenviron[i]; i++)
+		if (origenviron[i] == s + 1)
+		    s += strlen(++s);
+	}
+a731 5
+#if defined(NeXT) && defined(__DYNAMIC__)
+    _dyld_lookup_and_bind("__environ", (unsigned long*)&environ_pointer, NULL);
+#endif /* environ */
+    origenviron = environ;
+
+d744 6
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:19:12 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d59 1
+a59 1
+
+d61 1
+d66 12
+d161 1
+a161 1
+    int script_given, do_search;
+d235 1
+a235 1
+		compile_string("-e", argv[1], strlen(argv[1]));
+d239 1
+a239 1
+		compile_string("-e", "", 0);
+a376 1
+    Init_ext();		/* should be called here for some reason :-( */
+a380 1
+	    load_stdin();
+a385 1
+		load_stdin();
+d388 1
+a388 13
+		if (do_search) {
+		    char *path = getenv("RUBYPATH");
+
+		    script = 0;
+		    if (path) {
+			script = dln_find_file(argv[0], path);
+		    }
+		    if (!script) {
+			script = dln_find_file(argv[0], getenv("PATH"));
+		    }
+		    if (!script) script = argv[0];
+		}
+		load_file(script, 1);
+a394 1
+    xflag = FALSE;
+d421 35
+d511 1
+a511 1
+		    p = RSTRING(line)->ptr + 2;	/* skip `#!' */
+d550 3
+d592 1
+a592 1
+    if (origargv == 0) Fail("$0 not initialized");
+d602 8
+d776 5
+a792 6
+    }
+    if (do_print) {
+	yyappend_print();
+    }
+    if (do_loop) {
+	yywhile_loop(do_line, do_split);
+@
+
+
+1.1.1.2.2.5
+log
+@cygwin patches
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:22 $
+a85 7
+#if defined(__CYGWIN32__)
+    {
+	char rubylib[FILENAME_MAX];
+	conv_to_posix_path(path, rubylib);
+	path = rubylib;
+    }
+#endif
+@
+
+
+1.1.1.2.2.6
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 10:01:46 $
+a424 1
+	    argv[0][0] = '-';
+a450 1
+	char *p;
+d461 1
+a461 1
+		    if (p = strstr(RSTRING(line)->ptr, "ruby")) {
+d478 2
+d512 1
+a512 5
+		p += 4;
+		RSTRING(line)->ptr[RSTRING(line)->len-1] = '\0';
+		if (RSTRING(line)->ptr[RSTRING(line)->len-2] == '\r')
+		    RSTRING(line)->ptr[RSTRING(line)->len-2] = '\0';
+		if (p = strstr(p, " -")) {
+d514 1
+a514 1
+		    UCHAR *s = ++p;
+d516 9
+a524 11
+		    argc = 2; argv[0] = 0;
+		    while (*p == '-') {
+			while (*s && !isspace(*s))
+			    s++;
+			*s = '\0';
+			argv[1] = p;
+			proc_options(&argc, &argvp);
+			p = ++s;
+			while (*p && isspace(*p))
+			    p++;
+		    }
+@
+
+
+1.1.1.2.2.7
+log
+@DATA
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:33:00 $
+d540 1
+a540 6
+    if (script) {
+	rb_define_global_const("DATA", f);
+    }
+    else if (f != rb_stdin) {
+	io_close(f);
+    }
+@
+
+
+1.1.1.2.2.8
+log
+@$: changed
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/19 06:22:55 $
+a687 4
+    if (rb_safe_level() == 0) {
+	addpath(".");
+    }
+
+d704 3
+@
+
+
+1.1.1.2.2.9
+log
+@$:, remove top_protected
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/24 06:21:55 $
+a638 2
+    if (rb_safe_level() > 0)
+        Fatal("No %s allowed in tainted mode", s);
+a691 1
+    addpath(RUBY_LIB);
+d696 4
+a699 3
+#ifdef RUBY_ARCHLIB
+    addpath(RUBY_ARCHLIB);
+#endif
+d704 4
+a707 3
+    if (rb_safe_level() == 0) {
+	addpath(getenv("RUBYLIB"));
+    }
+@
+
+
+1.1.1.2.2.10
+log
+@site_ruby
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/27 06:09:18 $
+a703 10
+#endif
+
+#ifdef RUBY_SITE_LIB
+    addpath(RUBY_SITE_LIB);
+#endif
+#ifdef RUBY_SITE_ARCHLIB
+    addpath(RUBY_SITE_ARCHLIB);
+#endif
+#ifdef RUBY_SITE_THIN_ARCHLIB
+    addpath(RUBY_SITE_THIN_ARCHLIB);
+@
+
+
+1.1.1.2.2.11
+log
+@instance_eva/module_eval
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/27 10:19:52 $
+a70 3
+#ifndef RUBY_SITE_LIB
+#define RUBY_SITE_LIB "/usr/local/lib/site_ruby"
+#endif
+d706 1
+d708 1
+@
+
+
+1.1.1.2.2.12
+log
+@eval(..,file,line);String#center
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/30 09:41:16 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.13
+log
+@flock,flatten,signal to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/31 04:52:09 $
+d480 3
+a482 1
+	    if (RSTRING(line)->len > 2 && RSTRING(line)->ptr[0] == '!') {
+@
+
+
+1.1.1.2.2.14
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/16 07:42:46 $
+a447 7
+	FILE *fp = fopen(fname, "r");
+
+	if (fp == NULL) {
+	    LoadError("No such file to load -- %s", fname);
+	}
+	fclose(fp);
+
+@
+
+
+1.1.1.2.2.15
+log
+@-e tempfile
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 05:55:36 $
+a83 3
+static FILE *e_fp;
+static char *e_tmpname;
+
+a165 1
+    e_tmpname = NULL;
+d229 5
+a233 9
+	    if (!e_fp) {
+		e_tmpname = strdup("rbXXXXXX");
+		mktemp(e_tmpname);
+		if (!*e_tmpname)
+		    Fatal("Can't mktemp(%s)", e_tmpname);
+		e_fp = fopen(e_tmpname, "w");
+		if (!e_fp)
+		    Fatal("Cannot open temporary file: %s", e_tmpname);
+		if (script == 0) script = e_tmpname;
+d235 2
+a236 3
+	    if (argv[1]) {
+		fputs(argv[1], e_fp);
+		argc--, argv++;
+a237 1
+	    putc('\n', e_fp);
+a365 8
+    if (e_fp) {
+	if (fflush(e_fp) || ferror(e_fp) || fclose(e_fp))
+	    Fatal("Cannot write to temp file for -e");
+	e_fp = NULL;
+	argc++, argv--;
+	argv[0] = e_tmpname;
+    }
+
+a786 8
+    }
+    if (e_tmpname) {
+	unlink(e_tmpname);
+	e_tmpname = NULL;
+    }
+    if (e_fp) {
+	fclose(e_fp);
+	e_fp = NULL;
+@
+
+
+1.1.1.2.2.16
+log
+@exception model changed
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/30 12:39:47 $
+a32 2
+char *ruby_mktemp _((void));
+
+d234 4
+a237 2
+		e_tmpname = ruby_mktemp();
+		if (!e_tmpname) Fatal("Can't mktemp");
+d239 1
+a239 1
+		if (!e_fp) {
+a240 1
+		}
+@
+
+
+1.1.1.2.2.17
+log
+@new exception model
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/01 08:56:36 $
+d17 1
+a193 1
+	    verbose |= 1;
+d784 3
+@
+
+
+1.1.1.2.2.18
+log
+@pack/unpack unsigned
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/06 03:08:58 $
+d570 1
+a570 1
+    if (f != rb_stdin) {
+d786 1
+a786 1
+    rb_argv0 = rb_progname;
+d804 4
+a810 4
+    }
+    if (e_tmpname) {
+	unlink(e_tmpname);
+	e_tmpname = NULL;
+@
+
+
+1.1.1.2.2.19
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/08 09:38:14 $
+d545 1
+a545 1
+		    char *s = ++p;
+@
+
+
+1.1.1.2.2.20
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:58:06 $
+a25 11
+
+#ifdef __MWERKS__
+#include "node.h"
+void show_version();
+void show_copyright();
+#endif
+
+#ifdef USE_CWGUSI
+#include "macruby_missing.h"
+#endif
+
+d76 1
+a76 1
+#if defined(MSDOS) || defined(NT) || defined(__MACOS__)
+a531 1
+#ifndef USE_CWGUSI
+a532 1
+#endif
+a723 3
+#endif
+#ifdef __MACOS__
+    setup_macruby_libpath();
+@
+
+
+1.1.1.2.2.21
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:30 $
+d19 1
+a21 1
+#include <ctype.h>
+d38 3
+a40 3
+char *strchr _((char*,char));
+char *strrchr _((char*,char));
+char *strstr _((char*,char*));
+d64 1
+a64 1
+static void load_stdin _((void));
+d94 1
+d528 1
+a528 1
+		    while (p < pend && ISSPACE(*p))
+d531 1
+a531 1
+		    while (p < pend && !ISSPACE(*p))
+d562 1
+a562 1
+			while (*s && !ISSPACE(*s))
+d568 1
+a568 1
+			while (*p && ISSPACE(*p))
+@
+
+
+1.1.1.2.2.22
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:16 $
+a28 2
+#endif
+
+d31 1
+@
+
+
+1.1.1.2.2.23
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:53 $
+d616 1
+d627 2
+a628 1
+    s = str2cstr(val, &i);
+@
+
+
+1.1.1.2.2.24
+log
+@1.1c1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:34 $
+d583 1
+a583 1
+    else if (f != rb_stdin) {
+@
+
+
+1.1.1.2.2.25
+log
+@1.1c4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/24 04:42:00 $
+d137 1
+a137 2
+} req_list_head;
+struct req_list *req_list_last = &req_list_head;
+d147 2
+a148 3
+    list->next = 0;
+    req_list_last->next = list;
+    req_list_last = list;
+d154 1
+a154 1
+    struct req_list *list = req_list_head.next;
+d157 1
+a157 1
+    req_list_last = 0;
+@
+
+
+1.1.1.2.2.26
+log
+@1.1c final (hopefully)
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:41 $
+a22 4
+#ifdef __hpux
+#include <sys/pstat.h>
+#endif
+
+a617 1
+#ifndef __hpux
+a627 1
+#endif
+a628 1
+#ifndef __hpux
+a640 15
+#else
+    if (i >= PST_CLEN) {
+      union pstun j;
+      j.pst_command = s;
+      i = PST_CLEN;
+      RSTRING(val)->len = i;
+      *(s + i) = '\0';
+      pstat(PSTAT_SETCMD, j, PST_CLEN, 0, 0);
+    } else {
+      union pstun j;
+      j.pst_command = s;
+      pstat(PSTAT_SETCMD, j, i, 0, 0);
+    }
+    rb_progname = str_taint(str_new(s, i));
+#endif
+@
+
+
+1.1.1.2.2.27
+log
+@1.2.2 release
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/14 09:00:07 $
+d718 1
+a718 1
+    if (p) {
+d720 2
+a721 7
+	if (!strcasecmp(p-4, "\\bin"))
+	    p -= 4;
+    } else {
+	strcpy(libpath, ".");
+	p = libpath + 1;
+    }
+
+@
+
+
+1.1.1.2.2.28
+log
+@1.2.4
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/21 09:04:56 $
+d563 1
+a563 1
+		    int argc; char *argv[3]; char **argvp = argv;
+d566 1
+a566 1
+		    argc = 2; argv[0] = argv[2] = 0;
+@
+
+
+1.1.1.2.2.29
+log
+@to open CVS
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/08 10:14:34 $
+d60 1
+@
+
+
+1.1.1.2.2.30
+log
+@1.2.6
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/20 08:20:56 $
+d110 1
+a110 1
+	conv_to_posix_path(path, rubylib, FILENAME_MAX);
+@
+
+
+1.1.1.2.2.25.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:41 $
+d31 3
+d44 1
+a44 1
+#include "util.h"
+a45 1
+#ifndef HAVE_STDLIB_H
+a46 1
+#endif
+d50 4
+a53 4
+VALUE rb_debug = Qfalse;
+VALUE rb_verbose = Qfalse;
+int tainting = Qfalse;
+static int sflag = Qfalse;
+d55 1
+a55 1
+char *ruby_inplace_mode = Qfalse;
+d58 1
+d60 4
+a63 1
+static int xflag = Qfalse;
+d69 3
+a71 3
+static VALUE do_loop = Qfalse, do_print = Qfalse;
+static VALUE do_check = Qfalse, do_line = Qfalse;
+static VALUE do_split = Qfalse;
+d78 3
+d113 1
+a113 1
+	VALUE ary = rb_ary_new();
+d119 1
+a119 1
+		rb_ary_push(ary, rb_str_new(p, (int)(s-p)));
+d123 1
+a123 1
+		rb_ary_push(ary, rb_str_new2(p));
+d127 1
+a127 1
+	rb_load_path = rb_ary_plus(ary, rb_load_path);
+d130 1
+a130 1
+	rb_ary_unshift(rb_load_path, rb_str_new2(path));
+d161 1
+a161 1
+	rb_f_require(Qnil, rb_str_new2(list->name));
+d180 2
+a181 2
+    version = Qfalse;
+    do_search = Qfalse;
+d192 1
+a192 1
+	    do_split = Qtrue;
+d197 1
+a197 1
+	    do_print = Qtrue;
+d200 1
+a200 1
+	    do_loop = Qtrue;
+d205 2
+a206 2
+	    rb_debug = Qtrue;
+	    rb_verbose |= 1;
+d216 2
+a217 2
+	    ruby_show_version();
+	    rb_verbose = 2;
+d219 1
+a219 1
+	    rb_verbose |= 1;
+d224 1
+a224 1
+	    do_check = Qtrue;
+d230 1
+a230 1
+	    sflag = Qtrue;
+d235 2
+a236 2
+	    do_line = Qtrue;
+	    rb_output_rs = rb_rs;
+d242 1
+a242 1
+	    do_search = Qtrue;
+d250 1
+a250 1
+		if (!e_tmpname) rb_fatal("Can't mktemp");
+d253 1
+a253 1
+		    rb_fatal("Cannot open temporary file: %s", e_tmpname);
+d277 2
+a278 2
+	    if (ruby_inplace_mode) free(ruby_inplace_mode);
+	    ruby_inplace_mode = strdup(s+1);
+d282 1
+a282 1
+	    xflag = Qtrue;
+d285 1
+a285 1
+		rb_fatal("Can't chdir to %s", s);
+d296 1
+a296 1
+		rb_fatal("Can't chdir to %s", s);
+d301 1
+a301 1
+	    rb_fs = rb_str_new2(s+1);
+d320 1
+a320 1
+		tainting = Qtrue;
+d342 1
+a342 1
+		if (v > 0377) rb_rs = Qnil;
+d344 1
+a344 1
+		    rb_rs = rb_str_new2("\n\n");
+d348 1
+a348 1
+		    rb_rs = rb_str_new(&c, 1);
+d362 1
+a362 1
+		rb_debug = 1;
+d366 1
+a366 1
+		rb_verbose = 2;
+d370 1
+a370 1
+		rb_fatal("Unrecognized long option: --%s",s);
+d380 1
+a380 1
+	    rb_fatal("Unrecognized switch: -%s",s);
+d392 1
+a392 1
+	    rb_fatal("Cannot write to temp file for -e");
+d399 1
+a399 1
+	ruby_show_version();
+d403 1
+a403 1
+	ruby_show_copyright();
+d407 1
+a407 1
+    if (script_given == Qfalse) {
+d409 1
+a409 1
+	    if (rb_verbose == 3) exit(0);
+d437 1
+a437 1
+    if (rb_verbose) rb_verbose = Qtrue;
+d439 1
+a439 1
+    xflag = Qfalse;
+d455 1
+a455 1
+		rb_gvar_set2(argv[0], rb_str_new2(s));
+d458 1
+a458 1
+		rb_gvar_set2(argv[0], Qtrue);
+d483 1
+a483 1
+	    rb_raise(rb_eLoadError, "No such file to load -- %s", fname);
+d487 1
+a487 1
+	f = rb_file_open(fname, "r");
+d493 1
+a493 1
+	VALUE rs = rb_rs;
+d496 1
+a496 1
+	rb_rs = rb_default_rs;
+d499 2
+a500 2
+	    xflag = Qfalse;
+	    while (!NIL_P(line = rb_io_gets(f))) {
+d510 2
+a511 2
+	    rb_rs = rs;
+	    rb_raise(rb_eLoadError, "No Ruby script found in input");
+d514 1
+a514 1
+	c = rb_io_getc(f);
+d516 1
+a516 1
+	    line = rb_io_gets(f);
+d548 3
+a550 3
+		    ruby_sourcefile = fname;
+		    ruby_sourceline = 1;
+		    rb_fatal("Can't exec %s", path);
+d577 1
+a577 1
+	    rb_io_ungetc(f, c);
+d579 1
+a579 1
+	rb_rs = rs;
+d581 1
+a581 1
+    rb_compile_file(fname, f, line_start);
+d586 1
+a586 1
+	rb_io_close(f);
+d617 1
+a617 1
+    if (origargv == 0) rb_raise(rb_eRuntimeError, "$0 not initialized");
+d640 1
+a640 1
+    rb_progname = rb_str_taint(rb_str_new2(origargv[0]));
+d648 2
+a649 2
+	rb_progname = rb_str_taint(rb_str_new2(name));
+	ruby_sourcefile = name;
+d676 1
+a676 1
+        rb_raise(rb_eSecurityError, "No %s allowed while running setuid", s);
+d678 1
+a678 1
+        rb_raise(rb_eSecurityError, "No %s allowed while running setgid", s);
+d680 1
+a680 1
+        rb_raise(rb_eSecurityError, "No %s allowed in tainted mode", s);
+d722 5
+a726 5
+    ruby_sourcefile = "ruby";
+    rb_define_variable("$VERBOSE", &rb_verbose);
+    rb_define_variable("$-v", &rb_verbose);
+    rb_define_variable("$DEBUG", &rb_debug);
+    rb_define_variable("$-d", &rb_debug);
+d763 1
+a763 1
+    rb_argv = rb_ary_new();
+d791 1
+a791 1
+	rb_ary_push(rb_argv, rb_str_taint(rb_str_new2(argv[i])));
+d810 1
+a810 1
+    if (do_check && ruby_nerrs == 0) {
+d815 1
+a815 1
+	rb_parser_append_print();
+d818 1
+a818 1
+	rb_parser_while_loop(do_line, do_split);
+@
+
+
+1.1.1.2.2.25.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:09 $
+d51 1
+a51 1
+int rb_tainting = Qfalse;
+d312 1
+a312 1
+		rb_tainting = Qtrue;
+@
+
+
+1.1.1.2.2.25.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:15 $
+d632 1
+a632 1
+    rb_progname = rb_tainted_str_new2(origargv[0]);
+d640 1
+a640 1
+	rb_progname = rb_tainted_str_new2(name);
+d783 1
+a783 1
+	rb_ary_push(rb_argv, rb_tainted_str_new2(argv[i]));
+@
+
+
+1.1.1.2.2.25.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/14 09:00:07 $
+a22 4
+#ifdef __hpux
+#include <sys/pstat.h>
+#endif
+
+a609 1
+#ifndef __hpux
+a619 1
+#endif
+a620 1
+#ifndef __hpux
+a632 15
+#else
+    if (i >= PST_CLEN) {
+      union pstun j;
+      j.pst_command = s;
+      i = PST_CLEN;
+      RSTRING(val)->len = i;
+      *(s + i) = '\0';
+      pstat(PSTAT_SETCMD, j, PST_CLEN, 0, 0);
+    } else {
+      union pstun j;
+      j.pst_command = s;
+      pstat(PSTAT_SETCMD, j, i, 0, 0);
+    }
+    rb_progname = str_taint(str_new(s, i));
+#endif
+@
+
+
+1.1.1.2.2.25.2.5
+log
+@1.1d1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:33 $
+d84 6
+a98 2
+    const char sep = *RUBY_LIB_SEP;
+
+d107 1
+a107 1
+    if (strchr(path, sep)) {
+d113 2
+a114 2
+	    while (*p == sep) p++;
+	    if (s = strchr(p, sep)) {
+d626 1
+a626 1
+    s = rb_str2cstr(val, &i);
+d653 1
+a653 1
+    rb_progname = rb_tainted_str_new(s, i);
+@

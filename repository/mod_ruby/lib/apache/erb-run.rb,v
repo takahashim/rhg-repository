@@ -1,0 +1,390 @@
+head	1.9;
+access;
+symbols
+	release_1_0_1:1.9
+	version_1_0-branch:1.9.0.2
+	root-of-version_1_0:1.9
+	release_1_0_0:1.9
+	release_0_9_9:1.9
+	release_0_9_8:1.9
+	release_0_9_7:1.8
+	release_0_9_6:1.7
+	release_0_9_5:1.6
+	autoconfiscation-branch:1.6.0.2
+	root-of-autoconfiscation:1.6
+	release_0_9_4:1.6
+	release_0_9_3:1.6
+	release_0_9_2:1.6
+	release_0_9_1:1.6
+	release_0_9_0:1.5
+	release_0_8_6:1.5
+	release_0_8_5:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2002.04.04.06.18.35;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.02.12.04.04.34;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.01.16.05.39.29;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.08.06.05.39.40;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.29.07.09.48;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.29.06.43.57;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.21.09.42.15;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.21.09.34.50;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.06.21.07.51.04;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@* lib/apache/eruby-run.rb: do not send header on sync mode.
+* lib/apache/erb-run.rb: ditto.
+@
+text
+@=begin
+
+= apache/erb-run.rb
+
+Copyright (C) 2001  Shugo Maeda <shugo@@modruby.net>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+
+== Overview
+
+Apache::ERbRun handles eRuby files by ERb.
+
+== Example of httpd.conf
+
+  RubyRequire apache/erb-run
+  <Location /erb>
+  SetHandler ruby-object
+  RubyHandler Apache::ERbRun.instance
+  </Location>
+
+=end
+
+require "singleton"
+require "tempfile"
+require "erb/compile"
+
+# eruby emulation
+if !defined?(ERuby)
+  module ERuby
+    @@@@noheader = false
+    @@@@charset = @@@@default_charset = "iso-8859-1"
+    @@@@cgi = nil
+  
+    def ERuby.noheader
+      return @@@@noheader
+    end
+
+    def ERuby.noheader=(val)
+      @@@@noheader = val
+      return val
+    end
+  
+    def ERuby.charset
+      return @@@@charset
+    end
+
+    def ERuby.charset=(val)
+      @@@@charset = val
+      return val
+    end
+  
+    def ERuby.default_charset
+      return @@@@default_charset
+    end
+
+    def self.cgi
+      return @@@@cgi
+    end
+
+    def self.cgi=(cgi)
+      @@@@cgi = cgi
+    end
+  end
+end
+
+module Apache
+  class ERbRun
+    include Singleton
+
+    def handler(r)
+      if r.method_number == M_OPTIONS
+	r.allowed |= (1 << M_GET)
+	r.allowed |= (1 << M_POST)
+	return DECLINED
+      end
+      if r.finfo.mode == 0
+	return NOT_FOUND
+      end
+
+      filename = r.filename.dup
+      filename.untaint
+      code = compile(filename)
+      prerun(r)
+      run(code, filename)
+      postrun(r)
+
+      return OK
+    end
+
+    private
+
+    def initialize
+      @@compiler = ERbCompiler.new
+      @@compiler.put_cmd = 'print'
+    end
+
+    def compile(filename)
+      open(filename) do |f|
+	return @@compiler.compile(f.read)
+      end
+    end
+
+    def prerun(r)
+      ERuby.noheader = false
+      ERuby.charset = ERuby.default_charset
+      ERuby.cgi = nil
+      r.setup_cgi_env
+      Apache.chdir_file(r.filename)
+    end
+
+    def run(code, filename)
+      file = Tempfile.new(File.basename(filename) + ".")
+      begin
+	file.print(code)
+	file.close
+	load(file.path, true)
+      ensure
+	file.close(true)
+      end
+    end
+
+    def postrun(r)
+      unless ERuby.noheader
+	if cgi = ERuby.cgi
+	  cgi.header("charset" => ERuby.charset)
+        elsif r.sync_output or r.sync_header
+	  # Do nothing: header has already been sent
+	else
+	  r.content_type = format("text/html; charset=%s", ERuby.charset)
+	  r.send_http_header
+	end
+      end
+    end
+  end
+end
+@
+
+
+1.8
+log
+@* version 0.9.7 released.
+@
+text
+@d146 2
+@
+
+
+1.7
+log
+@* apachelib.h (CSTR2OBJ): use rb_tainted_str_new2().
+* array_header.c: ditto.
+* table.c: ditto.
+* server.c: ditto.
+* lib/apache/ruby-run.rb: use untaint.
+* lib/apache/eruby-run.rb: ditto.
+* lib/apache/erb-run.rb: ditto.
+* lib/apache/rd2html.rb: ditto.
+@
+text
+@d91 5
+@
+
+
+1.6
+log
+@* version 0.9.1 released.
+@
+text
+@d95 3
+a97 1
+      code = compile(r.filename)
+d99 1
+a99 1
+      run(code, r.filename)
+@
+
+
+1.5
+log
+@* lib/apache/cgi-support.rb: removed.
+* lib/apache/eruby-run.rb: use tempfile.
+* lib/apache/erb-run.rb: ditto.
+@
+text
+@d5 2
+a6 1
+Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+d8 8
+a15 1
+This file is part of mod_ruby.
+d17 11
+a27 14
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+@
+
+
+1.4
+log
+@* use tempfile.
+@
+text
+@a40 1
+require "apache/cgi-support"
+d47 1
+d70 8
+a83 1
+    include CGISupport
+d89 6
+a94 20
+      open(r.filename) do |f|
+	ERuby.noheader = false
+	ERuby.charset = ERuby.default_charset
+	src = f.read
+	code = @@compiler.compile(src)
+	emulate_cgi(r) do
+	  file = Tempfile.new(File.basename(r.filename) + ".")
+	  begin
+	    file.print(code)
+	    file.close
+	    load(file.path, true)
+	  ensure
+	    file.close(true)
+	  end
+	  unless ERuby.noheader
+	    r.content_type = format("text/html; charset=%s", ERuby.charset)
+	    r.send_http_header
+	  end
+	end
+      end
+d103 36
+@
+
+
+1.3
+log
+@* lib/apache/eruby-run.rb: don't check ExecCGI.
+* lib/apache/erb-run.rb: ditto.
+@
+text
+@d39 2
+a42 2
+require "erb/compile"
+
+a86 1
+	code.untaint
+d88 8
+a95 1
+	  eval(code, TOPLEVEL_BINDING, r.filename)
+@
+
+
+1.2
+log
+@* ruby_config.c (ruby_cmd_require): use ruby_required_libraries
+for virtual hosts.
+* lib/apache/erb-run.rb: no need to inherit Apache::RubyRun.
+@
+text
+@a81 4
+      if r.allow_options & OPT_EXECCGI == 0
+	r.log_reason("Options ExecCGI is off in this directory", r.filename)
+	return FORBIDDEN
+      end
+@
+
+
+1.1
+log
+@* lib/apache/cgi-support.rb: new file.
+* lib/apache/erb-run.rb: new file, supports ERb.
+@
+text
+@d74 1
+a74 1
+  class ERbRun < Apache::RubyRun
+@

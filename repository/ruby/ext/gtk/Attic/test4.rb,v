@@ -1,0 +1,140 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_2_6repack:1.1.1.1
+	v1_2_6:1.1.1.1
+	v1_1d1:1.1.1.1
+	v1_1d0:1.1.1.1
+	v1_1c6:1.1.1.1
+	gtk_012:1.1.1.1
+	v1_1d-start:1.1.1.1
+	v1_1dev:1.1.1.1.0.4
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.48;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@require 'gtk'
+
+window = Gtk::Window::new(Gtk::WINDOW_TOPLEVEL)
+window.set_title("notebook")
+window.border_width(0)
+
+box1 = Gtk::VBox::new(FALSE, 0)
+window.add(box1)
+box1.show
+
+box2 = Gtk::VBox::new(FALSE, 10)
+box2.border_width(10)
+box1.pack_start(box2, TRUE, TRUE, 0)
+box2.show
+
+notebook = Gtk::Notebook::new()
+notebook.set_tab_pos(Gtk::POS_TOP)
+box2.pack_start(notebook, TRUE, TRUE, 0)
+notebook.show
+
+for i in 1..5
+  frame = Gtk::Frame::new(format("Page %d", i))
+  frame.border_width(10)
+  frame.set_usize(200, 150)
+  frame.show
+
+  label = Gtk::Label::new(format("Box %d", i))
+  frame.add label
+  label.show
+
+  label = Gtk::Label::new(format("Tab %d", i))
+  notebook.append_page frame, label
+end
+
+separator = Gtk::HSeparator::new()
+box1.pack_start(separator, FALSE, TRUE, 0)
+separator.show
+
+box2 = Gtk::HBox::new(FALSE, 10)
+box2.border_width(10)
+box1.pack_start(box2, FALSE, TRUE, 0)
+box2.show
+
+button = Gtk::Button::new("close")
+button.signal_connect("clicked") do
+  window.destroy
+  exit
+end
+box2.pack_start(button, TRUE, TRUE, 0)
+button.set_flags(Gtk::CAN_DEFAULT);
+button.grab_default
+button.show
+
+button = Gtk::Button::new("next")
+button.signal_connect("clicked") do
+  notebook.next_page
+end
+box2.pack_start(button, TRUE, TRUE, 0)
+button.show
+
+button = Gtk::Button::new("prev")
+button.signal_connect("clicked") do
+  notebook.prev_page
+end
+box2.pack_start(button, TRUE, TRUE, 0)
+button.show
+
+button = Gtk::Button::new("rotate")
+button.signal_connect("clicked") do
+  notebook.set_tab_pos((notebook.tab_pos+1)%4)
+end
+box2.pack_start(button, TRUE, TRUE, 0)
+button.show
+
+window.show
+
+Gtk::main()
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

@@ -1,0 +1,769 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5.2.1
+	v1_6_5:1.5
+	v1_6_4:1.5
+	v1_7_1:1.6
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.5
+	v1_3_6_repack:1.1.1.2.2.5
+	v1_3_6:1.1.1.2.2.5
+	v1_3_5:1.1.1.2.2.5
+	v1_2_6repack:1.1.1.1.4.3
+	v1_3_4_990625:1.1.1.2.2.5
+	v1_3_4_990624:1.1.1.2.2.5
+	v1_2_6:1.1.1.1.4.3
+	v1_3_4_990611:1.1.1.2.2.5
+	v1_3_4_990531:1.1.1.2.2.5
+	v1_3_3_990518:1.1.1.2.2.5
+	v1_3_3_990513:1.1.1.2.2.5
+	v1_3_3_990507:1.1.1.2.2.5
+	v1_2_5:1.1.1.1.4.3
+	v1_2_4:1.1.1.1.4.3
+	v1_3_1_990225:1.1.1.2.2.3
+	v1_3_1_990224:1.1.1.2.2.2
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2.2.1
+	v1_3_1_990127:1.1.1.2.2.1
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.3
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.3
+	v1_2_1repack:1.1.1.1.4.3
+	v1_2_1:1.1.1.1.4.3
+	v1_2_stable:1.1.1.1.4.3
+	v1_1d1:1.1.1.1.4.3.2.2
+	v1_1d0:1.1.1.1.4.3.2.2
+	v1_1c9_1:1.1.1.1.4.3
+	v1_1c9:1.1.1.1.4.3
+	v1_1c8:1.1.1.1.4.3
+	v1_1c7:1.1.1.1.4.3
+	v1_1c6:1.1.1.1.4.3
+	v1_1d-start:1.1.1.1.4.3.2.1
+	v1_1c5:1.1.1.1.4.3
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.3
+	v1_1c1:1.1.1.1.4.3
+	v1_1c0:1.1.1.1.4.3
+	v1_1b9_31:1.1.1.1.4.3
+	v1_1b9_30:1.1.1.1.4.3
+	v1_1b9_28:1.1.1.1.4.3
+	v1_1b9_27:1.1.1.1.4.3
+	v1_1b9_26:1.1.1.1.4.3
+	r1_1b9_25:1.1.1.1.4.3
+	r1_1b9_24:1.1.1.1.4.3
+	v1_1b9_23:1.1.1.1.4.3
+	v1_1b9_22:1.1.1.1.4.3
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1.4.1
+	v1_1b9_16:1.1.1.1.4.1
+	v1_1b9_15:1.1.1.1.4.1
+	v1_1b9_13:1.1.1.1.4.1
+	v1_1b9_12:1.1.1.1.4.1
+	v1_1b9_11:1.1.1.1.4.1
+	v1_1b9_08:1.1.1.1.4.1
+	v1_1b9_07:1.1.1.1.4.1
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.10
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.12.21.07.20.23;	author nobu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.12.10.14.43.37;	author usa;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.02.14.05.51.58;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.27.09.49.24;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.05.01.09.41.31;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.05.04.37.14;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.30;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.24.04.31.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.02.25.06.39.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.03.24.08.52.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.05.18.04.56.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.05.18.05.57.45;	author matz;	state Exp;
+branches
+	1.1.1.1.4.3.2.1;
+next	;
+
+1.1.1.1.4.3.2.1
+date	98.09.08.07.09.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3.2.2;
+
+1.1.1.1.4.3.2.2
+date	98.10.06.03.28.17;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.24.15;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.12.21.07.20.00;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@/**********************************************************************
+
+  util.h -
+
+  $Author: nobu $
+  $Date: 2001/12/21 07:20:23 $
+  created at: Thu Mar  9 11:55:53 JST 1995
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#ifndef UTIL_H
+#define UTIL_H
+
+#ifndef _
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+#ifdef HAVE_PROTOTYPES
+# define _(args) args
+#else
+# define _(args) ()
+#endif
+#ifdef HAVE_STDARG_PROTOTYPES
+# define __(args) args
+#else
+# define __(args) ()
+#endif
+#endif
+
+#define scan_oct ruby_scan_oct
+unsigned long scan_oct _((const char*, int, int*));
+#define scan_hex ruby_scan_hex
+unsigned long scan_hex _((const char*, int, int*));
+
+#if defined(MSDOS) || defined(__CYGWIN32__) || defined(NT)
+void ruby_add_suffix();
+#define add_suffix ruby_add_suffix
+#endif
+
+void ruby_qsort _((void*, const int, const int, int (*)()));
+#define qsort(b,n,s,c) ruby_qsort(b,n,s,c)
+
+void ruby_setenv _((const char*, const char*));
+void ruby_unsetenv _((const char*));
+#undef setenv
+#undef unsetenv
+#define setenv(name,val) ruby_setenv((name),(val))
+#define unsetenv(name,val) ruby_unsetenv((name));
+
+char *ruby_strdup _((const char*));
+#undef strdup
+#define strdup(s) ruby_strdup((s))
+
+char *ruby_getcwd _((void));
+#define my_getcwd() ruby_getcwd()
+
+double ruby_strtod _((const char*, char **));
+#define strtod(s,e) ruby_strtod((s),(e))
+
+#endif /* UTIL_H */
+@
+
+
+1.9
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/12/10 14:43:37 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d63 3
+@
+
+
+1.8
+log
+@* util.h: change prototype of ruby_qsort() to accord with its definition.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/08 06:43:08 $
+d17 8
+@
+
+
+1.7
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:58 $
+d39 1
+a39 1
+void ruby_qsort _((void*, int, int, int (*)()));
+@
+
+
+1.6
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:24 $
+d52 3
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:31 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.5.2.1
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:24 $
+a16 8
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+@
+
+
+1.4
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:14 $
+a38 2
+char *ruby_mktemp _((void));
+
+d48 4
+@
+
+
+1.3
+log
+@20000105
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+d11 2
+a12 1
+************************************************/
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:43 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+a6 2
+  $Author$
+  $Date$
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 34
+a48 2
+unsigned long scan_hex();
+unsigned long scan_oct();
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 1998/10/06 03:28:17 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d15 2
+a16 22
+#ifndef _
+# ifdef __STDC__
+#  define _(args) args
+# else
+#  define _(args) ()
+# endif
+#endif
+
+#define scan_oct ruby_scan_oct
+unsigned long scan_oct _((char*, int, int*));
+#define scan_hex ruby_scan_hex
+unsigned long scan_hex _((char*, int, int*));
+
+#if defined(MSDOS) || defined(__CYGWIN32__) || defined(NT)
+#define add_suffix ruby_add_suffix
+void add_suffix();
+#endif
+
+char *ruby_mktemp _((void));
+
+void ruby_qsort _((void*, int, int, int (*)()));
+#define qsort(b,n,s,c) ruby_qsort(b,n,s,c)
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:30 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:17 $
+a36 4
+
+void ruby_setenv _((char*, char*));
+void ruby_setenv2 _((char*, char*));
+void ruby_unsetenv _((char*));
+@
+
+
+1.1.1.2.2.3
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:26 $
+d39 1
+@
+
+
+1.1.1.2.2.4
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:11 $
+d24 1
+a24 1
+unsigned long scan_oct _((const char*, int, int*));
+d26 1
+a26 1
+unsigned long scan_hex _((const char*, int, int*));
+a28 1
+void ruby_add_suffix();
+d30 1
+a39 4
+#undef setenv
+#undef unsetenv
+#define setenv(name,val) ruby_setenv((name),(val))
+#define unsetenv(name,val) ruby_unsetenv((name));
+@
+
+
+1.1.1.2.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:34 $
+d16 5
+a20 10
+#ifdef HAVE_PROTOTYPES
+# define _(args) args
+#else
+# define _(args) ()
+#endif
+#ifdef HAVE_STDARG_PROTOTYPES
+# define __(args) args
+#else
+# define __(args) ()
+#endif
+d38 2
+a39 2
+void ruby_setenv _((const char*, const char*));
+void ruby_unsetenv _((const char*));
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 1998/01/16 05:13:16 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.1.4.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:49 $
+d15 2
+a16 2
+unsigned long scan_oct _((char*,int,int*));
+unsigned long scan_hex _((char*,int,int*));
+@
+
+
+1.1.1.1.4.3
+log
+@1.1b9_21
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:25 $
+d15 2
+a16 2
+unsigned long scan_oct();
+unsigned long scan_hex();
+@
+
+
+1.1.1.1.4.3.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 05:57:45 $
+a14 1
+#define scan_oct ruby_scan_oct
+a15 1
+#define scan_hex ruby_scan_hex
+a16 7
+
+#if defined(MSDOS) || defined(__CYGWIN32__) || defined(NT)
+#define add_suffix ruby_add_suffix
+void add_suffix();
+#endif
+
+char *ruby_mktemp();
+@
+
+
+1.1.1.1.4.3.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:25 $
+a14 8
+#ifndef _
+# ifdef __STDC__
+#  define _(args) args
+# else
+#  define _(args) ()
+# endif
+#endif
+
+d16 1
+a16 1
+unsigned long scan_oct _((char*, int, int*));
+d18 1
+a18 1
+unsigned long scan_hex _((char*, int, int*));
+d25 1
+a25 4
+char *ruby_mktemp _((void));
+
+void ruby_qsort _((void*, int, int, int (*)()));
+#define qsort(b,n,s,c) ruby_qsort(b,n,s,c)
+@

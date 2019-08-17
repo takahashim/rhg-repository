@@ -1,0 +1,6353 @@
+head	1.76;
+access;
+symbols
+	v1_6_7:1.24.2.18
+	v1_6_6:1.24.2.17
+	v1_6_5:1.24.2.16
+	v1_6_4:1.24.2.13
+	v1_7_1:1.47
+	v1_6_4_preview4:1.24.2.12
+	v1_6_4_preview3:1.24.2.11
+	v1_6_4_preview2:1.24.2.9
+	v1_6_4_preview1:1.24.2.9
+	v1_6_3:1.24.2.7
+	ruby_m17n:1.24.0.4
+	ruby_1_6:1.24.0.2
+	v1_6_2:1.24
+	v1_6_1:1.23
+	v1_6_0:1.20
+	v1_4_6:1.2.2.4
+	v1_4_5:1.2.2.4
+	v1_4_4:1.2.2.4
+	ruby_1_4_3:1.2.2.1
+	ruby1_4_3:1.2.2.1
+	v1_4_3:1.2.2.1
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.7
+	v1_3_6_repack:1.1.1.3.2.6
+	v1_3_6:1.1.1.3.2.6
+	v1_3_5:1.1.1.3.2.5
+	v1_2_6repack:1.1.1.2.2.14
+	v1_3_4_990625:1.1.1.3.2.5
+	v1_3_4_990624:1.1.1.3.2.5
+	v1_2_6:1.1.1.2.2.14
+	v1_3_4_990611:1.1.1.3.2.4
+	v1_3_4_990531:1.1.1.3.2.4
+	v1_3_3_990518:1.1.1.3.2.4
+	v1_3_3_990513:1.1.1.3.2.4
+	v1_3_3_990507:1.1.1.3.2.3
+	v1_2_5:1.1.1.2.2.14
+	v1_2_4:1.1.1.2.2.14
+	v1_3_1_990225:1.1.1.3.2.1
+	v1_3_1_990224:1.1.1.3.2.1
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.14
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.14
+	v1_2_1repack:1.1.1.2.2.14
+	v1_2_1:1.1.1.2.2.14
+	v1_2_stable:1.1.1.2.2.14
+	v1_1d1:1.1.1.2.2.13.2.2
+	v1_1d0:1.1.1.2.2.13.2.2
+	v1_1c9_1:1.1.1.2.2.14
+	v1_1c9:1.1.1.2.2.14
+	v1_1c8:1.1.1.2.2.14
+	v1_1c7:1.1.1.2.2.14
+	v1_1c6:1.1.1.2.2.13
+	v1_1d-start:1.1.1.2.2.13.2.1
+	v1_1c5:1.1.1.2.2.13
+	v1_1dev:1.1.1.2.2.13.0.2
+	v1_1c4:1.1.1.2.2.13
+	v1_1c3:1.1.1.2.2.12
+	v1_1c2:1.1.1.2.2.12
+	v1_1c1:1.1.1.2.2.12
+	v1_1c0:1.1.1.2.2.12
+	v1_1b9_31:1.1.1.2.2.12
+	v1_1b9_30:1.1.1.2.2.11
+	v1_1b9_28:1.1.1.2.2.11
+	v1_1b9_27:1.1.1.2.2.10
+	v1_1b9_26:1.1.1.2.2.10
+	r1_1b9_25:1.1.1.2.2.9
+	r1_1b9_24:1.1.1.2.2.9
+	v1_1b9_23:1.1.1.2.2.9
+	v1_1b9_22:1.1.1.2.2.8
+	v1_1b9_20:1.1.1.2.2.8
+	v1_1b9_18:1.1.1.2.2.7
+	v1_1b9_16:1.1.1.2.2.7
+	v1_1b9_15:1.1.1.2.2.6
+	v1_1b9_13:1.1.1.2.2.6
+	v1_1b9_12:1.1.1.2.2.6
+	v1_1b9_11:1.1.1.2.2.6
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2.2.2
+	v1_1b8:1.1.1.2.2.2
+	v1_1b7:1.1.1.2.2.1
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.76
+date	2002.09.25.14.52.37;	author nobu;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.09.13.14.46.44;	author nobu;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.09.12.09.11.12;	author nobu;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.09.12.08.48.57;	author nobu;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.09.12.06.27.13;	author matz;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.06.15.10.24.38;	author knu;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.05.11.01.53.48;	author nobu;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.05.04.00.06.19;	author knu;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.05.03.22.39.40;	author knu;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.04.18.08.46.17;	author matz;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.04.10.09.58.39;	author matz;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.03.25.09.08.15;	author nobu;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.03.25.08.21.01;	author nobu;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.03.25.06.18.04;	author matz;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.03.13.23.59.41;	author nobu;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.03.13.10.11.09;	author knu;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.02.18.09.52.45;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.02.13.09.01.09;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.01.25.08.22.04;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.01.21.07.44.05;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.01.18.14.23.06;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.09.19.06.54.10;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.09.08.14.17.09;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.09.06.08.48.07;	author nobu;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.07.14.15.17.18;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.06.13.10.51.39;	author knu;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.05.27.17.24.24;	author knu;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.05.16.09.05.49;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.05.06.15.01.58;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.05.02.12.07.30;	author eban;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.04.01.16.22.12;	author eban;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.03.28.08.43.24;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.03.21.03.51.23;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.03.21.03.41.41;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.03.20.14.50.42;	author eban;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.03.19.03.20.20;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.03.16.08.30.09;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.03.13.07.57.53;	author eban;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.02.28.06.30.03;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.02.27.07.52.11;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.02.19.09.14.58;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.02.15.06.00.55;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.02.13.14.15.39;	author eban;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.02.13.05.08.59;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.02.09.15.02.14;	author usa;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.02.08.09.19.16;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.11.20.01.24.22;	author eban;	state Exp;
+branches
+	1.24.2.1;
+next	1.23;
+
+1.23
+date	2000.09.25.07.00.53;	author eban;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.09.25.04.33.53;	author eban;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.09.21.09.30.55;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.08.07.05.01.46;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.07.31.04.36.38;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.06.12.07.48.19;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.05.29.02.10.17;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.25.05.54.59;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.05.24.04.33.54;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.15.06.38.42;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.09.04.52.52;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.01.09.41.12;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.07.08.37.27;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.29.08.05.25;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.17.07.11.07;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.01.03.11.59;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.05.04.36.58;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.12.14.06.49.40;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.25.09.03.04;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.21.07.52.15;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.13.06.44.40;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.03;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.09;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.10;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.04.09.17.57.37;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.05.07.08.24.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.05.10.08.22.45;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.06.24.04.23.47;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.07.28.09.26.32;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.08.06.06.48.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.18.01.56.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.30.09.32.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.04.10.10.09.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.04.14.04.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.04.16.07.42.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.04.27.10.03.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.05.13.07.26.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.05.25.09.42.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.06.18.07.46.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.06.26.09.44.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.07.13.04.37.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.09.03.07.43.27;	author matz;	state Exp;
+branches
+	1.1.1.2.2.13.2.1;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.11.09.09.11.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.13.2.1
+date	98.09.08.07.08.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13.2.2;
+
+1.1.1.2.2.13.2.2
+date	98.11.25.03.31.10;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.11.24.07.13.50;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.01.17.08.23.53;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.02.01.03.11.20;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.02.17.08.28.51;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.07.31.09.20.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.24.2.1
+date	2001.02.08.09.17.56;	author matz;	state Exp;
+branches;
+next	1.24.2.2;
+
+1.24.2.2
+date	2001.02.09.15.07.52;	author usa;	state Exp;
+branches;
+next	1.24.2.3;
+
+1.24.2.3
+date	2001.02.13.05.10.43;	author matz;	state Exp;
+branches;
+next	1.24.2.4;
+
+1.24.2.4
+date	2001.02.13.14.15.55;	author eban;	state Exp;
+branches;
+next	1.24.2.5;
+
+1.24.2.5
+date	2001.02.14.05.53.54;	author matz;	state Exp;
+branches;
+next	1.24.2.6;
+
+1.24.2.6
+date	2001.03.13.07.58.07;	author eban;	state Exp;
+branches;
+next	1.24.2.7;
+
+1.24.2.7
+date	2001.03.20.14.50.25;	author eban;	state Exp;
+branches;
+next	1.24.2.8;
+
+1.24.2.8
+date	2001.03.27.07.10.56;	author matz;	state Exp;
+branches;
+next	1.24.2.9;
+
+1.24.2.9
+date	2001.04.01.16.21.26;	author eban;	state Exp;
+branches;
+next	1.24.2.10;
+
+1.24.2.10
+date	2001.05.02.12.07.08;	author eban;	state Exp;
+branches;
+next	1.24.2.11;
+
+1.24.2.11
+date	2001.05.11.05.21.57;	author matz;	state Exp;
+branches;
+next	1.24.2.12;
+
+1.24.2.12
+date	2001.05.25.15.18.08;	author usa;	state Exp;
+branches;
+next	1.24.2.13;
+
+1.24.2.13
+date	2001.05.27.17.45.19;	author knu;	state Exp;
+branches;
+next	1.24.2.14;
+
+1.24.2.14
+date	2001.07.13.05.50.03;	author matz;	state Exp;
+branches;
+next	1.24.2.15;
+
+1.24.2.15
+date	2001.08.26.22.45.09;	author nobu;	state Exp;
+branches;
+next	1.24.2.16;
+
+1.24.2.16
+date	2001.09.06.08.42.57;	author nobu;	state Exp;
+branches;
+next	1.24.2.17;
+
+1.24.2.17
+date	2001.11.07.09.01.30;	author matz;	state Exp;
+branches;
+next	1.24.2.18;
+
+1.24.2.18
+date	2002.01.21.07.43.39;	author matz;	state Exp;
+branches;
+next	1.24.2.19;
+
+1.24.2.19
+date	2002.03.19.15.51.06;	author knu;	state Exp;
+branches;
+next	1.24.2.20;
+
+1.24.2.20
+date	2002.03.25.06.15.58;	author matz;	state Exp;
+branches;
+next	1.24.2.21;
+
+1.24.2.21
+date	2002.06.15.10.32.23;	author knu;	state Exp;
+branches;
+next	1.24.2.22;
+
+1.24.2.22
+date	2002.09.08.10.25.42;	author usa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.76
+log
+@* dir.c (glob_helper): must not closedir() when exception raised
+  while globbing "**".
+
+* marshal.c (w_uclass): unused variable.
+
+* re.c (match_clone): unused.
+
+* regex.c (re_compile_pattern): get rid of implicit promotion from
+  plain char to int.
+@
+text
+@/**********************************************************************
+
+  dir.c -
+
+  $Author: nobu $
+  $Date: 2002/09/13 14:46:44 $
+  created at: Wed Jan  5 09:51:01 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#ifdef HAVE_SYS_PARAM_H
+# include <sys/param.h>
+#else
+# define MAXPATHLEN 1024
+#endif
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#if defined HAVE_DIRENT_H && !defined NT
+# include <dirent.h>
+# define NAMLEN(dirent) strlen((dirent)->d_name)
+#elif defined HAVE_DIRECT_H && !defined NT
+# include <direct.h>
+# define NAMLEN(dirent) strlen((dirent)->d_name)
+#else
+# define dirent direct
+# define NAMLEN(dirent) (dirent)->d_namlen
+# if HAVE_SYS_NDIR_H
+#  include <sys/ndir.h>
+# endif
+# if HAVE_SYS_DIR_H
+#  include <sys/dir.h>
+# endif
+# if HAVE_NDIR_H
+#  include <ndir.h>
+# endif
+# if defined(NT)
+#  include "win32/dir.h"
+# endif
+#endif
+
+#include <errno.h>
+
+#ifndef HAVE_STDLIB_H
+char *getenv();
+#endif
+
+#ifndef HAVE_STRING_H
+char *strchr _((char*,char));
+#endif
+
+#include <ctype.h>
+
+#include "util.h"
+
+#ifndef HAVE_LSTAT
+#define lstat(path,st) stat(path,st)
+#endif
+
+#define FNM_NOESCAPE	0x01
+#define FNM_PATHNAME	0x02
+#define FNM_DOTMATCH	0x04
+#define FNM_CASEFOLD	0x08
+
+#define FNM_NOMATCH	1
+#define FNM_ERROR	2
+
+#define downcase(c) (nocase && ISUPPER(c) ? tolower(c) : (c))
+
+#ifndef CharNext		/* defined as CharNext[AW] on Windows. */
+# if defined(DJGPP)
+#   define CharNext(p) ((p) + mblen(p, MB_CUR_MAX))
+# else
+#   define CharNext(p) ((p) + 1)
+# endif
+#endif
+#if defined DOSISH
+#define isdirsep(c) ((c) == '/' || (c) == '\\')
+static char *
+find_dirsep(s)
+    char *s;
+{
+    while (*s) {
+	if (isdirsep(*s))
+	    return s;
+	s = CharNext(s);
+    }
+    return 0;
+}
+#else
+#define isdirsep(c) ((c) == '/')
+#define find_dirsep(s) strchr(s, '/')
+#endif
+
+static char *
+range(pat, test, flags)
+    char *pat;
+    char test;
+    int flags;
+{
+    int not, ok = 0;
+    int nocase = flags & FNM_CASEFOLD;
+    int escape = !(flags & FNM_NOESCAPE);
+
+    not = *pat == '!' || *pat == '^';
+    if (not)
+	pat++;
+
+    test = downcase(test);
+
+    while (*pat) {
+	int cstart, cend;
+	cstart = cend = *pat++;
+	if (cstart == ']')
+	    return ok == not ? 0 : pat;
+        else if (escape && cstart == '\\')
+	    cstart = cend = *pat++;
+	if (*pat == '-' && pat[1] != ']') {
+	    if (escape && pat[1] == '\\')
+		pat++;
+	    cend = pat[1];
+	    if (!cend)
+		return 0;
+	    pat += 2;
+	}
+	if (downcase(cstart) <= test && test <= downcase(cend))
+	    ok = 1;
+    }
+    return 0;
+}
+
+#define ISDIRSEP(c) (pathname && isdirsep(c))
+#define PERIOD(s) (period && *(s) == '.' && \
+		  ((s) == string || ISDIRSEP((s)[-1])))
+static int
+fnmatch(pat, string, flags)
+    const char *pat;
+    const char *string;
+    int flags;
+{
+    int c;
+    int test;
+    const char *s = string;
+    int escape = !(flags & FNM_NOESCAPE);
+    int pathname = flags & FNM_PATHNAME;
+    int period = !(flags & FNM_DOTMATCH);
+    int nocase = flags & FNM_CASEFOLD;
+
+    while (c = *pat++) {
+	switch (c) {
+	case '?':
+	    if (!*s || ISDIRSEP(*s) || PERIOD(s))
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+	case '*':
+	    while ((c = *pat++) == '*')
+		;
+
+	    if (PERIOD(s))
+		return FNM_NOMATCH;
+
+	    if (!c) {
+		if (pathname && find_dirsep(s))
+		    return FNM_NOMATCH;
+		else
+		    return 0;
+	    }
+	    else if (ISDIRSEP(c)) {
+		s = find_dirsep(s);
+		if (s) {
+                    s++;
+		    break;
+                }
+		return FNM_NOMATCH;
+	    }
+
+	    test = escape && c == '\\' ? *pat : c;
+	    test = downcase(test);
+	    pat--;
+	    while (*s) {
+		if ((c == '[' || downcase(*s) == test) &&
+		    !fnmatch(pat, s, flags | FNM_DOTMATCH))
+		    return 0;
+		else if (ISDIRSEP(*s))
+		    break;
+		s++;
+	    }
+	    return FNM_NOMATCH;
+      
+	case '[':
+	    if (!*s || ISDIRSEP(*s) || PERIOD(s))
+		return FNM_NOMATCH;
+	    pat = range(pat, *s, flags);
+	    if (!pat)
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+
+	case '\\':
+	    if (escape
+#if defined DOSISH
+		&& *pat && strchr("*?[\\", *pat)
+#endif
+		) {
+		c = *pat;
+		if (!c)
+		    c = '\\';
+		else
+		    pat++;
+	    }
+	    /* FALLTHROUGH */
+
+	default:
+#if defined DOSISH
+	    if (ISDIRSEP(c) && isdirsep(*s))
+		;
+	    else
+#endif
+	    if(downcase(c) != downcase(*s))
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+	}
+    }
+    return !*s ? 0 : FNM_NOMATCH;
+}
+
+VALUE rb_cDir;
+
+struct dir_data {
+    DIR *dir;
+    char *path;
+};
+
+static void
+free_dir(dir)
+    struct dir_data *dir;
+{
+    if (dir && dir->dir) closedir(dir->dir);
+}
+
+static VALUE dir_close _((VALUE));
+
+static VALUE
+dir_s_alloc(klass)
+    VALUE klass;
+{
+    struct dir_data *dirp;
+    VALUE obj = Data_Make_Struct(klass, struct dir_data, 0, free_dir, dirp);
+
+    dirp->dir = NULL;
+    dirp->path = NULL;
+
+    return obj;
+}
+
+static VALUE
+dir_initialize(dir, dirname)
+    VALUE dir, dirname;
+{
+    struct dir_data *dp;
+
+    SafeStringValue(dirname);
+    Data_Get_Struct(dir, struct dir_data, dp);
+    if (dp->dir) closedir(dp->dir);
+    if (dp->path) free(dp->path);
+    dp->dir = NULL;
+    dp->path = NULL;
+    dp->dir = opendir(RSTRING(dirname)->ptr);
+    if (dp->dir == NULL) {
+	if (errno == EMFILE || errno == ENFILE) {
+	    rb_gc();
+	    dp->dir = opendir(RSTRING(dirname)->ptr);
+	}
+	if (dp->dir == NULL) {
+	    rb_sys_fail(RSTRING(dirname)->ptr);
+	}
+    }
+    dp->path = strdup(RSTRING(dirname)->ptr);
+
+    return dir;
+}
+
+static VALUE
+dir_s_open(klass, dirname)
+    VALUE klass, dirname;
+{
+    struct dir_data *dp;
+    VALUE dir = Data_Make_Struct(klass, struct dir_data, 0, free_dir, dp);
+
+    dir_initialize(dir, dirname);
+    if (rb_block_given_p()) {
+	return rb_ensure(rb_yield, dir, dir_close, dir);
+    }
+
+    return dir;
+}
+
+static void
+dir_closed()
+{
+    rb_raise(rb_eIOError, "closed directory");
+}
+
+#define GetDIR(obj, dirp) do {\
+    Data_Get_Struct(obj, struct dir_data, dirp);\
+    if (dirp->dir == NULL) dir_closed();\
+} while (0)
+
+static VALUE
+dir_path(dir)
+    VALUE dir;
+{
+    struct dir_data *dirp;
+
+    GetDIR(dir, dirp);
+    if (!dirp->path) return Qnil;
+    return rb_str_new2(dirp->path);
+}
+
+static VALUE
+dir_read(dir)
+    VALUE dir;
+{
+    struct dir_data *dirp;
+    struct dirent *dp;
+
+    GetDIR(dir, dirp);
+    errno = 0;
+    dp = readdir(dirp->dir);
+    if (dp) {
+	return rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+    }
+    else if (errno == 0) {	/* end of stream */
+	return Qnil;
+    }
+    else {
+	rb_sys_fail(0);
+    }
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+dir_each(dir)
+    VALUE dir;
+{
+    struct dir_data *dirp;
+    struct dirent *dp;
+
+    GetDIR(dir, dirp);
+    for (dp = readdir(dirp->dir); dp != NULL; dp = readdir(dirp->dir)) {
+	rb_yield(rb_tainted_str_new(dp->d_name, NAMLEN(dp)));
+	if (dirp->dir == NULL) dir_closed();
+    }
+    return dir;
+}
+
+static VALUE
+dir_tell(dir)
+    VALUE dir;
+{
+#ifdef HAVE_TELLDIR
+    struct dir_data *dirp;
+    long pos;
+
+    GetDIR(dir, dirp);
+    pos = telldir(dirp->dir);
+    return rb_int2inum(pos);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+dir_seek(dir, pos)
+    VALUE dir, pos;
+{
+    struct dir_data *dirp;
+
+#ifdef HAVE_SEEKDIR
+    GetDIR(dir, dirp);
+    seekdir(dirp->dir, NUM2INT(pos));
+    return dir;
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+dir_set_pos(dir, pos)
+    VALUE dir, pos;
+{
+    dir_seek(dir, pos);
+    return pos;
+}
+
+static VALUE
+dir_rewind(dir)
+    VALUE dir;
+{
+    struct dir_data *dirp;
+
+    GetDIR(dir, dirp);
+    rewinddir(dirp->dir);
+    return dir;
+}
+
+static VALUE
+dir_close(dir)
+    VALUE dir;
+{
+    struct dir_data *dirp;
+
+    GetDIR(dir, dirp);
+    closedir(dirp->dir);
+    dirp->dir = NULL;
+
+    return Qnil;
+}
+
+static void
+dir_chdir(path)
+    const char *path;
+{
+    if (chdir(path) < 0)
+	rb_sys_fail(path);
+}
+
+static int chdir_blocking = 0;
+static VALUE chdir_thread = Qnil;
+
+static VALUE
+chdir_restore(path)
+    char *path;
+{
+    chdir_blocking--;
+    if (chdir_blocking == 0)
+	chdir_thread = Qnil;
+    dir_chdir(path);
+    free(path);
+    return Qnil;
+}
+
+static VALUE
+dir_s_chdir(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE path = Qnil;
+    char *dist = "";
+
+    rb_secure(2);
+    if (rb_scan_args(argc, argv, "01", &path) == 1) {
+	SafeStringValue(path);
+	dist = RSTRING(path)->ptr;
+    }
+    else {
+	dist = getenv("HOME");
+	if (!dist) {
+	    dist = getenv("LOGDIR");
+	    if (!dist) rb_raise(rb_eArgError, "HOME/LOGDIR not set");
+	}
+    }
+
+    if (chdir_blocking > 0) {
+	if (!rb_block_given_p() || rb_thread_current() != chdir_thread)
+	    rb_warn("conflicting chdir during another chdir block");
+    }
+
+    if (rb_block_given_p()) {
+	char *cwd = my_getcwd();
+	chdir_blocking++;
+	if (chdir_thread == Qnil)
+	    chdir_thread = rb_thread_current();
+	dir_chdir(dist);
+	return rb_ensure(rb_yield, path, chdir_restore, (VALUE)cwd);
+    }
+    dir_chdir(dist);
+
+    return INT2FIX(0);
+}
+
+static VALUE
+dir_s_getwd(dir)
+    VALUE dir;
+{
+    char *path = my_getcwd();
+    VALUE cwd = rb_tainted_str_new2(path);
+
+    free(path);
+    return cwd;
+}
+
+static VALUE
+dir_s_chroot(dir, path)
+    VALUE dir, path;
+{
+#if defined(HAVE_CHROOT) && !defined(__CHECKER__)
+    rb_secure(2);
+    SafeStringValue(path);
+
+    if (chroot(RSTRING(path)->ptr) == -1)
+	rb_sys_fail(RSTRING(path)->ptr);
+
+    return INT2FIX(0);
+#else
+    rb_notimplement();
+    return Qnil;		/* not reached */
+#endif
+}
+
+static VALUE
+dir_s_mkdir(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE path, vmode;
+    int mode;
+
+    if (rb_scan_args(argc, argv, "11", &path, &vmode) == 2) {
+	mode = NUM2INT(vmode);
+    }
+    else {
+	mode = 0777;
+    }
+
+    SafeStringValue(path);
+    rb_secure(2);
+#if !defined(NT)
+    if (mkdir(RSTRING(path)->ptr, mode) == -1)
+	rb_sys_fail(RSTRING(path)->ptr);
+#else
+    if (mkdir(RSTRING(path)->ptr) == -1)
+	rb_sys_fail(RSTRING(path)->ptr);
+#endif
+
+    return INT2FIX(0);
+}
+
+static VALUE
+dir_s_rmdir(obj, dir)
+    VALUE obj, dir;
+{
+    SafeStringValue(dir);
+    rb_secure(2);
+    if (rmdir(RSTRING(dir)->ptr) < 0)
+	rb_sys_fail(RSTRING(dir)->ptr);
+
+    return INT2FIX(0);
+}
+
+/* Return nonzero if S has any special globbing chars in it.  */
+static int
+has_magic(s, send, flags)
+     char *s, *send;
+     int flags;
+{
+    register char *p = s;
+    register char c;
+    int open = 0;
+    int escape = !(flags & FNM_NOESCAPE);
+
+    while ((c = *p++) != '\0') {
+	switch (c) {
+	  case '?':
+	  case '*':
+	    return Qtrue;
+
+	  case '[':	/* Only accept an open brace if there is a close */
+	    open++;	/* brace to match it.  Bracket expressions must be */
+	    continue;	/* complete, according to Posix.2 */
+	  case ']':
+	    if (open)
+		return Qtrue;
+	    continue;
+
+	  case '\\':
+	    if (escape && *p++ == '\0')
+		return Qfalse;
+	}
+
+	if (send && p >= send) break;
+    }
+    return Qfalse;
+}
+
+static char*
+extract_path(p, pend)
+    char *p, *pend;
+{
+    char *alloc;
+    int len;
+
+    len = pend - p;
+    alloc = ALLOC_N(char, len+1);
+    memcpy(alloc, p, len);
+    if (len > 1 && pend[-1] == '/'
+#if defined DOSISH
+    && pend[-2] != ':'
+#endif
+    ) {
+	alloc[len-1] = 0;
+    }
+    else {
+	alloc[len] = 0;
+    }
+
+    return alloc;
+}
+
+static char*
+extract_elem(path)
+    char *path;
+{
+    char *pend;
+
+    pend = strchr(path, '/');
+    if (!pend) pend = path + strlen(path);
+
+    return extract_path(path, pend);
+}
+
+static void
+remove_backslashes(p)
+    char *p;
+{
+    char *pend = p + strlen(p);
+    char *t = p;
+
+    while (p < pend) {
+	if (*p == '\\') {
+	    if (++p == pend) break;
+	}
+	*t++ = *p++;
+    }
+    *t = '\0';
+}
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+struct glob_args {
+    void (*func) _((const char*, VALUE));
+    const char *c;
+    VALUE v;
+};
+
+static VALUE glob_func_caller _((VALUE));
+
+static VALUE
+glob_func_caller(val)
+    VALUE val;
+{
+    struct glob_args *args = (struct glob_args *)val;
+    (*args->func)(args->c, args->v);
+    return Qnil;
+}
+
+static int
+glob_call_func(func, path, arg)
+    void (*func) _((const char*, VALUE));
+    const char *path;
+    VALUE arg;
+{
+    int status;
+    struct glob_args args;
+
+    args.func = func;
+    args.c = path;
+    args.v = arg;
+
+    rb_protect(glob_func_caller, (VALUE)&args, &status);
+    return status;
+}
+
+static int
+glob_helper(path, sub, flags, func, arg)
+    char *path;
+    char *sub;
+    int flags;
+    void (*func) _((const char*, VALUE));
+    VALUE arg;
+{
+    struct stat st;
+    char *p, *m;
+    int status = 0;
+
+    p = sub ? sub : path;
+    if (!has_magic(p, 0, flags)) {
+#if defined DOSISH
+	remove_backslashes(path);
+#else
+	if (!(flags & FNM_NOESCAPE)) remove_backslashes(p);
+#endif
+	if (lstat(path, &st) == 0) {
+	    status = glob_call_func(func, path, arg);
+	    if (status) return status;
+	}
+	else if (errno != ENOENT) {
+	    /* In case stat error is other than ENOENT and
+	       we may want to know what is wrong. */
+	    rb_sys_warning(path);
+	}
+	return 0;
+    }
+
+    while (p && !status) {
+	if (*p == '/') p++;
+	m = strchr(p, '/');
+	if (has_magic(p, m, flags)) {
+	    char *dir, *base, *magic, *buf;
+	    DIR *dirp;
+	    struct dirent *dp;
+	    int recursive = 0;
+
+	    struct d_link {
+		char *path;
+		struct d_link *next;
+	    } *tmp, *link = 0;
+
+	    base = extract_path(path, p);
+	    if (path == p) dir = ".";
+	    else dir = base;
+
+	    magic = extract_elem(p);
+	    if (stat(dir, &st) < 0) {
+	        if (errno != ENOENT) rb_sys_warning(dir);
+	        free(base);
+	        free(magic);
+	        break;
+	    }
+	    if (S_ISDIR(st.st_mode)) {
+		if (m && strcmp(magic, "**") == 0) {
+		    int n = strlen(base);
+		    recursive = 1;
+		    buf = ALLOC_N(char, n+strlen(m)+3);
+		    sprintf(buf, "%s%s", base, *base ? m : m+1);
+		    status = glob_helper(buf, buf+n, flags, func, arg);
+		    free(buf);
+		    if (status) goto finalize;
+		}
+		dirp = opendir(dir);
+		if (dirp == NULL) {
+		    rb_sys_warning(dir);
+		    free(base);
+		    free(magic);
+		    break;
+		}
+	    }
+	    else {
+		free(base);
+		free(magic);
+		break;
+	    }
+	    
+#if defined DOSISH
+#define BASE (*base && !((isdirsep(*base) && !base[1]) || (base[1] == ':' && isdirsep(base[2]) && !base[3])))
+#else
+#define BASE (*base && !(*base == '/' && !base[1]))
+#endif
+
+	    for (dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) {
+		if (recursive) {
+		    if (strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
+			continue;
+		    buf = ALLOC_N(char, strlen(base)+NAMLEN(dp)+strlen(m)+6);
+		    sprintf(buf, "%s%s%s", base, (BASE) ? "/" : "", dp->d_name);
+		    if (lstat(buf, &st) < 0) {
+			if (errno != ENOENT) rb_sys_warning(buf);
+			continue;
+		    }
+		    if (S_ISDIR(st.st_mode)) {
+			char *t = buf+strlen(buf);
+		        strcpy(t, "/**");
+			strcpy(t+3, m);
+			status = glob_helper(buf, t, flags, func, arg);
+			free(buf);
+			if (status) break;
+			continue;
+		    }
+		    free(buf);
+		    continue;
+		}
+		if (fnmatch(magic, dp->d_name, flags) == 0) {
+		    buf = ALLOC_N(char, strlen(base)+NAMLEN(dp)+2);
+		    sprintf(buf, "%s%s%s", base, (BASE) ? "/" : "", dp->d_name);
+		    if (!m) {
+			status = glob_call_func(func, buf, arg);
+			free(buf);
+			if (status) break;
+			continue;
+		    }
+		    tmp = ALLOC(struct d_link);
+		    tmp->path = buf;
+		    tmp->next = link;
+		    link = tmp;
+		}
+	    }
+	    closedir(dirp);
+	  finalize:
+	    free(base);
+	    free(magic);
+	    if (link) {
+		while (link) {
+		    if (status == 0) {
+			if (stat(link->path, &st) == 0) {
+			    if (S_ISDIR(st.st_mode)) {
+				int len = strlen(link->path);
+				int mlen = strlen(m);
+				char *t = ALLOC_N(char, len+mlen+1);
+
+				sprintf(t, "%s%s", link->path, m);
+				status = glob_helper(t, t+len, flags, func, arg);
+				free(t);
+			    }
+			}
+			else {
+			    rb_sys_warning(link->path);
+			}
+		    }
+		    tmp = link;
+		    link = link->next;
+		    free(tmp->path);
+		    free(tmp);
+		}
+		break;
+	    }
+	}
+	p = m;
+    }
+    return status;
+}
+
+static void
+rb_glob2(path, flags, func, arg)
+    char *path;
+    int flags;
+    void (*func) _((const char*, VALUE));
+    VALUE arg;
+{
+    int status = glob_helper(path, 0, flags, func, arg);
+    if (status) rb_jump_tag(status);
+}
+
+void
+rb_glob(path, func, arg)
+    char *path;
+    void (*func) _((const char*, VALUE));
+    VALUE arg;
+{
+    rb_glob2(path, 0, func, arg);
+}
+
+void
+rb_globi(path, func, arg)
+    char *path;
+    void (*func) _((const char*, VALUE));
+    VALUE arg;
+{
+    rb_glob2(path, FNM_CASEFOLD, func, arg);
+}
+
+static void
+push_pattern(path, ary)
+    const char *path;
+    VALUE ary;
+{
+    VALUE str = rb_tainted_str_new2(path);
+
+    if (ary) {
+	rb_ary_push(ary, str);
+    }
+    else {
+	rb_yield(str);
+    }
+}
+
+static void
+push_globs(ary, s, flags)
+    VALUE ary;
+    char *s;
+    int flags;
+{
+    rb_glob2(s, flags, push_pattern, ary);
+}
+
+static void
+push_braces(ary, s, flags)
+    VALUE ary;
+    char *s;
+    int flags;
+{
+    char *buf;
+    char *p, *t, *b;
+    char *lbrace, *rbrace;
+    int nest = 0;
+
+    p = s;
+    lbrace = rbrace = 0;
+    while (*p) {
+	if (*p == '{') {
+	    lbrace = p;
+	    break;
+	}
+	p++;
+    }
+    while (*p) {
+	if (*p == '{') nest++;
+	if (*p == '}' && --nest == 0) {
+	    rbrace = p;
+	    break;
+	}
+	p++;
+    }
+
+    if (lbrace) {
+	int len = strlen(s);
+	buf = xmalloc(len + 1);
+	memcpy(buf, s, lbrace-s);
+	b = buf + (lbrace-s);
+	p = lbrace;
+	while (*p != '}') {
+	    t = p + 1;
+	    for (p = t; *p!='}' && *p!=','; p++) {
+		/* skip inner braces */
+		if (*p == '{') while (*p!='}') p++;
+	    }
+	    memcpy(b, t, p-t);
+	    strcpy(b+(p-t), rbrace+1);
+	    push_braces(ary, buf, flags);
+	}
+	free(buf);
+    }
+    else {
+	push_globs(ary, s, flags);
+    }
+}
+
+#define isdelim(c) ((c)=='\0')
+
+static VALUE
+rb_push_glob(str, flags)
+    VALUE str;
+    int flags;
+{
+    char *p, *pend;
+    char *buf;
+    char *t;
+    int nest, maxnest;
+    int noescape = flags & FNM_NOESCAPE;
+    VALUE ary;
+
+    if (rb_block_given_p())
+	ary = 0;
+    else
+	ary = rb_ary_new();
+
+    SafeStringValue(str);
+    buf = xmalloc(RSTRING(str)->len + 1);
+
+    p = RSTRING(str)->ptr;
+    pend = p + RSTRING(str)->len;
+
+    while (p < pend) {
+	t = buf;
+	nest = maxnest = 0;
+	while (p < pend && isdelim(*p)) p++;
+	while (p < pend && !isdelim(*p)) {
+	    if (*p == '{') nest++, maxnest++;
+	    if (*p == '}') nest--;
+	    if (!noescape && *p == '\\') {
+		*t++ = *p++;
+		if (p == pend) break;
+	    }
+	    *t++ = *p++;
+	}
+	*t = '\0';
+	if (maxnest == 0) {
+	    push_globs(ary, buf, flags);
+	}
+	else if (nest == 0) {
+	    push_braces(ary, buf, flags);
+	}
+	/* else unmatched braces */
+    }
+    free(buf);
+
+    return ary;
+}
+
+static VALUE
+dir_s_aref(obj, str)
+    VALUE obj, str;
+{
+    return rb_push_glob(str, 0);
+}
+
+static VALUE
+dir_s_glob(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE str, rflags;
+    int flags;
+
+    if (rb_scan_args(argc, argv, "11", &str, &rflags) == 2)
+	flags = NUM2INT(rflags);
+    else
+	flags = 0;
+
+    return rb_push_glob(str, flags);
+}
+
+static VALUE
+dir_foreach(io, dirname)
+    VALUE io, dirname;
+{
+    VALUE dir;
+
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+    rb_ensure(dir_each, dir, dir_close, dir);
+    return Qnil;
+}
+
+static VALUE
+dir_entries(io, dirname)
+    VALUE io, dirname;
+{
+    VALUE dir;
+
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+    return rb_ensure(rb_Array, dir, dir_close, dir);
+}
+
+static VALUE
+file_s_fnmatch(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE pattern, path;
+    VALUE rflags;
+    int flags;
+
+    if (rb_scan_args(argc, argv, "21", &pattern, &path, &rflags) == 3)
+	flags = NUM2INT(rflags);
+    else
+	flags = 0;
+
+    StringValue(pattern);
+    StringValue(path);
+
+    if (fnmatch(RSTRING(pattern)->ptr, RSTRING(path)->ptr, flags) == 0)
+	return Qtrue;
+
+    return Qfalse;
+}
+
+void
+Init_Dir()
+{
+    rb_cDir = rb_define_class("Dir", rb_cObject);
+
+    rb_include_module(rb_cDir, rb_mEnumerable);
+
+    rb_define_singleton_method(rb_cDir, "allocate", dir_s_alloc, 0);
+    rb_define_singleton_method(rb_cDir, "open", dir_s_open, 1);
+    rb_define_singleton_method(rb_cDir, "foreach", dir_foreach, 1);
+    rb_define_singleton_method(rb_cDir, "entries", dir_entries, 1);
+
+    rb_define_method(rb_cDir,"initialize", dir_initialize, 1);
+    rb_define_method(rb_cDir,"path", dir_path, 0);
+    rb_define_method(rb_cDir,"read", dir_read, 0);
+    rb_define_method(rb_cDir,"each", dir_each, 0);
+    rb_define_method(rb_cDir,"rewind", dir_rewind, 0);
+    rb_define_method(rb_cDir,"tell", dir_tell, 0);
+    rb_define_method(rb_cDir,"seek", dir_seek, 1);
+    rb_define_method(rb_cDir,"pos", dir_tell, 0);
+    rb_define_method(rb_cDir,"pos=", dir_set_pos, 1);
+    rb_define_method(rb_cDir,"close", dir_close, 0);
+
+    rb_define_singleton_method(rb_cDir,"chdir", dir_s_chdir, -1);
+    rb_define_singleton_method(rb_cDir,"getwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"pwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"chroot", dir_s_chroot, 1);
+    rb_define_singleton_method(rb_cDir,"mkdir", dir_s_mkdir, -1);
+    rb_define_singleton_method(rb_cDir,"rmdir", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"delete", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"unlink", dir_s_rmdir, 1);
+
+    rb_define_singleton_method(rb_cDir,"glob", dir_s_glob, -1);
+    rb_define_singleton_method(rb_cDir,"[]", dir_s_aref, 1);
+
+    rb_define_singleton_method(rb_cFile,"fnmatch", file_s_fnmatch, -1);
+    rb_define_singleton_method(rb_cFile,"fnmatch?", file_s_fnmatch, -1);
+
+    rb_file_const("FNM_NOESCAPE", INT2FIX(FNM_NOESCAPE));
+    rb_file_const("FNM_PATHNAME", INT2FIX(FNM_PATHNAME));
+    rb_file_const("FNM_DOTMATCH", INT2FIX(FNM_DOTMATCH));
+    rb_file_const("FNM_CASEFOLD", INT2FIX(FNM_CASEFOLD));
+}
+@
+
+
+1.75
+log
+@* dir.c (glob_func_caller): add prototype to get rid of warning.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/12 09:11:12 $
+d792 1
+a792 1
+			if (status) goto finalize;
+d804 1
+a804 1
+			if (status) goto finalize;
+d813 1
+a814 1
+	    closedir(dirp);
+@
+
+
+1.74
+log
+@* dir.c (glob_helper): should pass matched path.  (ruby-bugs-ja:PR#333)
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/12 08:48:57 $
+d662 2
+d665 2
+a666 2
+glob_func_caller(args)
+    struct glob_args *args;
+d668 1
+@
+
+
+1.73
+log
+@* dir.c (glob_helper): fixed freeing buffer.  (ruby-bugs-ja:PR#332)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/09/12 06:27:13 $
+d799 1
+a799 1
+			status = glob_call_func(func, path, arg);
+@
+
+
+1.72
+log
+@* dir.c (glob_helper): prevent memory leak using rb_protect().
+
+* string.c (rb_str_associate): no need to check freeze flag.
+
+* string.c (rb_str_resize): should honor STR_ASSOC flag on
+  resize.
+
+* string.c (rb_str_resize): proper STR_ASSOC handling.  pointed
+  out by Michal Rokos.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* string.c (rb_str_cat): ditto.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_append): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/06/15 10:24:38 $
+d790 1
+d800 1
+@
+
+
+1.71
+log
+@* dir.c (glob_helper): Use lstat() instead of stat() so it catches
+  a dead symlink.  Given a dead symlink named "a", Dir.glob("?")
+  did catch it but Dir.glob("a") somehow didn't.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/05/11 01:53:48 $
+d656 32
+a687 1
+static void
+d697 1
+d707 2
+a708 1
+	    (*func)(path, arg);
+d715 1
+a715 1
+	return;
+d718 1
+a718 1
+    while (p) {
+d740 1
+d749 1
+a749 1
+		    glob_helper(buf, buf+n, flags, func, arg);
+d751 1
+d757 1
+d763 1
+d787 3
+a789 1
+			glob_helper(buf, t, flags, func, arg);
+d798 2
+a799 2
+			(*func)(buf, arg);
+			free(buf);
+d808 1
+d814 14
+a827 9
+		    if (stat(link->path, &st) == 0) {
+			if (S_ISDIR(st.st_mode)) {
+			    int len = strlen(link->path);
+			    int mlen = strlen(m);
+			    char *t = ALLOC_N(char, len+mlen+1);
+
+			    sprintf(t, "%s%s", link->path, m);
+			    glob_helper(t, t+len, flags, func, arg);
+			    free(t);
+a829 3
+		    else {
+			rb_sys_warning(link->path);
+		    }
+d840 1
+d850 2
+a851 1
+    glob_helper(path, 0, flags, func, arg);
+@
+
+
+1.70
+log
+@* dir.c (glob_helper): remove escaping backslashes.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/05/04 00:06:19 $
+d674 1
+a674 1
+	if (stat(path, &st) == 0) {
+@
+
+
+1.69
+log
+@Back out the previous commit which was incorrect.  I misread the
+specification.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/03 22:39:40 $
+a639 1
+#if defined DOSISH
+a649 1
+#endif
+d669 1
+d671 3
+@
+
+
+1.68
+log
+@* dir.c (fnmatch): Make PERIOD() independent of FNM_PATHNAME.
+  This fixes a bug where fnmatch('/?a', '/.a', 0) returned true.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/04/18 08:46:17 $
+d144 1
+a144 1
+		  ((s) == string || isdirsep((s)[-1])))
+@
+
+
+1.67
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 09:58:39 $
+d144 1
+a144 1
+		  ((s) == string || ISDIRSEP((s)[-1])))
+@
+
+
+1.66
+log
+@* dir.c (glob_helper): should have proceed link when link->path
+  was non existing symbolic link.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/25 09:08:15 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d316 1
+a316 1
+#define GetDIR(obj, dirp) {\
+d319 1
+a319 1
+}
+@
+
+
+1.65
+log
+@* regex.c (mbc_startpos_func): VC6 seems to be unable to
+  understand forward declaration for static variables.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/25 08:21:01 $
+a781 4
+			tmp = link;
+			link = link->next;
+			free(tmp->path);
+			free(tmp);
+d786 4
+@
+
+
+1.64
+log
+@* dir.c (rb_push_glob): local variable 'maxnest' was
+  uninitialized.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/25 06:18:04 $
+d912 1
+a912 1
+    int nest, maxnest = 0;
+d929 1
+a929 1
+	nest = 0;
+@
+
+
+1.63
+log
+@* ext/socket/socket.c (bsock_do_not_rev_lookup_set): should not be
+  allowed when $SAFE > 3.
+
+* eval.c (rb_thread_ready): THREAD_TO_KILL threads should not turn
+  into THREAD_RUNNABLE on wakeup.
+
+* eval.c (rb_thread_list): THREAD_TO_KILL threads should be in the
+  list.
+
+* eval.c (thgroup_list): ditto; by moving gid clearance from
+  rb_thread_cleanup().
+
+* dir.c (fnmatch): "*/bar" (with FNM_PATHNAME flag) does not
+  match "foo/bar".
+
+* io.c (read_all): files on /proc filesystem with zero stat size,
+  may have contents.
+
+* ext/socket/socket.c (tcp_s_gethostbyname): refactored.
+
+* ext/socket/socket.c (sock_s_gethostbyname): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/13 23:59:41 $
+d912 1
+a912 1
+    int nest, maxnest;
+@
+
+
+1.62
+log
+@* dir.c (rb_push_glob): avoid SEGV when no block given.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/03/13 10:11:09 $
+d181 2
+a182 1
+		if (s)
+d184 1
+@
+
+
+1.61
+log
+@* dir.c: FNM_PERIOD is obsoleted and FNM_DOTMATCH is introduced
+  instead, which has the opposite meaning of FNM_PERIOD.
+
+* dir.c: Dir::glob now accepts optional FNM_* flags via the second
+  argument, whereas Dir::[] doesn't.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/18 09:52:45 $
+d915 1
+a915 1
+	ary = Qnil;
+@
+
+
+1.60
+log
+@* parse.y (expr_value, arg_value, primary_value): value_expr()
+  check in place.
+
+* eval.c (block_pass): "&nil" should clear block given.
+
+* dir.c (push_braces): remove MAXPATHLEN dependency.
+
+* dir.c (dir_s_globd): ditto.
+
+* dln.c (init_funcname): ditto.
+
+* dln.c (load_1): ditto.
+
+* dln.c (dln_load): ditto.
+
+* configure.in: add GNU/Hurd switches.
+
+* pack.c (pack_pack): allows comment in template strings.
+
+* pack.c (pack_unpack): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:01:09 $
+d72 1
+a72 1
+#define FNM_PERIOD	0x04
+d156 1
+a156 1
+    int period = flags & FNM_PERIOD;
+d191 1
+a191 1
+		    !fnmatch(pat, s, flags & ~FNM_PERIOD))
+d796 10
+d812 1
+a812 1
+    glob_helper(path, 0, FNM_PERIOD, func, arg);
+d821 1
+a821 1
+    glob_helper(path, 0, FNM_PERIOD|FNM_CASEFOLD, func, arg);
+a823 2
+static void push_pattern _((const char *path, VALUE ary));
+
+d840 1
+a840 1
+push_globs(ary, s)
+d843 1
+d845 1
+a845 1
+    rb_glob(s, push_pattern, ary);
+d849 1
+a849 1
+push_braces(ary, s)
+d852 1
+d891 1
+a891 1
+	    push_braces(ary, buf);
+d896 1
+a896 1
+	push_globs(ary, s);
+d903 3
+a905 2
+dir_s_glob(dir, str)
+    VALUE dir, str;
+d910 8
+a917 2
+    int nest;
+    VALUE ary = 0;
+a919 3
+    if (!rb_block_given_p()) {
+	ary = rb_ary_new();
+    }
+d930 3
+a932 3
+	    if (*p == '{') nest+=2;
+	    if (*p == '}') nest+=3;
+	    if (*p == '\\') {
+d939 2
+a940 2
+	if (nest == 0) {
+	    push_globs(ary, buf);
+d942 2
+a943 2
+	else if (nest % 5 == 0) {
+	    push_braces(ary, buf);
+d948 26
+a973 4
+    if (ary) {
+	return ary;
+    }
+    return Qnil;
+d1053 2
+a1054 2
+    rb_define_singleton_method(rb_cDir,"glob", dir_s_glob, 1);
+    rb_define_singleton_method(rb_cDir,"[]", dir_s_glob, 1);
+d1061 1
+a1061 1
+    rb_file_const("FNM_PERIOD", INT2FIX(FNM_PERIOD));
+@
+
+
+1.59
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/25 08:22:04 $
+d844 1
+a844 1
+    char buffer[MAXPATHLEN], *buf = buffer;
+d869 1
+a869 2
+	if (len >= MAXPATHLEN)
+	    buf = xmalloc(len + 1);
+d883 1
+a883 2
+	if (buf != buffer)
+	    free(buf);
+d897 1
+a897 1
+    char buffer[MAXPATHLEN], *buf;
+d906 1
+a906 5
+    if (RSTRING(str)->len >= MAXPATHLEN) {
+	buf = xmalloc(RSTRING(str)->len + 1);
+    } else {
+	buf = buffer;
+    }
+d933 1
+a933 2
+    if (buf != buffer)
+	free(buf);
+@
+
+
+1.58
+log
+@* class.c (rb_include_module): detect cyclic module inclusion.
+
+* eval.c (rb_thread_cleanup): need not to free thread stacks at
+  process termination.
+
+* array.c (rb_ary_fetch): use the block to get the default value
+  if the block is given.
+
+* eval.c (rb_thread_schedule): should check time only if BOTH
+  WAIT_SELECT and WAIT_TIME.
+
+* eval.c (umethod_bind): should update rklass field.
+
+* hash.c (rb_hash_update): if a block is given, yields [key,
+  value1, value2] to the block to resolve conflict.
+
+* string.c (rb_str_split_m): no need to consider KANJI
+characters, if the length of separator is 1 (byte).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/21 07:44:05 $
+a941 3
+	if (RARRAY(ary)->len == 0) {
+	    rb_warning("no matches found: %s", RSTRING(str)->ptr);
+	}
+@
+
+
+1.57
+log
+@* eval.c (ruby_stop): should not trace error handler.
+
+* signal.c (install_sighandler): do not install sighandler unless
+  the old value is SIG_DFL.
+
+* io.c (io_write): should not raise exception on O_NONBLOCK io.
+
+* dir.c (dir_set_pos): seek should return dir, pos= should not.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/18 14:23:06 $
+d737 1
+a737 1
+		    sprintf(buf, "%s%s%s", base, (BASE)?"/":"", dp->d_name);
+d753 1
+a753 1
+		    sprintf(buf, "%s%s%s", base, (BASE)?"/":"", dp->d_name);
+@
+
+
+1.56
+log
+@* io.c (rb_io_s_new): block check moved from initialize to this
+  method.
+
+* io.c (rb_io_s_open): open should call initialize too. IO#for_fd
+  also calls initialize. [new]
+
+* error.c (rb_sys_fail): replace INT2FIX() by INT2NUM() since
+  errno value may not fit in Fixnum size on Hurd.
+
+* error.c (set_syserr): ditto.
+
+* dir.c (dir_s_glob): returns nil if block given.
+
+* io.c (rb_io_each_byte): should return self.
+
+* io.c (rb_io_close_m): close check added.
+
+* dir.c (dir_seek): should return pos.
+
+* parse.y (fixpos): orig may be (NODE*)1, which should not be
+  dereferenced.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/08 06:43:08 $
+d392 1
+a392 1
+    return pos;
+d399 8
+d1015 1
+a1015 1
+    rb_define_method(rb_cDir,"pos=", dir_seek, 1);
+@
+
+
+1.55
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d392 1
+a392 1
+    return dir;
+d933 5
+a937 2
+    if (ary && RARRAY(ary)->len == 0) {
+	rb_warning("no matches found: %s", RSTRING(str)->ptr);
+d939 1
+a939 1
+    return ary;
+@
+
+
+1.54
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/19 06:54:10 $
+d64 2
+d435 1
+a435 1
+    const char *path;
+d441 1
+a444 6
+#ifdef HAVE_GETCWD
+#define GETCWD(path) if (getcwd(path, sizeof(path)) == 0) rb_sys_fail(path)
+#else
+#define GETCWD(path) if (getwd(path) == 0) rb_sys_fail(path)
+#endif
+
+d473 1
+a473 3
+	char cwd[MAXPATHLEN];
+
+	GETCWD(cwd);
+d489 2
+a490 1
+    char path[MAXPATHLEN];
+d492 2
+a493 2
+    GETCWD(path);
+    return rb_tainted_str_new2(path);
+@
+
+
+1.53
+log
+@* string.c (rb_str_init): String.new() => ""
+
+* dir.c (dir_path): new method.
+
+* dir.c (dir_initialize): wrap DIR into struct, along with path
+  information.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/08 14:17:09 $
+d252 1
+a252 3
+dir_s_new(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+a259 1
+    rb_obj_call_init(obj, argc, argv);
+d995 1
+a995 1
+    rb_define_singleton_method(rb_cDir, "new", dir_s_new, -1);
+@
+
+
+1.52
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/09/06 08:48:07 $
+d237 5
+d244 1
+a244 1
+    DIR *dir;
+d246 1
+a246 1
+    if (dir) closedir(dir);
+d257 2
+a258 1
+    VALUE obj = Data_Wrap_Struct(klass, 0, free_dir, 0);
+d260 2
+d271 1
+a271 1
+    DIR *dirp;
+d274 7
+a280 4
+    if (DATA_PTR(dir)) closedir(DATA_PTR(dir));
+    DATA_PTR(dir) = NULL;
+    dirp = opendir(RSTRING(dirname)->ptr);
+    if (dirp == NULL) {
+d283 1
+a283 1
+	    dirp = opendir(RSTRING(dirname)->ptr);
+d285 1
+a285 1
+	if (dirp == NULL) {
+d289 1
+a289 1
+    DATA_PTR(dir) = dirp;
+d298 2
+a299 1
+    VALUE dir = Data_Wrap_Struct(klass, 0, free_dir, 0);
+d316 13
+a328 2
+    Data_Get_Struct(obj, DIR, dirp);\
+    if (dirp == NULL) dir_closed();\
+d335 1
+a335 1
+    DIR *dirp;
+d340 2
+a341 2
+    dp = readdir(dirp);
+    if (dp)
+d343 1
+d357 1
+a357 1
+    DIR *dirp;
+d361 1
+a361 1
+    for (dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) {
+d363 1
+a363 1
+	if (DATA_PTR(dir) == NULL) dir_closed();
+d373 1
+a373 1
+    DIR *dirp;
+d377 1
+a377 1
+    pos = telldir(dirp);
+d388 1
+a388 1
+    DIR *dirp;
+d392 1
+a392 1
+    seekdir(dirp, NUM2INT(pos));
+d403 1
+a403 1
+    DIR *dirp;
+d406 1
+a406 1
+    rewinddir(dirp);
+d414 1
+a414 1
+    DIR *dirp;
+d416 3
+a418 4
+    Data_Get_Struct(dir, DIR, dirp);
+    if (dirp == NULL) dir_closed();
+    closedir(dirp);
+    DATA_PTR(dir) = NULL;
+d1004 1
+@
+
+
+1.51
+log
+@* dir.c (dir_s_chdir): raise if environment variable HOME/LOGDIR
+  not set.
+
+* dir.c (glob_helper): avoid infinite loop on a file name with
+  wildcard characters. (ruby-bugs#PR177)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/14 15:17:18 $
+d78 7
+d94 1
+a94 1
+	s++;
+@
+
+
+1.50
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+d439 1
+d626 1
+a626 1
+glob_helper(path, flags, func, arg)
+d628 1
+d636 2
+a637 1
+    if (!has_magic(path, 0, flags)) {
+a649 1
+    p = path;
+d676 1
+d678 1
+a678 1
+		    buf = ALLOC_N(char, strlen(base)+strlen(m)+3);
+d680 1
+a680 1
+		    glob_helper(buf, flags, func, arg);
+d712 4
+a715 3
+		        strcat(buf, "/**");
+			strcat(buf, m);
+			glob_helper(buf, flags, func, arg);
+d746 1
+a746 1
+			    glob_helper(t, flags, func, arg);
+d771 1
+a771 1
+    glob_helper(path, FNM_PERIOD, func, arg);
+d780 1
+a780 1
+    glob_helper(path, FNM_PERIOD|FNM_CASEFOLD, func, arg);
+@
+
+
+1.49
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/06/13 10:51:39 $
+d402 1
+d409 2
+d442 4
+a445 2
+    if (chdir_blocking > 0)
+	rb_warn("chdir during chdir block");
+d452 2
+d628 1
+a628 1
+    void (*func)();
+d773 1
+a773 1
+    void (*func)();
+@
+
+
+1.48
+log
+@* dir.c (Init_Dir): add a new method File::fnmatch? along with
+  File::Constants::FNM_*.  While I am here, FNM_NOCASE is renamed
+  to FNM_CASEFOLD which is commonly used by *BSD and GNU libc.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/27 17:24:24 $
+d541 2
+a542 2
+	  case '[':		/* Only accept an open brace if there is a close */
+	    open++;		/* brace to match it.  Bracket expressions must be */
+d599 1
+d610 1
+d850 1
+a850 1
+#define isdelim(c) ((c)==' '||(c)=='\t'||(c)=='\n'||(c)=='\0')
+@
+
+
+1.47
+log
+@* dir.c (glob_helper): teach has_magic() to handle flags and get
+  glob_helper to properly support FNM_NOESCAPE.
+
+* dir.c (fnmatch): fix a bug when FNM_PATHNAME and FNM_PERIOD are
+  specified at the same time.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/16 09:05:49 $
+d71 1
+a71 1
+#define FNM_NOCASE	0x08
+d103 1
+a103 1
+    int nocase = flags & FNM_NOCASE;
+d148 1
+a148 1
+    int nocase = flags & FNM_NOCASE;
+d767 1
+a767 1
+    glob_helper(path, FNM_PERIOD|FNM_NOCASE, func, arg);
+d924 24
+d981 8
+@
+
+
+1.46
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:24:54 $
+d133 1
+d135 1
+a135 1
+		  ((s) == string || pathname && isdirsep(*(s))))
+d153 1
+a153 1
+	    if (!*s || pathname && isdirsep(*s) || PERIOD(s))
+d170 1
+a170 1
+	    else if (pathname && isdirsep(c)) {
+d184 1
+a184 1
+		else if (pathname && isdirsep(*s))
+d191 1
+a191 1
+	    if (!*s || pathname && isdirsep(*s) || PERIOD(s))
+d215 1
+a215 1
+	    if (pathname && isdirsep(c) && isdirsep(*s))
+d526 1
+a526 1
+has_magic(s, send)
+d528 1
+d533 1
+d550 1
+a550 1
+	    if (*p++ == '\0')
+d616 1
+a616 1
+glob_helper(path, flag, func, arg)
+d618 1
+a618 1
+    int flag;
+d625 1
+a625 1
+    if (!has_magic(path, 0)) {
+d642 1
+a642 1
+	if (has_magic(p, m)) {
+d668 1
+a668 1
+		    glob_helper(buf, flag, func, arg);
+d702 1
+a702 1
+			glob_helper(buf, flag, func, arg);
+d707 1
+a707 1
+		if (fnmatch(magic, dp->d_name, flag) == 0) {
+d733 1
+a733 1
+			    glob_helper(t, flag, func, arg);
+d855 1
+a855 1
+    char buffer[MAXPATHLEN], *buf = buffer;
+d866 2
+@
+
+
+1.45
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/06 15:01:58 $
+d601 1
+a601 2
+	    *p++;
+	    if (p == pend) break;
+@
+
+
+1.44
+log
+@forgot some checkins.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/05/02 12:07:30 $
+d137 2
+a138 2
+    char *pat;
+    char *string;
+d143 1
+a143 1
+    char *s = string;
+@
+
+
+1.43
+log
+@* dir.c (rb_glob, rb_globi): remove unnecessary FNM_PATHNAME.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/02 04:22:10 $
+d753 1
+a753 1
+    void (*func)();
+d768 2
+d772 1
+a772 1
+    char *path;
+@
+
+
+1.42
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/04/01 16:22:12 $
+d756 1
+a756 1
+    glob_helper(path, FNM_PERIOD|FNM_PATHNAME, func, arg);
+d765 1
+a765 1
+    glob_helper(path, FNM_PERIOD|FNM_PATHNAME|FNM_NOCASE, func, arg);
+@
+
+
+1.41
+log
+@* win32/win32.c: use ruby's opendir on mingw32.
+* win32/dir.h, dir.c, Makefile: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/03/28 08:43:24 $
+d257 1
+a257 1
+    SafeStr(dirname);
+d428 1
+a428 1
+	SafeStr(path);
+d470 1
+a470 1
+    SafeStr(path);
+d498 1
+a498 1
+    SafeStr(path);
+d515 1
+a515 1
+    SafeStr(dir);
+d856 1
+a856 1
+    SafeStr(str);
+d860 1
+a860 1
+    if (RSTRING(str)->len >= MAXPATHLEN)
+d862 1
+@
+
+
+1.40
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 03:51:23 $
+d29 1
+a29 1
+#if HAVE_DIRENT_H
+d32 1
+a32 1
+#elif HAVE_DIRECT_H
+d47 1
+a47 1
+# if defined(NT) && defined(_MSC_VER)
+@
+
+
+1.39
+log
+@* ruby.h: rb_sys_stat -> stat
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 03:41:41 $
+d257 1
+a257 1
+    Check_SafeStr(dirname);
+d428 1
+a428 1
+	Check_SafeStr(path);
+d470 1
+a470 1
+    Check_SafeStr(path);
+d498 1
+a498 1
+    Check_SafeStr(path);
+d515 1
+a515 1
+    Check_SafeStr(dir);
+d856 1
+a856 1
+    Check_SafeStr(str);
+@
+
+
+1.38
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/20 14:50:42 $
+d65 1
+a65 1
+#define lstat rb_sys_stat
+d625 1
+a625 1
+	if (rb_sys_stat(path, &st) == 0) {
+d656 1
+a656 1
+	    if (rb_sys_stat(dir, &st) < 0) {
+d724 1
+a724 1
+		    if (rb_sys_stat(link->path, &st) == 0) {
+@
+
+
+1.37
+log
+@* win32/win32.c (win32_stat): UNC support.
+* dir.c (extract_path): fix "./*" problem.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/03/19 03:20:20 $
+d65 1
+a65 1
+#define lstat stat
+a612 2
+#define GLOB_RECURSIVE 0x10
+
+d625 1
+a625 1
+	if (stat(path, &st) == 0) {
+d628 1
+a628 1
+	else if (!(flag & GLOB_RECURSIVE)) {
+d656 2
+a657 2
+	    if (stat(dir, &st) < 0) {
+	        rb_sys_warning(dir);
+d666 1
+a666 1
+		    glob_helper(buf, flag|GLOB_RECURSIVE, func, arg);
+d694 1
+a694 1
+		        rb_sys_warning(buf);
+d700 1
+a700 1
+			glob_helper(buf, flag|GLOB_RECURSIVE, func, arg);
+d722 19
+a740 10
+	    while (link) {
+		if (stat(link->path, &st) == 0) {
+		    if (S_ISDIR(st.st_mode)) {
+			int len = strlen(link->path);
+			int mlen = strlen(m);
+			char *t = ALLOC_N(char, len+mlen+1);
+
+			sprintf(t, "%s%s", link->path, m);
+			glob_helper(t, flag|GLOB_RECURSIVE, func, arg);
+			free(t);
+a741 7
+		    tmp = link;
+		    link = link->next;
+		    free(tmp->path);
+		    free(tmp);
+		}
+		else {
+		    rb_sys_warning(link->path);
+d743 1
+d760 1
+a760 1
+rb_iglob(path, func, arg)
+d890 3
+@
+
+
+1.36
+log
+@* dir.c (glob_helper): replace lstat() by stat() to follow symlink
+  in the case like 'symlink/*'.
+
+* dir.c (glob_helper): gave warning too much.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/16 08:30:09 $
+d568 1
+a568 1
+    && len > 2 && pend[-2] != ':'
+@
+
+
+1.35
+log
+@* dir.c (dir_s_chdir): block form of Dir.chdir. (RCR#U016).
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/13 07:57:53 $
+d48 1
+a48 1
+#  include "missing/dir.h"
+d65 1
+a65 1
+#define lstat rb_sys_stat
+d613 1
+d615 2
+a616 2
+void
+rb_glob_helper(path, flag, func, arg)
+d627 1
+a627 1
+	if (rb_sys_stat(path, &st) == 0) {
+d630 1
+a630 1
+	else {
+d658 1
+a658 1
+	    if (lstat(dir, &st) < 0) {
+d668 1
+a668 1
+		    rb_glob_helper(buf, flag, func, arg);
+d671 6
+a676 6
+	       dirp = opendir(dir);
+	       if (dirp == NULL) {
+		   rb_sys_warning(dir);
+		   free(base);
+		   break;
+	       }
+d694 1
+a694 1
+		    sprintf(buf, "%s%s%s/", base, (BASE)?"/":"", dp->d_name);
+d700 1
+a700 1
+		        strcat(buf, "**");
+d702 1
+a702 1
+			rb_glob_helper(buf, flag, func, arg);
+d725 1
+a725 1
+		if (lstat(link->path, &st) == 0) {
+d732 1
+a732 1
+			rb_glob_helper(t, flag, func, arg);
+d755 1
+a755 1
+    rb_glob_helper(path, FNM_PERIOD|FNM_PATHNAME, func, arg);
+d764 1
+a764 1
+    rb_glob_helper(path, FNM_PERIOD|FNM_PATHNAME|FNM_NOCASE, func, arg);
+@
+
+
+1.34
+log
+@* dir.c (rb_glob_helper): fix drive letter handling on DOSISH.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/28 06:30:03 $
+d392 25
+d423 1
+a423 1
+    VALUE path;
+d438 12
+a449 2
+    if (chdir(dist) < 0)
+	rb_sys_fail(dist);
+d460 1
+a460 7
+#ifdef HAVE_GETCWD
+    if (getcwd(path, sizeof(path)) == 0) rb_sys_fail(path);
+#else
+    extern char *getwd();
+    if (getwd(path) == 0) rb_sys_fail(path);
+#endif
+
+@
+
+
+1.33
+log
+@* string.c (rb_str_delete_bang): delete! should take at least 1
+  argument.
+
+* ruby.c (load_file): add rb_gc() after loading to avoid
+  extraordinary memory growth.
+
+* dir.c (rb_glob_helper): "./foo" should match "foo", not "./foo".
+
+* eval.c (ev_const_get): retrieve Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* eval.c (ev_const_defined): check Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* time.c (time_timeval): negative time interval shoule not be
+  allowed.
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+
+* eval.c (rb_yield_0): should check based on rb_block_given_p()
+  and rb_f_block_given_p().
+
+* configure.in (frame-address): --enable-frame-address to allow
+  __builtin_frame_address() to be used.
+
+* eval.c (stack_length): use __builtin_frame_address() based on
+  the macro USE_BUILTIN_FRAME_ADDRESS.
+
+* gc.c (rb_gc): ditto.
+
+* gc.c (Init_stack): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/27 07:52:11 $
+d537 5
+a541 1
+    if (len > 1 && pend[-1] == '/') {
+d653 3
+d657 1
+@
+
+
+1.32
+log
+@* time.c (time_timeval): negative time interval shoule not be
+  allowed.
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/19 09:14:58 $
+d633 1
+a633 1
+		    sprintf(buf, "%s%s%s", base, (*base)?"":".", m);
+@
+
+
+1.31
+log
+@* string.c (rb_str_substr): "a"[1,2] should return ""; need
+  rubicon upgrade.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/15 06:00:55 $
+d283 1
+a283 2
+	rb_ensure(rb_yield, dir, dir_close, dir);
+	return Qnil;
+@
+
+
+1.30
+log
+@* process.c (proc_waitall): new method based on a patch from Brian
+  Fundakowski Feldman <green@@green.dyndns.org>.
+
+* process.c (last_status_set): objectify $? value (Process::Status).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d597 5
+a624 7
+	    if (m && strcmp(magic, "**") == 0) {
+		recursive = 1;
+		buf = ALLOC_N(char, strlen(base)+strlen(m)+3);
+		sprintf(buf, "%s%s%s", base, (*base)?"":".", m);
+		rb_glob_helper(buf, flag, func, arg);
+		free(buf);
+	    }
+d626 1
+d631 7
+d640 1
+d646 2
+a647 2
+	      free(base);
+	      break;
+d657 10
+a666 2
+		    sprintf(buf, "%s%s%s/**%s", base, (BASE)?"/":"", dp->d_name, m);
+		    rb_glob_helper(buf, flag, func, arg);
+d688 17
+a704 9
+		lstat(link->path, &st); /* should success */
+		if (S_ISDIR(st.st_mode)) {
+		    int len = strlen(link->path);
+		    int mlen = strlen(m);
+		    char *t = ALLOC_N(char, len+mlen+1);
+
+		    sprintf(t, "%s%s", link->path, m);
+		    rb_glob_helper(t, flag, func, arg);
+		    free(t);
+a705 4
+		tmp = link;
+		link = link->next;
+		free(tmp->path);
+		free(tmp);
+@
+
+
+1.29
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/02/13 14:15:39 $
+d561 1
+a561 1
+remove_backslases(p)
+d593 1
+a593 1
+	remove_backslases(path);
+@
+
+
+1.28
+log
+@* dir.c (lstat): should use rb_sys_stat if lstat(2) is not
+available.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/13 05:08:59 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+d560 17
+d581 1
+d593 1
+d716 8
+a723 1
+    rb_ary_push(ary, rb_tainted_str_new2(path));
+d797 1
+a797 1
+    VALUE ary;
+d800 3
+a802 1
+    ary = rb_ary_new();
+d816 4
+a832 8
+    if (rb_block_given_p()) {
+	long len = RARRAY(ary)->len;
+	VALUE *ptr = RARRAY(ary)->ptr;
+
+	while (len--) {
+	    rb_yield(*ptr++);
+	}
+    }
+@
+
+
+1.27
+log
+@* io.c (rb_io_ctl): do not call ioctl/fcntl for f2, if f and f2
+  have same fileno.
+
+* eval.c (rb_load): raise LocaJumpError if unexpected local jumps
+  appear during load.
+
+* ext/socket/socket.c (bsock_close_read): don't call rb_thread_fd_close();
+  it's supposed to be called by io_io_close().
+
+* ext/socket/socket.c (bsock_close_read): do not modify f and f2.
+
+* ext/socket/socket.c (bsock_close_write): ditto.
+
+* ext/socket/socket.c (sock_new): avoid dup(2) on sockets.
+
+* parse.y (primary): preserve and clear in_single and in_def using
+  stack to prevent nested method errors in singleton class bodies.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/02/09 15:02:14 $
+d63 4
+@
+
+
+1.26
+log
+@* win32/win32.c (win32_stat): replace stat for enable when pathname
+  ends with '/' or '\' for mswin32 on Win9X / Win2k.
+
+* win32/win32.h: ditto.
+
+* ruby.h: ditto.
+
+* dir.c (rb_glob_helper): ditto.
+
+* file.c (rb_stat, rb_file_s_stat, eaccess, check3rdbyte): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/08 09:19:16 $
+d604 3
+a606 4
+	    dirp = opendir(dir);
+	    if (dirp == NULL) {
+		free(base);
+		break;
+d608 12
+d650 1
+a650 1
+		stat(link->path, &st); /* should success */
+@
+
+
+1.25
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_options): new method to give an option values.
+
+* parse.y (cond0): disable special treating of integer literal in
+  conditional unless option -e is supplied.  changes current
+  behavior.  experimental.
+
+* parse.y (cond0): give warning for string/integer literals and
+  dot operators in conditionals unless option -e is supplied.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+
+* error.c (Init_Exception): make Interrupt a subclass of
+  SignalException.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/11/20 01:24:22 $
+d571 1
+a571 1
+	if (stat(path, &st) == 0) {
+@
+
+
+1.24
+log
+@eban
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/25 07:00:53 $
+d72 1
+a72 1
+#define downcase(c) (nocase && isupper(c) ? tolower(c) : (c))
+@
+
+
+1.24.2.1
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/20 01:24:22 $
+d72 1
+a72 1
+#define downcase(c) (nocase && ISUPPER(c) ? tolower(c) : (c))
+@
+
+
+1.24.2.2
+log
+@* win32/win32.c (win32_stat): replace stat for enable when pathname
+  ends with '/' or '\' for mswin32 on Win9X / Win2k.
+
+* win32/win32.h: ditto.
+
+* ruby.h: ditto.
+
+* dir.c (rb_glob_helper): ditto.
+
+* file.c (rb_stat, rb_file_s_stat, eaccess, check3rdbyte): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/08 09:17:56 $
+d571 1
+a571 1
+	if (rb_sys_stat(path, &st) == 0) {
+@
+
+
+1.24.2.3
+log
+@* parse.y (primary): preserve and clear in_single and in_def using
+  stack to prevent nested method errors in singleton class bodies.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/02/09 15:07:52 $
+d604 4
+a607 3
+	    if (lstat(dir, &st) < 0) {
+	        free(base);
+	        break;
+a608 12
+	    if (S_ISDIR(st.st_mode)) {
+	       dirp = opendir(dir);
+	       if (dirp == NULL) {
+		   free(base);
+		   break;
+	       }
+	    }
+	    else {
+	      free(base);
+	      break;
+	    }
+	    
+d639 1
+a639 1
+		lstat(link->path, &st); /* should success */
+@
+
+
+1.24.2.4
+log
+@* dir.c (lstat): should use rb_sys_stat if lstat(2) is not
+available.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/13 05:10:43 $
+a62 4
+
+#ifndef HAVE_LSTAT
+#define lstat rb_sys_stat
+#endif
+@
+
+
+1.24.2.5
+log
+@ping.rb patch
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/02/13 14:15:55 $
+d697 1
+a697 8
+    VALUE str = rb_tainted_str_new2(path);
+
+    if (ary) {
+	rb_ary_push(ary, str);
+    }
+    else {
+	rb_yield(str);
+    }
+d771 1
+a771 1
+    VALUE ary = 0;
+d774 1
+a774 3
+    if (!rb_block_given_p()) {
+	ary = rb_ary_new();
+    }
+d801 8
+@
+
+
+1.24.2.6
+log
+@* dir.c (rb_glob_helper): fix drive letter handling on DOSISH.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/14 05:53:54 $
+d538 1
+a538 5
+    if (len > 1 && pend[-1] == '/'
+#if defined DOSISH
+    && len > 2 && pend[-2] != ':'
+#endif
+    ) {
+a623 3
+#if defined DOSISH
+#define BASE (*base && !((isdirsep(*base) && !base[1]) || (base[1] == ':' && isdirsep(base[2]) && !base[3])))
+#else
+a624 1
+#endif
+@
+
+
+1.24.2.7
+log
+@* win32/win32.c (win32_stat): UNC support.
+* dir.c (extract_path): fix "./*" problem.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/13 07:58:07 $
+d540 1
+a540 1
+    && pend[-2] != ':'
+@
+
+
+1.24.2.8
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/20 14:50:25 $
+d612 1
+a612 1
+	    if (stat(dir, &st) < 0) {
+d640 1
+a640 9
+		    sprintf(buf, "%s%s%s", base, (BASE)?"/":"", dp->d_name);
+		    if (lstat(buf, &st) < 0) {
+			continue;
+		    }
+		    if (S_ISDIR(st.st_mode)) {
+		        strcat(buf, "/**");
+			strcat(buf, m);
+			rb_glob_helper(buf, flag, func, arg);
+		    }
+d662 1
+a662 1
+		stat(link->path, &st); /* should success */
+@
+
+
+1.24.2.9
+log
+@* win32/win32.c: use ruby's opendir on mingw32.
+* missing/dir.h, dir.c, Makefile: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/03/27 07:10:56 $
+d29 1
+a29 1
+#if defined HAVE_DIRENT_H && !defined NT
+d32 1
+a32 1
+#elif defined HAVE_DIRECT_H && !defined NT
+d47 1
+a47 1
+# if defined(NT)
+d612 1
+a612 1
+	    if (rb_sys_stat(dir, &st) < 0) {
+@
+
+
+1.24.2.10
+log
+@* dir.c (rb_glob, rb_iglob): remove unnecessary FNM_PATHNAME.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/04/01 16:21:26 $
+d696 1
+a696 1
+    rb_glob_helper(path, FNM_PERIOD, func, arg);
+d705 1
+a705 1
+    rb_glob_helper(path, FNM_PERIOD|FNM_NOCASE, func, arg);
+@
+
+
+1.24.2.11
+log
+@* bignum.c (bigdivrem): access boundary bug.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 12:07:08 $
+d137 2
+a138 2
+    const char *pat;
+    const char *string;
+d143 1
+a143 1
+    const char *s = string;
+@
+
+
+1.24.2.12
+log
+@* win32/dir.h: replace missing/dir.h .
+* dir.c: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/11 05:21:57 $
+d48 1
+a48 1
+#  include "win32/dir.h"
+@
+
+
+1.24.2.13
+log
+@* dir.c (rb_glob_helper): teach has_magic() to handle flags and
+  get rb_glob_helper to properly support FNM_NOESCAPE.
+
+* dir.c (fnmatch): fix a bug when FNM_PATHNAME and FNM_PERIOD are
+  specified at the same time.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/05/25 15:18:08 $
+a132 1
+#define ISDIRSEP(c) (pathname && isdirsep(c))
+d134 1
+a134 1
+		  ((s) == string || ISDIRSEP((s)[-1])))
+d152 1
+a152 1
+	    if (!*s || ISDIRSEP(*s) || PERIOD(s))
+d169 1
+a169 1
+	    else if (ISDIRSEP(c)) {
+d183 1
+a183 1
+		else if (ISDIRSEP(*s))
+d190 1
+a190 1
+	    if (!*s || ISDIRSEP(*s) || PERIOD(s))
+d214 1
+a214 1
+	    if (ISDIRSEP(c) && isdirsep(*s))
+d497 1
+a497 1
+has_magic(s, send, flags)
+a498 1
+     int flags;
+a502 1
+    int escape = !(flags & FNM_NOESCAPE);
+d519 1
+a519 1
+	    if (escape && *p++ == '\0')
+d569 1
+a569 1
+rb_glob_helper(path, flags, func, arg)
+d571 1
+a571 1
+    int flags;
+d578 1
+a578 1
+    if (!has_magic(path, 0, flags)) {
+d589 1
+a589 1
+	if (has_magic(p, m, flags)) {
+d609 1
+a609 1
+		rb_glob_helper(buf, flags, func, arg);
+d647 1
+a647 1
+			rb_glob_helper(buf, flags, func, arg);
+d652 1
+a652 1
+		if (fnmatch(magic, dp->d_name, flags) == 0) {
+d677 1
+a677 1
+		    rb_glob_helper(t, flags, func, arg);
+d791 1
+a791 1
+    char buffer[MAXPATHLEN], *buf;
+a801 2
+    else
+	buf = buffer;
+@
+
+
+1.24.2.14
+log
+@* eval.c: wrapper modifies updated to 1.7 changes.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/05/27 17:45:19 $
+d575 1
+a575 1
+    void (*func) _((const char*, VALUE));
+d705 1
+a705 1
+    void (*func) _((const char*, VALUE));
+@
+
+
+1.24.2.15
+log
+@* dir.c (rb_glob_helper): merge from 1.7: traversed files twice
+  with pattern "*/**".  don't descend to non-existing directories.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/13 05:50:03 $
+d608 7
+d620 5
+a624 12
+		if (m && strcmp(magic, "**") == 0) {
+		    recursive = 1;
+		    buf = ALLOC_N(char, strlen(base)+strlen(m)+3);
+		    sprintf(buf, "%s%s%s", base, (*base)?"":".", m);
+		    rb_glob_helper(buf, flags, func, arg);
+		    free(buf);
+		}
+		dirp = opendir(dir);
+		if (dirp == NULL) {
+		    free(base);
+		    break;
+		}
+d642 1
+@
+
+
+1.24.2.16
+log
+@* dir.c (dir_s_chdir): raise if environment variable HOME/LOGDIR
+  not set.
+
+* dir.c (glob_helper): avoid infinite loop on a file name with
+  wildcard characters. (ruby-bugs#PR177)
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/08/26 22:45:09 $
+a411 1
+	    if (!dist) rb_raise(rb_eArgError, "HOME/LOGDIR not set");
+d572 1
+a572 1
+rb_glob_helper(path, sub, flags, func, arg)
+a573 1
+    char *sub;
+d581 1
+a581 2
+    p = sub ? sub : path;
+    if (!has_magic(p, 0, flags)) {
+d588 1
+a613 1
+		    int n = strlen(base);
+d615 1
+a615 1
+		    buf = ALLOC_N(char, n+strlen(m)+3);
+d617 1
+a617 1
+		    rb_glob_helper(buf, buf+n, flags, func, arg);
+d647 3
+a649 4
+			char *t = buf+strlen(buf);
+		        strcpy(t, "/**");
+			strcpy(t+3, m);
+			rb_glob_helper(buf, t, flags, func, arg);
+d679 1
+a679 1
+		    rb_glob_helper(t, t+len, flags, func, arg);
+d698 1
+a698 1
+    rb_glob_helper(path, 0, FNM_PERIOD, func, arg);
+d707 1
+a707 1
+    rb_glob_helper(path, 0, FNM_PERIOD|FNM_NOCASE, func, arg);
+@
+
+
+1.24.2.17
+log
+@* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/06 08:42:57 $
+a421 14
+static char *
+my_getcwd()
+{
+    int size = MAXPATHLEN;
+    char *buf = xmalloc(size);
+
+    while (!getcwd(buf, size)) {
+	if (errno != ERANGE) rb_sys_fail(buf);
+	size *= 2;
+	buf = xrealloc(buf, size);
+    }
+    return buf;
+}
+
+d426 8
+a433 2
+    char *path = my_getcwd();
+    VALUE cwd = rb_tainted_str_new2(path);
+d435 1
+a435 2
+    free(path);
+    return cwd;
+@
+
+
+1.24.2.18
+log
+@* eval.c (ruby_stop): should not trace error handler.
+
+* io.c (io_write): should not raise exception on O_NONBLOCK io.
+
+* dir.c (dir_set_pos): seek should return dir, pos= should not.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/07 09:01:30 $
+a369 8
+dir_set_pos(dir, pos)
+    VALUE dir, pos;
+{
+    dir_seek(dir, pos);
+    return dir;
+}
+
+static VALUE
+a842 1
+    if (!ary) return Qnil;
+d886 1
+a886 1
+    rb_define_method(rb_cDir,"pos=", dir_set_pos, 1);
+@
+
+
+1.24.2.19
+log
+@* dir.c (my_getcwd): the content of buf is uncertain and must not
+  be printed when getcwd(buf, size) has failed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/21 07:43:39 $
+d437 1
+a437 1
+	if (errno != ERANGE) rb_sys_fail(NULL);
+@
+
+
+1.24.2.20
+log
+@* ext/socket/socket.c (bsock_do_not_rev_lookup_set): should not be
+  allowed when $SAFE > 3.
+
+* dir.c (fnmatch): "*/bar" (with FNM_PATHNAME flag) does not
+  match "foo/bar".
+
+* io.c (read_all): files on /proc filesystem with zero stat size,
+  may have contents.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/03/19 15:51:06 $
+d172 1
+a172 2
+		if (s) {
+                    s++;
+a173 1
+                }
+@
+
+
+1.24.2.21
+log
+@* dir.c (rb_glob_helper): Use lstat() instead of rb_sys_stat() so
+  it catches a dead symlink.  Given a dead symlink named "a",
+  Dir.glob("?") did catch it but Dir.glob("a") somehow didn't.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/25 06:15:58 $
+d604 1
+a604 1
+	if (lstat(path, &st) == 0) {
+@
+
+
+1.24.2.22
+log
+@* dir.c (rb_glob): add prototype of 2nd argument to avoid VC++ warning.
+
+* dir.c (push_pattern): add const directive to 1st argument.
+
+* dir.c: prototype; push_pattern() to avoid VC++ warning.
+
+* ext/tcltklib/tcltklib.c: prototype; _timer_for_tcl() and ip_ruby()
+  to avoid VC++ warning.
+
+* win32/win32.c (win32_stat): remove S_IWGRP and S_IWOTH bits from
+  st_mode.
+
+* win32/win32.h (S_I*): define if not defined.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2002/06/15 10:32:23 $
+d718 1
+a718 1
+    void (*func) _((const char*, VALUE));
+a732 2
+static void push_pattern _((const char *, VALUE));
+
+d735 1
+a735 1
+    const char *path;
+@
+
+
+1.23
+log
+@eban
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/25 04:33:53 $
+d561 1
+a561 1
+rb_glob(path, func, arg)
+d563 1
+d601 1
+a601 1
+		rb_glob(buf, func, arg);
+d617 1
+a617 1
+		    rb_glob(buf, func, arg);
+d621 1
+a621 1
+		if (fnmatch(magic, dp->d_name, FNM_PERIOD|FNM_PATHNAME) == 0) {
+d646 1
+a646 1
+		    rb_glob(t, func, arg);
+d657 18
+@
+
+
+1.22
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/09/21 09:30:55 $
+a513 1
+#if !defined DOSISH
+a516 1
+#endif
+d534 1
+a534 1
+    if (len > 1 && isdirsep(pend[-1])) {
+d550 1
+a550 1
+    pend = find_dirsep(path);
+d578 2
+a579 2
+	if (isdirsep(*p)) p++;
+	m = find_dirsep(p);
+d608 1
+a608 1
+#define BASE (*base && !(isdirsep(*base) && !base[1]))
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/07 05:01:46 $
+d514 1
+d518 1
+d536 1
+a536 1
+    if (len > 1 && pend[-1] == '/') {
+d552 1
+a552 1
+    pend = strchr(path, '/');
+d580 2
+a581 2
+	if (*p == '/') p++;
+	m = strchr(p, '/');
+d610 1
+a610 1
+#define BASE (*base && !(*base == '/' && !base[1]))
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/31 04:36:38 $
+d337 1
+a337 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d355 1
+a355 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/12 07:48:19 $
+d436 1
+a436 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(__BEOS__) && !defined(__EMX__) && !defined(riscos)
+@
+
+
+1.18
+log
+@2000-06-12
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/05/29 02:10:17 $
+a323 1
+    VALUE file;
+d327 2
+a328 2
+	file = rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+	rb_yield(file);
+@
+
+
+1.17
+log
+@see ChangeLog.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/25 05:54:59 $
+d786 2
+a787 1
+    return rb_ensure(dir_each, dir, dir_close, dir);
+d818 2
+@
+
+
+1.16
+log
+@2000-05-25
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:33:54 $
+d561 2
+a562 2
+static void
+glob(path, func, arg)
+d601 1
+a601 1
+		glob(buf, func, arg);
+d617 1
+a617 1
+		    glob(buf, func, arg);
+d646 1
+a646 1
+		    glob(t, func, arg);
+d672 1
+a672 1
+    glob(s, push_pattern, ary);
+@
+
+
+1.15
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/15 06:38:42 $
+d275 3
+a277 1
+    VALUE dir = dir_s_new(1, &dirname, klass);
+@
+
+
+1.14
+log
+@2000-05-15
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:52:52 $
+a243 4
+    if (rb_iterator_p()) {
+	rb_ensure(rb_yield, obj, dir_close, obj);
+    }
+
+d267 1
+d275 7
+a281 1
+    return dir_s_new(1, &dirname, klass);
+d766 1
+a766 1
+    if (rb_iterator_p()) {
+@
+
+
+1.13
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:12 $
+d592 1
+a592 1
+	    if (strcmp(magic, "**") == 0) {
+@
+
+
+1.12
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:27 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.11
+log
+@2000-03-07
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/02/29 08:05:25 $
+d10 2
+d13 1
+a13 1
+************************************************/
+@
+
+
+1.10
+log
+@2000-02-29
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 07:11:07 $
+a50 3
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+d430 1
+a430 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(USE_CWGUSI) && !defined(__BEOS__) && !defined(__EMX__) && !defined(riscos)
+d462 1
+a462 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d482 1
+a482 1
+    return Qtrue;
+@
+
+
+1.9
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:11:59 $
+d236 19
+a254 2
+dir_s_open(dir_class, dirname)
+    VALUE dir_class, dirname;
+a255 1
+    VALUE obj;
+d259 2
+a260 1
+
+d271 3
+d275 5
+a279 7
+    obj = Data_Wrap_Struct(dir_class, 0, free_dir, dirp);
+
+    if (rb_iterator_p()) {
+	return rb_ensure(rb_yield, obj, dir_close, obj);
+    }
+
+    return obj;
+d802 1
+a802 1
+    rb_define_singleton_method(rb_cDir, "new", dir_s_open, 1);
+d807 1
+@
+
+
+1.8
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:58 $
+d415 1
+a415 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(USE_CWGUSI) && !defined(__BEOS__) && !defined(__EMX__)
+@
+
+
+1.7
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:40 $
+d513 1
+a513 1
+    if (len > 0 && pend[-1] == '/') {
+d587 2
+d594 1
+a594 1
+		    sprintf(buf, "%s%s%s/**%s", base, (*base)?"/":"", dp->d_name, m);
+d601 1
+a601 1
+		    sprintf(buf, "%s%s%s", base, (*base)?"/":"", dp->d_name);
+@
+
+
+1.6
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/25 09:03:04 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.5
+log
+@19991125
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/21 07:52:15 $
+a437 1
+    rb_secure(2);
+d446 1
+d462 1
+a463 1
+    Check_SafeStr(dir);
+@
+
+
+1.4
+log
+@RUBYOPT
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/13 06:44:40 $
+d560 1
+a560 1
+	    char *dir, *base, *magic;
+d563 1
+d574 8
+a586 1
+	    magic = extract_elem(p);
+d588 9
+d598 2
+a599 3
+		    char *fix = ALLOC_N(char, strlen(base)+NAMLEN(dp)+2);
+
+		    sprintf(fix, "%s%s%s", base, (*base)?"/":"", dp->d_name);
+d601 2
+a602 2
+			(*func)(fix, arg);
+			free(fix);
+d606 1
+a606 1
+		    tmp->path = fix;
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+a49 6
+#ifdef HAVE_FNMATCH_H
+#include <fnmatch.h>
+#else
+#include "missing/fnmatch.h"
+#endif
+
+d62 161
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/06 06:48:09 $
+d573 8
+@
+
+
+1.2.2.1
+log
+@19991124-1.4.3pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d50 6
+a67 161
+
+#include <ctype.h>
+
+#define FNM_NOESCAPE	0x01
+#define FNM_PATHNAME	0x02
+#define FNM_PERIOD	0x04
+#define FNM_NOCASE	0x08
+
+#define FNM_NOMATCH	1
+#define FNM_ERROR	2
+
+#define downcase(c) (nocase && isupper(c) ? tolower(c) : (c))
+
+#if defined DOSISH
+#define isdirsep(c) ((c) == '/' || (c) == '\\')
+static char *
+find_dirsep(s)
+    char *s;
+{
+    while (*s) {
+	if (isdirsep(*s))
+	    return s;
+	s++;
+    }
+    return 0;
+}
+#else
+#define isdirsep(c) ((c) == '/')
+#define find_dirsep(s) strchr(s, '/')
+#endif
+
+static char *
+range(pat, test, flags)
+    char *pat;
+    char test;
+    int flags;
+{
+    int not, ok = 0;
+    int nocase = flags & FNM_NOCASE;
+    int escape = !(flags & FNM_NOESCAPE);
+
+    not = *pat == '!' || *pat == '^';
+    if (not)
+	pat++;
+
+    test = downcase(test);
+
+    while (*pat) {
+	int cstart, cend;
+	cstart = cend = *pat++;
+	if (cstart == ']')
+	    return ok == not ? 0 : pat;
+        else if (escape && cstart == '\\')
+	    cstart = cend = *pat++;
+	if (*pat == '-' && pat[1] != ']') {
+	    if (escape && pat[1] == '\\')
+		pat++;
+	    cend = pat[1];
+	    if (!cend)
+		return 0;
+	    pat += 2;
+	}
+	if (downcase(cstart) <= test && test <= downcase(cend))
+	    ok = 1;
+    }
+    return 0;
+}
+
+#define PERIOD(s) (period && *(s) == '.' && \
+		  ((s) == string || pathname && isdirsep(*(s))))
+static int
+fnmatch(pat, string, flags)
+    char *pat;
+    char *string;
+    int flags;
+{
+    int c;
+    int test;
+    char *s = string;
+    int escape = !(flags & FNM_NOESCAPE);
+    int pathname = flags & FNM_PATHNAME;
+    int period = flags & FNM_PERIOD;
+    int nocase = flags & FNM_NOCASE;
+
+    while (c = *pat++) {
+	switch (c) {
+	case '?':
+	    if (!*s || pathname && isdirsep(*s) || PERIOD(s))
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+	case '*':
+	    while ((c = *pat++) == '*')
+		;
+
+	    if (PERIOD(s))
+		return FNM_NOMATCH;
+
+	    if (!c) {
+		if (pathname && find_dirsep(s))
+		    return FNM_NOMATCH;
+		else
+		    return 0;
+	    }
+	    else if (pathname && isdirsep(c)) {
+		s = find_dirsep(s);
+		if (s)
+		    break;
+		return FNM_NOMATCH;
+	    }
+
+	    test = escape && c == '\\' ? *pat : c;
+	    test = downcase(test);
+	    pat--;
+	    while (*s) {
+		if ((c == '[' || downcase(*s) == test) &&
+		    !fnmatch(pat, s, flags & ~FNM_PERIOD))
+		    return 0;
+		else if (pathname && isdirsep(*s))
+		    break;
+		s++;
+	    }
+	    return FNM_NOMATCH;
+      
+	case '[':
+	    if (!*s || pathname && isdirsep(*s) || PERIOD(s))
+		return FNM_NOMATCH;
+	    pat = range(pat, *s, flags);
+	    if (!pat)
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+
+	case '\\':
+	    if (escape
+#if defined DOSISH
+		&& *pat && strchr("*?[\\", *pat)
+#endif
+		) {
+		c = *pat;
+		if (!c)
+		    c = '\\';
+		else
+		    pat++;
+	    }
+	    /* FALLTHROUGH */
+
+	default:
+#if defined DOSISH
+	    if (pathname && isdirsep(c) && isdirsep(*s))
+		;
+	    else
+#endif
+	    if(downcase(c) != downcase(*s))
+		return FNM_NOMATCH;
+	    s++;
+	    break;
+	}
+    }
+    return !*s ? 0 : FNM_NOMATCH;
+}
+@
+
+
+1.2.2.2
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/24 07:13:50 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.3
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:23:53 $
+d513 1
+a513 1
+    if (len > 1 && pend[-1] == '/') {
+a581 1
+		    #define BASE (*base && !(*base == '/' && !base[1]))
+d583 1
+a583 1
+		    sprintf(fix, "%s%s%s", base, (BASE)?"/":"", dp->d_name);
+@
+
+
+1.2.2.4
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:11:20 $
+a578 2
+#define BASE (*base && !(*base == '/' && !base[1]))
+
+d582 2
+@
+
+
+1.2.2.5
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 08:28:51 $
+a307 1
+	if (DATA_PTR(dir) == NULL) dir_closed();
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:28 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d16 1
+a16 3
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+d23 3
+d30 3
+d45 1
+a45 1
+# ifdef NT
+d50 6
+d57 3
+d61 1
+a61 1
+#ifndef NT
+d65 5
+a69 1
+static VALUE cDir;
+d78 2
+d82 1
+a82 2
+    VALUE dir_class;
+    struct RString *dirname;
+d89 1
+a89 1
+    dirp = opendir(dirname->ptr);
+d92 2
+a93 2
+	    gc();
+	    dirp = opendir(dirname->ptr);
+d96 1
+a96 1
+	    rb_sys_fail(dirname->ptr);
+d102 4
+d112 1
+a112 1
+    Fail("closed directory");
+d121 21
+d151 1
+a151 1
+	file = str_taint(str_new(dp->d_name, NAMLEN(dp)));
+d161 1
+d163 1
+a163 1
+    int pos;
+a164 1
+#if !defined(__CYGWIN32__)
+d167 1
+a167 1
+    return int2inum(pos);
+d179 1
+a179 1
+#if !defined(__CYGWIN32__)
+d223 1
+a223 2
+    rb_scan_args(argc, argv, "01", &path);
+    if (path) {
+d235 1
+a235 1
+	rb_sys_fail(0);
+a243 1
+    extern char *getwd();
+d249 1
+d253 1
+a253 1
+    return str_taint(str_new2(path));
+d260 1
+a260 1
+#if !defined(DJGPP) && !defined(__CYGWIN32__)  && !defined(NT) && !defined(__human68k__)
+d265 1
+a265 1
+	rb_sys_fail(0);
+d270 1
+d292 1
+a292 1
+#ifndef NT
+d305 1
+a305 2
+    VALUE obj;
+    struct RString *dir;
+d309 5
+a313 2
+    if (rmdir(dir->ptr) < 0)
+	rb_sys_fail(dir->ptr);
+d315 31
+a345 1
+    return TRUE;
+d348 115
+a462 1
+#define isdelim(c) ((c)==' '||(c)=='\t'||(c)=='\n'||(c)=='\0')
+d464 7
+a470 2
+char **glob_filename();
+extern char *glob_error_return;
+d477 1
+a477 13
+    char **fnames, **ff;
+
+    fnames = glob_filename(s);
+    if (fnames == (char**)-1) rb_sys_fail(s);
+    ff = fnames;
+    while (*ff) {
+	ary_push(ary, str_taint(str_new2(*ff)));
+	free(*ff);
+	ff++;
+    }
+    if (fnames != &glob_error_return) {
+        free(fnames);
+    }
+d485 1
+a485 1
+    char buf[MAXPATHLEN];
+d488 1
+d500 2
+a501 1
+	if (*p == '}' && lbrace) {
+d509 3
+d525 2
+d533 2
+d537 1
+a537 2
+    VALUE dir;
+    struct RString *str;
+d540 2
+a541 2
+    char buf[MAXPATHLEN];
+    char *t, *t0;
+d546 3
+d550 2
+a551 4
+    ary = ary_new();
+
+    p = str->ptr;
+    pend = p + str->len;
+d555 1
+d558 2
+a562 7
+	t0 = buf;
+	nest = 0;
+	while (t0 < t) {
+	    if (*t0 == '{') nest+=2;
+	    if (*t0 == '}') nest+=3;
+	    t0++;
+	}
+d571 2
+d578 1
+a578 2
+    VALUE io;
+    struct RString *dirname;
+d582 1
+a582 1
+    dir = dir_s_open(cDir, dirname);
+d586 10
+d599 1
+a599 5
+    extern VALUE mEnumerable;
+
+    cDir = rb_define_class("Dir", cObject);
+
+    rb_include_module(cDir, mEnumerable);
+d601 1
+a601 2
+    rb_define_singleton_method(cDir, "open", dir_s_open, 1);
+    rb_define_singleton_method(cDir, "foreach", dir_foreach, 1);
+d603 20
+a622 14
+    rb_define_method(cDir,"each", dir_each, 0);
+    rb_define_method(cDir,"rewind", dir_rewind, 0);
+    rb_define_method(cDir,"tell", dir_tell, 0);
+    rb_define_method(cDir,"seek", dir_seek, 1);
+    rb_define_method(cDir,"close", dir_close, 0);
+
+    rb_define_singleton_method(cDir,"chdir", dir_s_chdir, -1);
+    rb_define_singleton_method(cDir,"getwd", dir_s_getwd, 0);
+    rb_define_singleton_method(cDir,"pwd", dir_s_getwd, 0);
+    rb_define_singleton_method(cDir,"chroot", dir_s_chroot, 1);
+    rb_define_singleton_method(cDir,"mkdir", dir_s_mkdir, -1);
+    rb_define_singleton_method(cDir,"rmdir", dir_s_rmdir, 1);
+    rb_define_singleton_method(cDir,"delete", dir_s_rmdir, 1);
+    rb_define_singleton_method(cDir,"unlink", dir_s_rmdir, 1);
+d624 2
+a625 2
+    rb_define_singleton_method(cDir,"glob", dir_s_glob, 1);
+    rb_define_singleton_method(cDir,"[]", dir_s_glob, 1);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d16 3
+a18 1
+#include <sys/stat.h>
+a24 3
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+d63 2
+a64 1
+    VALUE dir_class, dirname;
+d71 1
+a71 1
+    dirp = opendir(RSTRING(dirname)->ptr);
+d74 2
+a75 2
+	    gc_gc();
+	    dirp = opendir(RSTRING(dirname)->ptr);
+d78 1
+a78 1
+	    rb_sys_fail(RSTRING(dirname)->ptr);
+d181 1
+a181 1
+    if (!NIL_P(path)) {
+d262 2
+a263 1
+    VALUE obj, dir;
+d267 2
+a268 2
+    if (rmdir(RSTRING(dir)->ptr) < 0)
+	rb_sys_fail(RSTRING(dir)->ptr);
+d345 3
+a347 2
+dir_s_glob(dir, vstr)
+    VALUE dir, vstr;
+a353 1
+    struct RString *str;
+d355 2
+a356 2
+    Check_SafeStr(vstr);
+    str = RSTRING(vstr);
+d389 2
+a390 1
+    VALUE io, dirname;
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:10 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a29 3
+#elif HAVE_DIRECT_H
+# include <direct.h>
+# define NAMLEN(dirent) strlen((dirent)->d_name)
+d42 1
+a42 1
+# if defined(NT) && defined(_MSC_VER)
+d53 1
+a53 5
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+
+VALUE rb_cDir;
+a61 2
+static VALUE dir_close _((VALUE));
+
+d74 1
+a74 1
+	    rb_gc();
+a83 4
+    if (rb_iterator_p()) {
+	return rb_ensure(rb_yield, obj, dir_close, obj);
+    }
+
+d90 1
+a90 1
+    rb_raise(rb_eIOError, "closed directory");
+a98 21
+dir_read(dir)
+    VALUE dir;
+{
+    DIR *dirp;
+    struct dirent *dp;
+
+    GetDIR(dir, dirp);
+    errno = 0;
+    dp = readdir(dirp);
+    if (dp)
+	return rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+    else if (errno == 0) {	/* end of stream */
+	return Qnil;
+    }
+    else {
+	rb_sys_fail(0);
+    }
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+d108 1
+a108 1
+	file = rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+d121 1
+a121 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d124 1
+a124 1
+    return rb_int2inum(pos);
+d136 1
+a136 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d180 2
+a181 1
+    if (rb_scan_args(argc, argv, "01", &path) == 1) {
+d193 1
+a193 1
+	rb_sys_fail(dist);
+d202 1
+a207 1
+    extern char *getwd();
+d211 1
+a211 1
+    return rb_tainted_str_new2(path);
+d218 1
+a218 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(USE_CWGUSI) && !defined(__BEOS__)
+d223 1
+a223 1
+	rb_sys_fail(RSTRING(path)->ptr);
+a227 1
+    return Qnil;		/* not reached */
+d249 1
+a249 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d269 1
+a269 1
+    return Qtrue;
+d288 1
+a288 1
+	rb_ary_push(ary, rb_tainted_str_new2(*ff));
+d344 2
+a345 2
+dir_s_glob(dir, str)
+    VALUE dir, str;
+d352 1
+d354 3
+a356 6
+    Check_SafeStr(str);
+    if (RSTRING(str)->len > MAXPATHLEN) {
+	rb_raise(rb_eArgError, "pathname too long (%d bytes)",
+		 RSTRING(str)->len);
+    }
+    ary = rb_ary_new();
+d358 2
+a359 2
+    p = RSTRING(str)->ptr;
+    pend = p + RSTRING(str)->len;
+d392 1
+a392 1
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+d396 2
+a397 3
+static VALUE
+dir_entries(io, dirname)
+    VALUE io, dirname;
+d399 1
+a399 1
+    VALUE dir;
+d401 1
+a401 3
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+    return rb_ensure(rb_Array, dir, dir_close, dir);
+}
+d403 1
+a403 4
+void
+Init_Dir()
+{
+    rb_cDir = rb_define_class("Dir", rb_cObject);
+d405 2
+a406 1
+    rb_include_module(rb_cDir, rb_mEnumerable);
+d408 14
+a421 20
+    rb_define_singleton_method(rb_cDir, "new", dir_s_open, 1);
+    rb_define_singleton_method(rb_cDir, "open", dir_s_open, 1);
+    rb_define_singleton_method(rb_cDir, "foreach", dir_foreach, 1);
+    rb_define_singleton_method(rb_cDir, "entries", dir_entries, 1);
+
+    rb_define_method(rb_cDir,"read", dir_read, 0);
+    rb_define_method(rb_cDir,"each", dir_each, 0);
+    rb_define_method(rb_cDir,"rewind", dir_rewind, 0);
+    rb_define_method(rb_cDir,"tell", dir_tell, 0);
+    rb_define_method(rb_cDir,"seek", dir_seek, 1);
+    rb_define_method(rb_cDir,"close", dir_close, 0);
+
+    rb_define_singleton_method(rb_cDir,"chdir", dir_s_chdir, -1);
+    rb_define_singleton_method(rb_cDir,"getwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"pwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"chroot", dir_s_chroot, 1);
+    rb_define_singleton_method(rb_cDir,"mkdir", dir_s_mkdir, -1);
+    rb_define_singleton_method(rb_cDir,"rmdir", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"delete", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"unlink", dir_s_rmdir, 1);
+d423 2
+a424 2
+    rb_define_singleton_method(rb_cDir,"glob", dir_s_glob, 1);
+    rb_define_singleton_method(rb_cDir,"[]", dir_s_glob, 1);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.3.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:10 $
+d251 1
+a251 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(USE_CWGUSI) && !defined(__BEOS__) && !defined(__EMX__)
+@
+
+
+1.1.1.3.2.3
+log
+@990507
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:37 $
+a49 6
+#ifdef HAVE_FNMATCH_H
+#include <fnmatch.h>
+#else
+#include "missing/fnmatch.h"
+#endif
+
+a50 3
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+d52 1
+a52 1
+#ifndef HAVE_STDLIB_H
+d56 2
+a57 2
+#ifndef HAVE_STRING_H
+char *strchr _((char*,char));
+a151 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d153 1
+a153 1
+    long pos;
+d155 1
+d306 1
+a306 67
+/* Return nonzero if S has any special globbing chars in it.  */
+static int
+has_magic(s, send)
+     char *s, *send;
+{
+    register char *p = s;
+    register char c;
+    int open = 0;
+
+    while ((c = *p++) != '\0') {
+	switch (c) {
+	  case '?':
+	  case '*':
+	    return Qtrue;
+
+	  case '[':		/* Only accept an open brace if there is a close */
+	    open++;		/* brace to match it.  Bracket expressions must be */
+	    continue;	/* complete, according to Posix.2 */
+	  case ']':
+	    if (open)
+		return Qtrue;
+	    continue;
+
+	  case '\\':
+	    if (*p++ == '\0')
+		return Qfalse;
+	}
+
+	if (send && p >= send) break;
+    }
+    return Qfalse;
+}
+
+struct glob1_arg {
+    void (*func)();
+    char *basename;
+    VALUE arg;
+};
+
+static char*
+extract_path(p, pend)
+    char *p, *pend;
+{
+    char *alloc;
+    int len;
+
+    len = pend - p;
+    alloc = ALLOC_N(char, len+1);
+    memcpy(alloc, p, len);
+    if (len > 0 && pend[-1] == '/') {
+	alloc[len-1] = 0;
+    }
+    else {
+	alloc[len] = 0;
+    }
+
+    return alloc;
+}
+
+static char*
+extract_elem(path)
+    char *path;
+{
+    char *pend;
+
+    pend = strchr(path, '/');
+    if (!pend) pend = path + strlen(path);
+d308 2
+a309 77
+    return extract_path(path, pend);
+}
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+static void
+glob(path, func, arg)
+    char *path;
+    void (*func)();
+    VALUE arg;
+{
+    struct stat st;
+    char *p, *m;
+
+    if (!has_magic(path, 0)) {
+	if (stat(path, &st) == 0) {
+	    (*func)(path, arg);
+	}
+	return;
+    }
+
+    p = path;
+    while (p) {
+	if (*p == '/') p++;
+	m = strchr(p, '/');
+	if (has_magic(p, m)) {
+	    char *dir, *base, *magic;
+	    DIR *dirp;
+	    struct dirent *dp;
+
+	    base = extract_path(path, p);
+	    if (path == p) dir = ".";
+	    else dir = base;
+
+	    dirp = opendir(dir);
+	    if (dirp == NULL) {
+		free(base);
+		break;
+	    }
+	    magic = extract_elem(p);
+	    for (dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) {
+		if (fnmatch(magic, dp->d_name, FNM_PERIOD|FNM_PATHNAME) == 0) {
+		    char *fix = ALLOC_N(char, strlen(base)+strlen(dp->d_name)+2);
+
+		    sprintf(fix, "%s%s%s", base, (p==path)?"":"/", dp->d_name);
+		    if (!m) {
+			(*func)(fix, arg);
+			free(fix);
+			continue;
+		    }
+		    stat(fix, &st); /* should success */
+		    if (S_ISDIR(st.st_mode)) {
+			char *t = ALLOC_N(char, strlen(fix)+strlen(m)+2);
+			sprintf(t, "%s%s", fix, m);
+			glob(t, func, arg);
+			free(t);
+		    }
+		    free(fix);
+		}
+	    }
+	    closedir(dirp);
+	    free(base);
+	    free(magic);
+	}
+	p = m;
+    }
+}
+
+static void
+push_pattern(path, ary)
+    char *path;
+    VALUE ary;
+{
+    rb_ary_push(ary, rb_tainted_str_new2(path));
+}
+d316 13
+a328 1
+    glob(s, push_pattern, ary);
+a375 2
+
+#define isdelim(c) ((c)==' '||(c)=='\t'||(c)=='\n'||(c)=='\0')
+@
+
+
+1.1.1.3.2.4
+log
+@regexp,range,squeeze
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/07 08:24:35 $
+d348 6
+a414 5
+	    struct d_link {
+		char *path;
+		struct d_link *next;
+	    } *tmp, *link = 0;
+
+d427 1
+a427 1
+		    char *fix = ALLOC_N(char, strlen(base)+NAMLEN(dp)+2);
+d429 1
+a429 1
+		    sprintf(fix, "%s%s%s", base, (*base)?"/":"", dp->d_name);
+d435 8
+a442 4
+		    tmp = ALLOC(struct d_link);
+		    tmp->path = fix;
+		    tmp->next = link;
+		    link = tmp;
+a447 16
+	    while (link) {
+		stat(link->path, &st); /* should success */
+		if (S_ISDIR(st.st_mode)) {
+		    int len = strlen(link->path);
+		    int mlen = strlen(m);
+		    char *t = ALLOC_N(char, len+mlen+1);
+
+		    sprintf(t, "%s%s", link->path, m);
+		    glob(t, func, arg);
+		    free(t);
+		}
+		tmp = link;
+		link = link->next;
+		free(tmp->path);
+		free(tmp);
+	    }
+@
+
+
+1.1.1.3.2.5
+log
+@990624
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/10 08:22:45 $
+d485 1
+a485 1
+    char buffer[MAXPATHLEN], *buf = buffer;
+a506 3
+	int len = strlen(s);
+	if (len >= MAXPATHLEN)
+	    buf = xmalloc(len + 1);
+a519 2
+	if (buf != buffer)
+	    free(buf);
+d533 1
+a533 1
+    char buffer[MAXPATHLEN], *buf = buffer;
+d539 4
+a543 2
+    if (RSTRING(str)->len >= MAXPATHLEN)
+	buf = xmalloc(RSTRING(str)->len + 1);
+a569 2
+    if (buf != buffer)
+	free(buf);
+@
+
+
+1.1.1.3.2.6
+log
+@990728
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/24 04:23:47 $
+a487 1
+    int nest = 0;
+d499 1
+a499 2
+	if (*p == '{') nest++;
+	if (*p == '}' && --nest == 0) {
+@
+
+
+1.1.1.3.2.7
+log
+@990806
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/28 09:26:32 $
+d541 1
+a541 1
+    char *t;
+a554 1
+	nest = 0;
+a556 2
+	    if (*p == '{') nest+=2;
+	    if (*p == '}') nest+=3;
+d560 7
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:56 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b8pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+d202 1
+a207 1
+    extern char *getwd();
+@
+
+
+1.1.1.2.2.3
+log
+@gw32 b19 patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 01:56:30 $
+d218 1
+a218 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__)
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_10 pre0
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/30 09:32:45 $
+a61 2
+static VALUE dir_close _((VALUE));
+
+a83 3
+    if (iterator_p())
+	rb_ensure(rb_yield, obj, dir_close, obj);
+
+a97 17
+#if 0
+static VALUE
+dir_read(dir)
+    VALUE dir;
+{
+    DIR *dirp;
+    struct dirent *dp;
+
+    GetDIR(dir, dirp);
+    dp = readdir(dirp);
+    if (dp)
+	return str_taint(str_new(dp->d_name, NAMLEN(dp)));
+    else
+	return Qnil;
+}
+#endif
+
+d193 1
+a193 1
+	rb_sys_fail(dist);
+d223 1
+a223 1
+	rb_sys_fail(RSTRING(path)->ptr);
+a404 1
+    rb_define_singleton_method(cDir, "new", dir_s_open, 1);
+a407 3
+#if 0
+    rb_define_method(cDir,"read", dir_read, 0);
+#endif
+@
+
+
+1.1.1.2.2.5
+log
+@signal delivered to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/10 10:09:48 $
+d103 1
+a111 1
+    errno = 0;
+d115 2
+a116 5
+    else {
+	if (errno == 0)		/* end of stream */
+	    return Qnil;
+	rb_sys_fail(0);
+    }
+d118 1
+d431 1
+d433 1
+@
+
+
+1.1.1.2.2.6
+log
+@flock,flatten,signal to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/14 04:55:46 $
+d416 1
+a416 1
+    dir = rb_funcall(cDir, rb_intern("open"), 1, dirname);
+@
+
+
+1.1.1.2.2.7
+log
+@tcltklib/gtk
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/16 07:42:41 $
+d86 1
+a86 1
+    if (iterator_p()) {
+a87 1
+    }
+a114 3
+    else if (errno == 0) {	/* end of stream */
+	return Qnil;
+    }
+d116 2
+@
+
+
+1.1.1.2.2.8
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/27 10:03:49 $
+a52 4
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+#endif
+
+d147 1
+a147 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d162 1
+a162 1
+#if !defined(__CYGWIN32__) && !defined(__BEOS__)
+d244 1
+a244 1
+#if !defined(DJGPP) && !defined(NT) && !defined(__human68k__) && !defined(USE_CWGUSI) && !defined(__BEOS__)
+d275 1
+a275 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+@
+
+
+1.1.1.2.2.9
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:06 $
+d91 1
+a91 1
+	return rb_ensure(rb_yield, obj, dir_close, obj);
+@
+
+
+1.1.1.2.2.10
+log
+@1.1b9_26
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 09:42:23 $
+d374 2
+a375 2
+dir_s_glob(dir, str)
+    VALUE dir, str;
+d382 1
+d384 2
+a385 4
+    Check_SafeStr(str);
+    if (RSTRING(str)->len > MAXPATHLEN) {
+	ArgError("pathname too long (%d bytes)", RSTRING(str)->len);
+    }
+d388 2
+a389 2
+    p = RSTRING(str)->ptr;
+    pend = p + RSTRING(str)->len;
+@
+
+
+1.1.1.2.2.11
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/18 07:46:43 $
+d430 2
+@
+
+
+1.1.1.2.2.12
+log
+@str2cstr
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:13 $
+d210 2
+a211 1
+    if (rb_scan_args(argc, argv, "01", &path) == 1) {
+@
+
+
+1.1.1.2.2.13
+log
+@1.1c4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/13 04:37:24 $
+a29 3
+#elif HAVE_DIRECT_H
+# include <direct.h>
+# define NAMLEN(dirent) strlen((dirent)->d_name)
+d42 1
+a42 1
+# if defined(NT) && defined(_MSC_VER)
+@
+
+
+1.1.1.2.2.14
+log
+@1.1c7
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:27 $
+a428 10
+static VALUE
+dir_entries(io, dirname)
+    VALUE io, dirname;
+{
+    VALUE dir;
+
+    dir = rb_funcall(cDir, rb_intern("open"), 1, dirname);
+    return rb_ensure(rb_Array, dir, dir_close, dir);
+}
+
+a438 1
+    rb_define_singleton_method(cDir, "entries", dir_entries, 1);
+@
+
+
+1.1.1.2.2.13.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:27 $
+d60 1
+a60 1
+VALUE rb_cDir;
+d83 1
+a83 1
+	    rb_gc();
+d93 1
+a93 1
+    if (rb_iterator_p()) {
+d103 1
+a103 1
+    rb_raise(rb_eIOError, "closed directory");
+d122 1
+a122 1
+	return rb_str_taint(rb_str_new(dp->d_name, NAMLEN(dp)));
+d141 1
+a141 1
+	file = rb_str_taint(rb_str_new(dp->d_name, NAMLEN(dp)));
+d157 1
+a157 1
+    return rb_int2inum(pos);
+d243 1
+a243 1
+    return rb_str_taint(rb_str_new2(path));
+d301 1
+a301 1
+    return Qtrue;
+d320 1
+a320 1
+	rb_ary_push(ary, rb_str_taint(rb_str_new2(*ff)));
+d387 1
+a387 2
+	rb_raise(rb_eArgError, "pathname too long (%d bytes)",
+		 RSTRING(str)->len);
+d389 1
+a389 1
+    ary = rb_ary_new();
+d425 1
+a425 1
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+d432 1
+a432 1
+    rb_cDir = rb_define_class("Dir", rb_cObject);
+d434 1
+a434 1
+    rb_include_module(rb_cDir, rb_mEnumerable);
+d436 19
+a454 19
+    rb_define_singleton_method(rb_cDir, "new", dir_s_open, 1);
+    rb_define_singleton_method(rb_cDir, "open", dir_s_open, 1);
+    rb_define_singleton_method(rb_cDir, "foreach", dir_foreach, 1);
+
+    rb_define_method(rb_cDir,"read", dir_read, 0);
+    rb_define_method(rb_cDir,"each", dir_each, 0);
+    rb_define_method(rb_cDir,"rewind", dir_rewind, 0);
+    rb_define_method(rb_cDir,"tell", dir_tell, 0);
+    rb_define_method(rb_cDir,"seek", dir_seek, 1);
+    rb_define_method(rb_cDir,"close", dir_close, 0);
+
+    rb_define_singleton_method(rb_cDir,"chdir", dir_s_chdir, -1);
+    rb_define_singleton_method(rb_cDir,"getwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"pwd", dir_s_getwd, 0);
+    rb_define_singleton_method(rb_cDir,"chroot", dir_s_chroot, 1);
+    rb_define_singleton_method(rb_cDir,"mkdir", dir_s_mkdir, -1);
+    rb_define_singleton_method(rb_cDir,"rmdir", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"delete", dir_s_rmdir, 1);
+    rb_define_singleton_method(rb_cDir,"unlink", dir_s_rmdir, 1);
+d456 2
+a457 2
+    rb_define_singleton_method(rb_cDir,"glob", dir_s_glob, 1);
+    rb_define_singleton_method(rb_cDir,"[]", dir_s_glob, 1);
+@
+
+
+1.1.1.2.2.13.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/09 09:11:48 $
+d122 1
+a122 1
+	return rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+d141 1
+a141 1
+	file = rb_tainted_str_new(dp->d_name, NAMLEN(dp));
+d243 1
+a243 1
+    return rb_tainted_str_new2(path);
+d320 1
+a320 1
+	rb_ary_push(ary, rb_tainted_str_new2(*ff));
+a429 10
+static VALUE
+dir_entries(io, dirname)
+    VALUE io, dirname;
+{
+    VALUE dir;
+
+    dir = rb_funcall(rb_cDir, rb_intern("open"), 1, dirname);
+    return rb_ensure(rb_Array, dir, dir_close, dir);
+}
+
+a439 1
+    rb_define_singleton_method(rb_cDir, "entries", dir_entries, 1);
+@

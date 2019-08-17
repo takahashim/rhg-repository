@@ -1,0 +1,29 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.07.12.16.40.06;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@import
+@
+text
+@# -*- ruby -*-
+
+require 'shellwords'
+require 'optparse'
+
+OptionParser.accept(Shellwords) {|s| Shellwords.shellwords(s)}
+@

@@ -1,0 +1,87 @@
+head	1.1;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1.2.1
+	v1_6_4_preview3:1.1.2.1
+	ruby_1_6:1.1.0.2
+	SHELL_v0_6:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.05.17.10.35.32;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#
+#   version.rb - shell version definition file
+#   	$Release Version: 0.6.0$
+#   	$Revision: 1.2 $
+#   	$Date: 2001/03/19 09:03:51 $
+#   	by Keiju ISHITSUKA(Nihon Rational Software Co.,Ltd)
+#
+# --
+#
+#   
+#
+
+class Shell
+  @@RELEASE_VERSION = "0.6.0"
+  @@LAST_UPDATE_DATE = "01/03/19"
+end
+@
+
+
+1.1.2.1
+log
+@* doc/shell.rd*, lib/shell*: bring shell.rb 0.6 onto the ruby_1_6
+branch.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/05/17 10:02:48 $
+@
+
+
+1.1.1.1
+log
+@Import Keiju ISHITSUKA's shell.rb 0.6 with some minor changes:
+
+	- all Japanese code were converted to EUC
+	- shell.doc and shell.doc.jp were renamed to shell.rd and
+	shell.rd.jp, respectively.  (They will be converted to RD
+	shortly)
+@
+text
+@@

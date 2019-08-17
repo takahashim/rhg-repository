@@ -1,0 +1,209 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_2_6repack:1.1.1.1.2.6
+	v1_2_6:1.1.1.1.2.6
+	v1_1d1:1.1.1.1.2.5.2.1
+	v1_1d0:1.1.1.1.2.5.2.1
+	v1_1c6:1.1.1.1.2.6
+	gtk_012:1.1.1.1.2.5
+	v1_1d-start:1.1.1.1.2.5
+	v1_1dev:1.1.1.1.2.5.0.2
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.47;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	98.04.23.07.38.01;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.04.24.09.33.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.04.27.10.08.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.04.30.07.41.19;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.06.26.08.08.46;	author matz;	state Exp;
+branches
+	1.1.1.1.2.5.2.1;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.10.06.02.47.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.5.2.1
+date	98.10.06.03.28.18;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@require "mkmf"
+if have_library("glib", "g_print") and
+    have_library("gdk", "gdk_init") and
+    have_library("gtk", "gtk_init")
+  create_makefile("gtk")
+end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.2.1
+log
+@gdk_draw_bitmap
+@
+text
+@a1 7
+
+# may need to be changed
+$LDFLAGS="-L/usr/X11R6/lib -L/usr/local/lib"
+$CFLAGS="-I/usr/X11R6/include -L/usr/local/include"
+
+have_library("X11", "XOpenDisplay")
+have_library("Xext", "XShmQueryVersion")
+@
+
+
+1.1.1.1.2.2
+log
+@gtk/nested local variables
+@
+text
+@d5 1
+@
+
+
+1.1.1.1.2.3
+log
+@extconf.rb
+@
+text
+@a4 1
+$CFLAGS=`gtk-config --cflags`
+a7 1
+have_library("Xi", "XOpenDevice")
+@
+
+
+1.1.1.1.2.4
+log
+@new exception model
+@
+text
+@d5 1
+a5 1
+$CFLAGS=`gtk-config --cflags`.chomp!
+@
+
+
+1.1.1.1.2.5
+log
+@*** empty log message ***
+@
+text
+@d4 1
+a4 1
+$LDFLAGS=`gtk-config --libs`.chomp!
+@
+
+
+1.1.1.1.2.5.2.1
+log
+@join 1.1c6
+@
+text
+@d4 2
+a5 9
+begin
+  $LDFLAGS, *libs = `gtk-config --libs`.chomp!.split(/(-l.*)/)
+  $libs = libs.join(' ') + ' ' + $libs
+  $CFLAGS=`gtk-config --cflags`.chomp!
+rescue
+  $LDFLAGS = '-L/usr/X11R6/lib -L/usr/local/lib'
+  $CFLAGS = '-I/usr/X11R6/lib -I/usr/local/include'
+  $libs = '-lm -lc'
+end
+a12 1
+  $libs = $libs.split(/\s/).uniq.join(' ')
+@
+
+
+1.1.1.1.2.6
+log
+@gtk-0.13
+@
+text
+@d4 2
+a5 9
+begin
+  $LDFLAGS, *libs = `gtk-config --libs`.chomp!.split(/(-l.*)/)
+  $libs = libs.join(' ') + ' ' + $libs
+  $CFLAGS=`gtk-config --cflags`.chomp!
+rescue
+  $LDFLAGS = '-L/usr/X11R6/lib -L/usr/local/lib'
+  $CFLAGS = '-I/usr/X11R6/lib -I/usr/local/include'
+  $libs = '-lm -lc'
+end
+a12 1
+  $libs = $libs.split(/\s/).uniq.join(' ')
+@
+
+

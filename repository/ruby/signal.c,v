@@ -1,0 +1,3696 @@
+head	1.37;
+access;
+symbols
+	v1_6_7:1.16.2.6
+	v1_6_6:1.16.2.6
+	v1_6_5:1.16.2.4
+	v1_6_4:1.16.2.4
+	v1_7_1:1.23
+	v1_6_4_preview4:1.16.2.4
+	v1_6_4_preview3:1.16.2.4
+	v1_6_4_preview2:1.16.2.3
+	v1_6_4_preview1:1.16.2.3
+	v1_6_3:1.16.2.3
+	ruby_m17n:1.16.0.4
+	ruby_1_6:1.16.0.2
+	v1_6_2:1.16
+	v1_6_1:1.14
+	v1_6_0:1.12
+	v1_4_6:1.3.2.2
+	v1_4_5:1.3.2.2
+	v1_4_4:1.3.2.2
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.3.2.1
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.6
+	v1_3_6_repack:1.1.1.2.2.6
+	v1_3_6:1.1.1.2.2.6
+	v1_3_5:1.1.1.2.2.6
+	v1_2_6repack:1.1.1.1.4.11
+	v1_3_4_990625:1.1.1.2.2.6
+	v1_3_4_990624:1.1.1.2.2.6
+	v1_2_6:1.1.1.1.4.11
+	v1_3_4_990611:1.1.1.2.2.6
+	v1_3_4_990531:1.1.1.2.2.6
+	v1_3_3_990518:1.1.1.2.2.5
+	v1_3_3_990513:1.1.1.2.2.5
+	v1_3_3_990507:1.1.1.2.2.4
+	v1_2_5:1.1.1.1.4.11
+	v1_2_4:1.1.1.1.4.11
+	v1_3_1_990225:1.1.1.2.2.2
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2.2.1
+	v1_3_1_990127:1.1.1.2.2.1
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.11
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.11
+	v1_2_1repack:1.1.1.1.4.11
+	v1_2_1:1.1.1.1.4.11
+	v1_2_stable:1.1.1.1.4.11
+	v1_1d1:1.1.1.1.4.11.2.3
+	v1_1d0:1.1.1.1.4.11.2.3
+	v1_1c9_1:1.1.1.1.4.11
+	v1_1c9:1.1.1.1.4.11
+	v1_1c8:1.1.1.1.4.11
+	v1_1c7:1.1.1.1.4.11
+	v1_1c6:1.1.1.1.4.11
+	v1_1d-start:1.1.1.1.4.11.2.1
+	v1_1c5:1.1.1.1.4.11
+	v1_1dev:1.1.1.1.4.11.0.2
+	v1_1c4:1.1.1.1.4.11
+	v1_1c3:1.1.1.1.4.11
+	v1_1c2:1.1.1.1.4.11
+	v1_1c1:1.1.1.1.4.11
+	v1_1c0:1.1.1.1.4.11
+	v1_1b9_31:1.1.1.1.4.11
+	v1_1b9_30:1.1.1.1.4.11
+	v1_1b9_28:1.1.1.1.4.10
+	v1_1b9_27:1.1.1.1.4.8
+	v1_1b9_26:1.1.1.1.4.8
+	r1_1b9_25:1.1.1.1.4.7
+	r1_1b9_24:1.1.1.1.4.6
+	v1_1b9_23:1.1.1.1.4.6
+	v1_1b9_22:1.1.1.1.4.5
+	v1_1b9_20:1.1.1.1.4.5
+	v1_1b9_18:1.1.1.1.4.4
+	v1_1b9_16:1.1.1.1.4.4
+	v1_1b9_15:1.1.1.1.4.4
+	v1_1b9_13:1.1.1.1.4.4
+	v1_1b9_12:1.1.1.1.4.4
+	v1_1b9_11:1.1.1.1.4.4
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.37
+date	2002.08.28.14.59.01;	author michal;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.08.16.07.23.04;	author eban;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.05.29.10.22.18;	author H_Konishi;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.04.24.04.54.14;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.08.07.03.03;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.21.13.59.41;	author nobu;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.21.07.44.06;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.21.15.41.27;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.19.05.03.03;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.13.08.19.52;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.08.23.06.02.15;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.08.06.03.05.13;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.05.16.09.05.50;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.03.28.08.43.25;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.03.21.03.41.41;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.02.20.07.42.03;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.02.19.07.03.06;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.02.14.05.51.58;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.11.27.09.23.26;	author matz;	state Exp;
+branches
+	1.16.2.1;
+next	1.15;
+
+1.15
+date	2000.11.14.07.10.23;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.09.27.09.11.12;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.09.19.07.54.22;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.08.07.05.01.57;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.13.16.12.16;	author eban;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.09.04.53.04;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.01.09.41.29;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.04.10.05.44.18;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.13.07.18.39;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.07.08.37.46;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.37.11;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.13.06.44.41;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.12.04.53.34;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.26;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.25.06.39.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.03.24.08.52.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.05.10.08.22.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.05.25.08.26.15;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.03.16.06.37.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.04.13.06.06.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.04.16.07.42.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	98.05.13.07.26.33;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.6;
+
+1.1.1.1.4.6
+date	98.05.25.04.57.55;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.7;
+
+1.1.1.1.4.7
+date	98.06.11.10.03.10;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.8;
+
+1.1.1.1.4.8
+date	98.06.16.04.23.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.9;
+
+1.1.1.1.4.9
+date	98.06.24.04.38.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.10;
+
+1.1.1.1.4.10
+date	98.06.26.09.44.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.11;
+
+1.1.1.1.4.11
+date	98.07.09.08.40.26;	author matz;	state Exp;
+branches
+	1.1.1.1.4.11.2.1;
+next	;
+
+1.1.1.1.4.11.2.1
+date	98.09.08.07.09.15;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.11.2.2;
+
+1.1.1.1.4.11.2.2
+date	98.10.06.03.28.15;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.11.2.3;
+
+1.1.1.1.4.11.2.3
+date	98.11.25.03.31.17;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.10.13.03.42.12;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.01.05.04.41.12;	author matz;	state Exp;
+branches;
+next	;
+
+1.16.2.1
+date	2001.02.19.07.39.20;	author matz;	state Exp;
+branches;
+next	1.16.2.2;
+
+1.16.2.2
+date	2001.02.20.07.42.20;	author matz;	state Exp;
+branches;
+next	1.16.2.3;
+
+1.16.2.3
+date	2001.03.19.09.00.30;	author matz;	state Exp;
+branches;
+next	1.16.2.4;
+
+1.16.2.4
+date	2001.05.15.08.49.21;	author matz;	state Exp;
+branches;
+next	1.16.2.5;
+
+1.16.2.5
+date	2001.11.13.08.22.27;	author matz;	state Exp;
+branches;
+next	1.16.2.6;
+
+1.16.2.6
+date	2001.11.21.15.35.58;	author matz;	state Exp;
+branches;
+next	1.16.2.7;
+
+1.16.2.7
+date	2002.03.08.06.59.53;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.37
+log
+@variable.c: Get rid of fix len buffer in rb_class_path (ruby-core:381)
+@
+text
+@/**********************************************************************
+
+  signal.c -
+
+  $Author: eban $
+  $Date: 2002/08/16 07:23:04 $
+  created at: Tue Dec 20 10:13:44 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "rubysig.h"
+#include <signal.h>
+#include <stdio.h>
+
+#ifdef __BEOS__
+#undef SIGBUS
+#endif
+
+#ifndef NSIG
+# ifdef DJGPP
+#  define NSIG SIGMAX
+# else
+#  define NSIG (_SIGMAX + 1)      /* For QNX */
+# endif
+#endif
+
+static struct signals {
+    char *signm;
+    int  signo;
+} siglist [] = {
+#ifdef SIGHUP
+    {"HUP", SIGHUP},
+#endif
+    {"INT", SIGINT},
+#ifdef SIGQUIT
+    {"QUIT", SIGQUIT},
+#endif
+#ifdef SIGILL
+    {"ILL", SIGILL},
+#endif
+#ifdef SIGTRAP
+    {"TRAP", SIGTRAP},
+#endif
+#ifdef SIGIOT
+    {"IOT", SIGIOT},
+#endif
+#ifdef SIGABRT
+    {"ABRT", SIGABRT},
+#endif
+#ifdef SIGEMT
+    {"EMT", SIGEMT},
+#endif
+#ifdef SIGFPE
+    {"FPE", SIGFPE},
+#endif
+#ifdef SIGKILL
+    {"KILL", SIGKILL},
+#endif
+#ifdef SIGBUS
+    {"BUS", SIGBUS},
+#endif
+#ifdef SIGSEGV
+    {"SEGV", SIGSEGV},
+#endif
+#ifdef SIGSYS
+    {"SYS", SIGSYS},
+#endif
+#ifdef SIGPIPE
+    {"PIPE", SIGPIPE},
+#endif
+#ifdef SIGALRM
+    {"ALRM", SIGALRM},
+#endif
+#ifdef SIGTERM
+    {"TERM", SIGTERM},
+#endif
+#ifdef SIGURG
+    {"URG", SIGURG},
+#endif
+#ifdef SIGSTOP
+    {"STOP", SIGSTOP},
+#endif
+#ifdef SIGTSTP
+    {"TSTP", SIGTSTP},
+#endif
+#ifdef SIGCONT
+    {"CONT", SIGCONT},
+#endif
+#ifdef SIGCHLD
+    {"CHLD", SIGCHLD},
+#endif
+#ifdef SIGCLD
+    {"CLD", SIGCLD},
+#else
+# ifdef SIGCHLD
+    {"CLD", SIGCHLD},
+# endif
+#endif
+#ifdef SIGTTIN
+    {"TTIN", SIGTTIN},
+#endif
+#ifdef SIGTTOU
+    {"TTOU", SIGTTOU},
+#endif
+#ifdef SIGIO
+    {"IO", SIGIO},
+#endif
+#ifdef SIGXCPU
+    {"XCPU", SIGXCPU},
+#endif
+#ifdef SIGXFSZ
+    {"XFSZ", SIGXFSZ},
+#endif
+#ifdef SIGVTALRM
+    {"VTALRM", SIGVTALRM},
+#endif
+#ifdef SIGPROF
+    {"PROF", SIGPROF},
+#endif
+#ifdef SIGWINCH
+    {"WINCH", SIGWINCH},
+#endif
+#ifdef SIGUSR1
+    {"USR1", SIGUSR1},
+#endif
+#ifdef SIGUSR2
+    {"USR2", SIGUSR2},
+#endif
+#ifdef SIGLOST
+    {"LOST", SIGLOST},
+#endif
+#ifdef SIGMSG
+    {"MSG", SIGMSG},
+#endif
+#ifdef SIGPWR
+    {"PWR", SIGPWR},
+#endif
+#ifdef SIGPOLL
+    {"POLL", SIGPOLL},
+#endif
+#ifdef SIGDANGER
+    {"DANGER", SIGDANGER},
+#endif
+#ifdef SIGMIGRATE
+    {"MIGRATE", SIGMIGRATE},
+#endif
+#ifdef SIGPRE
+    {"PRE", SIGPRE},
+#endif
+#ifdef SIGGRANT
+    {"GRANT", SIGGRANT},
+#endif
+#ifdef SIGRETRACT
+    {"RETRACT", SIGRETRACT},
+#endif
+#ifdef SIGSOUND
+    {"SOUND", SIGSOUND},
+#endif
+#ifdef SIGINFO
+    {"INFO", SIGINFO},
+#endif
+    {NULL, 0}
+};
+
+static int
+signm2signo(nm)
+    char *nm;
+{
+    struct signals *sigs;
+
+    for (sigs = siglist; sigs->signm; sigs++)
+	if (strcmp(sigs->signm, nm) == 0)
+	    return sigs->signo;
+    return 0;
+}
+
+static char*
+signo2signm(no)
+    int no;
+{
+    struct signals *sigs;
+
+    for (sigs = siglist; sigs->signm; sigs++)
+	if (sigs->signo == no)
+	    return sigs->signm;
+    return 0;
+}
+
+VALUE
+rb_f_kill(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    int negative = 0;
+    int sig;
+    int i;
+    char *s;
+
+    rb_secure(2);
+    if (argc < 2)
+	rb_raise(rb_eArgError, "wrong number of arguments -- kill(sig, pid...)");
+    switch (TYPE(argv[0])) {
+      case T_FIXNUM:
+	sig = FIX2INT(argv[0]);
+	break;
+
+      case T_SYMBOL:
+	s = rb_id2name(SYM2ID(argv[0]));
+	if (!s) rb_raise(rb_eArgError, "bad signal");
+	goto str_signal;
+
+      case T_STRING:
+	s = RSTRING(argv[0])->ptr;
+	if (s[0] == '-') {
+	    negative++;
+	    s++;
+	}
+      str_signal:
+	if (strncmp("SIG", s, 3) == 0)
+	    s += 3;
+	if((sig = signm2signo(s)) == 0)
+	    rb_raise(rb_eArgError, "unsupported name `SIG%s'", s);
+
+	if (negative)
+	    sig = -sig;
+	break;
+
+      default:
+        {
+	    VALUE str;
+
+	    str = rb_check_convert_type(argv[0], T_STRING, "String", "to_str");
+	    if (!NIL_P(str)) {
+		s = RSTRING(str)->ptr;
+		goto str_signal;
+	    }
+	    rb_raise(rb_eArgError, "bad signal type %s",
+		     rb_class2name(CLASS_OF(argv[0])));
+	}
+	break;
+    }
+
+    if (sig < 0) {
+	sig = -sig;
+	for (i=1; i<argc; i++) {
+	    int pid = NUM2INT(argv[i]);
+#ifdef HAS_KILLPG
+	    if (killpg(pid, sig) < 0)
+#else
+	    if (kill(-pid, sig) < 0)
+#endif
+		rb_sys_fail(0);
+	}
+    }
+    else {
+	for (i=1; i<argc; i++) {
+	    Check_Type(argv[i], T_FIXNUM);
+	    if (kill(FIX2INT(argv[i]), sig) < 0)
+		rb_sys_fail(0);
+	}
+    }
+    return INT2FIX(i-1);
+}
+
+static VALUE trap_list[NSIG];
+static rb_atomic_t trap_pending_list[NSIG];
+rb_atomic_t rb_trap_pending;
+rb_atomic_t rb_trap_immediate;
+int rb_prohibit_interrupt;
+
+void
+rb_gc_mark_trap_list()
+{
+#ifndef MACOS_UNUSE_SIGNAL
+    int i;
+
+    for (i=0; i<NSIG; i++) {
+	if (trap_list[i])
+	    rb_gc_mark(trap_list[i]);
+    }
+#endif /* MACOS_UNUSE_SIGNAL */
+}
+
+#ifdef __dietlibc__
+#define sighandler_t sh_t
+#endif
+
+typedef RETSIGTYPE (*sighandler_t)_((int));
+
+#ifdef POSIX_SIGNAL
+static sighandler_t
+ruby_signal(signum, handler)
+    int signum;
+    sighandler_t handler;
+{
+    struct sigaction sigact, old;
+
+    sigact.sa_handler = handler;
+    sigemptyset(&sigact.sa_mask);
+    sigact.sa_flags = 0;
+#if defined(SA_RESTART)
+    /* All other signals but VTALRM shall restart restartable syscall
+       VTALRM will cause EINTR to syscall if interrupted.
+    */
+    if (signum != SIGVTALRM) {
+        sigact.sa_flags |= SA_RESTART; /* SVR4, 4.3+BSD */
+    }
+#endif
+#ifdef SA_NOCLDWAIT
+    if (signum == SIGCHLD && handler == SIG_IGN)
+	sigact.sa_flags |= SA_NOCLDWAIT;
+#endif
+    sigaction(signum, &sigact, &old);
+    return old.sa_handler;
+}
+
+void
+posix_signal(signum, handler)
+    int signum;
+    sighandler_t handler;
+{
+    ruby_signal(signum, handler);
+}
+#else
+#define ruby_signal(sig,handler) signal((sig),(handler))
+#endif
+
+static void signal_exec _((int sig));
+static void
+signal_exec(sig)
+    int sig;
+{
+    if (trap_list[sig] == 0) {
+	switch (sig) {
+	  case SIGINT:
+	    rb_thread_interrupt();
+	    break;
+#ifdef SIGHUP
+	  case SIGHUP:
+#endif
+#ifdef SIGQUIT
+	  case SIGQUIT:
+#endif
+#ifdef SIGALRM
+	  case SIGALRM:
+#endif
+#ifdef SIGUSR1
+	  case SIGUSR1:
+#endif
+#ifdef SIGUSR2
+	  case SIGUSR2:
+#endif
+	    rb_thread_signal_raise(signo2signm(sig));
+	    break;
+	}
+    }
+    else {
+	rb_thread_trap_eval(trap_list[sig], sig);
+    }
+}
+
+static RETSIGTYPE sighandler _((int));
+static RETSIGTYPE
+sighandler(sig)
+    int sig;
+{
+#ifdef NT
+#define IN_MAIN_CONTEXT(f, a) (rb_w32_main_context(a, f) ? (void)0 : f(a))
+#else
+#define IN_MAIN_CONTEXT(f, a) f(a)
+#endif
+
+    if (sig >= NSIG) {
+	rb_bug("trap_handler: Bad signal %d", sig);
+    }
+
+#if !defined(BSD_SIGNAL) && !defined(POSIX_SIGNAL)
+    ruby_signal(sig, sighandler);
+#endif
+
+    if (ATOMIC_TEST(rb_trap_immediate)) {
+	IN_MAIN_CONTEXT(signal_exec, sig);
+	ATOMIC_SET(rb_trap_immediate, 1);
+    }
+    else {
+	ATOMIC_INC(rb_trap_pending);
+	ATOMIC_INC(trap_pending_list[sig]);
+    }
+}
+
+#ifdef SIGBUS
+static RETSIGTYPE sigbus _((int));
+static RETSIGTYPE
+sigbus(sig)
+    int sig;
+{
+    rb_bug("Bus Error");
+}
+#endif
+
+#ifdef SIGSEGV
+static RETSIGTYPE sigsegv _((int));
+static RETSIGTYPE
+sigsegv(sig)
+    int sig;
+{
+    rb_bug("Segmentation fault");
+}
+#endif
+
+#ifdef SIGPIPE
+static RETSIGTYPE sigpipe _((int));
+static RETSIGTYPE
+sigpipe(sig)
+    int sig;
+{
+    /* do nothing */
+}
+#endif
+
+void
+rb_trap_exit()
+{
+#ifndef MACOS_UNUSE_SIGNAL
+    if (trap_list[0]) {
+	VALUE trap_exit = trap_list[0];
+
+	trap_list[0] = 0;
+	rb_eval_cmd(trap_exit, rb_ary_new3(1, INT2FIX(0)), 0);
+    }
+#endif
+}
+
+void
+rb_trap_exec()
+{
+#ifndef MACOS_UNUSE_SIGNAL
+    int i;
+
+    for (i=0; i<NSIG; i++) {
+	if (trap_pending_list[i]) {
+	    trap_pending_list[i] = 0;
+	    signal_exec(i);
+	}
+    }
+#endif /* MACOS_UNUSE_SIGNAL */
+    rb_trap_pending = 0;
+}
+
+struct trap_arg {
+#if !defined(NT)
+# ifdef HAVE_SIGPROCMASK
+    sigset_t mask;
+# else
+    int mask;
+# endif
+#endif
+    VALUE sig, cmd;
+};
+
+# ifdef HAVE_SIGPROCMASK
+static sigset_t trap_last_mask;
+# else
+static int trap_last_mask;
+# endif
+
+static RETSIGTYPE sigexit _((int));
+static RETSIGTYPE
+sigexit(sig)
+    int sig;
+{
+    rb_exit(0);
+}
+
+static VALUE
+trap(arg)
+    struct trap_arg *arg;
+{
+    sighandler_t func;
+    VALUE command, old;
+    int sig = -1;
+    char *s;
+
+    func = sighandler;
+    command = arg->cmd;
+    if (NIL_P(command)) {
+	func = SIG_IGN;
+    }
+    else if (TYPE(command) == T_STRING) {
+	SafeStringValue(command);	/* taint check */
+	if (RSTRING(command)->len == 0) {
+	    func = SIG_IGN;
+	}
+	else if (RSTRING(command)->len == 7) {
+	    if (strncmp(RSTRING(command)->ptr, "SIG_IGN", 7) == 0) {
+		func = SIG_IGN;
+	    }
+	    else if (strncmp(RSTRING(command)->ptr, "SIG_DFL", 7) == 0) {
+		func = SIG_DFL;
+	    }
+	    else if (strncmp(RSTRING(command)->ptr, "DEFAULT", 7) == 0) {
+		func = SIG_DFL;
+	    }
+	}
+	else if (RSTRING(command)->len == 6) {
+	    if (strncmp(RSTRING(command)->ptr, "IGNORE", 6) == 0) {
+		func = SIG_IGN;
+	    }
+	}
+	else if (RSTRING(command)->len == 4) {
+	    if (strncmp(RSTRING(command)->ptr, "EXIT", 4) == 0) {
+		func = sigexit;
+	    }
+	}
+    }
+    if (func == SIG_IGN || func == SIG_DFL) {
+	command = 0;
+    }
+
+    switch (TYPE(arg->sig)) {
+      case T_FIXNUM:
+	sig = NUM2INT(arg->sig);
+	break;
+
+      case T_SYMBOL:
+	s = rb_id2name(SYM2ID(arg->sig));
+	if (!s) rb_raise(rb_eArgError, "bad signal");
+	goto str_signal;
+
+      case T_STRING:
+	s = RSTRING(arg->sig)->ptr;
+
+      str_signal:
+	if (strncmp("SIG", s, 3) == 0)
+	    s += 3;
+	sig = signm2signo(s);
+	if (sig == 0 && strcmp(s, "EXIT") != 0)
+	    rb_raise(rb_eArgError, "unsupported signal SIG%s", s);
+    }
+
+    if (sig < 0 || sig > NSIG) {
+	rb_raise(rb_eArgError, "invalid signal number (%d)", sig);
+    }
+#if defined(HAVE_SETITIMER) && !defined(__BOW__)
+    if (sig == SIGVTALRM) {
+	rb_raise(rb_eArgError, "SIGVTALRM reserved for Thread; cannot set handler");
+    }
+#endif
+    if (func == SIG_DFL) {
+	switch (sig) {
+	  case SIGINT:
+#ifdef SIGHUP
+	  case SIGHUP:
+#endif
+#ifdef SIGQUIT
+	  case SIGQUIT:
+#endif
+#ifdef SIGALRM
+	  case SIGALRM:
+#endif
+#ifdef SIGUSR1
+	  case SIGUSR1:
+#endif
+#ifdef SIGUSR2
+	  case SIGUSR2:
+#endif
+	    func = sighandler;
+	    break;
+#ifdef SIGBUS
+	  case SIGBUS:
+	    func = sigbus;
+	    break;
+#endif
+#ifdef SIGSEGV
+	  case SIGSEGV:
+	    func = sigsegv;
+	    break;
+#endif
+#ifdef SIGPIPE
+	  case SIGPIPE:
+	    func = sigpipe;
+	    break;
+#endif
+	}
+    }
+    ruby_signal(sig, func);
+    old = trap_list[sig];
+    if (!old) old = Qnil;
+
+    trap_list[sig] = command;
+    /* enable at least specified signal. */
+#if !defined(NT)
+#ifdef HAVE_SIGPROCMASK
+    sigdelset(&arg->mask, sig);
+#else
+    arg->mask &= ~sigmask(sig);
+#endif
+#endif
+    return old;
+}
+
+#if !defined(NT)
+static VALUE
+trap_ensure(arg)
+    struct trap_arg *arg;
+{
+    /* enable interrupt */
+#ifdef HAVE_SIGPROCMASK
+    sigprocmask(SIG_SETMASK, &arg->mask, NULL);
+#else
+    sigsetmask(arg->mask);
+#endif
+    trap_last_mask = arg->mask;
+    return 0;
+}
+#endif
+
+void
+rb_trap_restore_mask()
+{
+#if !defined(NT)
+# ifdef HAVE_SIGPROCMASK
+    sigprocmask(SIG_SETMASK, &trap_last_mask, NULL);
+# else
+    sigsetmask(trap_last_mask);
+# endif
+#endif
+}
+
+static VALUE
+sig_trap(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    struct trap_arg arg;
+
+    rb_secure(2);
+    if (argc == 0 || argc > 2) {
+	rb_raise(rb_eArgError, "wrong number of arguments -- trap(sig, cmd)/trap(sig){...}");
+    }
+
+    arg.sig = argv[0];
+    if (argc == 1) {
+	arg.cmd = rb_f_lambda();
+    }
+    else if (argc == 2) {
+	arg.cmd = argv[1];
+    }
+
+    if (OBJ_TAINTED(arg.cmd)) {
+	rb_raise(rb_eSecurityError, "Insecure: tainted signal trap");
+    }
+#if !defined(NT)
+    /* disable interrupt */
+# ifdef HAVE_SIGPROCMASK
+    sigfillset(&arg.mask);
+    sigprocmask(SIG_BLOCK, &arg.mask, &arg.mask);
+# else
+    arg.mask = sigblock(~0);
+# endif
+
+    return rb_ensure(trap, (VALUE)&arg, trap_ensure, (VALUE)&arg);
+#else
+    return trap(&arg);
+#endif
+}
+
+static VALUE
+sig_list()
+{
+    VALUE h = rb_hash_new();
+    struct signals *sigs;
+
+    for (sigs = siglist; sigs->signm; sigs++) {
+	rb_hash_aset(h, rb_str_new2(sigs->signm), INT2FIX(sigs->signo));
+    }
+    return h;
+}
+
+static void
+install_sighandler(signum, handler)
+    int signum;
+    sighandler_t handler;
+{
+    sighandler_t old;
+
+    old = ruby_signal(signum, handler);
+    if (old != SIG_DFL) {
+	ruby_signal(signum, old);
+    }
+}
+
+void
+Init_signal()
+{
+#ifndef MACOS_UNUSE_SIGNAL
+    VALUE mSignal = rb_define_module("Signal");
+
+    rb_define_global_function("trap", sig_trap, -1);
+    rb_define_module_function(mSignal, "trap", sig_trap, -1);
+    rb_define_module_function(mSignal, "list", sig_list, 0);
+
+    install_sighandler(SIGINT, sighandler);
+#ifdef SIGHUP
+    install_sighandler(SIGHUP, sighandler);
+#endif
+#ifdef SIGQUIT
+    install_sighandler(SIGQUIT, sighandler);
+#endif
+#ifdef SIGALRM
+    install_sighandler(SIGALRM, sighandler);
+#endif
+#ifdef SIGUSR1
+    install_sighandler(SIGUSR1, sighandler);
+#endif
+#ifdef SIGUSR2
+    install_sighandler(SIGUSR2, sighandler);
+#endif
+
+#ifdef SIGBUS
+    install_sighandler(SIGBUS, sigbus);
+#endif
+#ifdef SIGSEGV
+    install_sighandler(SIGSEGV, sigsegv);
+#endif
+#ifdef SIGPIPE
+    install_sighandler(SIGPIPE, sigpipe);
+#endif
+#endif /* MACOS_UNUSE_SIGNAL */
+}
+@
+
+
+1.36
+log
+@* io.c (NOFILE): define NOFILE as 64 if not defined.
+* signal.c (sighandler_t): rename to sh_t on dietlibc.
+@
+text
+@d5 2
+a6 2
+  $Author: H_Konishi $
+  $Date: 2002/05/29 10:22:18 $
+a38 1
+#ifdef SIGINT
+a39 1
+#endif
+@
+
+
+1.35
+log
+@Wed May 29 18:55:47 2002  KONISHI Hiromasa <H_Konishi@@ruby-lang.org>
+
+	* function renames my* and win32_* to rb_w32_* in win32/win32.c
+	  fixed files win32/win32.c, win32/win32.h, win32/dir.h,
+	              hash.c, rubysig.h, signal.c, ext/socket/socket.c
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d290 4
+@
+
+
+1.34
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 04:54:14 $
+d371 1
+a371 1
+#define IN_MAIN_CONTEXT(f, a) (win32_main_context(a, f) ? (void)0 : f(a))
+@
+
+
+1.33
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/11 08:02:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.32
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/08 07:03:03 $
+d37 1
+a37 1
+    "HUP", SIGHUP,
+d40 1
+a40 1
+    "INT", SIGINT,
+d43 1
+a43 1
+    "QUIT", SIGQUIT,
+d46 1
+a46 1
+    "ILL", SIGILL,
+d49 1
+a49 1
+    "TRAP", SIGTRAP,
+d52 1
+a52 1
+    "IOT", SIGIOT,
+d55 1
+a55 1
+    "ABRT", SIGABRT,
+d58 1
+a58 1
+    "EMT", SIGEMT,
+d61 1
+a61 1
+    "FPE", SIGFPE,
+d64 1
+a64 1
+    "KILL", SIGKILL,
+d67 1
+a67 1
+    "BUS", SIGBUS,
+d70 1
+a70 1
+    "SEGV", SIGSEGV,
+d73 1
+a73 1
+    "SYS", SIGSYS,
+d76 1
+a76 1
+    "PIPE", SIGPIPE,
+d79 1
+a79 1
+    "ALRM", SIGALRM,
+d82 1
+a82 1
+    "TERM", SIGTERM,
+d85 1
+a85 1
+    "URG", SIGURG,
+d88 1
+a88 1
+    "STOP", SIGSTOP,
+d91 1
+a91 1
+    "TSTP", SIGTSTP,
+d94 1
+a94 1
+    "CONT", SIGCONT,
+d97 1
+a97 1
+    "CHLD", SIGCHLD,
+d100 1
+a100 1
+    "CLD", SIGCLD,
+d103 1
+a103 1
+    "CLD", SIGCHLD,
+d107 1
+a107 1
+    "TTIN", SIGTTIN,
+d110 1
+a110 1
+    "TTOU", SIGTTOU,
+d113 1
+a113 1
+    "IO", SIGIO,
+d116 1
+a116 1
+    "XCPU", SIGXCPU,
+d119 1
+a119 1
+    "XFSZ", SIGXFSZ,
+d122 1
+a122 1
+    "VTALRM", SIGVTALRM,
+d125 1
+a125 1
+    "PROF", SIGPROF,
+d128 1
+a128 1
+    "WINCH", SIGWINCH,
+d131 1
+a131 1
+    "USR1", SIGUSR1,
+d134 1
+a134 1
+    "USR2", SIGUSR2,
+d137 1
+a137 1
+    "LOST", SIGLOST,
+d140 1
+a140 1
+    "MSG", SIGMSG,
+d143 1
+a143 1
+    "PWR", SIGPWR,
+d146 1
+a146 1
+    "POLL", SIGPOLL,
+d149 1
+a149 1
+    "DANGER", SIGDANGER,
+d152 1
+a152 1
+    "MIGRATE", SIGMIGRATE,
+d155 1
+a155 1
+    "PRE", SIGPRE,
+d158 1
+a158 1
+    "GRANT", SIGGRANT,
+d161 1
+a161 1
+    "RETRACT", SIGRETRACT,
+d164 1
+a164 1
+    "SOUND", SIGSOUND,
+d167 1
+a167 1
+    "INFO", SIGINFO,
+d169 1
+a169 1
+    NULL, 0,
+d484 1
+a484 1
+    int sig;
+@
+
+
+1.31
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+
+* class.c (rb_mod_clone): should not call rb_obj_clone(), since
+  Module does not provide "allocate".
+
+* class.c (rb_singleton_class): should crate new singleton class
+  if obj is a class or module and attached object is different,
+  which means metaclass of singleton class is sought.
+
+* time.c (time_s_alloc): now follows allocation framework.
+
+* eval.c (rb_eval): should initialize outer class variables from
+  methods in singleton class definitions.
+
+* eval.c (assign): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/21 13:59:41 $
+d220 10
+a229 11
+        {
+	    s = RSTRING(argv[0])->ptr;
+	    if (s[0] == '-') {
+		negative++;
+		s++;
+	    }
+	  str_signal:
+	    if (strncmp("SIG", s, 3) == 0)
+		s += 3;
+	    if((sig = signm2signo(s)) == 0)
+		rb_raise(rb_eArgError, "unrecognized signal name `%s'", s);
+d231 2
+a232 3
+	    if (negative)
+		sig = -sig;
+	}
+d236 11
+a246 2
+	rb_raise(rb_eArgError, "bad signal type %s",
+		 rb_class2name(CLASS_OF(argv[0])));
+@
+
+
+1.30
+log
+@* signal.c (ruby_signal): must define sighandler_t unless
+  POSIX_SIGNAL.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/21 07:44:06 $
+d534 1
+a534 1
+	    rb_raise(rb_eArgError, "invalid signal SIG%s", s);
+@
+
+
+1.29
+log
+@* eval.c (ruby_stop): should not trace error handler.
+
+* signal.c (install_sighandler): do not install sighandler unless
+  the old value is SIG_DFL.
+
+* io.c (io_write): should not raise exception on O_NONBLOCK io.
+
+* dir.c (dir_set_pos): seek should return dir, pos= should not.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/21 15:41:27 $
+a283 1
+#ifdef POSIX_SIGNAL
+d286 1
+@
+
+
+1.28
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* process.c (pst_wstopsig): returns nil unless WIFSTOPPED() is
+  non-zero.
+
+* process.c (pst_wtermsig): returns nil unless WIFSIGNALED() is
+  non-zero.
+
+* process.c (pst_wexitstatus): returns nil unless WIFEXITED() is
+  non-zero.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+
+* parse.y (call_args2): block_arg may follow the first argument in
+  call_args2.
+
+* eval.c (stack_check): should avoid stack length check during
+  raising SystemStackError exception.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:03 $
+d285 4
+a288 2
+void
+posix_signal(signum, handler)
+d290 1
+a290 1
+    RETSIGTYPE (*handler)_((int));
+d292 1
+a292 1
+    struct sigaction sigact;
+d309 10
+a318 1
+    sigaction(signum, &sigact, 0);
+a319 1
+#define ruby_signal(sig,handle) posix_signal((sig),(handle))
+d321 1
+a321 1
+#define ruby_signal(sig,handle) signal((sig),(handle))
+d358 1
+a358 1
+static RETSIGTYPE sighandle _((int));
+d360 1
+a360 1
+sighandle(sig)
+d374 1
+a374 1
+    ruby_signal(sig, sighandle);
+d475 1
+a475 1
+    RETSIGTYPE (*func)_((int));
+d480 1
+a480 1
+    func = sighandle;
+d563 1
+a563 1
+	    func = sighandle;
+d676 13
+d699 1
+a699 1
+    ruby_signal(SIGINT, sighandle);
+d701 1
+a701 1
+    ruby_signal(SIGHUP, sighandle);
+d704 1
+a704 1
+    ruby_signal(SIGQUIT, sighandle);
+d707 1
+a707 1
+    ruby_signal(SIGALRM, sighandle);
+d710 1
+a710 1
+    ruby_signal(SIGUSR1, sighandle);
+d713 1
+a713 1
+    ruby_signal(SIGUSR2, sighandle);
+d717 1
+a717 1
+    ruby_signal(SIGBUS, sigbus);
+d720 1
+a720 1
+    ruby_signal(SIGSEGV, sigsegv);
+d723 1
+a723 1
+    ruby_signal(SIGPIPE, sigpipe);
+@
+
+
+1.27
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:19:52 $
+d296 6
+a301 1
+    sigact.sa_flags |= SA_RESTART; /* SVR4, 4.3+BSD */
+@
+
+
+1.26
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:02:15 $
+d208 1
+a208 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- kill(sig, pid...)");
+d620 1
+a620 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- trap(sig, cmd)/trap(sig){...}");
+@
+
+
+1.25
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* file.c (group_member): should check real gid only.
+
+* file.c (eaccess): do not cache euid, since effective euid may be
+  changed via Process.euid=().
+
+* file.c (eaccess): return -1 unless every specified access mode
+  is permitted.
+
+* eval.c (rb_eval): while/until returns the value which is given
+  to break.
+
+* parse.y (value_expr): using while/until/class/def as an
+  expression is now gives a warning, not an error.
+
+* range.c (range_eqq): should compare strings based on magical
+  increment (using String#upto), not dictionary order.
+
+* enum.c (enum_sort_by): new method for Schewartzian transformed
+  stable sort.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/06 03:05:13 $
+d358 1
+a358 1
+#if !defined(BSD_SIGNAL)
+d410 1
+a410 1
+	rb_eval_cmd(trap_exit, rb_ary_new3(1, INT2FIX(0)));
+d631 3
+@
+
+
+1.24
+log
+@* string.c (rb_str_lstrip_bang): new method.
+
+* string.c (rb_str_rstrip_bang): new method.
+
+* string.c (rb_str_associate): should consider STR_ASSOC too.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+
+* process.c (proc_waitpid): now all arguments are optional.
+
+* process.c (Init_process): waitpid is now alias to wait.
+
+* process.c (Init_process): waitpid2 is now alias to wait2.
+
+* process.c (rb_waitpid): made public.
+
+* ext/pty/pty.c (pty_getpty): avoid disturbing SIGCHLD using
+  thread and rb_waitpid.
+
+* process.c (proc_getpgrp): now takes no argument on all
+  platforms.
+
+* process.c (proc_setpgrp): ditto.
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::pack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::pack_sockaddr_un(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::unpack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::unpack_sockaddr_un(). [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/16 09:05:50 $
+d612 1
+a612 1
+rb_f_trap(argc, argv)
+d646 12
+d662 6
+a667 1
+    rb_define_global_function("trap", rb_f_trap, -1);
+@
+
+
+1.23
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d295 1
+a295 1
+#ifdef SA_RESTART
+@
+
+
+1.22
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:25 $
+d165 3
+@
+
+
+1.21
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 03:41:41 $
+d468 1
+a468 1
+	SafeStr(command);	/* taint check */
+@
+
+
+1.20
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/20 07:42:03 $
+d468 1
+a468 1
+	Check_SafeStr(command);	/* taint check */
+@
+
+
+1.19
+log
+@* configure.in: add check for negative time_t for gmtime(3).
+
+* time.c (time_new_internal): no positive check if gmtime(3) can
+  handle negative time_t.
+
+* time.c (time_timeval): ditto.
+
+* bignum.c (rb_big2long): should not raise RangeError for Bignum
+  LONG_MIN value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/19 07:03:06 $
+d255 1
+a255 1
+	    if (kill(FIX2UINT(argv[i]), sig) < 0)
+@
+
+
+1.18
+log
+@* eval.c (secure_visibility): visibility check for untainted modules.
+
+* signal.c (sigpipe): sighandler which does nothing.
+
+* signal.c (trap): set sigpipe function for SIGPIPE.
+
+* signal.c (Init_signal): default SIGPIPE handler should be
+  sigpipe function.
+
+* array.c (rb_ary_subseq): wrong boundary check.
+
+* parse.y (cond0): integer literal in condition should not be
+  compared to lineno ($.).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:58 $
+d390 1
+a390 1
+static RETSIGTYPE sigsegv _((int));
+@
+
+
+1.17
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:26 $
+d389 10
+d559 1
+a559 1
+	    func = SIG_IGN;
+d672 1
+a672 1
+    ruby_signal(SIGPIPE, SIG_IGN);
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/14 07:10:23 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.16.2.1
+log
+@sigpipe patch
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:26 $
+a388 10
+#ifdef SIGPIPE
+static RETSIGTYPE sigsegv _((int));
+static RETSIGTYPE
+sigpipe(sig)
+    int sig;
+{
+    /* do nothing */
+}
+#endif
+
+d549 1
+a549 1
+	    func = sigpipe;
+d662 1
+a662 1
+    ruby_signal(SIGPIPE, sigpipe);
+@
+
+
+1.16.2.2
+log
+@* bignum.c (rb_big2long): should not raise RangeError for Bignum
+  LONG_MIN value.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/19 07:39:20 $
+d390 1
+a390 1
+static RETSIGTYPE sigpipe _((int));
+@
+
+
+1.16.2.3
+log
+@* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/20 07:42:20 $
+d255 1
+a255 1
+	    if (kill(FIX2INT(argv[i]), sig) < 0)
+@
+
+
+1.16.2.4
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/19 09:00:30 $
+a164 3
+#endif
+#ifdef SIGINFO
+    "INFO", SIGINFO,
+@
+
+
+1.16.2.5
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/15 08:49:21 $
+d358 1
+a358 1
+#if !defined(BSD_SIGNAL) && !defined(POSIX_SIGNAL)
+@
+
+
+1.16.2.6
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:22:27 $
+d296 1
+a296 6
+    /* All other signals but VTALRM shall restart restartable syscall
+       VTALRM will cause EINTR to syscall if interrupted.
+    */
+    if (signum != SIGVTALRM) {
+        sigact.sa_flags |= SA_RESTART; /* SVR4, 4.3+BSD */
+    }
+@
+
+
+1.16.2.7
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/21 15:35:58 $
+d524 1
+a524 1
+	    rb_raise(rb_eArgError, "unsupported signal SIG%s", s);
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/27 09:11:12 $
+d394 4
+a397 1
+	rb_eval_cmd(trap_list[0], rb_ary_new3(1, INT2FIX(0)));
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/19 07:54:22 $
+d263 3
+a265 3
+static int trap_pending_list[NSIG];
+int rb_trap_pending;
+int rb_trap_immediate;
+d306 1
+d346 1
+a346 3
+#define end_interrupt() win32_thread_resume_main()
+    if (win32_main_context(sig, sighandle)) return;
+
+d348 1
+a348 1
+#define end_interrupt() (void)0
+d359 3
+a361 4
+    if (rb_trap_immediate) {
+	rb_trap_immediate = 0;
+	signal_exec(sig);
+	rb_trap_immediate = 1;
+d364 2
+a365 2
+	rb_trap_pending++;
+	trap_pending_list[sig]++;
+a366 1
+    end_interrupt();
+@
+
+
+1.13
+log
+@000919
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/07 05:01:57 $
+d344 8
+d369 1
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/05/13 16:12:16 $
+d208 1
+a208 1
+	sig = FIX2UINT(argv[0]);
+@
+
+
+1.11
+log
+@support mingw32.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/09 04:53:04 $
+d285 1
+a285 1
+    RETSIGTYPE (*handler)();
+d339 1
+d364 1
+d374 1
+d426 1
+d428 2
+a429 1
+sigexit()
+d438 1
+a438 1
+    RETSIGTYPE (*func)();
+@
+
+
+1.10
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:29 $
+d315 1
+a315 1
+#if !defined(NT) && !defined(__human68k__)
+d506 1
+a506 1
+#if !defined(NT) && !defined(__human68k__)
+d625 1
+a625 1
+#ifndef NT
+@
+
+
+1.9
+log
+@2000-05-01
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/04/10 05:44:18 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+d13 1
+a13 1
+************************************************/
+@
+
+
+1.8
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/13 07:18:39 $
+d8 4
+@
+
+
+1.7
+log
+@2000-03-13
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:46 $
+d432 1
+d470 12
+a481 2
+    if (TYPE(arg->sig) == T_STRING) {
+	char *s = RSTRING(arg->sig)->ptr;
+d483 1
+d490 1
+a490 3
+    else {
+	sig = NUM2INT(arg->sig);
+    }
+@
+
+
+1.6
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:11 $
+a204 5
+	if (sig >= NSIG) {
+	    s = rb_id2name(sig);
+	    if (!s) rb_raise(rb_eArgError, "bad signal");
+	    goto str_signal;
+	}
+d206 5
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/13 06:44:41 $
+a27 5
+#ifdef USE_CWGUSI
+# undef NSIG
+# define NSIG __signal_max
+#endif
+
+a193 3
+#ifdef USE_CWGUSI
+    rb_notimplement();
+#else
+a255 1
+#endif /* USE_CWGUSI */
+d403 1
+a403 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d532 1
+a532 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d542 1
+a542 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d561 1
+a561 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d590 1
+a590 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/12 04:53:34 $
+d320 1
+a320 1
+#ifndef NT
+d501 1
+a501 1
+#ifndef NT
+@
+
+
+1.3
+log
+@19991012
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:14 $
+d301 1
+a301 1
+    if (signum == SIGCHLD && handler == (RETSIGTYPE)SIG_IGN)
+@
+
+
+1.3.2.1
+log
+@19991013
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/12 04:53:34 $
+d301 1
+a301 1
+    if (signum == SIGCHLD && handler == SIG_IGN)
+@
+
+
+1.3.2.2
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/13 03:42:12 $
+d320 1
+a320 1
+#if !defined(NT) && !defined(__human68k__)
+d501 1
+a501 1
+#if !defined(NT) && !defined(__human68k__)
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/25 08:26:15 $
+d297 7
+a322 3
+#ifdef SIGPIPE
+	  case SIGPIPE:
+#endif
+d352 1
+a352 1
+#if !defined(POSIX_SIGNAL) && !defined(BSD_SIGNAL)
+a515 3
+#ifdef SIGPIPE
+	  case SIGPIPE:
+#endif
+d528 5
+a622 3
+#ifdef SIGPIPE
+    ruby_signal(SIGPIPE, sighandle);
+#endif
+d641 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:53 $
+d12 1
+a12 1
+#include "sig.h"
+d16 4
+d21 5
+a25 4
+#ifdef DJGPP
+#define NSIG SIGMAX
+#else
+#define NSIG (_SIGMAX + 1)      /* For QNX */
+d27 4
+d182 12
+d195 1
+a195 1
+f_kill(argc, argv)
+d199 4
+d209 1
+a209 1
+	ArgError("wrong # of arguments -- kill(sig, pid...)");
+d215 1
+a215 1
+	    if (!s) ArgError("Bad signal");
+d221 1
+a221 3
+	{
+	    int negative = 0;
+
+d231 1
+a231 1
+		ArgError("Unrecognized signal name `%s'", s);
+d239 2
+a240 1
+	ArgError("bad signal type %s", rb_class2name(CLASS_OF(argv[0])));
+d264 1
+d269 3
+a271 3
+int trap_pending;
+int trap_immediate;
+int prohibit_interrupt;
+d274 1
+a274 1
+gc_mark_trap_list()
+d276 1
+d281 1
+a281 1
+	    gc_mark(trap_list[i]);
+d283 1
+d299 16
+d316 23
+d344 3
+a346 2
+    if (sig >= NSIG ||(sig != SIGINT && !trap_list[sig]))
+	Bug("trap_handler: Bad signal %d", sig);
+d349 1
+a349 1
+    signal(sig, sighandle);
+d352 4
+a355 11
+    if (trap_immediate) {
+	trap_immediate = 0;
+	if (sig == SIGINT && !trap_list[SIGINT]) {
+#ifdef THREAD
+	    thread_interrupt();
+#else
+	    rb_interrupt();
+#endif
+	}
+	rb_trap_eval(trap_list[sig], sig);
+	trap_immediate = 1;
+d358 1
+a358 1
+	trap_pending++;
+d368 1
+a368 1
+    Bug("Bus Error");
+d377 1
+a377 1
+    Bug("Segmentation fault");
+d384 5
+a388 2
+    if (trap_list[0])
+	rb_eval_cmd(trap_list[0], ary_new3(1, INT2FIX(0)));
+d394 1
+d400 1
+a400 9
+	    if (i == SIGINT && trap_list[SIGINT] == 0) {
+#ifdef THREAD
+		thread_interrupt();
+#else
+		rb_interrupt();
+#endif
+		return;
+	    }
+	    rb_trap_eval(trap_list[i], i);
+d403 2
+a404 1
+    trap_pending = 0;
+d408 1
+a408 1
+#ifndef NT
+d418 6
+d481 1
+a481 1
+	    ArgError("Invalid signal SIG%s", s);
+d487 1
+a487 1
+	ArgError("Invalid signal no %d", sig);
+d489 1
+a489 1
+#if defined(THREAD) && defined(HAVE_SETITIMER) && !defined(__BOW__)
+d491 1
+a491 1
+	ArgError("SIGVTALRM reserved for Thread; cannot set handler");
+d497 18
+d529 1
+a529 5
+#ifdef POSIX_SIGNAL
+    posix_signal(sig, func);
+#else
+    signal(sig, func);
+#endif
+d535 1
+a535 1
+#ifndef NT
+d545 2
+a546 2
+#ifndef NT
+static void
+d556 2
+d561 12
+d574 1
+a574 1
+f_trap(argc, argv)
+d582 1
+a582 1
+	ArgError("wrong # of arguments -- trap(sig, cmd)/trap(sig){...}");
+d587 1
+a587 1
+	arg.cmd = f_lambda();
+d593 1
+a593 1
+#ifndef NT
+d602 1
+a602 1
+    return rb_ensure(trap, &arg, trap_ensure, &arg);
+d611 21
+a631 1
+    extern VALUE mKernel;
+a632 6
+    rb_define_global_function("trap", f_trap, -1);
+#ifdef POSIX_SIGNAL
+    posix_signal(SIGINT, sighandle);
+#else
+    signal(SIGINT, sighandle);
+#endif
+d634 1
+a634 1
+    signal(SIGBUS, sigbus);
+d637 1
+a637 1
+    signal(SIGSEGV, sigsegv);
+d639 1
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:17 $
+d12 1
+a12 1
+#include "rubysig.h"
+a15 4
+#ifdef __BEOS__
+#undef SIGBUS
+#endif
+
+d17 4
+a20 5
+# ifdef DJGPP
+#  define NSIG SIGMAX
+# else
+#  define NSIG (_SIGMAX + 1)      /* For QNX */
+# endif
+a21 4
+
+#ifdef USE_CWGUSI
+# undef NSIG
+# define NSIG __signal_max
+d174 1
+a174 1
+rb_f_kill(argc, argv)
+a177 4
+#ifdef USE_CWGUSI
+    rb_notimplement();
+#else
+    int negative = 0;
+d184 1
+a184 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- kill(sig, pid...)");
+d190 1
+a190 1
+	    if (!s) rb_raise(rb_eArgError, "Bad signal");
+d196 3
+a198 1
+        {
+d208 1
+a208 1
+		rb_raise(rb_eArgError, "Unrecognized signal name `%s'", s);
+d216 1
+a216 2
+	rb_raise(rb_eArgError, "bad signal type %s",
+		 rb_class2name(CLASS_OF(argv[0])));
+a239 1
+#endif /* USE_CWGUSI */
+d244 3
+a246 3
+int rb_trap_pending;
+int rb_trap_immediate;
+int rb_prohibit_interrupt;
+d249 1
+a249 1
+rb_gc_mark_trap_list()
+a250 1
+#ifndef MACOS_UNUSE_SIGNAL
+d255 1
+a255 1
+	    rb_gc_mark(trap_list[i]);
+a256 1
+#endif /* MACOS_UNUSE_SIGNAL */
+a273 5
+#ifdef USE_THREAD
+# define rb_interrupt rb_thread_interrupt
+# define rb_trap_eval rb_thread_trap_eval
+#endif
+
+d279 1
+a279 1
+	rb_bug("trap_handler: Bad signal %d", sig);
+d285 2
+a286 2
+    if (rb_trap_immediate) {
+	rb_trap_immediate = 0;
+d288 3
+d292 1
+d295 1
+a295 1
+	rb_trap_immediate = 1;
+d298 1
+a298 1
+	rb_trap_pending++;
+d308 1
+a308 1
+    rb_bug("Bus Error");
+d317 1
+a317 1
+    rb_bug("Segmentation fault");
+d324 2
+a325 5
+#ifndef MACOS_UNUSE_SIGNAL
+    if (trap_list[0]) {
+	rb_eval_cmd(trap_list[0], rb_ary_new3(1, INT2FIX(0)));
+    }
+#endif
+a330 1
+#ifndef MACOS_UNUSE_SIGNAL
+d337 3
+d341 1
+d347 1
+a347 2
+#endif /* MACOS_UNUSE_SIGNAL */
+    rb_trap_pending = 0;
+d351 1
+a351 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+a360 6
+# ifdef HAVE_SIGPROCMASK
+static sigset_t trap_last_mask;
+# else
+static int trap_last_mask;
+# endif
+
+d418 1
+a418 1
+	    rb_raise(rb_eArgError, "Invalid signal SIG%s", s);
+d424 1
+a424 1
+	rb_raise(rb_eArgError, "Invalid signal no %d", sig);
+d426 1
+a426 1
+#if defined(USE_THREAD) && defined(HAVE_SETITIMER) && !defined(__BOW__)
+d428 1
+a428 1
+	rb_raise(rb_eArgError, "SIGVTALRM reserved for Thread; cannot set handler");
+d458 1
+a458 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d468 2
+a469 2
+#if !defined(NT) && !defined(USE_CWGUSI)
+static VALUE
+a478 2
+    trap_last_mask = arg->mask;
+    return 0;
+a481 12
+void
+rb_trap_restore_mask()
+{
+#ifndef NT
+# ifdef HAVE_SIGPROCMASK
+    sigprocmask(SIG_SETMASK, &trap_last_mask, NULL);
+# else
+    sigsetmask(trap_last_mask);
+# endif
+#endif
+}
+
+d483 1
+a483 1
+rb_f_trap(argc, argv)
+d491 1
+a491 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- trap(sig, cmd)/trap(sig){...}");
+d496 1
+a496 1
+	arg.cmd = rb_f_lambda();
+d502 1
+a502 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d511 1
+a511 1
+    return rb_ensure(trap, (VALUE)&arg, trap_ensure, (VALUE)&arg);
+d520 3
+a522 2
+#ifndef MACOS_UNUSE_SIGNAL
+    rb_define_global_function("trap", rb_f_trap, -1);
+a533 1
+#endif /* MACOS_UNUSE_SIGNAL */
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:26 $
+d510 1
+a510 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+@
+
+
+1.1.1.2.2.2
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:16 $
+d203 1
+a203 1
+	    if (!s) rb_raise(rb_eArgError, "bad signal");
+d219 1
+a219 1
+		rb_raise(rb_eArgError, "unrecognized signal name `%s'", s);
+d441 1
+a441 1
+	    rb_raise(rb_eArgError, "invalid signal SIG%s", s);
+d447 1
+a447 1
+	rb_raise(rb_eArgError, "invalid signal number (%d)", sig);
+@
+
+
+1.1.1.2.2.3
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:11 $
+a181 12
+static char*
+signo2signm(no)
+    int no;
+{
+    struct signals *sigs;
+
+    for (sigs = siglist; sigs->signm; sigs++)
+	if (sigs->signo == no)
+	    return sigs->signm;
+    return 0;
+}
+
+a286 3
+#define ruby_signal(sig,handle) posix_signal((sig),(handle))
+#else
+#define ruby_signal(sig,handle) signal((sig),(handle))
+d289 3
+a291 13
+static int
+signal_exec(sig)
+    int sig;
+{
+    if (trap_list[sig] == 0) {
+	switch (sig) {
+	  case SIGINT:
+	    rb_thread_interrupt();
+	    break;
+	  case SIGHUP:
+	  case SIGTERM:
+#ifdef SIGPIPE
+	  case SIGPIPE:
+a292 20
+#ifdef SIGQUIT
+	  case SIGQUIT:
+#endif
+#ifdef SIGALRM
+	  case SIGALRM:
+#endif
+#ifdef SIGUSR1
+	  case SIGUSR1:
+#endif
+#ifdef SIGUSR2
+	  case SIGUSR2:
+#endif
+	    rb_thread_signal_raise(signo2signm(sig));
+	    break;
+	}
+    }
+    else {
+	rb_thread_trap_eval(trap_list[sig], sig);
+    }
+}
+d298 1
+a298 1
+    if (sig >= NSIG) {
+a299 1
+    }
+d302 1
+a302 1
+    ruby_signal(sig, sighandle);
+d307 4
+a310 1
+	signal_exec(sig);
+d356 5
+a360 1
+	    signal_exec(i);
+d449 1
+a449 1
+#if defined(HAVE_SETITIMER) && !defined(__BOW__)
+a456 17
+	  case SIGHUP:
+	  case SIGTERM:
+#ifdef SIGQUIT
+	  case SIGQUIT:
+#endif
+#ifdef SIGALRM
+	  case SIGALRM:
+#endif
+#ifdef SIGUSR1
+	  case SIGUSR1:
+#endif
+#ifdef SIGUSR2
+	  case SIGUSR2:
+#endif
+#ifdef SIGPIPE
+	  case SIGPIPE:
+#endif
+d471 5
+a475 1
+    ruby_signal(sig, func);
+d559 4
+a562 8
+    ruby_signal(SIGINT, sighandle);
+    ruby_signal(SIGHUP, sighandle);
+    ruby_signal(SIGTERM, sighandle);
+#ifdef SIGPIPE
+    ruby_signal(SIGPIPE, sighandle);
+#endif
+#ifdef SIGQUIT
+    ruby_signal(SIGQUIT, sighandle);
+a563 10
+#ifdef SIGALRM
+    ruby_signal(SIGALRM, sighandle);
+#endif
+#ifdef SIGUSR1
+    ruby_signal(SIGUSR1, sighandle);
+#endif
+#ifdef SIGUSR2
+    ruby_signal(SIGUSR2, sighandle);
+#endif
+
+d565 1
+a565 1
+    ruby_signal(SIGBUS, sigbus);
+d568 1
+a568 1
+    ruby_signal(SIGSEGV, sigsegv);
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:33 $
+a312 1
+#ifndef NT
+a314 1
+#endif
+a495 1
+#ifndef NT
+a497 1
+#endif
+a611 1
+#ifndef NT
+a613 1
+#endif
+@
+
+
+1.1.1.2.2.5
+log
+@regexp,range,squeeze
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:43 $
+d315 1
+d500 1
+d618 1
+@
+
+
+1.1.1.2.2.6
+log
+@regexp null pattern
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/10 08:22:47 $
+d304 1
+a304 1
+static void
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 04:05:48 $
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_03 pre2
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+a360 6
+# ifdef HAVE_SIGPROCMASK
+static sigset_t trap_last_mask;
+# else
+static int trap_last_mask;
+# endif
+
+a478 1
+    trap_last_mask = arg->mask;
+a480 12
+
+void
+trap_restore_mask()
+{
+#ifndef NT
+# ifdef HAVE_SIGPROCMASK
+    sigprocmask(SIG_SETMASK, &trap_last_mask, NULL);
+# else
+    sigsetmask(trap_last_mask);
+# endif
+#endif
+}
+@
+
+
+1.1.1.1.4.3
+log
+@signal to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/16 06:37:12 $
+a343 3
+#ifdef THREAD
+	    thread_trap_eval(trap_list[i], i);
+#else
+a344 1
+#endif
+@
+
+
+1.1.1.1.4.4
+log
+@flock,flatten,signal to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/13 06:06:12 $
+a273 5
+#ifdef THREAD
+# define rb_interrupt thread_interrupt
+# define rb_trap_eval thread_trap_eval
+#endif
+
+d288 3
+d292 1
+d337 3
+d341 1
+d344 3
+d348 1
+@
+
+
+1.1.1.1.4.5
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/16 07:42:46 $
+a15 4
+#ifdef __BEOS__
+#undef SIGBUS
+#endif
+
+d17 4
+a20 5
+# ifdef DJGPP
+#  define NSIG SIGMAX
+# else
+#  define NSIG (_SIGMAX + 1)      /* For QNX */
+# endif
+a21 4
+
+#ifdef USE_CWGUSI
+# undef NSIG
+# define NSIG __signal_max
+a177 3
+#ifdef USE_CWGUSI
+    rb_notimplement();
+#else
+a239 1
+#endif /* USE_CWGUSI */
+a250 1
+#ifndef MACOS_UNUSE_SIGNAL
+a256 1
+#endif /* MACOS_UNUSE_SIGNAL */
+a324 1
+#ifndef MACOS_UNUSE_SIGNAL
+a326 1
+#endif
+a331 1
+#ifndef MACOS_UNUSE_SIGNAL
+a343 1
+#endif /* MACOS_UNUSE_SIGNAL */
+d348 1
+a348 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d461 1
+a461 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d471 2
+a472 2
+#if !defined(NT) && !defined(USE_CWGUSI)
+static VALUE
+d518 1
+a518 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+d527 1
+a527 1
+    return rb_ensure(trap, (VALUE)&arg, trap_ensure, (VALUE)&arg);
+a535 1
+#ifndef MACOS_UNUSE_SIGNAL
+a549 1
+#endif /* MACOS_UNUSE_SIGNAL */
+@
+
+
+1.1.1.1.4.6
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:33 $
+a189 1
+    int negative = 0;
+d208 3
+a210 1
+        {
+a501 1
+    return 0;
+d556 2
+@
+
+
+1.1.1.1.4.7
+log
+@1.1b9_25
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:55 $
+a449 3
+    }
+    if (sig == SIGALRM) {
+	ArgError("SIGALRM reserved for Thread; cannot set handler");
+@
+
+
+1.1.1.1.4.8
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/11 10:03:10 $
+d12 1
+a12 1
+#include "rubysig.h"
+@
+
+
+1.1.1.1.4.9
+log
+@thread->thred
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:46 $
+d289 2
+a290 2
+# define rb_interrupt thred_interrupt
+# define rb_trap_eval thred_trap_eval
+@
+
+
+1.1.1.1.4.10
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/24 04:38:04 $
+d289 2
+a290 2
+# define rb_interrupt thread_interrupt
+# define rb_trap_eval thread_trap_eval
+@
+
+
+1.1.1.1.4.11
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:39 $
+d450 3
+@
+
+
+1.1.1.1.4.11.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:26 $
+d183 1
+a183 1
+rb_f_kill(argc, argv)
+d197 1
+a197 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- kill(sig, pid...)");
+d203 1
+a203 1
+	    if (!s) rb_raise(rb_eArgError, "Bad signal");
+d219 1
+a219 1
+		rb_raise(rb_eArgError, "Unrecognized signal name `%s'", s);
+d227 1
+a227 2
+	rb_raise(rb_eArgError, "bad signal type %s",
+		 rb_class2name(CLASS_OF(argv[0])));
+d256 3
+a258 3
+int rb_trap_pending;
+int rb_trap_immediate;
+int rb_prohibit_interrupt;
+d261 1
+a261 1
+rb_gc_mark_trap_list()
+d268 1
+a268 1
+	    rb_gc_mark(trap_list[i]);
+d289 2
+a290 2
+# define rb_interrupt rb_thread_interrupt
+# define rb_trap_eval rb_thread_trap_eval
+d298 1
+a298 1
+	rb_bug("trap_handler: Bad signal %d", sig);
+d304 2
+a305 2
+    if (rb_trap_immediate) {
+	rb_trap_immediate = 0;
+d310 1
+a310 1
+	rb_trap_immediate = 1;
+d313 1
+a313 1
+	rb_trap_pending++;
+d323 1
+a323 1
+    rb_bug("Bus Error");
+d332 1
+a332 1
+    rb_bug("Segmentation fault");
+d341 1
+a341 1
+	rb_eval_cmd(trap_list[0], rb_ary_new3(1, INT2FIX(0)));
+d362 1
+a362 1
+    rb_trap_pending = 0;
+d439 1
+a439 1
+	    rb_raise(rb_eArgError, "Invalid signal SIG%s", s);
+d445 1
+a445 1
+	rb_raise(rb_eArgError, "Invalid signal no %d", sig);
+d449 1
+a449 1
+	rb_raise(rb_eArgError, "SIGVTALRM reserved for Thread; cannot set handler");
+d506 1
+a506 1
+rb_trap_restore_mask()
+d518 1
+a518 1
+rb_f_trap(argc, argv)
+d526 1
+a526 1
+	rb_raise(rb_eArgError, "wrong # of arguments -- trap(sig, cmd)/trap(sig){...}");
+d531 1
+a531 1
+	arg.cmd = rb_f_lambda();
+d556 1
+a556 1
+    rb_define_global_function("trap", rb_f_trap, -1);
+@
+
+
+1.1.1.1.4.11.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:15 $
+d289 1
+a289 1
+#ifdef USE_THREAD
+d448 1
+a448 1
+#if defined(USE_THREAD) && defined(HAVE_SETITIMER) && !defined(__BOW__)
+@
+
+
+1.1.1.1.4.11.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:15 $
+d341 1
+a341 1
+    if (trap_list[0]) {
+a342 1
+    }
+@

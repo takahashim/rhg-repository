@@ -1,0 +1,2311 @@
+head	1.34;
+access;
+symbols
+	V0_3_2:1.25
+	V0_1_4:1.17
+	V0_1_3:1.17
+	V0_1_2:1.16
+	V0_1_1:1.16
+	V0_1:1.16
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.34
+date	2002.10.07.08.00.23;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.09.28.04.50.25;	author akr;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.06.28.11.27.39;	author nobu;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.25.15.03.15;	author nobu;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.11.26.15.13.04;	author dave;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.11.26.04.17.47;	author dave;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.26.02.23.01;	author dave;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.19.13.08.10;	author dave;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.15.03.54.59;	author dave;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.11.14.04.55.12;	author dave;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.11.13.03.49.01;	author dave;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.11.12.04.51.37;	author dave;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.11.11.21.33.48;	author dave;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.11.06.23.53.49;	author dave;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.11.02.06.09.14;	author dave;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.11.02.00.17.06;	author dave;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.21.20.21.55;	author dave;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.06.20.06.14.56;	author dave;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.18.17.16.41;	author dave;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.16.13.40.57;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.15.21.12.05;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.15.20.46.26;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.15.19.59.31;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.15.17.37.53;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.14.21.16.08;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.14.02.46.37;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.13.22.52.10;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.13.22.20.17;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.12.20.53.57;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.34
+log
+@* replace "type" by "class" since Object#type is deprecated in
+  1.7.3.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestIO < Rubicon::TestCase
+
+  SAMPLE = "08: This is a line\n"
+
+  LINE_LENGTH = $os <= MsWin32 ? SAMPLE.length + 1 : SAMPLE.length
+
+  def setup
+    setupTestDir
+    @@file  = "_test/_10lines"
+    @@file1 = "_test/_99lines"
+
+    File.open(@@file, "w") do |f|
+      10.times { |i| f.printf "%02d: This is a line\n", i }
+    end
+    File.open(@@file1, "w") do |f|
+      99.times { |i| f.printf "Line %02d\n", i }
+    end
+  end
+
+  def teardown
+    File.delete(@@file) if File.exist?(@@file)
+    teardownTestDir
+  end
+
+  MsWin32.dont do
+    def stdin_copy_pipe
+      IO.popen("#$interpreter -e '$stdout.sync=true;while gets;puts $_;end'", "r+")
+    end
+  end
+
+  # ---------------------------------------------------------------
+
+  def test_s_foreach
+    assert_exception(Errno::ENOENT) { File.foreach("gumby") {} }
+    assert_exception(LocalJumpError) { File.foreach(@@file) }
+    
+    count = 0
+    IO.foreach(@@file) do |line|
+      num = line[0..1].to_i
+      assert_equal(count, num)
+      count += 1
+    end
+    assert_equal(10, count)
+
+    count = 0
+    IO.foreach(@@file, nil) do |file|
+      file.split(/\n/).each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+    end
+    assert_equal(10, count)
+
+    count = 0
+    IO.foreach(@@file, ' ') do |thing|
+      count += 1
+    end
+    assert_equal(41, count)
+  end
+
+  def test_s_new
+    f = File.open(@@file)
+    io = IO.new(f.fileno, "r")
+    begin
+      count = 0
+      io.each { count += 1 }
+      assert_equal(10, count)
+    ensure
+      io.close
+      begin
+        f.close
+      rescue Exception
+      end
+    end
+
+    f = File.open(@@file)
+    io = IO.new(f.fileno, "r")
+
+    begin
+      f.close
+      assert_exception(Errno::EBADF) { io.gets }
+    ensure
+      io.close
+      begin
+	f.close
+      rescue Exception
+      end
+    end
+
+    f = File.open(@@file, "r")
+    f.sysread(3*LINE_LENGTH)
+    io = IO.new(f.fileno, "r")
+    begin
+      assert_equal(3*LINE_LENGTH, io.tell)
+      
+      count = 0
+      io.each { count += 1 }
+      assert_equal(7, count)
+    ensure
+      io.close
+      begin
+        f.close
+      rescue Exception
+      end
+    end
+  end
+
+  def test_s_pipe
+    p = IO.pipe
+    begin
+      assert_equal(2, p.size)
+      r, w = *p
+      assert_instance_of(IO, r)
+      assert_instance_of(IO, w)
+      
+      w.puts "Hello World"
+      assert_equal("Hello World\n", r.gets)
+    ensure
+      r.close
+      w.close
+    end
+  end
+
+  def test_s_popen
+
+    if $os <= MsWin32
+      cmd = "type"
+      fname = @@file.tr '/', '\\'
+    else
+      cmd = "cat"
+      fname = @@file
+    end
+
+
+    # READ
+
+    IO.popen("#{cmd} #{fname}") do |p|
+      count = 0
+      p.each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(10, count)
+    end
+
+    # READ with block
+    res = IO.popen("#{cmd} #{fname}") do |p|
+      count = 0
+      p.each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(10, count)
+    end
+    assert_nil(res)
+
+
+    # WRITE
+    IO.popen("#$interpreter -e 'puts readlines' >#{fname}", "w") do |p|
+      5.times { |i| p.printf "Line %d\n", i }
+    end
+
+    count = 0
+    IO.foreach(@@file) do |line|
+      num = line.chomp[-1,1].to_i
+      assert_equal(count, num)
+      count += 1
+    end
+    assert_equal(5, count)
+    
+    MsWin32.dont do
+      # Spawn an interpreter
+      parent = $$
+      p = IO.popen("-")
+      if p
+	begin
+	  assert_equal(parent, $$)
+	  assert_equal("Hello\n", p.gets)
+	ensure
+	  p.close
+	end
+      else
+	assert_equal(parent, Process.ppid)
+	puts "Hello"
+	exit
+      end
+    end
+  end
+	
+  def test_s_popen_spawn
+    MsWin32.dont do
+      # Spawn an interpreter - WRITE
+      parent = $$
+      pipe = IO.popen("-", "w")
+      
+      if pipe
+	begin
+	  assert_equal(parent, $$)
+	  pipe.puts "12"
+	  Process.wait
+	  assert_equal(12, $?>>8)
+	ensure
+	  pipe.close
+	end
+      else
+	buff = $stdin.gets
+	exit buff.to_i
+      end
+      
+      # Spawn an interpreter - READWRITE
+      parent = $$
+      p = IO.popen("-", "w+")
+      
+      if p
+	begin
+	  assert_equal(parent, $$)
+	  p.puts "Hello\n"
+	  assert_equal("Goodbye\n", p.gets)
+	  Process.wait
+	ensure
+	  p.close
+	end
+      else
+	puts "Goodbye" if $stdin.gets == "Hello\n"
+	exit
+      end
+    end
+  end    
+
+  def test_s_readlines
+    assert_exception(Errno::ENOENT) { IO.readlines('gumby') }
+
+    lines = IO.readlines(@@file)
+    assert_equal(10, lines.size)
+
+    lines = IO.readlines(@@file, nil)
+    assert_equal(1, lines.size)
+    assert_equal(SAMPLE.length*10, lines[0].size)
+  end
+
+  def test_s_select
+    assert_nil(select(nil, nil, nil, 0))
+    assert_exception(ArgumentError) { IO.select(nil, nil, nil, -1) }
+    
+    File.open(@@file) do |file|
+      res = IO.select([file], [$stdout, $stderr], [file,$stdout,$stderr], 1)
+      assert_equal([[file], [$stdout, $stderr], []], res)
+    end
+    
+#     read, write = *IO.pipe
+#     read.fcntl(F_SETFL, File::NONBLOCK)
+  
+#     assert_nil(select([read], nil,  [read], .1))
+#     write.puts "Hello"
+#     assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+#     read.gets
+#     assert_nil(select([read], nil,  [read], .1))
+#     write.close
+#     assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+#     assert_nil(read.gets)
+#     read.close
+  end
+
+  class Dummy
+    def to_s
+      "dummy"
+    end
+  end
+
+  def test_LSHIFT # '<<'
+    File.open(@@file, "w") do |file|
+      io = IO.new(file.fileno, "w")
+      io << 1 << "\n" << Dummy.new << "\n" << "cat\n"
+      io.close
+    end
+    expected = [ "1\n", "dummy\n", "cat\n"]
+    IO.foreach(@@file) do |line|
+      assert_equal(expected.shift, line)
+    end
+    assert_equal([], expected)
+  end
+
+  def test_binmode
+    skipping("not supported")
+  end
+
+  def test_clone
+    # check file position shared
+    File.open(@@file, "r") do |file|
+      io = []
+      io[0] = IO.new(file.fileno, "r")
+      begin
+        io[1] = io[0].clone
+        begin
+          count = 0
+          io[count & 1].each do |line|
+            num = line[0..1].to_i
+            assert_equal(count, num)
+            count += 1
+          end
+          assert_equal(10, count)
+        ensure
+          io[1].close
+        end
+      ensure
+        io[0].close
+      end
+    end
+  end
+
+  def test_close
+    read, write = *IO.pipe
+    begin
+      read.close
+      assert_exception(IOError) { read.gets }
+    ensure
+      begin
+        read.close
+      rescue Exception
+      end
+      write.close
+    end
+  end
+
+  def test_close_read
+    MsWin32.dont do
+      pipe = stdin_copy_pipe
+      begin
+	pipe.puts "Hello"
+	assert_equal("Hello\n", pipe.gets)
+	pipe.close_read
+	assert_exception(IOError) { pipe.gets }
+      ensure
+	pipe.close_write
+      end
+    end
+  end
+
+  def test_close_write
+    MsWin32.dont do
+      pipe = stdin_copy_pipe
+      
+      pipe.puts "Hello"
+      assert_equal("Hello\n", pipe.gets)
+      pipe.close_write
+      assert_exception(IOError) { pipe.puts "Hello" }
+      pipe.close
+    end
+  end
+
+  def test_closed?
+    f = File.open(@@file)
+    assert(!f.closed?)
+    f.close
+    assert(f.closed?)
+
+    MsWin32.dont do
+      pipe = stdin_copy_pipe
+      assert(!pipe.closed?)
+      pipe.close_read
+      assert(!pipe.closed?)
+      pipe.close_write
+      assert(pipe.closed?)
+    end
+  end
+
+  def test_each
+    count = 0
+    File.open(@@file) do |file|
+      file.each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(10, count)
+    end
+
+    count = 0
+    File.open(@@file) do |file|
+      file.each(nil) do |contents|
+        contents.split(/\n/).each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+      end
+    end
+    assert_equal(10, count)
+
+    count = 0
+    File.open(@@file) do |file|
+      file.each(' ') do |thing|
+        count += 1
+      end
+    end
+    assert_equal(41, count)
+  end
+
+  def test_each_byte
+    count = 0
+    data = 
+      "00: This is a line\n" +
+      "01: This is a line\n" +
+      "02: This is a line\n" +
+      "03: This is a line\n" +
+      "04: This is a line\n" +
+      "05: This is a line\n" +
+      "06: This is a line\n" +
+      "07: This is a line\n" +
+      "08: This is a line\n" +
+      "09: This is a line\n" 
+
+    File.open(@@file) do |file|
+      file.each_byte do |b|
+        assert_equal(data[count], b)
+        count += 1
+      end
+    end
+    assert_equal(SAMPLE.length*10, count)
+  end
+
+  def test_each_line
+    count = 0
+    File.open(@@file) do |file|
+      file.each_line do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(10, count)
+    end
+
+    count = 0
+    File.open(@@file) do |file|
+      file.each_line(nil) do |contents|
+        contents.split(/\n/).each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+      end
+    end
+    assert_equal(10, count)
+
+    count = 0
+    File.open(@@file) do |file|
+      file.each_line(' ') do |thing|
+        count += 1
+      end
+    end
+    assert_equal(41, count)
+  end
+
+  def test_eof
+    File.open(@@file) do |file|
+      10.times do
+        assert(!file.eof)
+        assert(!file.eof?)
+        file.gets
+      end
+      assert(file.eof)
+      assert(file.eof?)
+    end
+  end
+
+  def test_fcntl
+    skipping("platform dependent")
+  end
+
+  def test_fileno
+    assert_equal(0, $stdin.fileno)
+    assert_equal(1, $stdout.fileno)
+    assert_equal(2, $stderr.fileno)
+  end
+
+  def test_flush
+    MsWin32.dont do
+      read, write = IO.pipe
+      write.sync = false
+      write.print "hello"
+      assert_nil(select([read], nil,  [read], .1))
+      write.flush
+      assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+      read.close
+      write.close
+    end
+  end
+
+  def test_getc
+    count = 0
+    data = 
+      "00: This is a line\n" +
+      "01: This is a line\n" +
+      "02: This is a line\n" +
+      "03: This is a line\n" +
+      "04: This is a line\n" +
+      "05: This is a line\n" +
+      "06: This is a line\n" +
+      "07: This is a line\n" +
+      "08: This is a line\n" +
+      "09: This is a line\n" 
+    
+    File.open(@@file) do |file|
+      while (ch = file.getc)
+        assert_equal(data[count], ch)
+        count += 1
+      end
+      assert_equal(nil, file.getc)
+    end
+    assert_equal(SAMPLE.length*10, count)
+  end
+
+  def test_gets
+    count = 0
+    File.open(@@file) do |file|
+      while (line = file.gets)
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_equal(nil, file.gets)
+      assert_equal(10, count)
+    end
+
+    count = 0
+    File.open(@@file) do |file|
+      while (contents = file.gets(nil))
+        contents.split(/\n/).each do |line|
+          num = line[0..1].to_i
+          assert_equal(count, num)
+          count += 1
+        end
+      end
+    end
+    assert_equal(10, count)
+
+    count = 0
+    File.open(@@file) do |file|
+      while (thing = file.gets(' '))
+        count += 1
+      end
+    end
+    assert_equal(41, count)
+  end
+
+  def test_gets_para
+    File.open(@@file, "w") do |file|
+      file.print "foo\n"*4096, "\n"*4096, "bar"*4096, "\n"*4096, "zot\n"*1024
+    end
+    File.open(@@file) do |file|
+      assert_equal("foo\n"*4096+"\n", file.gets(""))
+      assert_equal("bar"*4096+"\n\n", file.gets(""))
+      assert_equal("zot\n"*1024, file.gets(""))
+    end
+  end
+
+  def test_ioctl
+    skipping("Platform dependent")
+  end
+
+  # see tty?
+  def test_isatty
+    File.open(@@file) { |f|  assert(!f.isatty) }
+    MsWin32.only do 
+      File.open("con") { |f| assert(f.isatty) }
+    end
+    MsWin32.dont do
+      begin
+        File.open("/dev/tty") { |f| assert(f.isatty) }
+      rescue
+        # in run from (say) cron, /dev/tty can't be opened
+      end
+    end
+  end
+
+  def test_lineno
+    count = 1
+    File.open(@@file) do |file|
+      while (line = file.gets)
+        assert_equal(count, file.lineno)
+        count += 1
+      end
+      assert_equal(11, count)
+      file.rewind
+      assert_equal(0, file.lineno)
+    end
+
+    count = 1
+    File.open(@@file) do |file|
+      while (line = file.gets('i'))
+        assert_equal(count, file.lineno)
+        count += 1
+      end
+      assert_equal(32, count)
+    end
+  end
+
+  def test_lineno=
+    File.open(@@file) do |f|
+      assert_equal(0, f.lineno)
+      assert_equal(123, f.lineno = 123)
+      assert_equal(123, f.lineno)
+      f.gets
+      assert_equal(124, f.lineno)
+      f.lineno = 0
+      f.gets
+      assert_equal(1, f.lineno)
+      f.gets
+      assert_equal(2, f.lineno)
+    end
+  end
+
+  def test_pid
+    assert_nil($stdin.pid)
+    pipe = nil
+    Unix.or_variant do
+      pipe = IO.popen("exec #$interpreter -e 'p $$'", "r")
+    end
+    Unix.dont do
+      pipe = IO.popen("#$interpreter -e 'p $$'", "r")
+    end
+
+    pid = pipe.gets
+    assert_equal(pid.to_i, pipe.pid)
+    pipe.close
+  end
+
+  def test_pos
+    pos = 0
+    File.open(@@file, "rb") do |file|
+      assert_equal(0, file.pos)
+      while (line = file.gets)
+        pos += line.length
+        assert_equal(pos, file.pos)
+      end
+    end
+  end
+
+  def test_pos=
+    nums = [ 5, 8, 0, 1, 0 ]
+
+    File.open(@@file) do |file|
+      file.pos = 999
+      assert_nil(file.gets)
+      assert_kindof_exception(SystemCallError) { file.pos = -1 }
+      for pos in nums
+        assert_equal(0, file.pos = LINE_LENGTH*pos)
+        line = file.gets
+        assert_equal(pos, line[0..1].to_i)
+      end
+    end
+  end
+
+  def test_print
+    File.open(@@file, "w") do |file|
+      file.print "hello"
+      file.print 1,2
+      $_ = "wombat\n"
+      file.print
+      $\ = ":"
+      $, = ","
+      file.print 3, 4
+      file.print 5, 6
+      $\ = nil
+      file.print "\n"
+      $, = nil
+    end
+
+    File.open(@@file) do |file|
+      content = file.gets(nil)
+      assert_equal("hello12wombat\n3,4:5,6:\n", content)
+    end
+  end
+
+  def test_printf
+    # tested under Kernel.sprintf
+  end
+
+  def test_putc
+    File.open(@@file, "wb") do |file|
+      file.putc "A"
+      0.upto(255) { |ch| file.putc ch }
+    end
+
+    File.open(@@file, "rb") do |file|
+      assert_equal(?A, file.getc)
+      0.upto(255) { |ch| assert_equal(ch, file.getc) }
+    end
+  end
+
+  def test_puts
+    File.open(@@file, "w") do |file|
+      file.puts "line 1", "line 2"
+      file.puts [ Dummy.new, 4 ]
+    end
+
+    File.open(@@file) do |file|
+      assert_equal("line 1\n",  file.gets)
+      assert_equal("line 2\n",  file.gets)
+      assert_equal("dummy\n",   file.gets)
+      assert_equal("4\n",       file.gets)
+    end
+  end
+
+  def test_read
+    File.open(@@file) do |file|
+      content = file.read
+      assert_equal(SAMPLE.length*10, content.length)
+      count = 0
+      content.split(/\n/).each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+    end
+
+    File.open(@@file) do |file|
+      assert_equal("00: This is ", file.read(12))
+      assert_equal("a line\n01: T", file.read(12))
+    end
+  end
+
+  def test_readchar
+    count = 0
+    data = 
+      "00: This is a line\n" +
+      "01: This is a line\n" +
+      "02: This is a line\n" +
+      "03: This is a line\n" +
+      "04: This is a line\n" +
+      "05: This is a line\n" +
+      "06: This is a line\n" +
+      "07: This is a line\n" +
+      "08: This is a line\n" +
+      "09: This is a line\n" 
+    
+    File.open(@@file) do |file|
+      190.times do |count|
+        ch = file.readchar
+        assert_equal(data[count], ch)
+        count += 1
+      end
+      assert_exception(EOFError) { file.readchar }
+    end
+  end
+
+  def test_readline
+    count = 0
+    File.open(@@file) do |file|
+      10.times do |count|
+        line = file.readline
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_exception(EOFError) { file.readline }
+    end
+
+    count = 0
+    File.open(@@file) do |file|
+      contents = file.readline(nil)
+      contents.split(/\n/).each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+      end
+      assert_exception(EOFError) { file.readline }
+    end
+    assert_equal(10, count)
+
+    count = 0
+    File.open(@@file) do |file|
+      41.times do |count|
+        thing = file.readline(' ')
+        count += 1
+      end
+      assert_exception(EOFError) { file.readline }
+    end
+  end
+
+  def test_readlines
+    File.open(@@file) do |file|
+      lines = file.readlines
+      assert_equal(10, lines.size)
+    end
+
+    File.open(@@file) do |file|
+      lines = file.readlines(nil)
+      assert_equal(1, lines.size)
+      assert_equal(SAMPLE.length*10, lines[0].size)
+    end
+  end
+
+  def test_reopen1
+    f1 = File.new(@@file)
+    assert_equal("00: This is a line\n", f1.gets)
+    assert_equal("01: This is a line\n", f1.gets)
+
+    f2 = File.new(@@file1)
+    assert_equal("Line 00\n", f2.gets)
+    assert_equal("Line 01\n", f2.gets)
+
+    f2.reopen(@@file)
+    assert_equal("00: This is a line\n", f2.gets)
+    assert_equal("01: This is a line\n", f2.gets)
+
+    f1.close
+    f2.close
+  end
+
+  def test_reopen2 
+    f1 = File.new(@@file)
+    assert_equal("00: This is a line\n", f1.read(SAMPLE.length))
+    assert_equal("01: This is a line\n", f1.read(SAMPLE.length))
+
+    f2 = File.new(@@file1)
+    assert_equal("Line 00\n", f2.read(8))
+    assert_equal("Line 01\n", f2.read(8))
+
+    f2.reopen(f1)
+    assert_equal("02: This is a line\n", f2.read(SAMPLE.length))
+    assert_equal("03: This is a line\n", f2.read(SAMPLE.length))
+
+    f1.close
+    f2.close
+  end
+
+  def test_rewind
+    f1 = File.new(@@file)
+    assert_equal("00: This is a line\n", f1.gets)
+    assert_equal("01: This is a line\n", f1.gets)
+    f1.rewind
+    assert_equal("00: This is a line\n", f1.gets)
+
+    f1.readlines
+    assert_nil(f1.gets)
+    f1.rewind
+    assert_equal("00: This is a line\n", f1.gets)
+
+    f1.close
+  end
+
+  def test_seek
+    nums = [ 5, 8, 0, 1, 0 ]
+
+    File.open(@@file, "rb") do |file|
+      file.seek(999, IO::SEEK_SET)
+      assert_nil(file.gets)
+      assert_kindof_exception(SystemCallError) { file.seek(-1) }
+      for pos in nums
+        assert_equal(0, file.seek(LINE_LENGTH*pos))
+        line = file.gets
+        assert_equal(pos, line[0..1].to_i)
+      end
+    end
+
+    nums = [5, -2, 4, -7, 0 ]
+    File.open(@@file) do |file|
+      count = -1
+      file.seek(0)
+      for pos in nums
+        assert_equal(0, file.seek(LINE_LENGTH*pos, IO::SEEK_CUR))
+        line = file.gets
+        count = count + pos + 1
+        assert_equal(count, line[0..1].to_i)
+      end
+    end
+
+    nums = [ 5, 8, 1, 10, 1 ]
+
+    File.open(@@file) do |file|
+      file.seek(0)
+      for pos in nums
+        assert_equal(0, file.seek(-LINE_LENGTH*pos, IO::SEEK_END))
+        line = file.gets
+        assert_equal(10-pos, line[0..1].to_i)
+      end
+    end
+  end
+
+  # Stat is pretty much tested elsewhere, so we're minimal here
+  def test_stat
+    io = IO.new($stdin.fileno)
+    assert_instance_of(File::Stat, io.stat)
+    io.close
+  end
+
+  def test_sync
+    $stderr.sync = false
+    assert(!$stderr.sync)
+    $stderr.sync = true
+    assert($stderr.sync)
+  end
+
+  
+  def test_sync=()
+    MsWin32.dont do
+      read, write = IO.pipe
+      write.sync = false
+      write.print "hello"
+      assert_nil(select([read], nil,  [read], .1))
+      write.sync = true
+      write.print "there"
+      assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+      read.close
+      write.close
+    end
+  end
+
+  def test_sysread
+    File.open(@@file) do |file|
+      assert_equal("", file.sysread(0))
+      assert_equal("0", file.sysread(1))
+      assert_equal("0:", file.sysread(2))
+      assert_equal(" Thi", file.sysread(4))
+      rest = file.sysread(100000)
+      assert_equal(SAMPLE.length*10 - (1+2+4), rest.length)
+      assert_exception(EOFError) { file.sysread(1) }
+    end
+  end
+
+  def test_syswrite
+    File.open(@@file, "w") do |file|
+      file.syswrite ""
+      file.syswrite "hello"
+      file.syswrite 1
+      file.syswrite "\n"
+    end
+
+    File.open(@@file) do |file|
+      assert_equal("hello1\n", file.gets)
+    end
+  end
+
+  # see also pos
+  def test_tell
+    pos = 0
+    File.open(@@file, "rb") do |file|
+      assert_equal(0, file.tell)
+      while (line = file.gets)
+        pos += line.length
+        assert_equal(pos, file.tell)
+      end
+    end
+  end
+
+  def test_to_i
+    assert_equal(0, $stdin.to_i)
+    assert_equal(1, $stdout.to_i)
+    assert_equal(2, $stderr.to_i)
+  end
+
+  # see isatty
+  def test_tty?
+    File.open(@@file) { |f|  assert(!f.tty?) }
+    MsWin32.only do 
+      File.open("con") { |f| assert(f.tty?) }
+    end
+    MsWin32.dont do
+      begin
+        File.open("/dev/tty") { |f| assert(f.isatty) }
+      rescue
+        # Can't open from crontab jobs
+      end
+    end
+  end
+
+  def test_ungetc
+    File.open(@@file) do |file|
+      assert_equal(?0, file.getc)
+      assert_equal(?0, file.getc)
+      assert_equal(?:, file.getc)
+      assert_equal(?\s, file.getc)
+      assert_nil(file.ungetc(?:))
+      assert_equal(?:, file.getc)
+      1 while file.getc
+      assert_nil(file.ungetc(?A))
+      assert_equal(?A, file.getc)
+    end
+  end
+
+  def test_write
+    File.open(@@file, "w") do |file|
+      assert_equal(10, file.write('*' * 10))
+      assert_equal(5,  file.write('!' * 5))
+      assert_equal(0,  file.write(''))
+      assert_equal(1,  file.write(1))
+      assert_equal(3,  file.write(2.30000))
+      assert_equal(1,  file.write("\n"))
+    end
+    
+    File.open(@@file) do |file|
+      assert_equal("**********!!!!!12.3\n", file.gets)
+    end
+  end
+end
+
+Rubicon::handleTests(TestIO) if $0 == __FILE__
+@
+
+
+1.33
+log
+@* rubicon.rb: recognize HP-UX to treat it as an Unix variant.
+
+* builtin/TestIO.rb (test_pid): Use `exec' trick for all Unix
+variants.
+
+* builtin/TestFileTest.rb (TestFileTest::test_test): Use 02755 instead
+of 02644 for setgid bit because setgid bit without execution bit means
+mandatory locking for Solaris and it fails on NFS.
+(TestFileTest::test_test): /dev/tty is symlink on Solaris.
+
+* builtin/TestFloat.rb: Use 0.0/0.0 instead of Math::log(-1.0) to
+generate NaN because Math::log(-1.0) returns -Infinity instead of NaN
+on Solaris.
+
+* builtin/TestThreadGroup.rb (test_list): Avoid deadlock.
+@
+text
+@d90 1
+a90 1
+        f.close
+@
+
+
+1.32
+log
+@* builtin/TestIO.rb (TestIO::test_ungetc): use `\s' for white
+  space instead of `\ '.
+@
+text
+@d623 1
+a623 1
+    Solaris.only do
+d626 1
+a626 1
+    Solaris.dont do
+@
+
+
+1.31
+log
+@* builtin/TestIO.rb (TestIO::test_gets_para): IO#gets in paragraph
+  mode.
+@
+text
+@d980 1
+a980 1
+      assert_equal(? , file.getc)
+@
+
+
+1.30
+log
+@Problem with windows not closing pipes, so we can remove the guard
+@
+text
+@d553 11
+@
+
+
+1.29
+log
+@A Windows-ism crept through onto the Unix side
+@
+text
+@a163 3
+    MsWin32.only do
+      assert(false, "popen is leaving subprocesses, so can't run test")
+    end
+d166 1
+a166 2
+    p = IO.popen("#$interpreter -e 'puts readlines' >#{fname}", "w")
+    begin
+a167 2
+    ensure
+      p.close
+@
+
+
+1.28
+log
+@Start removing bi-directional pipes from the MsWin32 tests.
+@
+text
+@d31 1
+a31 1
+      IO.popen("#$interpreter -e '$stdout.sync=true;while gets;puts $_;end'", "r")
+@
+
+
+1.27
+log
+@Revery the array behavior. There seems to be a genuine Ruby bug in TestKernel.
+@
+text
+@d29 4
+a32 2
+  def stdin_copy_pipe
+    IO.popen("#$interpreter -e '$stdout.sync=true;while gets;puts $_;end'", "r+")
+d339 10
+a348 8
+    pipe = stdin_copy_pipe
+    begin
+      pipe.puts "Hello"
+      assert_equal("Hello\n", pipe.gets)
+      pipe.close_read
+      assert_exception(IOError) { pipe.gets }
+    ensure
+      pipe.close_write
+d353 8
+a360 2
+    MsWin32.only do
+      fail("SEGVs under Win32")
+a361 8
+
+    pipe = stdin_copy_pipe
+
+    pipe.puts "Hello"
+    assert_equal("Hello\n", pipe.gets)
+    pipe.close_write
+    assert_exception(IOError) { pipe.puts "Hello" }
+    pipe.close
+d370 8
+a377 6
+    pipe = stdin_copy_pipe
+    assert(!pipe.closed?)
+    pipe.close_read
+    assert(!pipe.closed?)
+    pipe.close_write
+    assert(pipe.closed?)
+d702 2
+a703 3
+      assert_equal("dummy\n",  file.gets)
+      assert_equal("4\n",  file.gets)
+      assert_equal("dummy4\n",  file.gets)
+@
+
+
+1.26
+log
+@Fix strange hang on dblack's machine.
+
+A test in ThreadGroup was leaving 10 threads each doing a sleep 60. On his
+machine, this caused some I/O tests to abort. Reap these sleeping threads,
+and the hang goes away.
+
+Also include umask in some file permission calculations
+@
+text
+@d698 3
+a700 6
+      if $rubyVersion < "1.7.2"
+        assert_equal("dummy\n",  file.gets)
+        assert_equal("4\n",  file.gets)
+      else
+        assert_equal("dummy4\n",  file.gets)
+      end
+@
+
+
+1.25
+log
+@New array behavior with puts.
+
+As of 1.7.2, array contents are no longer joined with "\n" when
+being output by puts.
+@
+text
+@d81 1
+@
+
+
+1.24
+log
+@Yet more tidying.
+
+Get stuff working across Cygwin and MsRuby.
+@
+text
+@d697 6
+a702 2
+      assert_equal("dummy\n",  file.gets)
+      assert_equal("4\n",  file.gets)
+@
+
+
+1.23
+log
+@AllTests now returns an exit code != 0 on failure.
+
+Various changes to make rubicon run from crontab.
+
+Remove warnings about bare regex's under 1.7.
+@
+text
+@d9 1
+a9 1
+  LINE_LENGTH = $os <= Windows ? SAMPLE.length + 1 : SAMPLE.length
+d128 1
+a128 1
+    if $os <= Windows
+d139 1
+a139 2
+    p = IO.popen("#{cmd} #{fname}")
+    begin
+a146 2
+    ensure
+      p.close
+a159 1
+    p.close
+d612 8
+a619 1
+    pipe = IO.popen("exec #$interpreter -e 'p $$'", "r")
+@
+
+
+1.22
+log
+@Fixes to File and IO by Tanaka Akira
+@
+text
+@d569 5
+a573 1
+      File.open("/dev/tty") { |f| assert(f.isatty) }
+d954 5
+a958 1
+      File.open("/dev/tty") { |f| assert(f.tty?) }
+@
+
+
+1.21
+log
+@iMake the output format pluggable as a first step towards decent
+publishing of the results.
+@
+text
+@d612 1
+a612 1
+    pipe = IO.popen("#$interpreter -e 'p $$'", "r")
+@
+
+
+1.20
+log
+@Get more tests working under Win32, and tidy up some of the
+operating system dependencies a tad
+@
+text
+@d204 2
+a205 2
+  MsWin32.dont do
+    def test_s_popen_spawn
+d488 2
+a489 2
+  MsWin32.dont do
+    def test_flush
+d493 1
+a493 1
+    assert_nil(select([read], nil,  [read], .1))
+@
+
+
+1.19
+log
+@Start adding MsWin32 support
+@
+text
+@d15 6
+a20 11
+    begin    
+      
+      File.open(@@file, "w") { |f|
+        10.times { |i| f.printf "%02d: This is a line\n", i }
+      }
+      File.open(@@file1, "w") { |f|
+        99.times { |i| f.printf "Line %02d\n", i }
+      }
+    rescue Exception
+      puts $!
+      exit!
+a21 1
+
+d28 5
+a32 1
+  
+d127 10
+d138 2
+a139 1
+    p = IO.popen("cat #@@file")
+d153 1
+a153 1
+    res = IO.popen("cat #@@file") do |p|
+d165 4
+d170 1
+a170 1
+    p = IO.popen("cat >#@@file", "w")
+d185 15
+a199 9
+    # Spawn an interpreter
+    parent = $$
+    p = IO.popen("-")
+    if p
+      begin
+        assert_equal(parent, $$)
+        assert_equal("Hello\n", p.gets)
+      ensure
+        p.close
+a200 4
+    else
+      assert_equal(parent, Process.ppid)
+      puts "Hello"
+      exit
+d203 19
+a221 14
+
+  def test_s_popen_spawn
+    # Spawn an interpreter - WRITE
+    parent = $$
+    pipe = IO.popen("-", "w")
+
+    if pipe
+      begin
+        assert_equal(parent, $$)
+        pipe.puts "12"
+        Process.wait
+        assert_equal(12, $?>>8)
+      ensure
+        pipe.close
+d223 17
+a239 17
+    else
+      buff = $stdin.gets
+      exit buff.to_i
+    end
+
+    # Spawn an interpreter - READWRITE
+    parent = $$
+    p = IO.popen("-", "w+")
+    
+    if p
+      begin
+        assert_equal(parent, $$)
+        p.puts "Hello\n"
+        assert_equal("Goodbye\n", p.gets)
+        Process.wait
+      ensure
+        p.close
+a240 3
+    else
+      puts "Goodbye" if $stdin.gets == "Hello\n"
+      exit
+d242 1
+a242 1
+  end
+d340 1
+a340 1
+    pipe = IO.popen("/bin/sh", "r+")
+d342 1
+a342 1
+      pipe.puts "echo Hello"
+d347 1
+a347 1
+      pipe.close
+d352 6
+a357 1
+    pipe = IO.popen("/bin/cat", "r+")
+d371 1
+a371 1
+    pipe = IO.popen("/bin/cat", "r+")
+d488 5
+a492 4
+  def test_flush
+    read, write = IO.pipe
+    write.sync = false
+    write.print "hello"
+d494 5
+a498 4
+    write.flush
+    assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+    read.close
+    write.close
+d565 6
+a570 1
+    File.open("/dev/tty") { |f| assert(f.isatty) }
+d612 4
+a615 9
+    pipe = IO.popen("-")
+    if pipe
+      pid = pipe.gets
+      assert_equal(pid.to_i, pipe.pid)
+      pipe.close
+    else
+      puts $$
+      exit
+    end
+d670 1
+a670 1
+    File.open(@@file, "w") do |file|
+d675 1
+a675 1
+    File.open(@@file) do |file|
+d885 13
+a897 10
+  def test_sync=
+    read, write = IO.pipe
+    write.sync = false
+    write.print "hello"
+    assert_nil(select([read], nil,  [read], .1))
+    write.sync = true
+    write.print "there"
+    assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+    read.close
+    write.close
+d946 6
+a951 1
+    File.open("/dev/tty") { |f| assert(f.tty?) }
+@
+
+
+1.18
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d7 4
+d95 1
+a95 1
+    f.sysread(3*19)
+d98 1
+a98 1
+      assert_equal(3*19, io.tell)
+d235 1
+a235 1
+    assert_equal(19*10, lines[0].size)
+d409 1
+a409 1
+    assert_equal(19*10, count)
+d498 1
+a498 1
+    assert_equal(19*10, count)
+d596 1
+a596 1
+    File.open(@@file) do |file|
+d607 1
+a607 1
+    
+d613 1
+a613 1
+        assert_equal(0, file.pos = 19*pos)
+d674 1
+a674 1
+      assert_equal(19*10, content.length)
+d756 1
+a756 1
+      assert_equal(19*10, lines[0].size)
+d779 2
+a780 2
+    assert_equal("00: This is a line\n", f1.read(19))
+    assert_equal("01: This is a line\n", f1.read(19))
+d787 2
+a788 2
+    assert_equal("02: This is a line\n", f2.read(19))
+    assert_equal("03: This is a line\n", f2.read(19))
+d811 2
+a812 2
+    
+    File.open(@@file) do |file|
+d817 1
+a817 1
+        assert_equal(0, file.seek(19*pos))
+d828 1
+a828 1
+        assert_equal(0, file.seek(19*pos, IO::SEEK_CUR))
+d840 1
+a840 1
+        assert_equal(0, file.seek(-19*pos, IO::SEEK_END))
+d880 1
+a880 1
+      assert_equal(19*10 - (1+2+4), rest.length)
+d901 1
+a901 1
+    File.open(@@file) do |file|
+@
+
+
+1.17
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.16
+log
+@Archive save
+@
+text
+@d606 1
+a606 1
+      assert_exception(Errno::EINVAL) { file.pos = -1 }
+d772 1
+a772 1
+  def test_reopen2
+d774 2
+a775 2
+    assert_equal("00: This is a line\n", f1.sysread(19))
+    assert_equal("01: This is a line\n", f1.sysread(19))
+d778 2
+a779 2
+    assert_equal("Line 00\n", f2.sysread(8))
+    assert_equal("Line 01\n", f2.sysread(8))
+d782 2
+a783 2
+    assert_equal("02: This is a line\n", f2.sysread(19))
+    assert_equal("03: This is a line\n", f2.sysread(19))
+d810 1
+a810 1
+      assert_exception(Errno::EINVAL) { file.seek(-1) }
+@
+
+
+1.15
+log
+@Archive save
+@
+text
+@d235 1
+a235 1
+    assert_exception(ArgumentError) { select(nil, nil, nil, -1) }
+d238 1
+a238 1
+      res = select([file], [$stdout, $stderr], [file,$stdout,$stderr], 1)
+@
+
+
+1.14
+log
+@Bug in test
+@
+text
+@d10 6
+a15 6
+begin    
+
+    File.open(@@file, "w") { |f|
+      10.times { |i| f.printf "%02d: This is a line\n", i }
+    }
+    File.open(@@file1, "w") { |f|
+d17 5
+a21 7
+    }
+rescue Exception
+  puts 
+  puts '!' * 50
+  puts $!
+  exit!
+end
+a25 18
+
+    begin
+      loop { Process.wait; puts "\n\nCHILD REAPED\n\n" }
+    rescue Errno::ECHILD
+    end
+
+    3.upto(255) { |fd|
+      begin
+        io = IO.new(fd)
+        $stderr.puts "FD #{fd} was not closed"
+        exit
+      rescue Errno::EBADF
+      rescue Exception
+        puts "Seen an exception: #{$!}"
+        exit!
+      end
+    }
+
+@
+
+
+1.13
+log
+@Archive save
+@
+text
+@d568 1
+a568 1
+      assert_equal(0, count)
+d588 1
+a588 1
+      f.lineno = -1
+d590 3
+a592 1
+      assert_equal(0, f.lineno)
+@
+
+
+1.12
+log
+@Various fixes
+@
+text
+@d568 1
+a568 1
+      assert_equal(1, count)
+@
+
+
+1.11
+log
+@Add chck that lineno is reset by rewind
+@
+text
+@d10 1
+a14 1
+
+d16 1
+a16 1
+      99.times { |i| f.printf "Line %02d\n", i }
+d18 7
+d29 5
+d90 4
+d103 4
+d120 4
+@
+
+
+1.10
+log
+@Yet more hackery
+@
+text
+@d543 2
+@
+
+
+1.9
+log
+@Change exception handling
+@
+text
+@a5 2
+  F_SETFL = 4
+
+d29 1
+a29 1
+        puts "Seen an exception: #{$!.name}"
+d72 7
+a78 4
+    count = 0
+    io.each { count += 1 }
+    assert_equal(10, count)
+    io.close
+d82 6
+a87 3
+    f.close
+    assert_exception(Errno::EBADF) { io.gets }
+    io.close
+d92 9
+a100 6
+    assert_equal(3*19, io.tell)
+
+    count = 0
+    io.each { count += 1 }
+    assert_equal(7, count)
+    io.close
+d105 12
+a116 9
+    assert_equal(2, p.size)
+    r, w = *p
+    assert_instance_of(IO, r)
+    assert_instance_of(IO, w)
+    
+    w.puts "Hello World"
+    assert_equal("Hello World\n", r.gets)
+    r.close
+    w.close
+d122 10
+a131 5
+    count = 0
+    p.each do |line|
+      num = line[0..1].to_i
+      assert_equal(count, num)
+      count += 1
+a132 2
+    assert_equal(10, count)
+    p.close
+d149 5
+a153 2
+    5.times { |i| p.printf "Line %d\n", i }
+    p.close
+a165 1
+    
+d167 6
+a172 3
+      assert_equal(parent, $$)
+      assert_equal("Hello\n", p.gets)
+      Process.wait
+a177 1
+    p.close
+d186 8
+a193 5
+      assert_equal(parent, $$)
+      pipe.puts "12"
+      Process.wait
+      assert_equal(12, $?>>8)
+      pipe.close
+d204 8
+a211 5
+      assert_equal(parent, $$)
+      p.puts "Hello\n"
+      assert_equal("Goodbye\n", p.gets)
+      Process.wait
+      p.close
+d232 1
+a232 1
+
+d237 13
+a249 13
+
+    read, write = *IO.pipe
+    read.fcntl(F_SETFL, File::NONBLOCK)
+
+    assert_nil(select([read], nil,  [read], .1))
+    write.puts "Hello"
+    assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+    read.gets
+    assert_nil(select([read], nil,  [read], .1))
+    write.close
+    assert_equal([[read],[],[]], select([read], nil,  [read], .1))
+    assert_nil(read.gets)
+    read.close
+d280 15
+a294 6
+      io[1] = io[0].clone
+      count = 0
+      io[count & 1].each do |line|
+        num = line[0..1].to_i
+        assert_equal(count, num)
+        count += 1
+a295 3
+      assert_equal(10, count)
+      io[0].close
+      io[1].close
+d301 10
+a310 3
+    read.close
+    assert_exception(IOError) { read.gets }
+    write.close
+d315 8
+a322 5
+    pipe.puts "echo Hello"
+    assert_equal("Hello\n", pipe.gets)
+    pipe.close_read
+    assert_exception(IOError) { pipe.gets }
+    pipe.close
+@
+
+
+1.8
+log
+@Tidy up a tad
+@
+text
+@d30 3
+@
+
+
+1.7
+log
+@Tidy up the test output
+@
+text
+@d27 1
+a27 1
+        $stderr.puts "Failed on fd #{fd}"
+@
+
+
+1.6
+log
+@Archive save
+@
+text
+@d577 1
+@
+
+
+1.5
+log
+@Tidy up loose files
+@
+text
+@d97 2
+a98 2
+    assert_instance_of(r, IO)
+    assert_instance_of(w, IO)
+d794 1
+a794 1
+    assert_instance_of(io.stat, File::Stat)
+@
+
+
+1.4
+log
+@Finish file
+@
+text
+@d23 10
+d74 1
+d79 2
+a80 1
+    assert_exception(IOError) { io.gets }
+d90 1
+a90 1
+    f.close
+d129 1
+d151 1
+a157 1
+
+a160 1
+
+d170 1
+d184 2
+d207 4
+a210 3
+    $stdin = File.open(@@file)
+    res = select([$stdin], [$stdout, $stderr], [$stdin,$stdout,$stderr], 1)
+    assert_equal([[$stdin], [$stdout, $stderr], []], res)
+d223 1
+d262 2
+d271 1
+d280 1
+d289 1
+a412 1
+    assert(File.open(@@file).fileno > 2)
+d422 2
+d484 1
+a484 1
+    skipping()
+d489 2
+a490 2
+    assert(!File.new(@@file).isatty)
+    assert(!File.new("/dev/tty").isatty)
+d793 3
+a795 1
+    assert_instance_of(IO.new($stdin.fileno).stat, File::Stat)
+d813 2
+a857 1
+    File.open(@@file) {|f| assert(f.to_i > 2)}
+d862 2
+a863 2
+    assert(!File.new(@@file).tty?)
+    assert(!File.new("/dev/tty").tty?)
+@
+
+
+1.3
+log
+@Archive save
+@
+text
+@d464 1
+a745 2
+      file.seek(999, IO::SEEK_CUR)
+      assert_nil(file.gets)
+d756 2
+d759 1
+a759 2
+      file.seek(999, IO::SEEK_SET)
+      assert_nil(file.gets)
+d761 1
+a761 1
+        assert_equal(0, file.seek(19*pos))
+d763 1
+a763 1
+        assert_equal(pos, line[0..1].to_i)
+d768 1
+d770 1
+a770 1
+    assert_fail("untested")
+d774 4
+a777 1
+    assert_fail("untested")
+d781 7
+a787 1
+    assert_fail("untested")
+d791 9
+a799 1
+    assert_fail("untested")
+d803 10
+a812 1
+    assert_fail("untested")
+d815 1
+d817 8
+a824 1
+    assert_fail("untested")
+d828 4
+a831 5
+    assert_fail("untested")
+  end
+
+  def test_to_io
+    assert_fail("untested")
+d834 1
+d836 2
+a837 1
+    assert_fail("untested")
+d841 11
+a851 1
+    assert_fail("untested")
+d855 12
+a866 1
+    assert_fail("untested")
+a867 1
+
+@
+
+
+1.2
+log
+@Remove spurious trace
+@
+text
+@d6 22
+d30 26
+a55 1
+    assert_fail("untested")
+d59 20
+a78 1
+    assert_fail("untested")
+d82 10
+a91 1
+    assert_fail("untested")
+d95 80
+a174 1
+    assert_fail("untested")
+d178 8
+a185 1
+    assert_fail("untested")
+d189 24
+a212 1
+    assert_fail("untested")
+d216 10
+a225 1
+    assert_fail("untested")
+d229 1
+a229 1
+    assert_fail("untested")
+d233 13
+a245 1
+    assert_fail("untested")
+d249 3
+a251 1
+    assert_fail("untested")
+d255 5
+a259 1
+    assert_fail("untested")
+d263 5
+a267 1
+    assert_fail("untested")
+d271 11
+a281 1
+    assert_fail("untested")
+d285 29
+a313 1
+    assert_fail("untested")
+d317 20
+a336 1
+    assert_fail("untested")
+d340 29
+a368 1
+    assert_fail("untested")
+d372 9
+a380 5
+    assert_fail("untested")
+  end
+
+  def test_eof?
+    assert_fail("untested")
+d384 1
+a384 1
+    assert_fail("untested")
+d388 4
+a391 1
+    assert_fail("untested")
+d395 6
+a400 1
+    assert_fail("untested")
+d404 21
+a424 1
+    assert_fail("untested")
+d428 30
+a457 1
+    assert_fail("untested")
+d461 1
+a461 1
+    assert_fail("untested")
+d465 2
+a466 1
+    assert_fail("untested")
+d470 17
+a486 1
+    assert_fail("untested")
+d490 10
+a499 1
+    assert_fail("untested")
+d503 10
+a512 1
+    assert_fail("untested")
+d516 8
+a523 1
+    assert_fail("untested")
+d527 12
+a538 1
+    assert_fail("untested")
+d542 17
+a558 1
+    assert_fail("untested")
+d562 1
+a562 1
+    assert_fail("untested")
+d566 9
+a574 1
+    assert_fail("untested")
+d578 11
+a588 1
+    assert_fail("untested")
+d592 15
+a606 1
+    assert_fail("untested")
+d610 21
+a630 1
+    assert_fail("untested")
+d634 31
+a664 1
+    assert_fail("untested")
+d668 41
+a708 2
+    assert_fail("untested")
+  end
+d710 2
+a711 2
+  def test_reopen
+    assert_fail("untested")
+d715 12
+a726 1
+    assert_fail("untested")
+d730 36
+a765 1
+    assert_fail("untested")
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 25
+a211 24
+    assert_fail("untested")
+  end
+
+  def test_s_foreach
+    assert_fail("untested")
+  end
+
+  def test_s_new
+    assert_fail("untested")
+  end
+
+  def test_s_pipe
+    assert_fail("untested")
+  end
+
+  def test_s_popen
+    assert_fail("untested")
+  end
+
+  def test_s_readlines
+    assert_fail("untested")
+  end
+
+  def test_s_select
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

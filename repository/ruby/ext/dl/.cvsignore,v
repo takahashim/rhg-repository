@@ -1,0 +1,68 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.09.08.09.04.17;	author eban;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.02.10.58.19;	author ttate;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* configure.in: modify program_prefix only if specified
+  --program-prefix.
+
+* configure.in: don't generate ext/extmk.rb.
+
+* Makefile.in: execute directly $(srcdir)/ext/extmk.rb.
+  remove -Cext option, "Dir::chdir 'ext'" in ext/extmk.rb.
+
+* {win32,bccwin32}/Makefile.sub: ditto.
+
+* instruby.rb: ditto.
+
+* ext/extmk.rb: renamed from ext/extmk.rb.in.
+
+* lib/mkmf.rb (module Logging): create log files (mkmf.log)
+  in each extension module directories.
+
+* ext/extmk.rb: ditto.
+
+* lib/mkmf.rb (macro_defined?): new method.
+
+* ext/.cvsignore: remove extmk.rb.
+
+* ext/*/.cvsignore: add "*.def".
+@
+text
+@Makefile
+mkmf.log
+dlconfig.h
+dlconfig.rb
+*.func
+*.o
+*~
+*.def
+@
+
+
+1.1
+log
+@Add ruby-dl.
+@
+text
+@d8 1
+@

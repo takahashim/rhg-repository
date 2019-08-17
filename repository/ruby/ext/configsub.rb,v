@@ -1,0 +1,167 @@
+head	1.5;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.3
+	v1_6_4_preview4:1.1
+	v1_6_4_preview3:1.1
+	v1_6_4_preview2:1.1
+	v1_6_4_preview1:1.1
+	v1_6_3:1.1
+	ruby_m17n:1.2.0.2
+	ruby_1_6:1.1.0.2
+	v1_6_2:1.1
+	v1_6_1:1.1
+	v1_6_0:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2002.03.20.16.03.52;	author nobu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.03.18.09.23.10;	author nobu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.31.04.40.37;	author eban;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.12.28.05.00.41;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.08.03.09.55.53;	author matz;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.05.31.04.40.20;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@* ext/configsub.rb: latest autoconf style support.
+@
+text
+@#!./miniruby -ps
+
+BEGIN {
+  CONFIG = {}
+
+  RUBY_VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) do
+    # overridden if config.status has version
+    CONFIG['MAJOR'] = $1
+    CONFIG['MINOR'] = $2
+    CONFIG['TEENY'] = $3
+  end
+
+  File.foreach($config || "config.status") do |line|
+    next if /^#/ =~ line
+    if /^s[%,]@@(\w+)@@[%,](.*)[%,][g;]/ =~ line
+      name = $1
+      val = $2 || ""
+      next if /^(INSTALL|DEFS|configure_input|srcdir)$/ =~ name
+      val.gsub!(/\$\{([^{}]+)\}/) { "$(#{$1})" }
+      CONFIG[name] = val
+    end
+  end
+
+  CONFIG['top_srcdir'] = File.expand_path($srcdir || ".")
+  CONFIG['RUBY_INSTALL_NAME'] = $install_name if $install_name
+  CONFIG['RUBY_SO_NAME'] = $so_name if $so_name
+  $defout = open($output, 'w') if $output
+}
+
+gsub!(/@@(\w+)@@/) {CONFIG[$1] || $&}
+
+# vi:set sw=2:
+@
+
+
+1.4
+log
+@* ext/digest: add depend file.
+
+* ext/digest/md5: ditto.
+
+* ext/digest/rmd160: ditto.
+
+* ext/digest/sha1: ditto.
+
+* ext/digest/sha2: ditto.
+
+* ext/iconv/MANIFEST: ditto.
+
+* ext/stringio/MANIFEST: ditto.
+
+* ext/syslog: ditto.
+@
+text
+@d15 1
+a15 1
+    if /^s[%,]@@(\w+)@@[%,](.*)[%,]g/ =~ line
+@
+
+
+1.3
+log
+@* mkconfig.rb, ext/configsub.rb: VERSION -> RUBY_VERSION.
+@
+text
+@d15 1
+a15 1
+    if /^s%@@(\w+)@@%(.*)%g/ =~ line
+@
+
+
+1.2
+log
+@changes from personal modifies -- matz
+@
+text
+@d6 1
+a6 1
+  VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) do
+@
+
+
+1.1
+log
+@matz - add/remove files
+@
+text
+@d13 3
+a15 3
+  File.foreach($config || "config.status") do |$_|
+    next if /^#/
+    if /^s%@@(\w+)@@%(.*)%g/
+@
+
+
+1.1.2.1
+log
+@* mkconfig.rb, ext/configsub.rb: VERSION -> RUBY_VERSION.
+@
+text
+@d6 1
+a6 1
+  RUBY_VERSION.scan(/(\d+)\.(\d+)\.(\d+)/) do
+@

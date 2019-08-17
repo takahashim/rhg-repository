@@ -1,0 +1,898 @@
+head	1.5;
+access;
+symbols
+	v1_6_7:1.2.4.1
+	v1_6_6:1.2.4.1
+	v1_6_5:1.2.4.1
+	v1_6_4:1.2
+	v1_7_1:1.3
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.3
+	v1_3_6:1.1.1.2.2.3
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2.2.2
+	v1_3_4_990624:1.1.1.2.2.2
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2
+	v1_1d0:1.1.1.1.4.2
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.2
+	v1_1b9_27:1.1.1.1.4.2
+	v1_1b9_26:1.1.1.1.4.2
+	r1_1b9_25:1.1.1.1.4.2
+	r1_1b9_24:1.1.1.1.4.2
+	v1_1b9_23:1.1.1.1.4.2
+	v1_1b9_22:1.1.1.1.4.2
+	v1_1b9_20:1.1.1.1.4.2
+	v1_1b9_18:1.1.1.1.4.2
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.2
+	v1_1b9_12:1.1.1.1.4.2
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.2
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.5
+date	2001.06.06.14.19.33;	author keiju;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.06.09.13.14;	author keiju;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.06.15.04.52;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches
+	1.2.4.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.07.22.10.37.26;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.27.07.48.11;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.4.1
+date	2001.06.06.09.19.19;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@
+* lib/sync.rb: bug fix if obj.initialize has parameters when
+  obj.extend(Sync_m)
+
+* lib/mutex_m.rb: modified bit
+@
+text
+@#
+#   mutex_m.rb - 
+#   	$Release Version: 3.0$
+#   	$Revision: 1.7 $
+#   	$Date: 1998/02/27 04:28:57 $
+#       Original from mutex.rb
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#       modified by matz
+#       patched by akira yamada
+#
+# --
+#   Usage:
+#	require "mutex_m.rb"
+#	obj = Object.new
+#	obj.extend Mutex_m
+#	...
+#	extended object can be handled like Mutex
+#       or
+#	class Foo
+#	  include Mutex_m
+#	  ...
+#	end
+#	obj = Foo.new
+#	this obj can be handled like Mutex
+#
+
+module Mutex_m
+  def Mutex_m.define_aliases(cl)
+    cl.module_eval %q{
+      alias locked? mu_locked?
+      alias lock mu_lock
+      alias unlock mu_unlock
+      alias try_lock mu_try_lock
+      alias synchronize mu_synchronize
+    }
+  end  
+
+  def Mutex_m.append_features(cl)
+    super
+    define_aliases(cl) unless cl.instance_of?(Module)
+  end
+  
+  def Mutex_m.extend_object(obj)
+    super
+    obj.mu_extended
+  end
+
+  def mu_extended
+    unless (defined? locked? and
+	    defined? lock and
+	    defined? unlock and
+	    defined? try_lock and
+	    defined? synchronize)
+      Mutex_m.define_aliases(class<<self;self;end)
+    end
+    mu_initialize
+  end
+  
+  # locking 
+  def mu_synchronize
+    begin
+      mu_lock
+      yield
+    ensure
+      mu_unlock
+    end
+  end
+  
+  def mu_locked?
+    @@mu_locked
+  end
+  
+  def mu_try_lock
+    result = false
+    Thread.critical = true
+    unless @@mu_locked
+      @@mu_locked = true
+      result = true
+    end
+    Thread.critical = false
+    result
+  end
+  
+  def mu_lock
+    while (Thread.critical = true; @@mu_locked)
+      @@mu_waiting.push Thread.current
+      Thread.stop
+    end
+    @@mu_locked = true
+    Thread.critical = false
+    self
+  end
+  
+  def mu_unlock
+    return unless @@mu_locked
+    Thread.critical = true
+    wait = @@mu_waiting
+    @@mu_waiting = []
+    @@mu_locked = false
+    Thread.critical = false
+    for w in wait
+      w.run
+    end
+    self
+  end
+  
+  private
+  
+  def mu_initialize
+    @@mu_waiting = []
+    @@mu_locked = false;
+  end
+
+  def initialize(*args)
+    mu_initialize
+    super
+  end
+end
+@
+
+
+1.4
+log
+@
+bug fix for obj.extend(Mutex_m).
+This is patched by akira yamada.
+@
+text
+@d28 10
+d40 1
+a40 10
+    unless cl.instance_of?(Module)
+      cl.module_eval %q{
+	alias locked? mu_locked?
+	alias lock mu_lock
+	alias unlock mu_unlock
+	alias try_lock mu_try_lock
+	alias synchronize mu_synchronize
+      }
+    end
+    self
+d54 1
+a54 7
+      eval "class << self
+	alias locked? mu_locked?
+	alias lock mu_lock
+	alias unlock mu_unlock
+	alias try_lock mu_try_lock
+	alias synchronize mu_synchronize
+      end"
+@
+
+
+1.3
+log
+@forgot some checkins.
+@
+text
+@d3 1
+a3 1
+#   	$Release Version: 2.0$
+d7 3
+a9 1
+#   	by Keiju ISHITSUKA(SHL Japan Inc.)
+d18 7
+d28 2
+a29 1
+  def Mutex_m.included(cl)
+d39 1
+a39 1
+    return self
+d61 1
+a61 1
+    initialize
+d114 1
+a114 2
+  def initialize(*args)
+    ret = super
+d117 5
+a121 1
+    return ret
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d19 1
+a19 2
+  def Mutex_m.append_features(cl)
+    super
+@
+
+
+1.2.4.1
+log
+@
+Bug fix for obj.extend(Mutex_m).
+This is patched by akira yamada.
+@
+text
+@d3 1
+a3 1
+#   	$Release Version: 3.0$
+d7 1
+a7 3
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#       modified by matz
+#       patched by akira yamada
+d30 1
+a30 1
+    self
+d52 1
+a52 1
+    mu_initialize
+d105 2
+a106 1
+  def mu_initialize
+d109 1
+a109 5
+  end
+
+  def initialize(*args)
+    mu_initialize
+    super
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.2 $
+#   	$Date: 1997/07/25 02:43:21 $
+d15 1
+a15 1
+#	後はMutexと同じ使い方
+a17 2
+require "finalize"
+
+d19 10
+a28 12
+  def Mutex_m.extend_object(obj)
+    if Fixnum === obj or TRUE === obj or FALSE === obj or nil == obj
+      raise TypeError, "Mutex_m can't extend to this class(#{obj.type})"
+    else
+      begin
+	eval "class << obj
+		@@mu_locked
+	      end"
+	obj.extend(For_primitive_object)
+      rescue TypeError
+	obj.extend(For_general_object)
+      end
+d30 1
+d33 5
+d45 1
+a45 1
+	alias locked mu_locked?
+d52 1
+d55 1
+d65 10
+a74 12
+  module For_general_object
+    include Mutex_m
+    
+    def For_general_object.extend_object(obj)
+      super
+      obj.mu_extended
+    end
+    
+    def mu_extended
+      super
+      @@mu_waiting = []
+      @@mu_locked = FALSE;
+d76 23
+a98 14
+
+    def mu_locked?
+      @@mu_locked
+    end
+
+    def mu_try_lock
+      result = FALSE
+      Thread.critical = TRUE
+      unless @@mu_locked
+	@@mu_locked = TRUE
+	result = TRUE
+      end
+      Thread.critical = FALSE
+      result
+d100 1
+a100 24
+
+    def mu_lock
+      while (Thread.critical = TRUE; @@mu_locked)
+	@@mu_waiting.push Thread.current
+	Thread.stop
+      end
+      @@mu_locked = TRUE
+      Thread.critical = FALSE
+      self
+    end
+
+    def mu_unlock
+      return unless @@mu_locked
+      Thread.critical = TRUE
+      wait = @@mu_waiting
+      @@mu_waiting = []
+      @@mu_locked = FALSE
+      Thread.critical = FALSE
+      for w in wait
+	w.run
+      end
+      self
+    end
+
+d102 8
+a109 66
+
+  module For_primitive_object
+    include Mutex_m
+    Mu_Locked = Hash.new
+    
+    def For_primitive_object.extend_object(obj)
+      super
+      obj.mu_extended
+      Finalizer.add(obj, For_primitive_object, :mu_finalize)
+    end
+    
+    def For_primitive_object.mu_finalize(id)
+      Thread.critical = TRUE
+      if wait = Mu_Locked.delete(id)
+	# wait == [] ときだけ GCされるので, for w in wait は意味なし.
+	Thread.critical = FALSE
+	for w in wait
+	  w.run
+	end
+      else
+	Thread.critical = FALSE
+      end
+      self
+    end
+    
+    def mu_locked?
+      Mu_Locked.key?(self.id)
+    end
+
+    def mu_try_lock
+      Thread.critical = TRUE
+      if Mu_Locked.key?(self.id)
+	ret = FALSE
+      else
+	Mu_Locked[self.id] = []
+	Finalizer.set(self, For_primitive_object, :mu_delete_Locked)
+	ret = TRUE
+      end
+      Thread.critical = FALSE
+      ret
+    end
+
+    def mu_lock
+      while (Thread.critical = TRUE; w = Mu_Locked[self.id])
+	w.push Thread.current
+	Thread.stop
+      end
+      Mu_Locked[self.id] = []
+      Finalizer.add(self, For_primitive_object, :mu_delete_Locked)
+      Thread.critical = FALSE
+      self
+    end
+
+    def mu_unlock
+      Thread.critical = TRUE
+      if wait = Mu_Locked.delete(self.id)
+	Finalizer.delete(self, For_primitive_object, :mu_finalize)
+	Thread.critical = FALSE
+	for w in wait
+	  w.run
+	end
+      else
+	Thread.critical = FALSE
+      end
+      self
+    end
+a111 2
+
+
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.7 $
+#   	$Date: 1998/02/27 04:28:57 $
+d21 1
+a21 1
+  def Mutex_m.extendable_module(obj)
+d26 4
+a29 2
+	obj.instance_eval "@@mu_locked"
+	For_general_object
+d31 1
+a31 1
+	For_primitive_object
+a35 31
+  def Mutex_m.includable_module(cl)
+    begin
+      dummy = cl.new
+      Mutex_m.extendable_module(dummy)
+    rescue NameError
+      # newが定義されていない時は, DATAとみなす.
+      For_primitive_object
+    end
+  end
+
+  def Mutex_m.extend_class(cl)
+    return super if cl.instance_of?(Module)
+    
+    # モジュールの時は何もしない. クラスの場合, 適切なモジュールの決定
+    # とaliasを行う.  
+    real = includable_module(cl)
+    cl.module_eval %q{
+      include real
+
+      alias locked? mu_locked?
+      alias lock mu_lock
+      alias unlock mu_unlock
+      alias try_lock mu_try_lock
+      alias synchronize mu_synchronize
+    }
+  end
+  
+  def Mutex_m.extend_object(obj)
+    obj.extend(Mutex_m.extendable_module(obj))
+  end
+
+d43 1
+a43 1
+	alias locked? mu_locked?
+a51 1
+  # locking 
+a60 1
+  # internal class
+a120 1
+
+a124 5
+    def mu_extended
+      super
+      initialize
+    end
+    
+d149 1
+a149 1
+	Finalizer.add(self, For_primitive_object, :mu_finalize)
+d162 1
+a162 1
+      Finalizer.add(self, For_primitive_object, :mu_finalize)
+d182 1
+@
+
+
+1.1.1.2.2.1
+log
+@990209
+@
+text
+@d15 1
+a15 1
+#	extended object can be handled like Mutex
+d39 1
+a39 1
+      # if new is not defined, cl must be Data.
+d47 2
+a48 2
+    # do nothing for Modules
+    # make aliases and include the proper module.
+d165 1
+@
+
+
+1.1.1.2.2.2
+log
+@990324
+@
+text
+@d18 2
+d21 20
+a40 10
+  def Mutex_m.append_features(cl)
+    super
+    unless cl.instance_of?(Module)
+      cl.module_eval %q{
+	alias locked? mu_locked?
+	alias lock mu_lock
+	alias unlock mu_unlock
+	alias try_lock mu_try_lock
+	alias synchronize mu_synchronize
+      }
+d42 17
+a58 1
+    return self
+d62 1
+a62 2
+    super
+    obj.mu_extended
+a78 1
+    initialize
+d91 35
+a125 8
+  def mu_locked?
+    @@mu_locked
+  end
+  
+  def mu_try_lock
+    result = FALSE
+    Thread.critical = TRUE
+    unless @@mu_locked
+d127 15
+a141 1
+      result = TRUE
+d143 1
+a143 2
+    Thread.critical = FALSE
+    result
+d145 70
+a214 20
+  
+  def mu_lock
+    while (Thread.critical = TRUE; @@mu_locked)
+      @@mu_waiting.push Thread.current
+      Thread.stop
+    end
+    @@mu_locked = TRUE
+    Thread.critical = FALSE
+    self
+  end
+  
+  def mu_unlock
+    return unless @@mu_locked
+    Thread.critical = TRUE
+    wait = @@mu_waiting
+    @@mu_waiting = []
+    @@mu_locked = FALSE
+    Thread.critical = FALSE
+    for w in wait
+      w.run
+a215 10
+    self
+  end
+  
+  private
+  
+  def initialize(*args)
+    ret = super
+    @@mu_waiting = []
+    @@mu_locked = FALSE;
+    return ret
+d218 1
+@
+
+
+1.1.1.2.2.3
+log
+@backtrace may be Qnil
+@
+text
+@d70 2
+a71 2
+    result = false
+    Thread.critical = true
+d73 2
+a74 2
+      @@mu_locked = true
+      result = true
+d76 1
+a76 1
+    Thread.critical = false
+d81 1
+a81 1
+    while (Thread.critical = true; @@mu_locked)
+d85 2
+a86 2
+    @@mu_locked = true
+    Thread.critical = false
+d92 1
+a92 1
+    Thread.critical = true
+d95 2
+a96 2
+    @@mu_locked = false
+    Thread.critical = false
+d108 1
+a108 1
+    @@mu_locked = false;
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 1998/01/16 04:05:49 $
+@
+
+
+1.1.1.1.4.2
+log
+@finalize/mutex_m
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.7 $
+#   	$Date: 1998/02/27 04:28:57 $
+d21 1
+a21 1
+  def Mutex_m.extendable_module(obj)
+d26 4
+a29 2
+	obj.instance_eval "@@mu_locked"
+	For_general_object
+d31 1
+a31 1
+	For_primitive_object
+a35 31
+  def Mutex_m.includable_module(cl)
+    begin
+      dummy = cl.new
+      Mutex_m.extendable_module(dummy)
+    rescue NameError
+      # newが定義されていない時は, DATAとみなす.
+      For_primitive_object
+    end
+  end
+
+  def Mutex_m.extend_class(cl)
+    return super if cl.instance_of?(Module)
+    
+    # モジュールの時は何もしない. クラスの場合, 適切なモジュールの決定
+    # とaliasを行う.  
+    real = includable_module(cl)
+    cl.module_eval %q{
+      include real
+
+      alias locked? mu_locked?
+      alias lock mu_lock
+      alias unlock mu_unlock
+      alias try_lock mu_try_lock
+      alias synchronize mu_synchronize
+    }
+  end
+  
+  def Mutex_m.extend_object(obj)
+    obj.extend(Mutex_m.extendable_module(obj))
+  end
+
+d43 1
+a43 1
+	alias locked? mu_locked?
+a51 1
+  # locking 
+a60 1
+  # internal class
+a120 1
+
+a124 5
+    def mu_extended
+      super
+      initialize
+    end
+    
+d149 1
+a149 1
+	Finalizer.add(self, For_primitive_object, :mu_finalize)
+d162 1
+a162 1
+      Finalizer.add(self, For_primitive_object, :mu_finalize)
+d182 1
+@

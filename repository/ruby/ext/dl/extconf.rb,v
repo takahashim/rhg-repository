@@ -1,0 +1,513 @@
+head	1.9;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2002.10.21.14.03.46;	author nobu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.06.11.01.27.47;	author H_Konishi;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.06.09.17.47.33;	author ttate;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.05.20.09.38.23;	author ttate;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.05.11.23.30.40;	author ttate;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.05.11.23.13.34;	author ttate;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.01.15.21.34;	author ttate;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.03.11.59.01;	author ttate;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.02.10.56.13;	author ttate;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@require 'mkmf'
+
+begin # for the exception SystemExit
+
+$:.unshift File.dirname(__FILE__)
+require 'type'
+
+if( ARGV.include?("--help") )
+  print <<EOF
+  --help             print this messages
+  --with-type-char   strictly use type 'char'
+  --with-type-short  strictly use type 'short'
+  --with-type-float  strictly use type 'float'
+  --with-args=<max_arg>
+  --with-callback=<max_callback>
+  --enable-asm       use the embedded assembler for passing arguments.
+                     (this option is available for i386 machine now.)
+  --enable-dlstack   use a stack emulation for constructing function call.
+EOF
+  exit(0)
+end
+
+($CPPFLAGS || $CFLAGS) << " -I."
+
+if (Config::CONFIG['CC'] =~ /gcc/)  # from Win32API
+  $CFLAGS << " -fno-defer-pop -fno-omit-frame-pointer"
+end
+
+if (Config::CONFIG['CC'] =~ /gcc/) && (Config::CONFIG['arch'] =~ /i.86/)
+  $with_asm = true
+else
+  $with_asm = false
+end
+$with_dlstack = ! $with_asm
+
+$with_type_int = try_cpp(<<EOF)
+#include "config.h"
+#if SIZEOF_INT == SIZEOF_LONG
+#error int not needed
+#endif
+EOF
+
+$with_type_float = try_cpp(<<EOF)
+#include "config.h"
+#if SIZEOF_FLOAT == SIZEOF_DOUBLE
+#error float not needed
+#endif
+EOF
+
+$with_type_voidp = try_cpp(<<EOF)
+#include "config.h"
+#if SIZEOF_VOIDP == SIZEOF_INT || SIZEOF_VOIDP == SIZEOF_LONG
+#error void* not needed
+#endif
+EOF
+
+$with_type_char  = DLTYPE[CHAR][:sym]
+$with_type_short = DLTYPE[SHORT][:sym]
+$with_type_long  = DLTYPE[LONG][:sym]
+$with_type_double= DLTYPE[DOUBLE][:sym]
+$with_type_int   &= DLTYPE[INT][:sym]
+$with_type_float &= DLTYPE[FLOAT][:sym]
+$with_type_voidp &= DLTYPE[VOIDP][:sym]
+
+$with_type_char  = enable_config("type-char", $with_type_char)
+$with_type_short = enable_config("type-short", $with_type_short)
+$with_type_float = enable_config("type-float", $with_type_float)
+
+$with_asm        = enable_config("asm", $with_asm)
+$with_dlstack    = enable_config("dlstack", $with_dlstack)
+
+args = with_config("args")
+max_arg = nil
+if( $with_asm || $with_dlstack )
+  $with_type_char = true
+  $with_type_short = true
+  $with_type_float = true
+  max_arg = 0
+end
+if( args )
+  max_arg = args.to_i
+  if( !max_arg )
+    print("--with-args=<max_arg>\n")
+    exit(1)
+  end
+end
+max_arg   ||= 6
+
+max_callback = with_config("callback","10").to_i
+callback_types = DLTYPE.keys.length
+
+
+$dlconfig_h = <<EOF
+#define MAX_ARG           #{max_arg}
+EOF
+
+def dlc_define(const)
+  $dlconfig_h << "#if !defined(#{const})\n" +
+                 "# define #{const}\n" +
+                 "#endif\n"
+end
+
+$dlconfig_h << "#define MAX_CALLBACK #{max_callback}\n"
+$dlconfig_h << "#define CALLBACK_TYPES #{callback_types}\n"
+if( $with_dlstack )
+  $dlconfig_h << "#define USE_DLSTACK\n"
+else
+  if( $with_asm )
+    $dlconfig_h << "#define USE_INLINE_ASM\n"
+  end
+end
+if( $with_type_char )
+  $dlconfig_h << "#define WITH_TYPE_CHAR\n"
+end
+if( $with_type_short )
+  $dlconfig_h << "#define WITH_TYPE_SHORT\n"
+end
+if( $with_type_long )
+  $dlconfig_h << "#define WITH_TYPE_LONG\n"
+end
+if( $with_type_double )
+  $dlconfig_h << "#define WITH_TYPE_DOUBLE\n"
+end
+if( $with_type_float )
+  $dlconfig_h << "#define WITH_TYPE_FLOAT\n"
+end
+if( $with_type_int )
+  $dlconfig_h << "#define WITH_TYPE_INT\n"
+end
+if( $with_type_voidp )
+  $dlconfig_h << "#define WITH_TYPE_VOIDP\n"
+end
+
+if( have_header("dlfcn.h") )
+  dlc_define("HAVE_DLFCN_H")
+  have_library("dl")
+  have_func("dlopen")
+  have_func("dlclose")
+  have_func("dlsym")
+  if( have_func("dlerror") )
+    dlc_define("HAVE_DLERROR")
+  end
+elsif( have_header("windows.h") )
+  dlc_define("HAVE_WINDOWS_H")
+  have_func("LoadLibrary")
+  have_func("FreeLibrary")
+  have_func("GetProcAddress")
+else
+  exit(0)
+end
+
+def File.update(file, str)
+  begin
+    open(file){|f|f.read} == str
+  rescue Errno::ENOENT
+    false
+  end or open(file, "w"){|f|f.print(str)}
+end
+
+File.update("dlconfig.h", <<EOF)
+#ifndef DLCONFIG_H
+#define DLCONFIG_H
+#{$dlconfig_h}
+#endif /* DLCONFIG_H */
+EOF
+
+File.update("dlconfig.rb", <<EOF)
+MAX_ARG = #{max_arg}
+MAX_CALLBACK = #{max_callback}
+CALLBACK_TYPES = #{callback_types}
+DLTYPE[CHAR][:sym]  = #{$with_type_char}
+DLTYPE[SHORT][:sym] = #{$with_type_short}
+DLTYPE[INT][:sym]   = #{$with_type_int}
+DLTYPE[LONG][:sym]  = #{$with_type_long}
+DLTYPE[FLOAT][:sym] = #{$with_type_float}
+DLTYPE[DOUBLE][:sym]= #{$with_type_double}
+DLTYPE[VOIDP][:sym] = #{$with_type_voidp}
+EOF
+
+$INSTALLFILES = [
+  ["./dlconfig.h", "$(archdir)$(target_prefix)", "."],
+  ["dl.h", "$(archdir)$(target_prefix)", ""],
+]
+
+create_makefile('dl')
+rescue SystemExit
+  # do nothing
+end
+@
+
+
+1.8
+log
+@new platform [bccwin32] merged.
+@
+text
+@d36 19
+a54 13
+$with_type_int = try_run(<<EOF)
+int main(){ return sizeof(int) == sizeof(long); }
+EOF
+
+$with_type_float = try_run(<<EOF)
+int main(){ return sizeof(float) == sizeof(double); }
+EOF
+
+$with_type_voidp = try_run(<<EOF)
+int main(){
+  return (sizeof(void *) == sizeof(long))
+         || (sizeof(void *) == sizeof(int));
+}
+a183 15
+
+if /bccwin32/ =~ RUBY_PLATFORM
+  srcdir = $top_srcdir + "/ext/dl/"
+  if !FileTest.exist?( srcdir+"dl.def.org" )
+    File.copy( srcdir+"dl.def", srcdir+"dl.def.org" )
+    open( srcdir+"dl.def.org" ){ |f|
+      open( "dl.def", "w" ) { |g|
+        g.print f.gets
+        while line = f.gets
+          g.print "_", line
+        end
+      }
+    }
+  end
+end
+@
+
+
+1.7
+log
+@* ext/dl: change the callback mechanism.
+@
+text
+@d179 15
+@
+
+
+1.6
+log
+@Get rid of the declaration of rb_str_cat2().
+@
+text
+@d14 2
+a15 4
+  --with-args=<max_arg>,<max_cbarg>,<max_cbent>
+                     <max_arg>:   maximum number of arguments of the function
+                     <max_cbarg>: maximum number of arguments of the callback
+                     <max_cbent>: maximum number of callback entries
+a58 2
+$with_cbtype_voidp = DLTYPE[VOIDP][:cb]
+
+d67 1
+a67 1
+max_arg = max_cbarg = max_cbent = nil
+d75 3
+a77 3
+  max_arg,max_cbarg,max_cbent = args.split(",").collect{|c| c.to_i}
+  if( !(max_arg && max_cbarg && max_cbent) )
+    print("--with-args=<max_arg>,<max_cbarg>,<max_cbent>\n")
+a81 5
+max_cbarg ||= 3
+max_cbent ||= 3
+
+max_callback_type = types2num(DLTYPE.keys.sort[-1,1] * (max_cbarg + 1)) + 1
+max_callback      = max_cbent
+d83 2
+a84 4
+#m = [1].pack("i")
+#c,cs = m.unpack("c")
+#bigendian = (c == 0)
+#print("bigendian ... #{bigendian ? 'true' : 'false'}\n")
+d88 1
+a88 5
+#define MAX_ARG   #{max_arg}
+#define MAX_CBARG #{max_cbarg}
+#define MAX_CBENT #{max_cbent}
+#define MAX_CALLBACK_TYPE #{max_callback_type}
+#define MAX_CALLBACK      #{max_callback}
+d97 2
+a126 9
+if( $with_cbtype_voidp )
+  $dlconfig_h << "#define WITH_CBTYPE_VOIDP\n"
+end
+#if( bigendian )
+#  $dlconfig_h << "#define BIGENDIAN"
+#else
+#  $dlconfig_h << "#define LITTLEENDIAN"
+#end
+
+d163 2
+a164 2
+MAX_CBARG = #{max_cbarg}
+MAX_CBENT = #{max_cbent}
+@
+
+
+1.5
+log
+@* ext/dl: enable dl's stack emulation for constructing function call.
+@
+text
+@d20 1
+a20 1
+  --enable-dlstack   use a stack emulation for constructing function call. [experimental]
+d36 1
+a36 1
+$with_dlstack = false
+a165 5
+end
+
+method(:have_func).arity == 1 or have_func("rb_str_cat2", "ruby.h")
+if method(:have_func).arity == 1 or !have_func("rb_block_given_p", "ruby.h")
+    $dlconfig_h << "#define rb_block_given_p rb_iterator_p\n"
+@
+
+
+1.4
+log
+@enable dl's stack emulation for constructing function call.
+@
+text
+@a13 3
+  --with-asm         use the embedded assembler for passing arguments.
+                     (this option is available for i386 machine now.)
+  --with-dlstack     use a stack emulation for constructing function call. [experimental]
+d18 3
+@
+
+
+1.3
+log
+@Catch the exception SystemExit in extconf.rb.
+@
+text
+@d16 1
+d36 1
+d68 1
+d72 1
+a72 1
+if( $with_asm )
+d112 6
+a117 2
+if( $with_asm )
+  $dlconfig_h << "#define USE_INLINE_ASM\n"
+@
+
+
+1.2
+log
+@Merge Nakada's patch and define StringValuePtr for ruby-1.6.
+CV ----------------------------------------------------------------------
+@
+text
+@d2 3
+d200 3
+@
+
+
+1.1
+log
+@Add ruby-dl
+@
+text
+@d23 1
+a23 2
+case RUBY_PLATFORM  # from Win32API
+when /cygwin/,/mingw/
+d58 3
+a60 3
+$with_type_char  = with_config("type-char")  ? true : false
+$with_type_short = with_config("type-short") ? true : false 
+$with_type_float = with_config("type-float") ? true : false
+d62 1
+a62 1
+$with_asm        = with_config("asm") ? true : $with_asm
+@

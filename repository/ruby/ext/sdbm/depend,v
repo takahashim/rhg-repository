@@ -1,0 +1,63 @@
+head	1.1;
+access;
+symbols
+	v1_6_7:1.1
+	v1_6_6:1.1
+	v1_6_5:1.1
+	v1_6_4:1.1
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1
+	v1_6_4_preview3:1.1
+	v1_6_4_preview2:1.1
+	v1_6_4_preview1:1.1
+	v1_6_3:1.1
+	ruby_m17n:1.1.0.6
+	ruby_1_6:1.1.0.4
+	v1_6_2:1.1
+	v1_6_1:1.1
+	v1_6_0:1.1
+	v1_4_6:1.1.2.1
+	v1_4_5:1.1.2.1
+	v1_4_4:1.1.2.1
+	ruby_1_4_3:1.1.2.1
+	ruby1_4_3:1.1.2.1
+	v1_4_3:1.1.2.1
+	v1_5_0:1.1
+	ruby_1_4:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	99.10.21.07.08.00;	author matz;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.11.25.05.09.39;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@ext/*/depend
+@
+text
+@_sdbm.o: _sdbm.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h
+init.o: init.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h
+@
+
+
+1.1.2.1
+log
+@19991125
+@
+text
+@@
+

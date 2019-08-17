@@ -1,0 +1,87 @@
+head	1.2;
+access;
+symbols
+	release_0_8_5:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.06.29.07.09.48;	author shugo;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.06.21.07.51.04;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* lib/apache/cgi-support.rb: removed.
+* lib/apache/eruby-run.rb: use tempfile.
+* lib/apache/erb-run.rb: ditto.
+@
+text
+@=begin
+
+= apache/cgi-support.rb
+
+Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+
+This file is part of mod_ruby.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+
+== Overview
+
+Apache::CGISupport provides CGI emulation.
+
+=end
+
+module Apache
+  module CGISupport
+    private
+
+    def emulate_cgi(r)
+      r.setup_cgi_env
+      Apache.chdir_file(r.filename)
+      stdin, stdout, defout = $stdin, $stdout, $>
+      $stdin = $stdout = $> = r
+      begin
+	yield
+      ensure
+	$stdin, $stdout, $> = stdin, stdout, defout
+      end
+    end
+  end
+end
+@
+
+
+1.1
+log
+@* lib/apache/cgi-support.rb: new file.
+* lib/apache/erb-run.rb: new file, supports ERb.
+@
+text
+@@
+

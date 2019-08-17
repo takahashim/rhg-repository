@@ -1,0 +1,312 @@
+head	1.5;
+access;
+symbols
+	v1_6_7:1.1.4.2
+	v1_6_6:1.1.4.2
+	v1_6_5:1.1.4.2
+	v1_6_4:1.1.4.1
+	v1_7_1:1.2
+	v1_6_4_preview4:1.1
+	v1_6_4_preview3:1.1
+	v1_6_4_preview2:1.1
+	v1_6_4_preview1:1.1
+	v1_6_3:1.1
+	ruby_m17n:1.1.0.6
+	ruby_1_6:1.1.0.4
+	v1_6_2:1.1
+	v1_6_1:1.1
+	v1_6_0:1.1
+	ruby_1_4:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	2002.10.10.08.29.00;	author eban;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.30.06.34.27;	author eban;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.25.01.52.50;	author eban;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.28.16.07.34;	author eban;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.08.08.05.05.33;	author eban;	state Exp;
+branches
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.2.1
+date	2000.08.30.05.25.45;	author eban;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2001.05.28.16.07.01;	author eban;	state Exp;
+branches;
+next	1.1.4.2;
+
+1.1.4.2
+date	2001.06.25.01.52.59;	author eban;	state Exp;
+branches;
+next	1.1.4.3;
+
+1.1.4.3
+date	2002.07.30.06.36.30;	author eban;	state Exp;
+branches;
+next	1.1.4.4;
+
+1.1.4.4
+date	2002.10.10.08.30.52;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): fix memory leak.
+  [ruby-dev:18478]
+@
+text
+@#if defined USE_TCL_STUBS && defined USE_TK_STUBS
+#include <tcl.h>
+#include <tk.h>
+#include "ruby.h"
+
+#if defined _WIN32 || defined __CYGWIN__
+# include <windows.h>
+  typedef HINSTANCE DL_HANDLE;
+# define DL_OPEN LoadLibrary
+# define DL_SYM GetProcAddress
+# define TCL_INDEX 4
+# define TK_INDEX 3
+# define TCL_NAME "tcl89%s"
+# define TK_NAME "tk89%s"
+# undef DLEXT
+# define DLEXT ".dll"
+#elif defined HAVE_DLOPEN
+# include <dlfcn.h>
+  typedef void *DL_HANDLE;
+# define DL_OPEN(file) dlopen(file, RTLD_LAZY|RTLD_GLOBAL)
+# define DL_SYM dlsym
+# define TCL_INDEX 8
+# define TK_INDEX 7
+# define TCL_NAME "libtcl8.9%s"
+# define TK_NAME "libtk8.9%s"
+#endif
+
+int
+ruby_tcltk_stubs()
+{
+    DL_HANDLE tcl_dll;
+    DL_HANDLE tk_dll;
+    Tcl_Interp *(*p_Tcl_CreateInterp)();
+    int (*p_Tk_Init) _((Tcl_Interp *));
+    Tcl_Interp *tcl_ip;
+    int n;
+    char *ruby_tcl_dll = 0;
+    char *ruby_tk_dll = 0;
+    char tcl_name[20];
+    char tk_name[20];
+
+    ruby_tcl_dll = getenv("RUBY_TCL_DLL");
+#if defined NT
+    if (ruby_tcl_dll) ruby_tcl_dll = ruby_strdup(ruby_tcl_dll);
+#endif
+    ruby_tk_dll = getenv("RUBY_TK_DLL");
+    if (ruby_tcl_dll && ruby_tk_dll) {
+	tcl_dll = (DL_HANDLE)DL_OPEN(ruby_tcl_dll);
+	tk_dll = (DL_HANDLE)DL_OPEN(ruby_tk_dll);
+    } else {
+	snprintf(tcl_name, sizeof tcl_name, TCL_NAME, DLEXT);
+	snprintf(tk_name, sizeof tk_name, TK_NAME, DLEXT);
+	/* examine from 8.9 to 8.1 */
+	for (n = '9'; n > '0'; n--) {
+	    tcl_name[TCL_INDEX] = n;
+	    tk_name[TK_INDEX] = n;
+	    tcl_dll = (DL_HANDLE)DL_OPEN(tcl_name);
+	    tk_dll = (DL_HANDLE)DL_OPEN(tk_name);
+	    if (tcl_dll && tk_dll)
+		break;
+	}
+    }
+
+#if defined NT
+    if (ruby_tcl_dll) ruby_xfree(ruby_tcl_dll);
+#endif
+
+    if (!tcl_dll || !tk_dll)
+	return -1;
+
+    p_Tcl_CreateInterp = (Tcl_Interp *(*)())DL_SYM(tcl_dll, "Tcl_CreateInterp");
+    if (!p_Tcl_CreateInterp)
+	return -2;
+
+    tcl_ip = (*p_Tcl_CreateInterp)();
+    if (!tcl_ip)
+	return -3;
+
+    p_Tk_Init = (int (*) _((Tcl_Interp *)))DL_SYM(tk_dll, "Tk_Init");
+    if (!p_Tk_Init)
+	return -4;
+    (*p_Tk_Init)(tcl_ip);
+
+    if (!Tcl_InitStubs(tcl_ip, "8.1", 0))
+	return -5;
+    if (!Tk_InitStubs(tcl_ip, "8.1", 0))
+	return -6;
+
+    Tcl_DeleteInterp(tcl_ip);
+
+    return 0;
+}
+#endif
+@
+
+
+1.4
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): win32_getenv returns
+  the same address always, so allocate string by ruby_strdup.
+
+* win32/win32.c: prototype; rb_w32_open_osfhandle().
+@
+text
+@d37 2
+a38 2
+    char *ruby_tcl_dll;
+    char *ruby_tk_dll;
+a49 3
+#if defined NT
+	ruby_xfree(ruby_tcl_dll);
+#endif
+d63 4
+@
+
+
+1.3
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): fix a typo in comment
+@
+text
+@d43 3
+d50 3
+@
+
+
+1.2
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d50 1
+a50 1
+	/* examin from 8.9 to 8.1 */
+@
+
+
+1.1
+log
+@eban
+@
+text
+@d6 1
+a6 1
+#if defined _WIN32
+@
+
+
+1.1.4.1
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d6 1
+a6 1
+#if defined _WIN32 || defined __CYGWIN__
+@
+
+
+1.1.4.2
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): fix a typo in comment
+@
+text
+@d50 1
+a50 1
+	/* examine from 8.9 to 8.1 */
+@
+
+
+1.1.4.3
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): win32_getenv returns
+  the same address always, so allocate string by ruby_strdup.
+@
+text
+@a42 3
+#if defined NT
+    if (ruby_tcl_dll) ruby_tcl_dll = ruby_strdup(ruby_tcl_dll);
+#endif
+a46 3
+#if defined NT
+	ruby_xfree(ruby_tcl_dll);
+#endif
+@
+
+
+1.1.4.4
+log
+@* ext/tcltklib/stubs.c (ruby_tcltk_stubs): fix memory leak.
+  [ruby-dev:18478]
+@
+text
+@d37 2
+a38 2
+    char *ruby_tcl_dll = 0;
+    char *ruby_tk_dll = 0;
+d50 3
+a65 4
+
+#if defined NT
+    if (ruby_tcl_dll) ruby_xfree(ruby_tcl_dll);
+#endif
+@
+
+
+1.1.2.1
+log
+@eban
+@
+text
+@@

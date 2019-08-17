@@ -1,0 +1,924 @@
+head	1.9;
+access;
+symbols
+	v1_6_7:1.7.2.1
+	v1_6_6:1.7
+	v1_6_5:1.7
+	v1_6_4:1.7
+	v1_7_1:1.7
+	v1_6_4_preview4:1.7
+	v1_6_4_preview3:1.7
+	v1_6_4_preview2:1.7
+	v1_6_4_preview1:1.7
+	v1_6_3:1.7
+	ruby_m17n:1.7.0.4
+	ruby_1_6:1.7.0.2
+	v1_6_2:1.7
+	v1_6_1:1.7
+	v1_6_0:1.7
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.3
+	v1_3_6:1.1.1.2.2.3
+	v1_3_5:1.1.1.2.2.3
+	v1_2_6repack:1.1.1.1.2.6
+	v1_3_4_990625:1.1.1.2.2.3
+	v1_3_4_990624:1.1.1.2.2.3
+	v1_2_6:1.1.1.1.2.6
+	v1_3_4_990611:1.1.1.2.2.3
+	v1_3_4_990531:1.1.1.2.2.3
+	v1_3_3_990518:1.1.1.2.2.3
+	v1_3_3_990513:1.1.1.2.2.3
+	v1_3_3_990507:1.1.1.2.2.3
+	v1_2_5:1.1.1.1.2.6
+	v1_2_4:1.1.1.1.2.6
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.5
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.5
+	v1_2_1repack:1.1.1.1.2.5
+	v1_2_1:1.1.1.1.2.5
+	v1_2_stable:1.1.1.1.2.5
+	v1_1d1:1.1.1.1.2.5
+	v1_1d0:1.1.1.1.2.5
+	v1_1c9_1:1.1.1.1.2.5
+	v1_1c9:1.1.1.1.2.5
+	v1_1c8:1.1.1.1.2.5
+	v1_1c7:1.1.1.1.2.5
+	v1_1c6:1.1.1.1.2.5
+	v1_1d-start:1.1.1.1.2.5
+	v1_1c5:1.1.1.1.2.5
+	v1_1dev:1.1.1.1.2.5.0.2
+	v1_1c4:1.1.1.1.2.5
+	v1_1c3:1.1.1.1.2.5
+	v1_1c2:1.1.1.1.2.5
+	v1_1c1:1.1.1.1.2.5
+	v1_1c0:1.1.1.1.2.5
+	v1_1b9_31:1.1.1.1.2.5
+	v1_1b9_30:1.1.1.1.2.4
+	v1_1b9_28:1.1.1.1.2.4
+	v1_1b9_27:1.1.1.1.2.4
+	v1_1b9_26:1.1.1.1.2.4
+	r1_1b9_25:1.1.1.1.2.4
+	r1_1b9_24:1.1.1.1.2.4
+	v1_1b9_23:1.1.1.1.2.3
+	v1_1b9_22:1.1.1.1.2.3
+	v1_1b9_20:1.1.1.1.2.3
+	v1_1b9_18:1.1.1.1.2.3
+	v1_1b9_16:1.1.1.1.2.2
+	v1_1b9_15:1.1.1.1.2.2
+	v1_1b9_13:1.1.1.1.2.2
+	v1_1b9_12:1.1.1.1.2.2
+	v1_1b9_11:1.1.1.1.2.2
+	v1_1b9_08:1.1.1.1.2.2
+	v1_1b9_07:1.1.1.1.2.2
+	r1_1b9:1.1.1.1.2.1
+	v1_1b8:1.1.1.1.2.1
+	v1_1b7:1.1.1.1.2.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2002.10.10.07.00.07;	author nobu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.11.08.06.43.12;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.27.09.49.33;	author matz;	state Exp;
+branches
+	1.7.2.1;
+next	1.6;
+
+1.6
+date	2000.07.18.06.00.44;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.17.09.38.08;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.07.10.04.49.21;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.03.06.04.15.42;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.18;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.18;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.18;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.36;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.12.11.17.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.02.02.04.49.13;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.03.13.09.04.32;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.05.06.03.09.02;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.06.08.01.40.06;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.07.15.06.13.07;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	99.02.16.03.42.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.03.02.03.51.50;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.07.26.09.41.17;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.07.31.09.20.59;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.08.07.05.05.04;	author matz;	state Exp;
+branches;
+next	;
+
+1.7.2.1
+date	2002.01.04.14.20.20;	author matz;	state Exp;
+branches;
+next	1.7.2.2;
+
+1.7.2.2
+date	2002.10.10.07.01.12;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@* lib/weakref.rb (WeakRef::@@@@final): use Hash#delete.
+
+* lib/weakref.rb (WeakRef::__getobj__): examin if alive or not by
+  ID_REV_MAP to deal with recycled object.  [ruby-dev:18472]
+
+* lib/weakref.rb (WeakRef::weakref_alive?): ditto.
+@
+text
+@# Weak Reference class that does not bother GCing.
+#
+# Usage:
+#   foo = Object.new
+#   foo = Object.new
+#   p foo.to_s			# original's class
+#   foo = WeakRef.new(foo)
+#   p foo.to_s			# should be same class
+#   ObjectSpace.garbage_collect
+#   p foo.to_s			# should raise exception (recycled)
+
+require "delegate"
+
+class WeakRef<Delegator
+
+  class RefError<StandardError
+  end
+
+  ID_MAP =  {}		    # obj -> [ref,...]
+  ID_REV_MAP =  {}          # ref -> obj
+  @@@@final = lambda{|id|
+    __old_status = Thread.critical
+    Thread.critical = true
+    begin
+      rids = ID_MAP[id]
+      if rids
+	for rid in rids
+	  ID_REV_MAP.delete(rid)
+	end
+	ID_MAP.delete(id)
+      end
+      rid = ID_REV_MAP[id]
+      if rid
+	ID_REV_MAP.delete(id)
+	ID_MAP[rid].delete(id)
+	ID_MAP.delete(rid) if ID_MAP[rid].empty?
+      end
+    ensure
+      Thread.critical = __old_status
+    end
+  }
+
+  def initialize(orig)
+    super
+    @@__id = orig.__id__
+    ObjectSpace.define_finalizer orig, @@@@final
+    ObjectSpace.define_finalizer self, @@@@final
+    __old_status = Thread.critical
+    begin
+      Thread.critical = true
+      ID_MAP[@@__id] = [] unless ID_MAP[@@__id]
+    ensure
+      Thread.critical = __old_status
+    end
+    ID_MAP[@@__id].push self.__id__
+    ID_REV_MAP[self.__id__] = @@__id
+  end
+
+  def __getobj__
+    unless ID_REV_MAP[self.__id__] == @@__id
+      raise RefError, "Illegal Reference - probably recycled", caller(2)
+    end
+    begin
+      ObjectSpace._id2ref(@@__id)
+    rescue RangeError
+      raise RefError, "Illegal Reference - probably recycled", caller(2)
+    end
+  end
+
+  def weakref_alive?
+    ID_REV_MAP[self.__id__] == @@__id
+  end
+end
+
+if __FILE__ == $0
+  require 'thread'
+  foo = Object.new
+  p foo.to_s			# original's class
+  foo = WeakRef.new(foo)
+  p foo.to_s			# should be same class
+  ObjectSpace.garbage_collect
+  p foo.to_s			# should raise exception (recycled)
+end
+@
+
+
+1.8
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d28 1
+a28 1
+	  ID_REV_MAP[rid] = nil
+d30 1
+a30 1
+	ID_MAP[id] = nil
+d34 1
+a34 1
+	ID_REV_MAP[id] = nil
+d36 1
+a36 1
+	ID_MAP[rid] = nil if ID_MAP[rid].empty?
+d56 1
+a56 1
+    ID_REV_MAP[self.id] = @@__id
+d60 1
+a60 1
+    unless ID_MAP[@@__id]
+d71 1
+a71 5
+    if ID_MAP[@@__id]
+      true
+    else
+      false
+    end
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d63 5
+a67 1
+    ObjectSpace._id2ref(@@__id)
+@
+
+
+1.7.2.1
+log
+@forgot to commit everything bug ChangeLog
+@
+text
+@d63 1
+a63 5
+    begin
+      ObjectSpace._id2ref(@@__id)
+    rescue RangeError
+      raise RefError, "Illegal Reference - probably recycled", caller(2)
+    end
+@
+
+
+1.7.2.2
+log
+@* eval.c (ruby_init): Init_stack() with local location.
+  (ruby-bugs-ja:PR#277)
+
+* gc.c (Init_stack): prefer address of argument rather than local
+  variable to initialize rb_gc_stack_start.
+
+* lib/weakref.rb (WeakRef::@@@@final): use Hash#delete.
+
+* lib/weakref.rb (WeakRef::__getobj__): examin if alive or not by
+  ID_REV_MAP to deal with recycled object.  [ruby-dev:18472]
+
+* lib/weakref.rb (WeakRef::weakref_alive?): ditto.
+@
+text
+@d28 1
+a28 1
+	  ID_REV_MAP.delete(rid)
+d30 1
+a30 1
+	ID_MAP.delete(id)
+d34 1
+a34 1
+	ID_REV_MAP.delete(id)
+d36 1
+a36 1
+	ID_MAP.delete(rid) if ID_MAP[rid].empty?
+d56 1
+a56 1
+    ID_REV_MAP[self.__id__] = @@__id
+d60 1
+a60 1
+    unless ID_REV_MAP[self.__id__] == @@__id
+d71 5
+a75 1
+    ID_REV_MAP[self.__id__] == @@__id
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d48 7
+a54 1
+    ID_MAP[@@__id] = [] unless ID_MAP[@@__id]
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d46 2
+a47 2
+        ObjectSpace.define_finalizer orig, @@@@final
+    ObjectSpace.defin_finalizer self, @@@@final
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d21 21
+a41 21
+  ObjectSpace.add_finalizer(lambda{|id|
+			      __old_status = Thread.critical
+			      Thread.critical = true
+			      begin
+				rids = ID_MAP[id]
+				if rids
+				  for rid in rids
+				    ID_REV_MAP[rid] = nil
+				  end
+				  ID_MAP[id] = nil
+				end
+				rid = ID_REV_MAP[id]
+				if rid
+				  ID_REV_MAP[id] = nil
+				  ID_MAP[rid].delete(id)
+				  ID_MAP[rid] = nil if ID_MAP[rid].empty?
+				end
+			      ensure
+				Thread.critical = __old_status
+			      end
+			    })
+d46 2
+a47 2
+    ObjectSpace.call_finalizer orig
+    ObjectSpace.call_finalizer self
+a65 4
+  end
+
+  def []
+    __getobj__
+@
+
+
+1.3
+log
+@2000-03-06
+@
+text
+@d22 9
+a30 4
+			      rids = ID_MAP[id]
+			      if rids
+				for rid in rids
+				  ID_REV_MAP[rid] = nil
+d32 8
+a39 7
+				ID_MAP[id] = nil
+			      end
+			      rid = ID_REV_MAP[id]
+			      if rid
+				ID_REV_MAP[id] = nil
+				ID_MAP[rid].delete(id)
+      				ID_MAP[rid] = nil if ID_MAP[rid].empty?
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d43 1
+a43 1
+    ID_MAP[@@__id].concat self.__id__
+@
+
+
+1.2.2.1
+log
+@2000-03-02
+@
+text
+@d43 1
+a43 1
+    ID_MAP[@@__id].push self.__id__
+@
+
+
+1.2.2.2
+log
+@1.4.6 preview2
+@
+text
+@d22 4
+a25 9
+			      __old_status = Thread.critical
+			      Thread.critical = true
+			      begin
+				rids = ID_MAP[id]
+				if rids
+				  for rid in rids
+				    ID_REV_MAP[rid] = nil
+				  end
+				  ID_MAP[id] = nil
+d27 7
+a33 8
+				rid = ID_REV_MAP[id]
+				if rid
+				  ID_REV_MAP[id] = nil
+				  ID_MAP[rid].delete(id)
+				  ID_MAP[rid] = nil if ID_MAP[rid].empty?
+				end
+			      ensure
+				Thread.critical = __old_status
+@
+
+
+1.2.2.3
+log
+@matz
+@
+text
+@d48 1
+a48 7
+    begin
+      __old_status = Thread.critical
+      Thread.critical = true
+      ID_MAP[@@__id] = [] unless ID_MAP[@@__id]
+    ensure
+      Thread.critical = __old_status
+    end
+@
+
+
+1.2.2.4
+log
+@matz
+@
+text
+@d23 1
+a24 1
+				Thread.critical = true
+a47 1
+    __old_status = Thread.critical
+d49 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+a6 1
+#   foo.hash
+d8 1
+a8 1
+#   foo.hash
+d10 1
+a10 1
+#   foo.hash	# => Raises WeakRef::RefError (because original GC'ed)
+d14 1
+a14 1
+class WeakRef<Delegater
+d16 2
+a17 1
+  Exception :RefError
+d19 2
+a20 2
+  ID_MAP =  {}
+  ID_REV_MAP =  {}
+d22 5
+a26 3
+			      rid = ID_MAP[id]
+			      if rid
+				ID_REV_MAP[rid] = nil
+d32 2
+a33 1
+				ID_MAP[rid] = nil
+d36 1
+a36 1
+			    
+d39 1
+a39 1
+    @@id = orig.id
+d41 4
+a44 2
+    ID_MAP[@@id] = self.id
+    ID_REV_MAP[self.id] = @@id
+d48 2
+a49 4
+    unless ID_MAP[@@id]
+      $@@ = caller(1)
+      $! = RefError.new("Illegal Reference - probably recycled")
+      raise
+d51 1
+a51 4
+    ObjectSpace.id2ref(@@id)
+#    ObjectSpace.each_object do |obj|
+#      return obj if obj.id == @@id
+#    end
+d55 1
+a55 1
+    if ID_MAP[@@id]
+d67 9
+a75 6
+foo = Object.new
+p foo.hash
+foo = WeakRef.new(foo)
+p foo.hash
+ObjectSpace.garbage_collect
+p foo.hash
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d13 1
+a13 1
+class WeakRef<Delegator
+d15 1
+a15 2
+  class RefError<StandardError
+  end
+d34 1
+a34 1
+    @@__id = orig.__id__
+d36 2
+a37 3
+    ObjectSpace.call_finalizer self
+    ID_MAP[@@__id] = self.__id__
+    ID_REV_MAP[self.id] = @@__id
+d41 4
+a44 2
+    unless ID_MAP[@@__id]
+      raise RefError, "Illegal Reference - probably recycled", caller(2)
+d46 4
+a49 1
+    ObjectSpace._id2ref(@@__id)
+d53 1
+a53 1
+    if ID_MAP[@@__id]
+d65 6
+a70 8
+if __FILE__ == $0
+  foo = Object.new
+  p foo.hash			# original's hash value
+  foo = WeakRef.new(foo)
+  p foo.hash			# should be same hash value
+  ObjectSpace.garbage_collect
+  p foo.hash			# should raise exception (recycled)
+end
+@
+
+
+1.1.1.2.2.1
+log
+@990212
+@
+text
+@a62 1
+  require 'thread'
+d64 1
+a64 1
+  p foo.to_s			# original's class
+d66 1
+a66 1
+  p foo.to_s			# should be same class
+d68 1
+a68 1
+  p foo.to_s			# should raise exception (recycled)
+@
+
+
+1.1.1.2.2.2
+log
+@990324
+@
+text
+@d5 1
+a5 2
+#   foo = Object.new
+#   p foo.to_s			# original's class
+d7 1
+a7 1
+#   p foo.to_s			# should be same class
+d9 1
+a9 1
+#   p foo.to_s			# should raise exception (recycled)
+d21 3
+a23 5
+			      rids = ID_MAP[id]
+			      if rids
+				for rid in rids
+				  ID_REV_MAP[rid] = nil
+				end
+d38 1
+a38 2
+    ID_MAP[@@__id] = [] unless ID_MAP[@@__id]
+    ID_MAP[@@__id].concat self.__id__
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d19 2
+a20 2
+  ID_MAP =  {}		    # obj -> [ref,...]
+  ID_REV_MAP =  {}          # ref -> obj
+d32 1
+a32 2
+				ID_MAP[rid].delete(id)
+      				ID_MAP[rid] = nil if ID_MAP[rid].empty?
+d35 1
+a35 1
+
+@
+
+
+1.1.1.1.2.1
+log
+@__FILE__,__LINE__
+@
+text
+@d13 1
+a13 1
+class WeakRef<Delegator
+@
+
+
+1.1.1.1.2.2
+log
+@1.1b9_02
+@
+text
+@d34 1
+a34 1
+    @@__id = orig.id
+d36 2
+a37 3
+    ObjectSpace.call_finalizer self
+    ID_MAP[@@__id] = self.id
+    ID_REV_MAP[self.id] = @@__id
+d41 1
+a41 1
+    unless ID_MAP[@@__id]
+d46 1
+a46 1
+    ObjectSpace._id2ref(@@__id)
+d48 1
+a48 1
+#      return obj if obj.id == @@__id
+d53 1
+a53 1
+    if ID_MAP[@@__id]
+d65 6
+a70 8
+if __FILE__ == $0
+  foo = Object.new
+  p foo.hash
+  foo = WeakRef.new(foo)
+  p foo.hash
+  ObjectSpace.garbage_collect
+  p foo.hash
+end
+@
+
+
+1.1.1.1.2.3
+log
+@new exception model
+@
+text
+@d15 1
+a15 2
+  class RefError<StandardError
+  end
+@
+
+
+1.1.1.1.2.4
+log
+@regex.c
+@
+text
+@d44 3
+a46 1
+      raise RefError, "Illegal Reference - probably recycled", caller(2)
+d49 3
+d69 1
+a69 1
+  p foo.hash			# original's hash value
+d71 1
+a71 1
+  p foo.hash			# should be same hash value
+d73 1
+a73 1
+  p foo.hash			# should raise exception (recycled)
+@
+
+
+1.1.1.1.2.5
+log
+@1.1b9_31
+@
+text
+@d35 1
+a35 1
+    @@__id = orig.__id__
+d38 1
+a38 1
+    ID_MAP[@@__id] = self.__id__
+@
+
+
+1.1.1.1.2.6
+log
+@1.2.3
+@
+text
+@a62 1
+  require 'thread'
+d64 1
+a64 1
+  p foo.to_s			# original's class
+d66 1
+a66 1
+  p foo.to_s			# should be same class
+d68 1
+a68 1
+  p foo.to_s			# should raise exception (recycled)
+@

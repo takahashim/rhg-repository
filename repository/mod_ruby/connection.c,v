@@ -1,0 +1,429 @@
+head	1.8;
+access;
+symbols
+	release_1_0_1:1.8
+	version_1_0-branch:1.8.0.2
+	root-of-version_1_0:1.8
+	release_1_0_0:1.8
+	release_0_9_9:1.8
+	release_0_9_8:1.8
+	release_0_9_7:1.6
+	release_0_9_6:1.6
+	release_0_9_5:1.6
+	autoconfiscation-branch:1.5.0.2
+	root-of-autoconfiscation:1.5
+	release_0_9_4:1.5
+	release_0_9_3:1.4
+	release_0_9_2:1.4
+	release_0_9_1:1.4
+	release_0_9_0:1.3
+	release_0_8_6:1.3
+	release_0_8_5:1.3
+	release_0_8_4:1.3
+	release_0_8_3:1.3
+	release_0_8_2:1.3
+	release_0_8_1:1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.8
+date	2002.03.27.05.17.20;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.03.05.05.57.35;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.10.30.05.58.19;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.10.15.03.27.46;	author shugo;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2001.08.06.05.39.37;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.04.03.07.20;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.02.08.45.26;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.27.04.51.59;	author shugo;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.10.30.06.02.53;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* request.c (request_set_user): new method.
+
+* request.c (request_set_auth_type): ditto.
+
+* request.c (request_set_auth_name): ditto.
+
+* connection.c (connection_set_user): ditto.
+
+* connection.c (connection_set_auth_type): ditto.
+
+* connection.c (connection_remote_port): fix for Apache2.
+
+* connection.c (connection_local_port): ditto.
+
+* connection.c (connection_remote_port): new method.
+
+* connection.c (connection_local_port): ditto.
+@
+text
+@/*
+ * $Id: connection.c,v 1.7 2002/03/05 05:57:35 shugo Exp $
+ * Copyright (C) 2001  Shugo Maeda <shugo@@modruby.net>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#include "mod_ruby.h"
+#include "apachelib.h"
+
+VALUE rb_cApacheConnection;
+
+VALUE rb_apache_connection_new(conn_rec *conn)
+{
+    return Data_Wrap_Struct(rb_cApacheConnection, NULL, NULL, conn);
+}
+
+DEFINE_BOOL_ATTR_READER(connection_aborted, conn_rec, aborted);
+DEFINE_STRING_ATTR_READER(connection_remote_ip, conn_rec, remote_ip);
+DEFINE_STRING_ATTR_READER(connection_remote_host, conn_rec, remote_host);
+DEFINE_STRING_ATTR_READER(connection_remote_logname, conn_rec, remote_logname);
+#ifdef APACHE2
+static VALUE connection_user(VALUE self)
+{
+    rb_notimplement();
+    return Qnil;
+}
+
+static VALUE connection_auth_type(VALUE self)
+{
+    rb_notimplement();
+    return Qnil;
+}
+
+static VALUE connection_set_user(VALUE self, VALUE user)
+{
+    rb_notimplement();
+    return Qnil;
+}
+
+static VALUE connection_set_auth_type(VALUE self, VALUE auth_type)
+{
+    rb_notimplement();
+    return Qnil;
+}
+#else /* Apache 1.x */
+DEFINE_STRING_ATTR_READER(connection_user, conn_rec, user);
+DEFINE_STRING_ATTR_READER(connection_auth_type, conn_rec, ap_auth_type);
+
+static VALUE connection_set_user(VALUE self, VALUE val)
+{
+    conn_rec *conn;
+
+    Data_Get_Struct(self, conn_rec, conn);
+    Check_Type(val, T_STRING);
+    conn->user = ap_pstrndup(conn->pool,
+			     RSTRING(val)->ptr, RSTRING(val)->len);
+    return val;
+}
+
+static VALUE connection_set_auth_type(VALUE self, VALUE val)
+{
+    conn_rec *conn;
+
+    Data_Get_Struct(self, conn_rec, conn);
+    Check_Type(val, T_STRING);
+    conn->ap_auth_type = ap_pstrndup(conn->pool,
+				     RSTRING(val)->ptr, RSTRING(val)->len);
+    return val;
+}
+#endif
+DEFINE_STRING_ATTR_READER(connection_local_ip, conn_rec, local_ip);
+DEFINE_STRING_ATTR_READER(connection_local_host, conn_rec, local_host);
+
+static VALUE connection_local_port(VALUE self)
+{
+    conn_rec *conn;
+
+    Data_Get_Struct(self, conn_rec, conn);
+#ifdef APACHE2
+    return INT2NUM(conn->local_addr->port);
+#else
+    return INT2NUM(ntohs(conn->local_addr.sin_port));
+#endif
+}
+
+static VALUE connection_remote_port(VALUE self)
+{
+    conn_rec *conn;
+
+    Data_Get_Struct(self, conn_rec, conn);
+#ifdef APACHE2
+    return INT2NUM(conn->remote_addr->port);
+#else
+    return INT2NUM(ntohs(conn->remote_addr.sin_port));
+#endif
+}
+
+void rb_init_apache_connection()
+{
+    rb_cApacheConnection = rb_define_class_under(rb_mApache, "Connection", rb_cObject);
+    rb_undef_method(CLASS_OF(rb_cApacheConnection), "new");
+    rb_define_method(rb_cApacheConnection, "aborted?",
+                     connection_aborted, 0);
+    rb_define_method(rb_cApacheConnection, "remote_ip",
+		     connection_remote_ip, 0);
+    rb_define_method(rb_cApacheConnection, "remote_host",
+		     connection_remote_host, 0);
+    rb_define_method(rb_cApacheConnection, "remote_port",
+		     connection_remote_port, 0);
+    rb_define_method(rb_cApacheConnection, "remote_logname",
+		     connection_remote_logname, 0);
+    rb_define_method(rb_cApacheConnection, "user", connection_user, 0);
+    rb_define_method(rb_cApacheConnection, "user=", connection_set_user, 1);
+    rb_define_method(rb_cApacheConnection, "auth_type",
+		     connection_auth_type, 0);
+    rb_define_method(rb_cApacheConnection, "auth_type=",
+		     connection_set_auth_type, 1);
+    rb_define_method(rb_cApacheConnection, "local_ip",
+		     connection_local_ip, 0);
+    rb_define_method(rb_cApacheConnection, "local_host",
+		     connection_local_host, 0);
+    rb_define_method(rb_cApacheConnection, "local_port",
+                     connection_local_port, 0);
+}
+@
+
+
+1.7
+log
+@* supports Apache 2.0.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.6 2001/10/30 05:58:19 shugo Exp $
+d42 1
+a42 1
+#ifdef STANDARD20_MODULE_STUFF /* Apache 2.x */
+d54 12
+d69 22
+d95 24
+d129 2
+d134 1
+d137 2
+d143 2
+@
+
+
+1.6
+log
+@* connection.c (connection_aborted): new method.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.5 2001/10/15 03:27:46 shugo Exp $
+d28 1
+a28 12
+#include "httpd.h"
+#include "http_config.h"
+#include "http_core.h"
+#include "http_log.h"
+#include "http_main.h"
+#include "http_protocol.h"
+#include "util_script.h"
+#include "multithread.h"
+
+#include "ruby.h"
+#include "version.h"
+
+d42 13
+d57 1
+@
+
+
+1.5
+log
+@* mod_ruby.c (ruby_startup): call Init_stack().
+* request.c (cleanup_request_object): free RDATA(reqobj)->data.
+* request.c (request_headers_in): allow non-auth handlers to
+access Authorization header fields.
+* request.c (request_get_basic_auth_pw): allow non-auth handlers.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.4 2001/08/06 05:39:37 shugo Exp $
+d49 1
+d62 2
+@
+
+
+1.5.2.1
+log
+@* merged the changes in HEAD.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.6 2001/10/30 05:58:19 shugo Exp $
+a48 1
+DEFINE_BOOL_ATTR_READER(connection_aborted, conn_rec, aborted);
+a60 2
+    rb_define_method(rb_cApacheConnection, "aborted?",
+                     connection_aborted, 0);
+@
+
+
+1.4
+log
+@* version 0.9.1 released.
+@
+text
+@d2 2
+a3 2
+ * $Id$
+ * Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+@
+
+
+1.3
+log
+@* lib/auto-reload: new file.
+* lib/apache/ruby-run.rb: renamed from ruby/apache/ruby.rb.
+* lib/apache/eruby-run.rb: renamed from ruby/apache/eruby.rb.
+* lib/apache/rd2html.rb: renamed from ruby/apache/rd2html.rb.
+* lib/apache/eruby-run.rb (handler): specify filename for backtrace.
+* changed license from GPL to LGPL.
+* COPYING: new file.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.2 2001/05/02 08:45:26 shugo Exp $
+d4 1
+d6 8
+a13 1
+ * Author: Shugo Maeda <shugo@@modruby.net>
+d15 11
+a25 16
+ * This file is part of mod_ruby.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+ * USA.
+@
+
+
+1.2
+log
+@* fixed copyright notice.
+* array_header.c: new file for Apache::ArrayHeader.
+* server.c: added some methods.
+@
+text
+@d2 1
+a2 1
+ * $Id: connection.c,v 1.1 2001/04/27 04:51:59 shugo Exp $
+d9 4
+a12 4
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+d16 2
+a17 2
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+d19 4
+a22 4
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA
+@
+
+
+1.1
+log
+@* ruby/apache/ruby.rb (emulate_cgi): new method.
+* ruby/apache/eruby.rb: inherit Apache::Ruby.
+* table.c: new file for Apache::Table.
+* connection.c: new file for Apache::Connection.
+* server.c: new file for Apache::Server.
+* request.c: new file for Apache::Request.
+* request.c (request_setup_cgi_env): new method.
+* mod_ruby.c (script_handler): resotre original $stdin, $stdout
+and $>.
+@
+text
+@d2 2
+a3 3
+ * $Id$
+ * Copyright (C) 2000  ZetaBITS, Inc.
+ * Copyright (C) 2000  Information-technology Promotion Agency, Japan
+@

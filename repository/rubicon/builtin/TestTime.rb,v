@@ -1,0 +1,1075 @@
+head	1.15;
+access;
+symbols
+	V0_3_2:1.13
+	V0_1_4:1.9
+	V0_1_3:1.8
+	V0_1_2:1.8
+	V0_1_1:1.7
+	V0_1:1.7
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.15
+date	2002.01.05.14.35.05;	author chad;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.11.27.16.18.07;	author chad;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.07.27.05.49.26;	author dave;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.03.28.16.38.54;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.11.16.19.05.23;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.10.20.18.04.44;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.14.19.44.10;	author andy;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.14.18.31.08;	author andy;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.12.20.53.57;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.12.20.38.42;	author andy;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.07.20.51.47;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.07.15.11.31;	author andy;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.15
+log
+@Replaced $rubyVersion global with Version class methods.  Replaced references to the former with the latter.  Deprecated tests for #indexes and #indices where appropriate.  Removed some duplication in several tests in ArrayBase and HashBase.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+#
+# NOTICE: These tests assume that your local time zone is *not* GMT.
+#
+
+class T
+  attr :orig
+  attr :amt
+  attr :result
+  def initialize(a1, anAmt, a2)
+    @@orig = a1
+    @@amt = anAmt
+    @@result = a2
+  end
+  def to_s
+    @@orig.join("-")
+  end
+end
+
+class TestTime < Rubicon::TestCase
+
+  ONEDAYSEC = 60 * 60 * 24
+
+  #
+  # Test month name to month number
+  #
+  @@@@months = { 
+    'Jan' => 1,
+    'Feb' => 2,
+    'Mar' => 3,
+    'Apr' => 4,
+    'May' => 5,
+    'Jun' => 6,
+    'Jul' => 7,
+    'Aug' => 8,
+    'Sep' => 9,
+    'Oct' => 10,
+    'Nov' => 11,
+    'Dec' => 12
+  }
+
+
+  #
+  # A random selection of interesting dates
+  #
+  @@@@dates = [ 
+    #                   Source  +   amt         ==   dest
+    T.new([1999, 12, 31, 23,59,59], 1,               [2000,  1,  1,  0,0,0]),
+    T.new([2036, 12, 31, 23,59,59], 1,               [2037,  1,  1,  0,0,0]),
+    T.new([2000,  2, 28, 23,59,59], 1,               [2000,  2, 29, 0,0,0]),
+    T.new([1970,  2, 1,   0, 0, 0], ONEDAYSEC,       [1970,  2,  2,  0,0,0]),
+    T.new([2000,  7, 1,   0, 0, 0], 32 * ONEDAYSEC,  [2000,  8,  2,  0,0,0]),
+    T.new([2000,  1, 1,   0, 0, 0], 366 * ONEDAYSEC, [2001,  1,  1,  0,0,0]),
+    T.new([2001,  1, 1,   0, 0, 0], 365 * ONEDAYSEC, [2002,  1,  1,  0,0,0]),
+
+    T.new([2000,  1, 1,   0, 0, 0], 0,               [2000,  1,  1,  0,0,0]),
+    T.new([2000,  2, 1,   0, 0, 0], 0,               [2000,  2,  1,  0,0,0]),
+    T.new([2000,  3, 1,   0, 0, 0], 0,               [2000,  3,  1,  0,0,0]),
+    T.new([2000,  4, 1,   0, 0, 0], 0,               [2000,  4,  1,  0,0,0]),
+    T.new([2000,  5, 1,   0, 0, 0], 0,               [2000,  5,  1,  0,0,0]),
+    T.new([2000,  6, 1,   0, 0, 0], 0,               [2000,  6,  1,  0,0,0]),
+    T.new([2000,  7, 1,   0, 0, 0], 0,               [2000,  7,  1,  0,0,0]),
+    T.new([2000,  8, 1,   0, 0, 0], 0,               [2000,  8,  1,  0,0,0]),
+    T.new([2000,  9, 1,   0, 0, 0], 0,               [2000,  9,  1,  0,0,0]),
+    T.new([2000, 10, 1,   0, 0, 0], 0,               [2000, 10,  1,  0,0,0]),
+    T.new([2000, 11, 1,   0, 0, 0], 0,               [2000, 11,  1,  0,0,0]),
+    T.new([2000, 12, 1,   0, 0, 0], 0,               [2000, 12,  1,  0,0,0]), 
+
+    T.new([2001,  1, 1,   0, 0, 0], 0,               [2001,  1,  1,  0,0,0]),
+    T.new([2001,  2, 1,   0, 0, 0], 0,               [2001,  2,  1,  0,0,0]),
+    T.new([2001,  3, 1,   0, 0, 0], 0,               [2001,  3,  1,  0,0,0]),
+    T.new([2001,  4, 1,   0, 0, 0], 0,               [2001,  4,  1,  0,0,0]),
+    T.new([2001,  5, 1,   0, 0, 0], 0,               [2001,  5,  1,  0,0,0]),
+    T.new([2001,  6, 1,   0, 0, 0], 0,               [2001,  6,  1,  0,0,0]),
+    T.new([2001,  7, 1,   0, 0, 0], 0,               [2001,  7,  1,  0,0,0]),
+    T.new([2001,  8, 1,   0, 0, 0], 0,               [2001,  8,  1,  0,0,0]),
+    T.new([2001,  9, 1,   0, 0, 0], 0,               [2001,  9,  1,  0,0,0]),
+    T.new([2001, 10, 1,   0, 0, 0], 0,               [2001, 10,  1,  0,0,0]),
+    T.new([2001, 11, 1,   0, 0, 0], 0,               [2001, 11,  1,  0,0,0]),
+    T.new([2001, 12, 1,   0, 0, 0], 0,               [2001, 12,  1,  0,0,0]),
+  ]
+
+
+  #
+  # Check a particular date component -- m is the method (day, month, etc)
+  # and i is the index in the date specifications above.
+  #
+  def checkComponent(m, i)
+    @@@@dates.each do |x|
+      msg = "\nTesting method Time."+m.id2name+" with "+x.orig.join(' ')+":\n"
+      assert_equals(x.orig[i], Time.local(*x.orig).send(m), msg)
+      assert_equals(x.result[i], Time.local(*x.result).send(m), msg)
+      assert_equals(x.orig[i], Time.gm(*x.orig).send(m), msg)
+      assert_equals(x.result[i], Time.gm(*x.result).send(m), msg)
+    end
+  end
+
+  #
+  # Ensure against time travel
+  #
+  def test_00sanity
+    Time.now.to_i > 960312287 # Tue Jun  6 13:25:06 EDT 2000
+  end
+
+  # Method tests:
+
+  def test_CMP # '<=>'
+    @@@@dates.each do |x|
+      if (x.amt != 0)
+        assert_equal(1, Time.local(*x.result) <=> Time.local(*x.orig),
+                     "#{x.result} should be > #{x.orig}")
+
+        assert_equal(-1, Time.local(*x.orig) <=> Time.local(*x.result))
+        assert_equal(0, Time.local(*x.orig) <=> Time.local(*x.orig))
+        assert_equal(0, Time.local(*x.result) <=> Time.local(*x.result))
+        
+        assert_equal(1,Time.gm(*x.result) <=> Time.gm(*x.orig))
+        assert_equal(-1,Time.gm(*x.orig) <=> Time.gm(*x.result))
+        assert_equal(0,Time.gm(*x.orig) <=> Time.gm(*x.orig))
+        assert_equal(0,Time.gm(*x.result) <=> Time.gm(*x.result))
+      end
+    end
+  end
+
+  def test_MINUS # '-'
+    @@@@dates.each do |x|
+      # Check subtracting an amount in seconds
+      assert_equals(Time.local(*x.result) - x.amt, Time.local(*x.orig))
+      assert_equals(Time.gm(*x.result) - x.amt, Time.gm(*x.orig))
+      # Check subtracting two times
+      assert_equals(Time.local(*x.result) - Time.local(*x.orig), x.amt)
+      assert_equals(Time.gm(*x.result) - Time.gm(*x.orig), x.amt)
+    end
+  end
+
+  def test_PLUS # '+'
+    @@@@dates.each do |x|
+      assert_equals(Time.local(*x.orig) + x.amt, Time.local(*x.result))
+      assert_equals(Time.gm(*x.orig) + x.amt, Time.gm(*x.result))
+    end
+  end
+
+  def test__dump
+  end
+  def os_specific_epoch
+    $os == MsWin32 ? "Thu Jan 01 00:00:00 1970" : "Thu Jan  1 00:00:00 1970"
+  end
+
+  def test_asctime
+    expected = os_specific_epoch
+    assert_equals(Time.at(0).gmtime.asctime, expected)
+  end
+
+  def test_clone
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = Time.now
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.clone
+
+        assert_equal(a, b)
+        assert(a.id != b.id)
+        assert_equal(a.frozen?, b.frozen?)
+        assert_equal(a.tainted?, b.tainted?)
+      end
+    end
+  end
+
+  def test_ctime
+    expected = os_specific_epoch
+    assert_equals(Time.at(0).gmtime.ctime, expected)
+  end
+
+  def test_day
+    checkComponent(:day, 2)
+  end
+
+  def test_eql?
+    t1=Time.now
+    t2=t1 
+    t2+= 2e-6
+    sleep(.1)
+    assert(!t1.eql?(Time.now))
+    assert(!t1.eql?(t2))
+  end
+
+  def test_gmt?
+    assert(!Time.now.gmt?)
+    assert(Time.now.gmtime.gmt?)
+    assert(!Time.local(2000).gmt?)
+    assert(Time.gm(2000).gmt?)
+  end
+
+  def test_gmtime
+    t = Time.now
+    loc = Time.at(t)
+    assert(!t.gmt?)
+    t.gmtime
+    assert(t.gmt?)
+    assert(t.asctime != loc.asctime)
+  end
+
+  def test_hash
+    t = Time.now
+    t2 = Time.at(t)
+    sleep(.1)
+    t3 = Time.now
+    assert(t.hash == t2.hash)
+    assert(t.hash != t3.hash)
+  end
+
+  def test_hour
+    checkComponent(:hour, 3)
+  end
+
+  def test_isdst
+    # This code is problematic: how do I find out the exact
+    # date and time of the dst switch for all the possible
+    # timezones in which this code runs? For now, I'll just check
+    # midvalues, and add boundary checks for the US. I know this won't 
+    # work in some parts of the US, even, so I'm looking for
+    # better ideas
+
+    zone = Time.now.zone
+
+    # Are we in the US?
+
+    if ["EST", "EDT",
+        "CST", "CDT",
+        "MST", "MDT",
+        "PST", "PDT"].include? zone
+
+      dtest = [ 
+        [false,     2000, 1, 1],
+        [true,  2000, 7, 1],
+      ]
+
+      dtest.push(
+                 [true,  2000, 4, 2, 4],
+                 [false, 2000, 10, 29, 4],
+                 [false, 2000, 4,2,1,59],   # Spring forward
+                 [true,  2000, 4,2,3,0],
+                 [true,  2000, 10,29,1,59], # Fall back
+                 [false, 2000, 10,29,2,0]
+                 )
+
+      dtest.each do |x|
+        result = x.shift
+        assert_equal(result, Time.local(*x).isdst,
+                     "\nExpected #{x.join(',')} to be dst=#{result}")
+      end
+    else
+      skipping("Don't know how to do timezones");
+    end
+  end
+
+  def test_localtime
+    t = Time.now.gmtime
+    utc = Time.at(t)
+    assert(t.gmt?)
+    t.localtime
+    assert(!t.gmt?)
+    assert(t.asctime != utc.asctime)
+  end
+
+  def test_mday
+    checkComponent(:mday, 2)
+  end
+
+  def test_min
+    checkComponent(:min, 4)
+  end
+
+  def test_mon
+    checkComponent(:mon, 1)
+  end
+
+  def test_month
+    checkComponent(:month, 1)
+  end
+
+  def test_sec
+    checkComponent(:sec, 5)
+  end
+
+  def test_strftime
+    # Sat Jan  1 14:58:42 2000
+    t = Time.local(2000,1,1,14,58,42)
+
+    stest = {
+       '%a' => 'Sat',
+       '%A' => 'Saturday',
+       '%b' => 'Jan',
+       '%B' => 'January',
+       #'%c',  The preferred local date and time representation,
+       '%d' => '01',
+       '%H' => '14',
+       '%I' => '02',
+       '%j' => '001',
+       '%m' => '01',
+       '%M' => '58',
+       '%p' => 'PM',
+       '%S' => '42',
+       '%U' => '00',
+       '%W' => '00',
+       '%w' => '6',
+       #'%x',  Preferred representation for the date alone, no time\\
+       #'%X',  Preferred representation for the time alone, no date\\
+       '%y' =>  '00',
+       '%Y' =>  '2000',
+       #'%Z',  Time zone name\\
+       '%%' =>  '%',
+      }
+
+    stest.each {|flag,val|
+      assert_equal("Got "+val,t.strftime("Got " + flag))
+    }
+
+  end
+
+  def test_to_a
+    t = Time.now
+    a = t.to_a
+    assert_equal(t.sec,  a[0])
+    assert_equal(t.min,  a[1])
+    assert_equal(t.hour, a[2])
+    assert_equal(t.day,  a[3])
+    assert_equal(t.month,a[4])
+    assert_equal(t.year, a[5])
+    assert_equal(t.wday, a[6])
+    assert_equal(t.yday, a[7])
+    assert_equal(t.isdst,a[8])
+    assert_equal(t.zone, a[9])
+  end
+
+  def test_to_f
+    t = Time.at(10000,1066)
+    assert_equal(t.to_f,10000.001066)
+  end
+
+  def test_to_i
+    t = Time.at(0)
+    assert_equal(t.to_i,0)
+    t = Time.at(10000)
+    assert_equal(t.to_i,10000)
+  end
+
+  def test_to_s
+    t = Time.now
+    assert_equal(t.to_s,t.strftime("%a %b %d %H:%M:%S %Z %Y"))
+  end
+
+  def test_tv_sec
+    t = Time.at(0)
+    assert_equal(t.tv_sec,0)
+    t = Time.at(10000)
+    assert_equal(t.tv_sec,10000)
+  end
+
+  def test_tv_usec
+    t = Time.at(10000,1066)
+    assert_equal(t.tv_usec,1066)
+  end
+
+  def test_usec
+    t = Time.at(10000,1066)
+    assert_equal(t.usec,1066)
+  end
+
+  def test_wday
+    t = Time.local(2001, 4, 1)
+
+    6.times {|i|
+      assert_equal(i,t.wday)
+      t += ONEDAYSEC
+    }
+  end
+
+  def test_yday
+    t = Time.local(2001, 1, 1)
+    365.times {|i|
+      assert_equal(i+1,t.yday)
+      t += ONEDAYSEC
+    }
+    
+  end
+
+  def test_year
+    checkComponent(:year, 0)
+  end
+
+  def test_zone
+    gmt = "UTC"
+    Version.less_than("1.7") do gmt = "GMT" end
+    t = Time.now.gmtime
+    assert_equals(gmt, t.zone)
+    t = Time.now
+    assert(gmt != t.zone)
+  end
+
+  def test_s__load
+  end
+
+  def test_s_at
+    t = Time.now
+    sec = t.to_i
+    assert_equal(0, Time.at(0))
+    assert_equal(t, Time.at(t))
+    assert((Time.at(sec,1000000).to_f - Time.at(sec).to_f) == 1.0)
+  end
+
+  def test_s_gm
+    assert_exception(ArgumentError) { Time.gm }
+    assert(Time.gm(2000) != Time.local(2000))
+    assert_equal(Time.gm(2000), Time.gm(2000,1,1,0,0,0))
+    assert_equal(Time.gm(2000,nil,nil,nil,nil,nil), Time.gm(2000,1,1,0,0,0))
+    assert_exception(ArgumentError) { Time.gm(2000,0) }
+    assert_exception(ArgumentError) { Time.gm(2000,13) }
+    assert_exception(ArgumentError) { Time.gm(2000,1,1,24) }
+    Time.gm(2000,1,1,23)
+    @@@@months.each do |month, num| 
+      assert_equal(Time.gm(2000,month), Time.gm(2000,num,1,0,0,0))
+      assert_equal(Time.gm(1970,month), Time.gm(1970,num,1,0,0,0))
+      assert_equal(Time.gm(2037,month), Time.gm(2037,num,1,0,0,0))
+    end
+    t = Time.gm(2000,1,1)
+    a = t.to_a
+    assert_equal(Time.gm(*a),t)
+  end
+
+  def test_s_local
+    assert_exception(ArgumentError) { Time.local }
+    assert(Time.gm(2000) != Time.local(2000))
+    assert_equal(Time.local(2000), Time.local(2000,1,1,0,0,0))
+    assert_equal(Time.local(2000,nil,nil,nil,nil,nil), Time.local(2000,1,1,0,0,0))
+    assert_exception(ArgumentError) { Time.local(2000,0) }
+    assert_exception(ArgumentError) { Time.local(2000,13) }
+    assert_exception(ArgumentError) { Time.local(2000,1,1,24) }
+    Time.local(2000,1,1,23)
+    @@@@months.each do |month, num| 
+      assert_equal(Time.local(2000,month), Time.local(2000,num,1,0,0,0))
+      assert_equal(Time.local(1971,month), Time.local(1971,num,1,0,0,0))
+      assert_equal(Time.local(2037,month), Time.local(2037,num,1,0,0,0))
+    end
+    t = Time.local(2000,1,1)
+    a = t.to_a
+    assert_equal(Time.local(*a),t)
+  end
+
+  def test_s_mktime
+    #
+    # Test insufficient arguments
+    #
+    assert_exception(ArgumentError) { Time.mktime }
+    assert(Time.gm(2000) != Time.mktime(2000))
+    assert_equal(Time.mktime(2000), Time.mktime(2000,1,1,0,0,0))
+    assert_equal(Time.mktime(2000,nil,nil,nil,nil,nil), Time.mktime(2000,1,1,0,0,0))
+    assert_exception(ArgumentError) { Time.mktime(2000,0) }
+    assert_exception(ArgumentError) { Time.mktime(2000,13) }
+    assert_exception(ArgumentError) { Time.mktime(2000,1,1,24) }
+    Time.mktime(2000,1,1,23)
+
+    #
+    # Make sure spelled-out month names work
+    #
+    @@@@months.each do |month, num| 
+      assert_equal(Time.mktime(2000,month), Time.mktime(2000,num,1,0,0,0))
+      assert_equal(Time.mktime(1971,month), Time.mktime(1971,num,1,0,0,0))
+      assert_equal(Time.mktime(2037,month), Time.mktime(2037,num,1,0,0,0))
+    end
+    t = Time.mktime(2000,1,1)
+    a = t.to_a
+    assert_equal(Time.mktime(*a),t)
+  end
+
+  def test_s_new
+    t1 = Time.new
+    sleep 1
+    t2 = Time.new
+    d = t2.to_f - t1.to_f
+    assert(d > 0.9 && d < 1.1)
+  end
+
+  def test_s_now
+    t1 = Time.now
+    sleep 1
+    t2 = Time.now
+    d = t2.to_f - t1.to_f
+    assert(d > 0.9 && d < 1.1)
+  end
+
+  def test_s_times
+    Version.less_than("1.7") do
+      assert_instance_of(Struct::Tms, Time.times)
+    end
+    Version.greater_or_equal("1.7") do
+      assert_instance_of(Struct::Tms, Process.times)
+    end
+  end
+
+end
+
+Rubicon::handleTests(TestTime) if $0 == __FILE__
+@
+
+
+1.14
+log
+@Fixed asctime and ctime tests to work properly on MsWin32.
+@
+text
+@d396 2
+a397 1
+    gmt = $rubyVersion < "1.7" ? "GMT" : "UTC"
+d496 1
+a496 1
+    if $rubyVersion < "1.7"
+d498 2
+a499 1
+    else
+@
+
+
+1.13
+log
+@Start to get tests running better under Windows. Start some basic work
+on File and Dir, We seem to be bumping up against some Cygwin bugs
+though; utime and IGNORED signals don't seem to work correctly. Once I get the
+tests stabilized I'll publish a list and hopefully those who know about
+these things will be able to comment.
+@
+text
+@d147 3
+d152 2
+a153 1
+    assert_equals(Time.at(0).gmtime.asctime, "Thu Jan  1 00:00:00 1970")
+d173 2
+a174 1
+    assert_equals(Time.at(0).gmtime.asctime, "Thu Jan  1 00:00:00 1970")
+@
+
+
+1.12
+log
+@Move #times from Time to Process for 1.7
+
+Time#zone now returns UTC, rather than GMT
+@
+text
+@d180 1
+d204 1
+@
+
+
+1.11
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d389 1
+d391 1
+a391 1
+    assert_equals("GMT",t.zone)
+d393 1
+a393 1
+    assert("GMT" != t.zone)
+d488 5
+a492 1
+    assert_instance_of(Struct::Tms, Time.times)
+@
+
+
+1.10
+log
+@Many contributions from members of the ml
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.9
+log
+@Fix bugs based on Matz's comments
+@
+text
+@d155 1
+a156 1
+        a.taint  if taint
+@
+
+
+1.8
+log
+@Make Aleksi's changes
+@
+text
+@d215 1
+a215 1
+    # midvalues, and add boundary checks for the US. I know theis won't 
+a218 5
+    dtest = [ 
+      [false, 2000, 1, 1],
+      [true,  2000, 7, 1],
+    ]
+
+d228 5
+a240 1
+    end
+d242 7
+a248 4
+    dtest.each do |x|
+      result = x.shift
+      assert_equal(result, Time.local(*x).isdst,
+                   "\nExpected #{x.join(',')} to be dst=#{result}")
+a249 1
+
+@
+
+
+1.7
+log
+@Updated for RubyUnit 0.2.0
+@
+text
+@d28 14
+a41 12
+  @@@@months = { 'Jan' => 1,
+            'Feb' => 2,
+            'Mar' => 3,
+            'Apr' => 4,
+            'May' => 5,
+            'Jun' => 6,
+            'Jul' => 7,
+            'Aug' => 8,
+            'Sep' => 9,
+            'Oct' => 10,
+            'Nov' => 11,
+            'Dec' => 12 }
+d49 33
+a81 33
+    T.new([1999, 12, 31, 23,59,59], 1,               [2000,  1,1,  0,0,0]),
+    T.new([2036, 12, 31, 23,59,59], 1,               [2037,  1,1,  0,0,0]),
+    T.new([2000,  2, 28, 23,59,59], 1,               [2000,  2,29, 0,0,0]),
+    T.new([1970,  1, 1,   0, 0, 0], ONEDAYSEC,       [1970,  1,2,  0,0,0]),
+    T.new([2000,  7, 1,   0, 0, 0], 32 * ONEDAYSEC,  [2000,  8,2,  0,0,0]),
+    T.new([2000,  1, 1,   0, 0, 0], 366 * ONEDAYSEC, [2001,  1,1,  0,0,0]),
+    T.new([2001,  1, 1,   0, 0, 0], 365 * ONEDAYSEC, [2002,  1,1,  0,0,0]),
+
+    T.new([2000,  1, 1,   0, 0, 0], 0,               [2000,  1,1,  0,0,0]),
+    T.new([2000,  2, 1,   0, 0, 0], 0,               [2000,  2,1,  0,0,0]),
+    T.new([2000,  3, 1,   0, 0, 0], 0,               [2000,  3,1,  0,0,0]),
+    T.new([2000,  4, 1,   0, 0, 0], 0,               [2000,  4,1,  0,0,0]),
+    T.new([2000,  5, 1,   0, 0, 0], 0,               [2000,  5,1,  0,0,0]),
+    T.new([2000,  6, 1,   0, 0, 0], 0,               [2000,  6,1,  0,0,0]),
+    T.new([2000,  7, 1,   0, 0, 0], 0,               [2000,  7,1,  0,0,0]),
+    T.new([2000,  8, 1,   0, 0, 0], 0,               [2000,  8,1,  0,0,0]),
+    T.new([2000,  9, 1,   0, 0, 0], 0,               [2000,  9,1,  0,0,0]),
+    T.new([2000, 10, 1,   0, 0, 0], 0,               [2000, 10,1,  0,0,0]),
+    T.new([2000, 11, 1,   0, 0, 0], 0,               [2000, 11,1,  0,0,0]),
+    T.new([2000, 12, 1,   0, 0, 0], 0,               [2000, 12,1,  0,0,0]),
+
+    T.new([2001,  1, 1,   0, 0, 0], 0,               [2001,  1,1,  0,0,0]),
+    T.new([2001,  2, 1,   0, 0, 0], 0,               [2001,  2,1,  0,0,0]),
+    T.new([2001,  3, 1,   0, 0, 0], 0,               [2001,  3,1,  0,0,0]),
+    T.new([2001,  4, 1,   0, 0, 0], 0,               [2001,  4,1,  0,0,0]),
+    T.new([2001,  5, 1,   0, 0, 0], 0,               [2001,  5,1,  0,0,0]),
+    T.new([2001,  6, 1,   0, 0, 0], 0,               [2001,  6,1,  0,0,0]),
+    T.new([2001,  7, 1,   0, 0, 0], 0,               [2001,  7,1,  0,0,0]),
+    T.new([2001,  8, 1,   0, 0, 0], 0,               [2001,  8,1,  0,0,0]),
+    T.new([2001,  9, 1,   0, 0, 0], 0,               [2001,  9,1,  0,0,0]),
+    T.new([2001, 10, 1,   0, 0, 0], 0,               [2001, 10,1,  0,0,0]),
+    T.new([2001, 11, 1,   0, 0, 0], 0,               [2001, 11,1,  0,0,0]),
+    T.new([2001, 12, 1,   0, 0, 0], 0,               [2001, 12,1,  0,0,0]),
+d90 1
+a90 1
+    @@@@dates.each {|x|
+d96 1
+a96 1
+    }
+d109 1
+a109 1
+    @@@@dates.each {|x|
+d111 2
+a112 2
+      assert_equal(1, Time.local(*x.result) <=> Time.local(*x.orig),
+                   "#{x.result} should be > #{x.orig}")
+d114 8
+a121 8
+      assert_equal(-1, Time.local(*x.orig) <=> Time.local(*x.result))
+      assert_equal(0, Time.local(*x.orig) <=> Time.local(*x.orig))
+      assert_equal(0, Time.local(*x.result) <=> Time.local(*x.result))
+
+      assert_equal(1,Time.gm(*x.result) <=> Time.gm(*x.orig))
+      assert_equal(-1,Time.gm(*x.orig) <=> Time.gm(*x.result))
+      assert_equal(0,Time.gm(*x.orig) <=> Time.gm(*x.orig))
+      assert_equal(0,Time.gm(*x.result) <=> Time.gm(*x.result))
+d123 1
+a123 1
+    }
+d127 1
+a127 1
+    @@@@dates.each {|x|
+d134 1
+a134 1
+    }
+d138 1
+a138 1
+    @@@@dates.each {|x|
+d141 1
+a141 1
+    }
+d212 7
+d222 5
+a226 7
+      [true,  2000, 4, 2, 4],
+      [false, 2000, 10, 29, 4],
+      [false, 2000, 4,2,1,59], # Spring forward
+      [true,  2000, 4,2,3,0],
+      [true,  2000, 10,29,1,59], # Fall back
+      [false, 2000, 10,29,2,0],
+      ]
+d228 16
+a243 1
+    dtest.each {|x|
+d247 1
+a247 1
+    }
+d413 1
+a413 1
+    @@@@months.each {|month, num| 
+d417 1
+a417 1
+    }
+d432 1
+a432 1
+    @@@@months.each {|month, num| 
+d434 1
+a434 1
+      assert_equal(Time.local(1970,month), Time.local(1970,num,1,0,0,0))
+d436 1
+a436 1
+    }
+d458 1
+a458 1
+    @@@@months.each {|month, num| 
+d460 1
+a460 1
+      assert_equal(Time.mktime(1970,month), Time.mktime(1970,num,1,0,0,0))
+d462 1
+a462 1
+    }
+@
+
+
+1.6
+log
+@All but pack...
+@
+text
+@d463 1
+a463 1
+    assert_instance_of(Time.times,Struct::Tms)
+@
+
+
+1.5
+log
+@Remove spurious trace
+@
+text
+@d41 1
+@
+
+
+1.4
+log
+@Odds and Sods.
+@
+text
+@a342 1
+    puts "Original t is #{t.asctime}"
+@
+
+
+1.3
+log
+@Widen the time window on Time
+@
+text
+@d16 3
+d107 13
+a119 9
+      assert_equal(Time.local(*x.result) <=> Time.local(*x.orig), 1)
+      assert_equal(Time.local(*x.orig) <=> Time.local(*x.result), -1)
+      assert_equal(Time.local(*x.orig) <=> Time.local(*x.orig), 0)
+      assert_equal(Time.local(*x.result) <=> Time.local(*x.result), 0)
+
+      assert_equal(Time.gm(*x.result) <=> Time.gm(*x.orig), 1)
+      assert_equal(Time.gm(*x.orig) <=> Time.gm(*x.result), -1)
+      assert_equal(Time.gm(*x.orig) <=> Time.gm(*x.orig), 0)
+      assert_equal(Time.gm(*x.result) <=> Time.gm(*x.result), 0)
+d175 1
+a175 1
+    t2+= 1e-6
+@
+
+
+1.2
+log
+@First stab
+@
+text
+@d444 1
+a444 1
+    assert(d > 1.0 && d < 1.1)
+d452 1
+a452 1
+    assert(d > 1.0 && d < 1.1)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 14
+d20 82
+d103 11
+a113 1
+    assert_fail("untested")
+d117 8
+a124 1
+    assert_fail("untested")
+d128 4
+a131 1
+    assert_fail("untested")
+a134 1
+    assert_fail("untested")
+d138 1
+a138 1
+    assert_fail("untested")
+d142 13
+a154 1
+    assert_fail("untested")
+d158 1
+a158 1
+    assert_fail("untested")
+d162 1
+a162 1
+    assert_fail("untested")
+d166 5
+a170 1
+    assert_fail("untested")
+d174 4
+a177 1
+    assert_fail("untested")
+d181 6
+a186 1
+    assert_fail("untested")
+d190 5
+a194 1
+    assert_fail("untested")
+d198 1
+a198 1
+    assert_fail("untested")
+d201 17
+a217 3
+  def test_inspect
+    assert_fail("untested")
+  end
+a218 2
+  def test_isdst
+    assert_fail("untested")
+d222 6
+a227 1
+    assert_fail("untested")
+d231 1
+a231 1
+    assert_fail("untested")
+d235 1
+a235 1
+    assert_fail("untested")
+d239 1
+a239 1
+    assert_fail("untested")
+d243 1
+a243 1
+    assert_fail("untested")
+d247 1
+a247 1
+    assert_fail("untested")
+d251 32
+a282 1
+    assert_fail("untested")
+d286 12
+a297 1
+    assert_fail("untested")
+d301 2
+a302 1
+    assert_fail("untested")
+d306 4
+a309 1
+    assert_fail("untested")
+d313 2
+a314 1
+    assert_fail("untested")
+d318 4
+a321 1
+    assert_fail("untested")
+d325 2
+a326 1
+    assert_fail("untested")
+d330 2
+a331 1
+    assert_fail("untested")
+d335 7
+a341 1
+    assert_fail("untested")
+d345 6
+a350 1
+    assert_fail("untested")
+d354 1
+a354 1
+    assert_fail("untested")
+d358 4
+a361 1
+    assert_fail("untested")
+a364 1
+    assert_fail("untested")
+d368 5
+a372 1
+    assert_fail("untested")
+d376 16
+a391 1
+    assert_fail("untested")
+d395 16
+a410 1
+    assert_fail("untested")
+d414 23
+a436 1
+    assert_fail("untested")
+d440 5
+a444 1
+    assert_fail("untested")
+d448 5
+a452 1
+    assert_fail("untested")
+d456 1
+a456 1
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

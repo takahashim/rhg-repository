@@ -1,0 +1,602 @@
+head	1.12;
+access;
+symbols
+	V0_3_2:1.11
+	V0_1_4:1.7
+	V0_1_3:1.7
+	V0_1_2:1.7
+	V0_1_1:1.7
+	V0_1:1.7
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.10.07.08.00.23;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.06.10.07.05.22;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.10.12.03.33.15;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.09.01.03.12.40;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.22.05.05.54;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.06.14.44.12;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* replace "type" by "class" since Object#type is deprecated in
+  1.7.3.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+# Note: conversion tests etc are in the language tests. This is
+# simply for the class methods
+
+class TestBignum < Rubicon::TestCase
+
+  def setup
+    @@big1 = 10**40 + 10**30 + 10**20 + 10**10 + 1
+    @@big2 = 2**80 + 2**40 + 2**20 + 2**10 + 1
+  end
+
+  def fact(n)
+    return 1 if n == 0
+    f = 1
+    while n>0
+      f *= n
+      n -= 1
+    end
+     f
+  end
+
+  def test_00_sanity
+    assert_equal(10000000001000000000100000000010000000001, @@big1)
+    assert_equal(1208925819615728687383553, @@big2)
+
+    x = fact(40)
+    assert_equal(x, x)
+    assert_equal(x, fact(40))
+    assert(x < x+2)
+    assert(x > x-2)
+    assert_equal(x, 815915283247897734345611269596115894272000000000)
+    assert(x != 815915283247897734345611269596115894272000000001)
+    assert_equal(x+1, 815915283247897734345611269596115894272000000001)
+    assert_equal(x/fact(20), 335367096786357081410764800000)
+    x = -x
+    assert_equal(x, -815915283247897734345611269596115894272000000000)
+    assert_equal(2-(2**32), -(2**32-2))
+    assert_equal(2**32 - 5, (2**32-3)-2)
+
+    a = 677330545177305025495135714080
+    b = 14269972710765292560
+    assert_equal(0, a % b)
+    assert_equal(0, -a % b)
+
+  end
+
+  def test_UMINUS
+    bm = -@@big1
+    assert_equal(0, @@big1 + bm)
+  end
+
+  def test_AND # '&'
+    checkBits([], @@big1 & 0)
+    checkBits([80, 40, 20, 10, 0], @@big2 & -1)
+    checkBits([80, 20,  0], @@big2 & (2**80 + 2**20 + 1))
+  end
+
+  def test_AREF # '[]'
+    checkBits( [80, 40, 20, 10, 0], @@big2 )
+  end
+
+  def test_CMP # '<=>'
+    assert_equal(1,  @@big1 <=> @@big2)
+    assert_equal(-1, @@big2 <=> @@big1)
+    assert_equal(0,  @@big1 <=> @@big1)
+    assert_equal(1,  @@big1 <=> 9999)
+    assert_equal(-1, 9999  <=> @@big1)
+    assert_equal(-1, 1.23  <=> @@big1)
+    assert_equal(+1, @@big2 <=> 1.23)
+    # Negatives:
+    assert_equal(-1, -@@big1 <=> @@big1)
+    assert_equal(1,  @@big1 <=> -@@big1)
+    assert_equal(-1,  -@@big1 <=> -@@big2)
+  end
+
+  def test_DIV # '/'
+    big3 = 2**70 + 2**30 + 2**10 + 1
+    assert_equal(big3, @@big2 / 1024)
+    assert_equal(1024, @@big2 / big3)
+
+    bm = -@@big2
+    assert_equal(-big3-1, bm / 1024)
+    assert_equal(-1025, bm / big3)
+
+    assert_equal(-big3-1, @@big2 / -1024)
+    assert_equal(-1025, @@big2 / -big3)
+
+    assert_equal(big3, bm / -1024)
+    assert_equal(1024, bm / -big3)
+
+    for i in 4000..4096
+      n1 = 1 << i
+      assert_equal((n1**2-1) / (n1+1), n1-1)
+    end
+
+    assert_equal(100000000000000000000, 10**40/10**20)
+  end
+
+  def test_LSHIFT # '<<'
+    checkBits([81, 41, 21, 11, 1],  @@big2 << 1)
+    checkBits([90, 50, 30, 20, 10], @@big2 << 10)
+    checkBits([79, 39, 19,  9],     @@big2 << -1)
+
+    # there was a bug where the top digits were getting dropped
+    num = 0x80000000
+    num = 0x8000000000000000 unless num.is_a?(Bignum)
+    if num.is_a?(Bignum)
+      assert_equal(num*2, num << 1)
+      assert_equal((num << 1)>>1, num)
+    end
+
+    for i in 1000..1014
+      assert_equal(2**i, 1<<i)
+    end
+    
+    n1 = 1<<1000
+    for i in 1000..1014
+      assert_equal(n1, 1 << i)
+      n1 *= 2
+    end
+  end
+
+  def test_MINUS # '-'
+    checkBits([80, 40, 20], @@big2 - 1025)
+    assert_equal(1,      @@big2 - (2**80 + 2**40 + 2**20 + 2**10))
+    assert_equal(-@@big1, 0-@@big1)
+    assert_equal(0,      @@big1 - @@big1)
+  end
+
+  def test_MUL # '*'
+    big3 = 2**90 + 2**50 + 2**30 + 2**20 + 2**10
+    assert_equal(big3, @@big2 * 1024)
+    assert_equal(big3, 1024 * @@big2)
+
+    bm = -@@big2
+    assert_equal(-big3, bm * 1024)
+    assert_equal(-big3, 1024 * bm)
+
+    assert_equal(-big3, @@big2 * -1024)
+    assert_equal(-big3, -1024 * @@big2)
+
+    assert_equal(big3, bm * -1024)
+    assert_equal(big3, -1024 * bm)
+  end
+
+  def test_OR # '|'
+    a = 0xffff0000ffff0000ffff0000
+    b = 0xf0f0f0f0c3c3c3c3a5a5a5a5
+    c = 0xfffff0f0ffffc3c3ffffa5a5
+
+    assert_equal(c, a | b)
+    assert_equal(c, b | a)
+
+    assert_equal(a, a | 0)
+  end
+
+  def test_PLUS # '+'
+    a = 10000000001000000000100000000010000000001
+    b =  9999999999999999999999999999999999999999
+    c = 20000000001000000000100000000010000000000
+    d =           1000000000100000000010000000002
+
+    assert_equal(a, a + 0)
+    assert_equal(a, 0 + a)
+    assert_equal(c, a + b)
+    assert_equal(c, b + a)
+    assert_equal(d, a + (-b))
+    assert_equal(d, (-b) + a)
+
+    assert_equal(10000000000000000000100000000000000000000, 10**40+10**20)
+  end
+
+  def test_POW # '**'
+    a = 10000200001
+    b = 100004000060000400001
+    assert_equal(1, a**0)
+    assert_equal(a, a**1)
+    assert_equal(b, a**2)
+    assert_equal(100001, a**(.5))
+    assert_equal(a.to_f, b**(.5))
+    assert((a**(-1) - 9.9998e-11).abs < 1e-16)
+    assert((a**(-2) - 9.9996e-21).abs < 1e-26)
+  end
+
+  def test_REV # '~'
+    a = ~(2**100)
+    assert_equal(0, a[100])
+    assert_equal(1, a[101])
+    99.downto(0) {|i| assert_equal(1, a[i]) }
+
+    a = ~a
+    assert_equal(1, a[100])
+    assert_equal(0, a[101])
+    99.downto(0) {|i| assert_equal(0, a[i]) }
+  end
+
+  def test_RSHIFT # '>>'
+    checkBits([79, 39, 19,  9],     @@big2 >> 1)
+    checkBits([70, 30, 10, 0],      @@big2 >> 10)
+    checkBits([81, 41, 21, 11, 1],  @@big2 >> -1)
+
+    n2 = n1 = 1 << 1000
+    for i in 1..10
+      n1 = n1 / 2
+      n2 = n2 >> 1
+      assert_equal(n1, n2)
+    end
+  end
+
+  def test_EQUAL # '=='
+    assert(81402749386839761113321 == 121**11)
+    assert(!(81402749386839761113320 == 121**11))
+  end
+
+  def test_VERY_EQUAL # '==='
+    assert(81402749386839761113321 === 121**11)
+    assert(!(81402749386839761113320 === 121**11))
+  end
+
+  def test_eql? #
+    assert(81402749386839761113321.eql?(121**11))
+    assert(!( 81402749386839761113320.eql?(121**11) ))
+  end
+
+  def test_equal?
+    a = 81402749386839761113321
+    b = a
+    c = 81402749386839761113321
+    assert(a.equal?(b))
+    assert(!(a.equal?(c)))
+  end
+
+  def test_XOR # '^'
+    a = 0xffff0000ffff0000ffff0000
+    b = 0xf0f0f0f0c3c3c3c3a5a5a5a5
+    c = 0x0f0ff0f03c3cc3c35a5aa5a5
+    d = 0xffff0000ffff0000ffff0001
+
+    assert_equal(c, a ^ b)
+    assert_equal(c, b ^ a)
+
+    assert_equal(1, a ^ d)
+    assert_equal(1, d ^ a)
+  end
+
+  def test_abs
+    assert_equal(@@big1, @@big1.abs)
+    bm = -@@big1
+    assert_equal(@@big1, bm.abs)
+  end
+
+#  def test_coerce
+#    assert_fail("untested")
+#  end
+
+  def test_divmod
+    div = {1         =>      [@@big1, 0], 
+           1001      =>      [9990009991008991009090909090919080919,     82],
+           100001    =>      [99999000019999800002999970000399996,        5],
+           100000001 =>      [99999999010000009900999900990100,    99009901],
+           10000000000001 => [1000000000099900000009990010,      9990009991] }
+
+    div.each do |n, r| 
+      res = @@big1.divmod(n)
+      assert_equal(@@big1, n*res[0] + res[1])
+      assert(res[1] < n)
+      assert_equal(r, res, n.to_s)
+    end
+
+    b = 10**80
+    a = b * 9 + 7
+    assert_equal(7, a.modulo(b))
+    assert_equal(-b + 7, a.modulo(-b))
+    assert_equal(b + -7, (-a).modulo(b))
+    assert_equal(-7, (-a).modulo(-b))
+    assert_equal(7, a.remainder(b))
+    assert_equal(7, a.remainder(-b))
+    assert_equal(-7, (-a).remainder(b))
+    assert_equal(-7, (-a).remainder(-b))
+  end
+
+  def test_hash
+    a = 10000000001000000000100000000010000000001
+    assert_equal(a.hash, @@big1.hash)
+  end
+
+  def test_MOD # '%'
+    b = 10**40
+    a = b * 9 + 7
+
+    assert_equal(7,   a % b)
+    assert_equal(7-b, a % (-b))
+    assert_equal(b-7, (-a) % b)
+    assert_equal(-7,  (-a) % (-b))
+  end
+
+  def test_remainder
+    b = 10**80
+    a = b * 9 + 7
+
+    assert_equal(7,  a.remainder(b))
+    assert_equal(7,  a.remainder(-b))
+    assert_equal(-7, (-a).remainder(b))
+    assert_equal(-7, (-a).remainder(-b))
+  end
+
+  def test_size
+    32.upto(100) { |n|
+      s = (2**n).size
+      assert(s >= (2**(n-1)).size)
+      assert(s >= n/8)
+    }
+  end
+
+  def test_to_f
+    f = @@big1.to_f
+    assert(f.class == Float)
+    assert(f > 1e40)
+    assert(f < (1e40 + 1e31))
+  end
+
+  def test_to_i
+    assert_equal(@@big1, @@big1.to_i)
+  end
+
+  def test_to_s
+    assert_equal("10000000001000000000100000000010000000001", @@big1.to_s)
+    assert_equal("-10000000001000000000100000000010000000001", (-@@big1).to_s)
+
+  end
+
+  def test_zero?
+    assert(!@@big1.zero?)
+  end
+
+#  def test_s_induced_from
+#    assert_fail("untested")
+#  end
+
+end
+
+
+Rubicon::handleTests(TestBignum) if $0 == __FILE__
+@
+
+
+1.11
+log
+@Add in the Ruby 1.7 tests
+@
+text
+@d319 1
+a319 1
+    assert(f.type == Float)
+@
+
+
+1.10
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d41 6
+@
+
+
+1.9
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d14 10
+d27 14
+d86 7
+d108 9
+d165 2
+d197 7
+d259 1
+a259 1
+    div.each { |n, r| 
+d264 12
+a275 1
+    }
+@
+
+
+1.8
+log
+@Many contributions from members of the ml
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.7
+log
+@Release 0.1. First public release
+@
+text
+@d41 4
+d67 9
+d162 7
+a168 2
+    assert(81402749386839761113321 == 121**11)
+    assert(!(81402749386839761113320 == 121**11))
+d171 6
+a176 3
+  def test_eql? # '=='
+    assert(81402749386839761113321 == 121**11)
+    assert(!(81402749386839761113320 == 121**11))
+@
+
+
+1.6
+log
+@Track the language
+@
+text
+@d91 1
+a91 1
+    c = 0xffffffffffffc3c3ffffa5a5
+@
+
+
+1.5
+log
+@Archive save
+@
+text
+@d49 2
+a50 2
+    assert_equal(-big3, bm / 1024)
+    assert_equal(-1024, bm / big3)
+d52 2
+a53 2
+    assert_equal(-big3, @@big2 / -1024)
+    assert_equal(-1024, @@big2 / -big3)
+@
+
+
+1.4
+log
+@Archive save
+@
+text
+@d215 4
+a218 4
+    assert_equal(7,  a % b)
+    assert_equal(7,  a % (-b))
+    assert_equal(-7, (-a) % b)
+    assert_equal(-7, (-a) % (-b))
+@
+
+
+1.3
+log
+@Various fixes
+@
+text
+@d39 2
+@
+
+
+1.2
+log
+@Archive
+@
+text
+@d200 1
+a200 1
+    b = 10**80
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a69 8
+  def test_MOD # '%'
+    assert_equal(1, @@big1 % 10)
+    assert_equal(1, 1 % @@big1)
+    assert_equal(230085376980473445764499, @@big1 % @@big2)
+    assert_equal(1208925819615728687383553, @@big2 % @@big1)
+    assert_equal(1, @@big1 % -10)
+  end
+
+d199 10
+d210 7
+a216 1
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

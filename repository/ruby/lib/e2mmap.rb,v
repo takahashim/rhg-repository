@@ -1,0 +1,1094 @@
+head	1.7;
+access;
+symbols
+	v1_6_7:1.5
+	v1_6_6:1.5
+	v1_6_5:1.5
+	v1_6_4:1.5
+	v1_7_1:1.6
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.4
+	v1_4_6:1.3
+	v1_4_5:1.3
+	v1_4_4:1.3
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.2
+	v1_3_6_repack:1.1.1.2.2.2
+	v1_3_6:1.1.1.2.2.2
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.4.6
+	v1_3_4_990625:1.1.1.2.2.2
+	v1_3_4_990624:1.1.1.2.2.2
+	v1_2_6:1.1.1.1.4.6
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.4.6
+	v1_2_4:1.1.1.1.4.6
+	v1_3_1_990225:1.1.1.2.2.2
+	v1_3_1_990224:1.1.1.2.2.2
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.6
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.6
+	v1_2_1repack:1.1.1.1.4.6
+	v1_2_1:1.1.1.1.4.6
+	v1_2_stable:1.1.1.1.4.6
+	v1_1d1:1.1.1.1.4.6
+	v1_1d0:1.1.1.1.4.6
+	v1_1c9_1:1.1.1.1.4.6
+	v1_1c9:1.1.1.1.4.6
+	v1_1c8:1.1.1.1.4.6
+	v1_1c7:1.1.1.1.4.6
+	v1_1c6:1.1.1.1.4.6
+	v1_1d-start:1.1.1.1.4.6
+	v1_1c5:1.1.1.1.4.6
+	v1_1dev:1.1.1.1.4.6.0.2
+	v1_1c4:1.1.1.1.4.6
+	v1_1c3:1.1.1.1.4.6
+	v1_1c2:1.1.1.1.4.4
+	v1_1c1:1.1.1.1.4.4
+	v1_1c0:1.1.1.1.4.4
+	v1_1b9_31:1.1.1.1.4.4
+	v1_1b9_30:1.1.1.1.4.4
+	v1_1b9_28:1.1.1.1.4.4
+	v1_1b9_27:1.1.1.1.4.4
+	v1_1b9_26:1.1.1.1.4.4
+	r1_1b9_25:1.1.1.1.4.4
+	r1_1b9_24:1.1.1.1.4.4
+	v1_1b9_23:1.1.1.1.4.4
+	v1_1b9_22:1.1.1.1.4.4
+	v1_1b9_20:1.1.1.1.4.3
+	v1_1b9_18:1.1.1.1.4.3
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.2
+	v1_1b9_12:1.1.1.1.4.2
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.2
+	v1_1b8:1.1.1.1.4.2
+	v1_1b7:1.1.1.1.4.2
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.7
+date	2002.10.02.16.45.34;	author nobu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.05.06.15.04.52;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.09.22.02.37.12;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.03.07.08.37.59;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.18.04.48.51;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.24.04.31.28;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.06.10.03.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.05.01.08.56.42;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.05.19.07.39.56;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	98.08.14.03.56.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.6;
+
+1.1.1.1.4.6
+date	98.08.27.03.55.40;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@use Object#class instead of deprecated Object#type.
+@
+text
+@#
+#   e2mmap.rb - for ruby 1.1
+#   	$Release Version: 2.0$
+#   	$Revision: 1.10 $
+#   	$Date: 1999/02/17 12:33:17 $
+#   	by Keiju ISHITSUKA
+#
+# --
+#   Usage:
+#
+# U1)
+#   class Foo
+#     extend Exception2MessageMapper
+#     def_e2message ExistingExceptionClass, "message..."
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     ...
+#   end
+#
+# U2)
+#   module Error
+#     extend Exception2MessageMapper
+#     def_e2meggage ExistingExceptionClass, "message..."
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     ...
+#   end
+#   class Foo
+#     include Error
+#     ...
+#   end
+#
+#   foo = Foo.new
+#   foo.Fail ....
+#
+# U3)
+#   module Error
+#     extend Exception2MessageMapper
+#     def_e2message ExistingExceptionClass, "message..."
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     ...
+#   end
+#   class Foo
+#     extend Exception2MessageMapper
+#     include Error
+#     ...
+#   end
+#
+#   Foo.Fail NewExceptionClass, arg...
+#   Foo.Fail ExistingExceptionClass, arg...
+#
+#
+fail "Use Ruby 1.1" if VERSION < "1.1"
+
+module Exception2MessageMapper
+  @@RCS_ID='-$Id: e2mmap.rb,v 1.10 1999/02/17 12:33:17 keiju Exp keiju $-'
+
+  E2MM = Exception2MessageMapper
+
+  def E2MM.extend_object(cl)
+    super
+    cl.bind(self) unless cl == E2MM
+  end
+  
+  # backward compatibility
+  def E2MM.extend_to(b)
+    c = eval("self", b)
+    c.extend(self)
+  end
+
+  def bind(cl)
+    self.module_eval %[
+      def Raise(err = nil, *rest)
+	Exception2MessageMapper.Raise(self.class, err, *rest)
+      end
+      alias Fail Raise
+
+      def self.included(mod)
+	mod.extend Exception2MessageMapper
+      end
+    ]
+  end
+
+  # Fail(err, *rest)
+  #	err:	exception
+  #	rest:	message arguments
+  #
+  def Raise(err = nil, *rest)
+    E2MM.Raise(self, err, *rest)
+  end
+  alias Fail Raise
+
+  # backward compatibility
+  alias fail! fail
+  def fail(err = nil, *rest)
+    begin 
+      E2MM.Fail(self, err, *rest)
+    rescue E2MM::ErrNotRegisteredException
+      super
+    end
+  end
+  class << self
+    public :fail
+  end
+
+  
+  # def_e2message(c, m)
+  #	    c:  exception
+  #	    m:  message_form
+  #	define exception c with message m.
+  #
+  def def_e2message(c, m)
+    E2MM.def_e2message(self, c, m)
+  end
+  
+  # def_exception(n, m, s)
+  #	    n:  exception_name
+  #	    m:  message_form
+  #	    s:	superclass(default: StandardError)
+  #	define exception named ``c'' with message m.
+  #
+  def def_exception(n, m, s = StandardError)
+    E2MM.def_exception(self, n, m, s)
+  end
+
+  #
+  # Private definitions.
+  #
+  # {[class, exp] => message, ...}
+  @@MessageMap = {}
+
+  # E2MM.def_exception(k, e, m)
+  #	    k:  class to define exception under.
+  #	    e:  exception
+  #	    m:  message_form
+  #	define exception c with message m.
+  #
+  def E2MM.def_e2message(k, c, m)
+    E2MM.instance_eval{@@MessageMap[[k, c]] = m}
+    c
+  end
+  
+  # E2MM.def_exception(k, n, m, s)
+  #	    k:  class to define exception under.
+  #	    n:  exception_name
+  #	    m:  message_form
+  #	    s:	superclass(default: StandardError)
+  #	define exception named ``c'' with message m.
+  #
+  def E2MM.def_exception(k, n, m, s = StandardError)
+    n = n.id2name if n.kind_of?(Fixnum)
+    e = Class.new(s)
+    E2MM.instance_eval{@@MessageMap[[k, e]] = m}
+    k.const_set(n, e)
+  end
+
+  # Fail(klass, err, *rest)
+  #	klass:  class to define exception under.
+  #	err:	exception
+  #	rest:	message arguments
+  #
+  def E2MM.Raise(klass = E2MM, err = nil, *rest)
+    if form = e2mm_message(klass, err)
+      $! = err.new(sprintf(form, *rest))
+      $@@ = caller(1) if $@@.nil?
+      #p $@@
+      #p __FILE__
+      $@@.shift if $@@[0] =~ /^#{Regexp.quote(__FILE__)}:/
+      raise
+    else
+      E2MM.Fail E2MM, ErrNotRegisteredException, err.inspect
+    end
+  end
+  class <<E2MM
+    alias Fail Raise
+  end
+
+  def E2MM.e2mm_message(klass, exp)
+    for c in klass.ancestors
+      if mes = @@MessageMap[[c,exp]]
+	#p mes
+	m = klass.instance_eval('"' + mes + '"')
+	return m
+      end
+    end
+    nil
+  end
+  class <<self
+    alias message e2mm_message
+  end
+
+  E2MM.def_exception(E2MM, 
+		     :ErrNotRegisteredException, 
+		     "not registerd exception(%s)")
+end
+
+
+@
+
+
+1.6
+log
+@forgot some checkins.
+@
+text
+@d72 1
+a72 1
+	Exception2MessageMapper.Raise(self.type, err, *rest)
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d76 1
+a76 2
+      def self.append_features(mod)
+	super
+@
+
+
+1.4
+log
+@2000-03-07
+@
+text
+@d13 1
+a13 1
+#     extend Exception2MassageMapper
+d21 1
+a21 1
+#     extend Exception2MassageMapper
+d27 1
+a27 1
+#     include Exp
+d36 1
+a36 1
+#     extend Exception2MassageMapper
+d115 1
+a115 1
+  # def_exception(c, m, s)
+d142 1
+a142 1
+  # E2MM.def_exception(k, c, m, s)
+@
+
+
+1.3
+log
+@990918-repack
+@
+text
+@d63 1
+a63 1
+  # 以前との互換性のために残してある.
+d84 2
+a85 2
+  #	err:	例外
+  #	rest:	メッセージに渡すパラメータ
+d92 1
+a92 1
+  # 過去の互換性のため
+d109 1
+a109 1
+  #	例外cのメッセージをmとする.
+d115 1
+a115 1
+  # def_exception(c, m)
+d118 2
+a119 2
+  #	    s:	例外スーパークラス(デフォルト: StandardError)
+  #	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+d132 1
+a132 1
+  #	    k:  例外を定義するクラス
+d135 1
+a135 1
+  #	例外cのメッセージをmとする.
+d142 2
+a143 2
+  # E2MM.def_exception(k, c, m)
+  #	    k:  例外を定義するクラス
+d146 2
+a147 2
+  #	    s:	例外スーパークラス(デフォルト: StandardError)
+  #	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+d157 3
+a159 3
+  #     klass:  例外の定義されているクラス
+  #	err:	例外
+  #	rest:	メッセージに渡すパラメータ
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d180 1
+a180 1
+	p mes
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 1.1$
+#   	$Revision: 1.4 $
+#   	$Date: 1997/08/18 07:12:12 $
+d9 1
+d11 7
+d19 43
+a61 3
+if VERSION < "1.1"
+  require "e2mmap1_0.rb"
+else  
+d63 35
+a97 6
+  module Exception2MessageMapper
+    RCS_ID='-$Header: /home/keiju/var/src/var.lib/ruby/RCS/e2mmap.rb,v 1.4 1997/08/18 07:12:12 keiju Exp keiju $-'
+    
+    E2MM = Exception2MessageMapper
+    
+    def E2MM.extend_object(cl)
+a98 1
+      cl.bind(self)
+d100 71
+a170 5
+    
+    # 以前との互換性のために残してある.
+    def E2MM.extend_to(b)
+      c = eval("self", b)
+      c.extend(self)
+d172 4
+a175 3
+    
+#    public :fail
+    #    alias e2mm_fail fail
+d177 6
+a182 53
+    def fail(err = nil, *rest)
+      Exception2MessageMapper.fail Exception2MessageMapper::ErrNotRegisteredException, err.to_s
+    end
+    
+    def bind(cl)
+      self.module_eval %q^
+	E2MM_ErrorMSG = {}
+	# fail(err, *rest)
+	#	err:	例外
+	#	rest:	メッセージに渡すパラメータ
+	#
+	def self.fail(err = nil, *rest)
+	  $@@ = caller(0) if $@@.nil?
+	  $@@.shift
+	  if form = E2MM_ErrorMSG[err]
+	    $! = err.new(sprintf(form, *rest))
+	    # e2mm_fail()
+	    raise()
+#	  elsif self == Exception2MessageMapper
+#	    fail Exception2MessageMapper::ErrNotRegisteredException, err.to_s
+	  else
+#	    print "super\n"
+	    super
+	  end
+	end
+	class << self
+	  public :fail
+	end
+	
+	# def_exception(c, m)
+	#	    c:  exception
+	#	    m:  message_form
+	#	例外cのメッセージをmとする.
+	#
+	def self.def_e2message(c, m)
+	  E2MM_ErrorMSG[c] = m
+	end
+	
+	# def_exception(c, m)
+	#	    n:  exception_name
+	#	    m:  message_form
+	#	    s:	例外スーパークラス(デフォルト: Exception)
+	#	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+	#
+	#def def_exception(n, m)
+	def self.def_exception(n, m, s = Exception)
+	  n = n.id2name if n.kind_of?(Fixnum)
+	  e = Class.new(s)
+	  const_set(n, e)
+	  E2MM_ErrorMSG[e] = m
+	  #	const_get(:E2MM_ErrorMSG)[e] = m
+	end
+      ^
+a183 4
+      
+      extend E2MM
+      def_exception(:ErrNotClassOrModule, "Not Class or Module")
+      def_exception(:ErrNotRegisteredException, "not registerd exception(%s)")
+d185 9
+d195 1
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 1.2$
+#   	$Revision: 1.8 $
+#   	$Date: 1998/08/19 15:22:22 $
+a8 11
+#   Usage:
+#
+#   class Foo
+#     extend Exception2MassageMapper
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     def_e2meggage ExistingExceptionClass, "message..."
+#     ...
+#   end
+#
+#   Foo.Fail NewExceptionClass, arg...
+#   Foo.Fail ExistingExceptionClass, arg...
+d16 1
+a16 1
+    @@RCS_ID='-$Id: e2mmap.rb,v 1.8 1998/08/19 15:22:22 keiju Exp keiju $-'
+d19 1
+a19 1
+
+d25 1
+a25 1
+    # backward compatibility
+d31 2
+a32 6
+    #    public :fail
+    alias fail! fail
+
+    #def fail(err = nil, *rest)
+    #  super
+    #end
+d34 2
+a35 2
+    def Fail(err = nil, *rest)
+      Exception2MessageMapper.Fail Exception2MessageMapper::ErrNotRegisteredException, err.inspect
+d40 1
+a40 1
+	E2MM_ErrorMSG = {} unless self.const_defined?(:E2MM_ErrorMSG)
+d42 2
+a43 2
+	#	err:	Exception
+	#	rest:	Parameter accompanied with the exception
+a44 16
+	def self.Fail(err = nil, *rest)
+	  if form = E2MM_ErrorMSG[err]
+	    $! = err.new(sprintf(form, *rest))
+	    $@@ = caller(0) if $@@.nil?
+	    $@@.shift
+	    # e2mm_fail()
+	    raise()
+#	  elsif self == Exception2MessageMapper
+#	    fail Exception2MessageMapper::ErrNotRegisteredException, err.to_s
+	  else
+#	    print "super\n"
+	    super
+	  end
+	end
+
+	# 過去の互換性のため
+d46 2
+a49 2
+	    $@@ = caller(0) if $@@.nil?
+	    $@@.shift
+d66 1
+d75 2
+a76 2
+	#	    s:	superclass_of_exception (default: Exception)
+	#	defines excaption named ``c'', whose message is ``m''.
+d79 1
+a79 1
+	def self.def_exception(n, m, s = nil)
+a80 7
+	  unless s
+	    if defined?(StandardError)
+	      s = StandardError
+	    else
+	      s = Exception
+	    end
+	  end
+a81 1
+
+d94 1
+@
+
+
+1.1.1.2.2.1
+log
+@990209
+@
+text
+@d75 1
+a75 1
+	# backward compatibility
+@
+
+
+1.1.1.2.2.2
+log
+@990224
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 2.0$
+#   	$Revision: 1.10 $
+#   	$Date: 1999/02/17 12:33:17 $
+a10 1
+# U1)
+a12 1
+#     def_e2message ExistingExceptionClass, "message..."
+a13 6
+#     ...
+#   end
+#
+# U2)
+#   module Error
+#     extend Exception2MassageMapper
+a14 21
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     ...
+#   end
+#   class Foo
+#     include Exp
+#     ...
+#   end
+#
+#   foo = Foo.new
+#   foo.Fail ....
+#
+# U3)
+#   module Error
+#     extend Exception2MassageMapper
+#     def_e2message ExistingExceptionClass, "message..."
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     ...
+#   end
+#   class Foo
+#     extend Exception2MessageMapper
+#     include Error
+d22 3
+a24 11
+fail "Use Ruby 1.1" if VERSION < "1.1"
+
+module Exception2MessageMapper
+  @@RCS_ID='-$Id: e2mmap.rb,v 1.10 1999/02/17 12:33:17 keiju Exp keiju $-'
+
+  E2MM = Exception2MessageMapper
+
+  def E2MM.extend_object(cl)
+    super
+    cl.bind(self) unless cl == E2MM
+  end
+d26 4
+a29 5
+  # 以前との互換性のために残してある.
+  def E2MM.extend_to(b)
+    c = eval("self", b)
+    c.extend(self)
+  end
+d31 1
+a31 29
+  def bind(cl)
+    self.module_eval %[
+      def Raise(err = nil, *rest)
+	Exception2MessageMapper.Raise(self.type, err, *rest)
+      end
+      alias Fail Raise
+
+      def self.append_features(mod)
+	super
+	mod.extend Exception2MessageMapper
+      end
+    ]
+  end
+
+  # Fail(err, *rest)
+  #	err:	例外
+  #	rest:	メッセージに渡すパラメータ
+  #
+  def Raise(err = nil, *rest)
+    E2MM.Raise(self, err, *rest)
+  end
+  alias Fail Raise
+
+  # 過去の互換性のため
+  alias fail! fail
+  def fail(err = nil, *rest)
+    begin 
+      E2MM.Fail(self, err, *rest)
+    rescue E2MM::ErrNotRegisteredException
+d33 1
+d35 13
+a47 55
+  end
+  class << self
+    public :fail
+  end
+
+  
+  # def_e2message(c, m)
+  #	    c:  exception
+  #	    m:  message_form
+  #	例外cのメッセージをmとする.
+  #
+  def def_e2message(c, m)
+    E2MM.def_e2message(self, c, m)
+  end
+  
+  # def_exception(c, m)
+  #	    n:  exception_name
+  #	    m:  message_form
+  #	    s:	例外スーパークラス(デフォルト: StandardError)
+  #	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+  #
+  def def_exception(n, m, s = StandardError)
+    E2MM.def_exception(self, n, m, s)
+  end
+
+  #
+  # Private definitions.
+  #
+  # {[class, exp] => message, ...}
+  @@MessageMap = {}
+
+  # E2MM.def_exception(k, e, m)
+  #	    k:  例外を定義するクラス
+  #	    e:  exception
+  #	    m:  message_form
+  #	例外cのメッセージをmとする.
+  #
+  def E2MM.def_e2message(k, c, m)
+    E2MM.instance_eval{@@MessageMap[[k, c]] = m}
+    c
+  end
+  
+  # E2MM.def_exception(k, c, m)
+  #	    k:  例外を定義するクラス
+  #	    n:  exception_name
+  #	    m:  message_form
+  #	    s:	例外スーパークラス(デフォルト: StandardError)
+  #	例外名``c''をもつ例外を定義し, そのメッセージをmとする.
+  #
+  def E2MM.def_exception(k, n, m, s = StandardError)
+    n = n.id2name if n.kind_of?(Fixnum)
+    e = Class.new(s)
+    E2MM.instance_eval{@@MessageMap[[k, e]] = m}
+    k.const_set(n, e)
+  end
+d49 2
+a50 15
+  # Fail(klass, err, *rest)
+  #     klass:  例外の定義されているクラス
+  #	err:	例外
+  #	rest:	メッセージに渡すパラメータ
+  #
+  def E2MM.Raise(klass = E2MM, err = nil, *rest)
+    if form = e2mm_message(klass, err)
+      $! = err.new(sprintf(form, *rest))
+      $@@ = caller(1) if $@@.nil?
+      #p $@@
+      #p __FILE__
+      $@@.shift if $@@[0] =~ /^#{Regexp.quote(__FILE__)}:/
+      raise
+    else
+      E2MM.Fail E2MM, ErrNotRegisteredException, err.inspect
+d52 73
+a124 11
+  end
+  class <<E2MM
+    alias Fail Raise
+  end
+
+  def E2MM.e2mm_message(klass, exp)
+    for c in klass.ancestors
+      if mes = @@MessageMap[[c,exp]]
+	p mes
+	m = klass.instance_eval('"' + mes + '"')
+	return m
+d126 4
+a130 9
+    nil
+  end
+  class <<self
+    alias message e2mm_message
+  end
+
+  E2MM.def_exception(E2MM, 
+		     :ErrNotRegisteredException, 
+		     "not registerd exception(%s)")
+a131 2
+
+
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 1998/01/16 04:05:49 $
+d16 1
+a16 1
+    RCS_ID='-$Header: /home/cvsroot/ruby/lib/e2mmap.rb,v 1.1.1.1 1998/01/16 04:05:49 matz Exp $-'
+@
+
+
+1.1.1.1.4.2
+log
+@-ko for keiju's files
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.4 $
+#   	$Date: 1997/08/18 07:12:12 $
+d16 1
+a16 1
+    RCS_ID='-$Header: /home/keiju/var/src/var.lib/ruby/RCS/e2mmap.rb,v 1.4 1997/08/18 07:12:12 keiju Exp keiju $-'
+@
+
+
+1.1.1.1.4.3
+log
+@exception model changed
+@
+text
+@d75 1
+a75 1
+	#	    s:	例外スーパークラス(デフォルト: StandardError)
+d79 1
+a79 1
+	def self.def_exception(n, m, s = StandardError)
+@
+
+
+1.1.1.1.4.4
+log
+@1.1b9_22
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.7 $
+#   	$Date: 1998/05/19 04:38:33 $
+d16 1
+a16 1
+    RCS_ID='-$Header: /home/keiju/var/src/var.lib/ruby/RCS/e2mmap.rb,v 1.7 1998/05/19 04:38:33 keiju Exp keiju $-'
+d19 1
+a19 1
+
+d40 1
+a40 1
+	E2MM_ErrorMSG = {} unless self.const_defined?(:E2MM_ErrorMSG)
+d46 2
+a49 2
+	    $@@ = caller(0) if $@@.nil?
+	    $@@.shift
+d75 1
+a75 1
+	#	    s:	例外スーパークラス(デフォルト: Exception)
+d79 1
+a79 1
+	def self.def_exception(n, m, s = nil)
+a80 7
+	  unless s
+	    if defined?(StandardError)
+	      s = StandardError
+	    else
+	      s = Exception
+	    end
+	  end
+a81 1
+
+@
+
+
+1.1.1.1.4.5
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+    # backward compatibility
+d31 1
+a31 1
+    #    public :fail
+d42 2
+a43 2
+	#	err:	Exception
+	#	rest:	Parameter accompanied with the exception
+d66 1
+d75 2
+a76 2
+	#	    s:	superclass_of_exception (default: Exception)
+	#	defines excaption named ``c'', whose message is ``m''.
+d102 1
+@
+
+
+1.1.1.1.4.6
+log
+@1.1c3
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 1.2$
+#   	$Revision: 1.8 $
+#   	$Date: 1998/08/19 15:22:22 $
+a8 11
+#   Usage:
+#
+#   class Foo
+#     extend Exception2MassageMapper
+#     def_exception :NewExceptionClass, "message..."[, superclass]
+#     def_e2meggage ExistingExceptionClass, "message..."
+#     ...
+#   end
+#
+#   Foo.Fail NewExceptionClass, arg...
+#   Foo.Fail ExistingExceptionClass, arg...
+d16 1
+a16 1
+    @@RCS_ID='-$Id: e2mmap.rb,v 1.8 1998/08/19 15:22:22 keiju Exp keiju $-'
+d32 1
+a32 1
+    alias fail! fail
+d34 2
+a35 6
+    #def fail(err = nil, *rest)
+    #  super
+    #end
+
+    def Fail(err = nil, *rest)
+      Exception2MessageMapper.Fail Exception2MessageMapper::ErrNotRegisteredException, err.inspect
+a44 16
+	def self.Fail(err = nil, *rest)
+	  if form = E2MM_ErrorMSG[err]
+	    $! = err.new(sprintf(form, *rest))
+	    $@@ = caller(0) if $@@.nil?
+	    $@@.shift
+	    # e2mm_fail()
+	    raise()
+#	  elsif self == Exception2MessageMapper
+#	    fail Exception2MessageMapper::ErrNotRegisteredException, err.to_s
+	  else
+#	    print "super\n"
+	    super
+	  end
+	end
+
+	# 過去の互換性のため
+@

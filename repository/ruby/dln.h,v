@@ -1,0 +1,707 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.3.2.2
+	v1_6_6:1.3.2.2
+	v1_6_5:1.3.2.1
+	v1_6_4:1.3.2.1
+	v1_7_1:1.6
+	v1_6_4_preview4:1.3.2.1
+	v1_6_4_preview3:1.3.2.1
+	v1_6_4_preview2:1.3.2.1
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.4.0.2
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.1
+	v1_3_6_repack:1.1.1.2.2.1
+	v1_3_6:1.1.1.2.2.1
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2
+	v1_1d0:1.1.1.1.4.2
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.2
+	v1_1b9_27:1.1.1.1.4.2
+	v1_1b9_26:1.1.1.1.4.2
+	r1_1b9_25:1.1.1.1.4.2
+	r1_1b9_24:1.1.1.1.4.2
+	v1_1b9_23:1.1.1.1.4.2
+	v1_1b9_22:1.1.1.1.4.2
+	v1_1b9_20:1.1.1.1.4.2
+	v1_1b9_18:1.1.1.1.4.2
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.2
+	v1_1b9_12:1.1.1.1.4.2
+	v1_1b9_11:1.1.1.1.4.2
+	v1_1b9_08:1.1.1.1.4.2
+	v1_1b9_07:1.1.1.1.4.2
+	r1_1b9:1.1.1.1.4.1
+	v1_1b8:1.1.1.1.4.1
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.8
+date	2002.05.14.06.22.25;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.12.21.07.20.23;	author nobu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.05.01.09.41.13;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.03;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.03.24.08.52.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.08.13.05.17.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.03.28.10.57.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.04.17.15.35.04;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.12.21.07.20.00;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@/**********************************************************************
+
+  dln.h -
+
+  $Author: nobu $
+  $Date: 2001/12/21 07:20:23 $
+  created at: Wed Jan 19 16:53:09 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#ifndef DLN_H
+#define DLN_H
+
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+
+#undef _
+#ifdef HAVE_PROTOTYPES
+# define _(args) args
+#else
+# define _(args) ()
+#endif
+
+char *dln_find_exe _((const char*,const char*));
+char *dln_find_file _((const char*,const char*));
+
+#ifdef USE_DLN_A_OUT
+extern char *dln_argv0;
+#endif
+
+void *dln_load _((const char*));
+#endif
+@
+
+
+1.7
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/02 04:22:10 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.6
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d15 9
+@
+
+
+1.5
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/26 08:08:50 $
+d30 1
+a30 1
+void dln_load _((const char*));
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:13 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.3
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d16 4
+a19 2
+#ifndef _
+#ifndef __STDC__
+a20 4
+# define const
+#else
+# define _(args) args
+#endif
+@
+
+
+1.3.2.1
+log
+@preview2
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:13 $
+d32 1
+a32 1
+void *dln_load _((const char*));
+@
+
+
+1.3.2.2
+log
+@* dln.h, ruby.h, util.h: enable prototypes in C++.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/17 15:35:04 $
+a14 9
+
+#ifdef __cplusplus
+# ifndef  HAVE_PROTOTYPES
+#  define HAVE_PROTOTYPES 1
+# endif
+# ifndef  HAVE_STDARG_PROTOTYPES
+#  define HAVE_STDARG_PROTOTYPES 1
+# endif
+#endif
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 1999/08/13 05:17:32 $
+d9 4
+a12 1
+************************************************/
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 2
+  $Revision: 1.2 $
+  $Date: 1996/12/25 04:47:17 $
+d13 11
+a23 2
+char *dln_find_exe();
+char *dln_find_file();
+d29 1
+a29 1
+void dln_load();
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.4.2 $
+  $Date: 1998/03/28 10:57:39 $
+d14 2
+a15 10
+#ifndef _
+#ifndef __STDC__
+# define _(args) ()
+#else
+# define _(args) args
+#endif
+#endif
+
+char *dln_find_exe _((char*,char*));
+char *dln_find_file _((char*,char*));
+d21 1
+a21 1
+void dln_load _((char*));
+@
+
+
+1.1.1.2.2.1
+log
+@990324
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.2 $
+  $Date: 1999/01/20 04:59:22 $
+a16 1
+# define const
+d22 2
+a23 2
+char *dln_find_exe _((const char*,const char*));
+char *dln_find_file _((const char*,const char*));
+d29 1
+a29 1
+void dln_load _((const char*));
+@
+
+
+1.1.1.2.2.2
+log
+@pre 1.4.0
+@
+text
+@d6 2
+a7 1
+  $Date: 1999/03/24 08:52:25 $
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1 $
+  $Date: 1998/01/16 04:05:48 $
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_05 bug fix
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.4.1 $
+  $Date: 1998/01/16 12:35:43 $
+d14 2
+a15 10
+#ifndef _
+#ifndef __STDC__
+# define _(args) ()
+#else
+# define _(args) args
+#endif
+#endif
+
+char *dln_find_exe _((char*,char*));
+char *dln_find_file _((char*,char*));
+d21 1
+a21 1
+void dln_load _((char*));
+@

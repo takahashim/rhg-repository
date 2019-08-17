@@ -1,0 +1,591 @@
+head	1.9;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2002.10.31.08.37.16;	author ttate;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.06.27.15.09.47;	author ttate;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.06.10.17.47.48;	author ttate;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.04.05.17.12.48;	author ttate;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.04.05.16.33.01;	author ttate;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.04.05.05.11.11;	author ttate;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.04.04.14.17.19;	author ttate;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.03.15.43.12;	author ttate;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.02.10.56.13;	author ttate;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@Bugfix for Importable::callback.
+@
+text
+@# -*- ruby -*-
+
+require 'dl'
+require 'dl/types'
+
+module DL
+  module Importable
+    LIB_MAP = {}
+
+    module Internal
+      def init_types()
+	if( !@@types )
+	  @@types = ::DL::Types.new
+	end
+      end
+
+      def init_sym()
+	if( !@@SYM )
+	  @@SYM = {}
+	end
+      end
+
+      def [](name)
+	return @@SYM[name.to_s][0]
+      end
+
+      def dlload(*libnames)
+	if( !defined?(@@LIBS) )
+	  @@LIBS = []
+	end
+	libnames.each{|libname|
+	  if( !LIB_MAP[libname] )
+	    LIB_MAP[libname] = DL.dlopen(libname)
+	  end
+	  @@LIBS.push(LIB_MAP[libname])
+	}
+      end
+      alias dllink :dlload
+
+      def parse_cproto(proto)
+	proto = proto.gsub(/\s+/, " ").strip
+	case proto
+	when /^([\d\w\*_\s]+)\(([\d\w\*_\s\,\[\]]*)\)$/
+	  ret = $1
+	  args = $2
+	  ret = ret.split(/\s+/)
+	  args = args.split(/\s*,\s*/)
+	  func = ret.pop
+	  if( func =~ /^\*/ )
+	    func.gsub!(/^\*+/,"")
+	    ret.push("*")
+	  end
+	  ret  = ret.join(" ")
+	  return [func, ret, args]
+	else
+	  raise(RuntimeError,"can't parse the function prototype: #{proto}")
+	end
+      end
+
+      # example:
+      #   extern "int strlen(char*)"
+      #
+      def extern(proto)
+	func,ret,args = parse_cproto(proto)
+	return import(func, ret, args)
+      end
+
+      # example:
+      #   callback "int method_name(int, char*)"
+      #
+      def callback(proto)
+	func,ret,args = parse_cproto(proto)
+
+	init_types()
+	init_sym()
+
+	rty,renc,rdec = @@types.encode_type(ret)
+	ty,enc,dec = encode_types(args)
+	symty = rty + ty
+
+	module_eval("module_function :#{func}")
+	sym = module_eval [
+	  "DL::callback(\"#{symty}\"){|*args|",
+	  "  sym,rdec,enc,dec  = @@SYM['#{func}']",
+	  "  args = enc.call(args) if enc",
+	  "  r,rs = #{func}(*args)",
+	  "  r  = renc.call(r) if rdec",
+	  "  rs = dec.call(rs) if dec",
+	  "  @@retval = r",
+	  "  @@args   = rs",
+	  "  @@retval",
+	  "}",
+	].join("\n")
+
+	@@SYM[func] = [sym,rdec,enc,dec]
+
+	return sym
+      end
+
+      # example:
+      #  typealias("uint", "unsigned int")
+      #
+      def typealias(*args)
+	init_types()
+	@@types.typealias(*args)
+      end
+
+      # example:
+      #  symbol "foo_value"
+      #  symbol "foo_func", "IIP"
+      #
+      def symbol(name, ty = nil)
+	sym = nil
+	@@LIBS.each{|lib|
+	  begin
+	    if( ty )
+	      sym = lib[name, ty]
+	    else
+	      sym = lib[name]
+	    end
+	  rescue
+	    next
+	  end
+	}
+	if( !sym )
+	  raise(RuntimeError, "can't find the symbol `#{name}'")
+	end
+	return sym
+      end
+
+      # example:
+      #   import("get_length", "int", ["void*", "int"])
+      #
+      def import(name, rettype, argtypes = nil)
+	init_types()
+	init_sym()
+
+	rty,_,rdec = @@types.encode_type(rettype)
+	ty,enc,dec = encode_types(argtypes)
+	symty = rty + ty
+
+	sym = symbol(name, symty)
+
+	mname = name.dup
+	if( ?A <= mname[0] && mname[0] <= ?Z )
+	  mname[0,1] = mname[0,1].downcase
+	end
+	@@SYM[mname] = [sym,rdec,enc,dec]
+	
+	module_eval [
+	  "def #{mname}(*args)",
+	  "  sym,rdec,enc,dec  = @@SYM['#{mname}']",
+	  "  args = enc.call(args) if enc",
+	  if( $DEBUG )
+	    "  p \"[DL] call #{mname} with \#{args.inspect}\""
+	  else
+	    ""
+	  end,
+	  "  r,rs = sym.call(*args)",
+	  if( $DEBUG )
+	    "  p \"[DL] retval=\#{r.inspect} args=\#{rs.inspect}\""
+	  else
+	    ""
+	  end,
+	  "  r  = rdec.call(r) if rdec",
+	  "  rs = dec.call(rs) if dec",
+	  "  @@retval = r",
+	  "  @@args   = rs",
+	  "  return @@retval",
+	  "end",
+	  "module_function :#{mname}",
+	].join("\n")
+
+	return sym
+      end
+
+      def _args_
+	return @@args
+      end
+
+      def _retval_
+	return @@retval
+      end
+
+      def encode_types(tys)
+	init_types()
+	encty = []
+	enc = nil
+	dec = nil
+	tys.each_with_index{|ty,idx|
+	  ty,c1,c2,_,_ = @@types.encode_type(ty)
+	  encty.push(ty)
+	  if( enc )
+	    if( c1 )
+	      conv1 = enc
+	      enc = proc{|v| v = conv1.call(v); v[idx] = c1.call(v[idx]); v}
+	    end
+	  else
+	    if( c1 )
+	      enc = proc{|v| v[idx] = c1.call(v[idx]); v}
+	    end
+	  end
+	  if( dec )
+	    if( c2 )
+	      conv2 = dec
+	      dec = proc{|v| v = conv2.call(v); v[idx] = c2.call(v[idx]); v}
+	    end
+	  else
+	    if( c2 )
+	      dec = proc{|v| v[idx] = c2.call(v[idx]); v}
+	    end
+	  end
+	}
+	return [encty.join, enc, dec]
+      end
+    end # end of Internal
+    include Internal
+  end # end of Importable
+end
+@
+
+
+1.8
+log
+@Add Importable::symbol.
+@
+text
+@d77 1
+a77 1
+	rty,_,rdec = @@types.encode_type(ret)
+d87 1
+a87 1
+	  "  r  = rdec.call(r) if rdec",
+@
+
+
+1.7
+log
+@Add DL::Importable::Internal::callback().
+@
+text
+@d109 23
+d142 1
+a142 6
+	@@LIBS.each{|lib|
+	  begin
+	    sym = lib[name, symty]
+	  rescue
+	    next
+	  end
+d144 29
+a172 29
+	  mname = name.dup
+	  if( ?A <= mname[0] && mname[0] <= ?Z )
+	    mname[0,1] = mname[0,1].downcase
+	  end
+	  @@SYM[mname] = [sym,rdec,enc,dec]
+	  
+	  module_eval [
+	    "def #{mname}(*args)",
+	    "  sym,rdec,enc,dec  = @@SYM['#{mname}']",
+	    "  args = enc.call(args) if enc",
+	    if( $DEBUG )
+	      "  p \"[DL] call #{mname} with \#{args.inspect}\""
+	    else
+	      ""
+	    end,
+	    "  r,rs = sym.call(*args)",
+	    if( $DEBUG )
+	      "  p \"[DL] retval=\#{r.inspect} args=\#{rs.inspect}\""
+	    else
+	      ""
+	    end,
+	    "  r  = rdec.call(r) if rdec",
+	    "  rs = dec.call(rs) if dec",
+	    "  @@retval = r",
+	    "  @@args   = rs",
+	    "  return @@retval",
+	    "end",
+	    "module_function :#{mname}",
+	  ].join("\n")
+d174 1
+a174 3
+	  return sym
+	}
+	raise(RuntimeError, "can't find #{name}.")
+@
+
+
+1.6
+log
+@improve the prototype parser.
+@
+text
+@d40 1
+a40 4
+      # example:
+      #   extern "int strlen(char*)"
+      #
+      def extern(proto)
+d54 1
+a54 1
+	  return import(func, ret, args)
+d61 40
+d114 5
+a119 4
+	  rty,_,rdec = @@types.encode_type(rettype)
+	  ty,enc,dec = encode_types(argtypes)
+	  symty = rty + ty
+
+@
+
+
+1.5
+log
+@"extern" and "[]" of the module Importable returns a symbol.
+@
+text
+@d52 4
+@
+
+
+1.4
+log
+@Add dl/struct.rb.
+@
+text
+@d23 4
+d114 1
+a114 1
+	  return @@SYM[mname]
+@
+
+
+1.3
+log
+@Get rid of ineffective encoding/decoding procedures.
+@
+text
+@d11 12
+d56 8
+d67 2
+a68 3
+	if( !defined?(@@SYM) )
+	  @@SYM   = {}
+	end
+d70 1
+a70 1
+	  rty,_,rdec = encode_type(rettype)
+a121 45
+      
+      def typealias(ty1, ty2, enc=nil, dec=nil)
+	check_type
+	@@TYDEFS.unshift([ty1,ty2, enc,dec])
+      end
+
+      def encode_type(ty)
+	check_type
+	orig_ty = ty
+	enc = nil
+	dec = nil
+	@@TYDEFS.each{|t1,t2,c1,c2|
+	  if( t1.is_a?(String) )
+	    t1 = Regexp.new("^" + t1 + "$")
+	  end
+	  if( ty =~ t1 )
+	    ty = ty.gsub(t1,t2)
+	    if( enc )
+	      if( c1 )
+		conv1 = enc
+		enc = proc{|v| c1.call(conv1.call(v))}
+	      end
+	    else
+	      if( c1 )
+		enc = c1
+	      end
+	    end
+	    if( dec )
+	      if( c2 )
+		conv2 = dec
+		dec = proc{|v| c2.call(conv2.call(v))}
+	      end
+	    else
+	      if( c2 )
+		dec = c2
+	      end
+	    end
+	  end
+	}
+	ty = ty.strip
+	if( ty.length != 1 )
+	  raise(TypeError, "unknown type: #{orig_ty}.")
+	end
+	return [ty,enc,dec]
+      end
+d124 1
+d129 1
+a129 1
+	  ty,c1,c2 = encode_type(ty)
+a152 10
+      end
+
+      def check_type
+	if( !defined?(@@TYDEFS) )
+	  init_type
+	end
+      end
+      
+      def init_type
+	@@TYDEFS = TYPES.collect{|ty| ty[0..3]}
+@
+
+
+1.2
+log
+@Add ext/dl/lib/dl/types.rb.
+@
+text
+@d70 1
+a70 1
+	    "  args = enc.call(args)",
+d82 4
+a85 2
+	    "  @@retval = rdec.call(r)",
+	    "  @@args   = dec.call(rs)",
+d112 2
+a113 2
+	enc = proc{|v| v}
+	dec = proc{|v| v}
+d120 9
+a128 3
+	    if( c1 )
+	      conv1 = enc
+	      enc = proc{|v| c1.call(conv1.call(v))}
+d130 9
+a138 3
+	    if( c2 )
+	      conv2 = dec
+	      dec = proc{|v| c2.call(conv2.call(v))}
+d151 2
+a152 2
+	enc = proc{|v| v}
+	dec = proc{|v| v}
+d156 20
+a175 4
+	  conv1 = enc
+	  enc = proc{|v| v = conv1.call(v); v[idx] = c1.call(v[idx]); v}
+	  conv2 = dec
+	  dec = proc{|v| v = conv2.call(v); v[idx] = c2.call(v[idx]); v}
+@
+
+
+1.1
+log
+@Add ruby-dl
+@
+text
+@d4 1
+d157 1
+a157 68
+	@@TYDEFS = [
+	  # for Windows
+	  ["DWORD",  "unsigned long", nil, nil],
+	  ["PDWORD", "unsigned long *", nil, nil],
+	  ["WORD",   "unsigned int", nil, nil],
+	  ["PWORD",  "unsigned int *", nil, nil],
+	  ["BOOL",   "ibool", nil, nil],
+	  ["ATOM",   "int", nil, nil],
+	  ["BYTE",   "unsigned char", nil, nil],
+	  ["PBYTE",  "unsigned char *", nil, nil],
+	  ["UINT",   "unsigned int", nil, nil],
+	  ["ULONG",  "unsigned long", nil, nil],
+	  ["UCHAR",  "unsigned char", nil, nil],
+	  ["HANDLE", "unsigned long", nil, nil],
+	  ["PHANDLE","void*", nil, nil],
+	  ["PVOID",  "void*", nil, nil],
+	  ["LPCSTR", "char*", nil, nil],
+
+	  # Others
+	  ["uint",   "unsigned int", nil, nil],
+	  ["u_int",  "unsigned int", nil, nil],
+	  ["ulong",  "unsigned long", nil, nil],
+	  ["u_long", "unsigned long", nil, nil],
+
+	  # DL::Importable primitive types
+	  ["ibool",   "I",
+	    proc{|v| v ? 1 : 0},
+	    proc{|v| (v != 0) ? true : false}],
+	  ["cbool",   "C",
+	    proc{|v| v ? 1 : 0},
+	    proc{|v| (v != 0) ? true : false}],
+	  ["lbool",   "L",
+	    proc{|v| v ? 1 : 0},
+	    proc{|v| (v != 0) ? true : false}],
+	  ["unsigned char", "I",
+	    proc{|v| [v].pack("C").unpack("c")[0]},
+	    proc{|v| [v].pack("c").unpack("C")[0]}],
+	  ["unsigned int", "I",
+	    proc{|v| [v].pack("I").unpack("i")[0]},
+	    proc{|v| [v].pack("i").unpack("I")[0]}],
+	  ["unsigned long", "L",
+	    proc{|v| [v].pack("L").unpack("l")[0]},
+	    proc{|v| [v].pack("l").unpack("L")[0]}],
+	  ["unsigned char ref", "i",
+	    proc{|v| [v].pack("C").unpack("c")[0]},
+	    proc{|v| [v].pack("c").unpack("C")[0]}],
+	  ["unsigned int ref", "i",
+	    proc{|v| [v].pack("I").unpack("i")[0]},
+	    proc{|v| [v].pack("i").unpack("I")[0]}],
+	  ["unsigned long ref", "l",
+	    proc{|v| [v].pack("L").unpack("l")[0]},
+	    proc{|v| [v].pack("l").unpack("L")[0]}],
+	  ["char ref",  "c", nil, nil],
+	  ["short ref", "h", nil, nil],
+	  ["int ref",   "i", nil, nil],
+	  ["long ref",  "l", nil, nil],
+	  ["float ref", "f", nil, nil],
+	  ["double ref","d", nil, nil],
+	  ["char",   "C", nil, nil],
+	  ["short",  "H", nil, nil],
+	  ["int",    "I", nil, nil],
+	  ["long",   "L", nil, nil],
+	  ["float",  "F", nil, nil],
+	  ["double", "D", nil, nil],
+	  [/.+\*/,   "P", nil, nil],
+	  [/.+\[\]/, "a", nil, nil],
+	  ["void",   "0", nil, nil],
+	]
+@

@@ -1,0 +1,57 @@
+head	1.1;
+access;
+symbols
+	release_1_0_1:1.1
+	version_1_0-branch:1.1.0.2
+	root-of-version_1_0:1.1
+	release_1_0_0:1.1
+	release_0_9_9:1.1
+	release_0_9_8:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.12.07.58.08;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* doc: added documents.
+@
+text
+@EN_RDS		= index.en.rd \
+		  install.en.rd \
+		  directives.en.rd \
+		  classes.en.rd \
+		  faq.en.rd
+JA_RDS		= $(EN_RDS:.en.rd=.ja.euc.rd)
+RDS		= $(EN_RDS) $(JA_RDS)
+EN_HTMLS	= $(EN_RDS:.en.rd=.en.html)
+JA_HTMLS	= $(JA_RDS:.ja.euc.rd=.ja.jis.html)
+HTMLS		= $(EN_HTMLS) $(JA_HTMLS)
+
+.SUFFIXES: .en.rd .ja.euc.rd .en.html .ja.jis.html
+
+.en.rd.en.html:
+	ruby -Kn -S rd2 -r rd/rd2html-lib \
+		--with-css=default.css \
+		$< > $@@
+
+.ja.euc.rd.ja.jis.html:
+	ruby -Ke -S rd2 -r rd/rd2html-lib \
+		--with-css=default.css --out-code=jis \
+		$< > $@@
+
+all: $(HTMLS)
+
+clean:
+	rm -f $(HTMLS)
+	rm -f *~
+@

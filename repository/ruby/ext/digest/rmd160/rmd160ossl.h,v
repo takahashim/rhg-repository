@@ -1,0 +1,46 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2002.09.26.17.26.46;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* ext/digest/rmd160: Use OpenSSL's RMD160 engine if available.  It
+  is much faster than what we have now (rmd160.[ch]).  Add a knob
+  (--with-bundled-rmd160) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@/* $Id$ */
+
+#ifndef RMD160OSSL_H_INCLUDED
+#define RMD160OSSL_H_INCLUDED
+
+#include <openssl/ripemd.h>
+
+#define RMD160_CTX	RIPEMD160_CTX
+
+#define RMD160_Init	RIPEMD160_Init
+#define RMD160_Update	RIPEMD160_Update
+#define RMD160_Final	RIPEMD160_Final
+
+#define RMD160_BLOCK_LENGTH		RIPEMD160_CBLOCK
+#define RMD160_DIGEST_LENGTH		RIPEMD160_DIGEST_LENGTH
+
+char *RMD160_End(RMD160_CTX *ctx, char *buf);
+int RMD160_Equal(RMD160_CTX *pctx1, RMD160_CTX *pctx2);
+
+#endif
+@

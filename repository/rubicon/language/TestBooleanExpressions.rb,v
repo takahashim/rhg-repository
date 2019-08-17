@@ -1,0 +1,81 @@
+head	1.2;
+access;
+symbols
+	V0_3_2:1.2
+	V0_1_4:1.1
+	V0_1_3:1.1
+	V0_1_2:1.1
+	V0_1_1:1.1
+	V0_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.06.10.06.15.46;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.30.21.14.10;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestBooleanExpressions < Rubicon::TestCase
+
+  def testBasicConditions
+    x = '0'
+    x == x && assert(true)
+    x != x && fail
+    x == x || fail
+    x != x || assert(true)
+  end
+
+end
+
+# Run these tests if invoked directly
+
+Rubicon::handleTests(TestBooleanExpressions) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Initial load of files
+@
+text
+@d1 2
+a2 11
+#!/usr/bin/env ruby
+# $Id$
+#
+# This file is part of Rubicon, a set of regression tests for the Ruby
+# language and its built-in classes and modules.
+#
+# Initial development by Dave Thomas and Andy Hunt.
+#
+# Copyright (c) 2000 The Pragmatic Programmers, LLC (www.pragmaticprogrammer.com)
+# Distributed according to the terms specified in the Ruby distribution README file.
+#
+d4 1
+a4 1
+require '../rubicon'
+d6 7
+a12 1
+class TestBooleanExpressions < Rubicon::TestCase
+@
+

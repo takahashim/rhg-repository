@@ -1,0 +1,433 @@
+head	1.3;
+access;
+symbols
+	v1_6_4:1.1.1.1
+	v1_7_1:1.2
+	v1_6_4_preview4:1.1.1.1
+	v1_6_4_preview3:1.1.1.1
+	v1_6_4_preview2:1.1.1.1
+	v1_6_4_preview1:1.1.1.1
+	v1_6_3:1.1.1.1
+	ruby_m17n:1.1.1.1.0.14
+	ruby_1_6:1.1.1.1.0.12
+	v1_6_2:1.1.1.1
+	v1_6_1:1.1.1.1
+	v1_6_0:1.1.1.1
+	v1_4_6:1.1.1.1
+	v1_4_5:1.1.1.1
+	v1_4_4:1.1.1.1
+	ruby_1_4_3:1.1.1.1
+	ruby1_4_3:1.1.1.1
+	v1_4_3:1.1.1.1
+	v1_5_0:1.1.1.1
+	ruby_1_4_3_pre1:1.1.1.1
+	ruby_1_4:1.1.1.1.0.10
+	v1_4_2:1.1.1.1
+	v1_4_1:1.1.1.1
+	v1_4_0:1.1.1.1
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.1.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.1.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.1.1
+	v1_2_4:1.1.1.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.8
+	v1_2_2:1.1.1.1
+	RUBY_1_3:1.1.1.1
+	v1_2_2_pr1:1.1.1.1
+	v1_2_1repack:1.1.1.1
+	v1_2_1:1.1.1.1
+	v1_2_stable:1.1.1.1
+	v1_1d1:1.1.1.1
+	v1_1d0:1.1.1.1
+	v1_1c9_1:1.1.1.1
+	v1_1c9:1.1.1.1
+	v1_1c8:1.1.1.1
+	v1_1c7:1.1.1.1
+	v1_1c6:1.1.1.1
+	v1_1d-start:1.1.1.1
+	v1_1c5:1.1.1.1
+	v1_1dev:1.1.1.1.0.6
+	v1_1c4:1.1.1.1
+	v1_1c3:1.1.1.1
+	v1_1c2:1.1.1.1
+	v1_1c1:1.1.1.1
+	v1_1c0:1.1.1.1
+	v1_1b9_31:1.1.1.1
+	v1_1b9_30:1.1.1.1
+	v1_1b9_28:1.1.1.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2001.07.13.20.06.14;	author knu;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.03.26.08.57.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.12.1;
+next	;
+
+1.1.1.1.12.1
+date	2001.08.16.07.35.43;	author knu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@/*
+  Copyright (C) 1999 Aladdin Enterprises.  All rights reserved.
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  L. Peter Deutsch
+  ghost@@aladdin.com
+
+ */
+/*$Id: md5.h,v 1.2 2001/03/26 08:57:14 matz Exp $ */
+/*
+  Independent implementation of MD5 (RFC 1321).
+
+  This code implements the MD5 Algorithm defined in RFC 1321.
+  It is derived directly from the text of the RFC and not from the
+  reference implementation.
+
+  The original and principal author of md5.h is L. Peter Deutsch
+  <ghost@@aladdin.com>.  Other authors are noted in the change history
+  that follows (in reverse chronological order):
+
+  1999-11-04 lpd Edited comments slightly for automatic TOC extraction.
+  1999-10-18 lpd Fixed typo in header comment (ansi2knr rather than md5);
+	added conditionalization for C++ compilation from Martin
+	Purschke <purschke@@bnl.gov>.
+  1999-05-03 lpd Original version.
+ */
+
+#ifndef md5_INCLUDED
+#  define md5_INCLUDED
+
+/*
+ * This code has some adaptations for the Ghostscript environment, but it
+ * will compile and run correctly in any environment with 8-bit chars and
+ * 32-bit ints.  Specifically, it assumes that if the following are
+ * defined, they have the same meaning as in Ghostscript: P1, P2, P3,
+ * ARCH_IS_BIG_ENDIAN.
+ */
+
+typedef unsigned char md5_byte_t; /* 8-bit byte */
+typedef unsigned int md5_word_t; /* 32-bit word */
+
+/* Define the state of the MD5 Algorithm. */
+typedef struct md5_state_s {
+    md5_word_t count[2];	/* message length in bits, lsw first */
+    md5_word_t abcd[4];		/* digest buffer */
+    md5_byte_t buf[64];		/* accumulate block */
+} md5_state_t;
+
+#ifdef __cplusplus
+extern "C" 
+{
+#endif
+
+/* Initialize the algorithm. */
+#ifdef P1
+void md5_init(P1(md5_state_t *pms));
+#else
+void md5_init(md5_state_t *pms);
+#endif
+
+/* Append a string to the message. */
+#ifdef P3
+void md5_append(P3(md5_state_t *pms, const md5_byte_t *data, int nbytes));
+#else
+void md5_append(md5_state_t *pms, const md5_byte_t *data, int nbytes);
+#endif
+
+/* Finish the message and return the digest. */
+#ifdef P2
+void md5_finish(P2(md5_state_t *pms, md5_byte_t digest[16]));
+#else
+void md5_finish(md5_state_t *pms, md5_byte_t digest[16]);
+#endif
+
+#ifdef __cplusplus
+}  /* end extern "C" */
+#endif
+
+#endif /* md5_INCLUDED */
+@
+
+
+1.2
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* file.c (rb_file_flock): do not trap EINTR.
+
+* missing/flock.c (flock): returns the value from lockf(2)
+  directly.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/md5/md5.h: replace by independent md5 implementation
+  contributed by L. Peter Deutsch (thanks).
+
+* ext/md5/md5init.c: adopted to Deutsch's md5 implementation.
+
+* pack.c (pack_unpack): string from P/p should be tainted.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+
+* object.c (sym_intern): new method.
+@
+text
+@d24 1
+a24 1
+/*$Id: md5.h,v 1.1 2000/03/09 08:40:44 lpd Exp $ */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 2
+/* MD5.H - header file for MD5C.C
+ */
+d4 15
+a18 2
+/* Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All
+rights reserved.
+d20 2
+a21 14
+License to copy and use this software is granted provided that it
+is identified as the "RSA Data Security, Inc. MD5 Message-Digest
+Algorithm" in all material mentioning or referencing this software
+or this function.
+
+License is also granted to make and use derivative works provided
+that such works are identified as "derived from the RSA Data
+Security, Inc. MD5 Message-Digest Algorithm" in all material
+mentioning or referencing the derived work.
+
+RSA Data Security, Inc. makes no representations concerning either
+the merchantability of this software or the suitability of this
+software for any particular purpose. It is provided "as is"
+without express or implied warranty of any kind.
+d23 18
+a40 2
+These notices must be retained in any copies of any part of this
+documentation and/or software.
+d43 2
+a44 3
+/* ========== include global.h ========== */
+/* GLOBAL.H - RSAREF types and constants
+ */
+d46 6
+a51 4
+/* PROTOTYPES should be set to one if and only if the compiler supports
+  function argument prototyping.
+The following makes PROTOTYPES default to 0 if it has not already
+  been defined with C compiler flags.
+a52 6
+#ifdef HAVE_PROTOTYPES
+#define PROTOTYPES 1
+#endif
+#ifndef PROTOTYPES
+#define PROTOTYPES 0
+#endif
+d54 2
+a55 2
+/* POINTER defines a generic pointer type */
+typedef unsigned char *POINTER;
+d57 18
+a74 2
+/* UINT2 defines a two byte word */
+typedef unsigned short int UINT2;
+d76 3
+a78 2
+#ifdef HAVE_LIMITS_H
+#include <limits.h>
+d80 1
+a80 2
+/* Wild guess */
+#define LONG_MAX 2147483647L
+d83 3
+a85 3
+/* UINT4 defines a four byte word */
+#if defined(INT_MAX) && INT_MAX == 2147483647
+typedef unsigned int UINT4;
+d87 1
+a87 4
+#if defined(LONG_MAX) && LONG_MAX == 2147483647L
+typedef unsigned long int UINT4;
+#endif
+/* Too bad if neither is */
+d90 2
+a91 8
+/* PROTO_LIST is defined depending on how PROTOTYPES is defined above.
+If using PROTOTYPES, then PROTO_LIST returns the list, otherwise it
+  returns an empty list.
+ */
+#if PROTOTYPES
+#define PROTO_LIST(list) list
+#else
+#define PROTO_LIST(list) ()
+a92 1
+/* ========== End global.h; continue md5.h ========== */
+d94 1
+a94 11
+/* MD5 context. */
+typedef struct {
+  UINT4 state[4];                                   /* state (ABCD) */
+  UINT4 count[2];        /* number of bits, modulo 2^64 (lsb first) */
+  unsigned char buffer[64];                         /* input buffer */
+} MD5_CTX;
+
+void MD5Init PROTO_LIST ((MD5_CTX *));
+void MD5Update PROTO_LIST
+  ((MD5_CTX *, unsigned char *, unsigned int));
+void MD5Final PROTO_LIST ((unsigned char [16], MD5_CTX *));
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.12.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@@
+

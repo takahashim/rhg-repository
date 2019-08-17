@@ -1,0 +1,28 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.04.02.10.56.13;	author ttate;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Add ruby-dl
+@
+text
+@require 'dl'
+
+crtdll = DL::dlopen("crtdll")
+getch  = crtdll['_getch', 'L']
+print(getch.call, "\n")
+@

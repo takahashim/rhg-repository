@@ -1,0 +1,37 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2002.09.26.16.27.23;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* ext/digest/md5: Use OpenSSL's MD5 engine if available.  It is
+  much faster than what we have now (md5.[ch]).  Add a knob
+  (--with-bundled-md5) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@/* $Id$ */
+
+#ifndef MD5OSSL_H_INCLUDED
+#define MD5OSSL_H_INCLUDED
+
+#include <openssl/md5.h>
+
+void MD5_End(MD5_CTX *pctx, unsigned char *hexdigest);
+int MD5_Equal(MD5_CTX *pctx1, MD5_CTX *pctx2);
+
+#endif
+@

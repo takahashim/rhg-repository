@@ -1,0 +1,560 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.10.20.10.54.19;	author akira;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.10.04.06.26.45;	author akira;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.09.25.07.03.05;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.01.10.08.00.51;	author akira;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2002.01.16.14.48.28;	author akira;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2002.09.25.07.07.43;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2002.10.01.08.15.28;	author matz;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2002.10.04.06.22.44;	author akira;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2002.10.20.10.53.22;	author akira;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@should raise InvalidComponentError if MAILTO_REGEXP could not match with @@opaque.
+@
+text
+@#
+# $Id: mailto.rb,v 1.3 2002/10/04 06:26:45 akira Exp $
+#
+# Copyright (c) 2001 akira yamada <akira@@ruby-lang.org>
+# You can redistribute it and/or modify it under the same term as Ruby.
+#
+
+require 'uri/generic'
+
+module URI
+
+=begin
+
+== URI::MailTo
+
+=== Super Class
+
+((<URI::Generic>))
+
+=end
+
+  # RFC2368, The mailto URL scheme
+  class MailTo < Generic
+    include REGEXP
+
+    DEFAULT_PORT = nil
+
+    COMPONENT = [
+      :scheme,
+      :to, :headers
+    ].freeze
+
+    #  "hname" and "hvalue" are encodings of an RFC 822 header name and
+    #  value, respectively. As with "to", all URL reserved characters must
+    #  be encoded.
+    #
+    #  "#mailbox" is as specified in RFC 822 [RFC822]. This means that it
+    #  consists of zero or more comma-separated mail addresses, possibly
+    #  including "phrase" and "comment" components. Note that all URL
+    #  reserved characters in "to" must be encoded: in particular,
+    #  parentheses, commas, and the percent sign ("%"), which commonly occur
+    #  in the "mailbox" syntax.
+    #
+    #  Within mailto URLs, the characters "?", "=", "&" are reserved.
+
+    # hname      =  *urlc
+    # hvalue     =  *urlc
+    # header     =  hname "=" hvalue
+    HEADER_PATTERN = "(?:[^?=&]*=[^?=&]*)".freeze
+    HEADER_REGEXP  = Regexp.new(HEADER_PATTERN, 'N').freeze
+    # headers    =  "?" header *( "&" header )
+    # to         =  #mailbox
+    # mailtoURL  =  "mailto:" [ to ] [ headers ]
+    MAILBOX_PATTERN = "(?:#{PATTERN::ESCAPED}|[^(),%?=&])".freeze
+    MAILTO_REGEXP = Regexp.new("
+      \\A
+      (#{MAILBOX_PATTERN}*?)                          (?# 1: to)
+      (?:
+        \\?
+        (#{HEADER_PATTERN}(?:\\&#{HEADER_PATTERN})*)  (?# 2: headers)
+      )?
+      \\z
+    ", Regexp::EXTENDED, 'N').freeze
+
+=begin
+
+=== Class Methods
+
+--- URI::MailTo::build
+    Create a new URI::MailTo object from components of URI::MailTo
+    with check.  It is to and headers. It provided by an Array of a
+    Hash. You can provide headers as an String like
+    "subject=subscribe&cc=addr" or an Array like [["subject",
+    "subscribe"], ["cc", "addr"]]
+
+--- URI::MailTo::new
+    Create a new URI::MailTo object from ``generic'' components with
+    no check. Because, this method is usually called from URI::parse
+    and the method checks validity of each components.
+
+=end
+
+    def self.build(args)
+      tmp = Util::make_components_hash(self, args)
+
+      if tmp[:to]
+	tmp[:opaque] = tmp[:to]
+      else
+	tmp[:opaque] = ''
+      end
+
+      if tmp[:headers]
+	tmp[:opaque] << '?'
+
+	if tmp[:headers].kind_of?(Array)
+	  tmp[:opaque] << tmp[:headers].collect { |x|
+	    if x.kind_of?(Array)
+	      x[0] + '=' + x[1..-1].to_s
+	    else
+	      x.to_s
+	    end
+	  }.join('&')
+
+	elsif tmp[:headers].kind_of?(Hash)
+	  tmp[:opaque] << tmp[:headers].collect { |h,v|
+	    h + '=' + v
+	  }.join('&')
+
+	else
+	  tmp[:opaque] << tmp[:headers].to_s
+	end
+      end
+
+      return super(tmp)
+    end
+
+    def initialize(*arg)
+      super(*arg)
+
+      @@to = nil
+      @@headers = []
+
+      if MAILTO_REGEXP =~ @@opaque
+ 	if arg[-1]
+	  self.to = $1
+	  self.headers = $2
+	else
+	  set_to($1)
+	  set_headers($2)
+	end
+
+      else
+	raise InvalidComponentError,
+	  "unrecognised opaque part for mailtoURL: #{@@opaque}"
+      end
+    end
+    attr_reader :to
+    attr_reader :headers
+
+=begin
+
+=== Instance Methods
+
+--- URI::MailTo#to
+
+--- URI::MailTo#to=(v)
+
+=end
+
+    #
+    # methods for to
+    #
+
+    def check_to(v)
+      return true unless v
+      return true if v.size == 0
+
+      if OPAQUE !~ v || /\A#{MAILBOX_PATTERN}*\z/o !~ v
+	raise InvalidComponentError,
+	  "bad component(expected opaque component): #{v}"
+      end
+
+      return true
+    end
+    private :check_to
+
+    def set_to(v)
+      @@to = v
+    end
+    protected :set_to
+
+    def to=(v)
+      check_to(v)
+      set_to(v)
+    end
+
+=begin
+
+--- URI::MailTo#headers
+
+--- URI::MailTo#headers=(v)
+
+=end
+
+    #
+    # methods for headers
+    #
+
+    def check_headers(v)
+      return true unless v
+      return true if v.size == 0
+
+      if OPAQUE !~ v || 
+	  /\A(#{HEADER_PATTERN}(?:\&#{HEADER_PATTERN})*)\z/o !~ v
+	raise InvalidComponentError,
+	  "bad component(expected opaque component): #{v}"
+      end
+
+      return true
+    end
+    private :check_headers
+
+    def set_headers(v)
+      @@headers = []
+      if v
+	v.scan(HEADER_REGEXP) do |x|
+	  @@headers << x.split(/=/o, 2)
+	end
+      end
+    end
+    protected :set_headers
+
+    def headers=(v)
+      check_headers(v)
+      set_headers(v)
+    end
+
+    def to_str
+      @@scheme + ':' + 
+	if @@to 
+	  @@to
+	else
+	  ''
+	end + 
+	if @@headers.size > 0
+	  '?' + @@headers.collect{|x| x.join('=')}.join('&')
+	else
+	  ''
+	end
+    end
+
+=begin
+
+--- URI::MailTo#to_mailtext
+
+=end
+    def to_mailtext
+      to = URI::unescape(@@to)
+      head = ''
+      body = ''
+      @@headers.each do |x|
+	case x[0]
+	when 'body'
+	  body = URI::unescape(x[1])
+	when 'to'
+	  to << ', ' + URI::unescape(x[1])
+	else
+	  head << URI::unescape(x[0]).capitalize + ': ' +
+	    URI::unescape(x[1])  + "\n"
+	end
+      end
+
+      return "To: #{to}
+#{head}
+#{body}
+"
+    end
+    alias to_rfc822text to_mailtext
+  end # MailTo
+
+  @@@@schemes['MAILTO'] = MailTo
+end # URI
+@
+
+
+1.3
+log
+@updated uri.rb and uri/*.rb to uri-0.9.7
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.3 2002/09/25 16:36:54 akira Exp $
+d54 1
+a54 1
+    MAILBOX_PATTERN = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})".freeze
+d131 2
+a132 1
+      elsif arg[-1]
+@
+
+
+1.2
+log
+@* io.c (appendline): forget to terminate with nul.
+
+* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* class.c (rb_make_metaclass): class of metaclass should be
+  metaclass of superclass, unless class itself is a metaclass;
+  class of metaclass of metaclass should point back to self.
+  eh, confusing, isn't it.
+
+* class.c (rb_singleton_class): check if its class is singleton
+  AND attached to self.
+
+* eval.c (rb_eval): should define class/module under ruby_cbase.
+
+* eval.c (rb_eval): should set class/module path based on
+  ruby_cbase, not ruby_class.
+
+* eval.c (module_setup): use ruby_cbase instead of ruby_class.
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.1 2002/01/10 08:00:51 akira Exp $
+d49 2
+a50 2
+    header_pattern = "(?:[^?=&]*=[^?=&]*)"
+    HEADER_REGEXP = /#{header_pattern}/
+d54 1
+a54 2
+    mailbox_pattern = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})"
+    MAILBOX_REGEXP = /#{mailbox_pattern}/
+d57 1
+a57 1
+      (#{mailbox_pattern}*?)                         (?# 1: to)
+d60 1
+a60 1
+        (#{header_pattern}(?:\\&#{header_pattern})*) (?# 2: headers)
+d63 1
+a63 1
+    ", Regexp::EXTENDED, 'N')
+d157 1
+a157 1
+      if OPAQUE !~ v || /\A#{MAILBOX_REGEXP}*\z/o !~ v
+d193 1
+a193 1
+	  /\A(#{HEADER_REGEXP}(?:\&#{HEADER_REGEXP})*)\z/o !~ v
+@
+
+
+1.1
+log
+@added uri library (uri-0.9.4)
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.2 2002/01/09 04:30:02 akira Exp $
+d49 2
+a50 1
+    HEADER_REGEXP = "(?:[^?=&]*=[^?=&]*)".freeze
+d54 2
+a55 1
+    MAILBOX_REGEXP = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})".freeze
+d58 1
+a58 1
+      (#{MAILBOX_REGEXP}*?)                         (?# 1: to)
+d61 1
+a61 1
+        (#{HEADER_REGEXP}(?:\\&#{HEADER_REGEXP})*)  (?# 2: headers)
+d64 1
+a64 1
+    ", Regexp::EXTENDED, 'N').freeze
+@
+
+
+1.1.2.1
+log
+@added uri library (uri-0.9.4)
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.1 2002/01/10 08:00:51 akira Exp $
+@
+
+
+1.1.2.2
+log
+@* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* variable.c (rb_path2class): should not use rb_eval_string().
+
+* parse.y (str_extend): expression substitution can contain string
+  terminator again.
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.1.2.1 2002/01/16 14:48:28 akira Exp $
+d49 1
+a49 2
+    header_pattern = "(?:[^?=&]*=[^?=&]*)"
+    HEADER_REGEXP = /#{header_pattern}/
+d53 1
+a53 2
+    mailbox_pattern = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})"
+    MAILBOX_REGEXP = /#{mailbox_pattern}/
+d56 1
+a56 1
+      (#{mailbox_pattern}*?)                         (?# 1: to)
+d59 1
+a59 1
+        (#{header_pattern}(?:\\&#{header_pattern})*) (?# 2: headers)
+@
+
+
+1.1.2.3
+log
+@* regex.c (re_match): p1 may exceed pend limit.
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.1.2.2 2002/09/25 07:07:43 matz Exp $
+d49 1
+a49 1
+    HEADER_PATTERN = "(?:[^?=&]*=[^?=&]*)"
+d54 1
+a54 1
+    MAILBOX_PATTERN = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})"
+d158 1
+a158 1
+      if OPAQUE !~ v || /\A#{MAILBOX_PATTERN}*\z/o !~ v
+d194 1
+a194 1
+	  /\A(#{HEADER_PATTERN}(?:\&#{HEADER_PATTERN})*)\z/o !~ v
+@
+
+
+1.1.2.4
+log
+@updated uri.rb and uri/*.rb to uri-0.9.7
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.3 2002/09/25 16:36:54 akira Exp $
+d49 2
+a50 2
+    HEADER_PATTERN = "(?:[^?=&]*=[^?=&]*)".freeze
+    HEADER_REGEXP  = Regexp.new(HEADER_PATTERN, 'N').freeze
+d54 2
+a55 1
+    MAILBOX_PATTERN = "(?:[^(),%?=&]|#{PATTERN::ESCAPED})".freeze
+d58 1
+a58 1
+      (#{MAILBOX_PATTERN}*?)                          (?# 1: to)
+d61 1
+a61 1
+        (#{HEADER_PATTERN}(?:\\&#{HEADER_PATTERN})*)  (?# 2: headers)
+@
+
+
+1.1.2.5
+log
+@should raise InvalidComponentError if MAILTO_REGEXP could not match with @@opaque.
+@
+text
+@d2 1
+a2 1
+# $Id: mailto.rb,v 1.1.2.4 2002/10/04 06:22:44 akira Exp $
+d54 1
+a54 1
+    MAILBOX_PATTERN = "(?:#{PATTERN::ESCAPED}|[^(),%?=&])".freeze
+d131 1
+a131 2
+
+      else
+@

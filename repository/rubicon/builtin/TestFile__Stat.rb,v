@@ -1,0 +1,877 @@
+head	1.14;
+access;
+symbols
+	V0_3_2:1.10
+	V0_1_4:1.7
+	V0_1_3:1.7
+	V0_1_2:1.6
+	V0_1_1:1.6
+	V0_1:1.6;
+locks; strict;
+comment	@# @;
+
+
+1.14
+date	2001.11.28.00.35.50;	author chad;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.11.26.04.09.52;	author dave;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.11.16.18.36.52;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.11.15.17.12.34;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.02.06.09.14;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.11.02.00.17.06;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.10.26.18.22.06;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.15.17.37.53;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.10.20.34.49;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.07.21.25.34;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.07.20.28.11;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.21.33.37;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@More win32 fixes.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'stat'
+require 'FileInfoTest.rb'
+
+class TestFile__Stat < FileInfoTest
+
+  def setup
+    super
+    @@s1 = File.stat(@@file1)
+    @@s2 = File.stat(@@file2)
+  end
+
+  # compares modified times
+  def test_CMP # '<=>'
+    assert_equal(0,  @@s1 <=> @@s1)
+    assert_equal(0,  @@s2 <=> @@s2)
+    assert_equal(+1, @@s1 <=> @@s2)
+    assert_equal(-1, @@s2 <=> @@s1)
+  end
+
+  Windows.dont do     # not on FAT filesystems
+    def test_atime
+      assert_equal(@@aTime1, @@s1.atime)
+      assert_equal(@@aTime2, @@s2.atime)
+    end
+  end
+
+  def test_blksize
+    blksize = checkstat(".").split[8].to_i
+    if $? != 0 || blksize == -1
+      skipping("Couldn't find block size")
+    else
+      assert_equal(blksize, File.stat('.').blksize)
+    end
+  end
+
+  def try(sym, file, expected)
+    if File.exist?(file)
+      s = File.stat(file)
+      assert_equal(expected, s.send(sym), "File: #{file}")
+    else
+      skipping("#{sym}: #{file} not found")
+    end
+  end
+
+  def test_blockdev?
+    try(:blockdev?, ".",        false)
+    Unix.or_variant do
+      try(:blockdev?, "/dev/tty", false)
+      Linux.only do
+	try(:blockdev?, "/dev/fd0", true)
+      end
+    end
+  end
+
+  MsWin32.dont do
+    def test_blocks
+      file = "_test/_size"
+      File.open(file, "w") { |f| }
+      assert_equal(0, File.stat(file).blocks)
+      File.open(file, "w") { |f| f.syswrite 'a'}
+      assert(File.stat(file).blocks > 0)
+      assert(File.stat(file).blocks < 16)
+    end
+  end
+
+  def test_chardev?
+    try(:chardev?, ".",        false)
+    Unix.only do
+      try(:chardev?, "/dev/tty", true)
+      Linux.only do
+	try(:chardev?, "/dev/fd0", false)
+      end
+    end
+  end
+
+  def test_ctime
+    cTime1 = Time.at(RubiconStat::ctime(@@file1))
+    assert_equal(cTime1, @@s1.ctime)
+  end
+
+  def test_dev
+#    assert_fail("untested")
+  end
+
+  def test_directory?
+    try(:directory?, "/dev/tty", false)
+    try(:directory?, ".",        true)
+    try(:directory?, "/dev/fd0", false)
+  end
+
+  def test_executable?
+    try(:executable?, "/dev/tty", false)
+    try(:executable?, "/bin/echo",true)
+    try(:executable?, "/dev/fd0", false)
+  end
+
+  def test_executable_real?
+#    assert_fail("untested")
+  end
+
+  def test_file?
+    try(:file?, "/dev/tty", false)
+    try(:file?, ".",        false)
+    try(:file?, "/dev/fd0", false)
+    try(:file?, @@file1,     true)
+  end
+
+  def test_ftype
+    Dir.chdir("_test")
+    MsWin32.dont do
+      File.symlink("_file1", "_file3") # may fail
+    end
+
+    tests = {
+      "../_test"          => "directory",
+      "_file1"            => "file",
+      "/dev/tty"          => "characterSpecial",
+      "/tmp/.X11-unix/X0" => "socket",
+    }
+
+    MsWin32.dont do
+      tests["_file3"]     =  "file"
+    end
+
+    Linux.only do
+      tests["/dev/fd0"]   = "blockSpecial"
+      system("mkfifo _fifo") # may fail
+      tests["_fifo"]      = "fifo" 
+    end
+
+    tests.each do |file, type|
+      try(:ftype, file, type)
+    end
+
+    MsWin32.dont do
+      assert_equal("link", File.lstat("_file3").ftype)
+    end
+  end
+
+  Linux.only do
+    def test_gid
+      assert_equal(Process.gid, @@s1.gid)
+    end
+    
+    def test_grpowned?
+      try(:grpowned?, @@file1,        true)
+      Unix.or_variant do
+        try(:grpowned?, "/etc/passwd", Process.egid == 0)
+      end
+    end
+  end
+
+  Linux.dont do
+    def test_gid
+      skipping "Behavior unknown (feel free up update!)"
+    end
+    
+    def test_grpowned?
+      skipping "Behavior unknown (feel free up update!)"
+    end
+  end
+
+  def test_ino
+    Dir.chdir("_test")
+    File.link("_file1", "_file3") # may fail
+    assert(File.stat("_file1").ino > 0)
+    assert(File.stat("_file2").ino > 0)
+    assert_equal(File.stat("_file1").ino, File.stat("_file3").ino)
+  end
+
+  def test_mode
+    base = $os <= Windows ? 0444 : 0
+
+    Dir.chdir("_test")
+    begin
+      File.open("_file1") do |f|
+	assert_equal(0,           f.chmod(0))
+	assert_equal(base,        f.stat.mode & 0777)
+	assert_equal(0,           f.chmod(0400))
+	assert_equal(base | 0400, f.stat.mode & 0777)
+	assert_equal(0,           f.chmod(0644))
+	assert_equal(base | 0644, f.stat.mode & 0777)
+      end
+    ensure
+      Dir.chdir("..")
+    end
+  end
+
+  def test_mtime
+    assert_equal(@@mTime1, @@s1.mtime)
+    assert_equal(@@mTime2, @@s2.mtime)
+ end
+
+  def test_nlink
+    Dir.chdir("_test")
+    File.link("_file1", "_file3") # may fail
+    try(:nlink, "_file1", 2)
+    try(:nlink, "_file2", 1)
+    try(:nlink, "_file3", 2)
+  end
+
+  def test_owned?
+    try(:owned?, @@file1,        true)
+    Unix.or_variant do
+      try(:owned?, "/etc/passwd", Process.euid == 0)
+    end
+  end
+
+  def test_pipe?
+    Unix.or_variant do
+      try(:pipe?, "/dev/tty", false)
+    end
+
+    try(:pipe?, ".",        false)
+    
+    MsWin32.dont do
+      IO.popen("-") do |p|
+	assert_equal(true, (p ? p : $stdout).stat.pipe?)
+      end
+    end
+  end
+
+  def test_rdev
+    # assert_fail("untested")
+  end
+
+  def test_readable?
+    try(:readable?, @@file1, true)
+    Windows.known_problem do
+      File.chmod(0222, @@file1)
+      try(:readable?, @@file1, false)
+    end
+  end
+
+  def test_readable_real?
+#    assert_fail("untested")
+  end
+
+  Unix.or_variant do
+    
+    def test_setgid?
+      try(:setgid?, @@file1, false)
+      File.chmod(02644, @@file1)
+      try(:setgid?, @@file1, true)
+    end
+    
+    def test_setuid?
+      try(:setuid?, @@file1, false)
+      File.chmod(04644, @@file1)
+      try(:setuid?, @@file1, true)
+    end
+  end
+
+  def test_size
+    File.open(@@file1, "w") { |f| f.syswrite "wombat" }
+    try(:size, @@file1, 6 )
+    try(:size, @@file2, 0)
+  end
+
+  def test_size?
+    File.open(@@file1, "w") { |f| f.syswrite "wombat" }
+    try(:size?, @@file1, 6 )
+    try(:size?, @@file2, nil)
+  end
+
+  def test_socket?
+    try(:socket?, "/dev/tty", false)
+    try(:socket?, ".",        false)
+    try(:socket?, @@file1,     false)
+    try(:socket?, "/tmp/.X11-unix/X0", true)
+  end
+
+  Unix.or_variant do
+    def test_sticky?
+      Dir.chdir("_test")
+      m = File.stat(".").mode
+      begin
+	File.chmod(m | 01000, ".")
+	try(:sticky?, ".",      true)
+      ensure
+	File.chmod(m, ".")
+      end
+      try(:sticky?, ".",        false)
+      try(:sticky?, "/dev/tty", false)
+      try(:sticky?, "_file2",   false)
+    end
+  end
+
+  MsWin32.dont do
+    def test_symlink?
+      Dir.chdir("_test")
+      File.symlink("_file1", "_symlink")
+      try(:symlink?, ".",        false)
+      try(:symlink?, "/dev/tty", false)
+      try(:symlink?, "_file1",   false)
+      try(:symlink?, "_symlink", false)  # try uses stat
+      assert(File.lstat("_symlink").symlink?)
+    end
+  end
+
+  def test_uid
+    assert_equal(Process.uid, @@s1.uid)
+  end
+
+  def test_writable?
+    File.chmod(0444, @@file1)
+    try(:writable?, @@file1, false)
+    try(:writable?, @@file2, true)
+  end
+
+  def test_writable_real?
+#    assert_fail("untested")
+  end
+
+  def test_zero?
+    File.open(@@file1, "w") { |f| f.puts "wombat" }
+    try(:zero?, @@file1, false)
+    try(:zero?, @@file2, true)
+  end
+
+end
+
+Rubicon::handleTests(TestFile__Stat) if $0 == __FILE__
+@
+
+
+1.13
+log
+@More support for MsWin32.
+
+Added GNUmakefile, and made .c code compile under both MSVC and GCC.
+@
+text
+@d230 1
+a230 1
+    Cygwin.known_problem do
+@
+
+
+1.12
+log
+@Yet another cygwin issue
+@
+text
+@d21 5
+a25 3
+  def test_atime
+    assert_equal(@@aTime1, @@s1.atime)
+    assert_equal(@@aTime2, @@s2.atime)
+d29 2
+a30 2
+    blksize = `perl -e "print((stat('.'))[11])"`.to_i
+    if $? != 0 || blksize == 0
+@
+
+
+1.11
+log
+@Make work when run as root.
+
+THere were soe permissions issues (for example ?r is somewhat moot) when run
+as root. Also allow tests to run in a g+s or u+s directory when the
+current uid/gid isn;t the directory's.
+@
+text
+@d228 4
+a231 2
+    File.chmod(0222, @@file1)
+    try(:readable?, @@file1, false)
+@
+
+
+1.10
+log
+@Get more tests working under Win32, and tidy up some of the
+operating system dependencies a tad
+@
+text
+@d146 3
+a148 1
+      try(:grpowned?, "/etc/passwd", false)
+d203 3
+a205 1
+    try(:owned?, "/etc/passwd", false)
+@
+
+
+1.9
+log
+@Start adding MsWin32 support
+@
+text
+@a44 1
+    try(:blockdev?, "/dev/tty", false) if $os <= Unix
+d46 6
+a51 1
+    try(:blockdev?, "/dev/fd0", true) if $os == Linux
+d54 9
+a62 7
+  def test_blocks
+    file = "_test/_size"
+    File.open(file, "w") { |f| }
+    assert_equal(0, File.stat(file).blocks)
+    File.open(file, "w") { |f| f.syswrite 'a'}
+    assert(File.stat(file).blocks > 0)
+    assert(File.stat(file).blocks < 16)
+a65 1
+    try(:chardev?, "/dev/tty", true)
+d67 5
+a71 2
+    if $os == Linux
+      try(:chardev?, "/dev/fd0", false)
+d109 3
+a111 1
+    File.symlink("_file1", "_file3") # may fail
+a117 1
+      "_file3"            => "file",   # try uses stat
+d120 6
+a125 2
+    if $os == Linux
+      tests["/dev/fd0"] = "blockSpecial"
+d127 1
+a127 1
+      tests["_fifo"]    = "fifo" 
+d133 4
+a136 1
+    assert_equal("link", File.lstat("_file3").ftype)
+d139 1
+a139 1
+  if $os == Linux
+d148 3
+a150 1
+  else
+d169 1
+a169 1
+    base = $os == Cygwin ? 0444 : 0
+d179 1
+a179 1
+	assert_equal(base |0644,  f.stat.mode & 0777)
+d205 4
+a208 1
+    try(:pipe?, "/dev/tty", false) if $os <= Unix
+d210 6
+a215 3
+    IO.popen("-") { |p|
+      assert_equal(true, (p ? p : $stdout).stat.pipe?)
+    }
+d232 1
+a232 1
+  if $os <= Unix
+d266 1
+a266 1
+  if $os <= Unix
+d282 10
+a291 8
+  def test_symlink?
+    Dir.chdir("_test")
+    File.symlink("_file1", "_symlink")
+    try(:symlink?, ".",        false)
+    try(:symlink?, "/dev/tty", false)
+    try(:symlink?, "_file1",   false)
+    try(:symlink?, "_symlink", false)  # try uses stat
+    assert(File.lstat("_symlink").symlink?)
+@
+
+
+1.8
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d45 1
+a45 1
+    try(:blockdev?, "/dev/tty", false)
+d47 1
+a47 3
+    if $os == Linux
+      try(:blockdev?, "/dev/fd0", true)
+    end
+a101 1
+    system("mkfifo _fifo") # may fail
+a108 1
+      "_fifo"             => "fifo" 
+d113 2
+d151 2
+d154 12
+a165 8
+    File.open("_file1") { |f|
+      assert_equal(0,    f.chmod(0))
+      assert_equal(0,    f.stat.mode & 0777)
+      assert_equal(0,    f.chmod(0400))
+      assert_equal(0400, f.stat.mode & 0777)
+      assert_equal(0,    f.chmod(0644))
+      assert_equal(0644, f.stat.mode & 0777)
+    }
+d187 1
+a187 1
+    try(:pipe?, "/dev/tty", false)
+d208 13
+a220 10
+  def test_setgid?
+    try(:setgid?, @@file1, false)
+    File.chmod(02644, @@file1)
+    try(:setgid?, @@file1, true)
+  end
+
+  def test_setuid?
+    try(:setuid?, @@file1, false)
+    File.chmod(04644, @@file1)
+    try(:setuid?, @@file1, true)
+d242 13
+a254 8
+  def test_sticky?
+    Dir.chdir("_test")
+    m = File.stat(".").mode
+    begin
+      File.chmod(m | 01000, ".")
+      try(:sticky?, ".",      true)
+    ensure
+      File.chmod(m, ".")
+a255 3
+    try(:sticky?, ".",        false)
+    try(:sticky?, "/dev/tty", false)
+    try(:sticky?, "_file2",   false)
+@
+
+
+1.7
+log
+@Try to remove yet more machine dependencies
+@
+text
+@d1 1
+@
+
+
+1.6
+log
+@Archive save
+@
+text
+@d46 3
+a48 1
+    try(:blockdev?, "/dev/fd0", true)
+d63 3
+a65 1
+    try(:chardev?, "/dev/fd0", false)
+d105 1
+a105 1
+    {
+a108 1
+      "/dev/fd0"          => "blockSpecial",
+d112 7
+a118 1
+    }.each { |file, type|
+d120 1
+a120 1
+    }
+d124 17
+a140 7
+  def test_gid
+    assert_equal(Process.gid, @@s1.gid)
+  end
+
+  def test_grpowned?
+    try(:grpowned?, @@file1,        true)
+    try(:grpowned?, "/etc/passwd", false)
+d236 7
+a242 1
+    File.chmod(01644, "_file1")
+a244 1
+    try(:sticky?, "_file1",   true)
+@
+
+
+1.5
+log
+@Tidy up the test output
+@
+text
+@a0 1
+require '../rubicon'
+d2 1
+d4 1
+a4 2
+
+class TestFile__Stat < Rubicon::TestCase
+d7 1
+a7 22
+    setupTestDir
+
+    @@file1 = "_test/_touched1"
+    @@file2 = "_test/_touched2"
+
+    sys("touch #@@file1")  # in case it needs creating
+
+    sys("touch -a -t 122512341999 #@@file1")
+    @@aTime1 = Time.local(1999, 12, 25, 12, 34, 00)
+
+    sys("touch -m -t 010112341997 #@@file1")
+    @@mTime1 = Time.local(1997,  1,  1, 12, 34, 00)
+
+    # File two is before file 1 in access time, and
+    # after in modification time
+
+    sys("touch -a -t 010212342000 #@@file2")
+    @@aTime2 = Time.local(2000, 1, 2, 12, 34, 00)
+
+    sys("touch -m -t 020312341995 #@@file2")
+    @@mTime2 = Time.local(1995,  2,  3, 12, 34, 00)
+
+a9 7
+  end
+
+  def teardown
+    [ @@file1, @@file2 ].each { |file|
+      File.delete file if File.exist?(file)
+    }
+    teardownTestDir
+@
+
+
+1.4
+log
+@Fix symlinks, and aid note about $+ to string
+@
+text
+@d2 1
+a13 4
+    # Yes - there's a race condition here...
+    n = Time.now          # sets the time
+    sys("touch  #@@file1")
+    @@cTime1 = Time.local(n.year, n.month, n.day, n.hour, n.min, n.sec)
+d94 2
+a95 1
+    assert_equal(@@cTime1, @@s1.ctime)
+@
+
+
+1.3
+log
+@Use new stat module
+@
+text
+@d138 1
+a138 1
+      "_file3"            => "link",
+d143 1
+d261 2
+a262 1
+    try(:symlink?, "_symlink", true)
+@
+
+
+1.2
+log
+@Finish File::Stat
+@
+text
+@d58 2
+a59 2
+    blksize = `perl -e "print((stat('.'))[11], '\n')"`.to_i
+    if $? != 0
+@
+
+
+1.1
+log
+@Get everything to run through
+@
+text
+@d6 39
+d46 4
+a49 1
+    assert_fail("untested")
+d53 2
+a54 1
+    assert_fail("untested")
+d58 15
+a72 1
+    assert_fail("untested")
+d76 3
+a78 1
+    assert_fail("untested")
+d82 6
+a87 1
+    assert_fail("untested")
+d91 3
+a93 1
+    assert_fail("untested")
+d97 1
+a97 1
+    assert_fail("untested")
+d101 1
+a101 1
+    assert_fail("untested")
+d105 3
+a107 1
+    assert_fail("untested")
+d111 3
+a113 1
+    assert_fail("untested")
+d117 1
+a117 1
+    assert_fail("untested")
+d121 4
+a124 1
+    assert_fail("untested")
+d128 15
+a142 1
+    assert_fail("untested")
+d146 1
+a146 1
+    assert_fail("untested")
+d150 2
+a151 1
+    assert_fail("untested")
+d155 5
+a159 1
+    assert_fail("untested")
+d163 9
+a171 1
+    assert_fail("untested")
+d175 3
+a177 2
+    assert_fail("untested")
+  end
+d180 5
+a184 1
+    assert_fail("untested")
+d188 2
+a189 1
+    assert_fail("untested")
+d193 5
+a197 1
+    assert_fail("untested")
+d201 1
+a201 1
+    assert_fail("untested")
+d205 3
+a207 1
+    assert_fail("untested")
+d211 1
+a211 1
+    assert_fail("untested")
+d215 3
+a217 1
+    assert_fail("untested")
+d221 3
+a223 1
+    assert_fail("untested")
+d227 3
+a229 1
+    assert_fail("untested")
+d233 3
+a235 1
+    assert_fail("untested")
+d239 4
+a242 1
+    assert_fail("untested")
+d246 6
+a251 1
+    assert_fail("untested")
+d255 6
+a260 1
+    assert_fail("untested")
+d264 1
+a264 1
+    assert_fail("untested")
+d268 3
+a270 1
+    assert_fail("untested")
+d274 1
+a274 1
+    assert_fail("untested")
+d278 3
+a280 1
+    assert_fail("untested")
+@
+

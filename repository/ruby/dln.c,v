@@ -1,0 +1,5882 @@
+head	1.40;
+access;
+symbols
+	v1_6_7:1.15.2.10
+	v1_6_6:1.15.2.10
+	v1_6_5:1.15.2.10
+	v1_6_4:1.15.2.7
+	v1_7_1:1.24
+	v1_6_4_preview4:1.15.2.6
+	v1_6_4_preview3:1.15.2.5
+	v1_6_4_preview2:1.15.2.4
+	v1_6_4_preview1:1.15.2.3
+	v1_6_3:1.15.2.2
+	ruby_m17n:1.15.0.4
+	ruby_1_6:1.15.0.2
+	v1_6_2:1.15
+	v1_6_1:1.14
+	v1_6_0:1.14
+	v1_4_6:1.2.2.5
+	v1_4_5:1.2.2.5
+	v1_4_4:1.2.2.3
+	ruby_1_4_3:1.2.2.1
+	ruby1_4_3:1.2.2.1
+	v1_4_3:1.2.2.1
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.16
+	v1_3_6_repack:1.1.1.3.2.15
+	v1_3_6:1.1.1.3.2.15
+	v1_3_5:1.1.1.3.2.14
+	v1_2_6repack:1.1.1.2.2.17
+	v1_3_4_990625:1.1.1.3.2.13
+	v1_3_4_990624:1.1.1.3.2.13
+	v1_2_6:1.1.1.2.2.17
+	v1_3_4_990611:1.1.1.3.2.12
+	v1_3_4_990531:1.1.1.3.2.11
+	v1_3_3_990518:1.1.1.3.2.10
+	v1_3_3_990513:1.1.1.3.2.8
+	v1_3_3_990507:1.1.1.3.2.7
+	v1_2_5:1.1.1.2.2.15
+	v1_2_4:1.1.1.2.2.15
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.2
+	v1_3_1_990210:1.1.1.3.2.2
+	v1_3_1_:1.1.1.3.2.2
+	v1_3_1_990209:1.1.1.3.2.2
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.13
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.13
+	v1_2_1repack:1.1.1.2.2.13
+	v1_2_1:1.1.1.2.2.13
+	v1_2_stable:1.1.1.2.2.13
+	v1_1d1:1.1.1.2.2.9.2.5
+	v1_1d0:1.1.1.2.2.9.2.4
+	v1_1c9_1:1.1.1.2.2.13
+	v1_1c9:1.1.1.2.2.12
+	v1_1c8:1.1.1.2.2.12
+	v1_1c7:1.1.1.2.2.12
+	v1_1c6:1.1.1.2.2.11
+	v1_1d-start:1.1.1.2.2.9.2.1
+	v1_1c5:1.1.1.2.2.10
+	v1_1dev:1.1.1.2.2.9.0.2
+	v1_1c4:1.1.1.2.2.9
+	v1_1c3:1.1.1.2.2.9
+	v1_1c2:1.1.1.2.2.8
+	v1_1c1:1.1.1.2.2.7
+	v1_1c0:1.1.1.2.2.7
+	v1_1b9_31:1.1.1.2.2.7
+	v1_1b9_30:1.1.1.2.2.7
+	v1_1b9_28:1.1.1.2.2.7
+	v1_1b9_27:1.1.1.2.2.7
+	v1_1b9_26:1.1.1.2.2.7
+	r1_1b9_25:1.1.1.2.2.7
+	r1_1b9_24:1.1.1.2.2.7
+	v1_1b9_23:1.1.1.2.2.7
+	v1_1b9_22:1.1.1.2.2.6
+	v1_1b9_20:1.1.1.2.2.6
+	v1_1b9_18:1.1.1.2.2.5
+	v1_1b9_16:1.1.1.2.2.5
+	v1_1b9_15:1.1.1.2.2.5
+	v1_1b9_13:1.1.1.2.2.5
+	v1_1b9_12:1.1.1.2.2.5
+	v1_1b9_11:1.1.1.2.2.4
+	v1_1b9_08:1.1.1.2.2.4
+	v1_1b9_07:1.1.1.2.2.4
+	r1_1b9:1.1.1.2.2.3
+	v1_1b8:1.1.1.2.2.3
+	v1_1b7:1.1.1.2.2.2
+	v1_1b6:1.1.1.2.2.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.40
+date	2002.10.17.16.13.44;	author knu;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.09.05.09.17.48;	author michal;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.06.25.09.44.57;	author H_Konishi;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.06.24.15.23.59;	author H_Konishi;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.06.17.13.41.53;	author eban;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.06.17.01.54.51;	author nobu;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.05.14.06.22.25;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.03.26.03.01.30;	author eban;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.03.25.02.09.16;	author nobu;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.03.06.09.00.32;	author eban;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.02.28.22.05.01;	author akr;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.02.18.09.52.45;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.08.24.05.44.20;	author usa;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.07.14.15.17.18;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.07.02.08.46.21;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.05.30.09.12.33;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.05.16.09.05.49;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.05.02.04.22.10;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.03.26.05.11.18;	author eban;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.03.13.05.45.08;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.02.26.05.29.00;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.02.08.09.19.16;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.01.09.07.26.16;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.10.10.07.20.10;	author eban;	state Exp;
+branches
+	1.15.2.1;
+next	1.14;
+
+1.14
+date	2000.08.07.05.01.47;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.27.09.49.14;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.07.15.49.36;	author eban;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.24.04.33.54;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.12.09.07.33;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.10.02.58.32;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.09.04.52.52;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.01.09.41.13;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.03.07.08.37.27;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.02.01.03.11.59;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.05.04.36.58;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.10.08.54.55;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.03;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.09;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.10;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.09.06.08.18;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.24.04.31.18;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.03.24.08.52.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.04.09.17.57.37;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.04.20.08.21.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.04.30.07.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.05.13.10.00.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.05.17.09.53.56;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.05.18.06.06.12;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.05.31.09.13.03;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.06.09.09.21.05;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.13;
+
+1.1.1.3.2.13
+date	99.06.24.04.23.47;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.14;
+
+1.1.1.3.2.14
+date	99.07.15.07.59.37;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.15;
+
+1.1.1.3.2.15
+date	99.07.28.09.26.32;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.16;
+
+1.1.1.3.2.16
+date	99.08.06.06.48.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.22.08.12.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.18.10.01.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.03.30.09.32.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.04.20.05.55.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.05.13.07.26.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.05.26.08.24.40;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.07.29.09.50.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.08.27.03.55.01;	author matz;	state Exp;
+branches
+	1.1.1.2.2.9.2.1;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.09.08.09.17.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.10.06.02.44.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.11.09.09.11.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.12.14.09.00.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	99.02.09.03.29.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	99.04.08.10.14.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	99.04.20.08.20.54;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	99.06.21.06.30.57;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.9.2.1
+date	98.09.08.07.08.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9.2.2;
+
+1.1.1.2.2.9.2.2
+date	98.10.06.03.28.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9.2.3;
+
+1.1.1.2.2.9.2.3
+date	98.11.25.03.31.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9.2.4;
+
+1.1.1.2.2.9.2.4
+date	98.12.16.07.30.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9.2.5;
+
+1.1.1.2.2.9.2.5
+date	98.12.22.09.01.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.11.10.08.54.41;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.01.17.08.23.53;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.01.24.03.46.05;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.05.09.04.50.06;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.06.05.09.00.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.15.2.1
+date	2001.01.09.07.29.03;	author matz;	state Exp;
+branches;
+next	1.15.2.2;
+
+1.15.2.2
+date	2001.02.08.09.17.56;	author matz;	state Exp;
+branches;
+next	1.15.2.3;
+
+1.15.2.3
+date	2001.03.26.05.11.03;	author eban;	state Exp;
+branches;
+next	1.15.2.4;
+
+1.15.2.4
+date	2001.04.17.15.35.04;	author matz;	state Exp;
+branches;
+next	1.15.2.5;
+
+1.15.2.5
+date	2001.05.15.08.49.20;	author matz;	state Exp;
+branches;
+next	1.15.2.6;
+
+1.15.2.6
+date	2001.05.25.21.10.58;	author matz;	state Exp;
+branches;
+next	1.15.2.7;
+
+1.15.2.7
+date	2001.05.30.23.35.05;	author usa;	state Exp;
+branches;
+next	1.15.2.8;
+
+1.15.2.8
+date	2001.06.29.08.32.51;	author matz;	state Exp;
+branches;
+next	1.15.2.9;
+
+1.15.2.9
+date	2001.07.13.05.50.03;	author matz;	state Exp;
+branches;
+next	1.15.2.10;
+
+1.15.2.10
+date	2001.08.24.05.45.55;	author usa;	state Exp;
+branches;
+next	1.15.2.11;
+
+1.15.2.11
+date	2002.03.06.09.00.08;	author eban;	state Exp;
+branches;
+next	1.15.2.12;
+
+1.15.2.12
+date	2002.03.25.02.37.07;	author nobu;	state Exp;
+branches;
+next	1.15.2.13;
+
+1.15.2.13
+date	2002.06.17.01.54.44;	author nobu;	state Exp;
+branches;
+next	1.15.2.14;
+
+1.15.2.14
+date	2002.06.17.13.42.15;	author eban;	state Exp;
+branches;
+next	1.15.2.15;
+
+1.15.2.15
+date	2002.06.24.15.26.17;	author H_Konishi;	state Exp;
+branches;
+next	1.15.2.16;
+
+1.15.2.16
+date	2002.06.25.09.43.24;	author H_Konishi;	state Exp;
+branches;
+next	1.15.2.17;
+
+1.15.2.17
+date	2002.10.17.16.27.16;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.40
+log
+@* hash.c, eval.c: Use (*_NSGetEnviron()) instead of environ on
+  Darwin for namespace cleanness.  [ruby-core:00537]
+
+* dln.c (dln_load): Fix Darwin support that has been disabled and
+  switch to using it on Darwin instead of the system dlopen().
+  [ruby-core:00541]
+@
+text
+@/**********************************************************************
+
+  dln.c -
+
+  $Author: michal $
+  $Date: 2002/09/05 09:17:48 $
+  created at: Tue Jan 18 17:05:06 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "dln.h"
+
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+#ifdef __CHECKER__
+#undef HAVE_DLOPEN
+#undef USE_DLN_A_OUT
+#undef USE_DLN_DLOPEN
+#endif
+
+#ifdef USE_DLN_A_OUT
+char *dln_argv0;
+#endif
+
+#ifdef _AIX
+#pragma alloca
+#endif
+
+#if defined(HAVE_ALLOCA_H) && !defined(__GNUC__)
+#include <alloca.h>
+#endif
+
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+# include <strings.h>
+#endif
+
+#ifndef xmalloc
+void *xmalloc();
+void *xcalloc();
+void *xrealloc();
+#endif
+
+#include <stdio.h>
+#if defined(NT) || defined(__VMS)
+#include "missing/file.h"
+#endif
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+
+#ifdef HAVE_SYS_PARAM_H
+# include <sys/param.h>
+#else
+# define MAXPATHLEN 1024
+#endif
+
+#ifdef HAVE_UNISTD_H
+# include <unistd.h>
+#endif
+
+#ifndef NT
+char *getenv();
+#endif
+
+#if defined(__VMS)
+#pragma builtins
+#include <dlfcn.h>
+#endif
+
+#ifdef __MACOS__
+# include <TextUtils.h>
+# include <CodeFragments.h>
+# include <Aliases.h>
+# include "macruby_private.h"
+#endif
+
+#ifdef __BEOS__
+# include <image.h>
+#endif
+
+int eaccess();
+
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(_AIX) && !defined(__APPLE__)
+/* dynamic load with dlopen() */
+# define USE_DLN_DLOPEN
+#endif
+
+#ifndef FUNCNAME_PATTERN
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && !defined(__ELF__)) || defined(__BORLANDC__) || (defined(__FreeBSD__) && !defined(__ELF__)) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+#  define FUNCNAME_PATTERN "_Init_%s"
+# else
+#  define FUNCNAME_PATTERN "Init_%s"
+# endif
+#endif
+
+static int
+init_funcname_len(buf, file)
+    char **buf;
+    char *file;
+{
+    char *p, *slash;
+
+    /* Load the file as an object one */
+    for (p = file, slash = p-1; *p; p++) /* Find position of last '/' */
+#ifdef __MACOS__
+	if (*p == ':') slash = p;
+#else
+	if (*p == '/') slash = p;
+#endif
+
+/* This assumes that systems without length limitation for file names
+   provide asprintf(). This shouldn't be too unlikely. */
+#ifdef MAXPATHLEN
+    *buf = xmalloc(MAXPATHLEN);
+    snprintf(*buf, MAXPATHLEN, FUNCNAME_PATTERN, slash + 1);
+#else
+    asprintf(buf, FUNCNAME_PATTERN, slash + 1);
+#endif
+    for (p = *buf; *p; p++) {         /* Delete suffix if it exists */
+	if (*p == '.') {
+	    *p = '\0'; break;
+	}
+    }
+    return p - *buf;
+}
+
+#define init_funcname(buf, file) do {\
+    int len = init_funcname_len(buf, file);\
+    char *tmp = ALLOCA_N(char, len+1);\
+    if (!tmp) {\
+	free(*buf);\
+	rb_memerror();\
+    }\
+    strcpy(tmp, *buf);\
+    free(*buf);\
+    *buf = tmp;\
+} while (0)
+
+#ifdef USE_DLN_A_OUT
+
+#ifndef LIBC_NAME
+# define LIBC_NAME "libc.a"
+#endif
+
+#ifndef DLN_DEFAULT_LIB_PATH
+#  define DLN_DEFAULT_LIB_PATH "/lib:/usr/lib:/usr/local/lib:."
+#endif
+
+#include <errno.h>
+
+static int dln_errno;
+
+#define DLN_ENOEXEC	ENOEXEC	/* Exec format error */
+#define DLN_ECONFL	1201	/* Symbol name conflict */
+#define DLN_ENOINIT	1202	/* No inititalizer given */
+#define DLN_EUNDEF	1203	/* Undefine symbol remains */
+#define DLN_ENOTLIB	1204	/* Not a library file */
+#define DLN_EBADLIB	1205	/* Malformed library file */
+#define DLN_EINIT	1206	/* Not initialized */
+
+static int dln_init_p = 0;
+
+#include <ar.h>
+#include <a.out.h>
+#ifndef N_COMM
+# define N_COMM 0x12
+#endif
+#ifndef N_MAGIC
+# define N_MAGIC(x) (x).a_magic
+#endif
+
+#define INVALID_OBJECT(h) (N_MAGIC(h) != OMAGIC)
+
+#include "util.h"
+#include "st.h"
+
+static st_table *sym_tbl;
+static st_table *undef_tbl;
+
+static int load_lib();
+
+static int
+load_header(fd, hdrp, disp)
+    int fd;
+    struct exec *hdrp;
+    long disp;
+{
+    int size;
+
+    lseek(fd, disp, 0);
+    size = read(fd, hdrp, sizeof(struct exec));
+    if (size == -1) {
+	dln_errno = errno;
+	return -1;
+    }
+    if (size != sizeof(struct exec) || N_BADMAG(*hdrp)) {
+	dln_errno = DLN_ENOEXEC;
+	return -1;
+    }
+    return 0;
+}
+
+#if defined(sequent)
+#define RELOC_SYMBOL(r)			((r)->r_symbolnum)
+#define RELOC_MEMORY_SUB_P(r)		((r)->r_bsr)
+#define RELOC_PCREL_P(r)		((r)->r_pcrel || (r)->r_bsr)
+#define RELOC_TARGET_SIZE(r)		((r)->r_length)
+#endif
+
+/* Default macros */
+#ifndef RELOC_ADDRESS
+#define RELOC_ADDRESS(r)		((r)->r_address)
+#define RELOC_EXTERN_P(r)		((r)->r_extern)
+#define RELOC_SYMBOL(r)			((r)->r_symbolnum)
+#define RELOC_MEMORY_SUB_P(r)		0
+#define RELOC_PCREL_P(r)		((r)->r_pcrel)
+#define RELOC_TARGET_SIZE(r)		((r)->r_length)
+#endif
+
+#if defined(sun) && defined(sparc)
+/* Sparc (Sun 4) macros */
+#  undef relocation_info
+#  define relocation_info reloc_info_sparc
+#  define R_RIGHTSHIFT(r)	(reloc_r_rightshift[(r)->r_type])
+#  define R_BITSIZE(r) 		(reloc_r_bitsize[(r)->r_type])
+#  define R_LENGTH(r)		(reloc_r_length[(r)->r_type])
+static int reloc_r_rightshift[] = {
+  0, 0, 0, 0, 0, 0, 2, 2, 10, 0, 0, 0, 0, 0, 0,
+};
+static int reloc_r_bitsize[] = {
+  8, 16, 32, 8, 16, 32, 30, 22, 22, 22, 13, 10, 32, 32, 16,
+};
+static int reloc_r_length[] = {
+  0, 1, 2, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+};
+#  define R_PCREL(r) \
+    ((r)->r_type >= RELOC_DISP8 && (r)->r_type <= RELOC_WDISP22)
+#  define R_SYMBOL(r) ((r)->r_index)
+#endif
+
+#if defined(sequent)
+#define R_SYMBOL(r)		((r)->r_symbolnum)
+#define R_MEMORY_SUB(r)		((r)->r_bsr)
+#define R_PCREL(r)		((r)->r_pcrel || (r)->r_bsr)
+#define R_LENGTH(r)		((r)->r_length)
+#endif
+
+#ifndef R_SYMBOL
+#  define R_SYMBOL(r) 		((r)->r_symbolnum)
+#  define R_MEMORY_SUB(r)	0
+#  define R_PCREL(r)  		((r)->r_pcrel)
+#  define R_LENGTH(r) 		((r)->r_length)
+#endif
+
+static struct relocation_info *
+load_reloc(fd, hdrp, disp)
+     int fd;
+     struct exec *hdrp;
+     long disp;
+{
+    struct relocation_info *reloc;
+    int size;
+
+    lseek(fd, disp + N_TXTOFF(*hdrp) + hdrp->a_text + hdrp->a_data, 0);
+    size = hdrp->a_trsize + hdrp->a_drsize;
+    reloc = (struct relocation_info*)xmalloc(size);
+    if (reloc == NULL) {
+	dln_errno = errno;
+	return NULL;
+    }
+
+    if (read(fd, reloc, size) !=  size) {
+	dln_errno = errno;
+	free(reloc);
+	return NULL;
+    }
+
+    return reloc;
+}
+
+static struct nlist *
+load_sym(fd, hdrp, disp)
+    int fd;
+    struct exec *hdrp;
+    long disp;
+{
+    struct nlist * buffer;
+    struct nlist * sym;
+    struct nlist * end;
+    long displ;
+    int size;
+
+    lseek(fd, N_SYMOFF(*hdrp) + hdrp->a_syms + disp, 0);
+    if (read(fd, &size, sizeof(int)) != sizeof(int)) {
+	goto err_noexec;
+    }
+
+    buffer = (struct nlist*)xmalloc(hdrp->a_syms + size);
+    if (buffer == NULL) {
+	dln_errno = errno;
+	return NULL;
+    }
+
+    lseek(fd, disp + N_SYMOFF(*hdrp), 0);
+    if (read(fd, buffer, hdrp->a_syms + size) != hdrp->a_syms + size) {
+	free(buffer);
+	goto err_noexec;
+    }
+
+    sym = buffer;
+    end = sym + hdrp->a_syms / sizeof(struct nlist);
+    displ = (long)buffer + (long)(hdrp->a_syms);
+
+    while (sym < end) {
+	sym->n_un.n_name = (char*)sym->n_un.n_strx + displ;
+	sym++;
+    }
+    return buffer;
+
+  err_noexec:
+    dln_errno = DLN_ENOEXEC;
+    return NULL;
+}
+
+static st_table *
+sym_hash(hdrp, syms)
+    struct exec *hdrp;
+    struct nlist *syms;
+{
+    st_table *tbl;
+    struct nlist *sym = syms;
+    struct nlist *end = syms + (hdrp->a_syms / sizeof(struct nlist));
+
+    tbl = st_init_strtable();
+    if (tbl == NULL) {
+	dln_errno = errno;
+	return NULL;
+    }
+
+    while (sym < end) {
+	st_insert(tbl, sym->n_un.n_name, sym);
+	sym++;
+    }
+    return tbl;
+}
+
+static int
+dln_init(prog)
+    const char *prog;
+{
+    char *file;
+    int fd;
+    struct exec hdr;
+    struct nlist *syms;
+
+    if (dln_init_p == 1) return 0;
+
+    file = dln_find_exe(prog, NULL);
+    if (file == NULL || (fd = open(file, O_RDONLY)) < 0) {
+	dln_errno = errno;
+	return -1;
+    }
+
+    if (load_header(fd, &hdr, 0) == -1) return -1;
+    syms = load_sym(fd, &hdr, 0);
+    if (syms == NULL) {
+	close(fd);
+	return -1;
+    }
+    sym_tbl = sym_hash(&hdr, syms);
+    if (sym_tbl == NULL) {	/* file may be start with #! */
+	char c = '\0';
+	char buf[MAXPATHLEN];
+	char *p;
+
+	free(syms);
+	lseek(fd, 0L, 0);
+	if (read(fd, &c, 1) == -1) {
+	    dln_errno = errno;
+	    return -1;
+	}
+	if (c != '#') goto err_noexec;
+	if (read(fd, &c, 1) == -1) {
+	    dln_errno = errno;
+	    return -1;
+	}
+	if (c != '!') goto err_noexec;
+
+	p = buf;
+	/* skip forwading spaces */
+	while (read(fd, &c, 1) == 1) {
+	    if (c == '\n') goto err_noexec;
+	    if (c != '\t' && c != ' ') {
+		*p++ = c;
+		break;
+	    }
+	}
+	/* read in command name */
+	while (read(fd, p, 1) == 1) {
+	    if (*p == '\n' || *p == '\t' || *p == ' ') break;
+	    p++;
+	    if (p-buf >= MAXPATHLEN) {
+		dln_errno = ENAMETOOLONG;
+		return -1;
+	    }
+	}
+	*p = '\0';
+
+	return dln_init(buf);
+    }
+    dln_init_p = 1;
+    undef_tbl = st_init_strtable();
+    close(fd);
+    return 0;
+
+  err_noexec:
+    close(fd);
+    dln_errno = DLN_ENOEXEC;
+    return -1;
+}
+
+static long
+load_text_data(fd, hdrp, bss, disp)
+    int fd;
+    struct exec *hdrp;
+    int bss;
+    long disp;
+{
+    int size;
+    unsigned char* addr;
+
+    lseek(fd, disp + N_TXTOFF(*hdrp), 0);
+    size = hdrp->a_text + hdrp->a_data;
+
+    if (bss == -1) size += hdrp->a_bss;
+    else if (bss > 1) size += bss;
+
+    addr = (unsigned char*)xmalloc(size);
+    if (addr == NULL) {
+	dln_errno = errno;
+	return 0;
+    }
+
+    if (read(fd, addr, size) !=  size) {
+	dln_errno = errno;
+	free(addr);
+	return 0;
+    }
+
+    if (bss == -1) {
+	memset(addr +  hdrp->a_text + hdrp->a_data, 0, hdrp->a_bss);
+    }
+    else if (bss > 0) {
+	memset(addr +  hdrp->a_text + hdrp->a_data, 0, bss);
+    }
+
+    return (long)addr;
+}
+
+static int
+undef_print(key, value)
+    char *key, *value;
+{
+    fprintf(stderr, "  %s\n", key);
+    return ST_CONTINUE;
+}
+
+static void
+dln_print_undef()
+{
+    fprintf(stderr, " Undefined symbols:\n");
+    st_foreach(undef_tbl, undef_print, NULL);
+}
+
+static void
+dln_undefined()
+{
+    if (undef_tbl->num_entries > 0) {
+	fprintf(stderr, "dln: Calling undefined function\n");
+	dln_print_undef();
+	rb_exit(1);
+    }
+}
+
+struct undef {
+    char *name;
+    struct relocation_info reloc;
+    long base;
+    char *addr;
+    union {
+	char c;
+	short s;
+	long l;
+    } u;
+};
+
+static st_table *reloc_tbl = NULL;
+static void
+link_undef(name, base, reloc)
+    const char *name;
+    long base;
+    struct relocation_info *reloc;
+{
+    static int u_no = 0;
+    struct undef *obj;
+    char *addr = (char*)(reloc->r_address + base);
+
+    obj = (struct undef*)xmalloc(sizeof(struct undef));
+    obj->name = strdup(name);
+    obj->reloc = *reloc;
+    obj->base = base;
+    switch (R_LENGTH(reloc)) {
+      case 0:		/* byte */
+	obj->u.c = *addr;
+	break;
+      case 1:		/* word */
+	obj->u.s = *(short*)addr;
+	break;
+      case 2:		/* long */
+	obj->u.l = *(long*)addr;
+	break;
+    }
+    if (reloc_tbl == NULL) {
+	reloc_tbl = st_init_numtable();
+    }
+    st_insert(reloc_tbl, u_no++, obj);
+}
+
+struct reloc_arg {
+    const char *name;
+    long value;
+};
+
+static int
+reloc_undef(no, undef, arg)
+    int no;
+    struct undef *undef;
+    struct reloc_arg *arg;
+{
+    int datum;
+    char *address;
+#if defined(sun) && defined(sparc)
+    unsigned int mask = 0;
+#endif
+
+    if (strcmp(arg->name, undef->name) != 0) return ST_CONTINUE;
+    address = (char*)(undef->base + undef->reloc.r_address);
+    datum = arg->value;
+
+    if (R_PCREL(&(undef->reloc))) datum -= undef->base;
+#if defined(sun) && defined(sparc)
+    datum += undef->reloc.r_addend;
+    datum >>= R_RIGHTSHIFT(&(undef->reloc));
+    mask = (1 << R_BITSIZE(&(undef->reloc))) - 1;
+    mask |= mask -1;
+    datum &= mask;
+    switch (R_LENGTH(&(undef->reloc))) {
+      case 0:
+	*address = undef->u.c;
+	*address &= ~mask;
+	*address |= datum;
+	break;
+      case 1:
+	*(short *)address = undef->u.s;
+	*(short *)address &= ~mask;
+	*(short *)address |= datum;
+	break;
+      case 2:
+	*(long *)address = undef->u.l;
+	*(long *)address &= ~mask;
+	*(long *)address |= datum;
+	break;
+    }
+#else
+    switch (R_LENGTH(&(undef->reloc))) {
+      case 0:		/* byte */
+	if (R_MEMORY_SUB(&(undef->reloc)))
+	    *address = datum - *address;
+	else *address = undef->u.c + datum;
+	break;
+      case 1:		/* word */
+	if (R_MEMORY_SUB(&(undef->reloc)))
+	    *(short*)address = datum - *(short*)address;
+	else *(short*)address = undef->u.s + datum;
+	break;
+      case 2:		/* long */
+	if (R_MEMORY_SUB(&(undef->reloc)))
+	    *(long*)address = datum - *(long*)address;
+	else *(long*)address = undef->u.l + datum;
+	break;
+    }
+#endif
+    free(undef->name);
+    free(undef);
+    return ST_DELETE;
+}
+
+static void
+unlink_undef(name, value)
+    const char *name;
+    long value;
+{
+    struct reloc_arg arg;
+
+    arg.name = name;
+    arg.value = value;
+    st_foreach(reloc_tbl, reloc_undef, &arg);
+}
+
+#ifdef N_INDR
+struct indr_data {
+    char *name0, *name1;
+};
+
+static int
+reloc_repl(no, undef, data)
+    int no;
+    struct undef *undef;
+    struct indr_data *data;
+{
+    if (strcmp(data->name0, undef->name) == 0) {
+	free(undef->name);
+	undef->name = strdup(data->name1);
+    }
+    return ST_CONTINUE;
+}
+#endif
+
+static int
+load_1(fd, disp, need_init)
+    int fd;
+    long disp;
+    const char *need_init;
+{
+    static char *libc = LIBC_NAME;
+    struct exec hdr;
+    struct relocation_info *reloc = NULL;
+    long block = 0;
+    long new_common = 0; /* Length of new common */
+    struct nlist *syms = NULL;
+    struct nlist *sym;
+    struct nlist *end;
+    int init_p = 0;
+
+    if (load_header(fd, &hdr, disp) == -1) return -1;
+    if (INVALID_OBJECT(hdr)) {
+	dln_errno = DLN_ENOEXEC;
+	return -1;
+    }
+    reloc = load_reloc(fd, &hdr, disp);
+    if (reloc == NULL) return -1;
+
+    syms = load_sym(fd, &hdr, disp);
+    if (syms == NULL) {
+	free(reloc);
+	return -1;
+    }
+
+    sym = syms;
+    end = syms + (hdr.a_syms / sizeof(struct nlist));
+    while (sym < end) {
+	struct nlist *old_sym;
+	int value = sym->n_value;
+
+#ifdef N_INDR
+	if (sym->n_type == (N_INDR | N_EXT)) {
+	    char *key = sym->n_un.n_name;
+
+	    if (st_lookup(sym_tbl, sym[1].n_un.n_name, &old_sym)) {
+		if (st_delete(undef_tbl, &key, NULL)) {
+		    unlink_undef(key, old_sym->n_value);
+		    free(key);
+		}
+	    }
+	    else {
+		struct indr_data data;
+
+		data.name0 = sym->n_un.n_name;
+		data.name1 = sym[1].n_un.n_name;
+		st_foreach(reloc_tbl, reloc_repl, &data);
+
+		st_insert(undef_tbl, strdup(sym[1].n_un.n_name), NULL);
+		if (st_delete(undef_tbl, &key, NULL)) {
+		    free(key);
+		}
+	    }
+	    sym += 2;
+	    continue;
+	}
+#endif
+	if (sym->n_type == (N_UNDF | N_EXT)) {
+	    if (st_lookup(sym_tbl, sym->n_un.n_name, &old_sym) == 0) {
+		old_sym = NULL;
+	    }
+
+	    if (value) {
+		if (old_sym) {
+		    sym->n_type = N_EXT | N_COMM;
+		    sym->n_value = old_sym->n_value;
+		}
+		else {
+		    int rnd =
+			value >= sizeof(double) ? sizeof(double) - 1
+			    : value >= sizeof(long) ? sizeof(long) - 1
+				: sizeof(short) - 1;
+
+		    sym->n_type = N_COMM;
+		    new_common += rnd;
+		    new_common &= ~(long)rnd;
+		    sym->n_value = new_common;
+		    new_common += value;
+		}
+	    }
+	    else {
+		if (old_sym) {
+		    sym->n_type = N_EXT | N_COMM;
+		    sym->n_value = old_sym->n_value;
+		}
+		else {
+		    sym->n_value = (long)dln_undefined;
+		    st_insert(undef_tbl, strdup(sym->n_un.n_name), NULL);
+		}
+	    }
+	}
+	sym++;
+    }
+
+    block = load_text_data(fd, &hdr, hdr.a_bss + new_common, disp);
+    if (block == 0) goto err_exit;
+
+    sym = syms;
+    while (sym < end) {
+	struct nlist *new_sym;
+	char *key;
+
+	switch (sym->n_type) {
+	  case N_COMM:
+	    sym->n_value += hdr.a_text + hdr.a_data;
+	  case N_TEXT|N_EXT:
+	  case N_DATA|N_EXT:
+
+	    sym->n_value += block;
+
+	    if (st_lookup(sym_tbl, sym->n_un.n_name, &new_sym) != 0
+		&& new_sym->n_value != (long)dln_undefined) {
+		dln_errno = DLN_ECONFL;
+		goto err_exit;
+	    }
+
+	    key = sym->n_un.n_name;
+	    if (st_delete(undef_tbl, &key, NULL) != 0) {
+		unlink_undef(key, sym->n_value);
+		free(key);
+	    }
+
+	    new_sym = (struct nlist*)xmalloc(sizeof(struct nlist));
+	    *new_sym = *sym;
+	    new_sym->n_un.n_name = strdup(sym->n_un.n_name);
+	    st_insert(sym_tbl, new_sym->n_un.n_name, new_sym);
+	    break;
+
+	  case N_TEXT:
+	  case N_DATA:
+	    sym->n_value += block;
+	    break;
+	}
+	sym++;
+    }
+
+    /*
+     * First comes the text-relocation
+     */
+    {
+	struct relocation_info * rel = reloc;
+	struct relocation_info * rel_beg = reloc +
+	    (hdr.a_trsize/sizeof(struct relocation_info));
+	struct relocation_info * rel_end = reloc +
+	    (hdr.a_trsize+hdr.a_drsize)/sizeof(struct relocation_info);
+
+	while (rel < rel_end) {
+	    char *address = (char*)(rel->r_address + block);
+	    long datum = 0;
+#if defined(sun) && defined(sparc)
+	    unsigned int mask = 0;
+#endif
+
+	    if(rel >= rel_beg)
+		address += hdr.a_text;
+
+	    if (rel->r_extern) { /* Look it up in symbol-table */
+		sym = &(syms[R_SYMBOL(rel)]);
+		switch (sym->n_type) {
+		  case N_EXT|N_UNDF:
+		    link_undef(sym->n_un.n_name, block, rel);
+		  case N_EXT|N_COMM:
+		  case N_COMM:
+		    datum = sym->n_value;
+		    break;
+		  default:
+		    goto err_exit;
+		}
+	    } /* end.. look it up */
+	    else { /* is static */
+		switch (R_SYMBOL(rel)) { 
+		  case N_TEXT:
+		  case N_DATA:
+		    datum = block;
+		    break;
+		  case N_BSS:
+		    datum = block +  new_common;
+		    break;
+		  case N_ABS:
+		    break;
+		}
+	    } /* end .. is static */
+	    if (R_PCREL(rel)) datum -= block;
+
+#if defined(sun) && defined(sparc)
+	    datum += rel->r_addend;
+	    datum >>= R_RIGHTSHIFT(rel);
+	    mask = (1 << R_BITSIZE(rel)) - 1;
+	    mask |= mask -1;
+	    datum &= mask;
+
+	    switch (R_LENGTH(rel)) {
+	      case 0:
+		*address &= ~mask;
+		*address |= datum;
+		break;
+	      case 1:
+		*(short *)address &= ~mask;
+		*(short *)address |= datum;
+		break;
+	      case 2:
+		*(long *)address &= ~mask;
+		*(long *)address |= datum;
+		break;
+	    }
+#else
+	    switch (R_LENGTH(rel)) {
+	      case 0:		/* byte */
+		if (datum < -128 || datum > 127) goto err_exit;
+		*address += datum;
+		break;
+	      case 1:		/* word */
+		*(short *)address += datum;
+		break;
+	      case 2:		/* long */
+		*(long *)address += datum;
+		break;
+	    }
+#endif
+	    rel++;
+	}
+    }
+
+    if (need_init) {
+	int len;
+	char **libs_to_be_linked = 0;
+	char *buf;
+
+	if (undef_tbl->num_entries > 0) {
+	    if (load_lib(libc) == -1) goto err_exit;
+	}
+
+	init_funcname(&buf, need_init);
+	len = strlen(buf);
+
+	for (sym = syms; sym<end; sym++) {
+	    char *name = sym->n_un.n_name;
+	    if (name[0] == '_' && sym->n_value >= block) {
+		if (strcmp(name+1, "dln_libs_to_be_linked") == 0) {
+		    libs_to_be_linked = (char**)sym->n_value;
+		}
+		else if (strcmp(name+1, buf) == 0) {
+		    init_p = 1;
+		    ((int (*)())sym->n_value)();
+		}
+	    }
+	}
+	if (libs_to_be_linked && undef_tbl->num_entries > 0) {
+	    while (*libs_to_be_linked) {
+		load_lib(*libs_to_be_linked);
+		libs_to_be_linked++;
+	    }
+	}
+    }
+    free(reloc);
+    free(syms);
+    if (need_init) {
+	if (init_p == 0) {
+	    dln_errno = DLN_ENOINIT;
+	    return -1;
+	}
+	if (undef_tbl->num_entries > 0) {
+	    if (load_lib(libc) == -1) goto err_exit;
+	    if (undef_tbl->num_entries > 0) {
+		dln_errno = DLN_EUNDEF;
+		return -1;
+	    }
+	}
+    }
+    return 0;
+
+  err_exit:
+    if (syms) free(syms);
+    if (reloc) free(reloc);
+    if (block) free((char*)block);
+    return -1;
+}
+
+static int target_offset;
+static int
+search_undef(key, value, lib_tbl)
+    const char *key;
+    int value;
+    st_table *lib_tbl;
+{
+    long offset;
+
+    if (st_lookup(lib_tbl, key, &offset) == 0) return ST_CONTINUE;
+    target_offset = offset;
+    return ST_STOP;
+}
+
+struct symdef {
+    int rb_str_index;
+    int lib_offset;
+};
+
+char *dln_librrb_ary_path = DLN_DEFAULT_LIB_PATH;
+
+static int
+load_lib(lib)
+    const char *lib;
+{
+    char *path, *file;
+    char armagic[SARMAG];
+    int fd, size;
+    struct ar_hdr ahdr;
+    st_table *lib_tbl = NULL;
+    int *data, nsym;
+    struct symdef *base;
+    char *name_base;
+
+    if (dln_init_p == 0) {
+	dln_errno = DLN_ENOINIT;
+	return -1;
+    }
+
+    if (undef_tbl->num_entries == 0) return 0;
+    dln_errno = DLN_EBADLIB;
+
+    if (lib[0] == '-' && lib[1] == 'l') {
+	char *p = alloca(strlen(lib) + 4);
+	sprintf(p, "lib%s.a", lib+2);
+	lib = p;
+    }
+
+    /* library search path: */
+    /* look for environment variable DLN_LIBRARY_PATH first. */
+    /* then variable dln_librrb_ary_path. */
+    /* if path is still NULL, use "." for path. */
+    path = getenv("DLN_LIBRARY_PATH");
+    if (path == NULL) path = dln_librrb_ary_path;
+
+    file = dln_find_file(lib, path);
+    fd = open(file, O_RDONLY);
+    if (fd == -1) goto syserr;
+    size = read(fd, armagic, SARMAG);
+    if (size == -1) goto syserr;
+
+    if (size != SARMAG) {
+	dln_errno = DLN_ENOTLIB;
+	goto badlib;
+    }
+    size = read(fd, &ahdr, sizeof(ahdr));
+    if (size == -1) goto syserr;
+    if (size != sizeof(ahdr) || sscanf(ahdr.ar_size, "%d", &size) != 1) {
+	goto badlib;
+    }
+
+    if (strncmp(ahdr.ar_name, "__.SYMDEF", 9) == 0) {
+	/* make hash table from __.SYMDEF */
+
+	lib_tbl = st_init_strtable();
+	data = (int*)xmalloc(size);
+	if (data == NULL) goto syserr;
+	size = read(fd, data, size);
+	nsym = *data / sizeof(struct symdef);
+	base = (struct symdef*)(data + 1);
+	name_base = (char*)(base + nsym) + sizeof(int);
+	while (nsym > 0) {
+	    char *name = name_base + base->rb_str_index;
+
+	    st_insert(lib_tbl, name, base->lib_offset + sizeof(ahdr));
+	    nsym--;
+	    base++;
+	}
+	for (;;) {
+	    target_offset = -1;
+	    st_foreach(undef_tbl, search_undef, lib_tbl);
+	    if (target_offset == -1) break;
+	    if (load_1(fd, target_offset, 0) == -1) {
+		st_free_table(lib_tbl);
+		free(data);
+		goto badlib;
+	    }
+	    if (undef_tbl->num_entries == 0) break;
+	}
+	free(data);
+	st_free_table(lib_tbl);
+    }
+    else {
+	/* linear library, need to scan (FUTURE) */
+
+	for (;;) {
+	    int offset = SARMAG;
+	    int found = 0;
+	    struct exec hdr;
+	    struct nlist *syms, *sym, *end;
+
+	    while (undef_tbl->num_entries > 0) {
+		found = 0;
+		lseek(fd, offset, 0);
+		size = read(fd, &ahdr, sizeof(ahdr));
+		if (size == -1) goto syserr;
+		if (size == 0) break;
+		if (size != sizeof(ahdr)
+		    || sscanf(ahdr.ar_size, "%d", &size) != 1) {
+		    goto badlib;
+		}
+		offset += sizeof(ahdr);
+		if (load_header(fd, &hdr, offset) == -1)
+		    goto badlib;
+		syms = load_sym(fd, &hdr, offset);
+		if (syms == NULL) goto badlib;
+		sym = syms;
+		end = syms + (hdr.a_syms / sizeof(struct nlist));
+		while (sym < end) {
+		    if (sym->n_type == N_EXT|N_TEXT
+			&& st_lookup(undef_tbl, sym->n_un.n_name, NULL)) {
+			break;
+		    }
+		    sym++;
+		}
+		if (sym < end) {
+		    found++;
+		    free(syms);
+		    if (load_1(fd, offset, 0) == -1) {
+			goto badlib;
+		    }
+		}
+		offset += size;
+		if (offset & 1) offset++;
+	    }
+	    if (found) break;
+	}
+    }
+    close(fd);
+    return 0;
+
+  syserr:
+    dln_errno = errno;
+  badlib:
+    if (fd >= 0) close(fd);
+    return -1;
+}
+
+static int
+load(file)
+    const char *file;
+{
+    int fd;
+    int result;
+
+    if (dln_init_p == 0) {
+	if (dln_init(dln_argv0) == -1) return -1;
+    }
+    result = strlen(file);
+    if (file[result-1] == 'a') {
+	return load_lib(file);
+    }
+
+    fd = open(file, O_RDONLY);
+    if (fd == -1) {
+	dln_errno = errno;
+	return -1;
+    }
+    result = load_1(fd, 0, file);
+    close(fd);
+
+    return result;
+}
+
+void*
+dln_sym(name)
+    const char *name;
+{
+    struct nlist *sym;
+
+    if (st_lookup(sym_tbl, name, &sym))
+	return (void*)sym->n_value;
+    return NULL;
+}
+
+#endif /* USE_DLN_A_OUT */
+
+#ifdef USE_DLN_DLOPEN
+# ifdef __NetBSD__
+#  include <nlist.h>
+#  include <link.h>
+# else
+#  include <dlfcn.h>
+# endif
+#endif
+
+#ifdef __hpux
+#include <errno.h>
+#include "dl.h"
+#endif
+
+#if defined(_AIX)
+#include <ctype.h>	/* for isdigit()	*/
+#include <errno.h>	/* for global errno	*/
+#include <sys/ldr.h>
+#endif
+
+#ifdef NeXT
+#if NS_TARGET_MAJOR < 4
+#include <mach-o/rld.h>
+#else
+#include <mach-o/dyld.h>
+#endif
+#endif
+#ifdef __APPLE__
+#include <mach-o/dyld.h>
+#endif
+
+
+#if defined _WIN32 && !defined __CYGWIN__
+#include <windows.h>
+#endif
+
+static const char *
+dln_strerror()
+{
+#ifdef USE_DLN_A_OUT
+    char *strerror();
+
+    switch (dln_errno) {
+      case DLN_ECONFL:
+	return "Symbol name conflict";
+      case DLN_ENOINIT:
+	return "No inititalizer given";
+      case DLN_EUNDEF:
+	return "Unresolved symbols";
+      case DLN_ENOTLIB:
+	return "Not a library file";
+      case DLN_EBADLIB:
+	return "Malformed library file";
+      case DLN_EINIT:
+	return "Not initialized";
+      default:
+	return strerror(dln_errno);
+    }
+#endif
+
+#ifdef USE_DLN_DLOPEN
+    return (char*)dlerror();
+#endif
+
+#if defined _WIN32 && !defined __CYGWIN__
+    static char message[1024];
+    int error = GetLastError();
+    char *p = message;
+    p += sprintf(message, "%d: ", error);
+    FormatMessage(
+	FORMAT_MESSAGE_FROM_SYSTEM	 | FORMAT_MESSAGE_IGNORE_INSERTS,
+	NULL,
+	error,
+	MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+	p,
+	sizeof message - strlen(message),
+	NULL);
+
+    for (p = message; *p; p++) {
+	if (*p == '\n' || *p == '\r')
+	    *p = ' ';
+    }
+    return message;
+#endif
+}
+
+
+#if defined(_AIX) && ! defined(_IA64)
+static void
+aix_loaderror(const char *pathname)
+{
+    char *message[8], errbuf[1024];
+    int i,j;
+
+    struct errtab { 
+	int errno;
+	char *errstr;
+    } load_errtab[] = {
+	{L_ERROR_TOOMANY,	"too many errors, rest skipped."},
+	{L_ERROR_NOLIB,		"can't load library:"},
+	{L_ERROR_UNDEF,		"can't find symbol in library:"},
+	{L_ERROR_RLDBAD,
+	     "RLD index out of range or bad relocation type:"},
+	{L_ERROR_FORMAT,	"not a valid, executable xcoff file:"},
+	{L_ERROR_MEMBER,
+	     "file not an archive or does not contain requested member:"},
+	{L_ERROR_TYPE,		"symbol table mismatch:"},
+	{L_ERROR_ALIGN,		"text allignment in file is wrong."},
+	{L_ERROR_SYSTEM,	"System error:"},
+	{L_ERROR_ERRNO,		NULL}
+    };
+
+#define LOAD_ERRTAB_LEN	(sizeof(load_errtab)/sizeof(load_errtab[0]))
+#define ERRBUF_APPEND(s) strncat(errbuf, s, sizeof(errbuf)-strlen(errbuf)-1)
+
+    snprintf(errbuf, 1024, "load failed - %s ", pathname);
+
+    if (!loadquery(1, &message[0], sizeof(message))) 
+	ERRBUF_APPEND(strerror(errno));
+    for(i = 0; message[i] && *message[i]; i++) {
+	int nerr = atoi(message[i]);
+	for (j=0; j<LOAD_ERRTAB_LEN; j++) {
+	    if (nerr == load_errtab[i].errno && load_errtab[i].errstr)
+		ERRBUF_APPEND(load_errtab[i].errstr);
+	}
+	while (isdigit(*message[i])) message[i]++; 
+	ERRBUF_APPEND(message[i]);
+	ERRBUF_APPEND("\n");
+    }
+    errbuf[strlen(errbuf)-1] = '\0';	/* trim off last newline */
+    rb_loaderror(errbuf);
+    return;
+}
+#endif
+
+void*
+dln_load(file)
+    const char *file;
+{
+#if !defined(_AIX) && !defined(NeXT)
+    const char *error = 0;
+#define DLN_ERROR() (error = dln_strerror(), strcpy(ALLOCA_N(char, strlen(error) + 1), error))
+#endif
+
+#if defined _WIN32 && !defined __CYGWIN__
+    HINSTANCE handle;
+    char winfile[MAXPATHLEN];
+    void (*init_fct)();
+    char *buf;
+
+    if (strlen(file) >= MAXPATHLEN) rb_loaderror("filename too long");
+
+    /* Load the file as an object one */
+    init_funcname(&buf, file);
+
+    strcpy(winfile, file);
+
+    /* Load file */
+    if ((handle = LoadLibrary(winfile)) == NULL) {
+	error = dln_strerror();
+	goto failed;
+    }
+
+    if ((init_fct = (void(*)())GetProcAddress(handle, buf)) == NULL) {
+	rb_loaderror("%s - %s\n%s", dln_strerror(), buf, file);
+    }
+
+    /* Call the init code */
+    (*init_fct)();
+    return handle;
+#else
+#ifdef USE_DLN_A_OUT
+    if (load(file) == -1) {
+	error = dln_strerror();
+	goto failed;
+    }
+    return 0;
+#else
+
+    char *buf;
+    /* Load the file as an object one */
+    init_funcname(&buf, file);
+
+#ifdef USE_DLN_DLOPEN
+#define DLN_DEFINED
+    {
+	void *handle;
+	void (*init_fct)();
+
+#ifndef RTLD_LAZY
+# define RTLD_LAZY 1
+#endif
+#ifndef RTLD_GLOBAL
+# define RTLD_GLOBAL 0
+#endif
+
+	/* Load file */
+	if ((handle = (void*)dlopen(file, RTLD_LAZY|RTLD_GLOBAL)) == NULL) {
+	    error = dln_strerror();
+	    goto failed;
+	}
+
+	init_fct = (void(*)())dlsym(handle, buf);
+	if (init_fct == NULL) {
+	    error = DLN_ERROR();
+	    dlclose(handle);
+	    goto failed;
+	}
+	/* Call the init code */
+	(*init_fct)();
+
+	return handle;
+    }
+#endif /* USE_DLN_DLOPEN */
+
+#ifdef __hpux
+#define DLN_DEFINED
+    {
+	shl_t lib = NULL;
+	int flags;
+	void (*init_fct)();
+
+	flags = BIND_DEFERRED;
+	lib = shl_load(file, flags, 0);
+	if (lib == NULL) {
+	    extern int errno;
+	    rb_loaderror("%s - %s", strerror(errno), file);
+	}
+	shl_findsym(&lib, buf, TYPE_PROCEDURE, (void*)&init_fct);
+	if (init_fct == NULL) {
+	    shl_findsym(&lib, buf, TYPE_UNDEFINED, (void*)&init_fct);
+	    if (init_fct == NULL) {
+		errno = ENOSYM;
+		rb_loaderror("%s - %s", strerror(ENOSYM), file);
+	    }
+	}
+	(*init_fct)();
+	return (void*)lib;
+    }
+#endif /* hpux */
+
+#if defined(_AIX) && ! defined(_IA64)
+#define DLN_DEFINED
+    {
+	void (*init_fct)();
+
+	init_fct = (void(*)())load((char*)file, 1, 0);
+	if (init_fct == NULL) {
+	    aix_loaderror(file);
+	}
+	if (loadbind(0, (void*)dln_load, (void*)init_fct) == -1) {
+	    aix_loaderror(file);
+	}
+	(*init_fct)();
+	return (void*)init_fct;
+    }
+#endif /* _AIX */
+
+#if defined(NeXT) || defined(__APPLE__)
+#define DLN_DEFINED
+/*----------------------------------------------------
+   By SHIROYAMA Takayuki Psi@@fortune.nest.or.jp
+ 
+   Special Thanks...
+    Yu tomoak-i@@is.aist-nara.ac.jp,
+    Mi hisho@@tasihara.nest.or.jp,
+    and... Miss ARAI Akino(^^;)
+ ----------------------------------------------------*/
+#if defined(NeXT) && (NS_TARGET_MAJOR < 4)/* NeXTSTEP rld functions */
+
+    {
+	unsigned long init_address;
+	char *object_files[2] = {NULL, NULL};
+
+	void (*init_fct)();
+	
+	object_files[0] = file;
+	
+	/* Load object file, if return value ==0 ,  load failed*/
+	if(rld_load(NULL, NULL, object_files, NULL) == 0) {
+	    rb_loaderror("Failed to load %.200s", file);
+	}
+
+	/* lookup the initial function */
+	if(rld_lookup(NULL, buf, &init_address) == 0) {
+	    rb_loaderror("Failed to lookup Init function %.200s", file);
+	}
+
+	 /* Cannot call *init_address directory, so copy this value to
+	    funtion pointer */
+	init_fct = (void(*)())init_address;
+	(*init_fct)();
+	return (void*)init_address;
+    }
+#else/* OPENSTEP dyld functions */
+    {
+	int dyld_result;
+	NSObjectFileImage obj_file; /* handle, but not use it */
+	/* "file" is module file name .
+	   "buf" is pointer to initial function name with "_" . */
+
+	void (*init_fct)();
+
+
+	dyld_result = NSCreateObjectFileImageFromFile(file, &obj_file);
+
+	if (dyld_result != NSObjectFileImageSuccess) {
+	    rb_loaderror("Failed to load %.200s", file);
+	}
+
+	NSLinkModule(obj_file, file, NSLINKMODULE_OPTION_BINDNOW);
+
+	/* lookup the initial function */
+	if(!NSIsSymbolNameDefined(buf)) {
+	    rb_loaderror("Failed to lookup Init function %.200s",file);
+	}	
+	init_fct = NSAddressOfSymbol(NSLookupAndBindSymbol(buf));
+	(*init_fct)();
+
+	return (void*)init_fct;
+    }
+#endif /* rld or dyld */
+#endif
+
+#ifdef __BEOS__
+# define DLN_DEFINED
+    {
+      status_t err_stat;  /* BeOS error status code */
+      image_id img_id;    /* extention module unique id */
+      void (*init_fct)(); /* initialize function for extention module */
+
+      /* load extention module */
+      img_id = load_add_on(file);
+      if (img_id <= 0) {
+	rb_loaderror("Failed to load %.200s", file);
+      }
+      
+      /* find symbol for module initialize function. */
+      /* The Be Book KernelKit Images section described to use
+	 B_SYMBOL_TYPE_TEXT for symbol of function, not
+	 B_SYMBOL_TYPE_CODE. Why ? */
+      /* strcat(init_fct_symname, "__Fv"); */  /* parameter nothing. */
+      /* "__Fv" dont need! The Be Book Bug ? */
+      err_stat = get_image_symbol(img_id, buf,
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+
+      if (err_stat != B_NO_ERROR) {
+	char real_name[MAXPATHLEN];
+
+	strcpy(real_name, buf);
+	strcat(real_name, "__Fv");
+        err_stat = get_image_symbol(img_id, real_name,
+				    B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+      }
+
+      if ((B_BAD_IMAGE_ID == err_stat) || (B_BAD_INDEX == err_stat)) {
+	unload_add_on(img_id);
+	rb_loaderror("Failed to lookup Init function %.200s", file);
+      }
+      else if (B_NO_ERROR != err_stat) {
+	char errmsg[] = "Internal of BeOS version. %.200s (symbol_name = %s)";
+	unload_add_on(img_id);
+	rb_loaderror(errmsg, strerror(err_stat), buf);
+      }
+
+      /* call module initialize function. */
+      (*init_fct)();
+      return (void*)img_id;
+    }
+#endif /* __BEOS__*/
+
+#ifdef __MACOS__
+# define DLN_DEFINED
+    {
+      OSErr err;
+      FSSpec libspec;
+      CFragConnectionID connID;
+      Ptr mainAddr;
+      char errMessage[1024];
+      Boolean isfolder, didsomething;
+      Str63 fragname;
+      Ptr symAddr;
+      CFragSymbolClass class;
+      void (*init_fct)();
+      char fullpath[MAXPATHLEN];
+
+      strcpy(fullpath, file);
+
+      /* resolve any aliases to find the real file */
+      c2pstr(fullpath);
+      (void)FSMakeFSSpec(0, 0, fullpath, &libspec);
+      err = ResolveAliasFile(&libspec, 1, &isfolder, &didsomething);
+      if (err) {
+	  rb_loaderror("Unresolved Alias - %s", file);
+      }
+
+      /* Load the fragment (or return the connID if it is already loaded */
+      fragname[0] = 0;
+      err = GetDiskFragment(&libspec, 0, 0, fragname, 
+			    kLoadCFrag, &connID, &mainAddr,
+			    errMessage);
+      if (err) {
+	  p2cstr(errMessage);
+	  rb_loaderror("%s - %s",errMessage , file);
+      }
+
+      /* Locate the address of the correct init function */
+      c2pstr(buf);
+      err = FindSymbol(connID, buf, &symAddr, &class);
+      if (err) {
+	  rb_loaderror("Unresolved symbols - %s" , file);
+      }
+      init_fct = (void (*)())symAddr;
+      (*init_fct)();
+      return (void*)init_fct;
+    }
+#endif /* __MACOS__ */
+
+#if defined(__VMS)
+#define DLN_DEFINED
+    {
+	void *handle, (*init_fct)();
+	char *fname, *p1, *p2;
+
+	fname = (char *)__alloca(strlen(file)+1);
+	strcpy(fname,file);
+	if (p1 = strrchr(fname,'/'))
+	    fname = p1 + 1;
+	if (p2 = strrchr(fname,'.'))
+	    *p2 = '\0';
+
+	if ((handle = (void*)dlopen(fname, 0)) == NULL) {
+	    error = dln_strerror();
+	    goto failed;
+	}
+
+	if ((init_fct = (void (*)())dlsym(handle, buf)) == NULL) {
+	    error = DLN_ERROR();
+	    dlclose(handle);
+	    goto failed;
+	}
+	/* Call the init code */
+	(*init_fct)();
+	return handle;
+    }
+#endif /* __VMS */
+
+#ifndef DLN_DEFINED
+    rb_notimplement();
+#endif
+
+#endif /* USE_DLN_A_OUT */
+#endif
+#if !defined(_AIX) && !defined(NeXT)
+  failed:
+    rb_loaderror("%s - %s", error, file);
+#endif
+    return 0;			/* dummy return */
+}
+
+static char *dln_find_1();
+
+char *
+dln_find_exe(fname, path)
+    const char *fname;
+    const char *path;
+{
+    if (!path) {
+#if defined(__human68k__)
+	path = getenv("path");
+#else
+	path = getenv("PATH");
+#endif
+    }
+
+    if (!path) {
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__MACOS__)
+	path = "/usr/local/bin;/usr/ucb;/usr/bin;/bin;.";
+#else
+	path = "/usr/local/bin:/usr/ucb:/usr/bin:/bin:.";
+#endif
+    }
+    return dln_find_1(fname, path, 1);
+}
+
+char *
+dln_find_file(fname, path)
+    const char *fname;
+    const char *path;
+{
+#ifndef __MACOS__
+    if (!path) path = ".";
+    return dln_find_1(fname, path, 0);
+#else
+    if (!path) path = ".";
+    return _macruby_path_conv_posix_to_macos(dln_find_1(fname, path, 0));
+#endif
+}
+
+#if defined(__CYGWIN32__)
+const char *
+conv_to_posix_path(win32, posix, len)
+    char *win32;
+    char *posix;
+    int len;
+{
+    char *first = win32;
+    char *p = win32;
+    char *dst = posix;
+
+    for (p = win32; *p; p++)
+	if (*p == ';') {
+	    *p = 0;
+	    cygwin32_conv_to_posix_path(first, posix);
+	    posix += strlen(posix);
+	    *posix++ = ':';
+	    first = p + 1;
+	    *p = ';';
+	}
+    if (len < strlen(first))
+	fprintf(stderr, "PATH length too long: %s\n", first);
+    else
+	cygwin32_conv_to_posix_path(first, posix);
+    return dst;
+}
+#endif
+
+static char fbuf[MAXPATHLEN];
+
+static char *
+dln_find_1(fname, path, exe_flag)
+    char *fname;
+    char *path;
+    int exe_flag;		/* non 0 if looking for executable. */
+{
+    register char *dp;
+    register char *ep;
+    register char *bp;
+    struct stat st;
+#ifdef __MACOS__
+    const char* mac_fullpath;
+#endif
+
+    if (fname[0] == '/') return fname;
+    if (strncmp("./", fname, 2) == 0 || strncmp("../", fname, 3) == 0)
+      return fname;
+    if (exe_flag && strchr(fname, '/')) return fname;
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+    if (fname[0] == '\\') return fname;
+    if (strlen(fname) > 2 && fname[1] == ':') return fname;
+    if (strncmp(".\\", fname, 2) == 0 || strncmp("..\\", fname, 3) == 0)
+      return fname;
+    if (exe_flag && strchr(fname, '\\')) return fname;
+#endif
+
+    for (dp = path;; dp = ++ep) {
+	register int l;
+	int i;
+	int fspace;
+
+	/* extract a component */
+	ep = strchr(dp, PATH_SEP[0]);
+	if (ep == NULL)
+	    ep = dp+strlen(dp);
+
+	/* find the length of that component */
+	l = ep - dp;
+	bp = fbuf;
+	fspace = sizeof fbuf - 2;
+	if (l > 0) {
+	    /*
+	    **	If the length of the component is zero length,
+	    **	start from the current directory.  If the
+	    **	component begins with "~", start from the
+	    **	user's $HOME environment variable.  Otherwise
+	    **	take the path literally.
+	    */
+
+	    if (*dp == '~' && (l == 1 ||
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+			       dp[1] == '\\' || 
+#endif
+			       dp[1] == '/')) {
+		char *home;
+
+		home = getenv("HOME");
+		if (home != NULL) {
+		    i = strlen(home);
+		    if ((fspace -= i) < 0)
+			goto toolong;
+		    memcpy(bp, home, i);
+		    bp += i;
+		}
+		dp++;
+		l--;
+	    }
+	    if (l > 0) {
+		if ((fspace -= l) < 0)
+		    goto toolong;
+		memcpy(bp, dp, l);
+		bp += l;
+	    }
+
+	    /* add a "/" between directory and filename */
+	    if (ep[-1] != '/')
+		*bp++ = '/';
+	}
+
+	/* now append the file name */
+	i = strlen(fname);
+	if ((fspace -= i) < 0) {
+	  toolong:
+	    fprintf(stderr, "openpath: pathname too long (ignored)\n");
+	    *bp = '\0';
+	    fprintf(stderr, "\tDirectory \"%s\"\n", fbuf);
+	    fprintf(stderr, "\tFile \"%s\"\n", fname);
+	    continue;
+	}
+	memcpy(bp, fname, i + 1);
+
+#ifndef __MACOS__
+	if (stat(fbuf, &st) == 0) {
+	    if (exe_flag == 0) return fbuf;
+	    /* looking for executable */
+	    if (!S_ISDIR(st.st_mode) && eaccess(fbuf, X_OK) == 0)
+		return fbuf;
+	}
+#else
+	if (mac_fullpath = _macruby_exist_file_in_libdir_as_posix_name(fbuf)) {
+	    if (exe_flag == 0) return mac_fullpath;
+	    /* looking for executable */
+	    if (stat(mac_fullpath, &st) == 0) {
+		if (!S_ISDIR(st.st_mode) && eaccess(mac_fullpath, X_OK) == 0)
+		    return mac_fullpath;
+	    }
+	}
+#endif
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+	if (exe_flag) {
+	    static const char *extension[] = {
+#if defined(MSDOS)
+		".com", ".exe", ".bat",
+#if defined(DJGPP)
+		".btm", ".sh", ".ksh", ".pl", ".sed",
+#endif
+#elif defined(__EMX__) || defined(NT)
+		".exe", ".com", ".cmd", ".bat",
+/* end of __EMX__ or NT*/
+#else
+		".r", ".R", ".x", ".X", ".bat", ".BAT",
+/* __human68k__ */
+#endif
+		(char *) NULL
+	    };
+	    int j;
+
+	    for (j = 0; extension[j]; j++) {
+		if (fspace < strlen(extension[j])) {
+		    fprintf(stderr, "openpath: pathname too long (ignored)\n");
+		    fprintf(stderr, "\tDirectory \"%.*s\"\n", (int) (bp - fbuf), fbuf);
+		    fprintf(stderr, "\tFile \"%s%s\"\n", fname, extension[j]);
+		    continue;
+		}
+		strcpy(bp + i, extension[j]);
+#ifndef __MACOS__
+		if (stat(fbuf, &st) == 0)
+		    return fbuf;
+#else
+		if (mac_fullpath = _macruby_exist_file_in_libdir_as_posix_name(fbuf))
+		    return mac_fullpath;
+#endif
+	    }
+	}
+#endif /* MSDOS or NT or __human68k__ or __EMX__ */
+	/* if not, and no other alternatives, life is bleak */
+	if (*ep == '\0') {
+	    return NULL;
+	}
+
+	/* otherwise try the next component in the search path */
+    }
+}
+@
+
+
+1.39
+log
+@fix mem leaks (ruby-core:405, ruby-core:407)
+@
+text
+@d5 2
+a6 2
+  $Author: H_Konishi $
+  $Date: 2002/06/25 09:44:57 $
+d93 1
+a93 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(_AIX)
+d1432 1
+a1432 2
+	/*NSIsSymbolNameDefined require function name without "_" */
+	if(NSIsSymbolNameDefined(buf + 1)) {
+d1434 1
+a1434 3
+	}
+
+	/* NSLookupAndBindSymbol require function name with "_" !! */
+@
+
+
+1.38
+log
+@* dln.c: remove definition rb_loaderror().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/06/24 15:23:59 $
+d106 2
+a107 2
+static void
+init_funcname(buf, file)
+d134 1
+d137 12
+d662 1
+d664 4
+a667 1
+    if (syms == NULL) return -1;
+a890 1
+	free (buf);
+a1284 1
+    free(buf);
+a1321 1
+	free(buf);
+a1347 1
+	free(buf);
+a1405 1
+	free(buf);
+a1408 1
+
+a1438 1
+	free(buf);
+a1478 1
+	free(buf);
+a1483 1
+	free(buf);
+a1486 1
+      free(buf);
+a1530 1
+      free(buf);
+@
+
+
+1.37
+log
+@* dln.c: remark definition rb_loaderror().
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/06/17 13:41:53 $
+a28 1
+//void rb_loaderror();
+@
+
+
+1.36
+log
+@* dln.c (dln_load): rb_notimplement takes no argument.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/06/17 01:54:51 $
+d29 1
+a29 1
+void rb_loaderror();
+@
+
+
+1.35
+log
+@* dln.c (dln_load): need to preserve dln_strerror() result,
+  calling other dl family can clear it.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:25 $
+d1565 1
+a1565 1
+    rb_notimplement("dynamic link not supported");
+@
+
+
+1.34
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/03/26 03:01:30 $
+d13 1
+a13 2
+#include "config.h"
+#include "defines.h"
+d1243 5
+d1263 1
+d1278 1
+d1303 1
+d1310 1
+d1549 1
+d1554 1
+d1572 1
+a1572 1
+    rb_loaderror("%s - %s", dln_strerror(), file);
+@
+
+
+1.33
+log
+@* bignum.c (rb_quad_pack): get rid of escape sequences.
+* dln.c (dln_load, __VMS): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/25 02:09:16 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.32
+log
+@* dln.c (dln_argv0): unused unless USE_DLN_A_OUT.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/22 07:26:35 $
+d1538 1
+a1538 1
+	    *p2 = '(J\(B0';
+@
+
+
+1.31
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/03/06 09:00:32 $
+d27 1
+d29 1
+@
+
+
+1.30
+log
+@* dln.c (dln_load): use LoadLibrary instead of LoadLibraryEx.
+@
+text
+@d5 2
+a6 2
+  $Author: akr $
+  $Date: 2002/02/28 22:05:01 $
+d51 1
+a51 1
+#ifdef NT
+d75 5
+d1524 27
+@
+
+
+1.29
+log
+@* dln.c (dln_load): fix typo.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/08/24 05:44:20 $
+d1251 1
+a1251 2
+    if ((handle =
+	LoadLibraryExA(winfile, NULL, LOAD_WITH_ALTERED_SEARCH_PATH)) == NULL) {
+@
+
+
+1.28
+log
+@* parse.y (expr_value, arg_value, primary_value): value_expr()
+  check in place.
+
+* eval.c (block_pass): "&nil" should clear block given.
+
+* dir.c (push_braces): remove MAXPATHLEN dependency.
+
+* dir.c (dir_s_globd): ditto.
+
+* dln.c (init_funcname): ditto.
+
+* dln.c (load_1): ditto.
+
+* dln.c (dln_load): ditto.
+
+* configure.in: add GNU/Hurd switches.
+
+* pack.c (pack_pack): allows comment in template strings.
+
+* pack.c (pack_unpack): ditto.
+@
+text
+@d1321 1
+a1321 1
+	free(buf)
+@
+
+
+1.27
+log
+@* dln.c (dln_strerror): fix a bug that sometimes made null message on
+  win32 (Tietew <tietew@@tietew.net>'s patch).
+
+* win32/win32.c (mystrerror): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/14 15:17:18 $
+d17 4
+d103 1
+a103 1
+    char *buf;
+d116 9
+a124 2
+    snprintf(buf, MAXPATHLEN, FUNCNAME_PATTERN, slash + 1);
+    for (p = buf; *p; p++) {         /* Delete suffix if it exists */
+a635 1
+    char buf[MAXPATHLEN];
+d848 1
+d854 1
+a854 1
+	init_funcname(buf, need_init);
+d869 1
+d1241 1
+a1241 1
+    char buf[MAXPATHLEN];
+d1246 1
+a1246 1
+    init_funcname(buf, file);
+d1259 2
+d1272 1
+a1272 1
+    char buf[MAXPATHLEN];
+d1274 1
+a1274 1
+    init_funcname(buf, file);
+d1294 3
+a1296 1
+	if ((init_fct = (void(*)())dlsym(handle, buf)) == NULL) {
+d1302 1
+d1321 1
+d1380 1
+d1394 1
+a1394 1
+	   "buf" is initial function name with "_" . */
+d1415 1
+d1456 1
+d1462 1
+d1466 1
+d1511 1
+a1514 1
+	
+@
+
+
+1.26
+log
+@* regex.c (re_search): should consider reverse search.
+
+* dir.c (dir_s_chdir): warn only when invoked from multiple
+  threads or block is not given.
+
+* object.c (rb_convert_type): should use rb_rescue(), not rb_rescue2().
+
+* range.c (range_init): ditto.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* eval.c (rb_f_require): revamp for simpler implementation.
+
+* file.c (rb_find_file_noext): use String object, instead of
+  passing char* around.
+
+* file.c (rb_find_file): ditto.
+
+* dln.c (dln_load): should use NSLINKMODULE_OPTION_BINDNOW.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:21 $
+d1156 1
+a1156 1
+	FORMAT_MESSAGE_FROM_SYSTEM,
+@
+
+
+1.25
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:33 $
+d1386 1
+a1386 1
+	NSLinkModule(obj_file, file, TRUE);
+@
+
+
+1.24
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/16 09:05:49 $
+d90 1
+a90 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && !defined(__ELF__)) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.23
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:10 $
+d53 4
+a1588 1
+#ifndef __MACOS__
+d1590 1
+a1590 1
+#else
+d1675 2
+a1676 1
+	    if (eaccess(fbuf, X_OK) == 0) return fbuf;
+d1682 4
+a1685 1
+	    if (eaccess(mac_fullpath, X_OK) == 0) return mac_fullpath;
+@
+
+
+1.22
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/26 05:11:18 $
+d1504 1
+@
+
+
+1.21
+log
+@* ext/Win32API/Win32API.c: remove Init_win32api().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/03/13 05:45:08 $
+d1217 1
+a1217 1
+void
+d1245 1
+a1245 1
+    return;
+d1251 1
+a1251 1
+    return;
+d1277 1
+d1282 1
+a1282 1
+	return;
+d1308 1
+a1308 1
+	return;
+d1325 1
+a1325 1
+	return;
+d1364 1
+a1364 1
+	return;
+d1394 1
+a1394 1
+	return;
+d1442 1
+a1442 1
+      return;
+d1490 1
+a1490 1
+      return;
+@
+
+
+1.20
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/26 05:29:00 $
+a1236 1
+        printf("LoadLibraryExA: %s\n", winfile);
+d1241 1
+a1241 2
+        printf("GetProcAddress %s\n", buf);
+	goto failed;
+@
+
+
+1.19
+log
+@* eval.c (proc_call): should not modify ruby_block->frame.iter
+  based on ruby_frame->iter altered by PUSH_ITER().
+
+* eval.c (rb_thread_fd_close): should save current context before
+  raising exception.
+
+* io.c (set_stdin): preserve original stdin.
+
+* io.c (set_outfile): preserve original stdout/stderr.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d87 1
+a87 1
+#  define FUNCNAME_PATTERN "_Init_%.200s"
+d89 1
+a89 1
+#  define FUNCNAME_PATTERN "Init_%.200s"
+d1197 1
+a1197 1
+    snprintf(errbuf, 1024, "load failed - %.200s ", pathname);
+@
+
+
+1.18
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/08 09:19:16 $
+d1207 1
+a1207 1
+	while (ISDIGIT(*message[i])) message[i]++; 
+@
+
+
+1.17
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_options): new method to give an option values.
+
+* parse.y (cond0): disable special treating of integer literal in
+  conditional unless option -e is supplied.  changes current
+  behavior.  experimental.
+
+* parse.y (cond0): give warning for string/integer literals and
+  dot operators in conditionals unless option -e is supplied.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+
+* error.c (Init_Exception): make Interrupt a subclass of
+  SignalException.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:16 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.16
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/10/10 07:20:10 $
+d1207 1
+a1207 1
+	while (isdigit(*message[i])) message[i]++; 
+@
+
+
+1.15
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/08/07 05:01:47 $
+d1169 1
+a1169 1
+#if defined(_AIX)
+d1313 1
+a1313 1
+#if defined(_AIX)
+@
+
+
+1.15.2.1
+log
+@* pack.c (pack_pack): template "m2" or "u2" caused inifinite loop.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/10/10 07:20:10 $
+d1169 1
+a1169 1
+#if defined(_AIX) && ! defined(_IA64)
+d1313 1
+a1313 1
+#if defined(_AIX) && ! defined(_IA64)
+@
+
+
+1.15.2.2
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/01/09 07:29:03 $
+d1207 1
+a1207 1
+	while (ISDIGIT(*message[i])) message[i]++; 
+@
+
+
+1.15.2.3
+log
+@* ext/Win32API/Win32API.c: remove Init_win32api().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/08 09:17:56 $
+d1237 1
+d1242 2
+a1243 1
+	rb_loaderror("%s - %s\n%s", dln_strerror(), buf, file);
+@
+
+
+1.15.2.4
+log
+@preview2
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/26 05:11:03 $
+d1217 1
+a1217 1
+void*
+d1245 1
+a1245 1
+    return handle;
+d1251 1
+a1251 1
+    return 0;
+a1276 1
+	    dlclose(handle);
+d1281 1
+a1281 1
+	return handle;
+d1307 1
+a1307 1
+	return (void*)lib;
+d1324 1
+a1324 1
+	return (void*)init_fct;
+d1363 1
+a1363 1
+	return (void*)init_address;
+d1393 1
+a1393 1
+	return (void*)init_fct;
+d1441 1
+a1441 1
+      return (void*)img_id;
+d1489 1
+a1489 1
+      return (void*)init_fct;
+@
+
+
+1.15.2.5
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/04/17 15:35:04 $
+d1207 1
+a1207 1
+	while (isdigit(*message[i])) message[i]++; 
+@
+
+
+1.15.2.6
+log
+@010526
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/15 08:49:20 $
+d1671 1
+a1671 1
+	    if (!S_ISDIR(st.st_mode) && eaccess(fbuf, X_OK) == 0) return fbuf;
+@
+
+
+1.15.2.7
+log
+@* dln.c: #define S_ISDIR if not defined.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/25 21:10:58 $
+a51 4
+
+#ifndef S_ISDIR
+#   define S_ISDIR(m) ((m & S_IFMT) == S_IFDIR)
+#endif
+@
+
+
+1.15.2.8
+log
+@* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/05/30 23:35:05 $
+d90 1
+a90 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && !defined(__ELF__)) || defined(__BORLANDC__) || (defined(__FreeBSD__) && !defined(__ELF__)) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.15.2.9
+log
+@* eval.c: wrapper modifies updated to 1.7 changes.
+
+* object.c (rb_obj_dup): should free generic_ivar if original owns
+  them.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/06/29 08:32:51 $
+d1386 1
+a1386 1
+	NSLinkModule(obj_file, file, NSLINKMODULE_OPTION_BINDNOW);
+@
+
+
+1.15.2.10
+log
+@* dln.c (dln_strerror): fix a bug that sometimes made null message on
+  win32 (Tietew <tietew@@tietew.net>'s patch).
+
+* win32/win32.c (mystrerror): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/13 05:50:03 $
+d1156 1
+a1156 1
+	FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+@
+
+
+1.15.2.11
+log
+@* dln.c (dln_load): use LoadLibrary instead of LoadLibraryEx.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/08/24 05:45:55 $
+d1239 2
+a1240 1
+    if ((handle = LoadLibrary(winfile)) == NULL) {
+@
+
+
+1.15.2.12
+log
+@* dln.c (dln_argv0): unused unless USE_DLN_A_OUT.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/03/06 09:00:08 $
+a22 1
+#ifdef USE_DLN_A_OUT
+a23 1
+#endif
+@
+
+
+1.15.2.13
+log
+@* dln.c (dln_load): need to preserve dln_strerror() result,
+  calling other dl family can clear it.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/25 02:37:07 $
+d13 2
+a14 1
+#include "ruby.h"
+a1226 5
+#if !defined(_AIX) && !defined(NeXT)
+    const char *error = 0;
+#define DLN_ERROR() (error = dln_strerror(), strcpy(ALLOCA_N(char, strlen(error) + 1), error))
+#endif
+
+a1241 1
+	error = dln_strerror();
+a1253 1
+	error = dln_strerror();
+a1277 1
+	    error = dln_strerror();
+a1281 1
+	    error = DLN_ERROR();
+d1507 1
+a1507 1
+    rb_loaderror("%s - %s", error, file);
+@
+
+
+1.15.2.14
+log
+@* dln.c (dln_load): rb_notimplement takes no argument.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/06/17 01:54:44 $
+d1508 1
+a1508 1
+    rb_notimplement();
+@
+
+
+1.15.2.15
+log
+@* dln.c: remark definition rb_loaderror().
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/06/17 13:42:15 $
+d25 1
+a25 1
+//void rb_loaderror();
+@
+
+
+1.15.2.16
+log
+@* dln.c: remove definition rb_loaderror().
+@
+text
+@d5 2
+a6 2
+  $Author: H_Konishi $
+  $Date: 2002/06/24 15:26:17 $
+d25 1
+@
+
+
+1.15.2.17
+log
+@* hash.c, eval.c: Use (*_NSGetEnviron()) instead of environ on
+  Darwin for namespace cleanness.  [ruby-core:00537]
+
+* dln.c (dln_load): Fix Darwin support that has been disabled and
+  switch to using it on Darwin instead of the system dlopen().
+  [ruby-core:00541]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/06/25 09:43:24 $
+d84 1
+a84 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(_AIX) && !defined(__APPLE__)
+d1397 2
+a1398 1
+	if(!NSIsSymbolNameDefined(buf)) {
+d1400 3
+a1402 1
+	}	
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/27 09:49:14 $
+a1231 3
+#ifdef __CYGWIN32__
+    cygwin32_conv_to_win32_path(file, winfile);
+#else
+a1232 1
+#endif
+a1239 7
+
+#ifdef __CYGWIN32__
+    init_fct = (void(*)())GetProcAddress(handle, "impure_setup");
+
+    if (init_fct)
+	init_fct(_impure_ptr);
+#endif
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/06/07 15:49:36 $
+d16 6
+@
+
+
+1.12
+log
+@2000-06-08
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/05/24 04:33:54 $
+d125 6
+a130 6
+#define DLN_ECONFL	201	/* Symbol name conflict */
+#define DLN_ENOINIT	202	/* No inititalizer given */
+#define DLN_EUNDEF	203	/* Undefine symbol remains */
+#define DLN_ENOTLIB	204	/* Not a library file */
+#define DLN_EBADLIB	205	/* Malformed library file */
+#define DLN_EINIT	206	/* Not initialized */
+a133 1
+#include "st.h"
+d144 3
+@
+
+
+1.11
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:07:33 $
+d74 1
+a74 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(__CYGWIN32__) && !defined(_AIX)
+d1106 1
+a1106 1
+#ifdef _WIN32
+d1138 1
+a1138 1
+#ifdef _WIN32
+d1213 1
+a1213 1
+#ifdef _WIN32
+@
+
+
+1.10
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/10 02:58:32 $
+d884 1
+a884 1
+    int offset;
+@
+
+
+1.9
+log
+@2000-05-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:52:52 $
+d18 1
+@
+
+
+1.8
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:13 $
+d1214 1
+a1214 1
+    char winfile[255];
+d1218 2
+d1426 1
+@
+
+
+1.7
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:27 $
+d101 1
+a101 1
+    sprintf(buf, FUNCNAME_PATTERN, slash + 1);
+d370 4
+d612 1
+a612 1
+    char buf[256];
+d1188 1
+a1188 1
+    sprintf(errbuf, "load failed - %.200s ", pathname);
+d1414 5
+a1418 5
+	  /* The Be Book KernelKit Images section described to use
+		 B_SYMBOL_TYPE_TEXT for symbol of function, not
+		 B_SYMBOL_TYPE_CODE. Why ? */
+	  /* strcat(init_fct_symname, "__Fv"); */  /* parameter nothing. */
+	  /* "__Fv" dont need! The Be Book Bug ? */
+d1423 3
+a1425 3
+	    char real_name[1024];
+	    strcpy(real_name, buf);
+	    strcat(real_name, "__Fv");
+d1427 1
+a1427 1
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+@
+
+
+1.6
+log
+@2000-03-07
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/02/01 03:11:59 $
+d11 1
+a11 1
+************************************************/
+@
+
+
+1.5
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:58 $
+d40 1
+a40 5
+#ifndef NT
+# ifndef USE_CWGUSI
+#  include <sys/file.h>
+# endif
+#else
+@
+
+
+1.4
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/10 08:54:55 $
+d83 1
+a83 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.3
+log
+@dln.c OpenBSD
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/06 06:48:09 $
+d83 1
+a83 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.2.2.1
+log
+@dln.c OpenBSD
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d83 1
+a83 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.2.2.2
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/10 08:54:41 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.3
+log
+@2000-01-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:23:53 $
+d83 1
+a83 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && !defined(__ELF__)) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(__OpenBSD__) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+@
+
+
+1.2.2.4
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/24 03:46:05 $
+d105 1
+a105 1
+    snprintf(buf, MAXPATHLEN, FUNCNAME_PATTERN, slash + 1);
+a373 4
+	    if (p-buf >= MAXPATHLEN) {
+		dln_errno = ENAMETOOLONG;
+		return -1;
+	    }
+d1188 1
+a1188 1
+    snprintf(errbuf, 1024, "load failed - %.200s ", pathname);
+d1414 5
+a1418 5
+      /* The Be Book KernelKit Images section described to use
+	 B_SYMBOL_TYPE_TEXT for symbol of function, not
+	 B_SYMBOL_TYPE_CODE. Why ? */
+      /* strcat(init_fct_symname, "__Fv"); */  /* parameter nothing. */
+      /* "__Fv" dont need! The Be Book Bug ? */
+d1423 5
+a1427 5
+	  char real_name[MAXPATHLEN];
+	  strcpy(real_name, buf);
+	  strcat(real_name, "__Fv");
+	  err_stat = get_image_symbol(img_id, real_name,
+				      B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+@
+
+
+1.2.2.5
+log
+@2000-06-05
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:50:06 $
+d887 1
+a887 1
+    long offset;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 01:28:23 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+a12 4
+#ifdef _AIX
+#pragma alloca
+#endif
+
+d19 4
+d27 7
+d37 1
+d41 3
+a43 1
+#include <sys/file.h>
+d60 2
+a61 4
+#if defined (HAVE_STRING_H)
+#  include <string.h>
+#else
+#  include <strings.h>
+d64 6
+a69 2
+#ifndef NT
+char *strdup();
+d71 2
+a72 1
+char *getenv();
+d77 1
+a77 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT)
+d83 1
+a83 1
+# if defined(__hp9000s300) || defined(__NetBSD__) || defined(__BORLANDC__) || defined(__FreeBSD__) || defined(NeXT)
+d92 2
+a93 1
+    char *buf, *file;
+d99 3
+d103 1
+d106 1
+a106 1
+    for (p = buf; *p; p++) {         /* Delete suffix it it exists */
+d321 1
+a321 1
+    char *prog;
+d468 1
+a468 1
+    char *name;
+d498 1
+a498 1
+    char *name;
+d568 1
+a568 1
+    char *name;
+d601 1
+a601 1
+    char *need_init;
+d836 1
+a836 1
+		if (strcmp(name+1, "libs_to_be_linked") == 0) {
+d879 1
+a879 1
+    char *key;
+d891 1
+a891 1
+    int str_index;
+d895 1
+a895 1
+char *dln_library_path = DLN_DEFAULT_LIB_PATH;
+d899 1
+a899 1
+    char *lib;
+d926 1
+a926 1
+    /* then variable dln_library_path. */
+d929 1
+a929 1
+    if (path == NULL) path = dln_library_path;
+d958 1
+a958 1
+	    char *name = name_base + base->str_index;
+d1036 1
+a1036 1
+    char *file;
+d1062 1
+a1062 1
+    char *name;
+d1082 1
+a1082 1
+#ifdef hpux
+d1087 1
+a1087 1
+#ifdef _AIX
+a1089 1
+#include <string.h>	/* for strerror()	*/
+d1094 13
+a1106 1
+/*#include <mach-o/rld.h>*/
+d1109 1
+a1109 1
+static char *
+d1136 21
+d1160 1
+a1160 1
+#ifdef _AIX
+d1162 1
+a1162 1
+aix_loaderror(char *pathname)
+d1194 1
+a1194 1
+	for (j=0; j<LOAD_ERRTAB_LEN ; j++) {
+d1198 1
+a1198 1
+	while (isdigit(*message[i])) message[i]++ ; 
+d1203 1
+a1203 1
+    LoadError(errbuf);
+d1210 1
+a1210 1
+    char *file;
+d1212 37
+a1264 1
+	int len = strlen(file);
+d1266 6
+a1271 6
+# ifndef RTLD_LAZY
+#  define RTLD_LAZY 1
+# endif
+# ifndef RTLD_GLOBAL
+#  define RTLD_GLOBAL 0
+# endif
+d1274 1
+a1274 1
+	if ((handle = dlopen(file, RTLD_LAZY|RTLD_GLOBAL)) == NULL) {
+d1287 1
+a1287 1
+#ifdef hpux
+d1297 2
+a1298 1
+	    rb_sys_fail(file);
+a1303 1
+		extern int errno;
+d1305 1
+a1305 1
+		rb_sys_fail(file);
+d1313 1
+a1313 1
+#ifdef _AIX
+d1318 1
+a1318 1
+	init_fct = (void(*)())load(file, 1, 0);
+d1322 3
+d1330 1
+a1330 1
+#ifdef NeXT
+d1340 2
+d1352 1
+a1352 1
+	    LoadError("Failed to load %.200s", file);
+d1357 1
+a1357 1
+	    LoadError("Failed to lookup Init function %.200s",file);
+d1365 31
+a1395 1
+	return ;
+d1397 1
+d1400 94
+d1499 1
+d1502 1
+a1502 1
+    LoadError("%s - %s", dln_strerror(), file);
+d1510 2
+a1511 2
+    char *fname;
+    char *path;
+d1513 1
+a1514 1
+    if (!path)
+a1515 2
+    if (!path)
+	path = "/usr/local/bin;/usr/usb;/usr/bin;/bin;.";
+d1517 1
+a1517 2
+    if (!path) path = getenv("PATH");
+    if (!path) path = "/usr/local/bin:/usr/ucb:/usr/bin:/bin:.";
+d1519 9
+d1533 2
+a1534 2
+    char *fname;
+    char *path;
+d1536 1
+d1539 4
+d1545 28
+d1584 1
+d1586 3
+d1593 2
+a1594 1
+#if defined(MSDOS) || defined(NT) || defined(__human68k__)
+d1596 1
+a1596 1
+    if (fname[1] == ':') return fname;
+d1599 1
+d1608 1
+a1608 5
+#if !defined(MSDOS)  && !defined(NT) && !defined(__human68k__)
+	ep = strchr(dp, ':');
+#else
+	ep = strchr(dp, ';');
+#endif
+d1625 5
+a1629 1
+	    if (*dp == '~' && (l == 1 || dp[1] == '/')) {
+d1667 1
+d1673 8
+a1680 1
+#if defined(MSDOS) || defined(NT) || defined(__human68k__)
+d1688 3
+d1693 1
+d1707 1
+d1710 4
+d1716 1
+a1716 1
+#endif /* MSDOS or NT or __human68k__ */
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@a26 6
+#ifdef HAVE_STRING_H
+# include <string.h>
+#else
+# include <strings.h>
+#endif
+
+d50 6
+d58 1
+d1072 1
+a1079 4
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
+a1106 14
+
+#ifdef _WIN32
+    static char message[1024];
+    FormatMessage(
+	FORMAT_MESSAGE_FROM_SYSTEM,
+	NULL,
+	GetLastError(),
+	MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US),
+	message,
+	sizeof message,
+	NULL);
+
+    return message;
+#endif
+a1161 37
+#ifdef _WIN32
+    HINSTANCE handle;
+    char winfile[255];
+    void (*init_fct)();
+    char buf[MAXPATHLEN];
+
+    /* Load the file as an object one */
+    init_funcname(buf, file);
+
+#ifdef __CYGWIN32__
+    cygwin32_conv_to_win32_path(file, winfile);
+#else
+    strcpy(winfile, file);
+#endif
+
+    /* Load file */
+    if ((handle =
+	LoadLibraryExA(winfile, NULL, LOAD_WITH_ALTERED_SEARCH_PATH)) == NULL) {
+        printf("LoadLibraryExA\n");
+	goto failed;
+    }
+
+#ifdef __CYGWIN32__
+    init_fct = (void(*)())GetProcAddress(handle, "impure_setup");
+
+    if (init_fct)
+	init_fct(_impure_ptr);
+#endif
+
+    if ((init_fct = (void(*)())GetProcAddress(handle, buf)) == NULL) {
+        printf("GetProcAddress %s\n", buf);
+	goto failed;
+    }
+    /* Call the init code */
+    (*init_fct)();
+    return;
+#else
+d1178 1
+a1282 1
+#endif
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/22 09:01:48 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d13 4
+a22 4
+#ifdef _AIX
+#pragma alloca
+#endif
+
+d39 1
+a39 3
+# ifndef USE_CWGUSI
+#  include <sys/file.h>
+# endif
+a60 10
+#ifdef __MACOS__
+# include <TextUtils.h>
+# include <CodeFragments.h>
+# include <Aliases.h>
+#endif
+
+#ifdef __BEOS__
+# include <image.h>
+#endif
+
+d63 1
+a63 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(__CYGWIN32__) && !defined(_AIX)
+d69 1
+a69 1
+# if defined(__hp9000s300) || defined(__NetBSD__) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__)
+a83 3
+#ifdef __MACOS__
+	if (*p == ':') slash = p;
+#else
+a84 1
+#endif
+d410 1
+a410 1
+underb_f_print(key, value)
+d421 1
+a421 1
+    st_foreach(undef_tbl, underb_f_print, NULL);
+d817 1
+a817 1
+		if (strcmp(name+1, "dln_libs_to_be_linked") == 0) {
+d872 1
+a872 1
+    int rb_str_index;
+d876 1
+a876 1
+char *dln_librrb_ary_path = DLN_DEFAULT_LIB_PATH;
+d907 1
+a907 1
+    /* then variable dln_librrb_ary_path. */
+d910 1
+a910 1
+    if (path == NULL) path = dln_librrb_ary_path;
+d939 1
+a939 1
+	    char *name = name_base + base->rb_str_index;
+d1068 1
+a1068 1
+#if defined(_AIX)
+d1075 1
+a1075 5
+#if NS_TARGET_MAJOR < 4
+#include <mach-o/rld.h>
+#else
+#include <mach-o/dyld.h>
+#endif
+a1111 3
+    int error = GetLastError();
+    char *p = message;
+    p += sprintf(message, "%d: ", error);
+d1115 4
+a1118 4
+	error,
+	MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+	p,
+	sizeof message - strlen(message),
+a1120 4
+    for (p = message; *p; p++) {
+	if (*p == '\n' || *p == '\r')
+	    *p = ' ';
+    }
+d1126 1
+a1126 1
+#if defined(_AIX)
+d1169 1
+a1169 1
+    rb_loaderror(errbuf);
+d1196 1
+a1196 1
+        printf("LoadLibraryExA: %s\n", winfile);
+d1232 6
+a1237 6
+#ifndef RTLD_LAZY
+# define RTLD_LAZY 1
+#endif
+#ifndef RTLD_GLOBAL
+# define RTLD_GLOBAL 0
+#endif
+d1240 1
+a1240 1
+	if ((handle = (void*)dlopen(file, RTLD_LAZY|RTLD_GLOBAL)) == NULL) {
+d1263 1
+a1263 2
+	    extern int errno;
+	    rb_loaderror("%s - %s", strerror(errno), file);
+d1269 1
+d1271 1
+a1271 1
+		rb_loaderror("%s - %s", strerror(ENOSYM), file);
+d1279 1
+a1279 1
+#if defined(_AIX)
+a1302 1
+#if NS_TARGET_MAJOR < 4 /* NeXTSTEP rld functions */
+d1313 1
+a1313 1
+	    rb_loaderror("Failed to load %.200s", file);
+d1318 1
+a1318 1
+	    rb_loaderror("Failed to lookup Init function %.200s", file);
+a1327 31
+#else/* OPENSTEP dyld functions */
+    {
+	int dyld_result ;
+	NSObjectFileImage obj_file ; /* handle, but not use it */
+	/* "file" is module file name .
+	   "buf" is initial function name with "_" . */
+
+	void (*init_fct)();
+
+
+	dyld_result = NSCreateObjectFileImageFromFile( file, &obj_file );
+
+	if (dyld_result != NSObjectFileImageSuccess) {
+	    rb_loaderror("Failed to load %.200s", file);
+	}
+
+	NSLinkModule(obj_file, file, TRUE);
+
+	/* lookup the initial function */
+	/*NSIsSymbolNameDefined require function name without "_" */
+	if( NSIsSymbolNameDefined( buf + 1 ) ) {
+	    rb_loaderror("Failed to lookup Init function %.200s",file);
+	}
+
+	/* NSLookupAndBindSymbol require function name with "_" !! */
+	init_fct = NSAddressOfSymbol( NSLookupAndBindSymbol( buf ) );
+	(*init_fct)();
+
+	return ;
+    }
+#endif /* rld or dyld */
+a1329 94
+#ifdef __BEOS__
+# define DLN_DEFINED
+    {
+      status_t err_stat;  /* BeOS error status code */
+      image_id img_id;    /* extention module unique id */
+      void (*init_fct)(); /* initialize function for extention module */
+
+      /* load extention module */
+      img_id = load_add_on(file);
+      if (img_id <= 0) {
+	rb_loaderror("Failed to load %.200s", file);
+      }
+      
+      /* find symbol for module initialize function. */
+	  /* The Be Book KernelKit Images section described to use
+		 B_SYMBOL_TYPE_TEXT for symbol of function, not
+		 B_SYMBOL_TYPE_CODE. Why ? */
+	  /* strcat(init_fct_symname, "__Fv"); */  /* parameter nothing. */
+	  /* "__Fv" dont need! The Be Book Bug ? */
+      err_stat = get_image_symbol(img_id, buf,
+				  B_SYMBOL_TYPE_TEXT, &init_fct);
+
+      if (err_stat != B_NO_ERROR) {
+	    char real_name[1024];
+	    strcpy(real_name, buf);
+	    strcat(real_name, "__Fv");
+        err_stat = get_image_symbol(img_id, real_name,
+				  B_SYMBOL_TYPE_TEXT, &init_fct);
+      }
+
+      if ((B_BAD_IMAGE_ID == err_stat) || (B_BAD_INDEX == err_stat)) {
+	unload_add_on(img_id);
+	rb_loaderror("Failed to lookup Init function %.200s", file);
+      }
+      else if (B_NO_ERROR != err_stat) {
+	char errmsg[] = "Internal of BeOS version. %.200s (symbol_name = %s)";
+	unload_add_on(img_id);
+	rb_loaderror(errmsg, strerror(err_stat), buf);
+      }
+
+      /* call module initialize function. */
+      (*init_fct)();
+      return;
+    }
+#endif /* __BEOS__*/
+
+#ifdef __MACOS__
+# define DLN_DEFINED
+    {
+      OSErr err;
+      FSSpec libspec;
+      CFragConnectionID connID;
+      Ptr mainAddr;
+      char errMessage[1024];
+      Boolean isfolder, didsomething;
+      Str63 fragname;
+      Ptr symAddr;
+      CFragSymbolClass class;
+      void (*init_fct)();
+      char fullpath[MAXPATHLEN];
+
+      strcpy(fullpath, file);
+
+      /* resolve any aliases to find the real file */
+      c2pstr(fullpath);
+      (void)FSMakeFSSpec(0, 0, fullpath, &libspec);
+      err = ResolveAliasFile(&libspec, 1, &isfolder, &didsomething);
+      if ( err ) {
+	rb_loaderror("Unresolved Alias - %s", file);
+      }
+
+      /* Load the fragment (or return the connID if it is already loaded */
+      fragname[0] = 0;
+      err = GetDiskFragment(&libspec, 0, 0, fragname, 
+			    kLoadCFrag, &connID, &mainAddr,
+			    errMessage);
+      if ( err ) {
+	p2cstr(errMessage);
+	rb_loaderror("%s - %s",errMessage , file);
+      }
+
+      /* Locate the address of the correct init function */
+      c2pstr(buf);
+      err = FindSymbol(connID, buf, &symAddr, &class);
+      if ( err ) {
+	rb_loaderror("Unresolved symbols - %s" , file);
+      }
+	
+      init_fct = (void (*)())symAddr;
+      (*init_fct)();
+      return;
+    }
+#endif /* __MACOS__ */
+
+d1338 1
+a1338 1
+    rb_loaderror("%s - %s", dln_strerror(), file);
+a1348 1
+    if (!path) {
+d1350 1
+d1352 2
+d1355 2
+a1356 9
+	path = getenv("PATH");
+#endif
+    }
+
+    if (!path) {
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__MACOS__)
+	path = "/usr/local/bin;/usr/ucb;/usr/bin;/bin;.";
+#else
+	path = "/usr/local/bin:/usr/ucb:/usr/bin:/bin:.";
+a1357 1
+    }
+a1369 24
+#if defined(__CYGWIN32__)
+char *
+conv_to_posix_path(win32, posix)
+    char *win32;
+    char *posix;
+{
+    char *first = win32;
+    char *p = win32;
+    char *dst = posix;
+
+    for (p = win32; *p; p++)
+	if (*p == ';') {
+	    *p = 0;
+	    cygwin32_conv_to_posix_path(first, posix);
+	    posix += strlen(posix);
+	    *posix++ = ':';
+	    first = p + 1;
+	    *p = ';';
+	}
+    cygwin32_conv_to_posix_path(first, posix);
+    return dst;
+}
+#endif
+
+a1382 6
+#if defined(__CYGWIN32__)
+    char rubypath[MAXPATHLEN];
+    conv_to_posix_path(path, rubypath);
+    path = rubypath;
+#endif
+#ifndef __MACOS__
+a1385 1
+    if (exe_flag && strchr(fname, '/')) return fname;
+d1388 1
+a1388 1
+    if (strlen(fname) > 2 && fname[1] == ':') return fname;
+a1390 1
+    if (exe_flag && strchr(fname, '\\')) return fname;
+a1391 1
+#endif /* __MACOS__ */
+d1399 5
+a1403 1
+	ep = strchr(dp, RUBY_PATH_SEP[0]);
+d1420 1
+a1420 5
+	    if (*dp == '~' && (l == 1 ||
+#if defined(MSDOS) || defined(NT) || defined(__human68k__)
+			       dp[1] == '\\' || 
+#endif
+			       dp[1] == '/')) {
+a1442 3
+#ifdef __MACOS__
+		*bp++ = ':';
+#else
+a1443 1
+#endif
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+a66 1
+# include "macruby_private.h"
+a1524 1
+#ifndef __MACOS__
+a1526 4
+#else
+    if (!path) path = ".";
+    return _macruby_path_conv_posix_to_macos(dln_find_1(fname, path, 0));
+#endif
+a1563 1
+#ifndef __MACOS__
+a1564 3
+#else
+    const char* mac_fullpath;
+#endif
+d1571 1
+d1583 1
+d1635 3
+d1639 1
+a1653 1
+#ifndef __MACOS__
+a1658 7
+#else
+	if (mac_fullpath = _macruby_exist_file_in_libdir_as_posix_name(fbuf)) {
+	    if (exe_flag == 0) return mac_fullpath;
+	    /* looking for executable */
+	    if (eaccess(mac_fullpath, X_OK) == 0) return mac_fullpath;
+	}
+#endif
+a1681 1
+#ifndef __MACOS__
+a1683 4
+#else
+		if (mac_fullpath = _macruby_exist_file_in_libdir_as_posix_name(fbuf))
+		    return mac_fullpath;
+#endif
+@
+
+
+1.1.1.3.2.2
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:10 $
+d82 1
+a82 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__)
+@
+
+
+1.1.1.3.2.3
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:18 $
+d1410 1
+a1410 1
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+d1417 1
+a1417 1
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+@
+
+
+1.1.1.3.2.4
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:18 $
+a58 1
+# ifndef strdup
+a59 1
+# endif
+d91 1
+a91 2
+    char *buf;
+    char *file;
+d319 1
+a319 1
+    const char *prog;
+d427 1
+a427 1
+undef_print(key, value)
+d438 1
+a438 1
+    st_foreach(undef_tbl, undef_print, NULL);
+d466 1
+a466 1
+    const char *name;
+d566 1
+a566 1
+    const char *name;
+d599 1
+a599 1
+    const char *need_init;
+d877 1
+a877 1
+    const char *key;
+d897 1
+a897 1
+    const char *lib;
+d1034 1
+a1034 1
+    const char *file;
+d1060 1
+a1060 1
+    const char *name;
+d1103 1
+a1103 1
+static const char *
+d1156 1
+a1156 1
+aix_loaderror(const char *pathname)
+d1204 1
+a1204 1
+    const char *file;
+d1500 2
+a1501 2
+    const char *fname;
+    const char *path;
+d1523 2
+a1524 2
+    const char *fname;
+    const char *path;
+d1536 1
+a1536 1
+const char *
+d1538 2
+a1539 2
+    const char *win32;
+    const char *posix;
+@
+
+
+1.1.1.3.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:24 $
+d1588 1
+a1588 1
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+d1620 1
+a1620 1
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+d1674 1
+a1674 1
+#if defined(MSDOS) || defined(NT) || defined(__human68k__) || defined(__EMX__)
+a1682 2
+#if defined(__EMX__)
+		".exe", ".com", ".cmd", ".bat",
+a1683 1
+#endif /*__EMX__*/
+d1706 1
+a1706 1
+#endif /* MSDOS or NT or __human68k__ or __EMX__ */
+@
+
+
+1.1.1.3.2.6
+log
+@to open CVS
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:37 $
+d59 3
+a1157 29
+static void *
+aix_findmain()
+{
+    struct ld_info *lp;
+    char *buf;
+    int size = 4 * 1024;
+    int rc;
+    void *ret;
+
+    if ((buf = xmalloc(size)) == NULL) {
+	return NULL;
+    }
+    while ((rc = loadquery(L_GETINFO, buf, size)) == -1 && errno == ENOMEM) {
+	free(buf);
+	size += 4 * 1024;
+	if ((buf = xmalloc(size)) == NULL) {
+	    return NULL;
+	}
+    }
+    if (rc == -1) {
+	free(buf);
+	return NULL;
+    }
+    lp = (struct ld_info *)buf;
+    ret = lp->ldinfo_dataorg;
+    free(buf);
+    return ret;
+}
+
+a1312 1
+	static void *main_module = NULL;
+d1315 1
+a1315 6
+	if (main_module == NULL) {
+	    if ((main_module = aix_findmain()) == NULL) {
+		aix_loaderror(file);
+	    }
+	}
+	init_fct = (void(*)())load((char*)file, 1, 0);
+a1316 3
+	    aix_loaderror(file);
+	}
+	if (loadbind(0, main_module, init_fct) == -1) {
+@
+
+
+1.1.1.3.2.7
+log
+@glibc 2.1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/20 08:21:35 $
+d1576 2
+a1577 2
+    char *win32;
+    char *posix;
+@
+
+
+1.1.1.3.2.8
+log
+@990513
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/30 07:55:46 $
+d496 1
+a496 1
+    const char *name;
+d1080 1
+a1080 1
+#ifdef __hpux
+d1310 1
+a1310 1
+#ifdef __hpux
+@
+
+
+1.1.1.3.2.9
+log
+@arity/strict yield
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/13 10:00:58 $
+d1351 1
+a1351 1
+	if (loadbind(0, main_module, (void*)init_fct) == -1) {
+@
+
+
+1.1.1.3.2.10
+log
+@mbc bug in regex
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/17 09:53:56 $
+d81 1
+a81 1
+# if defined(__hp9000s300) ||  (defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__) || defined(__APPLE__)
+a1097 4
+#ifdef __APPLE__
+#include <mach-o/dyld.h>
+#endif
+
+d1359 1
+a1359 1
+#if defined(NeXT) || defined(__APPLE__)
+d1369 1
+a1369 2
+#if defined(NeXT) && ( NS_TARGET_MAJOR < 4 )/* NeXTSTEP rld functions */
+
+d1575 1
+a1575 1
+conv_to_posix_path(win32, posix, len)
+a1577 1
+    int len;
+d1592 1
+a1592 4
+    if (len < strlen(first))
+	fprintf(stderr, "PATH length too long: %s\n", first);
+    else
+	strcpy(posix, first);
+d1615 2
+a1616 4
+    int pathlen = 2 * strlen(path);
+    int rubypathlen = pathlen > MAXPATHLEN ? pathlen : MAXPATHLEN;
+    char *rubypath = alloca(rubypathlen);
+    conv_to_posix_path(path, rubypath, rubypathlen);
+@
+
+
+1.1.1.3.2.11
+log
+@990531
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/18 06:06:12 $
+a32 1
+#ifndef xmalloc
+a35 1
+#endif
+@
+
+
+1.1.1.3.2.12
+log
+@thread bugs
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/31 09:13:03 $
+d1161 29
+d1345 1
+d1348 5
+d1357 1
+a1357 1
+	if (loadbind(0, (void*)dln_load, (void*)init_fct) == -1) {
+d1375 1
+a1375 1
+#if defined(NeXT) && (NS_TARGET_MAJOR < 4)/* NeXTSTEP rld functions */
+d1412 1
+a1412 1
+	dyld_result = NSCreateObjectFileImageFromFile(file, &obj_file);
+d1422 1
+a1422 1
+	if(NSIsSymbolNameDefined(buf + 1)) {
+d1427 1
+a1427 1
+	init_fct = NSAddressOfSymbol(NSLookupAndBindSymbol(buf));
+d1502 2
+a1503 2
+      if (err) {
+	  rb_loaderror("Unresolved Alias - %s", file);
+d1511 3
+a1513 3
+      if (err) {
+	  p2cstr(errMessage);
+	  rb_loaderror("%s - %s",errMessage , file);
+d1519 2
+a1520 2
+      if (err) {
+	  rb_loaderror("Unresolved symbols - %s" , file);
+@
+
+
+1.1.1.3.2.13
+log
+@990624
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/09 09:21:05 $
+d1695 2
+a1696 1
+#elif defined(__EMX__) || defined(NT)
+a1697 2
+/* end of __EMX__ or NT*/
+#else
+d1699 1
+a1699 1
+/* __human68k__ */
+@
+
+
+1.1.1.3.2.14
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/24 04:23:47 $
+d1568 1
+a1568 1
+	cygwin32_conv_to_posix_path(first, posix);
+d1590 7
+@
+
+
+1.1.1.3.2.15
+log
+@990728
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:37 $
+d1194 1
+a1194 1
+	for (j=0; j<LOAD_ERRTAB_LEN; j++) {
+d1198 1
+a1198 1
+	while (isdigit(*message[i])) message[i]++; 
+d1365 1
+a1365 1
+	return;
+d1369 2
+a1370 2
+	int dyld_result;
+	NSObjectFileImage obj_file; /* handle, but not use it */
+d1395 1
+a1395 1
+	return;
+@
+
+
+1.1.1.3.2.16
+log
+@990806
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/28 09:26:32 $
+d106 1
+a106 1
+    for (p = buf; *p; p++) {         /* Delete suffix if it exists */
+d1608 1
+a1608 1
+	ep = strchr(dp, PATH_SEP[0]);
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:56 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+d13 4
+a21 4
+
+#ifdef _AIX
+#pragma alloca
+#endif
+@
+
+
+1.1.1.2.2.3
+log
+@cygwin patches
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/22 08:12:08 $
+a1369 24
+#if defined(__CYGWIN32__)
+char *
+conv_to_posix_path(win32, posix)
+    char *win32;
+    char *posix;
+{
+    char *first = win32;
+    char *p = win32;
+    char *dst = posix;
+
+    for (p = win32; *p; p++)
+	if (*p == ';') {
+	    *p = 0;
+	    cygwin32_conv_to_posix_path(first, posix);
+	    posix += strlen(posix);
+	    *posix++ = ':';
+	    first = p + 1;
+	    *p = ';';
+	}
+    cygwin32_conv_to_posix_path(first, posix);
+    return dst;
+}
+#endif
+
+a1382 5
+#if defined(__CYGWIN32__)
+    char rubypath[MAXPATHLEN];
+    conv_to_posix_path(path, rubypath);
+    path = rubypath;
+#endif
+@
+
+
+1.1.1.2.2.4
+log
+@gw32 b19 patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 10:01:45 $
+d1353 1
+a1353 1
+	path = "/usr/local/bin;/usr/ucb;/usr/bin;/bin;.";
+@
+
+
+1.1.1.2.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/30 09:32:45 $
+d1263 1
+a1263 2
+	    extern int errno;
+	    LoadError("%s - %s", strerror(errno), file);
+d1269 1
+d1271 1
+a1271 1
+		LoadError("%s - %s", strerror(ENOSYM), file);
+d1417 1
+a1417 1
+    if (strlen(fname) > 2 && fname[1] == ':') return fname;
+d1449 1
+a1449 5
+	    if (*dp == '~' && (l == 1 ||
+#if defined(MSDOS) || defined(NT) || defined(__human68k__)
+			       dp[1] == '\\' || 
+#endif
+			       dp[1] == '/')) {
+@
+
+
+1.1.1.2.2.6
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/20 05:55:33 $
+d39 1
+a39 3
+# ifndef USE_CWGUSI
+#  include <sys/file.h>
+# endif
+a60 10
+#ifdef __MACOS__
+# include <TextUtils.h>
+# include <CodeFragments.h>
+# include <Aliases.h>
+#endif
+
+#ifdef __BEOS__
+# include <image.h>
+#endif
+
+a83 3
+#ifdef __MACOS__
+	if (*p == ':') slash = p;
+#else
+a84 1
+#endif
+a1329 87
+#ifdef __BEOS__
+# define DLN_DEFINED
+    {
+      status_t err_stat;  /* BeOS error status code */
+      image_id img_id;    /* extention module unique id */
+      void (*init_fct)(); /* initialize function for extention module */
+
+      /* load extention module */
+      img_id = load_add_on(file);
+      if (img_id <= 0) {
+	LoadError("Failed to load %.200s", file);
+      }
+      
+      /* find symbol for module initialize function. */
+	  /* The Be Book KernelKit Images section described to use
+		 B_SYMBOL_TYPE_TEXT for symbol of function, not
+		 B_SYMBOL_TYPE_CODE. Why ? */
+	  /* strcat(init_fct_symname, "__Fv"); */  /* parameter nothing. */
+	  /* "__Fv" dont need! The Be Book Bug ? */
+      err_stat = get_image_symbol(img_id, buf,
+				  B_SYMBOL_TYPE_TEXT, &init_fct);
+
+      if ((B_BAD_IMAGE_ID == err_stat) || (B_BAD_INDEX == err_stat)) {
+	unload_add_on(img_id);
+	LoadError("Failed to lookup Init function %.200s", file);
+      }
+      else if (B_NO_ERROR != err_stat) {
+	char errmsg[] = "Internal of BeOS version. %.200s (symbol_name = %s)";
+	unload_add_on(img_id);
+	LoadError(errmsg, strerror(err_stat), buf);
+      }
+
+      /* call module initialize function. */
+      (*init_fct)();
+      return;
+    }
+#endif /* __BEOS__*/
+
+#ifdef __MACOS__
+# define DLN_DEFINED
+    {
+      OSErr err;
+      FSSpec libspec;
+      CFragConnectionID connID;
+      Ptr mainAddr;
+      char errMessage[1024];
+      Boolean isfolder, didsomething;
+      Str63 fragname;
+      Ptr symAddr;
+      CFragSymbolClass class;
+      void (*init_fct)();
+      char fullpath[MAXPATHLEN];
+      extern LoadError();
+
+      strcpy(fullpath, file);
+
+      /* resolve any aliases to find the real file */
+      c2pstr(fullpath);
+      (void)FSMakeFSSpec(0, 0, fullpath, &libspec);
+      err = ResolveAliasFile(&libspec, 1, &isfolder, &didsomething);
+      if ( err ) {
+	LoadError("Unresolved Alias - %s", file);
+      }
+
+      /* Load the fragment (or return the connID if it is already loaded */
+      fragname[0] = 0;
+      err = GetDiskFragment(&libspec, 0, 0, fragname, 
+			    kLoadCFrag, &connID, &mainAddr,
+			    errMessage);
+      if ( err ) {
+	p2cstr(errMessage);
+	LoadError("%s - %s",errMessage , file);
+      }
+
+      /* Locate the address of the correct init function */
+      c2pstr(buf);
+      err = FindSymbol(connID, buf, &symAddr, &class);
+      if ( err ) {
+	LoadError("Unresolved symbols - %s" , file);
+      }
+	
+      init_fct = (void (*)())symAddr;
+      (*init_fct)();
+      return;
+    }
+#endif /* __MACOS__ */
+
+a1411 1
+#ifndef __MACOS__
+a1420 1
+#endif /* __MACOS__ */
+d1428 1
+a1428 1
+#if !defined(MSDOS)  && !defined(NT) && !defined(__human68k__) && !defined(__MACOS__)
+a1475 3
+#ifdef __MACOS__
+		*bp++ = ':';
+#else
+a1476 1
+#endif
+@
+
+
+1.1.1.2.2.7
+log
+@1.1b9_23
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:07 $
+a1366 8
+
+      if (err_stat != B_NO_ERROR) {
+	    char real_name[1024];
+	    strcpy(real_name, buf);
+	    strcat(real_name, "__Fv");
+        err_stat = get_image_symbol(img_id, real_name,
+				  B_SYMBOL_TYPE_TEXT, &init_fct);
+      }
+@
+
+
+1.1.1.2.2.8
+log
+@sync ev
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/26 08:24:40 $
+d1091 1
+a1091 5
+#if NS_TARGET_MAJOR < 4
+#include <mach-o/rld.h>
+#else
+#include <mach-o/dyld.h>
+#endif
+a1318 1
+#if NS_TARGET_MAJOR < 4 /* NeXTSTEP rld functions */
+a1343 36
+#else/* OPENSTEP dyld functions */
+	{
+	int dyld_result ;
+	NSObjectFileImage obj_file ; /* handle, but not use it */
+	/* "file" is module file name .
+	   "buf" is initial function name with "_" . */
+
+	void (*init_fct)();
+
+
+    dyld_result = NSCreateObjectFileImageFromFile( file, &obj_file );
+
+    if (dyld_result != NSObjectFileImageSuccess)
+    {
+	    LoadError("Failed to load %.200s", file);
+    }
+
+    NSLinkModule(obj_file, file, TRUE);
+
+
+	/* lookup the initial function */
+	 /*NSIsSymbolNameDefined require function name without "_" */
+    if( NSIsSymbolNameDefined( buf + 1 ) )
+    {
+	    LoadError("Failed to lookup Init function %.200s",file);
+	}
+
+	/* NSLookupAndBindSymbol require function name with "_" !! */
+
+	init_fct = NSAddressOfSymbol( NSLookupAndBindSymbol( buf ) );
+	(*init_fct)();
+
+
+	return ;
+    }
+#endif /* rld or dyld */
+@
+
+
+1.1.1.2.2.9
+log
+@1.1c3
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/29 09:50:28 $
+d81 1
+a81 1
+# if defined(__hp9000s300) || defined(__NetBSD__) || defined(__BORLANDC__) || defined(__FreeBSD__) || defined(NeXT) || defined(__WATCOMC__)
+a1567 1
+    if (exe_flag && strchr(fname, '/')) return fname;
+a1572 1
+    if (exe_flag && strchr(fname, '\\')) return fname;
+@
+
+
+1.1.1.2.2.10
+log
+@1.1c5
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:01 $
+d75 1
+a75 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(__CYGWIN32__)
+@
+
+
+1.1.1.2.2.11
+log
+@1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 09:17:31 $
+d75 1
+a75 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(__CYGWIN32__) && !defined(_AIX)
+d1260 1
+a1260 1
+	if ((handle = (void*)dlopen(file, RTLD_LAZY|RTLD_GLOBAL)) == NULL) {
+@
+
+
+1.1.1.2.2.12
+log
+@1.1c7
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:44:57 $
+d81 1
+a81 1
+# if defined(__hp9000s300) || defined(__NetBSD__) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__)
+@
+
+
+1.1.1.2.2.13
+log
+@1.1c final (hopefully)
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/09 09:11:48 $
+a1131 3
+    int error = GetLastError();
+    char *p = message;
+    p += sprintf(message, "%d: ", error);
+d1135 4
+a1138 4
+	error,
+	MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+	p,
+	sizeof message - strlen(message),
+a1140 4
+    for (p = message; *p; p++) {
+	if (*p == '\n' || *p == '\r')
+	    *p = ' ';
+    }
+d1216 1
+a1216 1
+        printf("LoadLibraryExA: %s\n", winfile);
+@
+
+
+1.1.1.2.2.14
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/14 09:00:05 $
+d81 1
+a81 1
+# if defined(__hp9000s300) ||  ( defined(__NetBSD__) && (!defined(__alpha__) && !defined(__mips__))) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__)
+@
+
+
+1.1.1.2.2.15
+log
+@1.2.4
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 03:29:21 $
+d1414 1
+a1414 1
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+d1421 1
+a1421 1
+				  B_SYMBOL_TYPE_TEXT, (void **)&init_fct);
+@
+
+
+1.1.1.2.2.16
+log
+@to open CVS
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/08 10:14:30 $
+d59 1
+@
+
+
+1.1.1.2.2.17
+log
+@1.2.6
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/20 08:20:54 $
+d1530 1
+a1530 1
+conv_to_posix_path(win32, posix, len)
+a1532 1
+    int len;
+d1547 1
+a1547 4
+    if (len < strlen(first))
+	fprintf(stderr, "PATH length too long: %s\n", first);
+    else
+	strcpy(posix, first);
+d1566 2
+a1567 4
+    int pathlen = 2 * strlen(path);
+    int rubypathlen = pathlen > MAXPATHLEN ? pathlen : MAXPATHLEN;
+    char *rubypath = alloca(rubypathlen);
+    conv_to_posix_path(path, rubypath, rubypathlen);
+@
+
+
+1.1.1.2.2.9.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:01 $
+d426 1
+a426 1
+underb_f_print(key, value)
+d437 1
+a437 1
+    st_foreach(undef_tbl, underb_f_print, NULL);
+d833 1
+a833 1
+		if (strcmp(name+1, "dln_libs_to_be_linked") == 0) {
+d888 1
+a888 1
+    int rb_str_index;
+d892 1
+a892 1
+char *dln_librrb_ary_path = DLN_DEFAULT_LIB_PATH;
+d923 1
+a923 1
+    /* then variable dln_librrb_ary_path. */
+d926 1
+a926 1
+    if (path == NULL) path = dln_librrb_ary_path;
+d955 1
+a955 1
+	    char *name = name_base + base->rb_str_index;
+d1189 1
+a1189 1
+    rb_loaderror(errbuf);
+d1284 1
+a1284 1
+	    rb_loaderror("%s - %s", strerror(errno), file);
+d1291 1
+a1291 1
+		rb_loaderror("%s - %s", strerror(ENOSYM), file);
+d1334 1
+a1334 1
+	    rb_loaderror("Failed to load %.200s", file);
+d1339 1
+a1339 1
+	    rb_loaderror("Failed to lookup Init function %.200s", file);
+d1366 1
+a1366 1
+    NSLinkModule(obj_file, file, Qtrue);
+d1397 1
+a1397 1
+	rb_loaderror("Failed to load %.200s", file);
+d1419 1
+a1419 1
+	rb_loaderror("Failed to lookup Init function %.200s", file);
+d1424 1
+a1424 1
+	rb_loaderror(errmsg, strerror(err_stat), buf);
+d1447 1
+d1456 1
+a1456 1
+	rb_loaderror("Unresolved Alias - %s", file);
+d1466 1
+a1466 1
+	rb_loaderror("%s - %s",errMessage , file);
+d1473 1
+a1473 1
+	rb_loaderror("Unresolved symbols - %s" , file);
+d1490 1
+a1490 1
+    rb_loaderror("%s - %s", dln_strerror(), file);
+@
+
+
+1.1.1.2.2.9.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:44:57 $
+d75 1
+a75 1
+#if defined(HAVE_DLOPEN) && !defined(USE_DLN_A_OUT) && !defined(__CYGWIN32__) && !defined(_AIX)
+d1084 1
+a1084 1
+#if defined(_AIX)
+d1146 1
+a1146 1
+#if defined(_AIX)
+d1260 1
+a1260 1
+	if ((handle = (void*)dlopen(file, RTLD_LAZY|RTLD_GLOBAL)) == NULL) {
+d1299 1
+a1299 1
+#if defined(_AIX)
+@
+
+
+1.1.1.2.2.9.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/09 09:11:48 $
+d81 1
+a81 1
+# if defined(__hp9000s300) || defined(__NetBSD__) || defined(__BORLANDC__) || (defined(__FreeBSD__) && __FreeBSD__ < 3) || defined(NeXT) || defined(__WATCOMC__)
+@
+
+
+1.1.1.2.2.9.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/14 09:00:05 $
+a1131 3
+    int error = GetLastError();
+    char *p = message;
+    p += sprintf(message, "%d: ", error);
+d1135 4
+a1138 4
+	error,
+	MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+	p,
+	sizeof message - strlen(message),
+a1140 4
+    for (p = message; *p; p++) {
+	if (*p == '\n' || *p == '\r')
+	    *p = ' ';
+    }
+d1216 1
+a1216 1
+        printf("LoadLibraryExA: %s\n", winfile);
+@
+
+
+1.1.1.2.2.9.2.5
+log
+@1.1d1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:28 $
+d1357 1
+a1357 1
+    {
+d1366 1
+a1366 1
+	dyld_result = NSCreateObjectFileImageFromFile( file, &obj_file );
+d1368 6
+a1373 3
+	if (dyld_result != NSObjectFileImageSuccess) {
+	    rb_loaderror("Failed to load %.200s", file);
+	}
+a1374 1
+	NSLinkModule(obj_file, file, TRUE);
+d1377 4
+a1380 3
+	/*NSIsSymbolNameDefined require function name without "_" */
+	if( NSIsSymbolNameDefined( buf + 1 ) ) {
+	    rb_loaderror("Failed to lookup Init function %.200s",file);
+d1384 1
+d1387 1
+@

@@ -1,0 +1,781 @@
+head	1.21;
+access;
+symbols
+	release_0_8_1:1.19
+	release_0_8_0:1.16
+	release_0_2_0:1.15;
+locks; strict;
+comment	@# @;
+
+
+1.21
+date	2001.05.18.07.46.25;	author shugo;	state dead;
+branches;
+next	1.20;
+
+1.20
+date	2001.05.02.08.45.26;	author shugo;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.04.27.04.51.59;	author shugo;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.04.20.04.08.56;	author shugo;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.04.19.06.13.25;	author shugo;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.04.13.04.19.40;	author shugo;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.08.31.02.50.47;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.13.03.31.04;	author shugo;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.19.05.32.10;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.18.08.31.20;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.18.08.09.41;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.30.07.35.33;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	99.08.12.02.48.52;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	99.08.10.06.37.51;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.07.15.06.06.09;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.07.09.10.15.50;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.07.09.04.30.35;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.07.06.09.36.53;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.06.21.07.14.10;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.06.01.07.05.58;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.20.04.14.59;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.21
+log
+@* Makefile.RB: removed.
+@
+text
+@#!/usr/bin/env ruby
+
+require "mkmf"
+require "getoptlong"
+
+if RUBY_VERSION < "1.6"
+  $stderr.print("mod_ruby requires Ruby 1.6.x or later.\n")
+  exit 1
+end
+
+if RUBY_VERSION < "1.6.4"
+  $stderr.print("warning: mod_ruby recommends Ruby 1.6.4 or later.\n")
+end
+
+$APXS = "apxs"
+$ENABLE_ERUBY = false
+$ERUBY_INCLUDES = nil
+$ERUBY_LIBRARIES = nil
+
+parser = GetoptLong.new
+parser.set_options(['--help', GetoptLong::NO_ARGUMENT],
+		   ['--apxs', GetoptLong::OPTIONAL_ARGUMENT],
+		   ['--enable-eruby', GetoptLong::OPTIONAL_ARGUMENT],
+		   ['--eruby-includes', GetoptLong::OPTIONAL_ARGUMENT],
+		   ['--eruby-libraries', GetoptLong::OPTIONAL_ARGUMENT])
+
+def usage
+  $stderr.printf <<EOS, $0
+usage: %s [options]
+
+  --help                        print this message
+  --apxs=APXS                   path to apxs command
+  --enable-eruby                enable eruby support
+  --eruby-includes=DIR		eruby include files are in DIR
+  --eruby-libraries=DIR		eruby library files are in DIR
+EOS
+end
+
+begin
+  parser.each_option do |name, arg|
+    case name
+    when "--apxs"
+      $APXS = arg
+    when "--enable-eruby"
+      $ENABLE_ERUBY = true
+    when "--eruby-includes"
+      $ERUBY_INCLUDES = arg
+    when "--eruby-libraries"
+      $ERUBY_LIBRARIES = arg
+    when "--help"
+      usage
+      exit(1)
+    end
+  end
+rescue
+  usage
+  exit(1)
+end
+
+begin
+  $LIBRUBYARG = Config.expand(CONFIG["LIBRUBYARG"])
+rescue
+  $LIBRUBYARG = CONFIG["LIBRUBYARG"]
+end
+if $LIBRUBYARG =~ /\.a$/
+  $shared = false
+  $LIBRUBYARG = $hdrdir + "/" + $LIBRUBYARG
+else
+  $shared = true
+  $LIBRUBYARG.gsub!(/-L\./, "-L#{CONFIG['prefix']}/lib")
+end
+
+case PLATFORM
+when /-aix/
+  $DLDFLAGS = "-Wl,-bE:mod_ruby.imp -Wl,-bI:httpd.exp -Wl,-bM:SRE -Wl,-bnoentry -lc"
+  if $shared
+    $LIBRUBYARG = "-Wl," + CONFIG["libdir"] + "/" + CONFIG["LIBRUBY_SO"]
+    $LIBRUBYARG.sub!(/\.so\.[.0-9]*$/, '.so')
+    $XLDFLAGS = ""
+  else
+    $XLDFLAGS = "-Wl,-bE:#{$topdir}/ruby.imp"
+  end
+  if CONFIG["DLDFLAGS"] !~ /-Wl,/
+    $LIBRUBYARG.gsub!(/-Wl,/, '')
+    $XLDFLAGS.gsub!(/-Wl,/, '')
+    $DLDFLAGS.gsub!(/-Wl,/, '')
+  end
+  ifile = open("mod_ruby.imp", "w")
+  begin
+    ifile.write <<EOIF
+#!
+ruby_module
+EOIF
+  ensure
+    ifile.close
+  end
+  print <<EOM
+To build mod_ruby on the AIX platform, you need to have the apache
+export file `httpd.exp' in the current directory.
+Please copy <apache-src-directory>/support/httpd.exp to the current
+directory before making `mod_ruby.so'.
+EOM
+#'
+else
+  $XLDFLAGS = CONFIG["XLDFLAGS"]
+  $DLDFLAGS = CONFIG["DLDFLAGS"]
+end
+
+$APACHE_CFLAGS = `#{$APXS} -q CFLAGS`
+if $APACHE_CFLAGS.size > 0
+  $CFLAGS = ($APACHE_CFLAGS.split(/[ \t]+/) | CFLAGS.split(/[ \t]+/)).join(" ")
+else
+  $CFLAGS = CFLAGS
+end
+$APACHE_INCLUDEDIR = `#{$APXS} -q INCLUDEDIR`
+$APACHE_LIBEXECDIR = `#{$APXS} -q LIBEXECDIR`
+
+$ERUBY_CFLAGS = ""
+$LIBERUBYARG = ""
+if $ENABLE_ERUBY
+  if $ERUBY_INCLUDES
+    $ERUBY_CFLAGS = "-DUSE_ERUBY -I#{$ERUBY_INCLUDES}"
+  else
+    $ERUBY_CFLAGS = "-DUSE_ERUBY"
+  end
+  if $ERUBY_LIBRARIES
+    $LIBERUBYARG = "-L#{$ERUBY_LIBRARIES} -leruby"
+  else
+    $LIBERUBYARG = "-leruby"
+  end
+end
+
+mfile = open("Makefile", "w")
+begin
+  mfile.write <<EOMF
+# Generated automatically by Makefile.RB.
+
+CC = #{CONFIG["CC"]}
+RUBY_INSTALL_NAME = #{CONFIG["RUBY_INSTALL_NAME"]}
+RUBY = $(RUBY_INSTALL_NAME)
+
+CFLAGS = #{CONFIG["CCDLFLAGS"]} -I#{$hdrdir} -I#{$APACHE_INCLUDEDIR} \\
+  #{$ERUBY_CFLAGS} #{$CFLAGS}
+LIBS = #{CONFIG["LIBS"]}
+XLDFLAGS = #{$XLDFLAGS}
+LDSHARED = #{CONFIG["LDSHARED"]}
+DLDFLAGS = #{$DLDFLAGS}
+INSTALL_DLLIB = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0555, true'
+INSTALL_DATA = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0644, true'
+INSTALL_DIR = $(RUBY) -r ftools -e 'File.makedirs(*ARGV)'
+LIBRUBYARG = #{$LIBRUBYARG}
+LIBERUBYARG = #{$LIBERUBYARG}
+
+DESTDIR = 
+
+libdir = $(DESTDIR)#{$libdir}
+libapachedir = $(libdir)/apache
+
+APACHE_LIBEXECDIR = $(DESTDIR)#{$APACHE_LIBEXECDIR}
+
+TARGET = mod_ruby.so
+
+OBJS	= mod_ruby.o \
+	  ruby_config.o \
+	  apachelib.o \
+	  array_header.o \
+	  table.o \
+	  connection.o \
+	  server.o \
+	  request.o
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+all: $(TARGET)
+
+install: $(TARGET)
+	@@-$(INSTALL_DIR) $(APACHE_LIBEXECDIR)
+	@@-$(INSTALL_DIR) $(libapachedir)
+	@@-$(INSTALL_DLLIB) $(TARGET) $(APACHE_LIBEXECDIR)
+	@@-$(INSTALL_DATA) ruby/apache/ruby.rb $(libapachedir)
+	@@-$(INSTALL_DATA) ruby/apache/eruby.rb $(libapachedir)
+	@@-$(INSTALL_DATA) ruby/apache/rd2html.rb $(libapachedir)
+
+clean:
+	rm -f $(TARGET) $(OBJS)
+
+distclean: clean
+	rm -f mod_ruby.imp Makefile
+	find . -name '*~' | xargs rm -f
+
+$(TARGET): $(OBJS)
+	$(LDSHARED) $(DLDFLAGS) $(XLDFLAGS) -o $(TARGET) $(OBJS) \
+		$(LIBERUBYARG) $(LIBRUBYARG) $(LIBS)
+
+mod_ruby.o: mod_ruby.c mod_ruby.h ruby_config.h apachelib.h
+ruby_config.o: ruby_config.c mod_ruby.h ruby_config.h
+apachelib.o: apachelib.c apachelib.h
+array_header.o: array_header.c apachelib.h
+table.o: table.c apachelib.h
+connection.o: connection.c apachelib.h
+server.o: server.c apachelib.h
+request.o: request.c apachelib.h
+EOMF
+ensure
+  mfile.close
+end
+
+# Local variables:
+# mode: Ruby
+# tab-width: 8
+# End:
+@
+
+
+1.20
+log
+@* fixed copyright notice.
+* array_header.c: new file for Apache::ArrayHeader.
+* server.c: added some methods.
+@
+text
+@@
+
+
+1.19
+log
+@* ruby/apache/ruby.rb (emulate_cgi): new method.
+* ruby/apache/eruby.rb: inherit Apache::Ruby.
+* table.c: new file for Apache::Table.
+* connection.c: new file for Apache::Connection.
+* server.c: new file for Apache::Server.
+* request.c: new file for Apache::Request.
+* request.c (request_setup_cgi_env): new method.
+* mod_ruby.c (script_handler): resotre original $stdin, $stdout
+and $>.
+@
+text
+@d166 1
+d199 1
+@
+
+
+1.18
+log
+@* apachelib.c (request_finfo): new method Apache::Request#finfo.
+* mod_ruby.c (load_eruby_script): supports eruby-0.9.0.
+* ruby/apache/eruby.rb: new handler Apache::ERuby.
+@
+text
+@d7 1
+a7 1
+  $stderr.print("mod_ruby requires Ruby 1.6.x or later.")
+d11 4
+d163 7
+a169 1
+OBJS = mod_ruby.o ruby_config.o apachelib.o
+d198 4
+@
+
+
+1.17
+log
+@* ruby/apache/ruby.rb: new handler Apache::Ruby.
+* ruby/apache/rd2html.rb: renamed from mod_rd2html.rb.
+* apachelib.c (request_read): do not use buffer.
+* apachelib.c (ruby_init_apachelib): remove methods from
+Apache::request. (gets, readline, readlines, each, getc,
+readchar, ungetc, tell, seek, rewind, pos, pos=)
+* apachelib.c (ruby_init_apachelib): new class Apache::Server.
+@
+text
+@d145 2
+d150 7
+d167 6
+a172 1
+	$(INSTALL_DLLIB) $(TARGET) #{$APACHE_LIBEXECDIR}
+d179 1
+a179 1
+	rm -f *~ */*~
+@
+
+
+1.16
+log
+@* version 0.8.0 released.
+@
+text
+@d6 5
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d156 1
+a156 1
+	rm -f $(TARGET) $(OBJS) *~
+d160 1
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d7 3
+a9 10
+$DEFAULT_CHARSET = case $KCODE
+		   when /^e/i
+		     "EUC-JP"
+		   when /^s/i
+		     "SHIFT_JIS"
+		   when /^u/i
+		     "UTF-8"
+		   else
+		     "US-ASCII"
+		   end
+d14 3
+a16 1
+		   ['--default-charset', GetoptLong::OPTIONAL_ARGUMENT])
+d24 3
+a26 1
+  --default-charset=CHARSET     default charset value
+d35 6
+a40 2
+    when "--default-charset"
+      $DEFAULT_CHARSET = arg
+d64 2
+a65 1
+if PLATFORM =~ /-aix/
+d94 1
+d109 15
+d130 2
+d134 1
+a134 1
+	 #{$CFLAGS}
+d136 1
+a136 1
+XLDFLAGS = #$XLDFLAGS
+d138 4
+a141 2
+DLDFLAGS = #$DLDFLAGS
+INSTALL_DLLIB = ruby -r ftools -e 'File.install ARGV[0], ARGV[1], 0555, true'
+a142 3
+RUBY_INSTALL_NAME = #{CONFIG["RUBY_INSTALL_NAME"]}
+LIBRUBYARG = #$LIBRUBYARG
+OBJS = mod_ruby.o ruby_config.o apachelib.o eruby.o
+d145 2
+d159 1
+a159 1
+	rm -f config.h mod_ruby.imp Makefile
+d162 2
+a163 1
+	$(LDSHARED) $(DLDFLAGS) $(XLDFLAGS) -o $(TARGET) $(OBJS) $(LIBRUBYARG) $(LIBS)
+d165 1
+a165 1
+mod_ruby.o: mod_ruby.c mod_ruby.h ruby_config.h apachelib.h eruby.h config.h
+a167 1
+eruby.o: eruby.c eruby.h config.h
+a170 11
+end
+
+cfile = open("config.h", "w")
+begin
+  cfile.write <<EOCF
+/* Generated automatically by Makefile.RB. */
+
+#define ERUBY_DEFAULT_CHARSET "#{$DEFAULT_CHARSET}"
+EOCF
+ensure
+  cfile.close
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d50 5
+a54 1
+$LIBRUBYARG = CONFIG["LIBRUBYARG"]
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d139 1
+a139 1
+mod_ruby.o: mod_ruby.c mod_ruby.h ruby_config.h apachelib.h eruby.h
+d142 1
+a142 1
+eruby.o: eruby.c eruby.h
+d150 1
+a150 1
+  cfile.write <<EOMF
+d154 1
+a154 1
+EOMF
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d131 1
+a131 1
+	rm -f config.h $(TARGET) $(OBJS) *~
+d134 1
+a134 1
+	rm -f mod_ruby.imp Makefile
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d7 10
+d20 2
+a21 1
+		   ['--apxs', GetoptLong::OPTIONAL_ARGUMENT])
+d27 3
+a29 2
+  --help                  print this message
+  --apxs=APXS             path to apxs command
+d38 2
+d131 1
+a131 1
+	rm -f $(TARGET) $(OBJS) *~
+d146 11
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d6 29
+a34 2
+ENV["PATH"] += ":/sbin:/usr/sbin:/usr/local/sbin:\
+/usr/apache/bin:/usr/local/apache/bin"
+d79 1
+a79 1
+$APACHE_CFLAGS = `apxs -q CFLAGS`
+d85 2
+a86 2
+$APACHE_INCLUDEDIR = `apxs -q INCLUDEDIR`
+$APACHE_LIBEXECDIR = `apxs -q LIBEXECDIR`
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+    $LIBRUBYARG = CONFIG["libdir"] + "/" + CONFIG["LIBRUBY_SO"]
+d23 1
+d25 1
+a25 1
+    $DLDFLAGS = "-Wl,-bE:$(topdir)/ruby.imp " + $DLDFLAGS
+d28 2
+d48 1
+d71 1
+a71 1
+XLDFLAGS = #{CONFIG["XLDFLAGS"]}
+d73 1
+a73 1
+DLDFLAGS = #{CONFIG["DLDFLAGS"]}
+d93 1
+a93 1
+	rm -f Makefile
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@a56 8
+$install = CONFIG["INSTALL_PROGRAM"]
+$install_data = CONFIG["INSTALL_DATA"]
+$install_dllib = CONFIG["INSTALL_DLLIB"] || $install_data
+if $install =~ %r!^[^\s/]+/! then
+  $install = CONFIG["compile_dir"]+"/"+$install
+  $install_dllib = CONFIG["compile_dir"]+"/"+$install_dllib
+end
+
+d70 1
+a70 2
+INSTALL = #{$install}
+INSTALL_DLLIB = #{$install_dllib}
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d11 1
+d14 1
+d16 30
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d43 1
+d69 1
+a69 1
+	$(LDSHARED) $(DLDFLAGS) -o $(TARGET) $(OBJS) $(LIBRUBYARG) $(LIBS)
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d12 2
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d23 8
+d40 1
+d43 2
+a44 2
+INSTALL = #{CONFIG["INSTALL"]}
+INSTALL_DATA = #{CONFIG["INSTALL_DATA"]}
+d57 1
+a57 1
+	$(INSTALL_DATA) $(TARGET) #{$APACHE_LIBEXECDIR}
+d66 1
+a66 1
+	$(LDSHARED) $(DLDFLAGS) -o $(TARGET) $(OBJS) $(LIBRUBYARG)
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@a8 29
+$USE_ERUBY = false
+$ERUBY_INCLUDEDIR = "../eruby"
+
+opts = GetoptLong.new(["--enable-eruby", GetoptLong::NO_ARGUMENT],
+		      ["--eruby-include-dir", GetoptLong::REQUIRED_ARGUMENT],
+		      ["--help", GetoptLong::NO_ARGUMENT],)
+begin
+  for name, arg in opts
+    case name
+    when "--enable-eruby"
+      $USE_ERUBY = true
+    when "--eruby-include-dir"
+      $ERUBY_INCLUDEDIR = arg
+    when "--help"
+      $stderr.print <<EOF
+Usage: #{$0} [options]
+Configuration:
+  --help			print this message
+
+  --enable-eruby		enable eruby
+  --eruby-include-dir=DIR	eruby in DIR
+EOF
+      exit 1
+    end
+  end
+rescue
+  exit 1
+end
+
+a29 3
+ERUBY_INCLUDEDIR = #{$ERUBY_INCLUDEDIR}
+LIBERUBY = #{ $USE_ERUBY ? "-leruby" : "" }
+
+d31 1
+a31 1
+	 #{$CFLAGS} #{ $USE_ERUBY ? "-I$(ERUBY_INCLUDEDIR) -DUSE_ERUBY" : "" }
+d39 2
+a40 2
+OBJS = ruby_module.o ruby_config.o apachelib.o
+TARGET = mod_ruby.#{CONFIG["DLEXT"]}
+d57 1
+a57 1
+	$(LDSHARED) $(DLDFLAGS) -o $(TARGET) $(OBJS) $(LIBERUBY) $(LIBRUBYARG)
+d59 2
+a60 2
+ruby_module.o: ruby_module.c ruby_module.h ruby_config.h apachelib.h
+ruby_config.o: ruby_config.c ruby_module.h ruby_config.h
+d62 1
+@
+
+
+1.1
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+$ERUBYDIR = "../eruby"
+d13 1
+a13 1
+		      ["--eruby-dir", GetoptLong::REQUIRED_ARGUMENT],
+d20 2
+a21 2
+    when "--eruby-dir"
+      $ERUBYDIR = arg
+d26 1
+a26 1
+  --help		print this message
+d28 2
+a29 2
+  --enable-eruby	enable eruby
+  --eruby-dir=DIR	eruby in DIR
+d39 2
+a40 2
+if $LIBRUBYARG == "libruby.a"
+  $LIBRUBYARG = $hdrdir + "/libruby.a"
+d59 2
+a60 2
+ERUBYDIR = #{$ERUBYDIR}
+LIBERUBY = #{ $USE_ERUBY ? "$(ERUBYDIR)/liberuby.a" : "" }
+d63 1
+a63 1
+	 #{$CFLAGS} #{ $USE_ERUBY ? "-I$(ERUBYDIR) -DUSE_ERUBY" : "" }
+d69 1
+d98 5
+@
+

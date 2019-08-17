@@ -1,0 +1,426 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.1.1.1.6.1
+	v1_6_6:1.1.1.1.6.1
+	v1_6_5:1.1.1.1.6.1
+	v1_6_4:1.1.1.1
+	v1_7_1:1.1.1.1
+	v1_6_4_preview4:1.1.1.1
+	v1_6_4_preview3:1.1.1.1
+	v1_6_4_preview2:1.1.1.1
+	v1_6_4_preview1:1.1.1.1
+	v1_6_3:1.1.1.1
+	ruby_m17n:1.1.1.1.0.8
+	ruby_1_6:1.1.1.1.0.6
+	v1_6_2:1.1.1.1
+	v1_6_1:1.1.1.1
+	v1_6_0:1.1.1.1
+	v1_4_6:1.1.1.1
+	v1_4_5:1.1.1.1
+	v1_4_4:1.1.1.1
+	ruby_1_4_3:1.1.1.1
+	ruby1_4_3:1.1.1.1
+	v1_4_3:1.1.1.1
+	v1_5_0:1.1.1.1
+	ruby_1_4_3_pre1:1.1.1.1
+	ruby_1_4:1.1.1.1.0.4
+	v1_4_2:1.1.1.1
+	v1_4_1:1.1.1.1
+	v1_4_0:1.1.1.1
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2001.07.05.15.47.03;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.07.02.08.46.26;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.19.09.21.38;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.01.20.04.59.33;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.33;	author matz;	state Exp;
+branches
+	1.1.1.1.6.1;
+next	;
+
+1.1.1.1.6.1
+date	2001.07.05.15.54.00;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@Detypo and reword a bit.
+@
+text
+@Extension for GNU Readline Library
+
+Example:
+
+  require "readline"
+  include Readline
+
+  line = readline("Prompt> ", true)
+
+[Readline]
+
+<module function>
+
+readline(prompt, add_history=nil)
+
+  Reads one line with line editing.  The inputted line is added to the
+  history if add_history is true.
+
+<class methods>
+
+completion_proc = proc
+
+  Specifies a Proc object to determine completion behavior.  It
+  should take input-string, and return an array of completion
+  candidates.
+
+completion_proc
+
+  Returns the completion Proc object.
+
+completion_case_fold = bool
+
+  Sets whether or not to ignore case on completion.
+
+completion_case_fold
+
+  Returns true if completion ignores case.
+
+completion_append_character = char
+
+  Specifies a character to be appended on completion.
+  Nothing will be appended if an empty string ("") or nil is
+  specified.
+
+completion_append_character
+
+  Returns a string containing a character to be appended on
+  completion.  The default is a space (" ").
+
+vi_editing_mode
+
+  Specifies VI editing mode.
+
+emacs_editing_mode
+
+  Specifies Emacs editing mode.
+
+<class constants>
+
+HISTORY
+
+The history buffer.  It behaves just like an array.
+@
+
+
+1.3
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d14 1
+a14 1
+readline(prompt, add_hostory=nil)
+d16 2
+a17 2
+  Reads one line wit line edit.  the line is added to the
+  history also if "add" is true.
+d19 1
+a19 1
+<class mehods>
+d23 3
+a25 2
+  Specifies Proc object to determin completion behavior.  It
+  shoule take input-string, and return completion candidates.
+d41 3
+a43 2
+  Specifies a chacatcter to be appended on completion.
+  Nothing will be appended if empty string ("") or nil is specified.
+d47 1
+a47 1
+  Returns a string contains a character to be appended on
+@
+
+
+1.2
+log
+@* ext/readline/readline.c: add new methods:
+  Readline::completion_append_character and
+  Readline::completion_append_character=.k
+@
+text
+@d1 1
+a1 1
+GNU Readline Libraryを利用するための拡張モジュールです。
+d3 1
+a3 2
+require "readline"
+include Readline
+d5 2
+a6 1
+line = readline("Prompt> ", TRUE)
+d8 1
+a8 1
+のように使用してください。
+d12 1
+a12 1
+<モジュール関数>
+d14 1
+a14 1
+readline(prompt, add=nil)
+d16 2
+a17 2
+  一行入力を読み込みます。
+  addがTRUEの場合、ヒストリに読み込んだ文字列を追加します。
+d19 1
+a19 1
+<クラスメソッド>
+d23 2
+a24 3
+  補完時の動作を決定するProcオブジェクトを指定します。
+  procは引数に入力文字列を取り、候補文字列の配列を返すように
+  してください。
+d28 1
+a28 1
+  補完時の動作を決定するProcオブジェクトを返します。
+d30 1
+a30 1
+completion_case_fold = case_fold
+d32 1
+a32 1
+  補完時に大文字小文字を区別しない場合、TRUEを指定します。
+d36 1
+a36 1
+  補完時に大文字小文字を区別しない場合、TRUEを返します。
+d40 2
+a41 3
+  補完時に付加される文字を文字列で指定します。先頭の一文字が
+  設定され、空文字列 ("") または nil を指定すると何も付加
+  されなくなります。
+d45 2
+a46 2
+  補完時に付加される文字を文字列で返します。デフォルトは
+  空白 (" ") です。
+d50 1
+a50 1
+  VIモードになります。
+d54 1
+a54 1
+  Emacsモードになります。
+d56 1
+a56 1
+<クラス定数>
+d60 1
+a60 2
+ヒストリに対する操作はこの定数を通して行ってください。
+配列と同じように扱えるようになっています。
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d39 11
+a63 3
+
+
+	@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@@
+
+
+1.1.1.1.6.1
+log
+@* ext/readline/readline.c (readline_event): merge from 1.7: a
+  non-void function should return a value.
+
+* ext/readline/readline.c: merge from 1.7: add new methods:
+  Readline::completion_append_character and
+  Readline::completion_append_character=.
+
+* ext/readline/README, ext/readline/README.jp: merge from 1.7: add
+  an English version of the document.
+@
+text
+@d1 1
+a1 1
+Extension for GNU Readline Library
+d3 2
+a4 1
+Example:
+d6 1
+a6 2
+  require "readline"
+  include Readline
+d8 1
+a8 1
+  line = readline("Prompt> ", true)
+d12 1
+a12 1
+<module function>
+d14 1
+a14 1
+readline(prompt, add_history=nil)
+d16 2
+a17 2
+  Reads one line with line editing.  The inputted line is added to the
+  history if add_history is true.
+d19 1
+a19 1
+<class methods>
+d23 3
+a25 3
+  Specifies a Proc object to determine completion behavior.  It
+  should take input-string, and return an array of completion
+  candidates.
+d29 1
+a29 1
+  Returns the completion Proc object.
+d31 1
+a31 1
+completion_case_fold = bool
+d33 1
+a33 1
+  Sets whether or not to ignore case on completion.
+d37 1
+a37 12
+  Returns true if completion ignores case.
+
+completion_append_character = char
+
+  Specifies a character to be appended on completion.
+  Nothing will be appended if an empty string ("") or nil is
+  specified.
+
+completion_append_character
+
+  Returns a string containing a character to be appended on
+  completion.  The default is a space (" ").
+d41 1
+a41 1
+  Specifies VI editing mode.
+d45 1
+a45 1
+  Specifies Emacs editing mode.
+d47 1
+a47 1
+<class constants>
+d51 5
+a55 1
+The history buffer.  It behaves just like an array.
+@
+

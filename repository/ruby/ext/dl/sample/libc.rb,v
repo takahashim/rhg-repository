@@ -1,0 +1,238 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2002.06.10.18.23.39;	author ttate;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.06.09.17.47.34;	author ttate;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.20.15.35.48;	author ttate;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.11.08.07.01;	author ttate;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.02.10.56.13;	author ttate;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@bugfix.
+@
+text
+@require "dl/import"
+require "dl/struct"
+
+module LIBC
+  extend DL::Importable
+
+  begin
+    dlload "libc.so.6"
+  rescue
+    dlload "libc.so.5"
+  end
+
+  extern "int atoi(char*)"
+  extern "ibool isdigit(int)"
+  extern "int gettimeofday(struct timeval *, struct timezone *)"
+  extern "char* strcat(char*, char*)"
+  extern "FILE* fopen(char*, char*)"
+  extern "int fclose(FILE*)"
+  extern "int fgetc(FILE*)"
+  extern "int strlen(char*)"
+  extern "void qsort(void*, int, int, void*)"
+
+  def str_qsort(ary, comp)
+    len = ary.length
+    r,rs = qsort(ary, len, DL.sizeof('P'), comp)
+    return rs[0].to_a('S', len)
+  end
+
+  Timeval = struct [
+    "long tv_sec",
+    "long tv_usec",
+  ]
+
+  Timezone = struct [
+    "int tz_minuteswest",
+    "int tz_dsttime",
+  ]
+
+  def my_compare(ptr1, ptr2)
+    ptr1.ptr.to_s <=> ptr2.ptr.to_s
+  end
+  COMPARE = callback "int my_compare(char**, char**)"
+end
+
+
+$cb1 = DL.callback('IPP'){|ptr1, ptr2|
+  str1 = ptr1.ptr.to_s
+  str2 = ptr2.ptr.to_s
+  str1 <=> str2
+}
+
+p LIBC.atoi("10")
+
+p LIBC.isdigit(?1)
+
+p LIBC.isdigit(?a)
+
+p LIBC.strcat("a", "b")
+
+ary = ["a","c","b"]
+ptr = ary.to_ptr
+LIBC.qsort(ptr, ary.length, DL.sizeof('P'), LIBC::COMPARE)
+p ptr.to_a('S', ary.length)
+
+tv = LIBC::Timeval.malloc
+tz = LIBC::Timezone.malloc
+LIBC.gettimeofday(tv, tz)
+
+p Time.at(tv.tv_sec)
+@
+
+
+1.4
+log
+@* ext/dl: change the callback mechanism.
+@
+text
+@d38 5
+d62 1
+a62 1
+LIBC.qsort(ptr, ary.length, DL.sizeof('P'), $cb1)
+@
+
+
+1.3
+log
+@rename PtrData::alloc and Struct#alloc to malloc respectively.
+@
+text
+@d41 1
+a41 1
+$cb1 = DL.set_callback('IPP', 0){|ptr1, ptr2|
+@
+
+
+1.2
+log
+@Add DL::Importable::Internal::Struct#alloc.
+@
+text
+@d60 2
+a61 2
+tv = LIBC::Timeval.alloc
+tz = LIBC::Timezone.alloc
+@
+
+
+1.1
+log
+@Add ruby-dl
+@
+text
+@d1 2
+a2 1
+require 'dl'
+d5 2
+d8 14
+a21 4
+    LIB = DL.dlopen('libc.so.6')
+  rescue RuntimeError
+    LIB = DL.dlopen('libc.so.5')
+  end
+d23 4
+a26 8
+  SYM = {
+    :atoi    => LIB['atoi', 'IS'],
+    :isdigit => LIB['isdigit', 'II'],
+  }
+
+  def atoi(str)
+    r,rs = SYM[:atoi].call(str)
+    return r
+d29 9
+a37 4
+  def isdigit(c)
+    r,rs = SYM[:isdigit].call(c)
+    return (r != 0)
+  end
+a39 36
+module LIBC
+  SYM[:strcat] = LIB['strcat', 'SsS']
+  def strcat(str1,str2)
+    r,rs = SYM[:strcat].call(str1 + "\0#{str2}",str2)
+    return rs[0]
+  end
+end
+
+module LIBC
+  SYM[:fopen] = LIB['fopen', 'PSS']
+  SYM[:fclose] = LIB['fclose', '0P']
+  SYM[:fgetc] = LIB['fgetc', 'IP']
+
+  def fopen(filename, mode)
+    r,rs = SYM[:fopen].call(filename, mode)
+    return r
+  end
+
+  def fclose(ptr)
+    SYM[:fclose].call(ptr)
+    return nil
+  end
+
+  def fgetc(ptr)
+    r,rs = SYM[:fgetc].call(ptr)
+    return r
+  end
+end
+
+module LIBC
+  SYM[:strlen] = LIB['strlen', 'IP']
+  def strlen(str)
+    r,rs = SYM[:strlen].call(str)
+    return r
+  end
+end
+d47 12
+a58 8
+module LIBC
+  SYM[:qsort] = LIB['qsort', '0aIIP']
+  def qsort(ary, comp)
+    len = ary.length
+    r,rs = SYM[:qsort].call(ary, len, DL.sizeof('P'), comp)
+    return rs[0].to_a('S', len)
+  end
+end
+d60 3
+a62 1
+include LIBC
+d64 1
+a64 5
+p atoi("10")
+p isdigit(?1)
+p isdigit(?a)
+p strcat("a", "b")
+p qsort(["a","c","b"],$cb1)
+@

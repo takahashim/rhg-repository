@@ -1,0 +1,1904 @@
+head	1.14;
+access;
+symbols
+	v1_6_7:1.9.2.4
+	v1_6_6:1.9.2.4
+	v1_6_5:1.9.2.4
+	v1_6_4:1.9.2.3
+	v1_7_1:1.11
+	v1_6_4_preview4:1.9.2.3
+	v1_6_4_preview3:1.9.2.3
+	v1_6_4_preview2:1.9.2.1
+	v1_6_4_preview1:1.9.2.1
+	v1_6_3:1.9.2.1
+	ruby_m17n:1.9.0.4
+	ruby_1_6:1.9.0.2
+	v1_6_2:1.9
+	v1_6_1:1.9
+	v1_6_0:1.8
+	v1_4_6:1.2.2.3
+	v1_4_5:1.2.2.3
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.5
+	v1_3_6_repack:1.1.1.2.2.5
+	v1_3_6:1.1.1.2.2.5
+	v1_3_5:1.1.1.2.2.4
+	v1_2_6repack:1.1.1.1.4.8
+	v1_3_4_990625:1.1.1.2.2.4
+	v1_3_4_990624:1.1.1.2.2.3
+	v1_2_6:1.1.1.1.4.8
+	v1_3_4_990611:1.1.1.2.2.3
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.4.8
+	v1_2_4:1.1.1.1.4.8
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.8
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.8
+	v1_2_1repack:1.1.1.1.4.8
+	v1_2_1:1.1.1.1.4.8
+	v1_2_stable:1.1.1.1.4.8
+	v1_1d1:1.1.1.1.4.8.2.1
+	v1_1d0:1.1.1.1.4.8.2.1
+	v1_1c9_1:1.1.1.1.4.8
+	v1_1c9:1.1.1.1.4.8
+	v1_1c8:1.1.1.1.4.8
+	v1_1c7:1.1.1.1.4.8
+	v1_1c6:1.1.1.1.4.8
+	v1_1d-start:1.1.1.1.4.8
+	v1_1c5:1.1.1.1.4.8
+	v1_1dev:1.1.1.1.4.8.0.2
+	v1_1c4:1.1.1.1.4.8
+	v1_1c3:1.1.1.1.4.8
+	v1_1c2:1.1.1.1.4.8
+	v1_1c1:1.1.1.1.4.8
+	v1_1c0:1.1.1.1.4.8
+	v1_1b9_31:1.1.1.1.4.8
+	v1_1b9_30:1.1.1.1.4.8
+	v1_1b9_28:1.1.1.1.4.8
+	v1_1b9_27:1.1.1.1.4.8
+	v1_1b9_26:1.1.1.1.4.8
+	r1_1b9_25:1.1.1.1.4.8
+	r1_1b9_24:1.1.1.1.4.8
+	v1_1b9_23:1.1.1.1.4.8
+	v1_1b9_22:1.1.1.1.4.8
+	v1_1b9_20:1.1.1.1.4.8
+	v1_1b9_18:1.1.1.1.4.8
+	v1_1b9_16:1.1.1.1.4.7
+	v1_1b9_15:1.1.1.1.4.7
+	v1_1b9_13:1.1.1.1.4.7
+	v1_1b9_12:1.1.1.1.4.7
+	v1_1b9_11:1.1.1.1.4.7
+	v1_1b9_08:1.1.1.1.4.7
+	v1_1b9_07:1.1.1.1.4.7
+	r1_1b9:1.1.1.1.4.6
+	v1_1b8:1.1.1.1.4.3
+	v1_1b7:1.1.1.1.4.2
+	v1_1b6:1.1.1.1.4.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.14
+date	2002.08.27.08.31.08;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.06.06.02.42.55;	author nobu;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.05.29.05.20.39;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.05.16.09.05.54;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.03.14.08.38.51;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.09.20.09.16.32;	author matz;	state Exp;
+branches
+	1.9.2.1;
+next	1.8;
+
+1.8
+date	2000.08.07.05.02.10;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.30.04.24.08;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.12.09.07.52;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.09.04.53.14;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.01.09.41.39;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.03.17.08.58.20;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.18;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.16.06.03.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.06.04.09.49.23;	author shugo;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.06.11.01.43.23;	author shugo;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.07.22.10.37.26;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.01.16.12.36.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.09.10.56.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.02.13.09.40.28;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.02.25.06.52.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	98.02.26.07.43.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.6;
+
+1.1.1.1.4.6
+date	98.02.27.05.40.03;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.7;
+
+1.1.1.1.4.7
+date	98.03.03.02.39.34;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.8;
+
+1.1.1.1.4.8
+date	98.05.01.08.56.45;	author matz;	state Exp;
+branches
+	1.1.1.1.4.8.2.1;
+next	;
+
+1.1.1.1.4.8.2.1
+date	98.11.25.03.31.18;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.03.23.04.14.30;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.05.01.09.42.38;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.05.30.04.21.35;	author matz;	state Exp;
+branches;
+next	;
+
+1.9.2.1
+date	2001.03.14.04.45.46;	author matz;	state Exp;
+branches;
+next	1.9.2.2;
+
+1.9.2.2
+date	2001.05.15.08.49.23;	author matz;	state Exp;
+branches;
+next	1.9.2.3;
+
+1.9.2.3
+date	2001.05.17.20.43.27;	author knu;	state Exp;
+branches;
+next	1.9.2.4;
+
+1.9.2.4
+date	2001.06.23.10.29.23;	author knu;	state Exp;
+branches;
+next	1.9.2.5;
+
+1.9.2.5
+date	2002.09.11.07.29.56;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@#
+#		thread.rb - thread support classes
+#			$Date: 2002/06/06 02:42:55 $
+#			by Yukihiro Matsumoto <matz@@netlab.co.jp>
+#
+# Copyright (C) 2001  Yukihiro Matsumoto
+# Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+# Copyright (C) 2000  Information-technology Promotion Agency, Japan
+#
+
+unless defined? Thread
+  fail "Thread not available for this ruby interpreter"
+end
+
+unless defined? ThreadError
+  class ThreadError<StandardError
+  end
+end
+
+if $DEBUG
+  Thread.abort_on_exception = true
+end
+
+def Thread.exclusive
+  _old = Thread.critical
+  begin
+    Thread.critical = true
+    return yield
+  ensure
+    Thread.critical = _old
+  end
+end
+
+class Mutex
+  def initialize
+    @@waiting = []
+    @@locked = false;
+    @@waiting.taint		# enable tainted comunication
+    self.taint
+  end
+
+  def locked?
+    @@locked
+  end
+
+  def try_lock
+    result = false
+    Thread.critical = true
+    unless @@locked
+      @@locked = true
+      result = true
+    end
+    Thread.critical = false
+    result
+  end
+
+  def lock
+    while (Thread.critical = true; @@locked)
+      @@waiting.push Thread.current
+      Thread.stop
+    end
+    @@locked = true
+    Thread.critical = false
+    self
+  end
+
+  def unlock
+    return unless @@locked
+    Thread.critical = true
+    @@locked = false
+    begin
+      t = @@waiting.shift
+      t.wakeup if t
+    rescue ThreadError
+      retry
+    end
+    Thread.critical = false
+    begin
+      t.run if t
+    rescue ThreadError
+    end
+    self
+  end
+
+  def synchronize
+    lock
+    begin
+      yield
+    ensure
+      unlock
+    end
+  end
+
+  def exclusive_unlock
+    return unless @@locked
+    Thread.exclusive do
+      @@locked = false
+      begin
+	t = @@waiting.shift
+	t.wakeup if t
+      rescue ThreadError
+	retry
+      end
+      yield
+    end
+    self
+  end
+end
+
+class ConditionVariable
+  def initialize
+    @@waiters = []
+  end
+  
+  def wait(mutex)
+    mutex.exclusive_unlock do
+      @@waiters.push(Thread.current)
+      Thread.stop
+    end
+    mutex.lock
+  end
+  
+  def signal
+    begin
+      t = @@waiters.shift
+      t.run if t
+    rescue ThreadError
+      retry
+    end
+  end
+    
+  def broadcast
+    waiters0 = nil
+    Thread.exclusive do
+      waiters0 = @@waiters.dup
+      @@waiters.clear
+    end
+    for t in waiters0
+      begin
+	t.run
+      rescue ThreadError
+      end
+    end
+  end
+end
+
+class Queue
+  def initialize
+    @@que = []
+    @@waiting = []
+    @@que.taint		# enable tainted comunication
+    @@waiting.taint
+    self.taint
+  end
+
+  def push(obj)
+    Thread.critical = true
+    @@que.push obj
+    begin
+      t = @@waiting.shift
+      t.wakeup if t
+    rescue ThreadError
+      retry
+    ensure
+      Thread.critical = false
+    end
+    begin
+      t.run if t
+    rescue ThreadError
+    end
+  end
+  alias << push
+  alias enq push
+
+  def pop(non_block=false)
+    while (Thread.critical = true; @@que.empty?)
+      raise ThreadError, "queue empty" if non_block
+      @@waiting.push Thread.current
+      Thread.stop
+    end
+    @@que.shift
+  ensure
+    Thread.critical = false
+  end
+  alias shift pop
+  alias deq pop
+
+  def empty?
+    @@que.empty?
+  end
+
+  def clear
+    @@que.clear
+  end
+
+  def length
+    @@que.length
+  end
+  def size
+    length
+  end
+
+  def num_waiting
+    @@waiting.size
+  end
+end
+
+class SizedQueue<Queue
+  def initialize(max)
+    raise ArgumentError, "queue size must be positive" unless max > 0
+    @@max = max
+    @@queue_wait = []
+    @@queue_wait.taint		# enable tainted comunication
+    super()
+  end
+
+  def max
+    @@max
+  end
+
+  def max=(max)
+    Thread.critical = true
+    if max <= @@max
+      @@max = max
+      Thread.critical = false
+    else
+      diff = max - @@max
+      @@max = max
+      Thread.critical = false
+      diff.times do
+	begin
+	  t = @@queue_wait.shift
+	  t.run if t
+	rescue ThreadError
+	  retry
+	end
+      end
+    end
+    max
+  end
+
+  def push(obj)
+    Thread.critical = true
+    while @@que.length >= @@max
+      @@queue_wait.push Thread.current
+      Thread.stop
+      Thread.critical = true
+    end
+    super
+  end
+  alias << push
+  alias enq push
+
+  def pop(*args)
+    retval = super
+    Thread.critical = true
+    if @@que.length < @@max
+      begin
+	t = @@queue_wait.shift
+	t.wakeup if t
+      rescue ThreadError
+	retry
+      ensure
+	Thread.critical = false
+      end
+      begin
+	t.run if t
+      rescue ThreadError
+      end
+    end
+    retval
+  end
+  alias shift pop
+  alias deq pop
+
+  def num_waiting
+    @@waiting.size + @@queue_wait.size
+  end
+end
+@
+
+
+1.13
+log
+@* lib/thread.rb (Queue::pop): get rid of race condition.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2002/05/29 05:20:39 $
+d252 1
+d273 2
+@
+
+
+1.12
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/05/16 09:05:54 $
+d176 4
+a179 15
+    Thread.critical = true
+    begin
+      loop do
+       if @@que.empty?
+	  if non_block
+	    raise ThreadError, "queue empty"
+	  end
+	  @@waiting.push Thread.current
+	  Thread.stop
+	else
+	  return @@que.shift
+	end
+      end
+    ensure
+      Thread.critical = false
+d181 3
+@
+
+
+1.11
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/03/14 08:38:51 $
+d218 1
+@
+
+
+1.10
+log
+@* eval.c (rb_thread_schedule): raise FATAL just once to
+  THREAD_TO_KILL.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/09/20 09:16:32 $
+d6 1
+d78 4
+a81 1
+    t.run if t
+d167 4
+a170 4
+    t.run if t
+  end
+  def enq(obj)
+    push(obj)
+d172 2
+d179 1
+a179 1
+	if @@que.length == 0
+d193 2
+a194 4
+  def shift(non_block=false)
+    pop(non_block)
+  end
+  alias deq shift
+d197 1
+a197 1
+    @@que.length == 0
+d201 1
+a201 1
+    @@que.replace([])
+d230 1
+a230 1
+    if max >= @@max
+d258 1
+d261 1
+d272 4
+a275 1
+      t.run if t
+d277 1
+a277 1
+    super
+@
+
+
+1.9
+log
+@matz - disappointing fixes
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/08/07 05:02:10 $
+d188 1
+a188 1
+    pop(non_block=false)
+@
+
+
+1.9.2.1
+log
+@* eval.c (rb_yield_0): 0 (= Qfalse) is a valid value, so that
+  default self should be checked by klass == 0.
+
+* bignum.c (rb_cstr2inum): should disallow '++1', '+-1', etc.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/09/20 09:16:32 $
+d188 1
+a188 1
+    pop(non_block)
+@
+
+
+1.9.2.2
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/03/14 04:45:46 $
+d173 1
+a173 1
+       if @@que.empty?
+d187 4
+a190 2
+  alias shift pop
+  alias deq pop
+d193 1
+a193 1
+    @@que.empty?
+d226 1
+a226 1
+    if max <= @@max
+d230 1
+a230 1
+      diff = @@max - max
+a255 1
+    retval = super
+d268 1
+a268 1
+    retval
+@
+
+
+1.9.2.3
+log
+@* lib/thread.rb: rescue ThreadError in case the thread is dead
+  just before calling Thread#run.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/05/15 08:49:23 $
+d77 1
+a77 4
+    begin
+      t.run if t
+    rescue ThreadError
+    end
+d163 1
+a163 4
+    begin
+      t.run if t
+    rescue ThreadError
+    end
+d265 1
+a265 4
+      begin
+	t.run if t
+      rescue ThreadError
+      end
+@
+
+
+1.9.2.4
+log
+@* lib/thread.rb: Synchronize with HEAD.  The last change
+  (rev.1.9.2.2) against SizedQueue#max= was wrong and didn't fix
+  the bug in question.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/05/17 20:43:27 $
+a5 1
+# Copyright (C) 2001  Yukihiro Matsumoto
+d171 3
+a173 2
+  alias << push
+  alias enq push
+d201 1
+a201 1
+    @@que.clear
+d234 1
+a234 1
+      diff = max - @@max
+a257 1
+  alias << push
+@
+
+
+1.9.2.5
+log
+@* lib/thread.rb: Merge from 1.7: Get rid of race condition in
+  Queue#pop().
+
+* lib/thread.rb: Merge from 1.7: SizedQueue: new(max) should not
+  accept a value <= 0.
+
+* lib/thread.rb: Merge from 1.7: SizedQueue: Properly override
+  enq(), shift() and deq().
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/06/23 10:29:23 $
+d176 15
+a190 4
+    while (Thread.critical = true; @@que.empty?)
+      raise ThreadError, "queue empty" if non_block
+      @@waiting.push Thread.current
+      Thread.stop
+a191 3
+    @@que.shift
+  ensure
+    Thread.critical = false
+a217 1
+    raise ArgumentError, "queue size must be positive" unless max > 0
+a258 1
+  alias enq push
+a278 2
+  alias shift pop
+  alias deq pop
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/05/30 04:24:08 $
+d226 1
+a226 1
+    if @@max >= max
+@
+
+
+1.7
+log
+@2000-05-30
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/05/12 09:07:52 $
+d24 1
+d27 1
+a27 1
+    r = yield
+d29 1
+a29 1
+    Thread.critical = false
+a30 1
+  r
+@
+
+
+1.6
+log
+@2000-05-12
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/05/09 04:53:14 $
+d165 3
+a167 1
+  alias enq push
+d169 1
+a169 1
+  def pop non_block=false
+d187 4
+a190 2
+  alias shift pop
+  alias deq pop
+d203 3
+a205 2
+  alias size length
+
+@
+
+
+1.5
+log
+@2000-05-09
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/05/01 09:41:39 $
+d160 2
+d163 1
+a163 1
+    Thread.critical = false
+d255 1
+a255 1
+	t.run if t
+d258 2
+d261 1
+@
+
+
+1.4
+log
+@2000-05-01
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/03/17 08:58:20 $
+d7 1
+a7 1
+# Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.3
+log
+@2000-03-17
+@
+text
+@d3 5
+a7 2
+#			$Date: 1999/08/13 05:45:18 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+d77 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/07/22 10:37:26 $
+a65 1
+    t = @@waiting.shift
+d67 6
+a73 1
+    t.run if t
+a88 1
+      t = @@waiting.shift
+d90 6
+a95 1
+      t.wakeup if t
+d116 6
+a121 2
+    t = @@waiters.shift
+    t.run if t
+d131 4
+a134 1
+      t.run
+d151 6
+a156 1
+    t = @@waiting.shift
+a157 1
+    t.run if t
+d223 6
+a228 2
+	t = @@queue_wait.shift
+	t.run if t
+d247 6
+a252 2
+      t = @@queue_wait.shift
+      t.run if t
+@
+
+
+1.2.2.1
+log
+@2000-03-23
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/13 05:45:18 $
+d66 1
+a67 6
+    begin
+      t = @@waiting.shift
+      t.wakeup if t
+    rescue ThreadError
+      retry
+    end
+d69 1
+d85 1
+d87 1
+a87 6
+      begin
+	t = @@waiting.shift
+	t.wakeup if t
+      rescue ThreadError
+	retry
+      end
+d108 2
+a109 6
+    begin
+      t = @@waiters.shift
+      t.run if t
+    rescue ThreadError
+      retry
+    end
+d119 1
+a119 4
+      begin
+	t.run
+      rescue ThreadError
+      end
+d136 1
+a136 6
+    begin
+      t = @@waiting.shift
+      t.wakeup if t
+    rescue ThreadError
+      retry
+    end
+d138 1
+d204 2
+a205 6
+	begin
+	  t = @@queue_wait.shift
+	  t.run if t
+	rescue ThreadError
+	  retry
+	end
+d224 2
+a225 6
+      begin
+	t = @@queue_wait.shift
+	t.run if t
+      rescue ThreadError
+	retry
+      end
+@
+
+
+1.2.2.2
+log
+@2000-05-01
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/03/23 04:14:30 $
+a73 1
+    t.run if t
+@
+
+
+1.2.2.3
+log
+@2000-05-30
+@
+text
+@d3 2
+a4 5
+#			$Date: 2000/05/12 09:07:52 $
+#			by Yukihiro Matsumoto <matz@@netlab.co.jp>
+#
+# Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+# Copyright (C) 2000  Information-technology Promotion Agency, Japan
+a156 2
+    ensure
+      Thread.critical = false
+d158 1
+a158 4
+    t.run if t
+  end
+  def enq(obj)
+    push(obj)
+d160 1
+d162 1
+a162 1
+  def pop(non_block=false)
+d180 2
+a181 4
+  def shift(non_block=false)
+    pop(non_block=false)
+  end
+  alias deq shift
+d194 2
+a195 3
+  def size
+    length
+  end
+d250 1
+a250 1
+	t.wakeup if t
+a252 2
+      ensure
+	Thread.critical = false
+a253 1
+      t.run if t
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+#			$Date: 1996/05/21 09:29:21 $
+d12 1
+a12 1
+  class ThreadError<Exception
+d16 14
+d33 3
+a35 1
+    @@locked = FALSE;
+d43 2
+a44 2
+    result = FALSE
+    Thread.critical = TRUE
+d46 2
+a47 2
+      @@locked = TRUE
+      result = TRUE
+d49 1
+a49 1
+    Thread.critical = FALSE
+d54 1
+a54 1
+    while (Thread.critical = TRUE; @@locked)
+d58 2
+a59 2
+    @@locked = TRUE
+    Thread.critical = FALSE
+d65 5
+a69 8
+    Thread.critical = TRUE
+    wait = @@waiting
+    @@waiting = []
+    @@locked = FALSE
+    Thread.critical = FALSE
+    for w in wait
+      w.run
+    end
+d74 1
+a75 1
+      lock
+d81 41
+d128 3
+d134 1
+a134 1
+    Thread.critical = TRUE
+d137 1
+a137 1
+    Thread.critical = FALSE
+d140 1
+d142 12
+a153 8
+  def pop non_block=FALSE
+    item = nil
+    until item
+      Thread.critical = TRUE
+      if @@que.length == 0
+	if non_block
+	  Thread.critical = FALSE
+	  raise ThreadError, "queue empty"
+a154 4
+	@@waiting.push Thread.current
+	Thread.stop
+      else
+	item = @@que.shift
+d156 2
+a158 2
+    Thread.critical = FALSE
+    item
+d160 2
+d167 4
+d173 59
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/11/25 03:31:18 $
+d12 1
+a12 1
+  class ThreadError<StandardError
+a15 4
+if $DEBUG
+  Thread.abort_on_exception = true
+end
+
+d19 1
+a19 3
+    @@locked = false;
+    @@waiting.taint		# enable tainted comunication
+    self.taint
+d27 2
+a28 2
+    result = false
+    Thread.critical = true
+d30 2
+a31 2
+      @@locked = true
+      result = true
+d33 1
+a33 1
+    Thread.critical = false
+d38 1
+a38 1
+    while (Thread.critical = true; @@locked)
+d42 2
+a43 2
+    @@locked = true
+    Thread.critical = false
+d50 2
+a51 1
+    t = @@waiting.shift
+d54 3
+a56 1
+    t.run if t
+a60 1
+    lock
+d62 1
+a69 34
+class ConditionVariable
+  def initialize
+    @@waiters = []
+    @@waiters_mutex = Mutex.new
+    @@waiters.taint		# enable tainted comunication
+    self.taint
+  end
+  
+  def wait(mutex)
+    mutex.unlock
+    @@waiters_mutex.synchronize {
+      @@waiters.push(Thread.current)
+    }
+    Thread.stop
+    mutex.lock
+  end
+  
+  def signal
+    @@waiters_mutex.synchronize {
+      t = @@waiters.shift
+      t.run if t
+    }
+  end
+    
+  def broadcast
+    @@waiters_mutex.synchronize {
+      for t in @@waiters
+	t.run
+      end
+      @@waiters.clear
+    }
+  end
+end
+
+a73 3
+    @@que.taint		# enable tainted comunication
+    @@waiting.taint
+    self.taint
+d77 1
+a77 1
+    Thread.critical = true
+d80 1
+a80 1
+    Thread.critical = false
+d84 8
+a91 12
+  def pop non_block=false
+    Thread.critical = true
+    begin
+      loop do
+	if @@que.length == 0
+	  if non_block
+	    raise ThreadError, "queue empty"
+	  end
+	  @@waiting.push Thread.current
+	  Thread.stop
+	else
+	  return @@que.shift
+d93 4
+a97 2
+    ensure
+      Thread.critical = false
+d99 2
+a108 59
+  end
+  alias size length
+
+
+  def num_waiting
+    @@waiting.size
+  end
+end
+
+class SizedQueue<Queue
+  def initialize(max)
+    @@max = max
+    @@queue_wait = []
+    @@queue_wait.taint		# enable tainted comunication
+    super()
+  end
+
+  def max
+    @@max
+  end
+
+  def max=(max)
+    Thread.critical = TRUE
+    if @@max >= max
+      @@max = max
+      Thread.critical = FALSE
+    else
+      diff = max - @@max
+      @@max = max
+      Thread.critical = FALSE
+      diff.times do
+	t = @@queue_wait.shift
+	t.run if t
+      end
+    end
+    max
+  end
+
+  def push(obj)
+    Thread.critical = true
+    while @@que.length >= @@max
+      @@queue_wait.push Thread.current
+      Thread.stop
+      Thread.critical = true
+    end
+    super
+  end
+
+  def pop(*args)
+    Thread.critical = true
+    if @@que.length < @@max
+      t = @@queue_wait.shift
+      t.run if t
+    end
+    super
+  end
+
+  def num_waiting
+    @@waiting.size + @@queue_wait.size
+@
+
+
+1.1.1.2.2.1
+log
+@990324
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/01/20 04:59:35 $
+a144 4
+  end
+
+  def clear
+    @@que.replace([])
+@
+
+
+1.1.1.2.2.2
+log
+@prepare to alpha
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/03/24 08:52:35 $
+a122 1
+  alias enq push
+a141 2
+  alias shift pop
+  alias deq pop
+@
+
+
+1.1.1.2.2.3
+log
+@Shin-ichiro Hara's ConditionVariable
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/04/16 06:03:36 $
+a19 10
+def Thread.exclusive
+  begin
+    Thread.critical = true
+    r = yield
+  ensure
+    Thread.critical = false
+  end
+  r
+end
+
+a70 11
+
+  def exclusive_unlock
+    return unless @@locked
+    Thread.exclusive do
+      t = @@waiting.shift
+      @@locked = false
+      t.wakeup if t
+      yield
+    end
+    self
+  end
+d76 3
+d82 2
+a83 1
+    mutex.exclusive_unlock do
+d85 2
+a86 2
+      Thread.stop
+    end
+d91 4
+a94 2
+    t = @@waiters.shift
+    t.run if t
+d98 4
+a101 3
+    waitors0 = nil
+    Thread.exclusive do
+      waiters0 = @@waitors.dup
+d103 1
+a103 4
+    end
+    for t in waiters0
+      t.run
+    end
+@
+
+
+1.1.1.2.2.4
+log
+@Fix typo.
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/06/04 09:49:23 $
+d113 1
+a113 1
+    waiters0 = nil
+d115 1
+a115 1
+      waiters0 = @@waiters.dup
+@
+
+
+1.1.1.2.2.5
+log
+@backtrace may be Qnil
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/06/11 01:43:23 $
+d65 1
+a65 1
+    Thread.critical = true
+d67 2
+a68 2
+    @@locked = false
+    Thread.critical = false
+d195 1
+a195 1
+    Thread.critical = true
+d198 1
+a198 1
+      Thread.critical = false
+d202 1
+a202 1
+      Thread.critical = false
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/01/16 04:05:50 $
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b7 pre
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/01/16 12:36:05 $
+a15 4
+if $DEBUG
+  Thread.abort_on_exception = true
+end
+
+a108 26
+  end
+  alias size length
+end
+
+class SizedQueue<Queue
+  def initialize(max)
+    @@max = max
+    @@queue_wait = []
+    super()
+  end
+
+  def push(obj)
+    while @@que.length >= @@max
+      @@queue_wait.push Thread.current
+      Thread.stop
+    end
+    super
+  end
+
+  def pop(*args)
+    if @@que.length < @@max
+      t = @@queue_wait.shift
+      t.run if t
+    end
+    pop = super
+    pop
+@
+
+
+1.1.1.1.4.3
+log
+@\s and assignment in conditional
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/02/09 10:56:23 $
+a71 4
+
+  def num_waiting
+    @@waiting.size
+  end
+a138 4
+  end
+
+  def num_waiting
+    @@waiting.size + @@queue_wait.size
+@
+
+
+1.1.1.1.4.4
+log
+@reserved words & etc.
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/02/13 09:40:28 $
+d23 1
+a23 1
+    @@locked = false;
+d31 2
+a32 2
+    result = false
+    Thread.critical = true
+d34 2
+a35 2
+      @@locked = true
+      result = true
+d37 1
+a37 1
+    Thread.critical = false
+d42 1
+a42 1
+    while (Thread.critical = true; @@locked)
+d46 2
+a47 2
+    @@locked = true
+    Thread.critical = false
+d53 1
+a53 1
+    Thread.critical = true
+d56 2
+a57 2
+    @@locked = false
+    Thread.critical = false
+d85 1
+a85 1
+    Thread.critical = true
+d88 1
+a88 1
+    Thread.critical = false
+d92 1
+a92 1
+  def pop non_block=false
+d95 1
+a95 1
+      Thread.critical = true
+d98 1
+a98 1
+	  Thread.critical = false
+d107 1
+a107 1
+    Thread.critical = false
+a127 20
+  def max
+    @@max
+  end
+
+  def max=(max)
+    if @@max >= max
+      @@max = max
+    else
+      Thread.critical = TRUE
+      diff = max - @@max
+      @@max = max
+      diff.times do
+	t = @@queue_wait.shift
+	t.run if t
+      end
+      Thread.critical = FALSE
+      @@max
+    end
+  end
+
+a128 1
+    Thread.critical = true
+a136 1
+    Thread.critical = true
+@
+
+
+1.1.1.1.4.5
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/02/25 06:52:43 $
+a71 1
+end
+d73 2
+a74 29
+class ConditionVariable
+  def initialize
+    @@waiters = []
+    @@waiters_mutex = Mutex.new
+  end
+  
+  def wait(mutex)
+    mutex.unlock
+    @@waiters_mutex.synchronize {
+      @@waiters.push(Thread.current)
+    }
+    Thread.stop
+    mutex.lock
+  end
+  
+  def signal
+    @@waiters_mutex.synchronize {
+      t = @@waiters.shift
+      t.run if t
+    }
+  end
+    
+  def broadcast
+    @@waiters_mutex.synchronize {
+      for t in @@waiters
+	t.run
+      end
+      @@waiters.clear
+    }
+a118 5
+
+
+  def num_waiting
+    @@waiting.size
+  end
+a132 1
+    Thread.critical = TRUE
+a134 1
+      Thread.critical = FALSE
+d136 1
+a138 1
+      Thread.critical = FALSE
+d143 2
+a145 1
+    max
+a152 1
+      Thread.critical = true
+d163 2
+a164 1
+    super
+@
+
+
+1.1.1.1.4.6
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/02/26 07:43:11 $
+d53 8
+a60 5
+    Thread.critical = TRUE
+    t = @@waiting.shift
+    @@locked = FALSE
+    Thread.critical = FALSE
+    t.run if t
+@
+
+
+1.1.1.1.4.7
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/02/27 05:40:03 $
+a61 1
+    lock
+d63 1
+d118 7
+a124 11
+    Thread.critical = true
+    begin
+      loop do
+	if @@que.length == 0
+	  if non_block
+	    raise ThreadError, "queue empty"
+	  end
+	  @@waiting.push Thread.current
+	  Thread.stop
+	else
+	  return @@que.shift
+d126 4
+a130 2
+    ensure
+      Thread.critical = false
+d132 2
+@
+
+
+1.1.1.1.4.8
+log
+@exception model changed
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/03/03 02:39:34 $
+d12 1
+a12 1
+  class ThreadError<StandardError
+@
+
+
+1.1.1.1.4.8.2.1
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+#			$Date: 1998/05/01 08:56:45 $
+a23 2
+    @@waiting.taint		# enable tainted comunication
+    self.taint
+a74 2
+    @@waiters.taint		# enable tainted comunication
+    self.taint
+a106 3
+    @@que.taint		# enable tainted comunication
+    @@waiting.taint
+    self.taint
+a154 1
+    @@queue_wait.taint		# enable tainted comunication
+@

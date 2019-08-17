@@ -1,0 +1,150 @@
+head	1.1;
+access;
+symbols
+	release_1_0_1:1.1
+	version_1_0-branch:1.1.0.2
+	root-of-version_1_0:1.1
+	release_1_0_0:1.1
+	release_0_9_9:1.1
+	release_0_9_8:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.12.07.58.08;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* doc: added documents.
+@
+text
+@=begin
+
+= mod_ruby Apache Directives
+
+[((<Index|URL:index.en.html>))
+|((<RD format|URL:directives.en.rd>))]
+
+* ((<RubyAddPath|RubyAddPath directory...>))
+* ((<RubyRequire|RubyRequire library...>))
+* ((<RubyHandler|RubyHandler expr>))
+* ((<RubyPassEnv|RubyPassEnv name...>))
+* ((<RubySetEnv|RubySetEnv name val>))
+* ((<RubyTimeOut|RubyTimeOut sec>))
+* ((<RubySafeLevel|RubySafeLevel level>))
+* ((<RubyOutputMode|RubyOutputMode mode>))
+* ((<RubyKanjiCode|RubyKanjiCode kcode>))
+
+--- RubyAddPath directory...
+      Adds a directory to the library search path.
+
+      example:
+
+        RubyAddPath /home/shugo/ruby
+
+--- RubyRequire library...
+      Specifies a library or libraries to use with Ruby code.
+
+      example:
+
+        RubyRequire apache/ruby-run
+        RubyRequire cgi
+
+--- RubyHandler expr
+      Specifies an expression that returns a handler object for
+      ((|ruby-object|)) handler.
+
+      example:
+
+        <Location /ruby>
+          SetHandler ruby-object
+          RubyHandler Apache::RubyRun.instance
+        </Location>
+
+--- RubyPassEnv name...
+      Specifies environment variable names to pass to scripts.
+      If this directive is not used, only CGI environment variables
+      (such as QUERY_STRING) are passed to Ruby scripts.
+      If it is used, all CGI environment variables and the other environment
+      variables listed will be available within Ruby scripts.
+      Only available in server config.
+
+      example:
+
+        RubyPassEnv HOSTNAME OSTYPE MACHTYPE
+
+--- RubySetEnv name val
+      Sets the value of environment variable ((|name|)) to pass to scripts.
+      
+      example:
+
+        RubySetEnv LANG "ja_JP.eucJP"
+
+--- RubyTimeOut sec
+      Specifies the timeout (in seconds) for Ruby scripts.
+      Scripts which are still running after the timeout expires will be
+      terminated.
+      Only available in server config. 
+
+      example:
+
+        RubyTimeOut 60
+
+--- RubySafeLevel level
+      Specifies the default value of ((|$SAFE|)).
+
+      $SAFE is the security level. The value of $SAFE should be one of
+      the integers from 0 to 4. The default value of $SAFE is 1 on mod_ruby.
+
+      If $SAFE >= 1, Ruby disallows the use of tainted data by potentially
+      dangerous operations.
+
+      If $SAFE >= 2, Ruby prohibits the loading of program files from globally
+      writable locations.
+
+      If $SAFE >= 3, All newly created objects are considered tainted.
+
+      If $SAFE >= 4, Ruby prohibits the modification of global states such as
+      global variables.
+
+      example:
+
+        RubySafeLevel 2
+
+--- RubyOutputMode mode
+      Specifies the output mode of scripts. ((|mode|)) should be one of
+      (({nosync})), (({sync})), (({syncheader})). If ((|mode|)) is
+      (({nosync})), all output of scripts will be buffered, then flushed on
+      the end of scripts execution. If ((|mode|)) is (({sync})), all
+      output of scripts will be sent to clients immediately.
+      If ((|mode|)) is ((|syncheader|)), only header output will be sent
+      immediately, then other output will be buffered.
+      The default value is ((|nosync|)).
+
+      example:
+
+        RubyOutputMode syncheader
+
+--- RubyKanjiCode kcode
+      Specifies the value of ((|$KCODE|)).
+
+      $KCODE is the character coding system Ruby handles. If the first
+      character of $KCODE is `e' or `E', Ruby handles EUC. If it is `s'
+      or `S', Ruby handles Shift_JIS. If it is `u' or `U', Ruby handles
+      UTF-8. If it is `n' or `N', Ruby doesn't handle multi-byte
+      characters. The default value is "NONE".
+
+      example:
+
+        RubyKanjiCode euc
+
+=end
+@

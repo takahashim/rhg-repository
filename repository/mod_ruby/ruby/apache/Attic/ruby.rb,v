@@ -1,0 +1,167 @@
+head	1.4;
+access;
+symbols
+	release_0_8_1:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2001.06.04.03.13.06;	author shugo;	state dead;
+branches;
+next	1.3;
+
+1.3
+date	2001.04.27.04.52.01;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.04.20.04.08.58;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.19.06.13.28;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@=begin
+
+= apache/ruby.rb
+
+Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+== Overview
+
+Apache::Ruby executes Ruby scripts.
+
+== Example of httpd.conf
+
+  RubyRequire apache/ruby
+  <Location /ruby>
+  SetHandler ruby-object
+  RubyHandler Apache::Ruby.instance
+  </Location>
+
+=end
+
+require "singleton"
+
+module Apache
+  class Ruby
+    include Singleton
+
+    def handler(r)
+      if r.finfo.mode == 0
+	return Apache::NOT_FOUND
+      end
+      if r.finfo.directory? or !r.finfo.readable?
+	return Apache::FORBIDDEN
+      end
+      emulate_cgi(r) do
+	load(r.filename, true)
+      end
+      return Apache::OK
+    end
+
+    private
+
+    def emulate_cgi(r)
+      r.setup_cgi_env
+      Apache.chdir_file(r.filename)
+      stdin, stdout, defout = $stdin, $stdout, $>
+      $stdin = $stdout = $> = r
+      begin
+	yield
+      ensure
+	$stdin, $stdout, $> = stdin, stdout, defout
+      end
+    end
+  end
+end
+@
+
+
+1.3
+log
+@* ruby/apache/ruby.rb (emulate_cgi): new method.
+* ruby/apache/eruby.rb: inherit Apache::Ruby.
+* table.c: new file for Apache::Table.
+* connection.c: new file for Apache::Connection.
+* server.c: new file for Apache::Server.
+* request.c: new file for Apache::Request.
+* request.c (request_setup_cgi_env): new method.
+* mod_ruby.c (script_handler): resotre original $stdin, $stdout
+and $>.
+@
+text
+@@
+
+
+1.2
+log
+@* apachelib.c (request_finfo): new method Apache::Request#finfo.
+* mod_ruby.c (load_eruby_script): supports eruby-0.9.0.
+* ruby/apache/eruby.rb: new handler Apache::ERuby.
+@
+text
+@d33 1
+a33 2
+      st = r.finfo
+      if st.mode.zero?
+d36 1
+a36 1
+      if st.directory? or !st.readable?
+d39 3
+a41 1
+      load(r.filename, true)
+d43 14
+@
+
+
+1.1
+log
+@* ruby/apache/ruby.rb: new handler Apache::Ruby.
+* ruby/apache/rd2html.rb: renamed from mod_rd2html.rb.
+* apachelib.c (request_read): do not use buffer.
+* apachelib.c (ruby_init_apachelib): remove methods from
+Apache::request. (gets, readline, readlines, each, getc,
+readchar, ungetc, tell, seek, rewind, pos, pos=)
+* apachelib.c (ruby_init_apachelib): new class Apache::Server.
+@
+text
+@d3 1
+a3 1
+= apache/rd2html.rb
+d12 12
+a26 2
+require "rd/rdfmt"
+require "rd/rd2html-lib"
+d33 2
+a34 4
+      begin
+	load(r.filename, true)
+	return Apache::OK
+      rescue Errno::ENOENT
+d36 2
+a37 1
+      rescue Errno::EACCES
+d40 2
+@
+

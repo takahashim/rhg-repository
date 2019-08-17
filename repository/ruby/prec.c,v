@@ -1,0 +1,516 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5.2.1
+	v1_6_5:1.5.2.1
+	v1_6_4:1.5.2.1
+	v1_7_1:1.8
+	v1_6_4_preview4:1.5.2.1
+	v1_6_4_preview3:1.5.2.1
+	v1_6_4_preview2:1.5.2.1
+	v1_6_4_preview1:1.5.2.1
+	v1_6_3:1.5.2.1
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.3.2.1
+	v1_4_5:1.3.2.1
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	v1_3_6_repack:1.1.2.1
+	v1_3_6:1.1.2.1
+	v1_3_5:1.1.2.1
+	v1_3_4_990625:1.1.2.1
+	v1_3_4_990624:1.1.2.1
+	v1_3_4_990611:1.1.2.1
+	v1_3_4_990531:1.1.2.1
+	v1_3_3_990518:1.1.2.1
+	v1_3_3_990513:1.1.2.1
+	v1_3_3_990507:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.10
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.03.28.08.43.25;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.01.15.07.00.54;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.01.09.41.25;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.01.05.04.37.08;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.16.09.40.32;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.12;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.12.10.27.39;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.04.12.10.27.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.01.17.08.24.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.01.15.07.33.12;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@/**********************************************************************
+
+  prec.c -
+
+  $Author: matz $
+  $Date: 2001/08/29 06:28:44 $
+  created at: Tue Jan 26 02:40:41 2000
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+
+VALUE rb_mPrecision;
+
+static ID prc_pr, prc_if;
+
+static VALUE
+prec_prec(x, klass)
+    VALUE x, klass;
+{
+    return rb_funcall(klass, prc_if, 1, x);
+}
+
+static VALUE
+prec_prec_i(x)
+    VALUE x;
+{
+    VALUE klass = rb_cInteger;
+
+    return rb_funcall(x, prc_pr, 1, klass);
+}
+
+static VALUE
+prec_prec_f(x)
+    VALUE x;
+{
+    VALUE klass = rb_cFloat;
+
+    return rb_funcall(x, prc_pr, 1, klass);
+}
+
+static VALUE
+prec_induced_from(module, x)
+    VALUE module, x;
+{
+    rb_raise(rb_eTypeError, "undefined conversion from %s into %s",
+            rb_class2name(CLASS_OF(x)), rb_class2name(module));
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+prec_included(module, include)
+    VALUE module, include;
+{
+    switch (TYPE(include)) {
+      case T_CLASS:
+      case T_MODULE:
+       break;
+      default:
+       Check_Type(include, T_CLASS);
+       break;
+    }
+    rb_define_singleton_method(include, "induced_from", prec_induced_from, 1);
+    return module;
+}
+
+
+void
+Init_Precision()
+{
+    rb_mPrecision = rb_define_module("Precision");
+    rb_define_singleton_method(rb_mPrecision, "included", prec_included, 1);
+    rb_define_method(rb_mPrecision, "prec", prec_prec, 1);
+    rb_define_method(rb_mPrecision, "prec_i", prec_prec_i, 0);
+    rb_define_method(rb_mPrecision, "prec_f", prec_prec_f, 0);
+
+    prc_pr = rb_intern("prec");
+    prc_if = rb_intern("induced_from");
+}
+@
+
+
+1.9
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.8
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d54 1
+a54 1
+prec_append_features(module, include)
+a64 1
+    rb_include_module(include, module);
+d74 1
+a74 1
+    rb_define_singleton_method(rb_mPrecision, "append_features", prec_append_features, 1);
+@
+
+
+1.7
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:00:54 $
+d50 1
+@
+
+
+1.6
+log
+@Mon Jan 15 16:00:07 2001  Yukihiro Matsumoto  <matz@@ruby-lang.org>
+
+	* pack.c (pack_unpack): should check associated pointer packed by
+	  pack("P").  restriction added.
+
+Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+
+	* re.c (rb_reg_s_last_match): should explicitly return nth match.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.5
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:08 $
+d46 1
+a46 1
+    
+@
+
+
+1.5.2.1
+log
+@Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:25 $
+d46 1
+a46 1
+    VALUE module, x;
+@
+
+
+1.4
+log
+@20000105
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d11 1
+a11 1
+*************************************************/
+@
+
+
+1.3
+log
+@1.4.1
+@
+text
+@d6 2
+a7 2
+  $Date: 1999/08/13 05:45:12 $
+  created at: Tue Jan 26 02:40:41 1999
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.3.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d3 1
+a3 1
+  ruby.h -
+d6 1
+a6 1
+  $Date: 1999/04/12 10:27:39 $
+@
+
+
+1.1
+log
+@file prec.c was initially added on branch ruby_1_3.
+@
+text
+@d1 81
+@
+
+
+1.1.2.1
+log
+@prec.c
+@
+text
+@a0 81
+/************************************************
+
+  ruby.h -
+
+  $Author: gotoken $
+  $Date: 1999/01/20 04:59:25 $
+  created at: Tue Jan 26 02:40:41 1999
+
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+
+*************************************************/
+
+#include "ruby.h"
+
+VALUE rb_mPrecision;
+
+static ID prc_pr, prc_if;
+
+static VALUE
+prec_prec(x, klass)
+    VALUE x, klass;
+{
+    return rb_funcall(klass, prc_if, 1, x);
+}
+
+static VALUE
+prec_prec_i(x)
+    VALUE x;
+{
+    VALUE klass = rb_cInteger;
+
+    return rb_funcall(x, prc_pr, 1, klass);
+}
+
+static VALUE
+prec_prec_f(x)
+    VALUE x;
+{
+    VALUE klass = rb_cFloat;
+
+    return rb_funcall(x, prc_pr, 1, klass);
+}
+
+static VALUE
+prec_induced_from(module, x)
+    
+{
+    rb_raise(rb_eTypeError, "undefined conversion from %s into %s",
+            rb_class2name(CLASS_OF(x)), rb_class2name(module));
+}
+
+static VALUE
+prec_append_features(module, include)
+    VALUE module, include;
+{
+    switch (TYPE(include)) {
+      case T_CLASS:
+      case T_MODULE:
+       break;
+      default:
+       Check_Type(include, T_CLASS);
+       break;
+    }
+    rb_include_module(include, module);
+    rb_define_singleton_method(include, "induced_from", prec_induced_from, 1);
+    return module;
+}
+
+
+void
+Init_Precision()
+{
+    rb_mPrecision = rb_define_module("Precision");
+    rb_define_singleton_method(rb_mPrecision, "append_features", prec_append_features, 1);
+    rb_define_method(rb_mPrecision, "prec", prec_prec, 1);
+    rb_define_method(rb_mPrecision, "prec_i", prec_prec_i, 0);
+    rb_define_method(rb_mPrecision, "prec_f", prec_prec_f, 0);
+
+    prc_pr = rb_intern("prec");
+    prc_if = rb_intern("induced_from");
+}
+@

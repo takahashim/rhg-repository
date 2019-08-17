@@ -1,0 +1,1861 @@
+head	1.11;
+access;
+symbols
+	irb_0_9:1.10
+	v1_6_7:1.3.2.5
+	v1_6_6:1.3.2.5
+	v1_6_5:1.3.2.5
+	v1_6_4:1.3.2.4
+	v1_7_1:1.8
+	v1_6_4_preview4:1.3.2.4
+	v1_6_4_preview3:1.3.2.4
+	v0_7_3:1.1.1.1
+	KEIJU:1.1.1
+	v1_6_4_preview2:1.3.2.1
+	v1_6_4_preview1:1.3.2.1
+	v1_6_3:1.3.2.1
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.11
+date	2002.07.29.06.14.08;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.07.09.11.17.16;	author keiju;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.27.15.35.04;	author keiju;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.05.08.09.28.19;	author keiju;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.05.03.08.55.53;	author knu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.04.30.17.54.55;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.02.02.11.38.20;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.01.18.08.43.14;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.07.25.06.03.50;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2000.05.13.17.22.08;	author eban;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.05.12.09.07.54;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.01.18.19.06.19;	author knu;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.04.30.18.39.35;	author knu;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2001.05.03.08.56.49;	author knu;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2001.05.16.20.44.26;	author keiju;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	2001.06.27.15.46.05;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@* numeric.c (num_to_int): default to_int implementaion for every
+  numeric class.
+
+* re.c (rb_reg_quote): initial part of the string was never copied
+  to the quoted string.
+@
+text
+@#
+#   irb/ruby-lex.rb - ruby lexcal analizer
+#   	$Release Version: 0.9$
+#   	$Revision: 1.10 $
+#   	$Date: 2002/07/09 11:17:16 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#
+# --
+#
+#   
+#
+
+require "e2mmap"
+require "irb/slex"
+require "irb/ruby-token"
+
+class RubyLex
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.10 2002/07/09 11:17:16 keiju Exp $-'
+
+  extend Exception2MessageMapper
+  def_exception(:AlreadyDefinedToken, "Already defined token(%s)")
+  def_exception(:TkReading2TokenNoKey, "key nothing(key='%s')")
+  def_exception(:TkSymbol2TokenNoKey, "key nothing(key='%s')")
+  def_exception(:TkReading2TokenDuplicateError, 
+		"key duplicate(token_n='%s', key='%s')")
+  def_exception(:SyntaxError, "%s")
+
+  def_exception(:TerminateLineInput, "Terminate Line Input")
+  
+  include RubyToken
+
+  class << self
+    attr_accessor :debug_level
+    def debug?
+      @@debug_level > 0
+    end
+  end
+  @@debug_level = 0
+
+  def initialize
+    lex_init
+    set_input(STDIN)
+
+    @@seek = 0
+    @@exp_line_no = @@line_no = 1
+    @@base_char_no = 0
+    @@char_no = 0
+    @@rests = []
+    @@readed = []
+    @@here_readed = []
+
+    @@indent = 0
+    @@indent_stack = []
+
+    @@skip_space = false
+    @@readed_auto_clean_up = false
+    @@exception_on_syntax_error = true
+  end
+
+  attr_accessor :skip_space
+  attr_accessor :readed_auto_clean_up
+  attr_accessor :exception_on_syntax_error
+
+  attr_reader :seek
+  attr_reader :char_no
+  attr_reader :line_no
+  attr_reader :indent
+
+  # io functions
+  def set_input(io, p = nil)
+    @@io = io
+    if p.kind_of?(Proc)
+      @@input = p
+    elsif iterator?
+      @@input = proc
+    else
+      @@input = proc{@@io.gets}
+    end
+  end
+
+  def get_readed
+    if idx = @@readed.reverse.index("\n")
+      @@base_char_no = idx
+    else
+      @@base_char_no += @@readed.size
+    end
+    
+    readed = @@readed.join("")
+    @@readed = []
+    readed
+  end
+
+  def getc
+    while @@rests.empty?
+      return nil unless buf_input
+    end
+    c = @@rests.shift
+    if @@here_header
+      @@here_readed.push c
+    else
+      @@readed.push c
+    end
+    @@seek += 1
+    if c == "\n"
+      @@line_no += 1 
+      @@char_no = 0
+    else
+      @@char_no += 1
+    end
+    c
+  end
+
+  def gets
+    l = ""
+    while c = getc
+      l.concat c
+      break if c == "\n"
+    end
+    l
+  end
+
+  def eof?
+    @@io.eof?
+  end
+
+  def getc_of_rests
+    if @@rests.empty?
+      nil
+    else
+      getc
+    end
+  end
+
+  def ungetc(c = nil)
+    if @@here_readed.empty?
+      c2 = @@readed.pop
+    else
+      c2 = @@here_readed.pop
+    end
+    c = c2 unless c
+    @@rests.unshift c #c = 
+      @@seek -= 1
+    if c == "\n"
+      @@line_no -= 1 
+      if idx = @@readed.reverse.index("\n")
+	@@char_no = @@readed.size - idx
+      else
+	@@char_no = @@base_char_no + @@readed.size
+      end
+    else
+      @@char_no -= 1
+    end
+  end
+
+  def peek_equal?(str)
+    chrs = str.split(//)
+    until @@rests.size >= chrs.size
+      return false unless buf_input
+    end
+    @@rests[0, chrs.size] == chrs
+  end
+
+  def peek_match?(regexp)
+    while @@rests.empty?
+      return false unless buf_input
+    end
+    regexp =~ @@rests.join("")
+  end
+
+  def peek(i = 0)
+    while @@rests.size <= i
+      return nil unless buf_input
+    end
+    @@rests[i]
+  end
+
+  def buf_input
+    prompt
+    line = @@input.call
+    return nil unless line
+    @@rests.concat line.split(//)
+    true
+  end
+  private :buf_input
+
+  def set_prompt(p = proc)
+    if p.kind_of?(Proc)
+      @@prompt = p
+    else
+      @@prompt = proc{print p}
+    end
+  end
+
+  def prompt
+    if @@prompt
+      @@prompt.call(@@ltype, @@indent, @@continue, @@line_no)
+    end
+  end
+
+  def initialize_input
+    @@ltype = nil
+    @@quoted = nil
+    @@indent = 0
+    @@indent_stack = []
+    @@lex_state = EXPR_BEG
+    @@space_seen = false
+    @@here_header = false
+    
+    @@continue = false
+    prompt
+
+    @@line = ""
+    @@exp_line_no = @@line_no
+  end
+  
+  def each_top_level_statement
+    initialize_input
+    catch(:TERM_INPUT) do
+      loop do
+	begin
+	  @@continue = false
+	  prompt
+	  unless l = lex
+	    throw :TERM_INPUT if @@line == ''
+	  else
+	    #p l
+	    @@line.concat l
+	    if @@ltype or @@continue or @@indent > 0
+	      next
+	    end
+	  end
+	  if @@line != "\n"
+	    yield @@line, @@exp_line_no
+	  end
+	  break unless l
+	  @@line = ''
+	  @@exp_line_no = @@line_no
+
+	  @@indent = 0
+	  @@indent_stack = []
+	  prompt
+	rescue TerminateLineInput
+	  initialize_input
+	  prompt
+	  get_readed
+	end
+      end
+    end
+  end
+
+  def lex
+    until (((tk = token).kind_of?(TkNL) || tk.kind_of?(TkEND_OF_SCRIPT)) &&
+	     !@@continue or
+	     tk.nil?)
+      #p tk
+      #p @@lex_state
+      #p self
+    end
+    line = get_readed
+    #      print self.inspect
+    if line == "" and tk.kind_of?(TkEND_OF_SCRIPT) || tk.nil?
+      nil
+    else
+      line
+    end
+  end
+
+  def token
+    #      require "tracer"
+    #      Tracer.on
+    @@prev_seek = @@seek
+    @@prev_line_no = @@line_no
+    @@prev_char_no = @@char_no
+    begin
+      begin
+	tk = @@OP.match(self)
+	@@space_seen = tk.kind_of?(TkSPACE)
+      rescue SyntaxError
+	abort if @@exception_on_syntax_error
+	tk = TkError.new(@@seek, @@line_no, @@char_no)
+      end
+    end while @@skip_space and tk.kind_of?(TkSPACE)
+    if @@readed_auto_clean_up
+      get_readed
+    end
+    #      Tracer.off
+    tk
+  end
+  
+  ENINDENT_CLAUSE = [
+    "case", "class", "def", "do", "for", "if",
+    "module", "unless", "until", "while", "begin" #, "when"
+  ]
+  DEINDENT_CLAUSE = ["end" #, "when"
+  ]
+
+  PERCENT_LTYPE = {
+    "q" => "\'",
+    "Q" => "\"",
+    "x" => "\`",
+    "r" => "\/",
+    "w" => "]"
+  }
+  
+  PERCENT_PAREN = {
+    "{" => "}",
+    "[" => "]",
+    "<" => ">",
+    "(" => ")"
+  }
+
+  Ltype2Token = {
+    "\'" => TkSTRING,
+    "\"" => TkSTRING,
+    "\`" => TkXSTRING,
+    "\/" => TkREGEXP,
+    "]" => TkDSTRING
+  }
+  DLtype2Token = {
+    "\"" => TkDSTRING,
+    "\`" => TkDXSTRING,
+    "\/" => TkDREGEXP,
+  }
+
+  def lex_init()
+    @@OP = SLex.new
+    @@OP.def_rules("\0", "\004", "\032") do
+      Token(TkEND_OF_SCRIPT)
+    end
+
+    @@OP.def_rules(" ", "\t", "\f", "\r", "\13") do
+      @@space_seen = true
+      while getc =~ /[ \t\f\r\13]/; end
+      ungetc
+      Token(TkSPACE)
+    end
+
+    @@OP.def_rule("#") do
+      |op, io|
+      identify_comment
+    end
+
+    @@OP.def_rule("=begin", proc{@@prev_char_no == 0 && peek(0) =~ /\s/}) do
+      |op, io|
+      @@ltype = "="
+      until getc == "\n"; end
+      until peek_equal?("=end") && peek(4) =~ /\s/
+	until getc == "\n"; end
+      end
+      gets
+      @@ltype = nil
+      Token(TkRD_COMMENT)
+    end
+
+    @@OP.def_rule("\n") do
+      print "\\n\n" if RubyLex.debug?
+      case @@lex_state
+      when EXPR_BEG, EXPR_FNAME, EXPR_DOT
+	@@continue = true
+      else
+	@@continue = false
+	@@lex_state = EXPR_BEG
+	until (@@indent_stack.empty? || 
+	       [TkLPAREN, TkLBRACK, TkLBRACE, 
+		 TkfLPAREN, TkfLBRACK, TkfLBRACE].include?(@@indent_stack.last))
+	  @@indent_stack.pop
+	end
+      end
+      @@here_header = false
+      @@here_readed = []
+      Token(TkNL)
+    end
+
+    @@OP.def_rules("*", "**",	
+		  "=", "==", "===", 
+		  "=~", "<=>",	
+		  "<", "<=",
+		  ">", ">=", ">>") do
+      |op, io|
+      case @@lex_state
+      when EXPR_FNAME, EXPR_DOT
+	@@lex_state = EXPR_ARG
+      else
+	@@lex_state = EXPR_BEG
+      end
+      Token(op)
+    end
+
+    @@OP.def_rules("!", "!=", "!~") do
+      |op, io|
+      #@@lex_state = EXPR_BEG
+      Token(op)
+    end
+
+    @@OP.def_rules("<<") do
+      |op, io|
+      tk = nil
+      if @@lex_state != EXPR_END && @@lex_state != EXPR_CLASS &&
+	  (@@lex_state != EXPR_ARG || @@space_seen)
+	c = peek(0)
+	if /\S/ =~ c && (/["'`]/ =~ c || /[\w_]/ =~ c || c == "-")
+	  tk = identify_here_document
+	end
+      end
+      unless tk
+	tk = Token(op)
+	case @@lex_state
+	when EXPR_FNAME, EXPR_DOT
+	  @@lex_state = EXPR_ARG
+	else
+	  @@lex_state = EXPR_BEG
+	end
+      end
+      tk
+    end
+
+    @@OP.def_rules("'", '"') do
+      |op, io|
+      identify_string(op)
+    end
+
+    @@OP.def_rules("`") do
+      |op, io|
+      if @@lex_state == EXPR_FNAME
+	Token(op)
+      else
+	identify_string(op)
+      end
+    end
+
+    @@OP.def_rules('?') do
+      |op, io|
+      if @@lex_state == EXPR_END
+	@@lex_state = EXPR_BEG
+	Token(TkQUESTION)
+      else
+	ch = getc
+	if @@lex_state == EXPR_ARG && ch =~ /\s/
+	  ungetc
+	  @@lex_state = EXPR_BEG;
+	  Token(TkQUESTION)
+	else
+	  if (ch == '\\') 
+	    read_escape
+	  end
+	  @@lex_state = EXPR_END
+	  Token(TkINTEGER)
+	end
+      end
+    end
+
+    @@OP.def_rules("&", "&&", "|", "||") do
+      |op, io|
+      @@lex_state = EXPR_BEG
+      Token(op)
+    end
+    
+    @@OP.def_rules("+=", "-=", "*=", "**=", 
+		  "&=", "|=", "^=", "<<=", ">>=", "||=", "&&=") do
+      |op, io|
+      @@lex_state = EXPR_BEG
+      op =~ /^(.*)=$/
+      Token(TkOPASGN, $1)
+    end
+
+    @@OP.def_rule("+@@", proc{@@lex_state == EXPR_FNAME}) do
+      |op, io|
+      Token(op)
+    end
+
+    @@OP.def_rule("-@@", proc{@@lex_state == EXPR_FNAME}) do
+      |op, io|
+      Token(op)
+    end
+
+    @@OP.def_rules("+", "-") do
+      |op, io|
+      catch(:RET) do
+	if @@lex_state == EXPR_ARG
+	  if @@space_seen and peek(0) =~ /[0-9]/
+	    throw :RET, identify_number
+	  else
+	    @@lex_state = EXPR_BEG
+	  end
+	elsif @@lex_state != EXPR_END and peek(0) =~ /[0-9]/
+	  throw :RET, identify_number
+	else
+	  @@lex_state = EXPR_BEG
+	end
+	Token(op)
+      end
+    end
+
+    @@OP.def_rule(".") do
+      @@lex_state = EXPR_BEG
+      if peek(0) =~ /[0-9]/
+	ungetc
+	identify_number
+      else
+	# for "obj.if" etc.
+	@@lex_state = EXPR_DOT
+	Token(TkDOT)
+      end
+    end
+
+    @@OP.def_rules("..", "...") do
+      |op, io|
+      @@lex_state = EXPR_BEG
+      Token(op)
+    end
+
+    lex_int2
+  end
+  
+  def lex_int2
+    @@OP.def_rules("]", "}", ")") do
+      |op, io|
+      @@lex_state = EXPR_END
+      @@indent -= 1
+      @@indent_stack.pop
+      Token(op)
+    end
+
+    @@OP.def_rule(":") do
+      if @@lex_state == EXPR_END || peek(0) =~ /\s/
+	@@lex_state = EXPR_BEG
+	Token(TkCOLON)
+      else
+	@@lex_state = EXPR_FNAME;
+	Token(TkSYMBEG)
+      end
+    end
+
+    @@OP.def_rule("::") do
+#      p @@lex_state.id2name, @@space_seen
+      if @@lex_state == EXPR_BEG or @@lex_state == EXPR_ARG && @@space_seen
+	@@lex_state = EXPR_BEG
+	Token(TkCOLON3)
+      else
+	@@lex_state = EXPR_DOT
+	Token(TkCOLON2)
+      end
+    end
+
+    @@OP.def_rule("/") do
+      |op, io|
+      if @@lex_state == EXPR_BEG || @@lex_state == EXPR_MID
+	identify_string(op)
+      elsif peek(0) == '='
+	getc
+	@@lex_state = EXPR_BEG
+	Token(TkOPASGN, "/") #/)
+      elsif @@lex_state == EXPR_ARG and @@space_seen and peek(0) !~ /\s/
+	identify_string(op)
+      else 
+	@@lex_state = EXPR_BEG
+	Token("/") #/)
+      end
+    end
+
+    @@OP.def_rules("^") do
+      @@lex_state = EXPR_BEG
+      Token("^")
+    end
+
+    #       @@OP.def_rules("^=") do
+    # 	@@lex_state = EXPR_BEG
+    # 	Token(OP_ASGN, :^)
+    #       end
+    
+    @@OP.def_rules(",") do
+      |op, io|
+      @@lex_state = EXPR_BEG
+      Token(op)
+    end
+
+    @@OP.def_rules(";") do
+      |op, io|
+      @@lex_state = EXPR_BEG
+      until (@@indent_stack.empty? || 
+	     [TkLPAREN, TkLBRACK, TkLBRACE, 
+	       TkfLPAREN, TkfLBRACK, TkfLBRACE].include?(@@indent_stack.last))
+	@@indent_stack.pop
+      end
+      Token(op)
+    end
+
+    @@OP.def_rule("~") do
+      @@lex_state = EXPR_BEG
+      Token("~")
+    end
+
+    @@OP.def_rule("~@@", proc{@@lex_state == EXPR_FNAME}) do
+      @@lex_state = EXPR_BEG
+      Token("~")
+    end
+    
+    @@OP.def_rule("(") do
+      @@indent += 1
+      if @@lex_state == EXPR_BEG || @@lex_state == EXPR_MID
+	@@lex_state = EXPR_BEG
+	tk_c = TkfLPAREN
+      else
+	@@lex_state = EXPR_BEG
+	tk_c = TkLPAREN
+      end
+      @@indent_stack.push tk_c
+      tk = Token(tk_c)
+    end
+
+    @@OP.def_rule("[]", proc{@@lex_state == EXPR_FNAME}) do
+      Token("[]")
+    end
+
+    @@OP.def_rule("[]=", proc{@@lex_state == EXPR_FNAME}) do
+      Token("[]=")
+    end
+
+    @@OP.def_rule("[") do
+      @@indent += 1
+      if @@lex_state == EXPR_FNAME
+	tk_c = TkfLBRACK
+      else
+	if @@lex_state == EXPR_BEG || @@lex_state == EXPR_MID
+	  tk_c = TkLBRACK
+	elsif @@lex_state == EXPR_ARG && @@space_seen
+	  tk_c = TkLBRACK
+	else
+	  tk_c = TkfLBRACK
+	end
+	@@lex_state = EXPR_BEG
+      end
+      @@indent_stack.push tk_c
+      Token(tk_c)
+    end
+
+    @@OP.def_rule("{") do
+      @@indent += 1
+      if @@lex_state != EXPR_END && @@lex_state != EXPR_ARG
+	tk_c = TkLBRACE
+      else
+	tk_c = TkfLBRACE
+      end
+      @@lex_state = EXPR_BEG
+      @@indent_stack.push tk_c
+      Token(tk_c)
+    end
+
+    @@OP.def_rule('\\') do
+      if getc == "\n"
+	@@space_seen = true
+	@@continue = true
+	Token(TkSPACE)
+      else
+	ungetc
+	Token("\\")
+      end
+    end
+
+    @@OP.def_rule('%') do
+      |op, io|
+      if @@lex_state == EXPR_BEG || @@lex_state == EXPR_MID
+	identify_quotation
+      elsif peek(0) == '='
+	getc
+	Token(TkOPASGN, :%)
+      elsif @@lex_state == EXPR_ARG and @@space_seen and peek(0) !~ /\s/
+	identify_quotation
+      else
+	@@lex_state = EXPR_BEG
+	Token("%") #))
+      end
+    end
+
+    @@OP.def_rule('$') do
+      identify_gvar
+    end
+
+    @@OP.def_rule('@@') do
+      if peek(0) =~ /[\w_@@]/
+	ungetc
+	identify_identifier
+      else
+	Token("@@")
+      end
+    end
+
+    #       @@OP.def_rule("def", proc{|op, io| /\s/ =~ io.peek(0)}) do 
+    # 	|op, io|
+    # 	@@indent += 1
+    # 	@@lex_state = EXPR_FNAME
+    # #	@@lex_state = EXPR_END
+    # #	until @@rests[0] == "\n" or @@rests[0] == ";"
+    # #	  rests.shift
+    # #	end
+    #       end
+
+    @@OP.def_rule("") do
+      |op, io|
+      printf "MATCH: start %s: %s\n", op, io.inspect if RubyLex.debug?
+      if peek(0) =~ /[0-9]/
+	t = identify_number
+      elsif peek(0) =~ /[\w_]/
+	t = identify_identifier
+      end
+      printf "MATCH: end %s: %s\n", op, io.inspect if RubyLex.debug?
+      t
+    end
+    
+    p @@OP if RubyLex.debug?
+  end
+  
+  def identify_gvar
+    @@lex_state = EXPR_END
+    
+    case ch = getc
+    when /[~_*$?!@@\/\\;,=:<>".]/   #"
+      Token(TkGVAR, "$" + ch)
+    when "-"
+      Token(TkGVAR, "$-" + getc)
+    when "&", "`", "'", "+"
+      Token(TkBACK_REF, "$"+ch)
+    when /[1-9]/
+      while getc =~ /[0-9]/; end
+      ungetc
+      Token(TkNTH_REF)
+    when /\w/
+      ungetc
+      ungetc
+      identify_identifier
+    else 
+      ungetc
+      Token("$")
+    end
+  end
+  
+  def identify_identifier
+    token = ""
+    if peek(0) =~ /[$@@]/
+      token.concat(c = getc)
+      if c == "@@" and peek(0) == "@@"
+	token.concat getc
+      end
+    end
+
+    while (ch = getc) =~ /\w|_/
+      print ":", ch, ":" if RubyLex.debug?
+      token.concat ch
+    end
+    ungetc
+    
+    if (ch == "!" || ch == "?") && token[0,1] =~ /\w/ && peek(0) != "="
+      token.concat getc
+    end
+
+    # almost fix token
+
+    case token
+    when /^\$/
+      return Token(TkGVAR, token)
+    when /^\@@\@@/
+      @@lex_state = EXPR_END
+      # p Token(TkCVAR, token)
+      return Token(TkCVAR, token)
+    when /^\@@/
+      @@lex_state = EXPR_END
+      return Token(TkIVAR, token)
+    end
+    
+    if @@lex_state != EXPR_DOT
+      print token, "\n" if RubyLex.debug?
+
+      token_c, *trans = TkReading2Token[token]
+      if token_c
+	# reserved word?
+
+	if (@@lex_state != EXPR_BEG &&
+	    @@lex_state != EXPR_FNAME &&
+	    trans[1])
+	  # modifiers
+	  token_c = TkSymbol2Token[trans[1]]
+	  @@lex_state = trans[0]
+	else
+	  if @@lex_state != EXPR_FNAME
+	    if ENINDENT_CLAUSE.include?(token)
+	      # check for ``class = val''.
+	      valid = true
+	      case token
+	      when "class"
+		valid = false unless peek_match?(/^\s*(<<|\w)/)
+
+	      when "def"
+		valid = false if peek_match?(/^\s*(([+-\/*&\|^]|<<|>>|\|\||\&\&)?=|\&\&|\|\|)/)
+	      when "do"
+		valid = false if peek_match?(/^\s*([+-\/*]?=|\*|<|>|\&)/)
+	      when *ENINDENT_CLAUSE
+		valid = false if peek_match?(/^\s*([+-\/*]?=|\*|<|>|\&|\|)/)
+	      else
+		# no nothing
+	      end
+	      if valid
+		if token == "do"
+		  if ![TkFOR, TkWHILE, TkUNTIL].include?(@@indent_stack.last)
+		    @@indent += 1
+		    @@indent_stack.push token_c
+		  end
+		else
+		  @@indent += 1
+		  @@indent_stack.push token_c
+		end
+#		p @@indent_stack
+	      end
+
+	    elsif DEINDENT_CLAUSE.include?(token)
+	      @@indent -= 1
+	      @@indent_stack.pop
+	    end
+	    @@lex_state = trans[0]
+	  else
+	    @@lex_state = EXPR_END
+	  end
+	end
+	return Token(token_c, token)
+      end
+    end
+
+    if @@lex_state == EXPR_FNAME
+      @@lex_state = EXPR_END
+      if peek(0) == '='
+	token.concat getc
+      end
+    elsif @@lex_state == EXPR_BEG || @@lex_state == EXPR_DOT
+      @@lex_state = EXPR_ARG
+    else
+      @@lex_state = EXPR_END
+    end
+
+    if token[0, 1] =~ /[A-Z]/
+      return Token(TkCONSTANT, token)
+    elsif token[token.size - 1, 1] =~ /[!?]/
+      return Token(TkFID, token)
+    else
+      return Token(TkIDENTIFIER, token)
+    end
+  end
+
+  def identify_here_document
+    ch = getc
+#    if lt = PERCENT_LTYPE[ch]
+    if ch == "-"
+      ch = getc
+      indent = true
+    end
+    if /['"`]/ =~ ch
+      lt = ch
+      quoted = ""
+      while (c = getc) && c != lt
+	quoted.concat c
+      end
+    else
+      lt = '"'
+      quoted = ch.dup
+      while (c = getc) && c =~ /\w/
+	quoted.concat c
+      end
+      ungetc
+    end
+
+    ltback, @@ltype = @@ltype, lt
+    reserve = []
+    while ch = getc
+      reserve.push ch
+      if ch == "\\"
+	reserve.push ch = getc
+      elsif ch == "\n"
+	break
+      end
+    end
+
+    @@here_header = false
+    while (l = gets.chomp) && (indent ? l.strip : l) != quoted
+    end
+
+    @@here_header = true
+    @@here_readed.concat reserve
+    while ch = reserve.pop
+      ungetc ch
+    end
+
+    @@ltype = ltback
+    @@lex_state = EXPR_END
+    Token(Ltype2Token[lt])
+  end
+  
+  def identify_quotation
+    ch = getc
+    if lt = PERCENT_LTYPE[ch]
+      ch = getc
+    elsif ch =~ /\W/
+      lt = "\""
+    else
+      RubyLex.fail SyntaxError, "unknown type of %string"
+    end
+#     if ch !~ /\W/
+#       ungetc
+#       next
+#     end
+    #@@ltype = lt
+    @@quoted = ch unless @@quoted = PERCENT_PAREN[ch]
+    identify_string(lt, @@quoted)
+  end
+
+  def identify_number
+    @@lex_state = EXPR_END
+
+    if ch = getc
+      if /[xX]/ =~ peek(0)
+	ch = getc
+	match = /[0-9a-fA-F_]/
+      elsif /[bB]/ =~ peek(0)
+	ch = getc
+	match = /[01_]/
+      else
+	match = /[0-7_]/
+      end
+      while ch = getc
+	if ch !~ match
+	  ungetc
+	  break
+	end
+      end
+      return Token(TkINTEGER)
+    end
+    
+    type = TkINTEGER
+    allow_point = true
+    allow_e = true
+    while ch = getc
+      case ch
+      when /[0-9_]/
+      when allow_point && "."
+	type = TkFLOAT
+	if peek(0) !~ /[0-9]/
+	  ungetc
+	  break
+	end
+	allow_point = false
+      when allow_e && "e", allow_e && "E"
+	type = TkFLOAT
+	if peek(0) =~ /[+-]/
+	  getc
+	end
+	allow_e = false
+	allow_point = false
+      else
+	ungetc
+	break
+      end
+    end
+    Token(type)
+  end
+  
+  def identify_string(ltype, quoted = ltype)
+    @@ltype = ltype
+    @@quoted = quoted
+    subtype = nil
+    begin
+      nest = 0
+      while ch = getc
+	if @@quoted == ch and nest == 0
+	  break
+	elsif @@ltype != "'" && @@ltype != "]" and ch == "#"
+	  subtype = true
+	elsif ch == '\\' #'
+	  read_escape
+	end
+	if PERCENT_PAREN.values.include?(@@quoted) 
+	  if PERCENT_PAREN[ch] == @@quoted
+	    nest += 1
+	  elsif ch == @@quoted
+	    nest -= 1
+	  end
+	end
+      end
+      if @@ltype == "/"
+	if peek(0) =~ /i|m|x|o|e|s|u|n/
+	  getc
+	end
+      end
+      if subtype
+	Token(DLtype2Token[ltype])
+      else
+	Token(Ltype2Token[ltype])
+      end
+    ensure
+      @@ltype = nil
+      @@quoted = nil
+      @@lex_state = EXPR_END
+    end
+  end
+  
+  def identify_comment
+    @@ltype = "#"
+
+    while ch = getc
+#      if ch == "\\" #"
+#	read_escape
+#      end
+      if ch == "\n"
+	@@ltype = nil
+	ungetc
+	break
+      end
+    end
+    return Token(TkCOMMENT)
+  end
+  
+  def read_escape
+    case ch = getc
+    when "\n", "\r", "\f"
+    when "\\", "n", "t", "r", "f", "v", "a", "e", "b" #"
+    when /[0-7]/
+      ungetc ch
+      3.times do
+	case ch = getc
+	when /[0-7]/
+	when nil
+	  break
+	else
+	  ungetc
+	  break
+	end
+      end
+      
+    when "x"
+      2.times do
+	case ch = getc
+	when /[0-9a-fA-F]/
+	when nil
+	  break
+	else
+	  ungetc
+	  break
+	end
+      end
+
+    when "M"
+      if (ch = getc) != '-'
+	ungetc
+      else
+	if (ch = getc) == "\\" #"
+	  read_escape
+	end
+      end
+
+    when "C", "c", "^"
+      if ch == "C" and (ch = getc) != "-"
+	ungetc
+      elsif (ch = getc) == "\\" #"
+	read_escape
+      end
+    else
+      # other characters 
+    end
+  end
+end
+@
+
+
+1.10
+log
+@* irb 0.9
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.32 $
+#   	$Date: 2002/06/13 05:17:58 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb 1.32 2002/06/13 05:17:58 keiju Exp $-'
+d740 1
+a740 1
+      token.concat (c = getc)
+@
+
+
+1.9
+log
+@
+
+* lib/matrix.rb: resolve 'ruby -w' warnings.
+* lib/irb/locale.rb: resolve 'ruby -w' warnings.
+* lib/irb/multi-irb.rb: resolve 'ruby -w' warnings.
+* lib/irb/ruby-lex.rb: fix problem for "\\M-\\..." and "\\C-\\..."
+  and resolve 'ruby -w' warnings.
+* lib/irb/ruby-token.rb: fix typo
+* lib/shell/command-processor.rb: resolve 'ruby -w' warnings.
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.8 $
+#   	$Date: 2001/05/08 09:28:19 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.8 2001/05/08 09:28:19 keiju Exp $-'
+d53 1
+d204 1
+d240 1
+d256 1
+d363 5
+a374 1
+		  "!", "!=", "!~",
+d380 12
+a391 1
+      @@lex_state = EXPR_BEG
+d397 1
+d404 9
+a412 2
+      else
+	tk = 	Token(op)
+d438 1
+a438 1
+	if @@lex_state == EXPR_ARG && ch !~ /\s/
+d467 2
+a468 1
+      Token(TkUPLUS)
+d472 2
+a473 1
+      Token(TkUMINUS)
+d520 1
+d552 1
+a552 1
+	Token(TkOPASGN, :/) #/)
+d571 1
+a571 1
+    @@OP.def_rules(",", ";") do
+d577 11
+d593 1
+a593 1
+    @@OP.def_rule("~@@", proc{@@lex_state = EXPR_FNAME}) do
+d602 1
+a602 1
+	Token(TkfLPAREN)
+d605 1
+a605 1
+	Token(TkLPAREN)
+d607 2
+d622 1
+a622 1
+	Token(TkfLBRACK)
+d625 1
+a625 1
+	  t = Token(TkLBRACK)
+d627 1
+a627 1
+	  t = Token(TkLBRACK)
+d629 1
+a629 1
+	  t = Token(TkfLBRACK)
+a631 1
+	t
+d633 2
+d640 1
+a640 1
+	t = Token(TkLBRACE)
+d642 1
+a642 1
+	t = Token(TkfLBRACE)
+d645 2
+a646 1
+      t
+d680 1
+a680 1
+      if peek(0) =~ /[\w_]/
+d739 7
+a745 1
+    token.concat getc if peek(0) =~ /[$@@]/
+d752 1
+a752 1
+    if ch == "!" or ch == "?"
+d755 1
+d761 4
+d786 28
+a813 1
+	      @@indent += 1
+d816 1
+d917 4
+a920 1
+      if peek(0) == "x"
+d922 1
+a922 1
+	match = /[0-9a-f_]/
+d968 3
+a970 2
+      while ch = getc 
+	if @@quoted == ch
+d977 7
+d986 1
+a986 1
+	if peek(0) =~ /i|o|n|e|s/
+d1006 3
+a1008 3
+      if ch == "\\" #"
+	read_escape
+      end
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3.2.3 $
+#   	$Date: 2001/05/03 08:56:49 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3.2.3 2001/05/03 08:56:49 knu Exp $-'
+d957 1
+a957 1
+	  read_escape(chrs)
+d965 1
+a965 1
+	read_escape(chrs)
+@
+
+
+1.7
+log
+@Get rid of Japanese comments and fix English comments as appropriate.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.6 $
+#   	$Date: 2001/04/30 17:54:55 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.6 2001/04/30 17:54:55 knu Exp $-'
+d27 2
+d216 27
+a242 10
+    loop do
+      @@continue = false
+      prompt
+      unless l = lex
+	break if @@line == ''
+      else
+	# p l
+	@@line.concat l
+	if @@ltype or @@continue or @@indent > 0
+	  next
+a244 9
+      if @@line != "\n"
+	yield @@line, @@exp_line_no
+      end
+      break unless l
+      @@line = ''
+      @@exp_line_no = @@line_no
+
+      @@indent = 0
+      prompt
+@
+
+
+1.6
+log
+@Merge from irb 0.7.3.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.5 $
+#   	$Date: 2001/02/02 11:38:20 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.5 2001/02/02 11:38:20 matz Exp $-'
+d461 1
+a461 2
+	# for obj.if
+	# (JP: obj.if などの対応)
+a694 1
+    # (JP: 大体fix token)
+a709 1
+	# (JP: 予約語かどうか?)
+a714 1
+	  # (JP: 修飾子)
+a958 1
+      #(JP:その他の文字)
+@
+
+
+1.5
+log
+@* array.c (rb_ary_sort_bang): returns self, even if its length is
+  less than 2.
+
+* eval.c (POP_VARS): propagate DVAR_DONT_RECYCLE, if
+  SCOPE_DONT_RECYCLE of ruby_scope is set.
+@
+text
+@d2 5
+a6 5
+#   ruby-lex.rb - ruby lexcal analizer
+#   	$Release Version: 0.6$
+#   	$Revision: 1.4 $
+#   	$Date: 2001/01/18 08:43:14 $
+#   	by Keiju ISHITSUKA(Nippon Rational Inc.)
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.4 2001/01/18 08:43:14 matz Exp $-'
+d205 1
+a206 1
+    @@continue = false
+d242 2
+a243 2
+      #	p tk
+      #	p self
+d336 1
+a336 1
+      getc; getc; getc; getc
+d462 1
+d695 2
+a696 1
+    # fix token
+d712 1
+d718 1
+d759 1
+d962 2
+a963 1
+      # other characters
+@
+
+
+1.4
+log
+@* io.c (rb_io_s_read): new method to call IO#read from
+  pathname.  In addition, it accepts third optional argument to
+  specify starting point.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 2000/07/25 06:03:50 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3 2000/07/25 06:03:50 matz Exp $-'
+d31 1
+a31 1
+    attr :debug_level, TRUE
+d57 8
+a64 8
+  attr :skip_space, true
+  attr :readed_auto_clean_up, true
+  attr :exception_on_syntax_error, true
+
+  attr :seek
+  attr :char_no
+  attr :line_no
+  attr :indent
+d206 1
+a206 1
+    @@continue = FALSE
+d215 1
+a215 1
+      @@continue = FALSE
+d318 1
+a318 1
+      @@space_seen = TRUE
+d345 1
+a345 1
+	@@continue = TRUE
+d347 1
+a347 1
+	@@continue = FALSE
+d838 2
+a839 2
+    allow_point = TRUE
+    allow_e = TRUE
+@
+
+
+1.3
+log
+@matz - irb (PR#46)
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.2 $
+#   	$Date: 2000/05/13 17:22:08 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.2 2000/05/13 17:22:08 eban Exp $-'
+d611 1
+a611 1
+	Token(OP_ASGIN, "%")
+@
+
+
+1.3.2.1
+log
+@* lib/irb/ruby-lex.rb: Merge from HEAD: rev.1.4
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 2000/07/25 06:03:50 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3 2000/07/25 06:03:50 matz Exp $-'
+d611 1
+a611 1
+	Token(TkOPASGN, :%)
+@
+
+
+1.3.2.2
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d2 5
+a6 5
+#   irb/ruby-lex.rb - ruby lexcal analizer
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.3.2.1 $
+#   	$Date: 2001/01/18 19:06:19 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3.2.1 2001/01/18 19:06:19 knu Exp $-'
+d31 1
+a31 1
+    attr_accessor :debug_level
+d57 8
+a64 8
+  attr_accessor :skip_space
+  attr_accessor :readed_auto_clean_up
+  attr_accessor :exception_on_syntax_error
+
+  attr_reader :seek
+  attr_reader :char_no
+  attr_reader :line_no
+  attr_reader :indent
+a204 1
+    @@continue = false
+d206 1
+d215 1
+a215 1
+      @@continue = false
+d242 2
+a243 2
+      #p tk
+      #p self
+d318 1
+a318 1
+      @@space_seen = true
+d336 1
+a336 1
+      gets
+d345 1
+a345 1
+	@@continue = true
+d347 1
+a347 1
+	@@continue = false
+a461 1
+	# (JP: obj.if などの対応)
+d694 1
+a694 2
+    # almost fix token
+    # (JP: 大体fix token)
+a709 1
+	# (JP: 予約語かどうか?)
+a714 1
+	  # (JP: 修飾子)
+a754 1
+#    if lt = PERCENT_LTYPE[ch]
+d838 2
+a839 2
+    allow_point = true
+    allow_e = true
+d957 1
+a957 2
+      # other characters 
+      #(JP:その他の文字)
+@
+
+
+1.3.2.3
+log
+@Get rid of Japanese comments and fix English comments as appropriate.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3.2.2 $
+#   	$Date: 2001/04/30 18:39:35 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3.2.2 2001/04/30 18:39:35 knu Exp $-'
+d461 2
+a462 1
+	# for "obj.if" etc.
+d696 1
+d712 1
+d718 1
+d963 1
+@
+
+
+1.3.2.4
+log
+@
+resolve ctrl-c problem.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3.2.3 $
+#   	$Date: 2001/05/03 08:56:49 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.3.2.3 2001/05/03 08:56:49 knu Exp $-'
+a26 2
+
+  def_exception(:TerminateLineInput, "Terminate Line Input")
+d214 10
+a223 27
+    catch(:TERM_INPUT) do
+      loop do
+	begin
+	  @@continue = false
+	  prompt
+	  unless l = lex
+	    throw :TERM_INPUT if @@line == ''
+	  else
+	    #p l
+	    @@line.concat l
+	    if @@ltype or @@continue or @@indent > 0
+	      next
+	    end
+	  end
+	  if @@line != "\n"
+	    yield @@line, @@exp_line_no
+	  end
+	  break unless l
+	  @@line = ''
+	  @@exp_line_no = @@line_no
+
+	  @@indent = 0
+	  prompt
+	rescue TerminateLineInput
+	  initialize_input
+	  prompt
+	  get_readed
+d226 9
+@
+
+
+1.3.2.5
+log
+@
+* lib/matrix.rb: resolve 'ruby -w' warnings.
+* lib/irb/locale.rb: resolve 'ruby -w' warnings.
+* lib/irb/multi-irb.rb: resolve 'ruby -w' warnings.
+* lib/irb/ruby-lex.rb: fix problem for "\\M-\\..." and "\\C-\\..."
+  and resolve 'ruby -w' warnings.
+* lib/irb/ruby-token.rb: fix typo
+* lib/shell/command-processor.rb: resolve 'ruby -w' warnings.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.9 $
+#   	$Date: 2001/06/27 15:35:04 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.9 2001/06/27 15:35:04 keiju Exp $-'
+d957 1
+a957 1
+	  read_escape
+d965 1
+a965 1
+	read_escape
+@
+
+
+1.2
+log
+@escape `/'.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1 $
+#   	$Date: 2000/05/12 09:07:54 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb,v 1.1 2000/05/12 09:07:54 matz Exp $-'
+d371 2
+a372 2
+	if /\S/ =~ c && (/["'`]/ =~ c || /[\w_]/ =~ c)
+	  tk = identify_here_document;
+d755 6
+a760 1
+    if lt = PERCENT_LTYPE[ch]
+d786 1
+a786 1
+    while (l = gets.chomp) && l != quoted
+@
+
+
+1.1
+log
+@2000-05-12
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.20 $
+#   	$Date: 1999/03/11 15:39:55 $
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb 1.20 1999/03/11 15:39:55 keiju Exp keiju $-'
+d662 1
+a662 1
+    when /[~_*$?!@@/\\;,=:<>".]/   #"
+@
+
+
+1.1.1.1
+log
+@This is the virgin import of irb 0.7.3.
+@
+text
+@d2 5
+a6 5
+#   irb/ruby-lex.rb - ruby lexcal analizer
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.24 $
+#   	$Date: 2001/04/16 06:06:10 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+d18 1
+a18 1
+  @@RCS_ID='-$Id: ruby-lex.rb 1.24 2001/04/16 06:06:10 keiju Exp keiju $-'
+d31 1
+a31 1
+    attr_accessor :debug_level
+d57 8
+a64 8
+  attr_accessor :skip_space
+  attr_accessor :readed_auto_clean_up
+  attr_accessor :exception_on_syntax_error
+
+  attr_reader :seek
+  attr_reader :char_no
+  attr_reader :line_no
+  attr_reader :indent
+a204 1
+    @@continue = false
+d206 1
+d215 1
+a215 1
+      @@continue = false
+d242 2
+a243 2
+      #p tk
+      #p self
+d318 1
+a318 1
+      @@space_seen = true
+d336 1
+a336 1
+      gets
+d345 1
+a345 1
+	@@continue = true
+d347 1
+a347 1
+	@@continue = false
+d371 2
+a372 2
+	if /\S/ =~ c && (/["'`]/ =~ c || /[\w_]/ =~ c || c == "-")
+	  tk = identify_here_document
+a461 1
+	# (JP: obj.if などの対応)
+d611 1
+a611 1
+	Token(TkOPASGN, :%)
+d662 1
+a662 1
+    when /[~_*$?!@@\/\\;,=:<>".]/   #"
+d694 1
+a694 2
+    # almost fix token
+    # (JP: 大体fix token)
+a709 1
+	# (JP: 予約語かどうか?)
+a714 1
+	  # (JP: 修飾子)
+d755 1
+a755 7
+#    if lt = PERCENT_LTYPE[ch]
+    if ch == "-"
+      ch = getc
+      indent = true
+    end
+    if /['"`]/ =~ ch
+      lt = ch
+d781 1
+a781 1
+    while (l = gets.chomp) && (indent ? l.strip : l) != quoted
+d833 2
+a834 2
+    allow_point = true
+    allow_e = true
+d952 1
+a952 2
+      # other characters 
+      #(JP:その他の文字)
+@

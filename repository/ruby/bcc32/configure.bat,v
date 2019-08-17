@@ -1,0 +1,231 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@:: @;
+
+
+1.6
+date	2002.10.22.10.54.11;	author H_Konishi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.10.21.14.03.46;	author nobu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.09.08.05.46.29;	author H_Konishi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.06.14.12.21.50;	author H_Konishi;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.06.11.03.41.52;	author H_Konishi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.06.11.01.27.46;	author H_Konishi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@*bcc32/configure.bat : The command line when calling setup.mak is corrected.
+@
+text
+@@@echo off
+::: Don't set environment variable in batch file other than autoexec.bat
+::: to avoid "Out of environment space" problem on Windows 95/98.
+::: set TMPMAKE=~tmp~.mak
+
+echo> ~tmp~.mak ####
+echo>> ~tmp~.mak conf = %0
+echo>> ~tmp~.mak $(conf:\=/): nul
+echo>> ~tmp~.mak 	@@del ~tmp~.mak
+echo>> ~tmp~.mak 	@@-$(MAKE) -l$(MAKEFLAGS) -f $(@@D)setup.mak \
+echo>> ~tmp~.mak 	bcc32dir="$(@@D)" \
+:loop
+if "%1" == "" goto :end
+if "%1" == "--srcdir" goto :srcdir
+if "%1" == "srcdir" goto :srcdir
+if "%1" == "--target" goto :target
+if "%1" == "target" goto :target
+  echo>> ~tmp~.mak 	"%1" 
+  shift
+goto :loop
+:srcdir
+  echo>> ~tmp~.mak 	"srcdir=%2" 
+  shift
+  shift
+goto :loop
+:target
+  echo>> ~tmp~.mak 	%2 
+  shift
+  shift
+goto :loop
+:end
+make -s -f ~tmp~.mak
+@
+
+
+1.5
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@d11 1
+d18 1
+a18 1
+  echo>> ~tmp~.mak 	"%1" \
+d22 1
+a22 1
+  echo>> ~tmp~.mak 	"srcdir=%2" \
+d27 1
+a27 1
+  echo>> ~tmp~.mak 	"%2" \
+a31 1
+echo>> ~tmp~.mak 	bcc32dir="$(@@D)"
+@
+
+
+1.4
+log
+@bcc32/configure.bat : Control of a message.
+bcc32/makefile.sub  : @@(sitearch) typo.
+ext/extmk.rb.in     : [bccwin32] libdir is added to a library path.
+lib/mkmf.rb         : ditto.
+@
+text
+@d9 23
+a31 2
+echo>> ~tmp~.mak  @@del ~tmp~.mak
+echo>> ~tmp~.mak  make -Dbcc32dir="$(@@D)" -f$(@@D)/setup.mak %1
+@
+
+
+1.3
+log
+@*bcc32 fix for win9x.
+@
+text
+@d11 1
+a11 1
+make -f ~tmp~.mak
+@
+
+
+1.2
+log
+@* bcc32/configure.bat fix.
+@
+text
+@d1 11
+a11 11
+@@echo off
+::: Don't set environment variable in batch file other than autoexec.bat
+::: to avoid "Out of environment space" problem on Windows 95/98.
+::: set TMPMAKE=~tmp~.mak
+
+echo> ~tmp~.mak ####
+echo>> ~tmp~.mak conf = %0
+echo>> ~tmp~.mak $(conf:\=/): nul
+echo>> ~tmp~.mak  @@del ~tmp~.mak
+echo>> ~tmp~.mak  make -Dbcc32dir="$(@@D)" -f$(@@D)/setup.mak %1
+make -f ~tmp~.mak
+@
+
+
+1.1
+log
+@new platform [bccwin32] merged.
+@
+text
+@d8 1
+a8 1
+echo>> ~tmp~.mak $(conf:\=/):
+@

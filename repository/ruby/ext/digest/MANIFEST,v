@@ -1,0 +1,334 @@
+head	1.6;
+access;
+symbols
+	v1_6_7:1.2.2.3
+	v1_6_6:1.2.2.3
+	v1_6_5:1.2.2.3
+	ruby_1_6:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2002.09.27.13.21.19;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.03.21.20.11.49;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.03.18.09.23.10;	author nobu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.09.08.14.17.43;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.07.19.05.42.07;	author knu;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.13;	author knu;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.08.16.07.35.42;	author knu;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2001.09.06.09.32.10;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2001.09.08.14.06.14;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2002.03.25.02.28.49;	author nobu;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2002.09.27.13.36.11;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@Update the MANIFEST files.
+@
+text
+@MANIFEST
+defs.h
+digest.c
+digest.h
+digest.txt
+digest.txt.ja
+extconf.rb
+lib/md5.rb
+lib/sha1.rb
+md5/MANIFEST
+md5/extconf.rb
+md5/md5.c
+md5/md5.h
+md5/md5init.c
+md5/md5ossl.c
+md5/md5ossl.h
+md5/depend
+rmd160/MANIFEST
+rmd160/extconf.rb
+rmd160/rmd160.c
+rmd160/rmd160.h
+rmd160/rmd160hl.c
+rmd160/rmd160init.c
+rmd160/rmd160ossl.c
+rmd160/rmd160ossl.h
+rmd160/depend
+sha1/MANIFEST
+sha1/extconf.rb
+sha1/sha1.c
+sha1/sha1.h
+sha1/sha1hl.c
+sha1/sha1init.c
+sha1/sha1ossl.c
+sha1/sha1ossl.h
+sha1/depend
+sha2/MANIFEST
+sha2/extconf.rb
+sha2/sha2.c
+sha2/sha2.h
+sha2/sha2hl.c
+sha2/sha2init.c
+sha2/depend
+test.rb
+test.sh
+depend
+@
+
+
+1.5
+log
+@Probably */depend should be added to this file too.
+@
+text
+@d15 2
+d24 2
+d33 2
+@
+
+
+1.4
+log
+@* ext/digest: add depend file.
+
+* ext/digest/md5: ditto.
+
+* ext/digest/rmd160: ditto.
+
+* ext/digest/sha1: ditto.
+
+* ext/digest/sha2: ditto.
+
+* ext/iconv/MANIFEST: ditto.
+
+* ext/stringio/MANIFEST: ditto.
+
+* ext/syslog: ditto.
+@
+text
+@d15 1
+d22 1
+d29 1
+d36 1
+@
+
+
+1.3
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d35 1
+@
+
+
+1.2
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@d10 23
+@
+
+
+1.2.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@@
+
+
+1.2.2.2
+log
+@010906
+@
+text
+@a9 19
+md5/extconf.rb
+md5/md5.c
+md5/md5.h
+md5/md5init.c
+rmd160/extconf.rb
+rmd160/rmd160.c
+rmd160/rmd160.h
+rmd160/rmd160hl.c
+rmd160/rmd160init.c
+sha1/extconf.rb
+sha1/sha1.c
+sha1/sha1.h
+sha1/sha1hl.c
+sha1/sha1init.c
+sha2/extconf.rb
+sha2/sha2.c
+sha2/sha2.h
+sha2/sha2hl.c
+sha2/sha2init.c
+@
+
+
+1.2.2.3
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+@
+text
+@d10 19
+@
+
+
+1.2.2.4
+log
+@add depend files
+@
+text
+@a11 1
+depend
+@
+
+
+1.2.2.5
+log
+@Update.
+@
+text
+@a2 1
+depend
+a9 27
+md5/MANIFEST
+md5/depend
+md5/extconf.rb
+md5/md5.c
+md5/md5.h
+md5/md5init.c
+rmd160/MANIFEST
+rmd160/depend
+rmd160/extconf.rb
+rmd160/rmd160.c
+rmd160/rmd160.h
+rmd160/rmd160hl.c
+rmd160/rmd160init.c
+sha1/MANIFEST
+sha1/depend
+sha1/extconf.rb
+sha1/sha1.c
+sha1/sha1.h
+sha1/sha1hl.c
+sha1/sha1init.c
+sha2/MANIFEST
+sha2/depend
+sha2/extconf.rb
+sha2/sha2.c
+sha2/sha2.h
+sha2/sha2hl.c
+sha2/sha2init.c
+d12 1
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d6 1
+a6 1
+digest.txt.jp
+@

@@ -1,0 +1,197 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.2
+	v1_6_4_preview4:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.07.11.08.22.18;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.26.03.38.39;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.25.15.01.48;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.05.25.15.01.48;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* array.c (rb_ary_insert): type fixed.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* string.c (rb_str_become): was leaking memory.
+
+* class.c (rb_include_module): should not alter other
+  classes/modules by inclusion.  by this fix, local order may not
+  be preserved for some cases.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+@
+text
+@# simple webpage fetcher
+
+# The code demonstrates how a multi-protocol client should be written.
+# TCPSocket is using getaddrinfo() internally, so there should be no problem.
+
+require "socket"
+
+if ARGV.size != 1
+  STDERR.print "requires URL\n"
+  exit
+end
+
+url = ARGV[0]
+if url !~ /^http:\/\/([^\/]+)(\/.*)$/
+  STDERR.print "only http with full hostname is supported\n"
+  exit
+end
+
+# split URL into host, port and path
+hostport = $1
+path = $2
+if (hostport =~ /^(.*):([0-9]+)$/)
+  host = $1
+  port = $2
+else
+  host = hostport
+  port = 80
+end
+if host =~ /^\[(.*)\]$/
+  host = $1
+end
+
+#STDERR.print "url=<#{ARGV[0]}>\n"
+#STDERR.print "host=<#{host}>\n"
+#STDERR.print "port=<#{port}>\n"
+#STDERR.print "path=<#{path}>\n"
+
+STDERR.print "conntecting to #{host} port #{port}\n"
+c = TCPSocket.new(host, port)
+dest = Socket.getnameinfo(c.getpeername,
+		Socket::NI_NUMERICHOST|Socket::NI_NUMERICSERV)
+STDERR.print "conntected to #{dest[0]} port #{dest[1]}\n"
+c.print "GET #{path} HTTP/1.0\n"
+c.print "Host: #{host}\n"
+c.print "\n"
+while c.gets
+  print
+end
+@
+
+
+1.2
+log
+@Synchronize MANIFEST with reality.  Add missing files.
+@
+text
+@d4 1
+a4 1
+# TCPsocket is using getaddrinfo() internally, so there should be no problem.
+d39 1
+a39 1
+c = TCPsocket.new(host, port)
+@
+
+
+1.1
+log
+@file dualstack-fetch.rb was initially added on branch ruby_1_6.
+@
+text
+@d1 48
+@
+
+
+1.1.2.1
+log
+@* string.c (rb_str_replace): add taint status infection
+  (OBJ_INFECT()).
+
+* string.c (rb_str_crypt): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@a0 48
+# simple webpage fetcher
+
+# The code demonstrates how a multi-protocol client should be written.
+# TCPsocket is using getaddrinfo() internally, so there should be no problem.
+
+require "socket"
+
+if ARGV.size != 1
+  STDERR.print "requires URL\n"
+  exit
+end
+
+url = ARGV[0]
+if url !~ /^http:\/\/([^\/]+)(\/.*)$/
+  STDERR.print "only http with full hostname is supported\n"
+  exit
+end
+
+# split URL into host, port and path
+hostport = $1
+path = $2
+if (hostport =~ /^(.*):([0-9]+)$/)
+  host = $1
+  port = $2
+else
+  host = hostport
+  port = 80
+end
+if host =~ /^\[(.*)\]$/
+  host = $1
+end
+
+#STDERR.print "url=<#{ARGV[0]}>\n"
+#STDERR.print "host=<#{host}>\n"
+#STDERR.print "port=<#{port}>\n"
+#STDERR.print "path=<#{path}>\n"
+
+STDERR.print "conntecting to #{host} port #{port}\n"
+c = TCPsocket.new(host, port)
+dest = Socket.getnameinfo(c.getpeername,
+		Socket::NI_NUMERICHOST|Socket::NI_NUMERICSERV)
+STDERR.print "conntected to #{dest[0]} port #{dest[1]}\n"
+c.print "GET #{path} HTTP/1.0\n"
+c.print "Host: #{host}\n"
+c.print "\n"
+while c.gets
+  print
+end
+@

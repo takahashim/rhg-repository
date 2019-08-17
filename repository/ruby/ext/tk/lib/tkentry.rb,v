@@ -1,0 +1,983 @@
+head	1.12;
+access;
+symbols
+	v1_6_7:1.8.2.2
+	v1_6_6:1.8.2.1
+	v1_6_5:1.8.2.1
+	v1_6_4:1.8.2.1
+	v1_7_1:1.9
+	v1_6_4_preview4:1.8.2.1
+	v1_6_4_preview3:1.8.2.1
+	v1_6_4_preview2:1.8.2.1
+	v1_6_4_preview1:1.8.2.1
+	v1_6_3:1.8
+	ruby_m17n:1.8.0.4
+	ruby_1_6:1.8.0.2
+	v1_6_2:1.8
+	v1_6_1:1.6
+	v1_6_0:1.6
+	v1_4_6:1.3.2.3
+	v1_4_5:1.3.2.3
+	v1_4_4:1.3.2.2
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.06.04.07.48.30;	author eban;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.06.04.07.03.33;	author nagai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.02.28.06.53.33;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.03.27.07.09.27;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.11.27.09.23.36;	author matz;	state Exp;
+branches
+	1.8.2.1;
+next	1.7;
+
+1.7
+date	2000.11.20.07.31.52;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.12.07.48.28;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.02.01.03.12.18;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.01.09.24.16;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.56;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.52;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.12.01.09.24.48;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.02.01.03.11.28;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.06.13.09.50.58;	author matz;	state Exp;
+branches;
+next	;
+
+1.8.2.1
+date	2001.03.27.07.10.58;	author matz;	state Exp;
+branches;
+next	1.8.2.2;
+
+1.8.2.2
+date	2002.02.28.06.52.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@* ext/tk/lib/tkentry.rb: typo fix(!! -> ||).
+@
+text
+@#
+#		tkentry.rb - Tk entry classes
+#			$Date: 2002/06/04 07:03:33 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+
+require 'tk.rb'
+
+class TkEntry<TkLabel
+  include Scrollable
+
+  WidgetClassName = 'Entry'.freeze
+  WidgetClassNames[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  class ValidateCmd
+    include TkComm
+
+    class ValidateArgs
+      def initialize(d,i,s,v,pp,ss,vv,ww)
+	@@action = d
+	@@index = i
+	@@current = s
+	@@type = v
+	@@value = pp
+	@@string = ss
+	@@triggered = vv
+	@@widget = ww
+      end
+      attr :action
+      attr :index
+      attr :current
+      attr :type
+      attr :value
+      attr :string
+      attr :triggered
+      attr :widget
+    end
+
+    def initialize(cmd = Proc.new, args=nil)
+      if args
+	@@id = install_cmd(proc{|*arg|
+			    TkUtil.eval_cmd cmd, *arg
+			  }) + " " + args
+      else
+	@@id = install_cmd(proc{|arg|
+			    TkUtil.eval_cmd cmd, ValidateArgs.new(*arg)
+			  }) + ' %d %i %s %v %P %S %V %W'
+      end
+    end
+
+    def to_eval
+      @@id
+    end
+  end
+
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'entry', @@path, *hash_kv(keys)
+    else
+      tk_call 'entry', @@path
+    end
+  end
+
+  def bbox(index)
+    tk_send 'bbox', index
+  end
+
+  def delete(s, e=None)
+    tk_send 'delete', s, e
+  end
+
+  def configure(slot, value=None)
+    if slot.kind_of? Hash
+      slot = _symbolkey2str(slot)
+      if slot['vcmd'].kind_of? Array
+	cmd, *args = slot['vcmd']
+	slot['vcmd'] = ValidateCmd.new(cmd, args.join(' '))
+      elsif slot['vcmd'].kind_of? Proc
+	slot['vcmd'] = ValidateCmd.new(slot['vcmd'])
+      end
+      if slot['validatecommand'].kind_of? Array
+	cmd, *args = slot['validatecommand']
+	slot['validatecommand'] = ValidateCmd.new(cmd, args.join(' '))
+      elsif slot['validatecommand'].kind_of? Proc
+	slot['validatecommand'] = ValidateCmd.new(slot['validatecommand'])
+      end
+      if slot['invcmd'].kind_of? Array
+	cmd, *args = slot['invcmd']
+	slot['invcmd'] = ValidateCmd.new(cmd, args.join(' '))
+      elsif slot['invcmd'].kind_of? Proc
+	slot['invcmd'] = ValidateCmd.new(slot['invcmd'])
+      end
+      if slot['invalidcommand'].kind_of? Array
+	cmd, *args = slot['invalidcommand']
+	slot['invalidcommand'] = ValidateCmd.new(cmd, args.join(' '))
+      elsif slot['invalidcommand'].kind_of? Proc
+	slot['invalidcommand'] = ValidateCmd.new(slot['invalidcommand'])
+      end
+      super(slot)
+    else
+      if (slot == 'vcmd' || slot == :vcmd || 
+          slot == 'validatecommand' || slot == :validatecommand || 
+	  slot == 'invcmd' || slot == :invcmd || 
+          slot == 'invalidcommand' || slot == :invalidcommand)
+	if value.kind_of? Array
+	  cmd, *args = value
+	  value = ValidateCmd.new(cmd, args.join(' '))
+	elsif value.kind_of? Proc
+	  value = ValidateCmd.new(value)
+	end
+      end
+      super(slot, value)
+    end
+  end
+
+  def cursor
+    tk_send 'index', 'insert'
+  end
+  def cursor=(index)
+    tk_send 'icursor', index
+  end
+  def index(index)
+    number(tk_send('index', index))
+  end
+  def insert(pos,text)
+    tk_send 'insert', pos, text
+  end
+  def mark(pos)
+    tk_send 'scan', 'mark', pos
+  end
+  def dragto(pos)
+    tk_send 'scan', 'dragto', pos
+  end
+  def selection_adjust(index)
+    tk_send 'selection', 'adjust', index
+  end
+  def selection_clear
+    tk_send 'selection', 'clear'
+  end
+  def selection_from(index)
+    tk_send 'selection', 'from', index
+  end
+  def selection_present()
+    bool(tk_send('selection', 'present'))
+  end
+  def selection_range(s, e)
+    tk_send 'selection', 'range', s, e
+  end
+  def selection_to(index)
+    tk_send 'selection', 'to', index
+  end
+
+  def validate(mode = nil)
+    if mode
+      configure 'validate', mode
+    else
+      if tk_send('validate') == '0'
+	false
+      else 
+	true
+      end
+    end
+  end
+
+  def validatecommand(cmd = ValidateCmd.new, args = nil)
+    if cmd.kind_of?(ValidateCmd)
+      configure('validatecommand', cmd)
+    else
+      configure('validatecommand', ValidateCmd.new(cmd, args))
+    end
+  end
+  alias vcmd validatecommand
+
+  def invalidcommand(cmd = ValidateCmd.new, args = nil)
+    if cmd.kind_of?(ValidateCmd)
+      configure('invalidcommand', cmd)
+    else
+      configure('invalidcommand', ValidateCmd.new(cmd, args))
+    end
+  end
+  alias invcmd invalidcommand
+
+  def value
+    tk_send 'get'
+  end
+  def value= (val)
+    tk_send 'delete', 0, 'end'
+    tk_send 'insert', 0, val
+  end
+end
+
+class TkSpinbox<TkEntry
+  WidgetClassName = 'Spinbox'.freeze
+  WidgetClassNames[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'spinbox', @@path, *hash_kv(keys)
+    else
+      tk_call 'spinbox', @@path
+    end
+  end
+
+  def identify(x, y)
+    tk_send 'identify', x, y
+  end
+
+  def spinup
+    tk_send 'invoke', 'spinup'
+  end
+
+  def spindown
+    tk_send 'invoke', 'spindown'
+  end
+
+  def set(str)
+    tk_send 'set', str
+  end
+end
+@
+
+
+1.11
+log
+@* tkfont.rb:  Fix bugs on TkFont.init_widget_font for Tk8.x.
+
+* tkafter.rb: Add self to 1st argument of interval- and loop-proc
+    TkAfter#current_interval returns an interval (sleep) time value
+    TkAfter#current_args returns an array of arguments
+    TkAfter#return_value returns a return value of last loop-proc
+      e.g.
+         TkAfter.new(
+           proc{|obj| 500 - obj.current_interval}, 10,
+           [proc{|obj| p obj.current_args}, 'proc', 1],
+           proc{|obj| p obj.current_args; ['return', 2]},
+           [proc{|obj|
+              p obj.return_value
+              p ['proc', obj.current_args[0].call(obj.return_value[1],
+                                                  obj.current_args[1])]},
+            proc{|*args| args[0] + args[1]}, 1],
+           proc{p ['proc', 4]} ).start(100)
+
+* tk*.rb: Allow to use Symbols for parameters.
+    Allow new notation of constructor (also allow old notation).
+      e.g.
+        TkFrame.new('classname'=>'User'){|base|
+          pack
+          f = TkFrame.new(base, :classname=>'ButtonFrame').pack
+          TkButton.new(
+             :parent     => f,
+             :text       => 'Quit',
+             :command    => proc{exit}
+          ).pack(
+             :fill => :x,
+             :pady => 2
+          )
+        }
+
+* tkcanvas.rb: (TkcItem) Add 'coords' parameter to the canvas item
+    constructor (for new notation of constructor).
+      e.g.
+        c = TkCanvas.new.pack
+        l = TkcLine.new(c, :coords=>[[0,0], [100,100]])
+
+* tcltklib.c: New 'mainloop' and 'mainloop_watchdog'.
+    The priority of their event-loop can be controlled.
+    They accept an optional argument.
+    If it false, they don't exit although the root widget is destroyed.
+    This function is sometimes useful, if it is used with 'restart'.
+    'mainloop' can't treat Thread#join/value in a callback routine.
+    (e.g. TkButton.new(:command=>proc{p Thread.new{button.invoke}.value}) )
+    'mainloop_watchdog' can treat them, but watchdog thread is always running
+    (so, a little heavier than 'mainloop').
+    If the purpose of using Thread#join/value is to do something under some
+    safe-level, please use Proc object.
+    (e.g. :command=>proc{$SAFE=1;proc{$SAFE=2;button.invoke}.call;p $SAFE})
+
+* tk.rb: Support functions of new 'mainloop' and 'mainloop_watchdog'.
+
+* tk.rb: (Tk.restart) Add 'app-name' paramater and 'use' parameter.
+    'app-name' specifies the name and the resource class of the
+    application. If 'app-name' is specified to 'xxx', the application
+    class on the resource database is set to 'Xxx' and the application
+    name is changed by the same rule of Tk.appname method.  'use'
+    specifies the main window for embedding the root widget instead of
+    generating a new window.
+
+* tk.rb: Add new parameter 'widgetname' to the widget constructor to
+    support effective use of Resource Database.  For example, the
+    resource 'Xxx*quit.text: QUIT' can set the text of the button
+    generated by the following code.
+      e.g.
+        Tk.restart('Xxx')
+        TkButton.new(nil, 'widgetname'=>'quit', 'command'=>proc{exit}).pack
+        Tk.mainloop
+
+* tk.rb: TkOption::get always returns a tainted string.
+    Add TkOption::new_proc_class.
+    It generates a class to import procedures defined on the resource
+    database. For example, there is a following resource file.
+      ----< resource-test >------------
+      *CMD.foo: {|*args| p [$SAFE, :foo, args]}
+      *CMD.XXX.bar: {|*args| p [$SAFE, :bar, args]}
+      *Button.command: ruby {p self; p $SAFE; TkOption::CMD::XXX.bar(1,2,3)}
+      ---------------------------------
+    The following code is a sample of use of the resource file.
+      e.g.
+        require 'tk'
+        TkOption.readfile 'resource-test'
+        p TkOption.new_proc_class(:CMD, [:foo], 1)
+        p TkOption.new_proc_class(:XXX, [:bar], 2, false, TkOption::CMD)
+        TkButton.new(:text=>'test').pack
+        Tk.mainloop
+@
+text
+@d3 1
+a3 1
+#			$Date: 2002/02/28 06:53:33 $
+d106 1
+a106 1
+          slot == 'invalidcommand' !! slot == :invalidcommand)
+@
+
+
+1.10
+log
+@* eval.c (rb_mod_include): load modules in argument order.
+
+* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/03/27 07:09:27 $
+d76 1
+d103 4
+a106 2
+      if (slot == 'vcmd' || slot == 'validatecommand' || 
+	  slot == 'invcmd' || slot == 'invalidcommand')
+@
+
+
+1.9
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/11/27 09:23:36 $
+d58 6
+a63 2
+  def create_self
+    tk_call 'entry', @@path
+d198 6
+a203 2
+  def create_self
+    tk_call 'spinbox', @@path
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/06/12 07:48:28 $
+d139 1
+a139 1
+    tk_send('selection', 'present') == 1
+@
+
+
+1.8.2.1
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/11/27 09:23:36 $
+d139 1
+a139 1
+    bool(tk_send('selection', 'present'))
+@
+
+
+1.8.2.2
+log
+@* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d3 1
+a3 1
+#			$Date: 2001/03/27 07:10:58 $
+d58 2
+a59 6
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'entry', @@path, *hash_kv(keys)
+    else
+      tk_call 'entry', @@path
+    end
+d194 2
+a195 6
+  def create_self(keys)
+    if keys and keys != None
+      tk_call 'spinbox', @@path, *hash_kv(keys)
+    else
+      tk_call 'spinbox', @@path
+    end
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d17 41
+d70 41
+a156 41
+    end
+  end
+
+  class ValidateCmd
+    include TkComm
+
+    class ValidateArgs
+      def initialize(d,i,s,v,pp,ss,vv,ww)
+	@@action = d
+	@@index = i
+	@@current = s
+	@@type = v
+	@@value = pp
+	@@string = ss
+	@@triggered = vv
+	@@widget = ww
+      end
+      attr :action
+      attr :index
+      attr :current
+      attr :type
+      attr :value
+      attr :string
+      attr :triggered
+      attr :widget
+    end
+
+    def initialize(cmd = Proc.new, args=nil)
+      if args
+	@@id = install_cmd(proc{|*arg|
+			    TkUtil.eval_cmd cmd, *arg
+			  }) + " " + args
+      else
+	@@id = install_cmd(proc{|arg|
+			    TkUtil.eval_cmd cmd, ValidateArgs.new(*arg)
+			  }) + ' %d %i %s %v %P %S %V %W'
+      end
+    end
+
+    def to_eval
+      @@id
+@
+
+
+1.6
+log
+@2000-06-12
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/02/01 03:12:18 $
+d21 4
+d66 67
+a132 5
+  def validate
+    if tk_send('validate') == '0'
+      false
+    else 
+      true
+d135 1
+d143 28
+@
+
+
+1.5
+log
+@2000-02-01
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/12/01 09:24:16 $
+d60 8
+@
+
+
+1.4
+log
+@19991201
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/24 08:21:56 $
+d9 2
+a19 3
+  def xscrollcommand(cmd=Proc.new)
+    configure_cmd 'xscrollcommand', cmd
+  end
+a59 3
+  end
+  def xview(*index)
+    tk_send 'xview', *index
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/13 05:37:52 $
+d18 2
+a19 2
+  def scrollcommand(cmd)
+    configure 'scrollcommand', cmd
+d48 1
+a48 1
+    tk_send 'selection', 'clear', 'end'
+@
+
+
+1.3.2.1
+log
+@19991201
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/08/24 08:21:56 $
+d18 2
+a19 2
+  def xscrollcommand(cmd=Proc.new)
+    configure_cmd 'xscrollcommand', cmd
+d48 1
+a48 1
+    tk_send 'selection', 'clear'
+@
+
+
+1.3.2.2
+log
+@2000-02-01
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/12/01 09:24:48 $
+a8 2
+  include Scrollable
+
+d18 3
+d61 3
+@
+
+
+1.3.2.3
+log
+@2000-06-13
+@
+text
+@d3 1
+a3 1
+#			$Date: 2000/02/01 03:11:28 $
+a59 8
+  end
+
+  def validate
+    if tk_send('validate') == '0'
+      false
+    else 
+      true
+    end
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d3 1
+a3 1
+#			$Date: 1999/01/20 04:59:34 $
+d10 1
+a10 1
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+@
+
+
+1.1
+log
+@file tkentry.rb was initially added on branch v1_1r.
+@
+text
+@d1 73
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 73
+#
+#		tkentry.rb - Tk entry classes
+#			$Date: 1998/11/17 09:12:44 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+
+require 'tk.rb'
+
+class TkEntry<TkLabel
+  WidgetClassName = 'Entry'.freeze
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self
+    tk_call 'entry', @@path
+  end
+  def scrollcommand(cmd)
+    configure 'scrollcommand', cmd
+  end
+
+  def delete(s, e=None)
+    tk_send 'delete', s, e
+  end
+
+  def cursor
+    tk_send 'index', 'insert'
+  end
+  def cursor=(index)
+    tk_send 'icursor', index
+  end
+  def index(index)
+    number(tk_send('index', index))
+  end
+  def insert(pos,text)
+    tk_send 'insert', pos, text
+  end
+  def mark(pos)
+    tk_send 'scan', 'mark', pos
+  end
+  def dragto(pos)
+    tk_send 'scan', 'dragto', pos
+  end
+  def selection_adjust(index)
+    tk_send 'selection', 'adjust', index
+  end
+  def selection_clear
+    tk_send 'selection', 'clear', 'end'
+  end
+  def selection_from(index)
+    tk_send 'selection', 'from', index
+  end
+  def selection_present()
+    tk_send('selection', 'present') == 1
+  end
+  def selection_range(s, e)
+    tk_send 'selection', 'range', s, e
+  end
+  def selection_to(index)
+    tk_send 'selection', 'to', index
+  end
+  def xview(*index)
+    tk_send 'xview', *index
+  end
+
+  def value
+    tk_send 'get'
+  end
+  def value= (val)
+    tk_send 'delete', 0, 'end'
+    tk_send 'insert', 0, val
+  end
+end
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 73
+#
+#		tkentry.rb - Tk entry classes
+#			$Date: 1998/07/09 08:40:41 $
+#			by Yukihiro Matsumoto <matz@@caelum.co.jp>
+
+require 'tk.rb'
+
+class TkEntry<TkLabel
+  WidgetClassName = 'Entry'.freeze
+  TkClassBind::WidgetClassNameTBL[WidgetClassName] = self
+  def self.to_eval
+    WidgetClassName
+  end
+
+  def create_self
+    tk_call 'entry', @@path
+  end
+  def scrollcommand(cmd)
+    configure 'scrollcommand', cmd
+  end
+
+  def delete(s, e=None)
+    tk_send 'delete', s, e
+  end
+
+  def cursor
+    tk_send 'index', 'insert'
+  end
+  def cursor=(index)
+    tk_send 'icursor', index
+  end
+  def index(index)
+    number(tk_send('index', index))
+  end
+  def insert(pos,text)
+    tk_send 'insert', pos, text
+  end
+  def mark(pos)
+    tk_send 'scan', 'mark', pos
+  end
+  def dragto(pos)
+    tk_send 'scan', 'dragto', pos
+  end
+  def selection_adjust(index)
+    tk_send 'selection', 'adjust', index
+  end
+  def selection_clear
+    tk_send 'selection', 'clear', 'end'
+  end
+  def selection_from(index)
+    tk_send 'selection', 'from', index
+  end
+  def selection_present()
+    tk_send('selection', 'present') == 1
+  end
+  def selection_range(s, e)
+    tk_send 'selection', 'range', s, e
+  end
+  def selection_to(index)
+    tk_send 'selection', 'to', index
+  end
+  def xview(*index)
+    tk_send 'xview', *index
+  end
+
+  def value
+    tk_send 'get'
+  end
+  def value= (val)
+    tk_send 'delete', 0, 'end'
+    tk_send 'insert', 0, val
+  end
+end
+@

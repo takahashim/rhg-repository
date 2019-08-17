@@ -1,0 +1,73 @@
+head	1.2;
+access;
+symbols
+	V0_3_2:1.2
+	V0_1_4:1.1.1.1
+	V0_1_3:1.1.1.1
+	V0_1_2:1.1.1.1
+	V0_1_1:1.1.1.1
+	V0_1:1.1.1.1
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestObject < Rubicon::TestCase
+
+end
+
+Rubicon::handleTests(TestObject) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

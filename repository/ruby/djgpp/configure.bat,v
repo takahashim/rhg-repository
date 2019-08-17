@@ -1,0 +1,113 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.4
+	ruby_1_6:1.2.0.2
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2;
+locks; strict;
+comment	@:: @;
+
+
+1.3
+date	2002.10.27.09.04.55;	author eban;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.08.05.07.32.54;	author eban;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.24.14.06.35;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* djgpp/*: sync with the latest.
+* ext/extmk.rb, lib/mkmf.rb: flush $stdout.
+* io.c (READ_DATA_PENDING_COUNT, READ_DATA_PENDING_PTR):
+  undef these macros on DJGPP.
+@
+text
+@@@echo off
+if exist configure.bat cd ..
+if exist djgpp\version.sed goto exist
+  sed -n -f djgpp\mkver.sed < version.h > djgpp\version.sed
+:exist
+set _conv_=-f djgpp\config.sed -f djgpp\version.sed
+sed %_conv_% < Makefile.in > Makefile
+sed %_conv_% < djgpp\config.hin > config.h
+echo LFN check > 12345678
+sed -n /LFN/d 123456789 > nul
+if errorlevel 2 goto LFN
+    copy missing\vsnprintf.c missing\vsnprint.c > nul
+    copy djgpp\config.sed config.sta > nul
+goto end
+:LFN
+    copy djgpp\config.sed config.status > nul
+:end
+set _conv_=
+del 12345678
+echo Now you must run a make.
+@
+
+
+1.2
+log
+@eban
+@
+text
+@a7 1
+sed %_conv_% < ext\extmk.rb.in > ext\extmk.rb
+@
+
+
+1.1
+log
+@2000-06-24
+@
+text
+@d2 3
+a4 6
+set _dj_=djgpp
+if exist djgpp\nul goto top
+  cd ..
+:top
+if exist %_dj_%\version.sed goto exist
+  sed -n -f %_dj_%\mkver.sed < version.h > %_dj_%\version.sed
+d6 4
+a9 4
+set _convert_=-f %_dj_%\config.status -f %_dj_%\version.sed
+sed %_convert_% < Makefile.in > Makefile
+sed %_convert_% < ext\extmk.rb.in > ext\extmk.rb
+sed %_convert_% < %_dj_%\config.hin > config.h
+d14 1
+a14 1
+    copy %_dj_%\config.status config.sta > nul
+d17 1
+a17 1
+    copy %_dj_%\config.status config.status > nul
+d19 1
+a19 2
+set _dj_=
+set _convert_=
+@

@@ -1,0 +1,256 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.10.21.14.03.46;	author nobu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.09.12.14.27.02;	author H_Konishi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.06.11.01.27.46;	author H_Konishi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@# -*- makefile -*-
+
+!if "$(srcdir)" != ""
+bcc32dir = $(srcdir)bcc32/
+!elseif "$(bcc32dir)" == "bcc32/"
+srcdir = ./
+!elseif "$(bcc32dir:/bcc32/=)/bcc32/" == "$(bcc32dir)"
+srcdir = $(bcc32dir:/bcc32/=/)
+!else
+srcdir = $(bcc32dir)../
+!endif
+
+OS = bccwin32
+RT = $(OS)
+INCLUDE = !include
+APPEND = echo>>$(MAKEFILE)
+!ifdef MAKEFILE
+MAKE = $(MAKE) -f $(MAKEFILE)
+!else
+MAKEFILE = Makefile
+!endif
+
+all: Makefile
+Makefile: -prologue- -generic- -epilogue-
+i386-$(OS): -prologue- -i386- -epilogue-
+i486-$(OS): -prologue- -i486- -epilogue-
+i586-$(OS): -prologue- -i586- -epilogue-
+i686-$(OS): -prologue- -i686- -epilogue-
+alpha-$(OS): -prologue- -alpha- -epilogue-
+
+-prologue-: nul
+	@@echo Creating $(MAKEFILE)
+	@@type > $(MAKEFILE) &&|
+\#\#\# Makefile for ruby $(OS) \#\#\#
+srcdir = $(srcdir:\=/)
+|
+
+-generic-: nul
+!if defined(PROCESSOR_ARCHITECTURE) ||  defined(PROCESSOR_LEVEL)
+	@@type >> $(MAKEFILE) &&|
+!if defined(PROCESSOR_ARCHITECTURE)
+	@@$(APPEND) PROCESSOR_ARCHITECTURE = $(PROCESSOR_ARCHITECTURE)
+!endif
+!if defined(PROCESSOR_LEVEL)
+	@@$(APPEND) PROCESSOR_LEVEL = $(PROCESSOR_LEVEL)
+!endif
+
+|
+!endif
+
+-alpha-: nul
+	@@$(APPEND) PROCESSOR_ARCHITECTURE = alpha
+-ix86-: nul
+	@@$(APPEND) PROCESSOR_ARCHITECTURE = x86
+
+-i386-: -ix86-
+	@@$(APPEND) PROCESSOR_LEVEL = 3
+-i486-: -ix86-
+	@@$(APPEND) PROCESSOR_LEVEL = 4
+-i586-: -ix86-
+	@@$(APPEND) PROCESSOR_LEVEL = 5
+-i686-: -ix86-
+	@@$(APPEND) PROCESSOR_LEVEL = 6
+
+-epilogue-: nul
+	@@type >> $(MAKEFILE) &&|
+
+\# OS = $(OS)
+\# RT = $(RT)
+\# RUBY_INSTALL_NAME = ruby
+\# RUBY_SO_NAME = $$(RT)-$$(RUBY_INSTALL_NAME)17
+\# prefix = /usr
+\# CFLAGS = -q $$(DEBUGFLAGS) $$(OPTFLAGS) $$(PROCESSOR_FLAG) -w-
+\# CPPFLAGS = -I. -I$$(srcdir) -I$$(srcdir)missing -DLIBRUBY_SO=\"$$(LIBRUBY_SO)\"
+\# STACK = 0x2000000
+\# LDFLAGS = -S:$$(STACK)
+\# RFLAGS = $$(iconinc)
+\# EXTLIBS = cw32.lib import32.lib user32.lib kernel32.lib
+$(INCLUDE) $$(srcdir)bcc32/Makefile.sub
+|
+	@@echo type "`$(MAKE)'" to make ruby for $(OS).
+@
+
+
+1.2
+log
+@* bcc32/setup.mak    : Control of a message.
+* bcc32/makefile.sub : include resource.
+@
+text
+@d3 3
+a5 1
+!if "$(bcc32dir)" == "bcc32/"
+d7 2
+a8 2
+!elseif "$(bcc32dir)" == "../bcc32/"
+srcdir = ../
+d14 8
+d23 24
+a46 1
+all: ext makefile
+d48 2
+a49 35
+makefile: make_s make_e
+
+make_s:
+	@@if exist makefile @@del makefile
+	@@echo ### makefile for ruby $(OS) ###> makefile
+	@@echo srcdir = $(srcdir:\=/)>> makefile
+	@@echo RUBY_INSTALL_NAME = ruby>> makefile
+	@@echo RUBY_SO_NAME = $(OS)_$$(RUBY_INSTALL_NAME)17>> makefile
+
+make_e:
+	@@echo !INCLUDE $$(srcdir)bcc32/makefile.sub>> makefile
+	@@echo type `make' to make ruby for bccwin32.
+
+ext:
+	@@if not exist $@@\* mkdir $@@
+
+pl3:
+	@@echo PROCESSOR_LEVEL = 3 >> makefile
+
+pl4:
+	@@echo PROCESSOR_LEVEL = 4 >> makefile
+
+pl5:
+	@@echo PROCESSOR_LEVEL = 5 >> makefile
+
+pl6:
+	@@echo PROCESSOR_LEVEL = 6 >> makefile
+
+3: ext make_s pl3 make_e
+
+4: ext make_s pl4 make_e
+
+5: ext make_s pl5 make_e
+
+6: ext make_s pl6 make_e
+d51 31
+@
+
+
+1.1
+log
+@new platform [bccwin32] merged.
+@
+text
+@a13 1
+	@@echo type `make' to make ruby for bccwin32.
+d26 1
+@

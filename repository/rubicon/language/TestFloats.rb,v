@@ -1,0 +1,225 @@
+head	1.6;
+access;
+symbols
+	V0_3_2:1.4
+	V0_1_4:1.1
+	V0_1_3:1.1
+	V0_1_2:1.1
+	V0_1_1:1.1
+	V0_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2002.01.28.19.09.36;	author nobu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.28.00.35.51;	author chad;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.13.03.49.02;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.10.06.15.47;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.01.18.22.39.19;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.30.21.14.10;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* builtin/TestFile.rb (TestFile::test_s_expand_path): avoid
+  warnings in 1.7.
+
+* builtin/TestKernel.rb (TestKernel::test_s_open1): 1.7 feature.
+
+* language/TestBlocksProcs.rb (TestBlocksProcs::testYield): ditto.
+
+* language/TestFloats.rb (TestFloats::test_number_to_string):
+  strict number check.
+
+* language/TestFloats.rb (TestFloats::test_malformed): ditto.
+
+* language/TestFloats.rb (TestFloats::test_string_to_number): ditto.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestFloats < Rubicon::TestCase
+  def test_number_to_string
+    tests = [
+      [ 1.0,             "1.0"],
+      [-3.141592654,    "-3.141592654"],
+      [  .1,             "0.1"],
+      [ 2.1e0,           "2.1"],
+      [ 2.1e3,        "2100.0"],
+      [-2.1E0,          "-2.1"],
+      [-2.1E-3,         "-0.0021"],
+    ]
+    for number, string in tests
+      assert_equal(string, number.to_s, "case #{number} to \"#{string}\"")
+    end
+
+    # For the big numbers... 
+    assert_flequal(-2.1E10, Float(-2.1E10.to_s), "case #{number} to \"#{string}\"")
+  end
+
+  def test_malformed
+    for malformed in [
+	".e2",
+	"1.",
+	"1. 1",
+	"1 .1",
+	"2.1e2.1",
+	"2.1e0x3",
+	"2 .1e2",
+	"2. 1e2",
+	"2.1 e2",
+	"2.1e 2",
+	"2.1e",
+	"2.1E",
+	"2.1_e",
+	"2.1_E",
+	"2.1e-",
+	"2.1E-",
+	"2.1e+",
+	"2.1E+",
+      ]
+      assert_exception(SyntaxError, "case #{malformed}") do 
+	eval malformed
+      end
+    end
+  end
+
+  def test_string_to_number
+    for string, number in [
+	[ "1.0",          1.0,],
+	["-3.141592654", -3.141592654],
+	["  .1",          0.1],
+	[" 2.1e+0",       2.1],
+	[" 2.1e3",     2100.0],
+	["-2.1E+0",      -2.1],
+	["-2.1E-3",      -0.0021],
+	["-2.1E10",      -2.1e+10],
+      ]
+      assert_equal(string.to_f, number, "case \"#{string}\" to #{number}")
+    end
+  end
+end
+
+# Run these tests if invoked directly
+
+Rubicon::handleTests(TestFloats) if $0 == __FILE__
+
+
+
+
+@
+
+
+1.5
+log
+@More win32 fixes.
+@
+text
+@d10 1
+a10 1
+      [ 2.1e,            "2.1"],
+d12 1
+a12 1
+      [-2.1E,           "-2.1"],
+d35 8
+d55 1
+a55 1
+	[" 2.1e",         2.1],
+d57 1
+a57 1
+	["-2.1E",        -2.1],
+@
+
+
+1.4
+log
+@Yet more tidying.
+
+Get stuff working across Cygwin and MsRuby.
+@
+text
+@a13 1
+      [-2.1E10,         "-2.1e+10"],
+d18 3
+@
+
+
+1.3
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@d17 1
+a17 1
+      assert_equal(number.to_s, string, "case #{number} to \"#{string}\"")
+@
+
+
+1.2
+log
+@Aleksi wrote some tests for floats
+@
+text
+@d1 2
+a2 15
+#!/usr/bin/env ruby
+# $Id: TestFloats.rb,v 1.1 2000/06/30 21:14:10 dave Exp $
+#
+# This file is part of Rubicon, a set of regression tests for the Ruby
+# language and its built-in classes and modules.
+#
+# Initial development by Dave Thomas and Andy Hunt.
+#
+# TestFloats.rb initially by Aleksi Niemlä
+#
+# Copyright (c) 2000 The Pragmatic Programmers, LLC (www.pragmaticprogrammer.com)
+# Distributed according to the terms specified in the Ruby distribution README file.
+#
+
+require '../rubicon'
+@
+
+
+1.1
+log
+@Initial load of files
+@
+text
+@d2 1
+a2 1
+# $Id$
+d9 2
+d18 34
+d53 14
+d72 4
+@
+

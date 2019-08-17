@@ -1,0 +1,497 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.4
+	v1_6_6:1.4
+	v1_6_5:1.4
+	v1_6_4:1.4
+	v1_7_1:1.4
+	v1_6_4_preview4:1.4
+	v1_6_4_preview3:1.4
+	v1_6_4_preview2:1.4
+	v1_6_4_preview1:1.4
+	v1_6_3:1.4
+	ruby_m17n:1.4.0.4
+	ruby_1_6:1.4.0.2
+	v1_6_2:1.4
+	v1_6_1:1.4
+	v1_6_0:1.4
+	v1_4_6:1.3.2.2
+	v1_4_5:1.3.2.2
+	v1_4_4:1.3.2.2
+	v1_4_3:1.3
+	ruby_1_4_3:1.3
+	v1_5_0:1.4
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.3
+	v1_3_6_repack:1.1.1.1.2.3
+	v1_3_6:1.1.1.1.2.3
+	v1_3_5:1.1.1.1.2.3
+	v1_3_4_990625:1.1.1.1.2.3
+	v1_3_4_990624:1.1.1.1.2.3
+	v1_3_4_990611:1.1.1.1.2.3
+	v1_3_4_990531:1.1.1.1.2.3
+	v1_3_3_990518:1.1.1.1.2.3
+	v1_3_3_990513:1.1.1.1.2.3
+	v1_3_3_990507:1.1.1.1.2.3
+	v1_3_1_990225:1.1.1.1.2.2
+	v1_3_1_990224:1.1.1.1.2.1
+	v1_3_1_990215:1.1.1.1.2.1
+	v1_3_1_990212:1.1.1.1.2.1
+	v1_3_1_990210:1.1.1.1.2.1
+	v1_3_1_:1.1.1.1.2.1
+	v1_3_1_990209:1.1.1.1.2.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	99.12.01.09.24.19;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.12.04.53.36;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.19;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.01.20.04.59.37;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.37;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.02.25.06.39.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.12.08.00.37.35;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	99.12.14.06.50.43;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@19991201
+@
+text
+@#! /usr/bin/ruby -Ke
+
+class Board
+  def clr
+    print "\e[2J"
+  end
+  def pos(x,y)
+    printf "\e[%d;%dH", y+1, x*2+1
+  end
+  def colorstr(id,s)
+    printf "\e[%dm%s\e[0m", id, s
+  end
+  def put(x, y, col, str)
+    pos(x,y); colorstr(43,str)
+    pos(0,@@hi); print "»Ä¤ê:",@@mc,"/",@@total,"   "
+    pos(x,y)
+  end
+  private :clr, :pos, :colorstr, :put
+  CHR=["¡¦","£±","£²","£³","£´","£µ","£¶","£·","£¸","¡ú","¡ü","@@@@"]
+  COL=[46,43,45] # default,opened,over
+  def initialize(h,w,m)
+    # ¥²¡¼¥àÈ×¤ÎÀ¸À®(h:½Ä¡¤w:²£¡¤m:ÇúÃÆ¤Î¿ô)
+    @@hi=h; @@wi=w; @@m=m
+    reset
+  end
+  def reset
+    # ¥²¡¼¥àÈ×¤ò(ºÆ)½é´ü²½¤¹¤ë
+    srand()
+    @@cx=0; @@cy=0; @@mc=@@m
+    @@over=false
+    @@data=Array.new(@@hi*@@wi)
+    @@state=Array.new(@@hi*@@wi)
+    @@total=@@hi*@@wi
+    @@total.times {|i| @@data[i]=0}
+    @@m.times do
+       loop do
+         j=rand(@@total-1)
+         if @@data[j] == 0 then
+           @@data[j]=1
+           break
+         end
+       end
+    end
+    clr; pos(0,0)
+    @@hi.times{|y| pos(0,y); colorstr(COL[0],CHR[0]*@@wi)}
+    pos(@@cx,@@cy)
+  end
+  def mark
+    # ¸½ºß¤Î¥«¡¼¥½¥ë°ÌÃÖ¤Ë¥Þ¡¼¥¯¤ò¤Ä¤±¤ë
+    if @@state[@@wi*@@cy+@@cx] != nil then return end
+    @@state[@@wi*@@cy+@@cx] = "MARK"
+    @@mc=@@mc-1;
+    @@total=@@total-1;
+    put(@@cx, @@cy, COL[1], CHR[9])
+  end
+  def open(x=@@cx,y=@@cy)
+    # ¸½ºß¤Î¥«¡¼¥½¥ë°ÌÃÖ¤ò¥ª¡¼¥×¥ó¤Ë¤¹¤ë
+    # ÇúÃÆ¤¬¤¢¤ì¤Ð¥²¡¼¥à¥ª¡¼¥Ð¡¼
+    if @@state[@@wi*y+x] =="OPEN"  then return 0 end
+    if @@state[@@wi*y+x] == nil then @@total=@@total-1 end
+    if @@state[@@wi*y+x] =="MARK" then @@mc=@@mc+1 end
+    @@state[@@wi*y+x]="OPEN"
+    if fetch(x,y) == 1 then @@over = 1; return end
+    c = count(x,y)
+    put(x, y, COL[1], CHR[c])
+    return 0 if c != 0
+    if x > 0 && y > 0         then open(x-1,y-1) end
+    if y > 0                  then open(x,  y-1) end
+    if x < @@wi-1 && y > 0     then open(x+1,y-1) end
+    if x > 0                  then open(x-1,y) end
+    if x < @@wi-1              then open(x+1,y) end
+    if x > 0 && y < @@hi-1     then open(x-1,y+1) end
+    if y < @@hi -1             then open(x,y+1) end
+    if x < @@wi-1 && y < @@hi-1 then open(x+1,y+1) end
+    pos(@@cx,@@cy)
+  end
+  def fetch(x,y)
+    # (x,y)¤Î°ÌÃÖ¤ÎÇúÃÆ¤Î¿ô(0 or 1)¤òÊÖ¤¹
+    if x < 0 then 0
+    elsif x >= @@wi then 0
+    elsif y < 0 then 0
+    elsif y >= @@hi then 0
+    else
+      @@data[y*@@wi+x]
+    end
+  end
+  def count(x,y)
+    # (x,y)¤ËÎÙÀÜ¤¹¤ëÇúÃÆ¤Î¿ô¤òÊÖ¤¹
+    fetch(x-1,y-1)+fetch(x,y-1)+fetch(x+1,y-1)+
+    fetch(x-1,y)  +             fetch(x+1,y)+
+    fetch(x-1,y+1)+fetch(x,y+1)+fetch(x+1,y+1)
+  end
+  def over(win)
+    # ¥²¡¼¥à¤Î½ªÎ»
+    quit
+    unless win
+      pos(@@cx,@@cy); print CHR[11]
+    end
+    pos(0,@@hi)
+    if win then print "*** YOU WIN !! ***"
+    else print "*** GAME OVER ***"
+    end
+  end
+  def over?
+    # ¥²¡¼¥à¤Î½ªÎ»¥Á¥§¥Ã¥¯
+    # ½ªÎ»½èÍý¤â¸Æ¤Ó½Ð¤¹
+    remain = (@@mc+@@total == 0)
+    if @@over || remain
+      over(remain)
+      true
+    else
+      false
+    end
+  end
+  def quit
+    # ¥²¡¼¥à¤ÎÃæÃÇ(¤Þ¤¿¤Ï½ªÎ»)
+    # È×ÌÌ¤òÁ´¤Æ¸«¤»¤ë
+    @@hi.times do|y|
+      pos(0,y)
+      @@wi.times do|x|
+	colorstr(if @@state[y*@@wi+x] == "MARK" then COL[1] else COL[2] end,
+		 if fetch(x,y)==1 then CHR[10] else CHR[count(x,y)] end)
+      end
+    end
+  end
+  def down
+    # ¥«¡¼¥½¥ë¤ò²¼¤Ë
+    if @@cy < @@hi-1 then @@cy=@@cy+1; pos(@@cx, @@cy) end
+  end
+  def up
+    # ¥«¡¼¥½¥ë¤ò¾å¤Ë
+    if @@cy > 0 then @@cy=@@cy-1; pos(@@cx, @@cy) end
+  end
+  def left
+    # ¥«¡¼¥½¥ë¤òº¸¤Ë
+    if @@cx > 0 then @@cx=@@cx-1; pos(@@cx, @@cy) end
+  end
+  def right
+    # ¥«¡¼¥½¥ë¤ò±¦¤Ë
+    if @@cx < @@wi-1 then @@cx=@@cx+1; pos(@@cx, @@cy) end
+  end
+end
+
+bd=Board.new(10,10,10)
+system("stty raw -echo")
+begin
+  loop do
+    case STDIN.getc
+    when ?n  # new game
+      bd.reset
+    when ?m  # mark
+      bd.mark
+    when ?j
+      bd.down
+    when ?k
+      bd.up
+    when ?h
+      bd.left
+    when ?l
+      bd.right
+    when ?\s
+      bd.open
+    when ?q,?\C-c  # quit game
+      bd.quit
+      break
+    end
+    if bd.over?
+      if STDIN.getc == ?q then break end
+      bd.reset
+    end
+  end
+ensure
+  system("stty -raw echo")
+end
+print "\n"
+@
+
+
+1.3
+log
+@19991012
+@
+text
+@d84 1
+a84 1
+      @@data[x*@@wi+y]
+@
+
+
+1.3.2.1
+log
+@991208-repack
+@
+text
+@d84 1
+a84 1
+      @@data[x*@@wi+x]
+@
+
+
+1.3.2.2
+log
+@19991214
+@
+text
+@d84 1
+a84 1
+      @@data[y*@@wi+x]
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d1 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d13 1
+a13 1
+    pos(0,@@hi); print "$B;D$j(B:",@@mc,"/",@@total,"   "
+d17 1
+a17 1
+  CHR=["$B!&(B","$B#1(B","$B#2(B","$B#3(B","$B#4(B","$B#5(B","$B#6(B","$B#7(B","$B#8(B","$B!z(B","$B!|(B","@@@@"]
+d20 1
+a20 1
+    # $B%2!<%`HW$N@@8@@.(B(h:$B=D!$(Bw:$B2#!$(Bm:$BGzCF$N?t(B)
+d25 1
+a25 1
+    # $B%2!<%`HW$r(B($B:F(B)$B=i4|2=$9$k(B
+d47 1
+a47 1
+    # $B8=:_$N%+!<%=%k0LCV$K%^!<%/$r$D$1$k(B
+d55 2
+a56 2
+    # $B8=:_$N%+!<%=%k0LCV$r%*!<%W%s$K$9$k(B
+    # $BGzCF$,$"$l$P%2!<%`%*!<%P!<(B
+d76 1
+a76 1
+    # (x,y)$B$N0LCV$NGzCF$N?t(B(0 or 1)$B$rJV$9(B
+d86 1
+a86 1
+    # (x,y)$B$KNY@@\$9$kGzCF$N?t$rJV$9(B
+d92 1
+a92 1
+    # $B%2!<%`$N=*N;(B
+d103 2
+a104 2
+    # $B%2!<%`$N=*N;%A%'%C%/(B
+    # $B=*N;=hM}$b8F$S=P$9(B
+d114 2
+a115 2
+    # $B%2!<%`$NCfCG(B($B$^$?$O=*N;(B)
+    # $BHWLL$rA4$F8+$;$k(B
+d125 1
+a125 1
+    # $B%+!<%=%k$r2<$K(B
+d129 1
+a129 1
+    # $B%+!<%=%k$r>e$K(B
+d133 1
+a133 1
+    # $B%+!<%=%k$r:8$K(B
+d137 1
+a137 1
+    # $B%+!<%=%k$r1&$K(B
+d146 1
+a146 1
+    case getc
+d166 1
+a166 1
+      if getc == ?q then break end
+d171 1
+a171 1
+ system("stty -raw echo")
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@@
+
+
+1.1.1.1.2.1
+log
+@990209
+@
+text
+@d13 1
+a13 1
+    pos(0,@@hi); print "»Ä¤ê:",@@mc,"/",@@total,"   "
+d17 1
+a17 1
+  CHR=["¡¦","£±","£²","£³","£´","£µ","£¶","£·","£¸","¡ú","¡ü","@@@@"]
+d20 1
+a20 1
+    # ¥²¡¼¥àÈ×¤ÎÀ¸À®(h:½Ä¡¤w:²£¡¤m:ÇúÃÆ¤Î¿ô)
+d25 1
+a25 1
+    # ¥²¡¼¥àÈ×¤ò(ºÆ)½é´ü²½¤¹¤ë
+d47 1
+a47 1
+    # ¸½ºß¤Î¥«¡¼¥½¥ë°ÌÃÖ¤Ë¥Þ¡¼¥¯¤ò¤Ä¤±¤ë
+d55 2
+a56 2
+    # ¸½ºß¤Î¥«¡¼¥½¥ë°ÌÃÖ¤ò¥ª¡¼¥×¥ó¤Ë¤¹¤ë
+    # ÇúÃÆ¤¬¤¢¤ì¤Ð¥²¡¼¥à¥ª¡¼¥Ð¡¼
+d76 1
+a76 1
+    # (x,y)¤Î°ÌÃÖ¤ÎÇúÃÆ¤Î¿ô(0 or 1)¤òÊÖ¤¹
+d86 1
+a86 1
+    # (x,y)¤ËÎÙÀÜ¤¹¤ëÇúÃÆ¤Î¿ô¤òÊÖ¤¹
+d92 1
+a92 1
+    # ¥²¡¼¥à¤Î½ªÎ»
+d103 2
+a104 2
+    # ¥²¡¼¥à¤Î½ªÎ»¥Á¥§¥Ã¥¯
+    # ½ªÎ»½èÍý¤â¸Æ¤Ó½Ð¤¹
+d114 2
+a115 2
+    # ¥²¡¼¥à¤ÎÃæÃÇ(¤Þ¤¿¤Ï½ªÎ»)
+    # È×ÌÌ¤òÁ´¤Æ¸«¤»¤ë
+d125 1
+a125 1
+    # ¥«¡¼¥½¥ë¤ò²¼¤Ë
+d129 1
+a129 1
+    # ¥«¡¼¥½¥ë¤ò¾å¤Ë
+d133 1
+a133 1
+    # ¥«¡¼¥½¥ë¤òº¸¤Ë
+d137 1
+a137 1
+    # ¥«¡¼¥½¥ë¤ò±¦¤Ë
+@
+
+
+1.1.1.1.2.2
+log
+@990225
+@
+text
+@d146 1
+a146 1
+    case STDIN.getc
+d166 1
+a166 1
+      if STDIN.getc == ?q then break end
+@
+
+
+1.1.1.1.2.3
+log
+@990324
+@
+text
+@d171 1
+a171 1
+  system("stty -raw echo")
+@
+
+

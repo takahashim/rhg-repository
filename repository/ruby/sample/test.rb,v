@@ -1,0 +1,5484 @@
+head	1.45;
+access;
+symbols
+	v1_6_7:1.18.2.2
+	v1_6_6:1.18
+	v1_6_5:1.18
+	v1_6_4:1.18
+	v1_7_1:1.20
+	v1_6_4_preview4:1.18
+	v1_6_4_preview3:1.18
+	v1_6_4_preview2:1.18
+	v1_6_4_preview1:1.18
+	v1_6_3:1.18
+	ruby_m17n:1.19.0.2
+	ruby_1_6:1.18.0.2
+	v1_6_2:1.18
+	v1_6_1:1.16
+	v1_6_0:1.16
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.6
+	v1_3_6_repack:1.1.1.3.2.6
+	v1_3_6:1.1.1.3.2.6
+	v1_3_5:1.1.1.3.2.6
+	v1_2_6repack:1.1.1.2.2.21
+	v1_3_4_990625:1.1.1.3.2.6
+	v1_3_4_990624:1.1.1.3.2.5
+	v1_2_6:1.1.1.2.2.21
+	v1_3_4_990611:1.1.1.3.2.5
+	v1_3_4_990531:1.1.1.3.2.5
+	v1_3_3_990518:1.1.1.3.2.4
+	v1_3_3_990513:1.1.1.3.2.4
+	v1_3_3_990507:1.1.1.3.2.4
+	v1_2_5:1.1.1.2.2.21
+	v1_2_4:1.1.1.2.2.20
+	v1_3_1_990225:1.1.1.3.2.2
+	v1_3_1_990224:1.1.1.3.2.2
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.2
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3
+	v1_3_1_990201:1.1.1.3
+	v1_3_1"_990201:1.1.1.3
+	v1_3_1_990128:1.1.1.3
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.20
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.20
+	v1_2_1repack:1.1.1.2.2.20
+	v1_2_1:1.1.1.2.2.20
+	v1_2_stable:1.1.1.2.2.20
+	v1_1d1:1.1.1.2.2.19.2.2
+	v1_1d0:1.1.1.2.2.19.2.1
+	v1_1c9_1:1.1.1.2.2.20
+	v1_1c9:1.1.1.2.2.20
+	v1_1c8:1.1.1.2.2.20
+	v1_1c7:1.1.1.2.2.20
+	v1_1c6:1.1.1.2.2.19
+	v1_1d-start:1.1.1.2.2.19
+	v1_1c5:1.1.1.2.2.19
+	v1_1dev:1.1.1.2.2.19.0.2
+	v1_1c4:1.1.1.2.2.19
+	v1_1c3:1.1.1.2.2.19
+	v1_1c2:1.1.1.2.2.19
+	v1_1c1:1.1.1.2.2.19
+	v1_1c0:1.1.1.2.2.18
+	v1_1b9_31:1.1.1.2.2.18
+	v1_1b9_30:1.1.1.2.2.18
+	v1_1b9_28:1.1.1.2.2.15
+	v1_1b9_27:1.1.1.2.2.14
+	v1_1b9_26:1.1.1.2.2.13
+	r1_1b9_25:1.1.1.2.2.11
+	r1_1b9_24:1.1.1.2.2.11
+	v1_1b9_23:1.1.1.2.2.11
+	v1_1b9_22:1.1.1.2.2.11
+	v1_1b9_20:1.1.1.2.2.11
+	v1_1b9_18:1.1.1.2.2.9
+	v1_1b9_16:1.1.1.2.2.8
+	v1_1b9_15:1.1.1.2.2.8
+	v1_1b9_13:1.1.1.2.2.8
+	v1_1b9_12:1.1.1.2.2.8
+	v1_1b9_11:1.1.1.2.2.8
+	v1_1b9_08:1.1.1.2.2.7
+	v1_1b9_07:1.1.1.2.2.7
+	r1_1b9:1.1.1.2.2.3
+	v1_1b8:1.1.1.2.2.3
+	v1_1b7:1.1.1.2.2.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.45
+date	2002.10.02.15.37.07;	author nobu;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.06.28.14.41.07;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.06.24.07.20.09;	author nobu;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.06.13.04.53.39;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.05.17.07.29.47;	author eban;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.05.14.06.22.31;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.03.19.09.03.11;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.03.12.09.28.50;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.03.08.07.03.09;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.02.25.10.46.48;	author nobu;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.02.25.10.43.13;	author nobu;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.02.19.07.47.07;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.02.15.04.43.08;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.02.13.09.01.11;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.01.16.09.25.59;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.12.18.08.56.51;	author eban;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.12.10.07.18.16;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.19.16.20.24;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.13.08.14.27;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.08.06.43.14;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.10.22.06.48.18;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.06.23.15.14.28;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.06.22.09.12.24;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.06.19.07.33.10;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.06.08.14.20.58;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.05.06.15.05.46;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.12.28.05.00.47;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.11.01.08.49.40;	author matz;	state Exp;
+branches
+	1.18.2.1;
+next	1.17;
+
+1.17
+date	2000.10.31.08.37.46;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.10.04.49.24;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.07.06.07.21.25;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.04.04.17.25;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.23.07.01.37;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.30.04.24.16;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.24.04.34.26;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.16.02.46.57;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.10.02.58.41;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.01.09.41.43;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.13.07.18.44;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.02.08.10.32;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.02.01.03.12.20;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.18.06.09.05;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.15.08.52.18;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.19;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.38;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.02.05.10.27.34;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.12.11.17.06;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.04.09.17.57.44;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.04.12.09.59.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.05.31.09.13.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.06.25.09.02.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.02.09.10.56.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.10.06.50.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.13.09.40.29;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.03.18.08.47.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.03.30.09.41.20;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.04.02.10.03.54;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.04.07.08.34.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.04.14.04.55.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.05.06.03.09.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.05.13.05.58.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.05.15.05.43.28;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.06.12.09.35.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.06.18.07.47.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.06.19.09.32.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.06.22.05.53.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.06.30.01.40.51;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.07.03.07.06.51;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.07.09.08.40.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	98.07.22.03.00.45;	author matz;	state Exp;
+branches
+	1.1.1.2.2.19.2.1;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	98.11.09.09.11.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	99.04.09.18.00.15;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.19.2.1
+date	98.11.25.03.31.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19.2.2;
+
+1.1.1.2.2.19.2.2
+date	98.12.22.09.01.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.04.17.06.24.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.18.2.1
+date	2002.02.25.10.42.29;	author nobu;	state Exp;
+branches;
+next	1.18.2.2;
+
+1.18.2.2
+date	2002.02.25.10.45.55;	author nobu;	state Exp;
+branches;
+next	1.18.2.3;
+
+1.18.2.3
+date	2002.05.17.07.35.24;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.45
+log
+@ditto.
+@
+text
+@#! /usr/bin/env ruby
+
+$testnum=0
+$ntest=0
+$failed = 0
+
+def test_check(what)
+  printf "%s\n", what
+  $what = what
+  $testnum = 0
+end
+
+def test_ok(cond)
+  $testnum+=1
+  $ntest+=1
+  if cond
+    printf "ok %d\n", $testnum
+  else
+    where = caller[0]
+    printf "not ok %s %d -- %s\n", $what, $testnum, where
+    $failed+=1 
+  end
+end
+
+# make sure conditional operators work
+
+test_check "assignment"
+
+a=[]; a[0] ||= "bar";
+test_ok(a[0] == "bar")
+h={}; h["foo"] ||= "bar";
+test_ok(h["foo"] == "bar")
+
+aa = 5
+aa ||= 25
+test_ok(aa == 5)
+bb ||= 25
+test_ok(bb == 25)
+cc &&=33
+test_ok(cc == nil)
+cc = 5
+cc &&=44
+test_ok(cc == 44)
+
+a = nil; test_ok(a == nil)
+a = 1; test_ok(a == 1)
+a = []; test_ok(a == [])
+a = [1]; test_ok(a == [1])
+a = [nil]; test_ok(a == [nil])
+a = [[]]; test_ok(a == [[]])
+a = [*[]]; test_ok(a == [])
+a = [*[1]]; test_ok(a == [1])
+a = [*[1,2]]; test_ok(a == [1,2])
+
+a = *nil; test_ok(a == nil)
+a = *1; test_ok(a == 1)
+a = *[]; test_ok(a == nil)
+a = *[1]; test_ok(a == 1)
+a = *[nil]; test_ok(a == nil)
+a = *[[]]; test_ok(a == [])
+a = *[*[]]; test_ok(a == nil)
+a = *[*[1]]; test_ok(a == 1)
+a = *[*[1,2]]; test_ok(a == [1,2])
+
+*a = nil; test_ok(a == [])
+*a = 1; test_ok(a == [1])
+*a = []; test_ok(a == [])
+*a = [1]; test_ok(a == [1])
+*a = [nil]; test_ok(a == [nil])
+*a = [[]]; test_ok(a == [[]])
+*a = [*[]]; test_ok(a == [])
+*a = [*[1]]; test_ok(a == [1])
+*a = [*[1,2]]; test_ok(a == [1,2])
+
+*a = *nil; test_ok(a == [])
+*a = *1; test_ok(a == [1])
+*a = *[]; test_ok(a == [])
+*a = *[1]; test_ok(a == [1])
+*a = *[nil]; test_ok(a == [])
+*a = *[[]]; test_ok(a == [])
+*a = *[*[]]; test_ok(a == [])
+*a = *[*[1]]; test_ok(a == [1])
+*a = *[*[1,2]]; test_ok(a == [1,2])
+
+a,b,*c = nil; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = 1; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = []; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [1]; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = [nil]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [[]]; test_ok([a,b,c] == [[], nil, []])
+a,b,*c = [*[]]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [*[1]]; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = [*[1,2]]; test_ok([a,b,c] == [1, 2, []])
+
+a,b,*c = *nil; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = *1; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = *[]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = *[1]; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = *[nil]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = *[[]]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = *[*[]]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = *[*[1]]; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = *[*[1,2]]; test_ok([a,b,c] == [1, 2, []])
+
+def f; yield nil; end; f {|a| test_ok(a == nil)}
+def f; yield 1; end; f {|a| test_ok(a == 1)}
+def f; yield []; end; f {|a| test_ok(a == [])}
+def f; yield [1]; end; f {|a| test_ok(a == [1])}
+def f; yield [nil]; end; f {|a| test_ok(a == [nil])}
+def f; yield [[]]; end; f {|a| test_ok(a == [[]])}
+def f; yield [*[]]; end; f {|a| test_ok(a == [])}
+def f; yield [*[1]]; end; f {|a| test_ok(a == [1])}
+def f; yield [*[1,2]]; end; f {|a| test_ok(a == [1,2])}
+
+def f; yield *nil; end; f {|a| test_ok(a == nil)}
+def f; yield *1; end; f {|a| test_ok(a == 1)}
+def f; yield *[]; end; f {|a| test_ok(a == nil)}
+def f; yield *[1]; end; f {|a| test_ok(a == 1)}
+def f; yield *[nil]; end; f {|a| test_ok(a == nil)}
+def f; yield *[[]]; end; f {|a| test_ok(a == [])}
+def f; yield *[*[]]; end; f {|a| test_ok(a == nil)}
+def f; yield *[*[1]]; end; f {|a| test_ok(a == 1)}
+def f; yield *[*[1,2]]; end; f {|a| test_ok(a == [1,2])}
+
+def f; yield nil; end; f {|*a| test_ok(a == [])}
+def f; yield 1; end; f {|*a| test_ok(a == [1])}
+def f; yield []; end; f {|*a| test_ok(a == [])}
+def f; yield [1]; end; f {|*a| test_ok(a == [1])}
+def f; yield [nil]; end; f {|*a| test_ok(a == [nil])}
+def f; yield [[]]; end; f {|*a| test_ok(a == [[]])}
+def f; yield [*[]]; end; f {|*a| test_ok(a == [])}
+def f; yield [*[1]]; end; f {|*a| test_ok(a == [1])}
+def f; yield [*[1,2]]; end; f {|*a| test_ok(a == [1,2])}
+
+def f; yield *nil; end; f {|*a| test_ok(a == [])}
+def f; yield *1; end; f {|*a| test_ok(a == [1])}
+def f; yield *[]; end; f {|*a| test_ok(a == [])}
+def f; yield *[1]; end; f {|*a| test_ok(a == [1])}
+def f; yield *[nil]; end; f {|*a| test_ok(a == [])}
+def f; yield *[[]]; end; f {|*a| test_ok(a == [])}
+def f; yield *[*[]]; end; f {|*a| test_ok(a == [])}
+def f; yield *[*[1]]; end; f {|*a| test_ok(a == [1])}
+def f; yield *[*[1,2]]; end; f {|*a| test_ok(a == [1,2])}
+
+def f; yield nil; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield 1; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield []; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [1]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield [nil]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [[]]; end; f {|a,b,*c| test_ok([a,b,c] == [[], nil, []])}
+def f; yield [*[]]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [*[1]]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield [*[1,2]]; end; f {|a,b,*c| test_ok([a,b,c] == [1, 2, []])}
+
+def f; yield *nil; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield *1; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield *[]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield *[1]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield *[nil]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield *[[]]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield *[*[]]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield *[*[1]]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield *[*[1,2]]; end; f {|a,b,*c| test_ok([a,b,c] == [1, 2, []])}
+
+test_check "condition"
+
+$x = '0';
+
+$x == $x && test_ok(true)
+$x != $x && test_ok(false)
+$x == $x || test_ok(false)
+$x != $x || test_ok(true)
+
+# first test to see if we can run the tests.
+
+test_check "if/unless";
+
+$x = 'test';
+test_ok(if $x == $x then true else false end)
+$bad = false
+unless $x == $x
+  $bad = true
+end
+test_ok(!$bad)
+test_ok(unless $x != $x then true else false end)
+
+test_check "case"
+
+case 5
+when 1, 2, 3, 4, 6, 7, 8
+  test_ok(false)
+when 5
+  test_ok(true)
+end
+
+case 5
+when 5
+  test_ok(true)
+when 1..10
+  test_ok(false)
+end
+
+case 5
+when 1..10
+  test_ok(true)
+else
+  test_ok(false)
+end
+
+case 5
+when 5
+  test_ok(true)
+else
+  test_ok(false)
+end
+
+case "foobar"
+when /^f.*r$/
+  test_ok(true)
+else
+  test_ok(false)
+end
+
+test_check "while/until";
+
+tmp = open("while_tmp", "w")
+tmp.print "tvi925\n";
+tmp.print "tvi920\n";
+tmp.print "vt100\n";
+tmp.print "Amiga\n";
+tmp.print "paper\n";
+tmp.close
+
+# test break
+
+tmp = open("while_tmp", "r")
+test_ok(tmp.kind_of?(File))
+
+while line = tmp.gets()
+  break if /vt100/ =~ line
+end
+
+test_ok(!tmp.eof? && /vt100/ =~ line)
+tmp.close
+
+# test next
+$bad = false
+tmp = open("while_tmp", "r")
+while line = tmp.gets()
+  next if /vt100/ =~ line
+  $bad = 1 if /vt100/ =~ line
+end
+test_ok(!(!tmp.eof? || /vt100/ =~ line || $bad))
+tmp.close
+
+# test redo
+$bad = false
+tmp = open("while_tmp", "r")
+while tmp.gets()
+  line = $_
+  gsub(/vt100/, 'VT100')
+  if $_ != line
+    $_.gsub!('VT100', 'Vt100')
+    redo
+  end
+  $bad = 1 if /vt100/ =~ $_
+  $bad = 1 if /VT100/ =~ $_
+end
+test_ok(tmp.eof? && !$bad)
+tmp.close
+
+sum=0
+for i in 1..10
+  sum += i
+  i -= 1
+  if i > 0
+    redo
+  end
+end
+test_ok(sum == 220)
+
+# test interval
+$bad = false
+tmp = open("while_tmp", "r")
+while line = tmp.gets()
+  break if 3
+  case line
+  when /vt100/, /Amiga/, /paper/
+    $bad = true
+  end
+end
+test_ok(!$bad)
+tmp.close
+
+File.unlink "while_tmp" or `/bin/rm -f "while_tmp"`
+test_ok(!File.exist?("while_tmp"))
+
+i = 0
+until i>4
+  i+=1
+end
+test_ok(i>4)
+
+
+# exception handling
+test_check "exception";
+
+begin
+  raise "this must be handled"
+  test_ok(false)
+rescue
+  test_ok(true)
+end
+
+$bad = true
+begin
+  raise "this must be handled no.2"
+rescue
+  if $bad
+    $bad = false
+    retry
+    test_ok(false)
+  end
+end
+test_ok(true)
+
+# exception in rescue clause
+$string = "this must be handled no.3"
+begin
+  begin
+    raise "exception in rescue clause"
+  rescue 
+    raise $string
+  end
+  test_ok(false)
+rescue
+  test_ok(true) if $! == $string
+end
+  
+# exception in ensure clause
+begin
+  begin
+    raise "this must be handled no.4"
+  ensure 
+    raise "exception in ensure clause"
+  end
+  test_ok(false)
+rescue
+  test_ok(true)
+end
+
+$bad = true
+begin
+  begin
+    raise "this must be handled no.5"
+  ensure
+    $bad = false
+  end
+rescue
+end
+test_ok(!$bad)
+
+$bad = true
+begin
+  begin
+    raise "this must be handled no.6"
+  ensure
+    $bad = false
+  end
+rescue
+end
+test_ok(!$bad)
+
+$bad = true
+while true
+  begin
+    break
+  ensure
+    $bad = false
+  end
+end
+test_ok(!$bad)
+
+test_ok(catch(:foo) {
+     loop do
+       loop do
+	 throw :foo, true
+	 break
+       end
+       break
+       test_ok(false)			# should no reach here
+     end
+     false
+   })
+
+test_check "array"
+test_ok([1, 2] + [3, 4] == [1, 2, 3, 4])
+test_ok([1, 2] * 2 == [1, 2, 1, 2])
+test_ok([1, 2] * ":" == "1:2")
+
+test_ok([1, 2].hash == [1, 2].hash)
+
+test_ok([1,2,3] & [2,3,4] == [2,3])
+test_ok([1,2,3] | [2,3,4] == [1,2,3,4])
+test_ok([1,2,3] - [2,3] == [1])
+
+$x = [0, 1, 2, 3, 4, 5]
+test_ok($x[2] == 2)
+test_ok($x[1..3] == [1, 2, 3])
+test_ok($x[1,3] == [1, 2, 3])
+
+$x[0, 2] = 10
+test_ok($x[0] == 10 && $x[1] == 2)
+  
+$x[0, 0] = -1
+test_ok($x[0] == -1 && $x[1] == 10)
+
+$x[-1, 1] = 20
+test_ok($x[-1] == 20 && $x.pop == 20)
+
+# array and/or
+test_ok(([1,2,3]&[2,4,6]) == [2])
+test_ok(([1,2,3]|[2,4,6]) == [1,2,3,4,6])
+
+# compact
+$x = [nil, 1, nil, nil, 5, nil, nil]
+$x.compact!
+test_ok($x == [1, 5])
+
+# uniq
+$x = [1, 1, 4, 2, 5, 4, 5, 1, 2]
+$x.uniq!
+test_ok($x == [1, 4, 2, 5])
+
+# empty?
+test_ok(!$x.empty?)
+$x = []
+test_ok($x.empty?)
+
+# sort
+$x = ["it", "came", "to", "pass", "that", "..."]
+$x = $x.sort.join(" ")
+test_ok($x == "... came it pass that to")
+$x = [2,5,3,1,7]
+$x.sort!{|a,b| a<=>b}		# sort with condition
+test_ok($x == [1,2,3,5,7])
+$x.sort!{|a,b| b-a}		# reverse sort
+test_ok($x == [7,5,3,2,1])
+
+# split test
+$x = "The Botest_ok of Mormon"
+test_ok($x.split(//).reverse!.join == $x.reverse)
+test_ok($x.reverse == $x.reverse!)
+test_ok("1 byte string".split(//).reverse.join(":") == "g:n:i:r:t:s: :e:t:y:b: :1")
+$x = "a b c  d"
+test_ok($x.split == ['a', 'b', 'c', 'd'])
+test_ok($x.split(' ') == ['a', 'b', 'c', 'd'])
+test_ok(defined? "a".chomp)
+test_ok("abc".scan(/./) == ["a", "b", "c"])
+test_ok("1a2b3c".scan(/(\d.)/) == [["1a"], ["2b"], ["3c"]])
+# non-greedy match
+test_ok("a=12;b=22".scan(/(.*?)=(\d*);?/) == [["a", "12"], ["b", "22"]])
+
+$x = [1]
+test_ok(($x * 5).join(":") == '1:1:1:1:1')
+test_ok(($x * 1).join(":") == '1')
+test_ok(($x * 0).join(":") == '')
+
+*$x = (1..7).to_a
+test_ok($x.size == 7)
+test_ok($x == [1, 2, 3, 4, 5, 6, 7])
+
+$x = [1,2,3]
+$x[1,0] = $x
+test_ok($x == [1,1,2,3,2,3])
+
+$x = [1,2,3]
+$x[-1,0] = $x
+test_ok($x == [1,2,1,2,3,3])
+
+$x = [1,2,3]
+$x.concat($x)
+test_ok($x == [1,2,3,1,2,3])
+
+test_check "hash"
+$x = {1=>2, 2=>4, 3=>6}
+$y = {1, 2, 2, 4, 3, 6}
+
+test_ok($x[1] == 2)
+
+test_ok(begin   
+     for k,v in $y
+       raise if k*2 != v
+     end
+     true
+   rescue
+     false
+   end)
+
+test_ok($x.length == 3)
+test_ok($x.has_key?(1))
+test_ok($x.has_value?(4))
+test_ok($x.select(2,3) == [4,6])
+test_ok($x == {1=>2, 2=>4, 3=>6})
+
+$z = $y.keys.join(":")
+test_ok($z == "1:2:3")
+
+$z = $y.values.join(":")
+test_ok($z == "2:4:6")
+test_ok($x == $y)
+
+$y.shift
+test_ok($y.length == 2)
+
+$z = [1,2]
+$y[$z] = 256
+test_ok($y[$z] == 256)
+
+$x = Hash.new(0)
+$x[1] = 1
+test_ok($x[1] == 1)
+test_ok($x[2] == 0)
+
+$x = Hash.new([])
+test_ok($x[22] == [])
+test_ok($x[22].equal?($x[22]))
+
+$x = Hash.new{[]}
+test_ok($x[22] == [])
+test_ok(!$x[22].equal?($x[22]))
+
+$x = Hash.new{|h,k| $z = k; h[k] = k*2}
+$z = 0
+test_ok($x[22] == 44)
+test_ok($z == 22)
+$z = 0
+test_ok($x[22] == 44)
+test_ok($z == 0)
+$x.default = 5
+test_ok($x[23] == 5)
+
+$x = Hash.new
+def $x.default(k)
+  $z = k
+  self[k] = k*2
+end
+$z = 0
+test_ok($x[22] == 44)
+test_ok($z == 22)
+$z = 0
+test_ok($x[22] == 44)
+test_ok($z == 0)
+
+test_check "iterator"
+
+test_ok(!iterator?)
+
+def ttt
+  test_ok(iterator?)
+end
+ttt{}
+
+# yield at top level
+test_ok(!defined?(yield))
+
+$x = [1, 2, 3, 4]
+$y = []
+
+# iterator over array
+for i in $x
+  $y.push i
+end
+test_ok($x == $y)
+
+# nested iterator
+def tt
+  1.upto(10) {|i|
+    yield i
+  }
+end
+
+tt{|i| break if i == 5}
+test_ok(i == 5)
+
+def tt2(dummy)
+  yield 1
+end
+
+def tt3(&block)
+  tt2(raise(ArgumentError,""),&block)
+end
+
+$x = false
+begin
+  tt3{}
+rescue ArgumentError
+  $x = true
+rescue Exception
+end
+test_ok($x)
+
+# iterator break/redo/next/retry
+done = true
+loop{
+  break
+  done = false			# should not reach here
+}
+test_ok(done)
+
+done = false
+$bad = false
+loop {
+  break if done
+  done = true
+  next
+  $bad = true			# should not reach here
+}
+test_ok(!$bad)
+
+done = false
+$bad = false
+loop {
+  break if done
+  done = true
+  redo
+  $bad = true			# should not reach here
+}
+test_ok(!$bad)
+
+$x = []
+for i in 1 .. 7
+  $x.push i
+end
+test_ok($x.size == 7)
+test_ok($x == [1, 2, 3, 4, 5, 6, 7])
+
+$done = false
+$x = []
+for i in 1 .. 7			# see how retry works in iterator loop
+  if i == 4 and not $done
+    $done = true
+    retry
+  end
+  $x.push(i)
+end
+test_ok($x.size == 10)
+test_ok($x == [1, 2, 3, 1, 2, 3, 4, 5, 6, 7])
+
+# append method to built-in class
+class Array
+  def iter_test1
+    collect{|e| [e, yield(e)]}.sort{|a,b|a[1]<=>b[1]}
+  end
+  def iter_test2
+    a = collect{|e| [e, yield(e)]}
+    a.sort{|a,b|a[1]<=>b[1]}
+  end
+end
+$x = [[1,2],[3,4],[5,6]]
+test_ok($x.iter_test1{|x|x} == $x.iter_test2{|x|x})
+
+class IterTest
+  def initialize(e); @@body = e; end
+
+  def each0(&block); @@body.each(&block); end
+  def each1(&block); @@body.each { |*x| block.call(*x) } end
+  def each2(&block); @@body.each { |*x| block.call(x) } end
+  def each3(&block); @@body.each { |x| block.call(*x) } end
+  def each4(&block); @@body.each { |x| block.call(x) } end
+  def each5; @@body.each { |*x| yield(*x) } end
+  def each6; @@body.each { |*x| yield(x) } end
+  def each7; @@body.each { |x| yield(*x) } end
+  def each8; @@body.each { |x| yield(x) } end
+
+  def f(a)
+    test_ok(a == [1])
+  end
+end
+IterTest.new(nil).method(:f).to_proc.call([1])
+
+IterTest.new([0]).each0 { |x| $x = x }
+test_ok($x == 0)
+IterTest.new([1]).each1 { |x| $x = x }
+test_ok($x == 1)
+IterTest.new([2]).each2 { |x| $x = x }
+test_ok($x == [2])
+IterTest.new([3]).each3 { |x| $x = x }
+test_ok($x == 3)
+IterTest.new([4]).each4 { |x| $x = x }
+test_ok($x == 4)
+IterTest.new([5]).each5 { |x| $x = x }
+test_ok($x == 5)
+IterTest.new([6]).each6 { |x| $x = x }
+test_ok($x == [6])
+IterTest.new([7]).each7 { |x| $x = x }
+test_ok($x == 7)
+IterTest.new([8]).each8 { |x| $x = x }
+test_ok($x == 8)
+
+IterTest.new([[0]]).each0 { |x| $x = x }
+test_ok($x == [0])
+IterTest.new([[1]]).each1 { |x| $x = x }
+test_ok($x == 1)
+IterTest.new([[2]]).each2 { |x| $x = x }
+test_ok($x == [2])
+IterTest.new([[3]]).each3 { |x| $x = x }
+test_ok($x == 3)
+IterTest.new([[4]]).each4 { |x| $x = x }
+test_ok($x == [4])
+IterTest.new([[5]]).each5 { |x| $x = x }
+test_ok($x == 5)
+IterTest.new([[6]]).each6 { |x| $x = x }
+test_ok($x == [6])
+IterTest.new([[7]]).each7 { |x| $x = x }
+test_ok($x == 7)
+IterTest.new([[8]]).each8 { |x| $x = x }
+test_ok($x == [8])
+
+IterTest.new([[0,0]]).each0 { |x| $x = x }
+test_ok($x == [0,0])
+IterTest.new([[8,8]]).each8 { |x| $x = x }
+test_ok($x == [8,8])
+
+test_check "float"
+test_ok(2.6.floor == 2)
+test_ok(-2.6.floor == -3)
+test_ok(2.6.ceil == 3)
+test_ok(-2.6.ceil == -2)
+test_ok(2.6.truncate == 2)
+test_ok(-2.6.truncate == -2)
+test_ok(2.6.round == 3)
+test_ok(-2.4.truncate == -2)
+test_ok((13.4 % 1 - 0.4).abs < 0.0001)
+
+test_check "bignum"
+def fact(n)
+  return 1 if n == 0
+  f = 1
+  while n>0
+    f *= n
+    n -= 1
+  end
+  return f
+end
+$x = fact(40)
+test_ok($x == $x)
+test_ok($x == fact(40))
+test_ok($x < $x+2)
+test_ok($x > $x-2)
+test_ok($x == 815915283247897734345611269596115894272000000000)
+test_ok($x != 815915283247897734345611269596115894272000000001)
+test_ok($x+1 == 815915283247897734345611269596115894272000000001)
+test_ok($x/fact(20) == 335367096786357081410764800000)
+$x = -$x
+test_ok($x == -815915283247897734345611269596115894272000000000)
+test_ok(2-(2**32) == -(2**32-2))
+test_ok(2**32 - 5 == (2**32-3)-2)
+
+$good = true;
+for i in 1000..1014
+  $good = false if ((1<<i) != (2**i))
+end
+test_ok($good)
+
+$good = true;
+n1=1<<1000
+for i in 1000..1014
+  $good = false if ((1<<i) != n1)
+  n1 *= 2
+end
+test_ok($good)
+
+$good = true;
+n2=n1
+for i in 1..10
+  n1 = n1 / 2
+  n2 = n2 >> 1
+  $good = false if (n1 != n2)
+end
+test_ok($good)
+
+$good = true;
+for i in 4000..4096
+  n1 = 1 << i;
+  if (n1**2-1) / (n1+1) != (n1-1)
+    p i
+    $good = false
+  end
+end
+test_ok($good)
+
+b = 10**80
+a = b * 9 + 7
+test_ok(7 == a.modulo(b))
+test_ok(-b + 7 == a.modulo(-b))
+test_ok(b + -7 == (-a).modulo(b))
+test_ok(-7 == (-a).modulo(-b))
+test_ok(7 == a.remainder(b))
+test_ok(7 == a.remainder(-b))
+test_ok(-7 == (-a).remainder(b))
+test_ok(-7 == (-a).remainder(-b))
+
+test_ok(10**40+10**20 == 10000000000000000000100000000000000000000)
+test_ok(10**40/10**20 == 100000000000000000000)
+
+a = 677330545177305025495135714080
+b = 14269972710765292560
+test_ok(a % b == 0)
+test_ok(-a % b == 0)
+
+def shift_test(a)
+  b = a / (2 ** 32)
+  c = a >> 32
+  test_ok(b == c)
+
+  b = a * (2 ** 32)
+  c = a << 32
+  test_ok(b == c)
+end
+
+shift_test(-4518325415524767873)
+shift_test(-0xfffffffffffffffff)
+
+test_check "string & char"
+
+test_ok("abcd" == "abcd")
+test_ok("abcd" =~ "abcd")
+test_ok("abcd" === "abcd")
+# compile time string concatenation
+test_ok("ab" "cd" == "abcd")
+test_ok("#{22}aa" "cd#{44}" == "22aacd44")
+test_ok("#{22}aa" "cd#{44}" "55" "#{66}" == "22aacd445566")
+test_ok("abc" !~ /^$/)
+test_ok("abc\n" !~ /^$/)
+test_ok("abc" !~ /^d*$/)
+test_ok(("abc" =~ /d*$/) == 3)
+test_ok("" =~ /^$/)
+test_ok("\n" =~ /^$/)
+test_ok("a\n\n" =~ /^$/)
+test_ok("abcabc" =~ /.*a/ && $& == "abca")
+test_ok("abcabc" =~ /.*c/ && $& == "abcabc")
+test_ok("abcabc" =~ /.*?a/ && $& == "a")
+test_ok("abcabc" =~ /.*?c/ && $& == "abc")
+test_ok(/(.|\n)*?\n(b|\n)/ =~ "a\nb\n\n" && $& == "a\nb")
+
+test_ok(/^(ab+)+b/ =~ "ababb" && $& == "ababb")
+test_ok(/^(?:ab+)+b/ =~ "ababb" && $& == "ababb")
+test_ok(/^(ab+)+/ =~ "ababb" && $& == "ababb")
+test_ok(/^(?:ab+)+/ =~ "ababb" && $& == "ababb")
+
+test_ok(/(\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+test_ok(/(?:\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+
+$x = <<END;
+ABCD
+ABCD
+END
+$x.gsub!(/((.|\n)*?)B((.|\n)*?)D/){$1+$3}
+test_ok($x == "AC\nAC\n")
+
+test_ok("foobar" =~ /foo(?=(bar)|(baz))/)
+test_ok("foobaz" =~ /foo(?=(bar)|(baz))/)
+
+$foo = "abc"
+test_ok("#$foo = abc" == "abc = abc")
+test_ok("#{$foo} = abc" == "abc = abc")
+
+foo = "abc"
+test_ok("#{foo} = abc" == "abc = abc")
+
+test_ok('-' * 5 == '-----')
+test_ok('-' * 1 == '-')
+test_ok('-' * 0 == '')
+
+foo = '-'
+test_ok(foo * 5 == '-----')
+test_ok(foo * 1 == '-')
+test_ok(foo * 0 == '')
+
+$x = "a.gif"
+test_ok($x.sub(/.*\.([^\.]+)$/, '\1') == "gif")
+test_ok($x.sub(/.*\.([^\.]+)$/, 'b.\1') == "b.gif")
+test_ok($x.sub(/.*\.([^\.]+)$/, '\2') == "")
+test_ok($x.sub(/.*\.([^\.]+)$/, 'a\2b') == "ab")
+test_ok($x.sub(/.*\.([^\.]+)$/, '<\&>') == "<a.gif>")
+
+# character constants(assumes ASCII)
+test_ok("a"[0] == ?a)
+test_ok(?a == ?a)
+test_ok(?\C-a == 1)
+test_ok(?\M-a == 225)
+test_ok(?\M-\C-a == 129)
+test_ok("a".upcase![0] == ?A)
+test_ok("A".downcase![0] == ?a)
+test_ok("abc".tr!("a-z", "A-Z") == "ABC")
+test_ok("aabbcccc".tr_s!("a-z", "A-Z") == "ABC")
+test_ok("abcc".squeeze!("a-z") == "abc")
+test_ok("abcd".delete!("bc") == "ad")
+
+$x = "abcdef"
+$y = [ ?a, ?b, ?c, ?d, ?e, ?f ]
+$bad = false
+$x.each_byte {|i|
+  if i != $y.shift
+    $bad = true
+    break
+  end
+}
+test_ok(!$bad)
+
+s = "a string"
+s[0..s.size]="another string"
+test_ok(s == "another string")
+
+s = <<EOS
+#{
+[1,2,3].join(",")
+}
+EOS
+test_ok(s == "1,2,3\n")
+
+test_check "assignment"
+a = nil
+test_ok(defined?(a))
+test_ok(a == nil)
+
+# multiple asignment
+a, b = 1, 2
+test_ok(a == 1 && b == 2)
+
+a, b = b, a
+test_ok(a == 2 && b == 1)
+
+a, = 1,2
+test_ok(a == 1)
+
+a, *b = 1, 2, 3
+test_ok(a == 1 && b == [2, 3])
+
+a, (b, c), d = 1, [2, 3], 4
+test_ok(a == 1 && b == 2 && c == 3 && d == 4)
+
+*a = 1, 2, 3
+test_ok(a == [1, 2, 3])
+
+*a = 4
+test_ok(a == [4])
+
+*a = nil
+test_ok(a == [])
+
+test_check "call"
+def aaa(a, b=100, *rest)
+  res = [a, b]
+  res += rest if rest
+  return res
+end
+
+# not enough argument
+begin
+  aaa()				# need at least 1 arg
+  test_ok(false)
+rescue
+  test_ok(true)
+end
+
+begin
+  aaa				# no arg given (exception raised)
+  test_ok(false)
+rescue
+  test_ok(true)
+end
+
+test_ok(aaa(1) == [1, 100])
+test_ok(aaa(1, 2) == [1, 2])
+test_ok(aaa(1, 2, 3, 4) == [1, 2, 3, 4])
+test_ok(aaa(1, *[2, 3, 4]) == [1, 2, 3, 4])
+
+test_check "proc"
+$proc = proc{|i| i}
+test_ok($proc.call(2) == 2)
+test_ok($proc.call(3) == 3)
+
+$proc = proc{|i| i*2}
+test_ok($proc.call(2) == 4)
+test_ok($proc.call(3) == 6)
+
+proc{
+  iii=5				# nested local variable
+  $proc = proc{|i|
+    iii = i
+  }
+  $proc2 = proc {
+    $x = iii			# nested variables shared by procs
+  }
+  # scope of nested variables
+  test_ok(defined?(iii))
+}.call
+test_ok(!defined?(iii))		# out of scope
+
+loop{iii=5; test_ok(eval("defined? iii")); break}
+loop {
+  iii = 10
+  def dyna_var_check
+    loop {
+      test_ok(!defined?(iii))
+      break
+    }
+  end
+  dyna_var_check
+  break
+}
+$x=0
+$proc.call(5)
+$proc2.call
+test_ok($x == 5)
+
+if defined? Process.kill
+  test_check "signal"
+
+  $x = 0
+  trap "SIGINT", proc{|sig| $x = 2}
+  Process.kill "SIGINT", $$
+  sleep 0.1
+  test_ok($x == 2)
+
+  trap "SIGINT", proc{raise "Interrupt"}
+
+  x = false
+  begin
+    Process.kill "SIGINT", $$
+    sleep 0.1
+  rescue
+    x = $!
+  end
+  test_ok(x && /Interrupt/ =~ x)
+end
+
+test_check "eval"
+test_ok(eval("") == nil)
+$bad=false
+eval 'while false; $bad = true; print "foo\n" end'
+test_ok(!$bad)
+
+test_ok(eval('TRUE'))
+test_ok(eval('true'))
+test_ok(!eval('NIL'))
+test_ok(!eval('nil'))
+test_ok(!eval('FALSE'))
+test_ok(!eval('false'))
+
+$foo = 'test_ok(true)'
+begin
+  eval $foo
+rescue
+  test_ok(false)
+end
+
+test_ok(eval("$foo") == 'test_ok(true)')
+test_ok(eval("true") == true)
+i = 5
+test_ok(eval("i == 5"))
+test_ok(eval("i") == 5)
+test_ok(eval("defined? i"))
+
+# eval with binding
+def test_ev
+  local1 = "local1"
+  lambda {
+    local2 = "local2"
+    return binding
+  }.call
+end
+
+$x = test_ev
+test_ok(eval("local1", $x) == "local1") # normal local var
+test_ok(eval("local2", $x) == "local2") # nested local var
+$bad = true
+begin
+  p eval("local1")
+rescue NameError		# must raise error
+  $bad = false
+end
+test_ok(!$bad)
+
+module EvTest
+  EVTEST1 = 25
+  evtest2 = 125
+  $x = binding
+end
+test_ok(eval("EVTEST1", $x) == 25)	# constant in module
+test_ok(eval("evtest2", $x) == 125)	# local var in module
+$bad = true
+begin
+  eval("EVTEST1")
+rescue NameError		# must raise error
+  $bad = false
+end
+test_ok(!$bad)
+
+x = proc{}
+eval "i4 = 1", x
+test_ok(eval("i4", x) == 1)
+x = proc{proc{}}.call
+eval "i4 = 22", x
+test_ok(eval("i4", x) == 22)
+$x = []
+x = proc{proc{}}.call
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+test_ok($x[4].call == 8)
+
+x = binding
+eval "i = 1", x
+test_ok(eval("i", x) == 1)
+x = proc{binding}.call
+eval "i = 22", x
+test_ok(eval("i", x) == 22)
+$x = []
+x = proc{binding}.call
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+test_ok($x[4].call == 8)
+x = proc{binding}.call
+eval "for i6 in 1..1; j6=i6; end", x
+test_ok(eval("defined? i6", x))
+test_ok(eval("defined? j6", x))
+
+proc {
+  p = binding
+  eval "foo11 = 1", p
+  foo22 = 5
+  proc{foo11=22}.call
+  proc{foo22=55}.call
+  test_ok(eval("foo11", p) == eval("foo11"))
+  test_ok(eval("foo11") == 1)
+  test_ok(eval("foo22", p) == eval("foo22"))
+  test_ok(eval("foo22") == 55)
+}.call
+
+p1 = proc{i7 = 0; proc{i7}}.call
+test_ok(p1.call == 0)
+eval "i7=5", p1
+test_ok(p1.call == 5)
+test_ok(!defined?(i7))
+
+p1 = proc{i7 = 0; proc{i7}}.call
+i7 = nil
+test_ok(p1.call == 0)
+eval "i7=1", p1
+test_ok(p1.call == 1)
+eval "i7=5", p1
+test_ok(p1.call == 5)
+test_ok(i7 == nil)
+
+test_check "system"
+test_ok(`echo foobar` == "foobar\n")
+test_ok(`./miniruby -e 'print "foobar"'` == 'foobar')
+
+tmp = open("script_tmp", "w")
+tmp.print "print $zzz\n";
+tmp.close
+
+test_ok(`./miniruby -s script_tmp -zzz` == 'true')
+test_ok(`./miniruby -s script_tmp -zzz=555` == '555')
+
+tmp = open("script_tmp", "w")
+tmp.print "#! /usr/local/bin/ruby -s\n";
+tmp.print "print $zzz\n";
+tmp.close
+
+test_ok(`./miniruby script_tmp -zzz=678` == '678')
+
+tmp = open("script_tmp", "w")
+tmp.print "this is a leading junk\n";
+tmp.print "#! /usr/local/bin/ruby -s\n";
+tmp.print "print $zzz\n";
+tmp.print "__END__\n";
+tmp.print "this is a trailing junk\n";
+tmp.close
+
+test_ok(`./miniruby -x script_tmp` == 'nil')
+test_ok(`./miniruby -x script_tmp -zzz=555` == '555')
+
+tmp = open("script_tmp", "w")
+for i in 1..5
+  tmp.print i, "\n"
+end
+tmp.close
+
+`./miniruby -i.bak -pe 'sub(/^[0-9]+$/){$&.to_i * 5}' script_tmp`
+done = true
+tmp = open("script_tmp", "r")
+while tmp.gets
+  if $_.to_i % 5 != 0
+    done = false
+    break
+  end
+end
+tmp.close
+test_ok(done)
+  
+File.unlink "script_tmp" or `/bin/rm -f "script_tmp"`
+File.unlink "script_tmp.bak" or `/bin/rm -f "script_tmp.bak"`
+
+$bad = false
+if (dir = File.dirname(File.dirname($0))) == '.'
+  dir = ""
+else
+  dir << "/"
+end
+
+def valid_syntax?(code, fname)
+  eval("BEGIN {return true}\n#{code}", nil, fname, 0)
+rescue Exception
+  puts $!.message
+  false
+end
+
+for script in Dir["#{dir}{lib,sample,ext}/**/*.rb"]
+  unless valid_syntax? IO::read(script), script
+    $bad = true
+  end
+end
+test_ok(!$bad)
+
+test_check "const"
+TEST1 = 1
+TEST2 = 2
+
+module Const
+  TEST3 = 3
+  TEST4 = 4
+end
+
+module Const2
+  TEST3 = 6
+  TEST4 = 8
+end
+
+include Const
+
+test_ok([TEST1,TEST2,TEST3,TEST4] == [1,2,3,4])
+
+include Const2
+STDERR.print "intentionally redefines TEST3, TEST4\n" if $VERBOSE
+test_ok([TEST1,TEST2,TEST3,TEST4] == [1,2,6,8])
+
+test_check "clone"
+foo = Object.new
+def foo.test
+  "test"
+end
+bar = foo.clone
+def bar.test2
+  "test2"
+end
+
+test_ok(bar.test2 == "test2")
+test_ok(bar.test == "test")
+test_ok(foo.test == "test")  
+
+begin
+  foo.test2
+  test_ok false
+rescue NoMethodError
+  test_ok true
+end
+
+module M001; end
+module M002; end
+module M003; include M002; end
+module M002; include M001; end
+module M003; include M002; end
+
+test_ok(M003.ancestors == [M003, M002, M001])
+
+test_check "marshal"
+$x = [1,2,3,[4,5,"foo"],{1=>"bar"},2.5,fact(30)]
+$y = Marshal.dump($x)
+test_ok($x == Marshal.load($y))
+
+StrClone=String.clone;
+test_ok(Marshal.load(Marshal.dump(StrClone.new("abc"))).class == StrClone)
+
+test_check "pack"
+
+$format = "c2x5CCxsdils_l_a6";
+# Need the expression in here to force ary[5] to be numeric.  This avoids
+# test2 failing because ary2 goes str->numeric->str and ary does not.
+ary = [1,-100,127,128,32767,987.654321098 / 100.0,12345,123456,-32767,-123456,"abcdef"]
+$x = ary.pack($format)
+ary2 = $x.unpack($format)
+
+test_ok(ary.length == ary2.length)
+test_ok(ary.join(':') == ary2.join(':'))
+test_ok($x =~ /def/)
+
+test_check "math"
+test_ok(Math.sqrt(4) == 2)
+
+include Math
+test_ok(sqrt(4) == 2)
+
+test_check "struct"
+struct_test = Struct.new("Test", :foo, :bar)
+test_ok(struct_test == Struct::Test)
+
+test = struct_test.new(1, 2)
+test_ok(test.foo == 1 && test.bar == 2)
+test_ok(test[0] == 1 && test[1] == 2)
+
+a, b = test.to_a
+test_ok(a == 1 && b == 2)
+
+test[0] = 22
+test_ok(test.foo == 22)
+
+test.bar = 47
+test_ok(test.bar == 47)
+
+test_check "variable"
+test_ok($$.instance_of?(Fixnum))
+
+# read-only variable
+begin
+  $$ = 5
+  test_ok false
+rescue NameError
+  test_ok true
+end
+
+foobar = "foobar"
+$_ = foobar
+test_ok($_ == foobar)
+
+class Gods
+  @@@@rule = "Uranus"
+  def ruler0
+    @@@@rule
+  end
+
+  def self.ruler1		# <= per method definition style
+    @@@@rule
+  end		   
+  class << self			# <= multiple method definition style
+    def ruler2
+      @@@@rule
+    end
+  end
+end
+
+module Olympians
+ @@@@rule ="Zeus"
+ def ruler3
+    @@@@rule
+  end
+end
+
+class Titans < Gods
+  @@@@rule = "Cronus"
+  include Olympians           	# OK to cause warning (intentional)
+end
+
+test_ok(Gods.new.ruler0 == "Cronus")
+test_ok(Gods.ruler1 == "Cronus")
+test_ok(Gods.ruler2 == "Cronus")
+test_ok(Titans.ruler1 == "Cronus")
+test_ok(Titans.ruler2 == "Cronus")
+atlas = Titans.new
+test_ok(atlas.ruler0 == "Cronus")
+test_ok(atlas.ruler3 == "Zeus")
+
+test_check "trace"
+$x = 1234
+$y = 0
+trace_var :$x, proc{$y = $x}
+$x = 40414
+test_ok($y == $x)
+
+untrace_var :$x
+$x = 19660208
+test_ok($y != $x)
+
+trace_var :$x, proc{$x *= 2}
+$x = 5
+test_ok($x == 10)
+
+untrace_var :$x
+
+test_check "defined?"
+
+test_ok(defined?($x))		# global variable
+test_ok(defined?($x) == 'global-variable')# returns description
+
+foo=5
+test_ok(defined?(foo))		# local variable
+
+test_ok(defined?(Array))	# constant
+test_ok(defined?(Object.new))	# method
+test_ok(!defined?(Object.print))# private method
+test_ok(defined?(1 == 2))	# operator expression
+
+class Foo
+  def foo
+    p :foo
+  end
+  protected :foo
+  def bar(f)
+    test_ok(defined?(self.foo))
+    test_ok(defined?(f.foo))
+  end
+end
+f = Foo.new
+test_ok(defined?(f.foo) == nil)
+f.bar(f)
+
+def defined_test
+  return !defined?(yield)
+end
+
+test_ok(defined_test)		# not iterator
+test_ok(!defined_test{})	# called as iterator
+
+test_check "alias"
+class Alias0
+  def foo; "foo" end
+end
+class Alias1<Alias0
+  alias bar foo
+  def foo; "foo+" + super end
+end
+class Alias2<Alias1
+  alias baz foo
+  undef foo
+end
+
+x = Alias2.new
+test_ok(x.bar == "foo")
+test_ok(x.baz == "foo+foo")
+
+# test_check for cache
+test_ok(x.baz == "foo+foo")
+
+class Alias3<Alias2
+  def foo
+    defined? super
+  end
+  def bar
+    defined? super
+  end
+  def quux
+    defined? super
+  end
+end
+x = Alias3.new
+test_ok(!x.foo)
+test_ok(x.bar)
+test_ok(!x.quux)
+
+test_check "gc"
+begin
+  1.upto(10000) {
+    tmp = [0,1,2,3,4,5,6,7,8,9]
+  }
+  tmp = nil
+  test_ok true
+rescue
+  test_ok false
+end
+class S
+  def initialize(a)
+    @@a = a
+  end
+end
+l=nil
+100000.times {
+  l = S.new(l)
+}
+GC.start
+test_ok true   # reach here or dumps core
+l = []
+100000.times {
+  l.push([l])
+}
+GC.start
+test_ok true   # reach here or dumps core
+
+if $failed > 0
+  printf "test: %d failed %d\n", $ntest, $failed
+else
+  printf "end of test(test: %d)\n", $ntest
+end
+@
+
+
+1.44
+log
+@* re.c (rb_reg_expr_str): need to process backslashes properly.
+
+* object.c (rb_any_to_a): declare Object#to_a to be obsolete.
+
+* object.c (rb_Array): do not convert nil into [] automagically.
+
+* object.c (rb_Integer): use "to_int" instead of
+  "to_i". [experimental]
+
+* object.c (nil_to_f): new method.
+
+* object.c (rb_Integer): Symbols and nil should cause error.
+
+* object.c (rb_Float): nil should cause error.
+@
+text
+@d1283 1
+a1283 1
+test_ok(Marshal.load(Marshal.dump(StrClone.new("abc"))).type == StrClone)
+@
+
+
+1.43
+log
+@* eval.c (rb_eval): NODE_EVSTR is no longer used.
+
+* eval.c (eval): not enforce to make assigned variables dynamic.
+
+* parse.y (string): split rules to strings/xstring/regexp to allow
+  arbitrary statements inside string interpolation.
+
+* parse.y (here_document): splitted into three phases.
+
+* parse.y (literall_append, literal_concat): added.
+  append/concatinate string literals.
+
+* sample/test.rb (valid_syntax): adjust line number for BEGIN.
+@
+text
+@d1215 1
+a1215 2
+  p $!
+ensure
+@
+
+
+1.42
+log
+@ext/exmk.rb.in, lib/singleton.rb: remove nested ""s.
+@
+text
+@d1213 1
+a1213 1
+  eval("BEGIN {return true}\n#{code}", nil, fname)
+@
+
+
+1.41
+log
+@* sampl/test.rb: use eval instead of './miniruby -c',
+  in order to check a syntax error.
+@
+text
+@d1212 2
+a1213 2
+def valid_syntax?(code)
+  eval("BEGIN {return true}\n#{code}")
+d1215 1
+d1221 1
+a1221 1
+  unless valid_syntax? IO::read(script)
+@
+
+
+1.40
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d1211 8
+d1220 1
+a1220 2
+  `./miniruby -c #{script}`
+  unless $?
+@
+
+
+1.39
+log
+@* re.c (rb_reg_search): should clear last_match if pos is out of
+  string range.
+
+* string.c (rb_str_index_m): ditto.
+
+* string.c (rb_str_rindex): ditto.
+
+* class.c (rb_define_class): should handle autoload.
+
+* class.c (rb_define_module): ditto.
+@
+text
+@d1003 1
+a1003 1
+loop {|iii|
+@
+
+
+1.38
+log
+@* regex.c (re_compile_pattern): '\0111' should be '\011' plus '1',
+  since octal literals are formed by three digits at most.
+
+* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d1002 12
+@
+
+
+1.37
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+
+* class.c (rb_mod_clone): should not call rb_obj_clone(), since
+  Module does not provide "allocate".
+
+* class.c (rb_singleton_class): should crate new singleton class
+  if obj is a class or module and attached object is different,
+  which means metaclass of singleton class is sought.
+
+* time.c (time_s_alloc): now follows allocation framework.
+
+* eval.c (rb_eval): should initialize outer class variables from
+  methods in singleton class definitions.
+
+* eval.c (assign): ditto.
+@
+text
+@a1353 11
+class <<a="a"
+  def foo=(n)
+    @@@@cv=n
+  end
+  def foo
+    @@@@cv
+  end
+end
+a.foo=5
+test_ok(a.foo == 5)
+
+@
+
+
+1.36
+log
+@commit miss.
+@
+text
+@d1354 11
+@
+
+
+1.35
+log
+@* sample/test.rb (system): test with scripts under the source
+  directory.
+@
+text
+@d1194 1
+a1194 1
+if (dir = File.dirname(File.dirname(dir))) == '.'
+@
+
+
+1.34
+log
+@* file.c (path_check_1): do not warn on world writable *parent*
+  directories.
+
+* class.c (rb_include_module): should preserve ancestor order in
+  the included class/module.
+@
+text
+@d1194 6
+a1199 1
+for script in Dir["{lib,sample,ext}/**/*.rb"]
+@
+
+
+1.33
+log
+@* bignum.c (rb_big_rshift): should properly convert the nagative
+  value to 2's compliment.
+@
+text
+@d1245 8
+@
+
+
+1.32
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d812 13
+@
+
+
+1.31
+log
+@* st.c: primes should be primes.
+
+* eval.c (is_defined): method defined? check should honor
+  protected too.
+
+* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d1291 37
+@
+
+
+1.30
+log
+@* sample/test.rb: Hash#indexes -> Hash#select.
+@
+text
+@d1316 1
+a1316 1
+test_ok(defined?(Array))		# constant
+d1318 16
+a1333 2
+test_ok(!defined?(Object.print))	# private method
+test_ok(defined?(1 == 2))		# operator expression
+d1340 1
+a1340 1
+test_ok(!defined_test{})		# called as iterator
+@
+
+
+1.29
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d503 1
+a503 1
+test_ok($x.indexes(2,3) == [4,6])
+@
+
+
+1.28
+log
+@* parse.y (str_extend): should not terminate string interpolation
+  with newlines in here-docs and newline terminated strings.
+@
+text
+@d473 12
+d520 34
+a553 11
+$x = [1,2,3]
+$x[1,0] = $x
+test_ok($x == [1,1,2,3,2,3])
+
+$x = [1,2,3]
+$x[-1,0] = $x
+test_ok($x == [1,2,1,2,3,3])
+
+$x = [1,2,3]
+$x.concat($x)
+test_ok($x == [1,2,3,1,2,3])
+@
+
+
+1.27
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d868 7
+@
+
+
+1.26
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d1341 7
+@
+
+
+1.25
+log
+@* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+
+* eval.c (rb_call0): self in a block given to define_method now be
+  switched to the receiver of the method.
+
+* eval.c (proc_invoke): added new parameter to allow self
+  switching.
+@
+text
+@d1332 10
+@
+
+
+1.24
+log
+@* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d1195 3
+@
+
+
+1.23
+log
+@* eval.c (rb_yield_0): no mvalue_to_svalue conversion here.
+
+* eval.c (massign): takes svalue, convert it to mvalue inside.
+
+* eval.c (rb_eval): parameters for yield/return are always
+  svalues now.
+
+* eval.c (svalue_to_mvalue): more strict conversion.
+
+* eval.c (mvalue_to_svalue): ditto.
+
+* st.c (new_size): prime hash size enabled.
+
+* ext/socket/socket.c (Init_socket): SO_* constants added.
+@
+text
+@d67 6
+a72 6
+*a = []; test_ok(a == [[]])
+*a = [1]; test_ok(a == [[1]])
+*a = [nil]; test_ok(a == [[nil]])
+*a = [[]]; test_ok(a == [[[]]])
+*a = [*[]]; test_ok(a == [[]])
+*a = [*[1]]; test_ok(a == [[1]])
+d80 1
+a80 1
+*a = *[[]]; test_ok(a == [[]])
+d87 6
+a92 6
+a,b,*c = []; test_ok([a,b,c] == [[], nil, []])
+a,b,*c = [1]; test_ok([a,b,c] == [[1], nil, []])
+a,b,*c = [nil]; test_ok([a,b,c] == [[nil], nil, []])
+a,b,*c = [[]]; test_ok([a,b,c] == [[[]], nil, []])
+a,b,*c = [*[]]; test_ok([a,b,c] == [[], nil, []])
+a,b,*c = [*[1]]; test_ok([a,b,c] == [[1], nil, []])
+d100 1
+a100 1
+a,b,*c = *[[]]; test_ok([a,b,c] == [[], nil, []])
+d127 6
+a132 6
+def f; yield []; end; f {|*a| test_ok(a == [[]])}
+def f; yield [1]; end; f {|*a| test_ok(a == [[1]])}
+def f; yield [nil]; end; f {|*a| test_ok(a == [[nil]])}
+def f; yield [[]]; end; f {|*a| test_ok(a == [[[]]])}
+def f; yield [*[]]; end; f {|*a| test_ok(a == [[]])}
+def f; yield [*[1]]; end; f {|*a| test_ok(a == [[1]])}
+d140 1
+a140 1
+def f; yield *[[]]; end; f {|*a| test_ok(a == [[]])}
+d147 6
+a152 6
+def f; yield []; end; f {|a,b,*c| test_ok([a,b,c] == [[], nil, []])}
+def f; yield [1]; end; f {|a,b,*c| test_ok([a,b,c] == [[1], nil, []])}
+def f; yield [nil]; end; f {|a,b,*c| test_ok([a,b,c] == [[nil], nil, []])}
+def f; yield [[]]; end; f {|a,b,*c| test_ok([a,b,c] == [[[]], nil, []])}
+def f; yield [*[]]; end; f {|a,b,*c| test_ok([a,b,c] == [[], nil, []])}
+def f; yield [*[1]]; end; f {|a,b,*c| test_ok([a,b,c] == [[1], nil, []])}
+d160 1
+a160 1
+def f; yield *[[]]; end; f {|a,b,*c| test_ok([a,b,c] == [[], nil, []])}
+d669 1
+a669 1
+test_ok($x == [1])
+d671 1
+a671 1
+test_ok($x == [[2]])
+d677 1
+a677 1
+test_ok($x == [5])
+d679 1
+a679 1
+test_ok($x == [[6]])
+@
+
+
+1.22
+log
+@* eval.c (svalue_to_mvalue): new function to convert from svalue
+  to mvalue. [experimental]
+
+* eval.c (mvalue_to_svalue): new function to convert from mvalue
+  to svalue.
+
+* eval.c (rb_eval): use mvalue_to_svalue().
+
+* eval.c (rb_yield_0): use mvalue_to_svalue().
+
+* eval.c (proc_invoke): proper mvalue handling.
+@
+text
+@d59 2
+a60 2
+a = *[nil]; test_ok(a == [nil])
+a = *[[]]; test_ok(a == [[]])
+d67 6
+a72 6
+*a = []; test_ok(a == [])
+*a = [1]; test_ok(a == [1])
+*a = [nil]; test_ok(a == [nil])
+*a = [[]]; test_ok(a == [[]])
+*a = [*[]]; test_ok(a == [])
+*a = [*[1]]; test_ok(a == [1])
+d79 1
+a79 1
+*a = *[nil]; test_ok(a == [nil])
+d87 6
+a92 6
+a,b,*c = []; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [1]; test_ok([a,b,c] == [1, nil, []])
+a,b,*c = [nil]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [[]]; test_ok([a,b,c] == [[], nil, []])
+a,b,*c = [*[]]; test_ok([a,b,c] == [nil, nil, []])
+a,b,*c = [*[1]]; test_ok([a,b,c] == [1, nil, []])
+d119 2
+a120 2
+def f; yield *[nil]; end; f {|a| test_ok(a == [nil])}
+def f; yield *[[]]; end; f {|a| test_ok(a == [[]])}
+d127 6
+a132 6
+def f; yield []; end; f {|*a| test_ok(a == [])}
+def f; yield [1]; end; f {|*a| test_ok(a == [1])}
+def f; yield [nil]; end; f {|*a| test_ok(a == [nil])}
+def f; yield [[]]; end; f {|*a| test_ok(a == [[]])}
+def f; yield [*[]]; end; f {|*a| test_ok(a == [])}
+def f; yield [*[1]]; end; f {|*a| test_ok(a == [1])}
+d139 1
+a139 1
+def f; yield *[nil]; end; f {|*a| test_ok(a == [nil])}
+d147 6
+a152 6
+def f; yield []; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [1]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+def f; yield [nil]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [[]]; end; f {|a,b,*c| test_ok([a,b,c] == [[], nil, []])}
+def f; yield [*[]]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+def f; yield [*[1]]; end; f {|a,b,*c| test_ok([a,b,c] == [1, nil, []])}
+d640 4
+d645 1
+d652 1
+a652 1
+test_ok($x == [2]); p $x
+d669 1
+a669 1
+test_ok($x == 1)
+d671 1
+a671 1
+test_ok($x == [2]); p $x
+d675 1
+a675 1
+test_ok($x == [4]); p $x
+d677 1
+a677 1
+test_ok($x == 5)
+d679 1
+a679 1
+test_ok($x == [6])
+@
+
+
+1.21
+log
+@* gc.c (Init_stack): avoid __builtin_frame_address(2) to retrieve
+  stack bottom line.
+
+* st.c (numhash): should shuffle bits by dividing by prime number.
+
+* eval.c (rb_eval): multiple assignment behavior fixed, which
+  results "*a = nil" makes "a == []" now.
+
+* eval.c (rb_f_require): should set SCOPE_PUBLIC before calling
+  dln_load().
+@
+text
+@d59 2
+a60 2
+a = *[nil]; test_ok(a == nil)
+a = *[[]]; test_ok(a == [])
+d79 2
+a80 2
+*a = *[nil]; test_ok(a == [])
+*a = *[[]]; test_ok(a == [])
+d100 1
+a100 1
+a,b,*c = *[[]]; test_ok([a,b,c] == [nil, nil, []])
+d119 2
+a120 2
+def f; yield *[nil]; end; f {|a| test_ok(a == nil)}
+def f; yield *[[]]; end; f {|a| test_ok(a == [])}
+d139 2
+a140 2
+def f; yield *[nil]; end; f {|*a| test_ok(a == [])}
+def f; yield *[[]]; end; f {|*a| test_ok(a == [])}
+d160 1
+a160 1
+def f; yield *[[]]; end; f {|a,b,*c| test_ok([a,b,c] == [nil, nil, []])}
+d647 1
+a647 1
+test_ok($x == [2])
+d666 1
+a666 1
+test_ok($x == [2])
+d670 1
+a670 1
+test_ok($x == [4])
+@
+
+
+1.20
+log
+@forgot some checkins.
+@
+text
+@d45 120
+d891 1
+a891 1
+test_ok(a == [nil])
+@
+
+
+1.19
+log
+@changes from personal modifies -- matz
+@
+text
+@d647 5
+d1061 1
+a1061 1
+rescue NameError
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d119 2
+a120 2
+while tmp.gets()
+  break if /vt100/
+d123 1
+a123 1
+test_ok(!tmp.eof? && /vt100/)
+d129 3
+a131 3
+while tmp.gets()
+  next if /vt100/;
+  $bad = 1 if /vt100/;
+d133 1
+a133 1
+test_ok(!(!tmp.eof? || /vt100/ || $bad))
+d141 1
+a141 1
+  $_ = gsub(/vt100/, 'VT100')
+d143 2
+a144 2
+    gsub!('VT100', 'Vt100')
+    redo;
+d146 2
+a147 2
+  $bad = 1 if /vt100/
+  $bad = 1 if /VT100/
+d165 4
+a168 3
+while tmp.gets()
+  break unless 1..2
+  if /vt100/ || /Amiga/ || /paper/
+a169 1
+    break
+@
+
+
+1.18.2.1
+log
+@* process.c (rb_syswait): argument order of rb_waitpid() inverted.
+
+* sample/test.rb (system): test with scripts under the source
+  directory.
+@
+text
+@d1009 1
+a1009 6
+if (dir = File.dirname(File.dirname(dir))) == '.'
+  dir = ""
+else
+  dir << "/"
+end
+for script in Dir["#{dir}{lib,sample,ext}/**/*.rb"]
+@
+
+
+1.18.2.2
+log
+@commit miss.
+@
+text
+@d1009 1
+a1009 1
+if (dir = File.dirname(File.dirname($0))) == '.'
+@
+
+
+1.18.2.3
+log
+@* sampl/test.rb: use eval instead of './miniruby -c',
+  in order to check a syntax error.
+@
+text
+@a1013 8
+
+def valid_syntax?(code)
+  eval("BEGIN {return true}\n#{code}")
+rescue Exception
+ensure
+  false
+end
+
+d1015 2
+a1016 1
+  unless valid_syntax? open(script).read
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d644 3
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d388 12
+a585 1
+fact(3)
+d627 1
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d1 1
+a1 1
+#! /usr/local/bin/ruby
+d7 1
+a7 1
+def check(what)
+d13 1
+a13 1
+def ok(cond)
+d27 1
+a27 1
+check "assignment"
+d30 1
+a30 1
+ok(a[0] == "bar")
+d32 1
+a32 1
+ok(h["foo"] == "bar")
+d36 1
+a36 1
+ok(aa == 5)
+d38 1
+a38 1
+ok(bb == 25)
+d40 1
+a40 1
+ok(cc == nil)
+d43 1
+a43 1
+ok(cc == 44)
+d45 1
+a45 1
+check "condition"
+d49 4
+a52 4
+$x == $x && ok(true)
+$x != $x && ok(false)
+$x == $x || ok(false)
+$x != $x || ok(true)
+d56 1
+a56 1
+check "if/unless";
+d59 1
+a59 1
+ok(if $x == $x then true else false end)
+d64 2
+a65 2
+ok(!$bad)
+ok(unless $x != $x then true else false end)
+d67 1
+a67 1
+check "case"
+d71 1
+a71 1
+  ok(false)
+d73 1
+a73 1
+  ok(true)
+d78 1
+a78 1
+  ok(true)
+d80 1
+a80 1
+  ok(false)
+d85 1
+a85 1
+  ok(true)
+d87 1
+a87 1
+  ok(false)
+d92 1
+a92 1
+  ok(true)
+d94 1
+a94 1
+  ok(false)
+d99 1
+a99 1
+  ok(true)
+d101 1
+a101 1
+  ok(false)
+d104 1
+a104 1
+check "while/until";
+d117 1
+a117 1
+ok(tmp.kind_of?(File))
+d123 1
+a123 1
+ok(!tmp.eof? && /vt100/)
+d133 1
+a133 1
+ok(!(!tmp.eof? || /vt100/ || $bad))
+d149 1
+a149 1
+ok(tmp.eof? && !$bad)
+d160 1
+a160 1
+ok(sum == 220)
+d172 1
+a172 1
+ok(!$bad)
+d176 1
+a176 1
+ok(!File.exist?("while_tmp"))
+d182 1
+a182 1
+ok(i>4)
+d186 1
+a186 1
+check "exception";
+d190 1
+a190 1
+  ok(false)
+d192 1
+a192 1
+  ok(true)
+d202 1
+a202 1
+    ok(false)
+d205 1
+a205 1
+ok(true)
+d215 1
+a215 1
+  ok(false)
+d217 1
+a217 1
+  ok(true) if $! == $string
+d227 1
+a227 1
+  ok(false)
+d229 1
+a229 1
+  ok(true)
+d241 1
+a241 1
+ok(!$bad)
+d252 1
+a252 1
+ok(!$bad)
+d262 1
+a262 1
+ok(!$bad)
+d264 1
+a264 1
+ok(catch(:foo) {
+d271 1
+a271 1
+       ok(false)			# should no reach here
+d276 10
+a285 10
+check "array"
+ok([1, 2] + [3, 4] == [1, 2, 3, 4])
+ok([1, 2] * 2 == [1, 2, 1, 2])
+ok([1, 2] * ":" == "1:2")
+
+ok([1, 2].hash == [1, 2].hash)
+
+ok([1,2,3] & [2,3,4] == [2,3])
+ok([1,2,3] | [2,3,4] == [1,2,3,4])
+ok([1,2,3] - [2,3] == [1])
+d288 3
+a290 3
+ok($x[2] == 2)
+ok($x[1..3] == [1, 2, 3])
+ok($x[1,3] == [1, 2, 3])
+d293 1
+a293 1
+ok($x[0] == 10 && $x[1] == 2)
+d296 1
+a296 1
+ok($x[0] == -1 && $x[1] == 10)
+d299 1
+a299 1
+ok($x[-1] == 20 && $x.pop == 20)
+d302 2
+a303 2
+ok(([1,2,3]&[2,4,6]) == [2])
+ok(([1,2,3]|[2,4,6]) == [1,2,3,4,6])
+d308 1
+a308 1
+ok($x == [1, 5])
+d313 1
+a313 1
+ok($x == [1, 4, 2, 5])
+d316 1
+a316 1
+ok(!$x.empty?)
+d318 1
+a318 1
+ok($x.empty?)
+d323 1
+a323 1
+ok($x == "... came it pass that to")
+d326 1
+a326 1
+ok($x == [1,2,3,5,7])
+d328 1
+a328 1
+ok($x == [7,5,3,2,1])
+d331 4
+a334 4
+$x = "The Book of Mormon"
+ok($x.split(//).reverse!.join == $x.reverse)
+ok($x.reverse == $x.reverse!)
+ok("1 byte string".split(//).reverse.join(":") == "g:n:i:r:t:s: :e:t:y:b: :1")
+d336 5
+a340 5
+ok($x.split == ['a', 'b', 'c', 'd'])
+ok($x.split(' ') == ['a', 'b', 'c', 'd'])
+ok(defined? "a".chomp)
+ok("abc".scan(/./) == ["a", "b", "c"])
+ok("1a2b3c".scan(/(\d.)/) == [["1a"], ["2b"], ["3c"]])
+d342 1
+a342 1
+ok("a=12;b=22".scan(/(.*?)=(\d*);?/) == [["a", "12"], ["b", "22"]])
+d345 3
+a347 3
+ok(($x * 5).join(":") == '1:1:1:1:1')
+ok(($x * 1).join(":") == '1')
+ok(($x * 0).join(":") == '')
+d350 2
+a351 2
+ok($x.size == 7)
+ok($x == [1, 2, 3, 4, 5, 6, 7])
+d353 1
+a353 1
+check "hash"
+d357 1
+a357 1
+ok($x[1] == 2)
+d359 1
+a359 1
+ok(begin   
+d368 5
+a372 5
+ok($x.length == 3)
+ok($x.has_key?(1))
+ok($x.has_value?(4))
+ok($x.indexes(2,3) == [4,6])
+ok($x == {1=>2, 2=>4, 3=>6})
+d375 1
+a375 1
+ok($z == "1:2:3")
+d378 2
+a379 2
+ok($z == "2:4:6")
+ok($x == $y)
+d382 1
+a382 1
+ok($y.length == 2)
+d386 1
+a386 1
+ok($y[$z] == 256)
+d388 1
+a388 1
+check "iterator"
+d390 1
+a390 1
+ok(!iterator?)
+d393 1
+a393 1
+  ok(iterator?)
+d398 1
+a398 1
+ok(!defined?(yield))
+d407 1
+a407 1
+ok($x == $y)
+d417 1
+a417 1
+ok(i == 5)
+d434 1
+a434 1
+ok($x)
+d442 1
+a442 1
+ok(done)
+d452 1
+a452 1
+ok(!$bad)
+d462 1
+a462 1
+ok(!$bad)
+d468 2
+a469 2
+ok($x.size == 7)
+ok($x == [1, 2, 3, 4, 5, 6, 7])
+d480 2
+a481 2
+ok($x.size == 10)
+ok($x == [1, 2, 3, 1, 2, 3, 4, 5, 6, 7])
+d494 1
+a494 1
+ok($x.iter_test1{|x|x} == $x.iter_test2{|x|x})
+d511 1
+a511 1
+ok($x == 0)
+d513 1
+a513 1
+ok($x == 1)
+d515 1
+a515 1
+ok($x == [2])
+d517 1
+a517 1
+ok($x == 3)
+d519 1
+a519 1
+ok($x == 4)
+d521 1
+a521 1
+ok($x == 5)
+d523 1
+a523 1
+ok($x == [6])
+d525 1
+a525 1
+ok($x == 7)
+d527 1
+a527 1
+ok($x == 8)
+d530 1
+a530 1
+ok($x == [0])
+d532 1
+a532 1
+ok($x == 1)
+d534 1
+a534 1
+ok($x == [2])
+d536 1
+a536 1
+ok($x == 3)
+d538 1
+a538 1
+ok($x == [4])
+d540 1
+a540 1
+ok($x == 5)
+d542 1
+a542 1
+ok($x == [6])
+d544 1
+a544 1
+ok($x == 7)
+d546 1
+a546 1
+ok($x == [8])
+d549 1
+a549 1
+ok($x == [0,0])
+d551 1
+a551 1
+ok($x == [8,8])
+d553 10
+a562 10
+check "float"
+ok(2.6.floor == 2)
+ok(-2.6.floor == -3)
+ok(2.6.ceil == 3)
+ok(-2.6.ceil == -2)
+ok(2.6.truncate == 2)
+ok(-2.6.truncate == -2)
+ok(2.6.round == 3)
+ok(-2.4.truncate == -2)
+ok((13.4 % 1 - 0.4).abs < 0.0001)
+d564 1
+a564 1
+check "bignum"
+d576 8
+a583 8
+ok($x == $x)
+ok($x == fact(40))
+ok($x < $x+2)
+ok($x > $x-2)
+ok($x == 815915283247897734345611269596115894272000000000)
+ok($x != 815915283247897734345611269596115894272000000001)
+ok($x+1 == 815915283247897734345611269596115894272000000001)
+ok($x/fact(20) == 335367096786357081410764800000)
+d585 3
+a587 3
+ok($x == -815915283247897734345611269596115894272000000000)
+ok(2-(2**32) == -(2**32-2))
+ok(2**32 - 5 == (2**32-3)-2)
+d593 1
+a593 1
+ok($good)
+d601 1
+a601 1
+ok($good)
+d610 1
+a610 1
+ok($good)
+d619 1
+a619 1
+ok($good)
+d623 14
+a636 14
+ok(7 == a.modulo(b))
+ok(-b + 7 == a.modulo(-b))
+ok(b + -7 == (-a).modulo(b))
+ok(-7 == (-a).modulo(-b))
+ok(7 == a.remainder(b))
+ok(7 == a.remainder(-b))
+ok(-7 == (-a).remainder(b))
+ok(-7 == (-a).remainder(-b))
+
+check "string & char"
+
+ok("abcd" == "abcd")
+ok("abcd" =~ "abcd")
+ok("abcd" === "abcd")
+d638 20
+a657 20
+ok("ab" "cd" == "abcd")
+ok("#{22}aa" "cd#{44}" == "22aacd44")
+ok("#{22}aa" "cd#{44}" "55" "#{66}" == "22aacd445566")
+ok("abc" !~ /^$/)
+ok("abc\n" !~ /^$/)
+ok("abc" !~ /^d*$/)
+ok(("abc" =~ /d*$/) == 3)
+ok("" =~ /^$/)
+ok("\n" =~ /^$/)
+ok("a\n\n" =~ /^$/)
+ok("abcabc" =~ /.*a/ && $& == "abca")
+ok("abcabc" =~ /.*c/ && $& == "abcabc")
+ok("abcabc" =~ /.*?a/ && $& == "a")
+ok("abcabc" =~ /.*?c/ && $& == "abc")
+ok(/(.|\n)*?\n(b|\n)/ =~ "a\nb\n\n" && $& == "a\nb")
+
+ok(/^(ab+)+b/ =~ "ababb" && $& == "ababb")
+ok(/^(?:ab+)+b/ =~ "ababb" && $& == "ababb")
+ok(/^(ab+)+/ =~ "ababb" && $& == "ababb")
+ok(/^(?:ab+)+/ =~ "ababb" && $& == "ababb")
+d659 2
+a660 2
+ok(/(\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+ok(/(?:\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+d667 1
+a667 1
+ok($x == "AC\nAC\n")
+d669 2
+a670 2
+ok("foobar" =~ /foo(?=(bar)|(baz))/)
+ok("foobaz" =~ /foo(?=(bar)|(baz))/)
+d673 2
+a674 2
+ok("#$foo = abc" == "abc = abc")
+ok("#{$foo} = abc" == "abc = abc")
+d677 1
+a677 1
+ok("#{foo} = abc" == "abc = abc")
+d679 3
+a681 3
+ok('-' * 5 == '-----')
+ok('-' * 1 == '-')
+ok('-' * 0 == '')
+d684 3
+a686 3
+ok(foo * 5 == '-----')
+ok(foo * 1 == '-')
+ok(foo * 0 == '')
+d689 5
+a693 5
+ok($x.sub(/.*\.([^\.]+)$/, '\1') == "gif")
+ok($x.sub(/.*\.([^\.]+)$/, 'b.\1') == "b.gif")
+ok($x.sub(/.*\.([^\.]+)$/, '\2') == "")
+ok($x.sub(/.*\.([^\.]+)$/, 'a\2b') == "ab")
+ok($x.sub(/.*\.([^\.]+)$/, '<\&>') == "<a.gif>")
+d696 11
+a706 11
+ok("a"[0] == ?a)
+ok(?a == ?a)
+ok(?\C-a == 1)
+ok(?\M-a == 225)
+ok(?\M-\C-a == 129)
+ok("a".upcase![0] == ?A)
+ok("A".downcase![0] == ?a)
+ok("abc".tr!("a-z", "A-Z") == "ABC")
+ok("aabbcccc".tr_s!("a-z", "A-Z") == "ABC")
+ok("abcc".squeeze!("a-z") == "abc")
+ok("abcd".delete!("bc") == "ad")
+d717 1
+a717 1
+ok(!$bad)
+d721 1
+a721 1
+ok(s == "another string")
+d723 1
+a723 1
+check "assignment"
+d725 2
+a726 2
+ok(defined?(a))
+ok(a == nil)
+d730 1
+a730 1
+ok(a == 1 && b == 2)
+d733 1
+a733 1
+ok(a == 2 && b == 1)
+d736 1
+a736 1
+ok(a == 1)
+d739 1
+a739 1
+ok(a == 1 && b == [2, 3])
+d742 1
+a742 1
+ok(a == 1 && b == 2 && c == 3 && d == 4)
+d745 1
+a745 1
+ok(a == [1, 2, 3])
+d748 1
+a748 1
+ok(a == [4])
+d751 1
+a751 1
+ok(a == [nil])
+d753 1
+a753 1
+check "call"
+d763 1
+a763 1
+  ok(false)
+d765 1
+a765 1
+  ok(true)
+d770 1
+a770 1
+  ok(false)
+d772 1
+a772 1
+  ok(true)
+d775 4
+a778 4
+ok(aaa(1) == [1, 100])
+ok(aaa(1, 2) == [1, 2])
+ok(aaa(1, 2, 3, 4) == [1, 2, 3, 4])
+ok(aaa(1, *[2, 3, 4]) == [1, 2, 3, 4])
+d780 1
+a780 1
+check "proc"
+d782 2
+a783 2
+ok($proc.call(2) == 2)
+ok($proc.call(3) == 3)
+d786 2
+a787 2
+ok($proc.call(2) == 4)
+ok($proc.call(3) == 6)
+d798 1
+a798 1
+  ok(defined?(iii))
+d800 1
+a800 1
+ok(!defined?(iii))		# out of scope
+d805 1
+a805 1
+ok($x == 5)
+d808 1
+a808 1
+  check "signal"
+d814 1
+a814 1
+  ok($x == 2)
+d825 1
+a825 1
+  ok(x && /Interrupt/ =~ x)
+d828 2
+a829 2
+check "eval"
+ok(eval("") == nil)
+d832 1
+a832 1
+ok(!$bad)
+d834 6
+a839 6
+ok(eval('TRUE'))
+ok(eval('true'))
+ok(!eval('NIL'))
+ok(!eval('nil'))
+ok(!eval('FALSE'))
+ok(!eval('false'))
+d841 1
+a841 1
+$foo = 'ok(true)'
+d845 1
+a845 1
+  ok(false)
+d848 2
+a849 2
+ok(eval("$foo") == 'ok(true)')
+ok(eval("true") == true)
+d851 3
+a853 3
+ok(eval("i == 5"))
+ok(eval("i") == 5)
+ok(eval("defined? i"))
+d865 2
+a866 2
+ok(eval("local1", $x) == "local1") # normal local var
+ok(eval("local2", $x) == "local2") # nested local var
+d873 1
+a873 1
+ok(!$bad)
+d880 2
+a881 2
+ok(eval("EVTEST1", $x) == 25)	# constant in module
+ok(eval("evtest2", $x) == 125)	# local var in module
+d888 1
+a888 1
+ok(!$bad)
+d892 1
+a892 1
+ok(eval("i4", x) == 1)
+d895 1
+a895 1
+ok(eval("i4", x) == 22)
+d899 1
+a899 1
+ok($x[4].call == 8)
+d903 1
+a903 1
+ok(eval("i", x) == 1)
+d906 1
+a906 1
+ok(eval("i", x) == 22)
+d910 1
+a910 1
+ok($x[4].call == 8)
+d913 2
+a914 2
+ok(eval("defined? i6", x))
+ok(eval("defined? j6", x))
+d922 4
+a925 4
+  ok(eval("foo11", p) == eval("foo11"))
+  ok(eval("foo11") == 1)
+  ok(eval("foo22", p) == eval("foo22"))
+  ok(eval("foo22") == 55)
+d929 1
+a929 1
+ok(p1.call == 0)
+d931 2
+a932 2
+ok(p1.call == 5)
+ok(!defined?(i7))
+d936 1
+a936 1
+ok(p1.call == 0)
+d938 1
+a938 1
+ok(p1.call == 1)
+d940 2
+a941 2
+ok(p1.call == 5)
+ok(i7 == nil)
+d943 3
+a945 3
+check "system"
+ok(`echo foobar` == "foobar\n")
+ok(`./miniruby -e 'print "foobar"'` == 'foobar')
+d951 2
+a952 2
+ok(`./miniruby -s script_tmp -zzz` == 'true')
+ok(`./miniruby -s script_tmp -zzz=555` == '555')
+d959 1
+a959 1
+ok(`./miniruby script_tmp -zzz=678` == '678')
+d969 2
+a970 2
+ok(`./miniruby -x script_tmp` == 'nil')
+ok(`./miniruby -x script_tmp -zzz=555` == '555')
+d988 1
+a988 1
+ok(done)
+d994 3
+a996 2
+for script in Dir["{lib,sample}/**/*.rb"]
+  unless `./miniruby -c #{script}`.chomp == "Syntax OK"
+d1000 1
+a1000 1
+ok(!$bad)
+d1002 1
+a1002 1
+check "const"
+d1018 1
+a1018 1
+ok([TEST1,TEST2,TEST3,TEST4] == [1,2,3,4])
+d1022 1
+a1022 1
+ok([TEST1,TEST2,TEST3,TEST4] == [1,2,6,8])
+d1024 1
+a1024 1
+check "clone"
+d1034 3
+a1036 3
+ok(bar.test2 == "test2")
+ok(bar.test == "test")
+ok(foo.test == "test")  
+d1040 1
+a1040 1
+  ok false
+d1042 1
+a1042 1
+  ok true
+d1045 1
+a1045 1
+check "marshal"
+d1048 1
+a1048 1
+ok($x == Marshal.load($y))
+d1050 1
+a1050 1
+check "pack"
+d1059 3
+a1061 3
+ok(ary.length == ary2.length)
+ok(ary.join(':') == ary2.join(':'))
+ok($x =~ /def/)
+d1063 2
+a1064 2
+check "math"
+ok(Math.sqrt(4) == 2)
+d1067 1
+a1067 1
+ok(sqrt(4) == 2)
+d1069 1
+a1069 1
+check "struct"
+d1071 1
+a1071 1
+ok(struct_test == Struct::Test)
+d1074 2
+a1075 2
+ok(test.foo == 1 && test.bar == 2)
+ok(test[0] == 1 && test[1] == 2)
+d1078 1
+a1078 1
+ok(a == 1 && b == 2)
+d1081 1
+a1081 1
+ok(test.foo == 22)
+d1084 1
+a1084 1
+ok(test.bar == 47)
+d1086 2
+a1087 2
+check "variable"
+ok($$.instance_of?(Fixnum))
+d1092 1
+a1092 1
+  ok false
+d1094 1
+a1094 1
+  ok true
+d1099 1
+a1099 1
+ok($_ == foobar)
+d1101 1
+a1101 1
+check "trace"
+d1106 1
+a1106 1
+ok($y == $x)
+d1110 1
+a1110 1
+ok($y != $x)
+d1114 1
+a1114 1
+ok($x == 10)
+d1118 1
+a1118 1
+check "defined?"
+d1120 2
+a1121 2
+ok(defined?($x))		# global variable
+ok(defined?($x) == 'global-variable')# returns description
+d1124 1
+a1124 1
+ok(defined?(foo))		# local variable
+d1126 4
+a1129 4
+ok(defined?(Array))		# constant
+ok(defined?(Object.new))	# method
+ok(!defined?(Object.print))	# private method
+ok(defined?(1 == 2))		# operator expression
+d1135 2
+a1136 2
+ok(defined_test)		# not iterator
+ok(!defined_test{})		# called as iterator
+d1138 1
+a1138 1
+check "alias"
+d1152 2
+a1153 2
+ok(x.bar == "foo")
+ok(x.baz == "foo+foo")
+d1155 2
+a1156 2
+# check for cache
+ok(x.baz == "foo+foo")
+d1170 3
+a1172 3
+ok(!x.foo)
+ok(x.bar)
+ok(!x.quux)
+d1174 1
+a1174 1
+check "gc"
+d1180 1
+a1180 1
+  ok true
+d1182 1
+a1182 1
+  ok false
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d553 11
+d623 8
+a630 4
+ok(7 ==a % b)
+ok(7 ==a % -b)
+ok(-7 == (-a) % b)
+ok(-7 == (-a) % (-b))
+@
+
+
+1.13
+log
+@2000-06-23
+@
+text
+@d612 4
+a615 8
+ok(7 == a % b)
+ok(7-b == a % (-b))
+ok(b-7 == (-a) % b)
+ok(-7 ==(-a) % (-b))
+ok(7 ==a.remainder(b))
+ok(7 ==a.remainder(-b))
+ok(-7 == (-a).remainder(b))
+ok(-7 == (-a).remainder(-b))
+@
+
+
+1.12
+log
+@2000-05-30
+@
+text
+@d610 11
+@
+
+
+1.11
+log
+@2000-05-24
+@
+text
+@d1029 1
+a1029 1
+$format = "c2x5CCxsdila6";
+d1032 1
+a1032 1
+ary = [1,-100,127,128,32767,987.654321098 / 100.0,12345,123456,"abcdef"]
+@
+
+
+1.10
+log
+@remove configure from repositry
+@
+text
+@a973 1
+    p `./miniruby -c #{script}`.chomp
+@
+
+
+1.9
+log
+@2000-05-10
+@
+text
+@d972 1
+a972 1
+for script in Dir["{lib,sample}/*.rb"]
+@
+
+
+1.8
+log
+@2000-05-01
+@
+text
+@d729 1
+a729 1
+ok(a == [])
+@
+
+
+1.7
+log
+@2000-03-13
+@
+text
+@d697 5
+a701 1
+check "asignment"
+@
+
+
+1.6
+log
+@2000-02-02
+@
+text
+@d146 2
+a147 2
+  $bad = 1 if /vt100/;
+  $bad = 1 if /VT100/;
+d183 1
+@
+
+
+1.5
+log
+@2000-02-01
+@
+text
+@a681 2
+$x = "abc"
+ok($x.tr("0-9", "A-Z").equal?($x))
+@
+
+
+1.4
+log
+@2000-01-18
+@
+text
+@d140 3
+a142 1
+  if gsub!('vt100', 'VT100')
+d682 2
+a683 1
+ok("abc".tr!("0-9", "A-Z") == nil)
+d971 1
+d1016 1
+a1016 1
+rescue
+d1068 1
+a1068 1
+rescue
+@
+
+
+1.3
+log
+@-r debug, -s, etc.
+@
+text
+@d346 1
+a346 1
+*$x = 1..7
+d719 5
+a723 2
+*a = 1..3			# array conversion
+ok(a == [1, 2, 3])
+d1048 1
+a1048 1
+a, b = test
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d416 17
+d612 4
+a627 4
+$x = <<END;
+ABCD
+ABCD
+END
+d637 4
+@
+
+
+1.2.2.1
+log
+@2000-04-17
+@
+text
+@d674 1
+a674 5
+s = "a string"
+s[0..s.size]="another string"
+ok(s == "another string")
+
+check "assignment"
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d27 18
+d49 4
+a52 4
+$x == $x && ok(TRUE)
+$x != $x && ok(FALSE)
+$x == $x || ok(FALSE)
+$x != $x || ok(TRUE)
+d59 2
+a60 2
+ok(if $x == $x then TRUE else FALSE end)
+$bad = FALSE
+d62 1
+a62 1
+  $bad = TRUE
+d65 1
+a65 1
+ok(unless $x != $x then TRUE else FALSE end)
+d71 1
+a71 1
+  ok(FALSE)
+d73 1
+a73 1
+  ok(TRUE)
+d78 1
+a78 1
+  ok(TRUE)
+d80 1
+a80 1
+  ok(FALSE)
+d85 1
+a85 1
+  ok(TRUE)
+d87 1
+a87 1
+  ok(FALSE)
+d92 1
+a92 1
+  ok(TRUE)
+d94 1
+a94 1
+  ok(FALSE)
+d99 1
+a99 1
+  ok(TRUE)
+d101 1
+a101 1
+  ok(FALSE)
+d127 1
+a127 1
+$bad = FALSE
+d130 2
+a131 2
+    next if /vt100/;
+    $bad = 1 if /vt100/;
+d137 1
+a137 1
+$bad = FALSE
+d161 1
+a161 1
+$bad = FALSE
+d166 1
+a166 1
+    $bad = TRUE
+d186 2
+a187 2
+  fail "this must be handled"
+  ok(FALSE)
+d189 1
+a189 1
+  ok(TRUE)
+d192 1
+a192 1
+$bad = TRUE
+d194 1
+a194 1
+  fail "this must be handled no.2"
+d197 1
+a197 1
+    $bad = FALSE
+d199 1
+a199 1
+    ok(FALSE)
+d202 1
+a202 1
+ok(TRUE)
+d208 1
+a208 1
+    fail "exception in rescue clause"
+d210 1
+a210 1
+    fail $string
+d212 1
+a212 1
+  ok(FALSE)
+d214 1
+a214 1
+  ok(TRUE) if $! == $string
+d220 1
+a220 1
+    fail "this must be handled no.4"
+d222 1
+a222 1
+    fail "exception in ensure clause"
+d224 1
+a224 1
+  ok(FALSE)
+d226 1
+a226 1
+  ok(TRUE)
+d229 1
+a229 1
+$bad = TRUE
+d232 1
+a232 1
+    fail "this must be handled no.5"
+d234 1
+a234 1
+    $bad = FALSE
+d240 1
+a240 1
+$bad = TRUE
+d243 1
+a243 1
+    fail "this must be handled no.6"
+d245 1
+a245 1
+    $bad = FALSE
+d251 2
+a252 2
+$bad = TRUE
+while TRUE
+d256 1
+a256 1
+    $bad = FALSE
+d261 12
+d298 4
+d307 5
+d329 2
+a330 1
+ok($x.split(//).reverse!.join == "nomroM fo kooB ehT")
+d335 5
+d358 1
+a358 1
+       fail if k*2 != v
+d360 1
+a360 1
+     TRUE
+d362 1
+a362 1
+     FALSE
+d369 1
+a369 1
+ok($x == (1=>2, 2=>4, 3=>6))
+d417 1
+a417 12
+unless defined? loop
+  def loop
+    while TRUE
+      yield
+    end
+  end
+  ok(FALSE)
+else
+  ok(TRUE)
+end
+
+done = TRUE
+d420 1
+a420 1
+  done = FALSE
+d424 2
+a425 2
+done = FALSE
+$bad = FALSE
+d428 1
+a428 1
+  done = TRUE
+d430 1
+a430 1
+  $bad = TRUE
+d434 2
+a435 2
+done = FALSE
+$bad = FALSE
+d438 1
+a438 1
+  done = TRUE
+d440 1
+a440 1
+  $bad = TRUE
+d451 1
+a451 1
+$done = FALSE
+d455 1
+a455 1
+    $done = TRUE
+d463 70
+d558 3
+a560 3
+$good = TRUE;
+for i in 1000..1024
+  $good = FALSE if ((1<<i) != (2**i))
+d564 1
+a564 1
+$good = TRUE;
+d566 2
+a567 2
+for i in 1000..1024
+  $good = FALSE if ((1<<i) != n1)
+d572 1
+a572 1
+$good = TRUE;
+d577 1
+a577 1
+  $good = FALSE if (n1 != n2)
+d581 2
+a582 2
+$good = TRUE;
+for i in 4000..4192
+d584 3
+a586 1
+  $good = FALSE if ((n1**2-1) / (n1+1) != (n1-1))
+d595 3
+a597 3
+ok(("abc" =~ /^$/) == FALSE)
+ok(("abc\n" =~ /^$/) == FALSE)
+ok(("abc" =~ /^d*$/) == FALSE)
+d602 23
+d655 7
+d665 1
+a665 1
+$bad = FALSE
+d668 1
+a668 1
+    $bad = TRUE
+d692 3
+d698 3
+d711 1
+a711 1
+  ok(FALSE)
+d713 1
+a713 1
+  ok(TRUE)
+d718 1
+a718 21
+  ok(FALSE)
+rescue
+  ok(TRUE)
+end
+
+begin
+  if aaa(1) == [1, 100]
+    ok(TRUE)
+  else
+    fail
+  end
+rescue
+  ok(FALSE)
+end
+
+begin
+  if aaa(1, 2) == [1, 2]
+    ok(TRUE)
+  else
+    fail
+  end
+d720 1
+a720 1
+  ok(FALSE)
+d723 2
+d738 1
+a738 1
+  iii=5				# dynamic local variable
+d743 1
+a743 1
+    $x = iii			# dynamic variables shared by procs
+d745 1
+a745 1
+  # scope of dynamic variables
+d764 1
+a764 1
+  trap "SIGINT", proc{fail "Interrupt"}
+d766 1
+a766 1
+  x = FALSE
+d773 1
+a773 3
+  ok(x && x =~ /Interrupt/)
+else
+  ok(FALSE)
+d778 2
+a779 2
+$bad=FALSE
+eval 'while FALSE; $bad = TRUE; print "foo\n" end'
+d783 5
+d789 1
+a789 1
+$foo = 'ok(TRUE)'
+d793 1
+a793 1
+  ok(FALSE)
+d796 2
+a797 2
+ok(eval("$foo") == 'ok(TRUE)')
+ok(eval("TRUE") == TRUE)
+d813 3
+a815 3
+ok(eval("local1", $x) == "local1") # static local var
+ok(eval("local2", $x) == "local2") # dynamic local var
+$bad = TRUE
+d819 1
+a819 1
+  $bad = FALSE
+d830 1
+a830 1
+$bad = TRUE
+d834 1
+a834 1
+  $bad = FALSE
+d838 53
+d893 1
+a893 1
+ok(`./ruby -e 'print "foobar"'` == 'foobar')
+d899 2
+a900 2
+ok(`./ruby -s script_tmp -zzz` == 'TRUE')
+ok(`./ruby -s script_tmp -zzz=555` == '555')
+d907 1
+a907 1
+ok(`./ruby script_tmp -zzz=678` == '678')
+d917 2
+a918 2
+ok(`./ruby -x script_tmp` == 'nil')
+ok(`./ruby -x script_tmp -zzz=555` == '555')
+d926 2
+a927 2
+`./ruby -i.bak -pe 'sub(/^[0-9]+$/){$&.to_i * 5}' script_tmp`
+done = TRUE
+d931 1
+a931 1
+    done = FALSE
+d941 8
+d987 1
+a987 1
+  ok FALSE
+d989 1
+a989 1
+  ok TRUE
+d992 5
+d1039 1
+a1039 1
+  ok FALSE
+d1041 1
+a1041 1
+  ok TRUE
+d1127 1
+a1127 1
+  ok TRUE
+d1129 1
+a1129 1
+  ok FALSE
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d31 4
+a34 4
+$x == $x && ok(true)
+$x != $x && ok(false)
+$x == $x || ok(false)
+$x != $x || ok(true)
+d41 2
+a42 2
+ok(if $x == $x then true else false end)
+$bad = false
+d44 1
+a44 1
+  $bad = true
+d47 1
+a47 1
+ok(unless $x != $x then true else false end)
+d53 1
+a53 1
+  ok(false)
+d55 1
+a55 1
+  ok(true)
+d60 1
+a60 1
+  ok(true)
+d62 1
+a62 1
+  ok(false)
+d67 1
+a67 1
+  ok(true)
+d69 1
+a69 1
+  ok(false)
+d74 1
+a74 1
+  ok(true)
+d76 1
+a76 1
+  ok(false)
+d81 1
+a81 1
+  ok(true)
+d83 1
+a83 1
+  ok(false)
+d109 1
+a109 1
+$bad = false
+d119 1
+a119 1
+$bad = false
+d143 1
+a143 1
+$bad = false
+d148 1
+a148 1
+    $bad = true
+d169 1
+a169 1
+  ok(false)
+d171 1
+a171 1
+  ok(true)
+d174 1
+a174 1
+$bad = true
+d179 1
+a179 1
+    $bad = false
+d181 1
+a181 1
+    ok(false)
+d184 1
+a184 1
+ok(true)
+d194 1
+a194 1
+  ok(false)
+d196 1
+a196 1
+  ok(true) if $! == $string
+d206 1
+a206 1
+  ok(false)
+d208 1
+a208 1
+  ok(true)
+d211 1
+a211 1
+$bad = true
+d216 1
+a216 1
+    $bad = false
+d222 1
+a222 1
+$bad = true
+d227 1
+a227 1
+    $bad = false
+d233 2
+a234 2
+$bad = true
+while true
+d238 1
+a238 1
+    $bad = false
+a294 5
+ok(defined? "a".chomp)
+ok("abc".scan(/./) == ["a", "b", "c"])
+ok("1a2b3c".scan(/(\d.)/) == [["1a"], ["2b"], ["3c"]])
+# non-greedy match
+ok("a=12;b=22".scan(/(.*?)=(\d*?);?/) == [["a", "12"], ["b", "22"]])
+d315 1
+a315 1
+     true
+d317 1
+a317 1
+     false
+d324 1
+a324 1
+ok($x == {1=>2, 2=>4, 3=>6})
+d374 1
+a374 1
+    while true
+d378 1
+a378 1
+  ok(false)
+d380 1
+a380 1
+  ok(true)
+d383 1
+a383 1
+done = true
+d386 1
+a386 1
+  done = false
+d390 2
+a391 2
+done = false
+$bad = false
+d394 1
+a394 1
+  done = true
+d396 1
+a396 1
+  $bad = true
+d400 2
+a401 2
+done = false
+$bad = false
+d404 1
+a404 1
+  done = true
+d406 1
+a406 1
+  $bad = true
+d417 1
+a417 1
+$done = false
+d421 1
+a421 1
+    $done = true
+d454 3
+a456 3
+$good = true;
+for i in 1000..1014
+  $good = false if ((1<<i) != (2**i))
+d460 1
+a460 1
+$good = true;
+d462 2
+a463 2
+for i in 1000..1014
+  $good = false if ((1<<i) != n1)
+d468 1
+a468 1
+$good = true;
+d473 1
+a473 1
+  $good = false if (n1 != n2)
+d477 2
+a478 2
+$good = true;
+for i in 4000..4096
+d480 1
+a480 1
+  $good = false if ((n1**2-1) / (n1+1) != (n1-1))
+d489 3
+a491 3
+ok(("abc" =~ /^$/) == false)
+ok(("abc\n" =~ /^$/) == false)
+ok(("abc" =~ /^d*$/) == false)
+a495 8
+"abcabc" =~ /.*a/
+ok($& == "abca")
+"abcabc" =~ /.*c/
+ok($& == "abcabc")
+"abcabc" =~ /.*?a/
+ok($& == "a")
+"abcabc" =~ /.*?c/
+ok($& == "abc")
+a525 5
+ok("a".upcase![0] == ?A)
+ok("A".downcase![0] == ?a)
+ok("abc".tr!("a-z", "A-Z") == "ABC")
+ok("abcc".squeeze!("a-z") == "abc")
+ok("abcd".delete!("bc") == "ad")
+d529 1
+a529 1
+$bad = false
+d532 1
+a532 1
+    $bad = true
+a558 3
+*a = 1..3
+ok(a == [1, 2, 3])
+
+d569 1
+a569 1
+  ok(false)
+d571 1
+a571 1
+  ok(true)
+d576 21
+a596 1
+  ok(false)
+d598 1
+a598 1
+  ok(true)
+a600 2
+ok(aaa(1) == [1, 100])
+ok(aaa(1, 2) == [1, 2])
+d642 1
+a642 1
+  x = false
+d651 1
+a651 1
+  ok(false)
+d656 2
+a657 2
+$bad=false
+eval 'while false; $bad = true; print "foo\n" end'
+a660 5
+ok(eval('true'))
+ok(!eval('NIL'))
+ok(!eval('nil'))
+ok(!eval('FALSE'))
+ok(!eval('false'))
+d662 1
+a662 1
+$foo = 'ok(true)'
+d666 1
+a666 1
+  ok(false)
+d669 2
+a670 2
+ok(eval("$foo") == 'ok(true)')
+ok(eval("true") == true)
+d688 1
+a688 1
+$bad = true
+d692 1
+a692 1
+  $bad = false
+d703 1
+a703 1
+$bad = true
+d707 1
+a707 1
+  $bad = false
+d719 1
+a719 1
+ok(`./ruby -s script_tmp -zzz` == 'true')
+d747 1
+a747 1
+done = true
+d751 1
+a751 1
+    done = false
+d799 1
+a799 1
+  ok false
+d801 1
+a801 1
+  ok true
+d846 1
+a846 1
+  ok false
+d848 1
+a848 1
+  ok true
+d934 1
+a934 1
+  ok true
+d936 1
+a936 1
+  ok false
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@a26 18
+check "assignment"
+
+a=[]; a[0] ||= "bar";
+ok(a[0] == "bar")
+h={}; h["foo"] ||= "bar";
+ok(h["foo"] == "bar")
+
+aa = 5
+aa ||= 25
+ok(aa == 5)
+bb ||= 25
+ok(bb == 25)
+cc &&=33
+ok(cc == nil)
+cc = 5
+cc &&=44
+ok(cc == 44)
+
+d112 2
+a113 2
+  next if /vt100/;
+  $bad = 1 if /vt100/;
+a242 12
+ok(catch(:foo) {
+     loop do
+       loop do
+	 throw :foo, true
+	 break
+       end
+       break
+       ok(false)			# should no reach here
+     end
+     false
+   })
+
+a267 4
+# array and/or
+ok(([1,2,3]&[2,4,6]) == [2])
+ok(([1,2,3]|[2,4,6]) == [1,2,3,4,6])
+
+a272 5
+# uniq
+$x = [1, 1, 4, 2, 5, 4, 5, 1, 2]
+$x.uniq!
+ok($x == [1, 4, 2, 5])
+
+d290 1
+a290 2
+ok($x.split(//).reverse!.join == $x.reverse)
+ok($x.reverse == $x.reverse!)
+d299 1
+a299 1
+ok("a=12;b=22".scan(/(.*?)=(\d*);?/) == [["a", "12"], ["b", "22"]])
+d377 11
+a433 70
+# append method to built-in class
+class Array
+  def iter_test1
+    collect{|e| [e, yield(e)]}.sort{|a,b|a[1]<=>b[1]}
+  end
+  def iter_test2
+    a = collect{|e| [e, yield(e)]}
+    a.sort{|a,b|a[1]<=>b[1]}
+  end
+end
+$x = [[1,2],[3,4],[5,6]]
+ok($x.iter_test1{|x|x} == $x.iter_test2{|x|x})
+
+class IterTest
+  def initialize(e); @@body = e; end
+
+  def each0(&block); @@body.each(&block); end
+  def each1(&block); @@body.each { |*x| block.call(*x) } end
+  def each2(&block); @@body.each { |*x| block.call(x) } end
+  def each3(&block); @@body.each { |x| block.call(*x) } end
+  def each4(&block); @@body.each { |x| block.call(x) } end
+  def each5; @@body.each { |*x| yield(*x) } end
+  def each6; @@body.each { |*x| yield(x) } end
+  def each7; @@body.each { |x| yield(*x) } end
+  def each8; @@body.each { |x| yield(x) } end
+end
+
+IterTest.new([0]).each0 { |x| $x = x }
+ok($x == 0)
+IterTest.new([1]).each1 { |x| $x = x }
+ok($x == 1)
+IterTest.new([2]).each2 { |x| $x = x }
+ok($x == [2])
+IterTest.new([3]).each3 { |x| $x = x }
+ok($x == 3)
+IterTest.new([4]).each4 { |x| $x = x }
+ok($x == 4)
+IterTest.new([5]).each5 { |x| $x = x }
+ok($x == 5)
+IterTest.new([6]).each6 { |x| $x = x }
+ok($x == [6])
+IterTest.new([7]).each7 { |x| $x = x }
+ok($x == 7)
+IterTest.new([8]).each8 { |x| $x = x }
+ok($x == 8)
+
+IterTest.new([[0]]).each0 { |x| $x = x }
+ok($x == [0])
+IterTest.new([[1]]).each1 { |x| $x = x }
+ok($x == 1)
+IterTest.new([[2]]).each2 { |x| $x = x }
+ok($x == [2])
+IterTest.new([[3]]).each3 { |x| $x = x }
+ok($x == 3)
+IterTest.new([[4]]).each4 { |x| $x = x }
+ok($x == [4])
+IterTest.new([[5]]).each5 { |x| $x = x }
+ok($x == 5)
+IterTest.new([[6]]).each6 { |x| $x = x }
+ok($x == [6])
+IterTest.new([[7]]).each7 { |x| $x = x }
+ok($x == 7)
+IterTest.new([[8]]).each8 { |x| $x = x }
+ok($x == [8])
+
+IterTest.new([[0,0]]).each0 { |x| $x = x }
+ok($x == [0,0])
+IterTest.new([[8,8]]).each8 { |x| $x = x }
+ok($x == [8,8])
+
+d485 1
+a485 3
+  if (n1**2-1) / (n1+1) != (n1-1)
+    $good = false
+  end
+d494 3
+a496 3
+ok("abc" !~ /^$/)
+ok("abc\n" !~ /^$/)
+ok("abc" !~ /^d*$/)
+a541 2
+ok("aabbcccc".tr_s!("a-z", "A-Z") == "ABC")
+ok("abc".tr!("0-9", "A-Z") == nil)
+a573 3
+a, (b, c), d = 1, [2, 3], 4
+ok(a == 1 && b == 2 && c == 3 && d == 4)
+
+d577 1
+a577 1
+*a = 1..3			# array conversion
+d617 1
+a617 1
+  iii=5				# nested local variable
+d622 1
+a622 1
+    $x = iii			# nested variables shared by procs
+d624 1
+a624 1
+  # scope of nested variables
+d652 3
+a654 1
+  ok(x && /Interrupt/ =~ x)
+d694 2
+a695 2
+ok(eval("local1", $x) == "local1") # normal local var
+ok(eval("local2", $x) == "local2") # nested local var
+a718 45
+x = proc{}
+eval "i4 = 1", x
+ok(eval("i4", x) == 1)
+x = proc{proc{}}.call
+eval "i4 = 22", x
+ok(eval("i4", x) == 22)
+$x = []
+x = proc{proc{}}.call
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+ok($x[4].call == 8)
+
+x = binding
+eval "i = 1", x
+ok(eval("i", x) == 1)
+x = proc{binding}.call
+eval "i = 22", x
+ok(eval("i", x) == 22)
+$x = []
+x = proc{binding}.call
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+ok($x[4].call == 8)
+
+proc {
+  p = binding
+  eval "foo11 = 1", p
+  proc{foo11=22}.call
+  ok(eval("foo11", p) == eval("foo11"))
+  ok(eval("foo11") == 1)
+}.call
+
+p1 = proc{i6 = 0; proc{i6}}.call
+ok(p1.call == 0)
+eval "i6=5", p1
+ok(p1.call == 5)
+ok(!defined?(i6))
+
+p1 = proc{i6 = 0; proc{i6}}.call
+i6 = nil
+ok(p1.call == 0)
+eval "i6=1", p1
+ok(p1.call == 1)
+eval "i6=5", p1
+ok(p1.call == 5)
+ok(i6 == nil)
+
+a768 8
+$bad = false
+for script in Dir["{lib,sample}/*.rb"]
+  unless `./ruby -c #{script}`.chomp == "Syntax OK"
+    $bad = true
+  end
+end
+ok(!$bad)
+
+a810 5
+
+check "marshal"
+$x = [1,2,3,[4,5,"foo"],{1=>"bar"},2.5,fact(30)]
+$y = Marshal.dump($x)
+ok($x == Marshal.load($y))
+@
+
+
+1.1.1.3.2.1
+log
+@990205
+@
+text
+@d186 1
+a186 1
+  raise "this must be handled"
+d194 1
+a194 1
+  raise "this must be handled no.2"
+d208 1
+a208 1
+    raise "exception in rescue clause"
+d210 1
+a210 1
+    raise $string
+d220 1
+a220 1
+    raise "this must be handled no.4"
+d222 1
+a222 1
+    raise "exception in ensure clause"
+d232 1
+a232 1
+    raise "this must be handled no.5"
+d243 1
+a243 1
+    raise "this must be handled no.6"
+d358 1
+a358 1
+       raise if k*2 != v
+d749 1
+a749 1
+  trap "SIGINT", proc{raise "Interrupt"}
+@
+
+
+1.1.1.3.2.2
+log
+@990212
+@
+text
+@d870 1
+a870 1
+ok(`./miniruby -e 'print "foobar"'` == 'foobar')
+d876 2
+a877 2
+ok(`./miniruby -s script_tmp -zzz` == 'true')
+ok(`./miniruby -s script_tmp -zzz=555` == '555')
+d884 1
+a884 1
+ok(`./miniruby script_tmp -zzz=678` == '678')
+d894 2
+a895 2
+ok(`./miniruby -x script_tmp` == 'nil')
+ok(`./miniruby -x script_tmp -zzz=555` == '555')
+d903 1
+a903 1
+`./miniruby -i.bak -pe 'sub(/^[0-9]+$/){$&.to_i * 5}' script_tmp`
+d920 1
+a920 1
+  unless `./miniruby -c #{script}`.chomp == "Syntax OK"
+@
+
+
+1.1.1.3.2.3
+log
+@*** empty log message ***
+@
+text
+@d420 1
+a420 1
+  done = false			# should not reach here
+d430 1
+a430 1
+  $bad = true			# should not reach here
+d440 1
+a440 1
+  $bad = true			# should not reach here
+@
+
+
+1.1.1.3.2.4
+log
+@*** empty log message ***
+@
+text
+@d602 8
+a609 15
+ok("abcabc" =~ /.*a/ && $& == "abca")
+ok("abcabc" =~ /.*c/ && $& == "abcabc")
+ok("abcabc" =~ /.*?a/ && $& == "a")
+ok("abcabc" =~ /.*?c/ && $& == "abc")
+ok(/(.|\n)*?\n(b|\n)/ =~ "a\nb\n\n" && $& == "a\nb")
+$x = <<END;
+ABCD
+ABCD
+END
+
+$x.gsub!(/((.|\n)*?)B((.|\n)*?)D/){$1+$3}
+ok($x == "AC\nAC\n")
+
+ok("foobar" =~ /foo(?=(bar)|(baz))/)
+ok("foobaz" =~ /foo(?=(bar)|(baz))/)
+a847 1
+  foo22 = 5
+a848 1
+  proc{foo22=55}.call
+a850 2
+  ok(eval("foo22", p) == eval("foo22"))
+  ok(eval("foo22") == 55)
+@
+
+
+1.1.1.3.2.5
+log
+@990531
+@
+text
+@a850 4
+x = proc{binding}.call
+eval "for i6 in 1..1; j6=i6; end", x
+ok(eval("defined? i6", x))
+ok(eval("defined? j6", x))
+d864 1
+a864 1
+p1 = proc{i7 = 0; proc{i7}}.call
+d866 1
+a866 1
+eval "i7=5", p1
+d868 1
+a868 1
+ok(!defined?(i7))
+d870 2
+a871 2
+p1 = proc{i7 = 0; proc{i7}}.call
+i7 = nil
+d873 1
+a873 1
+eval "i7=1", p1
+d875 1
+a875 1
+eval "i7=5", p1
+d877 1
+a877 1
+ok(i7 == nil)
+@
+
+
+1.1.1.3.2.6
+log
+@990625
+@
+text
+@a611 8
+ok(/^(ab+)+b/ =~ "ababb" && $& == "ababb")
+ok(/^(?:ab+)+b/ =~ "ababb" && $& == "ababb")
+ok(/^(ab+)+/ =~ "ababb" && $& == "ababb")
+ok(/^(?:ab+)+/ =~ "ababb" && $& == "ababb")
+
+ok(/(\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+ok(/(?:\s+\d+){2}/ =~ " 1 2" && $& == " 1 2")
+
+@
+
+
+1.1.1.2.2.1
+log
+@1.1b7 pre
+@
+text
+@d123 1
+a123 1
+    p gsub!('VT100', 'Vt100')
+a455 1
+p [2**32, 2-(2**32), -(2**32-2)]
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b7 pre2
+@
+text
+@d456 1
+@
+
+
+1.1.1.2.2.3
+log
+@\s and assignment in conditional
+@
+text
+@a768 8
+$bad = false
+for script in Dir["{lib,sample}/*.rb"]
+  unless `./ruby -c #{script}` == "Syntax OK\n"
+    $bad = true
+  end
+end
+ok(!$bad)
+
+@
+
+
+1.1.1.2.2.4
+log
+@extended regexp bug fix
+@
+text
+@d123 1
+a123 1
+    gsub!('VT100', 'Vt100')
+d299 1
+a299 1
+ok("a=12;b=22".scan(/(.*?)=(\d*);?/) == [["a", "12"], ["b", "22"]])
+@
+
+
+1.1.1.2.2.5
+log
+@instance_eva/module_eval
+@
+text
+@d112 2
+a113 2
+  next if /vt100/;
+  $bad = 1 if /vt100/;
+a242 12
+ok(catch(:foo) {
+     loop do
+       loop do
+	 throw :foo, true
+	 break
+       end
+       break
+       ok(false)			# should no reach here
+     end
+     false
+   })
+
+d290 1
+a290 2
+ok($x.split(//).reverse!.join == $x.reverse)
+ok($x.reverse == $x.reverse!)
+a541 2
+ok("aabbcccc".tr_s!("a-z", "A-Z") == "ABC")
+ok("abc".tr!("0-9", "A-Z") == nil)
+@
+
+
+1.1.1.2.2.6
+log
+@call initialize
+@
+text
+@a279 4
+# array and/or
+ok(([1,2,3]&[2,4,6]) == [2])
+ok(([1,2,3]|[2,4,6]) == [1,2,3,4,6])
+
+a283 5
+
+# uniq
+$x = [1, 1, 4, 2, 5, 4, 5, 1, 2]
+$x.uniq!
+ok($x == [1, 4, 2, 5])
+@
+
+
+1.1.1.2.2.7
+log
+@dynamic (nested) local variables
+@
+text
+@d641 1
+a641 1
+  iii=5				# nested local variable
+d646 1
+a646 1
+    $x = iii			# nested variables shared by procs
+d648 1
+a648 1
+  # scope of nested variables
+a655 1
+p $x
+d718 2
+a719 2
+ok(eval("local1", $x) == "local1") # normal local var
+ok(eval("local2", $x) == "local2") # nested local var
+@
+
+
+1.1.1.2.2.8
+log
+@signal delivered to main_thread
+@
+text
+@d678 2
+@
+
+
+1.1.1.2.2.9
+log
+@new exception model
+@
+text
+@d677 1
+a677 1
+  ok(x && /Interrupt/ =~ x)
+@
+
+
+1.1.1.2.2.10
+log
+@no INT,UINT
+@
+text
+@a852 1
+p [ary.join(':'), ary2.join(':')]
+@
+
+
+1.1.1.2.2.11
+log
+@ruby 1.1b9_20
+@
+text
+@d853 1
+@
+
+
+1.1.1.2.2.12
+log
+@nested local variables
+@
+text
+@d656 1
+a740 11
+
+x = proc{}
+eval "i = 1", x
+ok(eval("i", x) == 1)
+x = proc{proc{}}.call
+eval "i = 22", x
+ok(eval("i", x) == 22)
+$x = []
+x = proc{proc{}}.call
+eval "(0..9).each{|i4| $x[i4] = proc{i4*2}}", x
+ok($x[4].call == 8)
+@
+
+
+1.1.1.2.2.13
+log
+@1.1b9_26
+@
+text
+@a751 7
+proc {
+  p = proc{}
+  foo = 1
+  eval "foo = 10", p
+  ok(eval("foo", p) == eval("foo"))
+}.call
+
+@
+
+
+1.1.1.2.2.14
+log
+@1.1b9_27
+@
+text
+@a751 11
+x = binding
+eval "i = 1", x
+ok(eval("i", x) == 1)
+x = proc{binding}.call
+eval "i = 22", x
+ok(eval("i", x) == 22)
+$x = []
+x = proc{binding}.call
+eval "(0..9).each{|i4| $x[i4] = proc{i4*2}}", x
+ok($x[4].call == 8)
+
+d753 4
+a756 5
+  p = binding
+  eval "foo11 = 1", p
+  proc{foo11=22}.call
+  ok(eval("foo11", p) == eval("foo11"))
+  ok(eval("foo11") == 1)
+d811 1
+a811 1
+  unless `./ruby -c #{script}`.chomp == "Syntax OK"
+@
+
+
+1.1.1.2.2.15
+log
+@*** empty log message ***
+@
+text
+@d742 2
+a743 2
+eval "i4 = 1", x
+ok(eval("i4", x) == 1)
+d745 2
+a746 2
+eval "i4 = 22", x
+ok(eval("i4", x) == 22)
+d749 1
+a749 1
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+d760 1
+a760 1
+eval "(0..9).each{|i5| $x[i5] = proc{i5*2}}", x
+a769 15
+
+p1 = proc{i6 = 0; proc{i6}}.call
+ok(p1.call == 0)
+eval "i6=5", p1
+ok(p1.call == 5)
+ok(!defined?(i6))
+
+p1 = proc{i6 = 0; proc{i6}}.call
+i6 = nil
+ok(p1.call == 0)
+eval "i6=1", p1
+ok(p1.call == 1)
+eval "i6=5", p1
+ok(p1.call == 5)
+ok(i6 == nil)
+@
+
+
+1.1.1.2.2.16
+log
+@*** empty log message ***
+@
+text
+@a455 13
+# append method to built-in class
+class Array
+  def iter_test1
+    collect{|e| [e, yield(e)]}.sort{|a,b|a[1]<=>b[1]}
+  end
+  def iter_test2
+    a = collect{|e| [e, yield(e)]}
+    a.sort{|a,b|a[1]<=>b[1]}
+  end
+end
+$x = [[1,2],[3,4],[5,6]]
+ok($x.iter_test1{|x|x} == $x.iter_test2{|x|x})
+
+@
+
+
+1.1.1.2.2.17
+log
+@1.1b9_29
+@
+text
+@d520 1
+a520 6
+  if (n1**2-1) / (n1+1) != (n1-1)
+    p i
+    p (n1**2-1)/(n1+1)
+    p (n1-1)
+    $good = false
+  end
+a898 7
+
+check "marshal"
+$x = [1,2,3,[4,5,"foo"],{1=>"bar"},2.5,fact(30)]
+$y = Marshal.dump($x)
+p $x
+p Marshal.load($y)
+ok($x == Marshal.load($y))
+@
+
+
+1.1.1.2.2.18
+log
+@1.1b9_30
+@
+text
+@a26 18
+check "assignment"
+
+a=[]; a[0] ||= "bar";
+ok(a[0] == "bar")
+h={}; h["foo"] ||= "bar";
+ok(h["foo"] == "bar")
+
+aa = 5
+aa ||= 25
+ok(aa == 5)
+bb ||= 25
+ok(bb == 25)
+cc &&=33
+ok(cc == nil)
+cc = 5
+cc &&=44
+ok(cc == 44)
+
+d521 3
+@
+
+
+1.1.1.2.2.19
+log
+@rehash
+@
+text
+@d923 2
+@
+
+
+1.1.1.2.2.19.2.1
+log
+@*** empty log message ***
+@
+text
+@a486 57
+class IterTest
+  def initialize(e); @@body = e; end
+
+  def each0(&block); @@body.each(&block); end
+  def each1(&block); @@body.each { |*x| block.call(*x) } end
+  def each2(&block); @@body.each { |*x| block.call(x) } end
+  def each3(&block); @@body.each { |x| block.call(*x) } end
+  def each4(&block); @@body.each { |x| block.call(x) } end
+  def each5; @@body.each { |*x| yield(*x) } end
+  def each6; @@body.each { |*x| yield(x) } end
+  def each7; @@body.each { |x| yield(*x) } end
+  def each8; @@body.each { |x| yield(x) } end
+end
+
+IterTest.new([0]).each0 { |x| $x = x }
+ok($x == 0)
+IterTest.new([1]).each1 { |x| $x = x }
+ok($x == 1)
+IterTest.new([2]).each2 { |x| $x = x }
+ok($x == [2])
+IterTest.new([3]).each3 { |x| $x = x }
+ok($x == 3)
+IterTest.new([4]).each4 { |x| $x = x }
+ok($x == 4)
+IterTest.new([5]).each5 { |x| $x = x }
+ok($x == 5)
+IterTest.new([6]).each6 { |x| $x = x }
+ok($x == [6])
+IterTest.new([7]).each7 { |x| $x = x }
+ok($x == 7)
+IterTest.new([8]).each8 { |x| $x = x }
+ok($x == 8)
+
+IterTest.new([[0]]).each0 { |x| $x = x }
+ok($x == [0])
+IterTest.new([[1]]).each1 { |x| $x = x }
+ok($x == 1)
+IterTest.new([[2]]).each2 { |x| $x = x }
+ok($x == [2])
+IterTest.new([[3]]).each3 { |x| $x = x }
+ok($x == 3)
+IterTest.new([[4]]).each4 { |x| $x = x }
+ok($x == [4])
+IterTest.new([[5]]).each5 { |x| $x = x }
+ok($x == 5)
+IterTest.new([[6]]).each6 { |x| $x = x }
+ok($x == [6])
+IterTest.new([[7]]).each7 { |x| $x = x }
+ok($x == 7)
+IterTest.new([[8]]).each8 { |x| $x = x }
+ok($x == [8])
+
+IterTest.new([[0,0]]).each0 { |x| $x = x }
+ok($x == [0,0])
+IterTest.new([[8,8]]).each8 { |x| $x = x }
+ok($x == [8,8])
+
+d549 3
+a551 3
+ok("abc" !~ /^$/)
+ok("abc\n" !~ /^$/)
+ok("abc" !~ /^d*$/)
+@
+
+
+1.1.1.2.2.19.2.2
+log
+@1.1d1
+@
+text
+@d417 11
+a687 3
+a, (b, c), d = 1, [2, 3], 4
+ok(a == 1 && b == 2 && c == 3 && d == 4)
+
+d691 1
+a691 1
+*a = 1..3			# array conversion
+@
+
+
+1.1.1.2.2.20
+log
+@1.1c7
+@
+text
+@d549 3
+a551 3
+ok("abc" !~ /^$/)
+ok("abc\n" !~ /^$/)
+ok("abc" !~ /^d*$/)
+@
+
+
+1.1.1.2.2.21
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+#! /usr/local/bin/miniruby
+d821 1
+a821 1
+ok(`./miniruby -e 'print "foobar"'` == 'foobar')
+d827 2
+a828 2
+ok(`./miniruby -s script_tmp -zzz` == 'true')
+ok(`./miniruby -s script_tmp -zzz=555` == '555')
+d831 1
+a831 1
+tmp.print "#! /usr/local/bin/miniruby -s\n";
+d835 1
+a835 1
+ok(`./miniruby script_tmp -zzz=678` == '678')
+d839 1
+a839 1
+tmp.print "#! /usr/local/bin/miniruby -s\n";
+d845 2
+a846 2
+ok(`./miniruby -x script_tmp` == 'nil')
+ok(`./miniruby -x script_tmp -zzz=555` == '555')
+d854 1
+a854 1
+`./miniruby -i.bak -pe 'sub(/^[0-9]+$/){$&.to_i * 5}' script_tmp`
+d871 1
+a871 1
+  unless `./miniruby -c #{script}`.chomp == "Syntax OK"
+@

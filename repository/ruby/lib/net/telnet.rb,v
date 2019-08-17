@@ -1,0 +1,3601 @@
+head	1.18;
+access;
+symbols
+	v1_6_7:1.13.2.4
+	v1_6_6:1.13.2.4
+	v1_6_5:1.13.2.4
+	v1_6_4:1.13.2.1
+	v1_7_1:1.14
+	v1_6_4_preview4:1.13.2.1
+	v1_6_4_preview3:1.13.2.1
+	v1_6_4_preview2:1.13.2.1
+	v1_6_4_preview1:1.13.2.1
+	v1_6_3:1.13.2.1
+	ruby_m17n:1.13.0.4
+	ruby_1_6:1.13.0.2
+	v1_6_2:1.13
+	v1_6_1:1.11
+	v1_6_0:1.7
+	v1_4_6:1.1.2.6
+	v1_4_5:1.1.2.6
+	v1_4_4:1.1.2.1
+	ruby_1_4:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.18
+date	2002.07.11.08.22.16;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.09.07.22.17.13;	author wakou;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.09.07.00.56.10;	author wakou;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.09.06.22.18.11;	author wakou;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.02.25.20.34.59;	author wakou;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.12.24.20.20.49;	author wakou;	state Exp;
+branches
+	1.13.2.1;
+next	1.12;
+
+1.12
+date	2000.12.14.00.26.05;	author wakou;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.09.12.21.16.09;	author wakou;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.09.12.05.37.35;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.09.11.22.36.57;	author wakou;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.09.11.22.02.37;	author wakou;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.19.21.16.45;	author wakou;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.17.17.50.56;	author wakou;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.24.07.10.25;	author wakou;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.09.22.07.03;	author wakou;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.05.09.04.53.15;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.05.01.09.41.41;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.04.14.14.35.49;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2000.04.14.14.35.49;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2000.05.09.04.50.20;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2000.05.09.22.08.25;	author wakou;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2000.05.24.07.19.40;	author wakou;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2000.06.17.17.52.49;	author wakou;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	2000.06.19.21.18.41;	author wakou;	state Exp;
+branches;
+next	1.1.2.7;
+
+1.1.2.7
+date	2000.09.11.22.13.46;	author wakou;	state Exp;
+branches;
+next	1.1.2.8;
+
+1.1.2.8
+date	2000.09.11.22.37.27;	author wakou;	state Exp;
+branches;
+next	;
+
+1.13.2.1
+date	2001.02.25.20.33.53;	author wakou;	state Exp;
+branches;
+next	1.13.2.2;
+
+1.13.2.2
+date	2001.09.06.22.16.49;	author wakou;	state Exp;
+branches;
+next	1.13.2.3;
+
+1.13.2.3
+date	2001.09.07.00.54.32;	author wakou;	state Exp;
+branches;
+next	1.13.2.4;
+
+1.13.2.4
+date	2001.09.07.22.15.33;	author wakou;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.18
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* array.c (rb_ary_insert): type fixed.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* string.c (rb_str_become): was leaking memory.
+
+* class.c (rb_include_module): should not alter other
+  classes/modules by inclusion.  by this fix, local order may not
+  be preserved for some cases.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+@
+text
+@=begin
+
+== NAME
+
+net/telnet.rb - simple telnet client library
+
+Wakou Aoyama <wakou@@fsinet.or.jp>
+
+
+=== MAKE NEW TELNET OBJECT
+
+  host = Net::Telnet::new({
+           "Binmode"    => false,        # default: false
+           "Host"       => "localhost",  # default: "localhost"
+           "Output_log" => "output_log", # default: nil (no output)
+           "Dump_log"   => "dump_log",   # default: nil (no output)
+           "Port"       => 23,           # default: 23
+           "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+           "Telnetmode" => true,         # default: true
+           "Timeout"    => 10,           # default: 10
+             # if ignore timeout then set "Timeout" to false.
+           "Waittime"   => 0,            # default: 0
+           "Proxy"      => proxy         # default: nil
+                           # proxy is Net::Telnet or IO object
+         })
+
+Telnet object has socket class methods.
+
+if set "Telnetmode" option to false. not telnet command interpretation.
+"Waittime" is time to confirm "Prompt". There is a possibility that
+the same character as "Prompt" is included in the data, and, when
+the network or the host is very heavy, the value is enlarged.
+
+
+=== STATUS OUTPUT
+
+  host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+
+connection status output.
+
+example:
+
+  Trying localhost...
+  Connected to localhost.
+
+
+=== WAIT FOR MATCH
+
+  line = host.waitfor(/match/)
+  line = host.waitfor({"Match"   => /match/,
+                       "String"  => "string",
+                       "Timeout" => secs})
+                         # if ignore timeout then set "Timeout" to false.
+
+if set "String" option, then Match == Regexp.new(quote("string"))
+
+
+==== REALTIME OUTPUT
+
+  host.waitfor(/match/){|c| print c }
+  host.waitfor({"Match"   => /match/,
+                "String"  => "string",
+                "Timeout" => secs}){|c| print c}
+
+of cource, set sync=true or flush is necessary.
+
+
+=== SEND STRING AND WAIT PROMPT
+
+  line = host.cmd("string")
+  line = host.cmd({"String" => "string",
+                   "Match" => /[$%#>] \z/n,
+                   "Timeout" => 10})
+
+
+==== REALTIME OUTPUT
+
+  host.cmd("string"){|c| print c }
+  host.cmd({"String" => "string",
+            "Match" => /[$%#>] \z/n,
+            "Timeout" => 10}){|c| print c }
+
+of cource, set sync=true or flush is necessary.
+
+
+=== SEND STRING
+
+  host.print("string")
+  host.puts("string")
+
+Telnet#puts() adds "\n" to the last of "string".
+
+WARNING: Telnet#print() NOT adds "\n" to the last of "string", in the future.
+
+If "Telnetmode" option is true, then escape IAC code ("\xFF"). If
+"Binmode" option is false, then convert "\n" to EOL(end of line) code.
+
+If "WILL SGA" and "DO BIN", then EOL is CR. If "WILL SGA", then EOL is
+CR + NULL. If the other cases, EOL is CR + LF.
+
+
+=== TOGGLE TELNET COMMAND INTERPRETATION
+
+  host.telnetmode          # return the current status (true or false)
+  host.telnetmode = true   # do telnet command interpretation (default)
+  host.telnetmode = false  # don't telnet command interpretation
+
+
+=== TOGGLE NEWLINE TRANSLATION
+
+  host.binmode          # return the current status (true or false)
+  host.binmode = true   # no translate newline
+  host.binmode = false  # translate newline (default)
+
+
+=== LOGIN
+
+  host.login("username", "password")
+  host.login({"Name" => "username",
+              "Password" => "password"})
+
+if no password prompt:
+
+  host.login("username")
+  host.login({"Name" => "username"})
+
+
+==== REALTIME OUTPUT
+
+  host.login("username", "password"){|c| print c }
+  host.login({"Name" => "username",
+              "Password" => "password"}){|c| print c }
+
+of cource, set sync=true or flush is necessary.
+
+
+
+== EXAMPLE
+
+=== LOGIN AND SEND COMMAND
+
+  localhost = Net::Telnet::new({"Host" => "localhost",
+                                "Timeout" => 10,
+                                "Prompt" => /[$%#>] \z/n})
+  localhost.login("username", "password"){|c| print c }
+  localhost.cmd("command"){|c| print c }
+  localhost.close
+
+
+=== CHECKS A POP SERVER TO SEE IF YOU HAVE MAIL
+
+  pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+                          "Port" => 110,
+                          "Telnetmode" => false,
+                          "Prompt" => /^\+OK/n})
+  pop.cmd("user " + "your_username_here"){|c| print c}
+  pop.cmd("pass " + "your_password_here"){|c| print c}
+  pop.cmd("list"){|c| print c}
+
+
+=end
+
+
+require "socket"
+require "delegate"
+require "timeout"
+require "English"
+
+module Net
+  class Telnet < SimpleDelegator
+
+    IAC   = 255.chr # "\377" # "\xff" # interpret as command:
+    DONT  = 254.chr # "\376" # "\xfe" # you are not to use option
+    DO    = 253.chr # "\375" # "\xfd" # please, you use option
+    WONT  = 252.chr # "\374" # "\xfc" # I won't use option
+    WILL  = 251.chr # "\373" # "\xfb" # I will use option
+    SB    = 250.chr # "\372" # "\xfa" # interpret as subnegotiation
+    GA    = 249.chr # "\371" # "\xf9" # you may reverse the line
+    EL    = 248.chr # "\370" # "\xf8" # erase the current line
+    EC    = 247.chr # "\367" # "\xf7" # erase the current character
+    AYT   = 246.chr # "\366" # "\xf6" # are you there
+    AO    = 245.chr # "\365" # "\xf5" # abort output--but let prog finish
+    IP    = 244.chr # "\364" # "\xf4" # interrupt process--permanently
+    BREAK = 243.chr # "\363" # "\xf3" # break
+    DM    = 242.chr # "\362" # "\xf2" # data mark--for connect. cleaning
+    NOP   = 241.chr # "\361" # "\xf1" # nop
+    SE    = 240.chr # "\360" # "\xf0" # end sub negotiation
+    EOR   = 239.chr # "\357" # "\xef" # end of record (transparent mode)
+    ABORT = 238.chr # "\356" # "\xee" # Abort process
+    SUSP  = 237.chr # "\355" # "\xed" # Suspend process
+    EOF   = 236.chr # "\354" # "\xec" # End of file
+    SYNCH = 242.chr # "\362" # "\xf2" # for telfunc calls
+
+    OPT_BINARY         =   0.chr # "\000" # "\x00" # Binary Transmission
+    OPT_ECHO           =   1.chr # "\001" # "\x01" # Echo
+    OPT_RCP            =   2.chr # "\002" # "\x02" # Reconnection
+    OPT_SGA            =   3.chr # "\003" # "\x03" # Suppress Go Ahead
+    OPT_NAMS           =   4.chr # "\004" # "\x04" # Approx Message Size Negotiation
+    OPT_STATUS         =   5.chr # "\005" # "\x05" # Status
+    OPT_TM             =   6.chr # "\006" # "\x06" # Timing Mark
+    OPT_RCTE           =   7.chr # "\a"   # "\x07" # Remote Controlled Trans and Echo
+    OPT_NAOL           =   8.chr # "\010" # "\x08" # Output Line Width
+    OPT_NAOP           =   9.chr # "\t"   # "\x09" # Output Page Size
+    OPT_NAOCRD         =  10.chr # "\n"   # "\x0a" # Output Carriage-Return Disposition
+    OPT_NAOHTS         =  11.chr # "\v"   # "\x0b" # Output Horizontal Tab Stops
+    OPT_NAOHTD         =  12.chr # "\f"   # "\x0c" # Output Horizontal Tab Disposition
+    OPT_NAOFFD         =  13.chr # "\r"   # "\x0d" # Output Formfeed Disposition
+    OPT_NAOVTS         =  14.chr # "\016" # "\x0e" # Output Vertical Tabstops
+    OPT_NAOVTD         =  15.chr # "\017" # "\x0f" # Output Vertical Tab Disposition
+    OPT_NAOLFD         =  16.chr # "\020" # "\x10" # Output Linefeed Disposition
+    OPT_XASCII         =  17.chr # "\021" # "\x11" # Extended ASCII
+    OPT_LOGOUT         =  18.chr # "\022" # "\x12" # Logout
+    OPT_BM             =  19.chr # "\023" # "\x13" # Byte Macro
+    OPT_DET            =  20.chr # "\024" # "\x14" # Data Entry Terminal
+    OPT_SUPDUP         =  21.chr # "\025" # "\x15" # SUPDUP
+    OPT_SUPDUPOUTPUT   =  22.chr # "\026" # "\x16" # SUPDUP Output
+    OPT_SNDLOC         =  23.chr # "\027" # "\x17" # Send Location
+    OPT_TTYPE          =  24.chr # "\030" # "\x18" # Terminal Type
+    OPT_EOR            =  25.chr # "\031" # "\x19" # End of Record
+    OPT_TUID           =  26.chr # "\032" # "\x1a" # TACACS User Identification
+    OPT_OUTMRK         =  27.chr # "\e"   # "\x1b" # Output Marking
+    OPT_TTYLOC         =  28.chr # "\034" # "\x1c" # Terminal Location Number
+    OPT_3270REGIME     =  29.chr # "\035" # "\x1d" # Telnet 3270 Regime
+    OPT_X3PAD          =  30.chr # "\036" # "\x1e" # X.3 PAD
+    OPT_NAWS           =  31.chr # "\037" # "\x1f" # Negotiate About Window Size
+    OPT_TSPEED         =  32.chr # " "    # "\x20" # Terminal Speed
+    OPT_LFLOW          =  33.chr # "!"    # "\x21" # Remote Flow Control
+    OPT_LINEMODE       =  34.chr # "\""   # "\x22" # Linemode
+    OPT_XDISPLOC       =  35.chr # "#"    # "\x23" # X Display Location
+    OPT_OLD_ENVIRON    =  36.chr # "$"    # "\x24" # Environment Option
+    OPT_AUTHENTICATION =  37.chr # "%"    # "\x25" # Authentication Option
+    OPT_ENCRYPT        =  38.chr # "&"    # "\x26" # Encryption Option
+    OPT_NEW_ENVIRON    =  39.chr # "'"    # "\x27" # New Environment Option
+    OPT_EXOPL          = 255.chr # "\377" # "\xff" # Extended-Options-List
+
+    NULL = "\000"
+    CR   = "\015"
+    LF   = "\012"
+    EOL  = CR + LF
+    REVISION = '$Id: telnet.rb,v 1.17 2001/09/07 22:17:13 wakou Exp $'
+
+    def initialize(options)
+      @@options = options
+      @@options["Host"]       = "localhost"   unless @@options.has_key?("Host")
+      @@options["Port"]       = 23            unless @@options.has_key?("Port")
+      @@options["Prompt"]     = /[$%#>] \z/n  unless @@options.has_key?("Prompt")
+      @@options["Timeout"]    = 10            unless @@options.has_key?("Timeout")
+      @@options["Waittime"]   = 0             unless @@options.has_key?("Waittime")
+      unless @@options.has_key?("Binmode")
+        @@options["Binmode"]    = false         
+      else
+        unless (true == @@options["Binmode"] or false == @@options["Binmode"])
+          raise ArgumentError, "Binmode option required true or false"
+        end
+      end
+
+      unless @@options.has_key?("Telnetmode")
+        @@options["Telnetmode"] = true          
+      else
+        unless (true == @@options["Telnetmode"] or false == @@options["Telnetmode"])
+          raise ArgumentError, "Telnetmode option required true or false"
+        end
+      end
+
+      @@telnet_option = { "SGA" => false, "BINARY" => false }
+
+      if @@options.has_key?("Output_log")
+        @@log = File.open(@@options["Output_log"], 'a+')
+        @@log.sync = true
+        @@log.binmode
+      end
+
+      if @@options.has_key?("Dump_log")
+        @@dumplog = File.open(@@options["Dump_log"], 'a+')
+        @@dumplog.sync = true
+        @@dumplog.binmode
+        def @@dumplog.log_dump(dir, x)
+          len = x.length
+          addr = 0
+          offset = 0
+          while 0 < len
+            if len < 16
+              line = x[offset, len]
+            else
+              line = x[offset, 16]
+            end
+            hexvals = line.unpack('H*')[0]
+            hexvals += ' ' * (32 - hexvals.length)
+            hexvals = format "%s %s %s %s  " * 4, *hexvals.unpack('a2' * 16)
+            line = line.gsub(/[\000-\037\177-\377]/n, '.')
+            printf "%s 0x%5.5x: %s%s\n", dir, addr, hexvals, line
+            addr += 16
+            offset += 16
+            len -= 16
+          end
+          print "\n"
+        end
+      end
+
+      if @@options.has_key?("Proxy")
+        if @@options["Proxy"].kind_of?(Net::Telnet)
+          @@sock = @@options["Proxy"].sock
+        elsif @@options["Proxy"].kind_of?(IO)
+          @@sock = @@options["Proxy"]
+        else
+          raise "Error; Proxy is Net::Telnet or IO object."
+        end
+      else
+        message = "Trying " + @@options["Host"] + "...\n"
+        yield(message) if block_given?
+        @@log.write(message) if @@options.has_key?("Output_log")
+        @@dumplog.log_dump('#', message) if @@options.has_key?("Dump_log")
+
+        begin
+          if @@options["Timeout"] == false
+            @@sock = TCPSocket.open(@@options["Host"], @@options["Port"])
+          else
+            timeout(@@options["Timeout"]) do
+              @@sock = TCPSocket.open(@@options["Host"], @@options["Port"])
+            end
+          end
+        rescue TimeoutError
+          raise TimeoutError, "timed-out; opening of the host"
+        rescue
+          @@log.write($ERROR_INFO.to_s + "\n") if @@options.has_key?("Output_log")
+          @@dumplog.log_dump('#', $ERROR_INFO.to_s + "\n") if @@options.has_key?("Dump_log")
+          raise
+        end
+        @@sock.sync = true
+        @@sock.binmode
+
+        message = "Connected to " + @@options["Host"] + ".\n"
+        yield(message) if block_given?
+        @@log.write(message) if @@options.has_key?("Output_log")
+        @@dumplog.log_dump('#', message) if @@options.has_key?("Dump_log")
+      end
+
+      super(@@sock)
+    end # initialize
+
+    attr :sock
+
+    def telnetmode(mode = nil)
+      case mode
+      when nil
+        @@options["Telnetmode"]
+      when true, false
+        @@options["Telnetmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+      end
+    end
+
+    def telnetmode=(mode)
+      if (true == mode or false == mode)
+        @@options["Telnetmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+      end
+    end
+
+    def binmode(mode = nil)
+      case mode
+      when nil
+        @@options["Binmode"] 
+      when true, false
+        @@options["Binmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+      end
+    end
+
+    def binmode=(mode)
+      if (true == mode or false == mode)
+        @@options["Binmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+      end
+    end
+
+    def preprocess(string)
+      # combine CR+NULL into CR
+      string = string.gsub(/#{CR}#{NULL}/no, CR) if @@options["Telnetmode"]
+
+      # combine EOL into "\n"
+      string = string.gsub(/#{EOL}/no, "\n") unless @@options["Binmode"]
+
+      string.gsub(/#{IAC}(
+                   [#{IAC}#{AO}#{AYT}#{DM}#{IP}#{NOP}]|
+                   [#{DO}#{DONT}#{WILL}#{WONT}]
+                     [#{OPT_BINARY}-#{OPT_NEW_ENVIRON}#{OPT_EXOPL}]|
+                   #{SB}[^#{IAC}]*#{IAC}#{SE}
+                 )/xno) do
+        if    IAC == $1  # handle escaped IAC characters
+          IAC
+        elsif AYT == $1  # respond to "IAC AYT" (are you there)
+          self.write("nobody here but us pigeons" + EOL)
+          ''
+        elsif DO[0] == $1[0]  # respond to "IAC DO x"
+          if OPT_BINARY[0] == $1[1]
+            @@telnet_option["BINARY"] = true
+            self.write(IAC + WILL + OPT_BINARY)
+          else
+            self.write(IAC + WONT + $1[1..1])
+          end
+          ''
+        elsif DONT[0] == $1[0]  # respond to "IAC DON'T x" with "IAC WON'T x"
+          self.write(IAC + WONT + $1[1..1])
+          ''
+        elsif WILL[0] == $1[0]  # respond to "IAC WILL x"
+          if    OPT_BINARY[0] == $1[1]
+            self.write(IAC + DO + OPT_BINARY)
+          elsif OPT_ECHO[0] == $1[1]
+            self.write(IAC + DO + OPT_ECHO)
+          elsif OPT_SGA[0]  == $1[1]
+            @@telnet_option["SGA"] = true
+            self.write(IAC + DO + OPT_SGA)
+          else
+            self.write(IAC + DONT + $1[1..1])
+          end
+          ''
+        elsif WONT[0] == $1[0]  # respond to "IAC WON'T x"
+          if    OPT_ECHO[0] == $1[1]
+            self.write(IAC + DONT + OPT_ECHO)
+          elsif OPT_SGA[0]  == $1[1]
+            @@telnet_option["SGA"] = false
+            self.write(IAC + DONT + OPT_SGA)
+          else
+            self.write(IAC + DONT + $1[1..1])
+          end
+          ''
+        else
+          ''
+        end
+      end
+    end # preprocess
+
+    def waitfor(options)
+      time_out = @@options["Timeout"]
+      waittime = @@options["Waittime"]
+
+      if options.kind_of?(Hash)
+        prompt   = if options.has_key?("Match")
+                     options["Match"]
+                   elsif options.has_key?("Prompt")
+                     options["Prompt"]
+                   elsif options.has_key?("String")
+                     Regexp.new( Regexp.quote(options["String"]) )
+                   end
+        time_out = options["Timeout"]  if options.has_key?("Timeout")
+        waittime = options["Waittime"] if options.has_key?("Waittime")
+      else
+        prompt = options
+      end
+
+      if time_out == false
+        time_out = nil
+      end
+
+      line = ''
+      buf = ''
+      rest = ''
+      until(prompt === line and not IO::select([@@sock], nil, nil, waittime))
+        unless IO::select([@@sock], nil, nil, time_out)
+          raise TimeoutError, "timed-out; wait for the next data"
+        end
+        begin
+          c = @@sock.sysread(1024 * 1024)
+          @@dumplog.log_dump('<', c) if @@options.has_key?("Dump_log")
+          if @@options["Telnetmode"]
+            c = rest + c
+            if Integer(c.rindex(/#{IAC}#{SE}/no)) <
+               Integer(c.rindex(/#{IAC}#{SB}/no))
+              buf = preprocess(c[0 ... c.rindex(/#{IAC}#{SB}/no)])
+              rest = c[c.rindex(/#{IAC}#{SB}/no) .. -1]
+            elsif pt = c.rindex(/#{IAC}[^#{IAC}#{AO}#{AYT}#{DM}#{IP}#{NOP}]?\z/no)
+              buf = preprocess(c[0 ... pt])
+              rest = c[pt .. -1]
+            else
+              buf = preprocess(c)
+              rest = ''
+            end
+          end
+          @@log.print(buf) if @@options.has_key?("Output_log")
+          line += buf
+          yield buf if block_given?
+        rescue EOFError # End of file reached
+          if line == ''
+            line = nil
+            yield nil if block_given?
+          end
+          break
+        end
+      end
+      line
+    end
+
+    def write(string)
+      length = string.length
+      while 0 < length
+        IO::select(nil, [@@sock])
+        @@dumplog.log_dump('>', string[-length..-1]) if @@options.has_key?("Dump_log")
+        length -= @@sock.syswrite(string[-length..-1])
+      end
+    end
+
+    def _print(string)
+      string = string.gsub(/#{IAC}/no, IAC + IAC) if @@options["Telnetmode"]
+
+      if @@options["Binmode"]
+        self.write(string)
+      else
+        if @@telnet_option["BINARY"] and @@telnet_option["SGA"]
+          # IAC WILL SGA IAC DO BIN send EOL --> CR
+          self.write(string.gsub(/\n/n, CR))
+        elsif @@telnet_option["SGA"]
+          # IAC WILL SGA send EOL --> CR+NULL
+          self.write(string.gsub(/\n/n, CR + NULL))
+        else
+          # NONE send EOL --> CR+LF
+          self.write(string.gsub(/\n/n, EOL))
+        end
+      end
+    end
+
+    def puts(string)
+      self._print(string + "\n")
+    end
+
+    def print(string)
+      if $VERBOSE
+        $stderr.puts 'WARNING: Telnet#print("string") NOT adds "\n" to the last of "string", in the future.'
+        $stderr.puts '         cf. Telnet#puts().'
+      end
+      self.puts(string)
+    end
+
+    def cmd(options)
+      match    = @@options["Prompt"]
+      time_out = @@options["Timeout"]
+
+      if options.kind_of?(Hash)
+        string   = options["String"]
+        match    = options["Match"]   if options.has_key?("Match")
+        time_out = options["Timeout"] if options.has_key?("Timeout")
+      else
+        string = options
+      end
+
+      self.puts(string)
+      if block_given?
+        waitfor({"Prompt" => match, "Timeout" => time_out}){|c| yield c }
+      else
+        waitfor({"Prompt" => match, "Timeout" => time_out})
+      end
+    end
+
+    def login(options, password = nil)
+      if options.kind_of?(Hash)
+        username = options["Name"]
+        password = options["Password"]
+      else
+        username = options
+      end
+
+      if block_given?
+        line = waitfor(/login[: ]*\z/n){|c| yield c }
+        if password
+          line += cmd({"String" => username,
+                       "Match" => /Password[: ]*\z/n}){|c| yield c }
+          line += cmd(password){|c| yield c }
+        else
+          line += cmd(username){|c| yield c }
+        end
+      else
+        line = waitfor(/login[: ]*\z/n)
+        if password
+          line += cmd({"String" => username,
+                       "Match" => /Password[: ]*\z/n})
+          line += cmd(password)
+        else
+          line += cmd(username)
+        end
+      end
+      line
+    end
+
+  end
+end
+
+
+=begin
+
+== HISTORY
+
+delete. see cvs log.
+
+
+=end
+@
+
+
+1.17
+log
+@	* lib/net/telnet.rb: waitfor(): improvement. thanks to
+	  nobu.nakada@@nifty.ne.jp
+@
+text
+@d240 1
+a240 1
+    REVISION = '$Id:$'
+d316 1
+a316 1
+            @@sock = TCPsocket.open(@@options["Host"], @@options["Port"])
+d319 1
+a319 1
+              @@sock = TCPsocket.open(@@options["Host"], @@options["Port"])
+@
+
+
+1.16
+log
+@        * lib/net/telnet.rb: waitfor(): bug fix.
+@
+text
+@a469 1
+          c = rest + c
+d471 1
+@
+
+
+1.15
+log
+@	* lib/cgi.rb: CGI#doctype(): bug fix (html4Fr).
+
+	* lib/net/telnet.rb, lib/cgi.rb: remove VERSION, RELEASE_DATE,
+	  VERSION_CODE, RELEASE_CODE. please use REVISION.
+
+	* lib/cgi.rb: CGI#header(): bug fix.
+
+	* lib/net/telnet.rb, lib/cgi.rb: concat --> +=
+@
+text
+@d470 1
+d474 1
+a474 1
+              buf = preprocess(rest + c[0 ... c.rindex(/#{IAC}#{SB}/no)])
+d477 1
+a477 1
+              buf = preprocess(rest + c[0 ... pt])
+@
+
+
+1.14
+log
+@Mon Feb 26 05:27:52 2001  Wakou Aoyama  <wakou@@fsinet.or.jp>
+
+	* lib/net/telnet.rb: #telnetmode(), #binmode(): bug fix.
+	  thanks to nobu.nakada@@nifty.ne.jp.
+@
+text
+@a6 2
+Version 1.6.3
+
+a239 4
+    VERSION = '1.6.3'
+    RELEASE_DATE = '2001-02-26'
+    VERSION_CODE = 163
+    RELEASE_CODE = 20010226
+d288 1
+a288 1
+            hexvals.concat ' ' * (32 - hexvals.length)
+d484 1
+a484 1
+          line.concat(buf)
+d568 3
+a570 3
+          line.concat( cmd({"String" => username,
+                            "Match" => /Password[: ]*\z/n}){|c| yield c } )
+          line.concat( cmd(password){|c| yield c } )
+d572 1
+a572 1
+          line.concat( cmd(username){|c| yield c } )
+d577 3
+a579 3
+          line.concat( cmd({"String" => username,
+                            "Match" => /Password[: ]*\z/n}) )
+          line.concat( cmd(password) )
+d581 1
+a581 1
+          line.concat( cmd(username) )
+@
+
+
+1.13
+log
+@wakou
+@
+text
+@d7 1
+a7 1
+Version 1.6.2
+d242 5
+a246 4
+    VERSION = "1.6.2"
+    RELEASE_DATE = "2000-12-25"
+    VERSION_CODE = 162
+    RELEASE_CODE = 20001225
+d350 5
+a354 6
+      if mode
+        if (true == mode or false == mode)
+          @@options["Telnetmode"] = mode
+        else
+          raise ArgumentError, "required true or false"
+        end
+d356 1
+a356 1
+        @@options["Telnetmode"]
+d369 5
+a373 6
+      if mode
+        if (true == mode or false == mode)
+          @@options["Binmode"] = mode
+        else
+          raise ArgumentError, "required true or false"
+        end
+d375 1
+a375 1
+        @@options["Binmode"] 
+d601 2
+a602 175
+* Mon Dec 25 01:37:43 JST 2000 - wakou
+  * version 1.6.2
+  * Regexp::last_match[1] --> $1
+
+* Mon Dec 11 00:16:51 JST 2000 - wakou
+  * version 1.6.1
+  * $1 --> Regexp::last_match[1]
+
+* 2000/09/12 05:37:35 - matz
+  * change: iterator? --> block_given?
+
+* Tue Sep 12 06:52:48 JST 2000 - wakou
+  * version 1.6.0
+  * correct: document.
+    thanks to Kazuhiro NISHIYAMA <zn@@mbf.nifty.com>
+  * add: Telnet#puts().
+
+* Sun Jun 18 23:31:44 JST 2000 - wakou
+  * version 1.5.0
+  * change: version syntax. old: x.yz, now: x.y.z
+
+* 2000/05/24 06:57:38 - wakou
+  * version 1.40
+  * improve: binmode(), telnetmode() interface.
+    thanks to Dave Thomas <Dave@@thomases.com>
+
+* 2000/05/09 22:02:56 - wakou
+  * version 1.32
+  * require English.rb
+
+* 2000/05/02 21:48:39 - wakou
+  * version 1.31
+  * Proxy option: can receive IO object.
+
+* 2000/04/03 18:27:02 - wakou
+  * version 1.30
+  * telnet.rb --> net/telnet.rb
+
+* 2000/01/24 17:02:57 - wakou
+  * version 1.20
+  * respond to "IAC WILL x" with "IAC DONT x"
+  * respond to "IAC WONT x" with "IAC DONT x"
+  * better dumplog format.
+    thanks to WATANABE Hirofumi <Hirofumi.Watanabe@@jp.sony.com>
+
+* 2000/01/18 17:47:31 - wakou
+  * version 1.10
+  * bug fix: write method
+  * respond to "IAC WILL BINARY" with "IAC DO BINARY"
+
+* 1999/10/04 22:51:26 - wakou
+  * version 1.00
+  * bug fix: waitfor(preprocess) method.
+    thanks to Shin-ichiro Hara <sinara@@blade.nagaokaut.ac.jp>
+  * add simple support for AO, DM, IP, NOP, SB, SE
+  * COUTION! TimeOut --> TimeoutError
+
+* 1999/09/21 21:24:07 - wakou
+  * version 0.50
+  * add write method
+
+* 1999/09/17 17:41:41 - wakou
+  * version 0.40
+  * bug fix: preprocess method
+
+* 1999/09/14 23:09:05 - wakou
+  * version 0.30
+  * change prompt check order.
+      not IO::select([@@sock], nil, nil, waittime) and prompt === line
+      --> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+
+* 1999/09/13 22:28:33 - wakou
+  * version 0.24
+  * Telnet#login: if ommit password, then not require password prompt.
+
+* 1999/08/10 05:20:21 - wakou
+  * version 0.232
+  * STATUS OUTPUT sample code typo.
+    thanks to Tadayoshi Funaba <tadf@@kt.rim.or.jp>
+      host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+      --> host = Telnet.new({"Host" => "localhost"){|c| print c }
+
+* 1999/07/16 13:39:42 - wakou
+  * version 0.231
+  * TRUE --> true, FALSE --> false
+
+* 1999/07/15 22:32:09 - wakou
+  * version 0.23
+  * waitfor: if end of file reached, then return nil.
+
+* 1999/06/29 09:08:51 - wakou
+  * version 0.22
+  * new, waitfor, cmd: {"Timeout" => false}  # ignore timeout
+
+* 1999/06/28 18:18:55 - wakou
+  * version 0.21
+  * waitfor: not rescue (EOFError)
+
+* 1999/06/04 06:24:58 - wakou
+  * version 0.20
+  * waitfor: support for divided telnet command
+
+* 1999/05/22 - wakou
+  * version 0.181
+  * bug fix: print method
+
+* 1999/05/14 - wakou
+  * version 0.18
+  * respond to "IAC WON'T SGA" with "IAC DON'T SGA"
+  * DON'T SGA : end of line --> CR + LF
+  * bug fix: preprocess method
+
+* 1999/04/30 - wakou
+  * version 0.17
+  * bug fix: $! + "\n"  -->  $!.to_s + "\n"
+
+* 1999/04/11 - wakou
+  * version 0.163
+  * STDOUT.write(message) --> yield(message) if iterator?
+
+* 1999/03/17 - wakou
+  * version 0.162
+  * add "Proxy" option
+  * required timeout.rb
+
+* 1999/02/03 - wakou
+  * version 0.161
+  * select --> IO::select
+
+* 1998/10/09 - wakou
+  * version 0.16
+  * preprocess method change for the better
+  * add binmode method.
+  * change default Binmode. TRUE --> FALSE
+
+* 1998/10/04 - wakou
+  * version 0.15
+  * add telnetmode method.
+
+* 1998/09/22 - wakou
+  * version 0.141
+  * change default prompt. /[$%#>] $/ --> /[$%#>] \Z/
+
+* 1998/09/01 - wakou
+  * version 0.14
+  * IAC WILL SGA             send EOL --> CR+NULL
+  * IAC WILL SGA IAC DO BIN  send EOL --> CR
+  * NONE                     send EOL --> LF
+  * add Dump_log option.
+
+* 1998/08/25 - wakou
+  * version 0.13
+  * add print method.
+
+* 1998/08/05 - wakou
+  * version 0.122
+  * support for HP-UX 10.20.
+    thanks to WATANABE Tetsuya <tetsu@@jpn.hp.com>
+  * socket.<< --> socket.write
+
+* 1998/07/15 - wakou
+  * version 0.121
+  * string.+= --> string.concat
+
+* 1998/06/01 - wakou
+  * version 0.12
+  * add timeout, waittime.
+
+* 1998/04/21 - wakou
+  * version 0.11
+  * add realtime output.
+
+* 1998/04/13 - wakou
+  * version 0.10
+  * first release.
+a603 1
+$Date: 2000/12/14 00:26:05 $
+@
+
+
+1.13.2.1
+log
+@Mon Feb 26 05:27:52 2001  Wakou Aoyama  <wakou@@fsinet.or.jp>
+
+	* lib/net/telnet.rb: #telnetmode(), #binmode(): bug fix.
+	  thanks to nobu.nakada@@nifty.ne.jp.
+@
+text
+@d7 1
+a7 1
+Version 1.6.3
+d242 4
+a245 5
+    VERSION = '1.6.3'
+    RELEASE_DATE = '2001-02-26'
+    VERSION_CODE = 163
+    RELEASE_CODE = 20010226
+    REVISION = '$Id:$'
+d349 7
+a355 2
+      case mode
+      when nil
+a356 4
+      when true, false
+        @@options["Telnetmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+d369 7
+a375 2
+      case mode
+      when nil
+a376 4
+      when true, false
+        @@options["Binmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+d602 175
+a776 2
+delete. see cvs log.
+
+d778 1
+@
+
+
+1.13.2.2
+log
+@	* lib/cgi.rb: CGI#doctype(): bug fix (html4Fr).
+
+	* lib/net/telnet.rb, lib/cgi.rb: remove VERSION, RELEASE_DATE,
+	  VERSION_CODE, RELEASE_CODE. please use REVISION.
+
+	* lib/cgi.rb: CGI#header(): bug fix.
+
+	* lib/net/telnet.rb, lib/cgi.rb: concat --> +=
+@
+text
+@d7 2
+d242 4
+d294 1
+a294 1
+            hexvals += ' ' * (32 - hexvals.length)
+d490 1
+a490 1
+          line += buf
+d574 3
+a576 3
+          line += cmd({"String" => username,
+                       "Match" => /Password[: ]*\z/n}){|c| yield c }
+          line += cmd(password){|c| yield c }
+d578 1
+a578 1
+          line += cmd(username){|c| yield c }
+d583 3
+a585 3
+          line += cmd({"String" => username,
+                       "Match" => /Password[: ]*\z/n})
+          line += cmd(password)
+d587 1
+a587 1
+          line += cmd(username)
+@
+
+
+1.13.2.3
+log
+@        * lib/net/telnet.rb: waitfor(): bug fix.
+@
+text
+@a469 1
+          c = rest + c
+d473 1
+a473 1
+              buf = preprocess(c[0 ... c.rindex(/#{IAC}#{SB}/no)])
+d476 1
+a476 1
+              buf = preprocess(c[0 ... pt])
+@
+
+
+1.13.2.4
+log
+@	* lib/net/telnet.rb: waitfor(): improvement. thanks to
+	  nobu.nakada@@nifty.ne.jp
+@
+text
+@d470 1
+a471 1
+            c = rest + c
+@
+
+
+1.12
+log
+@wakou
+@
+text
+@d7 1
+a7 1
+Version 1.6.1
+d242 4
+a245 4
+    VERSION = "1.6.1"
+    RELEASE_DATE = "2000-12-14"
+    VERSION_CODE = 161
+    RELEASE_CODE = 20001214
+d401 1
+a401 1
+        if    IAC == Regexp::last_match[1]  # handle escaped IAC characters
+d403 1
+a403 1
+        elsif AYT == Regexp::last_match[1]  # respond to "IAC AYT" (are you there)
+d406 2
+a407 2
+        elsif DO[0] == Regexp::last_match[1][0]  # respond to "IAC DO x"
+          if OPT_BINARY[0] == Regexp::last_match[1][1]
+d411 1
+a411 1
+            self.write(IAC + WONT + Regexp::last_match[1][1..1])
+d414 2
+a415 2
+        elsif DONT[0] == Regexp::last_match[1][0]  # respond to "IAC DON'T x" with "IAC WON'T x"
+          self.write(IAC + WONT + Regexp::last_match[1][1..1])
+d417 2
+a418 2
+        elsif WILL[0] == Regexp::last_match[1][0]  # respond to "IAC WILL x"
+          if    OPT_BINARY[0] == Regexp::last_match[1][1]
+d420 1
+a420 1
+          elsif OPT_ECHO[0] == Regexp::last_match[1][1]
+d422 1
+a422 1
+          elsif OPT_SGA[0]  == Regexp::last_match[1][1]
+d426 1
+a426 1
+            self.write(IAC + DONT + Regexp::last_match[1][1..1])
+d429 2
+a430 2
+        elsif WONT[0] == Regexp::last_match[1][0]  # respond to "IAC WON'T x"
+          if    OPT_ECHO[0] == Regexp::last_match[1][1]
+d432 1
+a432 1
+          elsif OPT_SGA[0]  == Regexp::last_match[1][1]
+d436 1
+a436 1
+            self.write(IAC + DONT + Regexp::last_match[1][1..1])
+d602 4
+d778 1
+a778 1
+$Date: 2000/10/11 16:33:47 $
+@
+
+
+1.11
+log
+@wakou
+@
+text
+@d7 1
+a7 1
+Version 1.6.0
+d242 4
+a245 4
+    VERSION = "1.6.0"
+    RELEASE_DATE = "2000-09-12"
+    VERSION_CODE = 160
+    RELEASE_CODE = 20000912
+d401 1
+a401 1
+        if    IAC == $1         # handle escaped IAC characters
+d403 1
+a403 1
+        elsif AYT == $1         # respond to "IAC AYT" (are you there)
+d406 2
+a407 2
+        elsif DO[0] == $1[0]    # respond to "IAC DO x"
+          if OPT_BINARY[0] == $1[1]
+d411 1
+a411 1
+            self.write(IAC + WONT + $1[1..1])
+d414 2
+a415 2
+        elsif DONT[0] == $1[0]  # respond to "IAC DON'T x" with "IAC WON'T x"
+          self.write(IAC + WONT + $1[1..1])
+d417 2
+a418 2
+        elsif WILL[0] == $1[0]  # respond to "IAC WILL x"
+          if    OPT_BINARY[0] == $1[1]
+d420 1
+a420 1
+          elsif OPT_ECHO[0] == $1[1]
+d422 1
+a422 1
+          elsif OPT_SGA[0]  == $1[1]
+d426 1
+a426 1
+            self.write(IAC + DONT + $1[1..1])
+d429 2
+a430 2
+        elsif WONT[0] == $1[0]  # respond to "IAC WON'T x"
+          if    OPT_ECHO[0] == $1[1]
+d432 1
+a432 1
+          elsif OPT_SGA[0]  == $1[1]
+d436 1
+a436 1
+            self.write(IAC + DONT + $1[1..1])
+d602 4
+d774 1
+a774 1
+$Date: 2000/09/12 05:37:35 $
+@
+
+
+1.10
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d602 3
+d712 1
+a712 1
+  * STDOUT.write(message) --> yield(message) if block_given?
+d770 1
+a770 1
+$Date: 2000/09/11 22:36:57 $
+@
+
+
+1.9
+log
+@wakou
+@
+text
+@d315 1
+a315 1
+        yield(message) if iterator?
+d338 1
+a338 1
+        yield(message) if iterator?
+d492 1
+a492 1
+          yield buf if iterator?
+d496 1
+a496 1
+            yield nil if iterator?
+d557 1
+a557 1
+      if iterator?
+d572 1
+a572 1
+      if iterator?
+d709 1
+a709 1
+  * STDOUT.write(message) --> yield(message) if iterator?
+d767 1
+a767 1
+$Date: 2000/07/05 03:44:11 $
+@
+
+
+1.8
+log
+@wakou
+@
+text
+@d513 1
+a513 6
+    def print(string)
+      if $VERBOSE
+        $stderr.puts 'WARNING: Telnet#print("string") NOT adds "\n" to the last of "string", in the future.'
+        $stderr.puts '         cf. Telnet#puts().'
+      end
+      string = string + "\n"
+d533 9
+a541 1
+      self.print(string)
+d556 1
+a556 1
+      self.print(string)
+@
+
+
+1.7
+log
+@Tue Jun 20 06:14:43 2000  Wakou Aoyama <wakou@@fsinet.or.jp>
+
+        * lib/cgi.rb: change: version syntax. old: x.yz, now: x.y.z
+
+        * lib/net/telnet.rb: ditto.
+@
+text
+@d3 1
+a3 1
+== SIMPLE TELNET CLIENT LIBRARY
+d5 1
+a5 1
+net/telnet.rb
+d7 1
+a7 1
+Version 1.5.0
+d74 1
+a74 1
+                   "Prompt" => /[$%#>] \z/n,
+d82 1
+a82 1
+            "Prompt" => /[$%#>] \z/n,
+d91 11
+a101 1
+    # == host.write("string\n")
+d122 1
+a122 3
+              "Password" => "password",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10})
+d127 1
+a127 3
+  host.login({"Name" => "username",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10})
+d134 1
+a134 3
+              "Password" => "password",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10}){|c| print c }
+d242 4
+a245 4
+    VERSION = "1.5.0"
+    RELEASE_DATE = "2000-06-19"
+    VERSION_CODE = 150
+    RELEASE_CODE = 20000619
+d514 4
+d537 4
+d599 6
+d764 1
+a764 1
+$Date: 2000/06/18 14:32:27 $
+@
+
+
+1.6
+log
+@expand tabs: lib/cgi.rb, lib/net/telnet.rb
+@
+text
+@a1 1
+$Date: 2000/05/24 07:10:25 $
+d7 1
+a7 1
+Version 1.40
+d14 14
+a27 14
+        host = Net::Telnet::new({
+                 "Binmode"    => false,        # default: false
+                 "Host"       => "localhost",  # default: "localhost"
+                 "Output_log" => "output_log", # default: nil (no output)
+                 "Dump_log"   => "dump_log",   # default: nil (no output)
+                 "Port"       => 23,           # default: 23
+                 "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+                 "Telnetmode" => true,         # default: true
+                 "Timeout"    => 10,           # default: 10
+                   # if ignore timeout then set "Timeout" to false.
+                 "Waittime"   => 0,            # default: 0
+                 "Proxy"      => proxy         # default: nil
+                                 # proxy is Net::Telnet or IO object
+               })
+d36 1
+d39 1
+a39 1
+        host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+d43 1
+a43 1
+example
+d45 2
+a46 2
+        Trying localhost...
+        Connected to localhost.
+d51 5
+a55 5
+        line = host.waitfor(/match/)
+        line = host.waitfor({"Match"   => /match/,
+                             "String"  => "string",
+                             "Timeout" => secs})
+                               # if ignore timeout then set "Timeout" to false.
+d62 4
+a65 4
+        host.waitfor(/match/){|c| print c }
+        host.waitfor({"Match"   => /match/,
+                      "String"  => "string",
+                      "Timeout" => secs}){|c| print c}
+d72 4
+a75 4
+        line = host.cmd("string")
+        line = host.cmd({"String" => "string",
+                         "Prompt" => /[$%#>] \z/n,
+                         "Timeout" => 10})
+d80 4
+a83 4
+        host.cmd("string"){|c| print c }
+        host.cmd({"String" => "string",
+                  "Prompt" => /[$%#>] \z/n,
+                  "Timeout" => 10}){|c| print c }
+d90 2
+a91 2
+        host.print("string")
+          # == host.write("string\n")
+d96 3
+a98 3
+        host.telnetmode          # return the current status (true or false)
+        host.telnetmode = true   # do telnet command interpretation (default)
+        host.telnetmode = false  # don't telnet command interpretation
+d103 3
+a105 3
+        host.binmode          # return the current status (true or false)
+        host.binmode = true   # no translate newline
+        host.binmode = false  # translate newline (default)
+d110 12
+a121 12
+        host.login("username", "password")
+        host.login({"Name" => "username",
+                    "Password" => "password",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10})
+
+if no password prompt.
+
+        host.login("username")
+        host.login({"Name" => "username",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10})
+d126 5
+a130 5
+        host.login("username", "password"){|c| print c }
+        host.login({"Name" => "username",
+                    "Password" => "password",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10}){|c| print c }
+d135 1
+d140 6
+a145 6
+        localhost = Net::Telnet::new({"Host" => "localhost",
+                                      "Timeout" => 10,
+                                      "Prompt" => /[$%#>] \z/n})
+        localhost.login("username", "password"){|c| print c }
+        localhost.cmd("command"){|c| print c }
+        localhost.close
+d150 7
+a156 7
+        pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+                                "Port" => 110,
+                                "Telnetmode" => false,
+                                "Prompt" => /^\+OK/n})
+        pop.cmd("user " + "your_username_here"){|c| print c}
+        pop.cmd("pass " + "your_password_here"){|c| print c}
+        pop.cmd("list"){|c| print c}
+d159 1
+a159 118
+== HISTORY
+
+=== Version 1.40
+
+2000/05/24 06:57:38
+
+- improve: binmode(), telnetmode() interface
+  thanks to Dave Thomas <Dave@@thomases.com>
+
+=== Version 1.32
+
+2000/05/09 22:02:56
+
+- require English.rb
+
+=== Version 1.31
+
+2000/05/02 21:48:39
+
+- Proxy option: can receive IO object
+
+=== Version 1.30
+
+2000/04/03 18:27:02
+
+- telnet.rb --> net/telnet.rb
+
+=== Version 1.20
+
+2000/01/24 17:02:57
+
+- respond to "IAC WILL x" with "IAC DONT x"
+- respond to "IAC WONT x" with "IAC DONT x"
+- better dumplog format
+  thanks to WATANABE Hirofumi <Hirofumi.Watanabe@@jp.sony.com>
+
+=== Version 1.10
+
+2000/01/18 17:47:31
+
+- bug fix: write method
+- respond to "IAC WILL BINARY" with "IAC DO BINARY"
+
+=== Version 1.00
+
+1999/10/04 22:51:26
+
+- bug fix: waitfor(preprocess) method
+  thanks to Shin-ichiro Hara <sinara@@blade.nagaokaut.ac.jp>
+- add simple support for AO, DM, IP, NOP, SB, SE
+- COUTION! TimeOut --> TimeoutError
+
+=== Version 0.50
+
+1999/09/21 21:24:07
+
+- add write method
+
+=== Version 0.40
+
+1999/09/17 17:41:41
+
+- bug fix: preprocess method
+
+=== Version 0.30
+
+1999/09/14 23:09:05
+
+- change prompt check order.
+        not IO::select([@@sock], nil, nil, waittime) and prompt === line
+        --> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+
+=== Version 0.24
+
+1999/09/13 22:28:33
+
+- Telnet#login
+if ommit password, then not require password prompt.
+
+=== Version 0.232
+
+1999/08/10 05:20:21
+
+- STATUS OUTPUT sample code typo. thanks to Tadayoshi Funaba <tadf@@kt.rim.or.jp>
+        host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+        --> host = Telnet.new({"Host" => "localhost"){|c| print c }
+
+=== Version 0.231
+
+1999/07/16 13:39:42
+
+- TRUE --> true, FALSE --> false
+
+=== Version 0.23
+
+1999/07/15 22:32:09
+
+- waitfor: if end of file reached, then return nil.
+
+=== Version 0.22
+
+1999/06/29 09:08:51
+
+- new, waitfor, cmd: {"Timeout" => false}  # ignore timeout
+
+=== Version 0.21
+
+1999/06/28 18:18:55
+
+- waitfor: not rescue (EOFError)
+
+=== Version 0.20
+
+1999/06/04 06:24:58
+
+- waitfor: support for divided telnet command
+
+=== Version 0.181
+a160 104
+1999/05/22
+
+- bug fix: print method
+
+=== Version 0.18
+
+1999/05/14
+
+- respond to "IAC WON'T SGA" with "IAC DON'T SGA"
+- DON'T SGA : end of line --> CR + LF
+- bug fix: preprocess method
+
+=== Version 0.17
+
+1999/04/30
+
+- bug fix: $! + "\n"  -->  $!.to_s + "\n"
+
+=== Version 0.163
+
+1999/04/11
+
+- STDOUT.write(message) --> yield(message) if iterator?
+
+=== Version 0.162
+
+1999/03/17
+
+- add "Proxy" option
+- required timeout.rb
+
+=== Version 0.161
+
+1999/02/03
+
+- select --> IO::select
+
+=== Version 0.16
+
+1998/10/09
+
+- preprocess method change for the better
+- add binmode method.
+- change default Binmode. TRUE --> FALSE
+
+=== Version 0.15
+
+1998/10/04
+
+- add telnetmode method.
+
+=== Version 0.141
+
+1998/09/22
+
+- change default prompt. /[$%#>] $/ --> /[$%#>] \Z/
+
+=== Version 0.14
+
+1998/09/01
+
+- IAC WILL SGA             send EOL --> CR+NULL
+- IAC WILL SGA IAC DO BIN  send EOL --> CR
+- NONE                     send EOL --> LF
+- add Dump_log option.
+
+=== Version 0.13
+
+1998/08/25
+
+- add print method.
+
+=== Version 0.122
+
+1998/08/05
+
+- support for HP-UX 10.20    thanks to WATANABE Tetsuya <tetsu@@jpn.hp.com>
+- socket.<< --> socket.write
+
+=== Version 0.121
+
+1998/07/15
+
+- string.+= --> string.concat
+
+=== Version 0.12
+
+1998/06/01
+
+- add timeout, waittime.
+
+=== Version 0.11
+
+1998/04/21
+
+- add realtime output.
+
+=== Version 0.10
+
+1998/04/13
+
+- first release.
+
+=end
+d238 4
+a241 5
+  v = $-v
+  $-v = false
+    VERSION = "1.40"
+    RELEASE_DATE = "$Date: 2000/05/24 07:10:25 $"
+  $-v = v
+d581 167
+@
+
+
+1.5
+log
+@Wed May 24 16:03:06 2000  Wakou Aoyama <wakou@@fsinet.or.jp>
+
+        * lib/cgi.rb bug fix: CGI::escape(), CGI::Cookie::new()
+        * lib/net/telnet.rb improve: binmode(), telnetmode() interface
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/24 06:58:57 $
+d15 14
+a28 14
+	host = Net::Telnet::new({
+	         "Binmode"    => false,        # default: false
+	         "Host"       => "localhost",  # default: "localhost"
+	         "Output_log" => "output_log", # default: nil (no output)
+	         "Dump_log"   => "dump_log",   # default: nil (no output)
+	         "Port"       => 23,           # default: 23
+	         "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+	         "Telnetmode" => true,         # default: true
+	         "Timeout"    => 10,           # default: 10
+	           # if ignore timeout then set "Timeout" to false.
+	         "Waittime"   => 0,            # default: 0
+	         "Proxy"      => proxy         # default: nil
+	                         # proxy is Net::Telnet or IO object
+	       })
+d39 1
+a39 1
+	host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+d45 2
+a46 2
+	Trying localhost...
+	Connected to localhost.
+d51 5
+a55 5
+	line = host.waitfor(/match/)
+	line = host.waitfor({"Match"   => /match/,
+	                     "String"  => "string",
+	                     "Timeout" => secs})
+	                       # if ignore timeout then set "Timeout" to false.
+d62 4
+a65 4
+	host.waitfor(/match/){|c| print c }
+	host.waitfor({"Match"   => /match/,
+	              "String"  => "string",
+	              "Timeout" => secs}){|c| print c}
+d72 4
+a75 4
+	line = host.cmd("string")
+	line = host.cmd({"String" => "string",
+	                 "Prompt" => /[$%#>] \z/n,
+	                 "Timeout" => 10})
+d80 4
+a83 4
+	host.cmd("string"){|c| print c }
+	host.cmd({"String" => "string",
+	          "Prompt" => /[$%#>] \z/n,
+	          "Timeout" => 10}){|c| print c }
+d90 2
+a91 2
+	host.print("string")
+	  # == host.write("string\n")
+d96 3
+a98 3
+	host.telnetmode          # return the current status (true or false)
+	host.telnetmode = true   # do telnet command interpretation (default)
+	host.telnetmode = false  # don't telnet command interpretation
+d103 3
+a105 3
+	host.binmode          # return the current status (true or false)
+	host.binmode = true   # no translate newline
+	host.binmode = false  # translate newline (default)
+d110 5
+a114 5
+	host.login("username", "password")
+	host.login({"Name" => "username",
+	            "Password" => "password",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10})
+d118 4
+a121 4
+	host.login("username")
+	host.login({"Name" => "username",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10})
+d126 5
+a130 5
+	host.login("username", "password"){|c| print c }
+	host.login({"Name" => "username",
+	            "Password" => "password",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10}){|c| print c }
+d139 6
+a144 6
+	localhost = Net::Telnet::new({"Host" => "localhost",
+	                              "Timeout" => 10,
+	                              "Prompt" => /[$%#>] \z/n})
+	localhost.login("username", "password"){|c| print c }
+	localhost.cmd("command"){|c| print c }
+	localhost.close
+d149 7
+a155 7
+	pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+	                        "Port" => 110,
+	                        "Telnetmode" => false,
+	                        "Prompt" => /^\+OK/n})
+	pop.cmd("user " + "your_username_here"){|c| print c}
+	pop.cmd("pass " + "your_password_here"){|c| print c}
+	pop.cmd("list"){|c| print c}
+d227 2
+a228 2
+	not IO::select([@@sock], nil, nil, waittime) and prompt === line
+	--> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+d242 2
+a243 2
+	host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+	--> host = Telnet.new({"Host" => "localhost"){|c| print c }
+d461 1
+a461 1
+    RELEASE_DATE = "$Date: 2000/05/24 06:58:57 $"
+@
+
+
+1.4
+log
+@telnet.rb Version 1.32
+- require English.rb
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/09 22:02:56 $
+d8 1
+a8 1
+Version 1.32
+d94 1
+a94 1
+=== TURN TELNET COMMAND INTERPRETATION
+d96 3
+a98 3
+	host.telnetmode        # turn on/off
+	host.telnetmode(true)  # on
+	host.telnetmode(false) # off
+d103 3
+a105 3
+	host.binmode        # turn true/false
+	host.binmode(true)  # no translate newline
+	host.binmode(false) # translate newline
+d160 7
+d460 2
+a461 2
+    VERSION = "1.32"
+    RELEASE_DATE = "$Date: 2000/05/09 22:02:56 $"
+a465 1
+      @@options["Binmode"]    = false         unless @@options.has_key?("Binmode")
+a468 1
+      @@options["Telnetmode"] = true          unless @@options.has_key?("Telnetmode")
+d471 15
+d565 27
+a591 3
+    def telnetmode(mode = 'turn')
+      if 'turn' == mode
+        @@options["Telnetmode"] = @@options["Telnetmode"] ? false : true
+d593 1
+a593 1
+        @@options["Telnetmode"] = mode ? true : false
+d597 3
+a599 3
+    def binmode(mode = 'turn')
+      if 'turn' == mode
+        @@options["Binmode"] = @@options["Binmode"] ? false : true
+d601 1
+a601 1
+        @@options["Binmode"] = mode ? true : false
+@
+
+
+1.3
+log
+@2000-05-09
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/02 21:48:39 $
+d8 1
+a8 1
+Version 1.31
+d160 6
+d378 1
+d453 2
+a454 2
+    VERSION = "1.31"
+    RELEASE_DATE = "$Date: 2000/05/02 21:48:39 $"
+d492 1
+a492 1
+            line.gsub! /[\000-\037\177-\377]/n, '.'
+d520 1
+a520 1
+            timeout(@@options["Timeout"]){
+d522 1
+a522 1
+            }
+d527 2
+a528 2
+          @@log.write($!.to_s + "\n") if @@options.has_key?("Output_log")
+          @@dumplog.log_dump('#', $!.to_s + "\n") if @@options.has_key?("Dump_log")
+a561 2
+      str = string.dup
+
+d563 1
+a563 1
+      str.gsub!(/#{CR}#{NULL}/no, CR) if @@options["Telnetmode"]
+d566 1
+a566 1
+      str.gsub!(/#{EOL}/no, "\n") unless @@options["Binmode"]
+d568 1
+a568 1
+      str.gsub!(/#{IAC}(
+d573 1
+a573 1
+                 )/xno){
+d615 1
+a615 3
+      }
+
+      str
+d687 2
+a688 1
+      str = string.dup + "\n"
+d690 3
+a692 3
+      str.gsub!(/#{IAC}/no, IAC + IAC) if @@options["Telnetmode"]
+
+      unless @@options["Binmode"]
+d695 1
+a695 1
+          str.gsub!(/\n/n, CR)
+d698 1
+a698 1
+          str.gsub!(/\n/n, CR + NULL)
+d701 1
+a701 1
+          str.gsub!(/\n/n, EOL)
+a703 2
+
+      self.write(str)
+@
+
+
+1.2
+log
+@2000-05-01
+@
+text
+@d2 1
+a2 1
+$Date: 2000/04/03 18:27:02 $
+d8 1
+a8 1
+Version 1.30
+d27 1
+a27 1
+	                         # proxy is Telnet or TCPsocket object
+d160 6
+d446 2
+a447 2
+    VERSION = "1.30"
+    RELEASE_DATE = "$Date: 2000/04/03 18:27:02 $"
+d496 1
+a496 1
+        if @@options["Proxy"].kind_of?(Telnet)
+d498 1
+a498 1
+        elsif @@options["Proxy"].kind_of?(TCPsocket)
+d501 1
+a501 1
+          raise "Error; Proxy is Telnet or TCPSocket object."
+@
+
+
+1.1
+log
+@file telnet.rb was initially added on branch ruby_1_4.
+@
+text
+@d1 749
+@
+
+
+1.1.2.1
+log
+@000414
+@
+text
+@a0 749
+=begin
+$Date: 2000/04/03 18:27:02 $
+
+== SIMPLE TELNET CLIENT LIBRARY
+
+net/telnet.rb
+
+Version 1.30
+
+Wakou Aoyama <wakou@@fsinet.or.jp>
+
+
+=== MAKE NEW TELNET OBJECT
+
+	host = Net::Telnet::new({
+	         "Binmode"    => false,        # default: false
+	         "Host"       => "localhost",  # default: "localhost"
+	         "Output_log" => "output_log", # default: nil (no output)
+	         "Dump_log"   => "dump_log",   # default: nil (no output)
+	         "Port"       => 23,           # default: 23
+	         "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+	         "Telnetmode" => true,         # default: true
+	         "Timeout"    => 10,           # default: 10
+	           # if ignore timeout then set "Timeout" to false.
+	         "Waittime"   => 0,            # default: 0
+	         "Proxy"      => proxy         # default: nil
+	                         # proxy is Telnet or TCPsocket object
+	       })
+
+Telnet object has socket class methods.
+
+if set "Telnetmode" option to false. not telnet command interpretation.
+"Waittime" is time to confirm "Prompt". There is a possibility that
+the same character as "Prompt" is included in the data, and, when
+the network or the host is very heavy, the value is enlarged.
+
+=== STATUS OUTPUT
+
+	host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+
+connection status output.
+
+example
+
+	Trying localhost...
+	Connected to localhost.
+
+
+=== WAIT FOR MATCH
+
+	line = host.waitfor(/match/)
+	line = host.waitfor({"Match"   => /match/,
+	                     "String"  => "string",
+	                     "Timeout" => secs})
+	                       # if ignore timeout then set "Timeout" to false.
+
+if set "String" option, then Match == Regexp.new(quote("string"))
+
+
+==== REALTIME OUTPUT
+
+	host.waitfor(/match/){|c| print c }
+	host.waitfor({"Match"   => /match/,
+	              "String"  => "string",
+	              "Timeout" => secs}){|c| print c}
+
+of cource, set sync=true or flush is necessary.
+
+
+=== SEND STRING AND WAIT PROMPT
+
+	line = host.cmd("string")
+	line = host.cmd({"String" => "string",
+	                 "Prompt" => /[$%#>] \z/n,
+	                 "Timeout" => 10})
+
+
+==== REALTIME OUTPUT
+
+	host.cmd("string"){|c| print c }
+	host.cmd({"String" => "string",
+	          "Prompt" => /[$%#>] \z/n,
+	          "Timeout" => 10}){|c| print c }
+
+of cource, set sync=true or flush is necessary.
+
+
+=== SEND STRING
+
+	host.print("string")
+	  # == host.write("string\n")
+
+
+=== TURN TELNET COMMAND INTERPRETATION
+
+	host.telnetmode        # turn on/off
+	host.telnetmode(true)  # on
+	host.telnetmode(false) # off
+
+
+=== TOGGLE NEWLINE TRANSLATION
+
+	host.binmode        # turn true/false
+	host.binmode(true)  # no translate newline
+	host.binmode(false) # translate newline
+
+
+=== LOGIN
+
+	host.login("username", "password")
+	host.login({"Name" => "username",
+	            "Password" => "password",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10})
+
+if no password prompt.
+
+	host.login("username")
+	host.login({"Name" => "username",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10})
+
+
+==== REALTIME OUTPUT
+
+	host.login("username", "password"){|c| print c }
+	host.login({"Name" => "username",
+	            "Password" => "password",
+	            "Prompt" => /[$%#>] \z/n,
+	            "Timeout" => 10}){|c| print c }
+
+of cource, set sync=true or flush is necessary.
+
+
+== EXAMPLE
+
+=== LOGIN AND SEND COMMAND
+
+	localhost = Net::Telnet::new({"Host" => "localhost",
+	                              "Timeout" => 10,
+	                              "Prompt" => /[$%#>] \z/n})
+	localhost.login("username", "password"){|c| print c }
+	localhost.cmd("command"){|c| print c }
+	localhost.close
+
+
+=== CHECKS A POP SERVER TO SEE IF YOU HAVE MAIL
+
+	pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+	                        "Port" => 110,
+	                        "Telnetmode" => false,
+	                        "Prompt" => /^\+OK/n})
+	pop.cmd("user " + "your_username_here"){|c| print c}
+	pop.cmd("pass " + "your_password_here"){|c| print c}
+	pop.cmd("list"){|c| print c}
+
+
+== HISTORY
+
+=== Version 1.30
+
+2000/04/03 18:27:02
+
+- telnet.rb --> net/telnet.rb
+
+=== Version 1.20
+
+2000/01/24 17:02:57
+
+- respond to "IAC WILL x" with "IAC DONT x"
+- respond to "IAC WONT x" with "IAC DONT x"
+- better dumplog format
+  thanks to WATANABE Hirofumi <Hirofumi.Watanabe@@jp.sony.com>
+
+=== Version 1.10
+
+2000/01/18 17:47:31
+
+- bug fix: write method
+- respond to "IAC WILL BINARY" with "IAC DO BINARY"
+
+=== Version 1.00
+
+1999/10/04 22:51:26
+
+- bug fix: waitfor(preprocess) method
+  thanks to Shin-ichiro Hara <sinara@@blade.nagaokaut.ac.jp>
+- add simple support for AO, DM, IP, NOP, SB, SE
+- COUTION! TimeOut --> TimeoutError
+
+=== Version 0.50
+
+1999/09/21 21:24:07
+
+- add write method
+
+=== Version 0.40
+
+1999/09/17 17:41:41
+
+- bug fix: preprocess method
+
+=== Version 0.30
+
+1999/09/14 23:09:05
+
+- change prompt check order.
+	not IO::select([@@sock], nil, nil, waittime) and prompt === line
+	--> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+
+=== Version 0.24
+
+1999/09/13 22:28:33
+
+- Telnet#login
+if ommit password, then not require password prompt.
+
+=== Version 0.232
+
+1999/08/10 05:20:21
+
+- STATUS OUTPUT sample code typo. thanks to Tadayoshi Funaba <tadf@@kt.rim.or.jp>
+	host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+	--> host = Telnet.new({"Host" => "localhost"){|c| print c }
+
+=== Version 0.231
+
+1999/07/16 13:39:42
+
+- TRUE --> true, FALSE --> false
+
+=== Version 0.23
+
+1999/07/15 22:32:09
+
+- waitfor: if end of file reached, then return nil.
+
+=== Version 0.22
+
+1999/06/29 09:08:51
+
+- new, waitfor, cmd: {"Timeout" => false}  # ignore timeout
+
+=== Version 0.21
+
+1999/06/28 18:18:55
+
+- waitfor: not rescue (EOFError)
+
+=== Version 0.20
+
+1999/06/04 06:24:58
+
+- waitfor: support for divided telnet command
+
+=== Version 0.181
+
+1999/05/22
+
+- bug fix: print method
+
+=== Version 0.18
+
+1999/05/14
+
+- respond to "IAC WON'T SGA" with "IAC DON'T SGA"
+- DON'T SGA : end of line --> CR + LF
+- bug fix: preprocess method
+
+=== Version 0.17
+
+1999/04/30
+
+- bug fix: $! + "\n"  -->  $!.to_s + "\n"
+
+=== Version 0.163
+
+1999/04/11
+
+- STDOUT.write(message) --> yield(message) if iterator?
+
+=== Version 0.162
+
+1999/03/17
+
+- add "Proxy" option
+- required timeout.rb
+
+=== Version 0.161
+
+1999/02/03
+
+- select --> IO::select
+
+=== Version 0.16
+
+1998/10/09
+
+- preprocess method change for the better
+- add binmode method.
+- change default Binmode. TRUE --> FALSE
+
+=== Version 0.15
+
+1998/10/04
+
+- add telnetmode method.
+
+=== Version 0.141
+
+1998/09/22
+
+- change default prompt. /[$%#>] $/ --> /[$%#>] \Z/
+
+=== Version 0.14
+
+1998/09/01
+
+- IAC WILL SGA             send EOL --> CR+NULL
+- IAC WILL SGA IAC DO BIN  send EOL --> CR
+- NONE                     send EOL --> LF
+- add Dump_log option.
+
+=== Version 0.13
+
+1998/08/25
+
+- add print method.
+
+=== Version 0.122
+
+1998/08/05
+
+- support for HP-UX 10.20    thanks to WATANABE Tetsuya <tetsu@@jpn.hp.com>
+- socket.<< --> socket.write
+
+=== Version 0.121
+
+1998/07/15
+
+- string.+= --> string.concat
+
+=== Version 0.12
+
+1998/06/01
+
+- add timeout, waittime.
+
+=== Version 0.11
+
+1998/04/21
+
+- add realtime output.
+
+=== Version 0.10
+
+1998/04/13
+
+- first release.
+
+=end
+
+require "socket"
+require "delegate"
+require "timeout"
+
+module Net
+  class Telnet < SimpleDelegator
+
+    IAC   = 255.chr # "\377" # "\xff" # interpret as command:
+    DONT  = 254.chr # "\376" # "\xfe" # you are not to use option
+    DO    = 253.chr # "\375" # "\xfd" # please, you use option
+    WONT  = 252.chr # "\374" # "\xfc" # I won't use option
+    WILL  = 251.chr # "\373" # "\xfb" # I will use option
+    SB    = 250.chr # "\372" # "\xfa" # interpret as subnegotiation
+    GA    = 249.chr # "\371" # "\xf9" # you may reverse the line
+    EL    = 248.chr # "\370" # "\xf8" # erase the current line
+    EC    = 247.chr # "\367" # "\xf7" # erase the current character
+    AYT   = 246.chr # "\366" # "\xf6" # are you there
+    AO    = 245.chr # "\365" # "\xf5" # abort output--but let prog finish
+    IP    = 244.chr # "\364" # "\xf4" # interrupt process--permanently
+    BREAK = 243.chr # "\363" # "\xf3" # break
+    DM    = 242.chr # "\362" # "\xf2" # data mark--for connect. cleaning
+    NOP   = 241.chr # "\361" # "\xf1" # nop
+    SE    = 240.chr # "\360" # "\xf0" # end sub negotiation
+    EOR   = 239.chr # "\357" # "\xef" # end of record (transparent mode)
+    ABORT = 238.chr # "\356" # "\xee" # Abort process
+    SUSP  = 237.chr # "\355" # "\xed" # Suspend process
+    EOF   = 236.chr # "\354" # "\xec" # End of file
+    SYNCH = 242.chr # "\362" # "\xf2" # for telfunc calls
+
+    OPT_BINARY         =   0.chr # "\000" # "\x00" # Binary Transmission
+    OPT_ECHO           =   1.chr # "\001" # "\x01" # Echo
+    OPT_RCP            =   2.chr # "\002" # "\x02" # Reconnection
+    OPT_SGA            =   3.chr # "\003" # "\x03" # Suppress Go Ahead
+    OPT_NAMS           =   4.chr # "\004" # "\x04" # Approx Message Size Negotiation
+    OPT_STATUS         =   5.chr # "\005" # "\x05" # Status
+    OPT_TM             =   6.chr # "\006" # "\x06" # Timing Mark
+    OPT_RCTE           =   7.chr # "\a"   # "\x07" # Remote Controlled Trans and Echo
+    OPT_NAOL           =   8.chr # "\010" # "\x08" # Output Line Width
+    OPT_NAOP           =   9.chr # "\t"   # "\x09" # Output Page Size
+    OPT_NAOCRD         =  10.chr # "\n"   # "\x0a" # Output Carriage-Return Disposition
+    OPT_NAOHTS         =  11.chr # "\v"   # "\x0b" # Output Horizontal Tab Stops
+    OPT_NAOHTD         =  12.chr # "\f"   # "\x0c" # Output Horizontal Tab Disposition
+    OPT_NAOFFD         =  13.chr # "\r"   # "\x0d" # Output Formfeed Disposition
+    OPT_NAOVTS         =  14.chr # "\016" # "\x0e" # Output Vertical Tabstops
+    OPT_NAOVTD         =  15.chr # "\017" # "\x0f" # Output Vertical Tab Disposition
+    OPT_NAOLFD         =  16.chr # "\020" # "\x10" # Output Linefeed Disposition
+    OPT_XASCII         =  17.chr # "\021" # "\x11" # Extended ASCII
+    OPT_LOGOUT         =  18.chr # "\022" # "\x12" # Logout
+    OPT_BM             =  19.chr # "\023" # "\x13" # Byte Macro
+    OPT_DET            =  20.chr # "\024" # "\x14" # Data Entry Terminal
+    OPT_SUPDUP         =  21.chr # "\025" # "\x15" # SUPDUP
+    OPT_SUPDUPOUTPUT   =  22.chr # "\026" # "\x16" # SUPDUP Output
+    OPT_SNDLOC         =  23.chr # "\027" # "\x17" # Send Location
+    OPT_TTYPE          =  24.chr # "\030" # "\x18" # Terminal Type
+    OPT_EOR            =  25.chr # "\031" # "\x19" # End of Record
+    OPT_TUID           =  26.chr # "\032" # "\x1a" # TACACS User Identification
+    OPT_OUTMRK         =  27.chr # "\e"   # "\x1b" # Output Marking
+    OPT_TTYLOC         =  28.chr # "\034" # "\x1c" # Terminal Location Number
+    OPT_3270REGIME     =  29.chr # "\035" # "\x1d" # Telnet 3270 Regime
+    OPT_X3PAD          =  30.chr # "\036" # "\x1e" # X.3 PAD
+    OPT_NAWS           =  31.chr # "\037" # "\x1f" # Negotiate About Window Size
+    OPT_TSPEED         =  32.chr # " "    # "\x20" # Terminal Speed
+    OPT_LFLOW          =  33.chr # "!"    # "\x21" # Remote Flow Control
+    OPT_LINEMODE       =  34.chr # "\""   # "\x22" # Linemode
+    OPT_XDISPLOC       =  35.chr # "#"    # "\x23" # X Display Location
+    OPT_OLD_ENVIRON    =  36.chr # "$"    # "\x24" # Environment Option
+    OPT_AUTHENTICATION =  37.chr # "%"    # "\x25" # Authentication Option
+    OPT_ENCRYPT        =  38.chr # "&"    # "\x26" # Encryption Option
+    OPT_NEW_ENVIRON    =  39.chr # "'"    # "\x27" # New Environment Option
+    OPT_EXOPL          = 255.chr # "\377" # "\xff" # Extended-Options-List
+
+    NULL = "\000"
+    CR   = "\015"
+    LF   = "\012"
+    EOL  = CR + LF
+  v = $-v
+  $-v = false
+    VERSION = "1.30"
+    RELEASE_DATE = "$Date: 2000/04/03 18:27:02 $"
+  $-v = v
+
+    def initialize(options)
+      @@options = options
+      @@options["Binmode"]    = false         unless @@options.has_key?("Binmode")
+      @@options["Host"]       = "localhost"   unless @@options.has_key?("Host")
+      @@options["Port"]       = 23            unless @@options.has_key?("Port")
+      @@options["Prompt"]     = /[$%#>] \z/n  unless @@options.has_key?("Prompt")
+      @@options["Telnetmode"] = true          unless @@options.has_key?("Telnetmode")
+      @@options["Timeout"]    = 10            unless @@options.has_key?("Timeout")
+      @@options["Waittime"]   = 0             unless @@options.has_key?("Waittime")
+
+      @@telnet_option = { "SGA" => false, "BINARY" => false }
+
+      if @@options.has_key?("Output_log")
+        @@log = File.open(@@options["Output_log"], 'a+')
+        @@log.sync = true
+        @@log.binmode
+      end
+
+      if @@options.has_key?("Dump_log")
+        @@dumplog = File.open(@@options["Dump_log"], 'a+')
+        @@dumplog.sync = true
+        @@dumplog.binmode
+        def @@dumplog.log_dump(dir, x)
+          len = x.length
+          addr = 0
+          offset = 0
+          while 0 < len
+            if len < 16
+              line = x[offset, len]
+            else
+              line = x[offset, 16]
+            end
+            hexvals = line.unpack('H*')[0]
+            hexvals.concat ' ' * (32 - hexvals.length)
+            hexvals = format "%s %s %s %s  " * 4, *hexvals.unpack('a2' * 16)
+            line.gsub! /[\000-\037\177-\377]/n, '.'
+            printf "%s 0x%5.5x: %s%s\n", dir, addr, hexvals, line
+            addr += 16
+            offset += 16
+            len -= 16
+          end
+          print "\n"
+        end
+      end
+
+      if @@options.has_key?("Proxy")
+        if @@options["Proxy"].kind_of?(Telnet)
+          @@sock = @@options["Proxy"].sock
+        elsif @@options["Proxy"].kind_of?(TCPsocket)
+          @@sock = @@options["Proxy"]
+        else
+          raise "Error; Proxy is Telnet or TCPSocket object."
+        end
+      else
+        message = "Trying " + @@options["Host"] + "...\n"
+        yield(message) if iterator?
+        @@log.write(message) if @@options.has_key?("Output_log")
+        @@dumplog.log_dump('#', message) if @@options.has_key?("Dump_log")
+
+        begin
+          if @@options["Timeout"] == false
+            @@sock = TCPsocket.open(@@options["Host"], @@options["Port"])
+          else
+            timeout(@@options["Timeout"]){
+              @@sock = TCPsocket.open(@@options["Host"], @@options["Port"])
+            }
+          end
+        rescue TimeoutError
+          raise TimeoutError, "timed-out; opening of the host"
+        rescue
+          @@log.write($!.to_s + "\n") if @@options.has_key?("Output_log")
+          @@dumplog.log_dump('#', $!.to_s + "\n") if @@options.has_key?("Dump_log")
+          raise
+        end
+        @@sock.sync = true
+        @@sock.binmode
+
+        message = "Connected to " + @@options["Host"] + ".\n"
+        yield(message) if iterator?
+        @@log.write(message) if @@options.has_key?("Output_log")
+        @@dumplog.log_dump('#', message) if @@options.has_key?("Dump_log")
+      end
+
+      super(@@sock)
+    end # initialize
+
+    attr :sock
+
+    def telnetmode(mode = 'turn')
+      if 'turn' == mode
+        @@options["Telnetmode"] = @@options["Telnetmode"] ? false : true
+      else
+        @@options["Telnetmode"] = mode ? true : false
+      end
+    end
+
+    def binmode(mode = 'turn')
+      if 'turn' == mode
+        @@options["Binmode"] = @@options["Binmode"] ? false : true
+      else
+        @@options["Binmode"] = mode ? true : false
+      end
+    end
+
+    def preprocess(string)
+      str = string.dup
+
+      # combine CR+NULL into CR
+      str.gsub!(/#{CR}#{NULL}/no, CR) if @@options["Telnetmode"]
+
+      # combine EOL into "\n"
+      str.gsub!(/#{EOL}/no, "\n") unless @@options["Binmode"]
+
+      str.gsub!(/#{IAC}(
+                   [#{IAC}#{AO}#{AYT}#{DM}#{IP}#{NOP}]|
+                   [#{DO}#{DONT}#{WILL}#{WONT}]
+                     [#{OPT_BINARY}-#{OPT_NEW_ENVIRON}#{OPT_EXOPL}]|
+                   #{SB}[^#{IAC}]*#{IAC}#{SE}
+                 )/xno){
+        if    IAC == $1         # handle escaped IAC characters
+          IAC
+        elsif AYT == $1         # respond to "IAC AYT" (are you there)
+          self.write("nobody here but us pigeons" + EOL)
+          ''
+        elsif DO[0] == $1[0]    # respond to "IAC DO x"
+          if OPT_BINARY[0] == $1[1]
+            @@telnet_option["BINARY"] = true
+            self.write(IAC + WILL + OPT_BINARY)
+          else
+            self.write(IAC + WONT + $1[1..1])
+          end
+          ''
+        elsif DONT[0] == $1[0]  # respond to "IAC DON'T x" with "IAC WON'T x"
+          self.write(IAC + WONT + $1[1..1])
+          ''
+        elsif WILL[0] == $1[0]  # respond to "IAC WILL x"
+          if    OPT_BINARY[0] == $1[1]
+            self.write(IAC + DO + OPT_BINARY)
+          elsif OPT_ECHO[0] == $1[1]
+            self.write(IAC + DO + OPT_ECHO)
+          elsif OPT_SGA[0]  == $1[1]
+            @@telnet_option["SGA"] = true
+            self.write(IAC + DO + OPT_SGA)
+          else
+            self.write(IAC + DONT + $1[1..1])
+          end
+          ''
+        elsif WONT[0] == $1[0]  # respond to "IAC WON'T x"
+          if    OPT_ECHO[0] == $1[1]
+            self.write(IAC + DONT + OPT_ECHO)
+          elsif OPT_SGA[0]  == $1[1]
+            @@telnet_option["SGA"] = false
+            self.write(IAC + DONT + OPT_SGA)
+          else
+            self.write(IAC + DONT + $1[1..1])
+          end
+          ''
+        else
+          ''
+        end
+      }
+
+      str
+    end # preprocess
+
+    def waitfor(options)
+      time_out = @@options["Timeout"]
+      waittime = @@options["Waittime"]
+
+      if options.kind_of?(Hash)
+        prompt   = if options.has_key?("Match")
+                     options["Match"]
+                   elsif options.has_key?("Prompt")
+                     options["Prompt"]
+                   elsif options.has_key?("String")
+                     Regexp.new( Regexp.quote(options["String"]) )
+                   end
+        time_out = options["Timeout"]  if options.has_key?("Timeout")
+        waittime = options["Waittime"] if options.has_key?("Waittime")
+      else
+        prompt = options
+      end
+
+      if time_out == false
+        time_out = nil
+      end
+
+      line = ''
+      buf = ''
+      rest = ''
+      until(prompt === line and not IO::select([@@sock], nil, nil, waittime))
+        unless IO::select([@@sock], nil, nil, time_out)
+          raise TimeoutError, "timed-out; wait for the next data"
+        end
+        begin
+          c = @@sock.sysread(1024 * 1024)
+          @@dumplog.log_dump('<', c) if @@options.has_key?("Dump_log")
+          if @@options["Telnetmode"]
+            if Integer(c.rindex(/#{IAC}#{SE}/no)) <
+               Integer(c.rindex(/#{IAC}#{SB}/no))
+              buf = preprocess(rest + c[0 ... c.rindex(/#{IAC}#{SB}/no)])
+              rest = c[c.rindex(/#{IAC}#{SB}/no) .. -1]
+            elsif pt = c.rindex(/#{IAC}[^#{IAC}#{AO}#{AYT}#{DM}#{IP}#{NOP}]?\z/no)
+              buf = preprocess(rest + c[0 ... pt])
+              rest = c[pt .. -1]
+            else
+              buf = preprocess(c)
+              rest = ''
+            end
+          end
+          @@log.print(buf) if @@options.has_key?("Output_log")
+          line.concat(buf)
+          yield buf if iterator?
+        rescue EOFError # End of file reached
+          if line == ''
+            line = nil
+            yield nil if iterator?
+          end
+          break
+        end
+      end
+      line
+    end
+
+    def write(string)
+      length = string.length
+      while 0 < length
+        IO::select(nil, [@@sock])
+        @@dumplog.log_dump('>', string[-length..-1]) if @@options.has_key?("Dump_log")
+        length -= @@sock.syswrite(string[-length..-1])
+      end
+    end
+
+    def print(string)
+      str = string.dup + "\n"
+
+      str.gsub!(/#{IAC}/no, IAC + IAC) if @@options["Telnetmode"]
+
+      unless @@options["Binmode"]
+        if @@telnet_option["BINARY"] and @@telnet_option["SGA"]
+          # IAC WILL SGA IAC DO BIN send EOL --> CR
+          str.gsub!(/\n/n, CR)
+        elsif @@telnet_option["SGA"]
+          # IAC WILL SGA send EOL --> CR+NULL
+          str.gsub!(/\n/n, CR + NULL)
+        else
+          # NONE send EOL --> CR+LF
+          str.gsub!(/\n/n, EOL)
+        end
+      end
+
+      self.write(str)
+    end
+
+    def cmd(options)
+      match    = @@options["Prompt"]
+      time_out = @@options["Timeout"]
+
+      if options.kind_of?(Hash)
+        string   = options["String"]
+        match    = options["Match"]   if options.has_key?("Match")
+        time_out = options["Timeout"] if options.has_key?("Timeout")
+      else
+        string = options
+      end
+
+      self.print(string)
+      if iterator?
+        waitfor({"Prompt" => match, "Timeout" => time_out}){|c| yield c }
+      else
+        waitfor({"Prompt" => match, "Timeout" => time_out})
+      end
+    end
+
+    def login(options, password = nil)
+      if options.kind_of?(Hash)
+        username = options["Name"]
+        password = options["Password"]
+      else
+        username = options
+      end
+
+      if iterator?
+        line = waitfor(/login[: ]*\z/n){|c| yield c }
+        if password
+          line.concat( cmd({"String" => username,
+                            "Match" => /Password[: ]*\z/n}){|c| yield c } )
+          line.concat( cmd(password){|c| yield c } )
+        else
+          line.concat( cmd(username){|c| yield c } )
+        end
+      else
+        line = waitfor(/login[: ]*\z/n)
+        if password
+          line.concat( cmd({"String" => username,
+                            "Match" => /Password[: ]*\z/n}) )
+          line.concat( cmd(password) )
+        else
+          line.concat( cmd(username) )
+        end
+      end
+      line
+    end
+
+  end
+end
+@
+
+
+1.1.2.2
+log
+@2000-05-09
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/02 21:48:39 $
+d8 1
+a8 1
+Version 1.31
+d27 1
+a27 1
+	                         # proxy is Net::Telnet or IO object
+a159 6
+=== Version 1.31
+
+2000/05/02 21:48:39
+
+- Proxy option: can receive IO object
+
+d440 2
+a441 2
+    VERSION = "1.31"
+    RELEASE_DATE = "$Date: 2000/05/02 21:48:39 $"
+d490 1
+a490 1
+        if @@options["Proxy"].kind_of?(Net::Telnet)
+d492 1
+a492 1
+        elsif @@options["Proxy"].kind_of?(IO)
+d495 1
+a495 1
+          raise "Error; Proxy is Net::Telnet or IO object."
+@
+
+
+1.1.2.3
+log
+@telnet.rb Version 1.32
+- require English.rb
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/09 22:02:56 $
+d8 1
+a8 1
+Version 1.32
+a159 6
+=== Version 1.32
+
+2000/05/09 22:02:56
+
+- require English.rb
+
+a371 1
+require "English"
+d446 2
+a447 2
+    VERSION = "1.32"
+    RELEASE_DATE = "$Date: 2000/05/09 22:02:56 $"
+d485 1
+a485 1
+            line = line.gsub(/[\000-\037\177-\377]/n, '.')
+d513 1
+a513 1
+            timeout(@@options["Timeout"]) do
+d515 1
+a515 1
+            end
+d520 2
+a521 2
+          @@log.write($ERROR_INFO.to_s + "\n") if @@options.has_key?("Output_log")
+          @@dumplog.log_dump('#', $ERROR_INFO.to_s + "\n") if @@options.has_key?("Dump_log")
+d555 2
+d558 1
+a558 1
+      string = string.gsub(/#{CR}#{NULL}/no, CR) if @@options["Telnetmode"]
+d561 1
+a561 1
+      string = string.gsub(/#{EOL}/no, "\n") unless @@options["Binmode"]
+d563 1
+a563 1
+      string.gsub(/#{IAC}(
+d568 1
+a568 1
+                 )/xno) do
+d610 3
+a612 1
+      end
+d684 3
+a686 2
+      string = string + "\n"
+      string = string.gsub(/#{IAC}/no, IAC + IAC) if @@options["Telnetmode"]
+d688 1
+a688 3
+      if @@options["Binmode"]
+        self.write(string)
+      else
+d691 1
+a691 1
+          self.write(string.gsub(/\n/n, CR))
+d694 1
+a694 1
+          self.write(string.gsub(/\n/n, CR + NULL))
+d697 1
+a697 1
+          self.write(string.gsub(/\n/n, EOL))
+d700 2
+@
+
+
+1.1.2.4
+log
+@Wed May 24 16:03:06 2000  Wakou Aoyama <wakou@@fsinet.or.jp>
+
+        * lib/cgi.rb bug fix: CGI::escape(), CGI::Cookie::new()
+        * lib/net/telnet.rb improve: binmode(), telnetmode() interface
+@
+text
+@d2 1
+a2 1
+$Date: 2000/05/24 06:58:57 $
+d8 1
+a8 1
+Version 1.40
+d94 1
+a94 1
+=== TOGGLE TELNET COMMAND INTERPRETATION
+d96 3
+a98 3
+	host.telnetmode          # return the current status (true or false)
+	host.telnetmode = true   # do telnet command interpretation (default)
+	host.telnetmode = false  # don't telnet command interpretation
+d103 3
+a105 3
+	host.binmode          # return the current status (true or false)
+	host.binmode = true   # no translate newline
+	host.binmode = false  # translate newline (default)
+a159 7
+=== Version 1.40
+
+2000/05/24 06:57:38
+
+- improve: binmode(), telnetmode() interface
+  thanks to Dave Thomas <Dave@@thomases.com>
+
+d453 2
+a454 2
+    VERSION = "1.40"
+    RELEASE_DATE = "$Date: 2000/05/24 06:58:57 $"
+d459 1
+d463 1
+a465 15
+      unless @@options.has_key?("Binmode")
+        @@options["Binmode"]    = false         
+      else
+        unless (true == @@options["Binmode"] or false == @@options["Binmode"])
+          raise ArgumentError, "Binmode option required true or false"
+        end
+      end
+
+      unless @@options.has_key?("Telnetmode")
+        @@options["Telnetmode"] = true          
+      else
+        unless (true == @@options["Telnetmode"] or false == @@options["Telnetmode"])
+          raise ArgumentError, "Telnetmode option required true or false"
+        end
+      end
+d545 3
+a547 27
+    def telnetmode(mode = nil)
+      if mode
+        if (true == mode or false == mode)
+          @@options["Telnetmode"] = mode
+        else
+          raise ArgumentError, "required true or false"
+        end
+      else
+        @@options["Telnetmode"]
+      end
+    end
+
+    def telnetmode=(mode)
+      if (true == mode or false == mode)
+        @@options["Telnetmode"] = mode
+      else
+        raise ArgumentError, "required true or false"
+      end
+    end
+
+    def binmode(mode = nil)
+      if mode
+        if (true == mode or false == mode)
+          @@options["Binmode"] = mode
+        else
+          raise ArgumentError, "required true or false"
+        end
+d549 1
+a549 1
+        @@options["Binmode"] 
+d553 3
+a555 3
+    def binmode=(mode)
+      if (true == mode or false == mode)
+        @@options["Binmode"] = mode
+d557 1
+a557 1
+        raise ArgumentError, "required true or false"
+@
+
+
+1.1.2.5
+log
+@expand tabs: lib/cgi.rb, lib/net/telnet.rb
+@
+text
+@d2 1
+a2 1
+$Date: 2000/06/17 17:50:56 $
+d15 14
+a28 14
+        host = Net::Telnet::new({
+                 "Binmode"    => false,        # default: false
+                 "Host"       => "localhost",  # default: "localhost"
+                 "Output_log" => "output_log", # default: nil (no output)
+                 "Dump_log"   => "dump_log",   # default: nil (no output)
+                 "Port"       => 23,           # default: 23
+                 "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+                 "Telnetmode" => true,         # default: true
+                 "Timeout"    => 10,           # default: 10
+                   # if ignore timeout then set "Timeout" to false.
+                 "Waittime"   => 0,            # default: 0
+                 "Proxy"      => proxy         # default: nil
+                                 # proxy is Net::Telnet or IO object
+               })
+d39 1
+a39 1
+        host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+d45 2
+a46 2
+        Trying localhost...
+        Connected to localhost.
+d51 5
+a55 5
+        line = host.waitfor(/match/)
+        line = host.waitfor({"Match"   => /match/,
+                             "String"  => "string",
+                             "Timeout" => secs})
+                               # if ignore timeout then set "Timeout" to false.
+d62 4
+a65 4
+        host.waitfor(/match/){|c| print c }
+        host.waitfor({"Match"   => /match/,
+                      "String"  => "string",
+                      "Timeout" => secs}){|c| print c}
+d72 4
+a75 4
+        line = host.cmd("string")
+        line = host.cmd({"String" => "string",
+                         "Prompt" => /[$%#>] \z/n,
+                         "Timeout" => 10})
+d80 4
+a83 4
+        host.cmd("string"){|c| print c }
+        host.cmd({"String" => "string",
+                  "Prompt" => /[$%#>] \z/n,
+                  "Timeout" => 10}){|c| print c }
+d90 2
+a91 2
+        host.print("string")
+          # == host.write("string\n")
+d96 3
+a98 3
+        host.telnetmode          # return the current status (true or false)
+        host.telnetmode = true   # do telnet command interpretation (default)
+        host.telnetmode = false  # don't telnet command interpretation
+d103 3
+a105 3
+        host.binmode          # return the current status (true or false)
+        host.binmode = true   # no translate newline
+        host.binmode = false  # translate newline (default)
+d110 5
+a114 5
+        host.login("username", "password")
+        host.login({"Name" => "username",
+                    "Password" => "password",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10})
+d118 4
+a121 4
+        host.login("username")
+        host.login({"Name" => "username",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10})
+d126 5
+a130 5
+        host.login("username", "password"){|c| print c }
+        host.login({"Name" => "username",
+                    "Password" => "password",
+                    "Prompt" => /[$%#>] \z/n,
+                    "Timeout" => 10}){|c| print c }
+d139 6
+a144 6
+        localhost = Net::Telnet::new({"Host" => "localhost",
+                                      "Timeout" => 10,
+                                      "Prompt" => /[$%#>] \z/n})
+        localhost.login("username", "password"){|c| print c }
+        localhost.cmd("command"){|c| print c }
+        localhost.close
+d149 7
+a155 7
+        pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+                                "Port" => 110,
+                                "Telnetmode" => false,
+                                "Prompt" => /^\+OK/n})
+        pop.cmd("user " + "your_username_here"){|c| print c}
+        pop.cmd("pass " + "your_password_here"){|c| print c}
+        pop.cmd("list"){|c| print c}
+d227 2
+a228 2
+        not IO::select([@@sock], nil, nil, waittime) and prompt === line
+        --> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+d242 2
+a243 2
+        host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+        --> host = Telnet.new({"Host" => "localhost"){|c| print c }
+d461 1
+a461 1
+    RELEASE_DATE = "$Date: 2000/06/17 17:50:56 $"
+@
+
+
+1.1.2.6
+log
+@Tue Jun 20 06:14:43 2000  Wakou Aoyama <wakou@@fsinet.or.jp>
+
+        * lib/cgi.rb: change: version syntax. old: x.yz, now: x.y.z
+
+        * lib/net/telnet.rb: ditto.
+@
+text
+@d2 1
+d8 1
+a8 1
+Version 1.5.0
+d15 14
+a28 14
+  host = Net::Telnet::new({
+           "Binmode"    => false,        # default: false
+           "Host"       => "localhost",  # default: "localhost"
+           "Output_log" => "output_log", # default: nil (no output)
+           "Dump_log"   => "dump_log",   # default: nil (no output)
+           "Port"       => 23,           # default: 23
+           "Prompt"     => /[$%#>] \z/n, # default: /[$%#>] \z/n
+           "Telnetmode" => true,         # default: true
+           "Timeout"    => 10,           # default: 10
+             # if ignore timeout then set "Timeout" to false.
+           "Waittime"   => 0,            # default: 0
+           "Proxy"      => proxy         # default: nil
+                           # proxy is Net::Telnet or IO object
+         })
+a36 1
+
+d39 1
+a39 1
+  host = Net::Telnet::new({"Host" => "localhost"}){|c| print c }
+d43 1
+a43 1
+example:
+d45 2
+a46 2
+  Trying localhost...
+  Connected to localhost.
+d51 5
+a55 5
+  line = host.waitfor(/match/)
+  line = host.waitfor({"Match"   => /match/,
+                       "String"  => "string",
+                       "Timeout" => secs})
+                         # if ignore timeout then set "Timeout" to false.
+d62 4
+a65 4
+  host.waitfor(/match/){|c| print c }
+  host.waitfor({"Match"   => /match/,
+                "String"  => "string",
+                "Timeout" => secs}){|c| print c}
+d72 4
+a75 4
+  line = host.cmd("string")
+  line = host.cmd({"String" => "string",
+                   "Prompt" => /[$%#>] \z/n,
+                   "Timeout" => 10})
+d80 4
+a83 4
+  host.cmd("string"){|c| print c }
+  host.cmd({"String" => "string",
+            "Prompt" => /[$%#>] \z/n,
+            "Timeout" => 10}){|c| print c }
+d90 2
+a91 2
+  host.print("string")
+    # == host.write("string\n")
+d96 3
+a98 3
+  host.telnetmode          # return the current status (true or false)
+  host.telnetmode = true   # do telnet command interpretation (default)
+  host.telnetmode = false  # don't telnet command interpretation
+d103 3
+a105 3
+  host.binmode          # return the current status (true or false)
+  host.binmode = true   # no translate newline
+  host.binmode = false  # translate newline (default)
+d110 12
+a121 12
+  host.login("username", "password")
+  host.login({"Name" => "username",
+              "Password" => "password",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10})
+
+if no password prompt:
+
+  host.login("username")
+  host.login({"Name" => "username",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10})
+d126 5
+a130 5
+  host.login("username", "password"){|c| print c }
+  host.login({"Name" => "username",
+              "Password" => "password",
+              "Prompt" => /[$%#>] \z/n,
+              "Timeout" => 10}){|c| print c }
+a134 1
+
+d139 6
+a144 6
+  localhost = Net::Telnet::new({"Host" => "localhost",
+                                "Timeout" => 10,
+                                "Prompt" => /[$%#>] \z/n})
+  localhost.login("username", "password"){|c| print c }
+  localhost.cmd("command"){|c| print c }
+  localhost.close
+d149 125
+a273 7
+  pop = Net::Telnet::new({"Host" => "your_destination_host_here",
+                          "Port" => 110,
+                          "Telnetmode" => false,
+                          "Prompt" => /^\+OK/n})
+  pop.cmd("user " + "your_username_here"){|c| print c}
+  pop.cmd("pass " + "your_password_here"){|c| print c}
+  pop.cmd("list"){|c| print c}
+d275 104
+a381 1
+
+d458 5
+a462 4
+    VERSION = "1.5.0"
+    RELEASE_DATE = "2000-06-19"
+    VERSION_CODE = 150
+    RELEASE_CODE = 20000619
+a801 167
+
+
+=begin
+
+== HISTORY
+
+* Sun Jun 18 23:31:44 JST 2000 - wakou
+  * version 1.5.0
+  * change: version syntax. old: x.yz, now: x.y.z
+
+* 2000/05/24 06:57:38 - wakou
+  * version 1.40
+  * improve: binmode(), telnetmode() interface.
+    thanks to Dave Thomas <Dave@@thomases.com>
+
+* 2000/05/09 22:02:56 - wakou
+  * version 1.32
+  * require English.rb
+
+* 2000/05/02 21:48:39 - wakou
+  * version 1.31
+  * Proxy option: can receive IO object.
+
+* 2000/04/03 18:27:02 - wakou
+  * version 1.30
+  * telnet.rb --> net/telnet.rb
+
+* 2000/01/24 17:02:57 - wakou
+  * version 1.20
+  * respond to "IAC WILL x" with "IAC DONT x"
+  * respond to "IAC WONT x" with "IAC DONT x"
+  * better dumplog format.
+    thanks to WATANABE Hirofumi <Hirofumi.Watanabe@@jp.sony.com>
+
+* 2000/01/18 17:47:31 - wakou
+  * version 1.10
+  * bug fix: write method
+  * respond to "IAC WILL BINARY" with "IAC DO BINARY"
+
+* 1999/10/04 22:51:26 - wakou
+  * version 1.00
+  * bug fix: waitfor(preprocess) method.
+    thanks to Shin-ichiro Hara <sinara@@blade.nagaokaut.ac.jp>
+  * add simple support for AO, DM, IP, NOP, SB, SE
+  * COUTION! TimeOut --> TimeoutError
+
+* 1999/09/21 21:24:07 - wakou
+  * version 0.50
+  * add write method
+
+* 1999/09/17 17:41:41 - wakou
+  * version 0.40
+  * bug fix: preprocess method
+
+* 1999/09/14 23:09:05 - wakou
+  * version 0.30
+  * change prompt check order.
+      not IO::select([@@sock], nil, nil, waittime) and prompt === line
+      --> prompt === line and not IO::select([@@sock], nil, nil, waittime)
+
+* 1999/09/13 22:28:33 - wakou
+  * version 0.24
+  * Telnet#login: if ommit password, then not require password prompt.
+
+* 1999/08/10 05:20:21 - wakou
+  * version 0.232
+  * STATUS OUTPUT sample code typo.
+    thanks to Tadayoshi Funaba <tadf@@kt.rim.or.jp>
+      host = Telnet.new({"Hosh" => "localhost"){|c| print c }
+      --> host = Telnet.new({"Host" => "localhost"){|c| print c }
+
+* 1999/07/16 13:39:42 - wakou
+  * version 0.231
+  * TRUE --> true, FALSE --> false
+
+* 1999/07/15 22:32:09 - wakou
+  * version 0.23
+  * waitfor: if end of file reached, then return nil.
+
+* 1999/06/29 09:08:51 - wakou
+  * version 0.22
+  * new, waitfor, cmd: {"Timeout" => false}  # ignore timeout
+
+* 1999/06/28 18:18:55 - wakou
+  * version 0.21
+  * waitfor: not rescue (EOFError)
+
+* 1999/06/04 06:24:58 - wakou
+  * version 0.20
+  * waitfor: support for divided telnet command
+
+* 1999/05/22 - wakou
+  * version 0.181
+  * bug fix: print method
+
+* 1999/05/14 - wakou
+  * version 0.18
+  * respond to "IAC WON'T SGA" with "IAC DON'T SGA"
+  * DON'T SGA : end of line --> CR + LF
+  * bug fix: preprocess method
+
+* 1999/04/30 - wakou
+  * version 0.17
+  * bug fix: $! + "\n"  -->  $!.to_s + "\n"
+
+* 1999/04/11 - wakou
+  * version 0.163
+  * STDOUT.write(message) --> yield(message) if iterator?
+
+* 1999/03/17 - wakou
+  * version 0.162
+  * add "Proxy" option
+  * required timeout.rb
+
+* 1999/02/03 - wakou
+  * version 0.161
+  * select --> IO::select
+
+* 1998/10/09 - wakou
+  * version 0.16
+  * preprocess method change for the better
+  * add binmode method.
+  * change default Binmode. TRUE --> FALSE
+
+* 1998/10/04 - wakou
+  * version 0.15
+  * add telnetmode method.
+
+* 1998/09/22 - wakou
+  * version 0.141
+  * change default prompt. /[$%#>] $/ --> /[$%#>] \Z/
+
+* 1998/09/01 - wakou
+  * version 0.14
+  * IAC WILL SGA             send EOL --> CR+NULL
+  * IAC WILL SGA IAC DO BIN  send EOL --> CR
+  * NONE                     send EOL --> LF
+  * add Dump_log option.
+
+* 1998/08/25 - wakou
+  * version 0.13
+  * add print method.
+
+* 1998/08/05 - wakou
+  * version 0.122
+  * support for HP-UX 10.20.
+    thanks to WATANABE Tetsuya <tetsu@@jpn.hp.com>
+  * socket.<< --> socket.write
+
+* 1998/07/15 - wakou
+  * version 0.121
+  * string.+= --> string.concat
+
+* 1998/06/01 - wakou
+  * version 0.12
+  * add timeout, waittime.
+
+* 1998/04/21 - wakou
+  * version 0.11
+  * add realtime output.
+
+* 1998/04/13 - wakou
+  * version 0.10
+  * first release.
+
+$Date: 2000/06/18 14:32:27 $
+=end
+@
+
+
+1.1.2.7
+log
+@wakou
+@
+text
+@d3 1
+a3 1
+== NAME
+d5 1
+a5 1
+net/telnet.rb - simple telnet client library
+d7 1
+a7 1
+Version 1.6.0
+d74 1
+a74 1
+                   "Match" => /[$%#>] \z/n,
+d82 1
+a82 1
+            "Match" => /[$%#>] \z/n,
+d91 1
+a91 11
+  host.puts("string")
+
+Telnet#puts() adds "\n" to the last of "string".
+
+WARNING: Telnet#print() NOT adds "\n" to the last of "string", in the future.
+
+If "Telnetmode" option is true, then escape IAC code ("\xFF"). If
+"Binmode" option is false, then convert "\n" to EOL(end of line) code.
+
+If "WILL SGA" and "DO BIN", then EOL is CR. If "WILL SGA", then EOL is
+CR + NULL. If the other cases, EOL is CR + LF.
+d112 3
+a114 1
+              "Password" => "password"})
+d119 3
+a121 1
+  host.login({"Name" => "username"})
+d128 3
+a130 1
+              "Password" => "password"}){|c| print c }
+d238 4
+a241 4
+    VERSION = "1.6.0"
+    RELEASE_DATE = "2000-09-12"
+    VERSION_CODE = 160
+    RELEASE_CODE = 20000912
+a509 4
+      if $VERBOSE
+        $stderr.puts 'WARNING: Telnet#print("string") NOT adds "\n" to the last of "string", in the future.'
+        $stderr.puts '         cf. Telnet#puts().'
+      end
+a528 4
+    def puts(string)
+      self.print(string)
+    end
+
+a586 6
+* Tue Sep 12 06:52:48 JST 2000 - wakou
+  * version 1.6.0
+  * correct: document.
+    thanks to Kazuhiro NISHIYAMA <zn@@mbf.nifty.com>
+  * add: Telnet#puts().
+
+d746 1
+a746 1
+$Date: 2000/07/05 03:44:11 $
+@
+
+
+1.1.2.8
+log
+@wakou
+@
+text
+@d513 6
+a518 1
+    def _print(string)
+d538 1
+a538 9
+      self._print(string + "\n")
+    end
+
+    def print(string)
+      if $VERBOSE
+        $stderr.puts 'WARNING: Telnet#print("string") NOT adds "\n" to the last of "string", in the future.'
+        $stderr.puts '         cf. Telnet#puts().'
+      end
+      self.puts(string)
+d553 1
+a553 1
+      self.puts(string)
+@

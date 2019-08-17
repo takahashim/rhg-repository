@@ -1,0 +1,129 @@
+head	1.2;
+access;
+symbols
+	v1_6_3:1.2
+	ruby_1_6:1.2.0.2
+	v1_2_6repack:1.1.1.1.2.2
+	v1_2_6:1.1.1.1.2.2
+	v1_1d1:1.1.1.1.2.1.2.1
+	v1_1d0:1.1.1.1.2.1.2.1
+	v1_1c6:1.1.1.1.2.2
+	gtk_012:1.1.1.1.2.1
+	v1_1d-start:1.1.1.1.2.1
+	v1_1dev:1.1.1.1.2.1.0.2
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.47;	author matz;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.15;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	98.01.20.06.46.09;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1.2.1;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.10.06.02.47.49;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1.2.1
+date	98.10.06.03.28.18;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@MANIFEST
+extconf.rb
+gtk.c
+test.rb
+test.xpm
+test0.rb
+test1.rb
+test2.rb
+test3.rb
+test4.rb
+test5.rb
+test6.rb
+test7.rb
+test8.rb
+test9.rb
+testa.rb
+testb.rb
+testc.rb
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a18 1
+testd.rb
+@
+
+
+1.1.1.1.2.1.2.1
+log
+@join 1.1c6
+@
+text
+@a1 1
+ENVIRONMENT
+@
+
+
+1.1.1.1.2.2
+log
+@gtk-0.13
+@
+text
+@a1 1
+ENVIRONMENT
+@
+

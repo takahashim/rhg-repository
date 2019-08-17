@@ -1,0 +1,322 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.52;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@#! /usr/local/bin/ruby
+require "tk"
+
+root = TkFrame.new
+top = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+msg = TkMessage.new(top) {
+  text "File main.c hasn't been saved to disk since \
+it was last modified.  What should I do?" 
+  justify 'center'
+  aspect 200
+  font '-Adobe-helvetica-medium-r-normal--*-240*'
+  pack('padx'=>5, 'pady'=>5, 'expand'=>'yes')
+}
+top.pack('fill'=>'both')
+root.pack
+
+bot = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+
+TkFrame.new(bot) { |left|
+  relief 'sunken'
+  border 1
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10, 'pady'=> 10)
+  TkButton.new(left) {
+    text "Save File"
+    command "quit 'save'"
+    pack('expand'=>'yes','padx'=>6,'pady'=> 6)
+    top.bind "Enter", proc{state 'active'}
+    msg.bind "Enter", proc{state 'active'}
+    bot.bind "Enter", proc{state 'active'}
+    top.bind "Leave", proc{state 'normal'}
+    msg.bind "Leave", proc{state 'normal'}
+    bot.bind "Leave", proc{state 'normal'}
+    Tk.root.bind "ButtonRelease-1", proc{quit 'save'}
+    Tk.root.bind "Return", proc{quit 'save'}
+  }
+}
+TkButton.new(bot) {
+  text "Quit Anyway"
+  command "quit 'quit'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+TkButton.new(bot) {
+  text "Return To Editor"
+  command "quit 'return'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+bot.pack
+root.pack('side'=>'top', 'fill'=>'both', 'expand'=>'yes')
+
+def quit(button)
+  print "aaa\n"
+  print "You pressed the \"#{button}\" button;  bye-bye!\n"
+  exit
+end
+
+Tk.mainloop
+@
+
+
+1.1
+log
+@file tkdialog.rb was initially added on branch v1_1r.
+@
+text
+@d1 62
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 62
+#! /usr/local/bin/ruby
+require "tk"
+
+root = TkFrame.new
+top = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+msg = TkMessage.new(top) {
+  text "File main.c hasn't been saved to disk since \
+it was last modified.  What should I do?" 
+  justify 'center'
+  aspect 200
+  font '-Adobe-helvetica-medium-r-normal--*-240*'
+  pack('padx'=>5, 'pady'=>5, 'expand'=>'yes')
+}
+top.pack('fill'=>'both')
+root.pack
+
+bot = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+
+TkFrame.new(bot) { |left|
+  relief 'sunken'
+  border 1
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10, 'pady'=> 10)
+  TkButton.new(left) {
+    text "Save File"
+    command "quit 'save'"
+    pack('expand'=>'yes','padx'=>6,'pady'=> 6)
+    top.bind "Enter", proc{state 'active'}
+    msg.bind "Enter", proc{state 'active'}
+    bot.bind "Enter", proc{state 'active'}
+    top.bind "Leave", proc{state 'normal'}
+    msg.bind "Leave", proc{state 'normal'}
+    bot.bind "Leave", proc{state 'normal'}
+    Tk.root.bind "ButtonRelease-1", proc{quit 'save'}
+    Tk.root.bind "Return", proc{quit 'save'}
+  }
+}
+TkButton.new(bot) {
+  text "Quit Anyway"
+  command "quit 'quit'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+TkButton.new(bot) {
+  text "Return To Editor"
+  command "quit 'return'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+bot.pack
+root.pack('side'=>'top', 'fill'=>'both', 'expand'=>'yes')
+
+def quit(button)
+  print "aaa\n"
+  print "You pressed the \"#{button}\" button;  bye-bye!\n"
+  exit
+end
+
+Tk.mainloop
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 62
+#! /usr/local/bin/ruby
+require "tk"
+
+root = TkFrame.new
+top = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+msg = TkMessage.new(top) {
+  text "File main.c hasn't been saved to disk since \
+it was last modified.  What should I do?" 
+  justify 'center'
+  aspect 200
+  font '-Adobe-helvetica-medium-r-normal--*-240*'
+  pack('padx'=>5, 'pady'=>5, 'expand'=>'yes')
+}
+top.pack('fill'=>'both')
+root.pack
+
+bot = TkFrame.new(root) {
+  relief 'raised'
+  border 1
+}
+
+TkFrame.new(bot) { |left|
+  relief 'sunken'
+  border 1
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10, 'pady'=> 10)
+  TkButton.new(left) {
+    text "Save File"
+    command "quit 'save'"
+    pack('expand'=>'yes','padx'=>6,'pady'=> 6)
+    top.bind "Enter", proc{state 'active'}
+    msg.bind "Enter", proc{state 'active'}
+    bot.bind "Enter", proc{state 'active'}
+    top.bind "Leave", proc{state 'normal'}
+    msg.bind "Leave", proc{state 'normal'}
+    bot.bind "Leave", proc{state 'normal'}
+    Tk.root.bind "ButtonRelease-1", proc{quit 'save'}
+    Tk.root.bind "Return", proc{quit 'save'}
+  }
+}
+TkButton.new(bot) {
+  text "Quit Anyway"
+  command "quit 'quit'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+TkButton.new(bot) {
+  text "Return To Editor"
+  command "quit 'return'"
+  pack('side'=>'left', 'expand'=>'yes', 'padx'=>10)
+}
+bot.pack
+root.pack('side'=>'top', 'fill'=>'both', 'expand'=>'yes')
+
+def quit(button)
+  print "aaa\n"
+  print "You pressed the \"#{button}\" button;  bye-bye!\n"
+  exit
+end
+
+Tk.mainloop
+@
+

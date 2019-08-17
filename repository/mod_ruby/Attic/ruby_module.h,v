@@ -1,0 +1,105 @@
+head	1.2;
+access;
+symbols
+	start:1.1.1.1 NaCl:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	99.06.21.07.15.32;	author shugo;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@/*
+ * $Id: ruby_module.h,v 1.1 1999/04/20 08:41:05 shugo Exp $
+ * Copyright (C) 1998-1999  Network Applied Communication Laboratory, Inc.
+ *
+ * This file is part of mod_ruby.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA
+ */
+
+#ifndef RUBY_MODULE_H
+#define RUBY_MODULE_H
+
+#define MOD_RUBY_STRING_VERSION "mod_ruby/0.1.0"
+#define RUBY_GATEWAY_INTERFACE "CGI-Ruby/1.1"
+
+typedef struct {
+    array_header *required_files;
+    table *env;
+    int timeout;
+} ruby_server_config;
+
+typedef struct {
+    char *kcode;
+    table *env;
+} ruby_dir_config;
+
+extern MODULE_VAR_EXPORT module ruby_module;
+int ruby_running();
+int ruby_require(char*);
+
+#endif /* !RUBY_MODULE_H */
+
+/*
+ * Local variables:
+ * mode: C
+ * tab-width: 8
+ * End:
+ */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_module.h,v 1.1.1.1 1999/04/20 07:13:15 shugo Exp $
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

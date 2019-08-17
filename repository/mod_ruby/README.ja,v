@@ -1,0 +1,367 @@
+head	1.11;
+access;
+symbols
+	release_1_0_1:1.11
+	version_1_0-branch:1.11.0.2
+	root-of-version_1_0:1.11
+	release_1_0_0:1.11
+	release_0_9_9:1.10
+	release_0_9_8:1.10
+	release_0_9_7:1.9
+	release_0_9_6:1.9
+	release_0_9_5:1.9
+	autoconfiscation-branch:1.9.0.2
+	root-of-autoconfiscation:1.9
+	release_0_9_4:1.9
+	release_0_9_3:1.9
+	release_0_9_2:1.9
+	release_0_9_1:1.9
+	release_0_9_0:1.9
+	release_0_8_6:1.9
+	release_0_8_5:1.9
+	release_0_8_4:1.9
+	release_0_8_3:1.9
+	release_0_8_2:1.9
+	release_0_8_1:1.6
+	release_0_8_0:1.5
+	release_0_2_0:1.4
+	start:1.1.1.1
+	NaCl:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.11
+date	2002.08.20.03.59.53;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.03.05.05.57.35;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.04.10.18.09;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.04.03.07.20;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.05.18.07.18.38;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.04.27.04.51.59;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.10.16.09.27.57;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.07.15.06.06.09;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.06.21.07.23.03;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.05.20.05.36.14;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@* version 1.0.0 released.
+@
+text
+@=begin
+
+= mod_rubyのREADME
+
+== mod_rubyとは?
+
+mod_rubyはApacheウェブサーバにRubyインタプリタを組み込み、CGIスクリ
+プトをネイティブに起動できるようにします。スクリプトはmod_rubyを利
+用しない場合よりも高速に起動します。
+
+== 要求される環境
+
+* Ruby version 1.6.x 以降
+  (version 1.6.4 以降推奨)
+* Apache version 1.3.3 以降
+
+Apache 2.0を利用することもできますが、いくつかの制限があります。
+
+* mod_rubyをDSOモジュールとして構築する必要があります。
+  (configure.rbの実行時に、--with-apacheオプションの代りに--with-apxs
+  オプションを使用してください。)
+* mod_rubyはprefork MPMのみをサポートしています。threaded MPMを利用す
+  ることはできません。
+* Apache 2.0のAPIはApache 1.xのAPIとは異なるため、Apache 2.0用には実装
+  されていないメソッドがあります。(mod_ruby 1.1系列はApache 2.0のみを
+  サポートし、新しいAPIを提供する予定です。)
+
+== インストール
+
+(1) `./configure.rb'とタイプし、Makefileを作成してください。
+    (へルプメッセージを得るには`./configure.rb --help'とタイプしてください。)
+
+(2) `make'とタイプし、mod_rubyをコンパイルしてください。
+
+(3) `make install'とタイプし、ファイルをインストールしてください。
+
+(4) examples/httpd.confを参考にhttpd.confを編集してください。
+
+(5) Apacheを再起動してください。
+
+== 公式Webサイト
+
+((<URL:http://www.modruby.net/>))
+
+=end
+
+Local variables:
+mode: indented-text
+mode: auto-fill
+fill-column: 70
+End:
+@
+
+
+1.10
+log
+@* supports Apache 2.0.
+@
+text
+@d41 4
+@
+
+
+1.9
+log
+@* version 0.8.2 released.
+@
+text
+@d17 11
+@
+
+
+1.8
+log
+@* lib/auto-reload: new file.
+* lib/apache/ruby-run.rb: renamed from ruby/apache/ruby.rb.
+* lib/apache/eruby-run.rb: renamed from ruby/apache/eruby.rb.
+* lib/apache/rd2html.rb: renamed from ruby/apache/rd2html.rb.
+* lib/apache/eruby-run.rb (handler): specify filename for backtrace.
+* changed license from GPL to LGPL.
+* COPYING: new file.
+@
+text
+@d26 1
+a26 1
+(4) Apacheにmod_rubyをロードさせるため、`httpd.conf'を編集してください。
+d28 1
+a28 15
+      LoadModule ruby_module `apachelibexec'/mod_ruby.so
+
+(5) `srm.conf'を編集し、`ruby-script'ハンドラをセットしてください。
+
+      AddHandler ruby-script .rb
+
+    あるいは
+
+      Alias /ruby/ /usr/lib/cgi-bin/
+      <Location /ruby/>
+      SetHandler ruby-script
+      Options ExecCGI
+      </Location>
+
+(6) Apacheを再起動してください。
+@
+
+
+1.7
+log
+@* ruby/apache/eruby.rb: do not require "cgi/session".
+* configure.rb: new file.
+* Makefile.in: new file.
+@
+text
+@d8 2
+a9 2
+プトがネイティブに起動されることを許します。スクリプトはmod_rubyを利
+用しない場合よりも速く起動するでしょう。
+d24 1
+a24 2
+(3) `make install'とタイプし、mod_ruby.sooを`apachelibexec'にコピー
+    してください。
+@
+
+
+1.6
+log
+@* ruby/apache/ruby.rb (emulate_cgi): new method.
+* ruby/apache/eruby.rb: inherit Apache::Ruby.
+* table.c: new file for Apache::Table.
+* connection.c: new file for Apache::Connection.
+* server.c: new file for Apache::Server.
+* request.c: new file for Apache::Request.
+* request.c (request_setup_cgi_env): new method.
+* mod_ruby.c (script_handler): resotre original $stdin, $stdout
+and $>.
+@
+text
+@d1 1
+a1 1
+[mod_rubyのREADME]
+d3 1
+a3 2
+mod_rubyとは?
+=============
+d5 1
+a5 3
+  mod_rubyはApacheウェブサーバにRubyインタプリタを組み込み、CGIスクリ
+  プトがネイティブに起動されることを許します。スクリプトはmod_rubyを利
+  用しない場合よりも速く起動するでしょう。
+d7 3
+d11 1
+a11 2
+要求される環境
+==============
+d13 3
+a15 3
+  * Ruby version 1.6.x 以降
+    (version 1.6.4 以降推奨)
+  * Apache version 1.3.3 以降
+d17 1
+d19 2
+a20 2
+インストール
+============
+d22 1
+a22 1
+  1) `./Makefile.RB'とタイプし、Makefileを作成してください。
+d24 2
+a25 1
+  2) `make'とタイプし、mod_rubyをコンパイルしてください。
+d27 1
+a27 2
+  3) `make install'とタイプし、mod_ruby.sooを`apachelibexec'にコピー
+     してください。
+d29 1
+a29 1
+  4) Apacheにmod_rubyをロードさせるため、`httpd.conf'を編集してください。
+d31 1
+a31 1
+       LoadModule ruby_module `apachelibexec'/mod_ruby.{so|o}
+d33 1
+a33 1
+  5) `srm.conf'を編集し、`ruby-script'ハンドラをセットしてください。
+d35 1
+a35 1
+       AddHandler ruby-script .rb
+d37 5
+a41 1
+     あるいは
+d43 1
+a43 7
+       Alias /ruby/ /usr/lib/cgi-bin/
+       <Location /ruby/>
+       SetHandler ruby-script
+       Options ExecCGI
+       </Location>
+
+  6) Apacheを再起動してください。
+d45 1
+d48 2
+a49 1
+mode: Auto-Fill
+@
+
+
+1.5
+log
+@shugo
+* lib/net/imap.rb: don't upcase the value of ATOM token.
+@
+text
+@d15 1
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+  * Ruby version 1.3.1(99/03/11) 以降
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d36 8
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+  3) `make install'とタイプし、mod_ruby.{so|o}を`apachelibexec'にコピー
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d21 1
+a21 1
+  1) `ruby configure.rb'とタイプし、Makefileを作成してください。
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

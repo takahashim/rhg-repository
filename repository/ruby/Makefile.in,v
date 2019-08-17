@@ -1,0 +1,3419 @@
+head	1.37;
+access;
+symbols
+	v1_6_7:1.17.2.8
+	v1_6_6:1.17.2.6
+	v1_6_5:1.17.2.5
+	v1_6_4:1.17.2.4
+	v1_7_1:1.25
+	v1_6_4_preview4:1.17.2.4
+	v1_6_4_preview3:1.17.2.4
+	v1_6_4_preview2:1.17.2.2
+	v1_6_4_preview1:1.17.2.2
+	v1_6_3:1.17
+	ruby_m17n:1.17.0.4
+	ruby_1_6:1.17.0.2
+	v1_6_2:1.17
+	v1_6_1:1.13
+	v1_6_0:1.12
+	v1_4_6:1.4.2.2
+	v1_4_5:1.4.2.2
+	v1_4_4:1.4.2.1
+	ruby_1_4_3:1.4.2.1
+	ruby1_4_3:1.4.2.1
+	v1_4_3:1.4.2.1
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.4.2.1
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.17
+	v1_3_6_repack:1.1.1.3.2.16
+	v1_3_6:1.1.1.3.2.16
+	v1_3_5:1.1.1.3.2.15
+	v1_2_6repack:1.1.1.2.2.21
+	v1_3_4_990625:1.1.1.3.2.15
+	v1_3_4_990624:1.1.1.3.2.14
+	v1_2_6:1.1.1.2.2.21
+	v1_3_4_990611:1.1.1.3.2.14
+	v1_3_4_990531:1.1.1.3.2.13
+	v1_3_3_990518:1.1.1.3.2.12
+	v1_3_3_990513:1.1.1.3.2.12
+	v1_3_3_990507:1.1.1.3.2.12
+	v1_2_5:1.1.1.2.2.21
+	v1_2_4:1.1.1.2.2.21
+	v1_3_1_990225:1.1.1.3.2.6
+	v1_3_1_990224:1.1.1.3.2.6
+	v1_3_1_990215:1.1.1.3.2.5
+	v1_3_1_990212:1.1.1.3.2.5
+	v1_3_1_990210:1.1.1.3.2.5
+	v1_3_1_:1.1.1.3.2.5
+	v1_3_1_990209:1.1.1.3.2.4
+	v1_3_1_990205:1.1.1.3.2.4
+	v1_3_1_990203:1.1.1.3.2.3
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.2
+	v1_3_1_990127:1.1.1.3.2.2
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.20
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.20
+	v1_2_1repack:1.1.1.2.2.19
+	v1_2_1:1.1.1.2.2.19
+	v1_2_stable:1.1.1.2.2.18
+	v1_1d1:1.1.1.2.2.16.2.3
+	v1_1d0:1.1.1.2.2.16.2.2
+	v1_1c9_1:1.1.1.2.2.18
+	v1_1c9:1.1.1.2.2.18
+	v1_1c8:1.1.1.2.2.18
+	v1_1c7:1.1.1.2.2.17
+	v1_1c6:1.1.1.2.2.16
+	v1_1d-start:1.1.1.2.2.16.2.1
+	v1_1c5:1.1.1.2.2.16
+	v1_1dev:1.1.1.2.2.16.0.2
+	v1_1c4:1.1.1.2.2.16
+	v1_1c3:1.1.1.2.2.16
+	v1_1c2:1.1.1.2.2.16
+	v1_1c1:1.1.1.2.2.15
+	v1_1c0:1.1.1.2.2.15
+	v1_1b9_31:1.1.1.2.2.15
+	v1_1b9_30:1.1.1.2.2.15
+	v1_1b9_28:1.1.1.2.2.14
+	v1_1b9_27:1.1.1.2.2.12
+	v1_1b9_26:1.1.1.2.2.12
+	r1_1b9_25:1.1.1.2.2.11
+	r1_1b9_24:1.1.1.2.2.11
+	v1_1b9_23:1.1.1.2.2.11
+	v1_1b9_22:1.1.1.2.2.10
+	v1_1b9_20:1.1.1.2.2.10
+	v1_1b9_18:1.1.1.2.2.10
+	v1_1b9_16:1.1.1.2.2.8
+	v1_1b9_15:1.1.1.2.2.8
+	v1_1b9_13:1.1.1.2.2.7
+	v1_1b9_12:1.1.1.2.2.7
+	v1_1b9_11:1.1.1.2.2.6
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2
+	v1_1b8:1.1.1.2
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.37
+date	2002.10.21.14.17.44;	author nobu;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.09.08.09.04.15;	author eban;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.05.14.06.22.25;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.05.11.19.31.18;	author eban;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.04.12.03.24.52;	author nobu;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.04.02.06.48.41;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.11.15.36.11;	author eban;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.12.31.17.48.33;	author eban;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.08.09.21.59;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.09.08.14.17.09;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.05.07.09.26.23;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.05.02.18.35.50;	author knu;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.04.01.16.53.41;	author knu;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.04.01.16.22.12;	author eban;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.01.11.08.32.54;	author eban;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.01.11.01.21.25;	author eban;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.01.10.07.52.45;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.01.09.07.26.16;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.12.25.06.28.55;	author matz;	state Exp;
+branches
+	1.17.2.1
+	1.17.4.1;
+next	1.16;
+
+1.16
+date	2000.12.08.07.10.15;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.11.14.07.10.20;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.10.06.06.13.49;	author eban;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.09.04.04.43.26;	author eban;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.08.03.09.50.32;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.07.27.09.49.14;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.07.25.14.46.43;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.21.09.25.56;	author eban;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.14.09.36.25;	author eban;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.09.04.52.51;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.36.56;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.08.03.56.59;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.12.04.53.32;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.10.04.04.51.04;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.01;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.08;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.21;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.08;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.01.27.08.08.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.03.09.47.57;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.05.10.27.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.02.10.08.44.22;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.02.24.04.31.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.03.24.08.52.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.04.09.17.57.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.04.20.08.21.34;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.04.27.02.56.25;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.04.30.07.55.42;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.12;
+
+1.1.1.3.2.12
+date	99.05.07.08.24.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.13;
+
+1.1.1.3.2.13
+date	99.05.31.09.12.59;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.14;
+
+1.1.1.3.2.14
+date	99.06.01.06.58.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.15;
+
+1.1.1.3.2.15
+date	99.06.25.09.02.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.16;
+
+1.1.1.3.2.16
+date	99.07.28.09.26.26;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.17;
+
+1.1.1.3.2.17
+date	99.08.06.06.48.01;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.18;
+
+1.1.1.3.2.18
+date	99.08.13.05.17.32;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.03.13.09.00.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.03.26.09.09.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.30.09.32.44;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.04.09.09.58.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.04.10.10.09.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.04.14.04.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.04.17.09.29.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.04.22.08.57.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.05.06.03.08.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.05.12.08.38.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.05.25.09.42.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.06.18.07.46.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.06.26.07.18.59;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.06.26.09.44.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.07.09.08.40.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.08.10.05.41.07;	author matz;	state Exp;
+branches
+	1.1.1.2.2.16.2.1;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.11.09.09.11.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.11.17.09.12.26;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	99.01.11.07.55.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	99.01.18.09.08.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	99.04.08.10.14.29;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.16.2.1
+date	98.09.08.07.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16.2.2;
+
+1.1.1.2.2.16.2.2
+date	98.11.25.03.31.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16.2.3;
+
+1.1.1.2.2.16.2.3
+date	98.12.22.09.01.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	99.11.09.03.57.24;	author matz;	state Exp;
+branches;
+next	1.4.2.2;
+
+1.4.2.2
+date	2000.05.09.04.50.06;	author matz;	state Exp;
+branches;
+next	;
+
+1.17.2.1
+date	2001.04.01.16.21.26;	author eban;	state Exp;
+branches;
+next	1.17.2.2;
+
+1.17.2.2
+date	2001.04.03.06.30.33;	author knu;	state Exp;
+branches;
+next	1.17.2.3;
+
+1.17.2.3
+date	2001.05.02.19.08.07;	author knu;	state Exp;
+branches;
+next	1.17.2.4;
+
+1.17.2.4
+date	2001.05.08.08.29.51;	author matz;	state Exp;
+branches;
+next	1.17.2.5;
+
+1.17.2.5
+date	2001.09.08.14.05.50;	author matz;	state Exp;
+branches;
+next	1.17.2.6;
+
+1.17.2.6
+date	2001.11.13.08.22.26;	author matz;	state Exp;
+branches;
+next	1.17.2.7;
+
+1.17.2.7
+date	2001.12.31.17.47.29;	author eban;	state Exp;
+branches;
+next	1.17.2.8;
+
+1.17.2.8
+date	2002.01.11.15.35.41;	author eban;	state Exp;
+branches;
+next	1.17.2.9;
+
+1.17.2.9
+date	2002.04.10.08.47.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.17.4.1
+date	2001.01.12.04.35.59;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.37
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@SHELL = /bin/sh
+
+#### Start of system configuration section. ####
+
+srcdir = @@srcdir@@
+VPATH = $(srcdir):$(srcdir)/missing
+
+CC = @@CC@@
+YACC = @@YACC@@
+PURIFY =
+AUTOCONF = autoconf
+@@SET_MAKE@@
+
+prefix = @@prefix@@
+exec_prefix = @@exec_prefix@@
+bindir = @@bindir@@
+sbindir = @@sbindir@@
+libdir = @@libdir@@
+libexecdir = @@libexecdir@@
+arch = @@arch@@
+sitearch = @@sitearch@@
+sitedir = @@sitedir@@
+
+CFLAGS = @@CFLAGS@@ @@XCFLAGS@@
+CPPFLAGS = -I. -I$(srcdir)
+LDFLAGS = @@STATIC@@ $(CFLAGS) @@LDFLAGS@@
+EXTLDFLAGS = 
+XLDFLAGS = @@XLDFLAGS@@ $(EXTLDFLAGS)
+EXTLIBS = 
+LIBS = @@LIBS@@ $(EXTLIBS)
+MISSING = @@LIBOBJS@@ @@ALLOCA@@
+LDSHARED = @@LIBRUBY_LDSHARED@@
+DLDFLAGS = @@LIBRUBY_DLDFLAGS@@
+SOLIBS = @@SOLIBS@@
+MAINLIBS = @@MAINLIBS@@
+
+RUBY_INSTALL_NAME=@@RUBY_INSTALL_NAME@@
+RUBY_SO_NAME=@@RUBY_SO_NAME@@
+EXEEXT = @@EXEEXT@@
+PROGRAM=$(RUBY_INSTALL_NAME)$(EXEEXT)
+RUBY = $(RUBY_INSTALL_NAME)
+MINIRUBY = @@MINIRUBY@@
+
+#### End of system configuration section. ####
+
+MAJOR=	@@MAJOR@@
+MINOR=	@@MINOR@@
+TEENY=	@@TEENY@@
+
+LIBRUBY_A     = @@LIBRUBY_A@@
+LIBRUBY_SO    = @@LIBRUBY_SO@@
+LIBRUBY_ALIASES= @@LIBRUBY_ALIASES@@
+LIBRUBY	      = @@LIBRUBY@@
+LIBRUBYARG    = @@LIBRUBYARG@@
+
+PREP          = @@PREP@@ @@ARCHFILE@@
+SETUP         =
+
+EXTOBJS	      = 
+
+MAINOBJ	      = main.@@OBJEXT@@
+
+OBJS	      = array.@@OBJEXT@@ \
+		bignum.@@OBJEXT@@ \
+		class.@@OBJEXT@@ \
+		compar.@@OBJEXT@@ \
+		dir.@@OBJEXT@@ \
+		dln.@@OBJEXT@@ \
+		enum.@@OBJEXT@@ \
+		error.@@OBJEXT@@ \
+		eval.@@OBJEXT@@ \
+		file.@@OBJEXT@@ \
+		gc.@@OBJEXT@@ \
+		hash.@@OBJEXT@@ \
+		inits.@@OBJEXT@@ \
+		io.@@OBJEXT@@ \
+		marshal.@@OBJEXT@@ \
+		math.@@OBJEXT@@ \
+		numeric.@@OBJEXT@@ \
+		object.@@OBJEXT@@ \
+		pack.@@OBJEXT@@ \
+		parse.@@OBJEXT@@ \
+		process.@@OBJEXT@@ \
+		prec.@@OBJEXT@@ \
+		random.@@OBJEXT@@ \
+		range.@@OBJEXT@@ \
+		re.@@OBJEXT@@ \
+		regex.@@OBJEXT@@ \
+		ruby.@@OBJEXT@@ \
+		signal.@@OBJEXT@@ \
+		sprintf.@@OBJEXT@@ \
+		st.@@OBJEXT@@ \
+		string.@@OBJEXT@@ \
+		struct.@@OBJEXT@@ \
+		time.@@OBJEXT@@ \
+		util.@@OBJEXT@@ \
+		variable.@@OBJEXT@@ \
+		version.@@OBJEXT@@ \
+		$(MISSING)
+
+all:		@@MAKEFILES@@ miniruby$(EXEEXT) rbconfig.rb $(LIBRUBY)
+		@@$(MINIRUBY) $(srcdir)/ext/extmk.rb @@EXTSTATIC@@ $(MAKE) $(MFLAGS)$(MAKEFLAGS)
+
+miniruby$(EXEEXT):	config.status $(LIBRUBY_A) $(MAINOBJ) dmyext.@@OBJEXT@@
+		@@rm -f $@@
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.@@OBJEXT@@ $(LIBRUBY_A) $(LIBS) -o $@@
+
+$(PROGRAM):     $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) $(SETUP) miniruby$(EXEEXT)
+		@@rm -f $@@
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINLIBS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+
+$(LIBRUBY_A):	$(OBJS) dmyext.@@OBJEXT@@
+		@@AR@@ rcu $@@ $(OBJS) dmyext.@@OBJEXT@@
+		@@-@@RANLIB@@ $@@ 2> /dev/null || true
+
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@ miniruby$(EXEEXT) $(PREP)
+		$(LDSHARED) $(DLDFLAGS) $(OBJS) dmyext.@@OBJEXT@@ $(SOLIBS) -o $@@
+		@@-$(MINIRUBY) -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+						  File.symlink "$(LIBRUBY_SO)", link}' \
+				$(LIBRUBY_ALIASES) || true
+
+ruby.imp:	$(LIBRUBY_A)
+		@@@@NM@@ -Pgp $(LIBRUBY_A) | awk 'BEGIN{print "#!"}; $$2~/^[BD]$$/{print $$1}' | sort -u -o $@@
+# $(MINIRUBY) $< $@@
+
+install:	rbconfig.rb
+		$(MINIRUBY) $(srcdir)/instruby.rb --make=$(MAKE) $(MFLAGS)$(MAKEFLAGS) $(DESTDIR)
+		$(MINIRUBY) $(srcdir)/ext/extmk.rb $(MAKE) $(MFLAGS)$(MAKEFLAGS) DESTDIR=$(DESTDIR) install
+
+clean-ext:
+		@@-$(MINIRUBY) $(srcdir)/ext/extmk.rb $(MAKE) $(MFLAGS)$(MAKEFLAGS) clean 2> /dev/null || true
+
+clean-local:
+		@@rm -f $(OBJS) $(MAINOBJ) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES)
+		@@rm -f ext/extinit.c ext/extinit.@@OBJEXT@@ dmyext.@@OBJEXT@@
+		@@rm -f $(PROGRAM) miniruby$(EXEEXT)
+
+clean: clean-ext clean-local
+
+distclean-ext:
+		@@-$(MINIRUBY) $(srcdir)/ext/extmk.rb $(MAKE) $(MFLAGS)$(MAKEFLAGS) distclean 2> /dev/null || true
+
+distclean-local: clean-local
+		@@rm -f @@MAKEFILES@@ config.h rbconfig.rb
+		@@rm -f ext/config.cache config.cache config.log config.status
+		@@rm -f *~ core *.core gmon.out y.tab.c y.output ruby.imp
+
+distclean: distclean-ext distclean-local
+
+realclean: 	distclean
+		@@rm -f parse.c
+		@@rm -f lex.c
+
+test:		miniruby$(EXEEXT) rbconfig.rb $(PROGRAM)
+		@@./miniruby$(EXEEXT) $(srcdir)/rubytest.rb
+
+rbconfig.rb:	miniruby$(EXEEXT) $(srcdir)/mkconfig.rb config.status $(PREP)
+		@@$(MINIRUBY) $(srcdir)/mkconfig.rb rbconfig.rb
+
+fake.rb:	miniruby$(EXEEXT) Makefile
+		@@echo ' \
+		class Object; \
+		  CROSS_COMPILING = RUBY_PLATFORM; \
+		  remove_const :RUBY_PLATFORM; \
+		  remove_const :RUBY_VERSION; \
+		  RUBY_PLATFORM = "@@arch@@"; \
+		  RUBY_VERSION = "@@MAJOR@@.@@MINOR@@.@@TEENY@@"; \
+		end \
+		' > $@@
+
+Makefile:	$(srcdir)/Makefile.in
+
+.PRECIOUS:	@@MAKEFILES@@
+
+@@MAKEFILES@@: config.status
+		MAKE=$(MAKE) $(SHELL) ./config.status
+		@@{ : $(MAKE); \
+		    echo "all:; -@@rm -f conftest.mk"; \
+		    echo "conftest.mk: .force; @@echo AUTO_REMAKE"; \
+		    echo ".force:"; \
+		} > conftest.mk
+		@@$(MAKE) -f conftest.mk | grep '^AUTO_REMAKE$$' >/dev/null 2>&1 || \
+		{ echo "Makefile updated, restart."; exit 1; }
+
+config.status:	$(srcdir)/configure
+		$(SHELL) ./config.status --recheck
+
+$(srcdir)/configure: $(srcdir)/configure.in
+		cd $(srcdir) && $(AUTOCONF)
+
+.c.@@OBJEXT@@:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+
+lex.c: keywords
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ $(srcdir)/keywords > lex.c
+
+.y.c:
+	$(YACC) $<
+	sed '/^#/s|y\.tab\.c|$@@|' y.tab.c > $@@
+	rm -f y.tab.c
+
+ext/extinit.@@OBJEXT@@: ext/extinit.c $(SETUP)
+	$(CC) $(CFLAGS) $(CPPFLAGS) @@OUTFLAG@@$@@ -c ext/extinit.c
+
+acosh.@@OBJEXT@@: $(srcdir)/missing/acosh.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/acosh.c
+
+alloca.@@OBJEXT@@: $(srcdir)/missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/alloca.c
+
+crypt.@@OBJEXT@@: $(srcdir)/missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/crypt.c
+
+dup2.@@OBJEXT@@: $(srcdir)/missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/dup2.c
+
+fileblocks.@@OBJEXT@@: $(srcdir)/missing/fileblocks.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/fileblocks.c
+
+finite.@@OBJEXT@@: $(srcdir)/missing/finite.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/finite.c
+
+flock.@@OBJEXT@@: $(srcdir)/missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/flock.c
+
+isinf.@@OBJEXT@@: $(srcdir)/missing/isinf.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/isinf.c
+
+isnan.@@OBJEXT@@: $(srcdir)/missing/isnan.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/isnan.c
+
+fnmatch.@@OBJEXT@@: $(srcdir)/missing/fnmatch.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/fnmatch.c
+
+memcmp.@@OBJEXT@@: $(srcdir)/missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/memcmp.c
+
+memmove.@@OBJEXT@@: $(srcdir)/missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/memmove.c
+
+mkdir.@@OBJEXT@@: $(srcdir)/missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/mkdir.c
+
+vsnprintf.@@OBJEXT@@: $(srcdir)/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/vsnprintf.c
+
+strcasecmp.@@OBJEXT@@: $(srcdir)/missing/strcasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strcasecmp.c
+
+strncasecmp.@@OBJEXT@@: $(srcdir)/missing/strncasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strncasecmp.c
+
+strchr.@@OBJEXT@@: $(srcdir)/missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strchr.c
+
+strerror.@@OBJEXT@@: $(srcdir)/missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strerror.c
+
+strftime.@@OBJEXT@@: $(srcdir)/missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strftime.c
+
+strstr.@@OBJEXT@@: $(srcdir)/missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strstr.c
+
+strtol.@@OBJEXT@@: $(srcdir)/missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strtol.c
+
+strtoul.@@OBJEXT@@: $(srcdir)/missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strtoul.c
+
+x68.@@OBJEXT@@: $(srcdir)/missing/x68.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/x68.c
+
+os2.@@OBJEXT@@: $(srcdir)/missing/os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/os2.c
+
+dl_os2.@@OBJEXT@@: $(srcdir)/missing/dl_os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/dl_os2.c
+
+win32.@@OBJEXT@@: $(srcdir)/win32/win32.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -I$(srcdir)/win32 -c $(srcdir)/win32/win32.c
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
+###
+array.@@OBJEXT@@: array.c ruby.h config.h defines.h intern.h missing.h \
+  util.h st.h
+bignum.@@OBJEXT@@: bignum.c ruby.h config.h defines.h intern.h missing.h
+class.@@OBJEXT@@: class.c ruby.h config.h defines.h intern.h missing.h \
+  rubysig.h node.h st.h
+compar.@@OBJEXT@@: compar.c ruby.h config.h defines.h intern.h missing.h
+dir.@@OBJEXT@@: dir.c ruby.h config.h defines.h intern.h missing.h util.h
+dln.@@OBJEXT@@: dln.c config.h defines.h dln.h
+dmyext.@@OBJEXT@@: dmyext.c
+enum.@@OBJEXT@@: enum.c ruby.h config.h defines.h intern.h missing.h node.h \
+  util.h
+error.@@OBJEXT@@: error.c ruby.h config.h defines.h intern.h missing.h \
+  env.h version.h
+eval.@@OBJEXT@@: eval.c ruby.h config.h defines.h intern.h missing.h node.h \
+  env.h util.h rubysig.h st.h dln.h
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h missing.h \
+  rubyio.h rubysig.h util.h dln.h
+gc.@@OBJEXT@@: gc.c ruby.h config.h defines.h intern.h missing.h rubysig.h \
+  st.h node.h env.h re.h regex.h
+hash.@@OBJEXT@@: hash.c ruby.h config.h defines.h intern.h missing.h st.h \
+  util.h rubysig.h
+inits.@@OBJEXT@@: inits.c ruby.h config.h defines.h intern.h missing.h
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h missing.h rubyio.h \
+  rubysig.h env.h util.h
+main.@@OBJEXT@@: main.c ruby.h config.h defines.h intern.h missing.h
+marshal.@@OBJEXT@@: marshal.c ruby.h config.h defines.h intern.h missing.h \
+  rubyio.h st.h
+math.@@OBJEXT@@: math.c ruby.h config.h defines.h intern.h missing.h
+numeric.@@OBJEXT@@: numeric.c ruby.h config.h defines.h intern.h missing.h
+object.@@OBJEXT@@: object.c ruby.h config.h defines.h intern.h missing.h \
+  st.h
+pack.@@OBJEXT@@: pack.c ruby.h config.h defines.h intern.h missing.h
+parse.@@OBJEXT@@: parse.c ruby.h config.h defines.h intern.h missing.h \
+  env.h node.h st.h regex.h util.h lex.c
+prec.@@OBJEXT@@: prec.c ruby.h config.h defines.h intern.h missing.h
+process.@@OBJEXT@@: process.c ruby.h config.h defines.h intern.h missing.h \
+  rubysig.h st.h
+random.@@OBJEXT@@: random.c ruby.h config.h defines.h intern.h missing.h
+range.@@OBJEXT@@: range.c ruby.h config.h defines.h intern.h missing.h
+re.@@OBJEXT@@: re.c ruby.h config.h defines.h intern.h missing.h re.h \
+  regex.h
+regex.@@OBJEXT@@: regex.c config.h regex.h
+ruby.@@OBJEXT@@: ruby.c ruby.h config.h defines.h intern.h missing.h dln.h \
+  node.h util.h
+signal.@@OBJEXT@@: signal.c ruby.h config.h defines.h intern.h missing.h \
+  rubysig.h
+sprintf.@@OBJEXT@@: sprintf.c ruby.h config.h defines.h intern.h missing.h
+st.@@OBJEXT@@: st.c config.h st.h
+string.@@OBJEXT@@: string.c ruby.h config.h defines.h intern.h missing.h \
+  re.h regex.h
+struct.@@OBJEXT@@: struct.c ruby.h config.h defines.h intern.h missing.h
+time.@@OBJEXT@@: time.c ruby.h config.h defines.h intern.h missing.h
+util.@@OBJEXT@@: util.c ruby.h config.h defines.h intern.h missing.h util.h
+variable.@@OBJEXT@@: variable.c ruby.h config.h defines.h intern.h \
+  missing.h env.h node.h st.h util.h
+version.@@OBJEXT@@: version.c ruby.h config.h defines.h intern.h missing.h \
+  version.h
+@
+
+
+1.36
+log
+@* configure.in: modify program_prefix only if specified
+  --program-prefix.
+
+* configure.in: don't generate ext/extmk.rb.
+
+* Makefile.in: execute directly $(srcdir)/ext/extmk.rb.
+  remove -Cext option, "Dir::chdir 'ext'" in ext/extmk.rb.
+
+* {win32,bccwin32}/Makefile.sub: ditto.
+
+* instruby.rb: ditto.
+
+* ext/extmk.rb: renamed from ext/extmk.rb.in.
+
+* lib/mkmf.rb (module Logging): create log files (mkmf.log)
+  in each extension module directories.
+
+* ext/extmk.rb: ditto.
+
+* lib/mkmf.rb (macro_defined?): new method.
+
+* ext/.cvsignore: remove extmk.rb.
+
+* ext/*/.cvsignore: add "*.def".
+@
+text
+@d15 10
+a24 1
+CFLAGS = @@CFLAGS@@
+d27 2
+a28 1
+XLDFLAGS = @@XLDFLAGS@@
+d41 2
+d56 3
+d101 2
+a102 2
+all:		miniruby$(EXEEXT) @@PREP@@ rbconfig.rb $(LIBRUBY)
+		@@@@MINIRUBY@@ $(srcdir)/ext/extmk.rb @@EXTSTATIC@@
+d108 1
+a108 1
+$(PROGRAM):     $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) 
+d116 1
+a116 1
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@ miniruby$(EXEEXT)
+d118 1
+a118 1
+		@@-@@MINIRUBY@@ -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+d122 4
+d127 2
+a128 1
+		@@MINIRUBY@@ $(srcdir)/instruby.rb $(DESTDIR)
+d130 2
+a131 1
+clean-ext:;	@@-@@MINIRUBY@@ $(srcdir)/ext/extmk.rb clean 2> /dev/null || true
+d141 1
+a141 1
+		@@-@@MINIRUBY@@ $(srcdir)/ext/extmk.rb distclean 2> /dev/null || true
+d144 1
+a144 1
+		@@rm -f Makefile config.h rbconfig.rb
+d154 1
+a154 1
+test:		miniruby$(EXEEXT) rbconfig.rb
+d157 2
+a158 2
+rbconfig.rb:	miniruby$(EXEEXT) $(srcdir)/mkconfig.rb config.status
+		@@@@MINIRUBY@@ $(srcdir)/mkconfig.rb rbconfig.rb
+d160 1
+a160 1
+fake.rb:	miniruby$(EXEEXT)
+d163 1
+a167 1
+		  CROSS_COMPILING = true; \
+d171 14
+d197 1
+a197 1
+parse.c: parse.y
+d199 5
+a203 1
+	mv -f y.tab.c parse.c
+@
+
+
+1.35
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d87 1
+a87 1
+		@@@@MINIRUBY@@ -Cext extmk.rb @@EXTSTATIC@@
+d110 1
+a110 1
+clean-ext:;	@@-@@MINIRUBY@@ -Cext extmk.rb clean 2> /dev/null || true
+d120 1
+a120 1
+		@@-@@MINIRUBY@@ -Cext extmk.rb distclean 2> /dev/null || true
+d123 1
+a123 1
+		@@rm -f Makefile ext/extmk.rb config.h rbconfig.rb
+@
+
+
+1.34
+log
+@* missing.h: add for missing/*.c.
+* ruby.h: add `#include "missing.h"'.
+* Makefile.in: add the dependency of missing.h by gcc -MM.
+* MANIFEST: add missing.h
+@
+text
+@a225 3
+strtod.@@OBJEXT@@: $(srcdir)/missing/strtod.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/missing/strtod.c
+
+@
+
+
+1.33
+log
+@/tmp/log
+@
+text
+@a165 2
+parse.@@OBJEXT@@: parse.c
+
+d250 7
+a256 7
+parse.@@OBJEXT@@: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+###
+array.@@OBJEXT@@: array.c ruby.h config.h defines.h intern.h util.h st.h
+bignum.@@OBJEXT@@: bignum.c ruby.h config.h defines.h intern.h
+class.@@OBJEXT@@: class.c ruby.h config.h defines.h intern.h rubysig.h node.h st.h
+compar.@@OBJEXT@@: compar.c ruby.h config.h defines.h intern.h
+dir.@@OBJEXT@@: dir.c ruby.h config.h defines.h intern.h
+d259 32
+a290 19
+enum.@@OBJEXT@@: enum.c ruby.h config.h defines.h intern.h node.h
+error.@@OBJEXT@@: error.c ruby.h config.h defines.h intern.h env.h version.h
+eval.@@OBJEXT@@: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h dln.h util.h
+gc.@@OBJEXT@@: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+hash.@@OBJEXT@@: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h util.h
+inits.@@OBJEXT@@: inits.c ruby.h config.h defines.h intern.h
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h util.h
+main.@@OBJEXT@@: main.c ruby.h config.h defines.h intern.h
+marshal.@@OBJEXT@@: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+prec.@@OBJEXT@@: prec.c ruby.h config.h defines.h intern.h
+math.@@OBJEXT@@: math.c ruby.h config.h defines.h intern.h
+numeric.@@OBJEXT@@: numeric.c ruby.h config.h defines.h intern.h
+object.@@OBJEXT@@: object.c ruby.h config.h defines.h intern.h st.h
+pack.@@OBJEXT@@: pack.c ruby.h config.h defines.h intern.h
+process.@@OBJEXT@@: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+random.@@OBJEXT@@: random.c ruby.h config.h defines.h intern.h
+range.@@OBJEXT@@: range.c ruby.h config.h defines.h intern.h
+re.@@OBJEXT@@: re.c ruby.h config.h defines.h intern.h re.h regex.h
+d292 5
+a296 3
+ruby.@@OBJEXT@@: ruby.c ruby.h config.h defines.h intern.h dln.h node.h util.h
+signal.@@OBJEXT@@: signal.c ruby.h config.h defines.h intern.h rubysig.h
+sprintf.@@OBJEXT@@: sprintf.c ruby.h config.h defines.h intern.h
+d298 9
+a306 6
+string.@@OBJEXT@@: string.c ruby.h config.h defines.h intern.h re.h regex.h
+struct.@@OBJEXT@@: struct.c ruby.h config.h defines.h intern.h
+time.@@OBJEXT@@: time.c ruby.h config.h defines.h intern.h
+util.@@OBJEXT@@: util.c ruby.h config.h defines.h intern.h util.h
+variable.@@OBJEXT@@: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+version.@@OBJEXT@@: version.c ruby.h config.h defines.h intern.h version.h
+@
+
+
+1.32
+log
+@* Makefile.in (CPPFLAGS): remove @@includedir@@.
+
+* lib/mkmf.rb (create_makefile): ditto.
+
+* ext/extmk.rb.in (create_makefile): ditto.
+@
+text
+@d168 3
+d179 3
+@
+
+
+1.31
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d16 1
+a16 1
+CPPFLAGS = -I. -I$(srcdir) -I@@includedir@@
+@
+
+
+1.30
+log
+@* Makefile.in (clean): add $(MAINOBJ)
+@
+text
+@d112 1
+a112 1
+clean: clean-ext
+a114 1
+		@@-@@MINIRUBY@@ -Cext extmk.rb clean 2> /dev/null || true
+d117 2
+d122 1
+a122 1
+distclean: distclean-ext clean
+d126 2
+@
+
+
+1.29
+log
+@* ext/curses/extconf.rb: add dir_config.
+* Makefile.in (fake.rb): set RUBY_VERSION.
+@
+text
+@d113 1
+a113 1
+		@@rm -f $(OBJS) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES)
+@
+
+
+1.28
+log
+@* file.c (path_check_1): forgot to initialize 'p'.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+
+* array.c (rb_ary_hash): should override 'hash' too.
+@
+text
+@d140 1
+d142 1
+a142 4
+		  if defined? PLATFORM; \
+		    remove_const :PLATFORM; \
+		    PLATFORM = "@@arch@@"; \
+		  end; \
+@
+
+
+1.27
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d110 4
+a113 1
+clean:;		@@rm -f $(OBJS) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES) $(MAINOBJ) rbconfig.rb
+d118 5
+a122 3
+distclean:;	@@-@@MINIRUBY@@ -Cext extmk.rb distclean 2> /dev/null || true
+		$(MAKE) clean
+		@@rm -f Makefile ext/extmk.rb config.h
+@
+
+
+1.26
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d252 1
+a252 1
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h dln.h
+@
+
+
+1.25
+log
+@* parse.y (arg): "||=" should not warn for uninitialized instance
+  variables.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (eval): preserve and restore ruby_cref as well.
+@
+text
+@d125 1
+a125 1
+test:		miniruby$(EXEEXT)
+@
+
+
+1.24
+log
+@I'm committing this from a MacOS X host. :)
+
+* configure.in: get --enable-shared to work on MacOS X.
+
+* Makefile.in: make $(LIBRUBY_SO) depend on miniruby properly.
+Now `make -jN' should work without a problem.
+@
+text
+@d128 1
+a128 1
+rbconfig.rb:	miniruby$(EXEEXT)
+@
+
+
+1.23
+log
+@* Makefile.in: Introduce MAINLIBS.
+
+* configure.in: Link libc_r against the ruby executable on
+FreeBSD, which is the first attempt to work around a certain
+problem regarding pthread on FreeBSD.  It should make ruby/libruby
+happy when it loads an extention to a library compiled and linked
+with -pthread.  Note, however, that libruby is _not_ linked with
+libc_r so as not to mess up pthread unfriendly stuff including
+apache+mod_ruby and vim6+ruby_interp.
+@
+text
+@d101 1
+a101 1
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@
+@
+
+
+1.22
+log
+@* win32/win32.c: use ruby's opendir on mingw32.
+* win32/dir.h, dir.c, Makefile: ditto.
+@
+text
+@d25 1
+d95 1
+a95 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.21
+log
+@eban
+@
+text
+@d234 1
+a234 1
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $(srcdir)/win32/win32.c
+@
+
+
+1.20
+log
+@m17n cleanup
+@
+text
+@d146 1
+a146 1
+	$(srcdir)/configure: $(srcdir)/configure.in
+@
+
+
+1.19
+log
+@* m17n baseline.
+@
+text
+@a60 1
+		m17n.@@OBJEXT@@ \
+d255 1
+a255 2
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h util.h m17n.h
+m17n.@@OBJEXT@@: m17n.c m17n.h config.h
+@
+
+
+1.18
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d61 1
+d256 2
+a257 1
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h util.h
+@
+
+
+1.17
+log
+@001225
+@
+text
+@d114 2
+a115 1
+distclean:	clean
+d120 1
+a120 1
+realclean:	distclean
+d146 1
+a146 1
+$(srcdir)/configure: $(srcdir)/configure.in
+@
+
+
+1.17.2.1
+log
+@* win32/win32.c: use ruby's opendir on mingw32.
+* missing/dir.h, dir.c, Makefile: ditto.
+@
+text
+@d233 1
+a233 1
+	$(CC) $(CFLAGS) $(CPPFLAGS) -I$(srcdir)/missing -c $(srcdir)/win32/win32.c
+@
+
+
+1.17.2.2
+log
+@* Makefile.in: Introduce MAINLIBS.
+
+* configure.in: Link libc_r against the ruby executable on
+FreeBSD, which is the first attempt to work around a certain
+problem regarding pthread on FreeBSD.  It should make ruby/libruby
+happy when it loads an extention to a library compiled and linked
+with -pthread.  Note, however, that libruby is _not_ linked with
+libc_r so as not to mess up pthread unfriendly stuff including
+apache+mod_ruby and vim6+ruby_interp.
+@
+text
+@a24 1
+MAINLIBS = @@MAINLIBS@@
+d94 1
+a94 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINLIBS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.17.2.3
+log
+@* configure.in: get --enable-shared to work on MacOS X.
+
+* Makefile.in: make $(LIBRUBY_SO) depend on miniruby properly.
+Now `make -jN' should work without a problem.
+@
+text
+@d101 1
+a101 1
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@ miniruby$(EXEEXT)
+@
+
+
+1.17.2.4
+log
+@* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto
+@
+text
+@d127 1
+a127 1
+rbconfig.rb:	miniruby$(EXEEXT) $(srcdir)/mkconfig.rb config.status
+@
+
+
+1.17.2.5
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+@
+text
+@d124 1
+a124 1
+test:		miniruby$(EXEEXT) rbconfig.rb
+@
+
+
+1.17.2.6
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d110 2
+a111 1
+clean-ext:
+a112 4
+
+clean: clean-ext
+		@@rm -f $(OBJS) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES)
+		@@rm -f ext/extinit.c ext/extinit.@@OBJEXT@@ dmyext.@@OBJEXT@@
+d115 2
+a116 5
+distclean-ext:
+		@@-@@MINIRUBY@@ -Cext extmk.rb distclean 2> /dev/null || true
+
+distclean: distclean-ext clean
+		@@rm -f Makefile ext/extmk.rb config.h rbconfig.rb
+@
+
+
+1.17.2.7
+log
+@* Makefile.in (fake.rb): set RUBY_VERSION.
+@
+text
+@a139 1
+		  remove_const :RUBY_VERSION; \
+d141 4
+a144 1
+		  RUBY_VERSION = "@@MAJOR@@.@@MINOR@@.@@TEENY@@"; \
+@
+
+
+1.17.2.8
+log
+@* Makefile.in (clean): add $(MAINOBJ)
+@
+text
+@d114 1
+a114 1
+		@@rm -f $(OBJS) $(MAINOBJ) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES)
+@
+
+
+1.17.2.9
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+
+* numeric.c (int_step): step may be a float less than 1.
+@
+text
+@d16 1
+a16 1
+CPPFLAGS = -I. -I$(srcdir)
+@
+
+
+1.17.4.1
+log
+@m17n fix
+@
+text
+@a60 1
+		m17n.@@OBJEXT@@ \
+d250 1
+a250 1
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h dln.h m17n.h
+d254 1
+a254 2
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h util.h m17n.h
+m17n.@@OBJEXT@@: m17n.c config.h m17n.h
+d256 2
+a257 1
+marshal.@@OBJEXT@@: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h m17n.h
+d260 2
+a261 3
+object.@@OBJEXT@@: object.c ruby.h config.h defines.h intern.h st.h m17n.h
+pack.@@OBJEXT@@: pack.c ruby.h config.h defines.h intern.h m17n.h
+prec.@@OBJEXT@@: prec.c ruby.h config.h defines.h intern.h
+d266 1
+a266 1
+regex.@@OBJEXT@@: regex.c config.h regex.h m17n.h
+d269 1
+a269 1
+sprintf.@@OBJEXT@@: sprintf.c ruby.h config.h defines.h intern.h m17n.h
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d240 1
+a240 1
+array.@@OBJEXT@@: array.c ruby.h config.h defines.h intern.h st.h
+d242 1
+a242 1
+class.@@OBJEXT@@: class.c ruby.h config.h defines.h intern.h node.h st.h
+d247 1
+a247 1
+enum.@@OBJEXT@@: enum.c ruby.h config.h defines.h intern.h
+d250 1
+a250 1
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+d254 1
+a254 1
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h
+d266 2
+a267 2
+regex.@@OBJEXT@@: regex.c config.h regex.h util.h
+ruby.@@OBJEXT@@: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d240 1
+a240 1
+array.@@OBJEXT@@: array.c ruby.h config.h defines.h intern.h
+@
+
+
+1.14
+log
+@eban
+@
+text
+@d248 1
+a248 1
+error.@@OBJEXT@@: error.c ruby.h config.h defines.h intern.h env.h
+@
+
+
+1.13
+log
+@eban
+@
+text
+@d86 1
+a86 1
+		@@@@MINIRUBY@@ -Xext extmk.rb @@EXTSTATIC@@
+d111 1
+a111 1
+		@@-@@MINIRUBY@@ -Xext extmk.rb clean 2> /dev/null || true
+@
+
+
+1.12
+log
+@matz - nakada win32 patch
+@
+text
+@d27 1
+@
+
+
+1.11
+log
+@matz
+@
+text
+@d6 1
+a6 1
+VPATH = @@srcdir@@:@@srcdir@@/missing
+d16 1
+a16 1
+CPPFLAGS = -I. -I@@srcdir@@ -I@@includedir@@
+d151 1
+a151 1
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ @@srcdir@@/keywords > lex.c
+d159 2
+a160 2
+alloca.@@OBJEXT@@: @@srcdir@@/missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/alloca.c
+d162 2
+a163 2
+crypt.@@OBJEXT@@: @@srcdir@@/missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/crypt.c
+d165 2
+a166 2
+dup2.@@OBJEXT@@: @@srcdir@@/missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/dup2.c
+d168 2
+a169 2
+finite.@@OBJEXT@@: @@srcdir@@/missing/finite.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/finite.c
+d171 2
+a172 2
+flock.@@OBJEXT@@: @@srcdir@@/missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/flock.c
+d174 2
+a175 2
+isinf.@@OBJEXT@@: @@srcdir@@/missing/isinf.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/isinf.c
+d177 2
+a178 2
+isnan.@@OBJEXT@@: @@srcdir@@/missing/isnan.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/isnan.c
+d180 2
+a181 2
+fnmatch.@@OBJEXT@@: @@srcdir@@/missing/fnmatch.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/fnmatch.c
+d183 2
+a184 2
+memcmp.@@OBJEXT@@: @@srcdir@@/missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/memcmp.c
+d186 2
+a187 2
+memmove.@@OBJEXT@@: @@srcdir@@/missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/memmove.c
+d189 2
+a190 2
+mkdir.@@OBJEXT@@: @@srcdir@@/missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/mkdir.c
+d192 2
+a193 2
+vsnprintf.@@OBJEXT@@: @@srcdir@@/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/vsnprintf.c
+d195 2
+a196 2
+strcasecmp.@@OBJEXT@@: @@srcdir@@/missing/strcasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strcasecmp.c
+d198 2
+a199 2
+strncasecmp.@@OBJEXT@@: @@srcdir@@/missing/strncasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strncasecmp.c
+d201 2
+a202 2
+strchr.@@OBJEXT@@: @@srcdir@@/missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strchr.c
+d204 2
+a205 2
+strerror.@@OBJEXT@@: @@srcdir@@/missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strerror.c
+d207 2
+a208 2
+strftime.@@OBJEXT@@: @@srcdir@@/missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strftime.c
+d210 2
+a211 2
+strstr.@@OBJEXT@@: @@srcdir@@/missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strstr.c
+d213 2
+a214 2
+strtod.@@OBJEXT@@: @@srcdir@@/missing/strtod.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strtod.c
+d216 2
+a217 2
+strtol.@@OBJEXT@@: @@srcdir@@/missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strtol.c
+d219 2
+a220 2
+strtoul.@@OBJEXT@@: @@srcdir@@/missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strtoul.c
+d222 2
+a223 2
+x68.@@OBJEXT@@: @@srcdir@@/missing/x68.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/x68.c
+d225 2
+a226 2
+os2.@@OBJEXT@@: @@srcdir@@/missing/os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/os2.c
+d228 2
+a229 2
+dl_os2.@@OBJEXT@@: @@srcdir@@/missing/dl_os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/dl_os2.c
+d231 2
+a232 2
+win32.@@OBJEXT@@: @@srcdir@@/win32/win32.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/win32/win32.c
+@
+
+
+1.10
+log
+@eban
+@
+text
+@a203 3
+strdup.@@OBJEXT@@: @@srcdir@@/missing/strdup.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strdup.c
+
+@
+
+
+1.9
+log
+@see ChangeLog
+@
+text
+@d100 1
+a100 1
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) dmyext.@@OBJEXT@@ -o $@@
+@
+
+
+1.8
+log
+@fix bug; support mingw32.
+@
+text
+@d128 12
+a139 2
+prep.rb:	miniruby$(EXEEXT)
+		@@echo 'PLATFORM=RUBY_PLATFORM="@@arch@@"' > $@@
+@
+
+
+1.7
+log
+@2000-05-09
+@
+text
+@a214 3
+nt.@@OBJEXT@@: @@srcdir@@/missing/nt.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/nt.c
+
+d223 3
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d84 1
+a84 1
+all:		miniruby$(EXEEXT) @@PREP@@ rbconfig.rb
+@
+
+
+1.5
+log
+@19991108
+@
+text
+@d84 2
+a85 2
+all:		miniruby$(EXEEXT) rbconfig.rb
+		@@./miniruby$(EXEEXT) -Xext extmk.rb @@EXTSTATIC@@
+d101 1
+a101 1
+		@@-./miniruby -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+d106 1
+a106 1
+		./miniruby$(EXEEXT) $(srcdir)/instruby.rb $(DESTDIR)
+d110 1
+a110 1
+		@@-./miniruby$(EXEEXT) -Xext extmk.rb clean 2> /dev/null || true
+d126 4
+a129 1
+		@@./miniruby$(EXEEXT) $(srcdir)/mkconfig.rb rbconfig.rb
+@
+
+
+1.4
+log
+@19991012
+@
+text
+@d144 2
+@
+
+
+1.4.2.1
+log
+@19991109
+@
+text
+@a143 2
+parse.@@OBJEXT@@: parse.c
+
+@
+
+
+1.4.2.2
+log
+@2000-05-09
+@
+text
+@d84 1
+a84 1
+all:		miniruby$(EXEEXT) rbconfig.rb $(LIBRUBY)
+@
+
+
+1.3
+log
+@19991004
+@
+text
+@d15 2
+a16 1
+CFLAGS = @@CFLAGS@@ -I. -I@@srcdir@@ -I@@includedir@@
+d42 1
+a42 1
+EXTOBJS	      = dmyext.@@OBJEXT@@
+d87 1
+a87 1
+miniruby$(EXEEXT):	config.status $(LIBRUBY_A) $(MAINOBJ) $(EXTOBJS)
+d89 1
+a89 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY_A) $(LIBS) -o $@@
+d95 2
+a96 2
+$(LIBRUBY_A):	$(OBJS)
+		@@AR@@ rcu $@@ $(OBJS)
+d99 2
+a100 2
+$(LIBRUBY_SO):	$(OBJS)
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) -o $@@
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d41 1
+a41 1
+EXTOBJS	      = 
+d86 1
+a86 1
+miniruby$(EXEEXT):	config.status $(LIBRUBY_A) $(MAINOBJ) dmyext.@@OBJEXT@@
+d88 1
+a88 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.@@OBJEXT@@ $(LIBRUBY_A) $(LIBS) -o $@@
+d94 2
+a95 2
+$(LIBRUBY_A):	$(OBJS) dmyext.@@OBJEXT@@
+		@@AR@@ rcu $@@ $(OBJS) dmyext.@@OBJEXT@@
+d98 2
+a99 2
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) dmyext.@@OBJEXT@@ -o $@@
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a9 3
+INSTALL = @@INSTALL@@
+INSTALL_PROGRAM = @@INSTALL_PROGRAM@@
+INSTALL_DATA = @@INSTALL_DATA@@
+d11 1
+d14 2
+a15 1
+CFLAGS = @@CFLAGS@@ -I@@srcdir@@
+d17 2
+d21 9
+d31 51
+a81 2
+program_transform_name = -e @@program_transform_name@@
+RUBY_INSTALL_NAME = `t='$(program_transform_name)'; echo ruby | sed $$t`
+d83 2
+a84 4
+prefix = @@prefix@@
+exec_prefix = @@exec_prefix@@
+bindir = @@bindir@@
+libdir = @@libdir@@/$(RUBY_INSTALL_NAME)
+d86 3
+a88 1
+binsuffix = @@binsuffix@@
+d90 7
+a96 1
+#### End of system configuration section. ####
+d98 5
+d104 2
+a105 1
+LIBRUBY	      = libruby.a
+d107 4
+a110 1
+EXTOBJS	      = dmyext.o
+d112 4
+a115 1
+MAINOBJ	      = main.o
+d117 3
+a119 37
+OBJS	      = array.o \
+		bignum.o \
+		class.o \
+		compar.o \
+		dir.o \
+		dln.o \
+		enum.o \
+		error.o \
+		eval.o \
+		file.o \
+		fnmatch.o \
+		gc.o \
+		glob.o \
+		hash.o \
+		inits.o \
+		io.o \
+		math.o \
+		numeric.o \
+		object.o \
+		pack.o \
+		parse.o \
+		process.o \
+		random.o \
+		range.o \
+		re.o \
+		regex.o \
+		ruby.o \
+		signal.o \
+		sprintf.o \
+		st.o \
+		string.o \
+		struct.o \
+		time.o \
+		util.o \
+		variable.o \
+		version.o \
+		$(MISSING)
+d121 2
+a122 5
+all:		miniruby$(binsuffix) @@srcdir@@/ext/Setup 
+		@@if test -z "$$UNDER_EXTMAKE_RB"; \
+		then echo "Compiling ext modules"; \
+		UNDER_EXTMAKE_RB=yes; export UNDER_EXTMAKE_RB; \
+		cd ext; ../miniruby ./extmk.rb @@EXTSTATIC@@; fi
+d124 2
+a125 3
+miniruby$(binsuffix):	$(OBJS) $(MAINOBJ) $(EXTOBJS) 
+		@@rm -f $@@
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby
+d127 2
+a128 3
+ruby$(binsuffix):     	$(LIBRUBY) $(MAINOBJ) $(EXTOBJS) 
+		@@rm -f $@@
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby
+d130 2
+a131 30
+$(LIBRUBY):	$(OBJS) dmyext.o
+		@@AR@@ rcu $(LIBRUBY) $(OBJS) dmyext.o
+		@@-@@RANLIB@@ $(LIBRUBY) 2> /dev/null || true
+
+install:;	$(INSTALL_PROGRAM) ruby$(binsuffix) $(bindir)/$(RUBY_INSTALL_NAME)$(binsuffix)
+		@@-@@STRIP@@ $(bindir)/$(RUBY_INSTALL_NAME)$(binsuffix)
+		@@test -d $(libdir) || mkdir $(libdir)
+		cd ext; ../miniruby ./extmk.rb install
+		@@for rb in `grep '^lib/' @@srcdir@@/MANIFEST`; do \
+		  $(INSTALL_DATA) @@srcdir@@/$$rb $(libdir); \
+		done
+
+clean:;		@@rm -f $(OBJS) $(LIBRUBY) $(MAINOBJ)
+		@@rm -f ext/extinit.c ext/extinit.o dmyext.o
+		cd ext; ../miniruby ./extmk.rb clean
+
+realclean:	clean
+		@@rm -f Makefile ext/extmk.rb ext/config.cache parse.c
+		@@rm -f config.cache config.h config.log config.status
+		@@rm -f core ruby$(binsuffix) miniruby$(binsuffix) parse.c *~ *.core gmon.out
+
+test:;		@@-./ruby @@srcdir@@/sample/test.rb > ./ruby_test 2>&1; \
+		 if grep '^end of test' ./ruby_test > /dev/null; then \
+		   echo "test succeeded"; \
+		 else \
+	           grep '^sample/test.rb' ./ruby_test; \
+		   grep '^not' ./ruby_test; \
+	   	   echo "test failed";\
+		 fi;\
+		 rm -f ./ruby_test
+d133 1
+a133 1
+.c.o:
+d136 3
+d143 1
+a143 1
+alloca.o: @@srcdir@@/missing/alloca.c
+d146 1
+a146 1
+crypt.o: @@srcdir@@/missing/crypt.c
+d149 1
+a149 1
+dup2.o: @@srcdir@@/missing/dup2.c
+d152 4
+a155 1
+flock.o: @@srcdir@@/missing/flock.c
+d158 13
+a170 1
+memmove.o: @@srcdir@@/missing/memmove.c
+d173 1
+a173 1
+mkdir.o: @@srcdir@@/missing/mkdir.c
+d176 2
+a177 2
+setenv.o: @@srcdir@@/missing/setenv.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/setenv.c
+d179 1
+a179 1
+strcasecmp.o: @@srcdir@@/missing/strcasecmp.c
+d182 5
+a186 2
+strerror.o: @@srcdir@@/missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strerror.c
+d188 1
+a188 1
+strdup.o: @@srcdir@@/missing/strdup.c
+d191 4
+a194 1
+strftime.o: @@srcdir@@/missing/strftime.c
+d197 1
+a197 1
+strstr.o: @@srcdir@@/missing/strstr.c
+d200 4
+a203 1
+strtol.o: @@srcdir@@/missing/strtol.c
+d206 1
+a206 1
+strtoul.o: @@srcdir@@/missing/strtoul.c
+d209 1
+a209 1
+nt.o: @@srcdir@@/missing/nt.c
+d212 1
+a212 1
+x68.o: @@srcdir@@/missing/x68.c
+d215 6
+d224 1
+a224 1
+parse.o : parse.y ruby.h defines.h config.h env.h node.h st.h regex.h 
+d226 37
+a262 37
+array.o: array.c ruby.h config.h defines.h
+bignum.o: bignum.c ruby.h config.h defines.h
+class.o: class.c ruby.h config.h defines.h node.h st.h
+compar.o: compar.c ruby.h config.h defines.h
+dir.o: dir.c ruby.h config.h defines.h
+dln.o: dln.c config.h defines.h dln.h st.h
+dmyext.o: dmyext.c
+enum.o: enum.c ruby.h config.h defines.h
+error.o: error.c ruby.h config.h defines.h env.h
+eval.o: eval.c ruby.h config.h defines.h env.h node.h sig.h st.h dln.h
+file.o: file.c ruby.h config.h defines.h io.h sig.h
+fnmatch.o: fnmatch.c config.h fnmatch.h
+gc.o: gc.c ruby.h config.h defines.h env.h sig.h st.h node.h re.h regex.h
+glob.o: glob.c config.h fnmatch.h
+hash.o: hash.c ruby.h config.h defines.h st.h
+inits.o: inits.c ruby.h config.h defines.h
+io.o: io.c ruby.h config.h defines.h io.h sig.h
+main.o: main.c
+math.o: math.c ruby.h config.h defines.h
+numeric.o: numeric.c ruby.h config.h defines.h
+object.o: object.c ruby.h config.h defines.h st.h
+pack.o: pack.c ruby.h config.h defines.h
+process.o: process.c ruby.h config.h defines.h sig.h st.h
+random.o: random.c ruby.h config.h defines.h
+range.o: range.c ruby.h config.h defines.h
+re.o: re.c ruby.h config.h defines.h re.h regex.h
+regex.o: regex.c config.h defines.h regex.h util.h
+ruby.o: ruby.c ruby.h config.h defines.h re.h regex.h dln.h
+signal.o: signal.c ruby.h config.h defines.h sig.h
+sprintf.o: sprintf.c ruby.h config.h defines.h
+st.o: st.c config.h st.h
+string.o: string.c ruby.h config.h defines.h re.h regex.h
+struct.o: struct.c ruby.h config.h defines.h
+time.o: time.c ruby.h config.h defines.h
+util.o: util.c defines.h config.h util.h
+variable.o: variable.c ruby.h config.h defines.h env.h st.h
+version.o: version.c ruby.h config.h defines.h version.h
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d10 3
+d21 8
+d36 1
+a36 1
+EXTOBJS	      = 
+a56 1
+		marshal.o \
+d78 5
+a82 2
+all:		miniruby$(binsuffix) rbconfig.rb
+		@@cd ext; ../miniruby$(binsuffix) ./extmk.rb @@EXTSTATIC@@
+d84 1
+a84 1
+miniruby$(binsuffix):	$(OBJS) $(MAINOBJ) dmyext.o
+d86 1
+a86 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) dmyext.o $(LIBS) -o miniruby
+d96 7
+a102 2
+install:	rbconfig.rb
+		./miniruby$(binsuffix) $(srcdir)/instruby.rb
+d104 1
+a104 1
+clean:;		@@rm -f $(OBJS) $(LIBRUBY) $(MAINOBJ) rbconfig.rb
+d106 1
+a106 1
+		@@if test -f ./miniruby; then cd ext; ../miniruby ./extmk.rb clean; fi
+d109 1
+a109 1
+		@@rm -f Makefile ext/extmk.rb ext/config.cache
+d111 1
+a111 2
+		@@rm -f parse.c lex.c *~ core *.core gmon.out
+		@@rm -f ruby$(binsuffix) miniruby$(binsuffix)
+d113 9
+a121 5
+test:		miniruby$(binsuffix)
+		@@./miniruby$(binsuffix) $(srcdir)/rubytest.rb
+
+rbconfig.rb:	config.status miniruby$(binsuffix)
+		@@./miniruby$(binsuffix) $(srcdir)/mkconfig.rb rbconfig.rb
+a125 3
+lex.c: keywords
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ keywords > lex.c
+
+d181 1
+a181 1
+parse.o : parse.y ruby.h defines.h config.h intern.h env.h node.h st.h regex.h lex.c
+d183 5
+a187 5
+array.o: array.c ruby.h config.h defines.h intern.h
+bignum.o: bignum.c ruby.h config.h defines.h intern.h
+class.o: class.c ruby.h config.h defines.h intern.h node.h st.h
+compar.o: compar.c ruby.h config.h defines.h intern.h
+dir.o: dir.c ruby.h config.h defines.h intern.h
+d190 10
+a199 8
+enum.o: enum.c ruby.h config.h defines.h intern.h
+error.o: error.c ruby.h config.h defines.h intern.h env.h
+eval.o: eval.c ruby.h config.h defines.h intern.h env.h node.h sig.h st.h dln.h
+file.o: file.c ruby.h config.h defines.h intern.h io.h sig.h
+gc.o: gc.c ruby.h config.h defines.h intern.h env.h sig.h st.h node.h re.h regex.h
+hash.o: hash.c ruby.h config.h defines.h intern.h st.h
+inits.o: inits.c ruby.h config.h defines.h intern.h
+io.o: io.c ruby.h config.h defines.h intern.h io.h sig.h
+d201 12
+a212 12
+marshal.o: marshal.c ruby.h config.h defines.h intern.h io.h sig.h st.h
+math.o: math.c ruby.h config.h defines.h intern.h
+numeric.o: numeric.c ruby.h config.h defines.h intern.h
+object.o: object.c ruby.h config.h defines.h intern.h st.h
+pack.o: pack.c ruby.h config.h defines.h intern.h
+process.o: process.c ruby.h config.h defines.h intern.h sig.h st.h
+random.o: random.c ruby.h config.h defines.h intern.h
+range.o: range.c ruby.h config.h defines.h intern.h
+re.o: re.c ruby.h config.h defines.h intern.h re.h regex.h
+ruby.o: ruby.c ruby.h config.h defines.h intern.h re.h regex.h dln.h
+signal.o: signal.c ruby.h config.h defines.h intern.h sig.h
+sprintf.o: sprintf.c ruby.h config.h defines.h intern.h
+d214 6
+a219 6
+string.o: string.c ruby.h config.h defines.h intern.h re.h regex.h
+struct.o: struct.c ruby.h config.h defines.h intern.h
+time.o: time.c ruby.h config.h defines.h intern.h
+util.o: util.c defines.h intern.h config.h util.h
+variable.o: variable.c ruby.h config.h defines.h intern.h env.h st.h
+version.o: version.c ruby.h config.h defines.h intern.h version.h
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@a10 1
+AUTOCONF = autoconf
+d13 1
+a13 2
+prefix = @@prefix@@
+CFLAGS = @@CFLAGS@@ -I. -I@@srcdir@@ -I@@includedir@@
+a14 1
+EXTLIBS = 
+a16 3
+LDSHARED = @@LDSHARED@@
+DLDFLAGS = @@DLDFLAGS@@
+SOLIBS = @@SOLIBS@@
+d23 1
+a23 2
+LIBRUBY	      = @@LIBRUBY@@
+LIBRUBYARG    = @@LIBRUBYARG@@
+d45 1
+a46 1
+		math.o \
+d69 1
+a69 1
+		@@./miniruby$(binsuffix) -Xext extmk.rb @@EXTSTATIC@@
+d71 1
+a71 1
+miniruby$(binsuffix):	libruby.a $(MAINOBJ) dmyext.o
+d73 1
+a73 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.o libruby.a $(LIBS) -o $@@
+d77 1
+a77 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+d79 3
+a81 6
+libruby.a:	$(OBJS) dmyext.o
+		@@AR@@ rcu $@@ $(OBJS) dmyext.o
+		@@-@@RANLIB@@ $@@ 2> /dev/null || true
+
+libruby.so:	$(OBJS) dmyext.o
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) dmyext.o -o $@@
+d84 1
+a84 1
+		./miniruby$(binsuffix) $(srcdir)/instruby.rb $(DESTDIR)
+d88 6
+a93 8
+		@@if test -f ./miniruby$(binsuffix); then \
+			./miniruby$(binsuffix) -Xext extmk.rb clean; \
+		fi
+
+distclean:	clean
+		@@rm -f Makefile ext/extmk.rb config.h
+		@@rm -f ext/config.cache config.cache config.log config.status
+		@@rm -f parse.c *~ core *.core gmon.out y.tab.c y.output
+a95 3
+realclean:	distclean
+		@@rm -f lex.c
+
+a101 6
+config.status:	$(srcdir)/configure
+		$(SHELL) ./config.status --recheck
+
+$(srcdir)/configure: $(srcdir)/configure.in
+		cd $(srcdir) && $(AUTOCONF)
+
+d106 1
+a106 1
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ @@srcdir@@/keywords > lex.c
+a123 3
+memcmp.o: @@srcdir@@/missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/memcmp.c
+
+d130 2
+a131 2
+vsnprintf.o: @@srcdir@@/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/vsnprintf.c
+d136 2
+a137 2
+strchr.o: @@srcdir@@/missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strchr.c
+a141 3
+strerror.o: @@srcdir@@/missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strerror.c
+
+d163 1
+a163 1
+parse.o: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+d170 1
+a170 1
+dln.o: dln.c config.h defines.h dln.h
+d174 4
+a177 6
+eval.o: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.o: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+fnmatch.o: fnmatch.c config.h fnmatch.h
+gc.o: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+glob.o: config.h glob.c fnmatch.h
+hash.o: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h
+d179 3
+a181 3
+io.o: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+main.o: main.c ruby.h config.h defines.h intern.h
+marshal.o: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+d186 1
+a186 1
+process.o: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+d190 2
+a191 3
+regex.o: regex.c config.h regex.h util.h
+ruby.o: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+signal.o: signal.c ruby.h config.h defines.h intern.h rubysig.h
+d197 2
+a198 2
+util.o: util.c ruby.h config.h defines.h intern.h util.h
+variable.o: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@a4 7
+MAJOR=	@@MAJOR@@
+MINOR=	@@MINOR@@
+
+MAJOR=	@@MAJOR@@
+MINOR=	@@MINOR@@
+TEENY=	@@TEENY@@
+
+a28 3
+LIBRUBY_A     = @@LIBRUBY_A@@
+LIBRUBY_SO    = @@LIBRUBY_SO@@
+LIBRUBY_ALIASES= @@LIBRUBY_ALIASES@@
+a52 1
+		prec.o \
+d78 1
+a78 1
+miniruby$(binsuffix):	$(LIBRUBY_A) $(MAINOBJ) dmyext.o
+d80 1
+a80 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.o $(LIBRUBY_A) $(LIBS) -o $@@
+d86 1
+a86 1
+$(LIBRUBY_A):	$(OBJS) dmyext.o
+d90 1
+a90 1
+$(LIBRUBY_SO):	$(OBJS) dmyext.o
+a91 5
+		@@for alias in $(LIBRUBY_ALIASES); do \
+		  rm -f $$alias \
+		   && @@LN_S@@ $(LIBRUBY_SO) $$alias \
+		     && echo ln @@LN_S@@ $(LIBRUBY_SO) $$alias; \
+		done
+d96 1
+a96 1
+clean:;		@@rm -f $(OBJS) $(LIBRUBY_A) $(LIBRUBY_SO) $(LIBRUBY_ALIASES) $(MAINOBJ) rbconfig.rb
+a210 1
+prec.o: prec.c ruby.h config.h defines.h intern.h
+@
+
+
+1.1.1.3.2.2
+log
+@990127
+@
+text
+@d7 3
+a11 2
+RUBY_INSTALL_NAME=@@RUBY_INSTALL_NAME@@
+
+d34 1
+@
+
+
+1.1.1.3.2.3
+log
+@990203
+@
+text
+@d21 1
+a21 1
+CFLAGS = @@CFLAGS@@ -I@@srcdir@@ -I@@includedir@@
+@
+
+
+1.1.1.3.2.4
+log
+@990205
+@
+text
+@d21 1
+a21 1
+CFLAGS = @@CFLAGS@@ -I. -I@@srcdir@@ -I@@includedir@@
+a187 3
+
+strtod.o: @@srcdir@@/missing/strtod.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strtod.c
+@
+
+
+1.1.1.3.2.5
+log
+@*** empty log message ***
+@
+text
+@d5 6
+a29 1
+RUBY_INSTALL_NAME=@@RUBY_INSTALL_NAME@@
+a30 1
+PROGRAM=$(RUBY_INSTALL_NAME)$(binsuffix)
+a33 4
+MAJOR=	@@MAJOR@@
+MINOR=	@@MINOR@@
+TEENY=	@@TEENY@@
+
+d61 1
+a67 1
+		prec.o \
+d87 1
+a87 1
+miniruby$(binsuffix):	config.status $(LIBRUBY_A) $(MAINOBJ) dmyext.o
+d91 1
+a91 1
+$(PROGRAM):     	$(LIBRUBY) $(MAINOBJ) $(EXTOBJS) 
+d101 5
+a105 3
+		@@-./miniruby -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+						  File.symlink "$(LIBRUBY_SO)", link}' \
+				$(LIBRUBY_ALIASES) || true
+d112 3
+a114 1
+		@@-./miniruby$(binsuffix) -Xext extmk.rb clean 2> /dev/null || true
+d120 1
+a120 1
+		@@rm -f $(PROGRAM) miniruby$(binsuffix)
+d128 1
+a128 1
+rbconfig.rb:	miniruby$(binsuffix)
+@
+
+
+1.1.1.3.2.6
+log
+@990224
+@
+text
+@d54 1
+a154 3
+fnmatch.o: @@srcdir@@/missing/fnmatch.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/fnmatch.c
+
+d219 1
+a219 1
+hash.o: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h util.h
+@
+
+
+1.1.1.3.2.7
+log
+@990324
+@
+text
+@a150 3
+finite.o: @@srcdir@@/missing/finite.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/finite.c
+
+a152 6
+
+isinf.o: @@srcdir@@/missing/isinf.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/isinf.c
+
+isnan.o: @@srcdir@@/missing/isnan.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/isnan.c
+@
+
+
+1.1.1.3.2.8
+log
+@*** empty log message ***
+@
+text
+@a210 6
+os2.o: @@srcdir@@/missing/os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/os2.c
+
+dl_os2.o: @@srcdir@@/missing/dl_os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/dl_os2.c
+
+@
+
+
+1.1.1.3.2.9
+log
+@to open CVS
+@
+text
+@a16 1
+XLDFLAGS = @@XLDFLAGS@@
+d88 1
+a88 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) dmyext.o $(LIBRUBY_A) $(LIBS) -o $@@
+d90 1
+a90 1
+$(PROGRAM):     $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) 
+@
+
+
+1.1.1.3.2.10
+log
+@better AIX support
+@
+text
+@d16 2
+a17 1
+LDFLAGS = @@STATIC@@ $(CFLAGS) @@LDFLAGS@@ @@XLDFLAGS@@
+d89 1
+a89 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.o $(LIBRUBY_A) $(LIBS) -o $@@
+d115 1
+a115 1
+		@@rm -f *~ core *.core gmon.out y.tab.c y.output ruby.imp
+a118 1
+		@@rm -f parse.c
+@
+
+
+1.1.1.3.2.11
+log
+@glibc 2.1
+@
+text
+@d16 1
+a16 2
+LDFLAGS = @@STATIC@@ $(CFLAGS) @@LDFLAGS@@
+XLDFLAGS = @@XLDFLAGS@@
+d92 1
+a92 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.1.1.3.2.12
+log
+@990507
+@
+text
+@d56 1
+d237 1
+@
+
+
+1.1.1.3.2.13
+log
+@990531
+@
+text
+@d21 2
+a22 2
+LDSHARED = @@LIBRUBY_LDSHARED@@
+DLDFLAGS = @@LIBRUBY_DLDFLAGS@@
+@
+
+
+1.1.1.3.2.14
+log
+@rb_exec_end_proc, etc.
+@
+text
+@a181 3
+strncasecmp.o: @@srcdir@@/missing/strncasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strncasecmp.c
+
+@
+
+
+1.1.1.3.2.15
+log
+@990625
+@
+text
+@a109 1
+		@@rm -f $(PROGRAM) miniruby$(binsuffix)
+d115 1
+@
+
+
+1.1.1.3.2.16
+log
+@990728
+@
+text
+@d26 2
+a27 2
+EXEEXT = @@EXEEXT@@
+PROGRAM=$(RUBY_INSTALL_NAME)$(EXEEXT)
+d43 1
+a43 1
+MAINOBJ	      = main.@@OBJEXT@@
+d45 36
+a80 36
+OBJS	      = array.@@OBJEXT@@ \
+		bignum.@@OBJEXT@@ \
+		class.@@OBJEXT@@ \
+		compar.@@OBJEXT@@ \
+		dir.@@OBJEXT@@ \
+		dln.@@OBJEXT@@ \
+		enum.@@OBJEXT@@ \
+		error.@@OBJEXT@@ \
+		eval.@@OBJEXT@@ \
+		file.@@OBJEXT@@ \
+		gc.@@OBJEXT@@ \
+		hash.@@OBJEXT@@ \
+		inits.@@OBJEXT@@ \
+		io.@@OBJEXT@@ \
+		marshal.@@OBJEXT@@ \
+		math.@@OBJEXT@@ \
+		numeric.@@OBJEXT@@ \
+		object.@@OBJEXT@@ \
+		pack.@@OBJEXT@@ \
+		parse.@@OBJEXT@@ \
+		process.@@OBJEXT@@ \
+		prec.@@OBJEXT@@ \
+		random.@@OBJEXT@@ \
+		range.@@OBJEXT@@ \
+		re.@@OBJEXT@@ \
+		regex.@@OBJEXT@@ \
+		ruby.@@OBJEXT@@ \
+		signal.@@OBJEXT@@ \
+		sprintf.@@OBJEXT@@ \
+		st.@@OBJEXT@@ \
+		string.@@OBJEXT@@ \
+		struct.@@OBJEXT@@ \
+		time.@@OBJEXT@@ \
+		util.@@OBJEXT@@ \
+		variable.@@OBJEXT@@ \
+		version.@@OBJEXT@@ \
+d83 2
+a84 2
+all:		miniruby$(EXEEXT) rbconfig.rb
+		@@./miniruby$(EXEEXT) -Xext extmk.rb @@EXTSTATIC@@
+d86 1
+a86 1
+miniruby$(EXEEXT):	config.status $(LIBRUBY_A) $(MAINOBJ) dmyext.@@OBJEXT@@
+d88 1
+a88 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.@@OBJEXT@@ $(LIBRUBY_A) $(LIBS) -o $@@
+d94 2
+a95 2
+$(LIBRUBY_A):	$(OBJS) dmyext.@@OBJEXT@@
+		@@AR@@ rcu $@@ $(OBJS) dmyext.@@OBJEXT@@
+d98 2
+a99 2
+$(LIBRUBY_SO):	$(OBJS) dmyext.@@OBJEXT@@
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) dmyext.@@OBJEXT@@ -o $@@
+d105 1
+a105 1
+		./miniruby$(EXEEXT) $(srcdir)/instruby.rb $(DESTDIR)
+d108 3
+a110 3
+		@@rm -f ext/extinit.c ext/extinit.@@OBJEXT@@ dmyext.@@OBJEXT@@
+		@@-./miniruby$(EXEEXT) -Xext extmk.rb clean 2> /dev/null || true
+		@@rm -f $(PROGRAM) miniruby$(EXEEXT)
+d121 2
+a122 2
+test:		miniruby$(EXEEXT)
+		@@./miniruby$(EXEEXT) $(srcdir)/rubytest.rb
+d124 2
+a125 2
+rbconfig.rb:	miniruby$(EXEEXT)
+		@@./miniruby$(EXEEXT) $(srcdir)/mkconfig.rb rbconfig.rb
+d133 1
+a133 1
+.c.@@OBJEXT@@:
+d143 1
+a143 1
+alloca.@@OBJEXT@@: @@srcdir@@/missing/alloca.c
+d146 1
+a146 1
+crypt.@@OBJEXT@@: @@srcdir@@/missing/crypt.c
+d149 1
+a149 1
+dup2.@@OBJEXT@@: @@srcdir@@/missing/dup2.c
+d152 1
+a152 1
+finite.@@OBJEXT@@: @@srcdir@@/missing/finite.c
+d155 1
+a155 1
+flock.@@OBJEXT@@: @@srcdir@@/missing/flock.c
+d158 1
+a158 1
+isinf.@@OBJEXT@@: @@srcdir@@/missing/isinf.c
+d161 1
+a161 1
+isnan.@@OBJEXT@@: @@srcdir@@/missing/isnan.c
+d164 1
+a164 1
+fnmatch.@@OBJEXT@@: @@srcdir@@/missing/fnmatch.c
+d167 1
+a167 1
+memcmp.@@OBJEXT@@: @@srcdir@@/missing/memcmp.c
+d170 1
+a170 1
+memmove.@@OBJEXT@@: @@srcdir@@/missing/memmove.c
+d173 1
+a173 1
+mkdir.@@OBJEXT@@: @@srcdir@@/missing/mkdir.c
+d176 1
+a176 1
+vsnprintf.@@OBJEXT@@: @@srcdir@@/missing/vsnprintf.c
+d179 1
+a179 1
+strcasecmp.@@OBJEXT@@: @@srcdir@@/missing/strcasecmp.c
+d182 1
+a182 1
+strncasecmp.@@OBJEXT@@: @@srcdir@@/missing/strncasecmp.c
+d185 1
+a185 1
+strchr.@@OBJEXT@@: @@srcdir@@/missing/strchr.c
+d188 1
+a188 1
+strdup.@@OBJEXT@@: @@srcdir@@/missing/strdup.c
+d191 1
+a191 1
+strerror.@@OBJEXT@@: @@srcdir@@/missing/strerror.c
+d194 1
+a194 1
+strftime.@@OBJEXT@@: @@srcdir@@/missing/strftime.c
+d197 1
+a197 1
+strstr.@@OBJEXT@@: @@srcdir@@/missing/strstr.c
+d200 1
+a200 1
+strtod.@@OBJEXT@@: @@srcdir@@/missing/strtod.c
+d203 1
+a203 1
+strtol.@@OBJEXT@@: @@srcdir@@/missing/strtol.c
+d206 1
+a206 1
+strtoul.@@OBJEXT@@: @@srcdir@@/missing/strtoul.c
+d209 1
+a209 1
+nt.@@OBJEXT@@: @@srcdir@@/missing/nt.c
+d212 1
+a212 1
+x68.@@OBJEXT@@: @@srcdir@@/missing/x68.c
+d215 1
+a215 1
+os2.@@OBJEXT@@: @@srcdir@@/missing/os2.c
+d218 1
+a218 1
+dl_os2.@@OBJEXT@@: @@srcdir@@/missing/dl_os2.c
+d224 1
+a224 1
+parse.@@OBJEXT@@: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+d226 38
+a263 38
+array.@@OBJEXT@@: array.c ruby.h config.h defines.h intern.h
+bignum.@@OBJEXT@@: bignum.c ruby.h config.h defines.h intern.h
+class.@@OBJEXT@@: class.c ruby.h config.h defines.h intern.h node.h st.h
+compar.@@OBJEXT@@: compar.c ruby.h config.h defines.h intern.h
+dir.@@OBJEXT@@: dir.c ruby.h config.h defines.h intern.h
+dln.@@OBJEXT@@: dln.c config.h defines.h dln.h
+dmyext.@@OBJEXT@@: dmyext.c
+enum.@@OBJEXT@@: enum.c ruby.h config.h defines.h intern.h
+error.@@OBJEXT@@: error.c ruby.h config.h defines.h intern.h env.h
+eval.@@OBJEXT@@: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.@@OBJEXT@@: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+fnmatch.@@OBJEXT@@: fnmatch.c config.h fnmatch.h
+gc.@@OBJEXT@@: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+hash.@@OBJEXT@@: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h util.h
+inits.@@OBJEXT@@: inits.c ruby.h config.h defines.h intern.h
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+main.@@OBJEXT@@: main.c ruby.h config.h defines.h intern.h
+marshal.@@OBJEXT@@: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+prec.@@OBJEXT@@: prec.c ruby.h config.h defines.h intern.h
+math.@@OBJEXT@@: math.c ruby.h config.h defines.h intern.h
+numeric.@@OBJEXT@@: numeric.c ruby.h config.h defines.h intern.h
+object.@@OBJEXT@@: object.c ruby.h config.h defines.h intern.h st.h
+pack.@@OBJEXT@@: pack.c ruby.h config.h defines.h intern.h
+process.@@OBJEXT@@: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+random.@@OBJEXT@@: random.c ruby.h config.h defines.h intern.h
+range.@@OBJEXT@@: range.c ruby.h config.h defines.h intern.h
+re.@@OBJEXT@@: re.c ruby.h config.h defines.h intern.h re.h regex.h
+regex.@@OBJEXT@@: regex.c config.h regex.h util.h
+ruby.@@OBJEXT@@: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+signal.@@OBJEXT@@: signal.c ruby.h config.h defines.h intern.h rubysig.h
+sprintf.@@OBJEXT@@: sprintf.c ruby.h config.h defines.h intern.h
+st.@@OBJEXT@@: st.c config.h st.h
+string.@@OBJEXT@@: string.c ruby.h config.h defines.h intern.h re.h regex.h
+struct.@@OBJEXT@@: struct.c ruby.h config.h defines.h intern.h
+time.@@OBJEXT@@: time.c ruby.h config.h defines.h intern.h
+util.@@OBJEXT@@: util.c ruby.h config.h defines.h intern.h util.h
+variable.@@OBJEXT@@: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+version.@@OBJEXT@@: version.c ruby.h config.h defines.h intern.h version.h
+@
+
+
+1.1.1.3.2.17
+log
+@990806
+@
+text
+@d237 1
+@
+
+
+1.1.1.3.2.18
+log
+@pre 1.4.0
+@
+text
+@d240 1
+a240 1
+io.@@OBJEXT@@: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h
+@
+
+
+1.1.1.2.2.1
+log
+@Makefile.in add rules for some missing funcs
+@
+text
+@a123 3
+memcmp.o: @@srcdir@@/missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/memcmp.c
+
+d136 2
+a137 2
+strchr.o: @@srcdir@@/missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strchr.c
+a140 3
+
+strerror.o: @@srcdir@@/missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/strerror.c
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b9_05_pre1
+@
+text
+@d45 1
+a46 1
+		math.o \
+@
+
+
+1.1.1.2.2.3
+log
+@gw32 b19 patch
+@
+text
+@d73 1
+a73 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) dmyext.o $(LIBS) -o $@@
+d77 1
+a77 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o $@@
+d88 1
+a88 4
+		@@if test -f ./miniruby$(binsuffix); then \
+			cd ext; \
+			../miniruby$(binsuffix) ./extmk.rb clean; \
+		fi
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_09
+@
+text
+@d206 1
+a206 1
+util.o: util.c ruby.h defines.h intern.h config.h util.h
+@
+
+
+1.1.1.2.2.5
+log
+@1.1b9_10 pre0
+@
+text
+@d172 1
+a172 1
+parse.o: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+d179 1
+a179 1
+dln.o: dln.c config.h defines.h dln.h
+d183 1
+a183 1
+eval.o: eval.c ruby.h config.h defines.h intern.h node.h env.h sig.h st.h dln.h
+d185 2
+a186 2
+gc.o: gc.c ruby.h config.h defines.h intern.h sig.h st.h node.h env.h re.h regex.h
+hash.o: hash.c ruby.h config.h defines.h intern.h st.h sig.h
+d189 1
+a189 1
+main.o: main.c ruby.h config.h defines.h intern.h
+d206 2
+a207 2
+util.o: util.c ruby.h config.h defines.h intern.h util.h
+variable.o: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+@
+
+
+1.1.1.2.2.6
+log
+@signal delivered to main_thread
+@
+text
+@d69 1
+a69 1
+		@@./miniruby$(binsuffix) -Xext extmk.rb @@EXTSTATIC@@
+d89 2
+a90 1
+			./miniruby$(binsuffix) -Xext extmk.rb clean; \
+@
+
+
+1.1.1.2.2.7
+log
+@*** empty log message ***
+@
+text
+@d92 4
+a95 4
+distclean:	clean
+		@@rm -f Makefile ext/extmk.rb config.h
+		@@rm -f ext/config.cache config.cache config.log config.status
+		@@rm -f parse.c *~ core *.core gmon.out y.tab.c y.output
+a96 3
+
+realclean:	distclean
+		@@rm -f lex.c
+@
+
+
+1.1.1.2.2.8
+log
+@1.1b9_14
+@
+text
+@d13 1
+a13 2
+prefix = @@prefix@@
+CFLAGS = @@CFLAGS@@ -I@@includedir@@ -I@@srcdir@@
+@
+
+
+1.1.1.2.2.9
+log
+@new exception model
+@
+text
+@d202 1
+a202 1
+ruby.o: ruby.c ruby.h config.h defines.h intern.h dln.h
+@
+
+
+1.1.1.2.2.10
+log
+@1.1b9_18
+@
+text
+@d14 1
+a14 1
+CFLAGS = @@CFLAGS@@ -I@@srcdir@@ -I@@includedir@@
+@
+
+
+1.1.1.2.2.11
+log
+@*** empty log message ***
+@
+text
+@a17 3
+LDSHARED = @@LDSHARED@@
+DLDFLAGS = @@DLDFLAGS@@
+SOLIBS = @@SOLIBS@@
+d24 1
+a24 2
+LIBRUBY	      = @@LIBRUBY@@
+LIBRUBYARG    = @@LIBRUBYARG@@
+d78 1
+a78 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+d80 2
+a81 2
+libruby.a:	$(OBJS) dmyext.o
+		@@AR@@ rcu $@@ $(OBJS) dmyext.o
+a82 3
+
+libruby.so:	$(OBJS) dmyext.o
+		$(LDSHARED) $(DLDFLAGS) $(SOLIBS) $(OBJS) dmyext.o -o $@@
+@
+
+
+1.1.1.2.2.12
+log
+@1.1b9_26
+@
+text
+@d193 4
+a196 4
+eval.o: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.o: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+gc.o: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+hash.o: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h
+d198 1
+a198 1
+io.o: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+d200 1
+a200 1
+marshal.o: marshal.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h st.h
+d205 1
+a205 1
+process.o: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+d210 1
+a210 1
+signal.o: signal.c ruby.h config.h defines.h intern.h rubysig.h
+@
+
+
+1.1.1.2.2.13
+log
+@*** empty log message ***
+@
+text
+@a208 1
+regex.o: regex.c config.h regex.h util.h
+@
+
+
+1.1.1.2.2.14
+log
+@980626
+@
+text
+@a194 1
+fnmatch.o: fnmatch.c config.h fnmatch.h
+a195 1
+glob.o: config.h glob.c fnmatch.h
+d200 1
+a200 1
+marshal.o: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+@
+
+
+1.1.1.2.2.15
+log
+@1.1b9_30
+@
+text
+@a15 1
+EXTLIBS = 
+@
+
+
+1.1.1.2.2.16
+log
+@1.1c2
+@
+text
+@a149 3
+snprintf.o: @@srcdir@@/missing/snprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/snprintf.c
+
+@
+
+
+1.1.1.2.2.17
+log
+@1.1c7
+@
+text
+@d14 1
+a14 1
+CFLAGS = @@CFLAGS@@ -I. -I@@srcdir@@ -I@@includedir@@
+d87 1
+a87 1
+		@@-@@RANLIB@@ $@@ 2> /dev/null || true
+d120 1
+a120 1
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ @@srcdir@@/keywords > lex.c
+d150 2
+a151 2
+vsnprintf.o: @@srcdir@@/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/vsnprintf.c
+@
+
+
+1.1.1.2.2.18
+log
+@1.1c8
+@
+text
+@d93 1
+a93 1
+		./miniruby$(binsuffix) $(srcdir)/instruby.rb $(DESTDIR)
+@
+
+
+1.1.1.2.2.19
+log
+@1.2.1 stable
+@
+text
+@d77 1
+a77 1
+miniruby$(binsuffix):	libruby.a $(MAINOBJ) dmyext.o
+d79 1
+a79 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.o libruby.a $(LIBS) -o $@@
+@
+
+
+1.1.1.2.2.20
+log
+@1.2.2 PR1
+@
+text
+@d150 3
+a175 3
+
+vsnprintf.o: @@srcdir@@/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/vsnprintf.c
+@
+
+
+1.1.1.2.2.21
+log
+@1.2.4
+@
+text
+@a22 1
+RUBY_INSTALL_NAME = @@RUBY_INSTALL_NAME@@
+a23 1
+PROGRAM = $(RUBY_INSTALL_NAME)$(binsuffix)
+d81 1
+a81 1
+$(PROGRAM):     $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) 
+@
+
+
+1.1.1.2.2.16.2.1
+log
+@1.1d series
+@
+text
+@d77 1
+a77 1
+miniruby$(binsuffix):	$(LIBRUBY) $(MAINOBJ) dmyext.o
+d79 1
+a79 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) dmyext.o $(LIBRUBYARG) $(LIBS) -o $@@
+d216 1
+a216 1
+ruby.o: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+@
+
+
+1.1.1.2.2.16.2.2
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+CFLAGS = @@CFLAGS@@ -I. -I@@srcdir@@ -I@@includedir@@
+d87 1
+a87 1
+		@@-@@RANLIB@@ $@@ 2> /dev/null || true
+d93 1
+a93 1
+		./miniruby$(binsuffix) $(srcdir)/instruby.rb $(DESTDIR)
+d120 1
+a120 1
+	gperf -p -j1 -i 1 -g -o -t -N rb_reserved_word -k1,3,$$ @@srcdir@@/keywords > lex.c
+d150 2
+a151 2
+vsnprintf.o: @@srcdir@@/missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c @@srcdir@@/missing/vsnprintf.c
+@
+
+
+1.1.1.2.2.16.2.3
+log
+@1.1d1
+@
+text
+@d147 3
+@

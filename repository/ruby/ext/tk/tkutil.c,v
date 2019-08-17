@@ -1,0 +1,393 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.3
+	v1_6_6:1.3
+	v1_6_5:1.3
+	v1_6_4:1.3
+	v1_7_1:1.3
+	v1_6_4_preview4:1.3
+	v1_6_4_preview3:1.3
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.2
+	v1_3_6_repack:1.1.1.1.2.2
+	v1_3_6:1.1.1.1.2.2
+	v1_3_5:1.1.1.1.2.2
+	v1_2_6repack:1.1.2.2
+	v1_3_4_990625:1.1.1.1.2.2
+	v1_3_4_990624:1.1.1.1.2.2
+	v1_2_6:1.1.2.2
+	v1_3_4_990611:1.1.1.1.2.2
+	v1_3_4_990531:1.1.1.1.2.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.2
+	v1_2_4:1.1.2.2
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.4
+date	2001.11.13.08.53.15;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.05.24.04.34.20;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.51;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.05.31.09.13.32;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.06.11.06.30.01;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.08.11.07.24.10;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.04.08.10.14.35;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@tkutil needed to be updated
+@
+text
+@/************************************************
+
+  tk.c -
+
+  $Author: matz $
+  $Date: 2000/05/24 04:34:20 $
+  created at: Fri Nov  3 00:47:54 JST 1995
+
+************************************************/
+
+#include "ruby.h"
+
+static VALUE
+tk_eval_cmd(argc, argv)
+    int argc;
+    VALUE argv[];
+{
+    VALUE cmd, rest;
+
+    rb_scan_args(argc, argv, "1*", &cmd, &rest);
+    return rb_eval_cmd(cmd, rest, 0);
+}
+
+static VALUE
+tk_s_new(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE obj = rb_class_new_instance(argc, argv, klass);
+
+    if (rb_block_given_p()) rb_obj_instance_eval(0, 0, obj);
+    return obj;
+}
+
+void
+Init_tkutil()
+{
+    VALUE mTK = rb_define_module("TkUtil");
+    VALUE cTK = rb_define_class("TkKernel", rb_cObject);
+
+    rb_define_singleton_method(mTK, "eval_cmd", tk_eval_cmd, -1);
+
+    rb_define_singleton_method(cTK, "new", tk_s_new, -1);
+}
+@
+
+
+1.3
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:37:51 $
+d21 1
+a21 1
+    return rb_eval_cmd(cmd, rest);
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/11 07:24:10 $
+d32 1
+a32 1
+    if (rb_iterator_p()) rb_obj_instance_eval(0, 0, obj);
+@
+
+
+1.1
+log
+@file tkutil.c was initially added on branch v1_1r.
+@
+text
+@d1 45
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 45
+/************************************************
+
+  tk.c -
+
+  $Author: matz $
+  $Date: 1998/11/17 09:12:44 $
+  created at: Fri Nov  3 00:47:54 JST 1995
+
+************************************************/
+
+#include "ruby.h"
+
+static VALUE
+tk_eval_cmd(argc, argv)
+    int argc;
+    VALUE argv[];
+{
+    VALUE cmd, rest;
+
+    rb_scan_args(argc, argv, "1*", &cmd, &rest);
+    return rb_eval_cmd(cmd, rest);
+}
+
+static VALUE
+tk_s_new(argc, argv, class)
+    int argc;
+    VALUE *argv;
+    VALUE class;
+{
+    VALUE obj = rb_obj_alloc(class);
+
+    rb_funcall2(obj, rb_intern("initialize"), argc, argv);
+    if (rb_iterator_p()) rb_obj_instance_eval(0, 0, obj);
+    return obj;
+}
+
+Init_tkutil()
+{
+    VALUE mTK = rb_define_module("TkUtil");
+    VALUE cTK = rb_define_class("TkKernel", rb_cObject);
+
+    rb_define_singleton_method(mTK, "eval_cmd", tk_eval_cmd, -1);
+
+    rb_define_singleton_method(cTK, "new", tk_s_new, -1);
+}
+@
+
+
+1.1.1.1.2.1
+log
+@990531
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:34 $
+d32 1
+a32 1
+    rb_obj_call_init(obj, argc, argv);
+@
+
+
+1.1.1.1.2.2
+log
+@990611
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/31 09:13:32 $
+d25 1
+a25 1
+tk_s_new(argc, argv, klass)
+d28 1
+a28 1
+    VALUE klass;
+d30 1
+a30 1
+    VALUE obj = rb_class_new_instance(argc, argv, klass);
+d32 1
+@
+
+
+1.1.1.1.2.3
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/11 06:30:01 $
+a35 1
+void
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 45
+/************************************************
+
+  tk.c -
+
+  $Author: matz $
+  $Date: 1998/06/18 07:47:05 $
+  created at: Fri Nov  3 00:47:54 JST 1995
+
+************************************************/
+
+#include "ruby.h"
+
+static VALUE
+tk_eval_cmd(argc, argv)
+    int argc;
+    VALUE argv[];
+{
+    VALUE cmd, rest;
+
+    rb_scan_args(argc, argv, "1*", &cmd, &rest);
+    return rb_eval_cmd(cmd, rest);
+}
+
+static VALUE
+tk_s_new(argc, argv, class)
+    int argc;
+    VALUE *argv;
+    VALUE class;
+{
+    VALUE obj = obj_alloc(class);
+
+    rb_funcall2(obj, rb_intern("initialize"), argc, argv);
+    if (iterator_p()) rb_yield_0(obj, obj);
+    return obj;
+}
+
+Init_tkutil()
+{
+    VALUE mTK = rb_define_module("TkUtil");
+    VALUE cTK = rb_define_class("TkKernel", cObject);
+
+    rb_define_singleton_method(mTK, "eval_cmd", tk_eval_cmd, -1);
+
+    rb_define_singleton_method(cTK, "new", tk_s_new, -1);
+}
+@
+
+
+1.1.2.2
+log
+@1.2.4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/17 09:12:44 $
+d33 1
+a33 1
+    if (iterator_p()) rb_yield_0(obj, obj, 0);
+@
+
+

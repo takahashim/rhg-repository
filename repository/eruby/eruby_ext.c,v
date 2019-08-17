@@ -1,0 +1,91 @@
+head	1.2;
+access;
+symbols
+	release_0_9_8:1.2
+	autoconfiscation-branch:1.2.0.2
+	root-of-autoconfiscation:1.2
+	release_0_9_7:1.2
+	release_0_9_6:1.2
+	release_0_9_5:1.2
+	release_0_9_4:1.2
+	release_0_9_3:1.2
+	release_0_9_2:1.1
+	release_0_9_1:1.1
+	release_0_9_0:1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2001.06.04.05.20.18;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.19.06.02.39;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* examples/e2r.rb: new file.
+* examples/test.rhtml: new file.
+* examples/foo.rhtml: new file.
+* COPYING: new file.
+* GPL: new file.
+* LGPL: new file.
+* eruby_lib.c (eruby_import): use Kernel#eval for backtrace.
+@
+text
+@/*
+ * $Id: eruby_lib.c,v 1.7 2001/06/01 08:06:07 shugo Exp $
+ * Copyright (C) 2000  ZetaBITS, Inc.
+ * Copyright (C) 2000  Information-technology Promotion Agency, Japan
+ * Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+ *
+ * This file is part of eruby.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+ * USA.
+ */
+
+#include "ruby.h"
+#include "eruby.h"
+
+void Init_eruby()
+{
+    eruby_init();
+}
+@
+
+
+1.1
+log
+@* eruby_lib.c: renamed from eruby.c.
+* eruby_lib.c (eruby_init): new class ERuby::Compiler.
+* eruby_ext.c: new file for eruby extention library.
+* examples/test.rb: example for eruby extention library.
+@
+text
+@d1 24
+a31 2
+
+    
+@

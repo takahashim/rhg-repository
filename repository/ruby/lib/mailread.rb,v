@@ -1,0 +1,551 @@
+head	1.6;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5.2.1
+	v1_6_5:1.5
+	v1_6_4:1.5
+	v1_7_1:1.5
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.1
+	v1_3_6_repack:1.1.1.3.2.1
+	v1_3_6:1.1.1.3.2.1
+	v1_3_5:1.1.1.3.2.1
+	v1_2_6repack:1.1.1.2.2.2
+	v1_3_4_990625:1.1.1.3.2.1
+	v1_3_4_990624:1.1.1.3.2.1
+	v1_2_6:1.1.1.2.2.2
+	v1_3_4_990611:1.1.1.3.2.1
+	v1_3_4_990531:1.1.1.3.2.1
+	v1_3_3_990518:1.1.1.3.2.1
+	v1_3_3_990513:1.1.1.3.2.1
+	v1_3_3_990507:1.1.1.3.2.1
+	v1_2_5:1.1.1.2.2.2
+	v1_2_4:1.1.1.2.2.2
+	v1_3_1_990225:1.1.1.3
+	v1_3_1_990224:1.1.1.3
+	v1_3_1_990215:1.1.1.3
+	v1_3_1_990212:1.1.1.3
+	v1_3_1_990210:1.1.1.3
+	v1_3_1_:1.1.1.3
+	v1_3_1_990209:1.1.1.3
+	v1_3_1_990205:1.1.1.3
+	v1_3_1_990203:1.1.1.3
+	v1_3_1_990201:1.1.1.3
+	v1_3_1"_990201:1.1.1.3
+	v1_3_1_990128:1.1.1.3
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.1
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.1
+	v1_2_1repack:1.1.1.2.2.1
+	v1_2_1:1.1.1.2.2.1
+	v1_2_stable:1.1.1.2.2.1
+	v1_1d1:1.1.1.2.2.1.2.1
+	v1_1d0:1.1.1.2.2.1.2.1
+	v1_1c9_1:1.1.1.2.2.1
+	v1_1c9:1.1.1.2.2.1
+	v1_1c8:1.1.1.2.2.1
+	v1_1c7:1.1.1.2.2.1
+	v1_1c6:1.1.1.2.2.1
+	v1_1d-start:1.1.1.2.2.1
+	v1_1c5:1.1.1.2.2.1
+	v1_1dev:1.1.1.2.2.1.0.2
+	v1_1c4:1.1.1.2.2.1
+	v1_1c3:1.1.1.2.2.1
+	v1_1c2:1.1.1.2.2.1
+	v1_1c1:1.1.1.2.2.1
+	v1_1c0:1.1.1.2.2.1
+	v1_1b9_31:1.1.1.2.2.1
+	v1_1b9_30:1.1.1.2.2.1
+	v1_1b9_28:1.1.1.2.2.1
+	v1_1b9_27:1.1.1.2.2.1
+	v1_1b9_26:1.1.1.2.2.1
+	r1_1b9_25:1.1.1.2.2.1
+	r1_1b9_24:1.1.1.2.2.1
+	v1_1b9_23:1.1.1.2.2.1
+	v1_1b9_22:1.1.1.2.2.1
+	v1_1b9_20:1.1.1.2.2.1
+	v1_1b9_18:1.1.1.2.2.1
+	v1_1b9_16:1.1.1.2.2.1
+	v1_1b9_15:1.1.1.2.2.1
+	v1_1b9_13:1.1.1.2.2.1
+	v1_1b9_12:1.1.1.2.2.1
+	v1_1b9_11:1.1.1.2.2.1
+	v1_1b9_08:1.1.1.2.2.1
+	v1_1b9_07:1.1.1.2.2.1
+	r1_1b9:1.1.1.2
+	v1_1b8:1.1.1.2
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2001.10.02.04.31.23;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.10.10.09.24.54;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.10.10.07.03.32;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.25.03.51.23;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.03.26.10.22.14;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1.2.1;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.08.09.12.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1.2.1
+date	98.12.16.07.30.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.10.02.04.24.28;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@class Mail
+
+  def initialize(f)
+    unless defined? f.gets
+      f = open(f, "r")
+      opened = true
+    end
+
+    @@header = {}
+    @@body = []
+    begin
+      while line = f.gets()
+	line.chop!
+	next if /^From /=~line	# skip From-line
+	break if /^$/=~line	# end of header
+
+	if /^(\S+?):\s*(.*)/=~line
+	  (attr = $1).capitalize!
+	  @@header[attr] = $2
+	elsif attr
+	  line.sub!(/^\s*/, '')
+	  @@header[attr] += "\n" + line
+	end
+      end
+  
+      return unless line
+
+      while line = f.gets()
+	break if /^From /=~line
+	@@body.push(line)
+      end
+    ensure
+      f.close if opened
+    end
+  end
+
+  def header
+    return @@header
+  end
+
+  def body
+    return @@body
+  end
+
+  def [](field)
+    @@header[field.capitalize]
+  end
+end
+@
+
+
+1.5
+log
+@mailread
+@
+text
+@d17 1
+a17 1
+	if /^(\S+):\s*(.*)/=~line
+@
+
+
+1.5.2.1
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d17 1
+a17 1
+	if /^(\S+?):\s*(.*)/=~line
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d12 1
+a12 1
+      f.each do |line|
+@
+
+
+1.3
+log
+@2000-02-25
+@
+text
+@d12 1
+a12 1
+      while line = f.gets()
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d12 4
+a15 4
+      while f.gets()
+	$_.chop!
+	next if /^From /	# skip From-line
+	break if /^$/		# end of header
+d17 1
+a17 1
+	if /^(\S+):\s*(.*)/
+d21 2
+a22 2
+	  sub!(/^\s*/, '')
+	  @@header[attr] += "\n" + $_
+d26 1
+a26 1
+      return unless $_
+d28 3
+a30 3
+      while f.gets()
+	break if /^From /
+	@@body.push($_)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 3
+a4 2
+  def Mail.new(f)
+    unless f.kind_of?(IO)
+d6 1
+a6 4
+      me = super(f)
+      f.close
+    else
+      me = super
+a7 2
+    return me
+  end
+a8 1
+  def initialize(f)
+d11 13
+a23 10
+    while f.gets()
+      $_.chop!
+      next if /^From /		# skip From-line
+      break if /^$/		# end of header
+
+      if /^(\S+):\s*(.*)/
+	@@header[attr = $1.capitalize!] = $2
+      elsif attr
+	sub!(/^\s*/, '')
+	@@header[attr] += "\n" + $_
+a24 1
+    end
+d26 1
+a26 1
+    return unless $_
+d28 6
+a33 3
+    while f.gets()
+      break if /^From /
+      @@body.push($_)
+d46 1
+a46 1
+    @@header[field]
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 2
+
+  def initialize(f)
+d5 4
+a8 1
+      opened = true
+d10 2
+d13 1
+d16 4
+a19 5
+    begin
+      while f.gets()
+	$_.chop!
+	next if /^From /	# skip From-line
+	break if /^$/		# end of header
+d21 5
+a25 6
+	if /^(\S+):\s*(.*)/
+	  @@header[attr = $1.capitalize!] = $2
+	elsif attr
+	  sub!(/^\s*/, '')
+	  @@header[attr] += "\n" + $_
+	end
+d27 1
+d29 1
+a29 1
+      return unless $_
+d31 3
+a33 6
+      while f.gets()
+	break if /^From /
+	@@body.push($_)
+      end
+    ensure
+      f.close if opened
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d4 1
+a4 1
+    unless defined? f.gets
+d18 1
+a18 2
+	  (attr = $1).capitalize!
+	  @@header[attr] = $2
+@
+
+
+1.1.1.3.2.1
+log
+@*** empty log message ***
+@
+text
+@d46 1
+a46 1
+    @@header[field.capitalize]
+@
+
+
+1.1.1.2.2.1
+log
+@protected methods
+@
+text
+@d18 1
+a18 2
+	  (attr = $1).capitalize!
+	  @@header[attr] = $2
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d46 1
+a46 1
+    @@header[field.capitalize]
+@
+
+
+1.1.1.2.2.1.2.1
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d4 1
+a4 1
+    unless defined? f.gets
+@
+

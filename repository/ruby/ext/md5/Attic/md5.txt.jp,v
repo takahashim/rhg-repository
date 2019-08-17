@@ -1,0 +1,336 @@
+head	1.6;
+access;
+symbols
+	v1_6_4:1.3.2.2
+	v1_7_1:1.5
+	v1_6_4_preview4:1.3.2.2
+	v1_6_4_preview3:1.3.2.2
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2001.07.13.20.06.14;	author knu;	state dead;
+branches;
+next	1.5;
+
+1.5
+date	2001.05.16.22.28.40;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.05.16.21.34.18;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.22.08.29.56;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.49;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.08.06.06.48.22;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.08.06.06.48.22;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.05.16.21.38.37;	author knu;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.05.16.22.31.25;	author knu;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2001.07.19.05.44.25;	author knu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@.\" md5.doc -  -*- Indented-Text -*- created at: Fri Aug  2 12:01:27 JST 1996
+
+** MD5(クラス)
+
+RFC1321に記述されているRSA Data Security, Inc. の MD5 Message-Digest
+Algorithmを実装するクラス。
+
+Superclass: Object
+
+Class Methods:
+
+   new([str])
+   md5([str])
+
+        新しいMD5オブジェクトを生成する．文字列引数が与えられるとそれ
+        を追加する(see update)。
+
+Methods:
+
+   clone
+
+	MD5オブジェクトの複製を作る。
+
+   digest
+
+        今までに追加した文字列に対するハッシュ値を16バイト長の文字列で
+        返す。
+
+   hexdigest
+
+        今までに追加した文字列に対するハッシュ値を、ASCIIコードを使って
+	16進数の列を示す'fe5c2235f48d2bcc911afabea23cd5aa'のような32文字
+	の文字列にエンコードして返す。Rubyで書くと以下と同じ。
+
+	def hexdigest
+  	  ret = ''
+	  digest.each_byte {|i| ret << sprintf('%02x', i) }
+	  ret
+	end
+
+   update(str)
+   << str
+
+        MD5オブジェクトに文字列を追加する。複数回updateを呼ぶことは文
+        字列を連結してupdateを呼ぶことと等しい。すなわち m.update(a);
+	m.update(b) は m.update(a+b) と、 m << a << b は m << a+b と
+	それぞれ等価である。
+
+-------------------------------------------------------
+Local variables:
+fill-column: 70
+end:
+@
+
+
+1.5
+log
+@* ext/md5/md5.txt.jp, ext/sha1/sha1.txt.jp: s/SuperClass/Superclass/.
+@
+text
+@@
+
+
+1.4
+log
+@* ext/md5/md5.txt: make wording fixes, and mention the newly added
+method: "<<".
+
+* ext/md5/md5.txt.jp: ditto.
+@
+text
+@d8 1
+a8 1
+SuperClass: Object
+@
+
+
+1.3
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+Algorithmを実装するクラス．
+d16 1
+a16 1
+        を追加する(see update)．
+d22 1
+a22 1
+	MD5オブジェクトの複製を作る
+d27 1
+a27 1
+        返す．
+d42 1
+d45 3
+a47 1
+        字列を連結してupdateを呼ぶことと等しい．
+@
+
+
+1.3.2.1
+log
+@* ext/md5/md5.txt: make wording fixes.
+
+* ext/md5/md5.txt.jp: ditto.
+@
+text
+@d6 1
+a6 1
+Algorithmを実装するクラス。
+d16 1
+a16 1
+        を追加する(see update)。
+d22 1
+a22 1
+	MD5オブジェクトの複製を作る。
+d27 1
+a27 1
+        返す。
+d44 1
+a44 2
+        字列を連結してupdateを呼ぶことと等しい。すなわち m.update(a);
+	m.update(b) は m.update(a+b) と等価である。
+@
+
+
+1.3.2.2
+log
+@* ext/md5/md5.txt, ext/md5/md5.txt.jp: s/SuperClass/Superclass/.
+@
+text
+@d8 1
+a8 1
+Superclass: Object
+@
+
+
+1.3.2.3
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d29 12
+@
+
+
+1.1
+log
+@file md5.txt.jp was initially added on branch ruby_1_3.
+@
+text
+@d1 37
+@
+
+
+1.1.2.1
+log
+@990806
+@
+text
+@a0 37
+.\" md5.doc -  -*- Indented-Text -*- created at: Fri Aug  2 12:01:27 JST 1996
+
+** MD5(クラス)
+
+RFC1321に記述されているRSA Data Security, Inc. の MD5 Message-Digest
+Algorithmを実装するクラス．
+
+SuperClass: Object
+
+Class Methods:
+
+   new([str])
+   md5([str])
+
+        新しいMD5オブジェクトを生成する．文字列引数が与えられるとそれ
+        を追加する(see update)．
+
+Methods:
+
+   clone
+
+	MD5オブジェクトの複製を作る
+
+   digest
+
+        今までに追加した文字列に対するハッシュ値を16バイト長の文字列で
+        返す．
+
+   update(str)
+
+        MD5オブジェクトに文字列を追加する。複数回updateを呼ぶことは文
+        字列を連結してupdateを呼ぶことと等しい．
+
+-------------------------------------------------------
+Local variables:
+fill-column: 70
+end:
+@
+

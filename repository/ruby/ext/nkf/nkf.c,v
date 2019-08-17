@@ -1,0 +1,805 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.5.2.1
+	v1_6_6:1.5.2.1
+	v1_6_5:1.5.2.1
+	v1_6_4:1.5
+	v1_7_1:1.6
+	v1_6_4_preview4:1.5
+	v1_6_4_preview3:1.5
+	v1_6_4_preview2:1.5
+	v1_6_4_preview1:1.5
+	v1_6_3:1.5
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.3.2.1
+	v1_4_5:1.3.2.1
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.3.2.1
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.4
+	v1_3_6_repack:1.1.2.4
+	v1_3_6:1.1.2.4
+	v1_3_5:1.1.2.4
+	v1_3_4_990625:1.1.2.4
+	v1_3_4_990624:1.1.2.4
+	v1_3_4_990611:1.1.2.4
+	v1_3_4_990531:1.1.2.4
+	v1_3_3_990518:1.1.2.4
+	v1_3_3_990513:1.1.2.4
+	v1_3_3_990507:1.1.2.4
+	v1_3_1_990225:1.1.2.1
+	v1_3_1_990224:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.8
+date	2002.08.30.10.41.57;	author nobu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.07.18.05.55.22;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.05.06.15.03.06;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.20.07.10.23;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	99.10.18.09.03.01;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.04.04.51.06;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.49;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.02.24.04.31.27;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.02.24.04.31.27;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.03.24.08.52.34;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	99.04.13.01.20.43;	author matz;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	99.08.11.07.24.09;	author matz;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	99.08.13.05.17.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.11.24.07.13.53;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.07.06.06.37.01;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* ext/Win32API/Win32API.c (Win32API_Call): RSTRING()->ptr may be
+  NULL.
+
+* ext/nkf/nkf.c (rb_nkf_guess): ditto.
+
+* ext/readline/readline.c (readline_s_set_completion_append_character):
+  ditto.
+
+* ext/socket/socket.c (sock_s_getaddrinfo, sock_s_getnameinfo):
+  ditto.
+
+* ext/tcltklib/tcltklib.c (ip_toUTF8, ip_fromUTF8): ditto.
+@
+text
+@#include "ruby.h"
+
+#define	_AUTO		0
+#define	_JIS		1
+#define	_EUC		2
+#define	_SJIS		3
+#define	_BINARY		4
+#define	_NOCONV		4
+#define	_UNKNOWN	_AUTO
+
+#undef getc
+#undef ungetc
+#define getc(f)   	(input_ctr<i_len?input[input_ctr++]:-1)
+#define ungetc(c,f)	input_ctr--
+
+#undef putchar
+#define putchar(c)	rb_nkf_putchar(c)
+
+#define INCSIZE		32
+static int incsize;
+
+static unsigned char *input, *output;
+static int input_ctr, i_len;
+static int output_ctr, o_len;
+
+static VALUE dst;
+
+static int
+rb_nkf_putchar(c)
+     unsigned int c;
+{
+  if (output_ctr >= o_len) {
+    o_len += incsize;
+    rb_str_cat(dst, 0, incsize);
+    output = RSTRING(dst)->ptr;
+    incsize *= 2;
+  }
+  output[output_ctr++] = c;
+
+  return c;
+}
+
+#define PERL_XS 1
+#include "nkf1.7/nkf.c"
+
+static VALUE
+rb_nkf_kconv(obj, opt, src)
+     VALUE obj, opt, src;
+{
+  char *opt_ptr, *opt_end;
+  volatile VALUE v;
+
+  reinit();
+  StringValue(opt);
+  opt_ptr = RSTRING(opt)->ptr;
+  opt_end = opt_ptr + RSTRING(opt)->len;
+  for (; opt_ptr < opt_end; opt_ptr++) {
+    if (*opt_ptr != '-') {
+      continue;
+    }
+    arguments(opt_ptr);
+  }
+
+  incsize = INCSIZE;
+
+  input_ctr = 0; 
+  StringValue(src);
+  input = RSTRING(src)->ptr;
+  i_len = RSTRING(src)->len;
+  dst = rb_str_new(0, i_len*3 + 10);
+  v = dst;
+
+  output_ctr = 0;
+  output     = RSTRING(dst)->ptr;
+  o_len      = RSTRING(dst)->len;
+  *output    = '\0';
+
+  if(iso8859_f && (oconv != j_oconv || !x0201_f )) {
+    iso8859_f = FALSE;
+  } 
+
+  kanji_convert(NULL);
+  RSTRING(dst)->ptr[output_ctr] = '\0';
+  RSTRING(dst)->len = output_ctr;
+  OBJ_INFECT(dst, src);
+
+  return dst;
+}
+
+/*
+ * Character code detection - Algorithm described in:
+ * Ken Lunde. `Understanding Japanese Information Processing'
+ * Sebastopol, CA: O'Reilly & Associates.
+ */
+
+static VALUE
+rb_nkf_guess(obj, src)
+     VALUE obj, src;
+{
+  unsigned char *p;
+  unsigned char *pend;
+  int sequence_counter = 0;
+
+  StringValue(src);
+  p = RSTRING(src)->ptr;
+  pend = p + RSTRING(src)->len;
+  if (p == pend) return INT2FIX(_UNKNOWN);
+
+#define INCR do {\
+    p++;\
+    if (p==pend) return INT2FIX(_UNKNOWN);\
+    sequence_counter++;\
+    if (sequence_counter % 2 == 1 && *p != 0xa4)\
+	sequence_counter = 0;\
+    if (6 <= sequence_counter) {\
+	sequence_counter = 0;\
+	return INT2FIX(_EUC);\
+    }\
+} while (0)
+
+  if (*p == 0xa4)
+    sequence_counter = 1;
+
+  while (p<pend) {
+    if (*p == '\033') {
+      return INT2FIX(_JIS);
+    }
+    if (*p < '\006' || *p == 0x7f || *p == 0xff) {
+      return INT2FIX(_BINARY);
+    }
+    if (0x81 <= *p && *p <= 0x8d) {
+      return INT2FIX(_SJIS);
+    }
+    if (0x8f <= *p && *p <= 0x9f) {
+      return INT2FIX(_SJIS);
+    }
+    if (*p == 0x8e) {	/* SS2 */
+      INCR;
+      if ((0x40 <= *p && *p <= 0x7e) ||
+	  (0x80 <= *p && *p <= 0xa0) ||
+	  (0xe0 <= *p && *p <= 0xfc))
+	return INT2FIX(_SJIS);
+    }
+    else if (0xa1 <= *p && *p <= 0xdf) {
+      INCR;
+      if (0xf0 <= *p && *p <= 0xfe)
+	return INT2FIX(_EUC);
+      if (0xe0 <= *p && *p <= 0xef) {
+	while (p < pend && *p >= 0x40) {
+	  if (*p >= 0x81) {
+	    if (*p <= 0x8d || (0x8f <= *p && *p <= 0x9f)) {
+	      return INT2FIX(_SJIS);
+	    }
+	    else if (0xfd <= *p && *p <= 0xfe) {
+	      return INT2FIX(_EUC);
+	    }
+	  }
+	  INCR;
+	}
+      }
+      else if (*p <= 0x9f) {
+	return INT2FIX(_SJIS);
+      }
+    }
+    else if (0xf0 <= *p && *p <= 0xfe) {
+      return INT2FIX(_EUC);
+    }
+    else if (0xe0 <= *p && *p <= 0xef) {
+      INCR;
+      if ((0x40 <= *p && *p <= 0x7e) ||
+	  (0x80 <= *p && *p <= 0xa0)) {
+	return INT2FIX(_SJIS);
+      }
+      if (0xfd <= *p && *p <= 0xfe) {
+	return INT2FIX(_EUC);
+      }
+    }
+    INCR;
+  }
+  return INT2FIX(_UNKNOWN);
+}
+
+void
+Init_nkf()
+{
+    VALUE mKconv = rb_define_module("NKF");
+
+    rb_define_module_function(mKconv, "nkf", rb_nkf_kconv, 2);
+    rb_define_module_function(mKconv, "guess", rb_nkf_guess, 1);
+
+    rb_define_const(mKconv, "AUTO", INT2FIX(_AUTO));
+    rb_define_const(mKconv, "JIS", INT2FIX(_JIS));
+    rb_define_const(mKconv, "EUC", INT2FIX(_EUC));
+    rb_define_const(mKconv, "SJIS", INT2FIX(_SJIS));
+    rb_define_const(mKconv, "BINARY", INT2FIX(_BINARY));
+    rb_define_const(mKconv, "NOCONV", INT2FIX(_NOCONV));
+    rb_define_const(mKconv, "UNKNOWN", INT2FIX(_UNKNOWN));
+}
+@
+
+
+1.7
+log
+@* regex.c (NUM_FAILURE_ITEMS): was confusing NUM_REG_ITEMS and
+  NUM_NONREG_ITEMS, which have happened to be same value.
+
+* class.c (rb_class_new): subclass check moved to this function.
+
+* class.c (rb_class_boot): check less version of rb_class_new().
+
+* eval.c (proc_invoke): should preserve iter status for embedded
+  frame in the block.
+
+* file.c (rb_file_s_expand_path): may overrun buffer on stack.
+
+* string.c (rb_str_insert): forgot to call rb_str_modify().
+@
+text
+@d107 1
+@
+
+
+1.6
+log
+@forgot some checkins.
+@
+text
+@d85 1
+@
+
+
+1.5
+log
+@marshal load GC protect
+@
+text
+@a49 1
+  int i;
+d54 3
+a56 2
+  opt_ptr = str2cstr(opt, &i);
+  opt_end = opt_ptr + i;
+d67 3
+a69 1
+  input     = str2cstr(src, &i_len);
+a100 1
+  int plen;
+d103 3
+a105 4
+  Check_Type(src, T_STRING);
+
+  p = str2cstr(src, &plen);
+  pend = p + plen;
+@
+
+
+1.5.2.1
+log
+@* eval.c (rb_f_require): move rb_file_s_expand_path from
+  rb_find_file_noext().
+
+* file.c (rb_find_file_noext): move rb_file_s_expand_path to
+  rb_f_require().
+
+* string.c (rb_str_each_line): should propagate taint mark.
+
+* ext/nkf/nkf.c (rb_nkf_kconv): ditto.
+
+* ruby.c (load_file): local variables 'c' remain uninitialized on
+  xflag.
+
+* regex.c (re_match): prefetched escaped character too early.
+
+* eval.c (rb_call0): add argument check for attr_readers.
+@
+text
+@a82 2
+  if(OBJ_TAINTED(src))
+    OBJ_TAINT(dst);
+@
+
+
+1.4
+log
+@19991018
+@
+text
+@d52 1
+d68 2
+a69 1
+  dst = rb_str_new(0, i_len*3 + 10); /* large enough? */
+@
+
+
+1.3
+log
+@19991004
+@
+text
+@d34 2
+a35 1
+    rb_str_cat(dst, "", incsize);
+a37 1
+  
+d39 1
+a39 3
+/*
+printf("[[%c][%c][%d]]\n", c, output[output_ctr - 1], output_ctr);
+*/
+d79 2
+a80 12
+  if (output_ctr > 0) output_ctr--;
+  if (output[output_ctr] == '\0') {
+/*
+printf("([%c][%d])\n", output[output_ctr], output_ctr);
+*/
+    RSTRING(dst)->len = output_ctr;
+  } else {
+/*
+printf("<[%c][%d]>\n", output[output_ctr], output_ctr);
+*/
+    RSTRING(dst)->len = output_ctr + 1;
+  }
+@
+
+
+1.3.2.1
+log
+@19991124-1.4.3pre1
+@
+text
+@d34 1
+a34 2
+    rb_str_cat(dst, 0, incsize);
+    output = RSTRING(dst)->ptr;
+d37 1
+d39 3
+a41 1
+
+a53 1
+  volatile VALUE v;
+d69 1
+a69 2
+  dst = rb_str_new(0, i_len*3 + 10);
+  v = dst;
+d81 12
+a92 2
+  RSTRING(dst)->ptr[output_ctr] = '\0';
+  RSTRING(dst)->len = output_ctr;
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d13 1
+a13 1
+#define getc(f)   	(input_ctr>i_len?-1:input[input_ctr++])
+@
+
+
+1.1
+log
+@file nkf.c was initially added on branch ruby_1_3.
+@
+text
+@d1 206
+@
+
+
+1.1.2.1
+log
+@990224
+@
+text
+@a0 207
+#include "ruby.h"
+
+#define	_AUTO		0
+#define	_JIS		1
+#define	_EUC		2
+#define	_SJIS		3
+#define	_BINARY		4
+#define	_NOCONV		4
+#define	_UNKNOWN	_AUTO
+
+#undef getc
+#undef ungetc
+#define getc(f)   	(input_ctr>i_len?-1:input[input_ctr++])
+#define ungetc(c,f)	input_ctr--
+
+#undef putchar
+#define putchar(c)	rb_nkf_putchar(c)
+
+#define INCSIZE		32
+static int incsize;
+
+static unsigned char *input, *output;
+static int input_ctr, i_len;
+static int output_ctr, o_len;
+
+static VALUE dst;
+
+static int
+rb_nkf_putchar(c)
+     unsigned int c;
+{
+  if (output_ctr >= o_len) {
+    o_len += incsize;
+    rb_str_cat(dst, "", incsize);
+    incsize *= 2;
+  }
+  
+  output[output_ctr++] = c;
+/*
+printf("[[%c][%c][%d]]\n", c, output[output_ctr - 1], output_ctr);
+*/
+  return c;
+}
+
+#define PERL_XS 1
+#include "orig/nkf.c"
+
+static VALUE
+rb_nkf_kconv(obj, opt, src)
+     VALUE obj, opt, src;
+{
+  int i;
+  char *opt_ptr, *opt_end;
+
+  reinit();
+  opt_ptr = str2cstr(opt, &i);
+  opt_end = opt_ptr + i;
+  for (; opt_ptr < opt_end; opt_ptr++) {
+    if (*opt_ptr != '-') {
+      continue;
+    }
+    arguments(opt_ptr);
+  }
+  dst = rb_str_new(0, RSTRING(src)->len*3 + 10); /* large enough? */
+
+  incsize = INCSIZE;
+
+  input_ctr = 0; 
+  input     = str2cstr(src, &i_len);
+
+  output_ctr = 0;
+  output     = RSTRING(dst)->ptr;
+  o_len      = RSTRING(dst)->len;
+  *output    = '\0';
+
+  if(iso8859_f && (oconv != j_oconv || !x0201_f )) {
+    iso8859_f = FALSE;
+  } 
+
+  kanji_convert(NULL);
+  output_ctr--;
+  if (output[output_ctr] == '\0') {
+/*
+printf("([%c][%d])\n", output[output_ctr], output_ctr);
+*/
+    RSTRING(dst)->len = output_ctr;
+  } else {
+/*
+printf("<[%c][%d]>\n", output[output_ctr], output_ctr);
+*/
+    RSTRING(dst)->len = output_ctr + 1;
+  }
+
+  return dst;
+}
+
+/*
+ * Character code detection - Algorithm described in:
+ * Ken Lunde. `Understanding Japanese Information Processing'
+ * Sebastopol, CA: O'Reilly & Associates.
+ */
+
+static VALUE
+rb_nkf_guess(obj, src)
+     VALUE obj, src;
+{
+  unsigned char *p;
+  unsigned char *pend;
+  int sequence_counter = 0;
+
+  Check_Type(src, T_STRING);
+
+  p = RSTRING(src)->ptr;
+  pend = p + RSTRING(src)->len;
+
+#define INCR do {\
+    p++;\
+    if (p==pend) return INT2FIX(_UNKNOWN);\
+    sequence_counter++;\
+    if (sequence_counter % 2 == 1 && *p != 0xa4)\
+	sequence_counter = 0;\
+    if (6 <= sequence_counter) {\
+	sequence_counter = 0;\
+	return INT2FIX(_EUC);\
+    }\
+} while (0)
+
+  if (*p == 0xa4)
+    sequence_counter = 1;
+
+  while (p<pend) {
+    if (*p == '\033') {
+      return INT2FIX(_JIS);
+    }
+    if ('\000' < *p && *p < '\006'
+	|| *p == 0x7f
+	|| *p == 0xdf) {
+      return INT2FIX(_BINARY);
+    }
+    if (0x81 <= *p && *p <= 0x8d) {
+      return INT2FIX(_SJIS);
+    }
+    if (0x8f <= *p && *p <= 0x9f) {
+      return INT2FIX(_SJIS);
+    }
+    if (*p == 0x8e) {	/* SS2 */
+      INCR;
+      if ((0x40 <= *p && *p <= 0x7e) ||
+	  (0x80 <= *p && *p <= 0xa0) ||
+	  (0xe0 <= *p && *p <= 0xfc))
+	return INT2FIX(_SJIS);
+    }
+    else if (0xa1 <= *p && *p <= 0xdf) {
+      INCR;
+      if (0xf0 <= *p && *p <= 0xfe)
+	return INT2FIX(_EUC);
+      if (0xe0 <= *p && *p <= 0xef) {
+	while (p < pend && *p >= 0x40) {
+	  if (*p >= 0x81) {
+	    if (*p <= 0x8d || (0x8f <= *p && *p <= 0x9f)) {
+	      return INT2FIX(_SJIS);
+	    }
+	    else if (0xfd <= *p && *p <= 0xfe) {
+	      return INT2FIX(_EUC);
+	    }
+	  }
+	  INCR;
+	}
+      }
+      else if (*p <= 0x9f) {
+	return INT2FIX(_SJIS);
+      }
+    }
+    else if (0xf0 <= *p && *p <= 0xfe) {
+      return INT2FIX(_EUC);
+    }
+    else if (0xe0 <= *p && *p <= 0xef) {
+      INCR;
+      if ((0x40 <= *p && *p <= 0x7e) ||
+	  (0x80 <= *p && *p <= 0xa0)) {
+	return INT2FIX(_SJIS);
+      }
+      if (0xfd <= *p && *p <= 0xfe) {
+	return INT2FIX(_EUC);
+      }
+    }
+    INCR;
+  }
+  return INT2FIX(_UNKNOWN);
+}
+
+void
+Init_nkf()
+{
+    VALUE mKconv = rb_define_module("NKF");
+
+    rb_define_module_function(mKconv, "nkf", rb_nkf_kconv, 2);
+    rb_define_module_function(mKconv, "guess", rb_nkf_guess, 1);
+
+    rb_define_const(mKconv, "AUTO", INT2FIX(_AUTO));
+    rb_define_const(mKconv, "JIS", INT2FIX(_JIS));
+    rb_define_const(mKconv, "EUC", INT2FIX(_EUC));
+    rb_define_const(mKconv, "SJIS", INT2FIX(_SJIS));
+    rb_define_const(mKconv, "BINARY", INT2FIX(_BINARY));
+    rb_define_const(mKconv, "NOCONV", INT2FIX(_NOCONV));
+    rb_define_const(mKconv, "UNKNOWN", INT2FIX(_UNKNOWN));
+}
+@
+
+
+1.1.2.2
+log
+@990324
+@
+text
+@d46 1
+a46 1
+#include "1.7/nkf.c"
+d64 1
+a69 1
+  dst = rb_str_new(0, i_len*3 + 10); /* large enough? */
+a108 1
+  int plen;
+d113 2
+a114 2
+  p = str2cstr(src, &plen);
+  pend = p + plen;
+@
+
+
+1.1.2.3
+log
+@*** empty log message ***
+@
+text
+@d81 1
+a81 1
+  if (output_ctr > 0) output_ctr--;
+@
+
+
+1.1.2.4
+log
+@nkf
+@
+text
+@d46 1
+a46 1
+#include "nkf1.7/nkf.c"
+@
+
+
+1.1.2.5
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d136 1
+a136 1
+    if ('\000' <= *p && *p < '\006'
+d138 1
+a138 1
+	|| *p == 0xff) {
+@
+
+
+1.1.2.6
+log
+@pre 1.4.0
+@
+text
+@d136 3
+a138 1
+    if (*p < '\006' || *p == 0x7f || *p == 0xff) {
+@

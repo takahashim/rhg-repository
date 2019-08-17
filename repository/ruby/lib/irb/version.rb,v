@@ -1,0 +1,203 @@
+head	1.4;
+access;
+symbols
+	irb_0_9:1.4
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.2
+	v1_6_5:1.1.2.2
+	v1_6_4:1.1.2.2
+	v1_7_1:1.3
+	v1_6_4_preview4:1.1.2.2
+	v1_6_4_preview3:1.1.2.2
+	v0_7_3:1.1.1.1
+	KEIJU:1.1.1
+	v1_6_4_preview2:1.1
+	v1_6_4_preview1:1.1
+	v1_6_3:1.1
+	ruby_m17n:1.1.0.4
+	ruby_1_6:1.1.0.2
+	v1_6_2:1.1
+	v1_6_1:1.1
+	v1_6_0:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.07.09.11.17.16;	author keiju;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.08.09.28.19;	author keiju;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.04.30.17.54.55;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.05.12.09.07.55;	author matz;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.04.30.18.39.35;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.05.16.20.44.26;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* irb 0.9
+@
+text
+@#
+#   irb/version.rb - irb version definition file
+#   	$Release Version: 0.9$
+#   	$Revision: 1.15 $
+#   	$Date: 2002/07/03 10:50:57 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#
+# --
+#
+#   
+#
+
+module IRB
+  @@RELEASE_VERSION = "0.9"
+  @@LAST_UPDATE_DATE = "02/07/03"
+end
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.4$
+#   	$Revision: 1.8 $
+#   	$Date: 2001/05/08 08:05:03 $
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.7.4"
+  @@LAST_UPDATE_DATE = "01/05/08"
+@
+
+
+1.2
+log
+@Merge from irb 0.7.3.
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.1 $
+#   	$Date: 2000/05/12 09:07:55 $
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.7.3"
+  @@LAST_UPDATE_DATE = "01/04/16"
+@
+
+
+1.1
+log
+@2000-05-12
+@
+text
+@d2 5
+a6 5
+#   version.rb - irb version definition file
+#   	$Release Version: 0.6.1$
+#   	$Revision: 1.3 $
+#   	$Date: 1999/03/11 15:40:53 $
+#   	by Keiju ISHITSUKA(Nihon Rational Software Co.,Ltd)
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.6.1"
+  @@LAST_UPDATE_DATE = "99/09/16"
+@
+
+
+1.1.2.1
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d2 5
+a6 5
+#   irb/version.rb - irb version definition file
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.1 $
+#   	$Date: 2000/05/12 09:07:55 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.7.3"
+  @@LAST_UPDATE_DATE = "01/04/16"
+@
+
+
+1.1.2.2
+log
+@
+resolve ctrl-c problem.
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.4$
+#   	$Revision: 1.8 $
+#   	$Date: 2001/05/08 08:05:03 $
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.7.4"
+  @@LAST_UPDATE_DATE = "01/05/08"
+@
+
+
+1.1.1.1
+log
+@This is the virgin import of irb 0.7.3.
+@
+text
+@d2 5
+a6 5
+#   irb/version.rb - irb version definition file
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.7 $
+#   	$Date: 2001/04/16 06:06:58 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+d14 2
+a15 2
+  @@RELEASE_VERSION = "0.7.3"
+  @@LAST_UPDATE_DATE = "01/04/16"
+@

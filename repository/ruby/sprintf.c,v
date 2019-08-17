@@ -1,0 +1,3700 @@
+head	1.26;
+access;
+symbols
+	v1_6_7:1.11.2.2
+	v1_6_6:1.11.2.2
+	v1_6_5:1.11.2.2
+	v1_6_4:1.11.2.2
+	v1_7_1:1.16
+	v1_6_4_preview4:1.11.2.2
+	v1_6_4_preview3:1.11.2.2
+	v1_6_4_preview2:1.11.2.1
+	v1_6_4_preview1:1.11.2.1
+	v1_6_3:1.11.2.1
+	ruby_m17n:1.12.0.2
+	ruby_1_6:1.11.0.2
+	v1_6_2:1.11
+	v1_6_1:1.10
+	v1_6_0:1.10
+	v1_4_6:1.3.2.2
+	v1_4_5:1.3.2.2
+	v1_4_4:1.3.2.2
+	ruby_1_4_3:1.3.2.1
+	ruby1_4_3:1.3.2.1
+	v1_4_3:1.3.2.1
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.6
+	v1_3_6_repack:1.1.1.3.2.6
+	v1_3_6:1.1.1.3.2.6
+	v1_3_5:1.1.1.3.2.6
+	v1_2_6repack:1.1.1.2.2.16
+	v1_3_4_990625:1.1.1.3.2.6
+	v1_3_4_990624:1.1.1.3.2.6
+	v1_2_6:1.1.1.2.2.16
+	v1_3_4_990611:1.1.1.3.2.6
+	v1_3_4_990531:1.1.1.3.2.6
+	v1_3_3_990518:1.1.1.3.2.6
+	v1_3_3_990513:1.1.1.3.2.6
+	v1_3_3_990507:1.1.1.3.2.6
+	v1_2_5:1.1.1.2.2.14
+	v1_2_4:1.1.1.2.2.14
+	v1_3_1_990225:1.1.1.3.2.4
+	v1_3_1_990224:1.1.1.3.2.4
+	v1_3_1_990215:1.1.1.3.2.4
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.2
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.13
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.13
+	v1_2_1repack:1.1.1.2.2.13
+	v1_2_1:1.1.1.2.2.13
+	v1_2_stable:1.1.1.2.2.13
+	v1_1d1:1.1.1.2.2.12.2.2
+	v1_1d0:1.1.1.2.2.12.2.2
+	v1_1c9_1:1.1.1.2.2.13
+	v1_1c9:1.1.1.2.2.13
+	v1_1c8:1.1.1.2.2.13
+	v1_1c7:1.1.1.2.2.12
+	v1_1c6:1.1.1.2.2.12
+	v1_1d-start:1.1.1.2.2.12.2.1
+	v1_1c5:1.1.1.2.2.12
+	v1_1dev:1.1.1.2.2.12.0.2
+	v1_1c4:1.1.1.2.2.12
+	v1_1c3:1.1.1.2.2.11
+	v1_1c2:1.1.1.2.2.11
+	v1_1c1:1.1.1.2.2.11
+	v1_1c0:1.1.1.2.2.9
+	v1_1b9_31:1.1.1.2.2.9
+	v1_1b9_30:1.1.1.2.2.8
+	v1_1b9_28:1.1.1.2.2.6
+	v1_1b9_27:1.1.1.2.2.5
+	v1_1b9_26:1.1.1.2.2.5
+	r1_1b9_25:1.1.1.2.2.5
+	r1_1b9_24:1.1.1.2.2.5
+	v1_1b9_23:1.1.1.2.2.5
+	v1_1b9_22:1.1.1.2.2.5
+	v1_1b9_20:1.1.1.2.2.3
+	v1_1b9_18:1.1.1.2.2.3
+	v1_1b9_16:1.1.1.2.2.3
+	v1_1b9_15:1.1.1.2.2.3
+	v1_1b9_13:1.1.1.2.2.3
+	v1_1b9_12:1.1.1.2.2.3
+	v1_1b9_11:1.1.1.2.2.3
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2.2.2
+	v1_1b8:1.1.1.2.2.2
+	v1_1b7:1.1.1.2.2.2
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.26
+date	2002.10.16.13.44.19;	author nobu;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.08.28.08.05.23;	author michal;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.06.04.07.34.15;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.03.25.06.18.04;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.01.10.23.22;	author nobu;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.10.22.06.48.14;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.09.03.05.37.42;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.01.29.05.10.42;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.01.15.07.00.54;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.01.10.09.52.13;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches
+	1.12.2.1;
+next	1.11;
+
+1.11
+date	2000.12.12.07.42.32;	author matz;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2000.06.19.08.38.11;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.09.04.53.05;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.01.09.41.29;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.07.08.37.46;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.37.11;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.12.06.09.03.59;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.11.04.08.26;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.01.09.48.02;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.14;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.26;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.16;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.57;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.09.06.08.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.15.07.31.51;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.03.24.08.52.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.04.26.09.42.41;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.10.08.44.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.09.07.56.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.05.18.04.56.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.05.18.09.12.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.06.26.09.44.40;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.07.03.07.06.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.07.09.08.40.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.07.15.06.12.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.07.21.05.17.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.07.24.04.32.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.09.03.07.43.43;	author matz;	state Exp;
+branches
+	1.1.1.2.2.12.2.1;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.11.17.09.12.39;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	99.04.08.10.14.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	99.04.26.07.41.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	99.05.14.08.56.47;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.12.2.1
+date	98.09.08.07.09.16;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12.2.2;
+
+1.1.1.2.2.12.2.2
+date	98.11.25.03.31.17;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.12.06.09.03.33;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.01.17.08.24.12;	author matz;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.01.15.07.33.12;	author matz;	state Exp;
+branches;
+next	1.11.2.2;
+
+1.11.2.2
+date	2001.05.11.14.55.58;	author knu;	state Exp;
+branches;
+next	1.11.2.3;
+
+1.11.2.3
+date	2002.06.04.07.11.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.12.2.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	1.12.2.2;
+
+1.12.2.2
+date	2002.07.09.05.26.49;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.26
+log
+@* sprintf.c (rb_f_sprintf): disallow mixed usage of numbered and
+  unnumbered arguments.  [ruby-dev:18531]
+  get rid of memory leak at exception.  [ruby-core:00460]
+@
+text
+@/**********************************************************************
+
+  sprintf.c -
+
+  $Author: michal $
+  $Date: 2002/08/28 08:05:23 $
+  created at: Fri Oct 15 10:39:26 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+#include <ctype.h>
+#include <math.h>
+
+#define BIT_DIGITS(N)   (((N)*146)/485 + 1)  /* log2(10) =~ 146/485 */
+
+static void fmt_setup _((char*,int,int,int,int));
+
+static char*
+remove_sign_bits(str, base)
+    char *str;
+    int base;
+{
+    char *s, *t, *end;
+    unsigned long len;
+    
+    s = t = str;
+    len = strlen(str);
+    end = str + len;
+
+    if (base == 16) {
+	while (t<end && *t == 'f') {
+	    t++;
+	}
+    }
+    else if (base == 8) {
+	while (t<end && *t == '7') {
+	    t++;
+	}
+    }
+    else if (base == 2) {
+	while (t<end && *t == '1') {
+	    t++;
+	}
+    }
+    while (*t) *s++ = *t++;
+    *s = '\0';
+
+    return str;
+}
+
+#define FNONE  0
+#define FSHARP 1
+#define FMINUS 2
+#define FPLUS  4
+#define FZERO  8
+#define FSPACE 16
+#define FWIDTH 32
+#define FPREC  64
+
+#define CHECK(l) do {\
+    while (blen + (l) >= bsiz) {\
+	bsiz*=2;\
+    }\
+    rb_str_resize(result, bsiz);\
+    buf = RSTRING(result)->ptr;\
+} while (0)
+
+#define PUSH(s, l) do { \
+    CHECK(l);\
+    memcpy(&buf[blen], s, l);\
+    blen += (l);\
+} while (0)
+
+#define GETARG() (nextvalue != Qundef ? nextvalue : \
+    posarg < 0 ? \
+    (rb_raise(rb_eArgError, "unnumbered(%d) mixed with numbered", nextarg), 0) : \
+    (posarg = nextarg++, GETNTHARG(posarg)))
+
+#define GETPOSARG(n) (posarg > 0 ? \
+    (rb_raise(rb_eArgError, "numbered(%d) after unnumbered(%d)", n, posarg), 0) : \
+    ((n < 1) ? (rb_raise(rb_eArgError, "invalid index - %d$", n), 0) : \
+	       (posarg = -1, GETNTHARG(n))))
+
+#define GETNTHARG(nth) \
+    ((nth >= argc) ? (rb_raise(rb_eArgError, "too few argument."), 0) : argv[nth])
+
+#define GETASTER(val) do { \
+    t = p++; \
+    n = 0; \
+    for (; p < end && ISDIGIT(*p); p++) { \
+	n = 10 * n + (*p - '0'); \
+    } \
+    if (p >= end) { \
+	rb_raise(rb_eArgError, "malformed format string - %%*[0-9]"); \
+    } \
+    if (*p == '$') { \
+	tmp = GETPOSARG(n); \
+    } \
+    else { \
+	tmp = GETARG(); \
+	p = t; \
+    } \
+    val = NUM2INT(tmp); \
+} while (0)
+
+VALUE
+rb_f_sprintf(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE fmt;
+    char *buf, *p, *end;
+    int blen, bsiz;
+    VALUE result;
+
+    int width, prec, flags = FNONE;
+    int nextarg = 1;
+    int posarg = 0;
+    int tainted = 0;
+    VALUE nextvalue;
+    VALUE tmp;
+    VALUE str;
+
+    fmt = GETNTHARG(0);
+    if (OBJ_TAINTED(fmt)) tainted = 1;
+    StringValue(fmt);
+    p = RSTRING(fmt)->ptr;
+    end = p + RSTRING(fmt)->len;
+    blen = 0;
+    bsiz = 120;
+    result = rb_str_buf_new(bsiz);
+    buf = RSTRING(result)->ptr;
+
+    for (; p < end; p++) {
+	char *t;
+	int n;
+
+	for (t = p; t < end && *t != '%'; t++) ;
+	PUSH(p, t - p);
+	if (t >= end) {
+	    /* end of fmt string */
+	    goto sprint_exit;
+	}
+	p = t + 1;		/* skip `%' */
+
+	width = prec = -1;
+	nextvalue = Qundef;
+      retry:
+	switch (*p) {
+	  default:
+	    if (ISPRINT(*p))
+		rb_raise(rb_eArgError, "malformed format string - %%%c", *p);
+	    else
+		rb_raise(rb_eArgError, "malformed format string");
+	    break;
+
+	  case ' ':
+	    flags |= FSPACE;
+	    p++;
+	    goto retry;
+
+	  case '#':
+	    flags |= FSHARP;
+	    p++;
+	    goto retry;
+
+	  case '+':
+	    flags |= FPLUS;
+	    p++;
+	    goto retry;
+
+	  case '-':
+	    flags |= FMINUS;
+	    p++;
+	    goto retry;
+
+	  case '0':
+	    flags |= FZERO;
+	    p++;
+	    goto retry;
+
+	  case '1': case '2': case '3': case '4':
+	  case '5': case '6': case '7': case '8': case '9':
+	    n = 0;
+	    for (; p < end && ISDIGIT(*p); p++) {
+		n = 10 * n + (*p - '0');
+	    }
+	    if (p >= end) {
+		rb_raise(rb_eArgError, "malformed format string - %%[0-9]");
+	    }
+	    if (*p == '$') {
+		if (nextvalue != Qundef) {
+		    rb_raise(rb_eArgError, "value given twice - %d$", n);
+		}
+		nextvalue = GETPOSARG(n);
+		p++;
+		goto retry;
+	    }
+	    width = n;
+	    flags |= FWIDTH;
+	    goto retry;
+
+	  case '*':
+	    if (flags & FWIDTH) {
+		rb_raise(rb_eArgError, "width given twice");
+	    }
+
+	    flags |= FWIDTH;
+	    GETASTER(width);
+	    if (width < 0) {
+		flags |= FMINUS;
+		width = -width;
+	    }
+	    p++;
+	    goto retry;
+
+	  case '.':
+	    if (flags & FPREC) {
+		rb_raise(rb_eArgError, "precision given twice");
+	    }
+	    flags |= FPREC;
+
+	    prec = 0;
+	    p++;
+	    if (*p == '*') {
+		GETASTER(prec);
+		if (prec < 0) {	/* ignore negative precision */
+		    flags &= ~FPREC;
+		}
+		p++;
+		goto retry;
+	    }
+
+	    for (; p < end && ISDIGIT(*p); p++) {
+		prec = 10 * prec + (*p - '0');
+	    }
+	    if (p >= end) {
+		rb_raise(rb_eArgError, "malformed format string - %%.[0-9]");
+	    }
+	    goto retry;
+
+	  case '\n':
+	    p--;
+	  case '\0':
+	  case '%':
+	    if (flags != FNONE) {
+		rb_raise(rb_eArgError, "illegal format character - %%");
+	    }
+	    PUSH("%", 1);
+	    break;
+
+	  case 'c':
+	    {
+		VALUE val = GETARG();
+		char c;
+
+		if (!(flags & FMINUS))
+		    while (--width > 0)
+			PUSH(" ", 1);
+		c = NUM2INT(val) & 0xff;
+		PUSH(&c, 1);
+		while (--width > 0)
+		    PUSH(" ", 1);
+	    }
+	    break;
+
+	  case 's':
+	    {
+		VALUE arg = GETARG();
+		long len;
+
+		str = rb_obj_as_string(arg);
+		if (OBJ_TAINTED(str)) tainted = 1;
+		len = RSTRING(str)->len;
+		if (flags&FPREC) {
+		    if (prec < len) {
+			len = prec;
+		    }
+		}
+		if (flags&FWIDTH) {
+		    if (width > len) {
+			CHECK(width);
+			width -= len;
+			if (!(flags&FMINUS)) {
+			    while (width--) {
+				buf[blen++] = ' ';
+			    }
+			}
+			memcpy(&buf[blen], RSTRING(str)->ptr, len);
+			blen += len;
+			if (flags&FMINUS) {
+			    while (width--) {
+				buf[blen++] = ' ';
+			    }
+			}
+			break;
+		    }
+		}
+		PUSH(RSTRING(str)->ptr, len);
+	    }
+	    break;
+
+	  case 'd':
+	  case 'i':
+	  case 'o':
+	  case 'x':
+	  case 'X':
+	  case 'b':
+	  case 'B':
+	  case 'u':
+	    {
+		volatile VALUE val = GETARG();
+		char fbuf[32], nbuf[64], *s, *t;
+		char *prefix = 0;
+		int sign = 0;
+		char sc = 0;
+		long v;
+		int base, bignum = 0;
+		int len, pos;
+
+		switch (*p) {
+		  case 'd':
+		  case 'i':
+		    sign = 1; break;
+		  case 'o':
+		  case 'x':
+		  case 'X':
+		  case 'b':
+		  case 'B':
+		  case 'u':
+		  default:
+		    if (flags&(FPLUS|FSPACE)) sign = 1;
+		    break;
+		}
+		if (flags & FSHARP) {
+		    if (*p == 'o') prefix = "0";
+		    else if (*p == 'x') prefix = "0x";
+		    else if (*p == 'X') prefix = "0X";
+		    else if (*p == 'b') prefix = "0b";
+		    else if (*p == 'B') prefix = "0B";
+		    if (prefix) {
+			width -= strlen(prefix);
+		    }
+		}
+
+	      bin_retry:
+		switch (TYPE(val)) {
+		  case T_FLOAT:
+		    val = rb_dbl2big(RFLOAT(val)->value);
+		    if (FIXNUM_P(val)) goto bin_retry;
+		    bignum = 1;
+		    break;
+		  case T_STRING:
+		    val = rb_str_to_inum(val, 0, Qtrue);
+		    goto bin_retry;
+		  case T_BIGNUM:
+		    bignum = 1;
+		    break;
+		  case T_FIXNUM:
+		    v = FIX2LONG(val);
+		    break;
+		  default:
+		    val = rb_Integer(val);
+		    goto bin_retry;
+		}
+
+		if (*p == 'u' || *p == 'd' || *p == 'i') base = 10;
+		else if (*p == 'x' || *p == 'X') base = 16;
+		else if (*p == 'o') base = 8;
+		else if (*p == 'b' || *p == 'B') base = 2;
+		if (!bignum) {
+		    if (base == 2) {
+			val = rb_int2big(v);
+			goto bin_retry;
+		    }
+		    if (sign) {
+			char c = *p;
+			if (c == 'i') c = 'd'; /* %d and %i are identical */
+			if (v < 0) {
+			    v = -v;
+			    sc = '-';
+			    width--;
+			}
+			else if (flags & FPLUS) {
+			    sc = '+';
+			    width--;
+			}
+			else if (flags & FSPACE) {
+			    sc = ' ';
+			    width--;
+			}
+			sprintf(fbuf, "%%l%c", c);
+			sprintf(nbuf, fbuf, v);
+			s = nbuf;
+			goto format_integer;
+		    }
+		    s = nbuf;
+		    if (v < 0) {
+			if (base == 10) {
+			    rb_warning("negative number for %%u specifier");
+			}
+			else {
+			    strcpy(s, "..");
+			    s += 2;
+			}
+		    }
+		    sprintf(fbuf, "%%l%c", *p);
+		    sprintf(s, fbuf, v);
+		    if (v < 0) {
+			char d = 0;
+
+			remove_sign_bits(s, base);
+			switch (base) {
+			  case 16:
+			    d = 'f'; break;
+			  case 8:
+			    d = '7'; break;
+			}
+			if (d && *s != d) {
+			    memmove(s+1, s, strlen(s)+1);
+			    *s = d;
+			}
+		    }
+		    s = nbuf;
+		    goto format_integer;
+		}
+
+		if (sign) {
+		    val = rb_big2str(val, base);
+		    s = RSTRING(val)->ptr;
+		    if (s[0] == '-') {
+			s++;
+			sc = '-';
+			width--;
+		    }
+		    else if (flags & FPLUS) {
+			sc = '+';
+			width--;
+		    }
+		    else if (flags & FSPACE) {
+			sc = ' ';
+			width--;
+		    }
+		    goto format_integer;
+		}
+		if (!RBIGNUM(val)->sign) {
+		    val = rb_big_clone(val);
+		    rb_big_2comp(val);
+		}
+		val = rb_big2str(val, base);
+		s = RSTRING(val)->ptr;
+		if (*s == '-') {
+		    if (base == 10) {
+			rb_warning("negative number for %%u specifier");
+			s++;
+		    }
+		    else {
+			remove_sign_bits(++s, base);
+			val = rb_str_new(0, 3+strlen(s));
+			t = RSTRING(val)->ptr;
+                        strcpy(t, "..");
+                        t += 2;
+			switch (base) {
+			  case 16:
+			    if (s[0] != 'f') strcpy(t++, "f"); break;
+			  case 8:
+			    if (s[0] != '7') strcpy(t++, "7"); break;
+			  case 2:
+			    if (s[0] != '1') strcpy(t++, "1"); break;
+			}
+			strcpy(t, s);
+			bignum = 2;
+		    }
+		}
+		s  = RSTRING(val)->ptr;
+
+	      format_integer:
+		pos = -1;
+		len = strlen(s);
+
+		if (*p == 'X') {
+		    char *pp = s;
+		    while (*pp) {
+			*pp = toupper(*pp);
+			pp++;
+		    }
+		}
+		if (prec < len) prec = len;
+		width -= prec;
+		if (!(flags&(FZERO|FMINUS)) && s[0] != '.') {
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = ' ';
+		    }
+		}
+		if (sc) PUSH(&sc, 1);
+		if (prefix) {
+		    int plen = strlen(prefix);
+		    PUSH(prefix, plen);
+		    if (pos) pos += plen;
+		}
+		if (!(flags & FMINUS)) {
+		    char c = ' ';
+
+		    if (s[0] == '.') {
+			c = '.';
+			if ((flags & FPREC) && prec > len) {
+			    pos = blen;
+			}
+			else {
+			    pos = blen + 2;
+			}
+		    }
+		    else if (flags & FZERO) c = '0';
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = c;
+		    }
+		}
+		CHECK(prec - len);
+		while (len < prec--) {
+		    buf[blen++] = s[0]=='.'?'.':'0';
+		}
+		PUSH(s, len);
+		CHECK(width);
+		while (width-->0) {
+		    buf[blen++] = ' ';
+		}
+		if (pos >= 0 && buf[pos] == '.') {
+		    char c = '.';
+
+		    switch (base) {
+		      case 16:
+			if (*p == 'X') c = 'F';
+			else c = 'f';
+			break;
+		      case 8:
+			c = '7'; break;
+		      case 2:
+			c = '1'; break;
+		    }
+		    s = &buf[pos];
+		    while (*s && *s == '.') {
+			*s++ = c;
+		    }
+		}
+	    }
+	    break;
+
+	  case 'f':
+	  case 'g':
+	  case 'G':
+	  case 'e':
+	  case 'E':
+	    {
+		VALUE val = GETARG();
+		double fval;
+		int i, need = 6;
+		char fbuf[32];
+
+		fval = RFLOAT(rb_Float(val))->value;
+		fmt_setup(fbuf, *p, flags, width, prec);
+		need = 0;
+		if (*p != 'e' && *p != 'E') {
+		    i = INT_MIN;
+		    frexp(fval, &i);
+		    if (i > 0)
+			need = BIT_DIGITS(i);
+		}
+		need += (flags&FPREC) ? prec : 6;
+		if ((flags&FWIDTH) && need < width)
+		    need = width;
+		need += 20;
+
+		CHECK(need);
+		sprintf(&buf[blen], fbuf, fval);
+		blen += strlen(&buf[blen]);
+	    }
+	    break;
+	}
+	flags = FNONE;
+    }
+
+  sprint_exit:
+#if 0
+    /* XXX - We cannot validiate the number of arguments because
+     *       the format string may contain `n$'-style argument selector.
+     */
+    if (RTEST(ruby_verbose) && nextarg < argc) {
+	rb_raise(rb_eArgError, "too many argument for format string");
+    }
+#endif
+    rb_str_resize(result, blen);
+
+    if (tainted) OBJ_TAINT(result);
+    return result;
+}
+
+static void
+fmt_setup(buf, c, flags, width, prec)
+    char *buf;
+    int c;
+    int flags, width, prec;
+{
+    *buf++ = '%';
+    if (flags & FSHARP) *buf++ = '#';
+    if (flags & FPLUS)  *buf++ = '+';
+    if (flags & FMINUS) *buf++ = '-';
+    if (flags & FZERO)  *buf++ = '0';
+    if (flags & FSPACE) *buf++ = ' ';
+
+    if (flags & FWIDTH) {
+	sprintf(buf, "%d", width);
+	buf += strlen(buf);
+    }
+
+    if (flags & FPREC) {
+	sprintf(buf, ".%d", prec);
+	buf += strlen(buf);
+    }
+
+    *buf++ = c;
+    *buf = '\0';
+}
+@
+
+
+1.25
+log
+@Int vs Long cleanup #3 (ruby-core:352)
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/21 15:47:54 $
+d65 1
+a65 1
+#define CHECK(l) \
+a66 1
+	REALLOC_N(buf, char, bsiz*2);\
+d68 4
+a71 1
+    }
+d79 12
+a90 2
+#define GETARG() \
+    ((nextarg >= argc) ? (rb_raise(rb_eArgError, "too few argument."), 0) : argv[nextarg++])
+d102 1
+a102 4
+	int curarg = nextarg; \
+	nextarg = n; \
+	tmp = GETARG(); \
+	nextarg = curarg; \
+d122 2
+a123 1
+    int nextarg = 0;
+d125 1
+d129 1
+a129 1
+    fmt = GETARG();
+d136 2
+a137 1
+    buf = ALLOC_N(char, bsiz);
+d152 1
+d197 4
+a200 1
+		nextarg = n;
+d598 1
+a598 2
+    result = rb_str_new(buf, blen);
+    free(buf);
+@
+
+
+1.24
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/06/04 07:34:15 $
+d29 1
+a29 1
+    int len;
+@
+
+
+1.23
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+
+* lib/tempfile.rb (Tempfile::size): added.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:18 $
+d259 1
+a259 1
+		int len;
+@
+
+
+1.22
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d352 2
+a353 2
+		    v = NUM2LONG(val);
+		    break;
+@
+
+
+1.21
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/25 06:18:04 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d65 1
+a65 1
+#define CHECK(l) {\
+d69 1
+a69 2
+    }\
+}
+d71 1
+a71 1
+#define PUSH(s, l) { \
+d75 1
+a75 1
+}
+d80 1
+a80 1
+#define GETASTER(val) { \
+d100 1
+a100 1
+}
+@
+
+
+1.20
+log
+@* ext/socket/socket.c (bsock_do_not_rev_lookup_set): should not be
+  allowed when $SAFE > 3.
+
+* eval.c (rb_thread_ready): THREAD_TO_KILL threads should not turn
+  into THREAD_RUNNABLE on wakeup.
+
+* eval.c (rb_thread_list): THREAD_TO_KILL threads should be in the
+  list.
+
+* eval.c (thgroup_list): ditto; by moving gid clearance from
+  rb_thread_cleanup().
+
+* dir.c (fnmatch): "*/bar" (with FNM_PATHNAME flag) does not
+  match "foo/bar".
+
+* io.c (read_all): files on /proc filesystem with zero stat size,
+  may have contents.
+
+* ext/socket/socket.c (tcp_s_gethostbyname): refactored.
+
+* ext/socket/socket.c (sock_s_gethostbyname): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/01 10:23:22 $
+d29 1
+d32 2
+a33 1
+    end = str + strlen(str);
+d36 2
+a37 35
+      x_retry:
+	switch (*t) {
+	  case 'c': case 'C':
+	    *t = '4';
+	    break;
+	  case 'd': case 'D':
+	    *t = '5';
+	    break;
+	  case 'e': case 'E':
+	    *t = '2';
+	    break;
+	  case 'f': case 'F':
+	    if (t[1] > '8') {
+		t++;
+		goto x_retry;
+	    }
+	    *t = '1';
+	    break;
+	  case '1':
+	  case '3':
+	  case '7':
+	    if (t[1] > '8') {
+		t++;
+		goto x_retry;
+	    }
+	    break;
+	}
+	switch (*t) {
+	  case '1': *t = 'f'; break;
+	  case '2': *t = 'e'; break;
+	  case '3': *t = 'f'; break;
+	  case '4': *t = 'c'; break;
+	  case '5': *t = 'd'; break;
+	  case '6': *t = 'e'; break;
+	  case '7': *t = 'f'; break;
+d41 2
+a42 24
+      o_retry:
+	switch (*t) {
+	  case '6':
+	    *t = '2';
+	    break;
+	  case '7':
+	    if (t[1] > '3') {
+		t++;
+		goto o_retry;
+	    }
+	    *t = '1';
+	    break;
+	  case '1':
+	  case '3':
+	    if (t[1] > '3') {
+		t++;
+		goto o_retry;
+	    }
+	    break;
+	}
+	switch (*t) {
+	  case '1': *t = '7'; break;
+	  case '2': *t = '6'; break;
+	  case '3': *t = '7'; break;
+d46 3
+a48 2
+	while (t<end && *t == '1') t++;
+	t--;
+d349 3
+a354 3
+		  case T_FIXNUM:
+		    v = FIX2LONG(val);
+		    break;
+d405 1
+a405 2
+			    d = 'f'; 
+			    break;
+a442 3
+		    remove_sign_bits(++s, base);
+		    val = rb_str_new(0, 3+strlen(s));
+		    t = RSTRING(val)->ptr;
+d445 1
+d448 3
+d453 10
+a462 6
+                    }
+		    switch (base) {
+		      case 16:
+			if (s[0] != 'f') strcpy(t++, "f"); break;
+		      case 8:
+			if (s[0] != '7') strcpy(t++, "7"); break;
+a463 2
+		    strcpy(t, s);
+		    bignum = 2;
+@
+
+
+1.19
+log
+@* intern.h: prototypes for new functions; rb_cstr_to_inum(),
+  rb_str_to_inum(), rb_cstr_to_dbl(), rb_str_to_dbl()
+
+* bignum.c (rb_cstr_to_inum): changed from rb_cstr2inum(), and
+  added argument badcheck to be consistent with parser. [new]
+
+* bignum.c (rb_str_to_inum): ditto.
+
+* bignum.c (rb_cstr2inum): wapper of rb_cstr_to_inum() now.
+
+* bignum.c (rb_str2inum): ditto.
+
+* object.c (rb_cstr_to_dbl): float number parser. [new]
+
+* object.c (rb_str_to_dbl): ditto.
+
+* object.c (rb_Float): use rb_cstr_to_dbl() for strict check.
+
+* object.c (rb_Integer): use rb_str_to_inum() for strict check.
+
+* string.c (rb_str_to_f): use rb_str_to_dbl() with less check.
+
+* string.c (rb_str_to_i): use rb_str_to_inum() with less check.
+
+* string.c (rb_str_hex): ditto.
+
+* string.c (rb_str_oct): ditto.
+
+* sprintf.c (rb_f_sprintf): ditto.
+
+* time.c (obj2long): ditto.
+
+* parse.y (yylex): use rb_cstr_to_inum() for strict check.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/22 06:48:14 $
+d441 7
+a447 2
+			strcpy(s, "..");
+			s += 2;
+d499 7
+a505 2
+		    strcpy(t, "..");
+		    t += 2;
+@
+
+
+1.18
+log
+@* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+
+* eval.c (rb_call0): self in a block given to define_method now be
+  switched to the receiver of the method.
+
+* eval.c (proc_invoke): added new parameter to allow self
+  switching.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/09/03 05:37:42 $
+a20 4
+#if !defined(atof) && !defined(HAVE_STDLIB_H)
+double strtod();
+#endif
+
+d396 1
+a396 1
+		    val = rb_str2inum(val, 0);
+@
+
+
+1.17
+log
+@* ruby.c (proc_options): should not alter origargv[].
+
+* ruby.c (set_arg0): long strings for $0 dumped core.
+
+* ruby.c (set_arg0): use setprogtitle() if it's available.
+
+* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d355 1
+d375 1
+d386 1
+d416 1
+a416 1
+		else if (*p == 'b') base = 2;
+@
+
+
+1.16
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/29 05:10:42 $
+d592 1
+a592 18
+		switch (TYPE(val)) {
+		  case T_FIXNUM:
+		    fval = (double)FIX2LONG(val);
+		    break;
+		  case T_FLOAT:
+		    fval = RFLOAT(val)->value;
+		    break;
+		  case T_BIGNUM:
+		    fval = rb_big2dbl(val);
+		    break;
+		  case T_STRING:
+		    fval = strtod(RSTRING(val)->ptr, 0);
+		    break;
+		  default:
+		    fval = NUM2DBL(val);
+		    break;
+		}
+
+@
+
+
+1.15
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:00:54 $
+d177 3
+a179 2
+    p = rb_str2cstr(fmt, &blen);
+    end = p + blen;
+@
+
+
+1.14
+log
+@Mon Jan 15 16:00:07 2001  Yukihiro Matsumoto  <matz@@ruby-lang.org>
+
+	* pack.c (pack_unpack): should check associated pointer packed by
+	  pack("P").  restriction added.
+
+Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+
+	* re.c (rb_reg_s_last_match): should explicitly return nth match.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 09:52:13 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.13
+log
+@m17n cleanup ;_;
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/26 08:08:50 $
+d569 1
+a569 1
+		      case '2':
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/12 07:42:32 $
+a187 1
+	CHECK(t - p);
+d344 1
+a344 3
+		CHECK(len);
+		memcpy(&buf[blen], RSTRING(str)->ptr, len);
+		blen += len;
+d529 1
+a529 3
+		    CHECK(plen);
+		    strcpy(&buf[blen], prefix);
+		    blen += plen;
+d554 1
+a554 3
+		CHECK(len);
+		strcpy(&buf[blen], s);
+		blen += len;
+@
+
+
+1.12.2.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:46 $
+d16 1
+a16 1
+#include "m17n.h"
+d140 1
+a140 1
+    for (; p < end && m17n_isdigit(enc, *p); p++) { \
+a163 1
+    m17n_encoding *enc;
+a176 1
+    enc = rb_m17n_get_encoding(fmt);
+d188 1
+d200 1
+a200 1
+	    if (m17n_isprint(enc, *p))
+d234 1
+a234 1
+	    for (; p < end && m17n_isdigit(enc, *p); p++) {
+d280 1
+a280 1
+	    for (; p < end && m17n_isdigit(enc, *p); p++) {
+d301 1
+a301 1
+		int c, n;
+d306 2
+a307 5
+		c = NUM2INT(val);
+		n = m17n_codelen(enc, c);
+		CHECK(n);
+		m17n_mbcput(enc, c, &buf[blen]);
+		blen += n;
+d316 1
+a316 1
+		int len, slen;
+a319 3
+		if (enc->index != 0) {
+		    rb_m17n_enc_check(fmt, str, &enc);
+		}
+a320 6
+		if (flags&(FPREC|FWIDTH)) {
+		    slen = m17n_strlen(enc, RSTRING(str)->ptr, RSTRING(str)->ptr+len);
+		    if (slen < 0) {
+			rb_raise(rb_eArgError, "invalid mbstring sequence");
+		    }
+		}
+d322 2
+a323 11
+		    if (prec < slen) {
+			char *p;
+
+			slen = prec;
+			p = m17n_nth(enc, RSTRING(str)->ptr,
+				          RSTRING(str)->ptr + RSTRING(str)->len,
+				     prec);
+			if (p == (char*)-1) {
+			    rb_raise(rb_eArgError, "invalid mbstring sequence");
+			}
+			len = p - RSTRING(str)->ptr;
+d327 3
+a329 3
+		    if (width > slen) {
+			CHECK(width - slen + len);
+			width -= slen;
+d345 3
+a347 1
+		PUSH(RSTRING(str)->ptr, len);
+d517 1
+a517 1
+			*pp = m17n_toupper(enc, *pp);
+d532 3
+a534 1
+		    PUSH(prefix, plen);
+d559 3
+a561 1
+		PUSH(s, len);
+@
+
+
+1.12.2.2
+log
+@several minor fixes.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/12 04:36:00 $
+d329 1
+a329 1
+		    slen = m17n_swidth(enc, RSTRING(str)->ptr, RSTRING(str)->ptr+len);
+a335 1
+			int i, n;
+d339 5
+a343 16
+			for (i=1; 1; i++) {
+			    p = m17n_nth(enc, RSTRING(str)->ptr,
+					 RSTRING(str)->ptr + RSTRING(str)->len,
+					 i);
+			    if (p == (char*)-1) {
+				rb_raise(rb_eArgError, "invalid mbstring sequence");
+			    }
+			    n = m17n_swidth(enc, RSTRING(str)->ptr, p);
+			    if (n == prec) break;
+			    if (n > prec) {
+				p = m17n_nth(enc, RSTRING(str)->ptr,
+					     RSTRING(str)->ptr + RSTRING(str)->len,
+					     i-1);
+				slen = m17n_swidth(enc, RSTRING(str)->ptr, p);
+				break;
+			    }
+d350 1
+a350 1
+			CHECK(width + len);
+a366 1
+		CHECK(len);
+a367 10
+		if (flags&FPREC) {
+		    if (prec > slen) {
+			int n = prec - slen;
+
+			CHECK(n);
+			while (n--) {
+			    buf[blen++] = ' ';
+			}
+		    }
+		}
+@
+
+
+1.11
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/19 08:38:11 $
+d21 1
+a21 1
+#ifndef atof
+@
+
+
+1.11.2.1
+log
+@Sun Jan 14 21:49:28 2001  Koji Arai  <JCA02266@@nifty.ne.jp>
+
+	* sprintf.c (rb_f_sprintf): simple typo.  binary base should be 2,
+	  not '2'.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/12 07:42:32 $
+d576 1
+a576 1
+		      case 2:
+@
+
+
+1.11.2.2
+log
+@* process.c: silence VC++ warnings.
+
+* sprintf.c: ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/15 07:33:12 $
+d21 1
+a21 1
+#if !defined(atof) && !defined(HAVE_STDLIB_H)
+@
+
+
+1.11.2.3
+log
+@* string.c (rb_str_aset): should raise error if an indexing string
+  is not found in the receiver.
+
+* sprintf.c (rb_f_sprintf): "%d" should convert objects into
+  integers using Integer().
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/05/11 14:55:58 $
+d405 2
+a406 2
+		    val = rb_Integer(val);
+		    goto bin_retry;
+@
+
+
+1.10
+log
+@2000-06-19
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:53:05 $
+d323 1
+a323 4
+			CHECK(prec);
+			memcpy(&buf[blen], RSTRING(str)->ptr, prec);
+			blen += prec;
+			break;
+@
+
+
+1.9
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:29 $
+d267 1
+d273 3
+a275 2
+		if (prec > 0)
+		    flags |= FPREC;
+a285 2
+	    if (prec > 0)
+		flags |= FPREC;
+@
+
+
+1.8
+log
+@2000-05-01
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/07 08:37:46 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+d13 1
+a13 1
+************************************************/
+@
+
+
+1.7
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:11 $
+d10 2
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:59 $
+a22 3
+#ifdef USE_CWGUSI
+static void fmt_setup();
+#else
+a23 1
+#endif
+@
+
+
+1.5
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/11 04:08:26 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+a113 2
+double rb_big2dbl _((VALUE));
+
+d179 1
+a179 1
+    p = str2cstr(fmt, &blen);
+a397 3
+		  case T_FIXNUM:
+		    v = FIX2LONG(val);
+		    break;
+d404 1
+a404 1
+		    val = rb_str2inum(RSTRING(val)->ptr, 10);
+d410 4
+a413 1
+		    Check_Type(val, T_FIXNUM);
+d617 1
+a617 1
+		    Check_Type(val, T_FLOAT);
+@
+
+
+1.4
+log
+@19991111
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/01 09:48:02 $
+d175 1
+d180 1
+d323 1
+d657 1
+@
+
+
+1.3
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:14 $
+d139 23
+a161 1
+    ((argc == 0)?(rb_raise(rb_eArgError, "too few argument."),0):(argc--,((argv++)[0])))
+d174 1
+d187 1
+d235 1
+a235 2
+	    flags |= FWIDTH;
+	    width = 0;
+d237 1
+a237 1
+		width = 10 * width + (*p - '0');
+d242 7
+d257 1
+a257 2
+	    tmp = GETARG();
+	    width = NUM2INT(tmp);
+d273 1
+a273 2
+		tmp = GETARG();
+		prec = NUM2INT(tmp);
+d643 5
+a647 1
+    if (RTEST(ruby_verbose) && argc > 0) {
+d650 1
+@
+
+
+1.3.2.1
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/01 09:48:02 $
+d150 1
+a151 1
+    int tainted = 0;
+a155 1
+    if (OBJ_TAINTED(fmt)) tainted = 1;
+a174 1
+
+a292 1
+		if (OBJ_TAINTED(str)) tainted = 1;
+a620 1
+    if (tainted) OBJ_TAINT(result);
+@
+
+
+1.3.2.2
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:33 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/26 09:42:41 $
+d26 1
+a26 1
+static void fmt_setup _((char*,char,int,int,int));
+d266 3
+d626 2
+a627 1
+    char *buf, c;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:59 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 1
+d17 7
+d25 3
+d37 1
+d42 2
+a43 2
+	  case 'c':
+	    *t = '8';
+d45 2
+a46 2
+	  case 'd':
+	    *t = '9';
+d48 1
+a48 1
+	  case 'e':
+d51 1
+a51 1
+	  case 'f':
+d114 1
+a114 14
+double big2dbl();
+#ifndef atof
+double atof();
+#endif
+
+VALUE
+f_sprintf(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    struct RString *fmt;
+    char *buf, *p, *end;
+    int blen, bsiz;
+    VALUE result;
+d121 3
+a123 6
+#define FWIDTH 16
+#define FPREC  32
+
+    int width, prec, flags = FNONE;
+    VALUE str;
+
+d139 11
+a149 1
+    ((argc == 0)?(ArgError("too few argument."),0):(argc--,((argv++)[0])))
+d151 3
+a153 2
+    fmt = (struct RString*)GETARG();
+    Check_Type(fmt, T_STRING);
+d155 3
+a160 1
+    end = fmt->ptr + fmt->len;
+d162 1
+a162 1
+    for (p = fmt->ptr; p < end; p++) {
+d174 1
+d178 2
+a179 2
+	    if (isprint(*p))
+		ArgError("malformed format string - %%%c", *p);
+d181 1
+a181 1
+		ArgError("malformed format string");
+d185 1
+d213 1
+a213 1
+	    for (; p < end && isdigit(*p); p++) {
+d217 1
+a217 1
+		ArgError("malformed format string - %%[0-9]");
+d223 1
+a223 1
+		ArgError("width given twice");
+d227 2
+a228 2
+	    width = GETARG();
+	    width = NUM2INT(width);
+d231 1
+a231 1
+		width = - width;
+d238 1
+a238 1
+		ArgError("precision given twice");
+a242 1
+	    if (*p == '0') flags |= FZERO;
+d244 2
+a245 2
+		prec = GETARG();
+		prec = NUM2INT(prec);
+d252 1
+a252 1
+	    for (; p < end && isdigit(*p); p++) {
+d256 1
+a256 1
+		ArgError("malformed format string - %%.[0-9]");
+d274 3
+d279 2
+d289 1
+a289 1
+		str = obj_as_string(arg);
+d301 1
+a302 1
+			CHECK(width);
+d324 2
+a325 2
+	  case 'b':
+	  case 'B':
+d328 2
+d334 29
+a362 2
+		int v, base, bignum = 0;
+		int len, slen, pos;
+d367 1
+a367 1
+		    v = FIX2INT(val);
+d370 2
+a371 1
+		    val = dbl2big(RFLOAT(val)->value);
+d375 1
+a375 1
+		    val = str2inum(RSTRING(val)->ptr, 0);
+d385 2
+a386 1
+		if (*p == 'x') base = 16;
+d388 1
+a388 2
+		else if (*p == 'u') base = 10;
+		else if (*p == 'b' || *p == 'B') base = 2;
+d390 7
+a396 5
+		    if (*p == 'b' || *p == 'B') {
+			val = int2big(v);
+		    }
+		    else {
+			s = nbuf;
+d398 11
+a408 20
+			    strcpy(s, "..");
+			    s += 2;
+			    bignum = 2;
+			}
+			sprintf(fbuf, "%%%c", *p);
+			sprintf(s, fbuf, v);
+			if (v < 0) {
+			    char d = 0;
+
+			    remove_sign_bits(s, base);
+			    switch (base) {
+			      case 16:
+				d = 'f'; break;
+			      case 8:
+				d = '7'; break;
+			    }
+			    if (d && *s != d) {
+				memmove(s+1, s, strlen(s)+1);
+				*s = d;
+			    }
+d410 2
+d413 1
+a413 1
+			goto unsigned_format;
+d415 48
+d464 1
+a464 5
+		if (*p != 'B' && !RBIGNUM(val)->sign) {
+		    val = big_clone(val);
+		    big_2comp(val);
+		}
+		val = big2str(val, base);
+d466 1
+a466 1
+		if (*s == '-' && *p != 'B') {
+d468 1
+a468 1
+		    val = str_new(0, 3+strlen(s));
+d483 37
+a519 15
+	      unsigned_format:
+		slen = len = strlen(s);
+		pos = blen;
+		if (flags&FWIDTH) {
+		    if (width <= len) flags &= ~FWIDTH;
+		    else {
+			slen = width;
+		    }
+		}
+		if (flags&FPREC) {
+		    if (prec <= len) flags &= ~FPREC;
+		    else {
+			if (prec >= slen) {
+			    flags &= ~FWIDTH;
+			    slen = prec;
+d522 4
+a525 8
+		}
+		if (slen > len) {
+		    int n = slen-len;
+		    char d = ' ';
+		    if (flags & FZERO) d = '0';
+		    CHECK(n);
+		    while (n--) {
+			buf[blen++] = d;
+d528 3
+a530 4
+		if ((flags&(FWIDTH|FPREC)) == (FWIDTH|FPREC)) {
+		    if (prec < width) {
+			pos = width - prec;
+		    }
+d535 6
+a540 3
+		t = &buf[pos];
+		if (bignum == 2) {
+		    char d = '.';
+d544 3
+a546 1
+			d = 'f'; break;
+d548 1
+a548 1
+			d = '7'; break;
+d550 1
+a550 8
+			d = '1'; break;
+		    }
+
+		    if ((flags & FPREC) == 0 || prec <= len-2) {
+			*t++ = '.'; *t++ = '.';
+		    }
+		    while (*t == ' ' || *t == '.') {
+			*t++ = d;
+d552 3
+a554 4
+		}
+		else if (flags & (FPREC|FZERO)) {
+		    while (*t == ' ') {
+			*t++ = '0';
+a559 100
+	  case 'd':
+	  case 'D':
+	  case 'O':
+	  case 'X':
+	    {
+		volatile VALUE val = GETARG();
+		char fbuf[32], c = *p;
+		int bignum = 0, base;
+		int v;
+
+		if (c == 'D') c = 'd';
+	      int_retry:
+		switch (TYPE(val)) {
+		  case T_FIXNUM:
+		    v = FIX2INT(val);
+		    break;
+		  case T_FLOAT:
+		    v = RFLOAT(val)->value;
+		    break;
+		  case T_STRING:
+		    val = str2inum(RSTRING(val)->ptr, 0);
+		    goto int_retry;
+		  case T_BIGNUM:
+		    if (c == 'd') base = 10;
+		    else if (c == 'X') base = 16;
+		    else if (c == 'O') base = 8;
+		    val = big2str(val, base);
+		    bignum = 1;
+		    break;
+		  default:
+		    val = num2fix(val);
+		    goto int_retry;
+		}
+
+		if (bignum) {
+		    char *s = RSTRING(val)->ptr;
+		    int slen, len, pos_b, pos;
+
+		    slen = len = strlen(s);
+		    pos = pos_b = blen;
+		    if (flags&FWIDTH) {
+			if (width <= len) flags &= ~FWIDTH;
+			else {
+			    slen = width;
+			}
+		    }
+		    if (flags&FPREC) {
+			if (prec <= len) flags &= ~FPREC;
+			else {
+			    if (prec >= slen) {
+				flags &= ~FWIDTH;
+				slen = prec;
+			    }
+			}
+		    }
+		    if (slen > len) {
+			int n = slen-len;
+			CHECK(n);
+			while (n--) {
+			    buf[blen++] = ' ';
+			}
+		    }
+		    if ((flags&(FWIDTH|FPREC)) == (FWIDTH|FPREC)) {
+			if (prec < width) {
+			    pos = width - prec;
+			}
+		    }
+		    CHECK(len);
+		    strcpy(&buf[blen], s);
+		    blen += len;
+		    if (flags & (FPREC|FZERO)) {
+			char *t = &buf[pos];
+			char *b = &buf[pos_b];
+
+			if (s[0] == '-') {
+			    if (slen > len && t != b ) t[-1] = '-';
+			    else *t++ = '-';
+			}
+			while (*t == ' ' || *t == '-') {
+			    *t++ = '0';
+			}
+		    }
+		}
+		else {
+		    int max = 11;
+
+		    if ((flags & FPREC) && prec > max) max = prec;
+		    if ((flags & FWIDTH) && width > max) max = width;
+		    CHECK(max);
+		    if (v < 0 && (c == 'X' || c == 'O')) {
+			v = -v;
+			PUSH("-", 1);
+		    }
+		    fmt_setup(fbuf, c, flags, width, prec);
+		    sprintf(&buf[blen], fbuf, v);
+		    blen += strlen(&buf[blen]);
+		}
+	    }
+	    break;
+
+d562 1
+d564 1
+d568 1
+d573 1
+a573 1
+		    fval = FIX2INT(val);
+d579 1
+a579 1
+		    fval = big2dbl(val);
+d582 1
+a582 1
+		    fval = atof(RSTRING(val)->ptr);
+d590 11
+d602 1
+a602 1
+		CHECK(22);
+d612 2
+a613 2
+    if (verbose && argc > 1) {
+	ArgError("too many argument for format string");
+d615 1
+a615 1
+    result = str_new(buf, blen);
+d631 1
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d112 1
+a112 1
+    VALUE fmt;
+d125 1
+a125 1
+    int width = 0, prec = 0, flags = FNONE;
+d145 1
+a145 1
+    fmt = GETARG();
+d151 1
+a151 1
+    end = RSTRING(fmt)->ptr + RSTRING(fmt)->len;
+d153 1
+a153 1
+    for (p = RSTRING(fmt)->ptr; p < end; p++) {
+d600 1
+a600 1
+    if (RTEST(verbose) && argc > 1) {
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:17 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d16 1
+a16 1
+static void fmt_setup _((char*,char,int,int,int));
+a25 1
+    end = str + strlen(str);
+d30 2
+a31 2
+	  case 'c': case 'C':
+	    *t = '4';
+d33 2
+a34 2
+	  case 'd': case 'D':
+	    *t = '5';
+d36 1
+a36 1
+	  case 'e': case 'E':
+d39 1
+a39 1
+	  case 'f': case 'F':
+d102 14
+a115 1
+double rb_big2dbl _((VALUE));
+d122 6
+a127 3
+#define FSPACE 16
+#define FWIDTH 32
+#define FPREC  64
+d143 1
+a143 1
+    ((argc == 0)?(rb_raise(rb_eArgError, "too few argument."),0):(argc--,((argv++)[0])))
+d145 2
+a146 9
+VALUE
+rb_f_sprintf(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE fmt;
+    char *buf, *p, *end;
+    int blen, bsiz;
+    VALUE result;
+a147 7
+    int width, prec, flags = FNONE;
+    VALUE tmp;
+    VALUE str;
+
+    fmt = GETARG();
+    p = str2cstr(fmt, &blen);
+    end = p + blen;
+d151 1
+d153 1
+a153 1
+    for (; p < end; p++) {
+a164 1
+	width = prec = -1;
+d168 2
+a169 2
+	    if (ISPRINT(*p))
+		rb_raise(rb_eArgError, "malformed format string - %%%c", *p);
+d171 1
+a171 1
+		rb_raise(rb_eArgError, "malformed format string");
+a174 1
+	    flags |= FSPACE;
+d202 1
+a202 1
+	    for (; p < end && ISDIGIT(*p); p++) {
+d206 1
+a206 1
+		rb_raise(rb_eArgError, "malformed format string - %%[0-9]");
+d212 1
+a212 1
+		rb_raise(rb_eArgError, "width given twice");
+d216 2
+a217 2
+	    tmp = GETARG();
+	    width = NUM2INT(tmp);
+d220 1
+a220 1
+		width = -width;
+d227 1
+a227 1
+		rb_raise(rb_eArgError, "precision given twice");
+d232 1
+d234 2
+a235 2
+		tmp = GETARG();
+		prec = NUM2INT(tmp);
+d242 1
+a242 1
+	    for (; p < end && ISDIGIT(*p); p++) {
+d246 1
+a246 1
+		rb_raise(rb_eArgError, "malformed format string - %%.[0-9]");
+a263 3
+		if (!(flags & FMINUS))
+		    while (--width > 0)
+			PUSH(" ", 1);
+a265 2
+		while (--width > 0)
+		    PUSH(" ", 1);
+d274 1
+a274 1
+		str = rb_obj_as_string(arg);
+d286 1
+a287 1
+			width -= len;
+d309 2
+a310 2
+	  case 'd':
+	  case 'i':
+a312 2
+	  case 'X':
+	  case 'b':
+d317 2
+a318 29
+		char *prefix = 0;
+		int sign = 0;
+		char sc = 0;
+		long v;
+		int base, bignum = 0;
+		int len, pos;
+
+		switch (*p) {
+		  case 'd':
+		  case 'i':
+		    sign = 1; break;
+		  case 'o':
+		  case 'x':
+		  case 'X':
+		  case 'b':
+		  case 'u':
+		  default:
+		    if (flags&(FPLUS|FSPACE)) sign = 1;
+		    break;
+		}
+		if (flags & FSHARP) {
+		    if (*p == 'o') prefix = "0";
+		    else if (*p == 'x') prefix = "0x";
+		    else if (*p == 'X') prefix = "0X";
+		    else if (*p == 'b') prefix = "0b";
+		    if (prefix) {
+			width -= strlen(prefix);
+		    }
+		}
+d323 1
+a323 1
+		    v = FIX2LONG(val);
+d326 1
+a326 2
+		    val = rb_dbl2big(RFLOAT(val)->value);
+		    if (FIXNUM_P(val)) goto bin_retry;
+d330 1
+a330 1
+		    val = rb_str2inum(RSTRING(val)->ptr, 10);
+d340 1
+a340 2
+		if (*p == 'u' || *p == 'd' || *p == 'i') base = 10;
+		else if (*p == 'x' || *p == 'X') base = 16;
+d342 2
+a343 1
+		else if (*p == 'b') base = 2;
+d345 12
+a356 7
+		    if (base == 2) {
+			val = rb_int2big(v);
+			goto bin_retry;
+		    }
+		    if (sign) {
+			char c = *p;
+			if (c == 'i') c = 'd'; /* %d and %i are identical */
+d358 13
+a370 11
+			    v = -v;
+			    sc = '-';
+			    width--;
+			}
+			else if (flags & FPLUS) {
+			    sc = '+';
+			    width--;
+			}
+			else if (flags & FSPACE) {
+			    sc = ' ';
+			    width--;
+a371 2
+			sprintf(fbuf, "%%l%c", c);
+			sprintf(nbuf, fbuf, v);
+d373 1
+a373 1
+			goto format_integer;
+a374 48
+		    s = nbuf;
+		    if (v < 0) {
+			strcpy(s, "..");
+			s += 2;
+		    }
+		    sprintf(fbuf, "%%l%c", *p);
+		    sprintf(s, fbuf, v);
+		    if (v < 0) {
+			char d = 0;
+
+			remove_sign_bits(s, base);
+			switch (base) {
+			  case 16:
+			    d = 'f'; 
+			    break;
+			  case 8:
+			    d = '7'; break;
+			}
+			if (d && *s != d) {
+			    memmove(s+1, s, strlen(s)+1);
+			    *s = d;
+			}
+		    }
+		    s = nbuf;
+		    goto format_integer;
+		}
+
+		if (sign) {
+		    val = rb_big2str(val, base);
+		    s = RSTRING(val)->ptr;
+		    if (s[0] == '-') {
+			s++;
+			sc = '-';
+			width--;
+		    }
+		    else if (flags & FPLUS) {
+			sc = '+';
+			width--;
+		    }
+		    else if (flags & FSPACE) {
+			sc = ' ';
+			width--;
+		    }
+		    goto format_integer;
+		}
+		if (!RBIGNUM(val)->sign) {
+		    val = rb_big_clone(val);
+		    rb_big_2comp(val);
+d376 5
+a380 1
+		val = rb_big2str(val, base);
+d382 1
+a382 1
+		if (*s == '-') {
+d384 1
+a384 1
+		    val = rb_str_new(0, 3+strlen(s));
+d399 15
+a413 37
+	      format_integer:
+		pos = -1;
+		len = strlen(s);
+
+		if (*p == 'X') {
+		    char *pp = s;
+		    while (*pp) {
+			*pp = toupper(*pp);
+			pp++;
+		    }
+		}
+		if (prec < len) prec = len;
+		width -= prec;
+		if (!(flags&(FZERO|FMINUS)) && s[0] != '.') {
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = ' ';
+		    }
+		}
+		if (sc) PUSH(&sc, 1);
+		if (prefix) {
+		    int plen = strlen(prefix);
+		    CHECK(plen);
+		    strcpy(&buf[blen], prefix);
+		    blen += plen;
+		    if (pos) pos += plen;
+		}
+		if (!(flags & FMINUS)) {
+		    char c = ' ';
+
+		    if (s[0] == '.') {
+			c = '.';
+			if ((flags & FPREC) && prec > len) {
+			    pos = blen;
+			}
+			else {
+			    pos = blen + 2;
+d416 8
+a423 4
+		    else if (flags & FZERO) c = '0';
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = c;
+d426 4
+a429 3
+		CHECK(prec - len);
+		while (len < prec--) {
+		    buf[blen++] = s[0]=='.'?'.':'0';
+d434 3
+a436 6
+		CHECK(width);
+		while (width-->0) {
+		    buf[blen++] = ' ';
+		}
+		if (pos >= 0 && buf[pos] == '.') {
+		    char c = '.';
+d440 1
+a440 3
+			if (*p == 'X') c = 'F';
+			else c = 'f';
+			break;
+d442 1
+a442 1
+			c = '7'; break;
+d444 5
+a448 1
+			c = '1'; break;
+d450 2
+a451 3
+		    s = &buf[pos];
+		    while (*s && *s == '.') {
+			*s++ = c;
+d454 105
+a564 1
+	  case 'E':
+d572 1
+a572 1
+		    fval = (double)FIX2LONG(val);
+d578 1
+a578 1
+		    fval = rb_big2dbl(val);
+d600 2
+a601 2
+    if (RTEST(rb_verbose) && argc > 1) {
+	rb_raise(rb_eArgError, "too many argument for format string");
+d603 1
+a603 1
+    result = rb_str_new(buf, blen);
+a618 1
+    if (flags & FSPACE) *buf++ = ' ';
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:26 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+a15 3
+#ifdef USE_CWGUSI
+static void fmt_setup();
+#else
+a16 1
+#endif
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:16 $
+d592 1
+a592 1
+    if (RTEST(ruby_verbose) && argc > 1) {
+@
+
+
+1.1.1.3.2.3
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:57 $
+a15 4
+#ifndef atof
+double strtod();
+#endif
+
+d573 1
+a573 1
+		    fval = strtod(RSTRING(val)->ptr, 0);
+@
+
+
+1.1.1.3.2.4
+log
+@990215
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:23 $
+a558 1
+	  case 'G':
+@
+
+
+1.1.1.3.2.5
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/15 07:31:51 $
+d597 1
+a597 1
+    if (RTEST(ruby_verbose) && argc > 0) {
+@
+
+
+1.1.1.3.2.6
+log
+@aix shlib link
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:33 $
+a14 3
+#include <math.h>
+
+#define BIT_DIGITS(N)   (((N)*146)/485 + 1)  /* log2(10) =~ 146/485 */
+a564 1
+		int i, need = 6;
+a585 11
+		need = 0;
+		if (*p != 'e' && *p != 'E') {
+		    i = INT_MIN;
+		    frexp(fval, &i);
+		    if (i > 0)
+			need = BIT_DIGITS(i);
+		}
+		need += (flags&FPREC) ? prec : 6;
+		if ((flags&FWIDTH) && need < width)
+		    need = width;
+		need += 20;
+d587 1
+a587 1
+		CHECK(need);
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:58 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b7 pre3
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+d330 1
+a330 1
+		    val = str2inum(RSTRING(val)->ptr, 10);
+d342 1
+a342 1
+		else if (*p == 'u' || *p == 'd') base = 10;
+d345 1
+a345 1
+		    if (base == 2) {
+@
+
+
+1.1.1.2.2.3
+log
+@1.1b9_00
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/10 08:44:05 $
+d31 1
+a31 1
+	    *t = '4';
+d34 1
+a34 1
+	    *t = '5';
+a420 1
+		    if (s[0] == '.') d = '.';
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/09 07:56:58 $
+d16 1
+a16 1
+static void fmt_setup _((char*,char,int,int,int));
+d102 4
+a105 1
+double big2dbl _((VALUE));
+d168 1
+a168 1
+	    if (ISPRINT(*p))
+d202 1
+a202 1
+	    for (; p < end && ISDIGIT(*p); p++) {
+d242 1
+a242 1
+	    for (; p < end && ISDIGIT(*p); p++) {
+@
+
+
+1.1.1.2.2.5
+log
+@BeOS patches
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:19 $
+a25 1
+    end = str + strlen(str);
+@
+
+
+1.1.1.2.2.6
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 09:12:21 $
+d144 2
+a145 2
+    p = str2cstr(fmt, &blen);
+    end = p + blen;
+d149 1
+d151 1
+a151 1
+    for (; p < end; p++) {
+@
+
+
+1.1.1.2.2.7
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:40 $
+d314 1
+a314 2
+		long v;
+		int base, bignum = 0;
+d320 1
+a320 1
+		    v = FIX2LONG(val);
+d474 1
+a474 1
+		    v = FIX2LONG(val);
+d570 1
+a570 1
+		    fval = (double)FIX2LONG(val);
+@
+
+
+1.1.1.2.2.8
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:36 $
+d353 1
+a353 1
+			sprintf(fbuf, "%l%%c", *p);
+a471 1
+		if (c == 'O') c = 'o';
+d545 1
+a545 1
+		    int max = 12;
+a613 3
+    if (strchr("doOXx", c)) {
+	*buf++ = 'l';
+    }
+@
+
+
+1.1.1.2.2.9
+log
+@1.1b9_31
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:27 $
+d615 3
+a632 3
+    if (strchr("doOXx", c)) {
+	*buf++ = 'l';
+    }
+@
+
+
+1.1.1.2.2.10
+log
+@printf
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/15 06:12:53 $
+d31 1
+a31 1
+	  case 'c': case 'C':
+d34 1
+a34 1
+	  case 'd': case 'D':
+d37 1
+a37 1
+	  case 'e': case 'E':
+d40 1
+a40 1
+	  case 'f': case 'F':
+d105 10
+d120 6
+a125 3
+#define FSPACE 16
+#define FWIDTH 32
+#define FPREC  64
+a142 14
+VALUE
+f_sprintf(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE fmt;
+    char *buf, *p, *end;
+    int blen, bsiz;
+    VALUE result;
+
+    int width, prec, flags = FNONE;
+    VALUE tmp;
+    VALUE str;
+
+a161 1
+	width = prec = -1;
+a171 1
+	    flags |= FSPACE;
+d213 2
+a214 2
+	    tmp = GETARG();
+	    width = NUM2INT(tmp);
+d217 1
+a217 1
+		width = -width;
+d229 1
+d231 2
+a232 2
+		tmp = GETARG();
+		prec = NUM2INT(tmp);
+a260 3
+		if (!(flags & FMINUS))
+		    while (--width > 0)
+			PUSH(" ", 1);
+a262 2
+		while (--width > 0)
+		    PUSH(" ", 1);
+d306 2
+a307 2
+	  case 'd':
+	  case 'i':
+a309 2
+	  case 'X':
+	  case 'b':
+a313 3
+		char *prefix = 0;
+		int sign = 0;
+		char sc = 0;
+d316 1
+a316 24
+		int len, pos;
+
+		switch (*p) {
+		  case 'd':
+		  case 'i':
+		    sign = 1; break;
+		  case 'o':
+		  case 'x':
+		  case 'X':
+		  case 'b':
+		  case 'u':
+		  default:
+		    if (flags & FPLUS) sign = 1;
+		    break;
+		}
+		if (flags & FSHARP) {
+		    if (*p == 'o') prefix = "0";
+		    else if (*p == 'x') prefix = "0x";
+		    else if (*p == 'X') prefix = "0X";
+		    else if (*p == 'b') prefix = "0b";
+		    if (prefix) {
+			width -= strlen(prefix);
+		    }
+		}
+d338 1
+a338 2
+		if (*p == 'u' || *p == 'd' || *p == 'i') base = 10;
+		else if (*p == 'x' || *p == 'X') base = 16;
+d340 2
+a341 1
+		else if (*p == 'b') base = 2;
+a344 1
+			goto bin_retry;
+d346 2
+a347 3
+		    if (sign) {
+			char c = *p;
+			if (c == 'i') c = 'd'; /* %d and %i are identical */
+d349 3
+a351 11
+			    v = -v;
+			    sc = '-';
+			    width--;
+			}
+			else if (flags & FPLUS) {
+			    sc = '+';
+			    width--;
+			}
+			else if (flags & FSPACE) {
+			    sc = ' ';
+			    width--;
+d353 4
+a356 14
+			sprintf(fbuf, "%l%%c", c);
+			sprintf(nbuf, fbuf, v);
+			s = nbuf;
+			goto format_integer;
+		    }
+		    s = nbuf;
+		    if (v < 0) {
+			strcpy(s, "..");
+			s += 2;
+		    }
+		    sprintf(fbuf, "%l%%c", *p);
+		    sprintf(s, fbuf, v);
+		    if (v < 0) {
+			char d = 0;
+d358 11
+a368 7
+			remove_sign_bits(s, base);
+			switch (base) {
+			  case 16:
+			    d = 'f'; 
+			    break;
+			  case 8:
+			    d = '7'; break;
+d370 2
+a371 24
+			if (d && *s != d) {
+			    memmove(s+1, s, strlen(s)+1);
+			    *s = d;
+			}
+		    }
+		    s = nbuf;
+		    goto format_integer;
+		}
+
+		if (sign) {
+		    val = big2str(val, base);
+		    s = RSTRING(val)->ptr;
+		    if (s[0] == '-') {
+			s++;
+			sc = '-';
+			width--;
+		    }
+		    else if (flags & FPLUS) {
+			sc = '+';
+			width--;
+		    }
+		    else if (flags & FSPACE) {
+			sc = ' ';
+			width--;
+a372 1
+		    goto format_integer;
+d374 1
+a374 1
+		if (!RBIGNUM(val)->sign) {
+d380 1
+a380 1
+		if (*s == '-') {
+d397 15
+a411 37
+	      format_integer:
+		pos = -1;
+		len = strlen(s);
+
+		if (*p == 'X') {
+		    char *pp = s;
+		    while (*pp) {
+			*pp = toupper(*pp);
+			pp++;
+		    }
+		}
+		if (prec < len) prec = len;
+		width -= prec;
+		if (!(flags&(FZERO|FMINUS)) && s[0] != '.') {
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = ' ';
+		    }
+		}
+		if (sc) PUSH(&sc, 1);
+		if (prefix) {
+		    int plen = strlen(prefix);
+		    CHECK(plen);
+		    strcpy(&buf[blen], prefix);
+		    blen += plen;
+		    if (pos) pos += plen;
+		}
+		if (!(flags & FMINUS)) {
+		    char c = ' ';
+
+		    if (s[0] == '.') {
+			c = '.';
+			if ((flags & FPREC) && prec > len) {
+			    pos = blen;
+			}
+			else {
+			    pos = blen + 2;
+d414 9
+a422 4
+		    else if (flags & FZERO) c = '0';
+		    CHECK(width);
+		    while (width-->0) {
+			buf[blen++] = c;
+d425 4
+a428 3
+		CHECK(prec - len);
+		while (len < prec--) {
+		    buf[blen++] = s[0]=='.'?'.':'0';
+d433 3
+a435 6
+		CHECK(width);
+		while (width-->0) {
+		    buf[blen++] = ' ';
+		}
+		if (pos >= 0 && buf[pos] == '.') {
+		    char c = '.';
+d439 1
+a439 3
+			if (*p == 'X') c = 'F';
+			else c = 'f';
+			break;
+d441 1
+a441 1
+			c = '7'; break;
+d443 64
+a506 1
+			c = '1'; break;
+d508 35
+a542 3
+		    s = &buf[pos];
+		    while (*s && *s == '.') {
+			*s++ = c;
+d545 14
+a564 1
+	  case 'E':
+a618 1
+    if (flags & FSPACE) *buf++ = ' ';
+d630 3
+@
+
+
+1.1.1.2.2.11
+log
+@marshal/reg_clone
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/21 05:17:12 $
+d340 1
+a340 1
+		    if (flags&(FPLUS|FSPACE)) sign = 1;
+@
+
+
+1.1.1.2.2.12
+log
+@1.1c4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/24 04:32:31 $
+d290 1
+a291 1
+			width -= len;
+a359 1
+		    if (FIXNUM_P(val)) goto bin_retry;
+@
+
+
+1.1.1.2.2.13
+log
+@1.1c8
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:43 $
+d399 1
+a399 1
+			sprintf(fbuf, "%%l%c", c);
+d409 1
+a409 1
+		    sprintf(fbuf, "%%l%c", *p);
+@
+
+
+1.1.1.2.2.14
+log
+@1.2.4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/17 09:12:39 $
+d588 1
+a588 1
+    if (RTEST(verbose) && argc > 0) {
+@
+
+
+1.1.1.2.2.15
+log
+@format %f
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/08 10:14:34 $
+a14 3
+#include <math.h>
+
+#define BIT_DIGITS(N)   (((N)*146)/485 + 1)  /* log2(10) =~ 146/485 */
+a555 1
+		int i, need = 6;
+d577 2
+a578 14
+#if 1
+		need = 0;
+		if (*p != 'e' && *p != 'E') {
+		    i = INT_MIN;
+		    frexp(fval, &i);
+		    if (i > 0)
+			need = BIT_DIGITS(i);
+		}
+		need += (flags&FPREC) ? prec : 6;
+		if ((flags&FWIDTH) && need < width)
+		    need = width;
+		need += 20;
+		CHECK(need);
+#endif
+@
+
+
+1.1.1.2.2.16
+log
+@moving
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/26 07:41:42 $
+d581 1
+a581 1
+
+a592 1
+
+d594 1
+@
+
+
+1.1.1.2.2.12.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:43 $
+d103 1
+a103 1
+double rb_big2dbl _((VALUE));
+d128 1
+a128 1
+    ((argc == 0)?(rb_raise(rb_eArgError, "too few argument."),0):(argc--,((argv++)[0])))
+d131 1
+a131 1
+rb_f_sprintf(argc, argv)
+d168 1
+a168 1
+		rb_raise(rb_eArgError, "malformed format string - %%%c", *p);
+d170 1
+a170 1
+		rb_raise(rb_eArgError, "malformed format string");
+d206 1
+a206 1
+		rb_raise(rb_eArgError, "malformed format string - %%[0-9]");
+d212 1
+a212 1
+		rb_raise(rb_eArgError, "width given twice");
+d227 1
+a227 1
+		rb_raise(rb_eArgError, "precision given twice");
+d245 1
+a245 1
+		rb_raise(rb_eArgError, "malformed format string - %%.[0-9]");
+d278 1
+a278 1
+		str = rb_obj_as_string(arg);
+d359 1
+a359 1
+		    val = rb_dbl2big(RFLOAT(val)->value);
+d364 1
+a364 1
+		    val = rb_str2inum(RSTRING(val)->ptr, 10);
+d380 1
+a380 1
+			val = rb_int2big(v);
+d432 1
+a432 1
+		    val = rb_big2str(val, base);
+d450 2
+a451 2
+		    val = rb_big_clone(val);
+		    rb_big_2comp(val);
+d453 1
+a453 1
+		val = rb_big2str(val, base);
+d457 1
+a457 1
+		    val = rb_str_new(0, 3+strlen(s));
+d566 1
+a566 1
+		    fval = rb_big2dbl(val);
+d588 2
+a589 2
+    if (RTEST(rb_verbose) && argc > 1) {
+	rb_raise(rb_eArgError, "too many argument for format string");
+d591 1
+a591 1
+    result = rb_str_new(buf, blen);
+@
+
+
+1.1.1.2.2.12.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/17 09:12:39 $
+d399 1
+a399 1
+			sprintf(fbuf, "%%l%c", c);
+d409 1
+a409 1
+		    sprintf(fbuf, "%%l%c", *p);
+@

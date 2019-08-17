@@ -1,0 +1,215 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2002.09.17.13.52.45;	author michal;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.05.11.19.31.17;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@move struct timeval to missing.h
+@
+text
+@/************************************************
+
+  missing.h - prototype for *.c in ./missing, and
+  	      for missing timeval struct
+
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+  created at: Sat May 11 23:46:03 JST 2002
+
+************************************************/
+
+#ifndef MISSING_H
+#define MISSING_H
+
+#if defined(HAVE_SYS_TIME_H)
+#  include <sys/time.h>
+#elif !defined(NT)
+#  define time_t long
+struct timeval {
+    time_t tv_sec;	/* seconds */
+    time_t tv_usec;	/* microseconds */
+};
+#endif
+
+#ifndef HAVE_ACOSH
+extern double acosh _((double));
+extern double asinh _((double));
+extern double atanh _((double));
+#endif
+
+#ifndef HAVE_CRYPT
+extern char *crypt _((char *, char *));
+#endif
+
+#ifndef HAVE_DUP2
+extern int dup2 _((int, int));
+#endif
+
+#ifndef HAVE_FINITE
+extern int finite _((double));
+#endif
+
+#ifndef HAVE_FLOCK
+extern int flock _((int, int));
+#endif
+
+/*
+#ifndef HAVE_FREXP
+extern double frexp _((double, int *));
+#endif
+*/
+
+#ifndef HAVE_HYPOT
+extern double hypot _((double, double));
+#endif
+
+#ifndef HAVE_ISINF
+extern int isinf _((double));
+#endif
+
+#ifndef HAVE_ISNAN
+extern int isnan _((double));
+#endif
+
+/*
+#ifndef HAVE_MEMCMP
+extern int memcmp _((char *, char *, int));
+#endif
+*/
+
+#ifndef HAVE_MEMMOVE
+extern char *memmove _((char *, char *, int));
+#endif
+
+#ifndef HAVE_MKDIR
+extern int mkdir _((char *, int));
+#endif
+
+/*
+#ifndef HAVE_MODF
+extern double modf _((double, double *));
+#endif
+*/
+
+#ifndef HAVE_STRCASECMP
+extern int strcasecmp _((char *, char *));
+#endif
+
+#ifndef HAVE_STRNCASECMP
+extern int strncasecmp _((char *, char *, int));
+#endif
+
+#ifndef HAVE_STRCHR
+extern int strchr _((char *, int));
+extern int strrchr _((char *, int));
+#endif
+
+#ifndef HAVE_STRERROR
+extern char *strerror _((int));
+#endif
+
+#ifndef HAVE_STRFTIME
+extern size_t strftime _((char *, size_t, const char *, const struct tm *));
+#endif
+
+#ifndef HAVE_STRSTR
+extern char *strstr _((char *, char *));
+#endif
+
+#ifndef HAVE_STRTOD
+extern double strtod _((const char *, char **));
+#endif
+
+/*
+#ifndef HAVE_STRTOL
+extern long strtol _((char *, char **, int));
+#endif
+*/
+
+#ifndef HAVE_STRTOUL
+extern long strtoul _((char *, char **, int));
+#endif
+
+#ifndef HAVE_VSNPRINTF
+extern snprintf __((char *, size_t n, char const *, ...));
+extern vsnprintf _((char *, size_t n, char const *, va_list));
+#endif
+
+#endif /* MISSING_H */
+@
+
+
+1.2
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d3 2
+a4 1
+  missing.h - prototype for *.c in ./missing
+d6 2
+a7 2
+  $Author: eban $
+  $Date: 2002/05/11 19:31:17 $
+d14 10
+@
+
+
+1.1
+log
+@* missing.h: add for missing/*.c.
+* ruby.h: add `#include "missing.h"'.
+* Makefile.in: add the dependency of missing.h by gcc -MM.
+* MANIFEST: add missing.h
+@
+text
+@d3 1
+a3 1
+  missing.h - prototype for missing/*.c
+d5 2
+a6 2
+  $Author$
+  $Date$
+@

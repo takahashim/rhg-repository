@@ -1,0 +1,1871 @@
+head	1.25;
+access;
+symbols
+	v1_6_7:1.15.2.1
+	v1_6_6:1.15
+	v1_6_5:1.15
+	v1_6_4:1.15
+	v1_7_1:1.16
+	v1_6_4_preview4:1.15
+	v1_6_4_preview3:1.15
+	v1_6_4_preview2:1.15
+	v1_6_4_preview1:1.15
+	v1_6_3:1.15
+	ruby_m17n:1.15.0.4
+	ruby_1_6:1.15.0.2
+	v1_6_2:1.15
+	v1_6_1:1.13
+	v1_6_0:1.13
+	v1_4_6:1.4.2.4
+	v1_4_5:1.4.2.4
+	v1_4_4:1.4.2.4
+	ruby_1_4_3:1.4.2.2
+	ruby1_4_3:1.4.2.2
+	v1_4_3:1.4.2.2
+	v1_5_0:1.6
+	ruby_1_4_3_pre1:1.4.2.1
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.4
+	v1_4_1:1.4
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.3
+	v1_3_6_repack:1.1.1.3.2.3
+	v1_3_6:1.1.1.3.2.3
+	v1_3_5:1.1.1.3.2.3
+	v1_2_6repack:1.1.1.2.2.8
+	v1_3_4_990625:1.1.1.3.2.2
+	v1_3_4_990624:1.1.1.3.2.2
+	v1_2_6:1.1.1.2.2.8
+	v1_3_4_990611:1.1.1.3.2.2
+	v1_3_4_990531:1.1.1.3.2.2
+	v1_3_3_990518:1.1.1.3.2.2
+	v1_3_3_990513:1.1.1.3.2.1
+	v1_3_3_990507:1.1.1.3.2.1
+	v1_2_5:1.1.1.2.2.8
+	v1_2_4:1.1.1.2.2.8
+	v1_3_1_990225:1.1.1.3.2.1
+	v1_3_1_990224:1.1.1.3.2.1
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.8
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.8
+	v1_2_1repack:1.1.1.2.2.8
+	v1_2_1:1.1.1.2.2.8
+	v1_2_stable:1.1.1.2.2.8
+	v1_1d1:1.1.1.2.2.8.2.1
+	v1_1d0:1.1.1.2.2.8.2.1
+	v1_1c9_1:1.1.1.2.2.8
+	v1_1c9:1.1.1.2.2.8
+	v1_1c8:1.1.1.2.2.8
+	v1_1c7:1.1.1.2.2.8
+	v1_1c6:1.1.1.2.2.8
+	v1_1d-start:1.1.1.2.2.8.2.1
+	v1_1c5:1.1.1.2.2.8
+	v1_1dev:1.1.1.2.2.8.0.2
+	v1_1c4:1.1.1.2.2.8
+	v1_1c3:1.1.1.2.2.7
+	v1_1c2:1.1.1.2.2.7
+	v1_1c1:1.1.1.2.2.7
+	v1_1c0:1.1.1.2.2.7
+	v1_1b9_31:1.1.1.2.2.7
+	v1_1b9_30:1.1.1.2.2.7
+	v1_1b9_28:1.1.1.2.2.7
+	v1_1b9_27:1.1.1.2.2.7
+	v1_1b9_26:1.1.1.2.2.7
+	r1_1b9_25:1.1.1.2.2.7
+	r1_1b9_24:1.1.1.2.2.7
+	v1_1b9_23:1.1.1.2.2.7
+	v1_1b9_22:1.1.1.2.2.6
+	v1_1b9_20:1.1.1.2.2.6
+	v1_1b9_18:1.1.1.2.2.4
+	v1_1b9_16:1.1.1.2.2.3
+	v1_1b9_15:1.1.1.2.2.2
+	v1_1b9_13:1.1.1.2.2.1
+	v1_1b9_12:1.1.1.2.2.1
+	v1_1b9_11:1.1.1.2.2.1
+	v1_1b9_08:1.1.1.2.2.1
+	v1_1b9_07:1.1.1.2.2.1
+	r1_1b9:1.1.1.2.2.1
+	v1_1b8:1.1.1.2.2.1
+	v1_1b7:1.1.1.2.2.1
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.25
+date	2002.09.17.13.52.45;	author michal;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.08.13.09.21.13;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.07.26.06.56.30;	author eban;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.07.26.06.12.39;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.04.25.13.55.58;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.04.11.10.57.13;	author eban;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.02.27.04.29.10;	author eban;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.11.14.07.10.22;	author matz;	state Exp;
+branches
+	1.15.2.1;
+next	1.14;
+
+1.14
+date	2000.11.02.09.04.54;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.08.03.09.50.33;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.04.04.17.14;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.01.09.41.27;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.08.08.48.52;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.01.17.08.37.45;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.01.08.05.00.21;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.05.04.37.10;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.12.06.09.03.56;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.27.04.20.14;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.16.09.40.32;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.09.01.09.48.02;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.13;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.25;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.14;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.05.17.09.54.14;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.07.15.07.59.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.04.24.09.33.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.04.27.10.03.59;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.05.08.09.38.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.05.13.05.58.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.05.15.05.43.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.05.25.04.57.50;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.09.03.07.43.36;	author matz;	state Exp;
+branches
+	1.1.1.2.2.8.2.1;
+next	;
+
+1.1.1.2.2.8.2.1
+date	98.09.08.07.09.02;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	99.10.27.04.19.26;	author matz;	state Exp;
+branches;
+next	1.4.2.2;
+
+1.4.2.2
+date	99.12.06.09.03.33;	author matz;	state Exp;
+branches;
+next	1.4.2.3;
+
+1.4.2.3
+date	2000.01.17.08.24.10;	author matz;	state Exp;
+branches;
+next	1.4.2.4;
+
+1.4.2.4
+date	2000.02.08.08.53.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.15.2.1
+date	2002.02.27.04.30.19;	author eban;	state Exp;
+branches;
+next	1.15.2.2;
+
+1.15.2.2
+date	2002.04.11.11.00.02;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.25
+log
+@move struct timeval to missing.h
+@
+text
+@/**********************************************************************
+
+  random.c -
+
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+  created at: Fri Dec 24 16:39:21 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+/* 
+This is based on trimmed version of MT19937.  To get the original version,
+contact <http://www.math.keio.ac.jp/~matumoto/emt.html>.
+
+The original copyright notice follows.
+
+   A C-program for MT19937, with initialization improved 2002/2/10.
+   Coded by Takuji Nishimura and Makoto Matsumoto.
+   This is a faster version by taking Shawn Cokus's optimization,
+   Matthe Bellew's simplification, Isaku Wada's real version.
+
+   Before using, initialize the state by using init_genrand(seed) 
+   or init_by_array(init_key, key_length).
+
+   Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
+   All rights reserved.                          
+
+   Redistribution and use in source and binary forms, with or without
+   modification, are permitted provided that the following conditions
+   are met:
+
+     1. Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+
+     2. Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+
+     3. The names of its contributors may not be used to endorse or promote 
+        products derived from this software without specific prior written 
+        permission.
+
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+   A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+   Any feedback is very welcome.
+   http://www.math.keio.ac.jp/matumoto/emt.html
+   email: matumoto@@math.keio.ac.jp
+*/
+
+/* Period parameters */  
+#define N 624
+#define M 397
+#define MATRIX_A 0x9908b0dfUL   /* constant vector a */
+#define UMASK 0x80000000UL /* most significant w-r bits */
+#define LMASK 0x7fffffffUL /* least significant r bits */
+#define MIXBITS(u,v) ( ((u) & UMASK) | ((v) & LMASK) )
+#define TWIST(u,v) ((MIXBITS(u,v) >> 1) ^ ((v)&1UL ? MATRIX_A : 0UL))
+
+static unsigned long state[N]; /* the array for the state vector  */
+static int left = 1;
+static int initf = 0;
+static unsigned long *next;
+
+/* initializes state[N] with a seed */
+static void
+init_genrand(s)
+    unsigned long s;
+{
+    int j;
+    state[0]= s & 0xffffffffUL;
+    for (j=1; j<N; j++) {
+        state[j] = (1812433253UL * (state[j-1] ^ (state[j-1] >> 30)) + j); 
+        /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
+        /* In the previous versions, MSBs of the seed affect   */
+        /* only MSBs of the array state[].                        */
+        /* 2002/01/09 modified by Makoto Matsumoto             */
+        state[j] &= 0xffffffffUL;  /* for >32 bit machines */
+    }
+    left = 1; initf = 1;
+}
+
+static void
+next_state()
+{
+    unsigned long *p=state;
+    int j;
+
+    /* if init_genrand() has not been called, */
+    /* a default initial seed is used         */
+    if (initf==0) init_genrand(5489UL);
+
+    left = N;
+    next = state;
+    
+    for (j=N-M+1; --j; p++) 
+        *p = p[M] ^ TWIST(p[0], p[1]);
+
+    for (j=M; --j; p++) 
+        *p = p[M-N] ^ TWIST(p[0], p[1]);
+
+    *p = p[M-N] ^ TWIST(p[0], state[0]);
+}
+
+/* generates a random number on [0,1)-real-interval */
+static double
+genrand_real()
+{
+    unsigned long y;
+
+    if (--left == 0) next_state();
+    y = *next++;
+
+    /* Tempering */
+    y ^= (y >> 11);
+    y ^= (y << 7) & 0x9d2c5680UL;
+    y ^= (y << 15) & 0xefc60000UL;
+    y ^= (y >> 18);
+
+    return (double)y * (1.0/4294967296.0); 
+    /* divided by 2^32 */
+}
+
+#undef N
+#undef M
+
+/* These real versions are due to Isaku Wada, 2002/01/09 added */
+
+#include "ruby.h"
+
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#include <time.h>
+
+static int first = 1;
+
+static int
+rand_init(seed)
+    unsigned long seed;
+{
+    static unsigned long saved_seed;
+    unsigned long old;
+
+    first = 0;
+    init_genrand(seed);
+    old = saved_seed;
+    saved_seed = seed;
+
+    return old;
+}
+
+static unsigned long
+random_seed()
+{
+    static int n = 0;
+    struct timeval tv;
+
+    gettimeofday(&tv, 0);
+    return tv.tv_sec ^ tv.tv_usec ^ getpid() ^ n++;
+}
+
+static VALUE
+rb_f_srand(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE sd;
+    unsigned long seed, old;
+
+    rb_secure(4);
+    if (rb_scan_args(argc, argv, "01", &sd) == 0) {
+	seed = random_seed();
+    }
+    else {
+	seed = NUM2ULONG(sd);
+    }
+    old = rand_init(seed);
+
+    return ULONG2NUM(old);
+}
+
+static VALUE
+rb_f_rand(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE vmax;
+    long val, max;
+
+    rb_scan_args(argc, argv, "01", &vmax);
+    if (first) {
+	rand_init(random_seed());
+    }
+    switch (TYPE(vmax)) {
+      case T_FLOAT:
+	if (RFLOAT(vmax)->value <= LONG_MAX && RFLOAT(vmax)->value >= LONG_MIN) {
+	    max = (long)RFLOAT(vmax)->value;
+	    break;
+	}
+	vmax = rb_dbl2big(RFLOAT(vmax)->value);
+	/* fall through */
+        {
+	    long len = RBIGNUM(vmax)->len;
+	    double *buf = ALLOCA_N(double, len);
+
+	    while (len--) {
+		buf[len] = genrand_real();
+	    }
+	    return rb_big_rand(vmax, buf);
+	}
+      case T_NIL:
+	max = 0;
+	break;
+      default:
+	max = NUM2LONG(vmax);
+	break;
+    }
+
+    if (max == 0) {
+	return rb_float_new(genrand_real());
+    }
+    if (max < 0) max = -max;
+    val = max*genrand_real();
+
+    return LONG2NUM(val);
+}
+
+void
+Init_Random()
+{
+    rb_define_global_function("srand", rb_f_srand, -1);
+    rb_define_global_function("rand", rb_f_rand, -1);
+}
+@
+
+
+1.24
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/13 09:21:13 $
+a146 10
+#ifndef NT
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#else
+struct timeval {
+        long    tv_sec;         /* seconds */
+        long    tv_usec;        /* and microseconds */
+};
+#endif
+#endif /* NT */
+@
+
+
+1.23
+log
+@* hash.c (rb_hash_replace): should copy ifnone.
+
+* hash.c (rb_hash_dup): should preserve HASH_PROC_DEFAULT and
+  HASH_DELETED flags.
+
+* hash.c (rb_hash_shift): shift from empty hash should not return
+  its default proc.
+
+* hash.c (rb_hash_default_proc): new method. [new]
+
+* array.c (rb_ary_aref): no need for Bignum check.
+
+* array.c (rb_ary_aset): explicit Bignum check removd.
+
+* numeric.c (fix_aref): normalize bignum before bit-op.
+
+* bignum.c (rb_big_rand): max may be Bignum zero.
+
+* bignum.c (rb_cstr_to_inum): should normalize bignums, to avoid
+  returning fixable bignum value.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+
+* hash.c (rb_hash_equal): should check HASH_PROC_DEFAULT too.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/07/26 06:56:30 $
+d203 1
+a203 1
+    return UINT2NUM(old);
+@
+
+
+1.22
+log
+@* random.c (N, M): undef for <winnt.h> on MinGW.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/07/26 06:12:39 $
+a226 1
+      case T_BIGNUM:
+@
+
+
+1.21
+log
+@* random.c: replace with Mersenne Twister RNG.
+
+* eval.c (jump_tag_but_local_jump): preserve retval in
+  LocalJumpError exceptions.
+
+* parse.y (command): no more check for "super outside of method".
+
+* eval.c (rb_mod_define_method): should set last_class and
+  last_func in the block->frame.
+
+* eval.c (error_handle): should handle TAG_THROW as well.
+
+* parse.y (yylex): new decimal notation '0d4567'.
+
+* parse.y (yylex): new octal notation '0o777'.
+
+* parse.y (string_content): every string_content node should
+  return string only.  use NODE_EVSTR to coercing.
+
+* eval.c (rb_eval): NODE_EVSTR support.
+
+* re.c (rb_reg_quote): avoid unnecessary string allocation.
+
+* string.c (get_pat): quote metachracters before compiling a
+  string into a regex.
+
+* string.c (rb_str_split_m): special treatment of strings of size
+  1, but AWK emulation.  now uses get_pat().
+
+* string.c (rb_str_match_m): quote metacharacters.
+
+* string.c (rb_str_match2): ditto.
+
+* ext/socket/socket.c (sock_addrinfo): make all 3 versions of
+  getaddrinfo happy.  [ruby-core:00184]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/25 13:55:58 $
+d135 3
+@
+
+
+1.20
+log
+@* various files: macro fix-up by Michal Rokos.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:18 $
+d13 125
+a154 49
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+/*
+ * Prefer to use drand48, otherwise use random, or rand as a last resort.
+ */
+#ifdef HAVE_DRAND48
+
+#ifndef HAVE_DRAND48_DECL
+double drand48 _((void));
+void srand48 _((long));
+#endif
+
+#define SRANDOM(s)	srand48((long)(s))
+#define RANDOM_NUMBER	drand48()
+
+#else /* not HAVE_DRAND48 */
+
+/*
+ * The largest number returned by the random number generator is
+ * RANDOM_MAX.  If we're using `rand' it's RAND_MAX, but if we're
+ * using `random' it's 2^31-1.
+ */
+#ifndef RANDOM_MAX
+# ifndef HAVE_RANDOM
+#  define RANDOM_MAX	RAND_MAX
+# else
+#  define RANDOM_MAX	2147483647.0
+# endif
+#endif
+
+#ifdef HAVE_RANDOM
+
+#define RANDOM	random
+#define SRANDOM	srandom
+
+#else /* HAVE_RANDOM */
+
+#define RANDOM	rand
+#define SRANDOM	srand
+
+#endif /* HAVE_RANDOM */
+
+/* 0 <= RANDOM_NUMBER < 1 */
+#define RANDOM_NUMBER (((double)RANDOM())/((double)RANDOM_MAX+1))
+
+#endif /* not HAVE_DRAND48 */
+
+a155 3
+#ifdef HAVE_INITSTATE
+static char state[256];
+#endif
+d159 1
+a159 1
+    long seed;
+d161 2
+a162 2
+    int old;
+    static unsigned int saved_seed;
+a163 8
+#ifdef HAVE_INITSTATE
+    if (first == 1) {
+	initstate(1, state, sizeof state);
+    }
+    else {
+	setstate(state);
+    }
+#endif
+d165 1
+a165 2
+
+    SRANDOM(seed);
+d172 10
+d189 1
+a189 1
+    unsigned int seed, old;
+d193 1
+a193 5
+	static int n = 0;
+	struct timeval tv;
+
+	gettimeofday(&tv, 0);
+	seed = tv.tv_sec ^ tv.tv_usec ^ getpid() ^ n++;
+d196 1
+a196 1
+	seed = NUM2UINT(sd);
+d214 1
+a214 4
+	struct timeval tv;
+
+	gettimeofday(&tv, 0);
+	rand_init(tv.tv_sec ^ tv.tv_usec ^ getpid());
+d225 9
+a233 1
+	return rb_big_rand(vmax, RANDOM_NUMBER);
+d243 1
+a243 1
+	return rb_float_new(RANDOM_NUMBER);
+d245 2
+a246 1
+    val = max*RANDOM_NUMBER;
+a247 1
+    if (val < 0) val = -val;
+@
+
+
+1.19
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/04/11 10:57:13 $
+d130 1
+a130 1
+    return rb_uint2inum(old);
+d173 1
+a173 1
+    return rb_int2inum(val);
+@
+
+
+1.18
+log
+@* random.c (rand_init): add check for initstate(3).
+* configure.in: ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/27 04:29:10 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d80 1
+a80 1
+#ifdef HAVE_RANDOM
+d91 1
+a91 1
+#if defined HAVE_INITSTATE
+d114 1
+a114 1
+    VALUE a;
+d118 1
+a118 1
+    if (rb_scan_args(argc, argv, "01", &a) == 0) {
+d126 1
+a126 1
+	seed = NUM2UINT(a);
+@
+
+
+1.17
+log
+@* io.c (READ_DATA_PENDING): uClibc support.
+* random.c (rand_init): ditto.
+* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/14 05:51:57 $
+d91 1
+a91 1
+#if defined HAVE_RANDOM && !defined __UCLIBC__
+@
+
+
+1.16
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/14 07:10:22 $
+d91 1
+a91 1
+#ifdef HAVE_RANDOM
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/02 09:04:54 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.15.2.1
+log
+@* io.c (READ_DATA_PENDING): uClibc support.
+* random.c (rand_init): ditto.
+* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/14 07:10:22 $
+d91 1
+a91 1
+#if defined HAVE_RANDOM && !defined __UCLIBC__
+@
+
+
+1.15.2.2
+log
+@* random.c (rand_init): add check for initstate(3).
+* configure.in: ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2002/02/27 04:30:19 $
+d91 1
+a91 1
+#if defined HAVE_INITSTATE
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/03 09:50:33 $
+d117 1
+@
+
+
+1.13
+log
+@matz - nakada win32 patch
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/04 04:17:14 $
+d150 2
+a151 1
+	if (RFLOAT(vmax)->value <= LONG_MAX && RFLOAT(vmax)->value >= LONG_MIN)
+d153 2
+@
+
+
+1.12
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:27 $
+d74 1
+a74 1
+/* 0 <= RANDOM_NUMBER <= 1 */
+@
+
+
+1.11
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/08 08:48:52 $
+d133 4
+a136 2
+rb_f_rand(obj, vmax)
+    VALUE obj, vmax;
+d138 1
+d141 1
+d155 6
+a162 1
+    max = NUM2LONG(vmax);
+d176 1
+a176 1
+    rb_define_global_function("rand", rb_f_rand, 1);
+@
+
+
+1.10
+log
+@2000-02-08
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/01/17 08:37:45 $
+d11 1
+a11 1
+************************************************/
+@
+
+
+1.9
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/08 05:00:21 $
+d80 1
+a80 1
+#if !defined HAVE_DRAND48 && defined HAVE_RANDOM
+d91 1
+a91 1
+#if !defined HAVE_DRAND48 && defined HAVE_RANDOM
+@
+
+
+1.8
+log
+@2000-01-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:10 $
+a78 1
+#ifdef HAVE_RANDOM
+d80 1
+d91 1
+a91 1
+#ifdef HAVE_RANDOM
+a93 1
+	first = 0;
+d99 1
+a136 2
+
+    static initialized = 0;
+@
+
+
+1.7
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:56 $
+d84 24
+a115 1
+    static unsigned int saved_seed;
+d127 1
+a127 14
+
+#ifdef HAVE_RANDOM
+    if (first == 1) {
+	initstate(1, state, sizeof state);
+	first = 0;
+    }
+    else {
+	setstate(state);
+    }
+#endif
+
+    SRANDOM(seed);
+    old = saved_seed;
+    saved_seed = seed;
+d138 8
+@
+
+
+1.6
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/27 04:20:14 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.5
+log
+@unsigned seed
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d129 4
+d134 1
+a134 6
+	return rb_big_rand(vmax);
+	
+      case T_FLOAT:
+	if (RFLOAT(vmax)->value > LONG_MAX || RFLOAT(vmax)->value < LONG_MIN)
+	    return rb_big_rand(rb_dbl2big(RFLOAT(vmax)->value));
+	break;
+@
+
+
+1.4
+log
+@1.4.1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/01 09:48:02 $
+d90 3
+a92 3
+    VALUE seed;
+    int old;
+    static int saved_seed;
+d94 1
+a94 1
+    if (rb_scan_args(argc, argv, "01", &seed) == 0) {
+d102 1
+a102 1
+	seed = NUM2UINT(seed);
+d119 1
+a119 1
+    return rb_int2inum(old);
+@
+
+
+1.4.2.1
+log
+@unsigned seed
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/09/16 09:40:32 $
+d90 3
+a92 3
+    VALUE a;
+    unsigned int seed, old;
+    static unsigned int saved_seed;
+d94 1
+a94 1
+    if (rb_scan_args(argc, argv, "01", &a) == 0) {
+d102 1
+a102 1
+	seed = NUM2UINT(a);
+d119 1
+a119 1
+    return rb_uint2inum(old);
+@
+
+
+1.4.2.2
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/27 04:19:26 $
+d129 3
+d133 3
+a135 5
+	if (RFLOAT(vmax)->value <= LONG_MAX && RFLOAT(vmax)->value >= LONG_MIN)
+	    break;
+	/* fall through */
+      case T_BIGNUM:
+	return rb_big_rand(vmax, RANDOM_NUMBER);
+@
+
+
+1.4.2.3
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:33 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+a83 24
+static int
+rand_init(seed)
+    long seed;
+{
+    int old;
+    static unsigned int saved_seed;
+
+#ifdef HAVE_RANDOM
+    if (first == 1) {
+	initstate(1, state, sizeof state);
+	first = 0;
+    }
+    else {
+	setstate(state);
+    }
+#endif
+
+    SRANDOM(seed);
+    old = saved_seed;
+    saved_seed = seed;
+
+    return old;
+}
+
+d92 1
+d104 14
+a117 1
+    old = rand_init(seed);
+a127 8
+    static initialized = 0;
+
+    if (first) {
+	struct timeval tv;
+
+	gettimeofday(&tv, 0);
+	rand_init(tv.tv_sec ^ tv.tv_usec ^ getpid());
+    }
+@
+
+
+1.4.2.4
+log
+@2000-02-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:10 $
+d79 1
+a80 1
+#ifdef HAVE_RANDOM
+d94 1
+a99 1
+    first = 0;
+d137 2
+@
+
+
+1.3
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:13 $
+d95 1
+d99 1
+a99 1
+	seed = tv.tv_sec ^ tv.tv_usec ^ getpid();
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:51 $
+d15 3
+d98 1
+a98 1
+	seed = tv.tv_sec ^ tv.tv_usec;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:48 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 62
+d79 1
+d82 1
+a82 1
+f_srand(argc, argv, obj)
+d87 2
+a88 1
+    int seed, old;
+d92 4
+a95 1
+	seed = time(0);
+d98 1
+a98 1
+	seed = NUM2INT(seed);
+d109 1
+d111 1
+a111 7
+    srandom(seed);
+    old = saved_seed;
+    saved_seed = seed;
+
+    return int2inum(old);
+#else
+    srand(seed);
+d115 1
+a115 2
+    return int2inum(old);
+#endif
+d119 1
+a119 1
+f_rand(obj, vmax)
+d122 1
+a122 8
+    int val, max;
+
+#ifdef HAVE_RANDOM
+    if (first == 1) {
+	initstate(1, state, sizeof state);
+	first = 0;
+    }
+#endif
+d126 1
+a126 1
+	return big_rand(vmax);
+d130 1
+a130 1
+	    return big_rand(dbl2big(RFLOAT(vmax)->value));
+d134 5
+a138 8
+    max = NUM2INT(vmax);
+    if (max == 0) ArgError("rand(0)");
+
+#ifdef HAVE_RANDOM
+    val = random() % max;
+#else
+    val = rand() % max;
+#endif
+d141 1
+a141 1
+    return int2inum(val);
+d147 2
+a148 4
+    extern VALUE mKernel;
+
+    rb_define_global_function("srand", f_srand, -1);
+    rb_define_global_function("rand", f_rand, 1);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 2
+    VALUE seed;
+    int old;
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a14 62
+#include <time.h>
+#ifndef NT
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#else
+struct timeval {
+        long    tv_sec;         /* seconds */
+        long    tv_usec;        /* and microseconds */
+};
+#endif
+#endif /* NT */
+
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+/*
+ * Prefer to use drand48, otherwise use random, or rand as a last resort.
+ */
+#ifdef HAVE_DRAND48
+
+#ifndef HAVE_DRAND48_DECL
+double drand48 _((void));
+void srand48 _((long));
+#endif
+
+#define SRANDOM(s)	srand48((long)(s))
+#define RANDOM_NUMBER	drand48()
+
+#else /* not HAVE_DRAND48 */
+
+/*
+ * The largest number returned by the random number generator is
+ * RANDOM_MAX.  If we're using `rand' it's RAND_MAX, but if we're
+ * using `random' it's 2^31-1.
+ */
+#ifndef RANDOM_MAX
+# ifndef HAVE_RANDOM
+#  define RANDOM_MAX	RAND_MAX
+# else
+#  define RANDOM_MAX	2147483647.0
+# endif
+#endif
+
+#ifdef HAVE_RANDOM
+
+#define RANDOM	random
+#define SRANDOM	srandom
+
+#else /* HAVE_RANDOM */
+
+#define RANDOM	rand
+#define SRANDOM	srand
+
+#endif /* HAVE_RANDOM */
+
+/* 0 <= RANDOM_NUMBER <= 1 */
+#define RANDOM_NUMBER (((double)RANDOM())/(double)RANDOM_MAX)
+
+#endif /* not HAVE_DRAND48 */
+
+#ifdef HAVE_RANDOM
+a16 1
+#endif
+d19 1
+a19 1
+rb_f_srand(argc, argv, obj)
+d29 1
+a29 4
+	struct timeval tv;
+
+	gettimeofday(&tv, 0);
+	seed = tv.tv_sec ^ tv.tv_usec;
+d32 1
+a32 1
+	seed = NUM2UINT(seed);
+a42 1
+#endif
+d44 7
+a50 1
+    SRANDOM(seed);
+d54 2
+a55 1
+    return rb_int2inum(old);
+d59 1
+a59 1
+rb_f_rand(obj, vmax)
+d62 8
+a69 1
+    long val, max;
+d73 1
+a73 1
+	return rb_big_rand(vmax);
+d77 1
+a77 1
+	    return rb_big_rand(rb_dbl2big(RFLOAT(vmax)->value));
+d81 8
+a88 5
+    max = NUM2LONG(vmax);
+    if (max == 0) {
+	return rb_float_new(RANDOM_NUMBER);
+    }
+    val = max*RANDOM_NUMBER;
+d91 1
+a91 1
+    return rb_int2inum(val);
+d97 4
+a100 2
+    rb_define_global_function("srand", rb_f_srand, -1);
+    rb_define_global_function("rand", rb_f_rand, 1);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.3.2.2
+log
+@arity/strict yield
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:14 $
+d72 1
+a72 1
+#define RANDOM_NUMBER (((double)RANDOM())/(double)RANDOM_MAX+1)
+@
+
+
+1.1.1.3.2.3
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/17 09:54:14 $
+d72 1
+a72 1
+#define RANDOM_NUMBER (((double)RANDOM())/((double)RANDOM_MAX+1))
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@gtk/nested local variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:47 $
+a14 12
+#include <time.h>
+#ifndef NT
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#else
+struct timeval {
+        long    tv_sec;         /* seconds */
+        long    tv_usec;        /* and microseconds */
+};
+#endif
+#endif /* NT */
+
+a15 1
+#ifdef HAVE_RANDOM
+a16 1
+#endif
+d29 1
+a29 4
+	struct timeval tv;
+
+	gettimeofday(&tv, 0);
+	seed = tv.tv_usec;
+d64 1
+d66 2
+a67 1
+	f_srand(0, 0, 0);
+d69 1
+@
+
+
+1.1.1.2.2.3
+log
+@tcltklib/gtk
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/24 09:33:19 $
+d27 1
+a27 4
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+a28 1
+static int first = 1;
+d46 1
+a46 1
+	seed = tv.tv_sec ^ tv.tv_usec;
+d81 4
+d90 1
+a90 1
+	if (RFLOAT(vmax)->value > INT_MAX || RFLOAT(vmax)->value < INT_MIN)
+d99 1
+a99 6
+    val = random();
+#else
+    val = rand();
+#endif
+#ifdef RAND_MAX
+    val = val * (double)max / (double)RAND_MAX;
+d101 1
+a101 1
+    val = (val>>8) % max;
+@
+
+
+1.1.1.2.2.4
+log
+@pack/unpack unsigned
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/27 10:03:59 $
+d53 1
+a53 1
+	seed = NUM2UINT(seed);
+@
+
+
+1.1.1.2.2.5
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/08 09:38:12 $
+d90 1
+a90 1
+	if (RFLOAT(vmax)->value > LONG_MAX || RFLOAT(vmax)->value < LONG_MIN)
+@
+
+
+1.1.1.2.2.6
+log
+@ruby 1.1b9_20
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:58:05 $
+a30 45
+/*
+ * Prefer to use drand48, otherwise use random, or rand as a last resort.
+ */
+#ifdef HAVE_DRAND48
+
+#ifndef HAVE_DRAND48_DECL
+double drand48 _((void));
+void srand48 _((long));
+#endif
+
+#define SRANDOM(s)	srand48((long)(s))
+#define RANDOM_NUMBER	drand48()
+
+#else /* not HAVE_DRAND48 */
+
+/*
+ * The largest number returned by the random number generator is
+ * RANDOM_MAX.  If we're using `rand' it's RAND_MAX, but if we're
+ * using `random' it's 2^31-1.
+ */
+#ifndef RANDOM_MAX
+# ifndef HAVE_RANDOM
+#  define RANDOM_MAX	RAND_MAX
+# else
+#  define RANDOM_MAX	2147483647.0
+# endif
+#endif
+
+#ifdef HAVE_RANDOM
+
+#define RANDOM	random
+#define SRANDOM	srandom
+
+#else /* HAVE_RANDOM */
+
+#define RANDOM	rand
+#define SRANDOM	srand
+
+#endif /* HAVE_RANDOM */
+
+/* 0 <= RANDOM_NUMBER <= 1 */
+#define RANDOM_NUMBER (((double)RANDOM())/(double)RANDOM_MAX)
+
+#endif /* not HAVE_DRAND48 */
+
+a63 1
+#endif
+d65 7
+a71 1
+    SRANDOM(seed);
+d76 1
+d96 12
+a107 4
+    if (max == 0) {
+	return float_new(RANDOM_NUMBER);
+    }
+    val = max*RANDOM_NUMBER;
+@
+
+
+1.1.1.2.2.7
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/15 05:43:23 $
+d147 2
+@
+
+
+1.1.1.2.2.8
+log
+@1.1c4
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:50 $
+d122 1
+a122 1
+    long val, max;
+d134 1
+a134 1
+    max = NUM2LONG(vmax);
+@
+
+
+1.1.1.2.2.8.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/03 07:43:36 $
+d82 1
+a82 1
+rb_f_srand(argc, argv, obj)
+d115 1
+a115 1
+    return rb_int2inum(old);
+d119 1
+a119 1
+rb_f_rand(obj, vmax)
+d126 1
+a126 1
+	return rb_big_rand(vmax);
+d130 1
+a130 1
+	    return rb_big_rand(rb_dbl2big(RFLOAT(vmax)->value));
+d136 1
+a136 1
+	return rb_float_new(RANDOM_NUMBER);
+d141 1
+a141 1
+    return rb_int2inum(val);
+d147 2
+a148 2
+    rb_define_global_function("srand", rb_f_srand, -1);
+    rb_define_global_function("rand", rb_f_rand, 1);
+@

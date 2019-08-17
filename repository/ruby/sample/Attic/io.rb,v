@@ -1,0 +1,149 @@
+head	1.2;
+access;
+symbols
+	v1_6_4_preview3:1.1.1.1
+	v1_6_4_preview2:1.1.1.1
+	v1_6_4_preview1:1.1.1.1
+	v1_6_3:1.1.1.1
+	ruby_m17n:1.1.1.1.0.8
+	ruby_1_6:1.1.1.1.0.6
+	v1_6_2:1.1.1.1
+	v1_6_1:1.1.1.1
+	v1_6_0:1.1.1.1
+	v1_5_0:1.1.1.1
+	ruby_1_4:1.1.1.1.0.4
+	v1_4_2:1.1.1.1
+	v1_4_1:1.1.1.1
+	v1_4_0:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.05.26.03.38.39;	author knu;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1
+	1.1.1.1.6.1;
+next	;
+
+1.1.1.1.4.1
+date	99.12.07.16.53.19;	author matz;	state dead;
+branches;
+next	;
+
+1.1.1.1.6.1
+date	2001.05.25.15.01.48;	author matz;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Synchronize MANIFEST with reality.  Add missing files.
+@
+text
+@# IO test
+# usage: ruby io.rb file..
+
+home = ENV["HOME"]
+home.sub("m", "&&")
+print(home, "\n")
+print(home.reverse, "\n")
+
+if File.s("io.rb")
+  print(File.s("io.rb"), ": io.rb\n")
+end
+
+$/="f\n"
+for i in "abc\n\ndef\nghi\n"
+  print("tt: ", i)
+end
+
+printf("%s:(%d)%s\n", $0, ARGV.length, ARGV[0])
+passwd = open(ARGV[0], "r")
+#printf("%s", passwd.find{i|i =~ /\*/})
+
+n = 1
+for i in passwd #.grep(/^\*/)
+  printf("%6d: %s", n, i)
+  n = n + 1;
+end
+
+fp = open("|-", "r")
+
+if fp == nil
+  for i in 1..5
+    print(i, "\n")
+  end
+else
+  for line in fp
+    print(line)
+  end
+end
+
+def printUsage()
+  if $USAGE
+    apply($USAGE);
+  end
+end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.6.1
+log
+@* string.c (rb_str_replace): add taint status infection
+  (OBJ_INFECT()).
+
+* string.c (rb_str_crypt): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@@
+
+
+1.1.1.1.4.1
+log
+@991208-repack
+@
+text
+@@
+

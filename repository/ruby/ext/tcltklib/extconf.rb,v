@@ -1,0 +1,1100 @@
+head	1.12;
+access;
+symbols
+	v1_6_7:1.9.2.2
+	v1_6_6:1.9.2.1
+	v1_6_5:1.9.2.1
+	v1_6_4:1.9.2.1
+	v1_7_1:1.10
+	v1_6_4_preview4:1.9
+	v1_6_4_preview3:1.9
+	v1_6_4_preview2:1.9
+	v1_6_4_preview1:1.9
+	v1_6_3:1.9
+	ruby_m17n:1.9.0.4
+	ruby_1_6:1.9.0.2
+	v1_6_2:1.9
+	v1_6_1:1.8
+	v1_6_0:1.7
+	v1_4_6:1.2.2.2
+	v1_4_5:1.2.2.2
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2.2.1
+	ruby1_4_3:1.2.2.1
+	v1_4_3:1.2.2.1
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.3
+	v1_3_6_repack:1.1.1.2.2.2
+	v1_3_6:1.1.1.2.2.2
+	v1_3_5:1.1.1.2.2.1
+	v1_2_6repack:1.1.1.1.2.9
+	v1_3_4_990625:1.1.1.2.2.1
+	v1_3_4_990624:1.1.1.2.2.1
+	v1_2_6:1.1.1.1.2.9
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.2.8
+	v1_2_4:1.1.1.1.2.8
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.8
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.8
+	v1_2_1repack:1.1.1.1.2.8
+	v1_2_1:1.1.1.1.2.8
+	v1_2_stable:1.1.1.1.2.7
+	v1_1d1:1.1.1.1.2.6.2.1
+	v1_1d0:1.1.1.1.2.6.2.1
+	v1_1c9_1:1.1.1.1.2.7
+	v1_1c9:1.1.1.1.2.7
+	v1_1c8:1.1.1.1.2.7
+	v1_1c7:1.1.1.1.2.7
+	v1_1c6:1.1.1.1.2.7
+	v1_1d-start:1.1.1.1.2.6
+	v1_1c5:1.1.1.1.2.6
+	v1_1dev:1.1.1.1.2.6.0.2
+	v1_1c4:1.1.1.1.2.6
+	v1_1c3:1.1.1.1.2.6
+	v1_1c2:1.1.1.1.2.5
+	v1_1c1:1.1.1.1.2.5
+	v1_1c0:1.1.1.1.2.4
+	v1_1b9_31:1.1.1.1.2.4
+	v1_1b9_30:1.1.1.1.2.4
+	v1_1b9_28:1.1.1.1.2.3
+	v1_1b9_27:1.1.1.1.2.3
+	v1_1b9_26:1.1.1.1.2.3
+	r1_1b9_25:1.1.1.1.2.3
+	r1_1b9_24:1.1.1.1.2.3
+	v1_1b9_23:1.1.1.1.2.3
+	v1_1b9_22:1.1.1.1.2.3
+	v1_1b9_20:1.1.1.1.2.3
+	v1_1b9_18:1.1.1.1.2.3
+	v1_1b9_16:1.1.1.1.2.3
+	v1_1b9_15:1.1.1.1.2.3
+	v1_1b9_13:1.1.1.1.2.3
+	v1_1b9_12:1.1.1.1.2.3
+	v1_1b9_11:1.1.1.1.2.3
+	v1_1b9_08:1.1.1.1.2.3
+	v1_1b9_07:1.1.1.1.2.3
+	r1_1b9:1.1.1.1.2.2
+	v1_1b8:1.1.1.1.2.1
+	v1_1b7:1.1.1.1.2.1
+	v1_1b6:1.1.1.1.2.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2002.06.11.01.27.47;	author H_Konishi;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.01.11.09.18.54;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.05.28.16.07.34;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.10.03.08.56.50;	author matz;	state Exp;
+branches
+	1.9.2.1;
+next	1.8;
+
+1.8
+date	2000.09.22.18.15.52;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.08.09.21.27.10;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.08.08.05.05.33;	author eban;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.24.04.34.19;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.13.16.12.24;	author eban;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.04.08.39.38;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.51;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.16;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.16;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.33;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.05.06.08.31.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.07.28.09.26.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.08.06.06.48.23;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.01.20.08.29.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.02.23.05.36.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.03.28.11.05.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.07.09.08.40.31;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.07.24.04.42.03;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.08.11.04.29.04;	author matz;	state Exp;
+branches
+	1.1.1.1.2.6.2.1;
+next	1.1.1.1.2.7;
+
+1.1.1.1.2.7
+date	98.10.06.02.45.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.8;
+
+1.1.1.1.2.8
+date	99.01.11.07.55.27;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.9;
+
+1.1.1.1.2.9
+date	99.06.21.06.31.11;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.6.2.1
+date	98.10.06.03.28.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.11.04.08.39.56;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.05.30.04.21.33;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.08.30.05.25.45;	author eban;	state Exp;
+branches;
+next	;
+
+1.9.2.1
+date	2001.05.28.16.07.01;	author eban;	state Exp;
+branches;
+next	1.9.2.2;
+
+1.9.2.2
+date	2002.01.16.09.22.43;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@new platform [bccwin32] merged.
+@
+text
+@# extconf.rb for tcltklib
+
+require 'mkmf'
+
+if RUBY_PLATFORM !~ /mswin32|mingw|cygwin|bccwin32/
+  have_library("nsl", "t_open")
+  have_library("socket", "socket")
+  have_library("dl", "dlopen")
+  have_library("m", "log") 
+end
+
+dir_config("tk")
+dir_config("tcl")
+dir_config("X11")
+
+tklib = with_config("tklib")
+tcllib = with_config("tcllib")
+stubs = enable_config("tcltk_stubs") || with_config("tcltk_stubs")
+
+def find_tcl(tcllib, stubs)
+  paths = ["/usr/local/lib", "/usr/pkg/lib", "/usr/lib"]
+  func = stubs ? "Tcl_InitStubs" : "Tcl_FindExecutable"
+  if tcllib
+    find_library(tcllib, func, *paths)
+  elsif RUBY_PLATFORM =~ /mswin32|mingw|cygwin|bccwin32/
+    find_library("tcl", func, *paths) or
+      find_library("tcl84", func, *paths) or
+      find_library("tcl83", func, *paths) or
+      find_library("tcl82", func, *paths) or
+      find_library("tcl80", func, *paths) or
+      find_library("tcl76", func, *paths)
+  else
+    find_library("tcl", func, *paths) or
+      find_library("tcl8.4", func, *paths) or
+      find_library("tcl8.3", func, *paths) or
+      find_library("tcl8.2", func, *paths) or
+      find_library("tcl8.0", func, *paths) or
+      find_library("tcl7.6", func, *paths)
+  end
+end
+
+def find_tk(tklib, stubs)
+  paths = ["/usr/local/lib", "/usr/pkg/lib", "/usr/lib"]
+  func = stubs ? "Tk_InitStubs" : "Tk_Init"
+  if tklib
+    find_library(tklib, func, *paths)
+  elsif RUBY_PLATFORM =~ /mswin32|mingw|cygwin|bccwin32/
+    find_library("tk", func, *paths) or
+      find_library("tk84", func, *paths) or
+      find_library("tk83", func, *paths) or
+      find_library("tk82", func, *paths) or
+      find_library("tk80", func, *paths) or
+      find_library("tk42", func, *paths)
+  else
+    find_library("tk", func, *paths) or
+      find_library("tk8.4", func, *paths) or
+      find_library("tk8.3", func, *paths) or
+      find_library("tk8.2", func, *paths) or
+      find_library("tk8.0", func, *paths) or
+      find_library("tk4.2", func, *paths)
+  end
+end
+
+if have_header("tcl.h") && have_header("tk.h") &&
+    (/mswin32|mingw|cygwin|bccwin32/ =~ RUBY_PLATFORM || find_library("X11", "XOpenDisplay",
+	"/usr/X11/lib", "/usr/X11R6/lib", "/usr/openwin/lib")) &&
+    find_tcl(tcllib, stubs) &&
+    find_tk(tklib, stubs)
+  $CPPFLAGS += ' -DUSE_TCL_STUBS -DUSE_TK_STUBS' if stubs
+  $CPPFLAGS += ' -D_WIN32' if /cygwin/ =~ RUBY_PLATFORM
+  create_makefile("tcltklib")
+end
+@
+
+
+1.11
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d5 1
+a5 1
+if RUBY_PLATFORM !~ /mswin32|mingw|cygwin/
+d25 1
+a25 1
+  elsif RUBY_PLATFORM =~ /mswin32|mingw|cygwin/
+d47 1
+a47 1
+  elsif RUBY_PLATFORM =~ /mswin32|mingw|cygwin/
+d65 1
+a65 1
+    (/mswin32|mingw|cygwin/ =~ RUBY_PLATFORM || find_library("X11", "XOpenDisplay",
+@
+
+
+1.10
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d21 1
+a21 1
+  paths = ["/usr/local/lib", "/usr/pkg", "/usr/lib"]
+d43 1
+a43 1
+  paths = ["/usr/local/lib", "/usr/pkg", "/usr/lib"]
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d70 1
+@
+
+
+1.9.2.1
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@a69 1
+  $CPPFLAGS += ' -D_WIN32' if /cygwin/ =~ RUBY_PLATFORM
+@
+
+
+1.9.2.2
+log
+@* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d21 1
+a21 1
+  paths = ["/usr/local/lib", "/usr/pkg/lib", "/usr/lib"]
+d43 1
+a43 1
+  paths = ["/usr/local/lib", "/usr/pkg/lib", "/usr/lib"]
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d27 1
+d34 1
+d49 1
+d56 1
+@
+
+
+1.7
+log
+@eban
+@
+text
+@d21 1
+a21 1
+  paths = ["/usr/local/lib", "/usr/pkg"]
+d25 6
+d41 1
+a41 1
+  paths = ["/usr/local/lib", "/usr/pkg"]
+d45 6
+@
+
+
+1.6
+log
+@eban
+@
+text
+@d53 1
+a53 1
+  $CFLAGS += ' -DUSE_TCL_STUBS -DUSE_TK_STUBS' if stubs
+@
+
+
+1.5
+log
+@2000-05-24
+@
+text
+@d5 1
+a5 1
+if RUBY_PLATFORM !~ /mswin32|mingw/
+d18 1
+d20 1
+a20 1
+def find_tcl(tcllib)
+d22 1
+a22 1
+  func = "Tcl_FindExecutable"
+d34 1
+a34 1
+def find_tk(tklib)
+d36 1
+a36 1
+  func = "Tk_Init"
+d51 3
+a53 2
+    find_tcl(tcllib) &&
+    find_tk(tklib)
+@
+
+
+1.4
+log
+@support mingw32.
+@
+text
+@d26 1
+d40 1
+@
+
+
+1.3
+log
+@19991104
+@
+text
+@d5 6
+a10 4
+have_library("nsl", "t_open")
+have_library("socket", "socket")
+have_library("dl", "dlopen")
+have_library("m", "log") 
+d46 1
+a46 1
+    (/mswin32/ =~ RUBY_PLATFORM || find_library("X11", "XOpenDisplay",
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d24 1
+d37 1
+@
+
+
+1.2.2.1
+log
+@19991104
+@
+text
+@a23 1
+      find_library("tcl8.2", func, *paths) or
+a35 1
+      find_library("tk8.2", func, *paths) or
+@
+
+
+1.2.2.2
+log
+@2000-05-30
+@
+text
+@d5 4
+a8 6
+if RUBY_PLATFORM !~ /mswin32|mingw/
+  have_library("nsl", "t_open")
+  have_library("socket", "socket")
+  have_library("dl", "dlopen")
+  have_library("m", "log") 
+end
+a23 1
+      find_library("tcl8.3", func, *paths) or
+a36 1
+      find_library("tk8.3", func, *paths) or
+d44 1
+a44 1
+    (/mswin32|mingw|cygwin/ =~ RUBY_PLATFORM || find_library("X11", "XOpenDisplay",
+@
+
+
+1.2.2.3
+log
+@eban
+@
+text
+@d5 1
+a5 1
+if RUBY_PLATFORM !~ /mswin32|mingw|cygwin/
+a17 1
+stubs = enable_config("tcltk_stubs") || with_config("tcltk_stubs")
+d19 1
+a19 1
+def find_tcl(tcllib, stubs)
+d21 1
+a21 1
+  func = stubs ? "Tcl_InitStubs" : "Tcl_FindExecutable"
+d33 1
+a33 1
+def find_tk(tklib, stubs)
+d35 1
+a35 1
+  func = stubs ? "Tk_InitStubs" : "Tk_Init"
+d50 2
+a51 3
+    find_tcl(tcllib, stubs) &&
+    find_tk(tklib, stubs)
+  $CFLAGS += ' -DUSE_TCL_STUBS -DUSE_TK_STUBS' if stubs
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 3
+d7 2
+a8 1
+have_library("nsl", "gethostbyname")
+d10 16
+a25 16
+def search_file(var, include, *path)
+  pwd = Dir.getwd
+  begin
+    for i in path.reverse!
+      dir = Dir[i]
+      for path in dir
+	Dir.chdir path
+	files = Dir[include]
+	if files.size > 0
+	  var << path
+	  return files.pop
+	end
+      end
+    end
+  ensure
+    Dir.chdir pwd
+d29 10
+a38 30
+$includes = []
+search_file($includes, 
+	    "tcl.h",
+	    "/usr/include/tcl*",
+	    "/usr/include",
+	    "/usr/local/include/tcl*",
+	    "/usr/local/include")
+search_file($includes, 
+	    "tk.h",
+	    "/usr/include/tk*",
+	    "/usr/include",
+	    "/usr/local/include/tk*",
+	    "/usr/local/include")
+search_file($includes, 
+	    "X11/Xlib.h",
+	    "/usr/include",
+	    "/usr/X11*/include",
+	    "/usr/include",
+	    "/usr/X11*/include")
+
+$CFLAGS = "-Wall " + $includes.collect{|path| "-I" + path}.join(" ")
+
+$libraries = []
+tcllibfile = search_file($libraries,
+			 "libtcl{,7*,8*}.{a,so}",
+			 "/usr/lib",
+			 "/usr/local/lib")
+if tcllibfile
+  tcllibfile.sub!(/^lib/, '')
+  tcllibfile.sub!(/\.(a|so)$/, '')
+a39 14
+tklibfile =  search_file($libraries,
+			 "libtk{,4*,8*}.{a,so}",
+			 "/usr/lib",
+			 "/usr/local/lib")
+if tklibfile
+  tklibfile.sub!(/^lib/, '')
+  tklibfile.sub!(/\.(a|so)$/, '')
+end
+search_file($libraries,
+	    "libX11.{a,so}",
+	    "/usr/lib",
+	    "/usr/X11*/lib")
+
+$LDFLAGS = $libraries.collect{|path| "-L" + path}.join(" ")
+d41 5
+a45 7
+have_library("dl", "dlopen")
+if have_header("tcl.h") &&
+    have_header("tk.h") &&
+    have_library("X11", "XOpenDisplay") &&
+    have_library("m", "log") &&
+    have_library(tcllibfile, "Tcl_FindExecutable") &&
+    have_library(tklibfile, "Tk_Init")
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@a2 3
+require 'mkmf'
+
+have_library("nsl", "t_open")
+d4 1
+a4 2
+have_library("dl", "dlopen")
+have_library("m", "log") 
+d6 1
+a6 2
+$includes = []
+def search_header(include, *path)
+d9 1
+a9 1
+    for i in path.sort!.reverse!
+d11 1
+a11 2
+      for path in dir.sort!.reverse!
+	next unless File.directory? path
+d15 2
+a16 4
+	  unless $includes.include? path
+	    $includes << path
+	  end
+	  return
+d25 19
+a43 15
+search_header("tcl.h",
+	      "/usr/include/tcl{,8*,7*}",
+	      "/usr/include",
+	      "/usr/local/include/tcl{,8*,7*}",
+	      "/usr/local/include")
+search_header("tk.h",
+	      "/usr/include/tk{,8*,4*}",
+	      "/usr/include",
+	      "/usr/local/include/tk{,8*,4*}",
+	      "/usr/local/include")
+search_header("X11/Xlib.h",
+	      "/usr/include/X11*",
+	      "/usr/include",
+	      "/usr/openwin/include",
+	      "/usr/X11*/include")
+d45 1
+a45 1
+$CFLAGS = $includes.collect{|path| "-I" + path}.join(" ")
+d48 15
+a62 22
+def search_lib(file, func, *path)
+  for i in path.reverse!
+    dir = Dir[i]
+    for path in dir.sort!.reverse!
+      $LDFLAGS = $libraries.collect{|p| "-L" + p}.join(" ") + " -L" + path
+      files = Dir[path+"/"+file]
+      if files.size > 0
+	for lib in files.sort!.reverse!
+	  lib = File::basename(lib)
+	  lib.sub!(/^lib/, '')
+	  lib.sub!(/\.(a|so)$/, '')
+	  if have_library(lib, func)
+	    unless $libraries.include? path
+	      $libraries << path
+	    end
+	    return true
+	  end
+	end
+      end
+    end
+  end
+  return false;
+d64 4
+d69 9
+a77 8
+if have_header("tcl.h") && have_header("tk.h") &&
+    search_lib("libX11.{so,a}", "XOpenDisplay",
+	       "/usr/lib", "/usr/openwin/lib", "/usr/X11*/lib") &&
+    search_lib("libtcl{8*,7*,}.{so,a}", "Tcl_FindExecutable",
+	       "/usr/lib", "/usr/local/lib") &&
+    search_lib("libtk{8*,4*,}.{so,a}", "Tk_Init",
+	       "/usr/lib", "/usr/local/lib")
+  $LDFLAGS = $libraries.collect{|path| "-L" + path}.join(" ")
+@
+
+
+1.1.1.2.2.1
+log
+@small fixes
+@
+text
+@d62 1
+a62 1
+	  lib.sub!(/\.(a|so(.[0-9.]+)?)$/, '')
+d77 1
+a77 1
+    search_lib("libX11.{so*,a}", "XOpenDisplay",
+@
+
+
+1.1.1.2.2.2
+log
+@990728
+@
+text
+@d10 22
+a31 3
+dir_config("tk")
+dir_config("tcl")
+dir_config("X11")
+d33 15
+a47 2
+tklib = with_config("tklib")
+tcllib = with_config("tcllib")
+d49 1
+a49 11
+def find_tcl(tcllib)
+  paths = ["/usr/local/lib", "/usr/pkg"]
+  func = "Tcl_FindExecutable"
+  if tcllib
+    find_library(tcllib, func, *paths)
+  else
+    find_library("tcl", func, *paths) or
+      find_library("tcl8.0", func, *paths) or
+      find_library("tcl7.6", func, *paths)
+  end
+end
+d51 21
+a71 9
+def find_tk(tklib)
+  paths = ["/usr/local/lib", "/usr/pkg"]
+  func = "Tk_Init"
+  if tklib
+    find_library(tklib, func, *paths)
+  else
+    find_library("tk", func, *paths) or
+      find_library("tk8.0", func, *paths) or
+      find_library("tk4.2", func, *paths)
+d73 1
+d77 7
+a83 4
+    find_library("X11", "XOpenDisplay",
+		 "/usr/X11/lib", "/usr/X11R6/lib", "/usr/openwin/lib") &&
+    find_tcl(tcllib) &&
+    find_tk(tklib)
+@
+
+
+1.1.1.2.2.3
+log
+@990806
+@
+text
+@d42 2
+a43 2
+    (/mswin32/ =~ RUBY_PLATFORM || find_library("X11", "XOpenDisplay",
+	"/usr/X11/lib", "/usr/X11R6/lib", "/usr/openwin/lib")) &&
+@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a2 2
+require 'mkmf'
+
+a4 2
+have_library("dl", "dlopen")
+have_library("m", "log") 
+d6 1
+a6 2
+$includes = []
+def search_header(include, *path)
+d15 2
+a16 4
+	  unless $includes.include? path
+	    $includes << path
+	  end
+	  return
+d25 19
+a43 15
+search_header("tcl.h",
+	      "/usr/include/tcl*",
+	      "/usr/include",
+	      "/usr/local/include/tcl*",
+	      "/usr/local/include")
+search_header("tk.h",
+	      "/usr/include/tk*",
+	      "/usr/include",
+	      "/usr/local/include/tk*",
+	      "/usr/local/include")
+search_header("X11/Xlib.h",
+	      "/usr/include",
+	      "/usr/X11*/include",
+	      "/usr/include",
+	      "/usr/X11*/include")
+d48 15
+a62 22
+def search_lib(file, func, *path)
+  for i in path.reverse!
+    dir = Dir[i]
+    for path in dir
+      $LDFLAGS = $libraries.collect{|p| "-L" + p}.join(" ") + " -L" + path
+      files = Dir[path+"/"+file]
+      if files.size > 0
+	for lib in files
+	  lib = File::basename(lib)
+	  lib.sub!(/^lib/, '')
+	  lib.sub!(/\.(a|so)$/, '')
+	  if have_library(lib, func)
+	    unless $libraries.include? path
+	      $libraries << path
+	    end
+	    return TRUE
+	  end
+	end
+      end
+    end
+  end
+  return FALSE;
+d64 4
+d69 9
+a77 8
+if have_header("tcl.h") && have_header("tk.h") &&
+    search_lib("libX11.{a,so}", "XOpenDisplay",
+	       "/usr/lib", "/usr/X11*/lib") &&
+    search_lib("libtcl{,7*,8*}.{a,so}", "Tcl_FindExecutable",
+	       "/usr/lib", "/usr/local/lib") &&
+    search_lib("libtk{,4*,8*}.{a,so}", "Tk_Init",
+	       "/usr/lib", "/usr/local/lib")
+  $LDFLAGS = $libraries.collect{|path| "-L" + path}.join(" ")
+@
+
+
+1.1.1.1.2.2
+log
+@*** empty log message ***
+@
+text
+@d46 1
+a46 2
+	      "/usr/X11*/include",
+	      "/usr/openwin/include")
+d77 1
+a77 1
+	       "/usr/lib", "/usr/X11*/lib", "/usr/openwin/lib") &&
+@
+
+
+1.1.1.1.2.3
+log
+@1.1b9_05 patches
+@
+text
+@a42 1
+	      "/usr/include/X11*",
+d44 4
+a47 2
+	      "/usr/openwin/include",
+	      "/usr/X11*/include")
+d78 1
+a78 1
+	       "/usr/lib", "/usr/openwin/lib", "/usr/X11*/lib") &&
+@
+
+
+1.1.1.1.2.4
+log
+@1.1b9_30
+@
+text
+@d48 1
+a48 1
+$CFLAGS = $includes.collect{|path| "-I" + path}.join(" ")
+@
+
+
+1.1.1.1.2.5
+log
+@1.1c1
+@
+text
+@d78 1
+a78 1
+    search_lib("libtcl{,8*,7*}.{a,so}", "Tcl_FindExecutable",
+d80 1
+a80 1
+    search_lib("libtk{,8*,4*}.{a,so}", "Tk_Init",
+@
+
+
+1.1.1.1.2.6
+log
+@*** empty log message ***
+@
+text
+@a4 1
+have_library("nsl", "t_open")
+d6 1
+@
+
+
+1.1.1.1.2.6.2.1
+log
+@join 1.1c6
+@
+text
+@d14 1
+a14 1
+    for i in path.sort!.reverse!
+a16 1
+	next unless File.directory? path
+d33 1
+a33 1
+	      "/usr/include/tcl{,8*,7*}",
+d35 1
+a35 1
+	      "/usr/local/include/tcl{,8*,7*}",
+d38 1
+a38 1
+	      "/usr/include/tk{,8*,4*}",
+d40 1
+a40 1
+	      "/usr/local/include/tk{,8*,4*}",
+@
+
+
+1.1.1.1.2.7
+log
+@1.1c6
+@
+text
+@d14 1
+a14 1
+    for i in path.sort!.reverse!
+a16 1
+	next unless File.directory? path
+d33 1
+a33 1
+	      "/usr/include/tcl{,8*,7*}",
+d35 1
+a35 1
+	      "/usr/local/include/tcl{,8*,7*}",
+d38 1
+a38 1
+	      "/usr/include/tk{,8*,4*}",
+d40 1
+a40 1
+	      "/usr/local/include/tk{,8*,4*}",
+@
+
+
+1.1.1.1.2.8
+log
+@1.2.1 stable
+@
+text
+@d16 1
+a16 1
+      for path in dir.sort!.reverse!
+d55 1
+a55 1
+    for path in dir.sort!.reverse!
+d59 1
+a59 1
+	for lib in files.sort!.reverse!
+@
+
+
+1.1.1.1.2.9
+log
+@1.2.6
+@
+text
+@d62 1
+a62 1
+	  lib.sub!(/\.(a|so(.[0-9]+)?)$/, '')
+d77 1
+a77 1
+    search_lib("libX11.{a,so*}", "XOpenDisplay",
+@

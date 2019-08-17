@@ -1,0 +1,239 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.3
+	v1_6_6:1.3
+	v1_6_5:1.3
+	v1_6_4:1.3
+	v1_7_1:1.3
+	v1_6_4_preview4:1.3
+	v1_6_4_preview3:1.3
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	v1_3_6_repack:1.1.2.1
+	v1_3_6:1.1.2.1
+	v1_3_5:1.1.2.1
+	v1_3_4_990625:1.1.2.1
+	v1_3_4_990624:1.1.2.1
+	v1_3_4_990611:1.1.2.1
+	v1_3_4_990531:1.1.2.1
+	v1_3_3_990518:1.1.2.1
+	v1_3_3_990513:1.1.2.1
+	v1_3_3_990507:1.1.2.1
+	v1_3_1_990225:1.1.2.1
+	v1_3_1_990224:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	99.10.29.09.25.32;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.49;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.02.24.04.31.28;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.02.24.04.31.28;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@19991029
+@
+text
+@require 'nkf'
+
+module Kconv
+  AUTO = NKF::AUTO
+  JIS = NKF::JIS
+  EUC = NKF::EUC
+  SJIS = NKF::SJIS
+  BINARY = NKF::BINARY
+  NOCONV = NKF::NOCONV
+  UNKNOWN = NKF::UNKNOWN
+  def kconv(str, out_code, in_code = AUTO)
+    opt = '-'
+    case in_code
+    when NKF::JIS
+      opt << 'J'
+    when NKF::EUC
+      opt << 'E'
+    when NKF::SJIS
+      opt << 'S'
+    end
+
+    case out_code
+    when NKF::JIS
+      opt << 'j'
+    when NKF::EUC
+      opt << 'e'
+    when NKF::SJIS
+      opt << 's'
+    when NKF::NOCONV
+      return str
+    end
+
+    opt = '' if opt == '-'
+
+    NKF::nkf(opt, str)
+  end
+  module_function :kconv
+
+  def tojis(str)
+    NKF::nkf('-j', str)
+  end
+  module_function :tojis
+
+  def toeuc(str)
+    NKF::nkf('-e', str)
+  end
+  module_function :toeuc
+
+  def tosjis(str)
+    NKF::nkf('-s', str)
+  end
+  module_function :tosjis
+
+  def guess(str)
+    NKF::guess(str)
+  end
+  module_function :guess
+end
+
+class String
+  def kconv(out_code, in_code=Kconv::AUTO)
+    Kconv::kconv(self, out_code, in_code)
+  end
+  def tojis
+    NKF::nkf('-j', self)
+  end
+  def toeuc
+    NKF::nkf('-e', self)
+  end
+  def tosjis
+    NKF::nkf('-s', self)
+  end
+end
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d59 15
+@
+
+
+1.1
+log
+@file kconv.rb was initially added on branch ruby_1_3.
+@
+text
+@d1 58
+@
+
+
+1.1.2.1
+log
+@990224
+@
+text
+@a0 58
+require 'nkf'
+
+module Kconv
+  AUTO = NKF::AUTO
+  JIS = NKF::JIS
+  EUC = NKF::EUC
+  SJIS = NKF::SJIS
+  BINARY = NKF::BINARY
+  NOCONV = NKF::NOCONV
+  UNKNOWN = NKF::UNKNOWN
+  def kconv(str, out_code, in_code = AUTO)
+    opt = '-'
+    case in_code
+    when NKF::JIS
+      opt << 'J'
+    when NKF::EUC
+      opt << 'E'
+    when NKF::SJIS
+      opt << 'S'
+    end
+
+    case out_code
+    when NKF::JIS
+      opt << 'j'
+    when NKF::EUC
+      opt << 'e'
+    when NKF::SJIS
+      opt << 's'
+    when NKF::NOCONV
+      return str
+    end
+
+    opt = '' if opt == '-'
+
+    NKF::nkf(opt, str)
+  end
+  module_function :kconv
+
+  def tojis(str)
+    NKF::nkf('-j', str)
+  end
+  module_function :tojis
+
+  def toeuc(str)
+    NKF::nkf('-e', str)
+  end
+  module_function :toeuc
+
+  def tosjis(str)
+    NKF::nkf('-s', str)
+  end
+  module_function :tosjis
+
+  def guess(str)
+    NKF::guess(str)
+  end
+  module_function :guess
+end
+@
+

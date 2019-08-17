@@ -1,0 +1,465 @@
+head	1.4;
+access;
+symbols
+	irb_0_9:1.3
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.2
+	v1_6_5:1.1.2.2
+	v1_6_4:1.1.2.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.1.2.2
+	v1_6_4_preview3:1.1.2.2
+	ruby_1_6:1.1.0.2
+	v0_7_3:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.07.29.06.14.08;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.09.11.17.16;	author keiju;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.03.08.55.53;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.04.30.18.39.35;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.05.03.08.56.49;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* numeric.c (num_to_int): default to_int implementaion for every
+  numeric class.
+
+* re.c (rb_reg_quote): initial part of the string was never copied
+  to the quoted string.
+@
+text
+@#
+#   irb/extend-command.rb - irb command extend
+#   	$Release Version: 0.9$
+#   	$Revision: 1.3 $
+#   	$Date: 2002/07/09 11:17:16 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#
+# --
+#
+#   
+#
+module IRB
+  #
+  # IRB extended command
+  #
+  module ExtendCommandBundle
+    EXCB = ExtendCommandBundle
+
+    NO_OVERRIDE = 0
+    OVERRIDE_PRIVATE_ONLY = 0x01
+    OVERRIDE_ALL = 0x02
+
+    def irb_exit(ret = 0)
+      irb_context.exit(ret)
+    end
+
+    def irb_context
+      IRB.CurrentContext
+    end
+
+    @@ALIASES = [
+      [:context, :irb_context, NO_OVERRIDE],
+      [:conf, :irb_context, NO_OVERRIDE],
+      [:irb_quit, :irb_exit, OVERRIDE_PRIVATE_ONLY],
+      [:exit, :irb_exit, OVERRIDE_PRIVATE_ONLY],
+      [:quit, :irb_exit, OVERRIDE_PRIVATE_ONLY],
+    ]
+
+    @@EXTEND_COMMANDS = [
+      [:irb_current_working_workspace, :CurrentWorkingWorkspace, "irb/cmd/chws",
+	[:irb_print_working_workspace, OVERRIDE_ALL],
+	[:irb_cwws, OVERRIDE_ALL],
+	[:irb_pwws, OVERRIDE_ALL],
+#	[:irb_cww, OVERRIDE_ALL],
+#	[:irb_pww, OVERRIDE_ALL],
+	[:cwws, NO_OVERRIDE],
+	[:pwws, NO_OVERRIDE],
+#	[:cww, NO_OVERRIDE],
+#	[:pww, NO_OVERRIDE],
+	[:irb_current_working_binding, OVERRIDE_ALL],
+	[:irb_print_working_binding, OVERRIDE_ALL],
+	[:irb_cwb, OVERRIDE_ALL],
+	[:irb_pwb, OVERRIDE_ALL],
+#	[:cwb, NO_OVERRIDE],
+#	[:pwb, NO_OVERRIDE]
+      ],
+      [:irb_change_workspace, :ChangeWorkspace, "irb/cmd/chws",
+	[:irb_chws, OVERRIDE_ALL],
+#	[:irb_chw, OVERRIDE_ALL],
+	[:irb_cws, OVERRIDE_ALL],
+#	[:irb_cw, OVERRIDE_ALL],
+	[:chws, NO_OVERRIDE],
+#	[:chw, NO_OVERRIDE],
+	[:cws, NO_OVERRIDE],
+#	[:cw, NO_OVERRIDE],
+	[:irb_change_binding, OVERRIDE_ALL],
+	[:irb_cb, OVERRIDE_ALL],
+	[:cb, NO_OVERRIDE]],
+
+      [:irb_workspaces, :Workspaces, "irb/cmd/pushws",
+	[:workspaces, NO_OVERRIDE],
+	[:irb_bindings, OVERRIDE_ALL],
+	[:bindings, NO_OVERRIDE]],
+      [:irb_push_workspace, :PushWorkspace, "irb/cmd/pushws",
+	[:irb_pushws, OVERRIDE_ALL],
+#	[:irb_pushw, OVERRIDE_ALL],
+	[:pushws, NO_OVERRIDE],
+#	[:pushw, NO_OVERRIDE],
+	[:irb_push_binding, OVERRIDE_ALL],
+	[:irb_pushb, OVERRIDE_ALL],
+	[:pushb, NO_OVERRIDE]],
+      [:irb_pop_workspace, :PopWorkspace, "irb/cmd/pushws",
+	[:irb_popws, OVERRIDE_ALL],
+#	[:irb_popw, OVERRIDE_ALL],
+	[:popws, NO_OVERRIDE],
+#	[:popw, NO_OVERRIDE],
+	[:irb_pop_binding, OVERRIDE_ALL],
+	[:irb_popb, OVERRIDE_ALL],
+	[:popb, NO_OVERRIDE]],
+
+      [:irb_load, :Load, "irb/cmd/load"],
+      [:irb_require, :Require, "irb/cmd/load"],
+      [:irb_source, :Source, "irb/cmd/load", 
+	[:source, NO_OVERRIDE]],
+
+      [:irb, :IrbCommand, "irb/cmd/subirb"],
+      [:irb_jobs, :Jobs, "irb/cmd/subirb", 
+	[:jobs, NO_OVERRIDE]],
+      [:irb_fg, :Foreground, "irb/cmd/subirb", 
+	[:fg, NO_OVERRIDE]],
+      [:irb_kill, :Kill, "irb/cmd/subirb", 
+	[:kill, OVERRIDE_PRIVATE_ONLY]],
+    ]
+
+    def EXCB.install_extend_commands
+      for args in @@EXTEND_COMMANDS
+	def_extend_command(*args)
+      end
+    end
+
+    # aliases = [commans_alias, flag], ...
+    def EXCB.def_extend_command(cmd_name, cmd_class, load_file = nil, *aliases)
+      case cmd_class
+      when Symbol
+	cmd_class = cmd_class.id2name
+      when String
+      when Class
+	cmd_class = cmd_class.name
+      end
+
+      if load_file
+	eval %[
+	  def #{cmd_name}(*opts, &b)
+	    require "#{load_file}"
+	    eval %[
+	      def #{cmd_name}(*opts, &b)
+		ExtendCommand::#{cmd_class}.execute(irb_context, *opts, &b)
+	      end
+	    ]
+	    send :#{cmd_name}, *opts, &b
+	  end
+	]
+      else
+	eval %[
+	  def #{cmd_name}(*opts, &b)
+	    ExtendCommand::#{cmd_class}.execute(irb_context, *opts, &b)
+	  end
+	]
+      end
+
+      for ali, flag in aliases
+	@@ALIASES.push [ali, cmd_name, flag]
+      end
+    end
+
+    # override = {NO_OVERRIDE, OVERRIDE_PRIVATE_ONLY, OVERRIDE_ALL}
+    def install_alias_method(to, from, override = NO_OVERRIDE)
+      to = to.id2name unless to.kind_of?(String)
+      from = from.id2name unless from.kind_of?(String)
+
+      if override == OVERRIDE_ALL or
+	  (override == OVERRIDE_PRIVATE_ONLY) && !respond_to?(to) or
+	  (override == NO_OVERRIDE) &&  !respond_to?(to, true)
+	target = self
+	(class<<self;self;end).instance_eval{
+	  if target.respond_to?(to, true) && 
+	      !target.respond_to?(EXCB.irb_original_method_name(to), true)
+	    alias_method(EXCB.irb_original_method_name(to), to) 
+	  end
+	  alias_method to, from
+	}
+      else
+	print "irb: warn: can't alias #{to} from #{from}.\n"
+      end
+    end
+
+    def self.irb_original_method_name(method_name)
+      "irb_" + method_name + "_org"
+    end
+
+    def EXCB.extend_object(obj)
+      unless (class<<obj;ancestors;end).include?(EXCB)
+	super
+	for ali, com, flg in @@ALIASES
+	  obj.install_alias_method(ali, com, flg)
+	end
+      end
+    end
+
+    install_extend_commands
+  end
+
+  # extension support for Context
+  module ContextExtender
+    CE = ContextExtender
+
+    @@EXTEND_COMMANDS = [
+      [:eval_history=, "irb/ext/history.rb"],
+      [:use_tracer=, "irb/ext/tracer.rb"],
+      [:math_mode=, "irb/ext/math-mode.rb"],
+      [:use_loader=, "irb/ext/use-loader.rb"],
+    ]
+
+    def CE.install_extend_commands
+      for args in @@EXTEND_COMMANDS
+	def_extend_command(*args)
+      end
+    end
+
+    def CE.def_extend_command(cmd_name, load_file, *aliases)
+      Context.module_eval %[
+        def #{cmd_name}(*opts, &b)
+	  require "#{load_file}"
+	  send :#{cmd_name}, *opts, &b
+	end
+	for ali in aliases
+	  alias_method ali, cmd_name
+	end
+      ]
+    end
+
+    CE.install_extend_commands
+  end
+end
+
+@
+
+
+1.3
+log
+@* irb 0.9
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.10 $
+#   	$Date: 2002/07/03 10:44:04 $
+d107 1
+a107 1
+	def_extend_command *args
+d196 1
+a196 1
+	def_extend_command *args
+@
+
+
+1.2
+log
+@Get rid of Japanese comments and fix English comments as appropriate.
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.1 $
+#   	$Date: 2001/04/30 17:38:22 $
+d16 7
+a22 3
+  module ExtendCommand
+#    include Loader
+    
+a25 32
+    alias irb_quit irb_exit
+
+    def irb_fork(&block)
+      pid = send ExtendCommand.irb_original_method_name("fork")
+      unless pid 
+	class<<self
+	  alias_method :exit, ExtendCommand.irb_original_method_name('exit')
+	end
+	if iterator?
+	  begin
+	    yield
+	  ensure
+	    exit
+	  end
+	end
+      end
+      pid
+    end
+
+    def irb_change_binding(*main)
+      irb_context.change_binding(*main)
+    end
+    alias irb_change_workspace irb_change_binding
+
+    def irb_source(file)
+      irb_context.source(file)
+    end
+
+    def irb(*obj)
+      require "irb/multi-irb"
+      IRB.irb(nil, *obj)
+    end
+d28 1
+a28 1
+      IRB.conf[:MAIN_CONTEXT]
+d31 78
+a108 3
+    def irb_jobs
+      require "irb/multi-irb"
+      IRB.JobManager
+d111 9
+a119 4
+    def irb_fg(key)
+      require "irb/multi-irb"
+      IRB.JobManager.switch(key)
+    end
+d121 19
+a139 4
+    def irb_kill(*keys)
+      require "irb/multi-irb"
+      IRB.JobManager.kill(*keys)
+    end
+d141 2
+a142 5
+    # extend command functions
+    def ExtendCommand.extend_object(obj)
+      super
+      unless (class<<obj;ancestors;end).include?(ExtendCommand)
+	obj.install_aliases
+d146 2
+a147 21
+    OVERRIDE_NOTHING = 0
+    OVERRIDE_PRIVATE_ONLY = 0x01
+    OVERRIDE_ALL = 0x02
+
+    def install_aliases(override = OVERRIDE_NOTHING)
+
+      install_alias_method(:exit, :irb_exit, override | OVERRIDE_PRIVATE_ONLY)
+      install_alias_method(:quit, :irb_quit, override | OVERRIDE_PRIVATE_ONLY)
+      install_alias_method(:fork, :irb_fork, override | OVERRIDE_PRIVATE_ONLY)
+      install_alias_method(:kill, :irb_kill, override | OVERRIDE_PRIVATE_ONLY)
+
+      install_alias_method(:irb_cb, :irb_change_binding, override)
+      install_alias_method(:irb_ws, :irb_change_workspace, override)
+      install_alias_method(:source, :irb_source, override)
+      install_alias_method(:conf, :irb_context, override)
+      install_alias_method(:jobs, :irb_jobs, override)
+      install_alias_method(:fg, :irb_fg, override)
+    end
+
+    # override = {OVERRIDE_NOTHING, OVERRIDE_PRIVATE_ONLY, OVERRIDE_ALL}
+    def install_alias_method(to, from, override = OVERRIDE_NOTHING)
+d153 1
+a153 1
+	  (override == OVERRIDE_NOTHING) &&  !respond_to?(to, true)
+d157 2
+a158 2
+	      !target.respond_to?(ExtendCommand.irb_original_method_name(to), true)
+	    alias_method(ExtendCommand.irb_original_method_name(to), to) 
+d170 43
+d215 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 2001/04/16 06:05:22 $
+a14 1
+  # (JP: IRB拡張コマンド)
+@
+
+
+1.1.2.1
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/04/30 17:38:22 $
+@
+
+
+1.1.2.2
+log
+@Get rid of Japanese comments and fix English comments as appropriate.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.2.1 $
+#   	$Date: 2001/04/30 18:39:35 $
+d15 1
+@
+
+
+1.1.1.1
+log
+@This is the virgin import of irb 0.7.3.
+@
+text
+@@

@@ -1,0 +1,1775 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.6
+date	2002.10.08.01.58.34;	author akr;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.06.27.12.01.07;	author akr;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.06.27.09.30.47;	author akr;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.06.27.06.27.20;	author akr;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.02.22.02.31.15;	author akr;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.12.24.17.37.49;	author akr;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* lib/prettyprint.rb (PrettyPrint.singleline_format): new method.
+@
+text
+@# $Id$
+
+=begin
+= PrettyPrint
+The class implements pretty printing algorithm.
+It finds line breaks and nice indentations for grouped structure.
+
+By default, the class assumes that primitive elements are strings and
+each byte in the strings have single column in width.
+But it can be used for other situasions
+by giving suitable arguments for some methods:
+newline object and space generation block for (({PrettyPrint.new})),
+optional width argument for (({PrettyPrint#text})),
+(({PrettyPrint#breakable})), etc.
+There are several candidates to use them:
+text formatting using proportional fonts,
+multibyte characters which has columns diffrent to number of bytes,
+non-string formatting, etc.
+
+== class methods
+--- PrettyPrint.new([output[, maxwidth[, newline]]]) [{|width| ...}]
+    creates a buffer for pretty printing.
+
+    ((|output|)) is an output target.
+    If it is not specified, (({''})) is assumed.
+    It should have a (({<<})) method which accepts
+    the first argument ((|obj|)) of (({PrettyPrint#text})),
+    the first argument ((|sep|)) of (({PrettyPrint#breakable})),
+    the first argument ((|newline|)) of (({PrettyPrint.new})),
+    and
+    the result of a given block for (({PrettyPrint.new})).
+
+    ((|maxwidth|)) specifies maximum line length.
+    If it is not specified, 79 is assumed.
+    However actual outputs may overflow ((|maxwidth|)) if
+    long non-breakable texts are provided.
+
+    ((|newline|)) is used for line breaks.
+    (({"\n"})) is used if it is not specified.
+
+    The block is used to generate spaces.
+    (({{|width| ' ' * width}})) is used if it is not given.
+
+--- PrettyPrint.format([output[, maxwidth[, newline[, genspace]]]]) {|pp| ...}
+    is a convenience method which is same as follows:
+
+      begin
+        pp = PrettyPrint.new(output, maxwidth, newline, &genspace)
+        ...
+        pp.flush
+        output
+      end
+
+--- PrettyPrint.singleline_format([output[, maxwidth[, newline[, genspace]]]]) {|pp| ...}
+    is similar to (({PrettyPrint.format})) but the result has no breaks.
+
+    ((|maxwidth|)), ((|newline|)) and ((|genspace|)) are ignored.
+    The invocation of (({breakable})) in the block doesn't break a line and
+    treated as just an invocation of (({text})).
+
+== methods
+--- text(obj[, width])
+    adds ((|obj|)) as a text of ((|width|)) columns in width.
+
+    If ((|width|)) is not specified, (({((|obj|)).length})) is used.
+
+--- breakable([sep[, width]])
+    tells "you can break a line here if necessary", and a
+    ((|width|))-column text ((|sep|)) is inserted if a line is not
+    broken at the point.
+
+    If ((|sep|)) is not specified, (({" "})) is used.
+
+    If ((|width|)) is not specified, (({((|sep|)).length})) is used.
+    You will have to specify this when ((|sep|)) is a multibyte
+    character, for example.
+
+--- nest(indent) {...}
+    increases left margin after newline with ((|indent|)) for line breaks added
+    in the block.
+
+--- group([indent[, open_obj[, close_obj[, open_width[, close_width]]]]]) {...}
+    groups line break hints added in the block.
+    The line break hints are all to be breaked or not.
+
+    If ((|indent|)) is specified, the method call is regarded as nested by
+    (({nest(((|indent|))) { ... }})).
+
+    If ((|open_obj|)) is specified, (({text open_obj, open_width})) is called
+    at first.
+    If ((|close_obj|)) is specified, (({text close_obj, close_width})) is
+    called at last.
+
+--- flush
+    outputs buffered data.
+
+--- first?
+    is a predicate to test the call is a first call to (({first?})) with
+    current group.
+    It is useful to format comma separated values as:
+
+      pp.group(1, '[', ']') {
+        xxx.each {|yyy|
+          unless pp.first?
+            pp.text ','
+            pp.breakable
+          end
+          ... pretty printing yyy ...
+        }
+      }
+
+== Bugs
+* Box based formatting?  Other (better) model/algorithm?
+
+== References
+Christian Lindig, Strictly Pretty, March 2000,
+((<URL:http://www.gaertner.de/~lindig/papers/strictly-pretty.html>))
+
+Philip Wadler, A prettier printer, March 1998,
+((<URL:http://www.research.avayalabs.com/user/wadler/topics/recent.html#prettier>))
+
+=end
+
+class PrettyPrint
+  def PrettyPrint.format(output='', maxwidth=79, newline="\n", genspace=lambda {|n| ' ' * n})
+    pp = PrettyPrint.new(output, maxwidth, newline, &genspace)
+    yield pp
+    pp.flush
+    output
+  end
+
+  def PrettyPrint.singleline_format(output='', maxwidth=nil, newline=nil, genspace=nil)
+    pp = SingleLine.new(output)
+    yield pp
+    output
+  end
+
+  def initialize(output='', maxwidth=79, newline="\n", &genspace)
+    @@output = output
+    @@maxwidth = maxwidth
+    @@newline = newline
+    @@genspace = genspace || lambda {|n| ' ' * n}
+
+    @@output_width = 0
+    @@buffer_width = 0
+    @@buffer = []
+
+    root_group = Group.new(0)
+    @@group_stack = [root_group]
+    @@group_queue = GroupQueue.new(root_group)
+    @@indent = 0
+  end
+  attr_reader :output, :maxwidth, :newline, :genspace
+  attr_reader :indent, :group_queue
+
+  def current_group
+    @@group_stack.last
+  end
+
+  def first?
+    current_group.first?
+  end
+
+  def break_outmost_groups
+    while @@maxwidth < @@output_width + @@buffer_width
+      return unless group = @@group_queue.deq
+      until group.breakables.empty?
+        data = @@buffer.shift
+        @@output_width = data.output(@@output, @@output_width)
+        @@buffer_width -= data.width
+      end
+      while !@@buffer.empty? && Text === @@buffer.first
+        text = @@buffer.shift
+        @@output_width = text.output(@@output, @@output_width)
+        @@buffer_width -= text.width
+      end
+    end
+  end
+
+  def text(obj, width=obj.length)
+    if @@buffer.empty?
+      @@output << obj
+      @@output_width += width
+    else
+      text = @@buffer.last
+      unless Text === text
+        text = Text.new
+        @@buffer << text
+      end
+      text.add(obj, width)
+      @@buffer_width += width
+      break_outmost_groups
+    end
+  end
+
+  def fill_breakable(sep=' ', width=sep.length)
+    group { breakable sep, width }
+  end
+
+  def breakable(sep=' ', width=sep.length)
+    group = @@group_stack.last
+    if group.break?
+      flush
+      @@output << @@newline
+      @@output << @@genspace.call(@@indent)
+      @@output_width = @@indent
+      @@buffer_width = 0
+    else
+      @@buffer << Breakable.new(sep, width, self)
+      @@buffer_width += width
+      break_outmost_groups
+    end
+  end
+
+  def group(indent=0, open_obj='', close_obj='', open_width=open_obj.length, close_width=close_obj.length)
+    text open_obj, open_width
+    group_sub {
+      nest(indent) {
+        yield
+      }
+    }
+    text close_obj, close_width
+  end
+
+  def group_sub
+    group = Group.new(@@group_stack.last.depth + 1)
+    @@group_stack.push group
+    @@group_queue.enq group
+    begin
+      yield
+    ensure
+      @@group_stack.pop
+      if group.breakables.empty?
+        @@group_queue.delete group
+      end
+    end
+  end
+
+  def nest(indent)
+    @@indent += indent
+    begin
+      yield
+    ensure
+      @@indent -= indent
+    end
+  end
+
+  def flush
+    @@buffer.each {|data|
+      @@output_width = data.output(@@output, @@output_width)
+    }
+    @@buffer.clear
+    @@buffer_width = 0
+  end
+
+  class Text
+    def initialize
+      @@objs = []
+      @@width = 0
+    end
+    attr_reader :width
+
+    def output(out, output_width)
+      @@objs.each {|obj| out << obj}
+      output_width + @@width
+    end
+
+    def add(obj, width)
+      @@objs << obj
+      @@width += width
+    end
+  end
+
+  class Breakable
+    def initialize(sep, width, pp)
+      @@obj = sep
+      @@width = width
+      @@pp = pp
+      @@indent = pp.indent
+      @@group = pp.current_group
+      @@group.breakables.push self
+    end
+    attr_reader :obj, :width, :indent
+
+    def output(out, output_width)
+      @@group.breakables.shift
+      if @@group.break?
+        out << @@pp.newline
+        out << @@pp.genspace.call(@@indent)
+        @@indent
+      else
+        @@pp.group_queue.delete @@group if @@group.breakables.empty?
+        out << @@obj
+        output_width + @@width
+      end
+    end
+  end
+
+  class Group
+    def initialize(depth)
+      @@depth = depth
+      @@breakables = []
+      @@break = false
+    end
+    attr_reader :depth, :breakables
+
+    def break
+      @@break = true
+    end
+
+    def break?
+      @@break
+    end
+
+    def first?
+      if defined? @@first
+        false
+      else
+        @@first = false
+        true
+      end
+    end
+  end
+
+  class GroupQueue
+    def initialize(*groups)
+      @@queue = []
+      groups.each {|g| enq g}
+    end
+
+    def enq(group)
+      depth = group.depth
+      @@queue << [] until depth < @@queue.length
+      @@queue[depth] << group
+    end
+
+    def deq
+      @@queue.each {|gs|
+        (gs.length-1).downto(0) {|i|
+          unless gs[i].breakables.empty?
+            group = gs.slice!(i, 1).first
+            group.break
+            return group
+          end
+        }
+        gs.each {|group| group.break}
+        gs.clear
+      }
+      return nil
+    end
+
+    def delete(group)
+      @@queue[group.depth].delete(group)
+    end
+  end
+
+  class SingleLine
+    def initialize(output, maxwidth=nil, newline=nil)
+      @@output = output
+      @@first = [true]
+    end
+
+    def text(obj, width=nil)
+      @@output << obj
+    end
+
+    def breakable(sep=' ', width=nil)
+      @@output << sep
+    end
+
+    def nest(indent)
+      yield
+    end
+
+    def group(indent=nil, open_obj='', close_obj='', open_width=nil, close_width=nil)
+      @@first.push true
+      @@output << open_obj
+      yield
+      @@output << close_obj
+      @@first.pop
+    end
+
+    def flush
+    end
+
+    def first?
+      result = @@first[-1]
+      @@first[-1] = false
+      result
+    end
+  end
+end
+
+if __FILE__ == $0
+  require 'runit/testcase'
+  require 'runit/cui/testrunner'
+
+  class WadlerExample < RUNIT::TestCase
+    def setup
+      @@tree = Tree.new("aaaa", Tree.new("bbbbb", Tree.new("ccc"),
+                                                 Tree.new("dd")),
+                               Tree.new("eee"),
+                               Tree.new("ffff", Tree.new("gg"),
+                                                Tree.new("hhh"),
+                                                Tree.new("ii")))
+    end
+
+    def hello(width)
+      PrettyPrint.format('', width) {|hello|
+        hello.group {
+          hello.group {
+            hello.group {
+              hello.group {
+                hello.text 'hello'
+                hello.breakable; hello.text 'a'
+              }
+              hello.breakable; hello.text 'b'
+            }
+            hello.breakable; hello.text 'c'
+          }
+          hello.breakable; hello.text 'd'
+        }
+      }
+    end
+
+    def test_hello_00_06
+      expected = <<'End'.chomp
+hello
+a
+b
+c
+d
+End
+      assert_equal(expected, hello(0))
+      assert_equal(expected, hello(6))
+    end
+
+    def test_hello_07_08
+      expected = <<'End'.chomp
+hello a
+b
+c
+d
+End
+      assert_equal(expected, hello(7))
+      assert_equal(expected, hello(8))
+    end
+
+    def test_hello_09_10
+      expected = <<'End'.chomp
+hello a b
+c
+d
+End
+      out = hello(9); assert_equal(expected, out)
+      out = hello(10); assert_equal(expected, out)
+    end
+
+    def test_hello_11_12
+      expected = <<'End'.chomp
+hello a b c
+d
+End
+      assert_equal(expected, hello(11))
+      assert_equal(expected, hello(12))
+    end
+
+    def test_hello_13
+      expected = <<'End'.chomp
+hello a b c d
+End
+      assert_equal(expected, hello(13))
+    end
+
+    def tree(width)
+      PrettyPrint.format('', width) {|pp| @@tree.show(pp)}
+    end
+
+    def test_tree_00_19
+      expected = <<'End'.chomp
+aaaa[bbbbb[ccc,
+           dd],
+     eee,
+     ffff[gg,
+          hhh,
+          ii]]
+End
+      assert_equal(expected, tree(0))
+      assert_equal(expected, tree(19))
+    end
+
+    def test_tree_20_22
+      expected = <<'End'.chomp
+aaaa[bbbbb[ccc, dd],
+     eee,
+     ffff[gg,
+          hhh,
+          ii]]
+End
+      assert_equal(expected, tree(20))
+      assert_equal(expected, tree(22))
+    end
+
+    def test_tree_23_43
+      expected = <<'End'.chomp
+aaaa[bbbbb[ccc, dd],
+     eee,
+     ffff[gg, hhh, ii]]
+End
+      assert_equal(expected, tree(23))
+      assert_equal(expected, tree(43))
+    end
+
+    def test_tree_44
+      assert_equal(<<'End'.chomp, tree(44))
+aaaa[bbbbb[ccc, dd], eee, ffff[gg, hhh, ii]]
+End
+    end
+
+    def tree_alt(width)
+      PrettyPrint.format('', width) {|pp| @@tree.altshow(pp)}
+    end
+
+    def test_tree_alt_00_18
+      expected = <<'End'.chomp
+aaaa[
+  bbbbb[
+    ccc,
+    dd
+  ],
+  eee,
+  ffff[
+    gg,
+    hhh,
+    ii
+  ]
+]
+End
+      assert_equal(expected, tree_alt(0))
+      assert_equal(expected, tree_alt(18))
+    end
+
+    def test_tree_alt_19_20
+      expected = <<'End'.chomp
+aaaa[
+  bbbbb[ ccc, dd ],
+  eee,
+  ffff[
+    gg,
+    hhh,
+    ii
+  ]
+]
+End
+      assert_equal(expected, tree_alt(19))
+      assert_equal(expected, tree_alt(20))
+    end
+
+    def test_tree_alt_20_49
+      expected = <<'End'.chomp
+aaaa[
+  bbbbb[ ccc, dd ],
+  eee,
+  ffff[ gg, hhh, ii ]
+]
+End
+      assert_equal(expected, tree_alt(21))
+      assert_equal(expected, tree_alt(49))
+    end
+
+    def test_tree_alt_50
+      expected = <<'End'.chomp
+aaaa[ bbbbb[ ccc, dd ], eee, ffff[ gg, hhh, ii ] ]
+End
+      assert_equal(expected, tree_alt(50))
+    end
+
+    class Tree
+      def initialize(string, *children)
+        @@string = string
+        @@children = children
+      end
+
+      def show(pp)
+        pp.group {
+          pp.text @@string
+          pp.nest(@@string.length) {
+            unless @@children.empty?
+              pp.text '['
+              pp.nest(1) {
+                first = true
+                @@children.each {|t|
+                  if first
+                    first = false
+                  else
+                    pp.text ','
+                    pp.breakable
+                  end
+                  t.show(pp)
+                }
+              }
+              pp.text ']'
+            end
+          }
+        }
+      end
+
+      def altshow(pp)
+        pp.group {
+          pp.text @@string
+          unless @@children.empty?
+            pp.text '['
+            pp.nest(2) {
+              pp.breakable
+              first = true
+              @@children.each {|t|
+                if first
+                  first = false
+                else
+                  pp.text ','
+                  pp.breakable
+                end
+                t.altshow(pp)
+              }
+            }
+            pp.breakable
+            pp.text ']'
+          end
+        }
+      end
+
+    end
+  end
+
+  class StrictPrettyExample < RUNIT::TestCase
+    def prog(width)
+      PrettyPrint.format('', width) {|pp|
+        pp.group {
+          pp.group {pp.nest(2) {
+                       pp.text "if"; pp.breakable;
+                       pp.group {
+                         pp.nest(2) {
+                           pp.group {pp.text "a"; pp.breakable; pp.text "=="}
+                           pp.breakable; pp.text "b"}}}}
+          pp.breakable
+          pp.group {pp.nest(2) {
+                       pp.text "then"; pp.breakable;
+                       pp.group {
+                         pp.nest(2) {
+                           pp.group {pp.text "a"; pp.breakable; pp.text "<<"}
+                           pp.breakable; pp.text "2"}}}}
+          pp.breakable
+          pp.group {pp.nest(2) {
+                       pp.text "else"; pp.breakable;
+                       pp.group {
+                         pp.nest(2) {
+                           pp.group {pp.text "a"; pp.breakable; pp.text "+"}
+                           pp.breakable; pp.text "b"}}}}}
+      }
+    end
+
+    def test_00_04
+      expected = <<'End'.chomp
+if
+  a
+    ==
+    b
+then
+  a
+    <<
+    2
+else
+  a
+    +
+    b
+End
+      assert_equal(expected, prog(0))
+      assert_equal(expected, prog(4))
+    end
+
+    def test_05
+      expected = <<'End'.chomp
+if
+  a
+    ==
+    b
+then
+  a
+    <<
+    2
+else
+  a +
+    b
+End
+      assert_equal(expected, prog(5))
+    end
+
+    def test_06
+      expected = <<'End'.chomp
+if
+  a ==
+    b
+then
+  a <<
+    2
+else
+  a +
+    b
+End
+      assert_equal(expected, prog(6))
+    end
+
+    def test_07
+      expected = <<'End'.chomp
+if
+  a ==
+    b
+then
+  a <<
+    2
+else
+  a + b
+End
+      assert_equal(expected, prog(7))
+    end
+
+    def test_08
+      expected = <<'End'.chomp
+if
+  a == b
+then
+  a << 2
+else
+  a + b
+End
+      assert_equal(expected, prog(8))
+    end
+
+    def test_09
+      expected = <<'End'.chomp
+if a == b
+then
+  a << 2
+else
+  a + b
+End
+      assert_equal(expected, prog(9))
+    end
+
+    def test_10
+      expected = <<'End'.chomp
+if a == b
+then
+  a << 2
+else a + b
+End
+      assert_equal(expected, prog(10))
+    end
+
+    def test_11_31
+      expected = <<'End'.chomp
+if a == b
+then a << 2
+else a + b
+End
+      assert_equal(expected, prog(11))
+      assert_equal(expected, prog(15))
+      assert_equal(expected, prog(31))
+    end
+
+    def test_32
+      expected = <<'End'.chomp
+if a == b then a << 2 else a + b
+End
+      assert_equal(expected, prog(32))
+    end
+
+  end
+
+  class TailGroup < RUNIT::TestCase
+    def test_1
+      out = PrettyPrint.format('', 10) {|pp|
+        pp.group {
+          pp.group {
+            pp.text "abc"
+            pp.breakable
+            pp.text "def"
+          }
+          pp.group {
+            pp.text "ghi"
+            pp.breakable
+            pp.text "jkl"
+          }
+        }
+      }
+      assert_equal("abc defghi\njkl", out)
+    end
+  end
+
+  class NonString < RUNIT::TestCase
+    def format(width)
+      PrettyPrint.format([], width, 'newline', lambda {|n| "#{n} spaces"}) {|pp|
+        pp.text(3, 3)
+        pp.breakable(1, 1)
+        pp.text(3, 3)
+      }
+    end
+
+    def test_6
+      assert_equal([3, "newline", "0 spaces", 3], format(6))
+    end
+
+    def test_7
+      assert_equal([3, 1, 3], format(7))
+    end
+
+  end
+
+  class Fill < RUNIT::TestCase
+    def format(width)
+      PrettyPrint.format('', width) {|pp|
+        pp.group {
+          pp.text 'abc'
+          pp.fill_breakable
+          pp.text 'def'
+          pp.fill_breakable
+          pp.text 'ghi'
+          pp.fill_breakable
+          pp.text 'jkl'
+          pp.fill_breakable
+          pp.text 'mno'
+          pp.fill_breakable
+          pp.text 'pqr'
+          pp.fill_breakable
+          pp.text 'stu'
+        }
+      }
+    end
+
+    def test_00_06
+      expected = <<'End'.chomp
+abc
+def
+ghi
+jkl
+mno
+pqr
+stu
+End
+      assert_equal(expected, format(0))
+      assert_equal(expected, format(6))
+    end
+
+    def test_07_10
+      expected = <<'End'.chomp
+abc def
+ghi jkl
+mno pqr
+stu
+End
+      assert_equal(expected, format(7))
+      assert_equal(expected, format(10))
+    end
+
+    def test_11_14
+      expected = <<'End'.chomp
+abc def ghi
+jkl mno pqr
+stu
+End
+      assert_equal(expected, format(11))
+      assert_equal(expected, format(14))
+    end
+
+    def test_15_18
+      expected = <<'End'.chomp
+abc def ghi jkl
+mno pqr stu
+End
+      assert_equal(expected, format(15))
+      assert_equal(expected, format(18))
+    end
+
+    def test_19_22
+      expected = <<'End'.chomp
+abc def ghi jkl mno
+pqr stu
+End
+      assert_equal(expected, format(19))
+      assert_equal(expected, format(22))
+    end
+
+    def test_23_26
+      expected = <<'End'.chomp
+abc def ghi jkl mno pqr
+stu
+End
+      assert_equal(expected, format(23))
+      assert_equal(expected, format(26))
+    end
+
+    def test_27
+      expected = <<'End'.chomp
+abc def ghi jkl mno pqr stu
+End
+      assert_equal(expected, format(27))
+    end
+
+  end
+
+  RUNIT::CUI::TestRunner.run(WadlerExample.suite)
+  RUNIT::CUI::TestRunner.run(StrictPrettyExample.suite)
+  RUNIT::CUI::TestRunner.run(TailGroup.suite)
+  RUNIT::CUI::TestRunner.run(NonString.suite)
+  RUNIT::CUI::TestRunner.run(Fill.suite)
+end
+@
+
+
+1.5
+log
+@* lib/prettyprint.rb, lib/pp.rb: convenience methods added.
+@
+text
+@d24 1
+a24 1
+    ((|output|)) is a output target.
+d48 1
+a48 1
+        pp = PrettyPrint.format(output, maxwidth, newline, &genspace)
+d54 7
+d120 1
+a120 1
+((<URL:http://cm.bell-labs.com/cm/cs/who/wadler/topics/recent.html#prettier>))
+d132 6
+d354 36
+@
+
+
+1.4
+log
+@refine previous change.
+@
+text
+@d21 1
+a21 1
+--- PrettyPrint.new(output[, maxwidth[, newline]]) [{|width| ...}]
+d24 3
+a26 2
+    ((|output|)) is a output target.  It should have a (({<<})) method 
+    which accepts
+d31 1
+a31 1
+    the result of a given block for (({PrettyPrint.new})). 
+d44 10
+d75 1
+a75 1
+--- group {...}
+d79 8
+d90 15
+a105 2
+* Current API is for minimalists.  More useful methods are required.
+
+d118 8
+a125 1
+  def initialize(output, maxwidth=79, newline="\n", &genspace)
+d147 4
+d155 3
+a157 3
+	data = @@buffer.shift
+	@@output_width = data.output(@@output, @@output_width)
+	@@buffer_width -= data.width
+d160 3
+a162 3
+	text = @@buffer.shift
+	@@output_width = text.output(@@output, @@output_width)
+	@@buffer_width -= text.width
+d175 1
+a175 1
+	@@buffer << text
+d183 4
+d202 11
+a212 1
+  def group
+d275 3
+a277 3
+	out << @@pp.newline
+	out << @@pp.genspace.call(@@indent)
+	@@indent
+d279 3
+a281 3
+	@@pp.group_queue.delete @@group if @@group.breakables.empty?
+	out << @@obj
+	output_width + @@width
+d301 9
+d326 9
+a334 9
+	(gs.length-1).downto(0) {|i|
+	  unless gs[i].breakables.empty?
+	    group = gs.slice!(i, 1).first
+	    group.break
+	    return group
+	  end
+	}
+	gs.each {|group| group.break}
+	gs.clear
+d352 5
+a356 5
+						 Tree.new("dd")),
+			       Tree.new("eee"),
+			       Tree.new("ffff", Tree.new("gg"),
+						Tree.new("hhh"),
+						Tree.new("ii")))
+d360 15
+a374 13
+      out = ''
+      hello = PrettyPrint.new(out, width)
+      hello.group {
+	hello.group {
+	  hello.group {
+	    hello.group {
+	      hello.text 'hello'
+	      hello.breakable; hello.text 'a'}
+	    hello.breakable; hello.text 'b'}
+	  hello.breakable; hello.text 'c'}
+	hello.breakable; hello.text 'd'}
+      hello.flush
+      out
+d427 1
+a427 5
+      out = ''
+      pp = PrettyPrint.new(out, width)
+      @@tree.show(pp)
+      pp.flush
+      out
+d472 1
+a472 5
+      out = ''
+      pp = PrettyPrint.new(out, width)
+      @@tree.altshow(pp)
+      pp.flush
+      out
+d532 1
+a532 1
+	@@children = children
+d536 21
+a556 21
+	pp.group {
+	  pp.text @@string
+	  pp.nest(@@string.length) {
+	    unless @@children.empty?
+	      pp.text '['
+	      pp.nest(1) {
+		first = true
+		@@children.each {|t|
+		  if first
+		    first = false
+		  else
+		    pp.text ','
+		    pp.breakable
+		  end
+		  t.show(pp)
+		}
+	      }
+	      pp.text ']'
+	    end
+	  }
+	}
+d560 21
+a580 21
+	pp.group {
+	  pp.text @@string
+	  unless @@children.empty?
+	    pp.text '['
+	    pp.nest(2) {
+	      pp.breakable
+	      first = true
+	      @@children.each {|t|
+		if first
+		  first = false
+		else
+		  pp.text ','
+		  pp.breakable
+		end
+		t.altshow(pp)
+	      }
+	    }
+	    pp.breakable
+	    pp.text ']'
+	  end
+	}
+d588 23
+a610 25
+      out = ''
+      pp = PrettyPrint.new(out, width)
+      pp.group {
+	pp.group {pp.nest(2) {
+		     pp.text "if"; pp.breakable;
+		     pp.group {
+		       pp.nest(2) {
+			 pp.group {pp.text "a"; pp.breakable; pp.text "=="}
+			 pp.breakable; pp.text "b"}}}}
+	pp.breakable
+	pp.group {pp.nest(2) {
+		     pp.text "then"; pp.breakable;
+		     pp.group {
+		       pp.nest(2) {
+			 pp.group {pp.text "a"; pp.breakable; pp.text "<<"}
+			 pp.breakable; pp.text "2"}}}}
+	pp.breakable
+	pp.group {pp.nest(2) {
+		     pp.text "else"; pp.breakable;
+		     pp.group {
+		       pp.nest(2) {
+			 pp.group {pp.text "a"; pp.breakable; pp.text "+"}
+			 pp.breakable; pp.text "b"}}}}}
+      pp.flush
+      out
+d733 13
+a745 13
+      out = ''
+      pp = PrettyPrint.new(out, 10)
+      pp.group {
+	pp.group {
+	  pp.text "abc"
+	  pp.breakable
+	  pp.text "def"
+	}
+	pp.group {
+	  pp.text "ghi"
+	  pp.breakable
+	  pp.text "jkl"
+	}
+a746 1
+      pp.flush
+d753 5
+a757 7
+      out = []
+      pp = PrettyPrint.new(out, width, 'newline') {|n| "#{n} spaces"}
+      pp.text(3, 3)
+      pp.breakable(1, 1)
+      pp.text(3, 3)
+      pp.flush
+      out
+d772 16
+a787 16
+      out = ''
+      pp = PrettyPrint.new(out, width)
+      pp.group {
+        pp.text 'abc'
+	pp.group { pp.breakable }
+        pp.text 'def'
+	pp.group { pp.breakable }
+        pp.text 'ghi'
+	pp.group { pp.breakable }
+        pp.text 'jkl'
+	pp.group { pp.breakable }
+        pp.text 'mno'
+	pp.group { pp.breakable }
+        pp.text 'pqr'
+	pp.group { pp.breakable }
+        pp.text 'stu'
+a788 2
+      pp.flush
+      out
+@
+
+
+1.3
+log
+@* lib/prettyprint.rb: re-implemented for incremental output to handle
+huge data.  API is changed a bit.
+
+* lib/pp.rb: adapt new pretty printing API.
+@
+text
+@d101 6
+d113 1
+a113 1
+	@@output_width = data.output(@@output, @@output_width, @@newline, @@genspace)
+d149 1
+a149 1
+      @@buffer << Breakable.new(sep, width, @@indent, group)
+d163 3
+d180 1
+a180 1
+      @@output_width = data.output(@@output, @@output_width, @@newline, @@genspace)
+d193 1
+a193 1
+    def output(out, output_width, newline=nil, genspace=nil)
+d205 1
+a205 1
+    def initialize(sep, width, indent, group)
+d208 3
+a210 2
+      @@indent = indent
+      @@group = group
+d215 1
+a215 1
+    def output(out, output_width, newline, genspace)
+d218 2
+a219 2
+	out << newline
+	out << genspace.call(@@indent)
+d222 1
+d271 4
+@
+
+
+1.2
+log
+@* prettyprint.rb: FillGroup implemented.
+@
+text
+@d6 1
+a6 1
+It finds line breaks and nice indentations for grouped structure. 
+d9 1
+a9 1
+each byte in the strings have single column in width. 
+d20 2
+a21 2
+== class methods 
+--- PrettyPrint.new([newline]) [{|width| ...}]
+d24 13
+d43 1
+a43 1
+== methods 
+d61 2
+a62 1
+    increases left margin after newline with ((|indent|)) for line breaks added in the block.
+d68 2
+a69 3
+--- fill_group {...}
+    groups line break hints added in the block.
+    The each line break hints may be breaked or not differently.
+d71 2
+a72 13
+--- format(out[, width])
+    outputs buffered data to ((|out|)).
+    It tries to restrict the line length to ((|width|)) but it may
+    overflow.
+
+    If ((|width|)) is not specified, 79 is assumed.
+
+    ((|out|)) must have a method named (({<<})) which accepts
+    a first argument ((|obj|)) of (({PrettyPrint#text})),
+    a first argument ((|sep|)) of (({PrettyPrint#breakable})),
+    a first argument ((|newline|)) of (({PrettyPrint.new})),
+    and
+    a result of a given block for (({PrettyPrint.new})). 
+a73 1
+== Bugs
+d86 3
+a88 1
+  def initialize(newline="\n", &genspace)
+d91 25
+a115 3
+    @@buf = Group.new
+    @@nest = [0]
+    @@stack = []
+d119 13
+a131 1
+    @@buf << Text.new(obj, width)
+d135 11
+a145 9
+    @@buf << Breakable.new(sep, width, @@nest.last, @@newline, @@genspace)
+  end
+
+  def nest(indent)
+    @@nest << @@nest.last + indent
+    begin
+      yield
+    ensure
+      @@nest.pop
+d150 3
+a152 4
+    g = Group.new
+    @@buf << g
+    @@stack << @@buf
+    @@buf = g
+d156 1
+a156 1
+      @@buf = @@stack.pop
+d160 2
+a161 5
+  def fill_group
+    g = FillGroup.new
+    @@buf << g
+    @@stack << @@buf
+    @@buf = g
+d165 1
+a165 1
+      @@buf = @@stack.pop
+d169 6
+a174 4
+  def format(out, width=79)
+    tails = [[-1, 0]]
+    @@buf.update_tails(tails, 0)
+    @@buf.multiline_output(out, 0, 0, width)
+d178 3
+a180 13
+    def initialize(text, width)
+      @@text = text
+      @@width = width
+    end
+
+    def update_tails(tails, group)
+      @@tail = tails[-1][1]
+      tails[-1][1] += @@width
+    end
+    attr_reader :tail
+
+    def singleline_width
+      return @@width
+d182 1
+d184 3
+a186 2
+    def singleline_output(out)
+      out << @@text
+d189 3
+a191 3
+    def multiline_output(out, group, margin, width)
+      singleline_output(out)
+      return margin + singleline_width
+d196 2
+a197 2
+    def initialize(sep, width, indent, newline, genspace)
+      @@sep = sep
+d200 2
+a201 2
+      @@newline = newline
+      @@genspace = genspace
+d203 1
+d205 6
+a210 5
+    def update_tails(tails, group)
+      @@tail = tails[-1][1]
+      if group == tails[-1][0]
+	tails[-2][1] += @@width + tails[-1][1]
+	tails[-1][1] = 0
+d212 2
+a213 2
+	tails[-1][1] += @@width
+	tails << [group, 0]
+a215 15
+    attr_reader :tail
+
+    def singleline_width
+      return @@width
+    end
+
+    def singleline_output(out)
+      out << @@sep
+    end
+
+    def multiline_output(out, group, margin, width)
+      out << @@newline
+      out << @@genspace.call(@@indent)
+      return @@indent
+    end
+d219 4
+a222 3
+    def initialize
+      @@buf = []
+      @@singleline_width = nil
+d224 1
+d226 2
+a227 2
+    def <<(obj)
+      @@buf << obj
+d230 2
+a231 12
+    def update_tails(tails, group)
+      @@tail = tails[-1][1]
+      len = 0
+      @@buf.reverse_each {|obj|
+        obj.update_tails(tails, group + 1)
+	len += obj.singleline_width
+      }
+      @@singleline_width = len
+      while group < tails[-1][0]
+	tails[-2][1] += tails[-1][1]
+        tails.pop
+      end
+d233 1
+a233 1
+    attr_reader :tail
+d235 4
+a238 2
+    def singleline_width
+      return @@singleline_width
+d241 4
+a244 2
+    def singleline_output(out)
+      @@buf.each {|obj| obj.singleline_output(out)}
+d247 8
+a254 7
+    def multiline_output(out, group, margin, width)
+      if margin + singleline_width + @@tail <= width
+	singleline_output(out)
+	margin += @@singleline_width
+      else
+        @@buf.each {|obj|
+	  margin = obj.multiline_output(out, group + 1, margin, width)
+d256 2
+a257 14
+      end
+      return margin
+    end
+  end
+
+  class FillGroup < Group
+    def multiline_output(out, group, margin, width)
+      @@buf.each {|obj|
+        if margin + obj.singleline_width + obj.tail <= width
+	  obj.singleline_output(out)
+	  margin += obj.singleline_width
+	else
+	  margin = obj.multiline_output(out, group + 1, margin, width)
+	end
+d259 1
+a259 1
+      return margin
+a269 14
+      @@hello = PrettyPrint.new
+      @@hello.group {
+	@@hello.group {
+	  @@hello.group {
+	    @@hello.group {
+	      @@hello.text 'hello'; @@hello.breakable; @@hello.text 'a'
+	    }
+	    @@hello.breakable; @@hello.text 'b'
+	  }
+	  @@hello.breakable; @@hello.text 'c'
+	}
+	@@hello.breakable; @@hello.text 'd'
+      }
+
+d278 16
+d302 2
+a303 2
+      @@hello.format(out='', 0); assert_equal(expected, out)
+      @@hello.format(out='', 6); assert_equal(expected, out)
+d313 2
+a314 2
+      @@hello.format(out='', 7); assert_equal(expected, out)
+      @@hello.format(out='', 8); assert_equal(expected, out)
+d323 2
+a324 2
+      @@hello.format(out='', 9); assert_equal(expected, out)
+      @@hello.format(out='', 10); assert_equal(expected, out)
+d332 2
+a333 2
+      @@hello.format(out='', 11); assert_equal(expected, out)
+      @@hello.format(out='', 12); assert_equal(expected, out)
+d340 9
+a348 1
+      @@hello.format(out='', 13); assert_equal(expected, out)
+a351 2
+      pp = PrettyPrint.new
+      @@tree.show(pp)
+d360 2
+a361 2
+      pp.format(out='', 0); assert_equal(expected, out)
+      pp.format(out='', 19); assert_equal(expected, out)
+a364 2
+      pp = PrettyPrint.new
+      @@tree.show(pp)
+d372 2
+a373 2
+      pp.format(out='', 20); assert_equal(expected, out)
+      pp.format(out='', 22); assert_equal(expected, out)
+a376 2
+      pp = PrettyPrint.new
+      @@tree.show(pp)
+d382 2
+a383 2
+      pp.format(out='', 23); assert_equal(expected, out)
+      pp.format(out='', 43); assert_equal(expected, out)
+d387 1
+a387 4
+      pp = PrettyPrint.new
+      @@tree.show(pp)
+      pp.format(out='', 44)
+      assert_equal(<<'End'.chomp, out)
+d392 8
+a400 2
+      pp = PrettyPrint.new
+      @@tree.altshow(pp)
+d415 2
+a416 2
+      pp.format(out='', 0); assert_equal(expected, out)
+      pp.format(out='', 18); assert_equal(expected, out)
+a419 2
+      pp = PrettyPrint.new
+      @@tree.altshow(pp)
+d431 2
+a432 2
+      pp.format(out='', 19); assert_equal(expected, out)
+      pp.format(out='', 20); assert_equal(expected, out)
+a435 2
+      pp = PrettyPrint.new
+      @@tree.altshow(pp)
+d443 2
+a444 2
+      pp.format(out='', 21); assert_equal(expected, out)
+      pp.format(out='', 49); assert_equal(expected, out)
+a447 2
+      pp = PrettyPrint.new
+      @@tree.altshow(pp)
+d451 1
+a451 1
+      pp.format(out='', 50); assert_equal(expected, out)
+d512 26
+a537 23
+    def setup
+      @@pp = PrettyPrint.new
+      @@pp.group {
+	@@pp.group {@@pp.nest(2) {
+		     @@pp.text "if"; @@pp.breakable;
+		     @@pp.group {
+		       @@pp.nest(2) {
+			 @@pp.group {@@pp.text "a"; @@pp.breakable; @@pp.text "=="}
+			 @@pp.breakable; @@pp.text "b"}}}}
+	@@pp.breakable
+	@@pp.group {@@pp.nest(2) {
+		     @@pp.text "then"; @@pp.breakable;
+		     @@pp.group {
+		       @@pp.nest(2) {
+			 @@pp.group {@@pp.text "a"; @@pp.breakable; @@pp.text "<<"}
+			 @@pp.breakable; @@pp.text "2"}}}}
+	@@pp.breakable
+	@@pp.group {@@pp.nest(2) {
+		     @@pp.text "else"; @@pp.breakable;
+		     @@pp.group {
+		       @@pp.nest(2) {
+			 @@pp.group {@@pp.text "a"; @@pp.breakable; @@pp.text "+"}
+			 @@pp.breakable; @@pp.text "b"}}}}}
+d555 2
+a556 2
+      @@pp.format(out='', 0); assert_equal(expected, out)
+      @@pp.format(out='', 4); assert_equal(expected, out)
+d573 1
+a573 1
+      @@pp.format(out='', 5); assert_equal(expected, out)
+d588 1
+a588 1
+      @@pp.format(out='', 6); assert_equal(expected, out)
+d602 1
+a602 1
+      @@pp.format(out='', 7); assert_equal(expected, out)
+d614 1
+a614 1
+      @@pp.format(out='', 8); assert_equal(expected, out)
+d625 1
+a625 1
+      @@pp.format(out='', 9); assert_equal(expected, out)
+d635 1
+a635 1
+      @@pp.format(out='', 10); assert_equal(expected, out)
+d644 3
+a646 3
+      @@pp.format(out='', 11); assert_equal(expected, out)
+      @@pp.format(out='', 15); assert_equal(expected, out)
+      @@pp.format(out='', 31); assert_equal(expected, out)
+d653 1
+a653 1
+      @@pp.format(out='', 32); assert_equal(expected, out)
+d660 2
+a661 1
+      pp = PrettyPrint.new
+d674 2
+a675 2
+      pp.format(out='', 10)
+      assert_equal("abc\ndefghi jkl", out)
+d680 8
+a687 5
+    def setup
+      @@pp = PrettyPrint.new('newline') {|n| "#{n} spaces"}
+      @@pp.text(3, 3)
+      @@pp.breakable(1, 1)
+      @@pp.text(3, 3)
+d691 1
+a691 2
+      @@pp.format(out=[], 6)
+      assert_equal([3, "newline", "0 spaces", 3], out)
+d695 1
+a695 2
+      @@pp.format(out=[], 7)
+      assert_equal([3, 1, 3], out)
+d701 17
+a717 16
+    def setup
+      @@pp = PrettyPrint.new
+      @@pp.fill_group {
+        @@pp.text 'abc'
+	@@pp.breakable
+        @@pp.text 'def'
+	@@pp.breakable
+        @@pp.text 'ghi'
+	@@pp.breakable
+        @@pp.text 'jkl'
+	@@pp.breakable
+        @@pp.text 'mno'
+	@@pp.breakable
+        @@pp.text 'pqr'
+	@@pp.breakable
+        @@pp.text 'stu'
+d719 2
+d723 1
+a723 1
+    def test_0_6
+d733 2
+a734 4
+      @@pp.format(out='', 0)
+      assert_equal(expected, out)
+      @@pp.format(out='', 6)
+      assert_equal(expected, out)
+d737 1
+a737 1
+    def test_7_10
+d744 2
+a745 4
+      @@pp.format(out='', 7)
+      assert_equal(expected, out)
+      @@pp.format(out='', 10)
+      assert_equal(expected, out)
+d754 2
+a755 4
+      @@pp.format(out='', 11)
+      assert_equal(expected, out)
+      @@pp.format(out='', 14)
+      assert_equal(expected, out)
+d763 2
+a764 4
+      @@pp.format(out='', 15)
+      assert_equal(expected, out)
+      @@pp.format(out='', 18)
+      assert_equal(expected, out)
+d772 2
+a773 4
+      @@pp.format(out='', 19)
+      assert_equal(expected, out)
+      @@pp.format(out='', 22)
+      assert_equal(expected, out)
+d781 2
+a782 4
+      @@pp.format(out='', 23)
+      assert_equal(expected, out)
+      @@pp.format(out='', 26)
+      assert_equal(expected, out)
+d789 1
+a789 2
+      @@pp.format(out='', 27)
+      assert_equal(expected, out)
+@
+
+
+1.1
+log
+@lib/pp.rb lib/prettyprint.rb: new file.
+@
+text
+@d52 5
+d73 1
+a73 5
+* Line breaks in a group is constrained to whether all line break hints are
+  to be breaked or not.  Maybe, non-constrained version of
+  PrettyPrint#group should be provided to filling multi lines.
+
+* Box based formatting?
+d76 1
+a76 1
+Strictly Pretty, Christian Lindig, March 2000,
+d79 1
+a79 1
+A prettier printer, Philip Wadler, March 1998,
+d102 1
+a102 1
+    nest_enter(indent)
+d106 1
+a106 1
+      nest_leave
+a109 8
+  def nest_enter(indent)
+    @@nest << @@nest.last + indent
+  end
+
+  def nest_leave
+    @@nest.pop
+  end
+
+d111 4
+a114 1
+    group_enter
+d118 1
+a118 1
+      group_leave
+d122 2
+a123 2
+  def group_enter
+    g = Group.new
+d127 5
+a131 4
+  end
+
+  def group_leave
+    @@buf = @@stack.pop
+d147 1
+d150 1
+d176 1
+d185 1
+d213 1
+a213 1
+      @@tail = tails.empty? ? 0 : tails[-1][1]
+d220 1
+a220 1
+      while !tails.empty? && group <= tails[-1][0]
+d225 1
+d238 1
+a238 1
+	margin += singleline_width
+d247 14
+d693 104
+d801 1
+@

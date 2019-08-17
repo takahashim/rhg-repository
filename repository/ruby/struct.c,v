@@ -1,0 +1,4641 @@
+head	1.38;
+access;
+symbols
+	v1_6_7:1.19.2.3
+	v1_6_6:1.19.2.2
+	v1_6_5:1.19.2.2
+	v1_6_4:1.19
+	v1_7_1:1.22
+	v1_6_4_preview4:1.19
+	v1_6_4_preview3:1.19
+	v1_6_4_preview2:1.19
+	v1_6_4_preview1:1.19
+	v1_6_3:1.19
+	ruby_m17n:1.19.0.4
+	ruby_1_6:1.19.0.2
+	v1_6_2:1.19
+	v1_6_1:1.17
+	v1_6_0:1.17
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.9
+	v1_3_6_repack:1.1.1.3.2.9
+	v1_3_6:1.1.1.3.2.9
+	v1_3_5:1.1.1.3.2.8
+	v1_2_6repack:1.1.1.2.2.19
+	v1_3_4_990625:1.1.1.3.2.8
+	v1_3_4_990624:1.1.1.3.2.8
+	v1_2_6:1.1.1.2.2.19
+	v1_3_4_990611:1.1.1.3.2.8
+	v1_3_4_990531:1.1.1.3.2.7
+	v1_3_3_990518:1.1.1.3.2.5
+	v1_3_3_990513:1.1.1.3.2.5
+	v1_3_3_990507:1.1.1.3.2.4
+	v1_2_5:1.1.1.2.2.18
+	v1_2_4:1.1.1.2.2.18
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.2
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.18
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.18
+	v1_2_1repack:1.1.1.2.2.18
+	v1_2_1:1.1.1.2.2.18
+	v1_2_stable:1.1.1.2.2.18
+	v1_1d1:1.1.1.2.2.18.2.1
+	v1_1d0:1.1.1.2.2.18.2.1
+	v1_1c9_1:1.1.1.2.2.18
+	v1_1c9:1.1.1.2.2.18
+	v1_1c8:1.1.1.2.2.18
+	v1_1c7:1.1.1.2.2.18
+	v1_1c6:1.1.1.2.2.18
+	v1_1d-start:1.1.1.2.2.18.2.1
+	v1_1c5:1.1.1.2.2.18
+	v1_1dev:1.1.1.2.2.18.0.2
+	v1_1c4:1.1.1.2.2.18
+	v1_1c3:1.1.1.2.2.18
+	v1_1c2:1.1.1.2.2.17
+	v1_1c1:1.1.1.2.2.17
+	v1_1c0:1.1.1.2.2.17
+	v1_1b9_31:1.1.1.2.2.17
+	v1_1b9_30:1.1.1.2.2.17
+	v1_1b9_28:1.1.1.2.2.17
+	v1_1b9_27:1.1.1.2.2.17
+	v1_1b9_26:1.1.1.2.2.17
+	r1_1b9_25:1.1.1.2.2.16
+	r1_1b9_24:1.1.1.2.2.16
+	v1_1b9_23:1.1.1.2.2.15
+	v1_1b9_22:1.1.1.2.2.14
+	v1_1b9_20:1.1.1.2.2.13
+	v1_1b9_18:1.1.1.2.2.11
+	v1_1b9_16:1.1.1.2.2.10
+	v1_1b9_15:1.1.1.2.2.10
+	v1_1b9_13:1.1.1.2.2.10
+	v1_1b9_12:1.1.1.2.2.9
+	v1_1b9_11:1.1.1.2.2.8
+	v1_1b9_08:1.1.1.2.2.6
+	v1_1b9_07:1.1.1.2.2.6
+	r1_1b9:1.1.1.2.2.2
+	v1_1b8:1.1.1.2.2.2
+	v1_1b7:1.1.1.2.2.1
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.38
+date	2002.10.29.21.35.28;	author knu;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.09.03.05.20.06;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.08.29.09.08.16;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.08.27.08.31.06;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.04.12.08.45.02;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.02.14.07.49.27;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.10.20.18.39;	author nobu;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.12.11.03.48.08;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.08.20.04.29.56;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.08.06.03.08.57;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.07.02.08.46.22;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.02.14.05.51.58;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.10.13.09.01.58;	author matz;	state Exp;
+branches
+	1.19.2.1;
+next	1.18;
+
+1.18
+date	2000.10.10.07.03.25;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.08.09.04.32.18;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.06.07.21.13;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.14.05.30.23;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.24.04.34.09;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.01.09.41.30;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.04.10.05.44.19;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.13.07.18.40;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.07.08.37.48;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.23.05.23.10;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.01.03.12.13;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.18.06.09.03;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.37.12;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.12.14.06.49.52;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.12.07.09.23.28;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.11.17.07.30.36;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.12;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.29;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.02.01.07.34.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.24.04.31.26;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.25.06.39.11;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.03.24.08.52.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.05.12.05.27.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.05.25.08.26.17;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.05.31.09.13.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.06.11.06.29.59;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.07.22.10.37.22;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.18.01.56.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.03.02.39.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.03.05.06.37.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.03.06.10.07.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.04.02.10.03.51;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.04.14.04.55.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.04.16.10.20.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.04.17.03.53.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.04.21.08.41.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.04.30.07.41.17;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.05.13.07.26.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.05.14.04.10.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.05.18.04.56.23;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.05.25.04.57.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.06.02.10.05.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.06.16.04.23.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	98.08.27.03.55.34;	author matz;	state Exp;
+branches
+	1.1.1.2.2.18.2.1;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	99.05.14.08.56.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.18.2.1
+date	98.09.08.07.09.21;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.12.14.06.50.39;	author matz;	state Exp;
+branches;
+next	;
+
+1.19.2.1
+date	2001.08.06.03.10.24;	author matz;	state Exp;
+branches;
+next	1.19.2.2;
+
+1.19.2.2
+date	2001.08.24.06.36.14;	author matz;	state Exp;
+branches;
+next	1.19.2.3;
+
+1.19.2.3
+date	2002.01.10.23.38.57;	author nobu;	state Exp;
+branches;
+next	1.19.2.4;
+
+1.19.2.4
+date	2002.10.26.15.57.24;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.38
+log
+@* eval.c, file.c, gc.c, io.c, object.c, ruby.c, ruby.h, struct.c,
+  ext/socket/socket.c: differentiate long and int; use proper
+  printf type specifiers and do casts where appropriate.
+@
+text
+@/**********************************************************************
+
+  struct.c -
+
+  $Author: matz $
+  $Date: 2002/09/03 05:20:06 $
+  created at: Tue Mar 22 18:44:30 JST 1995
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+
+VALUE rb_cStruct;
+
+static VALUE struct_alloc _((VALUE));
+
+VALUE
+rb_struct_iv_get(c, name)
+    VALUE c;
+    char *name;
+{
+    ID id;
+
+    id = rb_intern(name);
+    for (;;) {
+	if (rb_ivar_defined(c, id))
+	    return rb_ivar_get(c, id);
+	c = RCLASS(c)->super;
+	if (c == 0 || c == rb_cStruct)
+	    return Qnil;
+    }
+}
+
+static VALUE
+rb_struct_s_members(obj)
+    VALUE obj;
+{
+    VALUE member, ary;
+    VALUE *p, *pend;
+
+    member = rb_struct_iv_get(obj, "__member__");
+    if (NIL_P(member)) {
+	rb_bug("uninitialized struct");
+    }
+    ary = rb_ary_new2(RARRAY(member)->len);
+    p = RARRAY(member)->ptr; pend = p + RARRAY(member)->len;
+    while (p < pend) {
+	rb_ary_push(ary, rb_str_new2(rb_id2name(SYM2ID(*p))));
+	p++;
+    }
+
+    return ary;
+}
+
+static VALUE
+rb_struct_members(obj)
+    VALUE obj;
+{
+    return rb_struct_s_members(rb_obj_class(obj));
+}
+
+VALUE
+rb_struct_getmember(obj, id)
+    VALUE obj;
+    ID id;
+{
+    VALUE member, slot;
+    long i;
+
+    member = rb_struct_iv_get(rb_obj_class(obj), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("uninitialized struct");
+    }
+    slot = ID2SYM(id);
+    for (i=0; i<RARRAY(member)->len; i++) {
+	if (RARRAY(member)->ptr[i] == slot) {
+	    return RSTRUCT(obj)->ptr[i];
+	}
+    }
+    rb_name_error(id, "%s is not struct member", rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+rb_struct_ref(obj)
+    VALUE obj;
+{
+    return rb_struct_getmember(obj, rb_frame_last_func());
+}
+
+static VALUE rb_struct_ref0(obj) VALUE obj; {return RSTRUCT(obj)->ptr[0];}
+static VALUE rb_struct_ref1(obj) VALUE obj; {return RSTRUCT(obj)->ptr[1];}
+static VALUE rb_struct_ref2(obj) VALUE obj; {return RSTRUCT(obj)->ptr[2];}
+static VALUE rb_struct_ref3(obj) VALUE obj; {return RSTRUCT(obj)->ptr[3];}
+static VALUE rb_struct_ref4(obj) VALUE obj; {return RSTRUCT(obj)->ptr[4];}
+static VALUE rb_struct_ref5(obj) VALUE obj; {return RSTRUCT(obj)->ptr[5];}
+static VALUE rb_struct_ref6(obj) VALUE obj; {return RSTRUCT(obj)->ptr[6];}
+static VALUE rb_struct_ref7(obj) VALUE obj; {return RSTRUCT(obj)->ptr[7];}
+static VALUE rb_struct_ref8(obj) VALUE obj; {return RSTRUCT(obj)->ptr[8];}
+static VALUE rb_struct_ref9(obj) VALUE obj; {return RSTRUCT(obj)->ptr[9];}
+
+static VALUE (*ref_func[10])() = {
+    rb_struct_ref0,
+    rb_struct_ref1,
+    rb_struct_ref2,
+    rb_struct_ref3,
+    rb_struct_ref4,
+    rb_struct_ref5,
+    rb_struct_ref6,
+    rb_struct_ref7,
+    rb_struct_ref8,
+    rb_struct_ref9,
+};
+
+static void
+rb_struct_modify(s)
+    VALUE s;
+{
+    if (OBJ_FROZEN(s)) rb_error_frozen("Struct");
+    if (!OBJ_TAINTED(s) && rb_safe_level() >= 4)
+       rb_raise(rb_eSecurityError, "Insecure: can't modify Struct");
+}
+
+static VALUE
+rb_struct_set(obj, val)
+    VALUE obj, val;
+{
+    VALUE member, slot;
+    long i;
+
+    member = rb_struct_iv_get(rb_obj_class(obj), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("uninitialized struct");
+    }
+    rb_struct_modify(obj);
+    for (i=0; i<RARRAY(member)->len; i++) {
+	slot = RARRAY(member)->ptr[i];
+	if (rb_id_attrset(SYM2ID(slot)) == rb_frame_last_func()) {
+	    return RSTRUCT(obj)->ptr[i] = val;
+	}
+    }
+    rb_name_error(rb_frame_last_func(), "`%s' is not a struct member",
+		  rb_id2name(rb_frame_last_func()));
+    return Qnil;		/* not reached */
+}
+
+static VALUE
+make_struct(name, member, klass)
+    VALUE name, member, klass;
+{
+    VALUE nstr;
+    ID id;
+    long i;
+
+    if (NIL_P(name)) {
+	nstr = rb_class_new(klass);
+	rb_class_inherited(klass, nstr);
+    }
+    else {
+	char *cname = StringValuePtr(name);
+	id = rb_intern(cname);
+	if (!rb_is_const_id(id)) {
+	    rb_name_error(id, "identifier %s needs to be constant", cname);
+	}
+	nstr = rb_define_class_under(klass, cname, klass);
+    }
+    rb_iv_set(nstr, "__size__", LONG2NUM(RARRAY(member)->len));
+    rb_iv_set(nstr, "__member__", member);
+
+    rb_define_singleton_method(nstr, "allocate", struct_alloc, 0);
+    rb_define_singleton_method(nstr, "new", rb_class_new_instance, -1);
+    rb_define_singleton_method(nstr, "[]", rb_class_new_instance, -1);
+    rb_define_singleton_method(nstr, "members", rb_struct_s_members, 0);
+    for (i=0; i< RARRAY(member)->len; i++) {
+	ID id = SYM2ID(RARRAY(member)->ptr[i]);
+	if (i<10) {
+	    rb_define_method_id(nstr, id, ref_func[i], 0);
+	}
+	else {
+	    rb_define_method_id(nstr, id, rb_struct_ref, 0);
+	}
+	rb_define_method_id(nstr, rb_id_attrset(id), rb_struct_set, 1);
+    }
+
+    return nstr;
+}
+
+#ifdef HAVE_STDARG_PROTOTYPES
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+#include <varargs.h>
+#define va_init_list(a,b) va_start(a)
+#endif
+
+VALUE
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_struct_define(const char *name, ...)
+#else
+rb_struct_define(name, va_alist)
+    const char *name;
+    va_dcl
+#endif
+{
+    va_list ar;
+    VALUE nm, ary;
+    char *mem;
+
+    if (!name) nm = Qnil;
+    else nm = rb_str_new2(name);
+    ary = rb_ary_new();
+
+    va_init_list(ar, name);
+    while (mem = va_arg(ar, char*)) {
+	ID slot = rb_intern(mem);
+	rb_ary_push(ary, ID2SYM(slot));
+    }
+    va_end(ar);
+
+    return make_struct(nm, ary, rb_cStruct);
+}
+
+static VALUE
+rb_struct_s_def(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE name, rest;
+    long i;
+    VALUE st;
+    ID id;
+
+    rb_scan_args(argc, argv, "1*", &name, &rest);
+    for (i=0; i<RARRAY(rest)->len; i++) {
+	id = rb_to_id(RARRAY(rest)->ptr[i]);
+	RARRAY(rest)->ptr[i] = ID2SYM(id);
+    }
+    if (!NIL_P(name) && TYPE(name) != T_STRING) {
+	id = rb_to_id(name);
+	rb_ary_unshift(rest, ID2SYM(id));
+	name = Qnil;
+    }
+    st = make_struct(name, rest, klass);
+
+    return st;
+}
+
+static VALUE
+rb_struct_initialize(self, values)
+    VALUE self, values;
+{
+    VALUE klass = rb_obj_class(self);
+    VALUE size;
+    long n;
+
+    rb_struct_modify(self);
+    size = rb_struct_iv_get(klass, "__size__");
+    n = FIX2LONG(size);
+    if (n < RARRAY(values)->len) {
+	rb_raise(rb_eArgError, "struct size differs");
+    }
+    MEMCPY(RSTRUCT(self)->ptr, RARRAY(values)->ptr, VALUE, RARRAY(values)->len);
+    if (n > RARRAY(values)->len) {
+	rb_mem_clear(RSTRUCT(self)->ptr+RARRAY(values)->len,
+		     n-RARRAY(values)->len);
+    }
+    return Qnil;
+}
+
+static VALUE
+struct_alloc(klass)
+    VALUE klass;
+{
+    VALUE size;
+    long n;
+    NEWOBJ(st, struct RStruct);
+    OBJSETUP(st, klass, T_STRUCT);
+
+    size = rb_struct_iv_get(klass, "__size__");
+    n = FIX2LONG(size);
+
+    st->ptr = ALLOC_N(VALUE, n);
+    rb_mem_clear(st->ptr, n);
+    st->len = n;
+
+    return (VALUE)st;
+}
+
+VALUE
+rb_struct_alloc(klass, values)
+    VALUE klass, values;
+{
+    return rb_class_new_instance(RARRAY(values)->len, RARRAY(values)->ptr, klass);
+}
+
+VALUE
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_struct_new(VALUE klass, ...)
+#else
+rb_struct_new(klass, va_alist)
+    VALUE klass;
+    va_dcl
+#endif
+{
+    VALUE sz, *mem;
+    long size, i;
+    va_list args;
+
+    sz = rb_struct_iv_get(klass, "__size__");
+    size = FIX2LONG(sz); 
+    mem = ALLOCA_N(VALUE, size);
+    va_init_list(args, klass);
+    for (i=0; i<size; i++) {
+	mem[i] = va_arg(args, VALUE);
+    }
+    va_end(args);
+
+    return rb_class_new_instance(size, mem, klass);
+}
+
+static VALUE
+rb_struct_each(s)
+    VALUE s;
+{
+    long i;
+
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	rb_yield(RSTRUCT(s)->ptr[i]);
+    }
+    return s;
+}
+
+static VALUE
+rb_struct_each_pair(s)
+    VALUE s;
+{
+    VALUE member;
+    long i;
+
+    member = rb_struct_iv_get(rb_obj_class(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	rb_yield(rb_assoc_new(RARRAY(member)->ptr[i], RSTRUCT(s)->ptr[i]));
+    }
+    return s;
+}
+
+static VALUE
+rb_struct_to_s(s)
+    VALUE s;
+{
+    char *cname = rb_class2name(rb_obj_class(s));
+    VALUE str = rb_str_new(0, strlen(cname) + 4);
+
+    sprintf(RSTRING(str)->ptr, "#<%s>", cname);
+    RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+    return str;
+}
+
+static VALUE
+inspect_struct(s)
+    VALUE s;
+{
+    char *cname = rb_class2name(rb_obj_class(s));
+    VALUE str, member;
+    long i;
+
+    member = rb_struct_iv_get(rb_obj_class(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+
+    str = rb_str_buf_new2("#<");
+    rb_str_cat2(str, cname);
+    rb_str_cat2(str, " ");
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	VALUE str2, slot;
+	char *p;
+
+	if (i > 0) {
+	    rb_str_cat2(str, ", ");
+	}
+	slot = RARRAY(member)->ptr[i];
+	p = rb_id2name(SYM2ID(slot));
+	rb_str_cat2(str, p);
+	rb_str_cat2(str, "=");
+	str2 = rb_inspect(RSTRUCT(s)->ptr[i]);
+	rb_str_append(str, str2);
+    }
+    rb_str_cat2(str, ">");
+    OBJ_INFECT(str, s);
+
+    return str;
+}
+
+static VALUE
+rb_struct_inspect(s)
+    VALUE s;
+{
+    if (rb_inspecting_p(s)) {
+	char *cname = rb_class2name(rb_obj_class(s));
+	VALUE str = rb_str_new(0, strlen(cname) + 8);
+
+	sprintf(RSTRING(str)->ptr, "#<%s:...>", cname);
+	RSTRING(str)->len = strlen(RSTRING(str)->ptr);
+	return str;
+    }
+    return rb_protect_inspect(inspect_struct, s, 0);
+}
+
+static VALUE
+rb_struct_to_a(s)
+    VALUE s;
+{
+    return rb_ary_new4(RSTRUCT(s)->len, RSTRUCT(s)->ptr);
+}
+
+static VALUE
+rb_struct_become(copy, s)
+    VALUE copy, s;
+{
+    if (copy == s) return copy;
+    rb_check_frozen(copy);
+    if (!rb_obj_is_instance_of(s, rb_obj_class(copy))) {
+	rb_raise(rb_eTypeError, "wrong argument class");
+    }
+    RSTRUCT(copy)->ptr = ALLOC_N(VALUE, RSTRUCT(s)->len);
+    RSTRUCT(copy)->len = RSTRUCT(s)->len;
+    MEMCPY(RSTRUCT(copy)->ptr, RSTRUCT(s)->ptr, VALUE, RSTRUCT(copy)->len);
+
+    return copy;
+}
+
+static VALUE
+rb_struct_aref_id(s, id)
+    VALUE s;
+    ID id;
+{
+    VALUE member;
+    long i, len;
+
+    member = rb_struct_iv_get(rb_obj_class(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (SYM2ID(RARRAY(member)->ptr[i]) == id) {
+	    return RSTRUCT(s)->ptr[i];
+	}
+    }
+    rb_name_error(id, "no member '%s' in struct", rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+VALUE
+rb_struct_aref(s, idx)
+    VALUE s, idx;
+{
+    long i;
+
+    if (TYPE(idx) == T_STRING || TYPE(idx) == T_SYMBOL) {
+	return rb_struct_aref_id(s, rb_to_id(idx));
+    }
+
+    i = NUM2LONG(idx);
+    if (i < 0) i = RSTRUCT(s)->len + i;
+    if (i < 0)
+        rb_raise(rb_eIndexError, "offset %ld too small for struct(size:%ld)",
+		 i, RSTRUCT(s)->len);
+    if (RSTRUCT(s)->len <= i)
+        rb_raise(rb_eIndexError, "offset %ld too large for struct(size:%ld)",
+		 i, RSTRUCT(s)->len);
+    return RSTRUCT(s)->ptr[i];
+}
+
+static VALUE
+rb_struct_aset_id(s, id, val)
+    VALUE s, val;
+    ID id;
+{
+    VALUE member;
+    long i, len;
+
+    member = rb_struct_iv_get(rb_obj_class(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+
+    rb_struct_modify(s);
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (SYM2ID(RARRAY(member)->ptr[i]) == id) {
+	    RSTRUCT(s)->ptr[i] = val;
+	    return val;
+	}
+    }
+    rb_name_error(id, "no member '%s' in struct", rb_id2name(id));
+}
+
+VALUE
+rb_struct_aset(s, idx, val)
+    VALUE s, idx, val;
+{
+    long i;
+
+    if (TYPE(idx) == T_STRING || TYPE(idx) == T_SYMBOL) {
+	return rb_struct_aset_id(s, rb_to_id(idx), val);
+    }
+
+    i = NUM2LONG(idx);
+    if (i < 0) i = RSTRUCT(s)->len + i;
+    if (i < 0) {
+        rb_raise(rb_eIndexError, "offset %ld too small for struct(size:%ld)",
+		 i, RSTRUCT(s)->len);
+    }
+    if (RSTRUCT(s)->len <= i) {
+        rb_raise(rb_eIndexError, "offset %ld too large for struct(size:%ld)",
+		 i, RSTRUCT(s)->len);
+    }
+    rb_struct_modify(s);
+    return RSTRUCT(s)->ptr[i] = val;
+}
+
+
+static VALUE
+rb_struct_select(argc, argv, s)
+    int argc;
+    VALUE *argv;
+    VALUE s;
+{
+    VALUE result = rb_ary_new();
+    long i;
+
+    if (rb_block_given_p()) {
+	if (argc > 0) {
+	    rb_raise(rb_eArgError, "wrong number arguments(%d for 0)", argc);
+	}
+	for (i = 0; i < RSTRUCT(s)->len; i++) {
+	    if (RTEST(rb_yield(RSTRUCT(s)->ptr[i]))) {
+		rb_ary_push(result, RSTRUCT(s)->ptr[i]);
+	    }
+	}
+    }
+    else {
+	for (i=0; i<argc; i++) {
+	    rb_ary_push(result, rb_struct_aref(s, argv[i]));
+	}
+    }
+    return result;
+}
+
+static VALUE
+rb_struct_equal(s, s2)
+    VALUE s, s2;
+{
+    long i;
+
+    if (s == s2) return Qtrue;
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (rb_obj_class(s) != rb_obj_class(s2)) return Qfalse;
+    if (RSTRUCT(s)->len != RSTRUCT(s2)->len) {
+	rb_bug("inconsistent struct"); /* should never happen */
+    }
+
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	if (!rb_equal(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+    }
+    return Qtrue;
+}
+
+static VALUE
+rb_struct_size(s)
+    VALUE s;
+{
+    return LONG2FIX(RSTRUCT(s)->len);
+}
+
+void
+Init_Struct()
+{
+    rb_cStruct = rb_define_class("Struct", rb_cObject);
+    rb_include_module(rb_cStruct, rb_mEnumerable);
+
+    rb_undef_method(CLASS_OF(rb_cStruct), "allocate");
+    rb_define_singleton_method(rb_cStruct, "new", rb_struct_s_def, -1);
+
+    rb_define_method(rb_cStruct, "initialize", rb_struct_initialize, -2);
+    rb_define_method(rb_cStruct, "become", rb_struct_become, 1);
+
+    rb_define_method(rb_cStruct, "==", rb_struct_equal, 1);
+
+    rb_define_method(rb_cStruct, "to_s", rb_struct_to_s, 0);
+    rb_define_method(rb_cStruct, "inspect", rb_struct_inspect, 0);
+    rb_define_method(rb_cStruct, "to_a", rb_struct_to_a, 0);
+    rb_define_method(rb_cStruct, "values", rb_struct_to_a, 0);
+    rb_define_method(rb_cStruct, "size", rb_struct_size, 0);
+    rb_define_method(rb_cStruct, "length", rb_struct_size, 0);
+
+    rb_define_method(rb_cStruct, "each", rb_struct_each, 0);
+    rb_define_method(rb_cStruct, "each_pair", rb_struct_each_pair, 0);
+    rb_define_method(rb_cStruct, "[]", rb_struct_aref, 1);
+    rb_define_method(rb_cStruct, "[]=", rb_struct_aset, 2);
+    rb_define_method(rb_cStruct, "select", rb_struct_select, -1);
+
+    rb_define_method(rb_cStruct, "members", rb_struct_members, 0);
+}
+@
+
+
+1.37
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/29 09:08:16 $
+d475 1
+a475 1
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+d478 1
+a478 1
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+d520 1
+a520 1
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+d524 1
+a524 1
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+@
+
+
+1.36
+log
+@* array.c (rb_ary_become): should not free ptr if it's shared.
+
+* eval.c (rb_alias): prohibit making an alias named "allocate" if
+  klass is a metaclass.
+
+* string.c (rb_string_value_ptr): StringValuePtr() should never
+  return NULL pointer.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/27 08:31:06 $
+d424 2
+a425 2
+rb_struct_become(clone, s)
+    VALUE clone, s;
+d427 3
+a429 1
+    if (!rb_obj_is_instance_of(s, rb_obj_class(clone))) {
+d432 3
+a434 3
+    RSTRUCT(clone)->ptr = ALLOC_N(VALUE, RSTRUCT(s)->len);
+    RSTRUCT(clone)->len = RSTRUCT(s)->len;
+    MEMCPY(RSTRUCT(clone)->ptr, RSTRUCT(s)->ptr, VALUE, RSTRUCT(clone)->len);
+d436 1
+a436 1
+    return clone;
+@
+
+
+1.35
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d427 2
+a428 2
+    if (!rb_obj_is_kind_of(s, rb_obj_class(clone))) {
+	rb_raise(rb_eTypeError, "wrong argument type");
+@
+
+
+1.34
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d424 2
+a425 2
+rb_struct_clone(s)
+    VALUE s;
+d427 3
+a429 2
+    VALUE clone = rb_obj_clone(s);
+
+d593 1
+a593 1
+    rb_define_method(rb_cStruct, "clone", rb_struct_clone, 0);
+@
+
+
+1.33
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/12 08:45:02 $
+d169 1
+a169 1
+    rb_iv_set(nstr, "__size__", INT2NUM(RARRAY(member)->len));
+d579 1
+a579 1
+    return INT2FIX(RSTRUCT(s)->len);
+@
+
+
+1.32
+log
+@* struct.c (rb_struct_select): fix typo.
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.31
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/14 07:49:27 $
+d543 1
+a543 1
+	    if (RTEST(rb_yield(RARRAY(s)->ptr[i]))) {
+@
+
+
+1.30
+log
+@* struct.c (Init_Struct): should undefine "allocate" for Struct
+  class (it's redefined in the subclasses).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 20:18:39 $
+d337 17
+d604 1
+@
+
+
+1.29
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/12/11 03:48:08 $
+d135 1
+a135 1
+	rb_bug("non-initialized struct");
+d571 1
+@
+
+
+1.28
+log
+@* string.c (rb_str_match_m): should convert an argument into
+  regexp if it's a string.
+
+* array.c (rb_ary_select): Array#select(n,m,...) now works like
+  Array#indexes(n,m,..). [new, experimental]
+
+* hash.c (rb_hash_select): ditto.
+
+* hash.c (env_select): ditto.
+
+* re.c (match_select): ditto.
+
+* struct.c (rb_struct_select): ditto.
+
+* gc.c (STR_ASSOC): use FL_USER3 instead of FL_USER2.
+
+* parse.y (str_extend): make up pushback call.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d159 1
+@
+
+
+1.27
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/29 06:28:44 $
+d510 28
+d587 1
+@
+
+
+1.26
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/20 04:29:56 $
+d17 1
+a17 1
+static VALUE struct_alloc _((int, VALUE*, VALUE));
+d171 3
+a173 2
+    rb_define_singleton_method(nstr, "new", struct_alloc, -1);
+    rb_define_singleton_method(nstr, "[]", struct_alloc, -1);
+d273 1
+a273 3
+struct_alloc(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+a277 1
+
+a286 1
+    rb_obj_call_init((VALUE)st, argc, argv);
+d295 1
+a295 1
+    return struct_alloc(RARRAY(values)->len, RARRAY(values)->ptr, klass);
+d320 1
+a320 1
+    return struct_alloc(size, mem, klass);
+d409 5
+a413 5
+    NEWOBJ(clone, struct RStruct);
+    CLONESETUP(clone, s);
+    clone->ptr = ALLOC_N(VALUE, RSTRUCT(s)->len);
+    clone->len = RSTRUCT(s)->len;
+    MEMCPY(clone->ptr, RSTRUCT(s)->ptr, VALUE, clone->len);
+d415 1
+a415 1
+    return (VALUE)clone;
+@
+
+
+1.25
+log
+@* range.c (range_step): 'iter' here should be an array.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+
+* variable.c (rb_cvar_get): class variable override check added.
+
+* variable.c (rb_cvar_set): ditto
+
+* variable.c (rb_cvar_declare): ditto.
+
+* parse.y (parse_regx): handle backslash escaping of delimiter here.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/06 03:08:57 $
+d19 3
+a21 3
+static VALUE
+iv_get(obj, name)
+    VALUE obj;
+d28 4
+a31 4
+	if (rb_ivar_defined(obj, id))
+	    return rb_ivar_get(obj, id);
+	obj = RCLASS(obj)->super;
+	if (obj == 0 || obj == rb_cStruct)
+d43 1
+a43 1
+    member = iv_get(obj, "__member__");
+d72 1
+a72 1
+    member = iv_get(rb_obj_class(obj), "__member__");
+d133 1
+a133 1
+    member = iv_get(rb_obj_class(obj), "__member__");
+d258 1
+a258 1
+    size = iv_get(klass, "__size__");
+d283 1
+a283 1
+    size = iv_get(klass, "__size__");
+d314 1
+a314 1
+    sz = iv_get(klass, "__size__");
+d358 1
+a358 1
+    member = iv_get(rb_obj_class(s), "__member__");
+d429 1
+a429 1
+    member = iv_get(rb_obj_class(s), "__member__");
+d473 1
+a473 1
+    member = iv_get(rb_obj_class(s), "__member__");
+d519 1
+@
+
+
+1.24
+log
+@* struct.c (rb_struct_modify): should check frozen and taint
+  status.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/02 08:46:22 $
+a19 10
+class_of(obj)
+    VALUE obj;
+{
+    obj = CLASS_OF(obj);
+    if (FL_TEST(obj, FL_SINGLETON))
+	return RCLASS(obj)->super;
+    return obj;
+}
+
+static VALUE
+d61 1
+a61 1
+    return rb_struct_s_members(class_of(obj));
+d72 1
+a72 1
+    member = iv_get(class_of(obj), "__member__");
+d133 1
+a133 1
+    member = iv_get(class_of(obj), "__member__");
+d253 1
+a253 1
+    VALUE klass = CLASS_OF(self);
+d342 1
+a342 1
+    char *cname = rb_class2name(CLASS_OF(s));
+d354 1
+a354 1
+    char *cname = rb_class2name(CLASS_OF(s));
+d358 1
+a358 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d391 1
+a391 1
+	char *cname = rb_class2name(CLASS_OF(s));
+d429 1
+a429 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d473 1
+a473 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d520 1
+a520 1
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+@
+
+
+1.23
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d127 9
+d147 1
+d267 1
+d488 1
+a488 1
+    if (OBJ_FROZEN(s)) rb_error_frozen("Struct");
+d519 1
+a519 1
+    if (OBJ_FROZEN(s)) rb_error_frozen("Struct");
+@
+
+
+1.22
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d92 1
+a92 1
+    rb_raise(rb_eNameError, "%s is not struct member", rb_id2name(id));
+d144 2
+a145 1
+    rb_raise(rb_eNameError, "not struct member");
+d164 1
+a164 1
+	    rb_raise(rb_eNameError, "identifier %s needs to be constant", cname);
+d439 1
+a439 1
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+d485 1
+a485 1
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+@
+
+
+1.21
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:58 $
+d361 1
+a361 1
+    str = rb_str_new2("#<");
+@
+
+
+1.20
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/13 09:01:58 $
+d160 1
+a160 1
+	char *cname = STR2CSTR(name);
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/10 07:03:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.19.2.1
+log
+@* struct.c (rb_struct_modify): should check frozen and taint
+  status.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/13 09:01:58 $
+a126 9
+static void
+rb_struct_modify(s)
+    VALUE s;
+{
+    if (OBJ_FROZEN(s)) rb_error_frozen("Struct");
+    if (!OBJ_TAINTED(s) && rb_safe_level() >= 4)
+       rb_raise(rb_eSecurityError, "Insecure: can't modify Struct");
+}
+
+a137 1
+    rb_struct_modify(obj);
+a255 1
+    rb_struct_modify(self);
+d476 1
+a476 1
+    rb_struct_modify(s);
+d507 1
+a507 1
+    rb_struct_modify(s);
+@
+
+
+1.19.2.2
+log
+@* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/06 03:10:24 $
+a527 1
+    if (s == s2) return Qtrue;
+@
+
+
+1.19.2.3
+log
+@* class.c (rb_make_metaclass): [new]
+
+* class.c (rb_define_class_id): use rb_make_metaclass(), don't
+  call Class#inherited hook.
+
+* class.c (rb_class_inherited): [new]
+
+* class.c (rb_define_class): call Class#inherited hook here.
+
+* class.c (rb_define_class_under): ditto after class path is set.
+
+* class.c (rb_singleton_class): use rb_make_metaclass().
+
+* eval.c (rb_eval): same as rb_define_class_under().
+
+* intern.h: prototypes of rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (rb_class_s_new): use rb_make_metaclass() and
+  rb_class_inherited().
+
+* object.c (Init_Object): use rb_make_metaclass().
+
+* struct.c (make_struct): use rb_class_inherited().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/24 06:36:14 $
+a167 1
+	rb_class_inherited(klass, nstr);
+@
+
+
+1.19.2.4
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/01/10 23:38:57 $
+d467 1
+a467 1
+        rb_raise(rb_eIndexError, "offset %ld too small for struct(size:%ld)",
+d470 1
+a470 1
+        rb_raise(rb_eIndexError, "offset %ld too large for struct(size:%ld)",
+d512 1
+a512 1
+        rb_raise(rb_eIndexError, "offset %ld too small for struct(size:%ld)",
+d516 1
+a516 1
+        rb_raise(rb_eIndexError, "offset %ld too large for struct(size:%ld)",
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/09 04:32:18 $
+d344 1
+d393 1
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/06 07:21:13 $
+d341 1
+a341 1
+    char *buf = ALLOCA_N(char, strlen(cname) + 4);
+d343 2
+a344 2
+    sprintf(buf, "#<%s>", cname);
+    return rb_str_new2(buf);
+d389 1
+a389 1
+	char *buf = ALLOCA_N(char, strlen(cname) + 8);
+d391 2
+a392 2
+	sprintf(buf, "#<%s:...>", cname);
+	return rb_str_new2(buf);
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/14 05:30:23 $
+a283 1
+    st->len = 0;		/* avoid GC crashing  */
+a409 1
+    clone->len = 0;		/* avoid GC crashing  */
+@
+
+
+1.15
+log
+@2000-06-14
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:09 $
+d238 1
+a238 1
+    if (TYPE(name) != T_STRING) {
+@
+
+
+1.14
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:30 $
+d499 1
+a499 1
+    if (i < 0)
+d502 2
+a503 1
+    if (RSTRUCT(s)->len <= i)
+d506 1
+@
+
+
+1.13
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:44:19 $
+d55 1
+a55 1
+	rb_bug("non-initialized struct");
+d84 1
+a84 1
+	rb_bug("non-initialized struct");
+d86 1
+a86 1
+    slot = INT2NUM(id);
+@
+
+
+1.12
+log
+@2000-04-10
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/13 07:18:40 $
+d9 3
+a11 1
+************************************************/
+@
+
+
+1.11
+log
+@2000-03-13
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:48 $
+d58 1
+a58 1
+	rb_ary_push(ary, rb_str_new2(rb_id2name(FIX2INT(*p))));
+d138 1
+a138 1
+	if (rb_id_attrset(FIX2INT(slot)) == rb_frame_last_func()) {
+d172 1
+a172 1
+	ID id = FIX2INT(RARRAY(member)->ptr[i]);
+d213 1
+a213 1
+	rb_ary_push(ary, INT2FIX(slot));
+d234 1
+a234 1
+	RARRAY(rest)->ptr[i] = INT2FIX(id);
+d238 1
+a238 1
+	rb_ary_unshift(rest, INT2FIX(id));
+d255 1
+a255 1
+    n = FIX2INT(size);
+d360 2
+a361 2
+    rb_str_cat(str, cname, strlen(cname));
+    rb_str_cat(str, " ", 1);
+d367 1
+a367 1
+	    rb_str_cat(str, ", ", 2);
+d370 3
+a372 3
+	p = rb_id2name(FIX2LONG(slot));
+	rb_str_cat(str, p, strlen(p));
+	rb_str_cat(str, "=", 1);
+d374 1
+a374 2
+	rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+	OBJ_INFECT(str, str2);
+d376 1
+a376 1
+    rb_str_cat(str, ">", 1);
+d432 1
+a432 1
+	if (FIX2UINT(RARRAY(member)->ptr[i]) == id) {
+d477 1
+a477 1
+	if (FIX2UINT(RARRAY(member)->ptr[i]) == id) {
+@
+
+
+1.10
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/23 05:23:10 $
+d447 1
+a447 1
+    if (TYPE(idx) == T_STRING) {
+d492 1
+a492 1
+    if (TYPE(idx) == T_STRING) {
+@
+
+
+1.9
+log
+@2000-02-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:13 $
+a11 4
+
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+@
+
+
+1.8
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/18 06:09:03 $
+d379 1
+d382 1
+@
+
+
+1.7
+log
+@2000-01-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:12 $
+d477 1
+d506 1
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:52 $
+a526 32
+rb_struct_eql(s, s2)
+    VALUE s, s2;
+{
+    long i;
+
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+    if (RSTRUCT(s)->len != RSTRUCT(s2)->len) {
+	rb_bug("inconsistent struct"); /* should never happen */
+    }
+
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	if (!rb_eql(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+    }
+    return Qtrue;
+}
+
+static VALUE
+rb_struct_hash(s)
+    VALUE s;
+{
+    long i;
+    int h;
+
+    h = CLASS_OF(s);
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	h ^= rb_hash(RSTRUCT(s)->ptr[i]);
+    }
+    return INT2FIX(h);
+}
+
+static VALUE
+a544 2
+    rb_define_method(rb_cStruct, "eql?", rb_struct_eql, 1);
+    rb_define_method(rb_cStruct, "hash", rb_struct_hash, 0);
+@
+
+
+1.5
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/07 09:23:28 $
+d410 6
+a415 6
+    NEWOBJ(st, struct RStruct);
+    CLONESETUP(st, s);
+    st->len = 0;		/* avoid GC crashing  */
+    st->ptr = ALLOC_N(VALUE, RSTRUCT(s)->len);
+    st->len = RSTRUCT(s)->len;
+    MEMCPY(st->ptr, RSTRUCT(s)->ptr, VALUE, st->len);
+d417 1
+a417 1
+    return (VALUE)st;
+@
+
+
+1.4
+log
+@991207
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:36 $
+d164 1
+a164 1
+	if (!rb_is_shared_id(id)) {
+d210 2
+a211 1
+    nm = rb_str_new2(name);
+d228 1
+d233 1
+d237 1
+a237 1
+	ID id = rb_to_id(RARRAY(rest)->ptr[i]);
+d239 5
+@
+
+
+1.3
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+d550 7
+d576 2
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/22 10:37:22 $
+d164 1
+a164 1
+	if (!rb_is_const_id(id)) {
+@
+
+
+1.2.2.1
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:15 $
+a226 1
+    VALUE klass;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:43:02 $
+d13 34
+a46 3
+ID rb_frame_last_func();
+VALUE cStruct;
+extern VALUE mEnumerable;
+d49 1
+a49 1
+struct_s_members(obj)
+d52 2
+a53 2
+    struct RArray *member;
+    VALUE ary, *p, *pend;
+d55 1
+a55 1
+    member = RARRAY(rb_iv_get(obj, "__member__"));
+d57 1
+a57 1
+	Fatal("non-initialized struct");
+d59 2
+a60 2
+    ary = ary_new2(member->len);
+    p = member->ptr; pend = p + member->len;
+d62 1
+a62 1
+	ary_push(ary, str_new2(rb_id2name(FIX2INT(*p))));
+d70 1
+a70 1
+struct_members(obj)
+d73 1
+a73 1
+    return struct_s_members(CLASS_OF(obj));
+d77 2
+a78 2
+struct_getmember(obj, id)
+    struct RStruct *obj;
+d81 2
+a82 2
+    VALUE nstr, member, slot;
+    int i;
+d84 1
+a84 2
+    nstr = CLASS_OF(obj);
+    member = rb_iv_get(nstr, "__member__");
+d86 1
+a86 1
+	Bug("non-initialized struct");
+d88 1
+a88 1
+    slot = INT2FIX(id);
+d91 1
+a91 1
+	    return obj->ptr[i];
+d94 2
+a95 2
+    NameError("%s is not struct member", rb_id2name(id));
+    /* not reached */
+d99 1
+a99 1
+struct_ref(obj)
+d102 1
+a102 1
+    return struct_getmember(obj, rb_frame_last_func());
+d105 22
+a126 22
+static VALUE struct_ref0(obj) struct RStruct *obj; {return obj->ptr[0];}
+static VALUE struct_ref1(obj) struct RStruct *obj; {return obj->ptr[1];}
+static VALUE struct_ref2(obj) struct RStruct *obj; {return obj->ptr[2];}
+static VALUE struct_ref3(obj) struct RStruct *obj; {return obj->ptr[3];}
+static VALUE struct_ref4(obj) struct RStruct *obj; {return obj->ptr[4];}
+static VALUE struct_ref5(obj) struct RStruct *obj; {return obj->ptr[5];}
+static VALUE struct_ref6(obj) struct RStruct *obj; {return obj->ptr[6];}
+static VALUE struct_ref7(obj) struct RStruct *obj; {return obj->ptr[7];}
+static VALUE struct_ref8(obj) struct RStruct *obj; {return obj->ptr[8];}
+static VALUE struct_ref9(obj) struct RStruct *obj; {return obj->ptr[9];}
+
+VALUE (*ref_func[10])() = {
+    struct_ref0,
+    struct_ref1,
+    struct_ref2,
+    struct_ref3,
+    struct_ref4,
+    struct_ref5,
+    struct_ref6,
+    struct_ref7,
+    struct_ref8,
+    struct_ref9,
+d130 2
+a131 3
+struct_set(obj, val)
+    struct RStruct *obj;
+    VALUE val;
+d133 2
+a134 2
+    VALUE nstr, member, slot;
+    int i;
+d136 1
+a136 2
+    nstr = CLASS_OF(obj);
+    member = rb_iv_get(nstr, "__member__");
+d138 1
+a138 1
+	Fatal("non-initialized struct");
+d142 2
+a143 2
+	if (id_attrset(FIX2INT(slot)) == rb_frame_last_func()) {
+	    return obj->ptr[i] = val;
+d146 2
+a147 2
+    NameError("not struct member");
+    /* not reached */
+a149 2
+VALUE struct_alloc();
+
+d151 2
+a152 3
+make_struct(name, member)
+    struct RString *name;
+    struct RArray *member;
+d156 1
+a156 1
+    int i;
+d158 10
+a167 3
+    id = rb_intern(name->ptr);
+    if (!rb_is_const_id(id)) {
+	NameError("identifier %s needs to be constant", name->ptr);
+d169 1
+a169 2
+    nstr = rb_define_class_under(cStruct, name->ptr, cStruct);
+    rb_iv_set(nstr, "__size__", INT2FIX(member->len));
+d172 5
+a176 5
+    rb_define_singleton_method(nstr, "new", struct_alloc, -2);
+    rb_define_singleton_method(nstr, "[]", struct_alloc, -2);
+    rb_define_singleton_method(nstr, "members", struct_s_members, 0);
+    for (i=0; i< member->len; i++) {
+	ID id = FIX2INT(member->ptr[i]);
+d181 1
+a181 1
+	    rb_define_method_id(nstr, id, struct_ref, 0);
+d183 1
+a183 1
+	rb_define_method_id(nstr, id_attrset(id), struct_set, 1);
+d189 4
+d194 2
+d198 5
+a202 2
+struct_define(name, va_alist)
+    char *name;
+d204 1
+d210 2
+a211 2
+    nm = str_new2(name);
+    ary = ary_new();
+d213 1
+a213 1
+    va_start(ar);
+d216 1
+a216 1
+	ary_push(ary, INT2FIX(slot));
+d220 1
+a220 1
+    return make_struct(nm, ary);
+d224 1
+a224 1
+struct_s_def(argc, argv)
+d228 3
+a230 3
+    struct RString *name;
+    struct RArray *rest;
+    int i;
+d233 3
+a235 4
+    Check_Type(name, T_STRING);
+    for (i=0; i<rest->len; i++) {
+	ID id = rb_to_id(rest->ptr[i]);
+	rest->ptr[i] = INT2FIX(id);
+d237 3
+a239 1
+    return make_struct(name, rest);
+d242 3
+a244 4
+VALUE
+struct_alloc(class, values)
+    VALUE class;
+    struct RArray *values;
+d246 1
+d248 1
+a248 1
+    int n;
+d250 1
+a250 1
+    size = rb_iv_get(class, "__size__");
+d252 2
+a253 2
+    if (n < values->len) {
+	ArgError("struct size differs");
+d255 31
+a285 8
+    else {
+	NEWOBJ(st, struct RStruct);
+	OBJSETUP(st, class, T_STRUCT);
+	st->len = n;
+	st->ptr = 0;		/* avoid GC crashing  */
+	st->ptr = ALLOC_N(VALUE, n);
+	MEMCPY(st->ptr, values->ptr, VALUE, values->len);
+	memclear(st->ptr+values->len, n - values->len);
+d287 5
+a291 3
+	return (VALUE)st;
+    }
+    /* not reached */
+d295 5
+a299 2
+struct_new(class, va_alist)
+    VALUE class;
+d301 1
+d303 2
+a304 2
+    VALUE val, mem;
+    int size;
+d307 6
+a312 7
+    val = rb_iv_get(class, "__size__");
+    size = FIX2INT(val); 
+    mem = ary_new();
+    va_start(args);
+    while (size--) {
+	val = va_arg(args, VALUE);
+	ary_push(mem, val);
+d316 1
+a316 1
+    return struct_alloc(class, mem);
+d320 2
+a321 2
+struct_each(s)
+    struct RStruct *s;
+d323 1
+a323 1
+    int i;
+d325 2
+a326 2
+    for (i=0; i<s->len; i++) {
+	rb_yield(s->ptr[i]);
+d328 1
+a328 1
+    return Qnil;
+a330 2
+char *rb_class2name();
+
+d332 2
+a333 2
+struct_to_s(s)
+    struct RStruct *s;
+d335 2
+a336 1
+    char *name, *buf;
+d338 2
+a339 4
+    name = rb_class2name(CLASS_OF(s));
+    buf = ALLOCA_N(char, strlen(name)+1);
+    sprintf(buf, "%s", name);
+    return str_new2(buf);
+d343 2
+a344 2
+struct_inspect(s)
+    struct RStruct *s;
+d346 1
+a346 1
+    char *name = rb_class2name(CLASS_OF(s));
+d348 1
+a348 2
+    char buf[256];
+    int i;
+d350 1
+a350 1
+    member = rb_iv_get(CLASS_OF(s), "__member__");
+d352 1
+a352 1
+	Fatal("non-initialized struct");
+d355 4
+a358 3
+    sprintf(buf, "#<%s ", name);
+    str = str_new2(buf);
+    for (i=0; i<s->len; i++) {
+d363 1
+a363 1
+	    str_cat(str, ", ", 2);
+d366 5
+a370 6
+	p = rb_id2name(FIX2INT(slot));
+	str_cat(str, p, strlen(p));
+	str_cat(str, "=", 1);
+	str2 = rb_inspect(s->ptr[i]);
+	str2 = obj_as_string(str2);
+	str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d372 1
+a372 1
+    str_cat(str, ">", 1);
+d378 16
+a393 2
+struct_to_a(s)
+    struct RStruct *s;
+d395 1
+a395 1
+    return ary_new4(s->len, s->ptr);
+d399 2
+a400 2
+struct_clone(s)
+    struct RStruct *s;
+d404 4
+a407 4
+    st->len = s->len;
+    st->ptr = 0;		/* avoid GC crashing  */
+    st->ptr = ALLOC_N(VALUE, s->len);
+    MEMCPY(st->ptr, s->ptr, VALUE, st->len);
+d412 23
+d436 2
+a437 3
+struct_aref(s, idx)
+    struct RStruct *s;
+    VALUE idx;
+d439 5
+a443 1
+    int i;
+d445 2
+a446 2
+    i = NUM2INT(idx);
+    if (i < 0) i = s->len - i;
+d448 29
+a476 4
+        IndexError("offset %d too small for struct(size:%d)", i, s->len);
+    if (s->len <= i)
+        IndexError("offset %d too large for struct(size:%d)", i, s->len);
+    return s->ptr[i];
+d480 2
+a481 3
+struct_aset(s, idx, val)
+    struct RStruct *s;
+    VALUE idx, val;
+d483 5
+a487 1
+    int i;
+d489 2
+a490 2
+    i = NUM2INT(idx);
+    if (i < 0) i = s->len - i;
+d492 6
+a497 4
+        IndexError("offset %d too small for struct(size:%d)", i, s->len);
+    if (s->len <= i)
+        IndexError("offset %d too large for struct(size:%d)", i, s->len);
+    return s->ptr[i] = val;
+d501 2
+a502 2
+struct_equal(s, s2)
+    struct RStruct *s, *s2;
+d504 1
+a504 1
+    int i;
+d506 4
+a509 4
+    if (TYPE(s2) != T_STRUCT) return FALSE;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return FALSE;
+    if (s->len != s2->len) {
+	Bug("inconsistent struct"); /* should never happen */
+d512 2
+a513 2
+    for (i=0; i<s->len; i++) {
+	if (!rb_equal(s->ptr[i], s2->ptr[i])) return FALSE;
+d515 1
+a515 1
+    return TRUE;
+d519 2
+a520 2
+struct_eql(s, s2)
+    struct RStruct *s, *s2;
+d522 1
+a522 1
+    int i;
+d524 4
+a527 4
+    if (TYPE(s2) != T_STRUCT) return FALSE;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return FALSE;
+    if (s->len != s2->len) {
+	Bug("inconsistent struct"); /* should never happen */
+d530 2
+a531 2
+    for (i=0; i<s->len; i++) {
+	if (!rb_eql(s->ptr[i], s2->ptr[i])) return FALSE;
+d533 1
+a533 1
+    return TRUE;
+d537 2
+a538 2
+struct_hash(s)
+    struct RStruct *s;
+d540 2
+a541 1
+    int i, h;
+d544 2
+a545 2
+    for (i=0; i<s->len; i++) {
+	h ^= rb_hash(s->ptr[i]);
+d553 2
+a554 2
+    cStruct = rb_define_class("Struct", cObject);
+    rb_include_module(cStruct, mEnumerable);
+d556 1
+a556 1
+    rb_define_singleton_method(cStruct, "new", struct_s_def, -1);
+d558 2
+a559 1
+    rb_define_method(cStruct, "clone", struct_clone, 0);
+d561 3
+a563 3
+    rb_define_method(cStruct, "==", struct_equal, 1);
+    rb_define_method(cStruct, "eql?", struct_eql, 1);
+    rb_define_method(cStruct, "hash", struct_hash, 0);
+d565 4
+a568 4
+    rb_define_method(cStruct, "to_s", struct_to_s, 0);
+    rb_define_method(cStruct, "inspect", struct_inspect, 0);
+    rb_define_method(cStruct, "to_a", struct_to_a, 0);
+    rb_define_method(cStruct, "values", struct_to_a, 0);
+d570 3
+a572 3
+    rb_define_method(cStruct, "each", struct_each, 0);
+    rb_define_method(cStruct, "[]", struct_aref, 1);
+    rb_define_method(cStruct, "[]=", struct_aset, 2);
+d574 1
+a574 1
+    rb_define_method(cStruct, "members", struct_members, 0);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d47 1
+a47 1
+    VALUE obj;
+d61 1
+a61 1
+	    return RSTRUCT(obj)->ptr[i];
+d75 10
+a84 10
+static VALUE struct_ref0(obj) VALUE obj; {return RSTRUCT(obj)->ptr[0];}
+static VALUE struct_ref1(obj) VALUE obj; {return RSTRUCT(obj)->ptr[1];}
+static VALUE struct_ref2(obj) VALUE obj; {return RSTRUCT(obj)->ptr[2];}
+static VALUE struct_ref3(obj) VALUE obj; {return RSTRUCT(obj)->ptr[3];}
+static VALUE struct_ref4(obj) VALUE obj; {return RSTRUCT(obj)->ptr[4];}
+static VALUE struct_ref5(obj) VALUE obj; {return RSTRUCT(obj)->ptr[5];}
+static VALUE struct_ref6(obj) VALUE obj; {return RSTRUCT(obj)->ptr[6];}
+static VALUE struct_ref7(obj) VALUE obj; {return RSTRUCT(obj)->ptr[7];}
+static VALUE struct_ref8(obj) VALUE obj; {return RSTRUCT(obj)->ptr[8];}
+static VALUE struct_ref9(obj) VALUE obj; {return RSTRUCT(obj)->ptr[9];}
+d101 2
+a102 1
+    VALUE obj, val;
+d115 1
+a115 1
+	    return RSTRUCT(obj)->ptr[i] = val;
+d126 2
+a127 1
+    VALUE name, member;
+d133 1
+a133 1
+    id = rb_intern(RSTRING(name)->ptr);
+d135 1
+a135 1
+	NameError("identifier %s needs to be constant", RSTRING(name)->ptr);
+d137 2
+a138 2
+    nstr = rb_define_class_under(cStruct, RSTRING(name)->ptr, cStruct);
+    rb_iv_set(nstr, "__size__", INT2FIX(RARRAY(member)->len));
+d144 2
+a145 2
+    for (i=0; i< RARRAY(member)->len; i++) {
+	ID id = FIX2INT(RARRAY(member)->ptr[i]);
+d202 2
+a203 1
+    VALUE class, values;
+d210 1
+a210 1
+    if (n < RARRAY(values)->len) {
+d219 2
+a220 2
+	MEMCPY(st->ptr, RARRAY(values)->ptr, VALUE, RARRAY(values)->len);
+	memclear(st->ptr+RARRAY(values)->len, n - RARRAY(values)->len);
+d251 1
+a251 1
+    VALUE s;
+d255 2
+a256 2
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	rb_yield(RSTRUCT(s)->ptr[i]);
+d265 1
+a265 1
+    VALUE s;
+d277 1
+a277 1
+    VALUE s;
+d291 1
+a291 1
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+d302 1
+a302 1
+	str2 = rb_inspect(RSTRUCT(s)->ptr[i]);
+d313 1
+a313 1
+    VALUE s;
+d315 1
+a315 1
+    return ary_new4(RSTRUCT(s)->len, RSTRUCT(s)->ptr);
+d320 1
+a320 1
+    VALUE s;
+d324 1
+a324 1
+    st->len = RSTRUCT(s)->len;
+d326 2
+a327 2
+    st->ptr = ALLOC_N(VALUE, RSTRUCT(s)->len);
+    MEMCPY(st->ptr, RSTRUCT(s)->ptr, VALUE, st->len);
+d334 2
+a335 1
+    VALUE s, idx;
+d340 1
+a340 1
+    if (i < 0) i = RSTRUCT(s)->len - i;
+d342 4
+a345 4
+        IndexError("offset %d too small for struct(size:%d)", i, RSTRUCT(s)->len);
+    if (RSTRUCT(s)->len <= i)
+        IndexError("offset %d too large for struct(size:%d)", i, RSTRUCT(s)->len);
+    return RSTRUCT(s)->ptr[i];
+d350 2
+a351 1
+    VALUE s, idx, val;
+d356 1
+a356 1
+    if (i < 0) i = RSTRUCT(s)->len - i;
+d358 4
+a361 4
+        IndexError("offset %d too small for struct(size:%d)", i, RSTRUCT(s)->len);
+    if (RSTRUCT(s)->len <= i)
+        IndexError("offset %d too large for struct(size:%d)", i, RSTRUCT(s)->len);
+    return RSTRUCT(s)->ptr[i] = val;
+d366 1
+a366 1
+    VALUE s, s2;
+d372 1
+a372 1
+    if (RSTRUCT(s)->len != RSTRUCT(s2)->len) {
+d376 2
+a377 2
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	if (!rb_equal(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return FALSE;
+d384 1
+a384 1
+    VALUE s, s2;
+d390 1
+a390 1
+    if (RSTRUCT(s)->len != RSTRUCT(s2)->len) {
+d394 2
+a395 2
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	if (!rb_eql(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return FALSE;
+d402 1
+a402 1
+    VALUE s;
+d407 2
+a408 2
+    for (i=0; i<RSTRUCT(s)->len; i++) {
+	h ^= rb_hash(RSTRUCT(s)->ptr[i]);
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:09:21 $
+d13 3
+a15 5
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+
+VALUE rb_cStruct;
+d18 1
+a18 1
+class_of(obj)
+d21 2
+a22 5
+    obj = CLASS_OF(obj);
+    if (FL_TEST(obj, FL_SINGLETON))
+	return RCLASS(obj)->super;
+    return obj;
+}
+d24 1
+a24 8
+static VALUE
+rb_struct_s_members(obj)
+    VALUE obj;
+{
+    VALUE member, ary;
+    VALUE *p, *pend;
+
+    member = rb_iv_get(obj, "__member__");
+d26 1
+a26 1
+	rb_bug("non-initialized struct");
+d28 2
+a29 2
+    ary = rb_ary_new2(RARRAY(member)->len);
+    p = RARRAY(member)->ptr; pend = p + RARRAY(member)->len;
+d31 1
+a31 1
+	rb_ary_push(ary, rb_str_new2(rb_id2name(FIX2INT(*p))));
+d39 1
+a39 1
+rb_struct_members(obj)
+d42 1
+a42 1
+    return rb_struct_s_members(class_of(obj));
+d46 1
+a46 1
+rb_struct_getmember(obj, id)
+d50 1
+a50 1
+    VALUE member, slot;
+d53 2
+a54 1
+    member = rb_iv_get(class_of(obj), "__member__");
+d56 1
+a56 1
+	rb_bug("non-initialized struct");
+d64 2
+a65 2
+    rb_raise(rb_eNameError, "%s is not struct member", rb_id2name(id));
+    return Qnil;		/* not reached */
+d69 1
+a69 1
+rb_struct_ref(obj)
+d72 1
+a72 1
+    return rb_struct_getmember(obj, rb_frame_last_func());
+d75 10
+a84 10
+static VALUE rb_struct_ref0(obj) VALUE obj; {return RSTRUCT(obj)->ptr[0];}
+static VALUE rb_struct_ref1(obj) VALUE obj; {return RSTRUCT(obj)->ptr[1];}
+static VALUE rb_struct_ref2(obj) VALUE obj; {return RSTRUCT(obj)->ptr[2];}
+static VALUE rb_struct_ref3(obj) VALUE obj; {return RSTRUCT(obj)->ptr[3];}
+static VALUE rb_struct_ref4(obj) VALUE obj; {return RSTRUCT(obj)->ptr[4];}
+static VALUE rb_struct_ref5(obj) VALUE obj; {return RSTRUCT(obj)->ptr[5];}
+static VALUE rb_struct_ref6(obj) VALUE obj; {return RSTRUCT(obj)->ptr[6];}
+static VALUE rb_struct_ref7(obj) VALUE obj; {return RSTRUCT(obj)->ptr[7];}
+static VALUE rb_struct_ref8(obj) VALUE obj; {return RSTRUCT(obj)->ptr[8];}
+static VALUE rb_struct_ref9(obj) VALUE obj; {return RSTRUCT(obj)->ptr[9];}
+d87 10
+a96 10
+    rb_struct_ref0,
+    rb_struct_ref1,
+    rb_struct_ref2,
+    rb_struct_ref3,
+    rb_struct_ref4,
+    rb_struct_ref5,
+    rb_struct_ref6,
+    rb_struct_ref7,
+    rb_struct_ref8,
+    rb_struct_ref9,
+d100 1
+a100 1
+rb_struct_set(obj, val)
+d103 1
+a103 1
+    VALUE member, slot;
+d106 2
+a107 1
+    member = rb_iv_get(class_of(obj), "__member__");
+d109 1
+a109 1
+	rb_bug("non-initialized struct");
+d113 1
+a113 1
+	if (rb_id_attrset(FIX2INT(slot)) == rb_frame_last_func()) {
+d117 2
+a118 2
+    rb_raise(rb_eNameError, "not struct member");
+    return Qnil;		/* not reached */
+d121 2
+d124 2
+a125 2
+make_struct(name, member, klass)
+    VALUE name, member, klass;
+d131 3
+a133 10
+    if (NIL_P(name)) {
+	nstr = rb_class_new(klass);
+    }
+    else {
+	char *cname = STR2CSTR(name);
+	id = rb_intern(cname);
+	if (!rb_is_const_id(id)) {
+	    rb_raise(rb_eNameError, "identifier %s needs to be constant", cname);
+	}
+	nstr = rb_define_class_under(klass, cname, klass);
+d135 1
+d139 3
+a141 3
+    rb_define_singleton_method(nstr, "new", rb_struct_alloc, -2);
+    rb_define_singleton_method(nstr, "[]", rb_struct_alloc, -2);
+    rb_define_singleton_method(nstr, "members", rb_struct_s_members, 0);
+d148 1
+a148 1
+	    rb_define_method_id(nstr, id, rb_struct_ref, 0);
+d150 1
+a150 1
+	rb_define_method_id(nstr, rb_id_attrset(id), rb_struct_set, 1);
+a155 4
+#ifdef HAVE_STDARG_PROTOTYPES
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+a156 2
+#define va_init_list(a,b) va_start(a)
+#endif
+d159 1
+a159 4
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_struct_define(char *name, ...)
+#else
+rb_struct_define(name, va_alist)
+a161 1
+#endif
+d167 2
+a168 2
+    nm = rb_str_new2(name);
+    ary = rb_ary_new();
+d170 1
+a170 1
+    va_init_list(ar, name);
+d173 1
+a173 1
+	rb_ary_push(ary, INT2FIX(slot));
+d177 1
+a177 1
+    return make_struct(nm, ary, rb_cStruct);
+d181 1
+a181 1
+rb_struct_s_def(argc, argv, klass)
+d185 2
+a186 1
+    VALUE name, rest;
+a187 1
+    VALUE st;
+d190 4
+a193 3
+    for (i=0; i<RARRAY(rest)->len; i++) {
+	ID id = rb_to_id(RARRAY(rest)->ptr[i]);
+	RARRAY(rest)->ptr[i] = INT2FIX(id);
+d195 1
+a195 4
+    st = make_struct(name, rest, klass);
+    rb_obj_call_init(st);
+
+    return st;
+d199 2
+a200 2
+rb_struct_alloc(klass, values)
+    VALUE klass, values;
+d205 1
+a205 1
+    size = rb_iv_get(klass, "__size__");
+d207 2
+a208 2
+    if (n != RARRAY(values)->len) {
+	rb_raise(rb_eArgError, "struct size differs");
+d212 3
+a214 2
+	OBJSETUP(st, klass, T_STRUCT);
+	st->len = 0;		/* avoid GC crashing  */
+a215 1
+	st->len = n;
+d217 1
+a217 1
+	rb_obj_call_init((VALUE)st);
+d221 1
+a221 1
+    return Qnil;		/* not reached */
+d225 2
+a226 5
+#ifdef HAVE_STDARG_PROTOTYPES
+rb_struct_new(VALUE klass, ...)
+#else
+rb_struct_new(klass, va_alist)
+    VALUE klass;
+a227 1
+#endif
+d230 1
+a230 1
+    int size, i;
+d233 1
+a233 1
+    val = rb_iv_get(klass, "__size__");
+d235 3
+a237 3
+    mem = rb_ary_new2(size);
+    va_init_list(args, klass);
+    for (i=0; i<size; i++) {
+d239 1
+a239 1
+	rb_ary_store(mem, i, val);
+d243 1
+a243 1
+    return rb_struct_alloc(klass, mem);
+d247 1
+a247 1
+rb_struct_each(s)
+d258 2
+d261 1
+a261 1
+rb_struct_to_s(s)
+d264 1
+a264 2
+    char *cname = rb_class2name(CLASS_OF(s));
+    char *buf = ALLOCA_N(char, strlen(cname) + 4);
+d266 4
+a269 2
+    sprintf(buf, "#<%s>", cname);
+    return rb_str_new2(buf);
+d273 1
+a273 1
+inspect_struct(s)
+d276 1
+a276 1
+    char *cname = rb_class2name(CLASS_OF(s));
+d278 1
+d283 1
+a283 1
+	rb_bug("non-initialized struct");
+d286 2
+a287 3
+    str = rb_str_new2("#<");
+    rb_str_cat(str, cname, strlen(cname));
+    rb_str_cat(str, " ", 1);
+d293 1
+a293 1
+	    rb_str_cat(str, ", ", 2);
+d297 2
+a298 2
+	rb_str_cat(str, p, strlen(p));
+	rb_str_cat(str, "=", 1);
+d300 2
+a301 1
+	rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d303 1
+a303 1
+    rb_str_cat(str, ">", 1);
+d309 1
+a309 1
+rb_struct_inspect(s)
+d312 1
+a312 8
+    if (rb_inspecting_p(s)) {
+	char *cname = rb_class2name(CLASS_OF(s));
+	char *buf = ALLOCA_N(char, strlen(cname) + 8);
+
+	sprintf(buf, "#<%s:...>", cname);
+	return rb_str_new2(buf);
+    }
+    return rb_protect_inspect(inspect_struct, s, 0);
+d316 1
+a316 8
+rb_struct_to_a(s)
+    VALUE s;
+{
+    return rb_ary_new4(RSTRUCT(s)->len, RSTRUCT(s)->ptr);
+}
+
+static VALUE
+rb_struct_clone(s)
+d321 2
+a322 1
+    st->len = 0;		/* avoid GC crashing  */
+a323 1
+    st->len = RSTRUCT(s)->len;
+a328 23
+static VALUE
+rb_struct_aref_id(s, id)
+    VALUE s;
+    ID id;
+{
+    VALUE member;
+    int i, len;
+
+    member = rb_iv_get(CLASS_OF(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (FIX2UINT(RARRAY(member)->ptr[i]) == id) {
+	    return RSTRUCT(s)->ptr[i];
+	}
+    }
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+    return Qnil;		/* not reached */
+}
+
+d330 1
+a330 1
+rb_struct_aref(s, idx)
+a334 4
+    if (TYPE(idx) == T_STRING) {
+	return rb_struct_aref_id(s, rb_to_id(idx));
+    }
+
+d336 1
+a336 1
+    if (i < 0) i = RSTRUCT(s)->len + i;
+d338 1
+a338 2
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d340 1
+a340 2
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+a343 23
+static VALUE
+rb_struct_aset_id(s, id, val)
+    VALUE s, val;
+    ID id;
+{
+    VALUE member;
+    int i, len;
+
+    member = rb_iv_get(CLASS_OF(s), "__member__");
+    if (NIL_P(member)) {
+	rb_bug("non-initialized struct");
+    }
+
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (FIX2UINT(RARRAY(member)->ptr[i]) == id) {
+	    RSTRUCT(s)->ptr[i] = val;
+	    return val;
+	}
+    }
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+}
+
+d345 1
+a345 1
+rb_struct_aset(s, idx, val)
+a349 4
+    if (TYPE(idx) == T_STRING) {
+	return rb_struct_aset_id(s, rb_to_id(idx), val);
+    }
+
+d351 1
+a351 1
+    if (i < 0) i = RSTRUCT(s)->len + i;
+d353 1
+a353 2
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d355 1
+a355 2
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d360 1
+a360 1
+rb_struct_equal(s, s2)
+d365 2
+a366 2
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+d368 1
+a368 1
+	rb_bug("inconsistent struct"); /* should never happen */
+d372 1
+a372 1
+	if (!rb_equal(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+d374 1
+a374 1
+    return Qtrue;
+d378 1
+a378 1
+rb_struct_eql(s, s2)
+d383 2
+a384 2
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+d386 1
+a386 1
+	rb_bug("inconsistent struct"); /* should never happen */
+d390 1
+a390 1
+	if (!rb_eql(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+d392 1
+a392 1
+    return Qtrue;
+d396 1
+a396 1
+rb_struct_hash(s)
+d411 2
+a412 2
+    rb_cStruct = rb_define_class("Struct", rb_cObject);
+    rb_include_module(rb_cStruct, rb_mEnumerable);
+d414 1
+a414 1
+    rb_define_singleton_method(rb_cStruct, "new", rb_struct_s_def, -1);
+d416 1
+a416 1
+    rb_define_method(rb_cStruct, "clone", rb_struct_clone, 0);
+d418 3
+a420 3
+    rb_define_method(rb_cStruct, "==", rb_struct_equal, 1);
+    rb_define_method(rb_cStruct, "eql?", rb_struct_eql, 1);
+    rb_define_method(rb_cStruct, "hash", rb_struct_hash, 0);
+d422 4
+a425 4
+    rb_define_method(rb_cStruct, "to_s", rb_struct_to_s, 0);
+    rb_define_method(rb_cStruct, "inspect", rb_struct_inspect, 0);
+    rb_define_method(rb_cStruct, "to_a", rb_struct_to_a, 0);
+    rb_define_method(rb_cStruct, "values", rb_struct_to_a, 0);
+d427 3
+a429 3
+    rb_define_method(rb_cStruct, "each", rb_struct_each, 0);
+    rb_define_method(rb_cStruct, "[]", rb_struct_aref, 1);
+    rb_define_method(rb_cStruct, "[]=", rb_struct_aset, 2);
+d431 1
+a431 1
+    rb_define_method(rb_cStruct, "members", rb_struct_members, 0);
+@
+
+
+1.1.1.3.2.1
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:29 $
+d97 1
+a97 1
+static VALUE (*ref_func[10])() = {
+@
+
+
+1.1.1.3.2.2
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:58 $
+a18 2
+static VALUE struct_alloc _((int, VALUE*, VALUE));
+
+d153 2
+a154 2
+    rb_define_singleton_method(nstr, "new", struct_alloc, -1);
+    rb_define_singleton_method(nstr, "[]", struct_alloc, -1);
+d224 3
+a226 3
+static VALUE
+rb_struct_initialize(self, values)
+    VALUE self, values;
+a227 1
+    VALUE klass = CLASS_OF(self);
+d236 8
+a243 3
+    MEMCPY(RSTRUCT(self)->ptr, RARRAY(values)->ptr, VALUE, RARRAY(values)->len);
+    return Qnil;
+}
+d245 3
+a247 29
+static VALUE
+struct_alloc(argc, argv, klass)
+    int argc;
+    VALUE *argv;
+    VALUE klass;
+{
+    VALUE size;
+    int n;
+
+    NEWOBJ(st, struct RStruct);
+    OBJSETUP(st, klass, T_STRUCT);
+
+    size = rb_iv_get(klass, "__size__");
+    n = FIX2INT(size);
+
+    st->len = 0;		/* avoid GC crashing  */
+    st->ptr = ALLOC_N(VALUE, n);
+    rb_mem_clear(st->ptr, n);
+    st->len = n;
+    rb_obj_call_init2((VALUE)st, argc, argv);
+
+    return (VALUE)st;
+}
+
+VALUE
+rb_struct_alloc(klass, values)
+    VALUE klass, values;
+{
+    return struct_alloc(RARRAY(values)->len, RARRAY(values)->ptr, klass);
+d259 1
+a259 1
+    VALUE sz, *mem;
+d263 3
+a265 3
+    sz = rb_iv_get(klass, "__size__");
+    size = FIX2INT(sz); 
+    mem = ALLOCA_N(VALUE, size);
+d268 2
+a269 1
+	mem[i] = va_arg(args, VALUE);
+d273 1
+a273 1
+    return struct_alloc(size, mem, klass);
+a513 1
+    rb_define_method(rb_cStruct, "initialize", rb_struct_initialize, -2);
+@
+
+
+1.1.1.3.2.3
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:26 $
+d221 1
+a221 1
+    rb_obj_call_init(st, argc, argv);
+d262 1
+a262 1
+    rb_obj_call_init((VALUE)st, argc, argv);
+@
+
+
+1.1.1.3.2.4
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:11 $
+d182 1
+a182 1
+rb_struct_define(const char *name, ...)
+d185 1
+a185 1
+    const char *name;
+@
+
+
+1.1.1.3.2.5
+log
+@$/, Struct subclassing
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:33 $
+a31 17
+iv_get(obj, name)
+    VALUE obj;
+    char *name;
+{
+    ID id;
+
+    id = rb_intern(name);
+    for (;;) {
+	if (rb_ivar_defined(obj, id))
+	    return rb_ivar_get(obj, id);
+	obj = RCLASS(obj)->super;
+	if (obj == 0 || obj == rb_cStruct)
+	    return Qnil;
+    }
+}
+
+static VALUE
+d38 1
+a38 1
+    member = iv_get(obj, "__member__");
+d67 1
+a67 1
+    member = iv_get(class_of(obj), "__member__");
+d119 1
+a119 1
+    member = iv_get(class_of(obj), "__member__");
+d234 1
+a234 1
+    size = iv_get(klass, "__size__");
+d255 1
+a255 1
+    size = iv_get(klass, "__size__");
+d287 1
+a287 1
+    sz = iv_get(klass, "__size__");
+d330 1
+a330 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d400 1
+a400 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d444 1
+a444 1
+    member = iv_get(CLASS_OF(s), "__member__");
+@
+
+
+1.1.1.3.2.6
+log
+@regexp null pattern
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/12 05:27:35 $
+d82 1
+a82 1
+    long i;
+d88 1
+a88 1
+    slot = INT2NUM(id);
+d134 1
+a134 1
+    long i;
+d156 1
+a156 1
+    long i;
+d169 1
+a169 1
+    rb_iv_set(nstr, "__size__", INT2NUM(RARRAY(member)->len));
+d229 1
+a229 1
+    long i;
+d249 1
+a249 1
+    long n;
+d267 1
+a267 1
+    long n;
+d273 1
+a273 1
+    n = FIX2LONG(size);
+d301 1
+a301 1
+    long size, i;
+d305 1
+a305 1
+    size = FIX2LONG(sz); 
+d320 1
+a320 1
+    long i;
+d345 1
+a345 1
+    long i;
+d363 1
+a363 1
+	p = rb_id2name(FIX2LONG(slot));
+d415 1
+a415 1
+    long i, len;
+d436 1
+a436 1
+    long i;
+d442 1
+a442 1
+    i = NUM2LONG(idx);
+d459 1
+a459 1
+    long i, len;
+d480 1
+a480 1
+    long i;
+d486 1
+a486 1
+    i = NUM2LONG(idx);
+d501 1
+a501 1
+    long i;
+d519 1
+a519 1
+    long i;
+d537 1
+a537 2
+    long i;
+    int h;
+@
+
+
+1.1.1.3.2.7
+log
+@990531
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/25 08:26:17 $
+d253 1
+a253 1
+    if (n < RARRAY(values)->len) {
+a256 4
+    if (n > RARRAY(values)->len) {
+	rb_mem_clear(RSTRUCT(self)->ptr+RARRAY(values)->len,
+		     n-RARRAY(values)->len);
+    }
+@
+
+
+1.1.1.3.2.8
+log
+@990611
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/31 09:13:29 $
+d238 1
+@
+
+
+1.1.1.3.2.9
+log
+@backtrace may be Qnil
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/11 06:29:59 $
+d328 1
+a328 1
+    return s;
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 04:14:47 $
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b8pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:48 $
+d199 2
+a200 2
+struct_alloc(klass, values)
+    VALUE klass, values;
+d205 1
+a205 1
+    size = rb_iv_get(klass, "__size__");
+d212 1
+a212 1
+	OBJSETUP(st, klass, T_STRUCT);
+d225 2
+a226 2
+struct_new(klass, va_alist)
+    VALUE klass;
+d233 1
+a233 1
+    val = rb_iv_get(klass, "__size__");
+d243 1
+a243 1
+    return struct_alloc(klass, mem);
+@
+
+
+1.1.1.2.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 01:56:42 $
+d213 2
+a214 1
+	st->len = 0;		/* avoid GC crashing  */
+a215 1
+	st->len = n;
+d321 2
+a322 1
+    st->len = 0;		/* avoid GC crashing  */
+a323 1
+    st->len = RSTRUCT(s)->len;
+@
+
+
+1.1.1.2.2.4
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/03 02:39:33 $
+a151 1
+    FL_SET(nstr, FL_PRIMITIVE);
+a431 1
+    FL_SET(cStruct, FL_PRIMITIVE);
+@
+
+
+1.1.1.2.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:47 $
+d152 1
+d433 1
+@
+
+
+1.1.1.2.2.6
+log
+@call initialize
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/06 10:07:53 $
+a187 1
+    VALUE st;
+d195 1
+a195 4
+    st = make_struct(name, rest);
+    obj_call_init((VALUE)st);
+
+    return st;
+a217 1
+	obj_call_init((VALUE)st);
+@
+
+
+1.1.1.2.2.7
+log
+@signal delivered to main_thread
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/02 10:03:51 $
+d124 2
+a125 2
+make_struct(name, member, klass)
+    VALUE name, member, klass;
+d135 1
+a135 1
+    nstr = rb_define_class_under(klass, RSTRING(name)->ptr, klass);
+d177 1
+a177 1
+    return make_struct(nm, ary, cStruct);
+d181 1
+a181 1
+struct_s_def(argc, argv, klass)
+d196 2
+a197 2
+    st = make_struct(name, rest, klass);
+    obj_call_init(st);
+d221 1
+a221 1
+	memclear(st->ptr+RARRAY(values)->len, n-RARRAY(values)->len);
+@
+
+
+1.1.1.2.2.8
+log
+@exception name on -d
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/14 04:55:49 $
+a17 10
+class_of(obj)
+    VALUE obj;
+{
+    obj = CLASS_OF(obj);
+    if (FL_TEST(obj, FL_SINGLETON))
+	return RCLASS(obj)->super;
+    return obj;
+}
+
+static VALUE
+d21 2
+a22 2
+    VALUE member, ary;
+    VALUE *p, *pend;
+d24 1
+a24 1
+    member = rb_iv_get(obj, "__member__");
+d26 1
+a26 1
+	Bug("non-initialized struct");
+d28 2
+a29 2
+    ary = ary_new2(RARRAY(member)->len);
+    p = RARRAY(member)->ptr; pend = p + RARRAY(member)->len;
+d42 1
+a42 1
+    return struct_s_members(class_of(obj));
+d50 1
+a50 1
+    VALUE member, slot;
+d53 2
+a54 1
+    member = rb_iv_get(class_of(obj), "__member__");
+d103 1
+a103 1
+    VALUE member, slot;
+d106 2
+a107 1
+    member = rb_iv_get(class_of(obj), "__member__");
+d283 1
+d291 2
+a292 3
+    str = str_new2("#<");
+    str_cat(str, name, strlen(name));
+    str_cat(str, " ", 1);
+a333 23
+static VALUE
+struct_aref_id(s, id)
+    VALUE s;
+    ID id;
+{
+    VALUE member;
+    int i, len;
+    VALUE *p;
+
+    member = rb_iv_get(CLASS_OF(s), "__member__");
+    if (NIL_P(member)) {
+	Bug("non-initialized struct");
+    }
+
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (FIX2INT(RARRAY(member)->ptr[i]) == id) {
+	    return RSTRUCT(s)->ptr[i];
+	}
+    }
+    NameError("no member '%s' in struct", rb_id2name(id));
+}
+
+a339 4
+    if (TYPE(idx) == T_STRING) {
+	return struct_aref_id(s, rb_to_id(idx));
+    }
+
+d341 1
+a341 1
+    if (i < 0) i = RSTRUCT(s)->len + i;
+d356 1
+a356 1
+    if (i < 0) i = RSTRUCT(s)->len + i;
+@
+
+
+1.1.1.2.2.9
+log
+@struct_aref by member name
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/16 10:20:19 $
+a384 24
+struct_aset_id(s, id, val)
+    VALUE s, val;
+    ID id;
+{
+    VALUE member;
+    int i, len;
+    VALUE *p;
+
+    member = rb_iv_get(CLASS_OF(s), "__member__");
+    if (NIL_P(member)) {
+	Bug("non-initialized struct");
+    }
+
+    len = RARRAY(member)->len;
+    for (i=0; i<len; i++) {
+	if (FIX2INT(RARRAY(member)->ptr[i]) == id) {
+	    RSTRUCT(s)->ptr[i] = val;
+	    return val;
+	}
+    }
+    NameError("no member '%s' in struct", rb_id2name(id));
+}
+
+VALUE
+a388 4
+
+    if (TYPE(idx) == T_STRING) {
+	return struct_aref_id(s, rb_to_id(idx));
+    }
+@
+
+
+1.1.1.2.2.10
+log
+@ruby 1.1b9_13
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/17 03:53:53 $
+d384 1
+a384 1
+static VALUE
+d415 1
+a415 1
+	return struct_aset_id(s, rb_to_id(idx), val);
+@
+
+
+1.1.1.2.2.11
+log
+@new exception model
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/21 08:41:06 $
+d313 1
+@
+
+
+1.1.1.2.2.12
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/04/30 07:41:17 $
+a12 4
+#ifdef USE_CWGUSI
+#include <stdio.h>
+#endif
+
+a163 4
+#ifdef __STDC__
+#include <stdarg.h>
+#define va_init_list(a,b) va_start(a,b)
+#else
+a164 2
+#define va_init_list(a,b) va_start(a)
+#endif
+a166 3
+#ifdef __STDC__
+struct_define(char *name, ...)
+#else
+a169 1
+#endif
+d178 1
+a178 1
+    va_init_list(ar, name);
+a237 3
+#ifdef __STDC__
+struct_new(VALUE klass, ...)
+#else
+a240 1
+#endif
+d249 1
+a249 1
+    va_init_list(args, klass);
+@
+
+
+1.1.1.2.2.13
+log
+@prototypes
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:37 $
+d168 1
+a168 1
+#ifdef HAVE_STDARG_PROTOTYPES
+d177 1
+a177 1
+#ifdef HAVE_STDARG_PROTOTYPES
+d252 1
+a252 1
+#ifdef HAVE_STDARG_PROTOTYPES
+@
+
+
+1.1.1.2.2.14
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/14 04:10:35 $
+d17 1
+d133 2
+d288 2
+@
+
+
+1.1.1.2.2.15
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:23 $
+d361 1
+d403 1
+@
+
+
+1.1.1.2.2.16
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:57 $
+d18 1
+@
+
+
+1.1.1.2.2.17
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/02 10:05:34 $
+d139 3
+a141 10
+    if (NIL_P(name)) {
+	nstr = class_new(klass);
+    }
+    else {
+	char *cname = STR2CSTR(name);
+	id = rb_intern(cname);
+	if (!rb_is_const_id(id)) {
+	    NameError("identifier %s needs to be constant", cname);
+	}
+	nstr = rb_define_class_under(klass, cname, klass);
+d143 1
+d209 1
+@
+
+
+1.1.1.2.2.18
+log
+@1.1c3
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:47 $
+d209 2
+a210 1
+    VALUE name, rest;
+d215 3
+a217 3
+    for (i=0; i<RARRAY(rest)->len; i++) {
+	ID id = rb_to_id(RARRAY(rest)->ptr[i]);
+	RARRAY(rest)->ptr[i] = INT2FIX(id);
+@
+
+
+1.1.1.2.2.19
+log
+@moving
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:34 $
+a29 17
+iv_get(obj, name)
+    VALUE obj;
+    char *name;
+{
+    ID id;
+
+    id = rb_intern(name);
+    for (;;) {
+	if (rb_ivar_defined(obj, id))
+	    return rb_ivar_get(obj, id);
+	obj = RCLASS(obj)->super;
+	if (obj == 0 || obj == cStruct)
+	    return Qnil;
+    }
+}
+
+static VALUE
+d36 1
+a36 1
+    member = iv_get(obj, "__member__");
+d65 1
+a65 1
+    member = iv_get(class_of(obj), "__member__");
+d117 1
+a117 1
+    member = iv_get(class_of(obj), "__member__");
+d231 1
+a231 1
+    size = iv_get(klass, "__size__");
+d264 1
+a264 1
+    val = iv_get(klass, "__size__");
+d309 1
+a309 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d365 1
+a365 1
+    member = iv_get(CLASS_OF(s), "__member__");
+d406 1
+a406 1
+    member = iv_get(CLASS_OF(s), "__member__");
+@
+
+
+1.1.1.2.2.18.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/27 03:55:34 $
+d17 1
+a17 1
+VALUE rb_cStruct;
+d30 1
+a30 1
+rb_struct_s_members(obj)
+d38 1
+a38 1
+	rb_bug("non-initialized struct");
+d40 1
+a40 1
+    ary = rb_ary_new2(RARRAY(member)->len);
+d43 1
+a43 1
+	rb_ary_push(ary, rb_str_new2(rb_id2name(FIX2INT(*p))));
+d51 1
+a51 1
+rb_struct_members(obj)
+d54 1
+a54 1
+    return rb_struct_s_members(class_of(obj));
+d58 1
+a58 1
+rb_struct_getmember(obj, id)
+d67 1
+a67 1
+	rb_bug("non-initialized struct");
+d75 1
+a75 1
+    rb_raise(rb_eNameError, "%s is not struct member", rb_id2name(id));
+d80 1
+a80 1
+rb_struct_ref(obj)
+d83 1
+a83 1
+    return rb_struct_getmember(obj, rb_frame_last_func());
+d86 10
+a95 10
+static VALUE rb_struct_ref0(obj) VALUE obj; {return RSTRUCT(obj)->ptr[0];}
+static VALUE rb_struct_ref1(obj) VALUE obj; {return RSTRUCT(obj)->ptr[1];}
+static VALUE rb_struct_ref2(obj) VALUE obj; {return RSTRUCT(obj)->ptr[2];}
+static VALUE rb_struct_ref3(obj) VALUE obj; {return RSTRUCT(obj)->ptr[3];}
+static VALUE rb_struct_ref4(obj) VALUE obj; {return RSTRUCT(obj)->ptr[4];}
+static VALUE rb_struct_ref5(obj) VALUE obj; {return RSTRUCT(obj)->ptr[5];}
+static VALUE rb_struct_ref6(obj) VALUE obj; {return RSTRUCT(obj)->ptr[6];}
+static VALUE rb_struct_ref7(obj) VALUE obj; {return RSTRUCT(obj)->ptr[7];}
+static VALUE rb_struct_ref8(obj) VALUE obj; {return RSTRUCT(obj)->ptr[8];}
+static VALUE rb_struct_ref9(obj) VALUE obj; {return RSTRUCT(obj)->ptr[9];}
+d98 10
+a107 10
+    rb_struct_ref0,
+    rb_struct_ref1,
+    rb_struct_ref2,
+    rb_struct_ref3,
+    rb_struct_ref4,
+    rb_struct_ref5,
+    rb_struct_ref6,
+    rb_struct_ref7,
+    rb_struct_ref8,
+    rb_struct_ref9,
+d111 1
+a111 1
+rb_struct_set(obj, val)
+d119 1
+a119 1
+	rb_bug("non-initialized struct");
+d123 1
+a123 1
+	if (rb_id_attrset(FIX2INT(slot)) == rb_frame_last_func()) {
+d127 1
+a127 1
+    rb_raise(rb_eNameError, "not struct member");
+d140 1
+a140 1
+	nstr = rb_class_new(klass);
+d146 1
+a146 1
+	    rb_raise(rb_eNameError, "identifier %s needs to be constant", cname);
+d153 3
+a155 3
+    rb_define_singleton_method(nstr, "new", rb_struct_alloc, -2);
+    rb_define_singleton_method(nstr, "[]", rb_struct_alloc, -2);
+    rb_define_singleton_method(nstr, "members", rb_struct_s_members, 0);
+d162 1
+a162 1
+	    rb_define_method_id(nstr, id, rb_struct_ref, 0);
+d164 1
+a164 1
+	rb_define_method_id(nstr, rb_id_attrset(id), rb_struct_set, 1);
+d180 1
+a180 1
+rb_struct_define(char *name, ...)
+d182 1
+a182 1
+rb_struct_define(name, va_alist)
+d191 2
+a192 2
+    nm = rb_str_new2(name);
+    ary = rb_ary_new();
+d197 1
+a197 1
+	rb_ary_push(ary, INT2FIX(slot));
+d201 1
+a201 1
+    return make_struct(nm, ary, rb_cStruct);
+d205 1
+a205 1
+rb_struct_s_def(argc, argv, klass)
+d219 1
+a219 1
+    rb_obj_call_init(st);
+d225 1
+a225 1
+rb_struct_alloc(klass, values)
+d233 2
+a234 2
+    if (n != RARRAY(values)->len) {
+	rb_raise(rb_eArgError, "struct size differs");
+d243 2
+a244 1
+	rb_obj_call_init((VALUE)st);
+d253 1
+a253 1
+rb_struct_new(VALUE klass, ...)
+d255 1
+a255 1
+rb_struct_new(klass, va_alist)
+d261 1
+a261 1
+    int size, i;
+d266 1
+a266 1
+    mem = rb_ary_new2(size);
+d268 1
+a268 1
+    for (i=0; i<size; i++) {
+d270 1
+a270 1
+	rb_ary_store(mem, i, val);
+d274 1
+a274 1
+    return rb_struct_alloc(klass, mem);
+d278 1
+a278 1
+rb_struct_each(s)
+d290 1
+a290 1
+rb_struct_to_s(s)
+d293 6
+a298 1
+    return rb_str_new2(rb_class2name(CLASS_OF(s)));
+d302 1
+a302 1
+rb_struct_inspect(s)
+d311 1
+a311 1
+	rb_bug("non-initialized struct");
+d314 3
+a316 3
+    str = rb_str_new2("#<");
+    rb_str_cat(str, name, strlen(name));
+    rb_str_cat(str, " ", 1);
+d322 1
+a322 1
+	    rb_str_cat(str, ", ", 2);
+d326 2
+a327 2
+	rb_str_cat(str, p, strlen(p));
+	rb_str_cat(str, "=", 1);
+d329 1
+a329 1
+	rb_str_cat(str, RSTRING(str2)->ptr, RSTRING(str2)->len);
+d331 1
+a331 1
+    rb_str_cat(str, ">", 1);
+d337 1
+a337 1
+rb_struct_to_a(s)
+d340 1
+a340 1
+    return rb_ary_new4(RSTRUCT(s)->len, RSTRUCT(s)->ptr);
+d344 1
+a344 1
+rb_struct_clone(s)
+d358 1
+a358 1
+rb_struct_aref_id(s, id)
+d367 1
+a367 1
+	rb_bug("non-initialized struct");
+d376 1
+a376 1
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+d380 1
+a380 1
+rb_struct_aref(s, idx)
+d386 1
+a386 1
+	return rb_struct_aref_id(s, rb_to_id(idx));
+d392 1
+a392 2
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d394 1
+a394 2
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d399 1
+a399 1
+rb_struct_aset_id(s, id, val)
+d408 1
+a408 1
+	rb_bug("non-initialized struct");
+d418 1
+a418 1
+    rb_raise(rb_eNameError, "no member '%s' in struct", rb_id2name(id));
+d422 1
+a422 1
+rb_struct_aset(s, idx, val)
+d428 1
+a428 1
+	return rb_struct_aset_id(s, rb_to_id(idx), val);
+d434 1
+a434 2
+        rb_raise(rb_eIndexError, "offset %d too small for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d436 1
+a436 2
+        rb_raise(rb_eIndexError, "offset %d too large for struct(size:%d)",
+		 i, RSTRUCT(s)->len);
+d441 1
+a441 1
+rb_struct_equal(s, s2)
+d446 2
+a447 2
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+d449 1
+a449 1
+	rb_bug("inconsistent struct"); /* should never happen */
+d453 1
+a453 1
+	if (!rb_equal(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+d455 1
+a455 1
+    return Qtrue;
+d459 1
+a459 1
+rb_struct_eql(s, s2)
+d464 2
+a465 2
+    if (TYPE(s2) != T_STRUCT) return Qfalse;
+    if (CLASS_OF(s) != CLASS_OF(s2)) return Qfalse;
+d467 1
+a467 1
+	rb_bug("inconsistent struct"); /* should never happen */
+d471 1
+a471 1
+	if (!rb_eql(RSTRUCT(s)->ptr[i], RSTRUCT(s2)->ptr[i])) return Qfalse;
+d473 1
+a473 1
+    return Qtrue;
+d477 1
+a477 1
+rb_struct_hash(s)
+d492 2
+a493 2
+    rb_cStruct = rb_define_class("Struct", rb_cObject);
+    rb_include_module(rb_cStruct, rb_mEnumerable);
+d495 1
+a495 1
+    rb_define_singleton_method(rb_cStruct, "new", rb_struct_s_def, -1);
+d497 1
+a497 1
+    rb_define_method(rb_cStruct, "clone", rb_struct_clone, 0);
+d499 3
+a501 3
+    rb_define_method(rb_cStruct, "==", rb_struct_equal, 1);
+    rb_define_method(rb_cStruct, "eql?", rb_struct_eql, 1);
+    rb_define_method(rb_cStruct, "hash", rb_struct_hash, 0);
+d503 4
+a506 4
+    rb_define_method(rb_cStruct, "to_s", rb_struct_to_s, 0);
+    rb_define_method(rb_cStruct, "inspect", rb_struct_inspect, 0);
+    rb_define_method(rb_cStruct, "to_a", rb_struct_to_a, 0);
+    rb_define_method(rb_cStruct, "values", rb_struct_to_a, 0);
+d508 3
+a510 3
+    rb_define_method(rb_cStruct, "each", rb_struct_each, 0);
+    rb_define_method(rb_cStruct, "[]", rb_struct_aref, 1);
+    rb_define_method(rb_cStruct, "[]=", rb_struct_aset, 2);
+d512 1
+a512 1
+    rb_define_method(rb_cStruct, "members", rb_struct_members, 0);
+@

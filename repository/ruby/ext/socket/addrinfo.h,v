@@ -1,0 +1,720 @@
+head	1.6;
+access;
+symbols
+	v1_6_7:1.3.2.2
+	v1_6_6:1.3
+	v1_6_5:1.3
+	v1_6_4:1.3
+	v1_7_1:1.3
+	v1_6_4_preview4:1.3
+	v1_6_4_preview3:1.3
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.9
+	v1_3_6_repack:1.1.2.9
+	v1_3_6:1.1.2.9
+	v1_3_5:1.1.2.9
+	v1_3_4_990625:1.1.2.9
+	v1_3_4_990624:1.1.2.9
+	v1_3_4_990611:1.1.2.9
+	v1_3_4_990531:1.1.2.8
+	v1_3_3_990518:1.1.2.7
+	v1_3_3_990513:1.1.2.6
+	v1_3_3_990507:1.1.2.4
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.6
+date	2002.06.03.15.50.01;	author nobu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.03.01.02.32.21;	author eban;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.02.27.04.29.10;	author eban;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.07.10.04.49.18;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.50;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.30.06.31.03;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.04.30.06.31.03;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.04.30.07.55.47;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	99.04.30.15.16.44;	author matz;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	99.05.06.08.31.48;	author matz;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	99.05.10.08.22.49;	author matz;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	99.05.13.10.01.09;	author matz;	state Exp;
+branches;
+next	1.1.2.7;
+
+1.1.2.7
+date	99.05.17.09.54.19;	author matz;	state Exp;
+branches;
+next	1.1.2.8;
+
+1.1.2.8
+date	99.05.31.09.13.30;	author matz;	state Exp;
+branches;
+next	1.1.2.9;
+
+1.1.2.9
+date	99.06.09.09.21.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2002.02.27.04.30.20;	author eban;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2002.03.01.02.31.02;	author eban;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2002.06.03.15.52.16;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* ext/socket/addrinfo.h: typo.
+
+* ext/socket/getaddrinfo.c (gai_strerror): get rid of warning.
+
+* ext/socket/socket.c (init_inetsock): ensures resources are
+  freed at exceptions.
+
+* ext/socket/socket.c (init_unixsock): ditto.
+
+* ext/socket/socket.c (udp_connect): ditto.
+@
+text
+@/*
+ * Copyright (C) 1995, 1996, 1997, 1998, and 1999 WIDE Project.
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the project nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#ifndef ADDR_INFO_H
+#define ADDR_INFO_H
+#ifndef HAVE_GETADDRINFO
+
+/* special compatibility hack */
+#undef EAI_ADDRFAMILY
+#undef EAI_AGAIN
+#undef EAI_BADFLAGS
+#undef EAI_FAIL
+#undef EAI_FAMILY
+#undef EAI_MEMORY
+#undef EAI_NODATA
+#undef EAI_NONAME
+#undef EAI_SERVICE
+#undef EAI_SOCKTYPE
+#undef EAI_SYSTEM
+#undef EAI_BADHINTS
+#undef EAI_PROTOCOL
+#undef EAI_MAX
+
+#undef AI_PASSIVE
+#undef AI_CANONNAME
+#undef AI_NUMERICHOST
+#undef AI_ALL
+#undef AI_ADDRCONFIG
+#undef AI_V4MAPPED
+#undef AI_DEFAULT
+
+#undef NI_NOFQDN
+#undef NI_NUMERICHOST
+#undef NI_NAMEREQD
+#undef NI_NUMERICSERV
+#undef NI_DGRAM
+
+#define addrinfo addrinfo__compat
+#define getaddrinfo getaddrinfo__compat
+#define getnameinfo getnameinfo__compat
+#define freehostent freehostent__compat
+#define freeaddrinfo freeaddrinfo__compat
+
+#ifndef __P
+# ifdef HAVE_PROTOTYPES
+#  define __P(args) args
+# else
+#  define __P(args) ()
+# endif
+#endif
+
+/* special compatibility hack -- end*/
+
+
+/*
+ * Error return codes from getaddrinfo()
+ */
+#define	EAI_ADDRFAMILY	 1	/* address family for hostname not supported */
+#define	EAI_AGAIN	 2	/* temporary failure in name resolution */
+#define	EAI_BADFLAGS	 3	/* invalid value for ai_flags */
+#define	EAI_FAIL	 4	/* non-recoverable failure in name resolution */
+#define	EAI_FAMILY	 5	/* ai_family not supported */
+#define	EAI_MEMORY	 6	/* memory allocation failure */
+#define	EAI_NODATA	 7	/* no address associated with hostname */
+#define	EAI_NONAME	 8	/* hostname nor servname provided, or not known */
+#define	EAI_SERVICE	 9	/* servname not supported for ai_socktype */
+#define	EAI_SOCKTYPE	10	/* ai_socktype not supported */
+#define	EAI_SYSTEM	11	/* system error returned in errno */
+#define EAI_BADHINTS	12
+#define EAI_PROTOCOL	13
+#define EAI_MAX		14
+
+/*
+ * Flag values for getaddrinfo()
+ */
+#define	AI_PASSIVE	0x00000001 /* get address to use bind() */
+#define	AI_CANONNAME	0x00000002 /* fill ai_canonname */
+#define	AI_NUMERICHOST	0x00000004 /* prevent name resolution */
+/* valid flags for addrinfo */
+#define	AI_MASK		(AI_PASSIVE | AI_CANONNAME | AI_NUMERICHOST)
+
+#define	AI_ALL		0x00000100 /* IPv6 and IPv4-mapped (with AI_V4MAPPED) */
+#define	AI_V4MAPPED_CFG	0x00000200 /* accept IPv4-mapped if kernel supports */
+#define	AI_ADDRCONFIG	0x00000400 /* only if any address is assigned */
+#define	AI_V4MAPPED	0x00000800 /* accept IPv4-mapped IPv6 address */
+/* special recommended flags for getipnodebyname */
+#define	AI_DEFAULT	(AI_V4MAPPED_CFG | AI_ADDRCONFIG)
+
+/*
+ * Constants for getnameinfo()
+ */
+#define	NI_MAXHOST	1025
+#define	NI_MAXSERV	32
+
+/*
+ * Flag values for getnameinfo()
+ */
+#define	NI_NOFQDN	0x00000001
+#define	NI_NUMERICHOST	0x00000002
+#define	NI_NAMEREQD	0x00000004
+#define	NI_NUMERICSERV	0x00000008
+#define	NI_DGRAM	0x00000010
+
+struct addrinfo {
+	int	ai_flags;	/* AI_PASSIVE, AI_CANONNAME */
+	int	ai_family;	/* PF_xxx */
+	int	ai_socktype;	/* SOCK_xxx */
+	int	ai_protocol;	/* 0 or IPPROTO_xxx for IPv4 and IPv6 */
+	size_t	ai_addrlen;	/* length of ai_addr */
+	char	*ai_canonname;	/* canonical name for hostname */
+	struct sockaddr *ai_addr;	/* binary address */
+	struct addrinfo *ai_next;	/* next structure in linked list */
+};
+
+extern int getaddrinfo __P((
+	const char *hostname, const char *servname,
+	const struct addrinfo *hints,
+	struct addrinfo **res));
+
+extern int getnameinfo __P((
+	const struct sockaddr *sa,
+	size_t salen,
+	char *host,
+	size_t hostlen,
+	char *serv,
+	size_t servlen,
+	int flags));
+
+extern void freehostent __P((struct hostent *));
+extern void freeaddrinfo __P((struct addrinfo *));
+#if defined __UCLIBC__
+const
+#endif
+extern char *gai_strerror __P((int));
+
+/* In case there is no definition of offsetof() provided - though any proper
+Standard C system should have one. */
+
+#ifndef offsetof
+#define offsetof(p_type,field) ((size_t)&(((p_type *)0)->field))
+#endif
+
+#endif
+#endif
+@
+
+
+1.5
+log
+@* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): add const
+  qualifier only for uClibc.
+@
+text
+@d156 1
+a156 1
+extern void freeaddrent __P((struct addrinfo *));
+@
+
+
+1.4
+log
+@* io.c (READ_DATA_PENDING): uClibc support.
+* random.c (rand_init): ditto.
+* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): ditto.
+@
+text
+@d157 4
+a160 1
+extern const char *gai_strerror __P((int));
+@
+
+
+1.3
+log
+@matz
+@
+text
+@d157 1
+a157 1
+extern char *gai_strerror __P((int));
+@
+
+
+1.3.2.1
+log
+@* io.c (READ_DATA_PENDING): uClibc support.
+* random.c (rand_init): ditto.
+* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): ditto.
+@
+text
+@d157 1
+a157 1
+extern const char *gai_strerror __P((int));
+@
+
+
+1.3.2.2
+log
+@* ext/socket/{addinfo.h,getaddrinfo.c} (gai_strerror): add const
+  qualifier only for uClibc.
+@
+text
+@d157 1
+a157 4
+#if defined __UCLIBC__
+const
+#endif
+extern char *gai_strerror __P((int));
+@
+
+
+1.3.2.3
+log
+@* ext/socket/addrinfo.h: typo.
+
+* ext/socket/getaddrinfo.c (gai_strerror): get rid of warning.
+
+* ext/socket/socket.c (init_inetsock): ensures resources are
+  freed at exceptions.
+
+* ext/socket/socket.c (init_unixsock): ditto.
+
+* ext/socket/socket.c (udp_connect): ditto.
+@
+text
+@d156 1
+a156 1
+extern void freeaddrinfo __P((struct addrinfo *));
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@a129 5
+#ifdef NT
+#define IN_EXPERIMENTAL(x) 0
+#define IN_LOOPBACKNET 0
+#endif
+
+@
+
+
+1.1
+log
+@file addrinfo.h was initially added on branch ruby_1_3.
+@
+text
+@d1 172
+@
+
+
+1.1.2.1
+log
+@add files
+@
+text
+@a0 165
+/*
+ * Copyright (C) 1995, 1996, 1997, 1998, and 1999 WIDE Project.
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the project nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#ifndef HAVE_GETADDRINFO
+
+/* special compatibility hack */
+#undef EAI_ADDRFAMILY
+#undef EAI_AGAIN
+#undef EAI_BADFLAGS
+#undef EAI_FAIL
+#undef EAI_FAMILY
+#undef EAI_MEMORY
+#undef EAI_NODATA
+#undef EAI_NONAME
+#undef EAI_SERVICE
+#undef EAI_SOCKTYPE
+#undef EAI_SYSTEM
+#undef EAI_BADHINTS
+#undef EAI_PROTOCOL
+#undef EAI_MAX
+
+#undef AI_PASSIVE
+#undef AI_CANONNAME
+#undef AI_NUMERICHOST
+
+#define addrinfo addrinfo__compat
+#define getaddrinfo getaddrinfo__compat
+#define getnameinfo getnameinfo__compat
+#define freehostent freehostent__compat
+#define freeaddrinfo freeaddrinfo__compat
+
+#ifdef HAVE_SIN_LEN
+# define SIN_LEN(si) (si).sin_len
+# define SET_SIN_LEN(si,len) (si).sin_len = (len)
+#else
+# define SIN_LEN(si) sizeof(struct sockaddr_in)
+# define SET_SIN_LEN(si,len) (len)
+#endif
+
+#ifdef HAVE_SA_LEN
+#ifndef SA_LEN
+# define SA_LEN(sa) (sa).sin_len
+#endif
+#define SET_SA_LEN(sa, len) (sa).sin_len = len
+#else
+#ifndef SA_LEN
+extern int addrinfo_sockaddr_len __P((struct sockaddr*));
+# define SA_LEN(sa) addrinfo_sockaddr_len((sa))
+#endif
+#define SET_SA_LEN(sa, len) (len)
+#endif
+/* special compatibility hack -- end*/
+
+
+/*
+ * Error return codes from getaddrinfo()
+ */
+#define	EAI_ADDRFAMILY	 1	/* address family for hostname not supported */
+#define	EAI_AGAIN	 2	/* temporary failure in name resolution */
+#define	EAI_BADFLAGS	 3	/* invalid value for ai_flags */
+#define	EAI_FAIL	 4	/* non-recoverable failure in name resolution */
+#define	EAI_FAMILY	 5	/* ai_family not supported */
+#define	EAI_MEMORY	 6	/* memory allocation failure */
+#define	EAI_NODATA	 7	/* no address associated with hostname */
+#define	EAI_NONAME	 8	/* hostname nor servname provided, or not known */
+#define	EAI_SERVICE	 9	/* servname not supported for ai_socktype */
+#define	EAI_SOCKTYPE	10	/* ai_socktype not supported */
+#define	EAI_SYSTEM	11	/* system error returned in errno */
+#define EAI_BADHINTS	12
+#define EAI_PROTOCOL	13
+#define EAI_MAX		14
+
+/*
+ * Flag values for getaddrinfo()
+ */
+#define	AI_PASSIVE	0x00000001 /* get address to use bind() */
+#define	AI_CANONNAME	0x00000002 /* fill ai_canonname */
+#define	AI_NUMERICHOST	0x00000004 /* prevent name resolution */
+/* valid flags for addrinfo */
+#define	AI_MASK		(AI_PASSIVE | AI_CANONNAME | AI_NUMERICHOST)
+
+#define	AI_ALL		0x00000100 /* IPv6 and IPv4-mapped (with AI_V4MAPPED) */
+#define	AI_V4MAPPED_CFG	0x00000200 /* accept IPv4-mapped if kernel supports */
+#define	AI_ADDRCONFIG	0x00000400 /* only if any address is assigned */
+#define	AI_V4MAPPED	0x00000800 /* accept IPv4-mapped IPv6 address */
+/* special recommended flags for getipnodebyname */
+#define	AI_DEFAULT	(AI_V4MAPPED_CFG | AI_ADDRCONFIG)
+
+/*
+ * Constants for getnameinfo()
+ */
+#define	NI_MAXHOST	1025
+#define	NI_MAXSERV	32
+
+/*
+ * Flag values for getnameinfo()
+ */
+#define	NI_NOFQDN	0x00000001
+#define	NI_NUMERICHOST	0x00000002
+#define	NI_NAMEREQD	0x00000004
+#define	NI_NUMERICSERV	0x00000008
+#define	NI_DGRAM	0x00000010
+
+struct addrinfo {
+	int	ai_flags;	/* AI_PASSIVE, AI_CANONNAME */
+	int	ai_family;	/* PF_xxx */
+	int	ai_socktype;	/* SOCK_xxx */
+	int	ai_protocol;	/* 0 or IPPROTO_xxx for IPv4 and IPv6 */
+	size_t	ai_addrlen;	/* length of ai_addr */
+	char	*ai_canonname;	/* canonical name for hostname */
+	struct sockaddr *ai_addr;	/* binary address */
+	struct addrinfo *ai_next;	/* next structure in linked list */
+};
+
+struct sockaddr_storage {
+	u_int8_t __ss_len;
+	u_int8_t __ss_family;
+	u_int8_t fill[126];
+};
+
+extern int getaddrinfo __P((
+	const char *hostname, const char *servname,
+	const struct addrinfo *hints,
+	struct addrinfo **res));
+
+extern int getnameinfo __P((
+	const struct sockaddr *sa,
+	size_t salen,
+	char *host,
+	size_t hostlen,
+	char *serv,
+	size_t servlen,
+	int flags));
+
+extern void freehostent __P((struct hostent *));
+extern void freeaddrent __P((struct addrinfo *));
+extern char *gai_strerror __P((int));
+
+#endif
+@
+
+
+1.1.2.2
+log
+@glibc 2.1
+@
+text
+@a50 10
+#undef AI_ALL
+#undef AI_ADDRCONFIG
+#undef AI_V4MAPPED
+#undef AI_DEFAULT
+
+#undef NI_NOFQDN
+#undef NI_NUMERICHOST
+#undef NI_NAMEREQD
+#undef NI_NUMERICSERV
+#undef NI_DGRAM
+@
+
+
+1.1.2.3
+log
+@*** empty log message ***
+@
+text
+@d68 20
+@
+
+
+1.1.2.4
+log
+@small fixes
+@
+text
+@a67 8
+#ifndef __P
+# ifdef HAVE_PROTOTYPES 1
+#  define __P(args) args
+# else
+#  define __P(args)
+# endif
+#endif
+
+@
+
+
+1.1.2.5
+log
+@regexp,range,squeeze
+@
+text
+@d69 1
+a69 1
+# ifdef HAVE_PROTOTYPES
+d137 6
+@
+
+
+1.1.2.6
+log
+@990513
+@
+text
+@d72 1
+a72 1
+#  define __P(args) ()
+@
+
+
+1.1.2.7
+log
+@arity/strict yield
+@
+text
+@a156 7
+/* In case there is no definition of offsetof() provided - though any proper
+Standard C system should have one. */
+
+#ifndef offsetof
+#define offsetof(p_type,field) ((size_t)&(((p_type *)0)->field))
+#endif
+
+@
+
+
+1.1.2.8
+log
+@990531
+@
+text
+@a127 5
+#ifdef NT
+#define IN_EXPERIMENTAL(x) 0
+#define IN_LOOPBACKNET 0
+#endif
+
+@
+
+
+1.1.2.9
+log
+@thread bugs
+@
+text
+@a29 2
+#ifndef ADDR_INFO_H
+#define ADDR_INFO_H
+a168 1
+#endif
+@

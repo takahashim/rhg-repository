@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols
+	release_0_9_8:1.1
+	autoconfiscation-branch:1.1.0.2
+	root-of-autoconfiscation:1.1
+	release_0_9_7:1.1
+	release_0_9_6:1.1
+	release_0_9_5:1.1
+	release_0_9_4:1.1
+	release_0_9_3:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.06.04.05.20.20;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* examples/e2r.rb: new file.
+* examples/test.rhtml: new file.
+* examples/foo.rhtml: new file.
+* COPYING: new file.
+* GPL: new file.
+* LGPL: new file.
+* eruby_lib.c (eruby_import): use Kernel#eval for backtrace.
+@
+text
+@<% print "foo" %>
+@

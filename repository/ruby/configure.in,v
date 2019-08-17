@@ -1,0 +1,9153 @@
+head	1.150;
+access;
+symbols
+	v1_6_7:1.68.2.28
+	v1_6_6:1.68.2.24
+	v1_6_5:1.68.2.16
+	v1_6_4:1.68.2.15
+	v1_7_1:1.91
+	v1_6_4_preview4:1.68.2.12
+	v1_6_4_preview3:1.68.2.12
+	v1_6_4_preview2:1.68.2.8
+	v1_6_4_preview1:1.68.2.8
+	v1_6_3:1.68.2.5
+	ruby_m17n:1.69.0.2
+	ruby_1_6:1.68.0.2
+	v1_6_2:1.68
+	v1_6_1:1.63
+	v1_6_0:1.56
+	v1_4_6:1.3.2.19
+	v1_4_5:1.3.2.19
+	v1_4_4:1.3.2.11
+	ruby_1_4_3:1.3.2.5
+	ruby1_4_3:1.3.2.4
+	v1_4_3:1.3.2.4
+	v1_5_0:1.9
+	ruby_1_4_3_pre1:1.3.2.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.27
+	v1_3_6_repack:1.1.1.2.2.26
+	v1_3_6:1.1.1.2.2.26
+	v1_3_5:1.1.1.2.2.24
+	v1_2_6repack:1.1.1.1.4.30
+	v1_3_4_990625:1.1.1.2.2.23
+	v1_3_4_990624:1.1.1.2.2.22
+	v1_2_6:1.1.1.1.4.30
+	v1_3_4_990611:1.1.1.2.2.21
+	v1_3_4_990531:1.1.1.2.2.20
+	v1_3_3_990518:1.1.1.2.2.18
+	v1_3_3_990513:1.1.1.2.2.18
+	v1_3_3_990507:1.1.1.2.2.18
+	v1_2_5:1.1.1.1.4.30
+	v1_2_4:1.1.1.1.4.30
+	v1_3_1_990225:1.1.1.2.2.10
+	v1_3_1_990224:1.1.1.2.2.9
+	v1_3_1_990215:1.1.1.2.2.8
+	v1_3_1_990212:1.1.1.2.2.7
+	v1_3_1_990210:1.1.1.2.2.6
+	v1_3_1_:1.1.1.2.2.6
+	v1_3_1_990209:1.1.1.2.2.5
+	v1_3_1_990205:1.1.1.2.2.4
+	v1_3_1_990203:1.1.1.2.2.3
+	v1_3_1_990201:1.1.1.2.2.2
+	v1_3_1"_990201:1.1.1.2.2.2
+	v1_3_1_990128:1.1.1.2.2.2
+	v1_3_1_990127:1.1.1.2.2.2
+	v1_3_1_990126:1.1.1.2.2.1
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.28
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.27
+	v1_2_1repack:1.1.1.1.4.26
+	v1_2_1:1.1.1.1.4.25
+	v1_2_stable:1.1.1.1.4.24
+	v1_1d1:1.1.1.1.4.20.2.4
+	v1_1d0:1.1.1.1.4.20.2.3
+	v1_1c9_1:1.1.1.1.4.24
+	v1_1c9:1.1.1.1.4.23
+	v1_1c8:1.1.1.1.4.23
+	v1_1c7:1.1.1.1.4.22
+	v1_1c6:1.1.1.1.4.22
+	v1_1d-start:1.1.1.1.4.20
+	v1_1c5:1.1.1.1.4.21
+	v1_1dev:1.1.1.1.4.20.0.2
+	v1_1c4:1.1.1.1.4.20
+	v1_1c3:1.1.1.1.4.19
+	v1_1c2:1.1.1.1.4.19
+	v1_1c1:1.1.1.1.4.17
+	v1_1c0:1.1.1.1.4.17
+	v1_1b9_31:1.1.1.1.4.17
+	v1_1b9_30:1.1.1.1.4.17
+	v1_1b9_28:1.1.1.1.4.16
+	v1_1b9_27:1.1.1.1.4.14
+	v1_1b9_26:1.1.1.1.4.13
+	r1_1b9_25:1.1.1.1.4.12
+	r1_1b9_24:1.1.1.1.4.12
+	v1_1b9_23:1.1.1.1.4.12
+	v1_1b9_22:1.1.1.1.4.10
+	v1_1b9_20:1.1.1.1.4.9
+	v1_1b9_18:1.1.1.1.4.5
+	v1_1b9_16:1.1.1.1.4.5
+	v1_1b9_15:1.1.1.1.4.5
+	v1_1b9_13:1.1.1.1.4.5
+	v1_1b9_12:1.1.1.1.4.4
+	v1_1b9_11:1.1.1.1.4.4
+	v1_1b9_08:1.1.1.1.4.4
+	v1_1b9_07:1.1.1.1.4.4
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.150
+date	2002.10.24.12.58.41;	author nobu;	state Exp;
+branches;
+next	1.149;
+
+1.149
+date	2002.10.23.17.40.14;	author nobu;	state Exp;
+branches;
+next	1.148;
+
+1.148
+date	2002.10.21.16.09.08;	author eban;	state Exp;
+branches;
+next	1.147;
+
+1.147
+date	2002.10.21.14.17.44;	author nobu;	state Exp;
+branches;
+next	1.146;
+
+1.146
+date	2002.10.04.05.46.45;	author eban;	state Exp;
+branches;
+next	1.145;
+
+1.145
+date	2002.10.04.05.18.04;	author eban;	state Exp;
+branches;
+next	1.144;
+
+1.144
+date	2002.10.02.14.59.25;	author nobu;	state Exp;
+branches;
+next	1.143;
+
+1.143
+date	2002.10.02.04.27.35;	author eban;	state Exp;
+branches;
+next	1.142;
+
+1.142
+date	2002.09.25.07.03.01;	author matz;	state Exp;
+branches;
+next	1.141;
+
+1.141
+date	2002.09.23.11.01.48;	author eban;	state Exp;
+branches;
+next	1.140;
+
+1.140
+date	2002.09.15.12.57.20;	author eban;	state Exp;
+branches;
+next	1.139;
+
+1.139
+date	2002.09.08.09.04.15;	author eban;	state Exp;
+branches;
+next	1.138;
+
+1.138
+date	2002.08.29.09.08.15;	author matz;	state Exp;
+branches;
+next	1.137;
+
+1.137
+date	2002.08.28.07.38.25;	author eban;	state Exp;
+branches;
+next	1.136;
+
+1.136
+date	2002.08.28.06.01.58;	author matz;	state Exp;
+branches;
+next	1.135;
+
+1.135
+date	2002.08.27.08.31.05;	author matz;	state Exp;
+branches;
+next	1.134;
+
+1.134
+date	2002.08.23.08.18.18;	author eban;	state Exp;
+branches;
+next	1.133;
+
+1.133
+date	2002.08.21.07.17.55;	author eban;	state Exp;
+branches;
+next	1.132;
+
+1.132
+date	2002.08.02.15.14.02;	author eban;	state Exp;
+branches;
+next	1.131;
+
+1.131
+date	2002.08.01.09.42.36;	author matz;	state Exp;
+branches;
+next	1.130;
+
+1.130
+date	2002.06.30.09.05.44;	author eban;	state Exp;
+branches;
+next	1.129;
+
+1.129
+date	2002.06.20.10.24.38;	author eban;	state Exp;
+branches;
+next	1.128;
+
+1.128
+date	2002.06.11.10.26.12;	author eban;	state Exp;
+branches;
+next	1.127;
+
+1.127
+date	2002.05.22.11.20.44;	author eban;	state Exp;
+branches;
+next	1.126;
+
+1.126
+date	2002.05.14.06.22.25;	author matz;	state Exp;
+branches;
+next	1.125;
+
+1.125
+date	2002.05.07.08.15.25;	author eban;	state Exp;
+branches;
+next	1.124;
+
+1.124
+date	2002.05.03.11.24.30;	author eban;	state Exp;
+branches;
+next	1.123;
+
+1.123
+date	2002.05.02.07.50.36;	author matz;	state Exp;
+branches;
+next	1.122;
+
+1.122
+date	2002.04.24.05.27.41;	author eban;	state Exp;
+branches;
+next	1.121;
+
+1.121
+date	2002.04.21.16.05.52;	author eban;	state Exp;
+branches;
+next	1.120;
+
+1.120
+date	2002.04.19.07.52.21;	author eban;	state Exp;
+branches;
+next	1.119;
+
+1.119
+date	2002.04.19.07.39.39;	author eban;	state Exp;
+branches;
+next	1.118;
+
+1.118
+date	2002.04.12.04.05.08;	author eban;	state Exp;
+branches;
+next	1.117;
+
+1.117
+date	2002.04.12.03.24.52;	author nobu;	state Exp;
+branches;
+next	1.116;
+
+1.116
+date	2002.04.11.10.02.59;	author matz;	state Exp;
+branches;
+next	1.115;
+
+1.115
+date	2002.03.26.10.14.44;	author eban;	state Exp;
+branches;
+next	1.114;
+
+1.114
+date	2002.03.25.15.37.44;	author akr;	state Exp;
+branches;
+next	1.113;
+
+1.113
+date	2002.03.25.14.50.40;	author nobu;	state Exp;
+branches;
+next	1.112;
+
+1.112
+date	2002.03.14.07.20.34;	author eban;	state Exp;
+branches;
+next	1.111;
+
+1.111
+date	2002.03.14.06.23.43;	author matz;	state Exp;
+branches;
+next	1.110;
+
+1.110
+date	2002.02.18.09.52.45;	author matz;	state Exp;
+branches;
+next	1.109;
+
+1.109
+date	2002.02.06.08.23.46;	author nobu;	state Exp;
+branches;
+next	1.108;
+
+1.108
+date	2002.01.29.09.15.59;	author akr;	state Exp;
+branches;
+next	1.107;
+
+1.107
+date	2002.01.25.08.58.00;	author eban;	state Exp;
+branches;
+next	1.106;
+
+1.106
+date	2002.01.23.07.30.39;	author matz;	state Exp;
+branches;
+next	1.105;
+
+1.105
+date	2002.01.04.14.14.34;	author matz;	state Exp;
+branches;
+next	1.104;
+
+1.104
+date	2001.12.17.06.45.37;	author akr;	state Exp;
+branches;
+next	1.103;
+
+1.103
+date	2001.12.03.09.38.35;	author eban;	state Exp;
+branches;
+next	1.102;
+
+1.102
+date	2001.12.03.07.05.37;	author usa;	state Exp;
+branches;
+next	1.101;
+
+1.101
+date	2001.12.02.18.33.10;	author usa;	state Exp;
+branches;
+next	1.100;
+
+1.100
+date	2001.12.02.14.10.26;	author eban;	state Exp;
+branches;
+next	1.99;
+
+1.99
+date	2001.11.30.09.17.30;	author eban;	state Exp;
+branches;
+next	1.98;
+
+1.98
+date	2001.11.13.10.53.20;	author eban;	state Exp;
+branches;
+next	1.97;
+
+1.97
+date	2001.11.13.08.19.51;	author matz;	state Exp;
+branches;
+next	1.96;
+
+1.96
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.95;
+
+1.95
+date	2001.10.02.04.31.18;	author matz;	state Exp;
+branches;
+next	1.94;
+
+1.94
+date	2001.09.03.05.37.42;	author matz;	state Exp;
+branches;
+next	1.93;
+
+1.93
+date	2001.08.06.03.05.12;	author matz;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2001.06.11.05.31.17;	author eban;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2001.06.01.02.25.28;	author eban;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2001.05.30.16.28.06;	author knu;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2001.05.28.16.07.34;	author eban;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2001.05.02.18.35.50;	author knu;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2001.04.26.13.58.10;	author eban;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2001.04.22.09.49.15;	author eban;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2001.04.01.16.53.41;	author knu;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2001.03.27.07.09.23;	author matz;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2001.03.22.08.59.02;	author matz;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2001.03.16.08.17.44;	author knu;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2001.03.13.05.45.08;	author matz;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2001.02.28.06.30.03;	author matz;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2001.02.26.05.29.00;	author matz;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2001.02.20.07.42.03;	author matz;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2001.02.16.07.53.19;	author matz;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2001.02.11.14.59.04;	author eban;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2001.01.31.14.26.46;	author eban;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2001.01.17.04.33.29;	author eban;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2001.01.10.09.52.13;	author matz;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2001.01.10.08.09.01;	author eban;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2001.01.10.07.30.18;	author eban;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2000.11.13.05.39.32;	author matz;	state Exp;
+branches
+	1.68.2.1;
+next	1.67;
+
+1.67
+date	2000.11.02.09.04.54;	author matz;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2000.10.31.08.37.38;	author matz;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2000.10.02.07.48.32;	author matz;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2000.09.30.17.06.08;	author eban;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2000.09.27.06.48.23;	author eban;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2000.09.22.18.15.40;	author matz;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2000.09.21.09.30.55;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2000.09.19.07.01.52;	author eban;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2000.09.19.05.03.07;	author eban;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2000.09.12.05.37.19;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2000.09.04.04.43.26;	author eban;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2000.08.28.09.53.24;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2000.08.15.07.11.10;	author eban;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2000.08.07.05.01.46;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2000.08.03.09.50.32;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2000.08.01.09.25.33;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2000.07.31.04.36.37;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2000.07.27.09.49.14;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2000.07.26.02.25.50;	author eban;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2000.07.26.01.12.31;	author eban;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2000.07.25.14.46.44;	author eban;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2000.07.03.09.08.37;	author eban;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2000.07.03.08.29.58;	author eban;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2000.07.03.01.47.02;	author eban;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2000.07.02.15.57.14;	author eban;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2000.06.28.12.27.54;	author eban;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2000.06.28.10.45.30;	author eban;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2000.06.28.08.26.53;	author matz;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2000.06.22.08.29.41;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2000.06.20.01.55.26;	author eban;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2000.06.19.08.38.04;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2000.06.19.03.37.52;	author eban;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2000.06.16.12.41.06;	author eban;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2000.06.16.07.44.01;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.06.14.05.15.08;	author eban;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.06.12.16.34.50;	author eban;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.06.12.14.46.44;	author eban;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.06.12.07.48.19;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.06.05.08.46.48;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.05.24.04.33.54;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.05.21.12.23.51;	author eban;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.05.21.09.25.57;	author eban;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.05.14.09.36.26;	author eban;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.05.13.16.12.15;	author eban;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.05.12.09.07.33;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.05.09.04.52.52;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.05.01.09.41.12;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.04.12.05.06.21;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.03.17.08.58.10;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.03.15.09.05.36;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.03.15.05.01.16;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.03.13.07.18.33;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.03.07.08.37.27;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.02.17.07.11.07;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.02.08.08.48.45;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.02.01.03.11.59;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.01.05.04.36.58;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	99.12.14.06.49.40;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	99.12.07.09.23.23;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	99.12.06.09.03.50;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.11.10.06.47.07;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.11.08.03.57.00;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.29.09.25.31;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.21.07.52.15;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.01.09.48.00;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.03;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.01.26.10.08.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.01.27.08.08.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.02.03.09.47.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.02.05.10.27.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.02.09.06.08.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.02.10.08.44.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.02.12.11.17.01;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	99.02.15.07.31.49;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	99.02.24.04.31.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	99.02.25.06.39.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	99.03.24.08.52.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	99.04.09.17.57.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	99.04.20.08.21.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	99.04.26.09.42.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	99.04.27.02.56.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	99.04.27.05.11.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	99.04.30.07.55.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.18;
+
+1.1.1.2.2.18
+date	99.05.06.08.31.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.19;
+
+1.1.1.2.2.19
+date	99.05.25.08.25.51;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.20;
+
+1.1.1.2.2.20
+date	99.05.31.09.13.03;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.21;
+
+1.1.1.2.2.21
+date	99.06.09.09.21.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.22;
+
+1.1.1.2.2.22
+date	99.06.24.04.23.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.23;
+
+1.1.1.2.2.23
+date	99.06.25.09.02.34;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.24;
+
+1.1.1.2.2.24
+date	99.07.15.07.59.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.25;
+
+1.1.1.2.2.25
+date	99.07.22.10.37.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.26;
+
+1.1.1.2.2.26
+date	99.07.28.09.26.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.27;
+
+1.1.1.2.2.27
+date	99.08.06.06.48.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.28;
+
+1.1.1.2.2.28
+date	99.08.11.07.23.54;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.03.03.02.39.31;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.03.11.07.32.54;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.03.27.10.19.52;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.03.30.09.41.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.5;
+
+1.1.1.1.4.5
+date	98.04.21.08.41.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.6;
+
+1.1.1.1.4.6
+date	98.05.13.05.57.51;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.7;
+
+1.1.1.1.4.7
+date	98.05.13.07.26.04;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.8;
+
+1.1.1.1.4.8
+date	98.05.14.04.10.26;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.9;
+
+1.1.1.1.4.9
+date	98.05.15.05.43.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.10;
+
+1.1.1.1.4.10
+date	98.05.18.09.12.18;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.11;
+
+1.1.1.1.4.11
+date	98.05.25.09.42.22;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.12;
+
+1.1.1.1.4.12
+date	98.05.26.08.24.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.13;
+
+1.1.1.1.4.13
+date	98.06.16.04.23.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.14;
+
+1.1.1.1.4.14
+date	98.06.19.09.32.01;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.15;
+
+1.1.1.1.4.15
+date	98.06.22.05.53.19;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.16;
+
+1.1.1.1.4.16
+date	98.06.26.09.44.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.17;
+
+1.1.1.1.4.17
+date	98.07.03.07.06.22;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.18;
+
+1.1.1.1.4.18
+date	98.07.29.09.50.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.19;
+
+1.1.1.1.4.19
+date	98.08.10.05.41.11;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.20;
+
+1.1.1.1.4.20
+date	98.09.03.07.43.26;	author matz;	state Exp;
+branches
+	1.1.1.1.4.20.2.1;
+next	1.1.1.1.4.21;
+
+1.1.1.1.4.21
+date	98.09.08.09.17.30;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.22;
+
+1.1.1.1.4.22
+date	98.10.06.02.44.57;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.23;
+
+1.1.1.1.4.23
+date	98.11.17.09.12.30;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.24;
+
+1.1.1.1.4.24
+date	98.12.14.09.00.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.25;
+
+1.1.1.1.4.25
+date	99.01.11.07.55.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.26;
+
+1.1.1.1.4.26
+date	99.01.12.01.16.56;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.27;
+
+1.1.1.1.4.27
+date	99.01.18.09.08.49;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.28;
+
+1.1.1.1.4.28
+date	99.01.21.09.04.53;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.29;
+
+1.1.1.1.4.29
+date	99.02.09.03.29.21;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.30;
+
+1.1.1.1.4.30
+date	99.04.08.10.14.30;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.20.2.1
+date	98.10.06.03.28.05;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.20.2.2;
+
+1.1.1.1.4.20.2.2
+date	98.11.25.03.31.10;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.20.2.3;
+
+1.1.1.1.4.20.2.3
+date	98.12.16.07.30.28;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.20.2.4;
+
+1.1.1.1.4.20.2.4
+date	98.12.22.09.01.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.10.25.05.09.11;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	99.11.09.03.57.26;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	99.11.10.06.36.01;	author matz;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	99.12.06.09.03.27;	author matz;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	99.12.07.16.47.14;	author matz;	state Exp;
+branches;
+next	1.3.2.6;
+
+1.3.2.6
+date	99.12.08.00.37.33;	author matz;	state Exp;
+branches;
+next	1.3.2.7;
+
+1.3.2.7
+date	2000.01.05.04.41.01;	author matz;	state Exp;
+branches;
+next	1.3.2.8;
+
+1.3.2.8
+date	2000.01.24.03.46.05;	author matz;	state Exp;
+branches;
+next	1.3.2.9;
+
+1.3.2.9
+date	2000.02.02.08.09.40;	author matz;	state Exp;
+branches;
+next	1.3.2.10;
+
+1.3.2.10
+date	2000.02.08.08.53.48;	author matz;	state Exp;
+branches;
+next	1.3.2.11;
+
+1.3.2.11
+date	2000.03.13.09.15.35;	author matz;	state Exp;
+branches;
+next	1.3.2.12;
+
+1.3.2.12
+date	2000.03.14.06.56.32;	author matz;	state Exp;
+branches;
+next	1.3.2.13;
+
+1.3.2.13
+date	2000.03.23.04.14.11;	author matz;	state Exp;
+branches;
+next	1.3.2.14;
+
+1.3.2.14
+date	2000.04.14.14.35.43;	author matz;	state Exp;
+branches;
+next	1.3.2.15;
+
+1.3.2.15
+date	2000.05.01.09.42.21;	author matz;	state Exp;
+branches;
+next	1.3.2.16;
+
+1.3.2.16
+date	2000.06.05.09.00.52;	author matz;	state Exp;
+branches;
+next	1.3.2.17;
+
+1.3.2.17
+date	2000.06.13.09.50.46;	author matz;	state Exp;
+branches;
+next	1.3.2.18;
+
+1.3.2.18
+date	2000.06.20.06.08.32;	author matz;	state Exp;
+branches;
+next	1.3.2.19;
+
+1.3.2.19
+date	2000.06.21.15.25.54;	author eban;	state Exp;
+branches;
+next	1.3.2.20;
+
+1.3.2.20
+date	2000.07.31.09.20.55;	author matz;	state Exp;
+branches;
+next	1.3.2.21;
+
+1.3.2.21
+date	2000.08.27.03.55.35;	author eban;	state Exp;
+branches;
+next	;
+
+1.68.2.1
+date	2001.01.17.04.31.29;	author eban;	state Exp;
+branches;
+next	1.68.2.2;
+
+1.68.2.2
+date	2001.01.31.14.27.36;	author eban;	state Exp;
+branches;
+next	1.68.2.3;
+
+1.68.2.3
+date	2001.02.08.09.17.56;	author matz;	state Exp;
+branches;
+next	1.68.2.4;
+
+1.68.2.4
+date	2001.02.11.14.58.52;	author eban;	state Exp;
+branches;
+next	1.68.2.5;
+
+1.68.2.5
+date	2001.03.16.08.25.17;	author knu;	state Exp;
+branches;
+next	1.68.2.6;
+
+1.68.2.6
+date	2001.03.22.08.59.26;	author matz;	state Exp;
+branches;
+next	1.68.2.7;
+
+1.68.2.7
+date	2001.03.27.07.10.56;	author matz;	state Exp;
+branches;
+next	1.68.2.8;
+
+1.68.2.8
+date	2001.04.03.06.30.33;	author knu;	state Exp;
+branches;
+next	1.68.2.9;
+
+1.68.2.9
+date	2001.04.22.09.48.37;	author eban;	state Exp;
+branches;
+next	1.68.2.10;
+
+1.68.2.10
+date	2001.04.26.13.57.31;	author eban;	state Exp;
+branches;
+next	1.68.2.11;
+
+1.68.2.11
+date	2001.05.02.19.08.07;	author knu;	state Exp;
+branches;
+next	1.68.2.12;
+
+1.68.2.12
+date	2001.05.11.05.21.57;	author matz;	state Exp;
+branches;
+next	1.68.2.13;
+
+1.68.2.13
+date	2001.05.28.16.07.01;	author eban;	state Exp;
+branches;
+next	1.68.2.14;
+
+1.68.2.14
+date	2001.05.30.16.29.32;	author knu;	state Exp;
+branches;
+next	1.68.2.15;
+
+1.68.2.15
+date	2001.06.01.02.26.09;	author eban;	state Exp;
+branches;
+next	1.68.2.16;
+
+1.68.2.16
+date	2001.06.11.05.31.00;	author eban;	state Exp;
+branches;
+next	1.68.2.17;
+
+1.68.2.17
+date	2001.10.02.04.25.51;	author matz;	state Exp;
+branches;
+next	1.68.2.18;
+
+1.68.2.18
+date	2001.11.07.09.01.30;	author matz;	state Exp;
+branches;
+next	1.68.2.19;
+
+1.68.2.19
+date	2001.11.13.08.22.26;	author matz;	state Exp;
+branches;
+next	1.68.2.20;
+
+1.68.2.20
+date	2001.11.13.13.28.00;	author eban;	state Exp;
+branches;
+next	1.68.2.21;
+
+1.68.2.21
+date	2001.12.02.14.09.43;	author eban;	state Exp;
+branches;
+next	1.68.2.22;
+
+1.68.2.22
+date	2001.12.02.18.31.15;	author usa;	state Exp;
+branches;
+next	1.68.2.23;
+
+1.68.2.23
+date	2001.12.03.07.06.28;	author usa;	state Exp;
+branches;
+next	1.68.2.24;
+
+1.68.2.24
+date	2001.12.03.10.11.03;	author eban;	state Exp;
+branches;
+next	1.68.2.25;
+
+1.68.2.25
+date	2001.12.30.09.10.28;	author akr;	state Exp;
+branches;
+next	1.68.2.26;
+
+1.68.2.26
+date	2002.01.04.14.19.47;	author matz;	state Exp;
+branches;
+next	1.68.2.27;
+
+1.68.2.27
+date	2002.01.25.09.00.50;	author eban;	state Exp;
+branches;
+next	1.68.2.28;
+
+1.68.2.28
+date	2002.02.06.08.25.00;	author nobu;	state Exp;
+branches;
+next	1.68.2.29;
+
+1.68.2.29
+date	2002.03.20.07.42.11;	author eban;	state Exp;
+branches;
+next	1.68.2.30;
+
+1.68.2.30
+date	2002.04.12.04.05.01;	author eban;	state Exp;
+branches;
+next	1.68.2.31;
+
+1.68.2.31
+date	2002.04.24.05.32.47;	author eban;	state Exp;
+branches;
+next	1.68.2.32;
+
+1.68.2.32
+date	2002.04.24.05.34.31;	author eban;	state Exp;
+branches;
+next	1.68.2.33;
+
+1.68.2.33
+date	2002.05.14.06.08.42;	author matz;	state Exp;
+branches;
+next	1.68.2.34;
+
+1.68.2.34
+date	2002.05.22.11.23.11;	author eban;	state Exp;
+branches;
+next	1.68.2.35;
+
+1.68.2.35
+date	2002.06.20.10.25.10;	author eban;	state Exp;
+branches;
+next	1.68.2.36;
+
+1.68.2.36
+date	2002.06.30.09.07.53;	author eban;	state Exp;
+branches;
+next	1.68.2.37;
+
+1.68.2.37
+date	2002.09.25.07.07.36;	author matz;	state Exp;
+branches;
+next	1.68.2.38;
+
+1.68.2.38
+date	2002.10.02.04.28.00;	author eban;	state Exp;
+branches;
+next	1.68.2.39;
+
+1.68.2.39
+date	2002.10.04.05.44.51;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.150
+log
+@* configure.in (LIBPATHFLAG): avoid $ substitution.
+  [ruby-dev:18577]
+
+* ext/extmk.rb (extmake): expand $srcdir.
+
+* ext/win32ole/extconf.rb: should not override $CFLAGS, but
+  append.
+
+* lib/mkmf.rb (config_string): use given config hash.
+@
+text
+@dnl Process this file with autoconf to produce a configure script.
+AC_INIT()
+
+AC_PREREQ(2.50)
+
+AC_DEFUN(RUBY_MINGW32,
+[case "$host_os" in
+cygwin*)
+AC_CACHE_CHECK(for mingw32 environment, rb_cv_mingw32,
+[AC_TRY_CPP([
+#ifndef __MINGW32__
+# error
+#endif
+], rb_cv_mingw32=yes,rb_cv_mingw32=no)
+rm -f conftest*])
+test "$rb_cv_mingw32" = yes && target_os="mingw32"
+  ;;
+esac])
+
+AC_DEFUN(RUBY_CPPOUTFILE,
+[cppflags=$CPPFLAGS
+AC_CACHE_CHECK(whether ${CPP} accepts -o, rb_cv_cppoutfile,
+[CPPFLAGS='-o conftest.i'
+AC_TRY_CPP([], rb_cv_cppoutfile="$CPPFLAGS", rb_cv_cppoutfile=' >conftest.i')
+rm -f conftest*])
+CPPOUTFILE="$rb_cv_cppoutfile"
+AC_SUBST(CPPOUTFILE)
+CPPFLAGS=$cppflags])
+
+AC_DEFUN(RUBY_PROG_GNU_LD,
+[AC_CACHE_CHECK(whether the linker is GNU ld, rb_cv_prog_gnu_ld,
+[if `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null; then
+  rb_cv_prog_gnu_ld=yes
+else
+  rb_cv_prog_gnu_ld=no
+fi
+])
+GNU_LD=$rb_cv_prog_gnu_ld
+AC_SUBST(GNU_LD)])
+
+rb_version=`grep RUBY_VERSION $srcdir/version.h`
+MAJOR=`expr "$rb_version" : '#define RUBY_VERSION "\([0-9][0-9]*\)\.[0-9][0-9]*\.[0-9][0-9]*"'`
+MINOR=`expr "$rb_version" : '#define RUBY_VERSION "[0-9][0-9]*\.\([0-9][0-9]*\)\.[0-9][0-9]*"'`
+TEENY=`expr "$rb_version" : '#define RUBY_VERSION "[0-9][0-9]*\.[0-9][0-9]*\.\([0-9][0-9]*\)"'`
+AC_SUBST(MAJOR)
+AC_SUBST(MINOR)
+AC_SUBST(TEENY)
+dnl checks for alternative programs
+AC_ARG_WITH(gcc, [  --without-gcc           never use gcc], [
+	case $withval in
+	no)	: ${CC=cc}
+		;;
+	yes)	: ${CC=gcc}
+		;;
+	*)	CC=$withval
+		;;
+	esac])
+dnl If the user switches compilers, we can't believe the cache
+if test ! -z "$ac_cv_prog_CC" -a ! -z "$CC" -a "$CC" != "$ac_cv_prog_CC"
+then
+  AC_MSG_ERROR(cached CC is different -- throw away $cache_file
+(it is also a good idea to do 'make clean' before compiling))
+fi
+
+if test "$program_prefix" = NONE; then
+  program_prefix=
+fi
+AC_CANONICAL_TARGET
+
+dnl checks for fat-binary
+fat_binary=no
+AC_ARG_ENABLE(fat-binary,
+       [  --enable-fat-binary     build a NeXT/Apple Multi Architecture Binary. ],
+       [fat_binary=$enableval])
+ if test "$fat_binary" = yes ; then
+
+    AC_MSG_CHECKING(target architecture)
+
+    case "$target_os" in
+    rhapsody*)
+        echo -n "MacOS X Server: "
+	  	if test "$TARGET_ARCHS" = "" ; then
+   	        TARGET_ARCHS="ppc i386"
+  		fi
+	;;
+    nextstep*|openstep*)
+  	    echo -n "NeXTSTEP/OPENSTEP: "
+	    if test "$TARGET_ARCHS" = "" ; then
+	       if test `/usr/bin/arch` = "m68k" ; then
+		   TARGET_ARCHS="m68k i486"
+	       else # Black and Native one
+		   TARGET_ARCHS="m68k `/usr/bin/arch`"
+	       fi
+	    fi
+	# to ensure AC_HEADER_SYS_WAIT works
+	AC_DEFINE(_POSIX_SOURCE)
+        ;;
+    macos*|darwin*)
+        echo -n "MacOS X (Darwin): "
+            if test "$TARGET_ARCHS" = "" ; then
+                TARGET_ARCHS="ppc i386"
+            fi
+	;;
+    esac
+    # /usr/lib/arch_tool -archify_list $TARGET_ARCHS
+    for archs in $TARGET_ARCHS 
+    do
+        ARCH_FLAG="$ARCH_FLAG -arch $archs "
+        echo -n " $archs"
+    done
+    AC_DEFINE(NEXT_FAT_BINARY)
+    echo "."
+fi 
+
+case $target_cpu in
+  i?86) frame_address=yes;;
+  *)    frame_address=no;;
+esac
+AC_ARG_ENABLE(frame-address,
+       [  --enable-frame-address  use GCC __builtin_frame_address(). ],
+       [frame_address=$enableval])
+if test $frame_address = yes; then
+    AC_DEFINE(USE_BUILTIN_FRAME_ADDRESS)
+fi
+
+AC_ARG_PROGRAM
+
+dnl Checks for programs.
+
+if test x"${build}" != x"${host}"; then
+  AC_CHECK_TOOL(CC, gcc)
+fi
+AC_PROG_CC
+AC_PROG_GCC_TRADITIONAL
+
+RUBY_PROG_GNU_LD
+RUBY_CPPOUTFILE
+
+OUTFLAG='-o '
+AC_SUBST(OUTFLAG)
+
+RUBY_MINGW32
+
+AC_PROG_YACC
+AC_CHECK_TOOL(RANLIB, ranlib, :)
+AC_CHECK_TOOL(AR, ar)
+if test -z "$AR"; then
+  AC_CHECK_PROGS(AR, aal, ar)
+fi
+
+case "$target_os" in
+cygwin*|mingw*)
+    AC_CHECK_TOOL(NM, nm)
+    AC_CHECK_TOOL(WINDRES, windres)
+    AC_CHECK_TOOL(DLLWRAP, dllwrap)
+    target_cpu=`echo $target_cpu | sed s/i.86/i386/`
+    : ${enable_shared=yes}
+    ;;
+aix*)
+    AC_CHECK_TOOL(NM, nm, /usr/ccs/bin/nm, /usr/ccs/bin:$PATH)
+    ;;
+esac
+
+# by TOYODA Eizi <toyoda@@npd.kishou.go.jp>
+case "$target_os" in
+hiuxmpp*)
+    AC_DEFINE(__HIUX_MPP__)
+    ;;
+esac
+
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+
+# checks for UNIX variants that set C preprocessor variables
+AC_AIX
+AC_MINIX
+
+dnl check for large file stuff
+AC_SYS_LARGEFILE
+
+AC_CHECK_TYPES([long long, off_t])
+
+AC_CHECK_SIZEOF(int, 4)
+AC_CHECK_SIZEOF(short, 2)
+AC_CHECK_SIZEOF(long, 4)
+AC_CHECK_SIZEOF(long long, 0)
+AC_CHECK_SIZEOF(__int64, 0)
+AC_CHECK_SIZEOF(off_t, 0)
+AC_CHECK_SIZEOF(void*, 4)
+AC_CHECK_SIZEOF(float, 4)
+AC_CHECK_SIZEOF(double, 8)
+
+AC_CACHE_CHECK(for prototypes, rb_cv_have_prototypes,
+  [AC_TRY_COMPILE([int foo(int x) { return 0; }], [return foo(10);],
+	rb_cv_have_prototypes=yes,
+	rb_cv_have_prototypes=no)])
+if test "$rb_cv_have_prototypes" = yes; then
+  AC_DEFINE(HAVE_PROTOTYPES)
+fi
+
+AC_CACHE_CHECK(token paste string, rb_cv_tokenpaste,
+  [AC_TRY_COMPILE([#define paste(a,b) a##b],
+		  [int xy = 1; return paste(x,y);],
+		  rb_cv_tokenpaste=ansi,
+		  rb_cv_tokenpaste=knr)])
+if test "$rb_cv_tokenpaste" = ansi; then
+  AC_DEFINE(TOKEN_PASTE(x,y),[x##y])
+else
+  AC_DEFINE(TOKEN_PASTE(x,y),[x/**/y])
+fi
+
+AC_CACHE_CHECK(for variable length prototypes and stdarg.h, rb_cv_stdarg,
+  [AC_TRY_COMPILE([
+#include <stdarg.h>
+int foo(int x, ...) {
+	va_list va;
+	va_start(va, x);
+	va_arg(va, int);
+	va_arg(va, char *);
+	va_arg(va, double);
+	return 0;
+}
+], [return foo(10, "", 3.14);],
+	rb_cv_stdarg=yes,
+	rb_cv_stdarg=no)])
+if test "$rb_cv_stdarg" = yes; then
+  AC_DEFINE(HAVE_STDARG_PROTOTYPES)
+fi
+
+AC_CACHE_CHECK([for noreturn], rb_cv_noreturn,
+[rb_cv_noreturn=no
+for mac in "x __attribute__ ((noreturn))" "__declspec(noreturn) x" x; do
+  AC_TRY_COMPILE(
+    [#define NORETURN(x) $mac
+NORETURN(void exit(int x));],
+    [],
+    [rb_cv_noreturn="$mac"; break])
+done])
+AC_DEFINE_UNQUOTED([NORETURN(x)], $rb_cv_noreturn)
+
+dnl Check whether we need to define sys_nerr locally
+AC_CHECK_DECLS([sys_nerr], [], [], [$ac_includes_default
+#include <errno.h>])
+
+dnl whether link libc_r or not
+AC_ARG_WITH(libc_r, 
+	[  --with-libc_r           link libc_r if possible (FreeBSD only)], [
+	case $withval in
+	yes) with_libc_r=yes;;
+	*)   with_libc_r=no;;
+	esac], [with_libc_r=no])
+
+dnl Checks for libraries.
+case "$target_os" in
+nextstep*)	;;
+openstep*)	;;
+rhapsody*)	;;
+darwin*)	LIBS="-lobjc $LIBS";;
+human*)		ac_cv_func_getpgrp_void=yes;;
+beos*)		;;
+cygwin*)	rb_cv_have_daylight=no
+		rb_cv_need_io_flush_between_rw=no
+		rb_cv_need_io_flush_before_seek=no
+		ac_cv_var_tzname=no
+		ac_cv_func__setjmp=no
+		ac_cv_func_setitimer=no
+		;;
+mingw*)		LIBS="-lwsock32 -lmsvcrt $LIBS"
+		rb_cv_need_io_flush_between_rw=no
+		rb_cv_need_io_flush_before_seek=no
+		ac_cv_header_a_out_h=no
+		ac_cv_header_pwd_h=no
+		ac_cv_header_utime_h=no
+		ac_cv_header_sys_ioctl_h=no
+		ac_cv_header_sys_param_h=no
+		ac_cv_header_sys_resource_h=no
+		ac_cv_header_sys_select_h=no
+		ac_cv_header_sys_times_h=no
+		ac_cv_func_times=yes
+		ac_cv_func_waitpid=yes
+		ac_cv_func_vsnprintf=yes
+		ac_cv_func_seekdir=yes
+		ac_cv_func_telldir=yes
+		ac_cv_func_crypt=no
+		;;
+os2_emx*)	LIBS="-lm $LIBS"
+		ac_cv_lib_dir_opendir=no;;
+msdosdjgpp*)	LIBS="-lm $LIBS"
+		ac_cv_func_getpgrp_void=yes;;
+freebsd*)	LIBS="-lm $LIBS"
+		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
+		  rb_cv_lib_xpg4_needed,
+		  [AC_TRY_CPP([
+#include <osreldate.h>
+#if __FreeBSD_version < 400020 || \
+   (__FreeBSD_version >= 500000 && __FreeBSD_version < 500005)
+#error needs libxpg4
+#endif
+		   ],
+		   rb_cv_lib_xpg4_needed=no,
+		   rb_cv_lib_xpg4_needed=yes,
+		   rb_cv_lib_xpg4_needed=yes)])
+		if test "$rb_cv_lib_xpg4_needed" = yes; then
+			AC_CHECK_LIB(xpg4, setlocale)
+		fi
+		if test "$with_libc_r" = yes; then
+			AC_CACHE_CHECK([whether libc_r is supplementary to libc],
+			  rb_cv_supplementary_lib_c_r,
+			  [AC_TRY_CPP([
+#include <osreldate.h>
+#if 500016 <= __FreeBSD_version
+#error libc_r is supplementary to libc
+#endif
+			   ],
+			   rb_cv_supplementary_lib_c_r=no,
+			   rb_cv_supplementary_lib_c_r=yes,
+			   rb_cv_supplementary_lib_c_r=yes)])
+			if test "$rb_cv_supplementary_lib_c_r" = yes; then
+				MAINLIBS="-lc_r $MAINLIBS"			
+			else
+				MAINLIBS="-pthread $MAINLIBS"			
+				CFLAGS="-D_THREAD_SAFE $CFLAGS"
+			fi
+		fi
+		;;
+linux*)		LIBS="-lm $LIBS"
+		case "$target_cpu" in
+		alpha*)
+		    CFLAGS="-mieee $CFLAGS" ;;
+		esac ;;
+osf*)		LIBS="-lm $LIBS"
+		case "$target_cpu"::"$GCC" in
+		alpha*::yes)
+		    CFLAGS="-mieee $CFLAGS" ;;
+		alpha*::no|alpha*::)
+		    CFLAGS="-ieee $CFLAGS" ;;
+		esac ;;
+*) LIBS="-lm $LIBS";;
+esac
+AC_CHECK_LIB(crypt, crypt)
+AC_CHECK_LIB(dl, dlopen)	# Dynamic linking for SunOS/Solaris and SYSV
+AC_CHECK_LIB(dld, shl_load)	# Dynamic linking for HP-UX
+
+dnl Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS(stdlib.h string.h unistd.h limits.h sys/file.h sys/ioctl.h\
+		 fcntl.h sys/fcntl.h sys/select.h sys/time.h sys/times.h sys/param.h\
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h sys/resource.h \
+		 sys/mkdev.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_TYPE_UID_T
+AC_TYPE_SIZE_T
+AC_STRUCT_ST_BLKSIZE
+AC_STRUCT_ST_BLOCKS
+AC_STRUCT_ST_RDEV
+
+dnl Checks for library functions.
+AC_TYPE_GETGROUPS
+AC_TYPE_SIGNAL
+AC_FUNC_ALLOCA
+AC_FUNC_MEMCMP
+AC_FUNC_FSEEKO
+AC_CHECK_FUNCS(ftello)
+AC_REPLACE_FUNCS(dup2 memmove mkdir strcasecmp strncasecmp strerror strftime\
+		 strchr strstr strtoul crypt flock vsnprintf\
+		 isinf isnan finite hypot acosh)
+AC_CHECK_FUNCS(fmod killpg wait4 waitpid syscall chroot fsync\
+	      truncate chsize times utimes fcntl lockf lstat symlink readlink\
+	      setitimer setruid seteuid setreuid setresuid setproctitle\
+	      setrgid setegid setregid setresgid pause lchown lchmod\
+	      getpgrp setpgrp getpgid setpgid getgroups getpriority getrlimit\
+	      dlopen sigprocmask sigaction _setjmp setsid telldir seekdir fchmod\
+	      mktime timegm cosh sinh tanh)
+AC_STRUCT_TIMEZONE
+AC_CACHE_CHECK(for struct tm.tm_gmtoff, rb_cv_member_struct_tm_tm_gmtoff,
+  [AC_TRY_COMPILE([#include <time.h>],
+    [struct tm t; t.tm_gmtoff = 3600;],
+  [rb_cv_member_struct_tm_tm_gmtoff=yes],
+  [rb_cv_member_struct_tm_tm_gmtoff=no])])
+if test "$rb_cv_member_struct_tm_tm_gmtoff" = yes; then
+  AC_DEFINE(HAVE_STRUCT_TM_TM_GMTOFF)
+fi
+AC_CACHE_CHECK(for external int daylight, rb_cv_have_daylight,
+  [AC_TRY_LINK([#include <time.h>
+  int i;],
+  	[i = daylight;],
+	rb_cv_have_daylight=yes,
+	rb_cv_have_daylight=no)])
+if test "$rb_cv_have_daylight" = yes; then
+  AC_DEFINE(HAVE_DAYLIGHT)
+fi
+AC_CACHE_CHECK(for negative time_t for gmtime(3), rb_cv_negative_time_t,
+  [AC_TRY_RUN([
+#include <time.h>
+
+void
+check(tm, y, m, d, h, s)
+    struct tm *tm;
+    int y, m, d, h, s;
+{
+    if (!tm ||
+	tm->tm_year != y ||
+	tm->tm_mon  != m-1 ||
+	tm->tm_mday != d ||
+	tm->tm_hour != h ||
+	tm->tm_sec  != s) {
+	exit(1);
+    }
+}
+
+int
+main()
+{
+   time_t t = -1;
+   struct tm *tm;
+
+   check(gmtime(&t), 69, 12, 31, 23, 59);
+   t = ~(time_t)0 << 31;
+   check(gmtime(&t), 1, 12, 13, 20, 52);
+   return 0;
+}
+],
+	rb_cv_negative_time_t=yes,
+	rb_cv_negative_time_t=no,
+	rb_cv_negative_time_t=yes)])
+if test "$rb_cv_negative_time_t" = yes; then
+  AC_DEFINE(NEGATIVE_TIME_T)
+fi
+
+if test "$ac_cv_func_sigprocmask" = yes && test "$ac_cv_func_sigaction" = yes; then
+   AC_DEFINE(POSIX_SIGNAL)
+else
+  AC_CACHE_CHECK(for BSD signal semantics, rb_cv_bsd_signal,
+    [AC_TRY_RUN([
+#include <stdio.h>
+#include <signal.h>
+
+void
+sig_handler(dummy)
+     int dummy;
+{
+}
+
+int
+main()
+{
+  signal(SIGINT, sig_handler);
+  kill(getpid(), SIGINT);
+  kill(getpid(), SIGINT);
+  return 0;
+}
+],
+	rb_cv_bsd_signal=yes,
+	rb_cv_bsd_signal=no,
+	rb_cv_bsd_signal=no)])
+  if test "$rb_cv_bsd_signal" = yes; then
+    AC_DEFINE(BSD_SIGNAL)
+  fi
+fi
+
+AC_FUNC_GETPGRP
+AC_FUNC_SETPGRP  
+
+AC_CACHE_CHECK(for working strtod, rb_cv_func_strtod,
+[AC_TRY_RUN([
+double strtod ();
+int
+main()
+{
+  {
+    /* Some versions of Linux strtod mis-parse strings with leading '+'.  */
+    char *string = " +69";
+    char *term;
+    double value;
+    value = strtod(string, &term);
+    if (value != 69 || term != (string + 4))
+      exit(1);
+  }
+
+  {
+    /* Under Solaris 2.4, strtod returns the wrong value for the
+       terminating character under some conditions.  */
+    char *string = "NaN";
+    char *term;
+    strtod(string, &term);
+    if (term != string && *(term - 1) == 0)
+      exit(1);
+  }
+  exit(0);
+}
+], rb_cv_func_strtod=yes, rb_cv_func_strtod=no, rb_cv_func_strtod=no)])
+test $rb_cv_func_strtod = no && AC_LIBOBJ([strtod])
+
+AC_C_BIGENDIAN
+AC_C_CONST
+AC_C_CHAR_UNSIGNED
+AC_C_INLINE
+
+AC_CACHE_CHECK(whether right shift preserve sign bit, rb_cv_rshift_sign,
+    [AC_TRY_RUN([
+int
+main()
+{
+  if (-1==(-1>>1))
+    return 0;
+  return 1;
+}
+],
+	rb_cv_rshift_sign=yes,
+	rb_cv_rshift_sign=no,
+	rb_cv_rshift_sign=yes)])
+if test "$rb_cv_rshift_sign" = yes; then
+  AC_DEFINE(RSHIFT(x,y), ((x)>>(int)y))
+else
+  AC_DEFINE(RSHIFT(x,y), (((x)<0) ? ~((~(x))>>y) : (x)>>y))
+fi
+
+AC_MSG_CHECKING(read count field in FILE structures)
+AC_CACHE_VAL(rb_cv_fcnt,
+[for fcnt in	dnl
+     _cnt	dnl
+     __cnt	dnl
+     _r		dnl
+     readCount	dnl
+     _rcount	dnl for emx0.9c
+; do
+    AC_TRY_COMPILE([#include <stdio.h>
+],
+	[FILE *f = stdin; f->$fcnt = 0;],
+	rb_cv_fcnt="$fcnt"; break,
+	rb_cv_fcnt="not found")
+done])
+if test "$rb_cv_fcnt" = "not found"; then
+  AC_MSG_RESULT([not found(OK if using GNU libc)])
+else
+  AC_MSG_RESULT($rb_cv_fcnt)
+  AC_DEFINE_UNQUOTED(FILE_COUNT, $rb_cv_fcnt)
+fi
+
+AC_MSG_CHECKING(read buffer ptr field in FILE structures)
+AC_CACHE_VAL(rb_cv_frptr,
+[for frptr in	dnl
+     _IO_read_ptr dnl
+     _ptr	dnl
+     __ptr	dnl
+     bufpos	dnl
+     _p	dnl
+; do
+    AC_TRY_COMPILE([#include <stdio.h>
+],
+	[FILE *f = stdin; char buf[256]; f->$frptr = buf;],
+	rb_cv_frptr="$frptr"; break,
+	rb_cv_frptr="not found")
+done])
+if test "$rb_cv_frptr" = "not found"; then
+  AC_MSG_RESULT([not found])
+else
+  AC_MSG_RESULT($rb_cv_frptr)
+  AC_DEFINE_UNQUOTED(FILE_READPTR, $rb_cv_frptr)
+
+  if test "$rb_cv_fcnt" = "not found"; then
+    AC_MSG_CHECKING(read buffer end field in FILE structures)
+    AC_CACHE_VAL(rb_cv_frend,
+    [for frend in	dnl
+         _IO_read_end	dnl
+         bufread 	dnl
+    ; do
+        AC_TRY_COMPILE([#include <stdio.h>
+    ],
+  	[FILE *f = stdin; char buf[256]; f->$frend = buf;],
+  	rb_cv_frend="$frend"; break,
+  	rb_cv_frend="not found")
+    done])
+    if test "$rb_cv_frend" = "not found"; then
+      AC_MSG_RESULT([not found])
+    else
+      AC_MSG_RESULT($rb_cv_frend)
+      AC_DEFINE_UNQUOTED(FILE_READEND, $rb_cv_frend)
+    fi
+  fi
+fi
+
+AC_DEFUN(RUBY_CHECK_IO_NEED_FLUSH,
+[AC_CACHE_CHECK(whether need to flush [$1], [$2],
+    [AC_TRY_RUN([
+#include <stdio.h>
+
+char *fn = "conftest.dat";
+char *wombat = "wombat\n";
+char *koara = "koara\n";
+
+int main()
+{
+    char buf[BUFSIZ];
+    FILE *f;
+    int r = 1;
+
+    if (!(f = fopen(fn, "w+"))) return 1;
+    fputs(wombat, f);
+    fflush(f);
+    fseek(f, 0, 0);
+    if (!fgets(buf, BUFSIZ, f) || strcmp(buf, wombat)) goto fail;
+    ]ifelse(index($2,between_rw),-1,fflush(f);)[
+    fputs(koara, f);
+    ]ifelse(index($2,before_seek),-1,fflush(f);)[
+    fseek(f, 0, 0);
+    ]ifelse(index($2,between_rw),-1,fflush(f);)[
+    if (!fgets(buf, BUFSIZ, f) || strcmp(buf, wombat)) goto fail;
+    if (!fgets(buf, BUFSIZ, f) || strcmp(buf, koara)) goto fail;
+    r = 0;
+  fail:
+    fclose(f);
+    unlink(fn);
+    return r;
+}
+], [$2]=no, [$2]=yes, [$2]=yes)])])
+
+RUBY_CHECK_IO_NEED_FLUSH(between R/W, rb_cv_need_io_flush_between_rw)
+RUBY_CHECK_IO_NEED_FLUSH(before seek, rb_cv_need_io_flush_before_seek)
+if test "$rb_cv_need_io_flush_between_rw" = yes; then
+  AC_DEFINE(NEED_IO_FLUSH_BETWEEN_RW, 1)
+fi
+if test "$rb_cv_need_io_flush_before_seek" = yes; then
+  AC_DEFINE(NEED_IO_FLUSH_BEFORE_SEEK, 1)
+fi
+
+dnl default value for $KANJI
+DEFAULT_KCODE="KCODE_NONE"
+
+AC_ARG_WITH(default-kcode, 
+	[  --with-default-kcode=CODE specify default value for \$KCODE (utf8|euc|sjis|none)], 
+	[case $withval in
+	utf8) DEFAULT_KCODE="KCODE_UTF8";;
+	euc)  DEFAULT_KCODE="KCODE_EUC";;
+	sjis) DEFAULT_KCODE="KCODE_SJIS";;
+	none) DEFAULT_KCODE="KCODE_NONE";;
+        *)    AC_MSG_WARN($withval is not valid kcode; ignored);;
+	esac])
+AC_DEFINE_UNQUOTED(DEFAULT_KCODE, $DEFAULT_KCODE)
+
+dnl wheather use dln_a_out or not
+AC_ARG_WITH(dln-a-out, 
+	[  --with-dln-a-out        use dln_a_out if possible], [
+	case $withval in
+	yes) with_dln_a_out=yes;;
+	*)   with_dln_a_out=no;;
+	esac], [with_dln_a_out=no])
+
+AC_SUBST(XCFLAGS)dnl
+AC_SUBST(XLDFLAGS)dnl
+
+AC_CACHE_CHECK(whether ELF binaries are produced, rb_cv_binary_elf,
+[AC_TRY_RUN([
+/* Test for whether ELF binaries are produced */
+#include <fcntl.h>
+#include <stdlib.h>
+main() {
+	char buffer[4];
+	int i=open("conftest",O_RDONLY);
+	if(i==-1)
+		exit(1); /* fail */
+	if(read(i,&buffer[0],4)<4)
+		exit(1); /* fail */
+	if(buffer[0] != 127 || buffer[1] != 'E' ||
+           buffer[2] != 'L' || buffer[3] != 'F')
+		exit(1); /* fail */
+	exit(0); /* succeed (yes, it's ELF) */
+}
+],
+rb_cv_binary_elf=yes,
+rb_cv_binary_elf=no,
+rb_cv_binary_elf=yes)])
+
+if test "$rb_cv_binary_elf" = yes; then
+  AC_DEFINE(USE_ELF)
+fi
+
+case "$target_os" in
+linux*)
+    if test "$rb_cv_binary_elf" = no; then
+	with_dln_a_out=yes
+	target_os=${target_os}-a_out
+    else
+	LDFLAGS="-rdynamic"
+    fi;;
+netbsd*)
+    if [[ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]]
+    then
+	netbsd_elf=yes
+    else
+	netbsd_elf=no
+    fi
+    ;;
+esac
+LIBEXT=a
+
+AC_SUBST(DLDFLAGS)dnl
+
+AC_SUBST(STATIC)dnl
+AC_SUBST(CCDLFLAGS)dnl
+AC_SUBST(LDSHARED)dnl
+AC_SUBST(DLEXT)dnl
+AC_SUBST(DLEXT2)dnl
+AC_SUBST(LIBEXT)dnl
+
+STATIC=
+LIBPATHFLAG=' -L%s'
+
+if test "$with_dln_a_out" != yes; then
+  rb_cv_dlopen=unknown
+  AC_MSG_CHECKING(whether OS depend dynamic link works)
+  if test "$GCC" = yes; then
+    case "$target_os" in
+    nextstep*)	;;
+    openstep*)	;;
+    rhapsody*)	;;
+    darwin*)	CCDLFLAGS=-fno-common;;
+    human*)	;;
+    bsdi*)	;;
+    beos*)	;;
+    cygwin*)	;;
+    mingw*)	;;
+    netbsd*) CCDLFLAGS=-fPIC;;
+    *) CCDLFLAGS=-fPIC;;
+    esac
+  else
+    case "$target_os" in
+	hpux*)		CCDLFLAGS='+z';;
+	solaris*|irix*)	CCDLFLAGS='-KPIC' ;;
+	sunos*)		CCDLFLAGS='-PIC' ;;
+	esix*|uxpds*)   CCDLFLAGS='-KPIC' ;;
+	*)		CCDLFLAGS='' ;;
+    esac
+  fi
+
+  case "$target_os" in
+	hpux*)		DLDFLAGS="-E"
+			LDSHARED='ld -b'
+			LDFLAGS="-Wl,-E"
+			rb_cv_dlopen=yes;;
+	solaris*) 	if test "$GCC" = yes; then
+			   LDSHARED='$(CC) -Wl,-G'
+			   if test "$rb_cv_prog_gnu_ld" = yes; then
+	 		       LDFLAGS="-Wl,-E"
+			       LDSHARED="$LDSHARED -shared"
+			   fi
+			else
+			   LDSHARED='ld -G'
+			fi
+			rb_cv_dlopen=yes;;
+	sunos*) 	LDSHARED='ld -assert nodefinitions'
+			rb_cv_dlopen=yes;;
+	irix*)		LDSHARED='ld -shared'
+			rb_cv_dlopen=yes;;
+	sysv4*) 	LDSHARED='ld -G'
+			rb_cv_dlopen=yes;;
+        nto-qnx*)       LDSHARED="qcc -shared"
+                        rb_cv_dlopen=yes ;;
+	esix*|uxpds*) 	LDSHARED="ld -G"
+			rb_cv_dlopen=yes ;;
+	osf*) 		LDSHARED="$CC -shared"
+			rb_cv_dlopen=yes ;;
+	linux*) 	LDSHARED="$CC -shared"
+			rb_cv_dlopen=yes ;;
+	gnu*)   	LDSHARED="$CC -shared"
+			rb_cv_dlopen=yes
+			LDFLAGS="-rdynamic" ;;
+	freebsd*)       LDSHARED="$CC -shared"
+			if test "$rb_cv_binary_elf" = yes; then
+			    LDFLAGS="-rdynamic"
+			    DLDFLAGS='-Wl,-soname,$(.TARGET)'
+			else
+			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
+			fi
+			rb_cv_dlopen=yes ;;
+	netbsd*)	LDSHARED='${CC} -shared'
+			if test "$rb_cv_binary_elf" = yes; then
+			    LDFLAGS="-Wl,-export-dynamic"
+			    LIBPATHFLAG=' -L%1$-s -Wl,-R%1$-s'
+			fi
+			rb_cv_dlopen=yes ;;
+	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
+			rb_cv_dlopen=yes ;;
+	bsdi3*) 	case "$CC" in
+			*shlicc*)	LDSHARED="$CC -r"
+					rb_cv_dlopen=yes ;;
+			esac ;;
+	bsdi*)		LDSHARED="ld -shared"
+			LDFLAGS='-rdynamic -Wl,-rpath,$(libdir)/ruby/$(MAJOR).$(MINOR)/i386-bsdi4.0'
+			rb_cv_dlopen=yes ;;
+	nextstep*)	LDSHARED='cc -r -nostdlib'
+			LDFLAGS="-u libsys_s"
+			DLDFLAGS="$ARCH_FLAG" 
+			rb_cv_dlopen=yes ;;
+	openstep*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+	rhapsody*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+	darwin*)	LDSHARED='cc -dynamic -bundle -undefined suppress -flat_namespace'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+	aix*)		LDSHARED='/usr/ccs/bin/ld'
+			XLDFLAGS='-Wl,-bE:ruby.imp'
+			DLDFLAGS='-brtl -eInit_$(TARGET) -bI:$(topdir)/ruby.imp -bM:SRE -T512 -H512 -lc'
+			LDFLAGS="-brtl"
+			rb_cv_dlopen=yes ;;
+
+	human*)		DLDFLAGS=''
+			LDSHARED=''
+			LDFLAGS=''
+			LINK_SO='ar cru $@@ $(OBJS)'
+			rb_cv_dlopen=yes ;;
+	beos*) 		case "$target_cpu" in
+			  powerpc*)
+			    LDSHARED="ld -xms"
+			    DLDFLAGS='-export Init_$(TARGET) -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o'
+                            ;;
+			  i586*)
+			    LDSHARED="ld -shared"
+			    DLDFLAGS="-L/boot/develop/lib/x86 -lbe -lroot"
+			    ;;
+			esac
+			rb_cv_dlopen=yes ;;
+	nto-qnx*)	DLDFLAGS="-L/lib -L/usr/lib -L/usr/local/lib"
+			LDSHARED='ld -Bshareable -x'
+			LDFLAGS="-L/lib -L/usr/lib -L/usr/local/lib"
+			rb_cv_dlopen=yes;;
+	cygwin*|mingw*)	: ${LDSHARED="${CC} -shared -s"}
+			XLDFLAGS='-Wl,--stack,0x02000000'
+			DLDFLAGS="${DLDFLAGS} "'$(DEFFILE)'
+			rb_cv_dlopen=yes ;;
+	hiuxmpp)	LDSHARED='ld -r' ;;
+	*) 		LDSHARED='ld' ;;
+  esac
+  AC_MSG_RESULT($rb_cv_dlopen)
+fi
+AC_SUBST(LINK_SO)
+AC_SUBST(LIBPATHFLAG)
+
+dln_a_out_works=no
+if test "$ac_cv_header_a_out_h" = yes; then
+  if test "$with_dln_a_out" = yes || test "$rb_cv_dlopen" = unknown; then
+    cat confdefs.h > config.h
+    AC_CACHE_CHECK(whether matz's dln works, rb_cv_dln_a_out,
+    [AC_TRY_COMPILE([
+#define USE_DLN_A_OUT
+#include "dln.c"
+],
+	[], 
+	rb_cv_dln_a_out=yes,
+	rb_cv_dln_a_out=no)])
+    if test "$rb_cv_dln_a_out" = yes; then
+      dln_a_out_works=yes
+      AC_DEFINE(USE_DLN_A_OUT)
+    fi
+  fi
+fi
+
+if test "$dln_a_out_works" = yes; then
+  if test "$GCC" = yes; then
+    STATIC=-static
+  else
+    STATIC=-Bstatic
+  fi
+  DLEXT=so
+  AC_DEFINE(DLEXT, ".so")
+  CCDLFLAGS=
+else
+  case "$target_os" in
+    hpux*)	DLEXT=sl
+	 	AC_DEFINE(DLEXT, ".sl");;
+    nextstep*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    openstep*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    rhapsody*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    darwin*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    os2_emx*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+    cygwin*|mingw*)	DLEXT=so
+	 	AC_DEFINE(DLEXT, ".so")
+		DLEXT2=dll
+	 	AC_DEFINE(DLEXT2, ".dll");;
+    *)		DLEXT=so
+    		AC_DEFINE(DLEXT, ".so");;
+  esac
+fi
+
+AC_SUBST(STRIP)dnl
+if test "$with_dln_a_out" = yes; then
+  STRIP=true
+else
+  STRIP=strip
+fi
+
+case "$target_os" in
+  linux*)
+	STRIP='strip -S -x';;
+  gnu*)
+	STRIP='strip -S -x';;
+  nextstep*)
+	STRIP='strip -A -n';;
+  openstep*)
+	STRIP='strip -A -n';;
+  rhapsody*)
+	STRIP='strip -A -n';;
+  darwin*)
+	STRIP='strip -A -n';;
+esac
+
+EXTSTATIC=
+AC_SUBST(EXTSTATIC)dnl
+AC_ARG_WITH(static-linked-ext,
+	    [  --with-static-linked-ext link external modules statically],
+            [case $withval in
+	     yes) STATIC=
+		  EXTSTATIC=static;;
+	     *)	;;
+	     esac])
+
+case "$target_os" in
+  human*)
+    AC_CHECK_LIB(signal, _harderr)
+    AC_CHECK_LIB(hmem, hmemset)
+    AC_CHECK_FUNCS(select gettimeofday)
+    AC_CACHE_CHECK(whether PD libc _dtos18 fail to convert big number,
+		   rb_cv_missing__dtos18,
+    [AC_TRY_RUN(
+changequote(<<, >>)dnl
+<<
+#include <stdio.h>
+main ()
+{
+   char buf[256];
+   sprintf (buf, "%g", 1e+300);
+   exit (strcmp (buf, "1e+300") ? 0 : 1);
+}
+>>,
+changequote([, ])dnl
+rb_cv_missing__dtos18=yes, rb_cv_missing__dtos18=no, rb_cv_missing__dtos18=no)])
+    if test "$rb_cv_missing__dtos18" = yes; then
+      AC_DEFINE(MISSING__DTOS18)
+    fi
+    AC_CACHE_CHECK(whether PD libc fconvert fail to round,
+		   rb_cv_missing_fconvert,
+    [AC_TRY_RUN(
+changequote(<<, >>)dnl
+<<
+#include <stdio.h>
+#include <math.h>
+main ()
+{
+  char buf[256];
+  sprintf (buf, "%f", log(exp(1.0)));
+  exit (strcmp (buf, "1.000000") ? 0 : 1);
+}
+>>,
+changequote([, ])dnl
+rb_cv_missing_fconvert=yes, rb_cv_missing_fconvert=no, rb_cv_missing_fconvert=no)])
+    if test "$rb_cv_missing_fconvert" = yes; then
+      AC_DEFINE(MISSING_FCONVERT)
+    fi
+    AC_LIBOBJ([x68.o])
+    CFLAGS="$CFLAGS -fansi-only"
+    XCFLAGS="-cc1-stack=262144 -cpp-stack=2694144"
+    EXEEXT=.x
+    OBJEXT=o
+    setup=Setup.x68
+    ;;
+  dnl OS/2 environment w/ Autoconf 2.1x for EMX
+  os2_emx)
+    AC_LIBOBJ([os2])
+    setup=Setup.emx
+    ;;
+  *djgpp*)
+    setup=Setup.dj
+    ;;
+  atheos*)
+    setup=Setup.atheos
+    ;;
+  *)
+    setup=Setup
+    ;;
+esac
+
+AC_SUBST(setup)
+
+if test "$prefix" = NONE; then
+  prefix=$ac_default_prefix
+fi
+
+if test "$fat_binary" = yes ; then
+  XCFLAGS="$ARCH_FLAG"
+fi
+
+if test x"$cross_compiling" = xyes; then
+  MINIRUBY="${RUBY-ruby} -I`pwd` -rfake"
+  PREP=fake.rb
+else
+  MINIRUBY='./miniruby$(EXEEXT)'
+  PREP=''
+fi
+AC_SUBST(MINIRUBY)
+AC_SUBST(PREP)
+
+FIRSTMAKEFILE=""
+LIBRUBY_A='lib$(RUBY_INSTALL_NAME).a'
+LIBRUBY='$(LIBRUBY_A)'
+LIBRUBYARG='-l$(RUBY_INSTALL_NAME)'
+SOLIBS=
+
+case "$target_os" in
+  cygwin*|mingw*|beos*|openstep*|nextstep*|rhapsody*|darwin*|os2_emx*)
+    DLDLIBS=""
+    ;;
+  *)
+    DLDLIBS="-lc"
+    ;;
+esac
+
+RUBY_SO_NAME='$(RUBY_INSTALL_NAME)'
+LIBRUBY_LDSHARED=$LDSHARED
+LIBRUBY_DLDFLAGS=$DLDFLAGS
+LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR).$(TEENY)'
+LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so'
+ENABLE_SHARED=no
+
+AC_ARG_ENABLE(shared,
+       [  --enable-shared         build a shared library for Ruby. ],
+       [enable_shared=$enableval])
+if test "$enable_shared" = 'yes'; then
+  LIBRUBY='$(LIBRUBY_SO)'
+  LIBRUBYARG='-l$(RUBY_SO_NAME)'
+  CFLAGS="$CFLAGS $CCDLFLAGS"
+  ENABLE_SHARED=yes
+  if test "$rb_cv_binary_elf" = yes; then
+    SOLIBS='$(LIBS)'
+  fi
+  case "$target_os" in
+    sunos4*)
+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
+	;;
+    linux*)
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
+	test "$rb_cv_prog_gnu_ld" = yes && DLDFLAGS="$DLDFLAGS -Wl,-no-undefined"
+	;;
+    gnu*)
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
+	;;
+    freebsd*)
+	SOLIBS='$(LIBS)'
+	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
+	if test "$rb_cv_binary_elf" != "yes" ; then
+	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
+	    LIBRUBY_ALIASES=''
+	fi
+	;;
+    netbsd*)
+	SOLIBS='$(LIBS)'
+	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
+	LIBRUBYARG='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
+	if test "$rb_cv_binary_elf" = yes; then # ELF platforms
+	   LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
+	else	# a.out platforms
+	   LIBRUBY_ALIASES=""
+	fi
+ 	;;
+    openbsd*)
+	SOLIBS='$(LIBS)'
+ 	;;
+    solaris*)
+	XLDFLAGS='-R${libdir}'
+ 	;;
+    hpux*)
+	XLDFLAGS='-Wl,+s,+b,$(libdir)'
+	LIBRUBY_SO='lib$(RUBY_SO_NAME).sl.$(MAJOR).$(MINOR).$(TEENY)'
+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).sl.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).sl'
+	;;
+    aix*)
+	if test "$GCC" = yes; then
+	    LIBRUBY_LDSHARED='$(CC) -shared'
+	    LIBRUBY_DLDFLAGS='-Wl,-bE:ruby.imp'
+	else
+	    LIBRUBY_LDSHARED='/usr/ccs/bin/ld'
+	    LIBRUBY_DLDFLAGS='-bE:ruby.imp -bM:SRE -bnoentry'
+	    ARCHFILE="ruby.imp"
+	fi
+	LIBRUBYARG='-L${libdir} -Wl,lib$(RUBY_SO_NAME).so'
+	SOLIBS='-lm -lc'
+	;;
+    beos*)
+	case "$target_cpu" in
+	powerpc*)
+	    LIBRUBY_DLDFLAGS='-f ruby.exp -lnet -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o'
+	    ;;
+	esac
+	;;
+    darwin*)
+	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).$(TEENY).dylib'
+	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress -flat_namespace'
+	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
+	;;
+    *)
+	;;
+  esac
+fi
+XLDFLAGS="$XLDFLAGS -L."
+AC_SUBST(ARCHFILE)
+
+case "$target_os" in
+    netbsd*)
+    	CFLAGS="$CFLAGS -pipe"
+	;;
+    nextstep*)
+    	CFLAGS="$CFLAGS -pipe"
+	;;
+    openstep*)
+    	CFLAGS="$CFLAGS -pipe"
+	;;
+    rhapsody*)
+    	CFLAGS="$CFLAGS -pipe -no-precomp"
+	;;
+    darwin*)
+    	CFLAGS="$CFLAGS -pipe"
+	;;
+    os2_emx)
+    	CFLAGS="$CFLAGS -DOS2"
+	;;
+    osf*)
+	if test "$GCC" != "yes" ; then
+	  # compile something small: taint.c is fine for this.
+	  # the main point is the '-v' flag of 'cc'.
+	  case "`cc -v -I. -c main.c -o /tmp/main.o 2>&1`" in
+	  */gemc_cc*)   # we have the new DEC GEM CC
+                        CFLAGS="$CFLAGS -oldc"
+                        ;;
+          *)            # we have the old MIPS CC
+                        ;;
+          esac
+	  # cleanup
+	  rm -f /tmp/main.o
+	  CFLAGS="$CFLAGS -std"
+	fi
+		;;
+    beos*)
+	case "$target_cpu" in
+	powerpc*)
+	    CFLAGS="$CFLAGS -relax_pointers"
+	    ;;
+	esac
+	;;
+    cygwin*|mingw*)
+	EXPORT_PREFIX=' '
+	case "$target_os" in
+	cygwin*)
+	    RUBY_SO_NAME=$target_os-'$(RUBY_INSTALL_NAME)'${MAJOR}${MINOR}
+	    AC_LIBOBJ([strftime])
+	    CCDLFLAGS=-DUSEIMPORTLIB ;;
+	mingw*)
+	    RUBY_SO_NAME=msvcrt-'$(RUBY_INSTALL_NAME)'${MAJOR}${MINOR}
+	    AC_LIBOBJ([win32])
+	    COMMON_LIBS=m
+	    COMMON_MACROS="WIN32_LEAN_AND_MEAN="
+	    COMMON_HEADERS="windows.h winsock.h"
+	    CFLAGS="-DNT -D__NO_ISOCEXT $CFLAGS"
+	    CCDLFLAGS=-DIMPORT ;;
+	esac
+	if test x"$enable_shared" = xyes; then
+	    LIBRUBY_SO='$(RUBY_SO_NAME)'.dll
+	    LIBRUBY_DLDFLAGS='-Wl,--out-implib=$(LIBRUBY) $(RUBYDEF)'
+	    LIBRUBY='lib$(LIBRUBY_SO).a'
+	else
+	    LIBRUBY_SO=dummy
+	    LIBRUBY_DLDFLAGS=''
+	    LIBRUBY='lib$(RUBY_SO_NAME).a'
+	fi
+	LIBRUBY_ALIASES=''
+	LIBRUBY_A='lib$(RUBY_INSTALL_NAME)s.a'
+	FIRSTMAKEFILE=GNUmakefile:cygwin/GNUmakefile.in
+	SOLIBS='$(LIBS)'
+	;;
+    *)
+	;;
+esac
+
+AC_SUBST(LIBRUBY_LDSHARED)
+AC_SUBST(LIBRUBY_DLDFLAGS)
+AC_SUBST(RUBY_INSTALL_NAME)
+AC_SUBST(rubyw_install_name)
+AC_SUBST(RUBYW_INSTALL_NAME)
+AC_SUBST(RUBY_SO_NAME)
+AC_SUBST(LIBRUBY_A)
+AC_SUBST(LIBRUBY_SO)
+AC_SUBST(LIBRUBY_ALIASES)
+AC_SUBST(LIBRUBY)
+AC_SUBST(LIBRUBYARG)
+AC_SUBST(SOLIBS)
+AC_SUBST(DLDLIBS)
+AC_SUBST(ENABLE_SHARED)
+AC_SUBST(MAINLIBS)
+AC_SUBST(COMMON_LIBS)
+AC_SUBST(COMMON_MACROS)
+AC_SUBST(COMMON_HEADERS)
+AC_SUBST(EXPORT_PREFIX)
+
+MAKEFILES="Makefile `echo $FIRSTMAKEFILE | sed 's/:.*//'`"
+MAKEFILES="`echo $MAKEFILES`"
+AC_SUBST(MAKEFILES)
+
+ri_prefix=
+test "$program_prefix" != NONE &&
+  ri_prefix=$program_prefix
+
+ri_suffix=
+test "$program_suffix" != NONE &&
+  ri_suffix=$program_suffix
+
+RUBY_INSTALL_NAME="${ri_prefix}ruby${ri_suffix}"
+case "$target_os" in
+  cygwin*|mingw*)
+    RUBYW_INSTALL_NAME="${ri_prefix}rubyw${ri_suffix}"
+    rubyw_install_name="$RUBYW_INSTALL_NAME"
+    ;;
+esac
+case "$target_os" in
+  cygwin*|mingw*|*djgpp*|os2_emx*)
+    RUBY_LIB_PREFIX="/lib/ruby"
+    ;;
+  *)
+    RUBY_LIB_PREFIX="${prefix}/lib/ruby"
+    ;;
+esac
+RUBY_LIB_PATH="${RUBY_LIB_PREFIX}/${MAJOR}.${MINOR}"
+
+AC_ARG_WITH(sitedir,
+	    [  --with-sitedir=DIR      site libraries in DIR [PREFIX/lib/ruby/site_ruby]],
+            [sitedir=$withval],
+            [sitedir='${prefix}/lib/ruby/site_ruby'])
+SITE_DIR="`eval \"echo ${sitedir}\"`"
+case "$target_os" in
+  cygwin*|mingw*|*djgpp*|os2_emx*)
+    RUBY_SITE_LIB_PATH="`expr "$SITE_DIR" : "$prefix\(/.*\)"`" ||
+    RUBY_SITE_LIB_PATH="$SITE_DIR";;
+  *)
+    RUBY_SITE_LIB_PATH="$SITE_DIR";;
+esac
+RUBY_SITE_LIB_PATH2="${RUBY_SITE_LIB_PATH}/${MAJOR}.${MINOR}"
+
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${RUBY_LIB_PATH}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${RUBY_SITE_LIB_PATH}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB2, "${RUBY_SITE_LIB_PATH2}")
+
+AC_SUBST(arch)dnl
+AC_SUBST(sitearch)dnl
+AC_SUBST(sitedir)dnl
+
+configure_args=$ac_configure_args
+AC_SUBST(configure_args)dnl
+
+if test "$fat_binary" = yes ; then
+    arch="fat-${target_os}"
+
+    AC_DEFINE_UNQUOTED(RUBY_THIN_ARCHLIB,
+                 "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${target_os}")
+
+    AC_DEFINE_UNQUOTED(RUBY_SITE_THIN_ARCHLIB,
+                 "${RUBY_SITE_LIB_PATH}/" __ARCHITECTURE__ "-${target_os}")
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM, __ARCHITECTURE__ "-${target_os}")
+else
+    arch="${target_cpu}-${target_os}"
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM, "${arch}")
+fi
+
+case "$target_os" in
+  mingw*) sitearch="i386-msvcrt" ;;
+  *) sitearch="${arch}" ;;
+esac
+
+AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${RUBY_LIB_PATH}/${arch}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH2}/${sitearch}")
+
+AC_ARG_WITH(search-path,
+		[  --with-search-path=DIR specify the additional search path],
+		[search_path=$withval])
+if test "$search_path" != ""; then
+    AC_DEFINE_UNQUOTED(RUBY_SEARCH_PATH,"$search_path")
+fi
+
+if test -f config.h && tr -d '\015' < confdefs.h | cmp -s config.h -; then
+  echo "config.h unchanged"
+else
+  echo "creating config.h"
+  tr -d '\015' < confdefs.h > config.h
+fi
+: > confdefs.h
+
+AC_CONFIG_FILES([$FIRSTMAKEFILE Makefile])
+AC_OUTPUT
+@
+
+
+1.149
+log
+@* configure.in (LIBPATHFLAG): should escape $.  [ruby-dev:18572]
+
+* mkconfig.rb: never substute escaped $$.
+
+* instruby.rb: not install LIBRUBY_SO unless enable-shared.
+  [ruby-dev:18569]
+@
+text
+@d782 1
+a782 1
+			    LIBPATHFLAG=' -L%1$$s -Wl,-R%1$$s'
+@
+
+
+1.148
+log
+@* configure.in (RUBY_CPPOUTFILE): fix cache file bug.
+* lib/mkmf.rb (link_command): put 'opt' after conftest.c for
+  static linking.
+@
+text
+@d782 1
+a782 1
+			    LIBPATHFLAG=' -L%1$s -Wl,-R%1$s'
+@
+
+
+1.147
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@a20 1
+[AC_CACHE_CHECK(whether ${CPP} accepts -o, rb_cv_cppoutfile,
+d22 5
+a26 8
+CPPFLAGS='-o conftest.i'
+AC_TRY_CPP([], rb_cv_cppoutfile=yes, rb_cv_cppoutfile=no)
+if test "$rb_cv_cppoutfile" = yes; then
+  CPPOUTFILE=$CPPFLAGS
+else
+  CPPOUTFILE='> conftest.i'
+fi
+CPPFLAGS=$cppflags
+d28 1
+a28 2
+rm -f conftest*])
+])
+@
+
+
+1.146
+log
+@* configure.in: use rb_cv_prog_gnu_ld on FreeBSD.
+@
+text
+@d164 3
+d657 1
+d687 7
+a693 7
+    linux*)
+  if test "$rb_cv_binary_elf" = no; then
+    with_dln_a_out=yes
+    target_os=${target_os}-a_out
+  else
+    LDFLAGS="-rdynamic"
+  fi;;
+d703 1
+d712 1
+d715 1
+d787 1
+d797 1
+a797 1
+			LDFLAGS='-rdynamic -Wl,-rpath,$(prefix)/lib/ruby/$(MAJOR).$(MINOR)/i386-bsdi4.0'
+d824 1
+d842 2
+a843 1
+			LDFLAGS='-Wl,--stack,0x02000000'
+d850 2
+d979 2
+a980 1
+    CFLAGS="$CFLAGS -fansi-only -cc1-stack=262144 -cpp-stack=2694144"
+d1008 1
+a1008 1
+  CFLAGS="$CFLAGS $ARCH_FLAG"
+d1012 1
+a1012 1
+  MINIRUBY="ruby -I`pwd` -rfake"
+d1024 1
+a1024 1
+LIBRUBYARG='$(LIBRUBY_A)'
+d1036 1
+d1039 2
+a1040 2
+LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR).$(TEENY)'
+LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so'
+d1048 1
+a1048 1
+  LIBRUBYARG='-L. -l$(RUBY_INSTALL_NAME)'
+d1056 1
+a1056 1
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+d1059 3
+a1061 2
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+d1064 2
+a1065 2
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+d1069 1
+a1069 1
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+d1077 3
+a1079 3
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME)'
+d1081 1
+a1081 1
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+d1090 1
+a1090 1
+	XLDFLAGS='-R${prefix}/lib'
+d1093 3
+a1095 3
+	XLDFLAGS='-Wl,+s,+b,$(prefix)/lib'
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).sl.$(MAJOR).$(MINOR).$(TEENY)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).sl.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).sl'
+d1104 1
+d1106 1
+a1106 1
+	LIBRUBYARG='-L${prefix}/lib -Wl,lib$(RUBY_INSTALL_NAME).so'
+d1117 1
+a1117 1
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).$(TEENY).dylib'
+d1119 2
+a1120 2
+	LIBRUBY_DLDFLAGS='-install_name $(prefix)/lib/lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
+d1126 2
+d1172 1
+d1181 3
+a1197 1
+	LIBRUBYARG='-L. -l$(RUBY_SO_NAME)'
+d1208 2
+d1220 8
+d1238 6
+@
+
+
+1.145
+log
+@* configure.in (RUBY_PROG_GNU_LD): check whether the linker is GNU ld.
+* ext/extmk.rb (create_makefile): add -Wl,-no-undefined to $DLDFLAGS
+  on Linux if GNU ld is used and --enable-shared is specified.
+@
+text
+@d744 1
+a744 1
+			   if test $rb_cv_prog_gnu_ld = yes; then
+d774 1
+a774 1
+			  test "$GCC" = yes && `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null || LDSHARED="ld -Bshareable"
+@
+
+
+1.144
+log
+@* configure.in (RUBY_CHECK_IO_NEED_FLUSH): check whether fflush()
+  is needed.
+
+* io.c (flush_before_seek): flush before seek if buffered data
+  may remain.
+
+* io.c (rb_io_check_readable): flush if the last operation was
+  write.
+
+* io.c (rb_io_check_writable): flush if the last operation was
+  read.
+
+* rubyio.h (FMODE_RBUF): added.
+@
+text
+@d35 11
+d141 1
+d744 1
+a744 1
+			   if `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null; then
+@
+
+
+1.143
+log
+@* configure.in: set ac_cv_func_setitimer to "no" on Cygwin.
+@
+text
+@d252 2
+d259 2
+d574 44
+@
+
+
+1.142
+log
+@* io.c (appendline): forget to terminate with nul.
+
+* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* class.c (rb_make_metaclass): class of metaclass should be
+  metaclass of superclass, unless class itself is a metaclass;
+  class of metaclass of metaclass should point back to self.
+  eh, confusing, isn't it.
+
+* class.c (rb_singleton_class): check if its class is singleton
+  AND attached to self.
+
+* eval.c (rb_eval): should define class/module under ruby_cbase.
+
+* eval.c (rb_eval): should set class/module path based on
+  ruby_cbase, not ruby_class.
+
+* eval.c (module_setup): use ruby_cbase instead of ruby_class.
+@
+text
+@d253 3
+a255 1
+		ac_cv_func__setjmp=no;;
+@
+
+
+1.141
+log
+@* configure.in (RUBY_MINGW32): new macro. check for the MinGW
+  compiler envionment.
+* lib/mkmf.rb: refactoring.
+@
+text
+@d918 3
+@
+
+
+1.140
+log
+@* configure.in (OUTFLAG, CPPOUTFILE): moved from lib/mkmf.rb.
+  check whether ${CPP} accepts the -o option.
+* win32/Makefile.sub (OUTFLAG, CPPOUTFILE): ditto.
+* bcc32/Makefile.sub (OUTFLAG, CPPOUTFILE): ditto.
+* djgpp/config.sed (OUTFLAG, CPPOUTFILE): ditto.
+* lib/mkmf.rb (OUTFLAG, CPPOUTFILE): use CONFIG.
+  make easy to understand log.
+* mkconfig.rb (val): should not strip.
+@
+text
+@d6 29
+d130 2
+a131 7
+echo 'foo(){}' > conftest.c
+if ${CPP} -o conftest.i conftest.c >/dev/null 2>&1; then
+  CPPOUTFILE='-o conftest.i'
+else
+  CPPOUTFILE='> conftest.i'
+fi
+AC_SUBST(CPPOUTFILE)
+d134 2
+@
+
+
+1.139
+log
+@* configure.in: modify program_prefix only if specified
+  --program-prefix.
+
+* configure.in: don't generate ext/extmk.rb.
+
+* Makefile.in: execute directly $(srcdir)/ext/extmk.rb.
+  remove -Cext option, "Dir::chdir 'ext'" in ext/extmk.rb.
+
+* {win32,bccwin32}/Makefile.sub: ditto.
+
+* instruby.rb: ditto.
+
+* ext/extmk.rb: renamed from ext/extmk.rb.in.
+
+* lib/mkmf.rb (module Logging): create log files (mkmf.log)
+  in each extension module directories.
+
+* ext/extmk.rb: ditto.
+
+* lib/mkmf.rb (macro_defined?): new method.
+
+* ext/.cvsignore: remove extmk.rb.
+
+* ext/*/.cvsignore: add "*.def".
+@
+text
+@d101 10
+@
+
+
+1.138
+log
+@* array.c (rb_ary_become): should not free ptr if it's shared.
+
+* eval.c (rb_alias): prohibit making an alias named "allocate" if
+  klass is a metaclass.
+
+* string.c (rb_string_value_ptr): StringValuePtr() should never
+  return NULL pointer.
+@
+text
+@d30 3
+d1178 1
+a1178 1
+AC_CONFIG_FILES([$FIRSTMAKEFILE Makefile ext/extmk.rb])
+@
+
+
+1.137
+log
+@* configure.in (ar): don't check twice for ar.
+@
+text
+@d1021 1
+a1021 1
+    	CFLAGS="$CFLAGS -pipe -no-precomp"
+@
+
+
+1.136
+log
+@* string.c (rb_str_delete_bang): should check if str->ptr is 0.
+
+* string.c (rb_str_squeeze_bang): ditto.
+
+* string.c (rb_str_count): ditto.
+
+* string.c (rb_str_lstrip_bang): ditto.
+
+* string.c (rb_str_rstrip_bang): ditto.
+
+* string.c (rb_str_intern): ditto.
+@
+text
+@d101 3
+a103 1
+AC_CHECK_PROGS(AR, ar aal, ar)
+@
+
+
+1.135
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d100 2
+a101 1
+AC_CHECK_TOOL(AR, ar aal, ar)
+@
+
+
+1.134
+log
+@* configure.in: RUBY_SO_NAME is msvcrt-rubyXX on mswin32/mingw32.
+* configure.in (sitearch): new var.
+* mkconfig.rb, lib/mkmf.rb (sitearch): ditto.
+* win32/Makefile.sub, win32/setup.mak (sitearch): ditto.
+@
+text
+@d100 1
+a100 2
+AC_CHECK_TOOL(AR, ar)
+AC_CHECK_PROGS(AR, ar aal, ar)
+@
+
+
+1.133
+log
+@* configure.in: set ac_cv_func__setjump to "no" on Cygwin.
+* configure.in: set ac_cv_func_crypt to "no" on MinGW.
+@
+text
+@d1048 11
+a1058 1
+	RUBY_SO_NAME=$target_os-'$(RUBY_INSTALL_NAME)'${MAJOR}${MINOR}
+a1072 9
+	case "$target_os" in
+	cygwin*)
+	    AC_LIBOBJ([strftime])
+	    CCDLFLAGS=-DUSEIMPORTLIB ;;
+	mingw*)
+	    AC_LIBOBJ([win32])
+	    CFLAGS="-DNT -D__NO_ISOCEXT $CFLAGS"
+	    CCDLFLAGS=-DIMPORT ;;
+	esac
+d1075 1
+a1075 1
+	;;	
+d1130 1
+d1150 5
+d1156 1
+a1156 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH2}/${arch}")
+@
+
+
+1.132
+log
+@* configure.in: remove initstate checking.
+@
+text
+@d211 2
+a212 1
+		ac_cv_var_tzname=no;;
+d227 1
+@
+
+
+1.131
+log
+@* parse.y (tokadd_string): ignore backslashed spaces in %w.
+
+* enum.c (enum_find): do not use rb_eval_cmd(); should not accept
+  a string for if_none.
+@
+text
+@d317 1
+a317 1
+	      mktime timegm cosh sinh tanh initstate)
+@
+
+
+1.130
+log
+@* configure.in (seekdir, telldir): add ac_cv_func_telldir=yes,
+  ac_cv_func_seekdir=yes for MinGW.
+@
+text
+@d311 1
+a311 1
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall chroot fsync\
+@
+
+
+1.129
+log
+@* configure.in (__NO_ISOCEXT): add for mingw-runtime 2.0-2.
+* configure.in (__MSVCRT__): removed because it is defined
+  in the GCC specs.
+@
+text
+@d224 2
+@
+
+
+1.128
+log
+@* configure.in (LIBRUBY): rename to lib$(LIBRUBY_SO).a on Cygwin/MinGW.
+
+* configure.in, cygwin/GNUmakefile: use dllwrap when --disable-shared
+  is specified.
+@
+text
+@d1065 1
+a1065 1
+	    CFLAGS="-DNT -D__MSVCRT__ $CFLAGS"
+@
+
+
+1.127
+log
+@Wed May 22 20:18:31 2002  WATANABE Hirofumi  <eban@@ruby-lang.org>
+
+	* configure.in: need not link vsnprintf.o on MinGW.
+@
+text
+@d107 1
+d1048 1
+d1051 2
+a1052 1
+	    LIBRUBY_DLDFLAGS='-Wl,--output-exp=$(RUBY_INSTALL_NAME).exp,--out-implib=$(LIBRUBY) $(RUBYDEF)'
+a1055 1
+	LIBRUBY='lib$(RUBY_SO_NAME).a'
+@
+
+
+1.126
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d221 3
+a223 1
+		ac_cv_func_waitpid=yes;;
+@
+
+
+1.125
+log
+@* configure.in: forgot to add -Wl, to the gcc option on Cygwin/MinGW.
+@
+text
+@d990 1
+a990 1
+	LIBRUBY_DLDFLAGS='-install_name lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+@
+
+
+1.124
+log
+@* configure.in: add #include <errno.h> in AC_CHECK_DECLS().
+@
+text
+@d1044 1
+a1044 1
+	    LIBRUBY_DLDFLAGS='--out-implib=$(LIBRUBY) $(RUBYDEF)'
+d1047 1
+a1047 1
+	    LIBRUBY_DLDFLAGS='-Wl,--output-exp=$(RUBY_INSTALL_NAME).exp --out-implib=$(LIBRUBY) $(RUBYDEF)'
+@
+
+
+1.123
+log
+@* error.c: use HAVE_DECL_SYS_NERR instead of platform names.
+@
+text
+@d190 2
+a191 1
+AC_CHECK_DECLS([sys_nerr])
+@
+
+
+1.122
+log
+@* configure.in: set size of the initial stack from
+  2MB to 32MB on MinGW/Cygwin.
+@
+text
+@d112 7
+d189 2
+d192 1
+a192 1
+dnl wheather link libc_r or not
+d724 1
+@
+
+
+1.121
+log
+@* configure.in: AC_INIT should take no argument.
+@
+text
+@a105 1
+    AC_CHECK_TOOL(AS, as)
+d713 1
+@
+
+
+1.120
+log
+@* configure.in: version 0.0 -> 1.7.2.
+@
+text
+@d2 1
+a2 1
+AC_INIT(ruby, 1.7.2)
+@
+
+
+1.119
+log
+@* configure.in: cleanup for autoconf 2.5x.
+* configure.in: use gcc -shared instead of dllwrap on Cygwin/MinGW.
+* ext/extmk.rb, lib/mkmf.rb: get rid of "--def=".
+@
+text
+@d2 1
+a2 1
+AC_INIT(ruby, 0.0)
+@
+
+
+1.118
+log
+@* configure.in: add check for initstate(3).
+@
+text
+@d2 1
+a2 1
+AC_INIT(ruby.h)
+d26 1
+a26 1
+  AC_ERROR(cached CC is different -- throw away $cache_file
+a29 3
+AC_DEFUN(RUBY_CANONICAL_BUILD, [AC_REQUIRE([AC_CANONICAL_BUILD])])
+
+AC_CANONICAL_HOST
+a30 1
+RUBY_CANONICAL_BUILD
+a105 1
+    AC_CHECK_TOOL(DLLWRAP, dllwrap)
+a106 1
+    AC_CHECK_TOOL(DLLTOOL, dlltool)
+a119 3
+AC_EXEEXT
+AC_OBJEXT
+
+d124 1
+d713 1
+a713 1
+	cygwin*|mingw*)	: ${LDSHARED="${DLLWRAP} --target=${target_os} --as=${AS} --dlltool-name=${DLLTOOL} --driver-name=${CC} --export-all -s"}
+d1033 1
+a1033 1
+	    LIBRUBY_DLDFLAGS='--dllname=$@@ --output-lib=$(LIBRUBY) --add-stdcall-alias --def=$(RUBYDEF)'
+d1036 1
+a1036 1
+	    LIBRUBY_DLDFLAGS='--output-exp=$(RUBY_INSTALL_NAME).exp --dllname=$(RUBY_INSTALL_NAME)$(EXEEXT) --output-lib=$(LIBRUBY) --add-stdcall-alias --def=$(RUBYDEF)'
+d1147 2
+a1148 1
+AC_OUTPUT($FIRSTMAKEFILE Makefile ext/extmk.rb)
+@
+
+
+1.117
+log
+@/tmp/log
+@
+text
+@d311 1
+a311 1
+	      mktime timegm cosh sinh tanh)
+@
+
+
+1.116
+log
+@* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+
+* dir.c (glob_helper): should have proceed link when link->path
+  was non existing symbolic link.
+@
+text
+@d14 1
+a14 1
+AC_ARG_WITH(gcc, [--without-gcc             never use gcc], [
+d39 1
+a39 1
+       [--enable-fat-binary       build a NeXT/Apple Multi Architecture Binary. ],
+d86 1
+a86 1
+       [--enable-frame-address    use GCC __builtin_frame_address(). ],
+d194 1
+a194 1
+	[--with-libc_r             link libc_r if possible (FreeBSD only)], [
+d304 1
+a304 1
+		 isinf isnan finite hypot)
+d525 1
+a525 1
+	[--with-default-kcode=CODE specify default value for \$KCODE (utf8|euc|sjis|none)], 
+d537 1
+a537 1
+	[--with-dln-a-out          use dln_a_out if possible], [
+d804 1
+a804 1
+	    [--with-static-linked-ext  link external modules statically],
+d914 1
+a914 1
+       [--enable-shared           build a shared library for Ruby. ],
+d1100 1
+a1100 1
+	    [--with-sitedir=DIR        site libraries in DIR [PREFIX/lib/ruby/site_ruby]],
+d1141 1
+a1141 1
+		[--with-search-path=DIR	  specify the additional search path],
+@
+
+
+1.115
+log
+@* configure.in (FILE_READPTR): check bufread instead of bufend for uClibc.
+@
+text
+@d311 1
+a311 1
+	      mktime timegm)
+@
+
+
+1.114
+log
+@* configure.in (FILE_READPTR): check _p for 4.4BSD.
+@
+text
+@d504 1
+a504 1
+         bufend 	dnl
+@
+
+
+1.113
+log
+@* configure.in (FILE_READPTR): new.  for IO#gets improvement.
+
+* io.c (READ_DATA_PENDING_PTR): ditto.
+
+* io.c (remain_size): separated from read_all().
+
+* io.c (read_all): argument chagend.
+
+* io.c (appendline): new.  get a line and append to string.
+
+* io.c (swallow): new.  swallow continuous line delimiters.
+
+* io.c (rb_io_getline_fast): add delimiter argument.
+
+* io.c (rb_io_getline): performance improvement.
+@
+text
+@d485 1
+@
+
+
+1.112
+log
+@* configure.in: autoconf 2.53 support. use AC_LIBOBJ.
+@
+text
+@d456 1
+a456 1
+AC_MSG_CHECKING(count field in FILE structures)
+d458 13
+a470 21
+[AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->_cnt = 0;], rb_cv_fcnt="_cnt", )
+if test "$rb_cv_fcnt" = ""; then
+    AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->__cnt = 0;], rb_cv_fcnt="__cnt", )
+fi
+if test "$rb_cv_fcnt" = ""; then
+    AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->_r = 0;], rb_cv_fcnt="_r", )
+fi
+if test "$rb_cv_fcnt" = ""; then
+    AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->readCount = 0;],
+	rb_cv_fcnt="readCount", )
+fi
+dnl for emx0.9c
+if test "$rb_cv_fcnt" = ""; then
+    AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->_rcount = 0;],
+	rb_cv_fcnt="_rcount", rb_cv_fcnt="not found")
+fi])
+d476 42
+@
+
+
+1.111
+log
+@* re.c (rb_reg_match): should clear $~ if operand is nil.
+
+* re.c (rb_reg_match2): ditto.
+
+* configure: merge Jonathan Baker's large file support patch
+  [ruby-talk:35316], with read_all patch in [ruby-talk:35470].
+
+* eval.c (rb_f_abort): optional message argument that be printed
+  on termination. [new]
+@
+text
+@a291 1
+save_LIBOJBS="$LIBOBJS"
+a292 1
+LIBOBJS="$save_LIBOBJS"
+d430 1
+a430 1
+test $rb_cv_func_strtod = no && LIBOBJS="$LIBOBJS strtod.o"
+d818 1
+a818 1
+    LIBOBJS="$LIBOBJS x68.o"
+d826 1
+a826 1
+    LIBOBJS="$LIBOBJS os2.$OBJEXT"
+d1019 1
+a1019 1
+	    LIBOBJS="$LIBOBJS strftime.o"
+d1022 1
+a1022 1
+	    LIBOBJS="$LIBOBJS win32.o"
+@
+
+
+1.110
+log
+@* parse.y (expr_value, arg_value, primary_value): value_expr()
+  check in place.
+
+* eval.c (block_pass): "&nil" should clear block given.
+
+* dir.c (push_braces): remove MAXPATHLEN dependency.
+
+* dir.c (dir_s_globd): ditto.
+
+* dln.c (init_funcname): ditto.
+
+* dln.c (load_1): ditto.
+
+* dln.c (dln_load): ditto.
+
+* configure.in: add GNU/Hurd switches.
+
+* pack.c (pack_pack): allows comment in template strings.
+
+* pack.c (pack_unpack): ditto.
+@
+text
+@d4 2
+d129 4
+d138 1
+d302 2
+@
+
+
+1.109
+log
+@* configure.in: keep old config.h unless changed.
+@
+text
+@d613 3
+d747 2
+d887 4
+@
+
+
+1.108
+log
+@* file.c: `major' and `minor' macro needs sys/mkdev.h on SunOS 5.x.
+
+* configure.in: add check for `sys/mkdev.h'.
+@
+text
+@d1096 6
+a1101 2
+echo "creating config.h"
+tr -d '\015' < confdefs.h > config.h
+@
+
+
+1.107
+log
+@* configure.in (solaris): add '-shared' only for GNU ld.
+@
+text
+@d278 2
+a279 1
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h sys/resource.h)
+@
+
+
+1.106
+log
+@* array.c (Init_Array): remove Array#filter.
+
+* object.c (rb_mod_initialize): should accept zero argument.
+
+* object.c (rb_mod_cmp): should raise ArgumentError if
+  inheritance/inclusion relation between two classes/modules is
+  not defined. [new]
+
+* io.c (rb_io_fsync): new method. [new]
+@
+text
+@d589 5
+a593 2
+			   LDSHARED='$(CC) -Wl,-G -shared'
+			   `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null && LDFLAGS="-Wl,-E"
+@
+
+
+1.105
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d297 1
+a297 1
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall chroot\
+@
+
+
+1.104
+log
+@* time.c: new method `gmtoff', `gmt_offset' and `utc_offset'.
+(time_utc_offset): new function.
+(Init_Time): bind above methods to `time_utc_offset'.
+
+* time.c: 64bit time_t support.
+(time_s_at): use NUM2LONG instead of NUM2INT for tv_sec.
+(time_arg): initialize tm_isdst correctly.
+use long to initialize tm_year.
+(search_time_t): renamed from `make_time_t'.
+(make_time_t): call `timegm' and `mktime' instead of `search_time_t'
+if availabe.
+(time_to_i): use LONG2NUM instead of INT2NUM.
+(time_localtime): check localtime failure.
+(time_gmtime): check gmtime failure.
+(time_year): use LONG2NUM instead of INT2FIX.
+(time_to_a): use long for tm_year.
+(time_dump): check tm_year which is not representable with 17bit.
+(time_load): initialize tm_isdst.
+
+* configure.in: check existence of `mktime' and `timegm'.
+check existence of tm_gmtoff field of struct tm.
+fix negative time_t for 64bit time_t.
+
+* missing/strftime.c: fix overflow by tm_year + 1900.
+@
+text
+@a292 1
+AC_FUNC_VFORK
+@
+
+
+1.103
+log
+@* configure.in: add -Wl,-export-dynamic on NetBSD.
+@
+text
+@d303 2
+a304 1
+	      dlopen sigprocmask sigaction _setjmp setsid telldir seekdir fchmod)
+d306 8
+d349 1
+a349 1
+   t = -0x80000000;
+@
+
+
+1.102
+log
+@* configure.in: not use X11BASE, since it's not always set.
+@
+text
+@d610 3
+a612 1
+			LDFLAGS=""
+@
+
+
+1.101
+log
+@* configure.in: apply patch from NetBSD's pkgsrc (patch-aa).
+@
+text
+@d883 1
+a883 1
+	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME) -Wl,-R -Wl,${X11BASE}/lib -L${X11BASE}/lib'
+@
+
+
+1.100
+log
+@* configure.in: use GCC, not without_gcc. remove without_gcc.
+* ext/curses/extconf.rb: check for curses.h.
+* ext/dbm/extconf.rb: check if $CFLAGS includes DBM_HDR.
+@
+text
+@d562 1
+a562 6
+    netbsd*) CCDLFLAGS=-fpic
+     case "$target_cpu" in
+     mips*) CCDLFLAGS=-fPIC ;;
+     sparc) CCDLFLAGS=-fPIC ;;
+     *) ;;
+     esac ;;
+d609 2
+a610 4
+	netbsd*)	LDSHARED="ld -shared"
+			if test "$rb_cv_binary_elf" = yes; then
+                          LDFLAGS="-export-dynamic"
+			fi
+d881 3
+a883 1
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+d885 3
+a887 3
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so'
+	else
+	   LIBRUBY_ALIASES=  # a.out platforms
+d931 3
+@
+
+
+1.99
+log
+@* configure.in: set target_cpu to i386 on cygwin and mingw32.
+@
+text
+@d15 1
+a15 1
+		without_gcc=yes;;
+d17 1
+a17 1
+		without_gcc=no;;
+d19 2
+a20 4
+		without_gcc=$withval;;
+	esac], [
+	  : ${CC=gcc}
+	  without_gcc=no])
+d260 2
+a261 2
+		case "$target_cpu"::"$without_gcc" in
+		alpha*::no)
+d263 1
+a263 1
+		alpha*::yes)
+d952 1
+a952 1
+	if test "$without_gcc" = "yes" ; then
+@
+
+
+1.98
+log
+@* configure.in: do not override CC if set.
+@
+text
+@d114 2
+d861 1
+a861 1
+AC_ARG_ENABLE(enable-shared,
+@
+
+
+1.97
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d14 1
+a14 1
+	no)	CC=cc
+d16 1
+a16 1
+	yes)	CC=gcc
+d21 1
+a21 1
+	  CC=gcc
+@
+
+
+1.96
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d20 3
+a22 1
+	esac], [without_gcc=no])
+@
+
+
+1.95
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@d296 1
+a296 1
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall getcwd chroot\
+d584 1
+a584 1
+			   LDSHARED='$(CC) -Wl,-G'
+@
+
+
+1.94
+log
+@* ruby.c (proc_options): should not alter origargv[].
+
+* ruby.c (set_arg0): long strings for $0 dumped core.
+
+* ruby.c (set_arg0): use setprogtitle() if it's available.
+
+* io.c (rb_io_popen): accept integer flags as mode.
+
+* file.c (rb_find_file_ext): extension table can be supplied from
+  outside.  renamed.
+
+* eval.c (rb_f_require): replace rb_find_file_noext by
+  rb_find_file_ext.
+
+* eval.c (rb_provided): should also check feature without
+  extension.
+
+* numeric.c (flo_to_s): do not rely on decimal point to be '.'
+@
+text
+@d638 1
+a638 1
+	darwin*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+d924 1
+a924 1
+	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress'
+@
+
+
+1.93
+log
+@* string.c (rb_str_lstrip_bang): new method.
+
+* string.c (rb_str_rstrip_bang): new method.
+
+* string.c (rb_str_associate): should consider STR_ASSOC too.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+
+* process.c (proc_waitpid): now all arguments are optional.
+
+* process.c (Init_process): waitpid is now alias to wait.
+
+* process.c (Init_process): waitpid2 is now alias to wait2.
+
+* process.c (rb_waitpid): made public.
+
+* ext/pty/pty.c (pty_getpty): avoid disturbing SIGCHLD using
+  thread and rb_waitpid.
+
+* process.c (proc_getpgrp): now takes no argument on all
+  platforms.
+
+* process.c (proc_setpgrp): ditto.
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::pack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::pack_sockaddr_un(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::unpack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::unpack_sockaddr_un(). [new]
+@
+text
+@d298 1
+a298 1
+	      setitimer setruid seteuid setreuid setresuid \
+@
+
+
+1.92
+log
+@* confgure.in: add RUBY_CANONICAL_BUILD.
+@
+text
+@d663 4
+@
+
+
+1.91
+log
+@* configure.in: use waitpid on mingw32.
+* ext/dbm/extconf.rb: include <ndbm.h>, not <gdbm.h>.
+@
+text
+@d28 2
+d32 1
+@
+
+
+1.90
+log
+@* configure.in: default --with-libc_r to `no' until the problem is
+  fixed. (FreeBSD only)
+@
+text
+@d207 2
+a208 1
+		ac_cv_func_times=yes;;
+@
+
+
+1.89
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d186 1
+a186 1
+	esac], [with_libc_r=yes])
+@
+
+
+1.88
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@a29 1
+AC_CANONICAL_BUILD
+a108 5
+    echo 'main(){}' > conftest.c
+    if $CC -mwin32 -c conftest.c 2> /dev/null; then
+	MWIN32=-mwin32
+	CFLAGS="$CFLAGS $MWIN32"
+    fi
+a110 1
+AC_SUBST(MWIN32)
+@
+
+
+1.87
+log
+@I'm committing this from a MacOS X host. :)
+
+* configure.in: get --enable-shared to work on MacOS X.
+
+* Makefile.in: make $(LIBRUBY_SO) depend on miniruby properly.
+Now `make -jN' should work without a problem.
+@
+text
+@d599 2
+@
+
+
+1.86
+log
+@* configure.in:  don't use tzname on cygwin 1.3.1+.
+
+* configure.in: add -mieee/-ieee to CFLAGS on OSF1/Alpha
+  to disable "DIVISION BY ZERO" exception.
+@
+text
+@d557 1
+a557 1
+    darwin*)	;;
+d918 6
+@
+
+
+1.85
+log
+@* configure.in: add -mieee to CFLAGS on Linux/Alpha
+  to disable "DIVISION BY ZERO" exception.
+
+* configure.in: remove -ansi on OSF/1.
+@
+text
+@d203 2
+a204 1
+cygwin*)	rb_cv_have_daylight=no;;
+d259 7
+@
+
+
+1.84
+log
+@* Makefile.in: Introduce MAINLIBS.
+
+* configure.in: Link libc_r against the ruby executable on
+FreeBSD, which is the first attempt to work around a certain
+problem regarding pthread on FreeBSD.  It should make ruby/libruby
+happy when it loads an extention to a library compiled and linked
+with -pthread.  Note, however, that libruby is _not_ linked with
+libc_r so as not to mess up pthread unfriendly stuff including
+apache+mod_ruby and vim6+ruby_interp.
+@
+text
+@d254 5
+d933 1
+a933 3
+	if test "$without_gcc" = "no" ; then
+	  CFLAGS="$CFLAGS -ansi"
+	else
+@
+
+
+1.83
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d187 8
+d234 19
+d472 1
+a472 1
+dnl wheather use dln_a_out ot not
+d993 1
+@
+
+
+1.82
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@a380 3
+if test "$ac_cv_c_inline" = no; then
+  AC_DEFINE(NO_C_INLINE)
+fi
+@
+
+
+1.81
+log
+@* configure.in: Set SOLIBS properly for all ELF and
+  FreeBSD/NetBSD/OpenBSD a.out platforms so that the shlib
+  dependencies are recorded in the libruby shlib.
+@
+text
+@a376 1
+AC_C_INLINE
+d380 4
+@
+
+
+1.80
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d822 3
+d834 1
+d842 1
+d849 3
+@
+
+
+1.79
+log
+@* string.c (rb_str_delete_bang): delete! should take at least 1
+  argument.
+
+* ruby.c (load_file): add rb_gc() after loading to avoid
+  extraordinary memory growth.
+
+* dir.c (rb_glob_helper): "./foo" should match "foo", not "./foo".
+
+* eval.c (ev_const_get): retrieve Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* eval.c (ev_const_defined): check Object's constant if no current
+  class is available (e.g. defining singleton class for Fixnums).
+
+* time.c (time_timeval): negative time interval shoule not be
+  allowed.
+
+* eval.c (proc_call): ignore block to `call' always, despite of
+  being orphan or not.
+
+* eval.c (rb_yield_0): should check based on rb_block_given_p()
+  and rb_f_block_given_p().
+
+* configure.in (frame-address): --enable-frame-address to allow
+  __builtin_frame_address() to be used.
+
+* eval.c (stack_length): use __builtin_frame_address() based on
+  the macro USE_BUILTIN_FRAME_ADDRESS.
+
+* gc.c (rb_gc): ditto.
+
+* gc.c (Init_stack): ditto.
+@
+text
+@d258 1
+a258 1
+		 isinf isnan finite)
+@
+
+
+1.78
+log
+@* eval.c (proc_call): should not modify ruby_block->frame.iter
+  based on ruby_frame->iter altered by PUSH_ITER().
+
+* eval.c (rb_thread_fd_close): should save current context before
+  raising exception.
+
+* io.c (set_stdin): preserve original stdin.
+
+* io.c (set_outfile): preserve original stdout/stderr.
+@
+text
+@d77 11
+@
+
+
+1.77
+log
+@* configure.in: add check for negative time_t for gmtime(3).
+
+* time.c (time_new_internal): no positive check if gmtime(3) can
+  handle negative time_t.
+
+* time.c (time_timeval): ditto.
+
+* bignum.c (rb_big2long): should not raise RangeError for Bignum
+  LONG_MIN value.
+@
+text
+@d273 2
+a274 1
+    if (tm->tm_year != y ||
+@
+
+
+1.76
+log
+@* io.c (set_outfile): f should be the FILE* from the assigning value.
+
+* ext/socket/socket.c (tcp_s_open): should not give default value
+  to local_host.
+
+* time.c (time_s_times): move to Process::times.
+
+* file.c (rb_file_s_lchmod): new method File::lchmod.
+
+* file.c (rb_file_s_lchown): new method File::lchown.
+@
+text
+@d264 36
+@
+
+
+1.75
+log
+@* configure.in: add ac_cv_func_getpgrp_void=yes on DJGPP.
+@
+text
+@d251 1
+a251 1
+	      setrgid setegid setregid setresgid pause\
+@
+
+
+1.74
+log
+@gcc-2.95.2-7(cygwin) support.
+@
+text
+@d197 2
+@
+
+
+1.73
+log
+@* configure.in: remove DEFS definition.
+@
+text
+@d93 12
+a104 7
+    cygwin*|mingw*)
+	AC_CHECK_TOOL(NM, nm)
+	AC_CHECK_TOOL(DLLWRAP, dllwrap)
+	AC_CHECK_TOOL(AS, as)
+	AC_CHECK_TOOL(DLLTOOL, dlltool)
+	AC_CHECK_TOOL(WINDRES, windres)
+	;;
+d106 1
+@
+
+
+1.72
+log
+@m17n cleanup ;_;
+@
+text
+@d972 1
+@
+
+
+1.71
+log
+@NORETURN
+@
+text
+@a157 8
+dnl AC_CACHE_CHECK(for gcc attribute noreturn, rb_cv_have_attr_noreturn,
+dnl   [AC_TRY_COMPILE([void exit(int x) __attribute__ ((noreturn));], [],
+dnl 	rb_cv_have_attr_noreturn=yes,
+dnl 	rb_cv_have_attr_noreturn=no)])
+dnl if test "$rb_cv_have_attr_noreturn" = yes; then
+dnl   AC_DEFINE(HAVE_ATTR_NORETURN)
+dnl fi
+
+a169 27
+AC_MSG_CHECKING(for inline)
+AC_CACHE_VAL(rb_cv_inline,
+[AC_TRY_COMPILE([
+extern __inline__ int foo() {return 0;}
+static __inline__ char* bar() {return "";}
+], [], rb_cv_inline="__inline__", )
+if test "$rb_cv_inline" = ""; then
+  AC_TRY_COMPILE([
+extern __inline int foo() {return 0;}
+static __inline char bar() {return "";}
+], [], rb_cv_inline="__inline", )
+fi
+if test "$rb_cv_inline" = ""; then
+  AC_TRY_COMPILE([
+extern inline int foo() {return 0;}
+static inline char bar() {return "";}
+], [], rb_cv_inline="inline", )
+fi])
+if test "$rb_cv_inline" = ""; then
+  AC_MSG_RESULT([not work])
+  AC_DEFINE(INLINE, /*inline*/)
+else
+  AC_MSG_RESULT($rb_cv_inline)
+  AC_DEFINE(HAVE_INLINE)
+  AC_DEFINE_UNQUOTED(INLINE, $rb_cv_inline)
+fi
+
+d321 1
+@
+
+
+1.70
+log
+@setres[ug]id, NORETURN
+@
+text
+@d158 19
+a176 7
+AC_CACHE_CHECK(for gcc attribute noreturn, rb_cv_have_attr_noreturn,
+  [AC_TRY_COMPILE([void exit(int x) __attribute__ ((noreturn));], [],
+	rb_cv_have_attr_noreturn=yes,
+	rb_cv_have_attr_noreturn=no)])
+if test "$rb_cv_have_attr_noreturn" = yes; then
+  AC_DEFINE(HAVE_ATTR_NORETURN)
+fi
+@
+
+
+1.69
+log
+@matz
+@
+text
+@d265 2
+a266 1
+	      setitimer setruid seteuid setreuid setrgid setegid setregid pause\
+@
+
+
+1.68
+log
+@matz
+@
+text
+@d166 27
+@
+
+
+1.68.2.1
+log
+@* configure.in: remove DEFS definition.
+@
+text
+@a965 1
+: > confdefs.h
+@
+
+
+1.68.2.2
+log
+@gcc-2.95.2-7(cygwin) support.
+@
+text
+@d93 7
+a99 12
+cygwin*|mingw*)
+    AC_CHECK_TOOL(NM, nm)
+    AC_CHECK_TOOL(DLLWRAP, dllwrap)
+    AC_CHECK_TOOL(AS, as)
+    AC_CHECK_TOOL(DLLTOOL, dlltool)
+    AC_CHECK_TOOL(WINDRES, windres)
+    echo 'main(){}' > conftest.c
+    if $CC -mwin32 -c conftest.c 2> /dev/null; then
+	MWIN32=-mwin32
+	CFLAGS="$CFLAGS $MWIN32"
+    fi
+    ;;
+a100 1
+AC_SUBST(MWIN32)
+@
+
+
+1.68.2.3
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+@
+text
+@a321 1
+AC_C_INLINE
+@
+
+
+1.68.2.4
+log
+@* configure.in: add ac_cv_func_getpgrp_void=yes on DJGPP.
+@
+text
+@a192 2
+msdosdjgpp*)	LIBS="-lm $LIBS"
+		ac_cv_func_getpgrp_void=yes;;
+@
+
+
+1.68.2.5
+log
+@* configure.in: Set SOLIBS properly for all ELF and
+  FreeBSD/NetBSD/OpenBSD a.out platforms so that the shlib
+  dependencies are recorded in the libruby shlib.
+@
+text
+@a768 3
+  if test "$rb_cv_binary_elf" = yes; then
+    SOLIBS='$(LIBS)'
+  fi
+a777 1
+	SOLIBS='$(LIBS)'
+a784 1
+	SOLIBS='$(LIBS)'
+a790 3
+ 	;;
+    openbsd*)
+	SOLIBS='$(LIBS)'
+@
+
+
+1.68.2.6
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d324 1
+a327 4
+AC_C_INLINE
+if test "$ac_cv_c_inline" = no; then
+  AC_DEFINE(NO_C_INLINE)
+fi
+@
+
+
+1.68.2.7
+log
+@* eval.c (rb_mod_define_method): should have clear method cache.
+
+* eval.c (rb_mod_define_method): should have raised exception for
+  type error.
+
+* ruby.h: changed "extern INLINE" to "static inline".
+@
+text
+@d328 3
+@
+
+
+1.68.2.8
+log
+@* Makefile.in: Introduce MAINLIBS.
+
+* configure.in: Link libc_r against the ruby executable on
+FreeBSD, which is the first attempt to work around a certain
+problem regarding pthread on FreeBSD.  It should make ruby/libruby
+happy when it loads an extention to a library compiled and linked
+with -pthread.  Note, however, that libruby is _not_ linked with
+libc_r so as not to mess up pthread unfriendly stuff including
+apache+mod_ruby and vim6+ruby_interp.
+@
+text
+@a171 8
+dnl wheather link libc_r or not
+AC_ARG_WITH(libc_r, 
+	[--with-libc_r             link libc_r if possible (FreeBSD only)], [
+	case $withval in
+	yes) with_libc_r=yes;;
+	*)   with_libc_r=no;;
+	esac], [with_libc_r=yes])
+
+a210 19
+		if test "$with_libc_r" = yes; then
+			AC_CACHE_CHECK([whether libc_r is supplementary to libc],
+			  rb_cv_supplementary_lib_c_r,
+			  [AC_TRY_CPP([
+#include <osreldate.h>
+#if 500016 <= __FreeBSD_version
+#error libc_r is supplementary to libc
+#endif
+			   ],
+			   rb_cv_supplementary_lib_c_r=no,
+			   rb_cv_supplementary_lib_c_r=yes,
+			   rb_cv_supplementary_lib_c_r=yes)])
+			if test "$rb_cv_supplementary_lib_c_r" = yes; then
+				MAINLIBS="-lc_r $MAINLIBS"			
+			else
+				MAINLIBS="-pthread $MAINLIBS"			
+				CFLAGS="-D_THREAD_SAFE $CFLAGS"
+			fi
+		fi
+d392 1
+a392 1
+dnl wheather use dln_a_out or not
+a912 1
+AC_SUBST(MAINLIBS)
+@
+
+
+1.68.2.9
+log
+@* configure.in: add -mieee to CFLAGS on Linux/Alpha
+  to disable "DIVISION BY ZERO" exception.
+
+* configure.in: remove -ansi on OSF/1.
+@
+text
+@a238 5
+linux*)		LIBS="-lm $LIBS"
+		case "$target_cpu" in
+		alpha*)
+		    CFLAGS="-mieee $CFLAGS" ;;
+		esac ;;
+d875 3
+a877 1
+	if test "$without_gcc" = "yes" ; then
+@
+
+
+1.68.2.10
+log
+@* configure.in:  don't use tzname on cygwin 1.3.1+.
+
+* configure.in: add -mieee/-ieee to CFLAGS on OSF1/Alpha
+  to disable "DIVISION BY ZERO" exception.
+@
+text
+@d188 1
+a188 2
+cygwin*)	rb_cv_have_daylight=no
+		ac_cv_var_tzname=no;;
+a242 7
+		esac ;;
+osf*)		LIBS="-lm $LIBS"
+		case "$target_cpu"::"$without_gcc" in
+		alpha*::no)
+		    CFLAGS="-mieee $CFLAGS" ;;
+		alpha*::yes)
+		    CFLAGS="-ieee $CFLAGS" ;;
+@
+
+
+1.68.2.11
+log
+@* configure.in: get --enable-shared to work on MacOS X.
+
+* Makefile.in: make $(LIBRUBY_SO) depend on miniruby properly.
+Now `make -jN' should work without a problem.
+@
+text
+@d504 1
+a504 1
+    darwin*)	CCDLFLAGS=-fno-common;;
+a864 6
+	;;
+    darwin*)
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).$(TEENY).dylib'
+	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress'
+	LIBRUBY_DLDFLAGS='-install_name lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
+@
+
+
+1.68.2.12
+log
+@* bignum.c (bigdivrem): access boundary bug.
+@
+text
+@a545 2
+        nto-qnx*)       LDSHARED="qcc -shared"
+                        rb_cv_dlopen=yes ;;
+@
+
+
+1.68.2.13
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d30 1
+d99 5
+d106 1
+@
+
+
+1.68.2.14
+log
+@* configure.in: default --with-libc_r to `no' until the problem is
+  fixed. (FreeBSD only)
+@
+text
+@d171 1
+a171 1
+	esac], [with_libc_r=no])
+@
+
+
+1.68.2.15
+log
+@* configure.in: use waitpid on mingw32.
+@
+text
+@d192 1
+a192 2
+		ac_cv_func_times=yes
+		ac_cv_func_waitpid=yes;;
+@
+
+
+1.68.2.16
+log
+@* confgure.in: add RUBY_CANONICAL_BUILD.
+@
+text
+@a27 2
+AC_DEFUN(RUBY_CANONICAL_BUILD, [AC_REQUIRE([AC_CANONICAL_BUILD])])
+
+a29 1
+RUBY_CANONICAL_BUILD
+@
+
+
+1.68.2.17
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d585 1
+a585 1
+	darwin*)	LDSHARED='cc -dynamic -bundle -undefined suppress -flat_namespace'
+d867 1
+a867 1
+	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress -flat_namespace'
+@
+
+
+1.68.2.18
+log
+@* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+@
+text
+@d531 1
+a531 1
+			   LDSHARED='$(CC) -Wl,-G -shared'
+@
+
+
+1.68.2.19
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d20 1
+a20 3
+	esac], [
+	  CC=gcc
+	  without_gcc=no])
+@
+
+
+1.68.2.20
+log
+@* configure.in: do not override CC if set.
+@
+text
+@d14 1
+a14 1
+	no)	: ${CC=cc}
+d16 1
+a16 1
+	yes)	: ${CC=gcc}
+d21 1
+a21 1
+	  : ${CC=gcc}
+@
+
+
+1.68.2.21
+log
+@* configure.in: use GCC, not without_gcc. remove without_gcc.
+* ext/curses/extconf.rb: check for curses.h.
+@
+text
+@d15 1
+a15 1
+		;;
+d17 1
+a17 1
+		;;
+d19 4
+a22 2
+		;;
+	esac])
+d245 3
+a247 1
+		case "$target_cpu"::"$GCC" in
+a248 2
+		    CFLAGS="-mieee $CFLAGS" ;;
+		alpha*::no|alpha*::)
+d895 1
+a895 1
+	if test "$GCC" != "yes" ; then
+@
+
+
+1.68.2.22
+log
+@* configure.in: apply patch from NetBSD's pkgsrc (patch-aa).
+@
+text
+@d507 6
+a512 1
+    netbsd*) CCDLFLAGS=-fPIC;;
+d559 4
+a562 2
+	netbsd*)	LDSHARED='${CC} -shared'
+			LDFLAGS=""
+d829 1
+a829 3
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME) -Wl,-R -Wl,${X11BASE}/lib -L${X11BASE}/lib'
+d831 3
+a833 3
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+	else	# a.out platforms
+	   LIBRUBY_ALIASES=""
+a876 3
+    netbsd*)
+    	CFLAGS="$CFLAGS -pipe"
+	;;
+@
+
+
+1.68.2.23
+log
+@* configure.in: not use X11BASE, since it's not always set.
+@
+text
+@d824 1
+a824 1
+	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME)'
+@
+
+
+1.68.2.24
+log
+@* configure.in: add -Wl,-export-dynamic on NetBSD.
+@
+text
+@d555 1
+a555 3
+			if test "$rb_cv_binary_elf" = yes; then
+			    LDFLAGS="-Wl,-export-dynamic"
+			fi
+@
+
+
+1.68.2.25
+log
+@* time.c (time_utc_offset): new function.
+
+* time.c (Init_Time): new method gmtoff, gmt_offset and utc_offset.
+
+* lib/time.rb: new file.
+@
+text
+@a286 8
+AC_CACHE_CHECK(for struct tm.tm_gmtoff, rb_cv_member_struct_tm_tm_gmtoff,
+  [AC_TRY_COMPILE([#include <time.h>],
+    [struct tm t; t.tm_gmtoff = 3600;],
+  [rb_cv_member_struct_tm_tm_gmtoff=yes],
+  [rb_cv_member_struct_tm_tm_gmtoff=no])])
+if test "$rb_cv_member_struct_tm_tm_gmtoff" = yes; then
+  AC_DEFINE(HAVE_STRUCT_TM_TM_GMTOFF)
+fi
+@
+
+
+1.68.2.26
+log
+@forgot to commit everything bug ChangeLog
+@
+text
+@d276 1
+@
+
+
+1.68.2.27
+log
+@* configure.in (solaris): add '-shared' only for GNU ld.
+@
+text
+@d533 2
+a534 5
+			   LDSHARED='$(CC) -Wl,-G'
+			   if `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null; then
+	 		       LDFLAGS="-Wl,-E"
+			       LDSHARED="$LDSHARED -shared"
+			   fi
+@
+
+
+1.68.2.28
+log
+@* configure.in: keep old config.h unless changed.
+@
+text
+@d1035 2
+a1036 6
+if test -f config.h && tr -d '\015' < confdefs.h | cmp -s config.h -; then
+  echo "config.h unchanged"
+else
+  echo "creating config.h"
+  tr -d '\015' < confdefs.h > config.h
+fi
+@
+
+
+1.68.2.29
+log
+@* configure.in: workaround for autoconf 2.53.
+@
+text
+@a3 5
+dnl workaround for autoconf 2.53
+: '
+m4_pattern_allow([^[L]IBOBJS$])
+'
+
+@
+
+
+1.68.2.30
+log
+@* configure.in: add check for initstate(3).
+@
+text
+@d289 1
+a289 2
+	      dlopen sigprocmask sigaction _setjmp setsid telldir seekdir \
+	      fchmod initstate)
+@
+
+
+1.68.2.31
+log
+@* configure.in: set size of the initial stack from
+  2MB to 32MB on MinGW/Cygwin.
+@
+text
+@a622 1
+			LDFLAGS='-Wl,--stack,0x02000000'
+@
+
+
+1.68.2.32
+log
+@* configure.in: change order.
+@
+text
+@d622 1
+a623 1
+			rb_cv_dlopen=yes ;;
+@
+
+
+1.68.2.33
+log
+@* eval.c (blk_orphan): the wrong condition; backported from 1.7
+
+* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* re.c (rb_reg_s_quote): # also should be quoted.
+@
+text
+@a108 7
+# by TOYODA Eizi <toyoda@@npd.kishou.go.jp>
+case "$target_os" in
+hiuxmpp*)
+    AC_DEFINE(__HIUX_MPP__)
+    ;;
+esac
+
+a623 1
+	hiuxmpp)	LDSHARED='ld -r' ;;
+d882 1
+a882 1
+	LIBRUBY_DLDFLAGS='-install_name $(prefix)/lib/lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+@
+
+
+1.68.2.34
+log
+@Wed May 22 20:18:31 2002  WATANABE Hirofumi  <eban@@ruby-lang.org>
+
+	* configure.in: need not link vsnprintf.o on MinGW.
+@
+text
+@d208 1
+a208 3
+		ac_cv_func_waitpid=yes
+		ac_cv_func_vsnprintf=yes
+		;;
+@
+
+
+1.68.2.35
+log
+@* configure.in (__NO_ISOCEXT): add for mingw-runtime 2.0-2.
+* configure.in (__MSVCRT__): removed because it is defined
+  in the GCC specs.
+@
+text
+@d963 1
+a963 1
+	    CFLAGS="-DNT -D__NO_ISOCEXT $CFLAGS"
+@
+
+
+1.68.2.36
+log
+@* configure.in (seekdir, telldir): add ac_cv_func_telldir=yes,
+  ac_cv_func_seekdir=yes for MinGW.
+@
+text
+@a209 2
+		ac_cv_func_seekdir=yes
+		ac_cv_func_telldir=yes
+@
+
+
+1.68.2.37
+log
+@* eval.c (ruby_run): should set toplevel visibility again here.
+
+* eval.c (rb_eval): should not rely on ruby_class == rb_cObject
+  check.   Besides allow implicit publicity for attribute set
+  methods.
+
+* parse.y (primary): need not to check class_nest, just set
+  whether method is an attrset or not.
+
+* string.c (rb_str_each_line): p might be at the top of the
+  string.
+
+* variable.c (rb_path2class): should not use rb_eval_string().
+
+* parse.y (str_extend): expression substitution can contain string
+  terminator again.
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+@
+text
+@d916 1
+a916 1
+    	CFLAGS="$CFLAGS -pipe"
+@
+
+
+1.68.2.38
+log
+@* configure.in: set ac_cv_func_setitimer to "no" on Cygwin.
+@
+text
+@d197 1
+a197 3
+		ac_cv_var_tzname=no
+		ac_cv_func_setitimer=no
+		;;
+@
+
+
+1.68.2.39
+log
+@* configure.in (RUBY_PROG_GNU_LD): check whether the linker is GNU ld.
+* ext/extmk.rb.in (create_makefile): add -Wl,-no-undefined to $DLDFLAGS
+  on Linux if GNU ld is used and --enable-shared is specified.
+* configure.in (RUBY_MINGW32): backport from 1.7.
+@
+text
+@a8 40
+AC_DEFUN(RUBY_MINGW32,
+[case "$host_os" in
+cygwin*)
+AC_CACHE_CHECK(for mingw32 environment, rb_cv_mingw32,
+[AC_TRY_CPP([
+#ifndef __MINGW32__
+# error
+#endif
+], rb_cv_mingw32=yes,rb_cv_mingw32=no)
+rm -f conftest*])
+test "$rb_cv_mingw32" = yes && target_os="mingw32"
+  ;;
+esac])
+
+AC_DEFUN(RUBY_CPPOUTFILE,
+[AC_CACHE_CHECK(whether ${CPP} accepts -o, rb_cv_cppoutfile,
+[cppflags=$CPPFLAGS
+CPPFLAGS='-o conftest.i'
+AC_TRY_CPP([], rb_cv_cppoutfile=yes, rb_cv_cppoutfile=no)
+if test "$rb_cv_cppoutfile" = yes; then
+  CPPOUTFILE=$CPPFLAGS
+else
+  CPPOUTFILE='> conftest.i'
+fi
+CPPFLAGS=$cppflags
+AC_SUBST(CPPOUTFILE)
+rm -f conftest*])
+])
+
+AC_DEFUN(RUBY_PROG_GNU_LD,
+[AC_CACHE_CHECK(whether the linker is GNU ld, rb_cv_prog_gnu_ld,
+[if `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null; then
+  rb_cv_prog_gnu_ld=yes
+else
+  rb_cv_prog_gnu_ld=no
+fi
+])
+GNU_LD=$rb_cv_prog_gnu_ld
+AC_SUBST(GNU_LD)])
+
+a93 8
+RUBY_PROG_GNU_LD
+RUBY_CPPOUTFILE
+
+OUTFLAG='-o '
+AC_SUBST(OUTFLAG)
+
+RUBY_MINGW32
+
+d553 1
+a553 1
+			   if test "$rb_cv_prog_gnu_ld" = yes; then
+d580 1
+a580 1
+			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
+@
+
+
+1.67
+log
+@matz
+@
+text
+@d240 1
+a240 1
+	      dlopen sigprocmask sigaction _setjmp setsid telldir seekdir)
+@
+
+
+1.66
+log
+@matz
+@
+text
+@d116 1
+@
+
+
+1.65
+log
+@matz
+@
+text
+@d115 1
+@
+
+
+1.64
+log
+@eban
+@
+text
+@d60 1
+a60 1
+    darwin*)
+d62 3
+a64 1
+   	        TARGET_ARCHS="ppc"
+d169 1
+a169 1
+darwin*)	;;
+d736 1
+a736 1
+  cygwin*|mingw*|beos*|openstep*|nextstep*|rhapsody*|os2_emx*)
+d905 1
+a905 1
+  cygwin*|mingw*|*djgpp*)
+d918 1
+a918 1
+SITE_DIR="`eval "echo ${sitedir}"`"
+d920 1
+a920 1
+  cygwin*|mingw*|*djgpp*)
+@
+
+
+1.63
+log
+@eban
+@
+text
+@d858 1
+a858 1
+	    LIBRUBY_DLDFLAGS='--output-exp=$(RUBY_SO_NAME).exp --dllname=$(RUBY_SO_NAME)$(EXEEXT) --output-lib=$(LIBRUBY) --add-stdcall-alias --def=$(RUBYDEF)'
+@
+
+
+1.62
+log
+@matz
+@
+text
+@a904 1
+    SITEDIR='/lib/ruby/site_ruby'
+a907 1
+    SITEDIR='${prefix}/lib/ruby/site_ruby'
+d911 1
+a911 1
+sitedir='${prefix}/lib/ruby/site_ruby'
+d915 9
+a923 2
+            [sitedir=`eval "echo ${SITEDIR}"`])
+RUBY_SITE_LIB_PATH="${sitedir}"
+@
+
+
+1.61
+log
+@matz
+@
+text
+@d916 3
+a918 2
+            [sitedir=$withval])
+RUBY_SITE_LIB_PATH=`eval "echo ${SITEDIR}"`
+@
+
+
+1.60
+log
+@eban
+@
+text
+@d233 4
+a236 4
+	      truncate chsize times utimes fcntl lockf setitimer pause\
+	      setruid seteuid setreuid setrgid setegid setregid\
+	      getpgrp setpgrp getpgid setpgid getgroups getpriority\
+	      dlopen sigprocmask sigaction _setjmp setsid getrlimit)
+@
+
+
+1.59
+log
+@eban
+@
+text
+@d852 1
+a852 1
+	RUBY_SO_NAME=$target_os-'$(RUBY_INSTALL_NAME)'-${MAJOR}.${MINOR}
+@
+
+
+1.58
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d852 1
+a852 1
+	RUBY_SO_NAME='$(RUBY_INSTALL_NAME)'.$target_os
+@
+
+
+1.57
+log
+@eban
+@
+text
+@d948 1
+a948 1
+		[--with-search-path	  specify the additional search path],
+@
+
+
+1.56
+log
+@matz
+@
+text
+@d852 1
+d854 1
+a854 1
+	    LIBRUBY_SO='$(RUBY_INSTALL_NAME).'$target_os.dll
+d858 1
+a858 1
+	    LIBRUBY_DLDFLAGS='--output-exp=$(RUBY_INSTALL_NAME).exp --dllname=$(RUBY_INSTALL_NAME)$(EXEEXT) --output-lib=$(LIBRUBY) --add-stdcall-alias --def=$(RUBYDEF)'
+d862 2
+a863 2
+	LIBRUBY='lib$(RUBY_INSTALL_NAME).a'
+	LIBRUBYARG='-L. -l$(RUBY_INSTALL_NAME)'
+@
+
+
+1.55
+log
+@eban
+@
+text
+@d60 4
+d167 1
+d451 1
+d533 4
+d603 2
+d632 2
+d818 3
+@
+
+
+1.54
+log
+@matz
+@
+text
+@d174 2
+a175 1
+		ac_cv_header_sys_times_h=no;;
+@
+
+
+1.53
+log
+@matz - nakada win32 patch
+@
+text
+@d226 1
+a226 1
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall getcwd\
+d864 1
+@
+
+
+1.52
+log
+@matz
+@
+text
+@d92 1
+d882 10
+a891 1
+RUBY_LIB_PREFIX="${prefix}/lib/ruby"
+d897 1
+a897 1
+RUBY_SITE_LIB_PATH=`eval "echo ${sitedir}"`
+@
+
+
+1.51
+log
+@matz
+@
+text
+@d57 2
+d99 1
+@
+
+
+1.50
+log
+@matz
+@
+text
+@d798 1
+a798 1
+    rhasody*)
+d800 3
+@
+
+
+1.49
+log
+@eban
+@
+text
+@d220 1
+a220 1
+		 strchr strstr strtoul strdup crypt flock vsnprintf\
+@
+
+
+1.48
+log
+@eban
+@
+text
+@d828 1
+a828 1
+	    LIBRUBY_SO='$(RUBY_INSTALL_NAME)-'$target_os.dll
+@
+
+
+1.47
+log
+@eban
+@
+text
+@d831 1
+a831 1
+	    LIBRUBY_SO=nul
+d839 1
+d847 1
+a847 2
+	    CCDLFLAGS=-DIMPORT
+	    SOLIBS='$(LIBS)' ;;
+@
+
+
+1.46
+log
+@2000-07-03
+@
+text
+@d827 7
+a833 1
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).a'
+d836 1
+d847 1
+a847 1
+	    SOLIBS='-lwsock32 -lmsvcrt' ;;
+@
+
+
+1.45
+log
+@2000-07-03
+@
+text
+@d28 1
+a29 1
+AC_CANONICAL_HOST
+@
+
+
+1.44
+log
+@2000-07-03
+@
+text
+@d28 3
+a30 1
+AC_CANONICAL_SYSTEM
+@
+
+
+1.43
+log
+@2000-07-02
+@
+text
+@d28 1
+a28 2
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+@
+
+
+1.42
+log
+@2000-06-28
+@
+text
+@d726 2
+d735 1
+a784 14
+    cygwin*|mingw*)
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).a'
+	LIBRUBY_ALIASES=''
+	LIBRUBY_A='lib$(RUBY_INSTALL_NAME)s.a'
+	LIBRUBYARG='-L. -l$(RUBY_INSTALL_NAME)'
+	FIRSTMAKEFILE=GNUmakefile:cygwin/GNUmakefile.in
+	case "$target_os" in
+	cygwin*)
+	    CCDLFLAGS=-DUSEIMPORTLIB ;;
+	mingw*)
+	    CCDLFLAGS=-DIMPORT
+	    SOLIBS='-lwsock32 -lmsvcrt' ;;
+	esac
+	;;
+d825 16
+a840 6
+    cygwin*)
+	LIBOBJS="$LIBOBJS strftime.o"
+	;;
+    mingw*)
+	LIBOBJS="$LIBOBJS win32.o"
+	CFLAGS="-DNT -D__MSVCRT__ $CFLAGS"
+d856 1
+@
+
+
+1.41
+log
+@2000-06-28
+@
+text
+@d873 2
+a874 2
+RUBY_SITE_LIB_PATH="${sitedir}"
+RUBY_SITE_LIB_PATH2="${sitedir}/${MAJOR}.${MINOR}"
+d876 3
+a878 3
+AC_DEFINE_UNQUOTED(RUBY_LIB, "`eval "echo ${RUBY_LIB_PATH}"`")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "`eval "echo ${RUBY_SITE_LIB_PATH}"`")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB2, "`eval "echo ${RUBY_SITE_LIB_PATH2}"`")
+d901 1
+a901 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "`eval "echo ${RUBY_SITE_LIB_PATH2}/${arch}"`")
+@
+
+
+1.40
+log
+@matz
+@
+text
+@d869 1
+a869 2
+#sitedir='${prefix}/lib/ruby/site_ruby'
+sitedir="${prefix}/lib/ruby/site_ruby"
+@
+
+
+1.39
+log
+@2000-06-22
+@
+text
+@d523 1
+a523 1
+			DLDFLAGS='-eInit_$(TARGET) -bI:$(topdir)/ruby.imp -bM:SRE -T512 -H512 -lc'
+@
+
+
+1.38
+log
+@2000-06-20
+@
+text
+@d869 2
+a870 1
+sitedir='${prefix}/lib/ruby/site_ruby'
+@
+
+
+1.37
+log
+@2000-06-19
+@
+text
+@d876 3
+a878 3
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${RUBY_LIB_PATH}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${RUBY_SITE_LIB_PATH}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB2, "${RUBY_SITE_LIB_PATH2}")
+d901 1
+a901 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH2}/${arch}")
+@
+
+
+1.36
+log
+@2000-06-19
+@
+text
+@d222 1
+a222 1
+	      truncate chsize times utimes fcntl lockf setitimer\
+d225 1
+a225 1
+	      dlopen sigprocmask sigaction _setjmp setsid getrlimit pause)
+@
+
+
+1.35
+log
+@2000-06-16
+@
+text
+@d869 1
+a869 1
+sitedir="${prefix}/lib/ruby/site_ruby"
+@
+
+
+1.34
+log
+@2000-06-16
+@
+text
+@d225 1
+a225 1
+	      dlopen sigprocmask sigaction _setjmp setsid getrlimit)
+@
+
+
+1.33
+log
+@2000-06-14
+@
+text
+@a170 1
+		ac_cv_lib_xpg4_setlocale=no
+d172 17
+a193 1
+AC_CHECK_LIB(xpg4, setlocale)	# FreeBSD needs this
+@
+
+
+1.32
+log
+@2000-06-13
+@
+text
+@d213 3
+a215 2
+  [AC_TRY_LINK([int i;],
+  	[extern int daylight; i = daylight;],
+@
+
+
+1.31
+log
+@2000-06-12
+@
+text
+@d213 2
+a214 2
+  [AC_TRY_LINK([],
+  	[extern int daylight; daylight++;],
+@
+
+
+1.30
+log
+@2000-06-12
+@
+text
+@d160 1
+a160 1
+cygwin*)	;;
+d214 1
+a214 1
+  	[extern int daylight; int i = daylight;],
+@
+
+
+1.29
+log
+@2000-06-05
+@
+text
+@d212 7
+a218 3
+if test "$ac_cv_func_strftime" = no; then
+    AC_TRY_LINK([],
+	 [extern int daylight; int i = daylight;], AC_DEFINE(HAVE_DAYLIGHT))
+@
+
+
+1.28
+log
+@2000-05-24
+@
+text
+@d428 1
+d436 1
+a436 1
+	solaris*|irix*)	CCDLFLAGS='-K PIC' ;;
+d457 1
+a457 1
+	irix*) 	 	LDSHARED='ld -ignore_unresolved'
+@
+
+
+1.27
+log
+@see ChangeLog.
+@
+text
+@a46 6
+    macos*)
+        echo -n "MacOS X : "
+	  	if test "$TARGET_ARCHS" = "" ; then
+   	        TARGET_ARCHS="ppc i386"
+  		fi
+	;;
+a157 1
+macos*)	;;
+a419 1
+    macos*)	;;
+d422 1
+a499 4
+	macos*)		LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+d513 1
+a513 1
+			    DLDFLAGS="-f ruby.exp -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+a518 2
+			  *)
+			    DLDFLAGS="ruby.def -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+a565 2
+    macos*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+a592 2
+  macos*)
+	STRIP='strip -A -n';;
+a690 19
+if test "$target_os" = "beos"; then
+  LIBRUBY='$(LIBRUBY_SO)'
+  LIBRUBYARG='-l$(RUBY_INSTALL_NAME)'
+  SOLIBS='-lnet'
+  echo creating ruby.def
+  case "$target_cpu" in
+    powerpc*)
+      cp beos/ruby.def.in ruby.exp
+      CFLAGS="$CFLAGS -relax_pointers"
+      ;;
+    i586*)
+      LDFLAGS="$LDFLAGS -L."
+      ;;
+    *)
+      echo EXPORTS > ruby.def
+      cat beos/ruby.def.in >> ruby.def
+      ;;
+  esac
+fi
+d693 1
+a693 1
+  cygwin*|mingw*|beos*|openstep*|nextstep*|rhapsody*|macos*|os2_emx*)
+d754 7
+d808 7
+@
+
+
+1.26
+log
+@see ChangeLog
+@
+text
+@d675 3
+@
+
+
+1.25
+log
+@fix bug; support mingw32.
+@
+text
+@d691 2
+a692 2
+  MINIRUBY='ruby -I.. -rprep'
+  PREP=prep.rb
+@
+
+
+1.24
+log
+@support mingw32.
+@
+text
+@d795 1
+a795 3
+	    LIBOBJS="$LIBOBJS strftime.o"
+	    CCDLFLAGS=-DUSEIMPORTLIB
+	    ;;
+a796 2
+	    LIBOBJS="$LIBOBJS win32.o"
+	    CFLAGS="-DNT -D__MSVCRT__ $CFLAGS"
+d798 1
+a798 1
+	    ;;
+d807 1
+a807 1
+	nextstep*)
+d809 2
+a810 2
+		;;
+	openstep*)
+d812 2
+a813 2
+		;;
+	rhasody*)
+d815 2
+a816 2
+		;;
+	osf*)
+d834 9
+a842 2
+	*)
+		;;	
+d909 1
+a909 1
+cat confdefs.h > config.h
+@
+
+
+1.23
+log
+@2000-05-12
+@
+text
+@d90 1
+a90 1
+    cygwin*)
+d168 9
+d431 1
+d534 1
+a534 1
+	cygwin*)	: ${LDSHARED="${DLLWRAP} --as=${AS} --dlltool-name=${DLLTOOL} --driver-name=${CC} --export-all -s"}
+d583 1
+a583 1
+    cygwin*)	DLEXT=so
+a674 3
+  cygwin*)
+    setup=Setup
+    ;;
+d726 1
+a726 1
+  cygwin*|beos*|openstep*|nextstep*|rhapsody*|macos*|os2_emx*)
+d787 1
+a787 1
+    cygwin*)
+d793 4
+a796 2
+	LIBOBJS="$LIBOBJS strftime.o"
+	CCDLFLAGS=-DUSEIMPORTLIB
+d798 7
+@
+
+
+1.22
+log
+@2000-05-09
+@
+text
+@a709 1
+      FIRSTMAKEFILE=GNUmakefile:beos/GNUmakefile.in
+@
+
+
+1.21
+log
+@2000-05-01
+@
+text
+@d406 1
+d573 4
+d719 9
+d836 1
+@
+
+
+1.20
+log
+@mkmf
+@
+text
+@d47 6
+d164 1
+d417 1
+d496 4
+d568 2
+a569 2
+    cygwin*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+d592 2
+@
+
+
+1.19
+log
+@2000-03-17
+@
+text
+@d820 6
+a825 2
+RUBY_SITE_LIB_PATH="${RUBY_LIB_PREFIX}/site_ruby"
+RUBY_SITE_LIB_PATH2="${RUBY_SITE_LIB_PATH}/${MAJOR}.${MINOR}"
+d832 1
+@
+
+
+1.18
+log
+@2000-03-15
+@
+text
+@d778 1
+a778 1
+	if [ $without_gcc = "yes" ]; then
+@
+
+
+1.17
+log
+@2000-03-15
+@
+text
+@d785 1
+a785 1
+                        CFLAGS="$CFLAGS -frpm d -ieee"
+a787 1
+                        CFLAGS="$CFLAGS -oldc"
+@
+
+
+1.16
+log
+@2000-03-13
+@
+text
+@d777 19
+@
+
+
+1.15
+log
+@2000-03-07
+@
+text
+@d674 1
+d691 1
+a699 1
+FIRSTMAKEFILE=""
+@
+
+
+1.14
+log
+@2000-02-17
+@
+text
+@d326 2
+a327 1
+AC_SUBST(DEFAULT_KCODE)
+d331 4
+a334 8
+	utf8) AC_DEFINE(DEFAULT_KCODE, KCODE_UTF8)
+	      DEFAULT_KCODE="KCODE_UTF8";;
+	euc)  AC_DEFINE(DEFAULT_KCODE, KCODE_EUC)
+	      DEFAULT_KCODE="KCODE_EUC";;
+	sjis) AC_DEFINE(DEFAULT_KCODE, KCODE_SJIS)
+	      DEFAULT_KCODE="KCODE_SJIS";;
+	none) AC_DEFINE(DEFAULT_KCODE, KCODE_NONE)
+	      DEFAULT_KCODE="KCODE_NONE";;
+d337 1
+@
+
+
+1.13
+log
+@2000-02-08
+@
+text
+@d801 5
+a805 1
+RUBY_LIB_PATH="${prefix}/lib/ruby/${MAJOR}.${MINOR}"
+a806 1
+RUBY_SITE_LIB_PATH="${RUBY_LIB_PATH}/site_ruby"
+d808 2
+d828 1
+d830 1
+a830 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH}/${arch}")
+@
+
+
+1.12
+log
+@2000-02-01
+@
+text
+@d161 3
+d493 1
+d560 2
+a561 2
+    os2_emx)	DLEXT=o
+	 	AC_DEFINE(DLEXT, ".so");;
+d645 1
+a645 1
+    LIBOBJS="$LIBOBJS os2.o"
+@
+
+
+1.11
+log
+@20000105
+@
+text
+@d71 4
+d77 1
+d79 2
+a80 2
+AC_PROG_RANLIB
+AC_SUBST(AR)
+d83 9
+d327 8
+a334 4
+	utf8) AC_DEFINE(DEFAULT_KCODE, KCODE_UTF8);;
+	euc)  AC_DEFINE(DEFAULT_KCODE, KCODE_EUC);;
+	sjis) AC_DEFINE(DEFAULT_KCODE, KCODE_SJIS);;
+	none) AC_DEFINE(DEFAULT_KCODE, KCODE_NONE);;
+d348 2
+a349 4
+case "$target_os" in
+    linux*)
+  AC_CACHE_CHECK(whether ELF binaries are produced, rb_cv_binary_elf,
+  [AC_TRY_RUN([
+d366 10
+a375 3
+	rb_cv_binary_elf=yes,
+	rb_cv_binary_elf=no,
+	rb_cv_binary_elf=yes)])
+d382 8
+d454 1
+a454 2
+			if test -x /usr/bin/objformat && \
+			   test `/usr/bin/objformat` = "elf" ; then
+a456 1
+			    rb_cv_freebsd_elf=yes
+d461 4
+a464 5
+	netbsd*)  	LDSHARED="ld -shared"
+                      	case "$target_cpu" in
+                      	alpha)
+                          LDFLAGS="-export-dynamic" ;;
+                      	esac
+d509 1
+a509 1
+	cygwin*)	: ${LDSHARED='dllwrap --export-all -s'}
+d718 1
+a718 1
+	if test "$rb_cv_freebsd_elf" != "yes" ; then
+d725 5
+a729 5
+ 	case "$target_cpu" in
+	alpha|mipsel|mipseb|powerpc|sparc64)  # ELF platforms
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so' ;;
+ 	*) LIBRUBY_ALIASES= ;;  # a.out platforms
+	esac
+a757 4
+	: ${NM=nm}
+	AC_SUBST(NM)
+        : ${DLLWRAP=dllwrap}
+	AC_SUBST(DLLWRAP)
+@
+
+
+1.10
+log
+@19991214
+@
+text
+@d29 1
+d40 1
+a40 1
+    case "$host_os" in
+d140 1
+a140 1
+case "$host_os" in
+d144 1
+a144 1
+human*)		;;
+d330 1
+a330 1
+case "$host_os" in
+d355 1
+a355 1
+    host_os=${host_os}-a_out
+d374 1
+a374 1
+    case "$host_os" in
+d382 1
+a382 1
+     case "$host_cpu" in
+d389 1
+a389 1
+    case "$host_os" in
+d398 1
+a398 1
+  case "$host_os" in
+d433 1
+a433 1
+                      	case "$host_cpu" in
+d468 1
+a468 1
+	beos*) 		case "$host_cpu" in
+d481 1
+a481 1
+	cygwin*)	LDSHARED='dllwrap --export-all -s'
+d517 1
+a517 1
+  case "$host_os" in
+d542 1
+a542 1
+case "$host_os" in
+d563 1
+a563 1
+case "$host_os" in
+d567 1
+a567 1
+    AC_CHECK_FUNCS(select)
+d606 1
+a606 1
+    CFLAGS="$CFLAGS -fansi-only -cc1-stack=196608 -cpp-stack=2694144"
+d634 10
+d648 1
+a648 1
+if test "$host_os" = "beos"; then
+d653 1
+a653 1
+  case "$host_cpu" in
+d680 1
+a680 1
+  case "$host_os" in
+d685 1
+a685 1
+	XLDFLAGS='-Wl,-rpath,${prefix}/lib':/usr/lib:/lib
+d697 1
+a697 1
+ 	case "$host_cpu" in
+d730 4
+d740 1
+a740 1
+case "$host_os" in
+d783 1
+a783 1
+    arch="fat-${host_os}"
+d786 1
+a786 1
+                 "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}")
+d789 2
+a790 2
+                 "${RUBY_SITE_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}")
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM, __ARCHITECTURE__ "-${host_os}")
+d792 1
+a792 1
+    arch="${host_cpu}-${host_os}"
+@
+
+
+1.9
+log
+@991207
+@
+text
+@d263 1
+a263 1
+  if (-1==(-1>>(unsigned)1))
+d272 1
+a272 1
+  AC_DEFINE(RSHIFT(x,y), ((x)>>y))
+@
+
+
+1.8
+log
+@19991206
+@
+text
+@d159 1
+a159 1
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h)
+d183 1
+a183 1
+	      dlopen sigprocmask sigaction _setjmp setsid)
+@
+
+
+1.7
+log
+@19991110
+@
+text
+@d263 1
+a263 1
+  if (-1==(-1>>1))
+@
+
+
+1.6
+log
+@19991108
+@
+text
+@d80 3
+d86 6
+a91 9
+# checks for UNIX variants that set C preprocessor variables
+AC_MINIX
+
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(short)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(void*)
+AC_CHECK_SIZEOF(float)
+AC_CHECK_SIZEOF(double)
+d256 1
+a256 1
+AC_CHAR_UNSIGNED
+@
+
+
+1.5
+log
+@19991029
+@
+text
+@d432 4
+@
+
+
+1.4
+log
+@RUBYOPT
+@
+text
+@d440 1
+a440 1
+			LDFLAGS="-rdynamic -Wl,-rpath,/usr/local/lib/ruby/1.4/i386-bsdi4.0"
+@
+
+
+1.3
+log
+@regexp literal (e.g. \202) match, etc.
+@
+text
+@d159 1
+a159 1
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h fnmatch.h)
+d178 1
+a178 1
+		 fnmatch isinf isnan finite)
+@
+
+
+1.3.2.1
+log
+@19991025
+@
+text
+@d440 1
+a440 1
+			LDFLAGS='-rdynamic -Wl,-rpath,$(prefix)/lib/ruby/$(MAJOR).$(MINOR)/i386-bsdi4.0'
+@
+
+
+1.3.2.2
+log
+@19991109
+@
+text
+@d86 6
+a91 6
+AC_CHECK_SIZEOF(int, 4)
+AC_CHECK_SIZEOF(short, 2)
+AC_CHECK_SIZEOF(long, 4)
+AC_CHECK_SIZEOF(void*, 4)
+AC_CHECK_SIZEOF(float, 4)
+AC_CHECK_SIZEOF(double, 8)
+d256 1
+a256 1
+AC_C_CHAR_UNSIGNED
+a431 4
+                      	case "$host_cpu" in
+                      	alpha)
+                          LDFLAGS="-export-dynamic" ;;
+                      	esac
+@
+
+
+1.3.2.3
+log
+@19991110
+@
+text
+@d80 3
+a84 3
+
+AC_EXEEXT
+AC_OBJEXT
+@
+
+
+1.3.2.4
+log
+@19991206
+@
+text
+@d263 1
+a263 1
+  if (-1==(-1>>(unsigned)1))
+@
+
+
+1.3.2.5
+log
+@19991208
+@
+text
+@d159 1
+a159 1
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h)
+d178 1
+a178 1
+		 isinf isnan finite)
+@
+
+
+1.3.2.6
+log
+@991208-repack
+@
+text
+@d390 1
+a390 1
+	solaris*)	CCDLFLAGS='-K PIC' ;;
+a391 1
+	irix*)		CCDLFLAGS='-KPIC' ;;
+d411 1
+a411 1
+	irix*) 	 	LDSHARED='ld -shared'
+@
+
+
+1.3.2.7
+log
+@20000105
+@
+text
+@d143 1
+a143 1
+human*)		ac_cv_func_getpgrp_void=yes;;
+d567 1
+a567 1
+    AC_CHECK_FUNCS(select gettimeofday)
+d606 1
+a606 1
+    CFLAGS="$CFLAGS -fansi-only -cc1-stack=262144 -cpp-stack=2694144"
+d675 1
+a675 1
+	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+@
+
+
+1.3.2.8
+log
+@2000-01-24
+@
+text
+@d263 1
+a263 1
+  if (-1==(-1>>1))
+d272 1
+a272 1
+  AC_DEFINE(RSHIFT(x,y), ((x)>>(int)y))
+d312 4
+a315 8
+	utf8) AC_DEFINE(DEFAULT_KCODE, KCODE_UTF8)
+	      DEFAULT_KCODE="KCODE_UTF8";;
+	euc)  AC_DEFINE(DEFAULT_KCODE, KCODE_EUC)
+	      DEFAULT_KCODE="KCODE_EUC";;
+	sjis) AC_DEFINE(DEFAULT_KCODE, KCODE_SJIS)
+	      DEFAULT_KCODE="KCODE_SJIS";;
+	none) AC_DEFINE(DEFAULT_KCODE, KCODE_NONE)
+	      DEFAULT_KCODE="KCODE_NONE";;
+d329 4
+a332 2
+AC_CACHE_CHECK(whether ELF binaries are produced, rb_cv_binary_elf,
+[AC_TRY_RUN([
+d349 3
+a351 10
+rb_cv_binary_elf=yes,
+rb_cv_binary_elf=no,
+rb_cv_binary_elf=yes)])
+
+if test "$rb_cv_binary_elf" = yes; then
+  AC_DEFINE(USE_ELF)
+fi
+
+case "$target_os" in
+    linux*)
+a357 8
+netbsd*)
+    if [[ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]]
+    then
+	netbsd_elf=yes
+    else
+	netbsd_elf=no
+    fi
+    ;;
+d390 1
+a390 1
+	solaris*|irix*)	CCDLFLAGS='-K PIC' ;;
+d392 1
+d412 1
+a412 1
+	irix*) 	 	LDSHARED='ld -ignore_unresolved'
+d423 2
+a424 1
+			if test "$rb_cv_binary_elf" = yes; then
+d427 1
+d432 5
+a436 4
+	netbsd*)	LDSHARED="ld -shared"
+			if test "$rb_cv_binary_elf" = yes; then
+                          LDFLAGS="-export-dynamic"
+			fi
+d680 1
+a680 1
+	if test "$rb_cv_binary_elf" != "yes" ; then
+d687 5
+a691 5
+	if test "$rb_cv_binary_elf" = yes; then # ELF platforms
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so'
+	else
+	   LIBRUBY_ALIASES=   # a.out platforms
+	fi
+@
+
+
+1.3.2.9
+log
+@2000-02-02
+@
+text
+@d359 1
+a359 1
+case "$host_os" in
+@
+
+
+1.3.2.10
+log
+@2000-02-08
+@
+text
+@a145 3
+os2_emx*)	LIBS="-lm $LIBS"
+		ac_cv_lib_xpg4_setlocale=no
+		ac_cv_lib_dir_opendir=no;;
+a474 1
+			LDFLAGS="-brtl"
+d541 2
+a542 2
+    os2_emx*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+d626 1
+a626 1
+    LIBOBJS="$LIBOBJS os2.$OBJEXT"
+@
+
+
+1.3.2.11
+log
+@2000-03-13
+@
+text
+@a650 1
+FIRSTMAKEFILE=""
+a666 1
+      FIRSTMAKEFILE=GNUmakefile:beos/GNUmakefile.in
+d675 1
+@
+
+
+1.3.2.12
+log
+@2000-03-14
+@
+text
+@d777 1
+a777 5
+RUBY_LIB_PREFIX="${prefix}/lib/ruby"
+RUBY_LIB_PATH="${RUBY_LIB_PREFIX}/${MAJOR}.${MINOR}"
+RUBY_SITE_LIB_PATH="${RUBY_LIB_PREFIX}/site_ruby"
+RUBY_SITE_LIB_PATH2="${RUBY_SITE_LIB_PATH}/${MAJOR}.${MINOR}"
+
+d779 1
+a780 2
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB2, "${RUBY_SITE_LIB_PATH2}")
+
+@
+
+
+1.3.2.13
+log
+@2000-03-23
+@
+text
+@a803 1
+
+d805 1
+a805 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH2}/${arch}")
+@
+
+
+1.3.2.14
+log
+@000414
+@
+text
+@d779 2
+a780 6
+sitedir="${prefix}/lib/ruby/site_ruby"
+AC_ARG_WITH(sitedir,
+	    [--with-sitedir=DIR        site libraries in DIR [PREFIX/lib/ruby/site_ruby]],
+            [sitedir=$withval])
+RUBY_SITE_LIB_PATH="${sitedir}"
+RUBY_SITE_LIB_PATH2="${sitedir}/${MAJOR}.${MINOR}"
+a786 1
+AC_SUBST(sitedir)dnl
+@
+
+
+1.3.2.15
+log
+@2000-05-01
+@
+text
+@a45 6
+    macos*)
+        echo -n "MacOS X : "
+	  	if test "$TARGET_ARCHS" = "" ; then
+   	        TARGET_ARCHS="ppc i386"
+  		fi
+	;;
+a142 1
+macos*)	;;
+a396 1
+    macos*)	;;
+a474 4
+	macos*)		LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+a542 2
+    macos*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+a566 2
+	STRIP='strip -A -n';;
+  macos*)
+@
+
+
+1.3.2.16
+log
+@2000-06-05
+@
+text
+@a410 1
+     sparc) CCDLFLAGS=-fPIC ;;
+d418 1
+a418 1
+	solaris*|irix*)	CCDLFLAGS='-KPIC' ;;
+d439 1
+a439 1
+	irix*)		LDSHARED='ld -shared'
+d684 1
+@
+
+
+1.3.2.17
+log
+@2000-06-13
+@
+text
+@d46 6
+d149 1
+d404 1
+d484 4
+d556 2
+d582 2
+@
+
+
+1.3.2.18
+log
+@2000-06-20
+@
+text
+@d147 1
+a148 17
+freebsd*)	LIBS="-lm $LIBS"
+		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
+		  rb_cv_lib_xpg4_needed,
+		  [AC_TRY_CPP([
+#include <osreldate.h>
+#if __FreeBSD_version < 400020 || \
+   (__FreeBSD_version >= 500000 && __FreeBSD_version < 500005)
+#error needs libxpg4
+#endif
+		   ],
+		   rb_cv_lib_xpg4_needed=no,
+		   rb_cv_lib_xpg4_needed=yes,
+		   rb_cv_lib_xpg4_needed=yes)])
+		if test "$rb_cv_lib_xpg4_needed" = yes; then
+			AC_CHECK_LIB(xpg4, setlocale)
+		fi
+		;;
+d154 1
+@
+
+
+1.3.2.19
+log
+@2000-06-21
+@
+text
+@d749 1
+a749 2
+	LIBRUBYARG='-l$(RUBY_INSTALL_NAME)'
+	XLDFLAGS='-L.'
+@
+
+
+1.3.2.20
+log
+@matz
+@
+text
+@d767 1
+a767 1
+	rhapsody*)
+a768 3
+		;;
+	os2_emx)
+    	CFLAGS="$CFLAGS -DOS2"
+@
+
+
+1.3.2.21
+log
+@eban
+@
+text
+@d201 1
+a201 1
+	      dlopen sigprocmask sigaction _setjmp setsid _mktemp)
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d378 1
+a378 1
+    bsdi3*)	;;
+d439 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 7
+a27 9
+dnl checks for thread
+rb_thread=yes
+AC_ARG_ENABLE(thread, [--disable-thread          never use user-level thread], [
+	rb_thread=$enableval
+])
+if test $rb_thread = yes; then
+  AC_DEFINE(THREAD)
+fi
+
+a29 1
+
+d32 4
+a35 4
+AC_ARG_ENABLE( fat-binary,
+       [--enable-fat-binary       build a NeXT Multi Architecture Binary. ],
+       [ fat_binary=$enableval ] )
+if test "$fat_binary" = yes ; then
+d37 1
+a37 1
+    AC_MSG_CHECKING( target architecture )
+d39 18
+a56 7
+    if test "$TARGET_ARCHS" = "" ; then
+        if test `/usr/bin/arch` = "m68k" ; then
+            TARGET_ARCHS="m68k i486"
+        else
+            TARGET_ARCHS="m68k `/usr/bin/arch`"
+        fi
+    fi
+d63 1
+a63 1
+    AC_DEFINE( NEXT_FAT_BINARY )
+a66 1
+
+d76 2
+a77 1
+AC_PROG_INSTALL
+d80 3
+d86 52
+d141 2
+d144 2
+d151 1
+d156 4
+a159 3
+AC_CHECK_HEADERS(stdlib.h unistd.h limits.h sys/file.h sys/ioctl.h pwd.h \
+		 sys/select.h sys/time.h sys/times.h sys/param.h sys/wait.h\
+		 syscall.h a.out.h string.h utime.h memory.h)
+a169 5
+AC_CHECK_SIZEOF(short)
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(void*)
+
+d175 5
+a179 3
+AC_REPLACE_FUNCS(dup2 setenv memmove mkdir strcasecmp strerror strftime\
+		 strstr strtoul strdup crypt flock)
+AC_CHECK_FUNCS(fmod killpg random wait4 waitpid syscall getcwd\
+d182 3
+a184 2
+	      setpgrp2 getpgid getgroups getpriority\
+	      dlopen sigprocmask sigaction _setjmp)
+a185 1
+    AC_STRUCT_TIMEZONE
+d193 1
+a193 2
+  AC_MSG_CHECKING(for BSD signal semantics)
+  AC_CACHE_VAL(rb_cv_bsd_signal,
+d214 1
+a215 1
+  AC_MSG_RESULT($rb_cv_bsd_signal)
+d221 2
+a222 13
+if test "$ac_cv_func_setpgrp2" = yes; then
+  AC_DEFINE(BSD_GETPGRP, getpgrp2)
+  AC_DEFINE(BSD_SETPGRP, setpgrp2)
+else
+  AC_MSG_CHECKING(whether getpgrp() has arg)
+  AC_CACHE_VAL(rb_cv_bsdgetpgrp,
+    [AC_TRY_COMPILE([#include <unistd.h>], [getpgrp(0);],
+      rb_cv_bsdgetpgrp=yes,
+      rb_cv_bsdgetpgrp=no)])
+  AC_MSG_RESULT($rb_cv_bsdgetpgrp)
+  if test "$rb_cv_bsdgetpgrp" = yes; then
+    AC_DEFINE(BSD_GETPGRP, getpgrp)
+  fi
+d224 29
+a252 10
+  AC_MSG_CHECKING(whether setpgrp() has args)
+  AC_CACHE_VAL(rb_cv_bsdsetpgrp,
+    [AC_TRY_COMPILE([#include <unistd.h>], [setpgrp(1, 1);],
+	rb_cv_bsdsetpgrp=yes,
+	rb_cv_bsdsetpgrp=no)])
+  AC_MSG_RESULT($rb_cv_bsdsetpgrp)
+  if test "$rb_cv_bsdsetpgrp" = yes; then
+    AC_DEFINE(BSD_SETPGRP, setpgrp)
+  fi
+fi
+d255 1
+d258 20
+a277 1
+AC_MSG_CHECKING([count field in FILE structures])
+d292 7
+a298 1
+	rb_cv_fcnt="readCount", rb_cv_fcnt="not found")
+d307 11
+a317 10
+if test "$ac_cv_func_getpwent" = yes; then
+  AC_MSG_CHECKING(struct passwd)
+  AC_EGREP_HEADER(pw_change, pwd.h, AC_DEFINE(PW_CHANGE))
+  AC_EGREP_HEADER(pw_quota, pwd.h, AC_DEFINE(PW_QUOTA))
+  AC_EGREP_HEADER(pw_age, pwd.h, AC_DEFINE(PW_AGE))
+  AC_EGREP_HEADER(pw_class, pwd.h, AC_DEFINE(PW_CLASS))
+  AC_EGREP_HEADER(pw_comment, pwd.h, AC_DEFINE(PW_COMMENT))
+  AC_EGREP_HEADER(pw_expire, pwd.h, AC_DEFINE(PW_EXPIRE))
+  AC_MSG_RESULT(done)
+fi
+d320 2
+a321 1
+AC_ARG_WITH(dln-a-out, [--with-dln-a-out          use dln_a_out if possible], [
+d327 2
+d331 1
+a331 2
+  AC_MSG_CHECKING(whether ELF binaries are produced)
+  AC_CACHE_VAL(rb_cv_linux_elf,
+d349 4
+a352 5
+	rb_cv_linux_elf=yes,
+	rb_cv_linux_elf=no,
+	[:])])
+  AC_MSG_RESULT($rb_cv_linux_elf)
+  if test "$rb_cv_linux_elf" = no; then
+d354 1
+a354 1
+    host_os=linux-a.out
+d375 2
+d378 8
+a385 1
+    *) CCDLFLAGS=-fpic;;
+d390 3
+a392 3
+	solaris*|irix*)	CCDLFLAGS='-K pic' ;;
+	sunos*)		CCDLFLAGS='-pic' ;;
+	esix*|uxpds*)   CCDLFLAGS='-Kpic' ;;
+d402 6
+a407 1
+	solaris*) 	LDSHARED='ld -G'
+d417 3
+a419 1
+	linux*) 	LDSHARED="gcc -shared"
+d421 9
+a429 1
+	freebsd*) 	LDSHARED="ld -Bshareable"
+d431 1
+a431 1
+	netbsd*) 	LDSHARED="ld -Bshareable"
+d433 1
+a433 1
+	openbsd*) 	LDSHARED="ld -Bshareable"
+d435 5
+a439 1
+	nextstep*)	LDSHARED='cc -r'
+d443 7
+a449 1
+	aix*)		LDSHARED='../../miniruby ../aix_ld.rb $(TARGET)'
+d451 5
+d458 17
+a474 1
+			LDFLAGS='' ;;
+a482 1
+    AC_MSG_CHECKING(whether matz's dln works)
+d484 1
+a484 1
+    AC_CACHE_VAL(rb_cv_dln_a_out,
+a491 1
+    AC_MSG_RESULT($rb_cv_dln_a_out)
+d505 2
+a506 2
+  DLEXT=o
+  AC_DEFINE(DLEXT, ".o")
+d512 10
+a521 2
+    nextstep*)	DLEXT=o
+	 	AC_DEFINE(DLEXT, ".o");;
+d539 4
+d560 2
+a561 2
+    AC_MSG_CHECKING(whether PD libc _dtos18 fail to convert big number)
+    AC_CACHE_VAL(rb_cv_missing__dtos18,
+d574 1
+a574 2
+rb_cv_missing__dtos18=yes, rb_cv_missing__dtos18=no)])
+    AC_MSG_RESULT($rb_cv_missing__dtos18)
+d578 2
+a579 2
+    AC_MSG_CHECKING(whether PD libc fconvert fail to round)
+    AC_CACHE_VAL(rb_cv_missing_fconvert,
+d593 1
+a593 2
+rb_cv_missing_fconvert=yes, rb_cv_missing_fconvert=no)])
+    AC_MSG_RESULT($rb_cv_missing_fconvert)
+d599 2
+a600 1
+    binsuffix=.x
+d603 8
+a611 1
+    binsuffix=
+d615 1
+a615 1
+AC_SUBST(binsuffix)
+d623 1
+a623 1
+  CFLAGS="$CFLAGS -pipe $ARCH_FLAG"
+d626 129
+a754 1
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${prefix}/lib/ruby")
+d757 3
+d764 1
+a764 1
+                 "${prefix}/lib/ruby/" __ARCHITECTURE__ "-${host_os}" )
+d766 3
+a768 2
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/ruby/${arch}")
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM,  __ARCHITECTURE__ "-${host_os}" )
+a770 1
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/ruby/${arch}")
+d773 9
+d786 1
+a786 1
+AC_OUTPUT(Makefile ext/extmk.rb)
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d27 1
+a27 1
+  AC_DEFINE(USE_THREAD)
+d32 1
+d36 1
+a36 1
+       [--enable-fat-binary       build a NeXT/Apple Multi Architecture Binary. ],
+d38 1
+a38 1
+ if test "$fat_binary" = yes ; then
+d42 3
+a44 15
+    case "$host_os" in
+    rhapsody*)
+        echo -n "MacOS X Server: "
+  	if test "$TARGET_ARCHS" = "" ; then
+           TARGET_ARCHS="ppc i386"
+  	fi
+	;;
+    nextstep*|openstep*)
+  	echo -n "NeXTSTEP/OPENSTEP: "
+
+        if test "$host_os" = "rhapsody" ; then
+            echo -n "Rhapsody: "
+	    if test "$TARGET_ARCHS" = "" ; then
+               TARGET_ARCHS="ppc i486"
+  	    fi
+d46 1
+a46 8
+  	    echo -n "NeXTSTEP/OPENSTEP: "
+	    if test "$TARGET_ARCHS" = "" ; then
+	       if test `/usr/bin/arch` = "m68k" ; then
+		   TARGET_ARCHS="m68k i486"
+	       else # Black and Native one
+		   TARGET_ARCHS="m68k `/usr/bin/arch`"
+	       fi
+	    fi
+d48 1
+a48 2
+        ;;
+    esac
+d59 1
+a74 44
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(void*)
+
+AC_MSG_CHECKING(for prototypes)
+AC_CACHE_VAL(rb_cv_have_prototypes,
+  [AC_TRY_COMPILE([int foo(int x) { return 0; }], [return foo(10);],
+	rb_cv_have_prototypes=yes,
+	rb_cv_have_prototypes=no)])
+AC_MSG_RESULT($rb_cv_have_prototypes)
+if test "$rb_cv_have_prototypes" = yes; then
+  AC_DEFINE(HAVE_PROTOTYPES)
+fi
+
+AC_MSG_CHECKING(for variable length prototypes and stdarg.h)
+AC_CACHE_VAL(rb_cv_stdarg,
+  [AC_TRY_COMPILE([
+#include <stdarg.h>
+int foo(int x, ...) {
+	va_list va;
+	va_start(va, x);
+	va_arg(va, int);
+	va_arg(va, char *);
+	va_arg(va, double);
+	return 0;
+}
+], [return foo(10, "", 3.14);],
+	rb_cv_stdarg=yes,
+	rb_cv_stdarg=no)])
+AC_MSG_RESULT($rb_cv_stdarg)
+if test "$rb_cv_stdarg" = yes; then
+  AC_DEFINE(HAVE_STDARG_PROTOTYPES)
+fi
+
+AC_MSG_CHECKING(for gcc attribute noreturn)
+AC_CACHE_VAL(rb_cv_have_attr_noreturn,
+  [AC_TRY_COMPILE([void exit(int x) __attribute__ ((noreturn));], [],
+	rb_cv_have_attr_noreturn=yes,
+	rb_cv_have_attr_noreturn=no)])
+AC_MSG_RESULT($rb_cv_have_attr_noreturn)
+if test "$rb_cv_have_attr_noreturn" = yes; then
+  AC_DEFINE(HAVE_ATTR_NORETURN)
+fi
+
+a77 2
+openstep*)	;;
+rhapsody*)	;;
+a78 1
+beos*)		;;
+a83 1
+AC_CHECK_LIB(xpg4, setlocale)	# FreeBSD needs this
+d90 1
+a90 1
+		 syscall.h a.out.h string.h utime.h memory.h direct.h)
+d101 5
+d111 3
+a113 4
+AC_FUNC_MEMCMP
+AC_REPLACE_FUNCS(dup2 memmove mkdir strcasecmp strerror strftime\
+		 strchr strstr strtoul strdup crypt flock vsnprintf)
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall getcwd\
+d116 2
+a117 2
+	      setpgrp2 getpgid setpgid getgroups getpriority\
+	      dlopen sigprocmask sigaction _setjmp setpgrp setsid)
+a183 20
+AC_MSG_CHECKING(whether right shift preserve sign bit)
+AC_CACHE_VAL(rb_cv_rshift_sign,
+    [AC_TRY_RUN([
+int
+main()
+{
+  if (-1==(-1>>1))
+    return 0;
+  return 1;
+}
+],
+	rb_cv_rshift_sign=yes,
+	rb_cv_rshift_sign=no)])
+  AC_MSG_RESULT($rb_cv_rshift_sign)
+if test "$rb_cv_rshift_sign" = yes; then
+  AC_DEFINE(RSHIFT(x,y), ((x)>>y))
+else
+  AC_DEFINE(RSHIFT(x,y), (((x)<0) ? ~((~(x))>>y) : (x)>>y))
+fi
+
+d208 11
+a273 2
+    openstep*)	;;
+    rhapsody*)	;;
+a274 1
+    cygwin*)	CCDLFLAGS=-DDLLIMPORT;;
+a303 3
+	freebsd3*)      LDSHARED="ld -Bshareable"   
+			LDFLAGS="-rdynamic"
+			rb_cv_dlopen=yes ;;
+d308 1
+a308 2
+	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
+			CCDLFLAGS=-fPIC
+a313 8
+	openstep*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+	rhapsody*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+a318 11
+	beos*) 		LDSHARED="ld -xms"
+			case "$host_cpu" in
+			  powerpc*)
+			    DLDFLAGS="-f ruby.exp -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+                            ;;
+			  *)
+			    DLDFLAGS="ruby.def -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+			    ;;
+			esac
+			rb_cv_dlopen=yes ;;
+	cygwin*)	LDSHARED='../../miniruby ../cygwin32_ld.rb' ;;
+a359 6
+    openstep*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    rhapsody*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    cygwin*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+a376 4
+  openstep*)
+	STRIP='strip -A -n';;
+  rhapsody*)
+	STRIP='strip -A -n';;
+a437 4
+  cygwin*)
+    binsuffix=.exe
+    setup=Setup
+    ;;
+a442 3
+
+
+
+d451 1
+a451 26
+  CFLAGS="$CFLAGS $ARCH_FLAG"
+fi
+
+LIBRUBY='libruby.a'
+LIBRUBYARG='libruby.a'
+SOLIBS=
+if test "$host_os" = "beos"; then
+  CFLAGS="$CFLAGS -relax_pointers"
+  LIBRUBY='libruby.so'
+  LIBRUBYARG='-lruby'
+  SOLIBS='-lnet'
+  echo creating ruby.def
+  case "$host_cpu" in
+    powerpc*)
+      cp beos/ruby.def.in ruby.exp
+      ;;
+    *)
+      echo EXPORTS > ruby.def
+      cat beos/ruby.def.in >> ruby.def
+      ;;
+  esac
+fi
+
+if test "$enable_shared" = 'yes'; then
+  LIBRUBY='libruby.so'
+  LIBRUBYARG='-L./ -lruby'
+d454 1
+a454 30
+case "$host_os" in
+	nextstep*)
+    	CFLAGS="$CFLAGS -pipe"
+		;;
+	openstep*)
+    	CFLAGS="$CFLAGS -pipe"
+		;;
+	rhasody*)
+    	CFLAGS="$CFLAGS -pipe -no-precomp"
+		;;
+	*)
+		;;	
+esac
+
+
+AC_SUBST(LIBRUBY)
+AC_SUBST(LIBRUBYARG)
+AC_SUBST(SOLIBS)
+
+ri_prefix=
+test "$program_prefix" != NONE &&
+  ri_prefix=$program_prefix
+
+ri_suffix=
+test "$program_suffix" != NONE &&
+  ri_suffix=$program_suffix
+
+RUBY_INSTALL_NAME="${ri_prefix}ruby${ri_suffix}"
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${prefix}/lib/${RUBY_INSTALL_NAME}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby")
+d461 1
+a461 4
+                 "${prefix}/lib/${RUBY_INSTALL_NAME}/" __ARCHITECTURE__ "-${host_os}" )
+
+    AC_DEFINE_UNQUOTED(RUBY_SITE_THIN_ARCHLIB,
+                 "${prefix}/lib/${RUBY_INSTALL_NAME}/" __ARCHITECTURE__ "-${host_os}" )
+d463 1
+a463 2
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/${arch}")
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby/${arch}")
+d467 1
+a467 2
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/${arch}")
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby/${arch}")
+@
+
+
+1.1.1.2.2.1
+log
+@990126
+@
+text
+@a3 6
+MAJOR=1
+MINOR=3
+TEENY=1
+AC_SUBST(MAJOR)
+AC_SUBST(MINOR)
+AC_SUBST(TEENY)
+a87 1
+AC_PROG_LN_S
+a95 2
+AC_CHECK_SIZEOF(float)
+AC_CHECK_SIZEOF(double)
+d300 1
+a300 1
+  AC_CACHE_VAL(rb_cv_binary_elf,
+d318 2
+a319 2
+	rb_cv_binary_elf=yes,
+	rb_cv_binary_elf=no,
+d321 2
+a322 2
+  AC_MSG_RESULT($rb_cv_binary_elf)
+  if test "$rb_cv_binary_elf" = no; then
+d324 1
+a324 1
+    host_os=${host_os}-a_out
+d378 4
+a381 2
+	freebsd*)       LDSHARED="gcc -shared"   
+			test -x /usr/bin/objformat && LDFLAGS="-rdynamic"
+d568 2
+a569 3
+LIBRUBY_A='libruby.a'
+LIBRUBY='$(LIBRUBY_A)'
+LIBRUBYARG='$(LIBRUBY_A)'
+d573 1
+a573 1
+  LIBRUBY='$(LIBRUBY_SO)'
+a587 4
+AC_SUBST(LIBSUFFIX)
+
+LIBRUBY_SO='libruby.so.$(MAJOR).$(MINOR).$(TEENY)'
+LIBRUBY_ALIASES='libruby.so'
+d589 1
+a589 1
+  LIBRUBY='$(LIBRUBY_SO)'
+a590 12
+  CFLAGS="$CFLAGS $CCDLFLAGS"
+  case "$host_os" in
+    freebsd2*|sunos4*)
+	LIBRUBY_ALIASES='libruby.so.$(MAJOR).$(MINOR) libruby.so'
+	;;
+    hpux*)
+	LIBRUBY_SO='libruby.sl.$(MAJOR).$(MINOR).$(TEENY)'
+	LIBRUBY_ALIASES='libruby.sl.$(MAJOR).$(MINOR) libruby.sl'
+	;;
+    *)
+	;;
+  esac
+a607 3
+AC_SUBST(LIBRUBY_A)
+AC_SUBST(LIBRUBY_SO)
+AC_SUBST(LIBRUBY_ALIASES)
+@
+
+
+1.1.1.2.2.2
+log
+@990127
+@
+text
+@d4 3
+a6 4
+rb_version=`grep RUBY_VERSION $srcdir/version.h`
+MAJOR=`expr "$rb_version" : '#define RUBY_VERSION "\([0-9][0-9]*\)\.[0-9][0-9]*\.[0-9][0-9]*"'`
+MINOR=`expr "$rb_version" : '#define RUBY_VERSION "[0-9][0-9]*\.\([0-9][0-9]*\)\.[0-9][0-9]*"'`
+TEENY=`expr "$rb_version" : '#define RUBY_VERSION "[0-9][0-9]*\.[0-9][0-9]*\.\([0-9][0-9]*\)"'`
+d575 1
+a575 1
+LIBRUBY_A='lib$(RUBY_INSTALL_NAME).a'
+d582 1
+a582 1
+  LIBRUBYARG='-l$(RUBY_INSTALL_NAME)'
+d596 4
+a599 2
+LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR).$(TEENY)'
+LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so'
+d602 1
+a602 1
+  LIBRUBYARG='-L./ -l$(RUBY_INSTALL_NAME)'
+d605 2
+a606 2
+    freebsd2*|sunos4*|linux*)
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+d609 2
+a610 2
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).sl.$(MAJOR).$(MINOR).$(TEENY)'
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).sl.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).sl'
+d631 1
+a631 1
+AC_SUBST(RUBY_INSTALL_NAME)
+a646 1
+LIBSUFFIX=$ri_suffix
+@
+
+
+1.1.1.2.2.3
+log
+@990203
+@
+text
+@a101 1
+AC_CHECK_SIZEOF(short)
+a116 6
+AC_MSG_CHECKING(token paste string)
+AC_TRY_COMPILE([#define paste(a,b) a##b],
+[ int xy = 1; return paste(x,y);],
+AC_DEFINE(TOKEN_PASTE(x,y),[x##y])   AC_MSG_RESULT(ANSI),
+AC_DEFINE(TOKEN_PASTE(x,y),[x/**/y]) AC_MSG_RESULT(KnR1))
+
+d359 1
+a359 1
+    *) CCDLFLAGS=-fPIC;;
+d364 3
+a366 3
+	solaris*|irix*)	CCDLFLAGS='-K PIC' ;;
+	sunos*)		CCDLFLAGS='-PIC' ;;
+	esix*|uxpds*)   CCDLFLAGS='-KPIC' ;;
+d394 1
+@
+
+
+1.1.1.2.2.4
+log
+@990205
+@
+text
+@d41 1
+a41 1
+AC_ARG_ENABLE(fat-binary,
+d43 1
+a43 1
+       [fat_binary=$enableval])
+d46 1
+a46 1
+    AC_MSG_CHECKING(target architecture)
+d108 2
+a109 1
+AC_CACHE_CHECK(for prototypes, rb_cv_have_prototypes,
+d113 1
+d118 5
+a122 10
+AC_CACHE_CHECK(token paste string, rb_cv_tokenpaste,
+  [AC_TRY_COMPILE([#define paste(a,b) a##b],
+		  [int xy = 1; return paste(x,y);],
+		  rb_cv_tokenpaste=ansi,
+		  rb_cv_tokenpaste=knr)])
+if test "$rb_cv_tokenpaste" = ansi; then
+  AC_DEFINE(TOKEN_PASTE(x,y),[x##y])
+else
+  AC_DEFINE(TOKEN_PASTE(x,y),[x/**/y])
+fi
+d124 2
+a125 1
+AC_CACHE_CHECK(for variable length prototypes and stdarg.h, rb_cv_stdarg,
+d139 1
+d144 2
+a145 1
+AC_CACHE_CHECK(for gcc attribute noreturn, rb_cv_have_attr_noreturn,
+d149 1
+d206 2
+a207 1
+  AC_CACHE_CHECK(for BSD signal semantics, rb_cv_bsd_signal,
+a227 1
+	rb_cv_bsd_signal=no,
+d229 1
+d239 2
+a240 1
+  AC_CACHE_CHECK(whether getpgrp() has arg, rb_cv_bsdgetpgrp,
+d244 1
+d249 2
+a250 1
+  AC_CACHE_CHECK(whether setpgrp() has args, rb_cv_bsdsetpgrp,
+d254 1
+a259 30
+AC_CACHE_CHECK(for working strtod, rb_cv_func_strtod,
+[AC_TRY_RUN([
+double strtod ();
+int
+main()
+{
+  {
+    /* Some versions of Linux strtod mis-parse strings with leading '+'.  */
+    char *string = " +69";
+    char *term;
+    double value;
+    value = strtod(string, &term);
+    if (value != 69 || term != (string + 4))
+      exit(1);
+  }
+
+  {
+    /* Under Solaris 2.4, strtod returns the wrong value for the
+       terminating character under some conditions.  */
+    char *string = "NaN";
+    char *term;
+    strtod(string, &term);
+    if (term != string && *(term - 1) == 0)
+      exit(1);
+  }
+  exit(0);
+}
+], rb_cv_func_strtod=yes, rb_cv_func_strtod=no, rb_cv_func_strtod=no)])
+test $rb_cv_func_strtod = no && LIBOBJS="$LIBOBJS strtod.o"
+
+d263 2
+a264 1
+AC_CACHE_CHECK(whether right shift preserve sign bit, rb_cv_rshift_sign,
+d275 2
+a276 2
+	rb_cv_rshift_sign=no,
+	rb_cv_rshift_sign=yes)])
+d283 1
+a283 1
+AC_MSG_CHECKING(count field in FILE structures)
+d316 2
+a317 1
+  AC_CACHE_CHECK(whether ELF binaries are produced, rb_cv_binary_elf,
+d337 2
+a338 1
+	rb_cv_binary_elf=yes)])
+d438 1
+d440 1
+a440 1
+    AC_CACHE_CHECK(whether matz's dln works, rb_cv_dln_a_out,
+d448 1
+d515 2
+a516 2
+    AC_CACHE_CHECK(whether PD libc _dtos18 fail to convert big number,
+		   rb_cv_missing__dtos18,
+d529 2
+a530 1
+rb_cv_missing__dtos18=yes, rb_cv_missing__dtos18=no, rb_cv_missing__dtos18=no)])
+d534 2
+a535 2
+    AC_CACHE_CHECK(whether PD libc fconvert fail to round,
+		   rb_cv_missing_fconvert,
+d549 2
+a550 1
+rb_cv_missing_fconvert=yes, rb_cv_missing_fconvert=no, rb_cv_missing_fconvert=no)])
+@
+
+
+1.1.1.2.2.5
+log
+@990209
+@
+text
+@d416 2
+a417 7
+	freebsd*)       LDSHARED="gcc -shared"
+			if test -x /usr/bin/objformat -a \
+				`/usr/bin/objformat` = "elf" ; then
+			    LDFLAGS="-rdynamic"
+			    DLDFLAGS='-Wl,-soname,$(.TARGET)'
+			    rb_cv_freebsd_elf=yes
+			fi
+a419 6
+			case "$host_cpu" in
+			alpha|mips)
+				LDFLAGS="-export-dynamic" ;;
+			*)
+				;;
+			esac
+d627 1
+a627 1
+    sunos4*|linux*)
+a629 7
+    freebsd*)
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+	if test "$rb_cv_freebsd_elf" != "yes" ; then
+	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
+	    LIBRUBY_ALIASES=''
+	fi
+	;;
+d669 1
+d671 2
+a672 3
+RUBY_LIB_PATH="${prefix}/lib/${RUBY_INSTALL_NAME}/${MAJOR}.${MINOR}"
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${RUBY_LIB_PATH}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${RUBY_LIB_PATH}/site_ruby")
+d679 1
+a679 1
+                 "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}" )
+d682 5
+a686 1
+                 "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}" )
+d689 3
+a692 3
+AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${RUBY_LIB_PATH}/${arch}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_LIB_PATH}/site_ruby/${arch}")
+AC_DEFINE_UNQUOTED(RUBY_PLATFORM, "${arch}")
+@
+
+
+1.1.1.2.2.6
+log
+@*** empty log message ***
+@
+text
+@a404 1
+			LDFLAGS="-Wl,-E"
+d417 2
+a418 2
+			if test -x /usr/bin/objformat && \
+				test `/ust/bin/objformat` = "elf" ; then
+d688 1
+a688 2
+#RUBY_LIB_PATH="${prefix}/lib/${RUBY_INSTALL_NAME}/${MAJOR}.${MINOR}"
+RUBY_LIB_PATH="${prefix}/lib/ruby/${MAJOR}.${MINOR}"
+@
+
+
+1.1.1.2.2.7
+log
+@990212
+@
+text
+@d419 1
+a419 1
+			   test `/usr/bin/objformat` = "elf" ; then
+d684 1
+a684 1
+ri_suffix="${MAJOR}.${MINOR}"
+@
+
+
+1.1.1.2.2.8
+log
+@990215
+@
+text
+@d233 20
+a252 2
+AC_FUNC_GETPGRP
+AC_FUNC_SETPGRP  
+d405 1
+a405 1
+			test "$GCC" = yes && `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null && LDFLAGS="-Wl,-E"
+d684 1
+a684 1
+ri_suffix=
+@
+
+
+1.1.1.2.2.9
+log
+@990224
+@
+text
+@d190 1
+a190 2
+		 strchr strstr strtoul strdup crypt flock vsnprintf\
+		 fnmatch isinf isnan finite)
+d194 2
+a195 2
+	      getpgrp setpgrp getpgid setpgid getgroups getpriority\
+	      dlopen sigprocmask sigaction _setjmp setsid)
+a404 2
+			else
+			  test "$GCC" = yes && `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null || LDSHARED="ld -Bshareable"
+d434 2
+a435 1
+	beos*) 		case "$host_cpu" in
+a436 1
+			    LDSHARED="ld -xms"
+a438 4
+			  i586*)
+			    LDSHARED="ld -shared"
+			    DLDFLAGS="-L/boot/develop/lib/x86 -lbe -lroot"
+			    ;;
+d598 1
+a605 4
+      CFLAGS="$CFLAGS -relax_pointers"
+      ;;
+    i586*)
+      LDFLAGS="$LDFLAGS -L."
+@
+
+
+1.1.1.2.2.10
+log
+@990225
+@
+text
+@d172 1
+a172 1
+		 syscall.h a.out.h string.h utime.h memory.h direct.h fnmatch.h)
+@
+
+
+1.1.1.2.2.11
+log
+@990324
+@
+text
+@d28 9
+a196 1
+AC_STRUCT_TIMEZONE
+d198 1
+a267 1
+AC_C_CONST
+d387 2
+a388 6
+	solaris*) 	if test "$GCC" = yes; then
+			   LDSHARED='gcc -Wl,-G'
+			   `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null && LDFLAGS="-Wl,-E"
+			else
+			   LDSHARED='ld -G'
+			fi
+a397 2
+	osf*) 		LDSHARED="gcc -shared"
+			rb_cv_dlopen=yes ;;
+d436 1
+a436 2
+			LDFLAGS=''
+			rb_cv_dlopen=yes ;;
+d448 1
+d451 1
+a451 2
+	cygwin*)	LDSHARED='../../miniruby ../cygwin32_ld.rb'
+			rb_cv_dlopen=yes ;;
+d681 1
+d684 1
+a684 2
+RUBY_SITE_LIB_PATH="${RUBY_LIB_PATH}/site_ruby"
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${RUBY_SITE_LIB_PATH}")
+d691 1
+a691 1
+                 "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}")
+d694 1
+a694 2
+                 "${RUBY_SITE_LIB_PATH}/" __ARCHITECTURE__ "-${host_os}")
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM, __ARCHITECTURE__ "-${host_os}")
+a696 1
+    AC_DEFINE_UNQUOTED(RUBY_PLATFORM, "${arch}")
+d699 2
+a700 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${RUBY_SITE_LIB_PATH}/${arch}")
+@
+
+
+1.1.1.2.2.12
+log
+@*** empty log message ***
+@
+text
+@d296 1
+a296 7
+	rb_cv_fcnt="readCount", )
+fi
+dnl for emx0.9c
+if test "$rb_cv_fcnt" = ""; then
+    AC_TRY_COMPILE([#include <stdio.h>],
+	[FILE *f = stdin; f->_rcount = 0;],
+	rb_cv_fcnt="_rcount", rb_cv_fcnt="not found")
+a495 2
+    os2_emx)	DLEXT=o
+	 	AC_DEFINE(DLEXT, ".o");;
+a575 6
+  dnl OS/2 environment w/ Autoconf 2.1x for EMX
+  os2_emx)
+    LIBOBJS="$LIBOBJS os2.o"
+    binsuffix=.exe
+    setup=Setup.emx
+    ;;
+a624 3
+AC_ARG_ENABLE(enable-shared,
+       [--enable-shared           build a shared library for Ruby. ],
+       [enable_shared=$enableval])
+@
+
+
+1.1.1.2.2.13
+log
+@to open CVS
+@
+text
+@a310 12
+dnl default value for $KANJI
+AC_SUBST(DEFAULT_KCODE)
+AC_ARG_WITH(default-kcode, 
+	[--with-default-kcode=CODE speficy default value for \$KCODE (utf8|euc|sjis|none)], 
+	[case $withval in
+	utf8) AC_DEFINE(DEFAULT_KCODE, KCODE_UTF8);;
+	euc)  AC_DEFINE(DEFAULT_KCODE, KCODE_EUC);;
+	sjis) AC_DEFINE(DEFAULT_KCODE, KCODE_SJIS);;
+	none) AC_DEFINE(DEFAULT_KCODE, KCODE_NONE);;
+        *)    AC_MSG_WARN($withval is not valid kcode; ignored);;
+	esac])
+
+d312 1
+a312 2
+AC_ARG_WITH(dln-a-out, 
+	[--with-dln-a-out          use dln_a_out if possible], [
+a317 2
+AC_SUBST(XLDFLAGS)dnl
+
+d345 1
+a345 1
+    XLDFLAGS="-rdynamic"
+d383 1
+a383 1
+			XLDFLAGS="-Wl,-E"
+d387 1
+a387 1
+			   `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null && XLDFLAGS="-Wl,-E"
+d407 1
+a407 1
+			    XLDFLAGS="-rdynamic"
+d417 1
+a417 1
+				XLDFLAGS="-export-dynamic" ;;
+a436 1
+			XLDFLAGS="-Wl,-bE:ext/ruby.imp"
+@
+
+
+1.1.1.2.2.14
+log
+@aix shlib link
+@
+text
+@d451 2
+a452 3
+	aix*)		LDSHARED='/usr/ccs/bin/ld'
+			XLDFLAGS="-Wl,-bE:ruby.imp"
+			DLDFLAGS="-eInit_$(TARGET) -bI:$(ruby_inc)/ruby.imp -bM:SRE -T512 -H512 -lc"
+a453 1
+
+@
+
+
+1.1.1.2.2.15
+log
+@better AIX support
+@
+text
+@d452 2
+a453 2
+			XLDFLAGS='-Wl,-bE:ruby.imp'
+			DLDFLAGS='-eInit_$(TARGET) -bI:$(ruby_inc)/ruby.imp -bM:SRE -T512 -H512 -lc'
+@
+
+
+1.1.1.2.2.16
+log
+@--with-xxx=yyy
+@
+text
+@d72 1
+a72 1
+    AC_DEFINE(NEXT_FAT_BINARY)
+a719 3
+
+configure_args=$ac_configure_args
+AC_SUBST(configure_args)dnl
+@
+
+
+1.1.1.2.2.17
+log
+@glibc 2.1
+@
+text
+@d360 1
+a360 1
+    LDFLAGS="-rdynamic"
+d398 1
+a398 1
+			LDFLAGS="-Wl,-E"
+d402 1
+a402 1
+			   `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null && LDFLAGS="-Wl,-E"
+d422 1
+a422 1
+			    LDFLAGS="-rdynamic"
+d432 1
+a432 1
+				LDFLAGS="-export-dynamic" ;;
+@
+
+
+1.1.1.2.2.18
+log
+@small fixes
+@
+text
+@d180 1
+a180 1
+AC_REPLACE_FUNCS(dup2 memmove mkdir strcasecmp strncasecmp strerror strftime\
+@
+
+
+1.1.1.2.2.19
+log
+@regexp null pattern
+@
+text
+@d453 1
+a453 1
+			DLDFLAGS='-eInit_$(TARGET) -bI:$(hdrdir)/ruby.imp -bM:SRE -T512 -H512 -lc'
+@
+
+
+1.1.1.2.2.20
+log
+@990531
+@
+text
+@a654 2
+LIBRUBY_LDSHARED=$LDSHARED
+LIBRUBY_DLDFLAGS=$DLDFLAGS
+a678 11
+    aix*)
+	if test "$GCC" = yes; then
+	    LIBRUBY_LDSHARED='$(CC) -shared'
+	    LIBRUBY_DLDFLAGS='-Wl,-bE:ruby.imp'
+	else
+	    LIBRUBY_LDSHARED='/usr/ccs/bin/ld'
+	    LIBRUBY_DLDFLAGS='-bE:ruby.imp -bM:SRE -bnoentry'
+	fi
+	LIBRUBYARG='-L./ -Wl,lib$(RUBY_INSTALL_NAME).so'
+	SOLIBS='-lm -lc'
+	;;
+a697 2
+AC_SUBST(LIBRUBY_LDSHARED)
+AC_SUBST(LIBRUBY_DLDFLAGS)
+@
+
+
+1.1.1.2.2.21
+log
+@thread bugs
+@
+text
+@a150 1
+cygwin*)	;;
+d382 1
+a382 7
+    bsdi3*)	;;
+    cygwin*)	;;
+    netbsd*) CCDLFLAGS=-fpic
+     case "$host_cpu" in
+     mips*) CCDLFLAGS=-fPIC ;;
+     *) ;;
+     esac ;;
+d429 7
+a435 1
+	netbsd*)  	LDSHARED="ld -shared"
+d439 1
+a439 5
+	bsdi3*) 	case "$CC" in
+			*shlicc*)	LDSHARED="$CC -r"
+					rb_cv_dlopen=yes ;;
+			esac ;;
+	nextstep*)	LDSHARED='cc -r -nostdlib'
+d473 1
+a473 1
+	cygwin*)	LDSHARED='dllwrap --export-all -s'
+d505 2
+a506 2
+  DLEXT=so
+  AC_DEFINE(DLEXT, ".so")
+d512 2
+a513 2
+    nextstep*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+d521 1
+a521 1
+	 	AC_DEFINE(DLEXT, ".so");;
+a654 1
+FIRSTMAKEFILE=""
+a676 8
+    netbsd*)
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+ 	case "$host_cpu" in
+	alpha|mipsel|mipseb|powerpc|sparc64)  # ELF platforms
+	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so' ;;
+ 	*) LIBRUBY_ALIASES= ;;  # a.out platforms
+	esac
+ 	;;
+a691 9
+    cygwin*)
+	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).a'
+	LIBRUBY_ALIASES=''
+	LIBRUBY_A='lib$(RUBY_INSTALL_NAME)s.a'
+	LIBRUBYARG='-L. -l$(RUBY_INSTALL_NAME)'
+	FIRSTMAKEFILE=GNUmakefile:cygwin/GNUmakefile.in
+	LIBOBJS="$LIBOBJS strftime.o"
+	CCDLFLAGS=-DUSEIMPORTLIB
+	    ;;
+d758 1
+a758 1
+AC_OUTPUT($FIRSTMAKEFILE Makefile ext/extmk.rb)
+@
+
+
+1.1.1.2.2.22
+log
+@990624
+@
+text
+@a85 3
+test -z "$INSTALL_DLLIB" && INSTALL_DLLIB='${INSTALL} -m 555'
+AC_SUBST(INSTALL_DLLIB)
+
+d670 1
+a670 1
+  LIBRUBYARG='-L. -l$(RUBY_INSTALL_NAME)'
+a690 3
+    solaris*)
+	XLDFLAGS='-R${prefix}/lib'
+ 	;;
+a691 1
+	XLDFLAGS='-Wl,+s,+b,$(prefix)/lib'
+d703 1
+a703 1
+	LIBRUBYARG='-L${prefix}/lib -Wl,lib$(RUBY_INSTALL_NAME).so'
+@
+
+
+1.1.1.2.2.23
+log
+@990625
+@
+text
+@d461 1
+a461 1
+			DLDFLAGS='-eInit_$(TARGET) -bI:$(topdir)/ruby.imp -bM:SRE -T512 -H512 -lc'
+d676 1
+a676 5
+    sunos4*)
+	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
+	;;
+    linux*)
+	XLDFLAGS='-Wl,-rpath,${prefix}/lib':/usr/lib:/lib
+@
+
+
+1.1.1.2.2.24
+log
+@990715
+@
+text
+@d42 3
+a44 3
+	  	if test "$TARGET_ARCHS" = "" ; then
+   	        TARGET_ARCHS="ppc i386"
+  		fi
+d47 8
+d63 1
+a164 1
+AC_HEADER_SYS_WAIT
+d166 2
+a167 2
+		 sys/select.h sys/time.h sys/times.h sys/param.h syscall.h\
+		 a.out.h string.h utime.h memory.h direct.h fnmatch.h)
+d318 1
+a318 1
+	[--with-default-kcode=CODE specify default value for \$KCODE (utf8|euc|sjis|none)], 
+a787 5
+
+AC_ARG_WITH(search-path,
+		[--with-search-path	  specify the additional search path],
+		[search_path=$withval])
+AC_DEFINE_UNQUOTED(RUBY_SEARCH_PATH,"$search_path")
+@
+
+
+1.1.1.2.2.25
+log
+@backtrace may be Qnil
+@
+text
+@d76 3
+a326 3
+AC_EXEEXT
+AC_OBJEXT
+
+d784 1
+a784 3
+if test "$search_path" != ""; then
+    AC_DEFINE_UNQUOTED(RUBY_SEARCH_PATH,"$search_path")
+fi
+@
+
+
+1.1.1.2.2.26
+log
+@990728
+@
+text
+@a79 3
+AC_EXEEXT
+AC_OBJEXT
+
+d154 3
+a156 3
+AC_CHECK_HEADERS(stdlib.h string.h unistd.h limits.h sys/file.h sys/ioctl.h\
+		 fcntl.h sys/fcntl.h sys/select.h sys/time.h sys/times.h sys/param.h\
+		 syscall.h pwd.h a.out.h utime.h memory.h direct.h fnmatch.h)
+d323 3
+@
+
+
+1.1.1.2.2.27
+log
+@990806
+@
+text
+@d599 1
+a599 2
+    EXEEXT=.x
+    OBJEXT=o
+d605 1
+d609 1
+d613 1
+d618 3
+@
+
+
+1.1.1.2.2.28
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d403 1
+a403 1
+			   LDSHARED='$(CC) -Wl,-G'
+d417 1
+a417 1
+	osf*) 		LDSHARED="$CC -shared"
+d419 1
+a419 1
+	linux*) 	LDSHARED="$CC -shared"
+d421 1
+a421 1
+	freebsd*)       LDSHARED="$CC -shared"
+@
+
+
+1.1.1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a110 1
+AC_FUNC_MEMCMP
+@
+
+
+1.1.1.1.4.2
+log
+@gets speed up patch
+@
+text
+@d113 1
+a113 1
+		 strchr strstr strtoul strdup crypt flock)
+@
+
+
+1.1.1.1.4.3
+log
+@site_ruby
+@
+text
+@a455 1
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${prefix}/lib/site_ruby")
+a463 3
+    AC_DEFINE_UNQUOTED(RUBY_SITE_THIN_ARCHLIB,
+                 "${prefix}/lib/site_ruby/" __ARCHITECTURE__ "-${host_os}" )
+
+a464 1
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/site_ruby/${arch}")
+a468 1
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/site_ruby/${arch}")
+@
+
+
+1.1.1.1.4.4
+log
+@instance_eva/module_eval
+@
+text
+@d466 1
+a466 1
+                 "${prefix}/lib/ruby/" __ARCHITECTURE__ "-${host_os}" )
+@
+
+
+1.1.1.1.4.5
+log
+@ruby 1.1b9_13
+@
+text
+@d455 2
+a456 11
+ri_prefix=
+test "$program_prefix" != NONE &&
+  ri_prefix=$program_prefix
+
+ri_suffix=
+test "$program_suffix" != NONE &&
+  ri_suffix=$program_suffix
+
+RUBY_INSTALL_NAME="${ri_prefix}ruby${ri_suffix}"
+AC_DEFINE_UNQUOTED(RUBY_LIB, "${prefix}/lib/${RUBY_INSTALL_NAME}")
+AC_DEFINE_UNQUOTED(RUBY_SITE_LIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby")
+d463 1
+a463 1
+                 "${prefix}/lib/${RUBY_INSTALL_NAME}/" __ARCHITECTURE__ "-${host_os}" )
+d466 1
+a466 1
+                 "${prefix}/lib/${RUBY_INSTALL_NAME}/" __ARCHITECTURE__ "-${host_os}" )
+d468 2
+a469 2
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/${arch}")
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby/${arch}")
+d473 2
+a474 2
+    AC_DEFINE_UNQUOTED(RUBY_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/${arch}")
+    AC_DEFINE_UNQUOTED(RUBY_SITE_ARCHLIB, "${prefix}/lib/${RUBY_INSTALL_NAME}/site_ruby/${arch}")
+@
+
+
+1.1.1.1.4.6
+log
+@no INT,UINT
+@
+text
+@d101 1
+@
+
+
+1.1.1.1.4.7
+log
+@1.1b9_19
+@
+text
+@a78 1
+beos*)		;;
+d90 1
+a90 2
+		 syscall.h a.out.h string.h utime.h memory.h\
+		 varargs.h stdarg.h)
+d117 1
+a117 1
+	      dlopen sigprocmask sigaction _setjmp setpgrp)
+a209 1
+  AC_EGREP_HEADER(pw_gecos, pwd.h, AC_DEFINE(PW_GECOS))
+a318 3
+	beos*) 		LDSHARED="mwld -xms"
+			DLDFLAGS="-f ruby.exp"
+			rb_cv_dlopen=yes ;;
+a451 4
+fi
+
+if test "$host_os" = "beos"; then
+  CFLAGS="$CFLAGS -relax_pointers"
+@
+
+
+1.1.1.1.4.8
+log
+@prototypes
+@
+text
+@a74 44
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(void*)
+
+AC_MSG_CHECKING(for prototypes)
+AC_CACHE_VAL(rb_cv_have_prototypes,
+  [AC_TRY_COMPILE([int foo(int x) { return 0; }], [return foo(10);],
+	rb_cv_have_prototypes=yes,
+	rb_cv_have_prototypes=no)])
+AC_MSG_RESULT($rb_cv_have_prototypes)
+if test "$rb_cv_have_prototypes" = yes; then
+  AC_DEFINE(HAVE_PROTOTYPES)
+fi
+
+AC_MSG_CHECKING(for variable length prototypes and stdarg.h)
+AC_CACHE_VAL(rb_cv_stdarg,
+  [AC_TRY_COMPILE([
+#include <stdarg.h>
+int foo(int x, ...) {
+	va_list va;
+	va_start(va, x);
+	va_arg(va, int);
+	va_arg(va, char *);
+	va_arg(va, double);
+	return 0;
+}
+], [return foo(10, "", 3.14);],
+	rb_cv_stdarg=yes,
+	rb_cv_stdarg=no)])
+AC_MSG_RESULT($rb_cv_stdarg)
+if test "$rb_cv_stdarg" = yes; then
+  AC_DEFINE(HAVE_STDARG_PROTOTYPES)
+fi
+
+AC_MSG_CHECKING(for gcc attribute noreturn)
+AC_CACHE_VAL(rb_cv_have_attr_noreturn,
+  [AC_TRY_COMPILE([void exit(int x) __attribute__ ((noreturn));], [],
+	rb_cv_have_attr_noreturn=yes,
+	rb_cv_have_attr_noreturn=no)])
+AC_MSG_RESULT($rb_cv_have_attr_noreturn)
+if test "$rb_cv_have_attr_noreturn" = yes; then
+  AC_DEFINE(HAVE_ATTR_NORETURN)
+fi
+
+d91 2
+a92 1
+		 syscall.h a.out.h string.h utime.h memory.h)
+d102 4
+@
+
+
+1.1.1.1.4.9
+log
+@ruby 1.1b9_20
+@
+text
+@d154 1
+a154 1
+AC_CHECK_FUNCS(fmod killpg drand48 random wait4 waitpid syscall getcwd\
+@
+
+
+1.1.1.1.4.10
+log
+@BeOS patches
+@
+text
+@d362 1
+a362 1
+			DLDFLAGS=""
+@
+
+
+1.1.1.1.4.11
+log
+@*** empty log message ***
+@
+text
+@d59 1
+d361 2
+a362 9
+	beos*) 		LDSHARED="ld -xms"
+			case "$host_cpu" in
+			  powerpc*)
+			    DLDFLAGS="-f ruby.def -lbe -lroot -ldll"
+                            ;;
+			  *)
+			    DLDFLAGS="ruby.def -lbe -lroot /boot/develop/lib/x86/glue-noinit.a"
+			    ;;
+			esac
+a498 3
+LIBRUBY='libruby.a'
+LIBRUBYARG='libruby.a'
+SOLIBS=
+a500 13
+  LIBRUBY='libruby.so'
+  LIBRUBYARG='-lruby'
+  SOLIBS='-lnet'
+  echo creating ruby.def
+  case "$host_cpu" in
+    powerpc*)
+      cp beos/ruby.def.in ruby.def
+      ;;
+    *)
+      echo EXPORTS > ruby.def
+      cat beos/ruby.def.in >> ruby.def
+      ;;
+  esac
+a501 3
+AC_SUBST(LIBRUBY)
+AC_SUBST(LIBRUBYARG)
+AC_SUBST(SOLIBS)
+@
+
+
+1.1.1.1.4.12
+log
+@1.1b9_23
+@
+text
+@d363 1
+a363 1
+			    DLDFLAGS="-f ruby.exp -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+d366 1
+a366 1
+			    DLDFLAGS="ruby.def -lbe -lroot glue-noinit.a init_term_dyn.o start_dyn.o"
+d516 1
+a516 1
+      cp beos/ruby.def.in ruby.exp
+@
+
+
+1.1.1.1.4.13
+log
+@baseline
+@
+text
+@d36 1
+a36 1
+       [--enable-fat-binary       build a NeXT/Apple Multi Architecture Binary. ],
+d38 1
+a38 1
+      if test "$fat_binary" = yes ; then
+d42 5
+a46 13
+    if test "$host_os" = "rhapsody" ; then
+        echo -n "Rhapsody: "
+	if test "$TARGET_ARCHS" = "" ; then
+           TARGET_ARCHS="ppc i486"
+  	fi
+    else
+  	echo -n "NeXTSTEP/OPENSTEP: "
+        if test "$TARGET_ARCHS" = "" ; then
+           if test `/usr/bin/arch` = "m68k" ; then
+               TARGET_ARCHS="m68k i486"
+           else
+               TARGET_ARCHS="m68k `/usr/bin/arch`"
+           fi
+a120 2
+openstep*)	;;
+rhapsody*)	;;
+a314 2
+    openstep*)	;;
+    rhapsody*)	;;
+a354 8
+	openstep*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+	rhapsody*)	LDSHARED='cc -dynamic -bundle -undefined suppress'
+			LDFLAGS=""
+			DLDFLAGS="$ARCH_FLAG"
+			rb_cv_dlopen=yes ;;
+a410 4
+    openstep*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+    rhapsody*)	DLEXT=bundle
+	 	AC_DEFINE(DLEXT, ".bundle");;
+a427 4
+  openstep*)
+	STRIP='strip -A -n';;
+  rhapsody*)
+	STRIP='strip -A -n';;
+a523 6
+
+if test "$host_os" = "rhapsody" ; then
+    CFLAGS="$CFLAGS -no-precomp"
+fi
+
+
+@
+
+
+1.1.1.1.4.14
+log
+@1.1b9_27
+@
+text
+@a233 19
+AC_MSG_CHECKING(whether right shift preserve sign bit)
+AC_CACHE_VAL(rb_cv_rshift_sign,
+    [AC_TRY_RUN([
+#define FIXNUM_FLAG 0x01
+int
+main()
+{
+  return (-1!=(((-1)<<1)&FIXNUM_FLAG)>>1);
+}
+],
+	rb_cv_rshift_sign=yes,
+	rb_cv_rshift_sign=no)])
+  AC_MSG_RESULT($rb_cv_rshift_sign)
+if test "$rb_cv_rshift_sign" = yes; then
+  AC_DEFINE(RSHIFT(x,y), ((x)>>y))
+else
+  AC_DEFINE(RSHIFT(x,y), (((x)<0) ? ~((~(x))>>y) : (x)>>y))
+fi
+
+a550 5
+fi
+
+if test "$enable_shared" = 'yes'; then
+  LIBRUBY='libruby.so'
+  LIBRUBYARG='-L./ -lruby'
+@
+
+
+1.1.1.1.4.15
+log
+@*** empty log message ***
+@
+text
+@d241 1
+a241 3
+  if (-1==(((-1)<<1)|FIXNUM_FLAG)>>1);
+    return 0;
+  return 1;
+@
+
+
+1.1.1.1.4.16
+log
+@980626
+@
+text
+@d237 1
+d241 1
+a241 1
+  if (-1==((-1)>>1))
+@
+
+
+1.1.1.1.4.17
+log
+@1.1b9_29
+@
+text
+@d167 1
+a167 1
+	      dlopen sigprocmask sigaction _setjmp setpgrp setsid)
+d240 1
+a240 1
+  if (-1==(-1>>1))
+@
+
+
+1.1.1.1.4.18
+log
+@sync ev
+@
+text
+@a541 3
+
+
+
+d550 1
+a550 1
+  CFLAGS="$CFLAGS $ARCH_FLAG"
+d578 3
+a580 13
+case "$host_os" in
+	nextstep*)
+    	CFLAGS="$CFLAGS -pipe"
+		;;
+	openstep*)
+    	CFLAGS="$CFLAGS -pipe"
+		;;
+	rhasody*)
+    	CFLAGS="$CFLAGS -pipe -no-precomp"
+		;;
+	*)
+		;;	
+esac
+@
+
+
+1.1.1.1.4.19
+log
+@1.1c2
+@
+text
+@d162 1
+a162 1
+		 strchr strstr strtoul strdup crypt flock snprintf)
+@
+
+
+1.1.1.1.4.20
+log
+@1.1c4
+@
+text
+@d32 1
+d76 1
+d144 1
+a144 1
+		 syscall.h a.out.h string.h utime.h memory.h direct.h)
+@
+
+
+1.1.1.1.4.20.2.1
+log
+@join 1.1c6
+@
+text
+@d27 1
+a27 1
+  AC_DEFINE(USE_THREAD)
+a74 1
+AC_PROG_INSTALL
+a135 1
+AC_CHECK_LIB(xpg4, setlocale)	# FreeBSD needs this
+d276 12
+a345 1
+    cygwin32*)	CCDLFLAGS=-DDLLIMPORT;;
+a407 1
+	cygwin32*)	LDSHARED='../../miniruby ../cygwin32_ld.rb' ;;
+a452 2
+    cygwin32*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+a533 4
+    ;;
+  cygwin32*)
+    binsuffix=.exe
+    setup=Setup
+@
+
+
+1.1.1.1.4.20.2.2
+log
+@*** empty log message ***
+@
+text
+@d162 1
+a162 1
+		 strchr strstr strtoul strdup crypt flock vsnprintf)
+a364 3
+			rb_cv_dlopen=yes ;;
+	freebsd3*)      LDSHARED="ld -Bshareable"   
+			LDFLAGS="-rdynamic"
+@
+
+
+1.1.1.1.4.20.2.3
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d37 1
+a37 1
+ if test "$fat_binary" = yes ; then
+d41 4
+a44 5
+    case "$host_os" in
+    rhapsody*)
+        echo -n "MacOS X Server: "
+  	if test "$TARGET_ARCHS" = "" ; then
+           TARGET_ARCHS="ppc i386"
+d46 1
+a46 2
+	;;
+    nextstep*|openstep*)
+d48 6
+a53 15
+
+        if test "$host_os" = "rhapsody" ; then
+            echo -n "Rhapsody: "
+	    if test "$TARGET_ARCHS" = "" ; then
+               TARGET_ARCHS="ppc i486"
+  	    fi
+        else
+  	    echo -n "NeXTSTEP/OPENSTEP: "
+	    if test "$TARGET_ARCHS" = "" ; then
+	       if test `/usr/bin/arch` = "m68k" ; then
+		   TARGET_ARCHS="m68k i486"
+	       else # Black and Native one
+		   TARGET_ARCHS="m68k `/usr/bin/arch`"
+	       fi
+	    fi
+d55 1
+a55 2
+        ;;
+    esac
+d166 1
+a166 1
+	      setpgrp2 getpgid setpgid getgroups getpriority\
+@
+
+
+1.1.1.1.4.20.2.4
+log
+@1.1d1
+@
+text
+@d173 1
+a173 1
+AC_REPLACE_FUNCS(dup2 memmove mkdir strcasecmp strerror strftime\
+@
+
+
+1.1.1.1.4.21
+log
+@1.1c5
+@
+text
+@a74 1
+AC_PROG_INSTALL
+@
+
+
+1.1.1.1.4.22
+log
+@1.1c6
+@
+text
+@a136 1
+AC_CHECK_LIB(xpg4, setlocale)	# FreeBSD needs this
+d277 12
+a346 1
+    cygwin32*)	CCDLFLAGS=-DDLLIMPORT;;
+a408 1
+	cygwin32*)	LDSHARED='../../miniruby ../cygwin32_ld.rb' ;;
+a453 2
+    cygwin32*)	DLEXT=dll
+	 	AC_DEFINE(DLEXT, ".dll");;
+a534 4
+    ;;
+  cygwin32*)
+    binsuffix=.exe
+    setup=Setup
+@
+
+
+1.1.1.1.4.23
+log
+@1.1c8
+@
+text
+@d162 1
+a162 1
+		 strchr strstr strtoul strdup crypt flock vsnprintf)
+a364 3
+			rb_cv_dlopen=yes ;;
+	freebsd3*)      LDSHARED="ld -Bshareable"   
+			LDFLAGS="-rdynamic"
+@
+
+
+1.1.1.1.4.24
+log
+@1.1c final (hopefully)
+@
+text
+@d37 1
+a37 1
+ if test "$fat_binary" = yes ; then
+d41 4
+a44 5
+    case "$host_os" in
+    rhapsody*)
+        echo -n "MacOS X Server: "
+  	if test "$TARGET_ARCHS" = "" ; then
+           TARGET_ARCHS="ppc i386"
+d46 1
+a46 2
+	;;
+    nextstep*|openstep*)
+d48 6
+a53 15
+
+        if test "$host_os" = "rhapsody" ; then
+            echo -n "Rhapsody: "
+	    if test "$TARGET_ARCHS" = "" ; then
+               TARGET_ARCHS="ppc i486"
+  	    fi
+        else
+  	    echo -n "NeXTSTEP/OPENSTEP: "
+	    if test "$TARGET_ARCHS" = "" ; then
+	       if test `/usr/bin/arch` = "m68k" ; then
+		   TARGET_ARCHS="m68k i486"
+	       else # Black and Native one
+		   TARGET_ARCHS="m68k `/usr/bin/arch`"
+	       fi
+	    fi
+d55 1
+a55 2
+        ;;
+    esac
+@
+
+
+1.1.1.1.4.25
+log
+@1.2.1 stable
+@
+text
+@d27 1
+a27 1
+  AC_DEFINE(USE_THREAD)
+d173 1
+a173 1
+AC_REPLACE_FUNCS(dup2 memmove mkdir strcasecmp strerror strftime\
+d178 1
+a178 1
+	      setpgrp2 getpgid setpgid getgroups getpriority\
+d385 1
+a385 2
+	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
+			CCDLFLAGS=-fPIC
+@
+
+
+1.1.1.1.4.26
+log
+@1.2.1 repack
+@
+text
+@d27 1
+a27 1
+  AC_DEFINE(THREAD)
+@
+
+
+1.1.1.1.4.27
+log
+@1.2.2 PR1
+@
+text
+@d173 1
+a173 1
+AC_REPLACE_FUNCS(dup2 setenv memmove mkdir strcasecmp strerror strftime\
+@
+
+
+1.1.1.1.4.28
+log
+@1.2.2 release
+@
+text
+@d348 1
+a348 1
+    cygwin*)	CCDLFLAGS=-DDLLIMPORT;;
+d415 1
+a415 1
+	cygwin*)	LDSHARED='../../miniruby ../cygwin32_ld.rb' ;;
+d461 1
+a461 1
+    cygwin*)	DLEXT=dll
+d545 1
+a545 1
+  cygwin*)
+@
+
+
+1.1.1.1.4.29
+log
+@990209
+@
+text
+@d378 4
+a381 5
+	freebsd*)	LDSHARED="gcc -shared"
+			if test -x /usr/bin/objformat -a \
+				`/usr/bin/objformat` = "elf" ; then
+			    LDFLAGS="-rdynamic"
+			fi
+a383 6
+			case "$host_cpu" in
+			alpha|mips)
+				LDFLAGS="-export-dynamic" ;;
+			*)
+				;;
+			esac
+@
+
+
+1.1.1.1.4.30
+log
+@1.2.4
+@
+text
+@d379 2
+a380 2
+			if test -x /usr/bin/objformat && \
+			   test `/usr/bin/objformat` = "elf" ; then
+a381 2
+			else
+			  test "$GCC" = yes && `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null || LDSHARED="ld -Bshareable"
+d412 2
+a413 1
+	beos*) 		case "$host_cpu" in
+a414 1
+			    LDSHARED="ld -xms"
+a416 4
+			  i586*)
+			    LDSHARED="ld -shared"
+			    DLDFLAGS="-L/boot/develop/lib/x86 -lbe -lroot"
+			    ;;
+d579 1
+a586 4
+      CFLAGS="$CFLAGS -relax_pointers"
+      ;;
+    i586*)
+      LDFLAGS="$LDFLAGS -L."
+a614 1
+AC_SUBST(RUBY_INSTALL_NAME)
+@

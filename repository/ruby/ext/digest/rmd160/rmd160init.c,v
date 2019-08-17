@@ -1,0 +1,164 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2002.09.26.17.26.46;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.02.17.12.43.37;	author nobu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.14;	author knu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.08.16.07.35.42;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* ext/digest/rmd160: Use OpenSSL's RMD160 engine if available.  It
+  is much faster than what we have now (rmd160.[ch]).  Add a knob
+  (--with-bundled-rmd160) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@/* $RoughId: rmd160init.c,v 1.3 2001/07/13 20:00:43 knu Exp $ */
+/* $Id: rmd160init.c,v 1.2 2002/02/17 12:43:37 nobu Exp $ */
+
+#include "digest.h"
+#if defined(HAVE_OPENSSL_RIPEMD_H)
+#include "rmd160ossl.h"
+#else
+#include "rmd160.h"
+#endif
+
+static algo_t rmd160 = {
+    RMD160_DIGEST_LENGTH,
+    sizeof(RMD160_CTX),
+    (hash_init_func_t)RMD160_Init,
+    (hash_update_func_t)RMD160_Update,
+    (hash_end_func_t)RMD160_End,
+    (hash_final_func_t)RMD160_Final,
+    (hash_equal_func_t)RMD160_Equal,
+};
+
+void
+Init_rmd160()
+{
+    VALUE mDigest, cDigest_Base, cDigest_RMD160;
+    ID id_metadata;
+
+    rb_require("digest.so");
+
+    mDigest = rb_path2class("Digest");
+    cDigest_Base = rb_path2class("Digest::Base");
+
+    cDigest_RMD160 = rb_define_class_under(mDigest, "RMD160", cDigest_Base);
+
+    id_metadata = rb_intern("metadata");
+
+    rb_cvar_set(cDigest_RMD160, id_metadata,
+		Data_Wrap_Struct(rb_cObject, 0, 0, &rmd160), Qtrue);
+}
+@
+
+
+1.2
+log
+@* ext/digest/md5/md5init.c (Init_md5): rb_cvar_declare() is
+  replaced by rb_cvar_set().
+
+* ext/digest/rmd160/rmd160init.c (Init_rmd160): ditto.
+
+* ext/digest/sha1/sha1init.c (Init_sha1): ditto.
+
+* ext/digest/sha2/sha2init.c (Init_sha2): ditto.
+@
+text
+@d2 1
+a2 1
+/* $Id: rmd160init.c,v 1.1 2001/07/13 20:06:14 knu Exp $ */
+d5 3
+d9 1
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d2 1
+a2 1
+/* $Id$ */
+d32 2
+a33 2
+    rb_cvar_declare(cDigest_RMD160, id_metadata,
+		    Data_Wrap_Struct(rb_cObject, 0, 0, &rmd160));
+@
+
+
+1.1.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@d2 1
+a2 1
+/* $Id: rmd160init.c,v 1.1 2001/07/13 20:06:14 knu Exp $ */
+@

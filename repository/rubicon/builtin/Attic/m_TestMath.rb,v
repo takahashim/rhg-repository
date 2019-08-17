@@ -1,0 +1,85 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.23.05.08.31;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestMath < Rubicon::TestCase
+
+  def test_s_atan2
+    assert_fail("untested")
+  end
+
+  def test_s_cos
+    assert_fail("untested")
+  end
+
+  def test_s_exp
+    assert_fail("untested")
+  end
+
+  def test_s_frexp
+    assert_fail("untested")
+  end
+
+  def test_s_ldexp
+    assert_fail("untested")
+  end
+
+  def test_s_log
+    assert_fail("untested")
+  end
+
+  def test_s_log10
+    assert_fail("untested")
+  end
+
+  def test_s_sin
+    assert_fail("untested")
+  end
+
+  def test_s_sqrt
+    assert_fail("untested")
+  end
+
+  def test_s_tan
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestMath) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

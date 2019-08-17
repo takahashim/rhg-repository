@@ -1,0 +1,46 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.06.01.12.34.29;	author suke;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge win32ole from rough
+@
+text
+@#
+# You need WSH(Windows Scripting Host) to run this script.
+#
+
+require "win32ole"
+
+def listup(items)
+#  items.each do |i|
+  for i in items
+    puts i.name 
+  end
+end
+
+fs = WIN32OLE.new("Scripting.FileSystemObject")
+
+folder = fs.GetFolder(".")
+
+puts "--- folder of #{folder.path} ---"
+listup(folder.SubFolders)
+
+puts "--- files of #{folder.path} ---"
+listup(folder.Files)
+
+@

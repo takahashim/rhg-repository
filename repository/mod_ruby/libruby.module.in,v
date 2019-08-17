@@ -1,0 +1,86 @@
+head	1.2;
+access;
+symbols
+	release_1_0_1:1.2
+	version_1_0-branch:1.2.0.4
+	root-of-version_1_0:1.2
+	release_1_0_0:1.2
+	release_0_9_9:1.2
+	release_0_9_8:1.2
+	release_0_9_7:1.2
+	release_0_9_6:1.2
+	release_0_9_5:1.2
+	autoconfiscation-branch:1.2.0.2
+	root-of-autoconfiscation:1.2
+	release_0_9_4:1.2
+	release_0_9_3:1.2
+	release_0_9_2:1.2
+	release_0_9_1:1.2
+	release_0_9_0:1.2
+	release_0_8_6:1.2
+	release_0_8_5:1.2
+	release_0_8_4:1.2
+	release_0_8_3:1.2
+	release_0_8_2:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.05.28.02.36.09;	author shugo;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.05.25.10.19.39;	author shugo;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.10.19.09.44.42;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* mod_ruby.c (ruby_startup): don't initialize ruby if
+ruby_running(). (for static Apache module)
+* mod_ruby.c: use EXTERN.
+* libruby.module.in: use MODULE_LIBS to expand LIBRUBYARG.
+* configure.rb.in: set $ERUBY_INCLUDES instead of modify $CFLAGS.
+* Makefile.in: RUBY_SO_NAME for cygwin.
+@
+text
+@Name: ruby_module
+ConfigStart
+	LIBS="@@MODULE_LIBS@@ $LIBS"
+ConfigEnd
+@
+
+
+1.2.2.1
+log
+@* autoconfiscated
+@
+text
+@d3 1
+a3 1
+	LIBS="@@RUBY_LIBS@@ $LIBS"
+@
+
+
+1.1
+log
+@* Makefile.in: static Apache module support..
+@
+text
+@d3 1
+a3 1
+	LIBS="@@LIBERUBYARG@@ @@LIBRUBYARG@@ @@LIBS@@ $LIBS"
+@

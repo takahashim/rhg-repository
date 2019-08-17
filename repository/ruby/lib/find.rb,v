@@ -1,0 +1,510 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.9.2.1
+	v1_6_6:1.9.2.1
+	v1_6_5:1.9.2.1
+	v1_6_4:1.9
+	v1_7_1:1.10
+	v1_6_4_preview4:1.9
+	v1_6_4_preview3:1.9
+	v1_6_4_preview2:1.9
+	v1_6_4_preview1:1.9
+	v1_6_3:1.9
+	ruby_m17n:1.9.0.4
+	ruby_1_6:1.9.0.2
+	v1_6_2:1.9
+	v1_6_1:1.7
+	v1_6_0:1.3
+	v1_4_6:1.1.1.2.4.2
+	v1_4_5:1.1.1.2.4.2
+	v1_4_4:1.1.1.2.4.2
+	ruby_1_4_3:1.1.1.2
+	ruby1_4_3:1.1.1.2
+	v1_4_3:1.1.1.2
+	v1_5_0:1.1.1.2
+	ruby_1_4_3_pre1:1.1.1.2
+	ruby_1_4:1.1.1.2.0.4
+	v1_4_2:1.1.1.2
+	v1_4_1:1.1.1.2
+	v1_4_0:1.1.1.2
+	v1_3_7:1.1.1.2
+	v1_3_6_repack:1.1.1.2
+	v1_3_6:1.1.1.2
+	v1_3_5:1.1.1.2
+	v1_2_6repack:1.1.1.1.4.2
+	v1_3_4_990625:1.1.1.2
+	v1_3_4_990624:1.1.1.2
+	v1_2_6:1.1.1.1.4.2
+	v1_3_4_990611:1.1.1.2
+	v1_3_4_990531:1.1.1.2
+	v1_3_3_990518:1.1.1.2
+	v1_3_3_990513:1.1.1.2
+	v1_3_3_990507:1.1.1.2
+	v1_2_5:1.1.1.1.4.2
+	v1_2_4:1.1.1.1.4.2
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.1.2.1
+	v1_1d0:1.1.1.1.4.1.2.1
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.1
+	v1_1c5:1.1.1.1.4.1
+	v1_1dev:1.1.1.1.4.1.0.2
+	v1_1c4:1.1.1.1.4.1
+	v1_1c3:1.1.1.1.4.1
+	v1_1c2:1.1.1.1.4.1
+	v1_1c1:1.1.1.1.4.1
+	v1_1c0:1.1.1.1.4.1
+	v1_1b9_31:1.1.1.1.4.1
+	v1_1b9_30:1.1.1.1.4.1
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1.4.1
+	v1_1b9_16:1.1.1.1.4.1
+	v1_1b9_15:1.1.1.1.4.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.10
+date	2001.03.21.03.41.45;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.12.05.09.36.52;	author matz;	state Exp;
+branches
+	1.9.2.1;
+next	1.8;
+
+1.8
+date	2000.10.02.07.48.37;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.09.22.02.37.13;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.09.21.10.18.31;	author eban;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.09.21.10.08.57;	author eban;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.09.21.09.31.00;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.17.07.11.22;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.01.05.04.37.22;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.4.1;
+next	;
+
+1.1.1.2.4.1
+date	2000.01.05.04.41.19;	author matz;	state Exp;
+branches;
+next	1.1.1.2.4.2;
+
+1.1.1.2.4.2
+date	2000.02.17.08.29.08;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.04.22.08.55.39;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1.2.1;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.10.06.02.45.13;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1.2.1
+date	98.10.06.03.28.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.9.2.1
+date	2001.07.03.15.13.30;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@# Usage:
+#	require "find"
+#
+#	Find.find('/foo','/bar') {|f| ...}
+#  or
+#	include Find
+#	find('/foo','/bar') {|f| ...}
+#
+
+module Find
+  def find(*path)
+    path.collect!{|d| d.dup}
+    while file = path.shift
+      catch(:prune) do
+	yield file
+	begin
+	  if File.lstat(file).directory? then
+	    d = Dir.open(file)
+	    begin
+	      for f in d
+		next if f == "." or f == ".."
+		if File::ALT_SEPARATOR and file =~ /^(?:[\/\\]|[A-Za-z]:[\/\\]?)$/ then
+		  f = file + f
+		elsif file == "/" then
+		  f = "/" + f
+		else
+		  f = File.join(file, f)
+		end
+		path.unshift f
+	      end
+	    ensure
+	      d.close
+	    end
+	  end
+       rescue Errno::ENOENT, Errno::EACCES
+	end
+      end
+    end
+  end
+
+  def prune
+    throw :prune
+  end
+  module_function :find, :prune
+end
+@
+
+
+1.9
+log
+@matz
+@
+text
+@d35 1
+a35 1
+	rescue Errno::ENOENT
+@
+
+
+1.9.2.1
+log
+@* lib/find.rb: merge from 1.7: rescue Errno::EACCES as well.
+@
+text
+@d35 1
+a35 1
+       rescue Errno::ENOENT, Errno::EACCES
+@
+
+
+1.8
+log
+@matz
+@
+text
+@d12 1
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d13 1
+a13 1
+      catch(:prune) {
+d15 14
+a28 11
+	if File.lstat(file).directory? then
+	  d = Dir.open(file)
+	  begin
+	    for f in d
+             next if f == "." or f == ".."
+             if File::ALT_SEPARATOR and file =~ /^(?:[\/\\]|[A-Za-z]:[\/\\]?)$/ then
+		f = file + f
+	      elsif file == "/" then
+		f = "/" + f
+	      else
+               f = File.join(file, f)
+d30 2
+a31 1
+	      path.unshift f
+a32 2
+	  ensure
+	    d.close
+d34 1
+d36 1
+a36 1
+      }
+@
+
+
+1.6
+log
+@eban
+@
+text
+@d15 1
+a15 1
+       if File.lstat(file).directory? then
+@
+
+
+1.5
+log
+@eban
+@
+text
+@a11 1
+p ["find", path]
+a14 1
+p ["find", file]
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d12 1
+d16 1
+@
+
+
+1.3
+log
+@2000-02-17
+@
+text
+@d15 1
+a15 1
+	if File.directory? file then
+d19 2
+a20 2
+	      next if f =~ /\A\.\.?\z/
+	      if File::ALT_SEPARATOR and file =~ /^([\/\\]|[A-Za-z]:[\/\\]?)$/ then
+d25 1
+a25 1
+		f = file + "/" + f
+@
+
+
+1.2
+log
+@20000105
+@
+text
+@d19 1
+a19 1
+	      next if f =~ /^\.\.?$/
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+#	require "find.rb"
+d15 1
+a15 1
+	if File.directory? file and not File.symlink? file then
+d20 3
+a22 1
+	      if file == "/" then
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d2 1
+a2 1
+#	require "find"
+d15 1
+a15 1
+	if File.directory? file then
+@
+
+
+1.1.1.2.4.1
+log
+@20000105
+@
+text
+@d20 1
+a20 3
+	      if File::ALT_SEPARATOR and file =~ /^([\/\\]|[A-Za-z]:[\/\\]?)$/ then
+		f = file + f
+	      elsif file == "/" then
+@
+
+
+1.1.1.2.4.2
+log
+@2000-02-17
+@
+text
+@d19 1
+a19 1
+	      next if f =~ /\A\.\.?\z/
+@
+
+
+1.1.1.1.4.1
+log
+@find.rb
+@
+text
+@d15 1
+a15 1
+	if File.directory? file then
+@
+
+
+1.1.1.1.4.1.2.1
+log
+@join 1.1c6
+@
+text
+@d2 1
+a2 1
+#	require "find"
+@
+
+
+1.1.1.1.4.2
+log
+@1.1c6
+@
+text
+@d2 1
+a2 1
+#	require "find"
+@
+
+

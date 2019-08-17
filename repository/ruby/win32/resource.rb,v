@@ -1,0 +1,259 @@
+head	1.6;
+access;
+symbols
+	v1_6_7:1.2.2.2
+	v1_6_6:1.2.2.1
+	v1_6_5:1.2.2.1
+	v1_6_4:1.2.2.1
+	v1_7_1:1.3
+	v1_6_4_preview4:1.2.2.1
+	v1_6_4_preview3:1.2.2.1
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.4
+	ruby_1_6:1.2.0.2
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2002.09.11.02.38.51;	author usa;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.06.11.01.27.48;	author H_Konishi;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.01.10.02.43.06;	author usa;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.13.14.51.45;	author usa;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.08.09.04.32.24;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2000.08.03.09.55.54;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.05.13.14.50.45;	author usa;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2002.01.10.02.31.20;	author usa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@* bcc32/Makefile.sub: remove unnecessary `.dll' from filename of
+  dll's resource file.
+
+* cygwin/GNUmakefile.in: ditto. [ruby-dev:17103]
+
+* win32/Makefile.sub: ditto. [ruby-dev:17103]
+
+* win32/resource.rb: ditto. [ruby-dev:17103]
+@
+text
+@#!./miniruby -sI.
+
+require 'rbconfig'
+
+CONFIG = Config::MAKEFILE_CONFIG
+
+fversion = "#{CONFIG['MAJOR']},#{CONFIG['MINOR']},#{CONFIG['TEENY']},0"
+
+$ruby_name ||= CONFIG["RUBY_INSTALL_NAME"]
+$rubyw_name ||= CONFIG["RUBYW_INSTALL_NAME"] || $ruby_name.sub(/ruby/, '\&w')
+$so_name ||= CONFIG["RUBY_SO_NAME"]
+
+icons = {}
+def icons.find(path)
+  if File.directory?(path)
+    Dir.open(File.expand_path(path)) do |d|
+      d.grep(/\.ico$/i) {|i| self[$`] = i}
+    end
+  else
+    self[File.basename(path, '.ico')] = path
+  end
+  self
+end
+
+if ARGV.empty?
+  icons.find('.')
+else
+  ARGV.each {|i| icons.find(i)}
+end
+
+ruby_icon = rubyw_icon = nil
+[$ruby_name, 'ruby'].each do |i|
+  if i = icons.delete(i)
+    ruby_icon = "1 ICON DISCARDABLE "+i.dump+"\n"
+    break
+  end
+end
+[$rubyw_name, 'rubyw'].each do |i|
+  if i = icons.delete(i)
+    rubyw_icon = "1 ICON DISCARDABLE "+i.dump+"\n"
+    break
+  end
+end
+dll_icons = []
+icons.keys.sort.each do |i|
+  dll_icons << "#{dll_icons.size + 1} ICON DISCARDABLE "+icons[i].dump+"\n"
+end
+
+[ # base name    extension         file type  icons
+  [$ruby_name,   CONFIG["EXEEXT"], 'VFT_APP', ruby_icon],
+  [$rubyw_name,  CONFIG["EXEEXT"], 'VFT_APP', rubyw_icon],
+  [$so_name,     '.dll',           'VFT_DLL', dll_icons],
+].each do |base, ext, type, icons|
+  open(base + '.rc', "w") { |f|
+    f.binmode if /mingw/ =~ RUBY_PLATFORM
+
+    f.print <<EOF
+#ifndef __BORLANDC__
+#include <windows.h>
+#endif
+
+#{icons}
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    #{fversion}
+ PRODUCTVERSION #{fversion}
+ FILEFLAGSMASK  0x3fL
+ FILEFLAGS      0x0L
+ FILEOS         VOS__WINDOWS32
+ FILETYPE       #{type}
+ FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+ BLOCK "StringFileInfo"
+ BEGIN
+  BLOCK "000004b0"
+  BEGIN
+   VALUE "FileDescription",  "Ruby interpreter\\0"
+   VALUE "FileVersion",      "#{fversion}\\0"
+   VALUE "Home Page",        "http://www.ruby-lang.org/\\0"
+   VALUE "InternalName",     "#{base + ext}\\0"
+   VALUE "LegalCopyright",   "Copyright (C) 1993-2002 Yukihiro Matsumoto\\0"
+   VALUE "OriginalFilename", "#{base + ext}\\0"
+   VALUE "Platform",         "#{RUBY_PLATFORM}\\0"
+   VALUE "ProductVersion",   "#{fversion}\\0"
+   VALUE "Release Date",     "#{RUBY_RELEASE_DATE}\\0"
+   VALUE "Version",          "#{RUBY_VERSION}\\0"
+  END
+ END
+ BLOCK "VarFileInfo"
+ BEGIN
+  VALUE "Translation", 0x0, 0x4b0
+ END
+END
+EOF
+  }
+end
+
+@
+
+
+1.5
+log
+@new platform [bccwin32] merged.
+@
+text
+@d11 1
+a11 1
+$so_name ||= CONFIG["RUBY_SO_NAME"] + '.dll'
+d52 1
+a52 1
+  [$so_name,     '',               'VFT_DLL', dll_icons],
+@
+
+
+1.4
+log
+@* win32/resource.rb: Modify copyright in resource script.
+@
+text
+@d58 1
+d60 1
+@
+
+
+1.3
+log
+@* win32/resource.rb: Modify copyright in resource script.
+@
+text
+@d78 1
+a78 1
+   VALUE "LegalCopyright",   "Copyright (C) 1993-2001 Yukihiro Matsumoto\\0"
+@
+
+
+1.2
+log
+@matz
+@
+text
+@d78 1
+a78 1
+   VALUE "LegalCopyright",   "Copyright (C) 1993-2000 Yukihiro Matsumoto\\0"
+@
+
+
+1.2.2.1
+log
+@* win32/resource.rb: Modify copyright in resource script.
+@
+text
+@d78 1
+a78 1
+   VALUE "LegalCopyright",   "Copyright (C) 1993-2001 Yukihiro Matsumoto\\0"
+@
+
+
+1.2.2.2
+log
+@* win32/resource.rb: Modify copyright in resource script.
+@
+text
+@d78 1
+a78 1
+   VALUE "LegalCopyright",   "Copyright (C) 1993-2002 Yukihiro Matsumoto\\0"
+@
+
+
+1.1
+log
+@matz - add/remove files
+@
+text
+@d11 1
+a11 1
+$so_name ||= CONFIG["RUBY_SO_NAME"]
+d52 1
+a52 1
+  [$so_name, '.'+CONFIG["DLEXT2"], 'VFT_DLL', dll_icons],
+@

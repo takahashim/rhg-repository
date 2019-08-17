@@ -1,0 +1,3120 @@
+head	1.29;
+access;
+symbols
+	v1_6_7:1.11.2.1
+	v1_6_6:1.11.2.1
+	v1_6_5:1.11
+	v1_6_4:1.11
+	v1_7_1:1.14
+	v1_6_4_preview4:1.11
+	v1_6_4_preview3:1.11
+	v1_6_4_preview2:1.11
+	v1_6_4_preview1:1.11
+	v1_6_3:1.11
+	ruby_m17n:1.11.0.4
+	ruby_1_6:1.11.0.2
+	v1_6_2:1.11
+	v1_6_1:1.11
+	v1_6_0:1.11
+	v1_4_6:1.2.2.5
+	v1_4_5:1.2.2.5
+	v1_4_4:1.2.2.4
+	ruby_1_4_3:1.2.2.3
+	ruby1_4_3:1.2.2.3
+	v1_4_3:1.2.2.3
+	v1_5_0:1.6
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.3
+	v1_3_6_repack:1.1.1.3.2.3
+	v1_3_6:1.1.1.3.2.3
+	v1_3_5:1.1.1.3.2.3
+	v1_2_6repack:1.1.1.2.2.6
+	v1_3_4_990625:1.1.1.3.2.3
+	v1_3_4_990624:1.1.1.3.2.3
+	v1_2_6:1.1.1.2.2.6
+	v1_3_4_990611:1.1.1.3.2.3
+	v1_3_4_990531:1.1.1.3.2.3
+	v1_3_3_990518:1.1.1.3.2.3
+	v1_3_3_990513:1.1.1.3.2.3
+	v1_3_3_990507:1.1.1.3.2.3
+	v1_2_5:1.1.1.2.2.6
+	v1_2_4:1.1.1.2.2.6
+	v1_3_1_990225:1.1.1.3.2.3
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.3
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.3
+	v1_3_1_990205:1.1.1.3.2.3
+	v1_3_1_990203:1.1.1.3.2.3
+	v1_3_1_990201:1.1.1.3.2.2
+	v1_3_1"_990201:1.1.1.3.2.2
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.6
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.6
+	v1_2_1repack:1.1.1.2.2.6
+	v1_2_1:1.1.1.2.2.6
+	v1_2_stable:1.1.1.2.2.6
+	v1_1d1:1.1.1.2.2.5.2.4
+	v1_1d0:1.1.1.2.2.5.2.3
+	v1_1c9_1:1.1.1.2.2.6
+	v1_1c9:1.1.1.2.2.6
+	v1_1c8:1.1.1.2.2.6
+	v1_1c7:1.1.1.2.2.6
+	v1_1c6:1.1.1.2.2.5
+	v1_1d-start:1.1.1.2.2.5.2.1
+	v1_1c5:1.1.1.2.2.5
+	v1_1dev:1.1.1.2.2.5.0.2
+	v1_1c4:1.1.1.2.2.5
+	v1_1c3:1.1.1.2.2.5
+	v1_1c2:1.1.1.2.2.5
+	v1_1c1:1.1.1.2.2.5
+	v1_1c0:1.1.1.2.2.5
+	v1_1b9_31:1.1.1.2.2.5
+	v1_1b9_30:1.1.1.2.2.5
+	v1_1b9_28:1.1.1.2.2.4
+	v1_1b9_27:1.1.1.2.2.4
+	v1_1b9_26:1.1.1.2.2.4
+	r1_1b9_25:1.1.1.2.2.4
+	r1_1b9_24:1.1.1.2.2.3
+	v1_1b9_23:1.1.1.2.2.3
+	v1_1b9_22:1.1.1.2.2.3
+	v1_1b9_20:1.1.1.2.2.3
+	v1_1b9_18:1.1.1.2.2.2
+	v1_1b9_16:1.1.1.2.2.2
+	v1_1b9_15:1.1.1.2.2.2
+	v1_1b9_13:1.1.1.2.2.2
+	v1_1b9_12:1.1.1.2.2.2
+	v1_1b9_11:1.1.1.2.2.2
+	v1_1b9_08:1.1.1.2.2.2
+	v1_1b9_07:1.1.1.2.2.2
+	r1_1b9:1.1.1.2.2.2
+	v1_1b8:1.1.1.2.2.2
+	v1_1b7:1.1.1.2.2.2
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.29
+date	2002.08.01.09.42.36;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.07.05.08.58.57;	author michal;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.06.13.03.55.44;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.05.01.09.41.49;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.04.18.08.46.17;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.03.18.01.48.56;	author nobu;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.03.18.01.46.33;	author nobu;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.12.10.07.18.12;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.12.09.13.47.54;	author nobu;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.11.27.10.00.30;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.11.13.08.19.51;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.08.23.17.49.08;	author nobu;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.08.23.06.02.14;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.03.13.05.45.08;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.01.29.05.10.41;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.01.09.07.26.16;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.24.04.33.54;	author matz;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2000.05.01.09.41.13;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.04.10.05.44.05;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.01.17.08.37.39;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.05.04.36.58;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.12.07.09.23.23;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.25.09.03.05;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.17.07.30.29;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.29.09.25.31;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.03;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.09;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.22;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.10;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.01.07.34.53;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.03.09.47.58;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.09.10.56.18;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.05.13.07.26.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.06.11.10.02.56;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.07.03.07.06.23;	author matz;	state Exp;
+branches
+	1.1.1.2.2.5.2.1;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.11.09.09.11.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.5.2.1
+date	98.09.08.07.08.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5.2.2;
+
+1.1.1.2.2.5.2.2
+date	98.11.25.03.31.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5.2.3;
+
+1.1.1.2.2.5.2.3
+date	98.12.16.07.30.29;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5.2.4;
+
+1.1.1.2.2.5.2.4
+date	98.12.22.09.01.48;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.11.24.07.13.50;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	99.11.29.06.30.58;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	99.12.07.09.24.55;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.01.17.08.23.54;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.04.10.05.48.27;	author matz;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.11.13.08.22.26;	author matz;	state Exp;
+branches;
+next	1.11.2.2;
+
+1.11.2.2
+date	2002.03.12.09.27.25;	author matz;	state Exp;
+branches;
+next	1.11.2.3;
+
+1.11.2.3
+date	2002.03.18.02.00.05;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.29
+log
+@* parse.y (tokadd_string): ignore backslashed spaces in %w.
+
+* enum.c (enum_find): do not use rb_eval_cmd(); should not accept
+  a string for if_none.
+@
+text
+@/**********************************************************************
+
+  enum.c -
+
+  $Author: michal $
+  $Date: 2002/07/05 08:58:57 $
+  created at: Fri Oct  1 15:15:19 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "node.h"
+#include "util.h"
+
+VALUE rb_mEnumerable;
+static ID id_each, id_eqq, id_cmp;
+
+VALUE
+rb_each(obj)
+    VALUE obj;
+{
+    return rb_funcall(obj, id_each, 0, 0);
+}
+
+static VALUE
+grep_i(i, arg)
+    VALUE i, *arg;
+{
+    if (RTEST(rb_funcall(arg[0], id_eqq, 1, i))) {
+	rb_ary_push(arg[1], i);
+    }
+    return Qnil;
+}
+
+static VALUE
+grep_iter_i(i, arg)
+    VALUE i, *arg;
+{
+    if (RTEST(rb_funcall(arg[0], id_eqq, 1, i))) {
+	rb_ary_push(arg[1], rb_yield(i));
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_grep(obj, pat)
+    VALUE obj, pat;
+{
+    VALUE ary = rb_ary_new();
+    VALUE arg[2];
+
+    arg[0] = pat;
+    arg[1] = ary;
+
+    rb_iterate(rb_each, obj, rb_block_given_p() ? grep_iter_i : grep_i, (VALUE)arg);
+    
+    return ary;
+}
+
+static VALUE
+find_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    if (RTEST(rb_yield(i))) {
+	memo->u2.value = Qtrue;
+	memo->u1.value = i;
+	rb_iter_break();
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_find(argc, argv, obj)
+    int argc;
+    VALUE* argv;
+    VALUE obj;
+{
+    NODE *memo = rb_node_newnode(NODE_MEMO, Qnil, Qfalse, 0);
+    VALUE if_none;
+
+    rb_scan_args(argc, argv, "01", &if_none);
+    rb_iterate(rb_each, obj, find_i, (VALUE)memo);
+    if (memo->u2.value) {
+	VALUE result = memo->u1.value;
+	rb_gc_force_recycle((VALUE)memo);
+	return result;
+    }
+    rb_gc_force_recycle((VALUE)memo);
+    if (!NIL_P(if_none)) {
+	return rb_funcall(if_none, rb_intern("call"), 0, 0);
+    }
+    return Qnil;
+}
+
+static VALUE
+find_all_i(i, ary)
+    VALUE i, ary;
+{
+    if (RTEST(rb_yield(i))) {
+	rb_ary_push(ary, i);
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_find_all(obj)
+    VALUE obj;
+{
+    VALUE ary = rb_ary_new();
+    
+    rb_iterate(rb_each, obj, find_all_i, ary);
+
+    return ary;
+}
+
+static VALUE
+reject_i(i, ary)
+    VALUE i, ary;
+{
+    if (!RTEST(rb_yield(i))) {
+	rb_ary_push(ary, i);
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_reject(obj)
+    VALUE obj;
+{
+    VALUE ary = rb_ary_new();
+    
+    rb_iterate(rb_each, obj, reject_i, ary);
+
+    return ary;
+}
+
+static VALUE
+collect_i(i, ary)
+    VALUE i, ary;
+{
+    rb_ary_push(ary, rb_yield(i));
+    
+    return Qnil;
+}
+
+static VALUE
+collect_all(i, ary)
+    VALUE i, ary;
+{
+    rb_ary_push(ary, i);
+    
+    return Qnil;
+}
+
+static VALUE
+enum_to_a(obj)
+    VALUE obj;
+{
+    VALUE ary = rb_ary_new();
+    
+    rb_iterate(rb_each, obj, collect_all, ary);
+
+    return ary;
+}
+
+static VALUE
+enum_collect(obj)
+    VALUE obj;
+{
+    VALUE ary = rb_ary_new();
+    
+    rb_iterate(rb_each, obj, rb_block_given_p() ? collect_i : collect_all, ary);
+
+    return ary;
+}
+
+static VALUE
+inject_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    if (memo->u2.value) {
+        memo->u2.value = Qfalse;
+        memo->u1.value = i;
+    }
+    else {
+        memo->u1.value = rb_yield(rb_assoc_new(memo->u1.value, i));
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_inject(argc, argv, obj)
+    int argc;
+    VALUE *argv, obj;
+{
+    NODE *memo;
+    VALUE n;
+
+    if (rb_scan_args(argc, argv, "01", &n) == 1) {
+        memo = rb_node_newnode(NODE_MEMO, n, Qfalse, 0);
+    }
+    else {
+        memo = rb_node_newnode(NODE_MEMO, Qnil, Qtrue, 0);
+    }
+    rb_iterate(rb_each, obj, inject_i, (VALUE)memo);
+    n = memo->u1.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return n;
+}
+
+static VALUE
+partition_i(i, ary)
+    VALUE i, *ary;
+{
+    if (RTEST(rb_yield(i))) {
+	rb_ary_push(ary[0], i);
+    }
+    else {
+	rb_ary_push(ary[1], i);
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_partition(obj)
+    VALUE obj;
+{
+    VALUE ary[2];
+
+    ary[0] = rb_ary_new();
+    ary[1] = rb_ary_new();
+    rb_iterate(rb_each, obj, partition_i, (VALUE)ary);
+
+    return rb_assoc_new(ary[0], ary[1]);
+}
+
+static VALUE
+enum_sort(obj)
+    VALUE obj;
+{
+    return rb_ary_sort(enum_to_a(obj));
+}
+
+static VALUE
+sort_by_i(i, ary)
+    VALUE i, ary;
+{
+    VALUE v, e;
+
+    v = rb_yield(i);
+    e = rb_assoc_new(v, i);
+    rb_ary_push(ary, e);
+    return Qnil;
+}
+
+static int
+sort_by_cmp(a, b)
+    VALUE *a, *b;
+{
+    VALUE retval;
+
+    retval = rb_funcall(RARRAY(*a)->ptr[0], id_cmp, 1, RARRAY(*b)->ptr[0]);
+    return rb_cmpint(retval);
+}
+
+static VALUE
+enum_sort_by(obj)
+    VALUE obj;
+{
+    VALUE ary;
+    long i;
+
+    ary  = rb_ary_new2((TYPE(obj) == T_ARRAY) ? RARRAY(obj)->len : 2000);
+    rb_iterate(rb_each, obj, sort_by_i, ary);
+    if (RARRAY(ary)->len > 1) {
+	qsort(RARRAY(ary)->ptr, RARRAY(ary)->len, sizeof(VALUE), sort_by_cmp);
+    }
+    for (i=0; i<RARRAY(ary)->len; i++) {
+	VALUE e = RARRAY(ary)->ptr[i];
+	RARRAY(ary)->ptr[i] = RARRAY(e)->ptr[1];
+    }
+    return ary;
+}
+
+static VALUE
+all_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    if (!RTEST(rb_yield(i))) {
+	memo->u1.value = Qfalse;
+	rb_iter_break();
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_all(obj)
+    VALUE obj;
+{
+    VALUE result;
+    NODE *memo = rb_node_newnode(NODE_MEMO, Qnil, 0, 0);
+
+    memo->u1.value = Qtrue;
+    rb_iterate(rb_each, obj, all_i, (VALUE)memo);
+    result = memo->u1.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return result;
+}
+
+static VALUE
+any_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    if (RTEST(rb_yield(i))) {
+	memo->u1.value = Qtrue;
+	rb_iter_break();
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_any(obj)
+    VALUE obj;
+{
+    VALUE result;
+    NODE *memo = rb_node_newnode(NODE_MEMO, Qnil, 0, 0);
+
+    memo->u1.value = Qfalse;
+    rb_iterate(rb_each, obj, any_i, (VALUE)memo);
+    result = memo->u1.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return result;
+}
+
+static VALUE
+min_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    VALUE cmp;
+
+    if (NIL_P(memo->u1.value)) {
+	memo->u1.value = i;
+    }
+    else {
+	cmp = rb_funcall(i, id_cmp, 1, memo->u1.value);
+	if (rb_cmpint(cmp) < 0) {
+	    memo->u1.value = i;
+	}
+    }
+    return Qnil;
+}
+
+static VALUE
+min_ii(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    VALUE cmp;
+
+    if (NIL_P(memo->u1.value)) {
+	memo->u1.value = i;
+    }
+    else {
+	cmp = rb_yield(rb_assoc_new(i, memo->u1.value));
+	if (rb_cmpint(cmp) < 0) {
+	    memo->u1.value = i;
+	}
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_min(obj)
+    VALUE obj;
+{
+    VALUE result;
+    NODE *memo = rb_node_newnode(NODE_MEMO, Qnil, 0, 0);
+
+    rb_iterate(rb_each, obj, rb_block_given_p() ? min_ii : min_i, (VALUE)memo);
+    result = memo->u1.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return result;
+}
+
+static VALUE
+max_i(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    VALUE cmp;
+
+    if (NIL_P(memo->u1.value)) {
+	memo->u1.value = i;
+    }
+    else {
+	cmp = rb_funcall(i, id_cmp, 1, memo->u1.value);
+	if (rb_cmpint(cmp) > 0) {
+	    memo->u1.value = i;
+	}
+    }
+    return Qnil;
+}
+
+static VALUE
+max_ii(i, memo)
+    VALUE i;
+    NODE *memo;
+{
+    VALUE cmp;
+
+    if (NIL_P(memo->u1.value)) {
+	memo->u1.value = i;
+    }
+    else {
+	cmp = rb_yield(rb_assoc_new(i, memo->u1.value));
+	if (rb_cmpint(cmp) > 0) {
+	    memo->u1.value = i;
+	}
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_max(obj)
+    VALUE obj;
+{
+    VALUE result;
+    NODE *memo = rb_node_newnode(NODE_MEMO, Qnil, 0, 0);
+
+    rb_iterate(rb_each, obj, rb_block_given_p() ? max_ii : max_i, (VALUE)memo);
+    result = memo->u1.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return result;
+}
+
+static VALUE
+member_i(item, memo)
+    VALUE item;
+    NODE *memo;
+{
+    if (rb_equal(item, memo->u1.value)) {
+	memo->u2.value = Qtrue;
+	rb_iter_break();
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_member(obj, val)
+    VALUE obj, val;
+{
+    VALUE result;
+    NODE *memo = rb_node_newnode(NODE_MEMO, val, Qfalse, 0);
+
+    rb_iterate(rb_each, obj, member_i, (VALUE)memo);
+    result = memo->u2.value;
+    rb_gc_force_recycle((VALUE)memo);
+    return result;
+}
+
+static VALUE
+each_with_index_i(val, memo)
+    VALUE val;
+    NODE *memo;
+{
+    rb_yield(rb_assoc_new(val, INT2FIX(memo->u3.cnt)));
+    memo->u3.cnt++;
+    return Qnil;
+}
+
+static VALUE
+enum_each_with_index(obj)
+    VALUE obj;
+{
+    NODE *memo = rb_node_newnode(NODE_MEMO, 0, 0, 0);
+
+    rb_iterate(rb_each, obj, each_with_index_i, (VALUE)memo);
+    rb_gc_force_recycle((VALUE)memo);
+    return obj;
+}
+
+void
+Init_Enumerable()
+{
+    rb_mEnumerable = rb_define_module("Enumerable");
+
+    rb_define_method(rb_mEnumerable,"to_a", enum_to_a, 0);
+    rb_define_method(rb_mEnumerable,"entries", enum_to_a, 0);
+
+    rb_define_method(rb_mEnumerable,"sort", enum_sort, 0);
+    rb_define_method(rb_mEnumerable,"sort_by", enum_sort_by, 0);
+    rb_define_method(rb_mEnumerable,"grep", enum_grep, 1);
+    rb_define_method(rb_mEnumerable,"find", enum_find, -1);
+    rb_define_method(rb_mEnumerable,"detect", enum_find, -1);
+    rb_define_method(rb_mEnumerable,"find_all", enum_find_all, 0);
+    rb_define_method(rb_mEnumerable,"select", enum_find_all, 0);
+    rb_define_method(rb_mEnumerable,"reject", enum_reject, 0);
+    rb_define_method(rb_mEnumerable,"collect", enum_collect, 0);
+    rb_define_method(rb_mEnumerable,"map", enum_collect, 0);
+    rb_define_method(rb_mEnumerable,"inject", enum_inject, -1);
+    rb_define_method(rb_mEnumerable,"partition", enum_partition, 0);
+    rb_define_method(rb_mEnumerable,"all?", enum_all, 0);
+    rb_define_method(rb_mEnumerable,"any?", enum_any, 0);
+    rb_define_method(rb_mEnumerable,"min", enum_min, 0);
+    rb_define_method(rb_mEnumerable,"max", enum_max, 0);
+    rb_define_method(rb_mEnumerable,"member?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"include?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"each_with_index", enum_each_with_index, 0);
+
+    id_eqq  = rb_intern("===");
+    id_each = rb_intern("each");
+    id_cmp  = rb_intern("<=>");
+}
+
+@
+
+
+1.28
+log
+@enum.c: Fix bug in enum_sort_by and some code indents
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/06/13 03:55:44 $
+d93 1
+a93 1
+	rb_eval_cmd(if_none, rb_ary_new2(0), 0);
+@
+
+
+1.27
+log
+@* eval.c (svalue_to_avalue): v may be Qundef.  This fix was
+  suggested by Guy Decoux.
+
+* hash.c (rb_hash_s_create): use rb_hash_aset() instead of calling
+  st_insert() directly, to dup&freeze string keys.
+
+* parse.y (yylex): proper error message for "@@@@0".
+
+* parse.y (yylex): paren to parse_string() must be zero for
+  unparenthesized strings.
+
+* parse.y (str_extend): broken string when unterminated "#{".
+
+* enum.c (enum_sort_by): had a bug in 1 element enumeration.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/01 09:41:49 $
+d51 2
+a52 1
+    VALUE tmp, arg[2];
+d54 6
+a59 8
+    arg[0] = pat; arg[1] = tmp = rb_ary_new();
+    if (rb_block_given_p()) {
+	rb_iterate(rb_each, obj, grep_iter_i, (VALUE)arg);
+    }
+    else {
+	rb_iterate(rb_each, obj, grep_i, (VALUE)arg);
+    }
+    return tmp;
+d99 2
+a100 2
+find_all_i(i, tmp)
+    VALUE i, tmp;
+d103 1
+a103 1
+	rb_ary_push(tmp, i);
+d112 3
+a114 1
+    VALUE tmp;
+d116 1
+a116 4
+    tmp = rb_ary_new();
+    rb_iterate(rb_each, obj, find_all_i, tmp);
+
+    return tmp;
+d120 2
+a121 2
+reject_i(i, tmp)
+    VALUE i, tmp;
+d124 1
+a124 1
+	rb_ary_push(tmp, i);
+d133 3
+a135 1
+    VALUE tmp;
+d137 1
+a137 4
+    tmp = rb_ary_new();
+    rb_iterate(rb_each, obj, reject_i, tmp);
+
+    return tmp;
+d141 2
+a142 2
+collect_i(i, tmp)
+    VALUE i, tmp;
+d144 2
+a145 1
+    rb_ary_push(tmp, rb_yield(i));
+d154 1
+d162 2
+a163 3
+    VALUE ary;
+
+    ary = rb_ary_new();
+d173 2
+a174 3
+    VALUE ary;
+
+    ary = rb_ary_new();
+a191 1
+
+d203 1
+a203 1
+    if (rb_scan_args(argc, argv, "01", &n) == 1)
+d205 2
+a206 1
+    else
+d208 1
+a208 1
+
+a210 1
+
+d235 1
+a235 1
+    ary[1]  =  rb_ary_new();
+d279 1
+a279 1
+    if (RARRAY(obj)->len > 1) {
+a285 1
+
+d348 1
+a348 1
+    if (NIL_P(memo->u1.value))
+d350 1
+d353 1
+a353 1
+	if (rb_cmpint(cmp) < 0)
+d355 1
+d367 1
+a367 1
+    if (NIL_P(memo->u1.value))
+d369 1
+d372 1
+a372 1
+	if (rb_cmpint(cmp) < 0)
+d374 1
+d386 1
+a386 1
+    rb_iterate(rb_each, obj, rb_block_given_p()?min_ii:min_i, (VALUE)memo);
+d399 1
+a399 1
+    if (NIL_P(memo->u1.value))
+d401 1
+d404 1
+a404 1
+	if (rb_cmpint(cmp) > 0)
+d406 1
+d418 1
+a418 1
+    if (NIL_P(memo->u1.value))
+d420 1
+d423 1
+a423 1
+	if (rb_cmpint(cmp) > 0)
+d425 1
+d437 1
+a437 1
+    rb_iterate(rb_each, obj, rb_block_given_p()?max_ii:max_i, (VALUE)memo);
+d521 1
+@
+
+
+1.26
+log
+@* numeric.c (num_step): better iteration condition for float
+  values;  suggested by Masahiro TANAKA <masa@@ir.isas.ac.jp>.
+
+* range.c (range_step): step (for Range#step method) <= 0 makes no
+  sence, thus ArgError will be raised.
+
+* range.c (range_each): Range#each method is special case for
+  Range#step(1)
+
+* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* enum.c (enum_partition): new method. [new]
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:17 $
+d283 3
+a285 2
+    if (RARRAY(ary)->len <= 1) return ary;
+    qsort(RARRAY(ary)->ptr, RARRAY(ary)->len, sizeof(VALUE), sort_by_cmp);
+@
+
+
+1.25
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/03/18 01:48:56 $
+d220 26
+d504 1
+@
+
+
+1.24
+log
+@* enum.c (enum_find): catch a value before recycle.
+
+* enum.c (enum_all): ditto.
+
+* enum.c (enum_any): ditto.
+
+* enum.c (enum_min): ditto.
+
+* enum.c (enum_max): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/18 01:46:33 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d175 1
+a175 1
+    VALUE tmp;
+d177 2
+a178 2
+    tmp = rb_ary_new();
+    rb_iterate(rb_each, obj, rb_block_given_p() ? collect_i : collect_all, tmp);
+d180 1
+a180 1
+    return tmp;
+@
+
+
+1.23
+log
+@* enum.c (enum_inject): use the first iterated element as the
+  initial value when omitted.
+
+* enum.c (inject_i): ditto.
+
+* enum.c (Init_Enumerable): Enumerable#inject now takes variable
+  count arguments.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/03/11 08:02:02 $
+d88 1
+d90 1
+a90 1
+	return memo->u1.value;
+d192 1
+a192 1
+    else
+d194 1
+d283 1
+d288 1
+d290 1
+a290 1
+    return memo->u1.value;
+d309 1
+d314 1
+d316 1
+a316 1
+    return memo->u1.value;
+d357 1
+d361 1
+d363 1
+a363 1
+    return memo->u1.value;
+d404 1
+d408 1
+d410 1
+a410 1
+    return memo->u1.value;
+a429 1
+
+@
+
+
+1.22
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/12/10 07:18:12 $
+d183 1
+a183 1
+inject_i(i, np)
+d185 1
+a185 1
+    VALUE *np;
+d187 7
+a193 1
+    *np = rb_yield(rb_assoc_new(*np, i));
+d198 3
+a200 2
+enum_inject(obj, n)
+    VALUE obj, n;
+d202 7
+a208 1
+    rb_iterate(rb_each, obj, inject_i, (VALUE)&n);
+d210 4
+d468 1
+a468 1
+    rb_define_method(rb_mEnumerable,"inject", enum_inject, 1);
+@
+
+
+1.21
+log
+@* array.c (rb_ary_modify): should copy the internal buffer if the
+  modifying buffer is shared.
+
+* array.c (ary_make_shared): make an internal buffer of an array
+  to be shared.
+
+* array.c (rb_ary_shift): avoid sliding an internal buffer by
+  using shared buffer.
+
+* array.c (rb_ary_subseq): avoid copying the buffer.
+
+* parse.y (gettable): should freeze __LINE__ string.
+
+* io.c (rb_io_puts): old behavoir restored.  rationale: a) if you
+  want to call to_s for arrays, you can just call print a, "\n".
+  b) to_s wastes memory if array (and sum of its contents) is
+  huge.  c) now any object that has to_ary is treated as an array,
+  using rb_check_convert_type().
+
+* hash.c (rb_hash_initialize): now accepts a block to calculate
+  the default value. [new]
+
+* hash.c (rb_hash_aref): call "default" method to get the value
+  corrensponding to the non existing key.
+
+* hash.c (rb_hash_default): get the default value based on the
+  block given to 'new'.  Now it takes an optinal "key" argument.
+  "default" became the method to get the value for non existing
+  key.  Users may override "default" method to change the hash
+  behavior.
+
+* hash.c (rb_hash_set_default): clear the flag if a block is given
+  to 'new'
+
+* object.c (Init_Object): undef Data.allocate, left Data.new.
+
+* ext/curses/curses.c (window_scrollok): use RTEST().
+
+* ext/curses/curses.c (window_idlok): ditto.
+
+* ext/curses/curses.c (window_keypad): ditto.
+
+* ext/curses/curses.c (window_idlok): idlok() may return void on
+  some platforms; so don't use return value.
+
+* ext/curses/curses.c (window_scrollok): ditto for consistency.
+
+* ext/curses/curses.c: replace FIX2INT() by typechecking NUM2INT().
+
+* parse.y (str_extend): should not process immature #$x and
+  #@@x interpolation, e.g #@@#@@ etc.
+
+* enum.c (enum_sort_by): sort_by does not have to be stable always.
+
+* enum.c (enum_sort_by): call qsort directly to gain performance.
+
+* util.c (ruby_qsort): ruby_qsort(qs6) is now native thread safe.
+
+* error.c (rb_sys_fail): it must be a bug if it's called when
+  errno == 0.
+
+* regex.c (WC2MBC1ST): should not pass through > 0x80 number in UTF-8.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/12/09 13:47:54 $
+d430 1
+a430 1
+    return Qnil;
+@
+
+
+1.20
+log
+@* enum.c (enum_sort_by): should replace with last elements.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/11/27 10:00:30 $
+d15 1
+d208 2
+a209 3
+sort_by_i(i, memo)
+    VALUE i;
+    NODE *memo;
+d214 2
+a215 16
+    if (TYPE(v) == T_ARRAY) {
+	int j, len = RARRAY(v)->len;
+
+	e = rb_ary_new2(len+2);
+	for (j=0; j<len; j++) {
+	    RARRAY(e)->ptr[j] = RARRAY(v)->ptr[j];
+	}
+	RARRAY(e)->ptr[j++] = INT2NUM(memo->u3.cnt);
+	RARRAY(e)->ptr[j] = i;
+	RARRAY(e)->len = len + 2;
+    }
+    else {
+	e = rb_ary_new3(3, v, INT2NUM(memo->u3.cnt), i);
+    }
+    rb_ary_push(memo->u1.value, e);
+    memo->u3.cnt++;
+d219 3
+a221 3
+static VALUE
+sort_by_sort_body(a)
+    VALUE a;
+d223 4
+a226 1
+    return rb_ary_cmp(RARRAY(a)->ptr[0], RARRAY(a)->ptr[1]);
+d233 1
+a233 2
+    VALUE ary = rb_ary_new2(2000);
+    NODE *memo = rb_node_newnode(NODE_MEMO, ary, 0, 0);
+d236 4
+a239 3
+    rb_iterate(rb_each, obj, sort_by_i, (VALUE)memo);
+    rb_gc_force_recycle((VALUE)memo);
+    rb_ary_sort_inplace(ary);
+d242 1
+a242 1
+	RARRAY(ary)->ptr[i] = RARRAY(e)->ptr[RARRAY(e)->len - 1];
+@
+
+
+1.19
+log
+@* marshal.c (w_float): must distinguish -0.0 from 0.0.
+
+* gc.c (gc_mark_all): tweak mark order for little bit better scan.
+
+* gc.c (rb_gc_mark): ditto.
+
+* gc.c (rb_gc): ditto.
+
+* enum.c (sort_by_i): slight performance boost.
+
+* gc.c (gc_mark_rest): should call gc_mark_children(), not gc_mark().
+
+* gc.c (rb_gc_mark): may cause infinite looop.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:19:51 $
+d253 1
+a253 1
+	RARRAY(ary)->ptr[i] = RARRAY(e)->ptr[2];
+@
+
+
+1.18
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* eval.c (rb_eval_cmd): should not upgrade safe level unless
+  explicitly specified by argument newly added.
+
+* signal.c (sig_trap): should not allow tainted trap closure.
+
+* variable.c (rb_f_trace_var): should not allow trace_var on safe
+  level higher than 3.
+
+* variable.c (rb_f_trace_var): should not allow tainted trace
+  closure.
+
+* gc.c: do not use static stack until system stack overflows.
+
+* eval.c (eval): should call Exception#exception instead of
+  calling rb_exc_new3() directly.
+
+* error.c (exc_exception): set "mesg" directly to the clone.  it
+  might be better to set mesg via some method for flexibility.
+
+* variable.c (cvar_override_check): should print original module
+  name, if 'a' is T_ICLASS.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d211 17
+a227 1
+    VALUE e = rb_ary_new3(3, rb_yield(i), INT2NUM(memo->u3.cnt), i);
+d244 1
+a244 1
+    VALUE ary = rb_ary_new();
+d250 1
+a250 1
+    rb_iterate(rb_ary_sort_bang, ary, sort_by_sort_body, 0);
+d253 1
+a253 1
+	RARRAY(ary)->ptr[i] = rb_ary_entry(e, 2);
+@
+
+
+1.17
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/08/23 17:49:08 $
+d92 1
+a92 1
+	rb_eval_cmd(if_none, rb_ary_new2(0));
+d302 1
+a302 1
+	if (NUM2LONG(cmp) < 0)
+d319 1
+a319 1
+	if (NUM2LONG(cmp) < 0)
+d347 1
+a347 1
+	if (NUM2LONG(cmp) > 0)
+d364 1
+a364 1
+	if (NUM2LONG(cmp) > 0)
+@
+
+
+1.16
+log
+@fix typo.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/08/23 06:02:14 $
+a237 1
+	rb_gc_force_recycle(e);
+@
+
+
+1.15
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* file.c (group_member): should check real gid only.
+
+* file.c (eaccess): do not cache euid, since effective euid may be
+  changed via Process.euid=().
+
+* file.c (eaccess): return -1 unless every specified access mode
+  is permitted.
+
+* eval.c (rb_eval): while/until returns the value which is given
+  to break.
+
+* parse.y (value_expr): using while/until/class/def as an
+  expression is now gives a warning, not an error.
+
+* range.c (range_eqq): should compare strings based on magical
+  increment (using String#upto), not dictionary order.
+
+* enum.c (enum_sort_by): new method for Schewartzian transformed
+  stable sort.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:08 $
+d211 1
+a211 1
+    VALUE e = rb_ary_new3(3, rb_yield(e), INT2NUM(memo->u3.cnt), i);
+@
+
+
+1.14
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/29 05:10:41 $
+d207 38
+d438 1
+@
+
+
+1.13
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:16 $
+d90 1
+a93 1
+    rb_gc_force_recycle((VALUE)memo);
+d150 1
+a150 1
+enum_all(i, ary)
+d164 1
+a164 1
+    rb_iterate(rb_each, obj, enum_all, ary);
+d176 1
+a176 1
+    rb_iterate(rb_each, obj, rb_block_given_p() ? collect_i : enum_all, tmp);
+d207 48
+d409 2
+@
+
+
+1.12
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:33:54 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.11
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:13 $
+d182 18
+d360 1
+@
+
+
+1.11.2.1
+log
+@* signal.c (sighandle): should not re-register sighandler if
+  POSIX_SIGNAL is defined.
+
+* eval.c (error_print): errat array may be empty.
+
+* parse.y (yylex): float '1_.0' should not be allowed.
+
+* variable.c (var_getter): should care about var as Qfalse
+  (ruby-bugs#PR199).
+
+* array.c (cmpint): <=> or block for {min,max} may return bignum.
+
+* array.c (sort_1): use rb_compint.
+
+* array.c (sort_2): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (min_ii): ditto.
+
+* enum.c (max_i): ditto.
+
+* enum.c (max_ii): ditto.
+
+* mkconfig.rb: use String#dump to generate Ruby string literal.
+
+* range.c (range_eql): should override 'eql?'
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:33:54 $
+d199 1
+a199 1
+	if (rb_cmpint(cmp) < 0)
+d216 1
+a216 1
+	if (rb_cmpint(cmp) < 0)
+d244 1
+a244 1
+	if (rb_cmpint(cmp) > 0)
+d261 1
+a261 1
+	if (rb_cmpint(cmp) > 0)
+@
+
+
+1.11.2.2
+log
+@* regex.c (re_compile_pattern): '\0111' should be '\011' plus '1',
+  since octal literals are formed by three digits at most.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/13 08:22:26 $
+d322 1
+a322 1
+    return obj;
+@
+
+
+1.11.2.3
+log
+@* enum.c (enum_find): catch a value before recycle.
+
+* enum.c (enum_min): ditto.
+
+* enum.c (enum_max): ditto.
+
+* parse.y (parse_string): part of multi-byte sequence must not
+  match to paren.
+
+* parse.y (parse_qstring): ditto.
+
+* parse.y (parse_quotedwords): ditto.
+
+* parse.y (str_extend): handle multi-byte characters.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/12 09:27:25 $
+a86 1
+	VALUE result = memo->u1.value;
+d88 1
+a88 1
+	return result;
+a225 1
+    VALUE result;
+a228 1
+    result = memo->u1.value;
+d230 1
+a230 1
+    return result;
+a270 1
+    VALUE result;
+a273 1
+    result = memo->u1.value;
+d275 1
+a275 1
+    return result;
+d295 1
+@
+
+
+1.10
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/10 05:44:05 $
+d53 1
+a53 1
+    if (rb_iterator_p()) {
+d176 1
+a176 1
+    rb_iterate(rb_each, obj, rb_iterator_p() ? collect_i : enum_all, tmp);
+d228 1
+a228 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?min_ii:min_i, (VALUE)memo);
+d273 1
+a273 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?max_ii:max_i, (VALUE)memo);
+@
+
+
+1.9
+log
+@2000-04-10
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/01/17 08:37:39 $
+d11 1
+a11 1
+************************************************/
+d341 1
+@
+
+
+1.8
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:36:58 $
+d91 1
+a91 1
+	rb_eval_cmd(if_none, Qnil);
+@
+
+
+1.7
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/07 09:23:23 $
+d14 1
+a61 5
+struct find_arg {
+    int found;
+    VALUE val;
+};
+    
+d63 1
+a63 1
+find_i(i, arg)
+d65 1
+a65 1
+    struct find_arg *arg;
+d68 2
+a69 2
+	arg->found = Qtrue;
+	arg->val = i;
+d81 1
+a81 1
+    struct find_arg arg;
+d85 4
+a88 4
+    arg.found = Qfalse;
+    rb_iterate(rb_each, obj, find_i, (VALUE)&arg);
+    if (arg.found) {
+	return arg.val;
+d93 1
+d189 3
+a191 2
+min_i(i, min)
+    VALUE i, *min;
+d195 2
+a196 2
+    if (NIL_P(*min))
+	*min = i;
+d198 1
+a198 1
+	cmp = rb_funcall(i, id_cmp, 1, *min);
+d200 1
+a200 1
+	    *min = i;
+d206 3
+a208 2
+min_ii(i, min)
+    VALUE i, *min;
+d212 2
+a213 2
+    if (NIL_P(*min))
+	*min = i;
+d215 1
+a215 1
+	cmp = rb_yield(rb_assoc_new(i, *min));
+d217 1
+a217 1
+	    *min = i;
+d226 1
+a226 1
+    VALUE min = Qnil;
+d228 3
+a230 2
+    rb_iterate(rb_each, obj, rb_iterator_p()?min_ii:min_i, (VALUE)&min);
+    return min;
+d234 3
+a236 2
+max_i(i, max)
+    VALUE i, *max;
+d240 2
+a241 2
+    if (NIL_P(*max))
+	*max = i;
+d243 1
+a243 1
+	cmp = rb_funcall(i, id_cmp, 1, *max);
+d245 1
+a245 1
+	    *max = i;
+d251 3
+a253 2
+max_ii(i, max)
+    VALUE i, *max;
+d257 2
+a258 2
+    if (NIL_P(*max))
+	*max = i;
+d260 1
+a260 1
+	cmp = rb_yield(rb_assoc_new(i, *max));
+d262 1
+a262 1
+	    *max = i;
+d271 1
+a271 1
+    VALUE max = Qnil;
+d273 3
+a275 2
+    rb_iterate(rb_each, obj, rb_iterator_p()?max_ii:max_i, (VALUE)&max);
+    return max;
+a277 6
+struct i_v_pair {
+    int i;
+    VALUE v;
+    int found;
+};
+
+d279 1
+a279 1
+index_i(item, iv)
+d281 1
+a281 1
+    struct i_v_pair *iv;
+d283 2
+a284 2
+    if (rb_equal(item, iv->v)) {
+	iv->found = 1;
+a286 3
+    else {
+	iv->i++;
+    }
+d291 1
+a291 1
+enum_index(obj, val)
+d294 1
+a294 1
+    struct i_v_pair iv;
+d296 1
+a296 25
+    iv.i = 0;
+    iv.v = val;
+    iv.found = 0;
+    rb_iterate(rb_each, obj, index_i, (VALUE)&iv);
+    if (iv.found) return INT2FIX(iv.i);
+    return Qnil;		/* not found */
+}
+
+static VALUE
+member_i(item, iv)
+    VALUE item;
+    struct i_v_pair *iv;
+{
+    if (rb_equal(item, iv->v)) {
+	iv->i = 1;
+	rb_iter_break();
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_member(obj, val)
+    VALUE obj, val;
+{
+    struct i_v_pair iv;
+d298 4
+a301 5
+    iv.i = 0;
+    iv.v = val;
+    rb_iterate(rb_each, obj, member_i, (VALUE)&iv);
+    if (iv.i) return Qtrue;
+    return Qfalse;
+d305 1
+a305 1
+each_with_index_i(val, indexp)
+d307 1
+a307 1
+    int *indexp;
+d309 2
+a310 6
+#if 1
+    rb_yield(rb_assoc_new(val, INT2FIX(*indexp)));
+#else
+    rb_yield(rb_ary_concat(rb_Array(val), INT2FIX(*indexp)));
+#endif
+    (*indexp)++;
+d318 1
+a318 1
+    int index = 0;
+d320 2
+a321 1
+    rb_iterate(rb_each, obj, each_with_index_i, (VALUE)&index);
+a342 1
+    rb_define_method(rb_mEnumerable,"index", enum_index, 1);
+@
+
+
+1.6
+log
+@991207
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/25 09:03:05 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.5
+log
+@19991125
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:29 $
+d201 1
+a201 1
+	if (FIX2LONG(cmp) < 0)
+d217 1
+a217 1
+	if (FIX2LONG(cmp) < 0)
+d243 1
+a243 1
+	if (FIX2LONG(cmp) > 0)
+d259 1
+a259 1
+	if (FIX2LONG(cmp) > 0)
+a335 26
+length_i(i, length)
+    VALUE i;
+    int *length;
+{
+    (*length)++;
+    return Qnil;
+}
+
+static VALUE
+enum_length(obj)
+    VALUE obj;
+{
+    int length = 0;
+
+    rb_iterate(rb_each, obj, length_i, (VALUE)&length);
+    return INT2FIX(length);
+}
+
+VALUE
+rb_enum_length(obj)
+    VALUE obj;
+{
+    return enum_length(obj);
+}
+
+static VALUE
+a379 2
+    rb_define_method(rb_mEnumerable,"length", enum_length, 0);
+    rb_define_method(rb_mEnumerable,"size", enum_length, 0);
+@
+
+
+1.4
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/29 09:25:31 $
+d53 1
+a53 1
+	rb_iterate(rb_each, obj, grep_iter_i, pat);
+@
+
+
+1.3
+log
+@19991029
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d36 2
+a37 2
+grep_iter_i(i, pat)
+    VALUE i, pat;
+d39 2
+a40 2
+    if (RTEST(rb_funcall(pat, id_eqq, 1, i))) {
+	rb_yield(i);
+d49 3
+a53 1
+	return obj;
+a55 3
+	VALUE tmp, arg[2];
+
+	arg[0] = pat; arg[1] = tmp = rb_ary_new();
+a56 3
+
+	if (RARRAY(tmp)->len == 0) return Qnil;
+	return tmp;
+d58 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/03 09:47:58 $
+a155 12
+enum_collect(obj)
+    VALUE obj;
+{
+    VALUE tmp;
+
+    tmp = rb_ary_new();
+    rb_iterate(rb_each, obj, collect_i, tmp);
+
+    return tmp;
+}
+
+static VALUE
+d173 12
+@
+
+
+1.2.2.1
+log
+@19991124-1.4.3pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:03 $
+d36 2
+a37 2
+grep_iter_i(i, arg)
+    VALUE i, *arg;
+d39 2
+a40 2
+    if (RTEST(rb_funcall(arg[0], id_eqq, 1, i))) {
+	rb_ary_push(arg[1], rb_yield(i));
+a48 3
+    VALUE tmp, arg[2];
+
+    arg[0] = pat; arg[1] = tmp = rb_ary_new();
+d50 2
+a51 1
+	rb_iterate(rb_each, obj, grep_iter_i, (VALUE)arg);
+d54 3
+d58 1
+d60 1
+a61 1
+    return tmp;
+@
+
+
+1.2.2.2
+log
+@19991129
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/24 07:13:50 $
+d57 1
+@
+
+
+1.2.2.3
+log
+@991207
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/29 06:30:58 $
+d201 1
+a201 1
+	if (NUM2LONG(cmp) < 0)
+d217 1
+a217 1
+	if (NUM2LONG(cmp) < 0)
+d243 1
+a243 1
+	if (NUM2LONG(cmp) > 0)
+d259 1
+a259 1
+	if (NUM2LONG(cmp) > 0)
+@
+
+
+1.2.2.4
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/07 09:24:55 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.5
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:23:54 $
+d95 1
+a95 1
+	rb_eval_cmd(if_none, rb_ary_new2(0));
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:29 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d15 1
+a15 1
+VALUE mEnumerable;
+d18 1
+a18 1
+void
+d22 1
+a22 1
+    rb_funcall(obj, id_each, 0, 0);
+d25 1
+a25 1
+static void
+d30 1
+a30 1
+	ary_push(arg[1], i);
+d32 1
+d35 1
+a35 1
+static void
+d42 1
+d49 1
+a49 1
+    if (iterator_p()) {
+d56 2
+a57 2
+	arg[0] = pat; arg[1] = tmp = ary_new();
+	rb_iterate(rb_each, obj, grep_i, arg);
+d59 1
+d69 1
+a69 1
+static void
+d75 1
+a75 1
+	arg->found = TRUE;
+d77 1
+a77 1
+	rb_break();
+d79 1
+d85 1
+a85 1
+    VALUE argv;
+d92 2
+a93 2
+    arg.found = FALSE;
+    rb_iterate(rb_each, obj, find_i, &arg);
+d103 1
+a103 1
+static void
+d108 1
+a108 1
+	ary_push(tmp, i);
+d110 1
+d119 1
+a119 1
+    tmp = ary_new();
+d125 2
+a126 2
+static void
+collect_i(i, tmp)
+d129 2
+a130 5
+    VALUE retval;
+
+    retval = rb_yield(i);
+    if (RTEST(retval)) {
+	ary_push(tmp, retval);
+d132 1
+d136 1
+a136 1
+enum_collect(obj)
+d141 2
+a142 2
+    tmp = ary_new();
+    rb_iterate(rb_each, obj, collect_i, tmp);
+d147 2
+a148 2
+static void
+reverse_i(i, tmp)
+d151 2
+a152 1
+    ary_unshift(tmp, i);
+d156 1
+a156 1
+enum_reverse(obj)
+d161 2
+a162 2
+    tmp = ary_new();
+    rb_iterate(rb_each, obj, reverse_i, tmp);
+d167 1
+a167 1
+static void
+d171 2
+a172 1
+    ary_push(ary, i);
+d181 1
+a181 1
+    ary = ary_new();
+d191 1
+a191 1
+    return ary_sort(enum_to_a(obj));
+d194 1
+a194 1
+static void
+d204 1
+a204 1
+	if (FIX2INT(cmp) < 0)
+d207 1
+d210 1
+a210 1
+static void
+d219 2
+a220 2
+	cmp = rb_yield(assoc_new(i, *min));
+	if (FIX2INT(cmp) < 0)
+d223 1
+d232 1
+a232 1
+    rb_iterate(rb_each, obj, iterator_p()?min_ii:min_i, &min);
+d236 1
+a236 1
+static void
+d246 1
+a246 1
+	if (FIX2INT(cmp) > 0)
+d249 1
+d252 1
+a252 1
+static void
+d261 2
+a262 2
+	cmp = rb_yield(assoc_new(i, *max));
+	if (FIX2INT(cmp) > 0)
+d265 1
+d274 1
+a274 1
+    rb_iterate(rb_each, obj, iterator_p()?max_ii:max_i, &max);
+d284 1
+a284 1
+static void
+d291 1
+a291 1
+	rb_break();
+d296 1
+d308 1
+a308 1
+    rb_iterate(rb_each, obj, index_i, &iv);
+d313 1
+a313 1
+static void
+d320 1
+a320 1
+	rb_break();
+d322 1
+d333 3
+a335 3
+    rb_iterate(rb_each, obj, member_i, &iv);
+    if (iv.i) return TRUE;
+    return FALSE;
+d338 1
+a338 1
+static void
+d344 1
+d347 1
+a347 1
+VALUE
+d353 1
+a353 1
+    rb_iterate(rb_each, obj, length_i, &length);
+d357 31
+d391 1
+a391 1
+    mEnumerable = rb_define_module("Enumerable");
+d393 2
+a394 1
+    rb_define_method(mEnumerable,"to_a", enum_to_a, 0);
+d396 16
+a411 13
+    rb_define_method(mEnumerable,"sort", enum_sort, 0);
+    rb_define_method(mEnumerable,"grep", enum_grep, 1);
+    rb_define_method(mEnumerable,"find", enum_find, -1);
+    rb_define_method(mEnumerable,"find_all", enum_find_all, 0);
+    rb_define_method(mEnumerable,"collect", enum_collect, 0);
+    rb_define_method(mEnumerable,"reverse", enum_reverse, 0);
+    rb_define_method(mEnumerable,"min", enum_min, 0);
+    rb_define_method(mEnumerable,"max", enum_max, 0);
+    rb_define_method(mEnumerable,"index", enum_index, 1);
+    rb_define_method(mEnumerable,"member?", enum_member, 1);
+    rb_define_method(mEnumerable,"include?", enum_member, 1);
+    rb_define_method(mEnumerable,"length", enum_length, 0);
+    rb_define_method(mEnumerable,"size", enum_length, 0);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d18 1
+a18 1
+VALUE
+d22 1
+a22 1
+    return rb_funcall(obj, id_each, 0, 0);
+d25 1
+a25 1
+static VALUE
+a31 1
+    return Qnil;
+d34 1
+a34 1
+static VALUE
+a40 1
+    return Qnil;
+d55 1
+a55 1
+	rb_iterate(rb_each, obj, grep_i, (VALUE)arg);
+d66 1
+a66 1
+static VALUE
+d74 1
+a74 1
+	rb_iter_break();
+a75 1
+    return Qnil;
+d81 1
+a81 1
+    VALUE* argv;
+d89 1
+a89 1
+    rb_iterate(rb_each, obj, find_i, (VALUE)&arg);
+d99 1
+a99 1
+static VALUE
+a105 1
+    return Qnil;
+d120 1
+a120 1
+static VALUE
+a129 1
+    return Qnil;
+d144 1
+a144 1
+static VALUE
+a148 1
+    return Qnil;
+d163 1
+a163 1
+static VALUE
+a167 1
+    return Qnil;
+d189 1
+a189 1
+static VALUE
+a201 1
+    return Qnil;
+d204 1
+a204 1
+static VALUE
+a216 1
+    return Qnil;
+d225 1
+a225 1
+    rb_iterate(rb_each, obj, iterator_p()?min_ii:min_i, (VALUE)&min);
+d229 1
+a229 1
+static VALUE
+a241 1
+    return Qnil;
+d244 1
+a244 1
+static VALUE
+a256 1
+    return Qnil;
+d265 1
+a265 1
+    rb_iterate(rb_each, obj, iterator_p()?max_ii:max_i, (VALUE)&max);
+d275 1
+a275 1
+static VALUE
+d282 1
+a282 1
+	rb_iter_break();
+a286 1
+    return Qnil;
+d298 1
+a298 1
+    rb_iterate(rb_each, obj, index_i, (VALUE)&iv);
+d303 1
+a303 1
+static VALUE
+d310 1
+a310 1
+	rb_iter_break();
+a311 1
+    return Qnil;
+d322 1
+a322 1
+    rb_iterate(rb_each, obj, member_i, (VALUE)&iv);
+d327 1
+a327 1
+static VALUE
+a332 1
+    return Qnil;
+d341 1
+a341 1
+    rb_iterate(rb_each, obj, length_i, (VALUE)&length);
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/22 09:01:48 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d15 1
+a15 1
+VALUE rb_mEnumerable;
+d30 1
+a30 1
+	rb_ary_push(arg[1], i);
+d49 1
+a49 1
+    if (rb_iterator_p()) {
+d56 1
+a56 1
+	arg[0] = pat; arg[1] = tmp = rb_ary_new();
+d74 1
+a74 1
+	arg->found = Qtrue;
+d91 1
+a91 1
+    arg.found = Qfalse;
+d107 1
+a107 1
+	rb_ary_push(tmp, i);
+d118 1
+a118 1
+    tmp = rb_ary_new();
+d128 6
+a133 1
+    rb_ary_push(tmp, rb_yield(i));
+d143 1
+a143 1
+    tmp = rb_ary_new();
+d150 20
+d173 1
+a173 1
+    rb_ary_push(ary, i);
+d183 1
+a183 1
+    ary = rb_ary_new();
+d193 1
+a193 1
+    return rb_ary_sort(enum_to_a(obj));
+d206 1
+a206 1
+	if (FIX2LONG(cmp) < 0)
+d221 2
+a222 2
+	cmp = rb_yield(rb_assoc_new(i, *min));
+	if (FIX2LONG(cmp) < 0)
+d234 1
+a234 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?min_ii:min_i, (VALUE)&min);
+d248 1
+a248 1
+	if (FIX2LONG(cmp) > 0)
+d263 2
+a264 2
+	cmp = rb_yield(rb_assoc_new(i, *max));
+	if (FIX2LONG(cmp) > 0)
+d276 1
+a276 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?max_ii:max_i, (VALUE)&max);
+d336 2
+a337 2
+    if (iv.i) return Qtrue;
+    return Qfalse;
+d349 1
+a349 1
+static VALUE
+a358 31
+VALUE
+rb_enum_length(obj)
+    VALUE obj;
+{
+    return enum_length(obj);
+}
+
+static VALUE
+each_with_index_i(val, indexp)
+    VALUE val;
+    int *indexp;
+{
+#if 1
+    rb_yield(rb_assoc_new(val, INT2FIX(*indexp)));
+#else
+    rb_yield(rb_ary_concat(rb_Array(val), INT2FIX(*indexp)));
+#endif
+    (*indexp)++;
+    return Qnil;
+}
+
+static VALUE
+enum_each_with_index(obj)
+    VALUE obj;
+{
+    int index = 0;
+
+    rb_iterate(rb_each, obj, each_with_index_i, (VALUE)&index);
+    return Qnil;
+}
+
+d362 1
+a362 1
+    rb_mEnumerable = rb_define_module("Enumerable");
+d364 1
+a364 2
+    rb_define_method(rb_mEnumerable,"to_a", enum_to_a, 0);
+    rb_define_method(rb_mEnumerable,"entries", enum_to_a, 0);
+d366 13
+a378 13
+    rb_define_method(rb_mEnumerable,"sort", enum_sort, 0);
+    rb_define_method(rb_mEnumerable,"grep", enum_grep, 1);
+    rb_define_method(rb_mEnumerable,"find", enum_find, -1);
+    rb_define_method(rb_mEnumerable,"find_all", enum_find_all, 0);
+    rb_define_method(rb_mEnumerable,"collect", enum_collect, 0);
+    rb_define_method(rb_mEnumerable,"min", enum_min, 0);
+    rb_define_method(rb_mEnumerable,"max", enum_max, 0);
+    rb_define_method(rb_mEnumerable,"index", enum_index, 1);
+    rb_define_method(rb_mEnumerable,"member?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"include?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"length", enum_length, 0);
+    rb_define_method(rb_mEnumerable,"size", enum_length, 0);
+    rb_define_method(rb_mEnumerable,"each_with_index", enum_each_with_index, 0);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.3.2.2
+log
+@990201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:10 $
+a58 1
+	if (RARRAY(tmp)->len == 0) return Qnil;
+a375 1
+    rb_define_method(rb_mEnumerable,"detect", enum_find, -1);
+a376 1
+    rb_define_method(rb_mEnumerable,"select", enum_find_all, 0);
+@
+
+
+1.1.1.3.2.3
+log
+@990203
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/01 07:34:53 $
+a125 22
+reject_i(i, tmp)
+    VALUE i, tmp;
+{
+    if (!RTEST(rb_yield(i))) {
+	rb_ary_push(tmp, i);
+    }
+    return Qnil;
+}
+
+static VALUE
+enum_reject(obj)
+    VALUE obj;
+{
+    VALUE tmp;
+
+    tmp = rb_ary_new();
+    rb_iterate(rb_each, obj, reject_i, tmp);
+
+    return tmp;
+}
+
+static VALUE
+a379 1
+    rb_define_method(rb_mEnumerable,"reject", enum_reject, 0);
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:56 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b7 pre
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:43 $
+a358 19
+each_with_index_i(val, indexp)
+    VALUE val;
+    int *indexp;
+{
+    rb_yield(assoc_new(val, INT2FIX(*indexp)));
+    (*indexp)++;
+    return Qnil;
+}
+
+VALUE
+enum_each_with_index(obj)
+    VALUE obj;
+{
+    int index = 0;
+
+    rb_iterate(rb_each, obj, each_with_index_i, (VALUE)&index);
+    return Qnil;
+}
+
+a378 1
+    rb_define_method(mEnumerable,"each_with_index", enum_each_with_index, 0);
+@
+
+
+1.1.1.2.2.3
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/09 10:56:18 $
+a358 1
+static VALUE
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_25
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:09 $
+d128 6
+a133 1
+    ary_push(tmp, rb_yield(i));
+@
+
+
+1.1.1.2.2.5
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/11 10:02:56 $
+d201 1
+a201 1
+	if (FIX2LONG(cmp) < 0)
+d217 1
+a217 1
+	if (FIX2LONG(cmp) < 0)
+d243 1
+a243 1
+	if (FIX2LONG(cmp) > 0)
+d259 1
+a259 1
+	if (FIX2LONG(cmp) > 0)
+@
+
+
+1.1.1.2.2.6
+log
+@1.1c7
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:23 $
+a379 1
+    rb_define_method(mEnumerable,"entries", enum_to_a, 0);
+@
+
+
+1.1.1.2.2.5.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:23 $
+d15 1
+a15 1
+VALUE rb_mEnumerable;
+d30 1
+a30 1
+	rb_ary_push(arg[1], i);
+d49 1
+a49 1
+    if (rb_iterator_p()) {
+d56 1
+a56 1
+	arg[0] = pat; arg[1] = tmp = rb_ary_new();
+d74 1
+a74 1
+	arg->found = Qtrue;
+d91 1
+a91 1
+    arg.found = Qfalse;
+d107 1
+a107 1
+	rb_ary_push(tmp, i);
+d118 1
+a118 1
+    tmp = rb_ary_new();
+d128 1
+a128 1
+    rb_ary_push(tmp, rb_yield(i));
+d138 1
+a138 1
+    tmp = rb_ary_new();
+d145 20
+d168 1
+a168 1
+    rb_ary_push(ary, i);
+d178 1
+a178 1
+    ary = rb_ary_new();
+d188 1
+a188 1
+    return rb_ary_sort(enum_to_a(obj));
+d216 1
+a216 1
+	cmp = rb_yield(rb_assoc_new(i, *min));
+d229 1
+a229 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?min_ii:min_i, (VALUE)&min);
+d258 1
+a258 1
+	cmp = rb_yield(rb_assoc_new(i, *max));
+d271 1
+a271 1
+    rb_iterate(rb_each, obj, rb_iterator_p()?max_ii:max_i, (VALUE)&max);
+d331 2
+a332 2
+    if (iv.i) return Qtrue;
+    return Qfalse;
+d344 1
+a344 1
+static VALUE
+a353 7
+VALUE
+rb_enum_length(obj)
+    VALUE obj;
+{
+    return enum_length(obj);
+}
+
+d359 1
+a359 1
+    rb_yield(rb_assoc_new(val, INT2FIX(*indexp)));
+d364 1
+a364 1
+static VALUE
+d377 1
+a377 1
+    rb_mEnumerable = rb_define_module("Enumerable");
+d379 1
+a379 1
+    rb_define_method(rb_mEnumerable,"to_a", enum_to_a, 0);
+d381 14
+a394 13
+    rb_define_method(rb_mEnumerable,"sort", enum_sort, 0);
+    rb_define_method(rb_mEnumerable,"grep", enum_grep, 1);
+    rb_define_method(rb_mEnumerable,"find", enum_find, -1);
+    rb_define_method(rb_mEnumerable,"find_all", enum_find_all, 0);
+    rb_define_method(rb_mEnumerable,"collect", enum_collect, 0);
+    rb_define_method(rb_mEnumerable,"min", enum_min, 0);
+    rb_define_method(rb_mEnumerable,"max", enum_max, 0);
+    rb_define_method(rb_mEnumerable,"index", enum_index, 1);
+    rb_define_method(rb_mEnumerable,"member?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"include?", enum_member, 1);
+    rb_define_method(rb_mEnumerable,"length", enum_length, 0);
+    rb_define_method(rb_mEnumerable,"size", enum_length, 0);
+    rb_define_method(rb_mEnumerable,"each_with_index", enum_each_with_index, 0);
+@
+
+
+1.1.1.2.2.5.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/09 09:11:48 $
+a366 1
+    rb_define_method(rb_mEnumerable,"entries", enum_to_a, 0);
+@
+
+
+1.1.1.2.2.5.2.3
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:10 $
+a345 1
+#if 0
+a346 3
+#else
+    rb_yield(rb_ary_concat(val, INT2FIX(*indexp)));
+#endif
+@
+
+
+1.1.1.2.2.5.2.4
+log
+@1.1d1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:29 $
+d346 1
+a346 1
+#if 1
+d349 1
+a349 1
+    rb_yield(rb_ary_concat(rb_Array(val), INT2FIX(*indexp)));
+@

@@ -1,0 +1,56 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2002.06.11.01.27.48;	author H_Konishi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.22.07.26.42;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@new platform [bccwin32] merged.
+@
+text
+@extern int isinf(double);
+extern int isnan(double);
+extern int flock(int fd, int oper);
+
+extern int vsnprintf();
+extern int snprintf();
+@
+
+
+1.1
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d1 6
+a6 6
+extern int isinf(double);
+extern int isnan(double);
+extern int flock(int fd, int oper);
+
+extern int vsnprintf();
+extern int snprintf();
+@

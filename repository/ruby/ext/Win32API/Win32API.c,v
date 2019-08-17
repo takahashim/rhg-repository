@@ -1,0 +1,1637 @@
+head	1.15;
+access;
+symbols
+	v1_6_7:1.10.2.1
+	v1_6_6:1.10.2.1
+	v1_6_5:1.10.2.1
+	v1_6_4:1.10.2.1
+	v1_7_1:1.11
+	v1_6_4_preview4:1.10.2.1
+	v1_6_4_preview3:1.10.2.1
+	v1_6_4_preview2:1.10.2.1
+	v1_6_4_preview1:1.10.2.1
+	v1_6_3:1.10
+	ruby_m17n:1.10.0.4
+	ruby_1_6:1.10.0.2
+	v1_6_2:1.10
+	v1_6_1:1.10
+	v1_6_0:1.10
+	v1_4_6:1.2.2.4
+	v1_4_5:1.2.2.4
+	v1_4_4:1.2.2.3
+	ruby_1_4_3:1.2.2.1
+	ruby1_4_3:1.2.2.1
+	v1_4_3:1.2.2.1
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.4
+	v1_3_6_repack:1.1.1.1.2.4
+	v1_3_6:1.1.1.1.2.4
+	v1_3_5:1.1.1.1.2.4
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1.2.4
+	v1_3_4_990624:1.1.1.1.2.4
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1.2.4
+	v1_3_4_990531:1.1.1.1.2.4
+	v1_3_3_990518:1.1.1.1.2.3
+	v1_3_3_990513:1.1.1.1.2.3
+	v1_3_3_990507:1.1.1.1.2.3
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1.2.3
+	v1_3_1_990224:1.1.1.1.2.3
+	v1_3_1_990215:1.1.1.1.2.3
+	v1_3_1_990212:1.1.1.1.2.2
+	v1_3_1_990210:1.1.1.1.2.2
+	v1_3_1_:1.1.1.1.2.2
+	v1_3_1_990209:1.1.1.1.2.2
+	v1_3_1_990205:1.1.1.1.2.1
+	v1_3_1_990203:1.1.1.1.2.1
+	v1_3_1_990201:1.1.1.1.2.1
+	v1_3_1"_990201:1.1.1.1.2.1
+	v1_3_1_990128:1.1.1.1.2.1
+	v1_3_1_990127:1.1.1.1.2.1
+	v1_3_1_990126:1.1.1.1.2.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1c7:1.1.2.1
+	v1_1c6:1.1.2.1
+	v1_1c5:1.1.2.1
+	v1_1c4:1.1.2.1
+	v1_1c3:1.1.2.1
+	v1_1c2:1.1.2.1
+	v1_1c1:1.1.2.1
+	v1_1c0:1.1.2.1
+	v1_1b9_31:1.1.2.1
+	v1_1b9_30:1.1.2.1
+	v1_1b9_28:1.1.2.1
+	v1_1b9_27:1.1.2.1
+	v1_1b9_26:1.1.2.1
+	r1_1b9_25:1.1.2.1
+	r1_1b9_24:1.1.2.1
+	v1_1b9_23:1.1.2.1
+	v1_1b9_22:1.1.2.1
+	v1_1b9_20:1.1.2.1
+	v1_1b9_18:1.1.2.1
+	v1_1b9_16:1.1.2.1
+	v1_1b9_15:1.1.2.1
+	v1_1b9_13:1.1.2.1
+	v1_1b9_12:1.1.2.1
+	v1_1b9_11:1.1.2.1
+	v1_1b9_08:1.1.2.1
+	v1_1b9_07:1.1.2.1
+	r1_1b9:1.1.2.1
+	v1_1b8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@ * @;
+expand	@o@;
+
+
+1.15
+date	2002.08.30.12.02.04;	author H_Konishi;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.08.30.10.41.57;	author nobu;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.06.11.01.27.47;	author H_Konishi;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.12.18.08.46.58;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.03.26.05.11.18;	author eban;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.08.30.08.16.36;	author eban;	state Exp;
+branches
+	1.10.2.1;
+next	1.9;
+
+1.9
+date	2000.08.30.05.33.06;	author eban;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.08.30.02.35.04;	author eban;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.13.16.12.19;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.09.04.53.09;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.03.06.04.15.35;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.05.04.37.17;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.15.08.52.17;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.46;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.02.18.10.01.46;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.01.26.10.08.17;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.02.09.06.08.24;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.02.15.07.31.51;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	99.05.25.08.26.18;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.02.18.10.01.46;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.10.15.08.44.38;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.01.05.04.41.13;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.03.08.06.25.18;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.06.03.16.04.37;	author eban;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.08.30.02.36.07;	author eban;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.08.30.05.34.05;	author eban;	state Exp;
+branches;
+next	;
+
+1.10.2.1
+date	2001.03.26.05.11.04;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.15
+log
+@* ext/Win32API/Win32API.c (Win32API_Call): typo.
+@
+text
+@/*
+  Win32API - Ruby Win32 API Import Facility
+*/
+
+#if !defined _MSC_VER && !defined NT
+#define  WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <stdio.h>
+#endif
+
+#if defined(_MSC_VER)
+#if defined(_M_ALPHA)
+#ifdef __cplusplus
+extern "C" { long __asm(char *,...); };
+#else
+long __asm(char *,...);
+#endif
+#pragma intrinsic(__asm)
+#endif
+#endif
+
+#define _T_VOID     0
+#define _T_NUMBER   1
+#define _T_POINTER  2
+#define _T_INTEGER  3
+
+typedef char *ApiPointer(void);
+typedef long  ApiNumber(void);
+typedef void  ApiVoid(void);
+typedef int   ApiInteger(void);
+
+#include "ruby.h"
+
+typedef struct {
+    HANDLE dll;
+    HANDLE proc;
+    VALUE dllname;
+    VALUE import;
+    VALUE export;
+} Win32API;
+
+static void
+Win32API_FreeLibrary(hdll)
+    HINSTANCE hdll;
+{
+    FreeLibrary(hdll);
+}
+
+static VALUE
+Win32API_initialize(self, dllname, proc, import, export)
+    VALUE self;
+    VALUE dllname;
+    VALUE proc;
+    VALUE import;
+    VALUE export;
+{
+    HANDLE hproc;
+    HINSTANCE hdll;
+    VALUE str;
+    VALUE a_import;
+    VALUE *ptr;
+    char *s;
+    int i;
+    int len;
+    int ex;
+
+    SafeStringValue(dllname);
+    SafeStringValue(proc);
+    hdll = LoadLibrary(RSTRING(dllname)->ptr);
+    if (!hdll)
+	rb_raise(rb_eRuntimeError, "LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+    rb_iv_set(self, "__hdll__", Data_Wrap_Struct(self, 0, Win32API_FreeLibrary, hdll));
+    hproc = GetProcAddress(hdll, RSTRING(proc)->ptr);
+    if (!hproc) {
+	str = rb_str_new3(proc);
+	str = rb_str_cat(str, "A", 1);
+	hproc = GetProcAddress(hdll, RSTRING(str)->ptr);
+	if (!hproc)
+	    rb_raise(rb_eRuntimeError, "GetProcAddress: %s or %s\n",
+		RSTRING(proc)->ptr, RSTRING(str)->ptr);
+    }
+    rb_iv_set(self, "__dll__", UINT2NUM((unsigned long)hdll));
+    rb_iv_set(self, "__dllname__", dllname);
+    rb_iv_set(self, "__proc__", UINT2NUM((unsigned long)hproc));
+
+    a_import = rb_ary_new();
+    switch (TYPE(import)) {
+      case T_NIL:
+	break;
+      case T_ARRAY:
+	ptr = RARRAY(import)->ptr;
+	for (i = 0, len = RARRAY(import)->len; i < len; i++) {
+	    SafeStringValue(ptr[i]);
+	    switch (*(char *)RSTRING(ptr[i])->ptr) {
+	      case 'N': case 'n': case 'L': case 'l':
+		rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+		break;
+	      case 'P': case 'p':
+		rb_ary_push(a_import, INT2FIX(_T_POINTER));
+		break;
+	      case 'I': case 'i':
+		rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+		break;
+	    }
+	}
+        break;
+      default:
+	SafeStringValue(import);
+	s = RSTRING(import)->ptr;
+	for (i = 0, len = RSTRING(import)->len; i < len; i++) {
+	    switch (*s++) {
+	      case 'N': case 'n': case 'L': case 'l':
+		rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+		break;
+	      case 'P': case 'p':
+		rb_ary_push(a_import, INT2FIX(_T_POINTER));
+		break;
+	      case 'I': case 'i':
+		rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+		break;
+	    }
+	}
+        break;
+    }
+    rb_iv_set(self, "__import__", a_import);
+
+    if (NIL_P(export)) {
+	ex = _T_VOID;
+    } else {
+	SafeStringValue(export);
+	switch (*RSTRING(export)->ptr) {
+	  case 'V': case 'v':
+	    ex = _T_VOID;
+	    break;
+	  case 'N': case 'n': case 'L': case 'l':
+	    ex = _T_NUMBER;
+	    break;
+	  case 'P': case 'p':
+	    ex = _T_POINTER;
+	    break;
+	  case 'I': case 'i':
+	    ex = _T_INTEGER;
+	    break;
+	}
+    }
+    rb_iv_set(self, "__export__", INT2FIX(ex));
+
+    return Qnil;
+}
+
+#ifdef __BORLANDC__ 
+int c_m( FARPROC api, long* p )
+{
+  long pp[16];
+  memcpy( pp, p, 16*sizeof(long) );
+  return api();
+}
+#endif
+
+static VALUE
+Win32API_Call(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE args;
+
+    FARPROC ApiFunction;
+
+    ApiPointer  *ApiFunctionPointer;
+    ApiNumber   *ApiFunctionNumber;
+    ApiVoid     *ApiFunctionVoid;
+    ApiInteger  *ApiFunctionInteger;
+
+    long  lParam;
+    char *pParam;
+
+    VALUE Return;
+
+    VALUE obj_proc;
+    VALUE obj_import;
+    VALUE obj_export;
+    VALUE import_type;
+    int nimport, timport, texport, i;
+    int items;
+    int ret;
+#ifdef __BORLANDC__ 
+    long* ptr;
+    long p[16];
+#endif
+
+    items = rb_scan_args(argc, argv, "0*", &args);
+
+    obj_proc = rb_iv_get(obj, "__proc__");
+
+    ApiFunction = (FARPROC)NUM2ULONG(obj_proc);
+
+    obj_import = rb_iv_get(obj, "__import__");
+    obj_export = rb_iv_get(obj, "__export__");
+    nimport = RARRAY(obj_import)->len;
+    texport = FIX2INT(obj_export);
+
+    if (items != nimport)
+	rb_raise(rb_eRuntimeError, "Wrong number of parameters: expected %d, got %d.\n",
+	    nimport, items);
+
+    if (0 < nimport) {
+#ifdef __BORLANDC__ 
+       ptr = p + ( nimport - 1 );
+#endif
+	for (i = nimport - 1; 0 <= i; i--) {
+	    VALUE str;
+	    import_type = rb_ary_entry(obj_import, i);
+	    timport = FIX2INT(import_type);
+	    switch (timport) {
+	    case _T_NUMBER:
+	    case _T_INTEGER:
+		lParam = NUM2ULONG(rb_ary_entry(args, i));
+#if defined(_MSC_VER) || defined(__LCC__)
+#if defined(_M_IX86)
+		_asm {
+		    mov     eax, lParam
+		    push    eax
+		}
+#elif defined(_M_ALPHA)
+		__asm(
+			"ldl r0, 0(%0);"
+			"stq r0, -(sp);"
+			, lParam
+		);
+#else
+#error
+#endif
+#elif defined(__BORLANDC__)
+		*ptr = lParam;
+		--ptr;
+#elif defined __GNUC__
+		asm volatile ("pushl %0" :: "g" (lParam));
+#else
+#error
+#endif
+		break;
+	    case _T_POINTER:
+		str = rb_ary_entry(args, i);
+		if (NIL_P(str)) {
+		    pParam = 0;
+		} else if (FIXNUM_P(str)){
+		    pParam = (char *)NUM2ULONG(str);
+		} else {
+		    StringValue(str);
+		    rb_str_modify(str);
+		    pParam = StringValuePtr(str);
+		}
+#if defined(_MSC_VER) || defined(__LCC__)
+#if defined(_M_IX86)
+		_asm {
+		    mov     eax, pParam
+		    push    eax
+		}
+#elif defined(_M_ALPHA)
+		__asm(
+			"ldl r0, 0(%0);"
+			"stq r0, -(sp);"
+			, pParam
+		);
+#else
+#error
+#endif
+#elif defined(__BORLANDC__)
+		*ptr = (long)pParam;
+		--ptr;
+#elif defined __GNUC__
+		asm volatile ("pushl %0" :: "g" (pParam));
+#else
+#error
+#endif
+		break;
+	    }
+	}
+    }
+
+#if defined __GNUC__
+    asm volatile ("call *%1" : "=r" (ret) : "g" (ApiFunction));
+    switch (texport) {
+    case _T_NUMBER:
+    case _T_INTEGER:
+	Return = INT2NUM(ret);
+	break;
+    case _T_POINTER:
+	Return = rb_str_new2((char *)ret);
+	break;
+    case _T_VOID:
+    default:
+	Return = INT2NUM(0);
+	break;
+    }
+#else
+    switch (texport) {
+    case _T_NUMBER:
+#if defined(__BORLANDC__)
+	Return = INT2NUM((long)c_m(ApiFunction, p));
+#else
+	ApiFunctionNumber = (ApiNumber *) ApiFunction;
+	Return = INT2NUM(ApiFunctionNumber());
+#endif
+	break;
+    case _T_POINTER:
+#if defined(__BORLANDC__)
+	Return = rb_str_new2((char *)c_m(ApiFunction, p));
+#else
+	ApiFunctionPointer = (ApiPointer *) ApiFunction;
+	Return = rb_str_new2((char *)ApiFunctionPointer());
+#endif
+	break;
+    case _T_INTEGER:
+#if defined(__BORLANDC__)
+	Return = INT2NUM((int)c_m(ApiFunction, p));
+#else
+	ApiFunctionInteger = (ApiInteger *) ApiFunction;
+	Return = INT2NUM(ApiFunctionInteger());
+#endif
+	break;
+    case _T_VOID:
+    default:
+	ApiFunctionVoid = (ApiVoid *) ApiFunction;
+	ApiFunctionVoid();
+	Return = INT2NUM(0);
+	break;
+    }
+#endif
+    return Return;
+}
+
+void
+Init_Win32API()
+{
+    VALUE cWin32API = rb_define_class("Win32API", rb_cObject);
+    rb_define_method(cWin32API, "initialize", Win32API_initialize, 4);
+    rb_define_method(cWin32API, "call", Win32API_Call, -1);
+    rb_define_alias(cWin32API,  "Call", "call");
+}
+@
+
+
+1.14
+log
+@* ext/Win32API/Win32API.c (Win32API_Call): RSTRING()->ptr may be
+  NULL.
+
+* ext/nkf/nkf.c (rb_nkf_guess): ditto.
+
+* ext/readline/readline.c (readline_s_set_completion_append_character):
+  ditto.
+
+* ext/socket/socket.c (sock_s_getaddrinfo, sock_s_getnameinfo):
+  ditto.
+
+* ext/tcltklib/tcltklib.c (ip_toUTF8, ip_fromUTF8): ditto.
+@
+text
+@d252 1
+a252 1
+		    pParam = StringValuePtr(str)
+@
+
+
+1.13
+log
+@new platform [bccwin32] merged.
+@
+text
+@d252 1
+a252 1
+		    pParam = RSTRING(str)->ptr;
+@
+
+
+1.12
+log
+@* string.c (rb_str_replace): swap arguments of OBJ_INFECT.
+
+* eval.c (rb_thread_schedule): should not select a thread which is
+  not yet initialized.
+
+* time.c (time_plus): wrong boundary check.
+
+* time.c (time_minus): ditto.
+@
+text
+@d151 9
+d187 4
+d208 3
+d234 3
+d269 3
+d300 3
+d305 1
+d308 3
+d313 1
+d316 3
+d321 1
+@
+
+
+1.11
+log
+@* ext/Win32API/Win32API.c: remove Init_win32api().
+@
+text
+@d67 2
+a68 2
+    Check_SafeStr(dllname);
+    Check_SafeStr(proc);
+d93 1
+a93 1
+	    Check_SafeStr(ptr[i]);
+d108 1
+a108 1
+	Check_SafeStr(import);
+d130 1
+a130 1
+	Check_SafeStr(export);
+d231 1
+a231 1
+		    Check_Type(str, T_STRING);
+@
+
+
+1.10
+log
+@eban
+@
+text
+@a307 6
+
+void
+Init_win32api()
+{
+    Init_Win32API();
+}
+@
+
+
+1.10.2.1
+log
+@* ext/Win32API/Win32API.c: remove Init_win32api().
+@
+text
+@d308 6
+@
+
+
+1.9
+log
+@eban
+@
+text
+@d11 11
+d204 1
+d209 9
+d236 1
+d241 9
+@
+
+
+1.8
+log
+@eban
+@
+text
+@d51 1
+d56 2
+d76 4
+a79 2
+    if (!NIL_P(import)) {
+	Check_Type(import, T_ARRAY);
+d82 1
+a82 1
+	    Check_Type(ptr[i], T_STRING);
+d95 18
+d119 1
+a119 1
+	Check_Type(export, T_STRING);
+@
+
+
+1.7
+log
+@support mingw32.
+@
+text
+@d73 16
+a88 13
+    ptr = RARRAY(import)->ptr;
+    for (i = 0, len = RARRAY(import)->len; i < len; i++) {
+	int c = *(char *)RSTRING(ptr[i])->ptr;
+	switch (c) {
+	case 'N': case 'n': case 'L': case 'l':
+	    rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+	    break;
+	case 'P': case 'p':
+	    rb_ary_push(a_import, INT2FIX(_T_POINTER));
+	    break;
+	case 'I': case 'i':
+	    rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+	    break;
+d93 1
+a93 2
+    switch (*RSTRING(export)->ptr) {
+    case 'V': case 'v':
+d95 16
+a110 10
+	break;
+    case 'N': case 'n': case 'L': case 'l':
+	ex = _T_NUMBER;
+	break;
+    case 'P': case 'p':
+	ex = _T_POINTER;
+	break;
+    case 'I': case 'i':
+	ex = _T_INTEGER;
+	break;
+@
+
+
+1.6
+log
+@2000-05-09
+@
+text
+@d5 1
+a5 1
+#ifndef _MSC_VER
+@
+
+
+1.5
+log
+@2000-03-06
+@
+text
+@d135 1
+d166 1
+a166 1
+#elif defined(__CYGWIN__) || defined(__MINGW32__)
+d188 1
+a188 1
+#elif defined(__CYGWIN__) || defined(__MINGW32__)
+d198 16
+d234 1
+@
+
+
+1.4
+log
+@20000105
+@
+text
+@d55 4
+a58 7
+    hdll = GetModuleHandle(RSTRING(dllname)->ptr);
+    if (!hdll) {
+	hdll = LoadLibrary(RSTRING(dllname)->ptr);
+	if (!hdll)
+	    rb_raise(rb_eRuntimeError, "LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+	Data_Wrap_Struct(self, 0, Win32API_FreeLibrary, hdll);
+    }
+@
+
+
+1.3
+log
+@-r debug, -s, etc.
+@
+text
+@d71 1
+a71 1
+    rb_iv_set(self, "__dll__", INT2NUM((int)hdll));
+d73 1
+a73 1
+    rb_iv_set(self, "__proc__", INT2NUM((int)hproc));
+d127 1
+a127 1
+    long  lParam; 
+d147 1
+a147 1
+    nimport  = RARRAY(obj_import)->len;
+d168 1
+a168 1
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+d187 1
+a187 1
+		    mov     eax, dword ptr pParam
+d190 1
+a190 1
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+a197 1
+
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d143 1
+a143 1
+    ApiFunction = (FARPROC)NUM2INT(obj_proc);
+d162 1
+a162 1
+		lParam = NUM2INT(rb_ary_entry(args, i));
+d176 9
+a184 3
+		Check_Type(str, T_STRING);
+		rb_str_modify(str);
+		pParam = RSTRING(str)->ptr;
+@
+
+
+1.2.2.1
+log
+@19991015
+@
+text
+@d143 1
+a143 1
+    ApiFunction = (FARPROC)NUM2ULONG(obj_proc);
+d162 1
+a162 1
+		lParam = NUM2ULONG(rb_ary_entry(args, i));
+d176 3
+a178 9
+		if (NIL_P(str)) {
+		    pParam = 0;
+		} else if (FIXNUM_P(str)){
+		    pParam = (char *)NUM2ULONG(str);
+		} else {
+		    Check_Type(str, T_STRING);
+		    rb_str_modify(str);
+		    pParam = RSTRING(str)->ptr;
+		}
+@
+
+
+1.2.2.2
+log
+@20000105
+@
+text
+@d71 1
+a71 1
+    rb_iv_set(self, "__dll__", UINT2NUM((unsigned long)hdll));
+d73 1
+a73 1
+    rb_iv_set(self, "__proc__", UINT2NUM((unsigned long)hproc));
+d127 1
+a127 1
+    long  lParam;
+d147 1
+a147 1
+    nimport = RARRAY(obj_import)->len;
+d168 1
+a168 1
+#elif defined(__CYGWIN__) || defined(__MINGW32__)
+d187 1
+a187 1
+		    mov     eax, pParam
+d190 1
+a190 1
+#elif defined(__CYGWIN__) || defined(__MINGW32__)
+d198 1
+@
+
+
+1.2.2.3
+log
+@2000-03-08
+@
+text
+@d55 7
+a61 4
+    hdll = LoadLibrary(RSTRING(dllname)->ptr);
+    if (!hdll)
+	rb_raise(rb_eRuntimeError, "LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+    rb_iv_set(self, "__hdll__", Data_Wrap_Struct(self, 0, Win32API_FreeLibrary, hdll));
+@
+
+
+1.2.2.4
+log
+@see ChangeLog
+@
+text
+@d5 1
+a5 1
+#if !defined _MSC_VER && !defined NT
+a134 1
+    int ret;
+d165 1
+a165 1
+#elif defined __GNUC__
+d187 1
+a187 1
+#elif defined __GNUC__
+a196 16
+#if defined __GNUC__
+    asm volatile ("call *%1" : "=r" (ret) : "g" (ApiFunction));
+    switch (texport) {
+    case _T_NUMBER:
+    case _T_INTEGER:
+	Return = INT2NUM(ret);
+	break;
+    case _T_POINTER:
+	Return = rb_str_new2((char *)ret);
+	break;
+    case _T_VOID:
+    default:
+	Return = INT2NUM(0);
+	break;
+    }
+#else
+a216 1
+#endif
+@
+
+
+1.2.2.5
+log
+@eban
+@
+text
+@d73 13
+a85 16
+    if (!NIL_P(import)) {
+	Check_Type(import, T_ARRAY);
+	ptr = RARRAY(import)->ptr;
+	for (i = 0, len = RARRAY(import)->len; i < len; i++) {
+	    Check_Type(ptr[i], T_STRING);
+	    switch (*(char *)RSTRING(ptr[i])->ptr) {
+	      case 'N': case 'n': case 'L': case 'l':
+		rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+		break;
+	      case 'P': case 'p':
+		rb_ary_push(a_import, INT2FIX(_T_POINTER));
+		break;
+	      case 'I': case 'i':
+		rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+		break;
+	    }
+d90 2
+a91 1
+    if (NIL_P(export)) {
+d93 10
+a102 16
+    } else {
+	Check_Type(export, T_STRING);
+	switch (*RSTRING(export)->ptr) {
+	  case 'V': case 'v':
+	    ex = _T_VOID;
+	    break;
+	  case 'N': case 'n': case 'L': case 'l':
+	    ex = _T_NUMBER;
+	    break;
+	  case 'P': case 'p':
+	    ex = _T_POINTER;
+	    break;
+	  case 'I': case 'i':
+	    ex = _T_INTEGER;
+	    break;
+	}
+@
+
+
+1.2.2.6
+log
+@eban
+@
+text
+@a50 1
+    char *s;
+a54 2
+    Check_SafeStr(dllname);
+    Check_SafeStr(proc);
+d73 2
+a74 4
+    switch (TYPE(import)) {
+      case T_NIL:
+	break;
+      case T_ARRAY:
+d77 1
+a77 1
+	    Check_SafeStr(ptr[i]);
+a89 18
+        break;
+      default:
+	Check_SafeStr(import);
+	s = RSTRING(import)->ptr;
+	for (i = 0, len = RSTRING(import)->len; i < len; i++) {
+	    switch (*s++) {
+	      case 'N': case 'n': case 'L': case 'l':
+		rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+		break;
+	      case 'P': case 'p':
+		rb_ary_push(a_import, INT2FIX(_T_POINTER));
+		break;
+	      case 'I': case 'i':
+		rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+		break;
+	    }
+	}
+        break;
+d96 1
+a96 1
+	Check_SafeStr(export);
+@
+
+
+1.1
+log
+@file Win32API.c was initially added on branch v1_1r.
+@
+text
+@d1 231
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 223
+/*
+  Win32API - Ruby Win32 API Import Facility
+*/
+
+#define  WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <stdio.h>
+
+#define _T_VOID     0
+#define _T_NUMBER   1
+#define _T_POINTER  2
+#define _T_INTEGER  3
+
+typedef char *ApiPointer(void);
+typedef long  ApiNumber(void);
+typedef void  ApiVoid(void);
+typedef int   ApiInteger(void);
+
+#include "ruby.h"
+
+typedef struct {
+    HANDLE dll;
+    HANDLE proc;
+    VALUE dllname;
+    VALUE import;
+    VALUE export;
+} Win32API;
+
+static void
+Win32API_FreeLibrary(hdll)
+    HINSTANCE hdll;
+{
+    FreeLibrary(hdll);
+}
+
+static VALUE
+Win32API_initialize(self, dllname, proc, import, export)
+    VALUE self;
+    VALUE dllname;
+    VALUE proc;
+    VALUE import;
+    VALUE export;
+{
+    HANDLE hproc;
+    HINSTANCE hdll;
+    VALUE str;
+    VALUE a_import;
+    VALUE *ptr;
+    int i;
+    int len;
+    int ex;
+
+    hdll = GetModuleHandle(RSTRING(dllname)->ptr);
+    if (!hdll) {
+	hdll = LoadLibrary(RSTRING(dllname)->ptr);
+	if (!hdll)
+	    Fail("LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+	Data_Wrap_Struct(self, 0, Win32API_FreeLibrary, hdll);
+    }
+    hproc = GetProcAddress(hdll, RSTRING(proc)->ptr);
+    if (!hproc) {
+	str = str_new3(proc);
+	str = str_cat(str, "A", 1);
+	hproc = GetProcAddress(hdll, RSTRING(str)->ptr);
+	if (!hproc)
+	    Fail("GetProcAddress: %s or %s\n",
+		RSTRING(proc)->ptr, RSTRING(str)->ptr);
+    }
+    rb_iv_set(self, "__dll__", INT2NUM((int)hdll));
+    rb_iv_set(self, "__dllname__", dllname);
+    rb_iv_set(self, "__proc__", INT2NUM((int)hproc));
+
+    a_import = ary_new();
+    ptr = RARRAY(import)->ptr;
+    for (i = 0, len = RARRAY(import)->len; i < len; i++) {
+	int c = *(char *)RSTRING(ptr[i])->ptr;
+	switch (c) {
+	case 'N': case 'n': case 'L': case 'l':
+	    ary_push(a_import, INT2FIX(_T_NUMBER));
+	    break;
+	case 'P': case 'p':
+	    ary_push(a_import, INT2FIX(_T_POINTER));
+	    break;
+	case 'I': case 'i':
+	    ary_push(a_import, INT2FIX(_T_INTEGER));
+	    break;
+	}
+    }
+    rb_iv_set(self, "__import__", a_import);
+
+    switch (*RSTRING(export)->ptr) {
+    case 'V': case 'v':
+	ex = _T_VOID;
+	break;
+    case 'N': case 'n': case 'L': case 'l':
+	ex = _T_NUMBER;
+	break;
+    case 'P': case 'p':
+	ex = _T_POINTER;
+	break;
+    case 'I': case 'i':
+	ex = _T_INTEGER;
+	break;
+    }
+    rb_iv_set(self, "__export__", INT2FIX(ex));
+
+    return Qnil;
+}
+
+static VALUE
+Win32API_Call(argc, argv, obj)
+    VALUE argc;
+    VALUE argv;
+    VALUE obj;
+{
+    VALUE args;
+
+    FARPROC ApiFunction;
+
+    ApiPointer  *ApiFunctionPointer;
+    ApiNumber   *ApiFunctionNumber;
+    ApiVoid     *ApiFunctionVoid;
+    ApiInteger  *ApiFunctionInteger;
+
+    long  lParam; 
+    char *pParam;
+
+    VALUE Return;
+
+    VALUE obj_proc;
+    VALUE obj_import;
+    VALUE obj_export;
+    VALUE import_type;
+    int nimport, timport, texport, i;
+    int items;
+
+    items = rb_scan_args(argc, argv, "0*", &args);
+
+    obj_proc = rb_iv_get(obj, "__proc__");
+
+    ApiFunction = (FARPROC)NUM2INT(obj_proc);
+
+    obj_import = rb_iv_get(obj, "__import__");
+    obj_export = rb_iv_get(obj, "__export__");
+    nimport  = RARRAY(obj_import)->len;
+    texport = FIX2INT(obj_export);
+
+    if (items != nimport)
+	Fail("Wrong number of parameters: expected %d, got %d.\n",
+	    nimport, items);
+
+    if (0 < nimport) {
+	for (i = nimport - 1; 0 <= i; i--) {
+	    VALUE str;
+	    import_type = ary_entry(obj_import, i);
+	    timport = FIX2INT(import_type);
+	    switch (timport) {
+	    case _T_NUMBER:
+	    case _T_INTEGER:
+		lParam = NUM2INT(ary_entry(args, i));
+#if defined(_MSC_VER) || defined(__LCC__)
+		_asm {
+		    mov     eax, lParam
+		    push    eax
+		}
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+		asm volatile ("pushl %0" :: "g" (lParam));
+#else
+#error
+#endif
+		break;
+	    case _T_POINTER:
+		str = ary_entry(args, i);
+		Check_Type(str, T_STRING);
+		str_modify(str);
+		pParam = RSTRING(str)->ptr;
+#if defined(_MSC_VER) || defined(__LCC__)
+		_asm {
+		    mov     eax, dword ptr pParam
+		    push    eax
+		}
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+		asm volatile ("pushl %0" :: "g" (pParam));
+#else
+#error
+#endif
+		break;
+	    }
+	}
+
+    }
+
+    switch (texport) {
+    case _T_NUMBER:
+	ApiFunctionNumber = (ApiNumber *) ApiFunction;
+	Return = INT2NUM(ApiFunctionNumber());
+	break;
+    case _T_POINTER:
+	ApiFunctionPointer = (ApiPointer *) ApiFunction;
+	Return = str_new2((char *)ApiFunctionPointer());
+	break;
+    case _T_INTEGER:
+	ApiFunctionInteger = (ApiInteger *) ApiFunction;
+	Return = INT2NUM(ApiFunctionInteger());
+	break;
+    case _T_VOID:
+    default:
+	ApiFunctionVoid = (ApiVoid *) ApiFunction;
+	ApiFunctionVoid();
+	Return = INT2NUM(0);
+	break;
+    }
+    return Return;
+}
+
+void
+Init_Win32API()
+{
+    VALUE cWin32API = rb_define_class("Win32API", cObject);
+    rb_define_method(cWin32API, "initialize", Win32API_initialize, 4);
+    rb_define_method(cWin32API, "call", Win32API_Call, -1);
+    rb_define_alias(cWin32API,  "Call", "call");
+}
+@
+
+
+1.1.1.1.2.1
+log
+@990126
+@
+text
+@d57 1
+a57 1
+	    rb_raise(rb_eRuntimeError, "LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+d62 2
+a63 2
+	str = rb_str_new3(proc);
+	str = rb_str_cat(str, "A", 1);
+d66 1
+a66 1
+	    rb_raise(rb_eRuntimeError, "GetProcAddress: %s or %s\n",
+d73 1
+a73 1
+    a_import = rb_ary_new();
+d79 1
+a79 1
+	    rb_ary_push(a_import, INT2FIX(_T_NUMBER));
+d82 1
+a82 1
+	    rb_ary_push(a_import, INT2FIX(_T_POINTER));
+d85 1
+a85 1
+	    rb_ary_push(a_import, INT2FIX(_T_INTEGER));
+d149 1
+a149 1
+	rb_raise(rb_eRuntimeError, "Wrong number of parameters: expected %d, got %d.\n",
+d155 1
+a155 1
+	    import_type = rb_ary_entry(obj_import, i);
+d160 1
+a160 1
+		lParam = NUM2INT(rb_ary_entry(args, i));
+d173 1
+a173 1
+		str = rb_ary_entry(args, i);
+d175 1
+a175 1
+		rb_str_modify(str);
+d200 1
+a200 1
+	Return = rb_str_new2((char *)ApiFunctionPointer());
+d219 1
+a219 1
+    VALUE cWin32API = rb_define_class("Win32API", rb_cObject);
+@
+
+
+1.1.1.1.2.2
+log
+@990209
+@
+text
+@a4 1
+#ifndef _MSC_VER
+a7 1
+#endif
+@
+
+
+1.1.1.1.2.3
+log
+@990215
+@
+text
+@a225 6
+
+void
+Init_win32api()
+{
+    Init_Win32API();
+}
+@
+
+
+1.1.1.1.2.4
+log
+@regexp null pattern
+@
+text
+@d114 2
+a115 2
+    int argc;
+    VALUE *argv;
+@
+
+
+1.1.2.1
+log
+@cygwin patches
+@
+text
+@a0 223
+/*
+  Win32API - Ruby Win32 API Import Facility
+*/
+
+#define  WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <stdio.h>
+
+#define _T_VOID     0
+#define _T_NUMBER   1
+#define _T_POINTER  2
+#define _T_INTEGER  3
+
+typedef char *ApiPointer(void);
+typedef long  ApiNumber(void);
+typedef void  ApiVoid(void);
+typedef int   ApiInteger(void);
+
+#include "ruby.h"
+
+typedef struct {
+    HANDLE dll;
+    HANDLE proc;
+    VALUE dllname;
+    VALUE import;
+    VALUE export;
+} Win32API;
+
+static void
+Win32API_FreeLibrary(hdll)
+    HINSTANCE hdll;
+{
+    FreeLibrary(hdll);
+}
+
+static VALUE
+Win32API_initialize(self, dllname, proc, import, export)
+    VALUE self;
+    VALUE dllname;
+    VALUE proc;
+    VALUE import;
+    VALUE export;
+{
+    HANDLE hproc;
+    HINSTANCE hdll;
+    VALUE str;
+    VALUE a_import;
+    VALUE *ptr;
+    int i;
+    int len;
+    int ex;
+
+    hdll = GetModuleHandle(RSTRING(dllname)->ptr);
+    if (!hdll) {
+	hdll = LoadLibrary(RSTRING(dllname)->ptr);
+	if (!hdll)
+	    Fail("LoadLibrary: %s\n", RSTRING(dllname)->ptr);
+	Data_Wrap_Struct(self, 0, Win32API_FreeLibrary, hdll);
+    }
+    hproc = GetProcAddress(hdll, RSTRING(proc)->ptr);
+    if (!hproc) {
+	str = str_new3(proc);
+	str = str_cat(str, "A", 1);
+	hproc = GetProcAddress(hdll, RSTRING(str)->ptr);
+	if (!hproc)
+	    Fail("GetProcAddress: %s or %s\n",
+		RSTRING(proc)->ptr, RSTRING(str)->ptr);
+    }
+    rb_iv_set(self, "__dll__", INT2NUM((int)hdll));
+    rb_iv_set(self, "__dllname__", dllname);
+    rb_iv_set(self, "__proc__", INT2NUM((int)hproc));
+
+    a_import = ary_new();
+    ptr = RARRAY(import)->ptr;
+    for (i = 0, len = RARRAY(import)->len; i < len; i++) {
+	int c = *(char *)RSTRING(ptr[i])->ptr;
+	switch (c) {
+	case 'N': case 'n': case 'L': case 'l':
+	    ary_push(a_import, INT2FIX(_T_NUMBER));
+	    break;
+	case 'P': case 'p':
+	    ary_push(a_import, INT2FIX(_T_POINTER));
+	    break;
+	case 'I': case 'i':
+	    ary_push(a_import, INT2FIX(_T_INTEGER));
+	    break;
+	}
+    }
+    rb_iv_set(self, "__import__", a_import);
+
+    switch (*RSTRING(export)->ptr) {
+    case 'V': case 'v':
+	ex = _T_VOID;
+	break;
+    case 'N': case 'n': case 'L': case 'l':
+	ex = _T_NUMBER;
+	break;
+    case 'P': case 'p':
+	ex = _T_POINTER;
+	break;
+    case 'I': case 'i':
+	ex = _T_INTEGER;
+	break;
+    }
+    rb_iv_set(self, "__export__", INT2FIX(ex));
+
+    return Qnil;
+}
+
+static VALUE
+Win32API_Call(argc, argv, obj)
+    VALUE argc;
+    VALUE argv;
+    VALUE obj;
+{
+    VALUE args;
+
+    FARPROC ApiFunction;
+
+    ApiPointer  *ApiFunctionPointer;
+    ApiNumber   *ApiFunctionNumber;
+    ApiVoid     *ApiFunctionVoid;
+    ApiInteger  *ApiFunctionInteger;
+
+    long  lParam; 
+    char *pParam;
+
+    VALUE Return;
+
+    VALUE obj_proc;
+    VALUE obj_import;
+    VALUE obj_export;
+    VALUE import_type;
+    int nimport, timport, texport, i;
+    int items;
+
+    items = rb_scan_args(argc, argv, "0*", &args);
+
+    obj_proc = rb_iv_get(obj, "__proc__");
+
+    ApiFunction = (FARPROC)NUM2INT(obj_proc);
+
+    obj_import = rb_iv_get(obj, "__import__");
+    obj_export = rb_iv_get(obj, "__export__");
+    nimport  = RARRAY(obj_import)->len;
+    texport = FIX2INT(obj_export);
+
+    if (items != nimport)
+	Fail("Wrong number of parameters: expected %d, got %d.\n",
+	    nimport, items);
+
+    if (0 < nimport) {
+	for (i = nimport - 1; 0 <= i; i--) {
+	    VALUE str;
+	    import_type = ary_entry(obj_import, i);
+	    timport = FIX2INT(import_type);
+	    switch (timport) {
+	    case _T_NUMBER:
+	    case _T_INTEGER:
+		lParam = NUM2INT(ary_entry(args, i));
+#if defined(_MSC_VER) || defined(__LCC__)
+		_asm {
+		    mov     eax, lParam
+		    push    eax
+		}
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+		asm volatile ("pushl %0" :: "g" (lParam));
+#else
+#error
+#endif
+		break;
+	    case _T_POINTER:
+		str = ary_entry(args, i);
+		Check_Type(str, T_STRING);
+		str_modify(str);
+		pParam = RSTRING(str)->ptr;
+#if defined(_MSC_VER) || defined(__LCC__)
+		_asm {
+		    mov     eax, dword ptr pParam
+		    push    eax
+		}
+#elif defined(__CYGWIN32__) || defined(__MINGW32__)
+		asm volatile ("pushl %0" :: "g" (pParam));
+#else
+#error
+#endif
+		break;
+	    }
+	}
+
+    }
+
+    switch (texport) {
+    case _T_NUMBER:
+	ApiFunctionNumber = (ApiNumber *) ApiFunction;
+	Return = INT2NUM(ApiFunctionNumber());
+	break;
+    case _T_POINTER:
+	ApiFunctionPointer = (ApiPointer *) ApiFunction;
+	Return = str_new2((char *)ApiFunctionPointer());
+	break;
+    case _T_INTEGER:
+	ApiFunctionInteger = (ApiInteger *) ApiFunction;
+	Return = INT2NUM(ApiFunctionInteger());
+	break;
+    case _T_VOID:
+    default:
+	ApiFunctionVoid = (ApiVoid *) ApiFunction;
+	ApiFunctionVoid();
+	Return = INT2NUM(0);
+	break;
+    }
+    return Return;
+}
+
+void
+Init_Win32API()
+{
+    VALUE cWin32API = rb_define_class("Win32API", cObject);
+    rb_define_method(cWin32API, "initialize", Win32API_initialize, 4);
+    rb_define_method(cWin32API, "call", Win32API_Call, -1);
+    rb_define_alias(cWin32API,  "Call", "call");
+}
+@

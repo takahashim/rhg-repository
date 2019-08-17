@@ -1,0 +1,45 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.23.03.00.08;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestFile__Constants < Rubicon::TestCase
+
+end
+
+Rubicon::handleTests(TestFile__Constants) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

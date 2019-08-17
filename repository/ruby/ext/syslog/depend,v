@@ -1,0 +1,54 @@
+head	1.1;
+access;
+symbols
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.03.18.09.23.11;	author nobu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2002.03.25.02.28.50;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* ext/digest: add depend file.
+
+* ext/digest/md5: ditto.
+
+* ext/digest/rmd160: ditto.
+
+* ext/digest/sha1: ditto.
+
+* ext/digest/sha2: ditto.
+
+* ext/iconv/MANIFEST: ditto.
+
+* ext/stringio/MANIFEST: ditto.
+
+* ext/syslog: ditto.
+@
+text
+@syslog.o: syslog.c $(hdrdir)/ruby.h $(topdir)/config.h $(hdrdir)/defines.h \
+  $(hdrdir)/intern.h
+@
+
+
+1.1.2.1
+log
+@add depend files
+@
+text
+@@

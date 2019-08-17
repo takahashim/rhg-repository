@@ -1,0 +1,962 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.6
+	v1_6_6:1.6
+	v1_6_5:1.6
+	v1_6_4:1.6
+	v1_7_1:1.6
+	v1_6_4_preview4:1.6
+	v1_6_4_preview3:1.6
+	v1_6_4_preview2:1.6
+	v1_6_4_preview1:1.6
+	v1_6_3:1.6
+	ruby_m17n:1.6.0.4
+	ruby_1_6:1.6.0.2
+	v1_6_2:1.6
+	v1_6_1:1.6
+	v1_6_0:1.6
+	v1_4_6:1.3.2.1
+	v1_4_5:1.3.2.1
+	v1_4_4:1.3
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1.2.2
+	v1_3_6_repack:1.1.1.1.2.2
+	v1_3_6:1.1.1.1.2.2
+	v1_3_5:1.1.1.1.2.2
+	v1_2_6repack:1.1.2.3
+	v1_3_4_990625:1.1.1.1.2.2
+	v1_3_4_990624:1.1.1.1.2.2
+	v1_2_6:1.1.2.3
+	v1_3_4_990611:1.1.1.1.2.2
+	v1_3_4_990531:1.1.1.1.2.2
+	v1_3_3_990518:1.1.1.1.2.2
+	v1_3_3_990513:1.1.1.1.2.2
+	v1_3_3_990507:1.1.1.1.2.2
+	v1_2_5:1.1.2.3
+	v1_2_4:1.1.2.3
+	v1_3_1_990225:1.1.1.1.2.1
+	v1_3_1_990224:1.1.1.1.2.1
+	v1_3_1_990215:1.1.1.1.2.1
+	v1_3_1_990212:1.1.1.1.2.1
+	v1_3_1_990210:1.1.1.1.2.1
+	v1_3_1_:1.1.1.1.2.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.2
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.2
+	v1_2_1repack:1.1.2.2
+	v1_2_1:1.1.2.2
+	v1_2_stable:1.1.2.2
+	v1_1d1:1.1.2.1.2.1
+	v1_1d0:1.1.2.1.2.1
+	v1_1c9_1:1.1.2.2
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1c7:1.1.2.1
+	v1_1c6:1.1.2.1
+	v1_1d-start:1.1.2.1
+	v1_1c5:1.1.2.1
+	v1_1dev:1.1.2.1.0.2
+	v1_1c4:1.1.2.1
+	v1_1c3:1.1.2.1
+	v1_1c2:1.1.2.1
+	v1_1c1:1.1.2.1
+	v1_1c0:1.1.2.1
+	v1_1b9_31:1.1.2.1
+	v1_1b9_30:1.1.2.1
+	v1_1b9_28:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.8
+date	2002.06.22.15.26.58;	author tadf;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.05.18.12.41.51;	author tadf;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.07.18.06.00.45;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.10.04.49.24;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.24.04.34.26;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.09.16.09.40.33;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.19;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.06.26.09.45.08;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.37;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	;
+
+1.1.1.1.2.1
+date	99.02.10.08.44.29;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	99.08.11.07.24.11;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.06.26.09.45.08;	author matz;	state Exp;
+branches
+	1.1.2.1.2.1;
+next	1.1.2.2;
+
+1.1.2.2
+date	98.12.14.09.00.08;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	99.02.16.03.42.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1.2.1
+date	98.12.16.07.30.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.05.30.04.21.37;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@updated to the new version (based on date2 3.3).
+@
+text
+@#! /usr/bin/env ruby
+
+# cal.rb: Written by Tadayoshi Funaba 1998-2002
+# $Id: cal.rb,v 2.4 2002-06-08 00:40:29+09 tadf Exp $
+
+require 'date'
+require 'getopts'
+
+$tab =
+{
+  'cn' => true,    # China
+  'de' => 2342032, # Germany (protestant states)
+  'dk' => 2342032, # Denmark
+  'es' => 2299161, # Spain
+  'fi' => 2361390, # Finland
+  'fr' => 2299227, # France
+  'gb' => 2361222, # United Kingdom
+  'gr' => 2423868, # Greece
+  'hu' => 2301004, # Hungary
+  'it' => 2299161, # Italy
+  'jp' => true,    # Japan
+  'no' => 2342032, # Norway
+  'pl' => 2299161, # Poland
+  'pt' => 2299161, # Portugal
+  'ru' => 2421639, # Russia
+  'se' => 2361390, # Sweden
+  'us' => 2361222, # United States
+  'os' => false,   # (old style)
+  'ns' => true     # (new style)
+}
+
+$cc = 'gb'
+
+def usage
+  $stderr.puts 'usage: cal [-c iso3166] [-jmty] [[month] year]'
+  exit 1
+end
+
+def pict(y, m, sg)
+  d = (1..31).detect{|d| Date.valid_date?(y, m, d, sg)}
+  fi = Date.new(y, m, d, sg)
+  fi -= (fi.jd - $k + 1) % 7
+
+  ve  = (fi..fi +  6).collect{|cu|
+    %w(S M Tu W Th F S)[cu.wday]
+  }
+  ve += (fi..fi + 41).collect{|cu|
+    if cu.mon == m then cu.send($da) end.to_s
+  }
+
+  ve = ve.collect{|e| e.rjust($dw)}
+
+  gr = group(ve, 7)
+  gr = trans(gr) if $OPT_t
+  ta = gr.collect{|xs| xs.join(' ')}
+
+  ca = %w(January February March April May June July
+	  August September October November December)[m - 1]
+  ca = ca + ' ' + y.to_s if not $OPT_y
+  ca = ca.center($mw)
+
+  ta.unshift(ca)
+end
+
+def group(xs, n)
+  (0..xs.size / n - 1).collect{|i| xs[i * n, n]}
+end
+
+def trans(xs)
+  (0..xs[0].size - 1).collect{|i| xs.collect{|x| x[i]}}
+end
+
+def unite(xs)
+  if xs.empty? then [] else xs[0] + unite(xs[1..-1]) end
+end
+
+def block(xs, n)
+  unite(group(xs, n).collect{|ys| trans(ys).collect{|zs| zs.join('  ')}})
+end
+
+def unlines(xs)
+  xs.collect{|x| x + "\n"}.join
+end
+
+usage unless getopts('jmty', "c:#{$cc}")
+
+y, m = ARGV.select(1, 0).compact.collect{|x| x.to_i}
+$OPT_y ||= (y and not m)
+
+to = Date.today
+y ||= to.year
+m ||= to.mon
+
+usage unless m >= 1 and m <= 12
+usage unless y >= -4712
+usage if (sg = $tab[$OPT_c]).nil?
+
+$dw = if $OPT_j then 3 else 2 end
+$mw = ($dw + 1) * 7 - 1
+$mn = if $OPT_j then 2 else 3 end
+$tw = ($mw + 2) * $mn - 2
+
+$k  = if $OPT_m then 1 else 0 end
+$da = if $OPT_j then :yday else :mday end
+
+print(if not $OPT_y
+	unlines(pict(y, m, sg))
+      else
+	y.to_s.center($tw) + "\n\n" +
+	  unlines(block((1..12).collect{|m| pict(y, m, sg)}, $mn)) + "\n"
+      end)
+@
+
+
+1.7
+log
+@updated to the new version (based on date2 3.2.1).
+@
+text
+@d4 1
+a4 1
+# $Id: cal.rb,v 2.3 2002-05-14 07:43:39+09 tadf Exp $
+d40 1
+a40 1
+  d = (1..31).detect{|d| Date.exist?(y, m, d, sg)}
+d96 1
+a96 1
+usage unless sg = $tab[$OPT_c]
+d106 6
+a111 6
+print (if not $OPT_y
+	 unlines(pict(y, m, sg))
+       else
+	 y.to_s.center($tw) + "\n\n" +
+	   unlines(block((1..12).collect{|m| pict(y, m, sg)}, $mn)) + "\n"
+       end)
+@
+
+
+1.6
+log
+@matz
+@
+text
+@d3 2
+a4 2
+# cal.rb: Written by Tadayoshi Funaba 1998-2000
+# $Id: cal.rb,v 1.11 2000-07-16 10:28:50+09 tadf Exp $
+d6 1
+a6 1
+require 'date2'
+d87 1
+a87 1
+y, m = ARGV.indexes(1, 0).compact.collect{|x| x.to_i}
+@
+
+
+1.5
+log
+@matz
+@
+text
+@d4 1
+a4 1
+# $Id: cal.rb,v 1.10 2000/05/20 02:09:47 tadf Exp $
+d41 1
+a41 1
+  fi = Date.new3(y, m, d, sg)
+d57 2
+a58 3
+  ca = %w(January   February  March     April
+	  May       June      July      August
+	  September October   November  December)[m - 1]
+@
+
+
+1.4
+log
+@2000-05-24
+@
+text
+@d1 1
+a1 1
+#! /usr/local/bin/ruby
+@
+
+
+1.3
+log
+@1.4.1
+@
+text
+@d3 2
+a4 2
+# cal.rb: Written by Tadayoshi Funaba 1998, 1999
+# $Id: cal.rb,v 1.6 1999/09/15 05:35:25 tadf Exp $
+d7 1
+d35 1
+a35 1
+  $stderr.puts 'usage: cal [-c iso3166] [-jy] [[month] year]'
+d39 37
+a75 70
+def cal(m, y, sg)
+  for d in 1..31
+    break if jd = Date.exist?(y, m, d, sg)
+  end
+  fst = cur = Date.new1(jd, sg)
+  ti = Date::MONTHNAMES[m]
+  ti << ' ' << y.to_s unless $yr
+  mo = ti.center((($w + 1) * 7) - 1) << "\n"
+  mo << ['S', 'M', 'Tu', 'W', 'Th', 'F', 'S'].
+    collect{|x| x.rjust($w)}.join(' ') << "\n"
+  mo << ' ' * (($w + 1) * fst.wday)
+  while cur.mon == fst.mon
+    mo << (if $jd then cur.yday else cur.mday end).to_s.rjust($w)
+    mo << (if (cur += 1).wday != 0 then "\s" else "\n" end)
+  end
+  mo << "\n" * (6 - ((fst.wday + (cur - fst)) / 7))
+  mo
+end
+
+def zip(xs)
+  yr = ''
+  until xs.empty?
+    ln = (if $jd then l,    r, *xs = xs; [l,    r]
+		 else l, c, r, *xs = xs; [l, c, r] end).
+      collect{|x| x.split(/\n/no, -1)}
+    8.times do
+      yr << ln.collect{|x|
+	x.shift.ljust((($w + 1) * 7) - 1)}.join('  ') << "\n"
+    end
+  end
+  yr
+end
+
+while /^-([^-].*)$/no =~ $*[0]
+  a = $1
+  if /^c(.+)?$/no =~ a
+    if $1
+      $cc = $1.downcase
+    elsif $*.length >= 2
+      $cc = $*[1].downcase
+      $*.shift
+    else
+      usage
+    end
+  else
+    a.scan(/./no) do |c|
+      case c
+      when 'j'; $jd = true
+      when 'y'; $yr = true
+      else usage
+      end
+    end
+  end
+  $*.shift
+end
+$*.shift if /^--/no =~ $*[0]
+usage if (sg = $tab[$cc]).nil?
+case $*.length
+when 0
+  td = Date.today
+  m = td.mon
+  y = td.year
+when 1
+  y = $*[0].to_i
+  $yr = true
+when 2
+  m = $*[0].to_i
+  y = $*[1].to_i
+else
+  usage
+d77 19
+a95 1
+usage unless m.nil? or (1..12) === m
+d97 16
+a112 9
+$w = if $jd then 3 else 2 end
+unless $yr
+  print cal(m, y, sg)
+else
+  print y.to_s.center(((($w + 1) * 7) - 1) *
+		      (if $jd then 2 else 3 end) +
+		      (if $jd then 2 else 4 end)), "\n\n",
+    zip((1..12).collect{|m| cal(m, y, sg)}), "\n"
+end
+@
+
+
+1.3.2.1
+log
+@2000-05-30
+@
+text
+@d3 2
+a4 2
+# cal.rb: Written by Tadayoshi Funaba 1998-2000
+# $Id: cal.rb,v 1.10 2000/05/20 02:09:47 tadf Exp $
+a6 1
+require 'getopts'
+d34 1
+a34 1
+  $stderr.puts 'usage: cal [-c iso3166] [-jmty] [[month] year]'
+d38 70
+a107 25
+def pict(y, m, sg)
+  d = (1..31).detect{|d| Date.exist?(y, m, d, sg)}
+  fi = Date.new3(y, m, d, sg)
+  fi -= (fi.jd - $k + 1) % 7
+
+  ve  = (fi..fi +  6).collect{|cu|
+    %w(S M Tu W Th F S)[cu.wday]
+  }
+  ve += (fi..fi + 41).collect{|cu|
+    if cu.mon == m then cu.send($da) end.to_s
+  }
+
+  ve = ve.collect{|e| e.rjust($dw)}
+
+  gr = group(ve, 7)
+  gr = trans(gr) if $OPT_t
+  ta = gr.collect{|xs| xs.join(' ')}
+
+  ca = %w(January   February  March     April
+	  May       June      July      August
+	  September October   November  December)[m - 1]
+  ca = ca + ' ' + y.to_s if not $OPT_y
+  ca = ca.center($mw)
+
+  ta.unshift(ca)
+d109 10
+a118 11
+
+def group(xs, n)
+  (0..xs.size / n - 1).collect{|i| xs[i * n, n]}
+end
+
+def trans(xs)
+  (0..xs[0].size - 1).collect{|i| xs.collect{|x| x[i]}}
+end
+
+def unite(xs)
+  if xs.empty? then [] else xs[0] + unite(xs[1..-1]) end
+a119 36
+
+def block(xs, n)
+  unite(group(xs, n).collect{|ys| trans(ys).collect{|zs| zs.join('  ')}})
+end
+
+def unlines(xs)
+  xs.collect{|x| x + "\n"}.join
+end
+
+usage unless getopts('jmty', "c:#{$cc}")
+
+y, m = ARGV.indexes(1, 0).compact.collect{|x| x.to_i}
+$OPT_y ||= (y and not m)
+
+to = Date.today
+y ||= to.year
+m ||= to.mon
+
+usage unless m >= 1 and m <= 12
+usage unless y >= -4712
+usage unless sg = $tab[$OPT_c]
+
+$dw = if $OPT_j then 3 else 2 end
+$mw = ($dw + 1) * 7 - 1
+$mn = if $OPT_j then 2 else 3 end
+$tw = ($mw + 2) * $mn - 2
+
+$k  = if $OPT_m then 1 else 0 end
+$da = if $OPT_j then :yday else :mday end
+
+print (if not $OPT_y
+	 unlines(pict(y, m, sg))
+       else
+	 y.to_s.center($tw) + "\n\n" +
+	   unlines(block((1..12).collect{|m| pict(y, m, sg)}, $mn)) + "\n"
+       end)
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d4 1
+a4 1
+# $Id: cal.rb,v 1.5 1999/08/04 14:54:18 tadf Exp $
+d42 1
+a42 1
+  fst = cur = Date.new(jd, sg)
+@
+
+
+1.1
+log
+@file cal.rb was initially added on branch v1_1r.
+@
+text
+@d1 119
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 118
+#! /usr/local/bin/ruby
+
+# cal.rb (bsd compatible version): Written by Tadayoshi Funaba 1998
+# $Id: bsdcal.rb,v 1.2 1998/12/01 13:47:40 tadf Exp $
+
+require 'date2'
+
+$tab =
+{
+  'cn' => true,    # China
+  'de' => 2342032, # Germany (protestant states)
+  'dk' => 2342032, # Denmark
+  'es' => 2299161, # Spain
+  'fi' => 2361390, # Finland
+  'fr' => 2299227, # France
+  'gb' => 2361222, # United Kingdom
+  'gr' => 2423868, # Greece
+  'hu' => 2301004, # Hungary
+  'it' => 2299161, # Italy
+  'jp' => true,    # Japan
+  'no' => 2342032, # Norway
+  'pl' => 2299161, # Poland
+  'pt' => 2299161, # Portugal
+  'ru' => 2421639, # Russia
+  'se' => 2361390, # Sweden
+  'us' => 2361222, # United States
+  'os' => false,   # (old style)
+  'ns' => true     # (new style)
+}
+
+$cc = 'gb'
+
+def usage
+  $stderr.puts 'usage: cal [-c iso3166] [-jy] [[month] year]'
+  exit 1
+end
+
+def cal(m, y, gs)
+  for d in 1..31
+    break if jd = Date.exist?(y, m, d, gs)
+  end
+  fst = cur = Date.new(jd, gs)
+  ti = Date::MONTHNAMES[m]
+  ti << ' ' << y.to_s unless $yr
+  mo = ti.center((($w + 1) * 7) - 1) << "\n"
+  mo << ['S', 'M', 'Tu', 'W', 'Th', 'F', 'S'].
+    collect{|x| x.rjust($w)}.join(' ') << "\n"
+  mo << ' ' * (($w + 1) * fst.wday)
+  while cur.mon == fst.mon
+    mo << (if $jd then cur.yday else cur.mday end).to_s.rjust($w)
+    mo << (if (cur += 1).wday != 0 then "\s" else "\n" end)
+  end
+  mo << "\n" * (6 - ((fst.wday + (cur - fst)) / 7))
+  mo
+end
+
+def zip(xs)
+  yr = ''
+  until xs.empty?
+    ln = (if $jd then l,    r, *xs = xs; [l,    r]
+		 else l, c, r, *xs = xs; [l, c, r] end).
+      collect{|x| x.split(/\n/no, -1)}
+    8.times do
+      yr << ln.collect{|x|
+	x.shift.ljust((($w + 1) * 7) - 1)}.join('  ') << "\n"
+    end
+  end
+  yr
+end
+
+while /^-(.*)$/no =~ $*[0]
+  a = $1
+  if /^c(.+)?$/no =~ a then
+    if $1 then
+      $cc = $1.downcase
+    elsif $*.length >= 2 then
+      $cc = $*[1].downcase
+      $*.shift
+    else
+      usage
+    end
+  else
+    a.scan(/./no) do |c|
+      case c
+      when 'j'; $jd = true
+      when 'y'; $yr = true
+      else usage
+      end
+    end
+  end
+  $*.shift
+end
+usage if (gs = $tab[$cc]).nil?
+case $*.length
+when 0
+  td = Date.today
+  m = td.mon
+  y = td.year
+when 1
+  y = $*[0].to_i
+  $yr = true
+when 2
+  m = $*[0].to_i
+  y = $*[1].to_i
+else
+  usage
+end
+usage unless m.nil? or (1..12) === m
+usage unless y >= -4712
+$w = if $jd then 3 else 2 end
+unless $yr then
+  print cal(m, y, gs)
+else
+  print y.to_s.center(((($w + 1) * 7) - 1) *
+		      (if $jd then 2 else 3 end) +
+		      (if $jd then 2 else 4 end)), "\n\n",
+    zip((1..12).collect{|m| cal(m, y, gs)}), "\n"
+end
+@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@d3 2
+a4 2
+# cal.rb (bsd compatible version): Written by Tadayoshi Funaba 1998, 1999
+# $Id: bsdcal.rb,v 1.3 1999/02/06 08:52:21 tadf Exp $
+d71 1
+a71 1
+while /^-([^-].*)$/no =~ $*[0]
+a92 1
+$*.shift if /^--/no =~ $*[0]
+@
+
+
+1.1.1.1.2.2
+log
+@990324
+@
+text
+@d4 1
+a4 1
+# $Id: bsdcal.rb,v 1.4 1999/03/06 02:05:59 tadf Exp $
+d73 2
+a74 2
+  if /^c(.+)?$/no =~ a
+    if $1
+d76 1
+a76 1
+    elsif $*.length >= 2
+d112 1
+a112 1
+unless $yr
+@
+
+
+1.1.1.1.2.3
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d3 2
+a4 2
+# cal.rb: Written by Tadayoshi Funaba 1998, 1999
+# $Id: cal.rb,v 1.5 1999/08/04 14:54:18 tadf Exp $
+d38 1
+a38 1
+def cal(m, y, sg)
+d40 1
+a40 1
+    break if jd = Date.exist?(y, m, d, sg)
+d42 1
+a42 1
+  fst = cur = Date.new(jd, sg)
+d94 1
+a94 1
+usage if (sg = $tab[$cc]).nil?
+d113 1
+a113 1
+  print cal(m, y, sg)
+d118 1
+a118 1
+    zip((1..12).collect{|m| cal(m, y, sg)}), "\n"
+@
+
+
+1.1.2.1
+log
+@980626
+@
+text
+@a0 118
+#! /usr/local/bin/ruby
+
+# cal.rb (bsd compatible version): Written by Tadayoshi Funaba 1998
+# $Id: bsdcal.rb,v 1.1 1998/06/01 12:53:01 tadf Exp $
+
+require 'date2'
+
+$tab =
+{
+  'cn' => true,    # China
+  'de' => 2342032, # Germany (protestant states)
+  'dk' => 2342032, # Denmark
+  'es' => 2299161, # Spain
+  'fi' => 2361390, # Finland
+  'fr' => 2299227, # France
+  'gb' => 2361222, # United Kingdom
+  'gr' => 2423868, # Greece
+  'hu' => 2301004, # Hungary
+  'it' => 2299161, # Italy
+  'jp' => true,    # Japan
+  'no' => 2342032, # Norway
+  'pl' => 2299161, # Poland
+  'pt' => 2299161, # Portugal
+  'ru' => 2421639, # Russia
+  'se' => 2361390, # Sweden
+  'us' => 2361222, # United States
+  'os' => false,   # (old style)
+  'ns' => true     # (new style)
+}
+
+$cc = 'gb'
+
+def usage
+  $stderr.puts 'usage: cal [-c iso3166] [-jy] [[month] year]'
+  exit 1
+end
+
+def cal(m, y, gs)
+  for d in 1..31
+    break if jd = Date.exist?(y, m, d, gs)
+  end
+  fst = cur = Date.new(jd, gs)
+  ti = Date::MONTHNAMES[m]
+  ti << ' ' << y.to_s unless $yr
+  mo = ti.center((($w + 1) * 7) - 1) << "\n"
+  mo << ['S', 'M', 'Tu', 'W', 'Th', 'F', 'S'].
+    collect{|x| x.rjust($w)}.join(' ') << "\n"
+  mo << ' ' * (($w + 1) * fst.wday)
+  while cur.mon == fst.mon
+    mo << (if $jd then cur.yday else cur.mday end).to_s.rjust($w)
+    mo << (if (cur += 1).wday != 0 then "\s" else "\n" end)
+  end
+  mo << "\n" * (6 - ((fst.wday + (cur - fst)) / 7))
+  mo
+end
+
+def zip(xs)
+  yr = ''
+  until xs.empty?
+    ln = (if $jd then l,    r, *xs = xs; [l,    r]
+		 else l, c, r, *xs = xs; [l, c, r] end).
+      collect{|x| x.split(/\n/no)}
+    8.times do
+      yr << ln.collect{|x|
+	x.shift.ljust((($w + 1) * 7) - 1)}.join('  ') << "\n"
+    end
+  end
+  yr
+end
+
+while /^-(.*)$/no =~ $*[0]
+  a = $1
+  if /^c(.+)?$/no =~ a then
+    if $1 then
+      $cc = $1.downcase
+    elsif $*.length >= 2 then
+      $cc = $*[1].downcase
+      $*.shift
+    else
+      usage
+    end
+  else
+    a.scan(/./no) do |c|
+      case c
+      when 'j'; $jd = true
+      when 'y'; $yr = true
+      else usage
+      end
+    end
+  end
+  $*.shift
+end
+usage if (gs = $tab[$cc]).nil?
+case $*.length
+when 0
+  td = Date.today
+  m = td.mon
+  y = td.year
+when 1
+  y = $*[0].to_i
+  $yr = true
+when 2
+  m = $*[0].to_i
+  y = $*[1].to_i
+else
+  usage
+end
+usage unless m.nil? or (1..12) === m
+usage unless y >= -4712
+$w = if $jd then 3 else 2 end
+unless $yr then
+  print cal(m, y, gs)
+else
+  print y.to_s.center(((($w + 1) * 7) - 1) *
+		      (if $jd then 2 else 3 end) +
+		      (if $jd then 2 else 4 end)), "\n\n",
+    zip((1..12).collect{|m| cal(m, y, gs)}), "\n"
+end
+@
+
+
+1.1.2.1.2.1
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d4 1
+a4 1
+# $Id: bsdcal.rb,v 1.2 1998/12/01 13:47:40 tadf Exp $
+d62 1
+a62 1
+      collect{|x| x.split(/\n/no, -1)}
+@
+
+
+1.1.2.2
+log
+@1.1c final (hopefully)
+@
+text
+@d4 1
+a4 1
+# $Id: bsdcal.rb,v 1.2 1998/12/01 13:47:40 tadf Exp $
+d62 1
+a62 1
+      collect{|x| x.split(/\n/no, -1)}
+@
+
+
+1.1.2.3
+log
+@1.2.3
+@
+text
+@d3 2
+a4 2
+# cal.rb (bsd compatible version): Written by Tadayoshi Funaba 1998, 1999
+# $Id: bsdcal.rb,v 1.3 1999/02/06 08:52:21 tadf Exp $
+d71 1
+a71 1
+while /^-([^-].*)$/no =~ $*[0]
+a92 1
+$*.shift if /^--/no =~ $*[0]
+@

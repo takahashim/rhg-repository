@@ -1,0 +1,261 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.2.4.1
+	v1_6_6:1.2.4.1
+	v1_6_5:1.2.4.1
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.07.19.05.42.07;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.47;	author matz;	state Exp;
+branches
+	1.2.4.1;
+next	1.1;
+
+1.1
+date	99.08.06.06.48.22;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.08.06.06.48.22;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.4.1
+date	2001.07.19.05.44.25;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@.\" etc.txt -  -*- Indented-Text -*- created at: Fri Jul 14 00:47:15 JST 1995
+
+** Etc(Module)
+
+The module to retrieve information under /etc directory.  Available
+only on UNIX platforms.  All operations defined in this module are
+module functions, so that you can include Etc module into your class.
+
+Module Function:
+
+   getlogin
+
+	returns login name of the user.  It this fails, try getpwuid().
+
+   getpwnam(name)
+
+	searches in /etc/passwd file (or equivalent database), and
+	returns password entry for the user.  The return value is an
+	passwd structure, which has members described below.
+
+	  struct passwd
+	    name 	# user name(string)
+	    passwd	# encrypted password(string)
+	    uid		# user ID(integer)
+	    gid		# group ID(integer)
+	    gecos	# gecos field(string)
+	    dir		# home directory(string)
+	    shell	# login shell(string)
+	    # members below are optional
+	    change	# password change time(integer)
+	    quota	# quota value(integer)
+	    age		# password age(integer)
+	    class	# user access class(string)
+	    comment	# comment(string)
+	    expire	# account expiration time(integer)	    
+	  end
+
+	See getpwnam(3) for detail.
+
+   getpwuid([uid])
+
+	returns passwd entry for the specified user id.  If uid is
+	ommitted, use the value from getuid().  See getpwuid(3) for
+	detail.
+
+   getgrgid(gid)
+
+	searches in /etc/group file (or equivalent database), and
+	returns group entry for the group id.  The return value is an
+	group structure, which has members described below.
+
+	  struct group
+	    name 	# group name(string)
+	    passwd	# group password(string)
+	    gid		# group ID(integer)
+	    mem		# array of the group member names
+	  end
+
+	See getgrgid(3) for detail.
+
+   getgrnam(name)
+
+	returns the group entry for the specified name.  The return
+	value is the group structure.  See getgrnam(3) for detail.
+
+   group
+
+	iterates over all group entries.
+
+   passwd
+
+	iterates over all passwd entries.
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d1 1
+a1 1
+.\" etc.doc -  -*- Indented-Text -*- created at: Fri Jul 14 00:47:15 JST 1995
+@
+
+
+1.2.4.1
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@d1 1
+a1 1
+.\" etc.txt -  -*- Indented-Text -*- created at: Fri Jul 14 00:47:15 JST 1995
+@
+
+
+1.1
+log
+@file etc.txt was initially added on branch ruby_1_3.
+@
+text
+@d1 72
+@
+
+
+1.1.2.1
+log
+@990806
+@
+text
+@a0 72
+.\" etc.doc -  -*- Indented-Text -*- created at: Fri Jul 14 00:47:15 JST 1995
+
+** Etc(Module)
+
+The module to retrieve information under /etc directory.  Available
+only on UNIX platforms.  All operations defined in this module are
+module functions, so that you can include Etc module into your class.
+
+Module Function:
+
+   getlogin
+
+	returns login name of the user.  It this fails, try getpwuid().
+
+   getpwnam(name)
+
+	searches in /etc/passwd file (or equivalent database), and
+	returns password entry for the user.  The return value is an
+	passwd structure, which has members described below.
+
+	  struct passwd
+	    name 	# user name(string)
+	    passwd	# encrypted password(string)
+	    uid		# user ID(integer)
+	    gid		# group ID(integer)
+	    gecos	# gecos field(string)
+	    dir		# home directory(string)
+	    shell	# login shell(string)
+	    # members below are optional
+	    change	# password change time(integer)
+	    quota	# quota value(integer)
+	    age		# password age(integer)
+	    class	# user access class(string)
+	    comment	# comment(string)
+	    expire	# account expiration time(integer)	    
+	  end
+
+	See getpwnam(3) for detail.
+
+   getpwuid([uid])
+
+	returns passwd entry for the specified user id.  If uid is
+	ommitted, use the value from getuid().  See getpwuid(3) for
+	detail.
+
+   getgrgid(gid)
+
+	searches in /etc/group file (or equivalent database), and
+	returns group entry for the group id.  The return value is an
+	group structure, which has members described below.
+
+	  struct group
+	    name 	# group name(string)
+	    passwd	# group password(string)
+	    gid		# group ID(integer)
+	    mem		# array of the group member names
+	  end
+
+	See getgrgid(3) for detail.
+
+   getgrnam(name)
+
+	returns the group entry for the specified name.  The return
+	value is the group structure.  See getgrnam(3) for detail.
+
+   group
+
+	iterates over all group entries.
+
+   passwd
+
+	iterates over all passwd entries.
+@
+

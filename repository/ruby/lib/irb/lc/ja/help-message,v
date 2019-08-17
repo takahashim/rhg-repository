@@ -1,0 +1,166 @@
+head	1.3;
+access;
+symbols
+	irb_0_9:1.3
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.2
+	v1_6_5:1.1.2.2
+	v1_6_4:1.1.2.2
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1.2.1
+	v1_6_4_preview3:1.1.2.1
+	ruby_1_6:1.1.0.2
+	v0_7_3:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.07.09.11.17.17;	author keiju;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.01.15.21.37;	author keiju;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.04.30.17.38.22;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.04.30.18.39.35;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.06.01.15.26.47;	author keiju;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* irb 0.9
+@
+text
+@#
+#   irb/lc/ja/help-message.rb - 
+#   	$Release Version: 0.9$
+#   	$Revision: 1.10 $
+#   	$Date: 2002/06/11 07:51:45 $
+#   	by Keiju ISHITSUKA(keiju@@ishitsuka.com)
+#
+# --
+#
+#   
+#
+Usage:  irb.rb [options] [programfile] [arguments]
+  -f		    ~/.irbrc $B$rFI$_9~$^$J$$(B.
+  -m		    bc$B%b!<%I(B($BJ,?t(B, $B9TNs$N7W;;$,$G$-$k(B)
+  -d                $DEBUG $B$r(Btrue$B$K$9$k(B(ruby -d $B$HF1$8(B)
+  -r load-module    ruby -r $B$HF1$8(B.
+  --inspect	    $B7k2L=PNO$K(Binspect$B$rMQ$$$k(B(bc$B%b!<%I0J30$O%G%U%)%k%H(B). 
+  --noinspect	    $B7k2L=PNO$K(Binspect$B$rMQ$$$J$$(B.
+  --readline	    readline$B%i%$%V%i%j$rMxMQ$9$k(B.
+  --noreadline	    readline$B%i%$%V%i%j$rMxMQ$7$J$$(B. 
+  --prompt prompt-mode/--prompt-mode prompt-mode
+		    $B%W%m%s%W%H%b!<%I$r@@ZBX$($^$9(B. $B8=:_Dj5A$5$l$F$$$k%W(B
+		    $B%m%s%W%H%b!<%I$O(B, default, simple, xmp, inf-ruby$B$,(B
+		    $BMQ0U$5$l$F$$$^$9(B. 
+  --inf-ruby-mode   emacs$B$N(Binf-ruby-mode$BMQ$N%W%m%s%W%HI=<($r9T$J$&(B. $BFC(B
+		    $B$K;XDj$,$J$$8B$j(B, readline$B%i%$%V%i%j$O;H$o$J$/$J$k(B.
+  --simple-prompt   $BHs>o$K%7%s%W%k$J%W%m%s%W%H$rMQ$$$k%b!<%I$G$9(B.
+  --noprompt	    $B%W%m%s%W%HI=<($r9T$J$o$J$$(B.
+  --tracer	    $B%3%^%s%I<B9T;~$K%H%l!<%9$r9T$J$&(B.
+  --back-trace-limit n
+		    $B%P%C%/%H%l!<%9I=<($r%P%C%/%H%l!<%9$NF,$+$i(B n, $B8e$m(B
+		    $B$+$i(Bn$B$@@$19T$J$&(B. $B%G%U%)%k%H$O(B16 
+  --irb_debug n	    irb$B$N%G%P%C%0%G%P%C%0%l%Y%k$r(Bn$B$K@@_Dj$9$k(B($BMxMQ$7$J(B
+		    $B$$J}$,L5Fq$G$7$g$&(B).
+  -v, --version	    irb$B$N%P!<%8%g%s$rI=<($9$k(B
+@
+
+
+1.2
+log
+@
+* irb messages: fix typos.
+@
+text
+@d3 3
+a5 3
+#   	$Release Version: 0.7.3$
+#   	$Revision: 1.1 $
+#   	$Date: 2001/04/30 17:38:22 $
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.3 $
+#   	$Date: 2001/04/16 06:06:42 $
+d23 1
+a23 1
+		    $B%m%s%W%H%b!<%I$O(B, defalut, simple, xmp, inf-ruby$B$,(B
+@
+
+
+1.1.2.1
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/04/30 17:38:22 $
+@
+
+
+1.1.2.2
+log
+@
+* irb messages: fix typos.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.2.1 $
+#   	$Date: 2001/04/30 18:39:35 $
+d23 1
+a23 1
+		    $B%m%s%W%H%b!<%I$O(B, default, simple, xmp, inf-ruby$B$,(B
+@
+
+
+1.1.1.1
+log
+@This is the virgin import of irb 0.7.3.
+@
+text
+@@

@@ -1,0 +1,836 @@
+head	1.10;
+access;
+symbols
+	v1_6_7:1.4
+	v1_6_6:1.4
+	v1_6_5:1.4
+	v1_6_4:1.4
+	v1_7_1:1.9
+	v1_6_4_preview4:1.4
+	v1_6_4_preview3:1.4
+	v1_6_4_preview2:1.4
+	v1_6_4_preview1:1.4
+	v1_6_3:1.4
+	ruby_m17n:1.4.0.4
+	ruby_1_6:1.4.0.2
+	v1_6_2:1.4
+	v1_6_1:1.4
+	v1_6_0:1.3
+	v1_4_6:1.3.2.2
+	v1_4_5:1.3.2.2
+	v1_4_4:1.3.2.1
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.4
+	v1_3_6_repack:1.1.1.2.2.4
+	v1_3_6:1.1.1.2.2.4
+	v1_3_5:1.1.1.2.2.3
+	v1_2_6repack:1.1.1.1.4.4
+	v1_3_4_990625:1.1.1.2.2.3
+	v1_3_4_990624:1.1.1.2.2.3
+	v1_2_6:1.1.1.1.4.4
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.4.3
+	v1_2_4:1.1.1.1.4.3
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.3
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.3
+	v1_2_1repack:1.1.1.1.4.3
+	v1_2_1:1.1.1.1.4.3
+	v1_2_stable:1.1.1.1.4.3
+	v1_1d1:1.1.1.1.4.3
+	v1_1d0:1.1.1.1.4.3
+	v1_1c9_1:1.1.1.1.4.3
+	v1_1c9:1.1.1.1.4.3
+	v1_1c8:1.1.1.1.4.3
+	v1_1c7:1.1.1.1.4.3
+	v1_1c6:1.1.1.1.4.3
+	v1_1d-start:1.1.1.1.4.3
+	v1_1c5:1.1.1.1.4.3
+	v1_1dev:1.1.1.1.4.3.0.2
+	v1_1c4:1.1.1.1.4.3
+	v1_1c3:1.1.1.1.4.3
+	v1_1c2:1.1.1.1.4.2
+	v1_1c1:1.1.1.1.4.2
+	v1_1c0:1.1.1.1.4.2
+	v1_1b9_31:1.1.1.1.4.2
+	v1_1b9_30:1.1.1.1.4.2
+	v1_1b9_28:1.1.1.1.4.2
+	v1_1b9_27:1.1.1.1.4.2
+	v1_1b9_26:1.1.1.1.4.2
+	r1_1b9_25:1.1.1.1.4.2
+	r1_1b9_24:1.1.1.1.4.2
+	v1_1b9_23:1.1.1.1.4.2
+	v1_1b9_22:1.1.1.1.4.2
+	v1_1b9_20:1.1.1.1.4.2
+	v1_1b9_18:1.1.1.1.4.2
+	v1_1b9_16:1.1.1.1.4.2
+	v1_1b9_15:1.1.1.1.4.2
+	v1_1b9_13:1.1.1.1.4.1
+	v1_1b9_12:1.1.1.1.4.1
+	v1_1b9_11:1.1.1.1.4.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.10
+date	2001.12.02.14.10.27;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.01.02.25.28;	author eban;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.05.24.15.55.40;	author knu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.05.24.05.28.15;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.05.07.10.56.01;	author eban;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.05.02.04.22.16;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.09.12.05.37.33;	author matz;	state Exp;
+branches
+	1.4.4.1;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.54;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.47;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.32;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.04.13.05.33.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.30.07.55.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.06.24.04.24.05;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.07.28.09.26.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.04.14.04.55.50;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.04.22.08.57.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.08.27.03.55.37;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	99.04.20.08.20.56;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.01.17.08.24.16;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.03.23.04.14.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.4.1
+date	2002.07.09.05.26.52;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@* configure.in: use GCC, not without_gcc. remove without_gcc.
+* ext/curses/extconf.rb: check for curses.h.
+* ext/dbm/extconf.rb: check if $CFLAGS includes DBM_HDR.
+@
+text
+@require 'mkmf'
+
+dir_config("dbm")
+
+dblib = with_config("dbm-type", nil)
+
+$dbm_conf_headers = {
+  "db" => ["db.h"],
+  "db1" => ["db1/ndbm.h", "db1.h", "ndbm.h"],
+  "db2" => ["db2/db.h", "db2.h", "db.h"],
+  "dbm" => ["ndbm.h"],
+  "gdbm" => ["gdbm-ndbm.h", "ndbm.h"],
+}
+
+def db_check(db)
+  $dbm_conf_db_prefix = ""
+  $dbm_conf_have_gdbm = false
+  hsearch = ""
+
+  case db
+  when /^db2?$/
+    $dbm_conf_db_prefix = "__db_n"
+    hsearch = "-DDB_DBM_HSEARCH "
+  when "gdbm"
+    $dbm_conf_have_gdbm = true
+  end
+
+  if have_func(db_prefix("dbm_open")) || have_library(db, db_prefix("dbm_open"))
+    for hdr in $dbm_conf_headers.fetch(db, ["ndbm.h"])
+      if have_header(hdr.dup)
+	$CFLAGS += " " + hsearch + "-DDBM_HDR='<"+hdr+">'"
+	return true
+      end
+    end
+  end
+  return false
+end
+
+def db_prefix(func)
+  $dbm_conf_db_prefix+func
+end
+
+if dblib
+  db_check(dblib)
+else
+  for dblib in %w(db db2 db1 dbm gdbm)
+    db_check(dblib) and break
+  end
+end
+
+have_header("cdefs.h") 
+have_header("sys/cdefs.h") 
+if /DBM_HDR/ =~ $CFLAGS and have_func(db_prefix("dbm_open"))
+  have_func(db_prefix("dbm_clearerr")) unless $dbm_conf_have_gdbm
+  create_makefile("dbm")
+end
+@
+
+
+1.9
+log
+@* configure.in: use waitpid on mingw32.
+* ext/dbm/extconf.rb: include <ndbm.h>, not <gdbm.h>.
+@
+text
+@d53 1
+a53 1
+if have_func(db_prefix("dbm_open"))
+@
+
+
+1.8
+log
+@* ext/dbm/extconf.rb: fix support for *BSD and set $CFLAGS
+  properly.
+@
+text
+@d12 1
+a12 1
+  "gdbm" => ["gdbm-ndbm.h", "gdbm.h"],
+@
+
+
+1.7
+log
+@* eval.c (rb_yield_0): need argument adjustment for C defined
+  blocks too.
+
+* ext/dbm/extconf.rb: header search added. [new]
+@
+text
+@d9 1
+a9 1
+  "db1" => ["db1/ndbm.h", "db1.h"],
+d31 2
+a32 2
+	$CFLAGS = "-DDBM_HDR='<"+hdr+">'"
+	break
+a34 2
+    $CFLAGS = hsearch + "-DDBM_HDR='<"+hdr+">'"
+    return true
+@
+
+
+1.6
+log
+@* ext/dbm/extconf.rb: fix for FreeBSD and GDBM.
+@
+text
+@d7 8
+d16 3
+a18 2
+  $db_hdr = "ndbm.h"
+  $db_prefix = ""
+d22 2
+a23 2
+    $db_prefix = "__db_n"
+    $db_hdr = db+".h"
+d25 1
+a25 1
+    $have_gdbm = true
+d28 11
+a38 1
+  have_func(db_prefix("dbm_open")) || have_library(db, db_prefix("dbm_open"))
+d42 1
+a42 1
+  $db_prefix+func
+d55 2
+a56 2
+if have_header($db_hdr) and have_func(db_prefix("dbm_open"))
+  have_func(db_prefix("dbm_clearerr")) unless $have_gdbm
+@
+
+
+1.5
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@a4 2
+$db_hdr = "ndbm.h"
+$db_prefix = ""
+d8 5
+a12 1
+  if /^db2?$/ =~ db
+d15 1
+a15 3
+  end
+  r = have_library(db, db_prefix("dbm_open"))
+  if db == "gdbm"
+d18 2
+a19 1
+  return r
+@
+
+
+1.4
+log
+@matz: 1.6.0 final (hopufully)
+@
+text
+@d4 15
+a18 2
+if have_library("gdbm", "dbm_open")
+  gdbm = true
+d20 13
+a32 1
+gdbm or have_library("db", "dbm_open") or have_library("dbm", "dbm_open")
+d35 2
+a36 2
+if have_header("ndbm.h") and have_func("dbm_open")
+  have_func("dbm_clearerr") unless gdbm
+@
+
+
+1.4.4.1
+log
+@several minor fixes.
+@
+text
+@d4 2
+a5 33
+
+dblib = with_config("dbm-type", nil)
+
+$dbm_conf_headers = {
+  "db" => ["db.h"],
+  "db1" => ["db1/ndbm.h", "db1.h", "ndbm.h"],
+  "db2" => ["db2/db.h", "db2.h", "db.h"],
+  "dbm" => ["ndbm.h"],
+  "gdbm" => ["gdbm-ndbm.h", "ndbm.h"],
+}
+
+def db_check(db)
+  $dbm_conf_db_prefix = ""
+  $dbm_conf_have_gdbm = false
+  hsearch = ""
+
+  case db
+  when /^db2?$/
+    $dbm_conf_db_prefix = "__db_n"
+    hsearch = "-DDB_DBM_HSEARCH "
+  when "gdbm"
+    $dbm_conf_have_gdbm = true
+  end
+
+  if have_func(db_prefix("dbm_open")) || have_library(db, db_prefix("dbm_open"))
+    for hdr in $dbm_conf_headers.fetch(db, ["ndbm.h"])
+      if have_header(hdr.dup)
+	$CFLAGS += " " + hsearch + "-DDBM_HDR='<"+hdr+">'"
+	return true
+      end
+    end
+  end
+  return false
+d7 1
+a7 13
+
+def db_prefix(func)
+  $dbm_conf_db_prefix+func
+end
+
+if dblib
+  db_check(dblib)
+else
+  for dblib in %w(db db2 db1 dbm gdbm)
+    db_check(dblib) and break
+  end
+end
+
+d10 2
+a11 2
+if have_func(db_prefix("dbm_open"))
+  have_func(db_prefix("dbm_clearerr")) unless $dbm_conf_have_gdbm
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d9 1
+@
+
+
+1.3.2.1
+log
+@2000-01-17
+@
+text
+@d4 3
+a6 4
+#if have_library("gdbm", "dbm_open")
+#  gdbm = true
+#end
+  gdbm = false
+@
+
+
+1.3.2.2
+log
+@2000-03-23
+@
+text
+@d4 3
+a6 3
+if have_library("gdbm", "dbm_open")
+  gdbm = true
+else
+a7 1
+end
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d2 1
+d4 4
+a7 3
+have_library("gdbm", "dbm_open") or
+  have_library("db", "dbm_open") or
+  have_library("dbm", "dbm_open")
+d10 1
+a10 1
+  have_func("dbm_clearerr")
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 8
+a8 3
+$LDFLAGS = "-L/usr/local/lib"
+have_library("gdbm", "dbm_open") or have_library("dbm", "dbm_open")
+if have_func("dbm_open")
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@a0 1
+require 'mkmf'
+d2 1
+a2 3
+have_library("gdbm", "dbm_open") or
+  have_library("db", "dbm_open") or
+  have_library("dbm", "dbm_open")
+a3 1
+  have_func("dbm_clearerr")
+@
+
+
+1.1.1.2.2.1
+log
+@ndbm.h check
+@
+text
+@d6 1
+a6 1
+if have_header("ndbm.h") and have_func("dbm_open")
+@
+
+
+1.1.1.2.2.2
+log
+@glibc 2.1
+@
+text
+@a2 3
+if dir = with_config("dbm-include")
+  $CFLAGS = "-I#{dir}"
+end
+@
+
+
+1.1.1.2.2.3
+log
+@990624
+@
+text
+@a8 1
+have_header("cdefs.h") 
+@
+
+
+1.1.1.2.2.4
+log
+@990728
+@
+text
+@d2 4
+a5 1
+dir_config("dbm")
+@
+
+
+1.1.1.1.4.1
+log
+@signal delivered to main_thread
+@
+text
+@a3 1
+  have_func("dbm_clearerr")
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b9_14
+@
+text
+@a0 1
+require 'mkmf'
+@
+
+
+1.1.1.1.4.3
+log
+@1.1c3
+@
+text
+@d3 1
+a3 3
+have_library("gdbm", "dbm_open") or
+  have_library("db", "dbm_open") or
+  have_library("dbm", "dbm_open")
+@
+
+
+1.1.1.1.4.4
+log
+@to open CVS
+@
+text
+@d6 1
+a6 1
+if have_header("ndbm.h") and have_func("dbm_open")
+@

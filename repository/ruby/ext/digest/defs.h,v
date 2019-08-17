@@ -1,0 +1,203 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.2.2.2
+	v1_6_6:1.2.2.1
+	v1_6_5:1.2.2.1
+	ruby_1_6:1.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.4
+date	2002.06.11.01.27.47;	author H_Konishi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.01.16.09.25.57;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.08.14.17.04.00;	author knu;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.13;	author knu;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.08.16.07.35.42;	author knu;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2002.01.16.09.22.41;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@new platform [bccwin32] merged.
+@
+text
+@/* -*- C -*-
+ * $Id: defs.h,v 1.3 2002/01/16 09:25:57 matz Exp $
+ */
+
+#ifndef DEFS_H
+#define DEFS_H
+
+#include "ruby.h"
+#include <sys/types.h>
+
+#if defined(HAVE_SYS_CDEFS_H)
+# include <sys/cdefs.h>
+#endif
+#if !defined(__BEGIN_DECLS)
+# define __BEGIN_DECLS
+# define __END_DECLS
+#endif
+
+#if defined(HAVE_INTTYPES_H)
+# include <inttypes.h>
+#else
+  typedef unsigned char uint8_t;
+  typedef unsigned int  uint32_t;
+# if SIZEOF_LONG == 8
+  typedef unsigned long uint64_t;
+# elif defined(__GNUC__)
+  typedef unsigned long long uint64_t;
+# elif defined(_MSC_VER)
+  typedef unsigned _int64 uint64_t;
+# elif defined(__BORLANDC__)
+  typedef unsigned __int64 uint64_t;
+# else
+#  define NO_UINT64_T
+# endif
+#endif
+
+#endif /* DEFS_H */
+@
+
+
+1.3
+log
+@* st.c: primes should be primes.
+
+* eval.c (is_defined): method defined? check should honor
+  protected too.
+
+* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d2 1
+a2 1
+ * $Id: defs.h,v 1.2 2001/08/14 17:04:00 knu Exp $
+d30 2
+@
+
+
+1.2
+log
+@* ext/digest/defs.h: Define NO_UINT64_T instead of emitting an
+  error to fail.
+
+* ext/digest/sha2/extconf.rb: Do not exit on error, and utilize
+  NO_UINT64_T to detect if the system has a 64bit integer type.
+@
+text
+@d2 1
+a2 1
+ * $Id: defs.h,v 1.1 2001/07/13 20:06:13 knu Exp $
+d13 2
+a14 1
+#else
+@
+
+
+1.2.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@d2 1
+a2 1
+ * $Id: defs.h,v 1.2 2001/08/14 17:04:00 knu Exp $
+@
+
+
+1.2.2.2
+log
+@* eval.c (block_pass): should not pass tainted block, if $SAFE > 0.
+
+* variable.c (rb_mod_remove_cvar): should pass the char*.
+@
+text
+@d2 1
+a2 1
+ * $Id: defs.h,v 1.2.2.1 2001/08/16 07:35:42 knu Exp $
+d13 1
+a13 2
+#endif
+#if !defined(__BEGIN_DECLS)
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d2 1
+a2 1
+ * $Id: defs.h,v 1.4 2001/07/09 03:08:01 knu Exp $
+d30 1
+a30 1
+#  error What is a 64bit integer type on this system?
+@

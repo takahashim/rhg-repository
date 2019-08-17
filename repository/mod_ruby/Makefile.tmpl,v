@@ -1,0 +1,138 @@
+head	1.2;
+access;
+symbols
+	release_1_0_1:1.2
+	version_1_0-branch:1.2.0.4
+	root-of-version_1_0:1.2
+	release_1_0_0:1.2
+	release_0_9_9:1.2
+	release_0_9_8:1.2
+	release_0_9_7:1.2
+	release_0_9_6:1.2
+	release_0_9_5:1.2
+	autoconfiscation-branch:1.2.0.2
+	root-of-autoconfiscation:1.2
+	release_0_9_4:1.2
+	release_0_9_3:1.2
+	release_0_9_2:1.2
+	release_0_9_1:1.2
+	release_0_9_0:1.2
+	release_0_8_6:1.2
+	release_0_8_5:1.2
+	release_0_8_4:1.2
+	release_0_8_3:1.1
+	release_0_8_2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.06.20.09.26.24;	author shugo;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.05.25.10.19.39;	author shugo;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.10.22.05.02.43;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* version 0.8.4 released.
+@
+text
+@##
+##  Apache 1.3 Makefile template for mod_ruby module
+##  [src/modules/ruby/Makefile.tmpl]
+##
+
+#   the parametrized target
+LIB=libmod_ruby.$(LIBEXT)
+
+# objects for building the static library
+#
+# Note: this Makefile can't do it... it is built externally by the mod_ruby
+#       build/install process.
+OBJS=
+OBJS_LIB=
+
+# objects for building the shared library (convert the static into shared)
+SHLIB_OBJS=ruby_shared_stub.o
+SHLIB_OBJS_LIB=libruby.a
+
+# standard targets
+all: lib
+lib: $(LIB)
+
+# not needed
+#libruby.a: $(OBJS) $(OBJS_LIB)
+#	cp $(OBJS_LIB) $@@
+#	ar r $@@ $(OBJS)
+#	$(RANLIB) $@@
+
+mod_ruby.so: $(SHLIB_OBJS) $(SHLIB_OBJS_LIB)
+	rm -f $@@
+	$(LD_SHLIB) $(LDFLAGS_SHLIB) -o $@@ $(SHLIB_OBJS) $(SHLIB_OBJS_LIB) $(LIBS)
+
+clean:
+	rm -f $(OBJS) $(SHLIB_OBJS) $(LIB)
+
+distclean: clean
+	-rm -f Makefile
+
+# We really don't expect end users to use this rule.  It works only with
+# gcc, and rebuilds Makefile.tmpl.  You have to re-run Configure after
+# using it.
+depend:
+	cp Makefile.tmpl Makefile.tmpl.bak \
+	    && sed -ne '1,/^# DO NOT REMOVE/p' Makefile.tmpl > Makefile.new \
+	    && gcc -MM $(INCLUDES) $(CFLAGS) *.c >> Makefile.new \
+	    && sed -e '1,$$s: $(INCDIR)/: $$(INCDIR)/:g' \
+	           -e '1,$$s: $(OSDIR)/: $$(OSDIR)/:g' Makefile.new \
+		> Makefile.tmpl \
+	    && rm Makefile.new
+
+.SUFFIXES: .o
+
+.c.o:
+	$(CC) -c $(INCLUDES) $(CFLAGS) $< -o $@@
+
+#Dependencies
+
+$(OBJS) $(SHLIB_OBJS) $(LIB): Makefile
+
+# DO NOT REMOVE
+@
+
+
+1.2.2.1
+log
+@* mod_ruby.c: use config.h for VERSION.
+@
+text
+@d7 1
+a7 1
+LIB=libruby.$(LIBEXT)
+@
+
+
+1.1
+log
+@* Makefile.in: static Apache module support..
+@
+text
+@d7 1
+a7 1
+LIB=libruby.$(LIBEXT)
+@

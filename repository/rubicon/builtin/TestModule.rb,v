@@ -1,0 +1,666 @@
+head	1.13;
+access;
+symbols
+	V0_3_2:1.10
+	V0_1_4:1.5
+	V0_1_3:1.5
+	V0_1_2:1.5
+	V0_1_1:1.5
+	V0_1:1.5
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.13
+date	2002.05.21.05.51.07;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.01.23.08.48.33;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.01.05.14.35.05;	author chad;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.10.25.03.31.10;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.11.12.39.32;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.11.07.14.26;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.10.07.05.22;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.23.19.31.57;	author dave;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.02.56.08;	author dave;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.14.21.16.08;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.14.04.06.41;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@* builtin/TestModule.rb (TestModule::test_CMP): <=> comparison
+  between unrelated classes/modules does not raise an exception on
+  1.7 now.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+$m0 = Module.nesting
+unless defined? ExpectedException
+  Version.less_than("1.7") do
+    ExpectedException = NameError
+  end
+  Version.greater_or_equal("1.7") do
+    ExpectedException = NoMethodError
+  end 
+end
+
+
+class TestModule < Rubicon::TestCase
+
+  # Support stuff
+
+  module Mixin
+    MIXIN = 1
+    def mixin
+    end
+  end
+
+  module User
+    USER = 2
+    include Mixin
+    def user
+    end
+  end
+
+  module Other
+    def other
+    end
+  end
+
+  class AClass
+    def AClass.cm1
+      "cm1"
+    end
+    def AClass.cm2
+      cm1 + "cm2" + cm3
+    end
+    def AClass.cm3
+      "cm3"
+    end
+    
+    private_class_method :cm1, "cm3"
+
+    def aClass
+    end
+
+    def aClass1
+    end
+
+    def aClass2
+    end
+
+    private :aClass1
+    protected :aClass2
+  end
+
+  class BClass < AClass
+    def bClass1
+    end
+
+    private
+
+    def bClass2
+    end
+
+    protected
+    def bClass3
+    end
+  end
+
+  MyClass = AClass.clone
+  class MyClass
+    public_class_method :cm1
+  end
+
+  # -----------------------------------------------------------
+
+  def test_CMP # '<=>'
+    assert_equal( 0, Mixin <=> Mixin)
+    assert_equal(-1, User <=> Mixin)
+    assert_equal( 1, Mixin <=> User)
+    Version.less_than("1.7") do
+      assert_equal(1, Mixin <=> User)
+    end
+
+    assert_equal( 0, Object <=> Object)
+    assert_equal(-1, String <=> Object)
+    assert_equal( 1, Object <=> String)
+  end
+
+  def test_GE # '>='
+    assert(Mixin >= User)
+    assert(Mixin >= Mixin)
+    assert(!(User >= Mixin))
+
+    assert(Object >= String)
+    assert(String >= String)
+    assert(!(String >= Object))
+  end
+
+  def test_GT # '>'
+    assert(Mixin   > User)
+    assert(!(Mixin > Mixin))
+    assert(!(User  > Mixin))
+
+    assert(Object > String)
+    assert(!(String > String))
+    assert(!(String > Object))
+  end
+
+  def test_LE # '<='
+    assert(User <= Mixin)
+    assert(Mixin <= Mixin)
+    assert(!(Mixin <= User))
+
+    assert(String <= Object)
+    assert(String <= String)
+    assert(!(Object <= String))
+  end
+
+  def test_LT # '<'
+    assert(User < Mixin)
+    assert(!(Mixin < Mixin))
+    assert(!(Mixin < User))
+
+    assert(String < Object)
+    assert(!(String < String))
+    assert(!(Object < String))
+  end
+
+  def test_VERY_EQUAL # '==='
+    assert(Object === self)
+    assert(Rubicon::TestCase === self)
+    assert(TestModule === self)
+    assert(!(String === self))
+  end
+
+  def test_ancestors
+    assert_equal([User, Mixin],      User.ancestors)
+    assert_equal([Mixin],            Mixin.ancestors)
+
+    assert_equal([Object, Kernel],   Object.ancestors)
+    assert_equal([String, 
+                   Enumerable, 
+                   Comparable,
+                   Object, Kernel],  String.ancestors)
+  end
+
+  def test_class_eval
+    Other.class_eval("CLASS_EVAL = 1")
+    assert_equal(1, Other::CLASS_EVAL)
+    assert(Other.constants.include?("CLASS_EVAL"))
+  end
+
+  def test_const_defined?
+    assert(Math.const_defined?(:PI))
+    assert(Math.const_defined?("PI"))
+    assert(!Math.const_defined?(:IP))
+    assert(!Math.const_defined?("IP"))
+  end
+
+  def test_const_get
+    assert_equal(Math::PI, Math.const_get("PI"))
+    assert_equal(Math::PI, Math.const_get(:PI))
+  end
+
+  def test_const_set
+    assert(!Other.const_defined?(:KOALA))
+    Other.const_set(:KOALA, 99)
+    assert(Other.const_defined?(:KOALA))
+    assert_equal(99, Other::KOALA)
+    Other.const_set("WOMBAT", "Hi")
+    assert_equal("Hi", Other::WOMBAT)
+  end
+
+  def test_constants
+    assert_equal(["MIXIN"], Mixin.constants)
+    assert_equal(["MIXIN", "USER"], User.constants.sort)
+  end
+
+  def test_included_modules
+    assert_equal([], Mixin.included_modules)
+    assert_equal([Mixin], User.included_modules)
+    assert_equal([Kernel], Object.included_modules)
+    assert_equal([Enumerable, Comparable, Kernel], String.included_modules)
+  end
+
+  def test_instance_methods
+    assert_equal(["user" ], User.instance_methods)
+    assert_equal(["user", "mixin"], User.instance_methods(true))
+    assert_equal(["mixin"], Mixin.instance_methods)
+    assert_equal(["mixin"], Mixin.instance_methods(true))
+    assert_equal(["aClass"], AClass.instance_methods)
+    assert_equal(["aClass"], AClass.instance_methods(true) - 
+                             Object.instance_methods(true))
+  end
+
+  def test_method_defined?
+    assert(!User.method_defined?(:wombat))
+    assert(User.method_defined?(:user))
+    assert(User.method_defined?(:mixin))
+    assert(!User.method_defined?("wombat"))
+    assert(User.method_defined?("user"))
+    assert(User.method_defined?("mixin"))
+  end
+
+  def test_module_eval
+    User.module_eval("MODULE_EVAL = 1")
+    assert_equal(1, User::MODULE_EVAL)
+    assert(User.constants.include?("MODULE_EVAL"))
+    User.instance_eval("remove_const(:MODULE_EVAL)")
+    assert(!User.constants.include?("MODULE_EVAL"))
+  end
+
+  def test_name
+    assert_equal("Fixnum", Fixnum.name)
+    assert_equal("TestModule::Mixin",  Mixin.name)
+    assert_equal("TestModule::User",   User.name)
+  end
+
+  def test_private_class_method
+    assert_exception(ExpectedException) { AClass.cm1 }
+    assert_exception(ExpectedException) { AClass.cm3 }
+    assert_equal("cm1cm2cm3", AClass.cm2)
+  end
+
+  def test_private_instance_methods
+    assert_equal(["aClass1"], AClass.private_instance_methods)
+    assert_equal(["bClass2"], BClass.private_instance_methods)
+    assert_equal(["bClass2", "aClass1"],
+                 BClass.private_instance_methods(true) -
+                 Object.private_instance_methods(true))
+  end
+
+  def test_protected_instance_methods
+    assert_equal(["aClass2"], AClass.protected_instance_methods)
+    assert_equal(["bClass3"], BClass.protected_instance_methods)
+    assert_equal(["bClass3", "aClass2"],
+                 BClass.protected_instance_methods(true) -
+                 Object.protected_instance_methods(true))
+  end
+
+  def test_public_class_method
+    assert_equal("cm1",       MyClass.cm1)
+    assert_equal("cm1cm2cm3", MyClass.cm2)
+    assert_exception(ExpectedException) { eval "MyClass.cm3" }
+  end
+
+  def test_public_instance_methods
+    assert_equal(["aClass"],  AClass.public_instance_methods)
+    assert_equal(["bClass1"], BClass.public_instance_methods)
+  end
+
+  def test_s_constants
+    c1 = Module.constants
+    Object.module_eval "WALTER = 99"
+    c2 = Module.constants
+    assert_equal(["WALTER"], c2 - c1)
+  end
+
+  module M1
+    $m1 = Module.nesting
+    module M2
+      $m2 = Module.nesting
+    end
+  end
+
+  def test_s_nesting
+    assert_equal([],                               $m0)
+    assert_equal([TestModule::M1, TestModule],     $m1)
+    assert_equal([TestModule::M1::M2,
+                  TestModule::M1, TestModule],     $m2)
+  end
+
+  def test_s_new
+    m = Module.new
+    assert_instance_of(Module, m)
+  end
+
+end
+
+Rubicon::handleTests(TestModule) if $0 == __FILE__
+@
+
+
+1.12
+log
+@* builtin/TestModule.rb (TestModule::test_CMP): Module#<=> between
+  unrelated modules now raises exception in 1.7
+@
+text
+@a90 3
+    Version.greater_or_equal("1.7") do
+      assert_exception(ArgumentError) { Mixin <=> Other }
+    end 
+@
+
+
+1.11
+log
+@Replaced $rubyVersion global with Version class methods.  Replaced references to the former with the latter.  Deprecated tests for #indexes and #indices where appropriate.  Removed some duplication in several tests in ArrayBase and HashBase.
+@
+text
+@d88 6
+a93 1
+    assert_equal( 1, Mixin <=> Other)
+@
+
+
+1.10
+log
+@Remove order dependency in tests
+@
+text
+@d5 8
+a12 6
+
+if $rubyVersion < "1.7"
+  ExpectedException = NameError
+else
+  ExpectedException = NoMethodError
+end unless defined? ExpectedException
+@
+
+
+1.9
+log
+@* Fixed a couple of warnings resulting from running tests in one pass.
+
+* Makefile: changed default target to run library and builtins tests in a
+  single pass, so we now get just one summary table
+@
+text
+@d22 1
+d29 1
+d213 2
+@
+
+
+1.8
+log
+@* builtin/TestModule.rb: list of constants should be sorted before
+  comparison.
+
+* builtin/TestFixnum.rb: -1 (in fact, negative integers in
+  general) should be considered as infinite sequence of 1 bits,
+  so that checkBits() test on -1 should be removed.
+@
+text
+@d10 1
+a10 1
+end
+@
+
+
+1.7
+log
+@Add in the Ruby 1.7 tests
+@
+text
+@d178 1
+a178 1
+    assert_equal(["USER", "MIXIN"], User.constants)
+@
+
+
+1.6
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@d6 7
+d220 2
+a221 2
+    assert_exception(NameError) { AClass.cm1 }
+    assert_exception(NameError) { AClass.cm3 }
+d244 1
+a244 1
+    assert_exception(NameError) { eval "MyClass.cm3" }
+@
+
+
+1.5
+log
+@Archive save
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+
+
+1.4
+log
+@Ensure we actually burn some time so the tests don;t fail
+@
+text
+@d160 5
+a164 7
+    assert(!Other.const_defined?(:WOMBAT))
+    Other.const_set(:WOMBAT, 99)
+    assert(Other.const_defined?(:WOMBAT))
+    assert_equal(99, Other::WOMBAT)
+    save = $-v
+    $-v = false
+    eval 'Other.const_set("WOMBAT", "Hi")'
+a165 1
+    $-v = save
+@
+
+
+1.3
+log
+@Archive save
+@
+text
+@d114 7
+a120 7
+    assert(User <= Mixin)
+    assert(!(Mixin <= Mixin))
+    assert(!(Mixin <= User))
+
+    assert(String <= Object)
+    assert(!(String <= String))
+    assert(!(Object <= String))
+d142 3
+a144 3
+    User.class_eval("CLASS_EVAL = 1")
+    assert_equal(1, User::CLASS_EVAL)
+    assert(User.constants.include?("CLASS_EVAL"))
+d166 1
+a166 1
+    Other.const_set("WOMBAT", "Hi")
+d210 2
+a211 2
+    assert_equal("Mixin",  Mixin.name)
+    assert_equal("User",   User.name)
+d243 2
+a244 5
+    assert_fail("untested")
+  end
+
+  def test_to_s
+    assert_fail("untested")
+@
+
+
+1.2
+log
+@Archive save
+@
+text
+@d7 2
+d11 2
+d17 2
+d21 28
+d51 21
+d144 1
+a144 1
+    assert_equal(["CLASS_EVAL"], User.constants)
+d184 7
+a190 1
+    assert_fail("untested")
+d194 6
+a199 1
+    assert_fail("untested")
+d203 3
+a205 1
+    assert_fail("untested")
+d209 3
+a211 1
+    assert_fail("untested")
+d215 3
+a217 1
+    assert_fail("untested")
+d221 5
+a225 1
+    assert_fail("untested")
+d229 5
+a233 1
+    assert_fail("untested")
+d237 3
+a239 1
+    assert_fail("untested")
+d273 1
+a273 1
+    assert_instance_of(m, Module)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+d7 10
+d18 8
+a25 1
+    assert_fail("untested")
+d29 7
+a35 1
+    assert_fail("untested")
+d39 7
+a45 1
+    assert_fail("untested")
+d49 7
+a55 1
+    assert_fail("untested")
+d59 7
+a65 1
+    assert_fail("untested")
+d69 4
+a72 1
+    assert_fail("untested")
+d76 8
+a83 1
+    assert_fail("untested")
+d87 3
+a89 5
+    assert_fail("untested")
+  end
+
+  def test_clone
+    assert_fail("untested")
+d93 4
+a96 1
+    assert_fail("untested")
+d100 2
+a101 1
+    assert_fail("untested")
+d105 9
+a113 1
+    assert_fail("untested")
+d117 2
+a118 1
+    assert_fail("untested")
+d122 4
+a125 1
+    assert_fail("untested")
+d169 11
+a179 1
+    assert_fail("untested")
+d183 4
+a186 1
+    assert_fail("untested")
+d190 2
+a191 1
+    assert_fail("untested")
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

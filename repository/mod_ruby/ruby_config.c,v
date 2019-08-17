@@ -1,0 +1,1248 @@
+head	1.29;
+access;
+symbols
+	release_1_0_1:1.29
+	version_1_0-branch:1.29.0.2
+	root-of-version_1_0:1.29
+	release_1_0_0:1.29
+	release_0_9_9:1.28
+	release_0_9_8:1.24
+	release_0_9_7:1.22
+	release_0_9_6:1.22
+	release_0_9_5:1.21
+	autoconfiscation-branch:1.21.0.2
+	root-of-autoconfiscation:1.21
+	release_0_9_4:1.21
+	release_0_9_3:1.18
+	release_0_9_2:1.18
+	release_0_9_1:1.18
+	release_0_9_0:1.16
+	release_0_8_6:1.16
+	release_0_8_5:1.16
+	release_0_8_4:1.13
+	release_0_8_3:1.11
+	release_0_8_2:1.11
+	release_0_8_1:1.9
+	release_0_8_0:1.8
+	release_0_2_0:1.2
+	start:1.1.1.1
+	NaCl:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.29
+date	2002.08.08.04.13.28;	author shugo;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.05.24.06.41.00;	author shugo;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.05.21.05.58.35;	author shugo;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.05.21.05.16.36;	author shugo;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.05.21.04.59.21;	author shugo;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.03.05.05.57.35;	author shugo;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.02.28.06.41.17;	author shugo;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.01.30.08.42.34;	author shugo;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.10.15.03.27.46;	author shugo;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.10.10.03.16.20;	author shugo;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.10.04.09.19.38;	author shugo;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.08.06.05.39.37;	author shugo;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.07.27.04.46.40;	author shugo;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.27.03.49.56;	author shugo;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.06.22.03.18.26;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.06.21.09.34.49;	author shugo;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.06.10.03.11.47;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.06.09.09.50.28;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.06.04.03.07.20;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.05.02.08.45.26;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.04.19.06.13.25;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.04.12.09.08.34;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.04.10.08.03.55;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.01.24.07.54.37;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.12.12.05.41.07;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.11.23.09.25.06;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.10.04.15.38.46;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.06.21.07.14.11;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.29
+log
+@* ruby_config.c (ruby_cmd_safe_level): RubySafeLevel on the top
+level of httpd.conf can set $SAFE to 0 now.
+@
+text
+@/*
+ * $Id: ruby_config.c,v 1.28 2002/05/24 06:41:00 shugo Exp $
+ * Copyright (C) 2000  ZetaBITS, Inc.
+ * Copyright (C) 2000  Information-technology Promotion Agency, Japan
+ * Copyright (C) 2001  Shugo Maeda <shugo@@modruby.net>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#include "mod_ruby.h"
+#include "ruby_config.h"
+
+static int default_safe_level = MR_DEFAULT_SAFE_LEVEL;
+
+#define push_handler(p, handler, arg) { \
+    if ((handler) == NULL) \
+	(handler) = ap_make_array(p, 1, sizeof(char*)); \
+    *(char **) ap_push_array(handler) = arg; \
+}
+
+void *ruby_create_server_config(pool *p, server_rec *s)
+{
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_pcalloc(p, sizeof(ruby_server_config));
+
+    conf->load_path = ap_make_array(p, 1, sizeof(char*));
+    conf->env = ap_make_table(p, 1);
+    conf->timeout = MR_DEFAULT_TIMEOUT;
+    return conf;
+}
+
+void *ruby_merge_server_config(pool *p, void *basev, void *addv)
+{
+    ruby_server_config *new =
+	(ruby_server_config *) ap_pcalloc(p, sizeof(ruby_server_config));
+    ruby_server_config *base = (ruby_server_config *) basev;
+    ruby_server_config *add = (ruby_server_config *) addv;
+
+    if (add->load_path == NULL) {
+	new->load_path = base->load_path;
+    }
+    else if (base->load_path == NULL) {
+	new->load_path = add->load_path;
+    }
+    else {
+	new->load_path = ap_append_arrays(p, base->load_path, add->load_path);
+    }
+    new->env = ap_overlay_tables(p, add->env, base->env);
+    new->timeout = add->timeout ? add->timeout : base->timeout;
+    return (void *) new;
+}
+
+void *ruby_create_dir_config(pool *p, char *dirname)
+{
+    ruby_dir_config *conf =
+	(ruby_dir_config *) ap_palloc(p, sizeof (ruby_dir_config));
+
+    conf->kcode = NULL;
+    conf->env = ap_make_table(p, 5); 
+    conf->safe_level = default_safe_level;
+    conf->output_mode = MR_OUTPUT_DEFAULT;
+    conf->load_path = NULL;
+    conf->ruby_handler = NULL;
+    conf->ruby_trans_handler = NULL;
+    conf->ruby_authen_handler = NULL;
+    conf->ruby_authz_handler = NULL;
+    conf->ruby_access_handler = NULL;
+    conf->ruby_type_handler = NULL;
+    conf->ruby_fixup_handler = NULL;
+    conf->ruby_log_handler = NULL;
+    conf->ruby_header_parser_handler = NULL;
+    conf->ruby_post_read_request_handler = NULL;
+    conf->ruby_init_handler = NULL;
+    conf->ruby_cleanup_handler = NULL;
+    return conf;
+}
+
+static array_header *merge_handlers(pool *p,
+				    array_header *base,
+				    array_header *add)
+{
+    if (base == NULL)
+	return add;
+    if (add == NULL)
+	return base;
+    return ap_append_arrays(p, add, base);
+}
+
+void *ruby_merge_dir_config(pool *p, void *basev, void *addv)
+{
+    ruby_dir_config *new =
+	(ruby_dir_config *) ap_pcalloc(p, sizeof(ruby_dir_config));
+    ruby_dir_config *base = (ruby_dir_config *) basev;
+    ruby_dir_config *add = (ruby_dir_config *) addv;
+
+    new->kcode = add->kcode ? add->kcode : base->kcode;
+    new->env = ap_overlay_tables(p, add->env, base->env);
+    if (add->safe_level >= base->safe_level) {
+	new->safe_level = add->safe_level;
+    }
+    else {
+	fprintf(stderr, "mod_ruby: can't decrease RubySafeLevel\n");
+	new->safe_level = base->safe_level;
+    }
+    new->output_mode = add->output_mode ? add->output_mode : base->output_mode;
+
+    if (add->load_path == NULL) {
+	new->load_path = base->load_path;
+    }
+    else if (base->load_path == NULL) {
+	new->load_path = add->load_path;
+    }
+    else {
+	new->load_path = ap_append_arrays(p, base->load_path, add->load_path);
+    }
+
+    new->ruby_handler =
+	merge_handlers(p, base->ruby_handler, add->ruby_handler);
+    new->ruby_trans_handler =
+	merge_handlers(p, base->ruby_trans_handler, add->ruby_trans_handler);
+    new->ruby_authen_handler =
+	merge_handlers(p, base->ruby_authen_handler, add->ruby_authen_handler);
+    new->ruby_authz_handler =
+	merge_handlers(p, base->ruby_authz_handler, add->ruby_authz_handler);
+    new->ruby_access_handler =
+	merge_handlers(p, base->ruby_access_handler, add->ruby_access_handler);
+    new->ruby_type_handler =
+	merge_handlers(p, base->ruby_type_handler, add->ruby_type_handler);
+    new->ruby_fixup_handler =
+	merge_handlers(p, base->ruby_fixup_handler, add->ruby_fixup_handler);
+    new->ruby_log_handler =
+	merge_handlers(p, base->ruby_log_handler, add->ruby_log_handler);
+    new->ruby_header_parser_handler =
+	merge_handlers(p, base->ruby_header_parser_handler,
+		       add->ruby_header_parser_handler);
+    new->ruby_post_read_request_handler =
+	merge_handlers(p, base->ruby_post_read_request_handler,
+		       add->ruby_post_read_request_handler);
+    new->ruby_init_handler =
+	merge_handlers(p, base->ruby_init_handler, add->ruby_init_handler);
+    new->ruby_cleanup_handler =
+	merge_handlers(p, base->ruby_cleanup_handler, add->ruby_cleanup_handler);
+    return (void *) new;
+}
+
+const char *ruby_cmd_kanji_code(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    conf->kcode = ap_pstrdup(cmd->pool, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_add_path(cmd_parms *cmd, ruby_dir_config *dconf, char *arg)
+{
+    ruby_server_config *sconf;
+
+    if (cmd->path == NULL) {
+	sconf = get_server_config(cmd->server);
+	*(char **) ap_push_array(sconf->load_path) = arg;
+    }
+    else {
+	if (dconf->load_path == NULL)
+	    dconf->load_path = ap_make_array(cmd->pool, 1, sizeof(char*));
+	*(char **) ap_push_array(dconf->load_path) = arg;
+    }
+    return NULL;
+}
+
+const char *ruby_cmd_require(cmd_parms *cmd, ruby_dir_config *dconf, char *arg)
+{
+    ruby_server_config *sconf = get_server_config(cmd->server);
+    ruby_library_context *lib;
+    int state;
+
+    if (ruby_running()) {
+	if ((state = ruby_require(arg, sconf, dconf))) {
+	    ap_log_error(APLOG_MARK, APLOG_ERR | APLOG_NOERRNO,
+			 APLOG_STATUS(0) cmd->server,
+			 "mod_ruby: failed to require %s", arg);
+	    ruby_log_error(cmd->server, ruby_get_error_info(state));
+	}
+    }
+    else {
+	if (ruby_required_libraries == NULL)
+	    ruby_required_libraries =
+		ap_make_array(cmd->pool, 1, sizeof(ruby_library_context));
+	lib = (ruby_library_context *) ap_push_array(ruby_required_libraries);
+	lib->filename = arg;
+	lib->server_config = sconf;
+	lib->dir_config = dconf;
+    }
+    return NULL;
+}
+
+const char *ruby_cmd_pass_env(cmd_parms *cmd, void *dummy, char *arg)
+{
+    ruby_server_config *conf = get_server_config(cmd->server);
+    char *key;
+    char *val = strchr(arg, ':');
+
+    if (val) {
+	key = ap_pstrndup(cmd->pool, arg, val - arg);
+	val++;
+    }
+    else {
+	key = arg;
+	val = getenv(key);
+    }
+    ap_table_set(conf->env, key, val);
+    return NULL;
+}
+
+const char *ruby_cmd_set_env(cmd_parms *cmd, ruby_dir_config *conf,
+			     char *key, char *val)
+{
+    ap_table_set(conf->env, key, val);
+    if (cmd->path == NULL) {
+	ruby_server_config *sconf = get_server_config(cmd->server);
+	ap_table_set(sconf->env, key, val);
+    }
+    return NULL;
+}
+
+const char *ruby_cmd_timeout(cmd_parms *cmd, void *dummy, char *arg)
+{
+    ruby_server_config *conf = get_server_config(cmd->server);
+
+    conf->timeout = atoi(arg);
+    return NULL;
+}
+
+const char *ruby_cmd_safe_level(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    if (cmd->path == NULL && !cmd->server->is_virtual) {
+	conf->safe_level = default_safe_level = atoi(arg);
+    }
+    else {
+	conf->safe_level = atoi(arg);
+    }
+    return NULL;
+}
+
+const char *ruby_cmd_output_mode(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    if (strcasecmp(arg, "nosync") == 0) {
+	conf->output_mode = MR_OUTPUT_NOSYNC;
+    }
+    else if (strcasecmp(arg, "sync") == 0) {
+	conf->output_mode = MR_OUTPUT_SYNC;
+    }
+    else if (strcasecmp(arg, "syncheader") == 0) {
+	conf->output_mode = MR_OUTPUT_SYNC_HEADER;
+    }
+    else {
+	return "unknown mode";
+    }
+    return NULL;
+}
+
+const char *ruby_cmd_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_trans_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_trans_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_authen_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_authen_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_authz_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_authz_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_access_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_access_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_type_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_type_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_fixup_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_fixup_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_log_handler(cmd_parms *cmd, ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_log_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_header_parser_handler(cmd_parms *cmd,
+					   ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_header_parser_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_post_read_request_handler(cmd_parms *cmd,
+					       ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_post_read_request_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_init_handler(cmd_parms *cmd,
+				  ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_init_handler, arg);
+    return NULL;
+}
+
+const char *ruby_cmd_cleanup_handler(cmd_parms *cmd,
+				     ruby_dir_config *conf, char *arg)
+{
+    push_handler(cmd->pool, conf->ruby_cleanup_handler, arg);
+    return NULL;
+}
+
+/*
+ * Local variables:
+ * mode: C
+ * tab-width: 8
+ * End:
+ */
+@
+
+
+1.28
+log
+@* mod_ruby.c (ruby_startup): remove already require libraries from
+conf->load_path.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.27 2002/05/21 05:58:35 shugo Exp $
+d33 2
+d80 1
+a80 1
+    conf->safe_level = MR_DEFAULT_SAFE_LEVEL;
+d253 6
+a258 1
+    conf->safe_level = atoi(arg);
+@
+
+
+1.27
+log
+@* ruby_config.c (ruby_cmd_require): fixed the third argument of
+ap_make_array().
+* ruby_config.c (ruby_merge_server_config): new function.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.26 2002/05/21 05:16:36 shugo Exp $
+d175 2
+a176 7
+	if (ruby_running()) {
+	    ruby_add_path(arg);
+	}
+	else {
+	    sconf = get_server_config(cmd->server);
+	    *(char **) ap_push_array(sconf->load_path) = arg;
+	}
+@
+
+
+1.26
+log
+@* ruby_config.c (ruby_cmd_require): push ruby_server_config* and
+ruby_dir_config* to ruby_required_libraries.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.25 2002/05/21 04:59:21 shugo Exp $
+d50 21
+d207 2
+a208 1
+	    ruby_required_libraries = ap_make_array(cmd->pool, 1, sizeof(char*));
+@
+
+
+1.25
+log
+@* apachelib.c (apache_server_root): moved from
+request.c:request_server_root().
+* request.c (request_proxy_q): fix for Apache2.
+* request.c (request_proxy_pass_q): ditto.
+* request.c (request_lookup_uri): ditto.
+* request.c (request_lookup_file): ditto.
+* request.c (request_server_root): new method.
+* request.c (request_get_dispatch_handler): ditto.
+* request.c (request_set_dispatch_handler): ditto.
+* request.c (request_proxy_q): ditto.
+* request.c (request_proxy_pass_q): ditto.
+* request.c (request_get_cache_resp): ditto.
+* request.c (request_set_cache_resp): ditto.
+* request.c (request_get_cache_resp): ditto.
+* request.c (request_lookup_uri): ditto.
+* request.c (request_lookup_file): ditto.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.24 2002/03/05 05:57:35 shugo Exp $
+d172 2
+a173 1
+    ruby_server_config *sconf;
+a176 1
+	sconf = get_server_config(cmd->server);
+d187 4
+a190 1
+	*(char **) ap_push_array(ruby_required_libraries) = arg;
+@
+
+
+1.24
+log
+@* supports Apache 2.0.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.23 2002/02/28 06:41:17 shugo Exp $
+d170 1
+a170 1
+const char *ruby_cmd_require(cmd_parms *cmd, void *dummy, char *arg)
+d172 1
+d176 2
+a177 1
+	if ((state = ruby_require(arg))) {
+@
+
+
+1.23
+log
+@* ruby_config.c (ruby_cmd_add_path): allow to use RubyAddPath in
+.htaccess.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.22 2002/01/30 08:42:34 shugo Exp $
+a29 12
+#include "httpd.h"
+#include "http_config.h"
+#include "http_core.h"
+#include "http_log.h"
+#include "http_main.h"
+#include "http_protocol.h"
+#include "http_request.h"
+#include "util_script.h"
+#include "multithread.h"
+
+#include "ruby.h"
+
+d176 2
+a177 1
+	    ap_log_error(APLOG_MARK, APLOG_ERR | APLOG_NOERRNO, cmd->server,
+@
+
+
+1.22
+log
+@* version 0.9.6 released.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.21 2001/10/15 03:27:46 shugo Exp $
+d71 1
+d116 10
+d161 1
+a161 1
+const char *ruby_cmd_add_path(cmd_parms *cmd, void *dummy, char *arg)
+d163 1
+a163 1
+    ruby_server_config *conf = get_server_config(cmd->server);
+d165 8
+a172 2
+    if (ruby_running()) {
+	ruby_add_path(arg);
+d175 3
+a177 1
+	*(char **) ap_push_array(conf->load_path) = arg;
+@
+
+
+1.21
+log
+@* mod_ruby.c (ruby_startup): call Init_stack().
+* request.c (cleanup_request_object): free RDATA(reqobj)->data.
+* request.c (request_headers_in): allow non-auth handlers to
+access Authorization header fields.
+* request.c (request_get_basic_auth_pw): allow non-auth handlers.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.20 2001/10/10 03:16:20 shugo Exp $
+d171 1
+a171 1
+	    ruby_log_error(cmd->server, state);
+@
+
+
+1.20
+log
+@* ruby_config.c (ruby_cmd_output_mode): new directive RubyOutputMode.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.19 2001/10/04 09:19:38 shugo Exp $
+d5 1
+a5 1
+ * Copyright (C) 2000  Shugo Maeda <shugo@@modruby.net>
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.18 2001/08/06 05:39:37 shugo Exp $
+a44 3
+#define MOD_RUBY_DEFAULT_TIMEOUT 270
+#define MOD_RUBY_DEFAULT_SAFE_LEVEL 1
+
+d58 1
+a58 1
+    conf->timeout = MOD_RUBY_DEFAULT_TIMEOUT;
+d69 2
+a70 1
+    conf->safe_level = MOD_RUBY_DEFAULT_SAFE_LEVEL;
+d113 1
+d222 17
+@
+
+
+1.18
+log
+@* version 0.9.1 released.
+@
+text
+@d2 1
+a2 1
+ * $Id$
+d39 2
+@
+
+
+1.17
+log
+@* mod_ruby.c (per_request_cleanup): do not restore rb_stdout.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.16 2001/06/27 03:49:56 shugo Exp $
+d6 1
+d8 8
+a15 1
+ * Author: Shugo Maeda <shugo@@modruby.net>
+d17 11
+a27 16
+ * This file is part of mod_ruby.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+ * USA.
+@
+
+
+1.16
+log
+@* mod_ruby.c (per_request_init): recycle rb_request.
+* request.c: removed notes from struct request_data.
+* request.c (rb_apache_request_flush): flush only once.
+* request.c (request_to_s): removed.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.15 2001/06/22 03:18:26 shugo Exp $
+d103 1
+a103 1
+    if (add->safe_level > base->safe_level) {
+d107 1
+@
+
+
+1.15
+log
+@* mod_ruby.c (load_eruby_script): don't use print_error().
+* mod_ruby.c (ruby_handler): multi-handler support.
+* ruby_config.c (ruby_cmd_post_read_request_handler): new handler.
+* ruby_config.c (ruby_cmd_init_handler): ditto.
+* ruby_config.c (ruby_cmd_cleanup_handler): ditto.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.14 2001/06/21 09:34:49 shugo Exp $
+d60 1
+a60 1
+void *ruby_create_dir_config (pool *p, char *dirname)
+@
+
+
+1.14
+log
+@* ruby_config.c (ruby_cmd_require): use ruby_required_libraries
+for virtual hosts.
+* lib/apache/erb-run.rb: no need to inherit Apache::RubyRun.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.13 2001/06/10 03:11:47 shugo Exp $
+d43 6
+d77 3
+d83 11
+d109 1
+d111 1
+a111 1
+	add->ruby_handler ? add->ruby_handler : base->ruby_handler;
+d113 1
+a113 1
+	add->ruby_trans_handler ? add->ruby_trans_handler : base->ruby_trans_handler;
+d115 1
+a115 1
+	add->ruby_authen_handler ? add->ruby_authen_handler : base->ruby_authen_handler;
+d117 1
+a117 1
+	add->ruby_authz_handler ? add->ruby_authz_handler : base->ruby_authz_handler;
+d119 1
+a119 1
+	add->ruby_access_handler ? add->ruby_access_handler : base->ruby_access_handler;
+d121 1
+a121 1
+	add->ruby_type_handler ? add->ruby_type_handler : base->ruby_type_handler;
+d123 1
+a123 1
+	add->ruby_fixup_handler ? add->ruby_fixup_handler : base->ruby_fixup_handler;
+d125 1
+a125 1
+	add->ruby_log_handler ? add->ruby_log_handler : base->ruby_log_handler;
+d127 9
+a135 2
+	add->ruby_header_parser_handler	? add->ruby_header_parser_handler :
+	base->ruby_header_parser_handler;
+d147 1
+a147 3
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+						    &ruby_module);
+d153 1
+a153 2
+	*(char **) ap_push_array(conf->load_path) =
+	    ap_pstrdup(cmd->pool, arg);
+d179 1
+a179 3
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+						    &ruby_module);
+d200 1
+a200 3
+	ruby_server_config *sconf =
+	    (ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+							&ruby_module);
+d208 1
+a208 3
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+						    &ruby_module);
+d222 1
+a222 1
+    conf->ruby_handler = arg;
+d228 1
+a228 1
+    conf->ruby_trans_handler = arg;
+d234 1
+a234 1
+    conf->ruby_authen_handler = arg;
+d240 1
+a240 1
+    conf->ruby_authz_handler = arg;
+d246 1
+a246 1
+    conf->ruby_access_handler = arg;
+d252 1
+a252 1
+    conf->ruby_type_handler = arg;
+d258 1
+a258 1
+    conf->ruby_fixup_handler = arg;
+d264 1
+a264 1
+    conf->ruby_log_handler = arg;
+d271 22
+a292 1
+    conf->ruby_header_parser_handler = arg;
+@
+
+
+1.13
+log
+@* mod_ruby.c (ruby_translate_handler): new handler.
+* mod_ruby.c (ruby_authen_handler): ditto.
+* mod_ruby.c (ruby_authen_handler): ditto.
+* mod_ruby.c (ruby_authz_handler): ditto.
+* mod_ruby.c (ruby_access_handler): ditto.
+* mod_ruby.c (ruby_type_handler): ditto.
+* mod_ruby.c (ruby_fixup_handler): ditto.
+* mod_ruby.c (ruby_log_handler): ditto.
+* mod_ruby.c (ruby_header_parser_handler): ditto.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.12 2001/06/09 09:50:28 shugo Exp $
+a48 1
+    conf->required_files = ap_make_array(p, 1, sizeof(char*));
+d135 1
+a135 3
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+						    &ruby_module);
+d138 5
+a142 1
+	ruby_require(arg);
+d145 3
+a147 2
+	*(char **) ap_push_array(conf->required_files) =
+	    ap_pstrdup(cmd->pool, arg);
+@
+
+
+1.12
+log
+@* configure.rb.in: check for gcc.
+* mod_ruby.c (ruby_object_handler_0): call log_error().
+* lib/apache/eruby-run.rb (handler): set @@compiler.sourcefile.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.11 2001/06/04 03:07:20 shugo Exp $
+d63 9
+a71 1
+    conf->ruby_handlers = ap_make_array(p, 1, sizeof(char*));
+d90 19
+a108 2
+    new->ruby_handlers =
+	ap_append_arrays(p, add->ruby_handlers, base->ruby_handlers);
+d201 50
+a250 2
+    *(char **) ap_push_array(conf->ruby_handlers) =
+	ap_pstrdup(cmd->pool, arg);
+@
+
+
+1.11
+log
+@* lib/auto-reload: new file.
+* lib/apache/ruby-run.rb: renamed from ruby/apache/ruby.rb.
+* lib/apache/eruby-run.rb: renamed from ruby/apache/eruby.rb.
+* lib/apache/rd2html.rb: renamed from ruby/apache/rd2html.rb.
+* lib/apache/eruby-run.rb (handler): specify filename for backtrace.
+* changed license from GPL to LGPL.
+* COPYING: new file.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.10 2001/05/02 08:45:26 shugo Exp $
+d63 1
+a63 1
+    conf->handlers = ap_make_array(p, 1, sizeof(char*));
+d82 2
+a83 2
+    new->handlers =
+	ap_append_arrays(p, add->handlers, base->handlers);
+d176 1
+a176 1
+    *(char **) ap_push_array(conf->handlers) =
+@
+
+
+1.10
+log
+@* fixed copyright notice.
+* array_header.c: new file for Apache::ArrayHeader.
+* server.c: added some methods.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.9 2001/04/19 06:13:25 shugo Exp $
+d11 4
+a14 4
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+d18 2
+a19 2
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+d21 4
+a24 4
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA
+@
+
+
+1.9
+log
+@* ruby/apache/ruby.rb: new handler Apache::Ruby.
+* ruby/apache/rd2html.rb: renamed from mod_rd2html.rb.
+* apachelib.c (request_read): do not use buffer.
+* apachelib.c (ruby_init_apachelib): remove methods from
+Apache::request. (gets, readline, readlines, each, getc,
+readchar, ungetc, tell, seek, rewind, pos, pos=)
+* apachelib.c (ruby_init_apachelib): new class Apache::Server.
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.8 2001/04/12 09:08:34 shugo Exp $
+d5 1
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.7 2001/04/10 08:03:55 shugo Exp $
+d6 1
+a6 1
+ * Author: Shugo Maeda <shugo@@ruby-lang.org>
+d62 1
+a62 1
+    conf->handler_objects = ap_make_array(p, 1, sizeof(char*));
+d81 2
+a82 3
+    new->handler_objects = ap_append_arrays(p,
+					    add->handler_objects,
+					    base->handler_objects);
+d175 1
+a175 1
+    *(char **) ap_push_array(conf->handler_objects) =
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.6 2001/01/24 07:54:37 shugo Exp $
+d39 2
+a40 2
+#define MR_DEFAULT_TIMEOUT 270
+#define MR_DEFAULT_SAFE_LEVEL 1
+d50 1
+a50 2
+    conf->timeout = MR_DEFAULT_TIMEOUT;
+    conf->safe = MR_DEFAULT_SAFE_LEVEL;
+d61 1
+d75 6
+d168 1
+a168 1
+const char *ruby_cmd_safe_level(cmd_parms *cmd, void *dummy, char *arg)
+d170 1
+a170 5
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(cmd->server->module_config,
+						    &ruby_module);
+
+    conf->safe = atoi(arg);
+@
+
+
+1.6
+log
+@fixed Apache::InTable#[].
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.5 2000/12/12 05:41:07 shugo Exp $
+d47 1
+d62 1
+d75 3
+d87 16
+d169 7
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.4 2000/11/23 09:25:06 shugo Exp $
+d64 1
+a64 1
+void *ruby_merge_dir_config(pool *p, void *parent_conf, void *newloc_conf)
+d66 1
+a66 1
+    ruby_dir_config *merged_conf =
+d68 2
+a69 2
+    ruby_dir_config *pconf = (ruby_dir_config *) parent_conf;
+    ruby_dir_config *nconf = (ruby_dir_config *) newloc_conf;
+d71 3
+a73 3
+    merged_conf->kcode = ap_pstrdup(p, nconf->kcode);
+    merged_conf->env = ap_overlay_tables(p, nconf->env, pconf->env);
+    return (void *) merged_conf;
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.3 2000/10/04 15:38:46 shugo Exp $
+d39 1
+a39 1
+#define MR_DEFAULT_TIMEOUT 299
+d131 1
+a131 1
+const char *ruby_cmd_timeout(cmd_parms *cmd, void *config, char *arg)
+d141 1
+a141 1
+const char *ruby_cmd_safe_level(cmd_parms *cmd, void *config, char *arg)
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.2 1999/06/21 07:14:11 shugo Exp $
+d40 1
+d50 1
+d138 10
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d2 5
+a6 2
+ * $Id: ruby_config.c,v 1.1.1.1 1999/04/20 08:41:05 shugo Exp $
+ * Copyright (C) 1998-1999  Network Applied Communication Laboratory, Inc.
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_config.c,v 1.1.1.1 1999/04/20 07:13:15 shugo Exp $
+d33 1
+a33 1
+#include "ruby_module.h"
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

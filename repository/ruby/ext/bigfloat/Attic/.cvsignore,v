@@ -1,0 +1,39 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.04.17.15.00.22;	author knu;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.22.04.52.19;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* ext/Setup*, ext/bigfloat/*: Back out the import of BigFloat in
+  favor of its forthcoming successor, BigDecimal.
+@
+text
+@Makefile
+mkmf.log
+@
+
+
+1.1
+log
+@BigFloat 1.1.8 has been imported.  Add .cvsignore and MANIFEST.
+@
+text
+@@

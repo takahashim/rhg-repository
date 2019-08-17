@@ -1,0 +1,430 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.1.2.2
+	v1_6_6:1.1.2.1
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.02.25.12.13.30;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.26.12.00.40;	author knu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.12.01.14.23.57;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2002.02.25.12.56.23;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* ext/syslog/syslog.c: Merge from rough.  Turn Syslog into a
+  module keeping backward compatibility intact.
+@
+text
+@#!/usr/bin/env ruby
+# $RoughId: test.rb,v 1.9 2002/02/25 08:20:14 knu Exp $
+# $Id: test.rb,v 1.1 2001/11/26 12:00:40 knu Exp $
+
+# Please only run this test on machines reasonable for testing.
+# If in doubt, ask your admin.
+
+require 'runit/testcase'
+require 'runit/cui/testrunner'
+
+# Prepend current directory to load path for testing.
+$:.unshift('.')
+
+require 'syslog'
+
+class TestSyslog < RUNIT::TestCase
+  def test_new
+    assert_exception(NameError) {
+      Syslog.new
+    }
+  end
+
+  def test_instance
+    sl1 = Syslog.instance
+    sl2 = Syslog.open
+    sl3 = Syslog.instance
+
+    assert_equal(Syslog, sl1)
+    assert_equal(Syslog, sl2)
+    assert_equal(Syslog, sl3)
+  ensure
+    Syslog.close
+  end
+
+  def test_open
+    # default parameters
+    Syslog.open
+
+    assert_equal($0, Syslog.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, Syslog.options)
+    assert_equal(Syslog::LOG_USER, Syslog.facility)
+
+    # open without close
+    assert_exception(RuntimeError) {
+      Syslog.open
+    }
+
+    Syslog.close
+
+    # given parameters
+    Syslog.open("foo", Syslog::LOG_NDELAY | Syslog::LOG_PERROR, Syslog::LOG_DAEMON) 
+
+    assert_equal('foo', Syslog.ident)
+    assert_equal(Syslog::LOG_NDELAY | Syslog::LOG_PERROR, Syslog.options)
+    assert_equal(Syslog::LOG_DAEMON, Syslog.facility)
+
+    Syslog.close
+
+    # default parameters again (after close)
+    Syslog.open
+    Syslog.close
+
+    assert_equal($0, Syslog.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, Syslog.options)
+    assert_equal(Syslog::LOG_USER, Syslog.facility)
+
+    # block
+    param = nil
+    Syslog.open { |param| }
+    assert_equal(Syslog, param)
+  ensure
+    Syslog.close
+  end
+
+  def test_opened?
+    assert_equal(false, Syslog.opened?)
+
+    Syslog.open
+    assert_equal(true, Syslog.opened?)
+
+    Syslog.close
+    assert_equal(false, Syslog.opened?)
+
+    Syslog.open {
+      assert_equal(true, Syslog.opened?)
+    }
+
+    assert_equal(false, Syslog.opened?)
+  end
+
+  def test_mask
+    Syslog.open
+
+    orig = Syslog.mask
+
+    Syslog.mask = Syslog.LOG_UPTO(Syslog::LOG_ERR)
+    assert_equal(Syslog.LOG_UPTO(Syslog::LOG_ERR), Syslog.mask)
+
+    Syslog.mask = Syslog.LOG_MASK(Syslog::LOG_CRIT)
+    assert_equal(Syslog.LOG_MASK(Syslog::LOG_CRIT), Syslog.mask)
+
+    Syslog.mask = orig
+  ensure
+    Syslog.close
+  end
+
+  def test_log
+    stderr = IO::pipe
+
+    pid = fork {
+      stderr[0].close
+      STDERR.reopen(stderr[1])
+      stderr[1].close
+
+      options = Syslog::LOG_PERROR | Syslog::LOG_NDELAY
+
+      Syslog.open("syslog_test", options) { |sl|
+	sl.log(Syslog::LOG_NOTICE, "test1 - hello, %s!", "world")
+	sl.notice("test1 - hello, %s!", "world")
+      }
+
+      Syslog.open("syslog_test", options | Syslog::LOG_PID) { |sl|
+	sl.log(Syslog::LOG_CRIT, "test2 - pid")
+	sl.crit("test2 - pid")
+      }
+      exit!
+    }
+
+    stderr[1].close
+    Process.waitpid(pid)
+
+    # LOG_PERROR is not yet implemented on Cygwin.
+    return if RUBY_PLATFORM =~ /cygwin/
+
+    2.times {
+      assert_equal("syslog_test: test1 - hello, world!\n", stderr[0].gets)
+    }
+
+    2.times {
+      assert_equal(format("syslog_test[%d]: test2 - pid\n", pid), stderr[0].gets)
+    }
+  end
+
+  def test_inspect
+    Syslog.open { |sl|
+      assert_equal(format('<#%s: opened=%s, ident="%s", ' +
+			  'options=%d, facility=%d, mask=%d>',
+			  Syslog, sl.opened?, sl.ident,
+			  sl.options, sl.facility, sl.mask),
+		   sl.inspect)
+    }
+  end
+end
+
+if $0 == __FILE__
+  suite = RUNIT::TestSuite.new
+
+  suite.add_test(TestSyslog.suite)
+
+  RUNIT::CUI::TestRunner.run(suite)
+end
+@
+
+
+1.1
+log
+@Import the "syslog" module from the rough ruby project.  This module
+provides the interface to the UNIX system logger (syslog).
+@
+text
+@d2 2
+a3 2
+# $RoughId: test.rb,v 1.8 2001/11/24 18:11:32 knu Exp $
+# $Id$
+d17 1
+a17 1
+  def test_s_new
+d23 1
+a23 1
+  def test_s_instance
+d28 3
+a30 2
+    assert_equal(sl1, sl2)
+    assert_equal(sl1, sl3)
+d32 1
+a32 1
+    sl1.close
+d35 1
+a35 1
+  def test_s_open
+d37 1
+a37 1
+    sl = Syslog.open
+d39 3
+a41 3
+    assert_equal($0, sl.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, sl.options)
+    assert_equal(Syslog::LOG_USER, sl.facility)
+d45 1
+a45 1
+      sl.open
+d48 1
+a48 1
+    sl.close
+d51 1
+a51 1
+    sl = Syslog.open("foo", Syslog::LOG_NDELAY | Syslog::LOG_PERROR, Syslog::LOG_DAEMON) 
+d53 3
+a55 3
+    assert_equal('foo', sl.ident)
+    assert_equal(Syslog::LOG_NDELAY | Syslog::LOG_PERROR, sl.options)
+    assert_equal(Syslog::LOG_DAEMON, sl.facility)
+d57 1
+a57 1
+    sl.close
+d60 2
+a61 2
+    sl = Syslog.open
+    sl.close
+d63 3
+a65 3
+    assert_equal($0, sl.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, sl.options)
+    assert_equal(Syslog::LOG_USER, sl.facility)
+d70 1
+a70 1
+    assert_equal(sl, param)
+d72 1
+a72 1
+    sl.close
+d76 1
+a76 2
+    sl = Syslog.instance
+    assert_equal(false, sl.opened?)
+d78 2
+a79 2
+    sl.open
+    assert_equal(true, sl.opened?)
+d81 2
+a82 2
+    sl.close
+    assert_equal(false, sl.opened?)
+d84 2
+a85 2
+    sl.open {
+      assert_equal(true, sl.opened?)
+d88 1
+a88 1
+    assert_equal(false, sl.opened?)
+d92 1
+a92 1
+    sl = Syslog.open
+d94 1
+a94 1
+    orig = sl.mask
+d96 2
+a97 2
+    sl.mask = Syslog.LOG_UPTO(Syslog::LOG_ERR)
+    assert_equal(Syslog.LOG_UPTO(Syslog::LOG_ERR), sl.mask)
+d99 2
+a100 2
+    sl.mask = Syslog.LOG_MASK(Syslog::LOG_CRIT)
+    assert_equal(Syslog.LOG_MASK(Syslog::LOG_CRIT), sl.mask)
+d102 1
+a102 1
+    sl.mask = orig
+d104 1
+a104 1
+    sl.close
+@
+
+
+1.1.2.1
+log
+@Add the syslog module.
+@
+text
+@@
+
+
+1.1.2.2
+log
+@* ext/syslog/syslog.c: Merge from rough.  Turn Syslog into a
+  module keeping backward compatibility intact.
+@
+text
+@d2 2
+a3 2
+# $RoughId: test.rb,v 1.9 2002/02/25 08:20:14 knu Exp $
+# $Id: test.rb,v 1.1.2.1 2001/12/01 14:23:57 knu Exp $
+d17 1
+a17 1
+  def test_new
+d23 1
+a23 1
+  def test_instance
+d28 2
+a29 3
+    assert_equal(Syslog, sl1)
+    assert_equal(Syslog, sl2)
+    assert_equal(Syslog, sl3)
+d31 1
+a31 1
+    Syslog.close
+d34 1
+a34 1
+  def test_open
+d36 1
+a36 1
+    Syslog.open
+d38 3
+a40 3
+    assert_equal($0, Syslog.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, Syslog.options)
+    assert_equal(Syslog::LOG_USER, Syslog.facility)
+d44 1
+a44 1
+      Syslog.open
+d47 1
+a47 1
+    Syslog.close
+d50 1
+a50 1
+    Syslog.open("foo", Syslog::LOG_NDELAY | Syslog::LOG_PERROR, Syslog::LOG_DAEMON) 
+d52 3
+a54 3
+    assert_equal('foo', Syslog.ident)
+    assert_equal(Syslog::LOG_NDELAY | Syslog::LOG_PERROR, Syslog.options)
+    assert_equal(Syslog::LOG_DAEMON, Syslog.facility)
+d56 1
+a56 1
+    Syslog.close
+d59 2
+a60 2
+    Syslog.open
+    Syslog.close
+d62 3
+a64 3
+    assert_equal($0, Syslog.ident)
+    assert_equal(Syslog::LOG_PID | Syslog::LOG_CONS, Syslog.options)
+    assert_equal(Syslog::LOG_USER, Syslog.facility)
+d69 1
+a69 1
+    assert_equal(Syslog, param)
+d71 1
+a71 1
+    Syslog.close
+d75 2
+a76 1
+    assert_equal(false, Syslog.opened?)
+d78 2
+a79 2
+    Syslog.open
+    assert_equal(true, Syslog.opened?)
+d81 2
+a82 2
+    Syslog.close
+    assert_equal(false, Syslog.opened?)
+d84 2
+a85 2
+    Syslog.open {
+      assert_equal(true, Syslog.opened?)
+d88 1
+a88 1
+    assert_equal(false, Syslog.opened?)
+d92 1
+a92 1
+    Syslog.open
+d94 1
+a94 1
+    orig = Syslog.mask
+d96 2
+a97 2
+    Syslog.mask = Syslog.LOG_UPTO(Syslog::LOG_ERR)
+    assert_equal(Syslog.LOG_UPTO(Syslog::LOG_ERR), Syslog.mask)
+d99 2
+a100 2
+    Syslog.mask = Syslog.LOG_MASK(Syslog::LOG_CRIT)
+    assert_equal(Syslog.LOG_MASK(Syslog::LOG_CRIT), Syslog.mask)
+d102 1
+a102 1
+    Syslog.mask = orig
+d104 1
+a104 1
+    Syslog.close
+@
+
+

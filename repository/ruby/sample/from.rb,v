@@ -1,0 +1,481 @@
+head	1.3;
+access;
+symbols
+	v1_6_7:1.3
+	v1_6_6:1.3
+	v1_6_5:1.3
+	v1_6_4:1.3
+	v1_7_1:1.3
+	v1_6_4_preview4:1.3
+	v1_6_4_preview3:1.3
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.2
+	v1_3_6_repack:1.1.1.2.2.2
+	v1_3_6:1.1.1.2.2.2
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.4.4
+	v1_3_4_990625:1.1.1.2.2.2
+	v1_3_4_990624:1.1.1.2.2.2
+	v1_2_6:1.1.1.1.4.4
+	v1_3_4_990611:1.1.1.2.2.1
+	v1_3_4_990531:1.1.1.2.2.1
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.4
+	v1_2_4:1.1.1.1.4.4
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.4
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.4
+	v1_2_1repack:1.1.1.1.4.4
+	v1_2_1:1.1.1.1.4.4
+	v1_2_stable:1.1.1.1.4.4
+	v1_1d1:1.1.1.1.4.4
+	v1_1d0:1.1.1.1.4.4
+	v1_1c9_1:1.1.1.1.4.4
+	v1_1c9:1.1.1.1.4.4
+	v1_1c8:1.1.1.1.4.4
+	v1_1c7:1.1.1.1.4.4
+	v1_1c6:1.1.1.1.4.4
+	v1_1d-start:1.1.1.1.4.4
+	v1_1c5:1.1.1.1.4.4
+	v1_1dev:1.1.1.1.4.4.0.2
+	v1_1c4:1.1.1.1.4.4
+	v1_1c3:1.1.1.1.4.4
+	v1_1c2:1.1.1.1.4.4
+	v1_1c1:1.1.1.1.4.4
+	v1_1c0:1.1.1.1.4.4
+	v1_1b9_31:1.1.1.1.4.4
+	v1_1b9_30:1.1.1.1.4.4
+	v1_1b9_28:1.1.1.1.4.4
+	v1_1b9_27:1.1.1.1.4.4
+	v1_1b9_26:1.1.1.1.4.4
+	r1_1b9_25:1.1.1.1.4.4
+	r1_1b9_24:1.1.1.1.4.4
+	v1_1b9_23:1.1.1.1.4.4
+	v1_1b9_22:1.1.1.1.4.4
+	v1_1b9_20:1.1.1.1.4.4
+	v1_1b9_18:1.1.1.1.4.4
+	v1_1b9_16:1.1.1.1.4.3
+	v1_1b9_15:1.1.1.1.4.3
+	v1_1b9_13:1.1.1.1.4.3
+	v1_1b9_12:1.1.1.1.4.3
+	v1_1b9_11:1.1.1.1.4.3
+	v1_1b9_08:1.1.1.1.4.3
+	v1_1b9_07:1.1.1.1.4.3
+	r1_1b9:1.1.1.1.4.3
+	v1_1b8:1.1.1.1.4.3
+	v1_1b7:1.1.1.1.4.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2000.10.10.07.03.36;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.19;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.37;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.06.24.04.24.08;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.02.09.10.56.23;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.02.10.08.53.38;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	98.02.16.06.05.45;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.4;
+
+1.1.1.1.4.4
+date	98.04.30.07.41.23;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@matz
+@
+text
+@#! /usr/local/bin/ruby
+
+require "parsedate"
+require "kconv"
+require "mailread"
+
+include ParseDate
+include Kconv
+
+class String
+
+  def kconv(code = Kconv::EUC)
+    Kconv.kconv(self, code, Kconv::AUTO)
+  end
+
+  def kjust(len)
+    len += 1
+    me = self[0, len].ljust(len)
+    if me =~ /.$/ and $&.size == 2
+      me[-2..-1] = '  '
+      me[-2, 2] = '  '
+    end
+    me.chop!
+  end
+
+end
+
+if ARGV[0] == '-w'
+  wait = TRUE
+  ARGV.shift
+end
+
+if ARGV.length == 0
+  file = ENV['MAIL']
+  user = ENV['USER'] || ENV['USERNAME'] || ENV['LOGNAME'] 
+else
+  file = user = ARGV[0]
+  ARGV.clear
+end
+
+if file == nil or !File.exist? file
+  [ENV['SPOOLDIR'], '/usr/spool', '/var/spool', '/usr', '/var'].each do |m|
+    if File.exist? f = "#{m}/mail/#{user}"
+      file = f
+      break 
+    end
+  end
+end
+
+$outcount = 0;
+def fromout(date, from, subj)
+  return if !date
+  y, m, d = parsedate(date) if date
+  y ||= 0; m ||= 0; d ||= 0
+  if from
+    from.gsub! /\n/, ""
+  else
+    from = "sombody@@somewhere"
+  end
+  if subj
+    subj.gsub! /\n/, ""
+  else
+    subj = "(nil)"
+  end
+  if ENV['LANG'] =~ /sjis/i
+    lang = Kconv::SJIS
+  else
+    lang = Kconv::EUC
+  end
+  from = from.kconv(lang).kjust(28)
+  subj = subj.kconv(lang).kjust(40)
+  printf "%02d/%02d/%02d [%s] %s\n",y%100,m,d,from,subj
+  $outcount += 1
+end
+
+if File.exist?(file)
+  atime = File.atime(file)
+  mtime = File.mtime(file)
+  f = open(file, "r")
+  begin
+    until f.eof?
+      mail = Mail.new(f)
+      fromout mail.header['Date'],mail.header['From'],mail.header['Subject']
+    end
+  ensure
+    f.close
+    File.utime(atime, mtime, file)
+  end
+end
+
+if $outcount == 0
+  print "You have no mail.\n"
+  sleep 2 if wait
+elsif wait
+  system "stty cbreak -echo"
+  getc()
+  system "stty cooked echo"
+end
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@a52 1
+  y = m = d = 0
+d54 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a11 2
+  public :kconv
+
+d20 1
+d34 2
+a35 1
+  user = ENV['USER']
+d37 2
+a38 1
+  user = ARGV[0]
+d41 7
+a47 2
+[ENV['SPOOLDIR'], '/usr/spool', '/var/spool', '/usr', '/var'].each do |m|
+  break if File.exist? ARGV[0] = "#{m}/mail/#{user}" 
+d72 1
+a72 1
+  printf "%02d/%02d/%02d [%s] %s\n",y,m,d,from,subj
+d76 3
+a78 2
+for file in ARGV
+  next if !File.exist?(file)
+d80 8
+a87 3
+  while !f.eof?
+    mail = Mail.new(f)
+    fromout mail.header['Date'], mail.header['From'], mail.header['Subject']
+a88 1
+  f.close
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d12 2
+d35 1
+a35 2
+  file = ENV['MAIL']
+  user = ENV['USER'] || ENV['USERNAME'] || ENV['LOGNAME'] 
+d37 1
+a37 2
+  file = user = ARGV[0]
+  ARGV.clear
+d40 2
+a41 7
+if file == nil or !File.exist? file
+  [ENV['SPOOLDIR'], '/usr/spool', '/var/spool', '/usr', '/var'].each do |m|
+    if File.exist? f = "#{m}/mail/#{user}"
+      file = f
+      break 
+    end
+  end
+d66 1
+a66 1
+  printf "%02d/%02d/%02d [%s] %s\n",y%100,m,d,from,subj
+d70 2
+a71 3
+if File.exist?(file)
+  atime = File.atime(file)
+  mtime = File.mtime(file)
+d73 3
+a75 8
+  begin
+    until f.eof?
+      mail = Mail.new(f)
+      fromout mail.header['Date'],mail.header['From'],mail.header['Subject']
+    end
+  ensure
+    f.close
+    File.utime(atime, mtime, file)
+d77 1
+@
+
+
+1.1.1.2.2.1
+log
+@990324
+@
+text
+@a19 2
+      p me[-2..-1]
+      me[-2..-1] = '  '
+@
+
+
+1.1.1.2.2.2
+log
+@990624
+@
+text
+@d20 1
+@
+
+
+1.1.1.1.4.1
+log
+@1.1b7 pre
+@
+text
+@d12 2
+a37 1
+  ARGV.clear
+d41 1
+a41 1
+  break if File.exist? file = "#{m}/mail/#{user}" 
+d70 2
+a71 3
+if File.exist?(file)
+  atime = File.atime(file)
+  mtime = File.mtime(file)
+d73 3
+a75 8
+  begin
+    until f.eof?
+      mail = Mail.new(f)
+      fromout mail.header['Date'],mail.header['From'],mail.header['Subject']
+    end
+  ensure
+    f.close
+    File.utime(atime, mtime, file)
+d77 1
+@
+
+
+1.1.1.1.4.2
+log
+@1.1b7
+@
+text
+@a38 1
+file = ARGV[0]
+@
+
+
+1.1.1.1.4.3
+log
+@pass_block, etc.
+@
+text
+@d35 1
+a35 1
+  file = user = ARGV[0]
+d39 1
+d41 1
+a41 4
+  if File.exist? f = "#{m}/mail/#{user}" 
+    file = f
+    break 
+  end
+d66 1
+a66 1
+  printf "%02d/%02d/%02d [%s] %s\n",y%100,m,d,from,subj
+@
+
+
+1.1.1.1.4.4
+log
+@new exception model
+@
+text
+@d33 1
+a33 2
+  file = ENV['MAIL']
+  user = ENV['USER'] || ENV['USERNAME'] || ENV['LOGNAME'] 
+d39 4
+a42 6
+if file == nil or !File.exist? file
+  [ENV['SPOOLDIR'], '/usr/spool', '/var/spool', '/usr', '/var'].each do |m|
+    if File.exist? f = "#{m}/mail/#{user}" 
+      file = f
+      break 
+    end
+@
+

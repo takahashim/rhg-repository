@@ -1,0 +1,892 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.3.2.2
+	v1_6_6:1.3.2.2
+	v1_6_5:1.3.2.1
+	v1_6_4:1.3.2.1
+	v1_7_1:1.4
+	v1_6_4_preview4:1.3.2.1
+	v1_6_4_preview3:1.3.2.1
+	v1_6_4_preview2:1.3
+	v1_6_4_preview1:1.3
+	v1_6_3:1.3
+	ruby_m17n:1.3.0.4
+	ruby_1_6:1.3.0.2
+	v1_6_2:1.3
+	v1_6_1:1.3
+	v1_6_0:1.3
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.4
+	v1_3_6_repack:1.1.1.2.2.4
+	v1_3_6:1.1.1.2.2.4
+	v1_3_5:1.1.1.2.2.2
+	v1_2_6repack:1.1.1.1.2.2
+	v1_3_4_990625:1.1.1.2.2.2
+	v1_3_4_990624:1.1.1.2.2.2
+	v1_2_6:1.1.1.1.2.2
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.2
+	v1_3_3_990513:1.1.1.2.2.2
+	v1_3_3_990507:1.1.1.2.2.2
+	v1_2_5:1.1.1.1.2.2
+	v1_2_4:1.1.1.1.2.2
+	v1_3_1_990225:1.1.1.2.2.1
+	v1_3_1_990224:1.1.1.2.2.1
+	v1_3_1_990215:1.1.1.2.2.1
+	v1_3_1_990212:1.1.1.2.2.1
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2.2.1
+	v1_3_1_990203:1.1.1.2.2.1
+	v1_3_1_990201:1.1.1.2.2.1
+	v1_3_1"_990201:1.1.1.2.2.1
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.2
+	v1_2_1repack:1.1.1.1.2.1
+	v1_2_1:1.1.1.1.2.1
+	v1_2_stable:1.1.1.1.2.1
+	v1_1d1:1.1.1.1.4.1
+	v1_1d0:1.1.1.1.4.1
+	v1_1c9_1:1.1.1.1.2.1
+	v1_1c9:1.1.1.1.2.1
+	v1_1c8:1.1.1.1.2.1
+	v1_1c7:1.1.1.1.2.1
+	v1_1c6:1.1.1.1.2.1
+	v1_1d-start:1.1.1.1.4.1
+	v1_1c5:1.1.1.1.2.1
+	v1_1dev:1.1.1.1.0.4
+	v1_1c4:1.1.1.1
+	v1_1c3:1.1.1.1
+	v1_1c2:1.1.1.1
+	v1_1c1:1.1.1.1
+	v1_1c0:1.1.1.1
+	v1_1b9_31:1.1.1.1
+	v1_1b9_30:1.1.1.1
+	v1_1b9_28:1.1.1.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.8
+date	2002.06.20.08.59.59;	author eban;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.06.20.08.21.00;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.06.11.01.27.47;	author H_Konishi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.10.02.10.36.34;	author eban;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.05.07.06.57.40;	author eban;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.08.05.08.39.39;	author eban;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.01.07.34.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.07.28.09.26.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.09.08.09.17.51;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	99.01.18.09.08.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.09.08.07.09.45;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.08.05.08.40.11;	author eban;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.05.07.06.51.37;	author eban;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.10.02.10.36.15;	author eban;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2002.06.20.08.17.56;	author eban;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2002.06.20.08.59.41;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* lib/ftools.rb (compare): don't return with a file opened
+@
+text
+@class << File
+
+  BUFSIZE = 8 * 1024
+
+  def catname from, to
+    if FileTest.directory? to
+      File.join to.sub(%r([/\\]$), ''), basename(from)
+    else
+      to
+    end
+  end
+
+# copy file
+
+  def syscopy from, to
+    to = catname(from, to)
+
+    fmode = stat(from).mode
+    tpath = to
+    not_exist = !exist?(tpath)
+
+    from = open(from, "rb")
+    to = open(to, "wb")
+
+    begin
+      while true
+	to.syswrite from.sysread(BUFSIZE)
+      end
+    rescue EOFError
+      ret = true
+    rescue
+      ret = false
+    ensure
+      to.close
+      from.close
+    end
+    chmod(fmode, tpath) if not_exist
+    ret
+  end
+
+  def copy from, to, verbose = false
+    $stderr.print from, " -> ", catname(from, to), "\n" if verbose
+    syscopy from, to
+  end
+
+  alias cp copy
+
+# move file
+
+  def move from, to, verbose = false
+    to = catname(from, to)
+    $stderr.print from, " -> ", to, "\n" if verbose
+
+    if RUBY_PLATFORM =~ /djgpp|(cyg|ms|bcc)win|mingw/ and FileTest.file? to
+      unlink to
+    end
+    fstat = stat(from)
+    begin
+      rename from, to
+    rescue
+      begin
+        symlink File.readlink(from), to and unlink from
+      rescue
+	from_stat = stat(from)
+	syscopy from, to and unlink from
+	utime(from_stat.atime, from_stat.mtime, to)
+	begin
+	  chown(fstat.uid, fstat.gid, to)
+	rescue
+	end
+      end
+    end
+  end
+
+  alias mv move
+
+#  compare two files
+#   true:  identical
+#   false: not identical
+
+  def compare from, to, verbose = false
+    $stderr.print from, " <=> ", to, "\n" if verbose
+
+    return false if stat(from).size != stat(to).size
+
+    from = open(from, "rb")
+    to = open(to, "rb")
+
+    ret = false
+    fr = tr = ''
+
+    begin
+      while fr == tr
+	fr = from.read(BUFSIZE)
+	if fr
+	  tr = to.read(fr.size)
+	else
+	  ret = to.read(BUFSIZE)
+	  ret = !ret || ret.length == 0
+	  break
+	end
+      end
+    rescue
+      ret = false
+    ensure
+      to.close
+      from.close
+    end
+    ret
+  end
+
+  alias cmp compare
+
+#  unlink files safely
+
+  def safe_unlink(*files)
+    verbose = if files[-1].is_a? String then false else files.pop end
+    begin
+      $stderr.print files.join(" "), "\n" if verbose
+      chmod 0777, *files
+      unlink(*files)
+    rescue
+#      STDERR.print "warning: Couldn't unlink #{files.join ' '}\n"
+    end
+  end
+
+  alias rm_f safe_unlink
+
+  def makedirs(*dirs)
+    verbose = if dirs[-1].is_a? String then false else dirs.pop end
+#    mode = if dirs[-1].is_a? Fixnum then dirs.pop else 0755 end
+    mode = 0755
+    for dir in dirs
+      next if FileTest.directory? dir
+      parent = dirname(dir)
+      makedirs parent unless FileTest.directory? parent
+      $stderr.print "mkdir ", dir, "\n" if verbose
+      if basename(dir) != ""
+	Dir.mkdir dir, mode
+      end
+    end
+  end
+
+  alias mkpath makedirs
+
+  alias o_chmod chmod
+
+  vsave, $VERBOSE = $VERBOSE, false
+  def chmod(mode, *files)
+    verbose = if files[-1].is_a? String then false else files.pop end
+    $stderr.printf "chmod %04o %s\n", mode, files.join(" ") if verbose
+    o_chmod mode, *files
+  end
+  $VERBOSE = vsave
+
+  def install(from, to, mode = nil, verbose = false)
+    to = catname(from, to)
+    unless FileTest.exist? to and cmp from, to
+      safe_unlink to if FileTest.exist? to
+      cp from, to, verbose
+      chmod mode, to, verbose if mode
+    end
+  end
+
+end
+# vi:set sw=2:
+@
+
+
+1.7
+log
+@* lib/ftool.rb (BUFSIZE): tuning, set buffer length to 8192.
+@
+text
+@d84 2
+a90 2
+
+    return false if from.stat.size != to.stat.size
+@
+
+
+1.6
+log
+@new platform [bccwin32] merged.
+@
+text
+@d3 1
+a3 1
+  TOO_BIG = 1024 * 1024 * 2 # 2MB
+a17 4
+    fsize = size(from)
+    fsize = 1024 if fsize < 512
+    fsize = TOO_BIG if fsize > TOO_BIG
+
+d22 2
+a23 4
+    from = open(from, "r")
+    from.binmode
+    to = open(to, "w")
+    to.binmode
+d27 1
+a27 7
+	r = from.sysread(fsize)
+	rsize = r.size
+        w = 0
+	while w < rsize
+	  t = to.syswrite(r[w, rsize - w])
+	  w += t
+	end
+d54 1
+a54 1
+    if RUBY_PLATFORM =~ /djgpp|cygwin|mswin32|bccwin32/ and FileTest.file? to
+d83 3
+a85 8
+    fsize = size(from)
+    fsize = 1024 if fsize < 512
+    fsize = TOO_BIG if fsize > TOO_BIG
+
+    from = open(from, "r")
+    from.binmode
+    to = open(to, "r")
+    to.binmode
+d90 2
+d94 1
+a94 1
+	fr = from.read(fsize)
+d98 1
+a98 1
+	  ret = to.read(fsize)
+@
+
+
+1.5
+log
+@* lib/ftools.rb (catname): allow trailing '/' for the destination.
+@
+text
+@d66 1
+a66 1
+    if RUBY_PLATFORM =~ /djgpp|cygwin|mswin32/ and FileTest.file? to
+@
+
+
+1.4
+log
+@* lib/ftools.rb (syscopy): chmod destination file only if
+  it does not exist.
+@
+text
+@d7 1
+a7 6
+      to +
+	if to =~ /\\/
+	  if to[-1,1] != '\\' then '\\' end + basename(from)
+	else
+	  if to[-1,1] != '/' then '/' end + basename(from)
+	end
+@
+
+
+1.3
+log
+@eban
+@
+text
+@d29 1
+d54 1
+a54 1
+    chmod(fmode, tpath)
+@
+
+
+1.3.2.1
+log
+@* lib/ftools.rb (syscopy): chmod destination file only if
+  it does not exist.
+@
+text
+@a28 1
+    not_exist = !exist?(tpath)
+d53 1
+a53 1
+    chmod(fmode, tpath) if not_exist
+@
+
+
+1.3.2.2
+log
+@* lib/ftools.rb (catname): allow trailing '/' for the destination.
+@
+text
+@d7 6
+a12 1
+      File.join to.sub(%r([/\\]$), ''), basename(from)
+@
+
+
+1.3.2.3
+log
+@* lib/ftool.rb (BUFSIZE): tuning, set buffer length to 8192.
+@
+text
+@d3 1
+a3 1
+  BUFSIZE = 8 * 1024
+d18 4
+d26 4
+a29 2
+    from = open(from, "rb")
+    to = open(to, "wb")
+d33 7
+a39 1
+	to.syswrite from.sysread(BUFSIZE)
+d66 1
+a66 1
+    if RUBY_PLATFORM =~ /djgpp|(cyg|ms|bcc)win|mingw/ and FileTest.file? to
+d95 8
+a102 3
+
+    from = open(from, "rb")
+    to = open(to, "rb")
+a106 2
+    return false if from.stat.size != to.stat.size
+
+d109 1
+a109 1
+	fr = from.read(BUFSIZE)
+d113 1
+a113 1
+	  ret = to.read(BUFSIZE)
+@
+
+
+1.3.2.4
+log
+@* lib/ftools.rb (compare): don't return with a file opened
+@
+text
+@a83 2
+    return false if stat(from).size != stat(to).size
+
+d89 2
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d84 1
+a84 1
+	  chown(fstat.uid, fstat.gid, tpath)
+d113 2
+a114 1
+	if fr = from.read(fsize)
+d140 1
+a140 1
+      unlink *files
+d167 1
+d173 1
+@
+
+
+1.2.2.1
+log
+@eban
+@
+text
+@d84 1
+a84 1
+	  chown(fstat.uid, fstat.gid, to)
+d113 1
+a113 2
+	fr = from.read(fsize)
+	if fr
+d139 1
+a139 1
+      unlink(*files)
+a165 1
+  vsave, $VERBOSE = $VERBOSE, false
+a170 1
+  $VERBOSE = vsave
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d27 3
+d36 1
+a36 1
+      while TRUE
+d46 1
+a46 1
+      ret = TRUE
+d48 1
+a48 1
+      ret = FALSE
+d53 1
+d57 1
+a57 1
+  def copy from, to, verbose = FALSE
+d66 1
+a66 1
+  def move from, to, verbose = FALSE
+d70 1
+a70 1
+    if PLATFORM =~ /djgpp|cygwin32|mswin32/ and FileTest.file? to
+d73 1
+d77 11
+a87 1
+      syscopy from, to and unlink from
+d94 2
+a95 2
+#   TRUE:  identical
+#   FALSE: not identical
+d97 1
+a97 1
+  def compare from, to, verbose = FALSE
+d108 1
+a108 1
+    ret = FALSE
+d116 2
+a117 1
+	  ret = !to.read(fsize)
+d122 1
+a122 1
+      ret = FALSE
+d135 1
+a135 1
+    verbose = if files[-1].is_a? String then FALSE else files.pop end
+d148 1
+a148 1
+    verbose = if dirs[-1].is_a? String then FALSE else dirs.pop end
+d156 3
+a158 1
+      Dir.mkdir dir, mode
+d167 1
+a167 1
+    verbose = if files[-1].is_a? String then FALSE else files.pop end
+d172 1
+a172 1
+  def install(from, to, mode, verbose)
+d175 1
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d33 1
+a33 1
+      while true
+d43 1
+a43 1
+      ret = true
+d45 1
+a45 1
+      ret = false
+d53 1
+a53 1
+  def copy from, to, verbose = false
+d62 1
+a62 1
+  def move from, to, verbose = false
+d66 1
+a66 1
+    if PLATFORM =~ /djgpp|cygwin|mswin32/ and FileTest.file? to
+d79 2
+a80 2
+#   true:  identical
+#   false: not identical
+d82 1
+a82 1
+  def compare from, to, verbose = false
+d93 1
+a93 1
+    ret = false
+d106 1
+a106 1
+      ret = false
+d119 1
+a119 1
+    verbose = if files[-1].is_a? String then false else files.pop end
+d132 1
+a132 1
+    verbose = if dirs[-1].is_a? String then false else dirs.pop end
+d149 1
+a149 1
+    verbose = if files[-1].is_a? String then false else files.pop end
+d154 1
+a154 1
+  def install(from, to, mode = nil, verbose = false)
+a156 1
+      unlink to if FileTest.exist? to
+@
+
+
+1.1.1.2.2.1
+log
+@990201
+@
+text
+@d140 1
+a140 3
+      if basename(dir) != ""
+	Dir.mkdir dir, mode
+      end
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@a26 3
+    fmode = stat(from).mode
+    tpath = to
+
+a49 1
+    chmod(fmode, tpath)
+a68 1
+    fstat = stat(from)
+a71 1
+      from_stat = stat(from)
+a72 5
+      utime(from_stat.atime, from_stat.mtime, to)
+      begin
+        chown(fstat.uid, fstat.gid, tpath)
+      rescue
+      end
+@
+
+
+1.1.1.2.2.3
+log
+@backtrace may be Qnil
+@
+text
+@d70 1
+a70 1
+    if RUBY_PLATFORM =~ /djgpp|cygwin|mswin32/ and FileTest.file? to
+@
+
+
+1.1.1.2.2.4
+log
+@990728
+@
+text
+@d77 3
+d81 1
+a81 1
+        symlink File.readlink(from), to and unlink from
+a82 7
+	from_stat = stat(from)
+	syscopy from, to and unlink from
+	utime(from_stat.atime, from_stat.mtime, to)
+	begin
+	  chown(fstat.uid, fstat.gid, tpath)
+	rescue
+	end
+d112 1
+a112 2
+	  ret = to.read(fsize)
+	  ret = !ret || ret.length == 0
+d170 1
+a170 1
+      safe_unlink to if FileTest.exist? to
+@
+
+
+1.1.1.1.2.1
+log
+@1.1c5
+@
+text
+@d154 1
+a154 1
+  def install(from, to, mode = nil, verbose = false)
+@
+
+
+1.1.1.1.2.2
+log
+@1.2.2 PR1
+@
+text
+@d66 1
+a66 1
+    if PLATFORM =~ /djgpp|cygwin|mswin32/ and FileTest.file? to
+a156 1
+      unlink to if FileTest.exist? to
+@
+
+
+1.1.1.1.4.1
+log
+@1.1d series
+@
+text
+@d33 1
+a33 1
+      while true
+d43 1
+a43 1
+      ret = true
+d45 1
+a45 1
+      ret = false
+d53 1
+a53 1
+  def copy from, to, verbose = false
+d62 1
+a62 1
+  def move from, to, verbose = false
+d79 2
+a80 2
+#   true:  identical
+#   false: not identical
+d82 1
+a82 1
+  def compare from, to, verbose = false
+d93 1
+a93 1
+    ret = false
+d106 1
+a106 1
+      ret = false
+d119 1
+a119 1
+    verbose = if files[-1].is_a? String then false else files.pop end
+d132 1
+a132 1
+    verbose = if dirs[-1].is_a? String then false else dirs.pop end
+d149 1
+a149 1
+    verbose = if files[-1].is_a? String then false else files.pop end
+d154 1
+a154 1
+  def install(from, to, mode = nil, verbose = false)
+@

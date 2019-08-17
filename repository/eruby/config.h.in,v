@@ -1,0 +1,113 @@
+head	1.3;
+access;
+symbols
+	release_0_9_8:1.3
+	autoconfiscation-branch:1.3.0.2
+	root-of-autoconfiscation:1.3
+	release_0_9_7:1.3
+	release_0_9_6:1.3
+	release_0_9_5:1.3
+	release_0_9_4:1.3
+	release_0_9_3:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.05.25.05.03.42;	author shugo;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2001.05.16.08.33.52;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.16.04.29.01;	author shugo;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.10.19.07.07.46;	author shugo;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2001.10.19.09.43.50;	author shugo;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* configure.rb.in: new file.
+@
+text
+@/* Generated automatically by configure.rb. */
+
+/* default charset */
+#undef ERUBY_DEFAULT_CHARSET
+@
+
+
+1.3.2.1
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+/* config.h.in.  Generated automatically from configure.in by autoheader 2.13.  */
+d3 1
+a3 10
+/* Define if you have the <dlfcn.h> header file.  */
+#undef HAVE_DLFCN_H
+
+/* Name of package */
+#undef PACKAGE
+
+/* Version number of package */
+#undef VERSION
+
+/* Default charset */
+a4 1
+
+@
+
+
+1.3.2.2
+log
+@* removed config.h.in
+@
+text
+@@
+
+
+1.2
+log
+@* configure.rb: new options, --prefix, --exec-prefix etc....
+* config.h.in: quote @@DEFAULT_CHARSET@@.
+@
+text
+@d3 2
+a4 1
+#define ERUBY_DEFAULT_CHARSET "@@DEFAULT_CHARSET@@"
+@
+
+
+1.1
+log
+@* Makefile.in: new file.
+* config.h.in: new file.
+@
+text
+@d3 1
+a3 1
+#define ERUBY_DEFAULT_CHARSET @@DEFAULT_CHARSET@@
+@

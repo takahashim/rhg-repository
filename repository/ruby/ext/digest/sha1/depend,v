@@ -1,0 +1,77 @@
+head	1.2;
+access;
+symbols
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.09.26.17.44.33;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.18.09.23.11;	author nobu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2002.03.25.02.28.50;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* ext/digest/sha1: Use OpenSSL's SHA1 engine if available.  It is
+  much faster than what we have now (sha1.[ch]).  Add a knob
+  (--with-bundled-sha1) to extconf.rb which makes it use the
+  bundled one anyway.
+@
+text
+@sha1.o: sha1.c sha1.h $(srcdir)/../defs.h $(hdrdir)/ruby.h \
+  $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/intern.h
+sha1hl.o: sha1hl.c sha1.h $(srcdir)/../defs.h $(hdrdir)/ruby.h \
+  $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/intern.h
+sha1init.o: sha1init.c $(srcdir)/../digest.h $(hdrdir)/ruby.h \
+  $(topdir)/config.h $(hdrdir)/defines.h $(hdrdir)/intern.h \
+  sha1.h $(srcdir)/../defs.h
+sha1ossl.o: sha1ossl.h  $(srcdir)/../defs.h
+@
+
+
+1.1
+log
+@* ext/digest: add depend file.
+
+* ext/digest/md5: ditto.
+
+* ext/digest/rmd160: ditto.
+
+* ext/digest/sha1: ditto.
+
+* ext/digest/sha2: ditto.
+
+* ext/iconv/MANIFEST: ditto.
+
+* ext/stringio/MANIFEST: ditto.
+
+* ext/syslog: ditto.
+@
+text
+@d8 1
+@
+
+
+1.1.2.1
+log
+@add depend files
+@
+text
+@@

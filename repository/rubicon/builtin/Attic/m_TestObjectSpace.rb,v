@@ -1,0 +1,73 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.23.19.31.57;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestObjectSpace < Rubicon::TestCase
+
+  def test_s__id2ref
+    assert_fail("untested")
+  end
+
+  def test_s_add_finalizer
+    assert_fail("untested")
+  end
+
+  def test_s_call_finalizer
+    assert_fail("untested")
+  end
+
+  def test_s_each_object
+    assert_fail("untested")
+  end
+
+  def test_s_finalizers
+    assert_fail("untested")
+  end
+
+  def test_s_garbage_collect
+    assert_fail("untested")
+  end
+
+  def test_s_remove_finalizer
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestObjectSpace) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

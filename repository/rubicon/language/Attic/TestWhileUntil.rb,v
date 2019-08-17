@@ -1,0 +1,67 @@
+head	1.2;
+access;
+symbols
+	V0_1_4:1.1
+	V0_1_3:1.1
+	V0_1_2:1.1
+	V0_1_1:1.1
+	V0_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.06.10.06.15.47;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.30.21.14.10;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Add all the 1.6.4 sample/test.rb tests to Rubicon, and integrate the
+language and library tests
+@
+text
+@#!/usr/bin/env ruby
+# $Id: TestWhileUntil.rb,v 1.1 2000/06/30 21:14:10 dave Exp $
+#
+# This file is part of Rubicon, a set of regression tests for the Ruby
+# language and its built-in classes and modules.
+#
+# Initial development by Dave Thomas and Andy Hunt.
+#
+# Copyright (c) 2000 The Pragmatic Programmers, LLC (www.pragmaticprogrammer.com)
+# Distributed according to the terms specified in the Ruby distribution README file.
+#
+
+require '../rubicon'
+
+class TestWhileUntil < Rubicon::TestCase
+
+end
+
+# Run these tests if invoked directly
+
+Rubicon::handleTests(TestWhileUntil) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Initial load of files
+@
+text
+@d2 1
+a2 1
+# $Id$
+@
+

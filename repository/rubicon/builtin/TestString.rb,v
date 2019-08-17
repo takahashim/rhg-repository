@@ -1,0 +1,1700 @@
+head	1.12;
+access;
+symbols
+	V0_3_2:1.12
+	V0_1_4:1.9
+	V0_1_3:1.9
+	V0_1_2:1.9
+	V0_1_1:1.9
+	V0_1:1.9
+	initial:1.1.1.1
+	PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.12
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.02.04.04.43.55;	author dave;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.01.14.02.40.12;	author dave;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.17.05.55.17;	author dave;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.15.03.04.45;	author dave;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.14.19.39.23;	author andy;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.14.19.32.34;	author andy;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.14.18.31.08;	author andy;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.10.20.35.45;	author dave;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.10.20.34.49;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.12
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+
+require 'rubicon'
+require 'StringBase'
+
+
+class TestString < StringBase
+
+  def initialize(*args)
+    @@cls = String
+    super
+  end
+
+end
+
+Rubicon::handleTests(TestString) if $0 == __FILE__
+@
+
+
+1.11
+log
+@Add more confitional tests to handle logic changes between Ruby versions
+@
+text
+@d1 1
+a1 1
+require '../rubicon'
+d3 2
+a4 1
+class TestString < Rubicon::TestCase
+a5 5
+  def test_AREF # '[]'
+    assert_equal(65,"AooBar"[0])
+    assert_equal(66,"FooBaB"[-1])
+    assert_equal(nil,"FooBar"[6])
+    assert_equal(nil,"FooBar"[-7])
+d7 1
+a7 4
+    assert_equal("Foo","FooBar"[0,3])
+    assert_equal("Bar","FooBar"[-3,3])
+    assert_equal(nil,"FooBar"[6,2]) # Matz doesn't agree that this is a bug
+    assert_equal(nil,"FooBar"[-7,10])
+d9 3
+a11 1138
+    assert_equal("Foo","FooBar"[0..2])
+    assert_equal("Foo","FooBar"[0...3])
+    assert_equal("Bar","FooBar"[-3..-1])
+    assert_equal(nil,"FooBar"[6..2])
+    assert_equal(nil,"FooBar"[-10..-7])
+
+    assert_equal("Foo","FooBar"[/^F../])
+    assert_equal("Bar","FooBar"[/..r$/])
+    assert_equal(nil,"FooBar"[/xyzzy/])
+    assert_equal(nil,"FooBar"[/plugh/])
+
+    assert_equal("Foo","FooBar"["Foo"])
+    assert_equal("Bar","FooBar"["Bar"])
+    assert_equal(nil,"FooBar"["xyzzy"])
+    assert_equal(nil,"FooBar"["plugh"])
+  end
+
+  def test_ASET # '[]='
+    s = "FooBar"
+    s[0] = 'A'
+    assert_equal("AooBar",s)
+    s[-1]= 'B'
+    assert_equal("AooBaB",s)
+    assert_exception(IndexError) { s[-7] = "xyz" }
+    assert_equal("AooBaB",s)
+    s[0] = "ABC"
+    assert_equal("ABCooBaB",s)
+
+    s="FooBar"
+    s[0,3] = "A"
+    assert_equal("ABar",s)
+    s[0] = "Foo"
+    assert_equal("FooBar",s)
+    s[-3,3] = "Foo"
+    assert_equal("FooFoo",s)
+    assert_exception (IndexError) { s[7,3] = "Bar" }
+    assert_exception (IndexError) { s[-7,3] = "Bar" }
+
+    s="FooBar"
+    s[0..2] = "A"
+    assert_equal("ABar",s)
+    s[1..3] = "Foo"
+    assert_equal("AFoo",s)
+    s[-4..-4] = "Foo"
+    assert_equal("FooFoo",s)
+    assert_exception (RangeError) { s[7..10] = "Bar" }
+    assert_exception (RangeError) { s[-7..-10] = "Bar" }
+
+
+    s="FooBar"
+    s[/^F../]= "Bar"
+    assert_equal("BarBar",s)
+    s[/..r$/]="Foo"
+    assert_equal("BarFoo",s)
+    s[/xyzzy/] = "None"
+    assert_equal("BarFoo",s)
+
+    s="FooBar"
+    s["Foo"] = "Bar"
+    assert_equal("BarBar",s)
+    s["Foo"] = "xyz"
+    assert_equal("BarBar",s)
+
+    $= = true
+    s="FooBar"
+    s["FOO"] = "Bar"
+    assert_equal("BarBar",s)
+    s["FOO"] = "xyz"
+    assert_equal("BarBar",s)
+    $= = false
+  end
+
+  def test_CMP # '<=>'
+    assert(1, "abcdef" <=> "abcde")
+    assert(0, "abcdef" <=> "abcdef")
+    assert(-1, "abcde" <=> "abcdef")
+
+    assert(1, "ABCDEF" <=> "abcdef")
+    $= = true
+    assert(0, "ABCDEF" <=> "abcdef")
+    $= = false
+  end
+
+  def test_EQUAL # '=='
+    assert_equal(false, "foo" == :foo)
+    assert(0, "abcdef" == "abcdef")
+    $= = true
+    assert("CAT" == 'cat')
+    assert("CaT" == 'cAt')
+    $= = false
+    assert("CAT" != 'cat')
+    assert("CaT" != 'cAt')
+  end
+
+  def test_LSHIFT # '<<'
+    assert_equal("world!", "world" << 33)
+    assert_equal("world!", "world" << '!')
+  end
+
+  def test_MATCH # '=~'
+    assert_equal(10, "FeeFieFoo-Fum" =~ /Fum$/)
+    assert_equal(nil, "FeeFieFoo-Fum" =~ /FUM$/)
+    $= = true
+    assert_equal(10, "FeeFieFoo-Fum" =~ /FUM$/)
+    $= = false
+  end
+
+  def test_MOD # '%'
+    assert_equals("00123", "%05d" % 123)
+    assert_equals("123  |00000001", "%-5s|%08x" % [123, 1])
+    x = "%3s %-4s%%foo %.0s%5d %#x%c%3.1f %b %x %X %#b %#x %#X" %
+    ["hi",
+      123,
+      "never seen",
+      456,
+      0,
+      ?A,
+      3.0999,
+      11,
+      171,
+      171,
+      11,
+      171,
+      171]
+
+    assert_equal(' hi 123 %foo   456 0x0A3.1 1011 ab AB 0b1011 0xab 0XAB', x)
+  end
+
+  def test_MUL # '*'
+    assert_equals("XXX","X" * 3)
+    assert_equals("HOHO","HO" * 2)
+  end
+
+  def test_PLUS # '+'
+    assert_equals("Yodel", "Yo" + "del")
+  end
+
+  def test_REV # '~'
+    $_ = "FeeFieFoo-Fum"
+    assert_equal(10, ~"Fum$")
+    assert_equal(nil, ~"FUM$")
+    $= = true
+    assert_equal(10, ~"FUM$")
+    $= = false
+    
+  end
+
+  def casetest(a,b,rev=false)
+    case a
+      when b
+        assert_fail("=== failed") if rev
+        assert(true)
+      else
+        assert_fail("=== failed") unless rev
+        assert(true)
+    end
+  end
+
+  def test_VERY_EQUAL # '==='
+    assert_equal(false, "foo" === :foo)
+    casetest("abcdef","abcdef")
+    $= = true
+    casetest("CAT",'cat')
+    casetest("CaT",'cAt')
+    $= = false
+    casetest("CAT",'cat',true) # Reverse the test - we don't want to
+    casetest("CaT",'cAt',true) # find these in the case.
+  end
+
+  def test_capitalize
+    assert_equal("Hello", "hello".capitalize)
+    assert_equal("Hello", "hELLO".capitalize)
+    assert_equal("123abc", "123ABC".capitalize)
+  end
+
+  def test_capitalize!
+    a="hello"; a.capitalize!
+    assert_equal("Hello", a)
+    a="hELLO"; a.capitalize!
+    assert_equal("Hello", a)
+    a="123ABC"; a.capitalize!
+    assert_equal("123abc", a)
+    assert_equal(nil,"123abc".capitalize!)
+    assert_equal("123abc","123ABC".capitalize!)
+    assert_equal("Abc","ABC".capitalize!)
+    assert_equal("Abc","abc".capitalize!)
+    assert_equal(nil,"Abc".capitalize!)
+
+    a = "hello"
+    b = a.dup
+    assert_equal("Hello", a.capitalize!)
+    assert_equal("hello", b)
+   
+  end
+
+  def test_center
+    assert_equal("hello", "hello".center(4))
+    assert_equal("   hello   ", "hello".center(11))
+  end
+
+  def test_chomp
+    assert_equal("hello", "hello".chomp("\n"))
+    assert_equal("hello", "hello\n".chomp("\n"))
+    $/="\n"
+    assert_equal("hello", "hello".chomp)
+    assert_equal("hello", "hello\n".chomp)
+    $/="!"
+    assert_equal("hello", "hello".chomp)
+    assert_equal("hello", "hello!".chomp)
+    $/="\n"
+  end
+
+  def test_chomp!
+    a="hello"
+    a.chomp!("\n")
+    assert_equal("hello", a)
+    assert_equal(nil,a.chomp!("\n"))
+    a="hello\n"
+    a.chomp!("\n")
+    assert_equal("hello", a)
+
+    $/="\n"
+    a="hello"
+    a.chomp!
+    assert_equal("hello", a)
+    a="hello\n"
+    a.chomp!
+    assert_equal("hello", a)
+
+    $/="!"
+    a="hello"
+    a.chomp!
+    assert_equal("hello", a)
+    a="hello!"
+    a.chomp!
+    assert_equal("hello", a)
+
+    $/="\n"
+
+    a = "hello\n"
+    b = a.dup
+    assert_equal("hello", a.chomp!)
+    assert_equal("hello\n", b)
+   
+  end
+
+  def test_chop
+    assert_equal("hell", "hello".chop)
+    assert_equal("hello", "hello\r\n".chop)
+    assert_equal("hello\n", "hello\n\r".chop)
+    assert_equal("", "\r\n".chop)
+    assert_equal("", "".chop)
+  end
+
+  def test_chop!
+    a="hello".chop!
+    assert_equal("hell", a)
+    a="hello\r\n".chop!
+    assert_equal("hello", a)
+    a="hello\n\r".chop!
+    assert_equal("hello\n", a)
+    a="\r\n".chop!
+    assert_equal("", a)
+    a="".chop!
+    assert_equal(nil,a)
+
+    a = "hello\n"
+    b = a.dup
+    assert_equal("hello", a.chop!)
+    assert_equal("hello\n", b)
+   
+  end
+
+  def test_clone
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = "Cool"
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.clone
+
+        assert_equal(a, b)
+        assert(a.id != b.id)
+        assert_equal(a.frozen?, b.frozen?)
+        assert_equal(a.tainted?, b.tainted?)
+      end
+    end
+  end
+
+  def test_concat
+    assert_equal("world!", "world".concat(33))
+    assert_equal("world!", "world".concat('!'))
+  end
+
+  def test_count
+    a = "hello world"
+    assert_equal(5,a.count("lo"))
+    assert_equal(2,a.count("lo","o"))
+    assert_equal(4,a.count("hello","^l"))
+    assert_equal(4,a.count("ej-m"))
+  end
+
+  def test_crypt
+    assert_equal('aaGUC/JkO9/Sc',"mypassword".crypt("aa"))
+    assert('aaGUC/JkO9/Sc' != "mypassword".crypt("ab"))
+  end
+
+  def test_delete
+    assert_equal("heo","hello".delete("l","lo"))
+    assert_equal("he","hello".delete("lo"))
+    assert_equal("hell","hello".delete("aeiou","^e"))
+    assert_equal("ho","hello".delete("ej-m"))
+  end
+
+  def test_delete!
+    a="hello"
+    a.delete!("l","lo")
+    assert_equal("heo",a)
+    a="hello"
+    a.delete!("lo")
+    assert_equal("he",a)
+
+    a="hello"
+    a.delete!("aeiou","^e")
+    assert_equal("hell",a)
+
+    a="hello"
+    a.delete!("ej-m")
+    assert_equal("ho",a)
+
+    a="hello"
+    assert_equal(nil,a.delete!("z"))
+
+    a="hello"
+    b=a.dup
+    a.delete!("lo")
+    assert_equal("he",a)
+    assert_equal("hello",b)
+
+  end
+
+
+  def test_downcase
+    assert_equal("hello","hElLo".downcase)
+    assert_equal("hello","hello".downcase)
+    assert_equal("hello","HELLO".downcase)
+    assert_equal("abc hello 123","abc HELLO 123".downcase)
+  end
+
+  def test_downcase!
+    a="heLlO"
+    b=a.dup
+    assert_equal("hello",a.downcase!)
+    assert_equal("hello",a)
+    assert_equal("heLlO",b)
+
+    a="hello"
+    assert_equal(nil,a.downcase!)
+    assert_equal("hello",a)
+  end
+
+  def test_dump
+    a= "Test" << 1 << 2 << 3 << 9 << 13 << 10
+    assert_equal("Test\001\002\003\t\r\n",a)
+  end
+
+  def test_dup
+    for taint in [ false, true ]
+      for frozen in [ false, true ]
+        a = "Hello"
+        a.taint  if taint
+        a.freeze if frozen
+        b = a.dup 
+
+        assert_equal(a, b)
+        assert(a.id != b.id)
+        assert_equal(false, b.frozen?)
+        assert_equal(a.tainted?,b.tainted?)
+      end
+    end     
+  end
+
+  def test_each
+    $/ = "\n"
+    res=[]
+    "hello\nworld".each {|x| res << x}
+    assert_equal("hello\n",res[0])
+    assert_equal("world",res[1])
+
+    res=[]
+    "hello\n\n\nworld".each('') {|x| res << x}
+    assert_equal("hello\n\n\n",res[0])
+    assert_equal("world",res[1])
+
+    $/ = "!"
+    res=[]
+    "hello!world".each {|x| res << x}
+    assert_equal("hello!",res[0])
+    assert_equal("world",res[1])
+
+    $/ = "\n"
+  end
+
+  def test_each_byte
+    res = []
+    "ABC".each_byte {|x| res << x }
+    assert_equal(65, res[0])
+    assert_equal(66, res[1])
+    assert_equal(67, res[2])
+  end
+
+  def test_each_line
+    $/ = "\n"
+    res=[]
+    "hello\nworld".each {|x| res << x}
+    assert_equal("hello\n",res[0])
+    assert_equal("world",res[1])
+
+    res=[]
+    "hello\n\n\nworld".each('') {|x| res << x}
+    assert_equal("hello\n\n\n",res[0])
+    assert_equal("world",res[1])
+
+    $/ = "!"
+    res=[]
+    "hello!world".each {|x| res << x}
+    assert_equal("hello!",res[0])
+    assert_equal("world",res[1])
+
+    $/ = "\n"
+  end
+
+  def test_empty?
+    assert_equal(true, "".empty?)
+    assert_equal(false, "not".empty?)
+  end
+
+  def test_eql?
+    a = "Hello"
+    assert_equal(true,a.eql?("Hello"))
+    assert_equal(true,a.eql?(a))
+  end
+
+  def test_gsub
+    assert_equal("h*ll*","hello".gsub(/[aeiou]/,'*'))
+    assert_equal("h<e>ll<o>","hello".gsub(/([aeiou])/,'<\1>'))
+    assert_equal("104 101 108 108 111 ", "hello".gsub('.') {
+                   |s| s[0].to_s+' '})
+    assert_equal("HELL-o", "hello".gsub(/(hell)(.)/) {
+                   |s| $1.upcase + '-' + $2
+                   })
+    a = "hello"
+    a.taint
+    assert_equal(true, (a.gsub('.','X').tainted?))
+  end
+
+  def test_gsub!
+    a = "hello"
+    b = a.dup
+    a.gsub!(/[aeiou]/,'*')
+    assert_equal("h*ll*",a)
+    assert_equal("hello",b)
+
+    a = "hello"
+    a.gsub!(/([aeiou])/,'<\1>')
+    assert_equal("h<e>ll<o>",a)
+
+    a = "hello"
+    a.gsub!('.') { |s| s[0].to_s+' '}
+    assert_equal("104 101 108 108 111 ", a)
+
+    a = "hello"
+    a.gsub!(/(hell)(.)/) { |s| $1.upcase + '-' + $2 }
+    assert_equal("HELL-o", a)
+    r = 'X'
+    r.taint
+    a.gsub!('.',r)
+    assert_equal(true,a.tainted?) 
+
+    a="hello"
+    assert_equal(nil,a.sub!('X','Y'))
+  end
+
+  def test_hash
+    assert_equal("hello".hash,"hello".hash)
+    assert("Hello".hash != "hello".hash)
+  end
+
+  def test_hex
+    assert_equal(255,"0xff".hex)
+    assert_equal(-255,"-0xff".hex)
+    assert_equal(255,"ff".hex)
+    assert_equal(-255,"-ff".hex)
+    assert_equal(0,"-ralph".hex)
+    assert_equal(-15,"-fred".hex)
+    assert_equal(15,"fred".hex)
+  end
+
+  def test_include?
+    assert_equal(true, "foobar".include?(?f))
+    assert_equal(true, "foobar".include?("foo"))
+    assert_equal(false, "foobar".include?("baz"))
+    assert_equal(false, "foobar".include?(?z))
+  end
+
+  def test_index
+    assert_equal(0,"hello".index(?h))
+    assert_equal(1,"hello".index("ell"))
+    assert_equal(2,"hello".index(/ll./))
+
+    assert_equal(3,"hello".index(?l,3))
+    assert_equal(3,"hello".index("l",3))
+    assert_equal(3,"hello".index(/l./,3))
+
+    assert_equal(nil,"hello".index(?z,3))
+    assert_equal(nil,"hello".index("z",3))
+    assert_equal(nil,"hello".index(/z./,3))
+
+    assert_equal(nil,"hello".index(?z))
+    assert_equal(nil,"hello".index("z"))
+    assert_equal(nil,"hello".index(/z./))
+  end
+
+  def test_intern
+    assert_equal(:koala, "koala".intern)
+    assert(:koala != "Koala".intern)
+  end
+
+  def test_length
+    assert_equal(0,"".length)
+    assert_equal(4,"1234".length)
+    assert_equal(6,"1234\r\n".length)
+    assert_equal(7,"\0011234\r\n".length)
+  end
+
+  def test_ljust
+    assert_equal("hello", "hello".ljust(4))
+    assert_equal("hello      ", "hello".ljust(11))
+  end
+
+  def test_next
+    assert_equal("abd","abc".next)
+    assert_equal("z","y".next)
+    assert_equal("aaa","zz".next)
+
+    assert_equal("124","123".next)
+    assert_equal("1000","999".next)
+
+    assert_equal("2000aaa", "1999zzz".next)
+    assert_equal("AAAAA000", "ZZZZ999".next)
+    assert_equal("*+", "**".next)
+  end
+
+  def test_next!
+    a="abc"
+    b=a.dup
+    assert_equal("abd",a.next!)
+    assert_equal("abd",a)
+    assert_equal("abc",b)
+
+    a="y"
+    assert_equal("z",a.next!)
+    assert_equal("z",a)
+
+    a="zz"
+    assert_equal("aaa",a.next!)
+    assert_equal("aaa",a)
+
+    a="123"
+    assert_equal("124",a.next!)
+    assert_equal("124",a)
+
+    a="999"
+    assert_equal("1000",a.next!)
+    assert_equal("1000",a)
+
+    a="1999zzz"
+    assert_equal("2000aaa", a.next!)
+    assert_equal("2000aaa", a)
+
+    a="ZZZZ999"
+    assert_equal("AAAAA000", a.next!)
+    assert_equal("AAAAA000", a)
+
+    a="**"
+    assert_equal("*+", a.next!)
+    assert_equal("*+", a)
+  end
+
+  def test_oct
+    assert_equal(255,"0377".oct)
+    assert_equal(255,"377".oct)
+    assert_equal(-255,"-0377".oct)
+    assert_equal(-255,"-377".oct)
+    assert_equal(0,"OO".oct)
+    assert_equal(24,"030OO".oct)
+  end
+
+  def test_replace
+    a="foo"
+    assert_equal("f",a.replace("f"))
+    a="foo"
+    assert_equal("foobar",a.replace("foobar"))
+    a="foo"
+    a.taint
+    b = a.replace("xyz")
+    assert_equal("xyz",b)
+    assert_equal(true,b.tainted?)
+  end
+
+  def test_reverse
+    assert_equal("beta","ateb".reverse)
+    assert_equal("madamImadam","madamImadam".reverse)
+    a="beta"
+    assert_equal("ateb",a.reverse)
+    assert_equal("beta",a)
+  end
+
+  def test_reverse!
+    a = "beta"
+    b = a.dup
+    assert_equal("ateb", a.reverse!)
+    assert_equal("ateb", a)
+    assert_equal("beta", b)
+    assert_equal("madamImadam", "madamImadam".reverse!)
+    a = "madamImadam"
+    assert_equal("madamImadam", a.reverse!)  # ??
+    assert_equal("madamImadam", a)
+  end
+
+  def test_rindex
+    assert_equal(3,"hello".rindex(?l))
+    assert_equal(6,"ell, hello".rindex("ell"))
+    assert_equal(7,"ell, hello".rindex(/ll./))
+
+    assert_equal(3,"hello,lo".rindex(?l,3))
+    assert_equal(3,"hello,lo".rindex("l",3))
+    assert_equal(3,"hello,lo".rindex(/l./,3))
+
+    assert_equal(nil,"hello".rindex(?z,3))
+    assert_equal(nil,"hello".rindex("z",3))
+    assert_equal(nil,"hello".rindex(/z./,3))
+
+    assert_equal(nil,"hello".rindex(?z))
+    assert_equal(nil,"hello".rindex("z"))
+    assert_equal(nil,"hello".rindex(/z./))
+  end
+
+  def test_rjust
+    assert_equal("hello", "hello".rjust(4))
+    assert_equal("      hello", "hello".rjust(11))
+  end
+
+  def test_scan
+    a = "cruel world"
+    assert_equal(["cruel","world"],a.scan(/\w+/))
+    assert_equal(["cru", "el ","wor"],a.scan(/.../))
+    assert_equal([["cru"], ["el "],["wor"]],a.scan(/(...)/))
+
+    res=[]
+    a.scan(/\w+/) { |w| res << w }
+    assert_equal(["cruel","world"],res)
+
+    res=[]
+    a.scan(/.../) { |w| res << w }
+    assert_equal(["cru", "el ","wor"],res)
+
+    res=[]
+    a.scan(/(...)/) { |w| res << w }
+    assert_equal([["cru"], ["el "],["wor"]],res)
+  end
+
+  def test_size
+    assert_equal(0,"".size)
+    assert_equal(4,"1234".size)
+    assert_equal(6,"1234\r\n".size)
+    assert_equal(7,"\0011234\r\n".size)
+  end
+
+  def test_slice
+    assert_equal(65,"AooBar".slice(0))
+    assert_equal(66,"FooBaB".slice(-1))
+    assert_equal(nil,"FooBar".slice(6))
+    assert_equal(nil,"FooBar".slice(-7))
+
+    assert_equal("Foo","FooBar".slice(0,3))
+    assert_equal("Bar","FooBar".slice(-3,3))
+    assert_equal(nil,"FooBar".slice(7,2))     # Maybe should be six?
+    assert_equal(nil,"FooBar".slice(-7,10))
+
+    assert_equal("Foo","FooBar".slice(0..2))
+    assert_equal("Bar","FooBar".slice(-3..-1))
+    assert_equal(nil,"FooBar".slice(6..2))
+    assert_equal(nil,"FooBar".slice(-10..-7))
+
+    assert_equal("Foo","FooBar".slice(/^F../))
+    assert_equal("Bar","FooBar".slice(/..r$/))
+    assert_equal(nil,"FooBar".slice(/xyzzy/))
+    assert_equal(nil,"FooBar".slice(/plugh/))
+
+    assert_equal("Foo","FooBar".slice("Foo"))
+    assert_equal("Bar","FooBar".slice("Bar"))
+    assert_equal(nil,"FooBar".slice("xyzzy"))
+    assert_equal(nil,"FooBar".slice("plugh"))
+  end
+
+  def test_slice!
+    a="AooBar"
+    b=a.dup
+    assert_equal(65,a.slice!(0))
+    assert_equal("ooBar",a)
+    assert_equal("AooBar",b)
+
+    a="FooBar"
+    assert_equal(?r,a.slice!(-1))
+    assert_equal("FooBa",a)
+
+    a="FooBar"
+    assert_exception(IndexError) { a.slice!(6) }
+    assert_equal("FooBar",a)
+    assert_exception(IndexError) { a.slice!(-7) }
+    assert_equal("FooBar",a)
+
+    a="FooBar"
+    assert_equal("Foo",a.slice!(0,3))
+    assert_equal("Bar",a)
+    a="FooBar"
+    assert_equal("Bar",a.slice!(-3,3))
+    assert_equal("Foo",a)
+
+    a="FooBar"
+    assert_exception(IndexError) {a.slice!(7,2)}     # Maybe should be six?
+    assert_equal("FooBar",a)
+    assert_exception(IndexError) {a.slice!(-7,10)}
+    assert_equal("FooBar",a)
+
+    a="FooBar"
+    assert_equal("Foo",a.slice!(0..2))
+    assert_equal("Bar",a)
+
+    a="FooBar"
+    assert_equal("Bar",a.slice!(-3..-1))
+    assert_equal("Foo",a)
+
+    a="FooBar"
+    assert_exception(RangeError) {a.slice!(6..2)}
+    assert_equal("FooBar",a)
+    assert_exception(RangeError) {a.slice!(-10..-7)}
+    assert_equal("FooBar",a)
+
+    a="FooBar"
+    assert_equal("Foo",a.slice!(/^F../))
+    assert_equal("Bar",a)
+
+    a="FooBar"
+    assert_equal("Bar",a.slice!(/..r$/))
+    assert_equal("Foo",a)
+
+    a="FooBar"
+    assert_equal(nil,a.slice!(/xyzzy/))
+    assert_equal("FooBar",a)
+    assert_equal(nil,a.slice!(/plugh/))
+    assert_equal("FooBar",a)
+
+    a="FooBar"
+    assert_equal("Foo",a.slice!("Foo"))
+    assert_equal("Bar",a)
+
+    a="FooBar"
+    assert_equal("Bar",a.slice!("Bar"))
+    assert_equal("Foo",a)
+
+    a="FooBar"
+    assert_equal(nil,a.slice!("xyzzy"))
+    assert_equal("FooBar",a)
+    assert_equal(nil,a.slice!("plugh"))
+    assert_equal("FooBar",a)
+  end
+
+  def test_split
+    assert_equal(nil,$;)
+    assert_equal(["a","b","c"], " a   b\t c ".split)
+    assert_equal(["a","b","c"], " a   b\t c ".split(" "))
+    assert_equal([" a "," b "," c "], " a | b | c ".split("|"))
+
+    assert_equal(["a","b","c"], "aXXbXXcXX".split(/X./))
+    assert_equal(["a","b","c"], "abc".split(//))
+
+    assert_equal(["a|b|c"], "a|b|c".split('|',1))
+
+    assert_equal(["a","b|c"], "a|b|c".split('|',2))
+    assert_equal(["a","b","c"], "a|b|c".split('|',3))
+    assert_equal(["a","b","c",""], "a|b|c|".split('|',-1))
+    assert_equal(["a","b","c","",""], "a|b|c||".split('|',-1))
+
+    assert_equal(["a","", "b", "c"], "a||b|c|".split('|'))
+    assert_equal(["a","", "b", "c",""], "a||b|c|".split('|',-1))
+  end
+
+  def test_squeeze
+    assert_equal("abc","aaabbbbccc".squeeze)
+    assert_equal("aa bb cc","aa   bb      cc".squeeze(" "))
+    assert_equal("BxTyWz","BxxxTyyyWzzzzz".squeeze("a-z"))
+  end
+
+  def test_squeeze!
+    a="aaabbbbccc"
+    b=a.dup
+    assert_equal("abc",a.squeeze!)
+    assert_equal("abc",a)
+    assert_equal("aaabbbbccc",b)
+
+    a="aa   bb      cc"
+    assert_equal("aa bb cc",a.squeeze!(" "))
+    assert_equal("aa bb cc",a)
+
+    a="BxxxTyyyWzzzzz"
+    assert_equal("BxTyWz",a.squeeze!("a-z"))
+    assert_equal("BxTyWz",a)
+
+    a="The quick brown fox"
+    assert_equal(nil,a.squeeze!)
+
+  end
+
+  def test_strip
+    assert_equal("x","      x        ".strip)
+    assert_equal("x"," \n\r\t     x  \t\r\n\n      ".strip)
+  end
+
+  def test_strip!
+    a="      x        "
+    b=a.dup
+    assert_equal("x",a.strip!)
+    assert_equal("x",a)
+    assert_equal("      x        ",b)
+
+    a=" \n\r\t     x  \t\r\n\n      "
+    assert_equal("x",a.strip!)
+    assert_equal("x",a)
+    a="x"
+    assert_equal(nil,a.strip!)
+    assert_equal("x",a)
+  end
+
+  def test_sub
+    assert_equal("h*llo",    "hello".sub(/[aeiou]/,'*'))
+    assert_equal("h<e>llo",  "hello".sub(/([aeiou])/,'<\1>'))
+    assert_equal("104 ello", "hello".sub('.') {
+                   |s| s[0].to_s+' '})
+    assert_equal("HELL-o", "hello".sub(/(hell)(.)/) {
+                   |s| $1.upcase + '-' + $2
+                   })
+    a = "hello"
+    a.taint
+    assert(a.sub('.', 'X').tainted?)
+  end
+
+  def test_sub!
+    a = "hello"
+    b = a.dup
+    a.sub!(/[aeiou]/,'*')
+    assert_equal("h*llo",a)
+    assert_equal("hello",b)
+
+    a = "hello"
+    a.sub!(/([aeiou])/,'<\1>')
+    assert_equal("h<e>llo",a)
+
+    a = "hello"
+    a.sub!('.') { |s| s[0].to_s+' '}
+    assert_equal("104 ello", a)
+
+    a = "hello"
+    a.sub!(/(hell)(.)/) { |s| $1.upcase + '-' + $2 }
+    assert_equal("HELL-o", a)
+
+    a="hello"
+    assert_equal(nil,a.sub!('X','Y'))
+
+    r = 'X'
+    r.taint
+    a.sub!('.',r)
+    assert_equal(true,a.tainted?) 
+  end
+
+  def test_succ
+    assert_equal("abd","abc".succ)
+    assert_equal("z","y".succ)
+    assert_equal("aaa","zz".succ)
+
+    assert_equal("124","123".succ)
+    assert_equal("1000","999".succ)
+
+    assert_equal("2000aaa", "1999zzz".succ)
+    assert_equal("AAAAA000", "ZZZZ999".succ)
+    assert_equal("*+", "**".succ)
+  end
+
+  def test_succ!
+    a="abc"
+    b=a.dup
+    assert_equal("abd",a.succ!)
+    assert_equal("abd",a)
+    assert_equal("abc",b)
+
+    a="y"
+    assert_equal("z",a.succ!)
+    assert_equal("z",a)
+
+    a="zz"
+    assert_equal("aaa",a.succ!)
+    assert_equal("aaa",a)
+
+    a="123"
+    assert_equal("124",a.succ!)
+    assert_equal("124",a)
+
+    a="999"
+    assert_equal("1000",a.succ!)
+    assert_equal("1000",a)
+
+    a="1999zzz"
+    assert_equal("2000aaa", a.succ!)
+    assert_equal("2000aaa", a)
+
+    a="ZZZZ999"
+    assert_equal("AAAAA000", a.succ!)
+    assert_equal("AAAAA000", a)
+
+    a="**"
+    assert_equal("*+", a.succ!)
+    assert_equal("*+", a)
+  end
+
+  def test_sum
+    n="\001\001\001\001\001\001\001\001\001\001\001\001\001\001\001"
+    assert_equal(15, n.sum)
+    n += "\001"
+    assert_equal(16, n.sum(17))
+    n[0] = 2
+    assert(15 != n.sum)
+  end
+
+  def test_swapcase
+    assert_equal("hi&LOW","HI&low".swapcase)
+  end
+
+  def test_swapcase!
+    a="hi&LOW"
+    b=a.dup
+    assert_equal("HI&low",a.swapcase!)
+    assert_equal("HI&low",a)
+    assert_equal("hi&LOW",b)
+
+    a="$^#^%$#!!"
+    assert_equal(nil,a.swapcase!)
+    assert_equal("$^#^%$#!!",a)
+  end
+
+  def test_to_f
+    assert_equal(344.3,"344.3".to_f)
+    assert_equal(5.9742e24,"5.9742e24".to_f)
+    assert_equal(98.6, "98.6 degrees".to_f)
+    assert_equal(0.0, "degrees 100.0".to_f)
+  end
+
+  def test_to_i
+    assert_equal(1480,"1480ft/sec".to_i)
+    assert_equal(0,"speed of sound in water @@20C = 1480ft/sec".to_i)
+  end
+
+  def test_to_s
+    a="me"
+    assert_equal(a,a.to_s)
+    assert_equal(a.id,a.to_s.id)
+  end
+
+  def test_to_str
+    a="me"
+    assert_equal(a,a.to_s)
+    assert_equal(a.id,a.to_s.id)
+  end
+
+  def test_tr
+    assert_equal("hippo","hello".tr("el","ip"))
+    assert_equal("*e**o","hello".tr("^aeiou","*"))
+    assert_equal("hal","ibm".tr("b-z","a-z"))
+  end
+
+  def test_tr!
+    a="hello"
+    b=a.dup
+    assert_equal("hippo",a.tr!("el","ip"))
+    assert_equal("hippo",a)
+    assert_equal("hello",b)
+
+    a="hello"
+    assert_equal("*e**o",a.tr!("^aeiou","*"))
+    assert_equal("*e**o",a)
+
+    a="IBM"
+    assert_equal("HAL",a.tr!("B-Z","A-Z"))
+    assert_equal("HAL",a)
+
+    a="ibm"
+    assert_equal(nil,a.tr!("B-Z","A-Z"))
+    assert_equal("ibm",a)
+  end
+
+  def test_tr_s
+    assert_equal("hypo","hello".tr_s("el","yp"))
+    assert_equal("h*o","hello".tr_s("el","*"))
+  end
+
+  def test_tr_s!
+    a="hello"
+    b=a.dup
+    assert_equal("hypo", a.tr_s!("el","yp"))
+    assert_equal("hypo", a)
+    assert_equal("hello", b)
+
+    a="hello"
+    assert_equal("h*o",a.tr_s!("el","*"))
+    assert_equal("h*o",a)
+  end
+
+  def test_unpack
+
+
+    a = %w( cat wombat x yy)
+    assert_equals(["cat","wom","x","yy"],"catwomx  yy ".unpack("A3A3A3A3"))
+
+    assert_equals(["cat"],"cat  \000\000".unpack("A*"))
+    assert_equals(["cwx", "wx", "x", "yy"], "cwx  yy ".unpack("A3@@1A3@@2A3A3"))
+    assert_equals(["cat", "wom", "x\000\000", "yy\000"],
+                  "catwomx\000\000yy\000".unpack("a3a3a3a3"))
+    assert_equals(["cat \000\000"],"cat \000\000".unpack("a*"))
+    assert_equals(["ca"],"catdog".unpack("a2"))
+
+    assert_equals(["cat\000\000"],"cat\000\000\000\000\000dog".unpack("a5"))
+
+    assert_equals(["01100001"], "\x61".unpack("B8"))
+    assert_equals(["01100001"], "\x61".unpack("B*"))
+    assert_equals(["0110000100110111"], "\x61\x37".unpack("B16"))
+    assert_equals(["01100001", "00110111"],"\x61\x37".unpack("B8B8"))
+    assert_equals(["0110"],"\x60".unpack("B4"))
+
+    assert_equals(["01"],"\x40".unpack("B2"))
+
+    assert_equals(["01100001"], "\x86".unpack("b8"))
+    assert_equals(["01100001"], "\x86".unpack("b*"))
+
+    assert_equals(["0110000100110111"], "\x86\xec".unpack("b16"))
+    assert_equals(["01100001", "00110111"], "\x86\xec".unpack("b8b8"))
+
+    assert_equals(["0110"], "\x06".unpack("b4"))
+    assert_equals(["01"], "\x02".unpack("b2"))
+
+    assert_equals([ 65, 66, 67 ],"ABC".unpack("C3"))
+
+    assert_equals([ 255, 66, 67 ],"\377BC".unpack("C*"))
+    assert_equals([ 65, 66, 67 ],"ABC".unpack("c3"))
+    assert_equals([ -1, 66, 67 ],"\377BC".unpack("c*"))
+
+    
+    assert_equal(["4142", "0a", "1"],"AB\n\x10".unpack("H4H2H1"))
+    assert_equal(["1424", "a0", "2"],"AB\n\x02".unpack("h4h2h1"))
+
+    assert_equal(["abc\002defcat\001", "", ""],
+                 "abc=02def=\ncat=\n=01=\n".unpack("M9M3M4"))
+
+    assert_equal(["hello\n"],"aGVsbG8K\n".unpack("m"))
+
+    assert_equal(["hello\nhello\n"],",:&5L;&\\*:&5L;&\\*\n".unpack("u"))
+
+    assert_equal([0xa9, 0x42, 0x2260],"\xc2\xa9B\xe2\x89\xa0".unpack("U*"))
+
+    skipping "Not tested:
+        D,d & double-precision float, native format\\
+        E & double-precision float, little-endian byte order\\
+        e & single-precision float, little-endian byte order\\
+        F,f & single-precision float, native format\\
+        G & double-precision float, network (big-endian) byte order\\
+        g & single-precision float, network (big-endian) byte order\\
+        I & unsigned integer\\
+        i & integer\\
+        L & unsigned long\\
+        l & long\\
+
+        m & string encoded in base64 (uuencoded)\\
+        N & long, network (big-endian) byte order\\
+        n & short, network (big-endian) byte-order\\
+        P & pointer to a structure (fixed-length string)\\
+        p & pointer to a null-terminated string\\
+        S & unsigned short\\
+        s & short\\
+        V & long, little-endian byte order\\
+        v & short, little-endian byte order\\
+        X & back up a byte\\
+        x & null byte\\
+        Z & ASCII string (null padded, count is width)\\
+"
+  end
+
+  def test_upcase
+    assert_equal("HELLO","hElLo".upcase)
+    assert_equal("HELLO","hello".upcase)
+    assert_equal("HELLO","HELLO".upcase)
+    assert_equal("ABC HELLO 123","abc HELLO 123".upcase)
+  end
+
+  def test_upcase!
+    a="heLlO"
+    b=a.dup
+    assert_equal("HELLO",a.upcase!)
+    assert_equal("HELLO",a)
+    assert_equal("heLlO",b)
+
+    a="HELLO"
+    assert_equal(nil,a.upcase!)
+    assert_equal("HELLO",a)
+  end
+
+  def test_upto
+    a="aa"
+    start="aa"
+    count = 0
+    assert_equal("aa", a.upto("zz") {|s|
+                   assert_equal(start,s)
+                   start.succ!
+                   count += 1
+                   })
+    assert_equal(676,count)
+  end
+
+  def test_s_new
+    assert_equal("RUBY",String.new("RUBY"))
+@
+
+
+1.10
+log
+@Many contributions from members of the ml
+@
+text
+@d635 1
+a635 1
+    a="beta"
+d641 1
+a641 1
+    a="madamImadam"
+@
+
+
+1.9
+log
+@Archive save
+@
+text
+@d17 1
+d200 9
+d254 6
+d281 6
+d293 1
+a294 1
+        a.taint  if taint
+d348 7
+d367 2
+a368 1
+    a.downcase!
+d370 1
+d386 1
+a387 1
+        a.taint  if taint
+d474 1
+d477 1
+d571 1
+d574 1
+d629 3
+d636 8
+a643 2
+    assert_equal("ateb",a.reverse!)
+    assert_equal("ateb",a)
+d724 1
+d727 1
+d823 1
+d826 2
+d848 1
+d850 3
+d855 1
+d858 1
+d876 1
+d879 1
+d917 1
+d920 1
+d966 1
+d969 2
+d1008 1
+d1011 1
+d1033 1
+d1036 1
+d1130 2
+a1131 1
+    a.upcase!
+d1133 1
+@
+
+
+1.8
+log
+@Various fixes
+@
+text
+@d807 2
+a808 2
+    assert_equal("h*llo","hello".sub(/[aeiou]/,'*'))
+    assert_equal("h<e>llo","hello".sub(/([aeiou])/,'<\1>'))
+d816 1
+a816 1
+    assert_equal(true, (a.sub('.','X').tainted?))
+@
+
+
+1.7
+log
+@Change stderr write to skipping()
+@
+text
+@d13 1
+a13 2
+    $stderr.puts "End of string is special???"
+    assert_equal(nil,"FooBar"[7,2])     # Maybe should be six?
+d125 16
+a140 1
+    $stderr.puts "kernel.sprintf flags not tested in String.%"
+@
+
+
+1.6
+log
+@Added unpack
+@
+text
+@d1014 1
+a1014 1
+    $stderr.puts "Not tested:
+@
+
+
+1.5
+log
+@Finished unpack, but not well.
+@
+text
+@d969 6
+a974 6
+    #assert_equals(["cat"],"cat".unpack("A*"))
+    #assert_equals(["cwx", "wx", "x", "yy"], "cwx  yy ".unpack("A3@@1A3@@2A3A3"))
+    #assert_equals(["cat", "wom", "x\000\000", "yy\000"],
+                  #"catwomx\000\000yy\000".unpack("a3a3a3a3"))
+    #assert_equals(["cat"],"cat".unpack("a*"))
+    #assert_equals(["ca"],"ca".unpack("a2"))
+d976 1
+a976 1
+    #assert_equals(["cat\000\000"],"cat\000\000".unpack("a5"))
+@
+
+
+1.4
+log
+@All but pack...
+@
+text
+@d964 75
+a1038 1
+    assert_fail("untested")
+@
+
+
+1.3
+log
+@Note $= use
+@
+text
+@a2 1
+
+d6 25
+a30 1
+    assert_fail("untested")
+d34 52
+a85 1
+    assert_fail("untested")
+d89 8
+a96 1
+    assert_fail("Remember $=")
+d100 2
+a101 1
+
+d106 2
+a107 1
+    assert_fail("untested")
+d111 2
+a112 1
+    assert_fail("untested")
+d116 5
+a120 2
+    assert_fail("Remember $=")
+    assert_fail("untested")
+d124 3
+a126 1
+    assert_fail("untested")
+d130 2
+a131 1
+    assert_fail("untested")
+d135 1
+a135 1
+    assert_fail("untested")
+d139 18
+a156 1
+    assert_fail("untested")
+d160 8
+a167 2
+    assert_fail("Remember $=")
+    assert_fail("untested")
+d171 3
+a173 1
+    assert_fail("untested")
+d177 8
+a184 1
+    assert_fail("untested")
+d188 2
+a189 1
+    assert_fail("untested")
+d193 9
+a201 1
+    assert_fail("untested")
+d205 25
+a229 1
+    assert_fail("untested")
+d233 5
+a237 1
+    assert_fail("untested")
+d241 10
+a250 1
+    assert_fail("untested")
+d254 13
+a266 1
+    assert_fail("untested")
+d270 2
+a271 1
+    assert_fail("untested")
+d275 5
+a279 1
+    assert_fail("untested")
+d283 2
+a284 1
+    assert_fail("untested")
+d288 4
+a291 1
+    assert_fail("untested")
+d295 17
+a311 1
+    assert_fail("untested")
+d314 1
+d316 4
+a319 1
+    assert_fail("untested")
+d323 7
+a329 1
+    assert_fail("untested")
+d333 2
+a334 1
+    assert_fail("untested")
+d338 13
+a350 1
+    assert_fail("untested")
+d354 18
+a371 1
+    assert_fail("untested")
+d375 5
+a379 1
+    assert_fail("untested")
+d383 18
+a400 1
+    assert_fail("untested")
+d404 2
+a405 1
+    assert_fail("untested")
+d409 3
+a411 1
+    assert_fail("untested")
+d415 10
+a424 1
+    assert_fail("untested")
+d428 22
+a449 1
+    assert_fail("untested")
+d453 2
+a454 1
+    assert_fail("untested")
+d458 7
+a464 1
+    assert_fail("untested")
+d468 4
+a471 1
+    assert_fail("untested")
+d475 15
+a489 5
+    assert_fail("untested")
+  end
+
+  def test_inspect
+    assert_fail("untested")
+d493 2
+a494 1
+    assert_fail("untested")
+d498 4
+a501 1
+    assert_fail("untested")
+d505 2
+a506 1
+    assert_fail("untested")
+d510 10
+a519 1
+    assert_fail("untested")
+d523 31
+a553 1
+    assert_fail("untested")
+d557 6
+a562 1
+    assert_fail("untested")
+d566 9
+a574 1
+    assert_fail("untested")
+d578 2
+a579 1
+    assert_fail("untested")
+d583 3
+a585 1
+    assert_fail("untested")
+d589 15
+a603 1
+    assert_fail("untested")
+d607 2
+a608 1
+    assert_fail("untested")
+d612 16
+a627 1
+    assert_fail("untested")
+d631 4
+a634 1
+    assert_fail("untested")
+d638 24
+a661 1
+    assert_fail("untested")
+d665 68
+a732 1
+    assert_fail("untested")
+d736 17
+a752 1
+    assert_fail("untested")
+d756 3
+a758 1
+    assert_fail("untested")
+d762 14
+a775 1
+    assert_fail("untested")
+d779 2
+a780 1
+    assert_fail("untested")
+d784 6
+a789 1
+    assert_fail("untested")
+d793 10
+a802 1
+    assert_fail("untested")
+d806 23
+a828 1
+    assert_fail("untested")
+d832 10
+a841 1
+    assert_fail("untested")
+d845 31
+a875 1
+    assert_fail("untested")
+d879 6
+a884 1
+    assert_fail("untested")
+d888 1
+a888 1
+    assert_fail("untested")
+d892 6
+a897 1
+    assert_fail("untested")
+d901 4
+a904 1
+    assert_fail("untested")
+d908 2
+a909 1
+    assert_fail("untested")
+d913 3
+a915 1
+    assert_fail("untested")
+d919 3
+a921 1
+    assert_fail("untested")
+d925 3
+a927 1
+    assert_fail("untested")
+d931 15
+a945 1
+    assert_fail("untested")
+d949 2
+a950 1
+    assert_fail("untested")
+d954 7
+a960 1
+    assert_fail("untested")
+d968 4
+a971 1
+    assert_fail("untested")
+d975 7
+a981 1
+    assert_fail("untested")
+d985 9
+a993 1
+    assert_fail("untested")
+d997 1
+a997 1
+    assert_fail("untested")
+@
+
+
+1.2
+log
+@Fix symlinks, and aid note about $+ to string
+@
+text
+@d15 1
+a15 1
+    assert_fail("untested")
+d32 1
+d53 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d19 5
+@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

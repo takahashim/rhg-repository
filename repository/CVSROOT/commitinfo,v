@@ -1,0 +1,123 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2001.01.30.18.39.20;	author knu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.01.14.10.17.49;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.01.12.11.03.36;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.01.11.21.00.43;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.01.11.10.53.02;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.12.22.04.32.16;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@Modify for cvsmailer 0.15.
+@
+text
+@# The "commitinfo" file is used to control pre-commit checks.
+# The filter on the right is invoked with the repository and a list 
+# of files to check.  A non-zero exit of the filter program will 
+# cause the commit to be aborted.
+#
+# The first entry on a line is a regular expression which is tested
+# against the directory that the change is being committed to, relative
+# to the $CVSROOT.  For the first match that is found, then the remainder
+# of the line is the name of the filter to run.
+#
+# If the repository name does not match any of the regular expressions in this
+# file, the "DEFAULT" line is used, if it is specified.
+#
+# If the name "ALL" appears as a regular expression it is always used
+# in addition to the first matching regex or "DEFAULT".
+#
+# $Id$
+#
+
+DEFAULT $CVSROOT/CVSROOT/commitinfo_ruby.rb $CVSROOT $USER
+@
+
+
+1.5
+log
+@Use commitinfo_ruby.rb.
+@
+text
+@d16 4
+@
+
+
+1.4
+log
+@Ok, it should work now...
+@
+text
+@d16 1
+a16 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/commitinfo.rb $CVSROOT $USER
+@
+
+
+1.3
+log
+@Fix wrong paths to *info.rb.
+
+Add myself manually until ruby-committers@@ mailing list is set up.
+@
+text
+@d16 1
+a16 1
+DEFAULT /usr/bin/ruby $CVSROOT/CVSROOT/commitinfo.rb $CVSROOT
+@
+
+
+1.2
+log
+@Activate commit mails.
+@
+text
+@d16 1
+a16 1
+DEFAULT /usr/bin/ruby $CVSROOT/commitinfo.rb $CVSROOT
+@
+
+
+1.1
+log
+@initial checkin
+@
+text
+@d16 1
+@
+
+

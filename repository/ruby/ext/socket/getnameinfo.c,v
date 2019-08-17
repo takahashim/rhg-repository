@@ -1,0 +1,981 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.7
+	v1_6_6:1.7
+	v1_6_5:1.7
+	v1_6_4:1.7
+	v1_7_1:1.7
+	v1_6_4_preview4:1.7
+	v1_6_4_preview3:1.7
+	v1_6_4_preview2:1.7
+	v1_6_4_preview1:1.7
+	v1_6_3:1.7
+	ruby_m17n:1.7.0.4
+	ruby_1_6:1.7.0.2
+	v1_6_2:1.7
+	v1_6_1:1.7
+	v1_6_0:1.7
+	v1_4_6:1.3.2.3
+	v1_4_5:1.3.2.3
+	v1_4_4:1.3.2.2
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.9
+	v1_3_6_repack:1.1.2.9
+	v1_3_6:1.1.2.9
+	v1_3_5:1.1.2.8
+	v1_3_4_990625:1.1.2.8
+	v1_3_4_990624:1.1.2.8
+	v1_3_4_990611:1.1.2.8
+	v1_3_4_990531:1.1.2.7
+	v1_3_3_990518:1.1.2.6
+	v1_3_3_990513:1.1.2.5
+	v1_3_3_990507:1.1.2.4
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.8
+date	2001.10.02.04.31.21;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.10.04.49.18;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.02.17.07.11.20;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.02.08.08.48.58;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.02.02.08.10.32;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.04.04.51.08;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.50;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.30.06.31.03;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.04.30.06.31.03;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.04.30.15.16.44;	author matz;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	99.05.06.08.31.48;	author matz;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	99.05.07.08.24.36;	author matz;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	99.05.10.08.22.49;	author matz;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	99.05.14.08.56.13;	author matz;	state Exp;
+branches;
+next	1.1.2.7;
+
+1.1.2.7
+date	99.05.31.09.13.31;	author matz;	state Exp;
+branches;
+next	1.1.2.8;
+
+1.1.2.8
+date	99.06.09.09.21.35;	author matz;	state Exp;
+branches;
+next	1.1.2.9;
+
+1.1.2.9
+date	99.07.22.10.37.24;	author matz;	state Exp;
+branches;
+next	1.1.2.10;
+
+1.1.2.10
+date	99.08.11.07.24.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.02.02.08.09.44;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	2000.02.17.08.29.06;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.03.23.04.14.26;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@/*
+ * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the project nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+/*
+ * Issues to be discussed:
+ * - Thread safe-ness must be checked
+ * - Return values.  There seems to be no standard for return value (RFC2133)
+ *   but INRIA implementation returns EAI_xxx defined for getaddrinfo().
+ */
+
+#include "config.h"
+#include <sys/types.h>
+#ifndef NT
+#if defined(__BEOS__)
+# include <net/socket.h>
+#else
+# include <sys/socket.h>
+#endif
+#include <netinet/in.h>
+#if defined(HAVE_ARPA_INET_H)
+#include <arpa/inet.h>
+#endif
+#if defined(HAVE_ARPA_NAMESER_H)
+#include <arpa/nameser.h>
+#endif
+#include <netdb.h>
+#if defined(HAVE_RESOLV_H)
+#include <resolv.h>
+#endif
+#endif
+#ifdef NT
+#include <winsock2.h>
+#include <stdio.h>
+#define snprintf _snprintf
+#endif
+
+#include <string.h>
+#include <stddef.h>
+
+#ifdef SOCKS5
+#include <socks.h>
+#endif
+
+#include "addrinfo.h"
+#include "sockport.h"
+
+#define SUCCESS 0
+#define ANY 0
+#define YES 1
+#define NO  0
+
+struct sockinet {
+	u_char	si_len;
+	u_char	si_family;
+	u_short	si_port;
+};
+
+static struct afd {
+	int a_af;
+	int a_addrlen;
+	int a_socklen;
+	int a_off;
+} afdl [] = {
+#ifdef INET6
+#define N_INET6 0
+	{PF_INET6, sizeof(struct in6_addr),
+	 sizeof(struct sockaddr_in6),
+	 offsetof(struct sockaddr_in6, sin6_addr)},
+#define N_INET  1
+#else
+#define N_INET  0
+#endif
+	{PF_INET, sizeof(struct in_addr),
+	 sizeof(struct sockaddr_in),
+	 offsetof(struct sockaddr_in, sin_addr)},
+	{0, 0, 0, 0},
+};
+
+#define ENI_NOSOCKET 	0
+#define ENI_NOSERVNAME	1
+#define ENI_NOHOSTNAME	2
+#define ENI_MEMORY	3
+#define ENI_SYSTEM	4
+#define ENI_FAMILY	5
+#define ENI_SALEN	6
+
+#ifndef HAVE_INET_NTOP
+static const char *
+inet_ntop(af, addr, numaddr, numaddr_len)
+	int af;
+	const void *addr;
+	char *numaddr;
+	size_t numaddr_len;
+{
+#ifdef HAVE_INET_NTOA
+	struct in_addr in;
+	memcpy(&in.s_addr, addr, sizeof(in.s_addr));
+	snprintf(numaddr, numaddr_len, "%s", inet_ntoa(in));
+#else
+	unsigned long x = ntohl(*(unsigned long*)addr);
+	snprintf(numaddr, numaddr_len, "%d.%d.%d.%d",
+		 (int) (x>>24) & 0xff, (int) (x>>16) & 0xff,
+		 (int) (x>> 8) & 0xff, (int) (x>> 0) & 0xff);
+#endif
+	return numaddr;
+}
+#endif
+
+int
+getnameinfo(sa, salen, host, hostlen, serv, servlen, flags)
+	const struct sockaddr *sa;
+	size_t salen;
+	char *host;
+	size_t hostlen;
+	char *serv;
+	size_t servlen;
+	int flags;
+{
+	struct afd *afd;
+	struct servent *sp;
+	struct hostent *hp;
+	u_short port;
+	int family, len, i;
+	char *addr, *p;
+	u_long v4a;
+#ifdef INET6
+	u_char pfx;
+#endif
+	int h_error;
+	char numserv[512];
+	char numaddr[512];
+
+	if (sa == NULL)
+		return ENI_NOSOCKET;
+
+	len = SA_LEN(sa);
+	if (len != salen) return ENI_SALEN;
+	
+	family = sa->sa_family;
+	for (i = 0; afdl[i].a_af; i++)
+		if (afdl[i].a_af == family) {
+			afd = &afdl[i];
+			goto found;
+		}
+	return ENI_FAMILY;
+	
+ found:
+	if (len != afd->a_socklen) return ENI_SALEN;
+	
+	port = ((struct sockinet *)sa)->si_port; /* network byte order */
+	addr = (char *)sa + afd->a_off;
+
+	if (serv == NULL || servlen == 0) {
+		/* what we should do? */
+	} else if (flags & NI_NUMERICSERV) {
+		snprintf(numserv, sizeof(numserv), "%d", ntohs(port));
+		if (strlen(numserv) + 1 > servlen)
+			return ENI_MEMORY;
+		strcpy(serv, numserv);
+	} else {
+#if defined(HAVE_GETSERVBYPORT)
+		sp = getservbyport(port, (flags & NI_DGRAM) ? "udp" : "tcp");
+		if (sp) {
+			if (strlen(sp->s_name) + 1 > servlen)
+				return ENI_MEMORY;
+			strcpy(serv, sp->s_name);
+		} else
+			return ENI_NOSERVNAME;
+#else
+		return ENI_NOSERVNAME;
+#endif
+	}
+
+	switch (sa->sa_family) {
+	case AF_INET:
+		v4a = ntohl(((struct sockaddr_in *)sa)->sin_addr.s_addr);
+		if (IN_MULTICAST(v4a) || IN_EXPERIMENTAL(v4a))
+			flags |= NI_NUMERICHOST;
+		v4a >>= IN_CLASSA_NSHIFT;
+		if (v4a == 0)
+			flags |= NI_NUMERICHOST;			
+		break;
+#ifdef INET6
+	case AF_INET6:
+		pfx = ((struct sockaddr_in6 *)sa)->sin6_addr.s6_addr8[0];
+		if (pfx == 0 || pfx == 0xfe || pfx == 0xff)
+			flags |= NI_NUMERICHOST;
+		break;
+#endif
+	}
+	if (host == NULL || hostlen == 0) {
+		/* what should we do? */
+	} else if (flags & NI_NUMERICHOST) {
+		if (inet_ntop(afd->a_af, addr, numaddr, sizeof(numaddr))
+		    == NULL)
+			return ENI_SYSTEM;
+		if (strlen(numaddr) > hostlen)
+			return ENI_MEMORY;
+		strcpy(host, numaddr);
+	} else {
+#ifdef INET6
+		hp = getipnodebyaddr(addr, afd->a_addrlen, afd->a_af, &h_error);
+#else
+		hp = gethostbyaddr(addr, afd->a_addrlen, afd->a_af);
+		h_error = h_errno;
+#endif
+
+		if (hp) {
+			if (flags & NI_NOFQDN) {
+				p = strchr(hp->h_name, '.');
+				if (p) *p = '\0';
+			}
+			if (strlen(hp->h_name) + 1 > hostlen) {
+#ifdef INET6
+				freehostent(hp);
+#endif
+				return ENI_MEMORY;
+			}
+			strcpy(host, hp->h_name);
+#ifdef INET6
+			freehostent(hp);
+#endif
+		} else {
+			if (flags & NI_NAMEREQD)
+				return ENI_NOHOSTNAME;
+			if (inet_ntop(afd->a_af, addr, numaddr, sizeof(numaddr))
+			    == NULL)
+				return ENI_NOHOSTNAME;
+			if (strlen(numaddr) > hostlen)
+				return ENI_MEMORY;
+			strcpy(host, numaddr);
+		}
+	}
+	return SUCCESS;
+}
+@
+
+
+1.7
+log
+@matz
+@
+text
+@d183 1
+a183 1
+		if (strlen(numserv) > servlen)
+d190 1
+a190 1
+			if (strlen(sp->s_name) > servlen)
+d202 1
+a202 1
+		v4a = ((struct sockaddr_in *)sa)->sin_addr.s_addr;
+d206 1
+a206 1
+		if (v4a == 0 || v4a == IN_LOOPBACKNET)
+d239 1
+a239 1
+			if (strlen(hp->h_name) > hostlen) {
+@
+
+
+1.6
+log
+@2000-02-17
+@
+text
+@d40 5
+a44 1
+#include <sys/socket.h>
+d46 1
+d48 1
+d187 1
+d195 3
+@
+
+
+1.5
+log
+@2000-02-08
+@
+text
+@d37 1
+a63 1
+#include "config.h"
+@
+
+
+1.4
+log
+@2000-02-02
+@
+text
+@a66 6
+#ifndef INET6
+#ifndef NT
+extern int h_errno;
+#endif
+#endif
+
+@
+
+
+1.3
+log
+@19991004
+@
+text
+@d67 6
+a157 3
+#ifndef NT
+	extern int h_errno;
+#endif
+@
+
+
+1.3.2.1
+log
+@2000-02-02
+@
+text
+@a66 6
+#ifndef INET6
+#ifndef NT
+extern int h_errno;
+#endif
+#endif
+
+d152 3
+@
+
+
+1.3.2.2
+log
+@2000-02-17
+@
+text
+@a36 1
+#include "config.h"
+d63 1
+@
+
+
+1.3.2.3
+log
+@2000-03-23
+@
+text
+@d67 6
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d59 4
+@
+
+
+1.1
+log
+@file getnameinfo.c was initially added on branch ruby_1_3.
+@
+text
+@d1 250
+@
+
+
+1.1.2.1
+log
+@add files
+@
+text
+@a0 203
+/*
+ * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the project nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+/*
+ * Issues to be discussed:
+ * - Thread safe-ness must be checked
+ * - Return values.  There seems to be no standard for return value (RFC2133)
+ *   but INRIA implementation returns EAI_xxx defined for getaddrinfo().
+ */
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <resolv.h>
+#include <string.h>
+#include <stddef.h>
+
+#include "addrinfo.h"
+
+#define SUCCESS 0
+#define ANY 0
+#define YES 1
+#define NO  0
+
+static struct afd {
+	int a_af;
+	int a_addrlen;
+	int a_socklen;
+	int a_off;
+} afdl [] = {
+#ifdef INET6
+	{PF_INET6, sizeof(struct in6_addr), sizeof(struct sockaddr_in6),
+		offsetof(struct sockaddr_in6, sin6_addr)},
+#endif
+	{PF_INET, sizeof(struct in_addr), sizeof(struct sockaddr_in),
+		offsetof(struct sockaddr_in, sin_addr)},
+	{0, 0, 0},
+};
+
+struct sockinet {
+	u_char	si_len;
+	u_char	si_family;
+	u_short	si_port;
+};
+
+#define ENI_NOSOCKET 	0
+#define ENI_NOSERVNAME	1
+#define ENI_NOHOSTNAME	2
+#define ENI_MEMORY	3
+#define ENI_SYSTEM	4
+#define ENI_FAMILY	5
+#define ENI_SALEN	6
+
+int
+getnameinfo(sa, salen, host, hostlen, serv, servlen, flags)
+	const struct sockaddr *sa;
+	size_t salen;
+	char *host;
+	size_t hostlen;
+	char *serv;
+	size_t servlen;
+	int flags;
+{
+	struct afd *afd;
+	struct servent *sp;
+	struct hostent *hp;
+	u_short port;
+	int family, len, i;
+	char *addr, *p;
+	u_long v4a;
+	u_char pfx;
+	int h_error;
+	char numserv[512];
+	char numaddr[512];
+
+	if (sa == NULL)
+		return ENI_NOSOCKET;
+
+	len = SA_LEN(sa);
+	if (len != salen) return ENI_SALEN;
+	
+	family = sa->sa_family;
+	for (i = 0; afdl[i].a_af; i++)
+		if (afdl[i].a_af == family) {
+			afd = &afdl[i];
+			goto found;
+		}
+	return ENI_FAMILY;
+	
+ found:
+	if (len != afd->a_socklen) return ENI_SALEN;
+	
+	port = ((struct sockinet *)sa)->si_port; /* network byte order */
+	addr = (char *)sa + afd->a_off;
+
+	if (serv == NULL || servlen == 0) {
+		/* what we should do? */
+	} else if (flags & NI_NUMERICSERV) {
+		snprintf(numserv, sizeof(numserv), "%d", ntohs(port));
+		if (strlen(numserv) > servlen)
+			return ENI_MEMORY;
+		strcpy(serv, numserv);
+	} else {
+		sp = getservbyport(port, (flags & NI_DGRAM) ? "udp" : "tcp");
+		if (sp) {
+			if (strlen(sp->s_name) > servlen)
+				return ENI_MEMORY;
+			strcpy(serv, sp->s_name);
+		} else
+			return ENI_NOSERVNAME;
+	}
+
+	switch (sa->sa_family) {
+	case AF_INET:
+		v4a = ((struct sockaddr_in *)sa)->sin_addr.s_addr;
+		if (IN_MULTICAST(v4a) || IN_EXPERIMENTAL(v4a))
+			flags |= NI_NUMERICHOST;
+		v4a >>= IN_CLASSA_NSHIFT;
+		if (v4a == 0 || v4a == IN_LOOPBACKNET)
+			flags |= NI_NUMERICHOST;			
+		break;
+#ifdef INET6
+	case AF_INET6:
+		pfx = ((struct sockaddr_in6 *)sa)->sin6_addr.s6_addr8[0];
+		if (pfx == 0 || pfx == 0xfe || pfx == 0xff)
+			flags |= NI_NUMERICHOST;
+		break;
+#endif
+	}
+	if (host == NULL || hostlen == 0) {
+		/* what should we do? */
+	} else if (flags & NI_NUMERICHOST) {
+		if (inet_ntop(afd->a_af, addr, numaddr, sizeof(numaddr))
+		    == NULL)
+			return ENI_SYSTEM;
+		if (strlen(numaddr) > hostlen)
+			return ENI_MEMORY;
+		strcpy(host, numaddr);
+	} else {
+#ifdef INET6
+		hp = getipnodebyaddr(addr, afd->a_addrlen, afd->a_af, &h_error);
+#else
+		hp = gethostbyaddr(addr, afd->a_addrlen, afd->a_af);
+		h_error = h_errno;
+#endif
+
+		if (hp) {
+			if (flags & NI_NOFQDN) {
+				p = strchr(hp->h_name, '.');
+				if (p) *p = '\0';
+			}
+			if (strlen(hp->h_name) > hostlen) {
+#ifdef INET6
+				freehostent(hp);
+#endif
+				return ENI_MEMORY;
+			}
+			strcpy(host, hp->h_name);
+#ifdef INET6
+			freehostent(hp);
+#endif
+		} else {
+			if (flags & NI_NAMEREQD)
+				return ENI_NOHOSTNAME;
+			if (inet_ntop(afd->a_af, addr, numaddr, sizeof(numaddr))
+			    == NULL)
+				return ENI_NOHOSTNAME;
+			if (strlen(numaddr) > hostlen)
+				return ENI_MEMORY;
+			strcpy(host, numaddr);
+		}
+	}
+	return SUCCESS;
+}
+@
+
+
+1.1.2.2
+log
+@*** empty log message ***
+@
+text
+@a47 1
+#include "sockport.h"
+@
+
+
+1.1.2.3
+log
+@small fixes
+@
+text
+@a46 1
+#include "config.h"
+a83 15
+#ifndef HAVE_INET_NTOP
+static char *
+inet_ntop(af, addr, numaddr, numaddr_len)
+	int af;
+	char *addr;
+	char *numaddr;
+	int numaddr_len;
+{
+	struct in_addr in;
+	memcpy(&in.s_addr, addr, sizeof(in.s_addr));
+	strcpy(numaddr, inet_ntoa(in));
+	return numaddr;
+}
+#endif
+
+a104 1
+	extern int h_errno;
+@
+
+
+1.1.2.4
+log
+@990507
+@
+text
+@d86 1
+a86 1
+static const char *
+d89 1
+a89 1
+	__const void *addr;
+d91 1
+a91 1
+	size_t numaddr_len;
+a92 1
+#ifdef HAVE_INET_NTOA
+d95 1
+a95 7
+	strncpy(numaddr, numaddr_len, inet_ntoa(in));
+#else
+	unsigned long x = ntohl(*(unsigned long*)addr);
+	snprintf(numaddr, numaddr_len, "%d.%d.%d.%d",
+		 (int) (x>>24) & 0xff, (int) (x>>16) & 0xff,
+		 (int) (x>> 8) & 0xff, (int) (x>> 0) & 0xff);
+#endif
+@
+
+
+1.1.2.5
+log
+@regexp,range,squeeze
+@
+text
+@d96 1
+a96 1
+	snprintf(numaddr, numaddr_len, "%s", inet_ntoa(in));
+@
+
+
+1.1.2.6
+log
+@moving
+@
+text
+@d89 1
+a89 1
+	const void *addr;
+@
+
+
+1.1.2.7
+log
+@990531
+@
+text
+@a37 1
+#ifndef NT
+a43 7
+#endif
+#ifdef NT
+#include <winsock2.h>
+#include <stdio.h>
+#define snprintf _snprintf
+#endif
+
+a127 1
+#ifndef NT
+a128 1
+#endif
+@
+
+
+1.1.2.8
+log
+@thread bugs
+@
+text
+@a63 6
+struct sockinet {
+	u_char	si_len;
+	u_char	si_family;
+	u_short	si_port;
+};
+
+d71 2
+a72 7
+#define N_INET6 0
+	{PF_INET6, sizeof(struct in6_addr),
+	 sizeof(struct sockaddr_in6),
+	 offsetof(struct sockaddr_in6, sin6_addr)},
+#define N_INET  1
+#else
+#define N_INET  0
+d74 9
+a82 4
+	{PF_INET, sizeof(struct in_addr),
+	 sizeof(struct sockaddr_in),
+	 offsetof(struct sockaddr_in, sin_addr)},
+	{0, 0, 0, 0},
+@
+
+
+1.1.2.9
+log
+@backtrace may be Qnil
+@
+text
+@a137 1
+#ifdef INET6
+a138 1
+#endif
+@
+
+
+1.1.2.10
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@a41 1
+#if defined(HAVE_ARPA_NAMESER_H)
+a42 1
+#endif
+a43 1
+#if defined(HAVE_RESOLV_H)
+a44 1
+#endif
+@
+
+

@@ -1,0 +1,100 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.07.07.46;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.07.07.46;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file configure.in was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 60
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT(eruby_main.c)
+
+dnl
+dnl Do the regular housekeeping.
+dnl
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(eruby, 0.9.8)
+
+dnl
+dnl Library version.
+dnl
+dnl 1. If the library source code has changed at all since the last
+dnl    update, then increment LT_REVISION
+dnl
+dnl 2. If any interfaces have been added, removed, or changed since the
+dnl    last update, increment LT_CURRENT, and set LT_REVISION to 0.
+dnl
+dnl 3. If any interfaces have been added since the last public release,
+dnl    then increment LT_AGE.
+dnl
+dnl 4. If any interfaces have been removed since the last public release,
+dnl    then set LT_AGE to 0.
+
+LT_CURRENT=1
+LT_REVISION=0
+LT_AGE=0
+AC_SUBST(LT_CURRENT)
+AC_SUBST(LT_REVISION)
+AC_SUBST(LT_AGE)
+
+dnl
+dnl Checks for programs.
+dnl
+AC_PROG_CC
+AM_PROG_LIBTOOL
+
+dnl
+dnl Checks for Ruby.
+dnl
+AM_PATH_RUBY(1.6)
+
+dnl
+dnl Check for default charset.
+dnl
+AC_MSG_CHECKING(for default charset)
+AC_ARG_WITH(charset,
+[  --with-charset=CHARSET  default charset is CHARSET],
+[
+  DEFAULT_CHARSET="$withval"
+], [
+  DEFAULT_CHARSET="iso-8859-1"
+])
+AC_MSG_RESULT($DEFAULT_CHARSET)
+AC_DEFINE_UNQUOTED(ERUBY_DEFAULT_CHARSET, "$DEFAULT_CHARSET",
+[Default charset])
+
+AC_OUTPUT(Makefile)
+@
+

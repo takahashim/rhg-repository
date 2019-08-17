@@ -1,0 +1,802 @@
+head	1.22;
+access;
+symbols
+	v1_6_7:1.17.2.2
+	v1_6_6:1.17.2.2
+	v1_6_5:1.17.2.2
+	v1_6_4:1.17.2.2
+	v1_7_1:1.19
+	v1_6_4_preview4:1.17.2.1
+	v1_6_4_preview3:1.17.2.1
+	v1_6_4_preview2:1.17.2.1
+	v1_6_4_preview1:1.17.2.1
+	v1_6_3:1.17.2.1
+	ruby_m17n:1.17.0.4
+	ruby_1_6:1.17.0.2
+	v1_6_2:1.17
+	v1_6_1:1.16
+	v1_6_0:1.16
+	v1_4_6:1.2.2.3
+	v1_4_5:1.2.2.2
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.2
+	v1_3_6_repack:1.1.2.2
+	v1_3_6:1.1.2.2
+	v1_3_5:1.1.2.1
+	v1_3_4_990625:1.1.2.1
+	v1_3_4_990624:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.22
+date	2002.10.21.14.03.46;	author nobu;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.09.11.02.38.51;	author usa;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.06.11.10.26.13;	author eban;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.05.28.16.07.34;	author eban;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.01.31.14.26.46;	author eban;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.10.31.00.43.07;	author eban;	state Exp;
+branches
+	1.17.2.1;
+next	1.16;
+
+1.16
+date	2000.08.09.04.32.20;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.08.07.05.02.09;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.08.03.09.50.40;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.25.14.46.46;	author eban;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.25.10.09.59;	author eban;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.07.14.08.21.30;	author eban;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.07.05.14.12.26;	author eban;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.07.03.07.50.20;	author eban;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.07.02.15.57.16;	author eban;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.14.09.36.27;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.13.16.12.18;	author eban;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.09.04.53.07;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.08.05.00.22;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.05.04.37.16;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	99.06.11.06.43.35;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.06.11.06.43.35;	author matz;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	99.07.28.09.26.51;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.05.04.41.13;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.06.03.07.49.19;	author eban;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.06.28.00.30.52;	author eban;	state Exp;
+branches;
+next	;
+
+1.17.2.1
+date	2001.01.31.14.27.37;	author eban;	state Exp;
+branches;
+next	1.17.2.2;
+
+1.17.2.2
+date	2001.05.28.16.07.01;	author eban;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@* configure.in (XCFLAGS): CFLAGS to comile ruby itself.
+
+* configure.in (LIBEXT): suffix for static libraries.
+
+* configure.in (LIBPATHFLAG): switch template to specify library
+  path.
+
+* configure.in (LINK_SO): command to link shared objects.
+
+* configure.in (DEFFILE, ARCHFILE): miscellaneous system dependent
+  files.
+
+* configure.in (EXPORT_PREFIX): prefix to exported symbols on
+  Windows.
+
+* configure.in (COMMON_LIBS, COMMON_MACROS, COMMON_HEADERS):
+  libraries, macros and headers used in common.
+
+* configure.in (RUBYW_INSTALL_NAME, rubyw_install_name): GUI mode
+  excutable name.
+
+* Makefile.in (CFLAGS): append XCFLAGS.
+
+* Makefile.in (PREP): miscellaneous system dependent files.
+
+* Makefile.in (ruby.imp, ext/extinit.o): moved from ext/extmk.rb.
+
+* Makefile.in (fake.rb): CROSS_COMPILING keeps building platform.
+
+* Makefile.in (MAKEFILES): depend on *.in and config.status.
+
+* Makefile.in (parse.c): replace "y.tab.c" with actual name for
+  byacc.
+
+* ext/extmk.rb, lib/mkmf.rb: integrated.
+
+* ext/extmk.rb: propagate MFLAGS.
+
+* ext/extmk.rb (extmake): make dummy Makefile to clean even if no
+  Makefile is made.
+
+* lib/mkmf.rb (older): accept multiple file names and Time
+  objects.
+
+* lib/mkmf.rb (xsystem): split and qoute.
+
+* lib/mkmf.rb (cpp_include): make include directives.
+
+* lib/mkmf.rb (try_func): try wheather specified function is
+  available.
+
+* lib/mkmf.rb (install_files): default to site-install.
+
+* lib/mkmf.rb (checking_for): added.
+
+* lib/mkmf.rb (find_executable0): just find executable file with
+  no message.
+
+* lib/mkmf.rb (create_header): output header file is variable.
+
+* lib/mkmf.rb (create_makefile): separate sections.
+
+* lib/mkmf.rb (init_mkmf): initialize global variables.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (CPP, AR): added.
+
+* bcc32/Makefile.sub (ARCH): fixed to i386.
+
+* win32/Makefile.sub, bcc32/Makefile.sub (miniruby): should not
+  link EXTOBJS.
+
+* ext/dl/extconf.rb: use try_cpp to cross compile.
+
+* ext/dl/extconf.rb: not modify files in source directory.
+@
+text
+@include Makefile
+
+ENABLE_SHARED=@@ENABLE_SHARED@@
+
+ifeq ($(ENABLE_SHARED),yes)
+  CPPFLAGS += -DLIBRUBY_SO=\"$(LIBRUBY_SO)\"
+else
+  RUBY_EXP = $(RUBY_INSTALL_NAME).exp
+  EXTOBJS = $(RUBY_EXP)
+  LIBRUBYARG = $(LIBRUBY_A)
+endif
+
+ifeq ($(RUBY_INSTALL_NAME),ruby)
+  RUBYW_INSTALL_NAME = $(RUBY_INSTALL_NAME)w
+else
+  RUBYW_INSTALL_NAME = $(subst ruby,rubyw,$(RUBY_INSTALL_NAME))
+endif
+WPROGRAM = $(RUBYW_INSTALL_NAME)$(EXEEXT)
+RUBYDEF = $(RUBY_INSTALL_NAME).def
+SOLIBS := $(RUBY_SO_NAME).res.@@OBJEXT@@ $(SOLIBS)
+EXTOBJS += $(@@:$(EXEEXT)=.res.@@OBJEXT@@)
+
+$(LIBRUBY_SO): $(RUBYDEF) $(RUBY_SO_NAME).res.@@OBJEXT@@ $(RUBY_EXP)
+$(LIBRUBY): $(LIBRUBY_SO)
+
+%.res.@@OBJEXT@@: %.rc
+	@@WINDRES@@ --include-dir . --include-dir $(<D) --include-dir $(srcdir)/win32 $< $@@
+
+$(RUBY_INSTALL_NAME).rc $(RUBYW_INSTALL_NAME).rc $(RUBY_SO_NAME).rc: rbconfig.rb
+	@@$(MINIRUBY) $(srcdir)/win32/resource.rb \
+	  -ruby_name=$(RUBY_INSTALL_NAME) -rubyw_name=$(RUBYW_INSTALL_NAME) \
+	  -so_name=$(RUBY_SO_NAME) \
+	  . $(icondirs) $(srcdir)/win32
+
+$(PROGRAM): $(RUBY_INSTALL_NAME).res.@@OBJEXT@@
+$(WPROGRAM): $(RUBYW_INSTALL_NAME).res.@@OBJEXT@@
+	@@rm -f $@@
+	$(PURIFY) $(CC) -mwindows -e _mainCRTStartup $(LDFLAGS) $(XLDFLAGS) \
+	  $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+
+$(RUBYDEF): $(LIBRUBY_A)
+	echo EXPORTS > $(RUBYDEF)
+	@@NM@@ --extern-only --defined-only $(LIBRUBY_A) | sed -n 's/.* [CDT] _//p' >> $(RUBYDEF)
+
+$(RUBY_EXP): $(RUBYDEF)
+	@@DLLWRAP@@ --output-exp=$(RUBY_EXP) --output-lib=$(LIBRUBY) \
+	  --def=$(RUBYDEF) $(LIBRUBY_A) $(LIBS) -o $(PROGRAM)
+	rm $(PROGRAM)
+
+GNUmakefile:	$(srcdir)/cygwin/GNUmakefile.in
+
+ifeq (@@target_os@@,mingw32)
+$(OBJS) $(MAINOBJ): win32/win32.h
+endif
+@
+
+
+1.21
+log
+@* bcc32/Makefile.sub: remove unnecessary `.dll' from filename of
+  dll's resource file.
+
+* cygwin/GNUmakefile.in: ditto. [ruby-dev:17103]
+
+* win32/Makefile.sub: ditto. [ruby-dev:17103]
+
+* win32/resource.rb: ditto. [ruby-dev:17103]
+@
+text
+@d30 1
+a30 1
+	@@@@MINIRUBY@@ $(srcdir)/win32/resource.rb \
+d43 2
+a44 2
+	@@NM@@ --extern-only --defined-only $(LIBRUBY_A) | \
+	  @@MINIRUBY@@ -ne 'puts $$1 if / [CDT] _(.*)$$/' >> $(RUBYDEF)
+d49 6
+@
+
+
+1.20
+log
+@* configure.in (LIBRUBY): rename to lib$(LIBRUBY_SO).a on Cygwin/MinGW.
+
+* configure.in, cygwin/GNUmakefile: use dllwrap when --disable-shared
+  is specified.
+@
+text
+@d20 1
+a20 1
+SOLIBS := $(LIBRUBY_SO).res.@@OBJEXT@@ $(SOLIBS)
+d23 1
+a23 1
+$(LIBRUBY_SO): $(RUBYDEF) $(LIBRUBY_SO).res.@@OBJEXT@@ $(RUBY_EXP)
+d29 1
+a29 1
+$(RUBY_INSTALL_NAME).rc $(RUBYW_INSTALL_NAME).rc $(LIBRUBY_SO).rc: rbconfig.rb
+d32 1
+a32 1
+	  -so_name=$(LIBRUBY_SO) \
+@
+
+
+1.19
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@d5 5
+a9 2
+ifneq (,$(findstring no, $(ENABLE_SHARED)))
+  EXTOBJS = $(RUBY_INSTALL_NAME).exp
+a10 2
+else
+  CPPFLAGS += -DLIBRUBY_SO=\"$(LIBRUBY_SO)\"
+d13 3
+a15 1
+ifneq (,$(findstring ruby, $(RUBY_INSTALL_NAME)))
+a16 2
+else
+  RUBYW_INSTALL_NAME = $(RUBY_INSTALL_NAME)w
+d23 1
+a23 1
+$(LIBRUBY_SO): $(RUBYDEF) $(LIBRUBY_SO).res.@@OBJEXT@@
+d45 4
+@
+
+
+1.18
+log
+@gcc-2.95.2-7(cygwin) support.
+@
+text
+@d8 2
+d26 1
+a26 1
+	@@WINDRES@@ --preprocessor '$(CC) -E -xc-header -DRC_INVOKE @@MWIN32@@' --include-dir . --include-dir $(<D) --include-dir $(srcdir)/win32 $< $@@
+@
+
+
+1.17
+log
+@eban
+@
+text
+@d24 1
+a24 1
+	@@WINDRES@@ --include-dir . --include-dir $(<D) --include-dir $(srcdir)/win32 $< $@@
+@
+
+
+1.17.2.1
+log
+@gcc-2.95.2-7(cygwin) support.
+@
+text
+@d24 1
+a24 1
+	@@WINDRES@@ --preprocessor '$(CC) -E -xc-header -DRC_INVOKE @@MWIN32@@' --include-dir . --include-dir $(<D) --include-dir $(srcdir)/win32 $< $@@
+@
+
+
+1.17.2.2
+log
+@* configure.in: remove unnecessary AC_CANONICAL_BUILD
+* defins.h: #define HAVE_SETITIMER on Cygwin(bug fixed).
+* ruby.c: use relative path from LIBRUBY_SO.
+* ruby.c: don't use -mwin32 option on Cygwin.
+* cygwin/GNUmakefile.in: ditto.
+* ext/sdbm/_sdbm: ditto.
+* ext/tcltklib/extconf.rb: ditto.
+* ext/tcltklib/stubs.c: ditto.
+@
+text
+@a7 2
+else
+  CPPFLAGS += -DLIBRUBY_SO=\"$(LIBRUBY_SO)\"
+d24 1
+a24 1
+	@@WINDRES@@ --include-dir . --include-dir $(<D) --include-dir $(srcdir)/win32 $< $@@
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d29 1
+a29 1
+ 	  -so_name=$(LIBRUBY_SO) \
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d17 2
+a18 3
+RUBY_SO_NAME = $(LIBRUBY_SO:.dll=)
+SOLIBS := $(RUBY_SO_NAME).res.o $(SOLIBS)
+EXTOBJS += $(@@:$(EXEEXT)=.res.o)
+d20 1
+a20 1
+$(LIBRUBY_SO): $(RUBYDEF) $(RUBY_SO_NAME).res.o
+d23 1
+a23 1
+%.res.o: %.rc
+d26 1
+a26 1
+$(RUBY_INSTALL_NAME).rc $(RUBYW_INSTALL_NAME).rc $(RUBY_SO_NAME).rc: rbconfig.rb
+d29 1
+a29 1
+	  -so_name=$(RUBY_SO_NAME) \
+d32 2
+a33 2
+$(PROGRAM): $(RUBY_INSTALL_NAME).res.o
+$(WPROGRAM): $(RUBYW_INSTALL_NAME).res.o
+@
+
+
+1.14
+log
+@matz - nakada win32 patch
+@
+text
+@d17 2
+a18 1
+SOLIBS := $(RUBY_INSTALL_NAME).dll.res.o $(SOLIBS)
+d21 1
+a21 1
+$(LIBRUBY_SO): $(RUBYDEF) $(RUBY_INSTALL_NAME).dll.res.o
+d27 1
+a27 1
+$(RUBY_INSTALL_NAME).rc $(RUBYW_INSTALL_NAME).rc $(RUBY_INSTALL_NAME).dll.rc: rbconfig.rb
+d30 1
+a30 1
+	  -so_name=$(RUBY_INSTALL_NAME).dll \
+@
+
+
+1.13
+log
+@eban
+@
+text
+@d10 6
+d17 2
+d20 1
+a20 1
+$(LIBRUBY_SO): $(RUBYDEF)
+d22 15
+@
+
+
+1.12
+log
+@eban
+@
+text
+@a2 1
+ARCH=@@arch@@
+d6 2
+a7 14
+  DLL = dummy.exe
+  DLLNAME = $(RUBY_INSTALL_NAME)$(EXEEXT)
+  RUBYEXP = --output-exp=$(RUBY_INSTALL_NAME).exp
+  MAINOBJ := $(RUBY_INSTALL_NAME).exp $(MAINOBJ)
+  LIBRUBYARG := lib$(RUBY_INSTALL_NAME)s.a
+else
+  ifneq (,$(findstring mingw, $(ARCH)))
+    DLL = $(RUBY_INSTALL_NAME)mg.dll
+    DLLNAME = $(RUBY_INSTALL_NAME)mg.dll
+  else
+    DLL = $(RUBY_INSTALL_NAME)cw.dll
+    DLLNAME = $(RUBY_INSTALL_NAME)cw.dll
+  endif
+  RUBYEXP =
+d12 2
+a13 1
+rbconfig.rb: $(DLL)
+d15 1
+a15 6
+$(DLL): $(OBJS) dmyext.@@OBJEXT@@ $(RUBYDEF)
+	$(LDSHARED) $(DLDFLAGS) -o $(DLL) --output-lib=$(LIBRUBY_SO) \
+	  --dllname=$(DLLNAME) --add-stdcall-alias --def=$(RUBYDEF) \
+	  $(RUBYEXP) $(OBJS) dmyext.@@OBJEXT@@ $(LIBS)
+
+$(RUBYDEF): $(OBJS) dmyext.@@OBJEXT@@
+d17 1
+a17 1
+	@@NM@@ --extern-only --defined-only $(OBJS) dmyext.@@OBJEXT@@ | \
+@
+
+
+1.11
+log
+@eban
+@
+text
+@d35 1
+a35 1
+	  @@MINIRUBY@@ -ne 'print $$1, "\n" if / [CDT] _(.*)$$/' >> $(RUBYDEF)
+@
+
+
+1.10
+log
+@eban
+@
+text
+@d25 1
+a25 1
+miniruby$(EXEEXT): $(DLL)
+d27 1
+a27 1
+$(DLL): $(OBJS) dmyext.o $(RUBYDEF)
+d30 1
+a30 1
+	  $(RUBYEXP) $(OBJS) dmyext.o $(LIBS)
+d32 1
+a32 1
+$(RUBYDEF): $(OBJS) dmyext.o
+d34 2
+a35 2
+	@@NM@@ --extern-only --defined-only $(OBJS) dmyext.o | \
+	  sed -n '/^........ [CDT] _\(.*\)$$/s//\1/p' >> $(RUBYDEF)
+@
+
+
+1.9
+log
+@2000-07-03
+@
+text
+@d8 3
+a10 3
+  DLLNAME = ruby.exe
+  RUBYEXP = --output-exp=ruby.exp
+  MAINOBJ := ruby.exp $(MAINOBJ)
+d14 2
+a15 2
+    DLL = rubymg.dll
+    DLLNAME = rubymg.dll
+d17 2
+a18 2
+    DLL = rubycw.dll
+    DLLNAME = rubycw.dll
+d23 2
+d27 9
+a35 2
+$(DLL): $(OBJS) dmyext.o
+	$(LDSHARED) $(DLDFLAGS) -o $(DLL) --output-lib=$(LIBRUBY_SO) --dllname=$(DLLNAME) --add-stdcall-alias $(RUBYEXP) $(OBJS) dmyext.o $(LIBS)
+@
+
+
+1.8
+log
+@2000-07-02
+@
+text
+@d11 1
+a11 1
+  LIBRUBYARG := librubys.a
+@
+
+
+1.7
+log
+@fix bug; support mingw32.
+@
+text
+@d4 1
+d6 6
+a11 3
+ifneq (,$(findstring mingw, $(ARCH)))
+DLL = rubymg.dll
+DLLWRAP_FLAGS =
+d13 8
+a20 2
+DLL = rubycw.dll
+DLLWRAP_FLAGS = -Wl,-e,__cygwin_noncygwin_dll_entry@@12
+a22 1
+ifeq (,$(strip $(LIBRUBY_ALIASES)))
+a23 1
+endif
+d26 1
+a26 1
+	$(LDSHARED) $(DLDFLAGS) -o $(DLL) --output-lib=$(LIBRUBY_SO) --dllname=$(DLL) --add-stdcall-alias $(OBJS) dmyext.o $(LIBS)
+@
+
+
+1.6
+log
+@support mingw32.
+@
+text
+@a5 1
+VPATH = @@srcdir@@/missing:@@srcdir@@/win32
+d13 1
+d15 1
+@
+
+
+1.5
+log
+@2000-05-09
+@
+text
+@d3 1
+a3 1
+RUBYCWDLL=rubycw.dll
+d5 8
+a12 1
+miniruby$(EXEEXT): $(RUBYCWDLL)
+d14 4
+a17 2
+$(RUBYCWDLL): $(OBJS) dmyext.o
+	$(LDSHARED) $(DLDFLAGS) -o $(RUBYCWDLL) --output-lib=$(LIBRUBY_SO) --dllname=$(RUBYCWDLL) -Wl,-e,__cygwin_noncygwin_dll_entry@@12 --add-stdcall-alias $(OBJS) dmyext.o
+@
+
+
+1.4
+log
+@2000-01-08
+@
+text
+@a8 1
+	@@NM@@ --extern-only $(OBJS) dmyext.o | sed -n '/^........ [CD] _\(.*\)$$/s//#define \1 (*__imp_\1)/p' >import.h 
+@
+
+
+1.3
+log
+@20000105
+@
+text
+@d7 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d7 2
+a8 3
+$(RUBYCWDLL): $(OBJS) dmyext.o
+	dllwrap -o $(RUBYCWDLL) --export-all --output-lib=$(LIBRUBY_SO) --dllname=$(RUBYCWDLL) -Wl,-e,__cygwin_noncygwin_dll_entry@@12 --add-stdcall-alias -s $(OBJS) dmyext.o
+	nm --extern-only $(OBJS) dmyext.o | sed -n '/^........ [CD] _\(.*\)$$/s//#define \1 (*__imp_\1)/p' >import.h 
+@
+
+
+1.2.2.1
+log
+@20000105
+@
+text
+@d8 1
+a8 1
+	$(LDSHARED) $(DLDFLAGS) -o $(RUBYCWDLL) --output-lib=$(LIBRUBY_SO) --dllname=$(RUBYCWDLL) -Wl,-e,__cygwin_noncygwin_dll_entry@@12 --add-stdcall-alias $(OBJS) dmyext.o
+@
+
+
+1.2.2.2
+log
+@see ChangeLog.
+@
+text
+@d9 1
+@
+
+
+1.2.2.3
+log
+@2000-06-28
+@
+text
+@d8 1
+a8 1
+	$(LDSHARED) $(DLDFLAGS) -o $(RUBYCWDLL) --output-lib=$(LIBRUBY_SO) --dllname=$(RUBYCWDLL) -Wl,-e,__cygwin_noncygwin_dll_entry@@12 --add-stdcall-alias $(OBJS) dmyext.o $(LIBS)
+@
+
+
+1.1
+log
+@file GNUmakefile.in was initially added on branch ruby_1_3.
+@
+text
+@d1 9
+@
+
+
+1.1.2.1
+log
+@GNUmakefile.in
+@
+text
+@a0 9
+include Makefile
+
+RUBYCWDLL=rubycw.dll
+
+miniruby$(binsuffix): $(RUBYCWDLL)
+
+$(RUBYCWDLL): $(OBJS) dmyext.o
+	dllwrap -o $(RUBYCWDLL) --export-all --output-lib=$(LIBRUBY_SO) --dllname=$(RUBYCWDLL) -Wl,-e,__cygwin_noncygwin_dll_entry@@12 --add-stdcall-alias -s $(OBJS) dmyext.o
+	nm --extern-only $(OBJS) dmyext.o | sed -n '/^........ [CD] _\(.*\)$$/s//#define \1 (*__imp_\1)/p' >import.h 
+@
+
+
+1.1.2.2
+log
+@990728
+@
+text
+@d5 1
+a5 1
+miniruby$(EXEEXT): $(RUBYCWDLL)
+@

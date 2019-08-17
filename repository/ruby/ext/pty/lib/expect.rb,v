@@ -1,0 +1,303 @@
+head	1.4;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.2.1
+	v1_3_6_repack:1.1.2.1
+	v1_3_6:1.1.2.1
+	v1_3_5:1.1.2.1
+	v1_3_4_990625:1.1.2.1
+	v1_3_4_990624:1.1.2.1
+	v1_3_4_990611:1.1.2.1
+	v1_3_4_990531:1.1.2.1
+	v1_3_3_990518:1.1.2.1
+	v1_3_3_990513:1.1.2.1
+	v1_3_3_990507:1.1.2.1
+	ruby_1_3:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.08.13.09.21.18;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.07.02.08.46.24;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.37.50;	author matz;	state Exp;
+branches
+	1.2.4.1;
+next	1.1;
+
+1.1
+date	99.05.07.08.24.36;	author matz;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	99.05.07.08.24.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.4.1
+date	2002.08.19.05.59.10;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* hash.c (rb_hash_replace): should copy ifnone.
+
+* hash.c (rb_hash_dup): should preserve HASH_PROC_DEFAULT and
+  HASH_DELETED flags.
+
+* hash.c (rb_hash_shift): shift from empty hash should not return
+  its default proc.
+
+* hash.c (rb_hash_default_proc): new method. [new]
+
+* array.c (rb_ary_aref): no need for Bignum check.
+
+* array.c (rb_ary_aset): explicit Bignum check removd.
+
+* numeric.c (fix_aref): normalize bignum before bit-op.
+
+* bignum.c (rb_big_rand): max may be Bignum zero.
+
+* bignum.c (rb_cstr_to_inum): should normalize bignums, to avoid
+  returning fixable bignum value.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+
+* hash.c (rb_hash_equal): should check HASH_PROC_DEFAULT too.
+@
+text
+@$expect_verbose = false
+
+class IO
+  def expect(pat,timeout=9999999)
+    buf = ''
+    case pat
+    when String
+      e_pat = Regexp.new(Regexp.quote(pat))
+    when Regexp
+      e_pat = pat
+    end
+    while true
+      if IO.select([self],nil,nil,timeout).nil? then
+        result = nil
+        break
+      end
+      c = getc.chr
+      buf << c
+      if $expect_verbose
+        STDOUT.print c
+        STDOUT.flush
+      end
+      if mat=e_pat.match(buf) then
+        result = [buf,*mat.to_a[1..-1]]
+        break
+      end
+    end
+    if block_given? then
+      yield result
+    else
+      return result
+    end
+    nil
+  end
+end
+
+@
+
+
+1.3
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d23 2
+a24 2
+      if buf =~ e_pat then
+        result = [buf,$1,$2,$3,$4,$5,$6,$7,$8,$9]
+@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@d28 1
+a28 1
+    if iterator? then
+@
+
+
+1.2.4.1
+log
+@* array.c (sort_2): *a - *b may overflow.
+
+* array.c (rb_ary_new2): len*sizeof(VALUE) may be a positive value.
+
+* array.c (rb_ary_initialize): ditto.
+
+* re.c (rb_reg_initialize): should not modify frozen Regexp.
+
+* bignum.c (rb_uint2big): there should be no zero sized bignum.
+
+* ext/extmk.rb.in: extmake() that works properly for both tkutil
+  (tk/tkutil.so) and digest/sha1.
+@
+text
+@d23 2
+a24 2
+      if mat=e_pat.match(buf) then
+        result = [buf,*mat.to_a[1..-1]]
+@
+
+
+1.1
+log
+@file expect.rb was initially added on branch ruby_1_3.
+@
+text
+@d1 36
+@
+
+
+1.1.2.1
+log
+@990507
+@
+text
+@a0 36
+$expect_verbose = false
+
+class IO
+  def expect(pat,timeout=9999999)
+    buf = ''
+    case pat
+    when String
+      e_pat = Regexp.new(Regexp.quote(pat))
+    when Regexp
+      e_pat = pat
+    end
+    while true
+      if IO.select([self],nil,nil,timeout).nil? then
+        result = nil
+        break
+      end
+      c = getc.chr
+      buf << c
+      if $expect_verbose
+        STDOUT.print c
+        STDOUT.flush
+      end
+      if buf =~ e_pat then
+        result = [buf,$1,$2,$3,$4,$5,$6,$7,$8,$9]
+        break
+      end
+    end
+    if iterator? then
+      yield result
+    else
+      return result
+    end
+    nil
+  end
+end
+
+@

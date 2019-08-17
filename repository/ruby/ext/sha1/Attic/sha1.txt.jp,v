@@ -1,0 +1,167 @@
+head	1.4;
+access;
+symbols
+	v1_7_1:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2001.07.13.20.06.14;	author knu;	state dead;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.17.16.05.49;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.16.22.28.40;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.16.22.19.30;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@.\" sha1.doc -  -*- Indented-Text -*- created at: Thu May 17 06:51:50 JST 2001
+
+** SHA1(クラス)
+
+FIPS PUB 180-1に記述されているNIST (the US' National Institute of
+Standards and Technology) の SHA1 Secure Hash Algorithmを実装するクラス。
+
+Superclass: Object
+
+Class Methods:
+
+   new([str])
+   sha1([str])
+
+        新しいSHA1オブジェクトを生成する．文字列引数が与えられるとそれ
+        を追加する(see update)。
+
+Methods:
+
+   clone
+
+	SHA1オブジェクトの複製を作る。
+
+   digest
+
+        今までに追加した文字列に対するハッシュ値を20バイト長の文字列で
+        返す。
+
+   hexdigest
+
+        今までに追加した文字列に対するハッシュ値を、ASCIIコードを使って
+        16進数の列を示す'18e40e1401eef67e1ae69efab09afb71f87ffb81'のよう
+        な40文字の文字列にエンコードして返す。Rubyで書くと以下と同じ。
+
+	def hexdigest
+  	  ret = ''
+	  digest.each_byte {|i| ret << sprintf('%02x', i) }
+	  ret
+	end
+
+   update(str)
+   << str
+
+        SHA1オブジェクトに文字列を追加する。複数回updateを呼ぶことは文
+        字列を連結してupdateを呼ぶことと等しい。すなわち m.update(a);
+	m.update(b) は m.update(a+b) と、 m << a << b は m << a+b と
+	それぞれ等価である。
+
+Copyright:
+
+	sha1.c はパブリックドメインである。
+
+-------------------------------------------------------
+Local variables:
+fill-column: 70
+end:
+@
+
+
+1.3
+log
+@* ext/sha1/sha1.txt, ext/sha1/sha1.txt.jp: fix typos.
+@
+text
+@@
+
+
+1.2
+log
+@* ext/md5/md5.txt.jp, ext/sha1/sha1.txt.jp: s/SuperClass/Superclass/.
+@
+text
+@d1 1
+a1 1
+.\" sha1.doc -  -*- Indented-Text -*- created at: Thu Mat 17 06:51:50 JST 2001
+d6 1
+a6 2
+Standards and Technology) の SHA1 Secure Hash Algorithm Algorithmを実装
+するクラス。
+@
+
+
+1.1
+log
+@* ext/sha1/sha1.txt.jp: add the Japanese version derived from
+ext/md5/md5.txt.jp.
+
+* ext/sha1/sha1.txt: revise the copyright info and reduce the
+difference from ext/md5/md5.txt.
+
+* ext/md5/md5.txt: reduce the difference from ext/sha1/sha1.txt.
+@
+text
+@d9 1
+a9 1
+SuperClass: Object
+@
+

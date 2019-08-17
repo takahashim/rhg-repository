@@ -1,0 +1,336 @@
+head	1.5;
+access;
+symbols
+	start:1.1.1.1 KNU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2001.01.31.15.07.20;	author knu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.01.31.05.22.34;	author knu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.01.30.18.33.49;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.01.19.17.42.45;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.01.14.09.58.11;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.01.14.09.58.11;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@Merge from the latest cvsmailer:
+
+    - Chop the cvsroot part off a module path before checking ACL.
+
+    - Lengthen the "Revision" column in commit mails.
+@
+text
+@#!/usr/bin/env ruby
+#
+# CVS commit mail script (pre-commit accumulation script)
+# This script is run before each commit.
+#
+# Use only args, not STDIN.
+# ARG0 : $CVSROOT
+# ARG1 : CVS user name
+# ARG2 : absolute path of the module
+# ARG3 : file1
+# ARG4 : file2
+# ..
+#
+# $Idaemons: /home/cvs/cvsmailer/commitinfo.rb,v 1.4 2001/01/19 17:22:53 knu Exp $
+# $devId: commitinfo.rb,v 1.8 2001/01/31 14:58:24 knu Exp $
+# $Id: commitinfo_ruby.rb,v 1.4 2001/01/31 05:22:34 knu Exp $
+#
+
+if ARGV.size < 4
+  puts "Usage: #{$0} CVSROOT USER modulepath file1 [file2...]"
+  exit 1	# No way!
+end
+
+$cvsroot, $cvsuser, $modulepath, *$cvsfiles = *ARGV
+
+$cvsroot.tr_s!('/', '/')
+$modulepath.tr_s!('/', '/')
+
+$modulename = $modulepath.sub(/^#{Regexp.quote($cvsroot)}/, '')
+
+$aclfile = "#{$cvsroot}/CVSROOT/acl"
+
+require "socket"
+$hostname = Socket.gethostbyname(Socket.gethostname)[0]
+
+# ACL check:
+$:.unshift "#{$cvsroot}/CVSROOT"
+require "cvsacl"
+
+if File.exist?($aclfile)
+  if !check_acl($aclfile, $hostname, $cvsuser, $modulename)
+    exit 1	# No way!
+  end
+end
+
+# append a line to a file
+def appendline(fn, s)
+  File.open(fn, "a+").puts s
+end
+
+savefile = sprintf("/tmp/commitinfo.%s.%d", $cvsuser, Process.getpgrp())
+
+appendline savefile, "#{$cvsroot} #{$modulepath} #{$cvsfiles.join(' ')}"
+
+exit 0		# Let's do it!
+
+# END OF THE SCRIPT
+@
+
+
+1.4
+log
+@Merge from the latest cvsmailer.
+
+Turn debug output on.
+@
+text
+@d15 2
+a16 2
+# $devId: commitinfo.rb,v 1.7 2001/01/31 05:18:14 knu Exp $
+# $Id: commitinfo_ruby.rb,v 1.3 2001/01/30 18:33:49 knu Exp $
+d20 1
+a20 1
+  puts "Usage: #{$0} CVSROOT USER module file1 [file2...]"
+d24 1
+a24 1
+$cvsroot, $cvsuser, $modulename, *$cvsfiles = *ARGV
+d27 3
+a29 1
+$modulename.tr_s!('/', '/')
+d40 4
+a43 2
+if File.exist?($aclfile) && !check_acl($aclfile, $hostname, $cvsuser, $modulename)
+  exit 1	# No way!
+d53 1
+a53 1
+appendline savefile, "#{$cvsroot} #{$modulename} #{$cvsfiles.join(' ')}"
+@
+
+
+1.3
+log
+@Update to cvsmailer 0.15.
+
+Add rules for www, doc, and rwiki.
+@
+text
+@d15 2
+a16 2
+# $devId: commitinfo.rb,v 1.6 2001/01/30 15:39:47 knu Exp $
+# $Id: commitinfo_ruby.rb,v 1.2 2001/01/19 17:42:45 knu Exp $
+d31 3
+d38 1
+a38 1
+if File.exist?($aclfile) && !check_acl($aclfile, $cvsuser, $modulename)
+@
+
+
+1.2
+log
+@Merge from cvsmailer 0.13.
+
+Implement access control facilities.
+@
+text
+@d8 4
+a11 4
+# ARG1 : Absolute path of the module
+# ARG2 : CVS user name
+# ARG3 : filename of the first file
+# ARG4 : filename of the second file
+d15 2
+a16 1
+# $Id: commitinfo_ruby.rb,v 1.1.1.1 2001/01/14 09:58:11 knu Exp $
+d20 1
+a20 1
+  puts "Usage: #{$0} CVSROOT USER module file file file..."
+d29 1
+a29 1
+$aclfile = "#{$cvsroot}/acl"
+d31 3
+a33 109
+# sanity check: 
+require 'socket'
+hostname = Socket.gethostbyname(Socket.gethostname)[0]
+
+case hostname.downcase
+when "helium.ruby-lang.org", "cvs.ruby-lang.org"
+  # ok
+else
+  puts "ERROR: You are committing on `#{hostname}'!  Please specify CVSROOT properly and commit on `cvs.ruby-lang.org'."
+  exit 1	# No way!
+end
+
+# acl check:
+class Group
+  @@@@group_table = {}
+
+  def Group::add(gid, obj)
+    @@@@group_table[gid] = if obj.is_a?(Group) then obj else Group.new(obj) end
+    self
+  end
+
+  def Group::group(gid)
+    if @@@@group_table.key? gid
+      @@@@group_table[gid]
+    else
+      nil
+    end
+  end
+
+  def initialize(list)
+    @@members = []
+    @@all = false
+
+    return if list == nil
+
+    list.each do |e|
+      if e =~ /^@@(.*)/
+	gid = $1
+
+	g = Group.group(gid)
+
+	if g == nil
+	  puts "No such group defined: '#{gid}'"
+	  next
+	end
+
+	if g.all?
+	  all!
+	  break
+	end
+
+	@@members |= g.members
+      else
+	@@members |= [e]
+      end
+    end
+  end
+
+  def all?
+    @@all
+  end
+
+  def all!
+    @@all = true
+    @@member = nil
+    self
+  end
+
+  def member?(u)
+    @@all || @@members.member?(u)
+  end
+
+  def members
+    @@members
+  end
+
+  # Register a special group named 'all'
+  add('all', new(nil).all!)
+end
+
+def check_acl(aclfile, user, modulename)
+  File.open(aclfile) do |f|
+    f.each_line do |line|
+      line.strip!
+      case line
+      when /^#/, /^$/
+	next
+      else
+	fields = line.split(':')
+	command = fields[0]
+
+	case command
+	when 'group'
+	  Group.add(fields[1], fields[2].split(','))
+	when 'deny', 'grant'
+	  if Group.new(fields[1].split(',')).member? user
+	    re = Regexp.new("^/?(?:#{fields[2]})(?:/|$)")
+
+	    if re =~ modulename
+	      return (command == 'grant')
+	    end
+	  end
+	end
+      end
+    end
+  end
+
+  true		# Grant by default
+end
+d36 1
+a36 2
+  puts "ERROR: You are not granted to commit on #{$modulename}'!"
+  exit 2	# No way!
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 15
+a28 2
+# $Idaemons: /home/cvs/cvsmailer/commitinfo.rb,v 1.2 2001/01/14 09:54:20 knu Exp $
+# $Id$
+d34 1
+a34 1
+case hostname
+d42 103
+d150 1
+a150 8
+if ARGV.size < 4
+  puts "Usage: #{$0} CVSROOT USER module file file file..."
+  exit 1	# No way!
+end
+
+cvsroot, cvsuser, modulename, *files = *ARGV
+
+savefile = sprintf("/tmp/commitinfo.%s.%d", cvsuser, Process.getpgrp())
+d152 1
+a152 1
+appendline savefile, "#{cvsroot} #{modulename} #{files.join(' ')}"
+@
+
+
+1.1.1.1
+log
+@Initial import of the tools for Ruby repositories.
+@
+text
+@@

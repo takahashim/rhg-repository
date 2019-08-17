@@ -1,0 +1,84 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.09.22.12.11.49;	author nobu;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2002.09.22.12.08.32;	author nobu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@commit miss
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+class TestNestedBlock < Rubicon::TestCase
+
+  def get_binding; binding; end
+  def get_proc; proc{yield}; end
+
+  def sub_given?; block_given?; end
+  def sub_yield; yield; end
+  def sub_test_given?; sub_given?; end
+  def sub_test_yield; sub_yield; end
+
+  def test_binding_failure
+    assert_exception(ArgumentError) {
+      eval "proc{proc}.call", get_binding
+    }
+  end
+  def test_binding_failure_with_arg
+    assert_exception(ArgumentError) {
+      eval "proc{proc}.call {1}", get_binding
+    }
+  end
+  def test_proc_call
+    assert_equal("hello wolrd", get_proc{"hello wolrd"}.call)
+  end
+  def test_block_given
+    assert_equal(false, sub_test_given?)
+  end
+  def test_yield_failure
+    assert_exception(LocalJumpError) {sub_test_yield {}}
+  end
+
+end
+
+Rubicon::handleTests(TestNestedBlock) if $0 == __FILE__
+@
+
+
+1.1
+log
+@* builtin/TestThread.rb (TestThread::test_abort_on_exception): get
+  rid of error message sent to stderr, and confirm whether exact
+  exception was raised from the message.
+
+* builtin/TestThread.rb (TestThread::test_s_abort_on_exception):
+  ditto.
+
+* builtin/TestThread.rb (TestThread::test_safe_level): not depend
+  on context switch order.
+
+* builtin/TestThread.rb (TestThread::MyException::test_timeout):
+  added for optional argument to Thread#join.
+@
+text
+@@
+

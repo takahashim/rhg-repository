@@ -1,0 +1,1489 @@
+head	1.5;
+access;
+symbols
+	v1_6_7:1.4
+	v1_6_6:1.4
+	v1_6_5:1.4
+	v1_6_4:1.4
+	v1_7_1:1.4
+	v1_6_4_preview4:1.4
+	v1_6_4_preview3:1.4
+	v1_6_4_preview2:1.4
+	v1_6_4_preview1:1.4
+	v1_6_3:1.4
+	ruby_m17n:1.4.0.4
+	ruby_1_6:1.4.0.2
+	v1_6_2:1.4
+	v1_6_1:1.4
+	v1_6_0:1.4
+	v1_4_6:1.3
+	v1_4_5:1.3
+	v1_4_4:1.3
+	ruby_1_4_3:1.3
+	ruby1_4_3:1.3
+	v1_4_3:1.3
+	v1_5_0:1.3
+	ruby_1_4_3_pre1:1.3
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.7
+	v1_3_6_repack:1.1.1.3.2.7
+	v1_3_6:1.1.1.3.2.7
+	v1_3_5:1.1.1.3.2.6
+	v1_2_6repack:1.1.1.2.2.10
+	v1_3_4_990625:1.1.1.3.2.5
+	v1_3_4_990624:1.1.1.3.2.5
+	v1_2_6:1.1.1.2.2.10
+	v1_3_4_990611:1.1.1.3.2.5
+	v1_3_4_990531:1.1.1.3.2.5
+	v1_3_3_990518:1.1.1.3.2.5
+	v1_3_3_990513:1.1.1.3.2.5
+	v1_3_3_990507:1.1.1.3.2.5
+	v1_2_5:1.1.1.2.2.10
+	v1_2_4:1.1.1.2.2.10
+	v1_3_1_990225:1.1.1.3.2.4
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.3
+	v1_3_1_990212:1.1.1.3.2.3
+	v1_3_1_990210:1.1.1.3.2.3
+	v1_3_1_:1.1.1.3.2.3
+	v1_3_1_990209:1.1.1.3.2.2
+	v1_3_1_990205:1.1.1.3.2.2
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.10
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.10
+	v1_2_1repack:1.1.1.2.2.10
+	v1_2_1:1.1.1.2.2.10
+	v1_2_stable:1.1.1.2.2.10
+	v1_1d1:1.1.1.2.2.10
+	v1_1d0:1.1.1.2.2.10
+	v1_1c9_1:1.1.1.2.2.10
+	v1_1c9:1.1.1.2.2.10
+	v1_1c8:1.1.1.2.2.10
+	v1_1c7:1.1.1.2.2.10
+	v1_1c6:1.1.1.2.2.10
+	v1_1d-start:1.1.1.2.2.10
+	v1_1c5:1.1.1.2.2.10
+	v1_1dev:1.1.1.2.2.10.0.2
+	v1_1c4:1.1.1.2.2.10
+	v1_1c3:1.1.1.2.2.10
+	v1_1c2:1.1.1.2.2.10
+	v1_1c1:1.1.1.2.2.10
+	v1_1c0:1.1.1.2.2.10
+	v1_1b9_31:1.1.1.2.2.9
+	v1_1b9_30:1.1.1.2.2.9
+	v1_1b9_28:1.1.1.2.2.8
+	v1_1b9_27:1.1.1.2.2.6
+	v1_1b9_26:1.1.1.2.2.5
+	r1_1b9_25:1.1.1.2.2.4
+	r1_1b9_24:1.1.1.2.2.4
+	v1_1b9_23:1.1.1.2.2.4
+	v1_1b9_22:1.1.1.2.2.4
+	v1_1b9_20:1.1.1.2.2.4
+	v1_1b9_18:1.1.1.2.2.4
+	v1_1b9_16:1.1.1.2.2.4
+	v1_1b9_15:1.1.1.2.2.4
+	v1_1b9_13:1.1.1.2.2.4
+	v1_1b9_12:1.1.1.2.2.4
+	v1_1b9_11:1.1.1.2.2.3
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2.2.2
+	v1_1b8:1.1.1.2.2.1
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2002.05.20.19.56.52;	author wakou;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.07.19.08.04.52;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.10.12.04.53.35;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.15;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.17;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.02.01.07.34.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.05.10.27.33;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.10.08.44.28;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.25.06.39.12;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.03.24.08.52.35;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.07.15.07.59.58;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.02.20.02.10.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.02.25.06.52.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.20.09.20.30;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.04.20.05.55.37;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.06.16.04.24.36;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.06.19.09.32.11;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.06.24.04.38.10;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.06.26.09.44.53;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.07.09.08.40.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.07.17.00.53.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2000.08.24.06.49.20;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	2002.05.20.19.54.58;	author wakou;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@Tue May 21 04:48:37 2002  Sean Chittenden <sean@@chittenden.org>
+
+	* lib/cgi-lib.rb: Checking for constant MOD_RUBY instead of
+	  environment variable. Remove a mod_ruby warning and use
+	  Apache::request.headers_out[] instead.
+@
+text
+@=begin
+
+= simple CGI support library
+
+= example
+
+== get form values
+
+	require "cgi-lib.rb"
+	query = CGI.new
+	query['field']   # <== value of 'field'
+	query.keys       # <== array of fields
+
+and query has Hash class methods
+
+
+== get cookie values
+
+	require "cgi-lib.rb"
+	query = CGI.new
+	query.cookie['name']  # <== cookie value of 'name'
+	query.cookie.keys     # <== all cookie names
+
+and query.cookie has Hash class methods
+
+
+== print HTTP header and HTML string to $>
+
+	require "cgi-lib.rb"
+	CGI::print{
+	  CGI::tag("HTML"){
+	    CGI::tag("HEAD"){ CGI::tag("TITLE"){"TITLE"} } +
+	    CGI::tag("BODY"){
+	      CGI::tag("FORM", {"ACTION"=>"test.rb", "METHOD"=>"POST"}){
+	        CGI::tag("INPUT", {"TYPE"=>"submit", "VALUE"=>"submit"})
+	      } +
+	      CGI::tag("HR")
+	    }
+	  }
+	}
+
+
+== make raw cookie string
+
+	require "cgi-lib.rb"
+	cookie1 = CGI::cookie({'name'    => 'name',
+	                       'value'   => 'value',
+	                       'path'    => 'path',   # optional
+	                       'domain'  => 'domain', # optional
+	                       'expires' => Time.now, # optional
+	                       'secure'  => true      # optional
+	                      })
+
+	CGI::print("Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+== print HTTP header and string to $>
+
+	require "cgi-lib.rb"
+	CGI::print{ "string" }
+	  # == CGI::print("Content-Type: text/html"){ "string" }
+	CGI::print("Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+=== NPH (no-parse-header) mode
+
+	require "cgi-lib.rb"
+	CGI::print("nph"){ "string" }
+	  # == CGI::print("nph", "Content-Type: text/html"){ "string" }
+	CGI::print("nph", "Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+== make HTML tag string
+
+	require "cgi-lib.rb"
+	CGI::tag("element", {"attribute_name"=>"attribute_value"}){"content"}
+
+
+== make HTTP header string
+
+	require "cgi-lib.rb"
+	CGI::header # == CGI::header("Content-Type: text/html")
+	CGI::header("Content-Type: text/html", cookie1, cookie2)
+
+
+=== NPH (no-parse-header) mode
+
+	CGI::header("nph") # == CGI::header("nph", "Content-Type: text/html")
+	CGI::header("nph", "Content-Type: text/html", cookie1, cookie2)
+
+
+== escape url encode
+
+	require "cgi-lib.rb"
+	url_encoded_string = CGI::escape("string")
+
+
+== unescape url encoded
+
+	require "cgi-lib.rb"
+	string = CGI::unescape("url encoded string")
+
+
+== escape HTML &"<>
+
+	require "cgi-lib.rb"
+	CGI::escapeHTML("string")
+
+
+=end
+
+require "delegate"
+
+class CGI < SimpleDelegator
+
+  CR  = "\015"
+  LF  = "\012"
+  EOL = CR + LF
+
+  RFC822_DAYS = %w[ Sun Mon Tue Wed Thu Fri Sat ]
+  RFC822_MONTHS = %w[ Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec ]
+
+  # make rfc1123 date string
+  def CGI::rfc1123_date(time)
+    t = time.clone.gmtime
+    return format("%s, %.2d %s %d %.2d:%.2d:%.2d GMT",
+                RFC822_DAYS[t.wday], t.day, RFC822_MONTHS[t.month-1], t.year,
+                t.hour, t.min, t.sec)
+  end
+
+  # escape url encode
+  def CGI::escape(str)
+    str.gsub(/[^a-zA-Z0-9_\-.]/n){ sprintf("%%%02X", $&.unpack("C")[0]) }
+  end
+
+  # unescape url encoded
+  def CGI::unescape(str)
+    str.gsub(/\+/, ' ').gsub(/%([0-9a-fA-F]{2})/){ [$1.hex].pack("c") }
+  end
+
+  # escape HTML
+  def CGI::escapeHTML(str)
+    str.gsub(/&/, "&amp;").gsub(/\"/, "&quot;").gsub(/>/, "&gt;").gsub(/</, "&lt;")
+  end
+
+  # offline mode. read name=value pairs on standard input.
+  def read_from_cmdline
+    require "shellwords.rb"
+    words = Shellwords.shellwords(
+              if not ARGV.empty?
+                ARGV.join(' ')
+              else
+                STDERR.print "(offline mode: enter name=value pairs on standard input)\n" if STDIN.tty?
+                readlines.join(' ').gsub(/\n/, '')
+              end.gsub(/\\=/, '%3D').gsub(/\\&/, '%26'))
+
+    if words.find{|x| x =~ /=/} then words.join('&') else words.join('+') end
+  end
+
+  def initialize(input = $stdin)
+
+    @@inputs = {}
+    @@cookie = {}
+
+    case ENV['REQUEST_METHOD']
+    when "GET"
+      ENV['QUERY_STRING'] or ""
+    when "POST"
+      input.read(Integer(ENV['CONTENT_LENGTH'])) or ""
+    else
+      read_from_cmdline
+    end.split(/[&;]/).each do |x|
+      key, val = x.split(/=/,2).collect{|x|CGI::unescape(x)}
+      if @@inputs.include?(key)
+        @@inputs[key] += "\0" + (val or "")
+      else
+        @@inputs[key] = (val or "")
+      end
+    end
+
+    super(@@inputs)
+
+    if ENV.has_key?('HTTP_COOKIE') or ENV.has_key?('COOKIE')
+      (ENV['HTTP_COOKIE'] or ENV['COOKIE']).split("; ").each do |x|
+        key, val = x.split(/=/,2)
+        key = CGI::unescape(key)
+        val = val.split(/&/).collect{|x|CGI::unescape(x)}.join("\0")
+        if @@cookie.include?(key)
+          @@cookie[key] += "\0" + val
+        else
+          @@cookie[key] = val
+        end
+      end
+    end
+  end
+
+  attr("inputs")
+  attr("cookie")
+
+  # make HTML tag string
+  def CGI::tag(element, attributes = {})
+    "<" + escapeHTML(element) + attributes.collect{|name, value|
+      " " + escapeHTML(name) + '="' + escapeHTML(value) + '"'
+    }.to_s + ">" +
+    (iterator? ? yield.to_s + "</" + escapeHTML(element) + ">" : "")
+  end
+
+  # make raw cookie string
+  def CGI::cookie(options)
+    "Set-Cookie: " + options['name'] + '=' + escape(options['value']) +
+    (options['domain']  ? '; domain='  + options['domain'] : '') +
+    (options['path']    ? '; path='    + options['path']   : '') +
+    (options['expires'] ? '; expires=' + rfc1123_date(options['expires']) : '') +
+    (options['secure']  ? '; secure' : '')
+  end
+
+  # make HTTP header string
+  def CGI::header(*options)
+    if defined?(MOD_RUBY)
+      options.each{|option|
+        option.sub(/(.*?): (.*)/){
+          Apache::request.headers_out[$1] = $2
+        }
+      }
+      Apache::request.send_http_header
+      ''
+    else
+      if options.delete("nph") or (ENV['SERVER_SOFTWARE'] =~ /IIS/)
+        [(ENV['SERVER_PROTOCOL'] or "HTTP/1.0") + " 200 OK",
+         "Date: " + rfc1123_date(Time.now),
+         "Server: " + (ENV['SERVER_SOFTWARE'] or ""),
+         "Connection: close"] +
+        (options.empty? ? ["Content-Type: text/html"] : options)
+      else
+        options.empty? ? ["Content-Type: text/html"] : options
+      end.join(EOL) + EOL + EOL
+    end
+  end
+
+  # print HTTP header and string to $>
+  def CGI::print(*options)
+    $>.print CGI::header(*options) + yield.to_s
+  end
+
+  # print message to $>
+  def CGI::message(message, title = "", header = ["Content-Type: text/html"])
+    if message.kind_of?(Hash)
+      title   = message['title']
+      header  = message['header']
+      message = message['body']
+    end
+    CGI::print(*header){
+      CGI::tag("HTML"){
+        CGI::tag("HEAD"){ CGI.tag("TITLE"){ title } } +
+        CGI::tag("BODY"){ message }
+      }
+    }
+    true
+  end
+
+  # print error message to $> and exit
+  def CGI::error
+    CGI::message({'title'=>'ERROR', 'body'=>
+      CGI::tag("PRE"){
+        "ERROR: " + CGI::tag("STRONG"){ escapeHTML($!.to_s) } + "\n" + escapeHTML($@@.join("\n"))
+      }
+    })
+    exit
+  end
+end
+@
+
+
+1.4
+log
+@matz
+@
+text
+@d219 1
+a219 1
+    if ENV['MOD_RUBY']
+d222 1
+a222 1
+          Apache::request[$1] = $2
+@
+
+
+1.4.2.1
+log
+@Tue May 21 04:48:37 2002  Sean Chittenden <sean@@chittenden.org>
+
+	* lib/cgi-lib.rb: Checking for constant MOD_RUBY instead of
+	  environment variable. Remove a mod_ruby warning and use
+	  Apache::request.headers_out[] instead.
+@
+text
+@d219 1
+a219 1
+    if defined?(MOD_RUBY)
+d222 1
+a222 1
+          Apache::request.headers_out[$1] = $2
+@
+
+
+1.3
+log
+@19991012
+@
+text
+@d124 1
+a124 1
+  def rfc1123_date(time)
+d132 1
+a132 1
+  def escape(str)
+d137 1
+a137 1
+  def unescape(str)
+d142 1
+a142 1
+  def escapeHTML(str)
+a145 2
+  module_function :escape, :unescape, :escapeHTML, :rfc1123_date
+
+d173 1
+a173 1
+      key, val = x.split(/=/,2).collect{|x|unescape(x)}
+d186 2
+a187 2
+        key = unescape(key)
+        val = val.split(/&/).collect{|x|unescape(x)}.join("\0")
+@
+
+
+1.3.2.1
+log
+@matz
+@
+text
+@d124 1
+a124 1
+  def CGI.rfc1123_date(time)
+a129 3
+  def rfc1123_date(time)
+    CGI.rfc1123_date(time)
+  end
+d132 1
+a132 1
+  def CGI.escape(str)
+a134 3
+  def escape(str)
+    CGI.escape(str)
+  end
+d137 1
+a137 1
+  def CGI.unescape(str)
+a139 3
+  def unescape(str)
+    CGI.unescape(str)
+  end
+d142 1
+a142 1
+  def CGI.escapeHTML(str)
+d145 3
+a147 4
+  def escapeHTML(str)
+    CGI.escapeHTML(str)
+  end
+	
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d120 11
+d146 1
+a146 1
+  module_function :escape, :unescape, :escapeHTML
+d174 1
+a174 1
+    end.split(/&/).each do |x|
+d215 1
+a215 1
+    (options['expires'] ? '; expires=' + options['expires'].strftime("%a, %d %b %Y %X %Z") : '') +
+d232 1
+a232 1
+         "Date: " + Time.now.gmtime.strftime("%a, %d %b %Y %X %Z"),
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 151
+a151 10
+#!/usr/local/bin/ruby
+#
+# Get CGI String
+#
+# EXAMPLE:
+# require "cgi-lib.rb"
+# foo = CGI.new
+# foo['field']   <== value of 'field'
+# foo.keys       <== array of fields
+# foo.inputs     <== hash of { <field> => <value> }
+a152 12
+class CGI
+  attr("inputs")
+  
+  def initialize
+    str = if ENV['REQUEST_METHOD'] == "GET"
+            ENV['QUERY_STRING']
+         elsif ENV['REQUEST_METHOD'] == "POST"
+           $stdin.read ENV['CONTENT_LENGTH'].to_i
+         else
+           ""
+         end
+    arr = str.split(/&/)
+d154 1
+a154 7
+    arr.each do |x|
+      x.gsub!(/\+/, ' ')
+      key, val = x.split(/=/, 2)
+      val = "" unless val
+      
+      key.gsub!(/%(..)/) { [$1.hex].pack("c") }
+      val.gsub!(/%(..)/) { [$1.hex].pack("c") }
+d156 29
+a184 2
+      @@inputs[key] += "\0" if @@inputs[key]
+      @@inputs[key] += val
+d188 9
+a196 2
+  def keys
+    @@inputs.keys
+d199 7
+a205 2
+  def [](key)
+    @@inputs[key]
+d207 27
+a233 9
+  
+  def CGI.message(msg, title = "")
+    print "Content-type: text/html\n\n"
+    print "<html><head><title>"
+    print title
+    print "</title></head><body>\n"
+    print msg
+    print "</body></html>\n"
+    TRUE
+d236 25
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@a11 7
+# if running on Windows(IIS or PWS) then change cwd.
+if ENV['SERVER_SOFTWARE'] =~ /^Microsoft-/ then
+  Dir.chdir ENV['PATH_TRANSLATED'].sub(/[^\\]+$/, '')
+end
+
+require "shellwords.rb"
+
+a12 2
+  include Shellwords
+
+a13 12
+
+  # original is CGI.pm
+  def read_from_cmdline
+    words = shellwords(if not ARGV.empty? then
+                         ARGV.join(' ')
+                       else
+                         print "(offline mode: enter name=value pairs on standard input)\n"
+                         readlines.join(' ').gsub(/\n/, '')
+                       end.gsub(/\\=/, '%3D').gsub(/\\&/, '%26'))
+
+    if words.find{|x| x =~ /=/} then words.join('&') else words.join('+') end
+  end
+a14 14
+  # escape url encode
+  def escape(str)
+    str.gsub!(/[^a-zA-Z0-9_\-.]/n){ sprintf("%%%02X", $&.unpack("C")[0]) }
+    str
+  end
+
+  # unescape url encoded
+  def unescape(str)
+    str.gsub! /\+/, ' '
+    str.gsub!(/%([0-9a-fA-F]{2})/){ [$1.hex].pack("c") }
+    str
+  end
+  module_function :escape, :unescape
+
+d16 16
+a31 2
+    # exception messages should be printed to stdout.
+    STDERR.reopen(STDOUT)
+d33 2
+a34 11
+    @@inputs = {}
+    case ENV['REQUEST_METHOD']
+    when "GET"
+      ENV['QUERY_STRING'] or ""
+    when "POST"
+      $stdin.read ENV['CONTENT_LENGTH'].to_i
+    else
+      read_from_cmdline
+    end.split(/&/).each do |x|
+      key, val = x.split(/=/,2).collect{|x|unescape(x)}
+      @@inputs[key] += ("\0" if @@inputs[key]) + (val or "")
+a55 11
+  def CGI.error
+    m = $!.dup
+    m.gsub!(/&/, '&amp;')
+    m.gsub!(/</, '&lt;')
+    m.gsub!(/>/, '&gt;')
+    msgs = ["<pre>ERROR: <strong>#{m}</strong>"]
+    msgs << $@@
+    msgs << "</pre>"
+    CGI.message(msgs.join("\n"), "ERROR")
+    exit
+  end
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d1 1
+d10 1
+a10 1
+# and foo has Hash class methods
+d17 1
+a17 1
+require "delegate"
+d19 2
+a20 1
+class CGI < SimpleDelegator
+d26 1
+a26 2
+    require "shellwords.rb"
+    words = Shellwords.shellwords(if not ARGV.empty? then
+d29 1
+a29 1
+                         STDERR.print "(offline mode: enter name=value pairs on standard input)\n" if STDIN.tty?
+d50 3
+a52 1
+  def initialize(input = $stdin)
+a56 2
+      # exception messages should be printed to stdout.
+      STDERR.reopen(STDOUT)
+d59 1
+a59 3
+      # exception messages should be printed to stdout.
+      STDERR.reopen(STDOUT)
+      input.read Integer(ENV['CONTENT_LENGTH'])
+d64 1
+a64 5
+      if @@inputs.include?(key)
+        @@inputs[key] += "\0" + (val or "")
+      else
+        @@inputs[key] = (val or "")
+      end
+d66 1
+d68 2
+a69 1
+    super(@@inputs)
+d72 4
+d87 1
+a87 1
+    m = $!.to_s.dup
+@
+
+
+1.1.1.3.2.1
+log
+@990201
+@
+text
+@a9 18
+#
+# foo.cookie['name']  <== cookie value of 'name'
+# foo.cookie.keys     <== all cookie names
+# and foo.cookie has Hash class methods
+#
+# make raw cookie string
+# cookie1 = CGI.cookie({'name'    => 'name',
+#                       'value'   => 'value',
+#                       'path'    => 'path',   # optional
+#                       'domain'  => 'domain', # optional
+#                       'expires' => Time.now, # optional
+#                       'secure'  => true      # optional
+#                      })
+#
+# print CGI.header("Content-Type: text/html", cookie1, cookie2)
+#
+# print CGI.header("HTTP/1.0 200 OK", "Content-Type: text/html")
+# print CGI.header # == print CGI.header("Content-Type: text/html")
+a19 4
+  CR  = "\015"
+  LF  = "\012"
+  EOL = CR + LF
+
+a20 1
+  attr("cookie")
+d43 1
+a43 1
+    str.gsub!(/\+/, ' ')
+a72 28
+
+    if ENV.has_key?('HTTP_COOKIE')
+      @@cookie = {}
+      ENV['HTTP_COOKIE'].split("; ").each do |x|
+	key, val = x.split(/=/,2).collect{|x|unescape(x)}
+	if @@cookie.include?(key)
+	  @@cookie[key] += "\0" + (val or "")
+	else
+	  @@cookie[key] = (val or "")
+	end
+      end
+    end
+  end
+
+  def CGI.header(*options)
+    options.push("Content-Type: text/html") if options.empty?
+    if options.find{|item| /^Expires: |^Set-Cookie: /i === item}
+      options.push("Date: " + Time.now.gmtime.strftime("%a, %d %b %Y %X %Z"))
+    end
+    options.join(EOL) + EOL + EOL
+  end
+
+  def CGI.cookie(options)
+    "Set-Cookie: " + options['name'] + '=' + escape(options['value']) +
+    (options['domain']  ? '; domain='  + options['domain'] : '') +
+    (options['path']    ? '; path='    + options['path']   : '') +
+    (options['expires'] ? '; expires=' + options['expires'].strftime("%a, %d %b %Y %X %Z") : '') +
+    (options['secure']  ? '; secure' : '')
+d75 2
+a76 2
+  def CGI.message(msg, title = "", header = ["Content-Type: text/html"])
+    print CGI.header(*header)
+@
+
+
+1.1.1.3.2.2
+log
+@990205
+@
+text
+@a27 14
+#
+# make HTML tag string
+# CGI.tag("element", {"attribute_name"=>"attribute_value"}){"content"}
+#
+# print CGI.tag("HTML"){
+#         CGI.tag("HEAD"){ CGI.tag("TITLE"){"TITLE"} } +
+#         CGI.tag("BODY"){
+#           CGI.tag("FORM", {"ACTION"=>"test.rb", "METHOD"=>"POST"}){
+#             CGI.tag("INPUT", {"TYPE"=>"submit", "VALUE"=>"submit"})
+#           } +
+#           CGI.tag("HR")
+#         }
+#       }
+
+d70 1
+a70 7
+
+  # escape HTML
+  def escapeHTML(str)
+    str.gsub(/&/, "&amp;").gsub(/\"/, "&quot;").gsub(/>/, "&gt;").gsub(/</, "&lt;")
+  end
+
+  module_function :escape, :unescape, :escapeHTML
+d100 6
+a105 6
+        key, val = x.split(/=/,2).collect{|x|unescape(x)}
+        if @@cookie.include?(key)
+          @@cookie[key] += "\0" + (val or "")
+        else
+          @@cookie[key] = (val or "")
+        end
+a123 7
+  end
+
+  def CGI.tag(element, attributes = {})
+    "<" + escapeHTML(element) + attributes.collect{|name, value|
+      " " + escapeHTML(name) + '="' + escapeHTML(value) + '"'
+    }.to_s + ">" +
+    (iterator? ? yield.to_s + "</" + escapeHTML(element) + ">" : "")
+@
+
+
+1.1.1.3.2.3
+log
+@*** empty log message ***
+@
+text
+@a40 5
+#
+# print HTTP header and strings to STDOUT
+# CGI.print{ "string" } # add HTTP header "Content-Type: text/html"
+# CGI.print("Content-Type: text/plain"){ "string" }
+# CGI.print("HTTP/1.0 200 OK", "Content-Type: text/html"){ "string" }
+d153 7
+a159 17
+  def CGI.print(*header)
+    header.push("Content-Type: text/html") if header.empty?
+    STDOUT.print CGI.header(*header) + yield.to_s
+  end
+
+  def CGI.message(message, title = "", header = ["Content-Type: text/html"])
+    if message.kind_of?(Hash)
+      title   = message['title']
+      header  = message['header']
+      message = message['body']
+    end
+    CGI.print(*header){
+      CGI.tag("HTML"){
+        CGI.tag("HEAD"){ CGI.tag("TITLE"){ title } } +
+        CGI.tag("BODY"){ message }
+      }
+    }
+d164 8
+a171 6
+    CGI.message({'title'=>'ERROR', 'body'=>
+      CGI.tag("PRE"){
+        "ERROR: " + CGI.tag("STRONG"){ escapeHTML($!.to_s) } + "\n" +
+        escapeHTML($@@.join("\n"))
+      }
+    })
+@
+
+
+1.1.1.3.2.4
+log
+@990225
+@
+text
+@d1 51
+a51 110
+=begin
+
+= simple CGI support library
+
+= example
+
+== get form values
+
+	require "cgi-lib.rb"
+	query = CGI.new
+	query['field']   # <== value of 'field'
+	query.keys       # <== array of fields
+
+and query has Hash class methods
+
+
+== get cookie values
+
+	require "cgi-lib.rb"
+	query = CGI.new
+	query.cookie['name']  # <== cookie value of 'name'
+	query.cookie.keys     # <== all cookie names
+
+and query.cookie has Hash class methods
+
+
+== print HTTP header and HTML string to $>
+
+	require "cgi-lib.rb"
+	CGI.print{
+	  CGI.tag("HTML"){
+	    CGI.tag("HEAD"){ CGI.tag("TITLE"){"TITLE"} } +
+	    CGI.tag("BODY"){
+	      CGI.tag("FORM", {"ACTION"=>"test.rb", "METHOD"=>"POST"}){
+	        CGI.tag("INPUT", {"TYPE"=>"submit", "VALUE"=>"submit"})
+	      } +
+	      CGI.tag("HR")
+	    }
+	  }
+	}
+
+
+== make raw cookie string
+
+	require "cgi-lib.rb"
+	cookie1 = CGI.cookie({'name'    => 'name',
+	                      'value'   => 'value',
+	                      'path'    => 'path',   # optional
+	                      'domain'  => 'domain', # optional
+	                      'expires' => Time.now, # optional
+	                      'secure'  => true      # optional
+	                     })
+
+	CGI.print("Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+== print HTTP header and string to $>
+
+	require "cgi-lib.rb"
+	CGI.print{ "string" }
+	  # == CGI.print("Content-Type: text/html"){ "string" }
+	CGI.print("Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+=== NPH (no-parse-header) mode
+
+	require "cgi-lib.rb"
+	CGI.print("nph"){ "string" }
+	  # == CGI.print("nph", "Content-Type: text/html"){ "string" }
+	CGI.print("nph", "Content-Type: text/html", cookie1, cookie2){ "string" }
+
+
+== make HTML tag string
+
+	require "cgi-lib.rb"
+	CGI.tag("element", {"attribute_name"=>"attribute_value"}){"content"}
+
+
+== make HTTP header string
+
+	require "cgi-lib.rb"
+	CGI.header # == CGI.header("Content-Type: text/html")
+	CGI.header("Content-Type: text/html", cookie1, cookie2)
+
+
+=== NPH (no-parse-header) mode
+
+	CGI.header("nph") # == CGI.header("nph", "Content-Type: text/html")
+	CGI.header("nph", "Content-Type: text/html", cookie1, cookie2)
+
+
+== escape url encode
+
+	require "cgi-lib.rb"
+	url_encoded_string = CGI.escape("string")
+
+
+== unescape url encoded
+
+	require "cgi-lib.rb"
+	string = CGI.unescape("url encoded string")
+
+
+== escape HTML &"<>
+
+	require "cgi-lib.rb"
+	CGI.escapeHTML("string")
+
+
+=end
+d61 14
+a74 3
+  # if running on Windows(IIS or PWS) then change cwd.
+  if ENV['SERVER_SOFTWARE'] =~ /^Microsoft-/
+    Dir.chdir(ENV['PATH_TRANSLATED'].sub(/[^\\]+$/, ''))
+d76 1
+a76 1
+
+d79 2
+a80 1
+    str.gsub(/[^a-zA-Z0-9_\-.]/n){ sprintf("%%%02X", $&.unpack("C")[0]) }
+d85 3
+a87 1
+    str.gsub(/\+/, ' ').gsub(/%([0-9a-fA-F]{2})/){ [$1.hex].pack("c") }
+a96 14
+  # offline mode. read name=value pairs on standard input.
+  def read_from_cmdline
+    require "shellwords.rb"
+    words = Shellwords.shellwords(
+              if not ARGV.empty?
+                ARGV.join(' ')
+              else
+                STDERR.print "(offline mode: enter name=value pairs on standard input)\n" if STDIN.tty?
+                readlines.join(' ').gsub(/\n/, '')
+              end.gsub(/\\=/, '%3D').gsub(/\\&/, '%26'))
+
+    if words.find{|x| x =~ /=/} then words.join('&') else words.join('+') end
+  end
+
+a99 2
+    @@cookie = {}
+
+d103 1
+a103 1
+      STDERR.reopen($>)
+d107 1
+a107 1
+      STDERR.reopen($>)
+d122 4
+a125 5
+    if ENV.has_key?('HTTP_COOKIE') or ENV.has_key?('COOKIE')
+      (ENV['HTTP_COOKIE'] or ENV['COOKIE']).split("; ").each do |x|
+        key, val = x.split(/=/,2)
+        key = unescape(key)
+        val = val.split(/&/).collect{|x|unescape(x)}.join("\0")
+d127 1
+a127 1
+          @@cookie[key] += "\0" + val
+d129 1
+a129 1
+          @@cookie[key] = val
+d135 6
+a140 9
+  attr("inputs")
+  attr("cookie")
+
+  # make HTML tag string
+  def CGI.tag(element, attributes = {})
+    "<" + escapeHTML(element) + attributes.collect{|name, value|
+      " " + escapeHTML(name) + '="' + escapeHTML(value) + '"'
+    }.to_s + ">" +
+    (iterator? ? yield.to_s + "</" + escapeHTML(element) + ">" : "")
+a142 1
+  # make raw cookie string
+d151 5
+a155 21
+  # make HTTP header string
+  def CGI.header(*options)
+    if ENV['MOD_RUBY']
+      options.each{|option|
+        option.sub(/(.*?): (.*)/){
+          Apache::request[$1] = $2
+        }
+      }
+      Apache::request.send_http_header
+      ''
+    else
+      if options.delete("nph") or (ENV['SERVER_SOFTWARE'] =~ /IIS/)
+        [(ENV['SERVER_PROTOCOL'] or "HTTP/1.0") + " 200 OK",
+         "Date: " + Time.now.gmtime.strftime("%a, %d %b %Y %X %Z"),
+         "Server: " + (ENV['SERVER_SOFTWARE'] or ""),
+         "Connection: close"] +
+        (options.empty? ? ["Content-Type: text/html"] : options)
+      else
+        options.empty? ? ["Content-Type: text/html"] : options
+      end.join(EOL) + EOL + EOL
+    end
+d158 3
+a160 3
+  # print HTTP header and string to $>
+  def CGI.print(*options)
+    $>.print CGI.header(*options) + yield.to_s
+a162 1
+  # print message to $>
+a177 1
+  # print error message to $> and exit
+@
+
+
+1.1.1.3.2.5
+log
+@990324
+@
+text
+@d30 6
+a35 6
+	CGI::print{
+	  CGI::tag("HTML"){
+	    CGI::tag("HEAD"){ CGI::tag("TITLE"){"TITLE"} } +
+	    CGI::tag("BODY"){
+	      CGI::tag("FORM", {"ACTION"=>"test.rb", "METHOD"=>"POST"}){
+	        CGI::tag("INPUT", {"TYPE"=>"submit", "VALUE"=>"submit"})
+d37 1
+a37 1
+	      CGI::tag("HR")
+d46 7
+a52 7
+	cookie1 = CGI::cookie({'name'    => 'name',
+	                       'value'   => 'value',
+	                       'path'    => 'path',   # optional
+	                       'domain'  => 'domain', # optional
+	                       'expires' => Time.now, # optional
+	                       'secure'  => true      # optional
+	                      })
+d54 1
+a54 1
+	CGI::print("Content-Type: text/html", cookie1, cookie2){ "string" }
+d60 3
+a62 3
+	CGI::print{ "string" }
+	  # == CGI::print("Content-Type: text/html"){ "string" }
+	CGI::print("Content-Type: text/html", cookie1, cookie2){ "string" }
+d68 3
+a70 3
+	CGI::print("nph"){ "string" }
+	  # == CGI::print("nph", "Content-Type: text/html"){ "string" }
+	CGI::print("nph", "Content-Type: text/html", cookie1, cookie2){ "string" }
+d76 1
+a76 1
+	CGI::tag("element", {"attribute_name"=>"attribute_value"}){"content"}
+d82 2
+a83 2
+	CGI::header # == CGI::header("Content-Type: text/html")
+	CGI::header("Content-Type: text/html", cookie1, cookie2)
+d88 2
+a89 2
+	CGI::header("nph") # == CGI::header("nph", "Content-Type: text/html")
+	CGI::header("nph", "Content-Type: text/html", cookie1, cookie2)
+d95 1
+a95 1
+	url_encoded_string = CGI::escape("string")
+d101 1
+a101 1
+	string = CGI::unescape("url encoded string")
+d107 1
+a107 1
+	CGI::escapeHTML("string")
+d120 5
+d163 2
+d167 2
+d201 1
+a201 1
+  def CGI::tag(element, attributes = {})
+d209 1
+a209 1
+  def CGI::cookie(options)
+d218 1
+a218 1
+  def CGI::header(*options)
+d241 2
+a242 2
+  def CGI::print(*options)
+    $>.print CGI::header(*options) + yield.to_s
+d246 1
+a246 1
+  def CGI::message(message, title = "", header = ["Content-Type: text/html"])
+d252 4
+a255 4
+    CGI::print(*header){
+      CGI::tag("HTML"){
+        CGI::tag("HEAD"){ CGI.tag("TITLE"){ title } } +
+        CGI::tag("BODY"){ message }
+d262 5
+a266 4
+  def CGI::error
+    CGI::message({'title'=>'ERROR', 'body'=>
+      CGI::tag("PRE"){
+        "ERROR: " + CGI::tag("STRONG"){ escapeHTML($!.to_s) } + "\n" + escapeHTML($@@.join("\n"))
+@
+
+
+1.1.1.3.2.6
+log
+@990715
+@
+text
+@d160 1
+a160 1
+      input.read(Integer(ENV['CONTENT_LENGTH'])) or ""
+@
+
+
+1.1.1.3.2.7
+log
+@backtrace may be Qnil
+@
+text
+@d249 1
+a249 1
+    true
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d17 2
+d20 1
+d26 1
+a26 2
+    require "shellwords.rb"
+    words = Shellwords.shellwords(if not ARGV.empty? then
+@
+
+
+1.1.1.2.2.2
+log
+@reserved words & etc.
+@
+text
+@d48 1
+a48 1
+  def initialize(input = $stdin)
+d57 1
+a57 1
+      input.read ENV['CONTENT_LENGTH'].to_i
+@
+
+
+1.1.1.2.2.3
+log
+@-a -> -a- ^^;;
+@
+text
+@d10 1
+a10 1
+# and foo has Hash class methods
+d17 1
+a17 3
+require "delegate"
+
+class CGI < SimpleDelegator
+d64 1
+d66 2
+a67 1
+    super(@@inputs)
+d70 4
+@
+
+
+1.1.1.2.2.4
+log
+@*** empty log message ***
+@
+text
+@d1 1
+@
+
+
+1.1.1.2.2.5
+log
+@baseline
+@
+text
+@d63 1
+a63 5
+      if @@inputs.include?('key')
+        @@inputs[key] += "\0" + (val or "")
+      else
+        @@inputs[key] = (val or "")
+      end
+@
+
+
+1.1.1.2.2.6
+log
+@1.1b9_27
+@
+text
+@d84 1
+a84 1
+    m = $!.to_s.dup
+@
+
+
+1.1.1.2.2.7
+log
+@thread->thred
+@
+text
+@d28 1
+a28 1
+                         print "(offline mode: enter name=value pairs on standard input)\n" if STDOUT.tty?
+@
+
+
+1.1.1.2.2.8
+log
+@980626
+@
+text
+@d28 1
+a28 1
+                         STDERR.print "(offline mode: enter name=value pairs on standard input)\n" if STDOUT.tty?
+d50 2
+a55 3
+      # exception messages should be printed to stdout.
+      STDERR.reopen(STDOUT)
+
+a57 3
+      # exception messages should be printed to stdout.
+      STDERR.reopen(STDOUT)
+
+@
+
+
+1.1.1.2.2.9
+log
+@1.1b9_30
+@
+text
+@d28 1
+a28 1
+                         STDERR.print "(offline mode: enter name=value pairs on standard input)\n" if STDIN.tty?
+@
+
+
+1.1.1.2.2.10
+log
+@substr() taint
+@
+text
+@d56 1
+d61 2
+a62 1
+      input.read Integer(ENV['CONTENT_LENGTH'])
+d67 1
+a67 1
+      if @@inputs.include?(key)
+@

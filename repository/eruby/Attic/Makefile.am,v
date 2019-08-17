@@ -1,0 +1,143 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.07.07.46;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.07.07.46;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.19.07.14.18;	author shugo;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2001.10.22.05.00.27;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file Makefile.am was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@a0 44
+## Process this file with automake to produce Makefile.in
+
+EXTRA_DIST	= bin2c \
+		  eruby_logo.png \
+		  eruby.rd \
+		  eruby.1 \
+		  ruby.m4 \
+		  README.ja \
+		  README.en \
+		  COPYING \
+		  GPL \
+		  LGPL \
+		  examples/test.rhtml \
+		  examples/foo.rhtml \
+		  examples/test.rb \
+		  examples/e2r.rb
+
+lib_LTLIBRARIES		= liberuby.la
+bin_PROGRAMS		= eruby
+rubyext_LTLIBRARIES	= eruby.la
+man_MANS		= eruby.1
+
+liberuby_la_SOURCES	= eruby_lib.c eruby.h
+liberuby_la_CFLAGS	= $(RUBY_CFLAGS)
+liberuby_la_LIBADD	= $(RUBY_EXT_LIBS)
+liberuby_la_LDFLAGS	= -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+
+eruby_SOURCES		= eruby_main.c eruby_logo.c eruby.h eruby_logo.h
+eruby_CFLAGS		= -I$(top_srcdir)/lib $(RUBY_CFLAGS)
+eruby_LDADD		= -L$(top_builddir)/lib -leruby $(RUBY_LIBS)
+eruby_DEPENDENCIES	= liberuby.la
+
+eruby_la_SOURCES	= eruby_ext.c eruby.h
+eruby_la_CFLAGS		= -I$(top_srcdir)/lib $(RUBY_CFLAGS)
+eruby_la_LIBADD		= -L$(top_builddir)/lib -leruby $(RUBY_EXT_LIBS)
+eruby_la_LDFLAGS	= -module -avoid-version
+eruby_la_DEPENDENCIES	= liberuby.la
+
+eruby_logo.c: eruby_logo.png
+	$(srcdir)/bin2c $(srcdir)/eruby_logo.png > eruby_logo.c
+
+eruby.1: eruby.rd
+	$(RUBY) -S rd2 -r rd/rd2man-lib -o eruby $(srcdir)/eruby.rd
+	$(RUBY) -i -ne 'print if ~/.+/' eruby.1
+@
+
+
+1.1.2.2
+log
+@*** empty log message ***
+@
+text
+@d29 2
+a30 2
+eruby_CFLAGS		= $(RUBY_CFLAGS)
+eruby_LDADD		= -L$(srcdir) -leruby $(RUBY_LIBS)
+d34 2
+a35 2
+eruby_la_CFLAGS		= $(RUBY_CFLAGS)
+eruby_la_LIBADD		= -L$(srcdir) -leruby $(RUBY_EXT_LIBS)
+@
+
+
+1.1.2.3
+log
+@* Makefile.am: new variable include_HEADERS.
+@
+text
+@d3 14
+a16 16
+EXTRA_DIST		= bin2c \
+			  eruby_logo.png \
+			  eruby.rd \
+			  eruby.1 \
+			  ruby.m4 \
+			  README.ja \
+			  README.en \
+			  COPYING \
+			  GPL \
+			  LGPL \
+			  examples/test.rhtml \
+			  examples/foo.rhtml \
+			  examples/test.rb \
+			  examples/e2r.rb
+
+include_HEADERS		= eruby.h
+a18 1
+
+a19 1
+
+a20 1
+
+@
+
+

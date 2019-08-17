@@ -1,0 +1,219 @@
+head	1.3;
+access;
+symbols
+	v1_6_4:1.2.2.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2.2.2
+	v1_6_4_preview3:1.2.2.2
+	ruby_1_6:1.2.0.2
+	forwardable_v1_1:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.07.19.05.42.06;	author knu;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.07.23.52.57;	author knu;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.07.23.38.53;	author knu;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.05.07.23.56.05;	author knu;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2001.05.07.23.59.00;	author knu;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2001.07.19.05.44.25;	author knu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@  -- forwatable.rb
+                                                $Release Version: 1.1 $
+                                                $Revision: 1.2 $
+                                                $Date: 2001/05/07 23:52:57 $
+
+=begin
+= Forwardable
+
+クラスに対しメソッドの委譲機能を定義します.
+
+== 使い方
+
+クラスに対してextendして使います. 
+  
+  class Foo
+    extend Forwardable
+
+    def_delegators("@@out", "printf", "print")
+    def_delegators(:@@in, :gets)
+    def_delegator(:@@contents, :[], "content_at")
+  end
+  f = Foo.new
+  f.printf ...
+  f.gets
+  f.content_at(1)
+
+== メソッド
+
+--- Forwardable#def_instance_delegators(accessor, *methods)
+
+      ((|methods|))で渡されたメソッドのリストを((|accessorに|))委譲する
+      ようにします.
+
+--- Forwardable#def_instance_delegator(accessor, method, ali = method)
+
+      ((||method|))で渡されたメソッドを((|accessor|))に委譲するようにし
+      ます. ((|ali|))が引数として渡されたときは, メソッド((|ali|))が呼ば
+      れたときには, ((|accessor|))に対し((|method|))を呼び出します.
+
+--- Forwardable#def_delegators(accessor, *methods)
+
+      ((|Forwardable#def_instance_delegators|))の別名です.
+
+--- Forwardable#def_delegator(accessor, method, ali = method)
+
+      ((|Forwardable#def_instance_delegator|))の別名です.
+
+= SingleForwardable
+
+オブジェクトに対し, メソッドの委譲機能を定義します.
+
+== 使い方
+
+オブジェクトに対して((|extend|))して使います. 
+
+  g = Goo.new
+  g.extend SingleForwardable
+  g.def_delegator("@@out", :puts)
+  g.puts ...
+
+== メソッド
+
+--- SingleForwardable#def_singleton_delegators(accessor, *methods)
+
+      ((|methods|))で渡されたメソッドのリストを((|accessor|))に委譲する
+      ようにします.
+
+--- SingleForwardable#def_singleton_delegator(accessor, method, ali = method)
+
+      ((|method|))で渡されたメソッドを((|accessor|))に委譲するようにしま
+      す. ((|ali|))が引数として渡されたときは, メソッド((|ali|))が呼ばれ
+      たときには, ((|accessor|))に対し((|method|))を呼び出します.
+
+--- SingleForwardable#def_delegators(accessor, *methods)
+
+      ((|SingleForwardable#def_singleton_delegators|))の別名です.
+
+--- SingleForwardable#def_delegator(accessor, method, ali = method)
+
+      ((|SingleForwardable#def_singleton_delegator|))の別名です.
+=end
+@
+
+
+1.2
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@d3 2
+a4 2
+                                                $Revision: 1.1.1.1 $
+                                                $Date: 2001/05/07 23:38:53 $
+@
+
+
+1.2.2.1
+log
+@Bring forwardable 1.1 onto the ruby_1_6 branch.
+@
+text
+@d6 1
+d81 1
+@
+
+
+1.2.2.2
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@d3 2
+a4 2
+                                                $Revision: 1.2.2.1 $
+                                                $Date: 2001/05/07 23:56:05 $
+a5 1
+=begin
+a79 1
+=end
+@
+
+
+1.2.2.3
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@d3 2
+a4 2
+                                                $Revision: 1.2.2.2 $
+                                                $Date: 2001/05/07 23:59:00 $
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 2
+a4 2
+                                                $Revision: 1.1 $
+                                                $Date: 2001/04/03 13:41:44 $
+d6 1
+d81 1
+@
+
+
+1.1.1.1
+log
+@Import forwardable 1.1.
+@
+text
+@@

@@ -1,0 +1,63 @@
+head	1.2;
+access;
+symbols
+	initial:1.1.1.1 PragProg:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.06.17.14.24;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2000.06.05.19.16.27;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive
+@
+text
+@require '../rubicon'
+
+
+class TestSignalException < Rubicon::TestCase
+
+  def test_s_exception
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestSignalException) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@Initial Import
+@
+text
+@@

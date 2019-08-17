@@ -1,0 +1,123 @@
+head	1.2;
+access;
+symbols
+	V0_3_2:1.2
+	V0_1_4:1.1
+	V0_1_3:1.1
+	V0_1_2:1.1
+	V0_1_1:1.1
+	V0_1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.02.15.21.15.31;	author dave;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.22.22.07.33;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@1. Add preamble to all tests to allow them to be run from any location (that
+   is we now add the path to rubicon to $:)
+
+2. Change string tests so they aren't wired to the String class.
+@
+text
+@$: << File.dirname($0) << File.join(File.dirname($0), "..")
+require 'rubicon'
+
+
+class TestComparable < Rubicon::TestCase
+
+  class C
+    include Comparable
+    attr :val
+    def initialize(val)
+      @@val = val
+    end
+    def <=>(other)
+      @@val <=> other.val
+    end
+  end
+
+  def setup
+    @@a = C.new(1)
+    @@b = C.new(2)
+    @@c = C.new(1)
+    @@d = C.new(3)
+  end
+
+  def test_00_sanity
+    assert_equal( 0, @@a <=> @@a)
+    assert_equal( 0, @@a <=> @@c)
+    assert_equal(-1, @@a <=> @@b)
+    assert_equal( 1, @@b <=> @@a)
+  end
+
+  def test_EQUAL # '=='
+    assert(  @@a == @@a)
+    assert(  @@a == @@c)
+    assert(!(@@a == @@b))
+    assert(  @@a != @@b)
+  end
+
+  def test_GE # '>='
+    assert(!(@@a >= @@b))
+    assert( (@@a >= @@a))
+    assert( (@@b >= @@a))
+  end
+
+  def test_GT # '>'
+    assert(!(@@a > @@b))
+    assert(!(@@a > @@a))
+    assert( (@@b > @@a))
+  end
+
+  def test_LE # '<='
+    assert( (@@a <= @@b))
+    assert( (@@a <= @@a))
+    assert(!(@@b <= @@a))
+  end
+
+  def test_LT # '<'
+    assert( (@@a < @@b))
+    assert(!(@@a < @@a))
+    assert(!(@@b < @@a))
+  end
+
+  def test_between?
+    assert( @@a.between?(@@a, @@c))
+    assert(!@@a.between?(@@b, @@c))
+    assert( @@b.between?(@@a, @@b))
+    assert( @@b.between?(@@a, @@d))
+    assert(!@@d.between?(@@a, @@b))
+    assert(!@@d.between?(@@b, @@b))
+  end
+
+end
+
+Rubicon::handleTests(TestComparable) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Archive save
+@
+text
+@d1 2
+a2 1
+require '../rubicon'
+@
+

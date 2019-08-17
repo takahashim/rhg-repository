@@ -1,0 +1,2933 @@
+head	1.36;
+access;
+symbols
+	v1_6_7:1.18.2.3
+	v1_6_6:1.18.2.2
+	v1_6_5:1.18.2.2
+	v1_6_4:1.18.2.2
+	v1_7_1:1.23
+	v1_6_4_preview4:1.18.2.2
+	v1_6_4_preview3:1.18.2.2
+	v1_6_4_preview2:1.18.2.2
+	v1_6_4_preview1:1.18.2.2
+	v1_6_3:1.18.2.1
+	ruby_m17n:1.18.0.4
+	ruby_1_6:1.18.0.2
+	v1_6_2:1.18
+	v1_6_1:1.16
+	v1_6_0:1.15
+	v1_4_6:1.2.2.6
+	v1_4_5:1.2.2.6
+	v1_4_4:1.2.2.4
+	ruby_1_4_3:1.2.2.1
+	ruby1_4_3:1.2.2.1
+	v1_4_3:1.2.2.1
+	v1_5_0:1.4
+	ruby_1_4_3_pre1:1.2.2.1
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.5
+	v1_3_6_repack:1.1.1.3.2.5
+	v1_3_6:1.1.1.3.2.5
+	v1_3_5:1.1.1.3.2.5
+	v1_2_6repack:1.1.1.2.2.11
+	v1_3_4_990625:1.1.1.3.2.5
+	v1_3_4_990624:1.1.1.3.2.4
+	v1_2_6:1.1.1.2.2.11
+	v1_3_4_990611:1.1.1.3.2.4
+	v1_3_4_990531:1.1.1.3.2.4
+	v1_3_3_990518:1.1.1.3.2.4
+	v1_3_3_990513:1.1.1.3.2.4
+	v1_3_3_990507:1.1.1.3.2.4
+	v1_2_5:1.1.1.2.2.11
+	v1_2_4:1.1.1.2.2.11
+	v1_3_1_990225:1.1.1.3.2.1
+	v1_3_1_990224:1.1.1.3.2.1
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.11
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.11
+	v1_2_1repack:1.1.1.2.2.11
+	v1_2_1:1.1.1.2.2.11
+	v1_2_stable:1.1.1.2.2.11
+	v1_1d1:1.1.1.2.2.11.2.3
+	v1_1d0:1.1.1.2.2.11.2.3
+	v1_1c9_1:1.1.1.2.2.11
+	v1_1c9:1.1.1.2.2.11
+	v1_1c8:1.1.1.2.2.11
+	v1_1c7:1.1.1.2.2.11
+	v1_1c6:1.1.1.2.2.11
+	v1_1d-start:1.1.1.2.2.11.2.1
+	v1_1c5:1.1.1.2.2.11
+	v1_1dev:1.1.1.2.2.11.0.2
+	v1_1c4:1.1.1.2.2.11
+	v1_1c3:1.1.1.2.2.11
+	v1_1c2:1.1.1.2.2.11
+	v1_1c1:1.1.1.2.2.11
+	v1_1c0:1.1.1.2.2.11
+	v1_1b9_31:1.1.1.2.2.11
+	v1_1b9_30:1.1.1.2.2.11
+	v1_1b9_28:1.1.1.2.2.10
+	v1_1b9_27:1.1.1.2.2.10
+	v1_1b9_26:1.1.1.2.2.10
+	r1_1b9_25:1.1.1.2.2.9
+	r1_1b9_24:1.1.1.2.2.9
+	v1_1b9_23:1.1.1.2.2.9
+	v1_1b9_22:1.1.1.2.2.9
+	v1_1b9_20:1.1.1.2.2.9
+	v1_1b9_18:1.1.1.2.2.8
+	v1_1b9_16:1.1.1.2.2.8
+	v1_1b9_15:1.1.1.2.2.8
+	v1_1b9_13:1.1.1.2.2.8
+	v1_1b9_12:1.1.1.2.2.8
+	v1_1b9_11:1.1.1.2.2.8
+	v1_1b9_08:1.1.1.2.2.8
+	v1_1b9_07:1.1.1.2.2.8
+	r1_1b9:1.1.1.2.2.4
+	v1_1b8:1.1.1.2.2.4
+	v1_1b7:1.1.1.2.2.3
+	v1_1b6:1.1.1.2.2.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.36
+date	2002.10.30.08.04.32;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.10.26.15.51.59;	author knu;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.10.23.10.17.29;	author nobu;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.08.27.08.27.11;	author michal;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.07.26.06.12.38;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.05.29.05.20.33;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.05.28.03.20.04;	author nobu;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.02.13.09.01.09;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.06.23.15.14.14;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.06.22.09.12.19;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.06.08.14.20.20;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.06.05.07.19.38;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.05.22.08.28.11;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.01.09.07.26.17;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.12.29.18.23.22;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.12.05.09.36.32;	author matz;	state Exp;
+branches
+	1.18.2.1
+	1.18.4.1;
+next	1.17;
+
+1.17
+date	2000.11.21.14.26.23;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.09.07.06.59.36;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.08.29.07.29.48;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.08.29.02.52.33;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.08.28.09.53.28;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.24.04.34.03;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.01.09.41.23;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.23.08.37.27;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.03.06.04.15.30;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.18.06.59.32;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.02.01.03.12.07;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.17.08.37.44;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.05.04.37.06;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.17.07.30.32;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.29.09.25.31;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.07;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.13;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.03.24.08.52.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.04.12.09.59.29;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.04.16.06.03.31;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.06.25.09.02.42;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.22.08.12.09;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.02.02.04.49.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.02.18.01.56.40;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.03.03.10.16.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.03.05.06.37.45;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.03.11.07.32.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.03.26.10.22.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.05.13.05.58.01;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.06.18.07.46.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.07.09.08.40.17;	author matz;	state Exp;
+branches
+	1.1.1.2.2.11.2.1;
+next	;
+
+1.1.1.2.2.11.2.1
+date	98.09.08.07.08.54;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11.2.2;
+
+1.1.1.2.2.11.2.2
+date	98.10.06.03.28.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11.2.3;
+
+1.1.1.2.2.11.2.3
+date	98.11.25.03.31.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.10.25.05.09.12;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	2000.01.17.08.24.05;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.03.08.06.25.10;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.03.13.09.15.42;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.03.23.04.14.19;	author matz;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.06.05.09.00.58;	author matz;	state Exp;
+branches;
+next	;
+
+1.18.2.1
+date	2001.01.09.07.29.03;	author matz;	state Exp;
+branches;
+next	1.18.2.2;
+
+1.18.2.2
+date	2001.04.06.05.42.40;	author matz;	state Exp;
+branches;
+next	1.18.2.3;
+
+1.18.2.3
+date	2002.02.27.04.50.30;	author matz;	state Exp;
+branches;
+next	1.18.2.4;
+
+1.18.2.4
+date	2002.05.28.03.19.55;	author nobu;	state Exp;
+branches;
+next	1.18.2.5;
+
+1.18.2.5
+date	2002.10.26.15.57.23;	author knu;	state Exp;
+branches;
+next	;
+
+1.18.4.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.36
+log
+@* eval.c (rb_mod_public_method_defined, etc.): new methods:
+  public_method_defined?, private_method_defined?,
+  protected_method_defined?
+
+* object.c (rb_obj_public_methods): new method
+  Object#public_methods.
+
+* class.c (ins_methods_i): Object#methods should list both public
+  and protected methods.
+
+* class.c (rb_class_public_instance_methods): new method
+  Module#public_instance_methods.
+@
+text
+@/**********************************************************************
+
+  node.h -
+
+  $Author: knu $
+  $Date: 2002/10/26 15:51:59 $
+  created at: Fri May 28 15:14:02 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#ifndef NODE_H
+#define NODE_H
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+enum node_type {
+    NODE_METHOD,
+    NODE_FBODY,
+    NODE_CFUNC,
+    NODE_SCOPE,
+    NODE_BLOCK,
+    NODE_IF,
+    NODE_CASE,
+    NODE_WHEN,
+    NODE_OPT_N,
+    NODE_WHILE,
+    NODE_UNTIL,
+    NODE_ITER,
+    NODE_FOR,
+    NODE_BREAK,
+    NODE_NEXT,
+    NODE_REDO,
+    NODE_RETRY,
+    NODE_BEGIN,
+    NODE_RESCUE,
+    NODE_RESBODY,
+    NODE_ENSURE,
+    NODE_AND,
+    NODE_OR,
+    NODE_NOT,
+    NODE_MASGN,
+    NODE_LASGN,
+    NODE_DASGN,
+    NODE_DASGN_CURR,
+    NODE_GASGN,
+    NODE_IASGN,
+    NODE_CDECL,
+    NODE_CVASGN,
+    NODE_CVDECL,
+    NODE_OP_ASGN1,
+    NODE_OP_ASGN2,
+    NODE_OP_ASGN_AND,
+    NODE_OP_ASGN_OR,
+    NODE_CALL,
+    NODE_FCALL,
+    NODE_VCALL,
+    NODE_SUPER,
+    NODE_ZSUPER,
+    NODE_ARRAY,
+    NODE_ZARRAY,
+    NODE_HASH,
+    NODE_RETURN,
+    NODE_YIELD,
+    NODE_LVAR,
+    NODE_DVAR,
+    NODE_GVAR,
+    NODE_IVAR,
+    NODE_CONST,
+    NODE_CVAR,
+    NODE_NTH_REF,
+    NODE_BACK_REF,
+    NODE_MATCH,
+    NODE_MATCH2,
+    NODE_MATCH3,
+    NODE_LIT,
+    NODE_STR,
+    NODE_DSTR,
+    NODE_XSTR,
+    NODE_DXSTR,
+    NODE_EVSTR,
+    NODE_DREGX,
+    NODE_DREGX_ONCE,
+    NODE_ARGS,
+    NODE_ARGSCAT,
+    NODE_ARGSPUSH,
+    NODE_RESTARGS,
+    NODE_RESTARY,
+    NODE_REXPAND,
+    NODE_BLOCK_ARG,
+    NODE_BLOCK_PASS,
+    NODE_DEFN,
+    NODE_DEFS,
+    NODE_ALIAS,
+    NODE_VALIAS,
+    NODE_UNDEF,
+    NODE_CLASS,
+    NODE_MODULE,
+    NODE_SCLASS,
+    NODE_COLON2,
+    NODE_COLON3,
+    NODE_CREF,
+    NODE_DOT2,
+    NODE_DOT3,
+    NODE_FLIP2,
+    NODE_FLIP3,
+    NODE_ATTRSET,
+    NODE_SELF,
+    NODE_NIL,
+    NODE_TRUE,
+    NODE_FALSE,
+    NODE_DEFINED,
+    NODE_NEWLINE,
+    NODE_POSTEXE,
+#ifdef C_ALLOCA
+    NODE_ALLOCA,
+#endif
+    NODE_DMETHOD,
+    NODE_BMETHOD,
+    NODE_MEMO,
+    NODE_IFUNC,
+    NODE_DSYM,
+    NODE_LAST
+};
+
+typedef struct RNode {
+    unsigned long flags;
+    char *nd_file;
+    union {
+	struct RNode *node;
+	ID id;
+	VALUE value;
+	VALUE (*cfunc)(ANYARGS);
+	ID *tbl;
+    } u1;
+    union {
+	struct RNode *node;
+	ID id;
+	int argc;
+	VALUE value;
+    } u2;
+    union {
+	struct RNode *node;
+	ID id;
+	long state;
+	struct global_entry *entry;
+	long cnt;
+	VALUE value;
+    } u3;
+} NODE;
+
+#define RNODE(obj)  (R_CAST(RNode)(obj))
+
+#define nd_type(n) ((int)(((RNODE(n))->flags>>FL_USHIFT)&0xff))
+#define nd_set_type(n,t) \
+    RNODE(n)->flags=((RNODE(n)->flags&~FL_UMASK)|(((t)<<FL_USHIFT)&FL_UMASK))
+
+#define NODE_LSHIFT (FL_USHIFT+8)
+#define NODE_LMASK  (((long)1<<(sizeof(NODE*)*CHAR_BIT-NODE_LSHIFT))-1)
+#define nd_line(n) ((unsigned int)(((RNODE(n))->flags>>NODE_LSHIFT)&NODE_LMASK))
+#define nd_set_line(n,l) \
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+
+#define nd_head  u1.node
+#define nd_alen  u2.argc
+#define nd_next  u3.node
+
+#define nd_cond  u1.node
+#define nd_body  u2.node
+#define nd_else  u3.node
+
+#define nd_orig  u3.value
+
+#define nd_resq  u2.node
+#define nd_ensr  u3.node
+
+#define nd_1st   u1.node
+#define nd_2nd   u2.node
+
+#define nd_stts  u1.node
+
+#define nd_entry u3.entry
+#define nd_vid   u1.id
+#define nd_cflag u2.id
+#define nd_cval  u3.value
+
+#define nd_cnt   u3.cnt
+#define nd_tbl   u1.tbl
+
+#define nd_var   u1.node
+#define nd_ibdy  u2.node
+#define nd_iter  u3.node
+
+#define nd_value u2.node
+#define nd_aid   u3.id
+
+#define nd_lit   u1.value
+
+#define nd_frml  u1.node
+#define nd_rest  u2.argc
+#define nd_opt   u1.node
+
+#define nd_recv  u1.node
+#define nd_mid   u2.id
+#define nd_args  u3.node
+
+#define nd_noex  u1.id
+#define nd_defn  u3.node
+
+#define nd_old   u1.id
+#define nd_new   u2.id
+
+#define nd_cfnc  u1.cfunc
+#define nd_argc  u2.argc
+
+#define nd_cname u1.id
+#define nd_super u3.node
+
+#define nd_modl  u1.id
+#define nd_clss  u1.value
+
+#define nd_beg   u1.node
+#define nd_end   u2.node
+#define nd_state u3.state
+#define nd_rval  u2.value
+
+#define nd_nth   u2.argc
+
+#define nd_tag   u1.id
+#define nd_tval  u2.value
+
+#define NEW_METHOD(n,x) rb_node_newnode(NODE_METHOD,x,n,0)
+#define NEW_FBODY(n,i,o) rb_node_newnode(NODE_FBODY,n,i,o)
+#define NEW_DEFN(i,a,d,p) rb_node_newnode(NODE_DEFN,p,i,NEW_RFUNC(a,d))
+#define NEW_DEFS(r,i,a,d) rb_node_newnode(NODE_DEFS,r,i,NEW_RFUNC(a,d))
+#define NEW_CFUNC(f,c) rb_node_newnode(NODE_CFUNC,f,c,0)
+#define NEW_IFUNC(f,c) rb_node_newnode(NODE_IFUNC,f,c,0)
+#define NEW_RFUNC(b1,b2) NEW_SCOPE(block_append(b1,b2))
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),0,(b))
+#define NEW_BLOCK(a) rb_node_newnode(NODE_BLOCK,a,0,0)
+#define NEW_IF(c,t,e) rb_node_newnode(NODE_IF,c,t,e)
+#define NEW_UNLESS(c,t,e) NEW_IF(c,e,t)
+#define NEW_CASE(h,b) rb_node_newnode(NODE_CASE,h,b,0)
+#define NEW_WHEN(c,t,e) rb_node_newnode(NODE_WHEN,c,t,e)
+#define NEW_OPT_N(b) rb_node_newnode(NODE_OPT_N,0,b,0)
+#define NEW_WHILE(c,b,n) rb_node_newnode(NODE_WHILE,c,b,n)
+#define NEW_UNTIL(c,b,n) rb_node_newnode(NODE_UNTIL,c,b,n)
+#define NEW_FOR(v,i,b) rb_node_newnode(NODE_FOR,v,b,i)
+#define NEW_ITER(v,i,b) rb_node_newnode(NODE_ITER,v,b,i)
+#define NEW_BREAK(s) rb_node_newnode(NODE_BREAK,s,0,0)
+#define NEW_NEXT(s) rb_node_newnode(NODE_NEXT,s,0,0)
+#define NEW_REDO() rb_node_newnode(NODE_REDO,0,0,0)
+#define NEW_RETRY() rb_node_newnode(NODE_RETRY,0,0,0)
+#define NEW_BEGIN(b) rb_node_newnode(NODE_BEGIN,0,b,0)
+#define NEW_RESCUE(b,res,e) rb_node_newnode(NODE_RESCUE,b,res,e)
+#define NEW_RESBODY(a,ex,n) rb_node_newnode(NODE_RESBODY,n,ex,a)
+#define NEW_ENSURE(b,en) rb_node_newnode(NODE_ENSURE,b,0,en)
+#define NEW_RETURN(s) rb_node_newnode(NODE_RETURN,s,0,0)
+#define NEW_YIELD(a) rb_node_newnode(NODE_YIELD,a,0,0)
+#define NEW_LIST(a)  NEW_ARRAY(a)
+#define NEW_ARRAY(a) rb_node_newnode(NODE_ARRAY,a,1,0)
+#define NEW_ZARRAY() rb_node_newnode(NODE_ZARRAY,0,0,0)
+#define NEW_HASH(a)  rb_node_newnode(NODE_HASH,a,0,0)
+#define NEW_NOT(a)   rb_node_newnode(NODE_NOT,0,a,0)
+#define NEW_MASGN(l,r)   rb_node_newnode(NODE_MASGN,l,0,r)
+#define NEW_GASGN(v,val) rb_node_newnode(NODE_GASGN,v,val,rb_global_entry(v))
+#define NEW_LASGN(v,val) rb_node_newnode(NODE_LASGN,v,val,local_cnt(v))
+#define NEW_DASGN(v,val) rb_node_newnode(NODE_DASGN,v,val,0)
+#define NEW_DASGN_CURR(v,val) rb_node_newnode(NODE_DASGN_CURR,v,val,0)
+#define NEW_IASGN(v,val) rb_node_newnode(NODE_IASGN,v,val,0)
+#define NEW_CDECL(v,val) rb_node_newnode(NODE_CDECL,v,val,0)
+#define NEW_CVASGN(v,val) rb_node_newnode(NODE_CVASGN,v,val,0)
+#define NEW_CVDECL(v,val) rb_node_newnode(NODE_CVDECL,v,val,0)
+#define NEW_OP_ASGN1(p,id,a) rb_node_newnode(NODE_OP_ASGN1,p,id,a)
+#define NEW_OP_ASGN2(r,i,o,val) rb_node_newnode(NODE_OP_ASGN2,r,val,NEW_OP_ASGN22(i,o))
+#define NEW_OP_ASGN22(i,o) rb_node_newnode(NODE_OP_ASGN2,i,o,rb_id_attrset(i))
+#define NEW_OP_ASGN_OR(i,val) rb_node_newnode(NODE_OP_ASGN_OR,i,val,0)
+#define NEW_OP_ASGN_AND(i,val) rb_node_newnode(NODE_OP_ASGN_AND,i,val,0)
+#define NEW_GVAR(v) rb_node_newnode(NODE_GVAR,v,0,rb_global_entry(v))
+#define NEW_LVAR(v) rb_node_newnode(NODE_LVAR,v,0,local_cnt(v))
+#define NEW_DVAR(v) rb_node_newnode(NODE_DVAR,v,0,0);
+#define NEW_IVAR(v) rb_node_newnode(NODE_IVAR,v,0,0)
+#define NEW_CONST(v) rb_node_newnode(NODE_CONST,v,0,0)
+#define NEW_CVAR(v) rb_node_newnode(NODE_CVAR,v,0,0)
+#define NEW_NTH_REF(n)  rb_node_newnode(NODE_NTH_REF,0,n,local_cnt('~'))
+#define NEW_BACK_REF(n) rb_node_newnode(NODE_BACK_REF,0,n,local_cnt('~'))
+#define NEW_MATCH(c) rb_node_newnode(NODE_MATCH,c,0,0)
+#define NEW_MATCH2(n1,n2) rb_node_newnode(NODE_MATCH2,n1,n2,0)
+#define NEW_MATCH3(r,n2) rb_node_newnode(NODE_MATCH3,r,n2,0)
+#define NEW_LIT(l) rb_node_newnode(NODE_LIT,l,0,0)
+#define NEW_STR(s) rb_node_newnode(NODE_STR,s,0,0)
+#define NEW_DSTR(s) rb_node_newnode(NODE_DSTR,s,0,0)
+#define NEW_XSTR(s) rb_node_newnode(NODE_XSTR,s,0,0)
+#define NEW_DXSTR(s) rb_node_newnode(NODE_DXSTR,s,0,0)
+#define NEW_DSYM(s) rb_node_newnode(NODE_DSYM,s,0,0)
+#define NEW_EVSTR(n) rb_node_newnode(NODE_EVSTR,0,(n),0)
+#define NEW_CALL(r,m,a) rb_node_newnode(NODE_CALL,r,m,a)
+#define NEW_FCALL(m,a) rb_node_newnode(NODE_FCALL,0,m,a)
+#define NEW_VCALL(m) rb_node_newnode(NODE_VCALL,0,m,0)
+#define NEW_SUPER(a) rb_node_newnode(NODE_SUPER,0,0,a)
+#define NEW_ZSUPER() rb_node_newnode(NODE_ZSUPER,0,0,0)
+#define NEW_ARGS(f,o,r) rb_node_newnode(NODE_ARGS,o,r,f)
+#define NEW_ARGSCAT(a,b) rb_node_newnode(NODE_ARGSCAT,a,b,0)
+#define NEW_ARGSPUSH(a,b) rb_node_newnode(NODE_ARGSPUSH,a,b,0)
+#define NEW_RESTARGS(a) rb_node_newnode(NODE_RESTARGS,a,0,0)
+#define NEW_RESTARY(a) rb_node_newnode(NODE_RESTARY,a,0,0)
+#define NEW_REXPAND(a) rb_node_newnode(NODE_REXPAND,a,0,0)
+#define NEW_BLOCK_ARG(v) rb_node_newnode(NODE_BLOCK_ARG,v,0,local_cnt(v))
+#define NEW_BLOCK_PASS(b) rb_node_newnode(NODE_BLOCK_PASS,0,b,0)
+#define NEW_ALIAS(n,o) rb_node_newnode(NODE_ALIAS,o,n,0)
+#define NEW_VALIAS(n,o) rb_node_newnode(NODE_VALIAS,o,n,0)
+#define NEW_UNDEF(i) rb_node_newnode(NODE_UNDEF,0,i,0)
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_SCOPE(b),(s))
+#define NEW_SCLASS(r,b) rb_node_newnode(NODE_SCLASS,r,NEW_SCOPE(b),0)
+#define NEW_MODULE(n,b) rb_node_newnode(NODE_MODULE,n,NEW_SCOPE(b),0)
+#define NEW_COLON2(c,i) rb_node_newnode(NODE_COLON2,c,i,0)
+#define NEW_COLON3(i) rb_node_newnode(NODE_COLON3,0,i,0)
+#define NEW_CREF(c) (rb_node_newnode(NODE_CREF,0,0,c))
+#define NEW_DOT2(b,e) rb_node_newnode(NODE_DOT2,b,e,0)
+#define NEW_DOT3(b,e) rb_node_newnode(NODE_DOT3,b,e,0)
+#define NEW_ATTRSET(a) rb_node_newnode(NODE_ATTRSET,a,0,0)
+#define NEW_SELF() rb_node_newnode(NODE_SELF,0,0,0)
+#define NEW_NIL() rb_node_newnode(NODE_NIL,0,0,0)
+#define NEW_TRUE() rb_node_newnode(NODE_TRUE,0,0,0)
+#define NEW_FALSE() rb_node_newnode(NODE_FALSE,0,0,0)
+#define NEW_DEFINED(e) rb_node_newnode(NODE_DEFINED,e,0,0)
+#define NEW_NEWLINE(n) rb_node_newnode(NODE_NEWLINE,0,0,n)
+#define NEW_PREEXE(b) NEW_SCOPE(b)
+#define NEW_POSTEXE() rb_node_newnode(NODE_POSTEXE,0,0,0)
+#define NEW_DMETHOD(b) rb_node_newnode(NODE_DMETHOD,0,0,b)
+#define NEW_BMETHOD(b) rb_node_newnode(NODE_BMETHOD,0,0,b)
+
+#define NOEX_PUBLIC    0
+#define NOEX_UNDEF     1
+#define NOEX_CFUNC     1
+#define NOEX_PRIVATE   2
+#define NOEX_PROTECTED 4 
+#define NOEX_MASK      6 
+
+NODE *rb_compile_cstr _((const char*, const char*, int, int));
+NODE *rb_compile_string _((const char*, VALUE, int));
+NODE *rb_compile_file _((const char*, VALUE, int));
+
+void rb_add_method _((VALUE, ID, NODE *, int));
+NODE *rb_node_newnode(ANYARGS);
+
+struct global_entry *rb_global_entry _((ID));
+VALUE rb_gvar_get _((struct global_entry *));
+VALUE rb_gvar_set _((struct global_entry *, VALUE));
+VALUE rb_gvar_defined _((struct global_entry *));
+
+#if defined(__cplusplus)
+}  /* extern "C" { */
+#endif
+
+#endif
+@
+
+
+1.35
+log
+@* node.h (nd_type): cast the value to int.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/10/23 10:17:29 $
+d341 1
+@
+
+
+1.34
+log
+@* eval.c (rb_eval): added NODE_DSYM, symbol literal with
+  interpolation.
+
+* node.h: ditto.
+
+* intern.h: prototypes; rb_is_junk_id, rb_str_dump, rb_str_intern
+
+* object.c (sym_inspect): escape and quote for non-alphanumeric
+  symbols.
+
+* parse.y (dsym, tokadd_string, yylex): extended symbol literals.
+
+* parse.y (rb_is_junk_id): added.
+
+* string.c (rb_str_dump, rb_str_intern) : make extern.
+
+* lib/mkmf.rb (create_makefile): deffile should be removed by
+  distclean, not clean.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/27 08:27:11 $
+d157 1
+a157 1
+#define nd_type(n) (((RNODE(n))->flags>>FL_USHIFT)&0xff)
+@
+
+
+1.33
+log
+@node.h: unsigned int cast (ruby-core:358)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/07/26 06:12:38 $
+d125 1
+d298 1
+@
+
+
+1.32
+log
+@* random.c: replace with Mersenne Twister RNG.
+
+* eval.c (jump_tag_but_local_jump): preserve retval in
+  LocalJumpError exceptions.
+
+* parse.y (command): no more check for "super outside of method".
+
+* eval.c (rb_mod_define_method): should set last_class and
+  last_func in the block->frame.
+
+* eval.c (error_handle): should handle TAG_THROW as well.
+
+* parse.y (yylex): new decimal notation '0d4567'.
+
+* parse.y (yylex): new octal notation '0o777'.
+
+* parse.y (string_content): every string_content node should
+  return string only.  use NODE_EVSTR to coercing.
+
+* eval.c (rb_eval): NODE_EVSTR support.
+
+* re.c (rb_reg_quote): avoid unnecessary string allocation.
+
+* string.c (get_pat): quote metachracters before compiling a
+  string into a regex.
+
+* string.c (rb_str_split_m): special treatment of strings of size
+  1, but AWK emulation.  now uses get_pat().
+
+* string.c (rb_str_match_m): quote metacharacters.
+
+* string.c (rb_str_match2): ditto.
+
+* ext/socket/socket.c (sock_addrinfo): make all 3 versions of
+  getaddrinfo happy.  [ruby-core:00184]
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/29 05:20:33 $
+d162 1
+a162 1
+#define nd_line(n) (((RNODE(n))->flags>>NODE_LSHIFT)&NODE_LMASK)
+@
+
+
+1.31
+log
+@* parse.y: yyparse #defines moved from intern.h
+
+* ruby.c (proc_options): access prefixed "ruby_yydebug".
+
+* applied modifies to pacify some of gcc -Wall warnings.
+
+* parse.y (arg): no more ugly hack for "**", so that "-2**2" to be
+  parsed as "(-2)**2", whereas "- 2**2" or "-(2)**2" to be parsed
+  as "-(2**2)".
+
+* parse.y (yylex): '-2' to be literal fixnum. [new]
+
+* time.c (time_succ): new method for Range support.
+
+* time.c (time_arg): nil test against v[6] (usec).
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/05/28 03:20:04 $
+d297 1
+a297 1
+#define NEW_EVSTR(s,l) rb_node_newnode(NODE_EVSTR,rb_str_new(s,l),0,0)
+@
+
+
+1.30
+log
+@* eval.c (scope_node): trick to keep the node has a scope.
+
+* eval.c (rb_eval): NODE_EVSTR: write back local_tbl to the node.
+
+* eval.c (rb_eval): NODE_SCOPE: hold the scope node in ruby_scope.
+
+* eval.c (module_setup): ditto.
+
+* eval.c (rb_call0): ditto.
+
+* node.h (NEW_DASGN, NEW_DASGN_CURR): remove surplus semicolons.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d141 1
+a141 1
+	long argc;
+@
+
+
+1.29
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/13 09:01:09 $
+d270 2
+a271 2
+#define NEW_DASGN(v,val) rb_node_newnode(NODE_DASGN,v,val,0);
+#define NEW_DASGN_CURR(v,val) rb_node_newnode(NODE_DASGN_CURR,v,val,0);
+@
+
+
+1.28
+log
+@* parse.y (stmt): local variable declaration order was changed
+  since 1.6
+
+* parse.y (arg): ditto.
+
+* pack.c (pack_pack): add templates 'q' and 'Q'.
+
+* pack.c (pack_unpack): ditto.
+
+* bignum.c (rb_quad_pack): new utility function.
+
+* bignum.c (rb_quad_unpack): ditto.
+
+* parse.y (assignable): should emit CVASGN within the method
+  body.
+
+* dir.c (dir_s_glob): should not warn even if no match found.
+
+* eval.c (rb_eval): clean up class variable behavior.
+
+* eval.c (assign): ditto.
+
+* eval.c (is_defined): ditto.
+
+* variable.c (rb_mod_class_variables): need not to call rb_cvar_singleton().
+
+* variable.c (rb_cvar_singleton): removed.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/23 15:14:14 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.27
+log
+@* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/22 09:12:19 $
+a73 1
+    NODE_CVAR2,
+a286 1
+#define NEW_CVAR2(v) rb_node_newnode(NODE_CVAR2,v,0,0)
+@
+
+
+1.26
+log
+@* eval.c (rb_yield_0): no mvalue_to_svalue conversion here.
+
+* eval.c (massign): takes svalue, convert it to mvalue inside.
+
+* eval.c (rb_eval): parameters for yield/return are always
+  svalues now.
+
+* eval.c (svalue_to_mvalue): more strict conversion.
+
+* eval.c (mvalue_to_svalue): ditto.
+
+* st.c (new_size): prime hash size enabled.
+
+* ext/socket/socket.c (Init_socket): SO_* constants added.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/08 14:20:20 $
+d93 1
+a93 2
+    NODE_SVALUE,
+    NODE_MVALUE,
+d310 1
+a310 2
+#define NEW_SVALUE(a) rb_node_newnode(NODE_SVALUE,a,0,0)
+#define NEW_MVALUE(a) rb_node_newnode(NODE_MVALUE,a,0,0)
+@
+
+
+1.25
+log
+@* gc.c (Init_stack): avoid __builtin_frame_address(2) to retrieve
+  stack bottom line.
+
+* st.c (numhash): should shuffle bits by dividing by prime number.
+
+* eval.c (rb_eval): multiple assignment behavior fixed, which
+  results "*a = nil" makes "a == []" now.
+
+* eval.c (rb_f_require): should set SCOPE_PUBLIC before calling
+  dln_load().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 07:19:38 $
+d93 2
+a94 1
+    NODE_REXPAND,
+d311 2
+a312 1
+#define NEW_REXPAND(a) rb_node_newnode(NODE_REXPAND,a,0,0)
+@
+
+
+1.24
+log
+@* variable.c (rb_mod_const_at): use hash table as internal
+  data. [new]
+
+* variable.c (rb_mod_const_of): ditto.
+
+* variable.c (rb_const_list): new function to convert internal
+  data (hash table) to array of strings.
+
+* eval.c (rb_mod_s_constants): data handling scheme has changed.
+
+* eval.c (rb_add_method): should not call rb_secure(), for
+  last_func may not be set.
+
+* io.c (rb_io_ctl): ioctl should accept any integer within C long
+  range.
+
+* marshal.c (r_object): wrong type check for modules.
+
+* marshal.c (w_object): should not dump anonymous classes/modules.
+
+* io.c (rb_open_file): use rb_file_sysopen_internal() if the 3rd
+  argument (permission flags) is given. [new, should be backported?]
+
+* io.c (rb_io_mode_binmode): mode string (e.g. "r+") to flags to
+  open(2).
+
+* eval.c (rb_eval): NODE_REXPAND expand an array of 1 element as
+  the element itself. [new, should be backported?]
+
+* parse.y (ret_args): should treat "*[a]" in rhs expression as
+  "a", not "[a]".
+
+* regex.c (re_compile_pattern): should push option modifier at the
+  right place.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/22 08:28:11 $
+d92 1
+d309 1
+@
+
+
+1.23
+log
+@* variable.c (rb_alias_variable): should not allow variable
+  aliasing if $SAFE >= 4.
+
+* parse.y (expr): "break" and "next" to take optional expression,
+  which is used as a value for termination. [new, experimental]
+
+* eval.c (rb_eval): "break" can give value to terminating method.
+
+* eval.c (rb_eval): "break" and "next" to take optional expression.
+
+* eval.c (rb_yield_0): "next" can give value to terminating "yield".
+
+* eval.c (rb_iterate): "break" can give value to terminating method.
+
+* eval.c (proc_call): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d92 1
+d308 1
+@
+
+
+1.22
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d251 2
+a252 2
+#define NEW_BREAK() rb_node_newnode(NODE_BREAK,0,0,0)
+#define NEW_NEXT() rb_node_newnode(NODE_NEXT,0,0,0)
+@
+
+
+1.21
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:17 $
+d134 1
+a134 1
+	VALUE (*cfunc)();
+d240 1
+a240 1
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),cur_cref,(b))
+d312 3
+a314 3
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_CBODY(b),(s))
+#define NEW_SCLASS(r,b) rb_node_newnode(NODE_SCLASS,r,NEW_CBODY(b),0)
+#define NEW_MODULE(n,b) rb_node_newnode(NODE_MODULE,n,NEW_CBODY(b),0)
+d317 1
+a317 3
+#define NEW_CREF0() (cur_cref=RNODE(ruby_frame->cbase))
+#define NEW_CREF() (cur_cref=rb_node_newnode(NODE_CREF,0,0,cur_cref))
+#define NEW_CBODY(b) (cur_cref->nd_body=NEW_SCOPE(b),cur_cref)
+d343 1
+a343 1
+NODE *rb_node_newnode();
+@
+
+
+1.20
+log
+@* enum.c (enum_inject): new method.
+
+* gc.c (rb_gc_call_finalizer_at_exit): clear klass member of
+  terminating object.
+
+* eval.c (rb_call): raise exception for terminated object.
+
+* bignum.c (bigdivrem): t2 might be too big for signed long; do
+  not use rb_int2big(), but rb_uint2big().
+
+* error.c (rb_load_fail): new func to report LoadError.
+
+* ruby.c (load_file): use rb_load_fail.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* gc.c (rb_gc_mark): link 2 of NODE_IFUNC should not be explicitly
+  marked.  it may contain non object pointer.
+
+* re.c (reg_s_last_match): Regexp::last_match(nth) returns nth
+  substring of the match  (alternative for $& and $<digit>).
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+
+* gc.c (mem_error): prohibit recursive mem_error().
+  (ruby-bugs-ja:PR#36)
+
+* eval.c (rb_thread_fd_writable): should not switch context if
+  rb_thread_critical is set.
+
+* eval.c (rb_thread_wait_fd): ditto.
+
+* eval.c (rb_thread_wait_for): ditto.
+
+* eval.c (rb_thread_select): ditto.
+
+* eval.c (rb_thread_join): join during critical section causes
+  deadlock.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/29 18:23:22 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.19
+log
+@* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:32 $
+a23 1
+    NODE_IFUNC,
+d123 1
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/21 14:26:23 $
+d24 1
+d238 1
+@
+
+
+1.18.4.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:26:17 $
+a122 1
+    NODE_IFUNC,
+a236 1
+#define NEW_IFUNC(f,c) rb_node_newnode(NODE_IFUNC,f,c,0)
+@
+
+
+1.18.2.1
+log
+@* pack.c (pack_pack): template "m2" or "u2" caused inifinite loop.
+
+* eval.c (ruby_finalize): should enclosed by PUSH_TAG/POP_TAG.
+
+* eval.c (rb_mod_define_method): wrong comparison for blocks.
+
+* gc.c (id2ref): should handle Symbol too.
+
+* gc.c (id2ref): should print original ptr value
+
+* eval.c (rb_iterate): NODE_CFUNC does not protect its data
+  (nd_tval), so create new node NODE_IFUNC for iteration C
+  function.
+
+* eval.c (rb_yield_0): use NODE_IFUNC.
+
+* gc.c (rb_gc_mark): support NODE_IFUNC.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:32 $
+a23 1
+    NODE_IFUNC,
+a236 1
+#define NEW_IFUNC(f,c) rb_node_newnode(NODE_IFUNC,f,c,0)
+@
+
+
+1.18.2.2
+log
+@* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE SUMMER TIME!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/09 07:29:03 $
+d240 1
+a240 1
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),0,(b))
+d312 3
+a314 3
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_SCOPE(b),(s))
+#define NEW_SCLASS(r,b) rb_node_newnode(NODE_SCLASS,r,NEW_SCOPE(b),0)
+#define NEW_MODULE(n,b) rb_node_newnode(NODE_MODULE,n,NEW_SCOPE(b),0)
+d317 3
+a319 1
+#define NEW_CREF(c) (rb_node_newnode(NODE_CREF,0,0,c))
+@
+
+
+1.18.2.3
+log
+@* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/06 05:42:40 $
+d134 1
+a134 1
+	VALUE (*cfunc)(ANYARGS);
+d343 1
+a343 1
+NODE *rb_node_newnode(ANYARGS);
+@
+
+
+1.18.2.4
+log
+@* eval.c (scope_node): trick to keep the node has a scope.
+
+* eval.c (rb_eval): NODE_EVSTR: write back local_tbl to the node.
+
+* eval.c (rb_eval): NODE_SCOPE: hold the scope node in ruby_scope.
+
+* eval.c (module_setup): ditto.
+
+* eval.c (rb_call0): ditto.
+
+* node.h (NEW_DASGN, NEW_DASGN_CURR): remove surplus semicolons.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/27 04:50:30 $
+d269 2
+a270 2
+#define NEW_DASGN(v,val) rb_node_newnode(NODE_DASGN,v,val,0)
+#define NEW_DASGN_CURR(v,val) rb_node_newnode(NODE_DASGN_CURR,v,val,0)
+@
+
+
+1.18.2.5
+log
+@* array.c, class.c, eval.c, file.c, gc.c, node.h, numeric.c,
+  object.c, parse.y, range.c, re.c, string.c, struct.c, util.c,
+  ext/socket/socket.c: merge from 1.7: treat long values as long
+  instead of int.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/05/28 03:19:55 $
+d155 1
+a155 1
+#define nd_type(n) ((int)(((RNODE(n))->flags>>FL_USHIFT)&0xff))
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/07 06:59:36 $
+d120 2
+d329 2
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/29 07:29:48 $
+d52 1
+a52 1
+    NODE_CVASGN2,
+d269 1
+a269 1
+#define NEW_CVASGN2(v,val) rb_node_newnode(NODE_CVASGN2,v,val,0)
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/29 02:52:33 $
+a103 1
+    NODE_CNAME,
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/28 09:53:28 $
+a52 1
+    NODE_CVASGN3,
+a74 1
+    NODE_CVAR3,
+a270 1
+#define NEW_CVASGN3(v,val) rb_node_newnode(NODE_CVASGN3,v,val,0)
+a283 1
+#define NEW_CVAR3(v) rb_node_newnode(NODE_CVAR3,v,0,0)
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:03 $
+a51 1
+    NODE_CVASGN,
+a271 1
+#define NEW_CVASGN(v,val) rb_node_newnode(NODE_CVASGN,v,val,0)
+@
+
+
+1.12
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:23 $
+a50 1
+    NODE_CASGN,
+d53 2
+d76 2
+a271 1
+#define NEW_CASGN(v,val) rb_node_newnode(NODE_CASGN,v,val,0)
+d274 2
+d288 2
+@
+
+
+1.11
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/23 08:37:27 $
+d138 1
+a138 1
+	int argc;
+d144 1
+a144 1
+	int state;
+d146 1
+a146 1
+	int cnt;
+@
+
+
+1.10
+log
+@2000-03-23
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/06 04:15:30 $
+d11 1
+a11 1
+************************************************/
+d122 1
+@
+
+
+1.9
+log
+@2000-03-06
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/18 06:59:32 $
+d53 2
+a54 2
+    NODE_SHASGN,
+    NODE_SHDECL,
+d73 1
+a74 1
+    NODE_SHVAR,
+d270 2
+a271 2
+#define NEW_SHASGN(v,val) rb_node_newnode(NODE_SHASGN,v,val,0)
+#define NEW_SHDECL(v,val) rb_node_newnode(NODE_SHDECL,v,val,0)
+d281 1
+a282 1
+#define NEW_SHVAR(v) rb_node_newnode(NODE_SHVAR,v,0,0)
+d313 1
+a313 1
+#define NEW_CREF0() (cur_cref=rb_node_newnode(NODE_CREF,RNODE(ruby_frame->cbase)->nd_clss,0,0))
+@
+
+
+1.8
+log
+@2000-02-18
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:07 $
+a326 3
+
+NODE *rb_node_newnode();
+VALUE rb_method_booundp();
+@
+
+
+1.7
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:37:44 $
+d53 2
+d74 1
+d270 2
+d282 1
+@
+
+
+1.6
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:06 $
+d48 1
+a48 1
+    NODE_DASGN_PUSH,
+d263 1
+a263 1
+#define NEW_DASGN_PUSH(v,val) rb_node_newnode(NODE_DASGN_PUSH,v,val,0);
+@
+
+
+1.5
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/17 07:30:32 $
+d87 1
+d118 1
+d295 1
+@
+
+
+1.4
+log
+@19991117
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/29 09:25:31 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.3
+log
+@19991029
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:07 $
+d52 1
+d264 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/25 09:02:42 $
+d16 4
+d337 4
+@
+
+
+1.2.2.1
+log
+@19991025
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:07 $
+a15 4
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+a332 4
+
+#if defined(__cplusplus)
+}  /* extern "C" { */
+#endif
+@
+
+
+1.2.2.2
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/25 05:09:12 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.3
+log
+@2000-03-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:05 $
+d318 1
+@
+
+
+1.2.2.4
+log
+@2000-03-13
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/08 06:25:10 $
+d316 2
+@
+
+
+1.2.2.5
+log
+@2000-03-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/13 09:15:42 $
+d302 1
+a302 1
+#define NEW_CREF0() (cur_cref=RNODE(ruby_frame->cbase))
+@
+
+
+1.2.2.6
+log
+@2000-06-05
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/23 04:14:19 $
+d131 1
+a131 1
+	long argc;
+d137 1
+a137 1
+	long state;
+d139 1
+a139 1
+	long cnt;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:41 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+a15 2
+struct global_entry *rb_global_entry();
+
+d30 4
+d44 1
+d50 2
+a68 2
+    NODE_MATCH_REF,
+    NODE_LASTLINE,
+d70 2
+d81 4
+d94 1
+d104 2
+a106 1
+    NODE_TAG,
+d108 4
+d115 2
+a116 2
+    UINT flags;
+    char *file;
+d142 1
+a142 1
+#define nd_type(n) (((RNODE(n))->flags>>FL_USHIFT)&0x7f)
+d146 3
+a148 1
+#define nd_line(n) (((RNODE(n))->flags>>18)&0x3fff)
+d150 1
+a150 1
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<18))|(((l)&0x7fff)<<18))
+d198 1
+a199 1
+#define nd_old   u3.id
+d205 1
+a205 1
+#define nd_super u3.id
+d213 1
+a213 1
+#define nd_rval  u3.value
+a217 1
+#define nd_tlev  u3.cnt
+d220 5
+a224 7
+#define nd_file  file
+
+#define NEW_METHOD(n,x) node_newnode(NODE_METHOD,x,n,0)
+#define NEW_FBODY(n,i,o) node_newnode(NODE_FBODY,n,i,o)
+#define NEW_DEFN(i,a,d,p) node_newnode(NODE_DEFN,p,i,NEW_RFUNC(a,d))
+#define NEW_DEFS(r,i,a,d) node_newnode(NODE_DEFS,r,i,NEW_RFUNC(a,d))
+#define NEW_CFUNC(f,c) node_newnode(NODE_CFUNC,f,c,0)
+d226 21
+a246 17
+#define NEW_SCOPE(b) node_newnode(NODE_SCOPE,local_tbl(),(b),cur_cref)
+#define NEW_BLOCK(a) node_newnode(NODE_BLOCK,a,0,0)
+#define NEW_IF(c,t,e) node_newnode(NODE_IF,c,t,e)
+#define NEW_UNLESS(c,t,e) node_newnode(NODE_IF,c,e,t)
+#define NEW_CASE(h,b) node_newnode(NODE_CASE,h,b,0)
+#define NEW_WHEN(c,t,e) node_newnode(NODE_WHEN,c,t,e)
+#define NEW_OPT_N(b) node_newnode(NODE_OPT_N,0,b,0)
+#define NEW_WHILE(c,b,n) node_newnode(NODE_WHILE,c,b,n)
+#define NEW_UNTIL(c,b,n) node_newnode(NODE_UNTIL,c,b,n)
+#define NEW_FOR(v,i,b) node_newnode(NODE_FOR,v,b,i)
+#define NEW_ITER(v,i,b) node_newnode(NODE_ITER,v,b,i)
+#define NEW_BEGIN(b) node_newnode(NODE_BEGIN,0,b,0)
+#define NEW_RESCUE(b,res) node_newnode(NODE_RESCUE,b,res,0)
+#define NEW_RESBODY(a,ex,n) node_newnode(NODE_RESBODY,n,ex,a)
+#define NEW_ENSURE(b,en) node_newnode(NODE_ENSURE,b,0,en)
+#define NEW_RET(s)   node_newnode(NODE_RETURN,s,0,0)
+#define NEW_YIELD(a) node_newnode(NODE_YIELD,a,0,0)
+d248 52
+a299 42
+#define NEW_ARRAY(a) node_newnode(NODE_ARRAY,a,1,0)
+#define NEW_ZARRAY() node_newnode(NODE_ZARRAY,0,0,0)
+#define NEW_HASH(a)  node_newnode(NODE_HASH,a,0,0)
+#define NEW_NOT(a)   node_newnode(NODE_NOT,0,a,0)
+#define NEW_MASGN(l,r)   node_newnode(NODE_MASGN,l,0,r)
+#define NEW_GASGN(v,val) node_newnode(NODE_GASGN,v,val,rb_global_entry(v))
+#define NEW_LASGN(v,val) node_newnode(NODE_LASGN,v,val,local_cnt(v))
+#define NEW_DASGN(v,val) node_newnode(NODE_DASGN,v,val,0);
+#define NEW_IASGN(v,val) node_newnode(NODE_IASGN,v,val,0)
+#define NEW_CASGN(v,val) node_newnode(NODE_CASGN,v,val,0)
+#define NEW_OP_ASGN1(p,id,a) node_newnode(NODE_OP_ASGN1,p,id,a)
+#define NEW_OP_ASGN2(r,i,o,val) node_newnode(NODE_OP_ASGN2,r,val,NEW_OP_ASGN3(i,o))
+#define NEW_OP_ASGN3(i,o) node_newnode(NODE_OP_ASGN2,i,o,0)
+#define NEW_GVAR(v) node_newnode(NODE_GVAR,v,0,rb_global_entry(v))
+#define NEW_LVAR(v) node_newnode(NODE_LVAR,v,0,local_cnt(v))
+#define NEW_DVAR(v) node_newnode(NODE_DVAR,v,0,0);
+#define NEW_IVAR(v) node_newnode(NODE_IVAR,v,0,0)
+#define NEW_CVAR(v) node_newnode(NODE_CVAR,v,0,0)
+#define NEW_NTH_REF(n)  node_newnode(NODE_NTH_REF,0,n,local_cnt('~'))
+#define NEW_BACK_REF(n) node_newnode(NODE_BACK_REF,0,n,local_cnt('~'))
+#define NEW_MATCH(c) node_newnode(NODE_MATCH,c,0,0)
+#define NEW_LIT(l) node_newnode(NODE_LIT,l,0,0)
+#define NEW_STR(s) node_newnode(NODE_STR,s,0,0)
+#define NEW_DSTR(s) node_newnode(NODE_DSTR,s,0,0)
+#define NEW_XSTR(s) node_newnode(NODE_XSTR,s,0,0)
+#define NEW_DXSTR(s) node_newnode(NODE_DXSTR,s,0,0)
+#define NEW_EVSTR(s,l) node_newnode(NODE_EVSTR,str_new(s,l),0,0)
+#define NEW_CALL(r,m,a) node_newnode(NODE_CALL,r,m,a)
+#define NEW_FCALL(m,a) node_newnode(NODE_FCALL,0,m,a)
+#define NEW_VCALL(m) node_newnode(NODE_VCALL,0,m,0)
+#define NEW_SUPER(a) node_newnode(NODE_SUPER,0,0,a)
+#define NEW_ZSUPER() node_newnode(NODE_ZSUPER,0,0,0)
+#define NEW_ARGS(f,o,r) node_newnode(NODE_ARGS,o,r,f)
+#define NEW_ALIAS(n,o) node_newnode(NODE_ALIAS,0,n,o)
+#define NEW_VALIAS(n,o) node_newnode(NODE_VALIAS,0,n,o)
+#define NEW_UNDEF(i) node_newnode(NODE_UNDEF,0,i,0)
+#define NEW_CLASS(n,b,s) node_newnode(NODE_CLASS,n,NEW_CBODY(b),s)
+#define NEW_SCLASS(r,b) node_newnode(NODE_SCLASS,r,NEW_CBODY(b),0)
+#define NEW_MODULE(n,b) node_newnode(NODE_MODULE,n,NEW_CBODY(b),0)
+#define NEW_COLON2(c,i) node_newnode(NODE_COLON2,c,i,0)
+#define NEW_CREF0() (cur_cref=node_newnode(NODE_CREF,RNODE(the_frame->cbase)->nd_clss,0,0))
+#define NEW_CREF() (cur_cref=node_newnode(NODE_CREF,0,0,cur_cref))
+d301 11
+a311 7
+#define NEW_DOT2(b,e) node_newnode(NODE_DOT2,b,e,0)
+#define NEW_DOT3(b,e) node_newnode(NODE_DOT3,b,e,0)
+#define NEW_ATTRSET(a) node_newnode(NODE_ATTRSET,a,0,0)
+#define NEW_SELF() node_newnode(NODE_SELF,0,0,0)
+#define NEW_NIL() node_newnode(NODE_NIL,0,0,0)
+#define NEW_DEFINED(e) node_newnode(NODE_DEFINED,e,0,0)
+#define NEW_NEWLINE(n) node_newnode(NODE_NEWLINE,0,0,n)
+d313 1
+a313 1
+NODE *node_newnode();
+d316 17
+a332 5
+#define NOEX_PUBLIC  0
+#define NOEX_PRIVATE 1
+
+NODE *compile_string();
+NODE *compile_file();
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d16 2
+a31 4
+    NODE_BREAK,
+    NODE_NEXT,
+    NODE_REDO,
+    NODE_RETRY,
+a66 2
+    NODE_MATCH2,
+    NODE_MATCH3,
+a93 2
+    NODE_TRUE,
+    NODE_FALSE,
+a96 1
+    NODE_POSTEXE,
+d101 1
+a101 1
+    char *nd_file;
+d188 1
+a188 1
+#define nd_super u3.node
+d204 2
+a222 4
+#define NEW_BREAK() node_newnode(NODE_BREAK,0,0,0)
+#define NEW_NEXT() node_newnode(NODE_NEXT,0,0,0)
+#define NEW_REDO() node_newnode(NODE_REDO,0,0,0)
+#define NEW_RETRY() node_newnode(NODE_RETRY,0,0,0)
+a250 2
+#define NEW_MATCH2(n1,n2) node_newnode(NODE_MATCH2,n1,n2,0)
+#define NEW_MATCH3(r,n2) node_newnode(NODE_MATCH3,r,n2,0)
+a277 2
+#define NEW_TRUE() node_newnode(NODE_TRUE,0,0,0)
+#define NEW_FALSE() node_newnode(NODE_FALSE,0,0,0)
+a279 2
+#define NEW_PREEXE(b) NEW_SCOPE(b)
+#define NEW_POSTEXE() node_newnode(NODE_POSTEXE,0,0,0)
+d287 2
+a288 14
+NODE *compile_string _((char *, char *, int));
+NODE *compile_file _((char *, VALUE, int));
+
+void rb_add_method _((VALUE, ID, NODE *, int));
+void rb_remove_method _((VALUE, ID));
+NODE *node_newnode();
+
+enum node_type nodetype _((NODE *));
+int nodeline _((NODE *));
+
+struct global_entry *rb_global_entry _((ID));
+VALUE rb_gvar_get _((struct global_entry *));
+VALUE rb_gvar_set _((struct global_entry *, VALUE));
+VALUE rb_gvar_defined _((struct global_entry *));
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/11/25 03:31:14 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+a43 1
+    NODE_DASGN_PUSH,
+a48 2
+    NODE_OP_ASGN_AND,
+    NODE_OP_ASGN_OR,
+d66 2
+a79 4
+    NODE_ARGSCAT,
+    NODE_RESTARGS,
+    NODE_BLOCK_ARG,
+    NODE_BLOCK_PASS,
+a88 1
+    NODE_COLON3,
+d101 1
+a103 3
+#ifdef C_ALLOCA
+    NODE_ALLOCA,
+#endif
+d107 1
+a107 1
+    unsigned long flags;
+d134 1
+a134 1
+#define nd_type(n) (((RNODE(n))->flags>>FL_USHIFT)&0xff)
+d138 1
+a138 3
+#define NODE_LSHIFT (FL_USHIFT+8)
+#define NODE_LMASK  ((1<<(sizeof(NODE*)*CHAR_BIT-NODE_LSHIFT))-1)
+#define nd_line(n) (((RNODE(n))->flags>>NODE_LSHIFT)&NODE_LMASK)
+d140 1
+a140 1
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+a187 1
+#define nd_old   u1.id
+d189 1
+d203 1
+a203 1
+#define nd_rval  u2.value
+d208 1
+d211 5
+a215 5
+#define NEW_METHOD(n,x) rb_node_newnode(NODE_METHOD,x,n,0)
+#define NEW_FBODY(n,i,o) rb_node_newnode(NODE_FBODY,n,i,o)
+#define NEW_DEFN(i,a,d,p) rb_node_newnode(NODE_DEFN,p,i,NEW_RFUNC(a,d))
+#define NEW_DEFS(r,i,a,d) rb_node_newnode(NODE_DEFS,r,i,NEW_RFUNC(a,d))
+#define NEW_CFUNC(f,c) rb_node_newnode(NODE_CFUNC,f,c,0)
+d217 21
+a237 29
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),cur_cref,(b))
+#define NEW_BLOCK(a) rb_node_newnode(NODE_BLOCK,a,0,0)
+#ifdef NOBLOCK_RECUR
+#define NEW_IF(c,t,e) block_append(c,rb_node_newnode(NODE_IF,0,t,e))
+#else
+#define NEW_IF(c,t,e) rb_node_newnode(NODE_IF,c,t,e)
+#endif
+#define NEW_UNLESS(c,t,e) NEW_IF(c,e,t)
+#ifdef NOBLOCK_RECUR
+#define NEW_CASE(h,b) block_append(h,rb_node_newnode(NODE_CASE,0,b,0))
+#else
+#define NEW_CASE(h,b) rb_node_newnode(NODE_CASE,h,b,0)
+#endif
+#define NEW_WHEN(c,t,e) rb_node_newnode(NODE_WHEN,c,t,e)
+#define NEW_OPT_N(b) rb_node_newnode(NODE_OPT_N,0,b,0)
+#define NEW_WHILE(c,b,n) rb_node_newnode(NODE_WHILE,c,b,n)
+#define NEW_UNTIL(c,b,n) rb_node_newnode(NODE_UNTIL,c,b,n)
+#define NEW_FOR(v,i,b) rb_node_newnode(NODE_FOR,v,b,i)
+#define NEW_ITER(v,i,b) rb_node_newnode(NODE_ITER,v,b,i)
+#define NEW_BREAK() rb_node_newnode(NODE_BREAK,0,0,0)
+#define NEW_NEXT() rb_node_newnode(NODE_NEXT,0,0,0)
+#define NEW_REDO() rb_node_newnode(NODE_REDO,0,0,0)
+#define NEW_RETRY() rb_node_newnode(NODE_RETRY,0,0,0)
+#define NEW_BEGIN(b) rb_node_newnode(NODE_BEGIN,0,b,0)
+#define NEW_RESCUE(b,res,e) rb_node_newnode(NODE_RESCUE,b,res,e)
+#define NEW_RESBODY(a,ex,n) rb_node_newnode(NODE_RESBODY,n,ex,a)
+#define NEW_ENSURE(b,en) rb_node_newnode(NODE_ENSURE,b,0,en)
+#define NEW_RETURN(s) rb_node_newnode(NODE_RETURN,s,0,0)
+#define NEW_YIELD(a) rb_node_newnode(NODE_YIELD,a,0,0)
+d239 44
+a282 56
+#define NEW_ARRAY(a) rb_node_newnode(NODE_ARRAY,a,1,0)
+#define NEW_ZARRAY() rb_node_newnode(NODE_ZARRAY,0,0,0)
+#define NEW_HASH(a)  rb_node_newnode(NODE_HASH,a,0,0)
+#define NEW_NOT(a)   rb_node_newnode(NODE_NOT,0,a,0)
+#define NEW_MASGN(l,r)   rb_node_newnode(NODE_MASGN,l,0,r)
+#define NEW_GASGN(v,val) rb_node_newnode(NODE_GASGN,v,val,rb_global_entry(v))
+#define NEW_LASGN(v,val) rb_node_newnode(NODE_LASGN,v,val,local_cnt(v))
+#define NEW_DASGN(v,val) rb_node_newnode(NODE_DASGN,v,val,0);
+#define NEW_DASGN_PUSH(v,val) rb_node_newnode(NODE_DASGN_PUSH,v,val,0);
+#define NEW_IASGN(v,val) rb_node_newnode(NODE_IASGN,v,val,0)
+#define NEW_CASGN(v,val) rb_node_newnode(NODE_CASGN,v,val,0)
+#define NEW_OP_ASGN1(p,id,a) rb_node_newnode(NODE_OP_ASGN1,p,id,a)
+#define NEW_OP_ASGN2(r,i,o,val) rb_node_newnode(NODE_OP_ASGN2,r,val,NEW_OP_ASGN22(i,o))
+#define NEW_OP_ASGN22(i,o) rb_node_newnode(NODE_OP_ASGN2,i,o,rb_id_attrset(i))
+#define NEW_OP_ASGN_OR(i,val) rb_node_newnode(NODE_OP_ASGN_OR,i,val,0)
+#define NEW_OP_ASGN_AND(i,val) rb_node_newnode(NODE_OP_ASGN_AND,i,val,0)
+#define NEW_GVAR(v) rb_node_newnode(NODE_GVAR,v,0,rb_global_entry(v))
+#define NEW_LVAR(v) rb_node_newnode(NODE_LVAR,v,0,local_cnt(v))
+#define NEW_DVAR(v) rb_node_newnode(NODE_DVAR,v,0,0);
+#define NEW_IVAR(v) rb_node_newnode(NODE_IVAR,v,0,0)
+#define NEW_CVAR(v) rb_node_newnode(NODE_CVAR,v,0,0)
+#define NEW_NTH_REF(n)  rb_node_newnode(NODE_NTH_REF,0,n,local_cnt('~'))
+#define NEW_BACK_REF(n) rb_node_newnode(NODE_BACK_REF,0,n,local_cnt('~'))
+#define NEW_MATCH(c) rb_node_newnode(NODE_MATCH,c,0,0)
+#define NEW_MATCH2(n1,n2) rb_node_newnode(NODE_MATCH2,n1,n2,0)
+#define NEW_MATCH3(r,n2) rb_node_newnode(NODE_MATCH3,r,n2,0)
+#define NEW_LIT(l) rb_node_newnode(NODE_LIT,l,0,0)
+#define NEW_STR(s) rb_node_newnode(NODE_STR,s,0,0)
+#define NEW_DSTR(s) rb_node_newnode(NODE_DSTR,s,0,0)
+#define NEW_XSTR(s) rb_node_newnode(NODE_XSTR,s,0,0)
+#define NEW_DXSTR(s) rb_node_newnode(NODE_DXSTR,s,0,0)
+#define NEW_EVSTR(s,l) rb_node_newnode(NODE_EVSTR,rb_str_new(s,l),0,0)
+#ifdef NOBLOCK_RECUR_incomplete
+#define NEW_CALL(r,m,a) block_append(r,rb_node_newnode(NODE_CALL,0,m,a))
+#else
+#define NEW_CALL(r,m,a) rb_node_newnode(NODE_CALL,r,m,a)
+#endif
+#define NEW_FCALL(m,a) rb_node_newnode(NODE_FCALL,0,m,a)
+#define NEW_VCALL(m) rb_node_newnode(NODE_VCALL,0,m,0)
+#define NEW_SUPER(a) rb_node_newnode(NODE_SUPER,0,0,a)
+#define NEW_ZSUPER() rb_node_newnode(NODE_ZSUPER,0,0,0)
+#define NEW_ARGS(f,o,r) rb_node_newnode(NODE_ARGS,o,r,f)
+#define NEW_ARGSCAT(a,b) rb_node_newnode(NODE_ARGSCAT,a,b,0)
+#define NEW_RESTARGS(a) rb_node_newnode(NODE_RESTARGS,a,0,0)
+#define NEW_BLOCK_ARG(v) rb_node_newnode(NODE_BLOCK_ARG,v,0,local_cnt(v))
+#define NEW_BLOCK_PASS(b) rb_node_newnode(NODE_BLOCK_PASS,0,b,0)
+#define NEW_ALIAS(n,o) rb_node_newnode(NODE_ALIAS,o,n,0)
+#define NEW_VALIAS(n,o) rb_node_newnode(NODE_VALIAS,o,n,0)
+#define NEW_UNDEF(i) rb_node_newnode(NODE_UNDEF,0,i,0)
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_CBODY(b),(s))
+#define NEW_SCLASS(r,b) rb_node_newnode(NODE_SCLASS,r,NEW_CBODY(b),0)
+#define NEW_MODULE(n,b) rb_node_newnode(NODE_MODULE,n,NEW_CBODY(b),0)
+#define NEW_COLON2(c,i) rb_node_newnode(NODE_COLON2,c,i,0)
+#define NEW_COLON3(i) rb_node_newnode(NODE_COLON3,0,i,0)
+#define NEW_CREF0() (cur_cref=rb_node_newnode(NODE_CREF,RNODE(ruby_frame->cbase)->nd_clss,0,0))
+#define NEW_CREF() (cur_cref=rb_node_newnode(NODE_CREF,0,0,cur_cref))
+d284 9
+a292 9
+#define NEW_DOT2(b,e) rb_node_newnode(NODE_DOT2,b,e,0)
+#define NEW_DOT3(b,e) rb_node_newnode(NODE_DOT3,b,e,0)
+#define NEW_ATTRSET(a) rb_node_newnode(NODE_ATTRSET,a,0,0)
+#define NEW_SELF() rb_node_newnode(NODE_SELF,0,0,0)
+#define NEW_NIL() rb_node_newnode(NODE_NIL,0,0,0)
+#define NEW_TRUE() rb_node_newnode(NODE_TRUE,0,0,0)
+#define NEW_FALSE() rb_node_newnode(NODE_FALSE,0,0,0)
+#define NEW_DEFINED(e) rb_node_newnode(NODE_DEFINED,e,0,0)
+#define NEW_NEWLINE(n) rb_node_newnode(NODE_NEWLINE,0,0,n)
+d294 1
+a294 1
+#define NEW_POSTEXE() rb_node_newnode(NODE_POSTEXE,0,0,0)
+d296 1
+a296 1
+NODE *rb_node_newnode();
+d299 5
+a303 9
+#define NOEX_PUBLIC    0
+#define NOEX_UNDEF     1
+#define NOEX_CFUNC     1
+#define NOEX_PRIVATE   2
+#define NOEX_PROTECTED 4 
+
+NODE *rb_compile_cstr _((char *, char *, int));
+NODE *rb_compile_string _((char *, VALUE));
+NODE *rb_compile_file _((char *, VALUE, int));
+d306 5
+a310 1
+NODE *rb_node_newnode();
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:24 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.3.2.2
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:13 $
+d334 3
+a336 3
+NODE *rb_compile_cstr _((const char*, const char*, int));
+NODE *rb_compile_string _((const char*, VALUE));
+NODE *rb_compile_file _((const char*, VALUE, int));
+@
+
+
+1.1.1.3.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:29 $
+d334 2
+a335 2
+NODE *rb_compile_cstr _((const char*, const char*, int, int));
+NODE *rb_compile_string _((const char*, VALUE, int));
+@
+
+
+1.1.1.3.2.4
+log
+@prepare to alpha
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/12 09:59:29 $
+d147 1
+a147 1
+#define NODE_LMASK  (((long)1<<(sizeof(NODE*)*CHAR_BIT-NODE_LSHIFT))-1)
+@
+
+
+1.1.1.3.2.5
+log
+@990625
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/16 06:03:31 $
+d228 3
+d232 1
+d234 3
+d238 1
+d288 3
+d292 1
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:13:16 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:46 $
+a103 3
+#ifdef C_ALLOCA
+    NODE_ALLOCA,
+#endif
+@
+
+
+1.1.1.2.2.3
+log
+@__FILE__,__LINE__
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/22 08:12:09 $
+d122 1
+a122 1
+	INT argc;
+d128 1
+a128 1
+	INT state;
+d130 1
+a130 1
+	INT cnt;
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b8pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/02 04:49:12 $
+a88 1
+    NODE_COLON3,
+a283 1
+#define NEW_COLON3(i) node_newnode(NODE_COLON3,0,i,0)
+@
+
+
+1.1.1.2.2.5
+log
+@shugo's method etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/02/18 01:56:40 $
+d138 1
+a138 1
+#define nd_type(n) (((RNODE(n))->flags>>FL_USHIFT)&0xff)
+@
+
+
+1.1.1.2.2.6
+log
+@block arg etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/03 10:16:13 $
+a79 2
+    NODE_BLOCK_ARG,
+    NODE_BLOCK_PASS,
+a277 2
+#define NEW_BLOCK_ARG(v) node_newnode(NODE_BLOCK_ARG,v,0,local_cnt(v))
+#define NEW_BLOCK_PASS(b) node_newnode(NODE_BLOCK_PASS,0,b,0)
+@
+
+
+1.1.1.2.2.7
+log
+@gets speed up patch
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/05 06:37:45 $
+a309 2
+#define NOEX_UNDEF   2
+#define NOEX_CFUNC   2
+d315 1
+@
+
+
+1.1.1.2.2.8
+log
+@protected methods
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/11 07:32:58 $
+d308 4
+a311 5
+#define NOEX_PUBLIC    0
+#define NOEX_UNDEF     1
+#define NOEX_CFUNC     1
+#define NOEX_PRIVATE   2
+#define NOEX_PROTECTED 4 
+@
+
+
+1.1.1.2.2.9
+log
+@no INT,UINT
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/26 10:22:13 $
+d113 1
+a113 1
+    unsigned long flags;
+d125 1
+a125 1
+	int argc;
+d131 1
+a131 1
+	int state;
+d133 1
+a133 1
+	int cnt;
+@
+
+
+1.1.1.2.2.10
+log
+@1.1b9_26
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 05:58:01 $
+a43 1
+    NODE_DASGN_PUSH,
+a252 1
+#define NEW_DASGN_PUSH(v,val) node_newnode(NODE_DASGN_PUSH,v,val,0);
+@
+
+
+1.1.1.2.2.11
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/18 07:46:52 $
+a49 2
+    NODE_OP_ASGN_AND,
+    NODE_OP_ASGN_OR,
+d258 2
+a259 4
+#define NEW_OP_ASGN2(r,i,o,val) node_newnode(NODE_OP_ASGN2,r,val,NEW_OP_ASGN22(i,o))
+#define NEW_OP_ASGN22(i,o) node_newnode(NODE_OP_ASGN2,i,o,id_attrset(i))
+#define NEW_OP_ASGN_OR(i,val) node_newnode(NODE_OP_ASGN_OR,i,val,0)
+#define NEW_OP_ASGN_AND(i,val) node_newnode(NODE_OP_ASGN_AND,i,val,0)
+@
+
+
+1.1.1.2.2.11.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:17 $
+d220 5
+a224 5
+#define NEW_METHOD(n,x) rb_node_newnode(NODE_METHOD,x,n,0)
+#define NEW_FBODY(n,i,o) rb_node_newnode(NODE_FBODY,n,i,o)
+#define NEW_DEFN(i,a,d,p) rb_node_newnode(NODE_DEFN,p,i,NEW_RFUNC(a,d))
+#define NEW_DEFS(r,i,a,d) rb_node_newnode(NODE_DEFS,r,i,NEW_RFUNC(a,d))
+#define NEW_CFUNC(f,c) rb_node_newnode(NODE_CFUNC,f,c,0)
+d226 21
+a246 21
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),(b),cur_cref)
+#define NEW_BLOCK(a) rb_node_newnode(NODE_BLOCK,a,0,0)
+#define NEW_IF(c,t,e) rb_node_newnode(NODE_IF,c,t,e)
+#define NEW_UNLESS(c,t,e) rb_node_newnode(NODE_IF,c,e,t)
+#define NEW_CASE(h,b) rb_node_newnode(NODE_CASE,h,b,0)
+#define NEW_WHEN(c,t,e) rb_node_newnode(NODE_WHEN,c,t,e)
+#define NEW_OPT_N(b) rb_node_newnode(NODE_OPT_N,0,b,0)
+#define NEW_WHILE(c,b,n) rb_node_newnode(NODE_WHILE,c,b,n)
+#define NEW_UNTIL(c,b,n) rb_node_newnode(NODE_UNTIL,c,b,n)
+#define NEW_FOR(v,i,b) rb_node_newnode(NODE_FOR,v,b,i)
+#define NEW_ITER(v,i,b) rb_node_newnode(NODE_ITER,v,b,i)
+#define NEW_BREAK() rb_node_newnode(NODE_BREAK,0,0,0)
+#define NEW_NEXT() rb_node_newnode(NODE_NEXT,0,0,0)
+#define NEW_REDO() rb_node_newnode(NODE_REDO,0,0,0)
+#define NEW_RETRY() rb_node_newnode(NODE_RETRY,0,0,0)
+#define NEW_BEGIN(b) rb_node_newnode(NODE_BEGIN,0,b,0)
+#define NEW_RESCUE(b,res) rb_node_newnode(NODE_RESCUE,b,res,0)
+#define NEW_RESBODY(a,ex,n) rb_node_newnode(NODE_RESBODY,n,ex,a)
+#define NEW_ENSURE(b,en) rb_node_newnode(NODE_ENSURE,b,0,en)
+#define NEW_RET(s)   rb_node_newnode(NODE_RETURN,s,0,0)
+#define NEW_YIELD(a) rb_node_newnode(NODE_YIELD,a,0,0)
+d248 50
+a297 50
+#define NEW_ARRAY(a) rb_node_newnode(NODE_ARRAY,a,1,0)
+#define NEW_ZARRAY() rb_node_newnode(NODE_ZARRAY,0,0,0)
+#define NEW_HASH(a)  rb_node_newnode(NODE_HASH,a,0,0)
+#define NEW_NOT(a)   rb_node_newnode(NODE_NOT,0,a,0)
+#define NEW_MASGN(l,r)   rb_node_newnode(NODE_MASGN,l,0,r)
+#define NEW_GASGN(v,val) rb_node_newnode(NODE_GASGN,v,val,rb_global_entry(v))
+#define NEW_LASGN(v,val) rb_node_newnode(NODE_LASGN,v,val,local_cnt(v))
+#define NEW_DASGN(v,val) rb_node_newnode(NODE_DASGN,v,val,0);
+#define NEW_DASGN_PUSH(v,val) rb_node_newnode(NODE_DASGN_PUSH,v,val,0);
+#define NEW_IASGN(v,val) rb_node_newnode(NODE_IASGN,v,val,0)
+#define NEW_CASGN(v,val) rb_node_newnode(NODE_CASGN,v,val,0)
+#define NEW_OP_ASGN1(p,id,a) rb_node_newnode(NODE_OP_ASGN1,p,id,a)
+#define NEW_OP_ASGN2(r,i,o,val) rb_node_newnode(NODE_OP_ASGN2,r,val,NEW_OP_ASGN22(i,o))
+#define NEW_OP_ASGN22(i,o) rb_node_newnode(NODE_OP_ASGN2,i,o,rb_id_attrset(i))
+#define NEW_OP_ASGN_OR(i,val) rb_node_newnode(NODE_OP_ASGN_OR,i,val,0)
+#define NEW_OP_ASGN_AND(i,val) rb_node_newnode(NODE_OP_ASGN_AND,i,val,0)
+#define NEW_GVAR(v) rb_node_newnode(NODE_GVAR,v,0,rb_global_entry(v))
+#define NEW_LVAR(v) rb_node_newnode(NODE_LVAR,v,0,local_cnt(v))
+#define NEW_DVAR(v) rb_node_newnode(NODE_DVAR,v,0,0);
+#define NEW_IVAR(v) rb_node_newnode(NODE_IVAR,v,0,0)
+#define NEW_CVAR(v) rb_node_newnode(NODE_CVAR,v,0,0)
+#define NEW_NTH_REF(n)  rb_node_newnode(NODE_NTH_REF,0,n,local_cnt('~'))
+#define NEW_BACK_REF(n) rb_node_newnode(NODE_BACK_REF,0,n,local_cnt('~'))
+#define NEW_MATCH(c) rb_node_newnode(NODE_MATCH,c,0,0)
+#define NEW_MATCH2(n1,n2) rb_node_newnode(NODE_MATCH2,n1,n2,0)
+#define NEW_MATCH3(r,n2) rb_node_newnode(NODE_MATCH3,r,n2,0)
+#define NEW_LIT(l) rb_node_newnode(NODE_LIT,l,0,0)
+#define NEW_STR(s) rb_node_newnode(NODE_STR,s,0,0)
+#define NEW_DSTR(s) rb_node_newnode(NODE_DSTR,s,0,0)
+#define NEW_XSTR(s) rb_node_newnode(NODE_XSTR,s,0,0)
+#define NEW_DXSTR(s) rb_node_newnode(NODE_DXSTR,s,0,0)
+#define NEW_EVSTR(s,l) rb_node_newnode(NODE_EVSTR,rb_str_new(s,l),0,0)
+#define NEW_CALL(r,m,a) rb_node_newnode(NODE_CALL,r,m,a)
+#define NEW_FCALL(m,a) rb_node_newnode(NODE_FCALL,0,m,a)
+#define NEW_VCALL(m) rb_node_newnode(NODE_VCALL,0,m,0)
+#define NEW_SUPER(a) rb_node_newnode(NODE_SUPER,0,0,a)
+#define NEW_ZSUPER() rb_node_newnode(NODE_ZSUPER,0,0,0)
+#define NEW_ARGS(f,o,r) rb_node_newnode(NODE_ARGS,o,r,f)
+#define NEW_BLOCK_ARG(v) rb_node_newnode(NODE_BLOCK_ARG,v,0,local_cnt(v))
+#define NEW_BLOCK_PASS(b) rb_node_newnode(NODE_BLOCK_PASS,0,b,0)
+#define NEW_ALIAS(n,o) rb_node_newnode(NODE_ALIAS,0,n,o)
+#define NEW_VALIAS(n,o) rb_node_newnode(NODE_VALIAS,0,n,o)
+#define NEW_UNDEF(i) rb_node_newnode(NODE_UNDEF,0,i,0)
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_CBODY(b),s)
+#define NEW_SCLASS(r,b) rb_node_newnode(NODE_SCLASS,r,NEW_CBODY(b),0)
+#define NEW_MODULE(n,b) rb_node_newnode(NODE_MODULE,n,NEW_CBODY(b),0)
+#define NEW_COLON2(c,i) rb_node_newnode(NODE_COLON2,c,i,0)
+#define NEW_COLON3(i) rb_node_newnode(NODE_COLON3,0,i,0)
+#define NEW_CREF0() (cur_cref=rb_node_newnode(NODE_CREF,RNODE(ruby_frame->cbase)->nd_clss,0,0))
+#define NEW_CREF() (cur_cref=rb_node_newnode(NODE_CREF,0,0,cur_cref))
+d299 9
+a307 9
+#define NEW_DOT2(b,e) rb_node_newnode(NODE_DOT2,b,e,0)
+#define NEW_DOT3(b,e) rb_node_newnode(NODE_DOT3,b,e,0)
+#define NEW_ATTRSET(a) rb_node_newnode(NODE_ATTRSET,a,0,0)
+#define NEW_SELF() rb_node_newnode(NODE_SELF,0,0,0)
+#define NEW_NIL() rb_node_newnode(NODE_NIL,0,0,0)
+#define NEW_TRUE() rb_node_newnode(NODE_TRUE,0,0,0)
+#define NEW_FALSE() rb_node_newnode(NODE_FALSE,0,0,0)
+#define NEW_DEFINED(e) rb_node_newnode(NODE_DEFINED,e,0,0)
+#define NEW_NEWLINE(n) rb_node_newnode(NODE_NEWLINE,0,0,n)
+d309 1
+a309 1
+#define NEW_POSTEXE() rb_node_newnode(NODE_POSTEXE,0,0,0)
+d311 1
+a311 1
+NODE *rb_node_newnode();
+d320 2
+a321 2
+NODE *rb_compile_string _((char *, char *, int));
+NODE *rb_compile_file _((char *, VALUE, int));
+d324 4
+a327 1
+NODE *rb_node_newnode();
+@
+
+
+1.1.1.2.2.11.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:54 $
+d69 2
+d107 1
+d245 1
+a245 1
+#define NEW_RETURN(s) rb_node_newnode(NODE_RETURN,s,0,0)
+@
+
+
+1.1.1.2.2.11.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 03:28:12 $
+a80 2
+    NODE_ARGSCAT,
+    NODE_RESTARGS,
+d144 1
+a144 3
+#define NODE_LSHIFT (FL_USHIFT+8)
+#define NODE_LMASK  ((1<<(sizeof(NODE*)*CHAR_BIT-NODE_LSHIFT))-1)
+#define nd_line(n) (((RNODE(n))->flags>>NODE_LSHIFT)&NODE_LMASK)
+d146 1
+a146 1
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+a193 1
+#define nd_old   u1.id
+d195 1
+d209 1
+a209 1
+#define nd_rval  u2.value
+d214 1
+d223 1
+a223 1
+#define NEW_SCOPE(b) rb_node_newnode(NODE_SCOPE,local_tbl(),cur_cref,(b))
+a224 3
+#ifdef NOBLOCK_RECUR
+#define NEW_IF(c,t,e) block_append(c,rb_node_newnode(NODE_IF,0,t,e))
+#else
+d226 1
+a226 5
+#endif
+#define NEW_UNLESS(c,t,e) NEW_IF(c,e,t)
+#ifdef NOBLOCK_RECUR
+#define NEW_CASE(h,b) block_append(h,rb_node_newnode(NODE_CASE,0,b,0))
+#else
+a227 1
+#endif
+d239 1
+a239 1
+#define NEW_RESCUE(b,res,e) rb_node_newnode(NODE_RESCUE,b,res,e)
+a276 3
+#ifdef NOBLOCK_RECUR_incomplete
+#define NEW_CALL(r,m,a) block_append(r,rb_node_newnode(NODE_CALL,0,m,a))
+#else
+a277 1
+#endif
+a282 2
+#define NEW_ARGSCAT(a,b) rb_node_newnode(NODE_ARGSCAT,a,b,0)
+#define NEW_RESTARGS(a) rb_node_newnode(NODE_RESTARGS,a,0,0)
+d285 2
+a286 2
+#define NEW_ALIAS(n,o) rb_node_newnode(NODE_ALIAS,o,n,0)
+#define NEW_VALIAS(n,o) rb_node_newnode(NODE_VALIAS,o,n,0)
+d288 1
+a288 1
+#define NEW_CLASS(n,b,s) rb_node_newnode(NODE_CLASS,n,NEW_CBODY(b),(s))
+d317 1
+a317 2
+NODE *rb_compile_cstr _((char *, char *, int));
+NODE *rb_compile_string _((char *, VALUE));
+@

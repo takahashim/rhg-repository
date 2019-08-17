@@ -1,0 +1,43 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.24.00.52.43;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.07.21.11.20;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@# Makefile for rubicon utilities
+
+
+all:		checkstat
+
+
+clean:		checkstat *~@
+
+
+1.1
+log
+@Add a utility to report stat values
+@
+text
+@@
+

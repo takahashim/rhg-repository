@@ -1,0 +1,165 @@
+head	1.1;
+access;
+symbols
+	autoconfiscation-branch:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.10.19.09.44.42;	author shugo;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.10.19.09.44.42;	author shugo;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.10.22.05.02.43;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file configure.in was initially added on branch autoconfiscation-branch.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@* autoconfiscated
+@
+text
+@a0 82
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT(mod_ruby.c)
+
+dnl
+dnl Do the regular housekeeping.
+dnl
+
+AM_INIT_AUTOMAKE(mod_ruby, 0.9.5)
+
+dnl
+dnl Checks for programs.
+dnl
+AC_PROG_CC
+AM_PROG_LIBTOOL
+
+dnl
+dnl Checks for Ruby.
+dnl
+AM_PATH_RUBY(1.6.4)
+
+dnl
+dnl Check for Apache.
+dnl
+
+AC_MSG_CHECKING(for static Apache module support)
+AC_ARG_WITH(apache,
+[  --with-apache=DIR       Build static Apache module.  DIR is the path
+                          to the top-level Apache source directory.],
+[
+  APACHE_SRCDIR=`cd $withval; pwd`
+
+  dnl  For Apache 2.0 apxs in src/support may be usable
+  if test ! -f "$APACHE_SRCDIR/src/include/httpd.h"; then
+    AC_MSG_ERROR([$withval does not look like an Apache source directory.])
+  fi
+
+  APACHE_INCLUDES="-I\$(APACHE_SRCDIR)/src/include -I\$(APACHE_SRCDIR)/src/os/unix"
+  # note who owns the apache source directory
+  APACHE_SRC_UID=`ruby -e 'p File.stat(ARGV.shift).uid' $APACHE_SRCDIR`
+  APACHE_SRC_GID=`ruby -e 'p File.stat(ARGV.shift).gid' $APACHE_SRCDIR`
+
+  AC_MSG_RESULT(yes)
+], [
+  AC_MSG_RESULT(no)
+])
+
+AC_ARG_WITH(apxs,
+[  --with-apxs[=FILE]      Build shared Apache module.  FILE is the optional
+                          pathname to the Apache apxs tool; defaults to "apxs".],
+[
+  if test -n "$APACHE_SRCDIR"; then
+    AC_MSG_ERROR(--with-apache and --with-apxs are mutually exclusive)
+  fi
+  AC_MSG_RESULT(using $withval for ruby)
+  APXS="$withval"
+], [
+  if test -z "$APACHE_SRCDIR"; then
+    AC_PATH_PROG(APXS, apxs, no, $PATH:/usr/sbin:/usr/local/apache/bin)
+    if test "$APXS" = "no"; then
+      AC_MSG_ERROR(Please specify --with-apache or --with-apxs)
+    fi
+  fi
+])
+
+if test -n "$APXS"; then
+  APACHE_CFLAGS=`$APXS -q CFLAGS`
+  APACHE_INCLUDES="-I`$APXS -q INCLUDEDIR`"
+  apachelibdir=`$APXS -q LIBEXECDIR`
+  apachelib_LIBRARIES="mod_ruby.la"
+fi
+
+AC_SUBST(APACHE_SRCDIR)
+AC_SUBST(APACHE_SRC_UID)
+AC_SUBST(APACHE_SRC_GID)
+AC_SUBST(APACHE_CFLAGS)
+AC_SUBST(APACHE_INCLUDES)
+AC_SUBST(apachelibdir)
+AC_SUBST(apachelib_LIBRARIES)
+
+AC_OUTPUT(Makefile
+	  libruby.module)
+@
+
+
+1.1.2.2
+log
+@* mod_ruby.c: use config.h for VERSION.
+@
+text
+@a8 1
+AM_CONFIG_HEADER(config.h)
+a42 2
+  opt_noinst_LTLIBRARIES="libruby.la"
+
+d50 1
+a50 1
+                          pathname to the Apache apxs tool.],
+d55 2
+a56 9
+  if test "$withval" = "yes"; then
+    AC_PATH_PROG(APXS, apxs, no, $PATH:/usr/sbin:/usr/local/apache/bin)
+    if test "$APXS" = "no"; then
+      AC_MSG_ERROR(You must specify the pathname to apxs)
+    fi
+  else
+    AC_MSG_RESULT(using $withval for apxs)
+    APXS="$withval"
+  fi
+d61 1
+a61 1
+      AC_MSG_ERROR(You must specify either --with-apxs or --with-apache)
+d70 1
+a70 1
+  opt_apachelib_LTLIBRARIES="mod_ruby.la"
+d79 1
+a79 2
+AC_SUBST(opt_noinst_LTLIBRARIES)
+AC_SUBST(opt_apachelib_LTLIBRARIES)
+@
+
+

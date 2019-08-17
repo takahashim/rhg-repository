@@ -1,0 +1,6947 @@
+head	1.73;
+access;
+symbols
+	v1_6_7:1.26.2.12
+	v1_6_6:1.26.2.9
+	v1_6_5:1.26.2.7
+	v1_6_4:1.26.2.4
+	v1_7_1:1.36
+	v1_6_4_preview4:1.26.2.4
+	v1_6_4_preview3:1.26.2.4
+	v1_6_4_preview2:1.26.2.3
+	v1_6_4_preview1:1.26.2.3
+	v1_6_3:1.26
+	ruby_m17n:1.27.0.2
+	ruby_1_6:1.26.0.2
+	v1_6_2:1.26
+	v1_6_1:1.21
+	v1_6_0:1.20
+	v1_4_6:1.3.2.6
+	v1_4_5:1.3.2.6
+	v1_4_4:1.3.2.3
+	ruby_1_4_3:1.3.2.2
+	ruby1_4_3:1.3.2.2
+	v1_4_3:1.3.2.2
+	v1_5_0:1.7
+	ruby_1_4_3_pre1:1.3.2.2
+	ruby_1_4:1.3.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.7
+	v1_3_6_repack:1.1.1.2.2.7
+	v1_3_6:1.1.1.2.2.7
+	v1_3_5:1.1.1.2.2.7
+	v1_2_6repack:1.1.1.1.2.17
+	v1_3_4_990625:1.1.1.2.2.7
+	v1_3_4_990624:1.1.1.2.2.7
+	v1_2_6:1.1.1.1.2.17
+	v1_3_4_990611:1.1.1.2.2.6
+	v1_3_4_990531:1.1.1.2.2.5
+	v1_3_3_990518:1.1.1.2.2.5
+	v1_3_3_990513:1.1.1.2.2.5
+	v1_3_3_990507:1.1.1.2.2.5
+	v1_2_5:1.1.1.1.2.17
+	v1_2_4:1.1.1.1.2.17
+	v1_3_1_990225:1.1.1.2.2.4
+	v1_3_1_990224:1.1.1.2.2.3
+	v1_3_1_990215:1.1.1.2.2.2
+	v1_3_1_990212:1.1.1.2.2.2
+	v1_3_1_990210:1.1.1.2.2.1
+	v1_3_1_:1.1.1.2.2.1
+	v1_3_1_990209:1.1.1.2.2.1
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.2.17
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.2.17
+	v1_2_1repack:1.1.1.1.2.17
+	v1_2_1:1.1.1.1.2.17
+	v1_2_stable:1.1.1.1.2.17
+	v1_1d1:1.1.1.1.2.16.2.3
+	v1_1d0:1.1.1.1.2.16.2.3
+	v1_1c9_1:1.1.1.1.2.17
+	v1_1c9:1.1.1.1.2.17
+	v1_1c8:1.1.1.1.2.17
+	v1_1c7:1.1.1.1.2.17
+	v1_1c6:1.1.1.1.2.16
+	v1_1d-start:1.1.1.1.2.16.2.1
+	v1_1c5:1.1.1.1.2.16
+	v1_1dev:1.1.1.1.2.16.0.2
+	v1_1c4:1.1.1.1.2.16
+	v1_1c3:1.1.1.1.2.15
+	v1_1c2:1.1.1.1.2.15
+	v1_1c1:1.1.1.1.2.15
+	v1_1c0:1.1.1.1.2.14
+	v1_1b9_31:1.1.1.1.2.14
+	v1_1b9_30:1.1.1.1.2.13
+	v1_1b9_28:1.1.1.1.2.12
+	v1_1b9_27:1.1.1.1.2.11
+	v1_1b9_26:1.1.1.1.2.11
+	r1_1b9_25:1.1.1.1.2.10
+	r1_1b9_24:1.1.1.1.2.10
+	v1_1b9_23:1.1.1.1.2.9
+	v1_1b9_22:1.1.1.1.2.8
+	v1_1b9_20:1.1.1.1.2.7
+	v1_1b9_18:1.1.1.1.2.5
+	v1_1b9_16:1.1.1.1.2.5
+	v1_1b9_15:1.1.1.1.2.5
+	v1_1b9_13:1.1.1.1.2.5
+	v1_1b9_12:1.1.1.1.2.5
+	v1_1b9_11:1.1.1.1.2.4
+	v1_1b9_08:1.1.1.1.2.4
+	v1_1b9_07:1.1.1.1.2.4
+	r1_1b9:1.1.1.1.2.3
+	v1_1b8:1.1.1.1.2.3
+	v1_1b7:1.1.1.1.2.2
+	v1_1b6:1.1.1.1.2.1
+	v1_1r:1.1.1.1.0.2
+	v1_1:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.73
+date	2002.10.17.10.20.52;	author nobu;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.09.25.14.52.37;	author nobu;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.09.17.09.36.05;	author matz;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.09.06.08.59.38;	author matz;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.09.05.09.42.56;	author matz;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.09.04.06.37.35;	author matz;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.08.29.09.08.16;	author matz;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.08.28.15.58.35;	author nobu;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.08.27.08.31.06;	author matz;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.08.16.02.52.25;	author nobu;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.08.11.00.36.38;	author nobu;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.04.24.04.54.13;	author matz;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.02.28.06.53.29;	author matz;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.02.27.04.52.15;	author matz;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.02.26.06.48.58;	author matz;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.02.19.06.43.58;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.01.23.07.30.39;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.11.27.10.00.31;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.11.19.05.03.03;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.10.22.06.48.14;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.10.19.14.32.51;	author nobu;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.10.05.06.30.42;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.10.03.07.19.10;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.10.01.23.28.57;	author nobu;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.08.29.06.28.44;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.08.23.06.02.15;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.08.20.04.29.56;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.08.13.05.17.38;	author knu;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.07.31.08.33.17;	author usa;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.07.31.06.24.42;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.07.03.07.29.00;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.06.05.07.19.38;	author matz;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.05.30.09.12.34;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.05.11.05.24.54;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.03.26.08.57.10;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.03.22.08.59.02;	author matz;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.03.21.03.41.41;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.03.13.05.45.09;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.02.08.09.19.17;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches
+	1.27.2.1;
+next	1.26;
+
+1.26
+date	2000.12.05.09.36.31;	author matz;	state Exp;
+branches
+	1.26.2.1;
+next	1.25;
+
+1.25
+date	2000.11.21.14.31.11;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.11.20.07.31.43;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.11.02.09.04.54;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.10.31.08.37.39;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.09.19.07.54.21;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.07.21.08.45.31;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.06.23.07.01.24;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.06.22.08.29.45;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.06.14.05.30.22;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.24.04.34.02;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.05.12.09.07.41;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.01.09.41.23;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.04.12.05.06.21;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.04.10.05.44.13;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.03.07.08.37.38;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.01.03.12.06;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.01.17.08.37.43;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.01.05.04.37.05;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	99.12.02.06.58.48;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.12.01.09.24.13;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.27.04.20.00;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.10.20.07.10.22;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.53;	author matz;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.1.2.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.02.09.06.08.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.02.12.11.17.04;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.02.24.04.31.21;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.02.25.06.39.07;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.03.24.08.52.29;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.06.09.09.21.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.06.24.04.23.56;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.1
+date	98.01.16.12.35.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.2;
+
+1.1.1.1.2.2
+date	98.02.09.10.56.21;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.3;
+
+1.1.1.1.2.3
+date	98.02.18.01.56.39;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.4;
+
+1.1.1.1.2.4
+date	98.03.25.09.36.58;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.5;
+
+1.1.1.1.2.5
+date	98.04.20.06.20.34;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.6;
+
+1.1.1.1.2.6
+date	98.05.13.05.58.00;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.7;
+
+1.1.1.1.2.7
+date	98.05.13.07.26.21;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.8;
+
+1.1.1.1.2.8
+date	98.05.18.04.56.06;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.9;
+
+1.1.1.1.2.9
+date	98.05.25.04.57.41;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.10;
+
+1.1.1.1.2.10
+date	98.06.02.10.05.25;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.11;
+
+1.1.1.1.2.11
+date	98.06.16.04.23.37;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.12;
+
+1.1.1.1.2.12
+date	98.06.26.09.44.27;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.13;
+
+1.1.1.1.2.13
+date	98.07.03.07.06.31;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.14;
+
+1.1.1.1.2.14
+date	98.07.13.04.37.46;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.15;
+
+1.1.1.1.2.15
+date	98.07.24.04.32.28;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.16;
+
+1.1.1.1.2.16
+date	98.09.03.07.43.35;	author matz;	state Exp;
+branches
+	1.1.1.1.2.16.2.1;
+next	1.1.1.1.2.17;
+
+1.1.1.1.2.17
+date	98.11.09.09.11.50;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.2.16.2.1
+date	98.09.08.07.08.51;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.16.2.2;
+
+1.1.1.1.2.16.2.2
+date	98.10.06.03.28.12;	author matz;	state Exp;
+branches;
+next	1.1.1.1.2.16.2.3;
+
+1.1.1.1.2.16.2.3
+date	98.11.25.03.31.14;	author matz;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	99.10.20.09.20.08;	author matz;	state Exp;
+branches;
+next	1.3.2.2;
+
+1.3.2.2
+date	99.10.27.04.19.50;	author matz;	state Exp;
+branches;
+next	1.3.2.3;
+
+1.3.2.3
+date	2000.02.08.08.53.54;	author matz;	state Exp;
+branches;
+next	1.3.2.4;
+
+1.3.2.4
+date	2000.04.14.14.35.44;	author matz;	state Exp;
+branches;
+next	1.3.2.5;
+
+1.3.2.5
+date	2000.06.05.09.00.57;	author matz;	state Exp;
+branches;
+next	1.3.2.6;
+
+1.3.2.6
+date	2000.06.23.07.05.53;	author matz;	state Exp;
+branches;
+next	;
+
+1.26.2.1
+date	2001.03.21.09.43.10;	author matz;	state Exp;
+branches;
+next	1.26.2.2;
+
+1.26.2.2
+date	2001.03.22.08.59.26;	author matz;	state Exp;
+branches;
+next	1.26.2.3;
+
+1.26.2.3
+date	2001.03.26.08.56.04;	author matz;	state Exp;
+branches;
+next	1.26.2.4;
+
+1.26.2.4
+date	2001.04.24.06.44.13;	author matz;	state Exp;
+branches;
+next	1.26.2.5;
+
+1.26.2.5
+date	2001.06.05.03.53.46;	author matz;	state Exp;
+branches;
+next	1.26.2.6;
+
+1.26.2.6
+date	2001.07.31.06.20.10;	author matz;	state Exp;
+branches;
+next	1.26.2.7;
+
+1.26.2.7
+date	2001.08.23.06.00.30;	author matz;	state Exp;
+branches;
+next	1.26.2.8;
+
+1.26.2.8
+date	2001.10.02.04.25.52;	author matz;	state Exp;
+branches;
+next	1.26.2.9;
+
+1.26.2.9
+date	2001.10.05.06.27.46;	author matz;	state Exp;
+branches;
+next	1.26.2.10;
+
+1.26.2.10
+date	2002.02.19.06.43.34;	author matz;	state Exp;
+branches;
+next	1.26.2.11;
+
+1.26.2.11
+date	2002.02.27.04.50.30;	author matz;	state Exp;
+branches;
+next	1.26.2.12;
+
+1.26.2.12
+date	2002.02.28.06.52.47;	author matz;	state Exp;
+branches;
+next	1.26.2.13;
+
+1.26.2.13
+date	2002.03.08.06.59.53;	author matz;	state Exp;
+branches;
+next	1.26.2.14;
+
+1.26.2.14
+date	2002.03.15.08.55.58;	author matz;	state Exp;
+branches;
+next	1.26.2.15;
+
+1.26.2.15
+date	2002.05.01.09.37.58;	author matz;	state Exp;
+branches;
+next	1.26.2.16;
+
+1.26.2.16
+date	2002.10.23.08.19.24;	author matz;	state Exp;
+branches;
+next	;
+
+1.27.2.1
+date	2001.01.12.04.36.00;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.73
+log
+@* marshal.c (w_byten): added; write n bytes from s to arg.
+
+* marshal.c (dump): flush buffered data.
+
+* marshal.c (marshal_dump, r_byte, r_bytes0, marshal_load): unify
+  marshaling I/O.  [ruby-talk:53368]
+@
+text
+@/**********************************************************************
+
+  marshal.c -
+
+  $Author: nobu $
+  $Date: 2002/09/25 14:52:37 $
+  created at: Thu Apr 27 16:30:01 JST 1995
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include <math.h>
+
+#include "ruby.h"
+#include "rubyio.h"
+#include "st.h"
+#include "util.h"
+
+#define BITSPERSHORT (2*CHAR_BIT)
+#define SHORTMASK ((1<<BITSPERSHORT)-1)
+#define SHORTDN(x) RSHIFT(x,BITSPERSHORT)
+
+#if SIZEOF_SHORT == SIZEOF_BDIGITS
+#define SHORTLEN(x) (x)
+#else
+static int
+shortlen(len, ds)
+    long len;
+    BDIGIT *ds;
+{
+    BDIGIT num;
+    int offset = 0;
+
+    num = ds[len-1];
+    while (num) {
+	num = SHORTDN(num);
+	offset++;
+    }
+    return (len - 1)*sizeof(BDIGIT)/2 + offset;
+}
+#define SHORTLEN(x) shortlen((x),d)
+#endif
+
+#define MARSHAL_MAJOR   4
+#define MARSHAL_MINOR   8
+
+#define TYPE_NIL	'0'
+#define TYPE_TRUE	'T'
+#define TYPE_FALSE	'F'
+#define TYPE_FIXNUM	'i'
+
+#define TYPE_EXTENDED	'e'
+#define TYPE_UCLASS	'C'
+#define TYPE_OBJECT	'o'
+#define TYPE_DATA       'd'
+#define TYPE_USERDEF	'u'
+#define TYPE_USRMARHAL	'U'
+#define TYPE_FLOAT	'f'
+#define TYPE_BIGNUM	'l'
+#define TYPE_STRING	'"'
+#define TYPE_REGEXP	'/'
+#define TYPE_ARRAY	'['
+#define TYPE_HASH	'{'
+#define TYPE_HASH_DEF	'}'
+#define TYPE_STRUCT	'S'
+#define TYPE_MODULE_OLD	'M'
+#define TYPE_CLASS	'c'
+#define TYPE_MODULE	'm'
+
+#define TYPE_SYMBOL	':'
+#define TYPE_SYMLINK	';'
+
+#define TYPE_IVAR	'I'
+#define TYPE_LINK	'@@'
+
+static ID s_dump, s_load;
+static ID s_dump_data, s_load_data, s_alloc;
+static ID s_getc, s_read, s_write;
+
+struct dump_arg {
+    VALUE obj;
+    FILE *fp;
+    VALUE str, dest;
+    st_table *symbol;
+    st_table *data;
+    int taint;
+};
+
+struct dump_call_arg {
+    VALUE obj;
+    struct dump_arg *arg;
+    int limit;
+};
+
+static void w_long _((long, struct dump_arg*));
+
+static void
+w_byten(s, n, arg)
+    char *s;
+    int n;
+    struct dump_arg *arg;
+{
+    if (arg->fp) {
+	fwrite(s, 1, n, arg->fp);
+    }
+    else {
+	VALUE buf = arg->str;
+	rb_str_buf_cat(buf, s, n);
+	if (arg->dest && RSTRING(buf)->len >= BUFSIZ) {
+	    if (arg->taint) OBJ_TAINT(buf);
+	    rb_io_write(arg->dest, buf);
+	    rb_str_resize(buf, 0);
+	}
+    }
+}
+
+static void
+w_byte(c, arg)
+    char c;
+    struct dump_arg *arg;
+{
+    w_byten(&c, 1, arg);
+}
+
+static void
+w_bytes(s, n, arg)
+    char *s;
+    int n;
+    struct dump_arg *arg;
+{
+    w_long(n, arg);
+    w_byten(s, n, arg);
+}
+
+static void
+w_short(x, arg)
+    int x;
+    struct dump_arg *arg;
+{
+    w_byte((x >> 0) & 0xff, arg);
+    w_byte((x >> 8) & 0xff, arg);
+}
+
+static void
+w_long(x, arg)
+    long x;
+    struct dump_arg *arg;
+{
+    char buf[sizeof(long)+1];
+    int i, len = 0;
+
+#if SIZEOF_LONG > 4
+    if (!(RSHIFT(x, 31) == 0 || RSHIFT(x, 31) == -1)) {
+	/* big long does not fit in 4 bytes */
+	rb_raise(rb_eTypeError, "long too big to dump");
+    }
+#endif
+
+    if (x == 0) {
+	w_byte(0, arg);
+	return;
+    }
+    if (0 < x && x < 123) {
+	w_byte(x + 5, arg);
+	return;
+    }
+    if (-124 < x && x < 0) {
+	w_byte((x - 5)&0xff, arg);
+	return;
+    }
+    for (i=1;i<sizeof(long)+1;i++) {
+	buf[i] = x & 0xff;
+	x = RSHIFT(x,8);
+	if (x == 0) {
+	    buf[0] = i;
+	    break;
+	}
+	if (x == -1) {
+	    buf[0] = -i;
+	    break;
+	}
+    }
+    len = i;
+    for (i=0;i<=len;i++) {
+	w_byte(buf[i], arg);
+    }
+}
+
+static void
+w_float(d, arg)
+    double d;
+    struct dump_arg *arg;
+{
+    char buf[100];
+
+    if (isinf(d)) {
+	if (d < 0) strcpy(buf, "-inf");
+	else       strcpy(buf, "inf");
+    }
+    else if (isnan(d)) {
+	strcpy(buf, "nan");
+    }
+    else if (d == 0.0) {
+	if (1.0/d < 0) strcpy(buf, "-0");
+	else           strcpy(buf, "0");
+    }
+    else {
+	/* xxx: should not use system's sprintf(3) */
+	sprintf(buf, "%.16g", d);
+    }
+    w_bytes(buf, strlen(buf), arg);
+}
+
+static void
+w_symbol(id, arg)
+    ID id;
+    struct dump_arg *arg;
+{
+    char *sym = rb_id2name(id);
+    long num;
+
+    if (st_lookup(arg->symbol, id, &num)) {
+	w_byte(TYPE_SYMLINK, arg);
+	w_long(num, arg);
+    }
+    else {
+	w_byte(TYPE_SYMBOL, arg);
+	w_bytes(sym, strlen(sym), arg);
+	st_add_direct(arg->symbol, id, arg->symbol->num_entries);
+    }
+}
+
+static void
+w_unique(s, arg)
+    char *s;
+    struct dump_arg *arg;
+{
+    if (s[0] == '#') {
+	rb_raise(rb_eArgError, "can't dump anonymous class %s", s);
+    }
+    w_symbol(rb_intern(s), arg);
+}
+
+static void w_object _((VALUE,struct dump_arg*,int));
+
+static int
+hash_each(key, value, arg)
+    VALUE key, value;
+    struct dump_call_arg *arg;
+{
+    w_object(key, arg->arg, arg->limit);
+    w_object(value, arg->arg, arg->limit);
+    return ST_CONTINUE;
+}
+
+static int
+obj_each(id, value, arg)
+    ID id;
+    VALUE value;
+    struct dump_call_arg *arg;
+{
+    w_symbol(id, arg->arg);
+    w_object(value, arg->arg, arg->limit);
+    return ST_CONTINUE;
+}
+
+static void
+w_extended(klass, arg)
+    VALUE klass;
+    struct dump_arg *arg;
+{
+    char *path;
+
+    if (FL_TEST(klass, FL_SINGLETON)) {
+	if (RCLASS(klass)->m_tbl->num_entries ||
+	    (RCLASS(klass)->iv_tbl && RCLASS(klass)->iv_tbl->num_entries > 1)) {
+	    rb_raise(rb_eTypeError, "singleton can't be dumped");
+	}
+	klass = RCLASS(klass)->super;
+    }
+    while (BUILTIN_TYPE(klass) == T_ICLASS) {
+	path = rb_class2name(RBASIC(klass)->klass);
+	w_byte(TYPE_EXTENDED, arg);
+	w_unique(path, arg);
+	klass = RCLASS(klass)->super;
+    }
+}
+
+static void
+w_class(type, obj, arg)
+    int type;
+    VALUE obj;
+    struct dump_arg *arg;
+{
+    char *path;
+
+    VALUE klass = CLASS_OF(obj);
+    w_extended(klass, arg);
+    w_byte(type, arg);
+    path = rb_class2name(klass);
+    w_unique(path, arg);
+}
+
+static void
+w_uclass(obj, base_klass, arg)
+    VALUE obj, base_klass;
+    struct dump_arg *arg;
+{
+    VALUE klass = CLASS_OF(obj);
+
+    w_extended(klass, arg);
+    if (klass != base_klass) {
+	w_byte(TYPE_UCLASS, arg);
+	w_unique(rb_class2name(CLASS_OF(obj)), arg);
+    }
+}
+
+static void
+w_ivar(tbl, arg)
+    st_table *tbl;
+    struct dump_call_arg *arg;
+{
+    if (tbl) {
+	w_long(tbl->num_entries, arg->arg);
+	st_foreach(tbl, obj_each, arg);
+    }
+    else {
+	w_long(0, arg->arg);
+    }
+}
+
+static void
+w_object(obj, arg, limit)
+    VALUE obj;
+    struct dump_arg *arg;
+    int limit;
+{
+    struct dump_call_arg c_arg;
+    st_table *ivtbl = 0;
+
+    if (limit == 0) {
+	rb_raise(rb_eArgError, "exceed depth limit");
+    }
+    if (obj == Qnil) {
+	w_byte(TYPE_NIL, arg);
+    }
+    else if (obj == Qtrue) {
+	w_byte(TYPE_TRUE, arg);
+    }
+    else if (obj == Qfalse) {
+	w_byte(TYPE_FALSE, arg);
+    }
+    else if (FIXNUM_P(obj)) {
+#if SIZEOF_LONG <= 4
+	w_byte(TYPE_FIXNUM, arg);
+	w_long(FIX2INT(obj), arg);
+#else
+	if (RSHIFT((long)obj, 31) == 0 || RSHIFT((long)obj, 31) == -1) {
+	    w_byte(TYPE_FIXNUM, arg);
+	    w_long(FIX2LONG(obj), arg);
+	}
+	else {
+	    w_object(rb_int2big(FIX2LONG(obj)), arg, limit);
+	    return;
+	}
+#endif
+    }
+    else if (SYMBOL_P(obj)) {
+	w_symbol(SYM2ID(obj), arg);
+	return;
+    }
+    else {
+	long num;
+
+	limit--;
+	c_arg.limit = limit;
+	c_arg.arg = arg;
+
+	if (st_lookup(arg->data, obj, &num)) {
+	    w_byte(TYPE_LINK, arg);
+	    w_long(num, arg);
+	    return;
+	}
+
+	if (OBJ_TAINTED(obj)) arg->taint = Qtrue;
+
+	if (ivtbl = rb_generic_ivar_table(obj)) {
+	    w_byte(TYPE_IVAR, arg);
+	}
+
+	st_add_direct(arg->data, obj, arg->data->num_entries);
+	if (rb_respond_to(obj, s_dump)) {
+	    VALUE v;
+
+	    w_class(TYPE_USERDEF, obj, arg);
+	    v = rb_funcall(obj, s_dump, 1, INT2NUM(limit));
+	    if (TYPE(v) != T_STRING) {
+		rb_raise(rb_eTypeError, "_dump() must return String");
+	    }
+	    w_bytes(RSTRING(v)->ptr, RSTRING(v)->len, arg);
+	    if (ivtbl) w_ivar(ivtbl, &c_arg);
+	    return;
+	}
+
+	switch (BUILTIN_TYPE(obj)) {
+	  case T_CLASS:
+	    if (FL_TEST(obj, FL_SINGLETON)) {
+		rb_raise(rb_eTypeError, "singleton class can't be dumped");
+	    }
+	    w_byte(TYPE_CLASS, arg);
+	    {
+		VALUE path = rb_class_path(obj);
+		if (RSTRING(path)->ptr[0] == '#') {
+		    rb_raise(rb_eArgError, "can't dump anonymous class %s",
+			     RSTRING(path)->ptr);
+		}
+		w_bytes(RSTRING(path)->ptr, RSTRING(path)->len, arg);
+	    }
+	    break;
+
+	  case T_MODULE:
+	    w_byte(TYPE_MODULE, arg);
+	    {
+		VALUE path = rb_class_path(obj);
+		if (RSTRING(path)->ptr[0] == '#') {
+		    rb_raise(rb_eArgError, "can't dump anonymous module %s",
+			     RSTRING(path)->ptr);
+		}
+		w_bytes(RSTRING(path)->ptr, RSTRING(path)->len, arg);
+	    }
+	    break;
+
+	  case T_FLOAT:
+	    w_byte(TYPE_FLOAT, arg);
+	    w_float(RFLOAT(obj)->value, arg);
+	    break;
+
+	  case T_BIGNUM:
+	    w_byte(TYPE_BIGNUM, arg);
+	    {
+		char sign = RBIGNUM(obj)->sign ? '+' : '-';
+		long len = RBIGNUM(obj)->len;
+		BDIGIT *d = RBIGNUM(obj)->digits;
+
+		w_byte(sign, arg);
+		w_long(SHORTLEN(len), arg); /* w_short? */
+		while (len--) {
+#if SIZEOF_BDIGITS > SIZEOF_SHORT
+		    BDIGIT num = *d;
+		    int i;
+
+		    for (i=0; i<SIZEOF_BDIGITS; i+=SIZEOF_SHORT) {
+			w_short(num & SHORTMASK, arg);
+			num = SHORTDN(num);
+			if (len == 0 && num == 0) break;
+		    }
+#else
+		    w_short(*d, arg);
+#endif
+		    d++;
+		}
+	    }
+	    break;
+
+	  case T_STRING:
+	    w_uclass(obj, rb_cString, arg);
+	    w_byte(TYPE_STRING, arg);
+	    w_bytes(RSTRING(obj)->ptr, RSTRING(obj)->len, arg);
+	    break;
+
+	  case T_REGEXP:
+	    w_uclass(obj, rb_cRegexp, arg);
+	    w_byte(TYPE_REGEXP, arg);
+	    w_bytes(RREGEXP(obj)->str, RREGEXP(obj)->len, arg);
+	    w_byte(rb_reg_options(obj), arg);
+	    break;
+
+	  case T_ARRAY:
+	    w_uclass(obj, rb_cArray, arg);
+	    w_byte(TYPE_ARRAY, arg);
+	    {
+		long len = RARRAY(obj)->len;
+		VALUE *ptr = RARRAY(obj)->ptr;
+
+		w_long(len, arg);
+		while (len--) {
+		    w_object(*ptr, arg, limit);
+		    ptr++;
+		}
+	    }
+	    break;
+
+	  case T_HASH:
+	    w_uclass(obj, rb_cHash, arg);
+	    if (NIL_P(RHASH(obj)->ifnone)) {
+		w_byte(TYPE_HASH, arg);
+	    }
+	    else if (FL_TEST(obj, FL_USER2)) {
+		/* FL_USER2 means HASH_PROC_DEFAULT (see hash.c) */
+		rb_raise(rb_eArgError, "cannot dump hash with default proc");
+	    }
+	    else {
+		w_byte(TYPE_HASH_DEF, arg);
+	    }
+	    w_long(RHASH(obj)->tbl->num_entries, arg);
+	    st_foreach(RHASH(obj)->tbl, hash_each, &c_arg);
+	    if (!NIL_P(RHASH(obj)->ifnone)) {
+		w_object(RHASH(obj)->ifnone, arg, limit);
+	    }
+	    break;
+
+	  case T_STRUCT:
+	    w_byte(TYPE_STRUCT, arg);
+	    {
+		long len = RSTRUCT(obj)->len;
+		VALUE mem;
+		long i;
+
+		w_unique(rb_class2name(CLASS_OF(obj)), arg);
+		w_long(len, arg);
+		mem = rb_struct_iv_get(rb_obj_class(obj), "__member__");
+		if (mem == Qnil) {
+		    rb_raise(rb_eTypeError, "uninitialized struct");
+		}
+		for (i=0; i<len; i++) {
+		    w_symbol(SYM2ID(RARRAY(mem)->ptr[i]), arg);
+		    w_object(RSTRUCT(obj)->ptr[i], arg, limit);
+		}
+	    }
+	    break;
+
+	  case T_OBJECT:
+	    w_class(TYPE_OBJECT, obj, arg);
+	    w_ivar(ROBJECT(obj)->iv_tbl, &c_arg);
+	    break;
+
+         case T_DATA:
+           {
+               VALUE v;
+
+	       w_class(TYPE_DATA, obj, arg);
+               if (!rb_respond_to(obj, s_dump_data)) {
+                   rb_raise(rb_eTypeError,
+                            "class %s needs to have instance method `_dump_data'",
+                            rb_class2name(CLASS_OF(obj)));
+               }
+               v = rb_funcall(obj, s_dump_data, 0);
+               w_object(v, arg, limit);
+           }
+           break;
+
+	  default:
+	    rb_raise(rb_eTypeError, "can't dump %s",
+		     rb_class2name(CLASS_OF(obj)));
+	    break;
+	}
+    }
+    if (ivtbl) {
+	w_ivar(ivtbl, &c_arg);
+    }
+}
+
+static VALUE
+dump(arg)
+    struct dump_call_arg *arg;
+{
+    w_object(arg->obj, arg->arg, arg->limit);
+    if (arg->arg->dest) {
+	rb_io_write(arg->arg->dest, arg->arg->str);
+	rb_str_resize(arg->arg->str, 0);
+    }
+    return 0;
+}
+
+static VALUE
+dump_ensure(arg)
+    struct dump_arg *arg;
+{
+    st_free_table(arg->symbol);
+    st_free_table(arg->data);
+    if (!arg->fp && arg->taint) {
+	OBJ_TAINT(arg->str);
+    }
+    return 0;
+}
+
+static VALUE
+marshal_dump(argc, argv)
+    int argc;
+    VALUE* argv;
+{
+    VALUE obj, port, a1, a2;
+    int limit = -1;
+    struct dump_arg arg;
+    struct dump_call_arg c_arg;
+
+    port = 0;
+    rb_scan_args(argc, argv, "12", &obj, &a1, &a2);
+    if (argc == 3) {
+	if (!NIL_P(a2)) limit = NUM2INT(a2);
+	port = a1;
+    }
+    else if (argc == 2) {
+	if (FIXNUM_P(a1)) limit = FIX2INT(a1);
+	else port = a1;
+    }
+    arg.dest = 0;
+    if (port) {
+	if (rb_obj_is_kind_of(port, rb_cIO)) {
+	    OpenFile *fptr;
+
+	    rb_io_binmode(port);
+	    GetOpenFile(port, fptr);
+	    rb_io_check_writable(fptr);
+	    arg.fp = (fptr->f2) ? fptr->f2 : fptr->f;
+	}
+	else if (rb_respond_to(port, s_write)) {
+	    arg.fp = 0;
+	    arg.str = rb_str_buf_new(0);
+	    arg.dest = port;
+	}
+	else {
+	    rb_raise(rb_eTypeError, "instance of IO needed");
+	}
+    }
+    else {
+	arg.fp = 0;
+	port = rb_str_buf_new(0);
+	arg.str = port;
+    }
+
+    arg.symbol = st_init_numtable();
+    arg.data   = st_init_numtable();
+    arg.taint  = Qfalse;
+    c_arg.obj = obj;
+    c_arg.arg = &arg;
+    c_arg.limit = limit;
+
+    w_byte(MARSHAL_MAJOR, &arg);
+    w_byte(MARSHAL_MINOR, &arg);
+
+    rb_ensure(dump, (VALUE)&c_arg, dump_ensure, (VALUE)&arg);
+
+    return port;
+}
+
+struct load_arg {
+    FILE *fp;
+    char *ptr, *end;
+    st_table *symbol;
+    VALUE data;
+    VALUE proc;
+    int taint;
+};
+
+static VALUE r_object _((struct load_arg *arg));
+
+static int
+r_byte(arg)
+    struct load_arg *arg;
+{
+    int c;
+
+    if (arg->fp) {
+	c = rb_getc(arg->fp);
+	if (c == EOF) rb_eof_error();
+    }
+    else if (!arg->end) {
+	VALUE src = (VALUE)arg->ptr;
+	VALUE v = rb_funcall2(src, s_getc, 0, 0);
+	if (NIL_P(v)) rb_eof_error();
+	c = (unsigned char)FIX2INT(v);
+    }
+    else if (arg->ptr < arg->end) {
+	c = *(unsigned char*)arg->ptr++;
+    }
+    else {
+	rb_raise(rb_eArgError, "marshal data too short");
+    }
+    return c;
+}
+
+static void
+long_toobig(size)
+    int size;
+{
+    rb_raise(rb_eTypeError, "long too big for this architecture (size %d, given %d)",
+	     sizeof(long), size);
+}
+
+#undef SIGN_EXTEND_CHAR
+#if __STDC__
+# define SIGN_EXTEND_CHAR(c) ((signed char)(c))
+#else  /* not __STDC__ */
+/* As in Harbison and Steele.  */
+# define SIGN_EXTEND_CHAR(c) ((((unsigned char)(c)) ^ 128) - 128)
+#endif
+
+static long
+r_long(arg)
+    struct load_arg *arg;
+{
+    register long x;
+    int c = SIGN_EXTEND_CHAR(r_byte(arg));
+    long i;
+
+    if (c == 0) return 0;
+    if (c > 0) {
+	if (4 < c && c < 128) {
+	    return c - 5;
+	}
+	if (c > sizeof(long)) long_toobig(c);
+	x = 0;
+	for (i=0;i<c;i++) {
+	    x |= (long)r_byte(arg) << (8*i);
+	}
+    }
+    else {
+	if (-129 < c && c < -4) {
+	    return c + 5;
+	}
+	c = -c;
+	if (c > sizeof(long)) long_toobig(c);
+	x = -1;
+	for (i=0;i<c;i++) {
+	    x &= ~((long)0xff << (8*i));
+	    x |= (long)r_byte(arg) << (8*i);
+	}
+    }
+    return x;
+}
+
+#define r_bytes(arg) r_bytes0(r_long(arg), (arg))
+
+static VALUE
+r_bytes0(len, arg)
+    long len;
+    struct load_arg *arg;
+{
+    VALUE str;
+
+    if (arg->fp) {
+	str = rb_str_new(0, len);
+	if (rb_io_fread(RSTRING(str)->ptr, len, arg->fp) != len) {
+	  too_short:
+	    rb_raise(rb_eArgError, "marshal data too short");
+	}
+    }
+    else if (!arg->end) {
+	VALUE src = (VALUE)arg->ptr;
+	VALUE n = LONG2NUM(len);
+	str = rb_funcall2(src, s_read, 1, &n);
+	if (NIL_P(str)) goto too_short;
+	Check_Type(str, T_STRING);
+	if (RSTRING(str)->len != len) goto too_short;
+	if (OBJ_TAINTED(str)) arg->taint = Qtrue;
+    }
+    else {
+	if (arg->ptr + len > arg->end) {
+	    goto too_short;
+	}
+	str = rb_str_new(arg->ptr, len);
+	arg->ptr += len;
+    }
+    return str;
+}
+
+static ID
+r_symlink(arg)
+    struct load_arg *arg;
+{
+    ID id;
+    long num = r_long(arg);
+
+    if (st_lookup(arg->symbol, num, &id)) {
+	return id;
+    }
+    rb_raise(rb_eTypeError, "bad symbol");
+}
+
+static ID
+r_symreal(arg)
+    struct load_arg *arg;
+{
+    ID id;
+
+    id = rb_intern(RSTRING(r_bytes(arg))->ptr);
+    st_insert(arg->symbol, arg->symbol->num_entries, id);
+
+    return id;
+}
+
+static ID
+r_symbol(arg)
+    struct load_arg *arg;
+{
+    if (r_byte(arg) == TYPE_SYMLINK) {
+	return r_symlink(arg);
+    }
+    return r_symreal(arg);
+}
+
+static char*
+r_unique(arg)
+    struct load_arg *arg;
+{
+    return rb_id2name(r_symbol(arg));
+}
+
+static VALUE
+r_string(arg)
+    struct load_arg *arg;
+{
+    return r_bytes(arg);
+}
+
+static VALUE
+r_regist(v, arg)
+    VALUE v;
+    struct load_arg *arg;
+{
+    rb_hash_aset(arg->data, INT2FIX(RHASH(arg->data)->tbl->num_entries), v);
+    if (arg->taint) OBJ_TAINT(v);
+    return v;
+}
+
+static void
+r_ivar(obj, arg)
+    VALUE obj;
+    struct load_arg *arg;
+{
+    long len;
+
+    len = r_long(arg);
+    if (len > 0) {
+	while (len--) {
+	    ID id = r_symbol(arg);
+	    VALUE val = r_object(arg);
+	    rb_ivar_set(obj, id, val);
+	}
+    }
+}
+
+static VALUE
+path2class(path)
+    char *path;
+{
+    VALUE v = rb_path2class(path);
+
+    if (TYPE(v) != T_CLASS) {
+	rb_raise(rb_eTypeError, "%s does not refer class", path);
+    }
+    return v;
+}
+
+static VALUE
+path2module(path)
+    char *path;
+{
+    VALUE v = rb_path2class(path);
+
+    if (TYPE(v) != T_MODULE) {
+	rb_raise(rb_eTypeError, "%s does not refer module", path);
+    }
+    return v;
+}
+
+static VALUE
+r_object0(arg, proc)
+    struct load_arg *arg;
+    VALUE proc;
+{
+    VALUE v = Qnil;
+    int type = r_byte(arg);
+    long id;
+
+    switch (type) {
+      case TYPE_LINK:
+	id = r_long(arg);
+	v = rb_hash_aref(arg->data, LONG2FIX(id));
+	if (NIL_P(v)) {
+	    rb_raise(rb_eArgError, "dump format error (unlinked)");
+	}
+	return v;
+
+      case TYPE_IVAR:
+	v = r_object0(arg, 0);
+	r_ivar(v, arg);
+	break;
+
+      case TYPE_EXTENDED:
+	{
+	    VALUE m = path2module(r_unique(arg));
+
+	    v = r_object0(arg, 0);
+	    rb_extend_object(v, m);
+	}
+	break;
+
+      case TYPE_UCLASS:
+	{
+	    VALUE c = path2class(r_unique(arg));
+
+	    v = r_object0(arg, 0);
+	    if (rb_special_const_p(v) || TYPE(v) == T_OBJECT || TYPE(v) == T_CLASS) {
+	      format_error:
+		rb_raise(rb_eArgError, "dump format error (user class)");
+	    }
+	    if (TYPE(v) == T_MODULE || !RTEST(rb_funcall(c, '<', 1, RBASIC(v)->klass))) {
+		VALUE tmp = rb_obj_alloc(c);
+
+		if (TYPE(v) != TYPE(tmp)) goto format_error;
+	    }
+	    RBASIC(v)->klass = c;
+	}
+	break;
+
+      case TYPE_NIL:
+	v = Qnil;
+	break;
+
+      case TYPE_TRUE:
+	v = Qtrue;
+	break;
+
+      case TYPE_FALSE:
+	v = Qfalse;
+	break;
+
+      case TYPE_FIXNUM:
+	{
+	    long i = r_long(arg);
+	    v = LONG2FIX(i);
+	}
+	break;
+
+      case TYPE_FLOAT:
+	{
+	    double d, t = 0.0;
+	    VALUE str = r_bytes(arg);
+
+	    if (strcmp(RSTRING(str)->ptr, "nan") == 0) {
+		d = t / t;
+	    }
+	    else if (strcmp(RSTRING(str)->ptr, "inf") == 0) {
+		d = 1.0 / t;
+	    }
+	    else if (strcmp(RSTRING(str)->ptr, "-inf") == 0) {
+		d = -1.0 / t;
+	    }
+	    else {
+		d = strtod(RSTRING(str)->ptr, 0);
+	    }
+	    v = rb_float_new(d);
+	    r_regist(v, arg);
+	}
+	break;
+
+      case TYPE_BIGNUM:
+	{
+	    long len;
+	    BDIGIT *digits;
+	    VALUE data;
+
+	    NEWOBJ(big, struct RBignum);
+	    OBJSETUP(big, rb_cBignum, T_BIGNUM);
+	    big->sign = (r_byte(arg) == '+');
+	    len = r_long(arg);
+	    data = r_bytes0(len * 2, arg);
+#if SIZEOF_BDIGITS == SIZEOF_SHORT
+	    big->len = len;
+#else
+	    big->len = (len + 1) * 2 / sizeof(BDIGIT);
+#endif
+	    big->digits = digits = ALLOC_N(BDIGIT, big->len);
+	    MEMCPY(digits, RSTRING(data)->ptr, char, len * 2);
+#if SIZEOF_BDIGITS > SIZEOF_SHORT
+	    MEMZERO((char *)digits + len * 2, char,
+		    big->len * sizeof(BDIGIT) - len * 2);
+#endif
+	    len = big->len;
+	    while (len > 0) {
+		unsigned char *p = (unsigned char *)digits;
+		BDIGIT num = 0;
+#if SIZEOF_BDIGITS > SIZEOF_SHORT
+		int shift = 0;
+		int i;
+
+		for (i=0; i<SIZEOF_BDIGITS; i++) {
+		    num |= (int)p[i] << shift;
+		    shift += 8;
+		}
+#else
+		num = p[0] | (p[1] << 8);
+#endif
+		*digits++ = num;
+		len--;
+	    }
+	    v = rb_big_norm((VALUE)big);
+	    r_regist(v, arg);
+	}
+	break;
+
+      case TYPE_STRING:
+	v = r_regist(r_string(arg), arg);
+	break;
+
+      case TYPE_REGEXP:
+	{
+	    volatile VALUE str = r_bytes(arg);
+	    int options = r_byte(arg);
+	    v = r_regist(rb_reg_new(RSTRING(str)->ptr, RSTRING(str)->len, options), arg);
+	}
+	break;
+
+      case TYPE_ARRAY:
+	{
+	    volatile long len = r_long(arg); /* gcc 2.7.2.3 -O2 bug?? */
+
+	    v = rb_ary_new2(len);
+	    r_regist(v, arg);
+	    while (len--) {
+		rb_ary_push(v, r_object(arg));
+	    }
+	}
+	break;
+
+      case TYPE_HASH:
+      case TYPE_HASH_DEF:
+	{
+	    long len = r_long(arg);
+
+	    v = rb_hash_new();
+	    r_regist(v, arg);
+	    while (len--) {
+		VALUE key = r_object(arg);
+		VALUE value = r_object(arg);
+		rb_hash_aset(v, key, value);
+	    }
+	    if (type == TYPE_HASH_DEF) {
+		RHASH(v)->ifnone = r_object(arg);
+	    }
+	}
+	break;
+
+      case TYPE_STRUCT:
+	{
+	    VALUE klass, mem, values;
+	    volatile long i;	/* gcc 2.7.2.3 -O2 bug?? */
+	    long len;
+	    ID slot;
+
+	    klass = path2class(r_unique(arg));
+	    mem = rb_struct_iv_get(klass, "__member__");
+	    if (mem == Qnil) {
+		rb_raise(rb_eTypeError, "uninitialized struct");
+	    }
+	    len = r_long(arg);
+
+	    values = rb_ary_new2(len);
+	    for (i=0; i<len; i++) {
+		rb_ary_push(values, Qnil);
+	    }
+	    v = rb_struct_alloc(klass, values);
+	    r_regist(v, arg);
+	    for (i=0; i<len; i++) {
+		slot = r_symbol(arg);
+
+		if (RARRAY(mem)->ptr[i] != ID2SYM(slot)) {
+		    rb_raise(rb_eTypeError, "struct %s not compatible (:%s for :%s)",
+			     rb_class2name(klass),
+			     rb_id2name(slot),
+			     rb_id2name(SYM2ID(RARRAY(mem)->ptr[i])));
+		}
+		rb_struct_aset(v, LONG2FIX(i), r_object(arg));
+	    }
+	}
+	break;
+
+      case TYPE_USERDEF:
+        {
+	    VALUE klass = path2class(r_unique(arg));
+
+	    if (!rb_respond_to(klass, s_load)) {
+		rb_raise(rb_eTypeError, "class %s needs to have method `_load'",
+			 rb_class2name(klass));
+	    }
+	    v = rb_funcall(klass, s_load, 1, r_string(arg));
+	    r_regist(v, arg);
+	}
+        break;
+
+      case TYPE_OBJECT:
+	{
+	    VALUE klass = path2class(r_unique(arg));
+
+	    v = rb_obj_alloc(klass);
+	    if (TYPE(v) != T_OBJECT) {
+		rb_raise(rb_eArgError, "dump format error");
+	    }
+	    r_regist(v, arg);
+	    r_ivar(v, arg);
+	}
+	break;
+
+      case TYPE_DATA:
+       {
+           VALUE klass = path2class(r_unique(arg));
+           if (rb_respond_to(klass, s_alloc)) {
+	       static int warn = Qtrue;
+	       if (warn) {
+		   rb_warn("define `allocate' instead of `_alloc'");
+		   warn = Qfalse;
+	       }
+	       v = rb_funcall(klass, s_alloc, 0);
+           }
+	   else {
+	       v = rb_obj_alloc(klass);
+	   }
+           if (TYPE(v) != T_DATA) {
+               rb_raise(rb_eArgError, "dump format error");
+           }
+           r_regist(v, arg);
+           if (!rb_respond_to(v, s_load_data)) {
+               rb_raise(rb_eTypeError,
+                        "class %s needs to have instance method `_load_data'",
+                        rb_class2name(klass));
+           }
+           rb_funcall(v, s_load_data, 1, r_object0(arg, 0));
+       }
+       break;
+
+      case TYPE_MODULE_OLD:
+        {
+	    VALUE str = r_bytes(arg);
+
+	    v = path2module(RSTRING(str)->ptr);
+	    r_regist(v, arg);
+	}
+	break;
+
+      case TYPE_CLASS:
+        {
+	    VALUE str = r_bytes(arg);
+
+	    v = path2class(RSTRING(str)->ptr);
+	    r_regist(v, arg);
+	}
+	break;
+
+      case TYPE_MODULE:
+        {
+	    VALUE str = r_bytes(arg);
+
+	    v = path2module(RSTRING(str)->ptr);
+	    r_regist(v, arg);
+	}
+	break;
+
+      case TYPE_SYMBOL:
+	v = ID2SYM(r_symreal(arg));
+	break;
+
+      case TYPE_SYMLINK:
+	return ID2SYM(r_symlink(arg));
+
+      default:
+	rb_raise(rb_eArgError, "dump format error(0x%x)", type);
+	break;
+    }
+    if (proc) {
+	rb_funcall(proc, rb_intern("yield"), 1, v);
+    }
+    return v;
+}
+
+static VALUE
+r_object(arg)
+    struct load_arg *arg;
+{
+    return r_object0(arg, arg->proc);
+}
+
+static VALUE
+load(arg)
+    struct load_arg *arg;
+{
+    return r_object(arg);
+}
+
+static VALUE
+load_ensure(arg)
+    struct load_arg *arg;
+{
+    st_free_table(arg->symbol);
+    return 0;
+}
+
+static VALUE
+marshal_load(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE port, proc;
+    int major, minor;
+    VALUE v;
+    OpenFile *fptr;
+    struct load_arg arg;
+    volatile VALUE hash;	/* protect from GC */
+
+    rb_scan_args(argc, argv, "11", &port, &proc);
+    if (rb_obj_is_kind_of(port, rb_cIO)) {
+	rb_io_binmode(port);
+	GetOpenFile(port, fptr);
+	rb_io_check_readable(fptr);
+	arg.fp = fptr->f;
+	arg.taint = Qtrue;
+    }
+    else if (rb_respond_to(port, rb_intern("to_str"))) {
+	arg.taint = OBJ_TAINTED(port); /* original taintedness */
+	StringValue(port);	       /* possible conversion */
+	arg.fp = 0;
+	arg.ptr = RSTRING(port)->ptr;
+	arg.end = arg.ptr + RSTRING(port)->len;
+    }
+    else if (rb_respond_to(port, s_getc) && rb_respond_to(port, s_read)) {
+	arg.taint = Qfalse;
+	arg.fp = 0;
+	arg.ptr = (char *)port;
+	arg.end = 0;
+    }
+    else {
+	rb_raise(rb_eTypeError, "instance of IO needed");
+    }
+
+    major = r_byte(&arg);
+    minor = r_byte(&arg);
+    if (major != MARSHAL_MAJOR || minor > MARSHAL_MINOR) {
+	rb_raise(rb_eTypeError, "incompatible marshal file format (can't be read)\n\
+\tformat version %d.%d required; %d.%d given",
+		 MARSHAL_MAJOR, MARSHAL_MINOR, major, minor);
+    }
+    if (RTEST(ruby_verbose) && minor != MARSHAL_MINOR) {
+	rb_warn("incompatible marshal file format (can be read)\n\
+\tformat version %d.%d required; %d.%d given",
+		MARSHAL_MAJOR, MARSHAL_MINOR, major, minor);
+    }
+
+    arg.symbol = st_init_numtable();
+    arg.data   = hash = rb_hash_new();
+    if (NIL_P(proc)) arg.proc = 0;
+    else             arg.proc = proc;
+    v = rb_ensure(load, (VALUE)&arg, load_ensure, (VALUE)&arg);
+
+    return v;
+}
+
+void
+Init_marshal()
+{
+    VALUE rb_mMarshal = rb_define_module("Marshal");
+
+    s_dump = rb_intern("_dump");
+    s_load = rb_intern("_load");
+    s_dump_data = rb_intern("_dump_data");
+    s_load_data = rb_intern("_load_data");
+    s_alloc = rb_intern("_alloc");
+    s_getc = rb_intern("getc");
+    s_read = rb_intern("read");
+    s_write = rb_intern("write");
+
+    rb_define_module_function(rb_mMarshal, "dump", marshal_dump, -1);
+    rb_define_module_function(rb_mMarshal, "load", marshal_load, -1);
+    rb_define_module_function(rb_mMarshal, "restore", marshal_load, -1);
+
+    rb_define_const(rb_mMarshal, "MAJOR_VERSION", INT2FIX(MARSHAL_MAJOR));
+    rb_define_const(rb_mMarshal, "MINOR_VERSION", INT2FIX(MARSHAL_MINOR));
+}
+
+VALUE
+rb_marshal_dump(obj, port)
+    VALUE obj, port;
+{
+    int argc = 1;
+    VALUE argv[2];
+
+    argv[0] = obj;
+    argv[1] = port;
+    if (!NIL_P(port)) argc = 2;
+    return marshal_dump(argc, argv);
+}
+
+VALUE
+rb_marshal_load(port)
+    VALUE port;
+{
+    return marshal_load(1, &port);
+}
+@
+
+
+1.72
+log
+@* dir.c (glob_helper): must not closedir() when exception raised
+  while globbing "**".
+
+* marshal.c (w_uclass): unused variable.
+
+* re.c (match_clone): unused.
+
+* regex.c (re_compile_pattern): get rid of implicit promotion from
+  plain char to int.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/09/17 09:36:05 $
+d79 1
+d84 1
+a84 1
+    VALUE str;
+d99 20
+d123 1
+a123 2
+    if (arg->fp) putc(c, arg->fp);
+    else rb_str_buf_cat(arg->str, &c, 1);
+d133 1
+a133 6
+    if (arg->fp) {
+	fwrite(s, 1, n, arg->fp);
+    }
+    else {
+	rb_str_buf_cat(arg->str, s, n);
+    }
+d569 4
+d608 1
+d618 5
+d669 6
+a683 12
+static unsigned short
+r_short(arg)
+    struct load_arg *arg;
+{
+    unsigned short x;
+
+    x =  r_byte(arg);
+    x |= r_byte(arg)<<8;
+
+    return x;
+}
+
+d750 9
+d964 1
+d970 1
+d977 6
+d984 2
+a986 1
+		BDIGIT num = 0;
+d990 3
+a992 5
+		for (i=0; i<SIZEOF_BDIGITS; i+=2) {
+		    int j = r_short(arg);
+		    num |= j << shift;
+		    shift += BITSPERSHORT;
+		    if (--len == 0) break;
+d994 3
+a997 2
+#else
+		*digits++ = r_short(arg);
+a998 1
+#endif
+d1227 6
+d1269 4
+@
+
+
+1.71
+log
+@* eval.c (rb_mod_nesting): load wrapping module should appear in
+  Module#nesting list. (ruby-bugs-ja:PR#328)
+
+* eval.c (rb_thread_remove): free stack buffer on remove.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/06 08:59:38 $
+a295 1
+    char *path;
+@
+
+
+1.70
+log
+@* gc.c (ruby_xmalloc): remove MALLOC_LIMIT to avoid frequent
+  garabage collection.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/05 09:42:56 $
+d46 1
+a46 1
+#define MARSHAL_MINOR   7
+d374 4
+d382 1
+a382 2
+	    w_byte(TYPE_USERDEF, arg);
+	    w_unique(rb_class2name(CLASS_OF(obj)), arg);
+d388 1
+a389 4
+	}
+
+	if (ivtbl = rb_generic_ivar_table(obj)) {
+	    w_byte(TYPE_IVAR, arg);
+@
+
+
+1.69
+log
+@* variable.c (rb_path2class): should not use rb_eval_string().
+
+* marshal.c (w_extended): should allow marshaling of object which
+  is extended by named module.
+
+* class.c (rb_make_metaclass): super may be T_ICLASS, need to skip.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/09/04 06:37:35 $
+d117 1
+a117 1
+	rb_str_cat(arg->str, s, n);
+@
+
+
+1.68
+log
+@* class.c (rb_make_metaclass): obj.meta.super.meta should be equal
+  to obj.meta.meta.super (ruby-bugs-ja:PR#324).
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* marshal.c (r_bytes): do not use alloca (ruby-bugs:PR#382).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/29 09:08:16 $
+d53 1
+d56 1
+a56 1
+#define TYPE_DATA      'd'
+d254 2
+a255 2
+w_class(obj, arg)
+    VALUE obj;
+a257 1
+    VALUE klass = CLASS_OF(obj);
+d260 3
+a262 3
+    while (FL_TEST(klass, FL_SINGLETON) || BUILTIN_TYPE(klass) == T_ICLASS) {
+	if (RCLASS(klass)->m_tbl->num_entries > 0 ||
+	    RCLASS(klass)->iv_tbl->num_entries > 1) {
+d265 1
+d267 19
+d298 1
+a298 8
+    while (FL_TEST(klass, FL_SINGLETON) || BUILTIN_TYPE(klass) == T_ICLASS) {
+	if (RCLASS(klass)->m_tbl->num_entries > 0 ||
+	    RCLASS(klass)->iv_tbl->num_entries > 1) {
+	    rb_raise(rb_eTypeError, "singleton can't be dumped");
+	}
+	klass = RCLASS(klass)->super;
+    }
+
+d520 1
+a520 2
+	    w_byte(TYPE_OBJECT, arg);
+	    w_class(obj, arg);
+a524 1
+           w_byte(TYPE_DATA, arg);
+d528 1
+a528 1
+	       w_class(obj, arg);
+d819 24
+d865 9
+d876 1
+a876 1
+	    VALUE c = rb_path2class(r_unique(arg));
+d1020 1
+a1020 1
+	    klass = rb_path2class(r_unique(arg));
+d1049 1
+a1049 1
+	    VALUE klass;
+a1050 1
+	    klass = rb_path2class(r_unique(arg));
+d1062 1
+a1062 1
+	    VALUE klass;
+a1063 1
+	    klass = rb_path2class(r_unique(arg));
+d1075 1
+a1075 3
+           VALUE klass;
+
+           klass = rb_path2class(r_unique(arg));
+d1102 4
+a1105 2
+	    volatile VALUE str = r_bytes(arg);
+	    v = r_regist(rb_path2class(RSTRING(str)->ptr), arg);
+d1111 3
+a1113 5
+	    volatile VALUE str = r_bytes(arg);
+	    v = rb_path2class(RSTRING(str)->ptr);
+	    if (TYPE(v) != T_CLASS) {
+		rb_raise(rb_eTypeError, "%s is not a class", RSTRING(str)->ptr);
+	    }
+d1120 3
+a1122 5
+	    volatile VALUE str = r_bytes(arg);
+	    v = rb_path2class(RSTRING(str)->ptr);
+	    if (TYPE(v) != T_MODULE) {
+		rb_raise(rb_eTypeError, "%s is not a module", RSTRING(str)->ptr);
+	    }
+@
+
+
+1.67
+log
+@* array.c (rb_ary_become): should not free ptr if it's shared.
+
+* eval.c (rb_alias): prohibit making an alias named "allocate" if
+  klass is a metaclass.
+
+* string.c (rb_string_value_ptr): StringValuePtr() should never
+  return NULL pointer.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/28 15:58:35 $
+d705 1
+a705 10
+#define r_bytes2(s, len, arg) do {	\
+    (len) = r_long(arg);		\
+    (s) = ALLOCA_N(char,(len)+1);	\
+    r_bytes0((s),(len),(arg));		\
+} while (0)
+
+#define r_bytes(s, arg) do {		\
+    long r_bytes_len;			\
+    r_bytes2((s), r_bytes_len, (arg));	\
+} while (0)
+d707 2
+a708 3
+static void
+r_bytes0(s, len, arg)
+    char *s;
+d712 2
+d715 2
+a716 1
+	if (rb_io_fread(s, len, arg->fp) != len) {
+d725 1
+a725 1
+	memcpy(s, arg->ptr, len);
+d728 1
+a728 1
+    s[len] = '\0';
+a747 1
+    char *buf;
+d750 1
+a750 2
+    r_bytes(buf, arg);
+    id = rb_intern(buf);
+d777 1
+a777 5
+    char *buf;
+    long len;
+
+    r_bytes2(buf, len, arg);
+    return rb_str_new(buf, len);
+a868 1
+	    char *buf;
+d870 1
+d872 1
+a872 2
+	    r_bytes(buf, arg);
+	    if (strcmp(buf, "nan") == 0) {
+d875 1
+a875 1
+	    else if (strcmp(buf, "inf") == 0) {
+d878 1
+a878 1
+	    else if (strcmp(buf, "-inf") == 0) {
+d882 1
+a882 1
+		d = strtod(buf, 0);
+d933 3
+a935 7
+	    char *buf;
+	    long len;
+	    int options;
+
+	    r_bytes2(buf, len, arg);
+	    options = r_byte(arg);
+	    v = r_regist(rb_reg_new(buf, len, options), arg);
+d1062 2
+a1063 3
+	    char *buf;
+	    r_bytes(buf, arg);
+	    v = r_regist(rb_path2class(buf), arg);
+d1069 2
+a1070 3
+	    char *buf;
+	    r_bytes(buf, arg);
+	    v = rb_path2class(buf);
+d1072 1
+a1072 1
+		rb_raise(rb_eTypeError, "%s is not a class", buf);
+d1080 2
+a1081 3
+	    char *buf;
+	    r_bytes(buf, arg);
+	    v = rb_path2class(buf);
+d1083 1
+a1083 1
+		rb_raise(rb_eTypeError, "%s is not a module", buf);
+@
+
+
+1.66
+log
+@* marshal.c (r_object): yield loaded objects, not intermediates.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/08/27 08:31:06 $
+d469 6
+a474 2
+	    if (!NIL_P(RHASH(obj)->ifnone)) {
+		w_byte(TYPE_HASH_DEF, arg);
+d477 1
+a477 1
+		w_byte(TYPE_HASH, arg);
+d1054 7
+a1060 4
+           if (!rb_respond_to(klass, s_alloc)) {
+               rb_raise(rb_eTypeError,
+                        "class %s needs to have class method `_alloc'",
+                        rb_class2name(klass));
+d1062 3
+a1064 1
+           v = rb_funcall(klass, s_alloc, 0);
+@
+
+
+1.65
+log
+@* file.c (rb_find_file): $LOAD_PATH must not be empty.
+
+* file.c (rb_find_file_ext): ditto.
+
+* range.c (range_eq): class check should be based on range.class,
+  instead of Range to work with Range.dup.
+
+* range.c (range_eql): ditto.
+
+* class.c (rb_mod_dup): need to preserve metaclass and flags.
+
+* object.c (rb_cstr_to_dbl): had a buffer overrun.
+
+* marshal.c (w_class): integrate singleton check into a funciton
+  to follow DRY principle.
+
+* marshal.c (w_uclass): should check singleton method.
+
+* object.c (rb_obj_dup): dmark and dfree functions must be match
+  for T_DATA type.
+
+* object.c (rb_obj_dup): class of the duped object must be match
+  to the class of the original.
+
+* re.c (rb_reg_quote): do not escape \t, \f, \r, \n, for they are
+  not regular expression metacharacters.
+
+* time.c (time_s_alloc): use time_free instead of free (null check,
+  also serves for type mark).
+
+* time.c (time_s_at): check dfree function too.
+@
+text
+@d5 2
+a6 2
+  $Author: michal $
+  $Date: 2002/08/21 15:47:54 $
+d817 1
+a817 1
+r_object(arg)
+d819 1
+d835 1
+a835 1
+	v = r_object(arg);
+d837 1
+a837 1
+	return v;
+d843 1
+a843 1
+	    v = r_object(arg);
+a853 1
+	    return v;
+d855 1
+d1065 1
+a1065 1
+           rb_funcall(v, s_load_data, 1, r_object(arg));
+d1112 2
+a1113 2
+    if (arg->proc) {
+	rb_funcall(arg->proc, rb_intern("yield"), 1, v);
+d1116 7
+@
+
+
+1.64
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/08/16 02:52:25 $
+d253 20
+a272 2
+w_uclass(obj, klass, arg)
+    VALUE obj, klass;
+d275 12
+a286 1
+    if (rb_obj_class(obj) != klass) {
+d504 2
+a505 15
+	    {
+		VALUE klass = CLASS_OF(obj);
+		char *path;
+
+		while (FL_TEST(klass, FL_SINGLETON) || BUILTIN_TYPE(klass) == T_ICLASS) {
+		    if (RCLASS(klass)->m_tbl->num_entries > 0 ||
+			RCLASS(klass)->iv_tbl->num_entries > 1) {
+			rb_raise(rb_eTypeError, "singleton can't be dumped");
+		    }
+		    klass = RCLASS(klass)->super;
+		}
+		path = rb_class2name(klass);
+		w_unique(path, arg);
+		w_ivar(ROBJECT(obj)->iv_tbl, &c_arg);
+	    }
+a510 13
+               VALUE klass = CLASS_OF(obj);
+               char *path;
+
+               if (FL_TEST(klass, FL_SINGLETON)) {
+                   if (RCLASS(klass)->m_tbl->num_entries > 0 ||
+                       RCLASS(klass)->iv_tbl->num_entries > 1) {
+                       rb_raise(rb_eTypeError, "singleton can't be dumped");
+                   }
+               }
+               path = rb_class2name(klass);
+               w_unique(path, arg);
+           }
+           {
+d513 1
+@
+
+
+1.63
+log
+@* io.c (rb_io_fread): renamed from io_fread and made extern.
+
+* marshal.c (r_bytes0): check if successfully read, use
+  rb_io_fread() instead of fread() to be preemptive.
+  (ruby-bugs-ja:PR#294, 295)
+
+* rubyio.h (rb_io_fread): added.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/11 00:36:38 $
+d823 1
+a823 1
+	v = rb_hash_aref(arg->data, INT2FIX(id));
+d867 1
+a867 1
+	    v = INT2FIX(i);
+d1007 1
+a1007 1
+		rb_struct_aset(v, INT2FIX(i), r_object(arg));
+@
+
+
+1.62
+log
+@* eval.c (rb_eval): set line number from all nodes.
+
+* eval.c (proc_to_s): show source file/line if available.
+
+* marshal.c (r_object): register TYPE_BIGNUM regardless real type.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/05/14 06:22:26 $
+d715 4
+a718 1
+	len = fread(s, 1, len, arg->fp);
+d722 1
+a722 1
+	    len = arg->end - arg->ptr;
+@
+
+
+1.61
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/24 04:54:13 $
+d925 1
+a925 3
+	    if (TYPE(v) == T_BIGNUM) {
+		r_regist(v, arg);
+	    }
+@
+
+
+1.60
+log
+@* io.c (rb_io_mode_flags): both 'r+b' and 'rb+' should be allowed.
+
+* io.c (rb_io_mode_modenum): ditto.
+
+* gc.c (rb_memerror): rename from mem_error, and exported.
+
+* gc.c (Init_GC): pre-allocate NoMemoryError instance.
+
+* object.c (convert_type): error message changed from "failed to
+  convert" to "cannot convert", since it does not try to convert
+  if an object does not respond to the converting method.
+
+* eval.c (block_pass): convert Method to Proc using
+  rb_check_convert_type().
+
+* object.c (rb_check_convert_type): always convert T_DATA
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* marshal.c (w_object): T_DATA process patch from Joel VanderWerf
+  <vjoel@@PATH.Berkeley.EDU>.  This is temporary hack; it remains
+  undocumented, and it will be removed when marshaling is
+  re-designed.
+
+* marshal.c (r_object): ditto.
+
+* numeric.c (num_step): Integer#step is moved to Numeric#step;
+  Fixnum#step is merged into this method.
+
+* numeric.c (int_dotimes): Fixnum#times is merged.
+
+* numeric.c (int_upto): Fixnum#upto is merged.
+
+* numeric.c (int_downto): Fixnum#downto is merged.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/18 08:46:18 $
+d18 1
+a18 4
+
+#if !defined(atof) && !defined(HAVE_STDLIB_H)
+double strtod();
+#endif
+a883 1
+		/* xxx: should not use system's strtod(3) */
+@
+
+
+1.59
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d58 1
+d80 1
+d495 28
+d1043 24
+d1191 3
+@
+
+
+1.58
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/11 08:02:02 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.57
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/28 06:53:29 $
+a20 8
+#endif
+
+#if SIZEOF_INT*2 <= SIZEOF_LONG_LONG || SIZEOF_INT*2 <= SIZEOF_LONG
+typedef unsigned int BDIGIT;
+#define SIZEOF_BDIGITS SIZEOF_INT
+#else
+typedef unsigned short BDIGIT;
+#define SIZEOF_BDIGITS SIZEOF_SHORT
+@
+
+
+1.56
+log
+@* eval.c (rb_mod_include): load modules in argument order.
+
+* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/27 04:52:15 $
+d488 1
+a488 1
+		if (FL_TEST(klass, FL_SINGLETON)) {
+d493 1
+@
+
+
+1.55
+log
+@* ext/dbm/dbm.c (fdbm_select): 1.7 behavior.
+
+* ext/gdbm/gdbm.c (fgdbm_select): ditto.
+
+* ext/sdbm/sdbm.c (fsdbm_select): ditto.
+
+* ext/dbm/dbm.c (fdbm_delete): adopt Hash#delete behavior.
+
+* ext/sdbm/sdbm.c (fsdbm_delete): ditto.
+
+* ext/gdbm/gdbm.c: need not to dup key to the block.
+
+* ext/sdbm/sdbm.c : replace RuntimeError with SDBMError.
+
+* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/26 06:48:58 $
+d839 1
+@
+
+
+1.54
+log
+@* eval.c (rb_eval): call trace_func for if/while conditions.
+
+* marshal.c (r_object): separate r_regist from proc calling.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/19 06:43:58 $
+d904 3
+a906 3
+	    big = RBIGNUM(rb_big_norm((VALUE)big));
+	    if (TYPE(big) == T_BIGNUM) {
+		r_regist((VALUE)big, arg);
+a907 1
+	    v = (VALUE)big;
+a1010 1
+	    r_regist(v, arg);
+d1014 1
+d1053 1
+d1056 1
+a1056 1
+	v = ID2SYM(r_symlink(arg));
+@
+
+
+1.53
+log
+@* file.c (path_check_1): should check directory sticky bits.
+
+* process.c (security): need not to warn twice.
+
+* marshal.c (r_object): complete restoration before calling
+  r_regist().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/23 07:30:39 $
+a766 3
+    if (arg->proc) {
+	rb_funcall(arg->proc, rb_intern("call"), 1, v);
+    }
+d793 1
+a793 1
+    VALUE v;
+a804 1
+      break;
+d830 2
+a831 1
+	return Qnil;
+d834 2
+a835 1
+	return Qtrue;
+d838 1
+a838 1
+	return Qfalse;
+d843 1
+a843 1
+	    return INT2FIX(i);
+d845 1
+d867 1
+a867 1
+	    return r_regist(v, arg);
+d869 1
+d908 1
+a908 1
+	    return (VALUE)big;
+d910 1
+d913 2
+a914 1
+	return r_regist(r_string(arg), arg);
+d924 1
+a924 1
+	    return r_regist(rb_reg_new(buf, len, options), arg);
+d926 1
+d933 1
+a936 1
+	    return r_regist(v, arg);;
+d938 1
+d946 1
+a954 1
+	    return r_regist(v, arg);
+d956 1
+d977 1
+a988 2
+	    r_regist(v, arg);
+	    return v;
+d997 3
+a999 3
+	    if (rb_respond_to(klass, s_load)) {
+		v = rb_funcall(klass, s_load, 1, r_string(arg));
+		return r_regist(v, arg);
+d1001 2
+a1002 2
+	    rb_raise(rb_eTypeError, "class %s needs to have method `_load'",
+		     rb_class2name(klass));
+d1012 1
+a1016 1
+	    return r_regist(v, arg);
+d1024 1
+a1024 1
+	    return r_regist(rb_path2class(buf), arg);
+d1026 1
+a1029 2
+	    VALUE c;
+
+d1032 2
+a1033 2
+	    c = rb_path2class(buf);
+	    if (TYPE(c) != T_CLASS) {
+d1036 1
+a1036 1
+	    return r_regist(c, arg);
+d1038 1
+a1041 2
+	    VALUE m;
+
+d1044 2
+a1045 2
+	    m = rb_path2class(buf);
+	    if (TYPE(m) != T_MODULE) {
+d1048 1
+a1048 1
+	    return r_regist(m, arg);
+d1050 1
+d1053 1
+a1053 1
+	return ID2SYM(r_symreal(arg));
+d1056 1
+a1056 1
+	return ID2SYM(r_symlink(arg));
+d1062 4
+a1065 1
+    return Qnil;		/* not reached */
+@
+
+
+1.52
+log
+@* array.c (Init_Array): remove Array#filter.
+
+* object.c (rb_mod_initialize): should accept zero argument.
+
+* object.c (rb_mod_cmp): should raise ArgumentError if
+  inheritance/inclusion relation between two classes/modules is
+  not defined. [new]
+
+* io.c (rb_io_fsync): new method. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/27 10:00:31 $
+a929 1
+	    r_regist(v, arg);
+d933 1
+a933 1
+	    return v;
+a941 1
+	    r_regist(v, arg);
+d950 1
+a950 1
+	    return v;
+a971 1
+	    r_regist(v, arg);
+d983 1
+a1010 1
+	    r_regist(v, arg);
+d1012 1
+a1012 1
+	    return v;
+@
+
+
+1.51
+log
+@* marshal.c (w_float): must distinguish -0.0 from 0.0.
+
+* gc.c (gc_mark_all): tweak mark order for little bit better scan.
+
+* gc.c (rb_gc_mark): ditto.
+
+* gc.c (rb_gc): ditto.
+
+* enum.c (sort_by_i): slight performance boost.
+
+* gc.c (gc_mark_rest): should call gc_mark_children(), not gc_mark().
+
+* gc.c (rb_gc_mark): may cause infinite looop.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:03 $
+d395 1
+a395 1
+		char sign = RBIGNUM(obj)->sign?'+':'-';
+@
+
+
+1.50
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/22 06:48:14 $
+d196 4
+@
+
+
+1.49
+log
+@* class.c (rb_mod_clone): should not copy class name, since clone
+  should remain anonymous.
+
+* eval.c (rb_call0): self in a block given to define_method now be
+  switched to the receiver of the method.
+
+* eval.c (proc_invoke): added new parameter to allow self
+  switching.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/19 14:32:51 $
+d13 2
+d57 1
+a57 1
+#define MARSHAL_MINOR   6
+d190 11
+a200 1
+    sprintf(buf, "%.16g", d);
+d847 1
+d850 14
+a863 1
+	    v = rb_float_new(strtod(buf, 0));
+@
+
+
+1.48
+log
+@* marshal.c (w_uclass): cloned class is not user
+  class. (ruby-bugs-ja#PR103)
+
+* marshal.c (r_object): Struct subclass couldn't
+  load. (ruby-bugs-ja#PR104)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/10/05 06:30:42 $
+d250 1
+a250 1
+    if (rb_class_real(CLASS_OF(obj)) != klass) {
+a801 1
+	    VALUE tmp;
+d804 2
+a805 3
+	    if (rb_special_const_p(v) ||
+		TYPE(v) == T_OBJECT || TYPE(v) == T_CLASS || TYPE(v) == T_MODULE || 
+		!RTEST(rb_funcall(c, '<', 1, RBASIC(v)->klass))) {
+d808 4
+a811 4
+#if 0
+	    tmp = rb_obj_alloc(c);
+	    if (TYPE(v) != TYPE(tmp)) {
+		rb_raise(rb_eArgError, "dump format error (user class)");
+a812 1
+#endif
+@
+
+
+1.47
+log
+@* marshal.c (w_unique): should not dump anonymous class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/03 07:19:10 $
+d250 1
+a250 1
+    if (CLASS_OF(obj) != klass) {
+d936 1
+a936 1
+	    mem = rb_ivar_get(klass, rb_intern("__member__"));
+@
+
+
+1.46
+log
+@* marshal.c (r_object): better allocation type check for
+  TYPE_UCLASS. usage of allocation framework is disabled for now.
+
+* variable.c (rb_class_path): Module may have subclass.
+
+* string.c (rb_str_update): should maintain original negative
+  offset.
+
+* string.c (rb_str_subpat_set): ditto
+
+* string.c (rb_str_aset): ditto.
+
+* re.c (rb_reg_nth_match): should check negative nth.
+
+* re.c (rb_reg_nth_defined): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/10/01 23:28:57 $
+d216 3
+@
+
+
+1.45
+log
+@* marshal.c (r_object): TYPE_UCLASS check should be inversed.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/08/29 06:28:44 $
+d799 2
+d803 1
+d807 6
+d980 3
+@
+
+
+1.44
+log
+@* parse.y (yylex): ternary ? can be followed by newline.
+
+* eval.c (rb_f_require): should check static linked libraries
+  before raising exception.
+
+* array.c (rb_ary_equal): check identiry equality first.
+
+* string.c (rb_str_equal): ditto.
+
+* struct.c (rb_struct_equal): ditto.
+
+* numeric.c (Init_Numeric): undef Integer::new.
+
+* eval.c (rb_eval): NODE_WHILE should update result for each
+  conditional evaluation.
+
+* eval.c (rb_eval): NODE_UNTIL should return last evaluated value
+  (or value given to break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:02:15 $
+d801 1
+a801 1
+		!RTEST(rb_funcall(c, rb_intern("==="), 1, v))) {
+@
+
+
+1.43
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* file.c (group_member): should check real gid only.
+
+* file.c (eaccess): do not cache euid, since effective euid may be
+  changed via Process.euid=().
+
+* file.c (eaccess): return -1 unless every specified access mode
+  is permitted.
+
+* eval.c (rb_eval): while/until returns the value which is given
+  to break.
+
+* parse.y (value_expr): using while/until/class/def as an
+  expression is now gives a warning, not an error.
+
+* range.c (range_eqq): should compare strings based on magical
+  increment (using String#upto), not dictionary order.
+
+* enum.c (enum_sort_by): new method for Schewartzian transformed
+  stable sort.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/20 04:29:56 $
+d29 1
+a29 1
+#define BITSPERSHORT (sizeof(short)*CHAR_BIT)
+d49 1
+a49 1
+    return (len - 1)*sizeof(BDIGIT)/sizeof(short) + offset;
+d132 2
+a133 5
+    int i;
+
+    for (i=0; i<sizeof(short); i++) {
+	w_byte((x >> (i*8)) & 0xff, arg);
+    }
+d145 1
+a145 1
+    if (!(RSHIFT(x, 32) == 0 || RSHIFT(x, 32) == -1)) {
+d452 1
+a452 1
+		mem = rb_ivar_get(rb_obj_class(obj), rb_intern("__member__"));
+a600 1
+    int i;
+d602 2
+a603 4
+    x = 0;
+    for (i=0; i<sizeof(short); i++) {
+	x |= r_byte(arg)<<(i*8);
+    }
+d616 8
+d629 2
+a630 2
+    int c = (char)r_byte(arg);
+    int i;
+d651 1
+a651 1
+	    x &= ~(0xff << (8*i));
+d800 2
+a801 1
+	    if (rb_special_const_p(v)) {
+d844 1
+a844 1
+	    big->len = (len + 1) * sizeof(short) / sizeof(BDIGIT);
+d853 1
+a853 1
+		for (i=0; i<SIZEOF_BDIGITS; i+=sizeof(short)) {
+@
+
+
+1.42
+log
+@* range.c (range_step): 'iter' here should be an array.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+
+* variable.c (rb_cvar_get): class variable override check added.
+
+* variable.c (rb_cvar_set): ditto
+
+* variable.c (rb_cvar_declare): ditto.
+
+* parse.y (parse_regx): handle backslash escaping of delimiter here.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/08/13 05:17:38 $
+d296 1
+a296 1
+	if (RSHIFT((long)obj, 30) == 0 || RSHIFT((long)obj, 30) == -1) {
+@
+
+
+1.41
+log
+@* bignum.c, marshal.c: Detypo: s/SIZEOF_ING/SIZEOF_INT/.
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/07/31 08:33:17 $
+d296 1
+a296 1
+	if (RSHIFT((long)obj, 32) == 0 || RSHIFT((long)obj, 32) == -1) {
+a449 1
+		char *path = rb_class2name(CLASS_OF(obj));
+d453 1
+a453 1
+		w_unique(path, arg);
+d455 1
+a455 1
+		mem = rb_ivar_get(CLASS_OF(obj), rb_intern("__member__"));
+@
+
+
+1.40
+log
+@* marshal.c (Init_marshal): fix typos.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/07/31 06:24:42 $
+d21 1
+a21 1
+#if SIZEOF_INT*2 <= SIZEOF_LONG_LONG || SIZEOF_ING*2 <= SIZEOF_LONG
+@
+
+
+1.39
+log
+@* marshal.c (Init_marshal): new constant Marshal::MAJOR_VERSION
+  and Marshal::MINOR_VERSION.
+
+* marshal.c (marshal_load): ruby_verbose test should be wrapped by
+  RTEST().
+
+* hash.c (rb_hash_index): should return nil (not the default
+  value) if value is not in the hash.
+
+* numeric.c (num_div): new method added.  alias to '/' which
+  should be preserved even if '/' is redefined (e.g. by
+  mathn). [new]
+
+* bignum.c (rb_cstr2inum): "0 ff".hex should return 0, not 255.
+
+* file.c (rb_file_s_expand_path): fixed using CharNext().
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/03 07:29:00 $
+d1100 2
+a1101 2
+    rb_define_const(rb_mMarshal, "MAJOR_VERSION", INT2FIX(MAJOR_VERSION));
+    rb_define_const(rb_mMarshal, "MINOR_VERSION", INT2FIX(MINOR_VERSION));
+@
+
+
+1.38
+log
+@credit rb_name_error() fix to Nobuyoshi Nakada.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 07:19:38 $
+d1074 1
+a1074 1
+    if (ruby_verbose && minor != MARSHAL_MINOR) {
+d1099 3
+@
+
+
+1.37
+log
+@* variable.c (rb_mod_const_at): use hash table as internal
+  data. [new]
+
+* variable.c (rb_mod_const_of): ditto.
+
+* variable.c (rb_const_list): new function to convert internal
+  data (hash table) to array of strings.
+
+* eval.c (rb_mod_s_constants): data handling scheme has changed.
+
+* eval.c (rb_add_method): should not call rb_secure(), for
+  last_func may not be set.
+
+* io.c (rb_io_ctl): ioctl should accept any integer within C long
+  range.
+
+* marshal.c (r_object): wrong type check for modules.
+
+* marshal.c (w_object): should not dump anonymous classes/modules.
+
+* io.c (rb_open_file): use rb_file_sysopen_internal() if the 3rd
+  argument (permission flags) is given. [new, should be backported?]
+
+* io.c (rb_io_mode_binmode): mode string (e.g. "r+") to flags to
+  open(2).
+
+* eval.c (rb_eval): NODE_REXPAND expand an array of 1 element as
+  the element itself. [new, should be backported?]
+
+* parse.y (ret_args): should treat "*[a]" in rhs expression as
+  "a", not "[a]".
+
+* regex.c (re_compile_pattern): should push option modifier at the
+  right place.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/30 09:12:34 $
+d1099 20
+@
+
+
+1.36
+log
+@* ruby.c (proc_options): unexpected SecurityError happens when -T4.
+
+* regex.c (re_compile_pattern): * \1 .. \9 should be
+  backreferences always.
+
+* regex.c (re_match): backreferences corresponding to
+  unclosed/unmatched parentheses should fail always.
+
+* string.c (rb_str_cat): use rb_str_buf_cat() if possible. [new]
+
+* string.c (rb_str_append): ditto.
+
+* string.c (rb_str_buf_cat): remove unnecessary check (type,
+  taint, modify) to gain performance.
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_new): buffering string function. [new]
+
+* string.c (rb_str_buf_append): ditto.
+
+* string.c (rb_str_buf_cat): ditto.
+
+* time.c (make_time_t): local time adjustment revised.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/11 05:24:54 $
+d55 1
+a55 1
+#define MARSHAL_MINOR   5
+d351 4
+d363 4
+d1002 1
+a1002 1
+	    if (TYPE(m) != T_CLASS) {
+@
+
+
+1.35
+log
+@* bignum.c (bigdivrem): access boundary bug.
+
+* marshal.c (w_object): prohibit dumping out singleton classes.
+
+* object.c (rb_mod_to_s): distinguish singleton classes.
+
+* variable.c (rb_class2name): it's ok to reveal NilClass,
+  TrueClass, FalseClass.
+
+* eval.c (rb_yield_0): preserve and restore ruby_cref as well.
+
+* eval.c (is_defined): core dumped during instance_eval for
+  special constants.
+
+* eval.c (rb_eval): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d109 1
+a109 1
+    else rb_str_cat(arg->str, &c, 1);
+d543 1
+a543 1
+	port = rb_str_new(0, 0);
+@
+
+
+1.34
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/26 08:57:10 $
+d345 3
+d466 2
+a467 1
+		    if (RCLASS(klass)->m_tbl->num_entries > 0) {
+@
+
+
+1.33
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* file.c (rb_file_flock): do not trap EINTR.
+
+* missing/flock.c (flock): returns the value from lockf(2)
+  directly.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/md5/md5.h: replace by independent md5 implementation
+  contributed by L. Peter Deutsch (thanks).
+
+* ext/md5/md5init.c: adopted to Deutsch's md5 implementation.
+
+* pack.c (pack_unpack): string from P/p should be tainted.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+
+* object.c (sym_intern): new method.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/22 08:59:02 $
+d21 1
+a21 1
+#if SIZEOF_INT*2 <= SIZEOF_LONG_LONG || SIZEOF_INT*2 <= SIZEOF___INT64
+d191 1
+a191 1
+    sprintf(buf, "%.12g", d);
+d1045 2
+a1046 2
+	int len;
+
+d1048 2
+a1049 3
+	arg.ptr = rb_str2cstr(port, &len);
+	arg.end = arg.ptr + len;
+	arg.taint = OBJ_TAINTED(port);
+@
+
+
+1.32
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 03:41:41 $
+d379 1
+a379 1
+		    for (i=0; i<SIZEOF_BDIGITS; i+=sizeof(short)) {
+d382 1
+a382 1
+			if (num == 0) break;
+@
+
+
+1.31
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:09 $
+d827 3
+d831 1
+@
+
+
+1.30
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/14 05:51:57 $
+d49 1
+a49 1
+    return len*sizeof(BDIGIT)/sizeof(short) - offset;
+@
+
+
+1.29
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/08 09:19:17 $
+d1059 1
+a1059 1
+    if (minor != MARSHAL_MINOR) {
+@
+
+
+1.28
+log
+@* parse.y (parse_quotedwords): %w should allow parenthesis escape.
+
+* parse.y (parse_qstring): %q should allow terminator escape.
+
+* re.c (rb_reg_options): new method to give an option values.
+
+* parse.y (cond0): disable special treating of integer literal in
+  conditional unless option -e is supplied.  changes current
+  behavior.  experimental.
+
+* parse.y (cond0): give warning for string/integer literals and
+  dot operators in conditionals unless option -e is supplied.
+
+* re.c (rb_reg_equal): all option flags should be same to be equal.
+
+* error.c (Init_Exception): make Interrupt a subclass of
+  SignalException.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/26 08:08:50 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.27
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:31 $
+d65 1
+@
+
+
+1.27.2.1
+log
+@m17n fix
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/26 08:08:50 $
+a684 1
+    return 0;			/* not reached */
+@
+
+
+1.26
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/21 14:31:11 $
+d17 1
+a17 1
+#ifndef atof
+@
+
+
+1.26.2.1
+log
+@fix screw-ups in gc.c and marshal.c.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/05 09:36:31 $
+d17 1
+a17 1
+#if !defined(atof) && !defined(HAVE_STDLIB_H)
+d49 1
+a49 1
+    return (len - 1)*sizeof(BDIGIT)/sizeof(short) + offset;
+d1058 1
+a1058 1
+    if (ruby_verbose && minor != MARSHAL_MINOR) {
+@
+
+
+1.26.2.2
+log
+@* ruby.h: better inline function support.
+
+* configure.in (NO_C_INLINE): check if inline is available for the
+  C compiler.
+
+* marshal.c (r_object): len calculation patch was wrong for
+  machines SIZEOF_BDIGITS == SIZEOF_SHORT.
+
+* gc.c: alloca prototype reorganized for C_ALLOCA machine.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/21 09:43:10 $
+a825 3
+#if SIZEOF_BDIGITS == SIZEOF_SHORT
+	    big->len = len;
+#else
+a826 1
+#endif
+@
+
+
+1.26.2.3
+log
+@* eval.c: remove TMP_PROTECT_END to prevent C_ALLOCA crash.
+
+* eval.c (ev_const_defined): should ignore toplevel cbase (Object).
+
+* eval.c (ev_const_get): ditto.
+
+* ext/curses/curses.c: curses on Mac OS X public beta does not
+  have _maxx etc.
+
+* marshal.c (w_object): should truncate trailing zero short for
+  bignums.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/22 08:59:26 $
+d381 1
+a381 1
+			if (len == 0 && num == 0) break;
+@
+
+
+1.26.2.4
+log
+@* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/26 08:56:04 $
+d190 1
+a190 1
+    sprintf(buf, "%.16g", d);
+@
+
+
+1.26.2.5
+log
+@* marshal.c (r_object): wrong type check for modules.
+
+* marshal.c (w_object): should not dump anonymous classes/modules.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/04/24 06:44:13 $
+d55 1
+a55 1
+#define MARSHAL_MINOR   6
+a354 8
+		if (RSTRING(path)->ptr[0] == '#') {
+		    rb_raise(rb_eArgError, "can't dump anonymous class %s",
+			     RSTRING(path)->ptr);
+		}
+		if (RSTRING(path)->ptr[0] == '#') {
+		    rb_raise(rb_eArgError, "can't dump anonymous module %s",
+			     RSTRING(path)->ptr);
+		}
+d989 1
+a989 1
+	    if (TYPE(m) != T_MODULE) {
+@
+
+
+1.26.2.6
+log
+@* marshal.c (marshal_load): ruby_verbose test should be wrapped by
+  RTEST().
+
+* hash.c (rb_hash_index): should return nil (not the default
+  value) if value is not in the hash.
+
+* bignum.c (rb_cstr2inum): "0 ff".hex should return 0, not 255.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/06/05 03:53:46 $
+d1070 1
+a1070 1
+    if (RTEST(ruby_verbose) && minor != MARSHAL_MINOR) {
+@
+
+
+1.26.2.7
+log
+@* eval.c (is_defined): should not dump core for "defined?(())".
+
+* eval.c (umethod_bind): recv can be an instance of descender of
+  oklass if oklass is a Module.
+
+* hash.c (rb_hash_equal): check identiry equality first.
+
+* variable.c (mod_av_set): detect constant overriding for built-in
+  classes/modules.
+
+* marshal.c (w_object): should retrieve __member__ data from
+  non-singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/07/31 06:20:10 $
+d147 1
+a147 1
+    if (!(RSHIFT(x, 31) == 0 || RSHIFT(x, 31) == -1)) {
+d446 2
+a447 1
+		VALUE c, mem;
+d450 1
+a450 2
+		c = CLASS_OF(obj);
+		w_unique(rb_class2name(c), arg);
+d452 1
+a452 3
+		if (FL_TEST(c, FL_SINGLETON))
+		    c = RCLASS(c)->super;
+		mem = rb_ivar_get(c, rb_intern("__member__"));
+@
+
+
+1.26.2.8
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* string.c (rb_str_reverse): should return an instance of
+  reciever's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/23 06:00:30 $
+a346 4
+		if (RSTRING(path)->ptr[0] == '#') {
+		    rb_raise(rb_eArgError, "can't dump anonymous class %s",
+			     RSTRING(path)->ptr);
+		}
+d355 4
+@
+
+
+1.26.2.9
+log
+@* marshal.c: backport from 1.7 marshal.c
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/02 04:25:52 $
+d29 1
+a29 1
+#define BITSPERSHORT (2*CHAR_BIT)
+d49 1
+a49 1
+    return (len - 1)*sizeof(BDIGIT)/2 + offset;
+d131 5
+a135 2
+    w_byte((x >> 0) & 0xff, arg);
+    w_byte((x >> 8) & 0xff, arg);
+a217 3
+    if (s[0] == '#') {
+	rb_raise(rb_eArgError, "can't dump anonymous class %s", s);
+    }
+d295 1
+a295 1
+	if (RSHIFT((long)obj, 31) == 0 || RSHIFT((long)obj, 31) == -1) {
+a343 3
+	    if (FL_TEST(obj, FL_SINGLETON)) {
+		rb_raise(rb_eTypeError, "singleton class can't be dumped");
+	    }
+d386 1
+a386 1
+		    for (i=0; i<SIZEOF_BDIGITS; i+=SIZEOF_SHORT) {
+d472 1
+a472 2
+		    if (RCLASS(klass)->m_tbl->num_entries > 0 ||
+			RCLASS(klass)->iv_tbl->num_entries > 1) {
+d602 1
+d604 4
+a607 2
+    x =  r_byte(arg);
+    x |= r_byte(arg)<<8;
+a619 8
+#undef SIGN_EXTEND_CHAR
+#if __STDC__
+# define SIGN_EXTEND_CHAR(c) ((signed char)(c))
+#else  /* not __STDC__ */
+/* As in Harbison and Steele.  */
+# define SIGN_EXTEND_CHAR(c) ((((unsigned char)(c)) ^ 128) - 128)
+#endif
+
+d625 2
+a626 2
+    int c = SIGN_EXTEND_CHAR(r_byte(arg));
+    long i;
+d647 1
+a647 1
+	    x &= ~((long)0xff << (8*i));
+a794 2
+	    VALUE tmp;
+
+d796 1
+a796 8
+	    if (rb_special_const_p(v) ||
+		TYPE(v) == T_OBJECT || TYPE(v) == T_CLASS || TYPE(v) == T_MODULE || 
+		!RTEST(rb_funcall(c, '<', 1, RBASIC(v)->klass))) {
+		rb_raise(rb_eArgError, "dump format error (user class)");
+	    }
+#if 0
+	    tmp = rb_obj_alloc(c);
+	    if (TYPE(v) != TYPE(tmp)) {
+a798 1
+#endif
+d839 1
+a839 1
+	    big->len = (len + 1) * 2 / sizeof(BDIGIT);
+d848 1
+a848 1
+		for (i=0; i<SIZEOF_BDIGITS; i+=2) {
+a965 3
+	    if (TYPE(v) != T_OBJECT) {
+		rb_raise(rb_eArgError, "dump format error");
+	    }
+@
+
+
+1.26.2.10
+log
+@* marshal.c (r_object): complete restoration before calling
+  r_regist().
+
+* parse.y (yylex): operators in the "op" rule should make
+  lex_state EXPR_ARG on EXPR_FNAME and EXPR_DOT.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/10/05 06:27:46 $
+d905 1
+d909 1
+a909 1
+	    return r_regist(v, arg);;
+d918 1
+d927 1
+a927 1
+	    return r_regist(v, arg);
+d949 1
+a960 1
+	    r_regist(v, arg);
+d988 1
+d990 1
+a990 1
+	    return r_regist(v, arg);
+@
+
+
+1.26.2.11
+log
+@* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d753 3
+d782 1
+a782 1
+    VALUE v = Qnil;
+d794 1
+d804 1
+d807 3
+a809 2
+	    if (rb_special_const_p(v) || TYPE(v) == T_OBJECT || TYPE(v) == T_CLASS) {
+	      format_error:
+d812 4
+a815 4
+	    if (TYPE(v) == T_MODULE || !RTEST(rb_funcall(c, '<', 1, RBASIC(v)->klass))) {
+		VALUE tmp = rb_obj_alloc(c);
+
+		if (TYPE(v) != TYPE(tmp)) goto format_error;
+d817 1
+d823 1
+a823 2
+	v = Qnil;
+	break;
+d826 1
+a826 2
+	v = Qtrue;
+	break;
+d829 1
+a829 1
+	v = Qfalse;
+d834 1
+a834 1
+	    v = INT2FIX(i);
+a835 1
+	break;
+a839 1
+	    double d, t = 0.0;
+d842 2
+a843 15
+	    if (strcmp(buf, "nan") == 0) {
+		d = t / t;
+	    }
+	    else if (strcmp(buf, "inf") == 0) {
+		d = 1.0 / t;
+	    }
+	    else if (strcmp(buf, "-inf") == 0) {
+		d = -1.0 / t;
+	    }
+	    else {
+		/* xxx: should not use system's strtod(3) */
+		d = strtod(buf, 0);
+	    }
+	    v = rb_float_new(d);
+	    r_regist(v, arg);
+a844 1
+	break;
+d879 3
+a881 3
+	    v = rb_big_norm((VALUE)big);
+	    if (TYPE(v) == T_BIGNUM) {
+		r_regist(v, arg);
+d883 1
+a884 1
+	break;
+d887 1
+a887 2
+	v = r_regist(r_string(arg), arg);
+	break;
+d897 1
+a897 1
+	    v = r_regist(rb_reg_new(buf, len, options), arg);
+a898 1
+	break;
+a904 1
+	    r_regist(v, arg);
+d908 1
+a909 1
+	break;
+a916 1
+	    r_regist(v, arg);
+d925 1
+a926 1
+	break;
+a946 1
+	    r_regist(v, arg);
+d958 2
+d968 3
+a970 3
+	    if (!rb_respond_to(klass, s_load)) {
+		rb_raise(rb_eTypeError, "class %s needs to have method `_load'",
+			 rb_class2name(klass));
+d972 2
+a973 2
+	    v = rb_funcall(klass, s_load, 1, r_string(arg));
+	    r_regist(v, arg);
+a985 1
+	    r_regist(v, arg);
+d987 1
+d995 1
+a995 1
+	    v = r_regist(rb_path2class(buf), arg);
+a996 1
+	break;
+d1000 2
+d1004 2
+a1005 2
+	    v = rb_path2class(buf);
+	    if (TYPE(v) != T_CLASS) {
+d1008 1
+a1008 1
+	    r_regist(v, arg);
+a1009 1
+	break;
+d1013 2
+d1017 2
+a1018 2
+	    v = rb_path2class(buf);
+	    if (TYPE(v) != T_MODULE) {
+d1021 1
+a1021 1
+	    r_regist(v, arg);
+a1022 1
+	break;
+d1025 1
+a1025 2
+	v = ID2SYM(r_symreal(arg));
+	break;
+d1034 1
+a1034 4
+    if (arg->proc) {
+	rb_funcall(arg->proc, rb_intern("yield"), 1, v);
+    }
+    return v;
+@
+
+
+1.26.2.12
+log
+@* st.c (st_init_table_with_size): num_bins should be prime numbers
+  (no decrement).
+
+* st.c (rehash): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/27 04:50:30 $
+a824 1
+	break;
+@
+
+
+1.26.2.13
+log
+@* eval.c (cvar_cbase): utility function to find innermost non
+  singleton cbase.
+
+* eval.c (is_defined): adopt new cvar behavior.
+
+* eval.c (rb_eval): ditto.
+
+* eval.c (assign): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/28 06:52:47 $
+d1050 1
+a1050 1
+	rb_funcall(arg->proc, rb_intern("call"), 1, v);
+@
+
+
+1.26.2.14
+log
+@* class.c (rb_define_class): should handle autoload.
+
+* class.c (rb_define_module): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/08 06:59:53 $
+d474 1
+a474 1
+		while (FL_TEST(klass, FL_SINGLETON) || BUILTIN_TYPE(klass) == T_ICLASS) {
+a478 1
+		    klass = RCLASS(klass)->super;
+@
+
+
+1.26.2.15
+log
+@* file.c (rb_find_file): load must be done from an abolute path if
+  $SAFE >= 4.
+
+* re.c (rb_reg_s_quote): quote whitespaces for /x cases.
+
+* eval.c (rb_thread_cleanup): should not terminate main_thread by
+  Fatal error.
+
+* regex.c (is_in_list): need to not exclude NUL and NEWLINE.
+
+* re.c (rb_reg_expr_str): wrong backslash escapement.
+
+* re.c (rb_reg_expr_str): do not escape embedded space
+  characters.
+
+* eval.c (rb_thread_cleanup): current thread may be THREAD_STOPPED,
+  for example when terminated from signal handler.
+
+* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+
+* pack.c (pack_unpack): should treat 'U' in character unit, not in
+  byte unit.
+
+* marshal.c (w_uclass): should check based on rb_obj_class(), not
+  CLASS_OF().
+
+* io.c (io_write): check error if written data is less than
+  specified size to detect EPIPE.
+
+* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/15 08:55:58 $
+d249 1
+a249 1
+    if (rb_obj_class(obj) != klass) {
+@
+
+
+1.26.2.16
+log
+@* eval.c (rb_eval): local_vars[-1] should protect body, not a
+  local_tbl.
+
+* marshal.c (w_object): check if klass is really a class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/01 09:37:58 $
+a997 3
+	    if (TYPE(klass) != T_CLASS) {
+		rb_raise(rb_eArgError, "dump format error");
+	    }
+@
+
+
+1.25
+log
+@001121
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/20 07:31:43 $
+d55 1
+a55 1
+#define MARSHAL_MINOR   4
+d146 7
+d157 8
+d615 1
+a615 1
+    int c = r_byte(arg);
+d620 3
+d630 3
+@
+
+
+1.24
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/02 09:04:54 $
+d1032 1
+a1032 1
+    if (major != MARSHAL_MAJOR) {
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/31 08:37:39 $
+d353 1
+a353 1
+		int len = RBIGNUM(obj)->len;
+d357 1
+a357 1
+		w_long(SHORTLEN(len), arg);
+d393 1
+a393 1
+		int len = RARRAY(obj)->len;
+d422 1
+a422 1
+		int len = RSTRUCT(obj)->len;
+d425 1
+a425 1
+		int i;
+d600 1
+a600 1
+    int c = (char)r_byte(arg);
+d605 1
+a605 1
+	if (c > sizeof(long)) long_toobig((int)c);
+d613 1
+a613 1
+	if (c > sizeof(long)) long_toobig((int)c);
+d630 1
+a630 1
+    int r_bytes_len;			\
+d637 1
+a637 1
+    int len;
+d658 1
+a658 1
+    int num = r_long(arg);
+d702 1
+a702 1
+    int len;
+d726 1
+a726 1
+    int len;
+d783 1
+a783 1
+	    int i = r_long(arg);
+d798 1
+a798 1
+	    int len;
+d838 1
+a838 1
+	    int len;
+d848 1
+a848 1
+	    volatile int len = r_long(arg); /* gcc 2.7.2.3 -O2 bug?? */
+d861 1
+a861 1
+	    int len = r_long(arg);
+d879 2
+a880 2
+	    volatile int i;	/* gcc 2.7.2.3 -O2 bug?? */
+	    int len;
+d1004 1
+a1004 1
+    int major;
+d1008 1
+d1031 11
+a1041 2
+    if (major == MARSHAL_MAJOR) {
+	volatile VALUE hash;	/* protect from GC */
+d1043 5
+a1047 12
+	if (r_byte(&arg) != MARSHAL_MINOR) {
+	    rb_warn("Old marshal file format (can be read)");
+	}
+	arg.symbol = st_init_numtable();
+	arg.data   = hash = rb_hash_new();
+	if (NIL_P(proc)) arg.proc = 0;
+	else             arg.proc = proc;
+	v = rb_ensure(load, (VALUE)&arg, load_ensure, (VALUE)&arg);
+    }
+    else {
+	rb_raise(rb_eTypeError, "old marshal file format (can't read)");
+    }
+@
+
+
+1.22
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/09/19 07:54:21 $
+d21 1
+a21 4
+#if SIZEOF_LONG*2 <= SIZEOF_LONG_LONG
+typedef unsigned long BDIGIT;
+#define SIZEOF_BDIGITS SIZEOF_LONG
+#elif SIZEOF_INT*2 <= SIZEOF_LONG_LONG
+@
+
+
+1.21
+log
+@000919
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/21 08:45:31 $
+d21 36
+d357 1
+a357 1
+		unsigned short *d = RBIGNUM(obj)->digits;
+d360 1
+a360 1
+		w_long(len, arg);
+d362 10
+d373 1
+d802 1
+a802 1
+	    unsigned short *digits;
+d807 17
+a823 3
+	    big->len = len = r_long(arg);
+	    big->digits = digits = ALLOC_N(unsigned short, len);
+	    while (len--) {
+d825 2
+@
+
+
+1.20
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/23 07:01:24 $
+a998 2
+
+    rb_provide("marshal.so");	/* for backward compatibility */
+@
+
+
+1.19
+log
+@2000-06-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/22 08:29:45 $
+d58 1
+d274 2
+d438 3
+d485 1
+d504 1
+a668 1
+    OBJ_TAINT(v);
+d673 1
+d955 1
+d963 1
+@
+
+
+1.18
+log
+@2000-06-22
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/14 05:30:22 $
+d988 1
+a988 1
+    rb_define_module_function(rb_mMarshal, "restore", marshal_load, 1);
+@
+
+
+1.17
+log
+@2000-06-14
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:02 $
+d400 3
+a402 1
+		    rb_raise(rb_eTypeError, "singleton can't be dumped");
+@
+
+
+1.16
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/12 09:07:41 $
+d387 1
+a387 1
+		    w_symbol(FIX2LONG(RARRAY(mem)->ptr[i]), arg);
+d829 1
+a829 1
+		if (RARRAY(mem)->ptr[i] != INT2FIX(slot)) {
+d833 1
+a833 1
+			     rb_id2name(FIX2INT(RARRAY(mem)->ptr[i])));
+@
+
+
+1.15
+log
+@2000-05-12
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:23 $
+d151 1
+a151 1
+    int num;
+d261 1
+a261 1
+	int num;
+d384 1
+a384 1
+		    rb_raise(rb_eTypeError, "non-initialized struct");
+d816 1
+a816 1
+		rb_raise(rb_eTypeError, "non-initialized struct");
+@
+
+
+1.14
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/12 05:06:21 $
+a210 2
+    struct dump_call_arg c_arg;
+
+@
+
+
+1.13
+log
+@mkmf
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/04/10 05:44:13 $
+d9 3
+a11 1
+************************************************/
+@
+
+
+1.12
+log
+@2000-04-10
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/07 08:37:38 $
+d449 1
+a449 1
+	limit = NUM2INT(a2);
+@
+
+
+1.11
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:06 $
+d257 1
+a257 1
+	w_symbol(obj, arg);
+d600 14
+a613 1
+r_symbol(arg)
+a618 8
+    if (r_byte(arg) == TYPE_SYMLINK) {
+	int num = r_long(arg);
+
+	if (st_lookup(arg->symbol, num, &id)) {
+	    return id;
+	}
+	rb_raise(rb_eTypeError, "bad symbol");
+    }
+d626 10
+d899 1
+d901 4
+a904 1
+	return ID2SYM(r_symbol(arg));
+@
+
+
+1.10
+log
+@2000-02-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:37:43 $
+d20 1
+a20 1
+#define MARSHAL_MINOR   3
+d256 4
+d884 2
+@
+
+
+1.9
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:05 $
+d230 1
+a230 1
+	rb_raise(rb_eRuntimeError, "exceed depth limit");
+@
+
+
+1.8
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/02 06:58:48 $
+d227 1
+a227 1
+    st_table *ivtbl = 0;;
+d400 1
+a400 1
+		w_ivar(ROBJECT(obj)->iv_tbl);
+@
+
+
+1.7
+log
+@19991292
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/01 09:24:13 $
+d20 1
+a20 1
+#define MARSHAL_MINOR   2
+d45 1
+d205 16
+d227 1
+d283 4
+d294 1
+a294 1
+	    return;
+d302 1
+a302 1
+	    return;
+d307 1
+a307 1
+	    return;
+d323 1
+a323 1
+	    return;
+d329 1
+a329 1
+	    return;
+d336 1
+a336 1
+	    return;
+d400 1
+a400 7
+		if (ROBJECT(obj)->iv_tbl) {
+		    w_long(ROBJECT(obj)->iv_tbl->num_entries, arg);
+		    st_foreach(ROBJECT(obj)->iv_tbl, obj_each, &c_arg);
+		}
+		else {
+		    w_long(0, arg);
+		}
+d410 3
+d493 2
+d648 17
+d683 5
+a838 1
+	    int len;
+a840 1
+	    len = r_long(arg);
+d843 1
+a843 7
+	    if (len > 0) {
+		while (len--) {
+		    ID id = r_symbol(arg);
+		    VALUE val = r_object(arg);
+		    rb_ivar_set(v, id, val);
+		}
+	    }
+d925 1
+a925 1
+	arg.ptr = str2cstr(port, &len);
+@
+
+
+1.6
+log
+@19991201
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/27 04:20:00 $
+d738 1
+a738 1
+	    if (type = TYPE_HASH_DEF) {
+@
+
+
+1.5
+log
+@register class/module
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/20 07:10:22 $
+d20 1
+a20 1
+#define MARSHAL_MINOR   1
+d36 1
+d38 3
+a40 1
+#define TYPE_MODULE	'M'
+d266 8
+a274 1
+	  case T_CLASS:
+d333 6
+a338 1
+	    w_byte(TYPE_HASH, arg);
+d341 3
+d727 1
+d738 3
+d813 20
+d835 2
+d839 5
+a843 1
+	    return r_regist(rb_path2class(buf), arg);
+@
+
+
+1.4
+log
+@marshal load GC protect
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:53 $
+d620 3
+a622 2
+	if (v = rb_hash_aref(arg->data, INT2FIX(id))) {
+	    return v;
+d624 1
+a624 1
+	rb_raise(rb_eArgError, "dump format error (unlinked)");
+d795 1
+a795 1
+	    return rb_path2class(buf);
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:06 $
+d452 1
+a452 1
+    st_table *data;
+d605 1
+a605 1
+    st_insert(arg->data, arg->data->num_entries, v);
+d615 1
+d619 2
+a620 1
+	if (st_lookup(arg->data, r_long(arg), &v)) {
+d624 1
+a624 1
+	break;
+a815 1
+    st_free_table(arg->data);
+d850 2
+d856 1
+a856 1
+	arg.data   = st_init_numtable();
+@
+
+
+1.3.2.1
+log
+@marshal load GC bug
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/24 08:21:53 $
+d452 1
+a452 1
+    VALUE data;
+d605 1
+a605 1
+    rb_hash_aset(arg->data, INT2FIX(RHASH(arg->data)->tbl->num_entries), v);
+a614 1
+    long id;
+d618 1
+a618 2
+	id = r_long(arg);
+	if (v = rb_hash_aref(arg->data, INT2FIX(id))) {
+d622 1
+a622 1
+      break;
+d814 1
+a848 2
+	volatile VALUE hash;	/* protect from GC */
+
+d853 1
+a853 1
+	arg.data   = hash = rb_hash_new();
+@
+
+
+1.3.2.2
+log
+@register class/module
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/20 09:20:08 $
+d620 2
+a621 3
+	v = rb_hash_aref(arg->data, INT2FIX(id));
+	if (NIL_P(v)) {
+	    rb_raise(rb_eArgError, "dump format error (unlinked)");
+d623 1
+a623 1
+	return v;
+d794 1
+a794 1
+	    return r_regist(rb_path2class(buf), arg);
+@
+
+
+1.3.2.3
+log
+@2000-02-08
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/01 03:12:06 $
+d20 1
+a20 1
+#define MARSHAL_MINOR   3
+a35 1
+#define TYPE_HASH_DEF	'}'
+d37 1
+a37 3
+#define TYPE_MODULE_OLD	'M'
+#define TYPE_CLASS	'c'
+#define TYPE_MODULE	'm'
+a41 1
+#define TYPE_IVAR	'I'
+a200 16
+w_ivar(tbl, arg)
+    st_table *tbl;
+    struct dump_call_arg *arg;
+{
+    struct dump_call_arg c_arg;
+
+    if (tbl) {
+	w_long(tbl->num_entries, arg->arg);
+	st_foreach(tbl, obj_each, arg);
+    }
+    else {
+	w_long(0, arg->arg);
+    }
+}
+
+static void
+a206 1
+    st_table *ivtbl = 0;
+d209 1
+a209 1
+	rb_raise(rb_eArgError, "exceed depth limit");
+a261 4
+	if (ivtbl = rb_generic_ivar_table(obj)) {
+	    w_byte(TYPE_IVAR, arg);
+	}
+
+d263 1
+a264 8
+	    w_byte(TYPE_CLASS, arg);
+	    {
+		VALUE path = rb_class_path(obj);
+		w_bytes(RSTRING(path)->ptr, RSTRING(path)->len, arg);
+	    }
+	    break;
+
+	  case T_MODULE:
+d270 1
+a270 1
+	    break;
+d275 1
+a275 1
+	    break;
+d291 1
+a291 1
+	    break;
+d297 1
+a297 1
+	    break;
+d304 1
+a304 1
+	    break;
+d323 1
+a323 6
+	    if (!NIL_P(RHASH(obj)->ifnone)) {
+		w_byte(TYPE_HASH_DEF, arg);
+	    }
+	    else {
+		w_byte(TYPE_HASH, arg);
+	    }
+a325 3
+	    if (!NIL_P(RHASH(obj)->ifnone)) {
+		w_object(RHASH(obj)->ifnone, arg, limit);
+	    }
+d360 7
+a366 1
+		w_ivar(ROBJECT(obj)->iv_tbl, &c_arg);
+a375 3
+    if (ivtbl) {
+	w_ivar(ivtbl, &c_arg);
+    }
+a455 2
+static VALUE r_object _((struct load_arg *arg));
+
+a608 17
+static void
+r_ivar(obj, arg)
+    VALUE obj;
+    struct load_arg *arg;
+{
+    int len;
+
+    len = r_long(arg);
+    if (len > 0) {
+	while (len--) {
+	    ID id = r_symbol(arg);
+	    VALUE val = r_object(arg);
+	    rb_ivar_set(obj, id, val);
+	}
+    }
+}
+
+a626 5
+      case TYPE_IVAR:
+	v = r_object(arg);
+	r_ivar(v, arg);
+	return v;
+
+a708 1
+      case TYPE_HASH_DEF:
+a718 3
+	    if (type == TYPE_HASH_DEF) {
+		RHASH(v)->ifnone = r_object(arg);
+	    }
+d774 1
+d777 1
+d780 7
+a786 1
+	    r_ivar(v, arg);
+d791 1
+a791 1
+      case TYPE_MODULE_OLD:
+a797 26
+      case TYPE_CLASS:
+        {
+	    VALUE c;
+
+	    char *buf;
+	    r_bytes(buf, arg);
+	    c = rb_path2class(buf);
+	    if (TYPE(c) != T_CLASS) {
+		rb_raise(rb_eTypeError, "%s is not a class", buf);
+	    }
+	    return r_regist(c, arg);
+	}
+
+      case TYPE_MODULE:
+        {
+	    VALUE m;
+
+	    char *buf;
+	    r_bytes(buf, arg);
+	    m = rb_path2class(buf);
+	    if (TYPE(m) != T_CLASS) {
+		rb_raise(rb_eTypeError, "%s is not a module", buf);
+	    }
+	    return r_regist(m, arg);
+	}
+
+d842 1
+a842 1
+	arg.ptr = rb_str2cstr(port, &len);
+@
+
+
+1.3.2.4
+log
+@000414
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/08 08:53:54 $
+d445 1
+a445 1
+	if (!NIL_P(a2)) limit = NUM2INT(a2);
+@
+
+
+1.3.2.5
+log
+@2000-06-05
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/04/14 14:35:44 $
+d149 1
+a149 1
+    long num;
+d257 1
+a257 1
+	long num;
+@
+
+
+1.3.2.6
+log
+@2000-06-23
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/05 09:00:57 $
+d961 1
+a961 1
+    rb_define_module_function(rb_mMarshal, "restore", marshal_load, -1);
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/24 04:23:56 $
+d695 2
+a696 1
+	    volatile int len = r_long(arg);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+a6 3
+  $Author$
+  $Revision$
+  $Date$
+d12 1
+a12 1
+#include "io.h"
+d15 4
+d20 1
+a20 1
+#define MARSHAL_MINOR   0
+a43 7
+extern VALUE cString;
+extern VALUE cRegexp;
+extern VALUE cArray;
+extern VALUE cHash;
+
+VALUE rb_path2class();
+
+d68 1
+a68 1
+    else str_cat(arg->str, (UCHAR*)&c, 1);
+d82 1
+a82 1
+	str_cat(arg->str, s, n);
+d93 1
+a93 1
+    for (i=0; i<sizeof(USHORT); i++) {
+d154 1
+a154 1
+	st_insert(arg->symbol, id, arg->symbol->num_entries);
+a166 1
+extern VALUE cIO, cBignum, cStruct;
+d190 2
+a191 2
+w_uclass(obj, class, arg)
+    VALUE obj, class;
+d194 1
+a194 1
+    if (CLASS_OF(obj) != class) {
+a205 1
+    int n;
+d209 1
+a209 1
+	Fail("exceed depth limit");
+a210 4
+    limit--;
+    c_arg.limit = limit;
+    c_arg.arg = arg;
+
+d214 1
+a214 1
+    else if (obj == TRUE) {
+d217 1
+a217 1
+    else if (obj == FALSE) {
+d225 1
+a225 1
+	if (RSHIFT(obj, 32) == 0 || RSHIFT(obj, 32) == -1) {
+d227 1
+a227 1
+	    w_long(FIX2INT(obj), arg);
+d230 2
+a231 2
+	    obj = int2big(FIX2INT(obj));
+	    goto write_bignum;
+d238 4
+d248 1
+a248 1
+	st_insert(arg->data, obj, arg->data->num_entries);
+d254 1
+a254 1
+	    v = rb_funcall(obj, s_dump, 1, limit);
+d256 1
+a256 1
+		TypeError("_dump_to must return String");
+a277 1
+	  write_bignum:
+d282 1
+a282 1
+		USHORT *d = RBIGNUM(obj)->digits;
+d294 1
+a294 1
+	    w_uclass(obj, cString, arg);
+d300 1
+a300 1
+	    w_uclass(obj, cRegexp, arg);
+d303 1
+a303 1
+	    w_byte(FL_TEST(obj, FL_USER1), arg);
+d307 1
+a307 1
+	    w_uclass(obj, cArray, arg);
+d322 1
+a322 1
+	    w_uclass(obj, cHash, arg);
+d340 1
+a340 1
+		    Fatal("non-initialized struct");
+d343 1
+a343 1
+		    w_symbol(FIX2INT(RARRAY(mem)->ptr[i]), arg);
+d352 1
+a352 1
+		VALUE class = CLASS_OF(obj);
+d355 2
+a356 2
+		if (FL_TEST(class, FL_SINGLETON)) {
+		    TypeError("singleton can't be dumped");
+d358 1
+a358 1
+		path = rb_class2name(class);
+d371 2
+a372 1
+	    TypeError("can't dump %s", rb_class2name(CLASS_OF(obj)));
+d383 1
+d392 1
+a401 1
+    extern VALUE cIO;
+d416 1
+a416 1
+	if (obj_is_kind_of(port, cIO)) {
+d419 1
+a419 1
+	    io_binmode(port);
+d421 1
+a421 1
+	    io_writable(fptr);
+d425 1
+a425 1
+	    TypeError("instance of IO needed");
+d430 1
+a430 1
+	port = str_new(0, 0);
+d443 1
+a443 1
+    rb_ensure(dump, &c_arg, dump_ensure, &arg);
+d450 1
+a450 1
+    UCHAR *ptr, *end;
+d460 13
+a472 3
+    if (arg->fp) return getc(arg->fp);
+    if (arg->ptr < arg->end) return *arg->ptr++;
+    return EOF;
+d475 1
+a475 1
+static USHORT
+d479 1
+a479 1
+    USHORT x;
+d483 1
+a483 1
+    for (i=0; i<sizeof(USHORT); i++) {
+d494 2
+a495 2
+    TypeError("long too big for this architecture (size %d, given %d)",
+	      sizeof(long), size);
+a501 1
+    int c = r_byte(arg), i;
+d503 2
+d514 1
+a514 1
+    else if (c < 0) {
+d526 10
+a535 2
+#define r_bytes(s, arg) \
+  (s = (char*)r_long(arg), r_bytes0(&s,ALLOCA_N(char,(long)s),(long)s,arg))
+d537 3
+a539 3
+static int
+r_bytes0(sp, s, len, arg)
+    char **sp, *s;
+d553 1
+a553 5
+
+    (s)[len] = '\0';
+    *sp = s;
+
+    return len;
+a561 1
+    char type;
+d569 1
+a569 1
+	TypeError("bad symbol");
+d590 1
+a590 1
+    int len = r_bytes(buf, arg);
+d592 2
+a593 1
+    return str_taint(str_new(buf, len));
+d601 1
+a616 4
+      case EOF:
+	eof_error();
+	return Qnil;
+
+d621 1
+a621 1
+	ArgError("dump format error (unlinked)");
+d629 1
+a629 1
+		ArgError("dump format error (user class)");
+d631 1
+a631 1
+	    RBASIC(v)->class = c;
+d639 1
+a639 1
+	return TRUE;
+d642 1
+a642 1
+	return FALSE;
+a651 3
+#ifndef atof
+	    double atof();
+#endif
+d655 1
+a655 1
+	    v = float_new(atof(buf));
+d662 1
+a662 1
+	    USHORT *digits;
+d665 1
+a665 1
+	    OBJSETUP(big, cBignum, T_BIGNUM);
+d668 1
+a668 1
+	    big->digits = digits = ALLOC_N(USHORT, len);
+d672 1
+a672 1
+	    big = RBIGNUM(big_norm((VALUE)big));
+d674 1
+a674 1
+		r_regist(big, arg);
+d685 6
+a690 3
+	    int len = r_bytes(buf, arg);
+	    int ci = r_byte(arg);
+	    return r_regist(reg_new(buf, len, ci), arg);
+d696 1
+a696 1
+	    v = ary_new2(len);
+d699 1
+a699 1
+		ary_push(v, r_object(arg));
+d708 1
+a708 1
+	    v = hash_new();
+d713 1
+a713 1
+		hash_aset(v, key, value);
+d720 1
+a720 1
+	    VALUE class, mem, values;
+d725 2
+a726 2
+	    class = rb_path2class(r_unique(arg));
+	    mem = rb_ivar_get(class, rb_intern("__member__"));
+d728 1
+a728 1
+		Fatal("non-initialized struct");
+d732 1
+a732 1
+	    values = ary_new2(len);
+d734 1
+a734 1
+		ary_push(values, Qnil);
+d736 1
+a736 1
+	    v = struct_alloc(class, values);
+d742 4
+a745 4
+		    TypeError("struct %s not compatible (:%s for :%s)",
+			      rb_class2name(class),
+			      rb_id2name(slot),
+			      rb_id2name(FIX2INT(RARRAY(mem)->ptr[i])));
+d747 1
+a747 1
+		struct_aset(v, INT2FIX(i), r_object(arg));
+d755 1
+a755 2
+	    VALUE class;
+	    int len;
+d757 3
+a759 3
+	    class = rb_path2class(r_unique(arg));
+	    if (rb_respond_to(class, s_load)) {
+		v = rb_funcall(class, s_load, 1, r_string(arg));
+d762 2
+a763 2
+	    TypeError("class %s needs to have method `_load_from'",
+		      rb_class2name(class));
+d769 1
+a769 1
+	    VALUE class;
+d772 1
+a772 1
+	    class = rb_path2class(r_unique(arg));
+d774 1
+a774 1
+	    v = obj_alloc(class);
+d795 1
+a795 1
+	ArgError("dump format error(0x%x)", type);
+d798 1
+d814 1
+a822 1
+    FILE *fp;
+d829 9
+a837 1
+    if (TYPE(port) == T_STRING) {
+d839 2
+a840 2
+	arg.ptr = RSTRING(port)->ptr;
+	arg.end = arg.ptr + RSTRING(port)->len;
+d843 1
+a843 9
+	if (obj_is_kind_of(port, cIO)) {
+	    io_binmode(port);
+	    GetOpenFile(port, fptr);
+	    io_readable(fptr);
+	    arg.fp = fptr->f;
+	}
+	else {
+	    TypeError("instance of IO needed");
+	}
+d849 1
+a849 1
+	    Warning("Old marshal file format (can be read)");
+d855 1
+a855 1
+	v = rb_ensure(load, &arg, load_ensure, &arg);
+d858 1
+a858 1
+	TypeError("Old marshal file format (can't read)");
+d864 1
+d867 1
+a867 1
+    VALUE mMarshal = rb_define_module("Marshal");
+d869 5
+a873 5
+    s_dump = rb_intern("_dump_to");
+    s_load = rb_intern("_load_from");
+    rb_define_module_function(mMarshal, "dump", marshal_dump, -1);
+    rb_define_module_function(mMarshal, "load", marshal_load, -1);
+    rb_define_module_function(mMarshal, "restore", marshal_load, 1);
+d875 1
+a875 1
+    rb_provide("marshal.o");	/* for backward compatibility */
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@d5 3
+a7 2
+  $Author: matz $
+  $Date: 1998/11/25 03:31:14 $
+d13 1
+a13 1
+#include "rubyio.h"
+d41 6
+a46 1
+VALUE rb_path2class _((char*));
+d72 1
+a72 1
+    else rb_str_cat(arg->str, &c, 1);
+d86 1
+a86 1
+	rb_str_cat(arg->str, s, n);
+d97 1
+a97 1
+    for (i=0; i<sizeof(short); i++) {
+d158 1
+a158 1
+	st_add_direct(arg->symbol, id, arg->symbol->num_entries);
+d171 1
+d174 1
+a174 1
+rb_hash_each(key, value, arg)
+d184 1
+a184 1
+rb_obj_each(id, value, arg)
+d195 2
+a196 2
+w_uclass(obj, klass, arg)
+    VALUE obj, klass;
+d199 1
+a199 1
+    if (CLASS_OF(obj) != klass) {
+d211 1
+d215 1
+a215 1
+	rb_raise(rb_eRuntimeError, "exceed depth limit");
+d217 4
+d224 1
+a224 1
+    else if (obj == Qtrue) {
+d227 1
+a227 1
+    else if (obj == Qfalse) {
+d235 1
+a235 1
+	if (RSHIFT((long)obj, 32) == 0 || RSHIFT((long)obj, 32) == -1) {
+d237 1
+a237 1
+	    w_long(FIX2LONG(obj), arg);
+d240 2
+a241 2
+	    w_object(rb_int2big(FIX2LONG(obj)), arg, limit);
+	    return;
+a247 4
+	limit--;
+	c_arg.limit = limit;
+	c_arg.arg = arg;
+
+d254 1
+a254 1
+	st_add_direct(arg->data, obj, arg->data->num_entries);
+d262 1
+a262 1
+		rb_raise(rb_eTypeError, "_dump_to must return String");
+d284 1
+d289 1
+a289 1
+		unsigned short *d = RBIGNUM(obj)->digits;
+d301 1
+a301 1
+	    w_uclass(obj, rb_cString, arg);
+d307 1
+a307 1
+	    w_uclass(obj, rb_cRegexp, arg);
+d310 1
+a310 1
+	    w_byte(rb_reg_options(obj), arg);
+d314 1
+a314 1
+	    w_uclass(obj, rb_cArray, arg);
+d329 1
+a329 1
+	    w_uclass(obj, rb_cHash, arg);
+d332 1
+a332 1
+	    st_foreach(RHASH(obj)->tbl, rb_hash_each, &c_arg);
+d347 1
+a347 1
+		    rb_raise(rb_eTypeError, "non-initialized struct");
+d350 1
+a350 1
+		    w_symbol(FIX2LONG(RARRAY(mem)->ptr[i]), arg);
+d359 1
+a359 1
+		VALUE klass = CLASS_OF(obj);
+d362 2
+a363 2
+		if (FL_TEST(klass, FL_SINGLETON)) {
+		    rb_raise(rb_eTypeError, "singleton can't be dumped");
+d365 1
+a365 1
+		path = rb_class2name(klass);
+d369 1
+a369 1
+		    st_foreach(ROBJECT(obj)->iv_tbl, rb_obj_each, &c_arg);
+d378 1
+a378 2
+	    rb_raise(rb_eTypeError, "can't dump %s",
+		     rb_class2name(CLASS_OF(obj)));
+a388 1
+    return 0;
+a396 1
+    return 0;
+d406 1
+d421 1
+a421 1
+	if (rb_obj_is_kind_of(port, rb_cIO)) {
+d424 1
+a424 1
+	    rb_io_binmode(port);
+d426 1
+a426 1
+	    rb_io_check_writable(fptr);
+d430 1
+a430 1
+	    rb_raise(rb_eTypeError, "instance of IO needed");
+d435 1
+a435 1
+	port = rb_str_new(0, 0);
+d448 1
+a448 1
+    rb_ensure(dump, (VALUE)&c_arg, dump_ensure, (VALUE)&arg);
+d455 1
+a455 1
+    char *ptr, *end;
+d466 1
+a466 1
+    if (arg->ptr < arg->end) return *(unsigned char*)arg->ptr++;
+d470 1
+a470 1
+static unsigned short
+d474 1
+a474 1
+    unsigned short x;
+d478 1
+a478 1
+    for (i=0; i<sizeof(short); i++) {
+d489 2
+a490 2
+    rb_raise(rb_eTypeError, "long too big for this architecture (size %d, given %d)",
+	     sizeof(long), size);
+d497 1
+a498 2
+    int c = (char)r_byte(arg);
+    int i;
+d508 1
+a508 1
+    else {
+d520 2
+a521 10
+#define r_bytes2(s, len, arg) do {	\
+    (len) = r_long(arg);		\
+    (s) = ALLOCA_N(char,(len)+1);	\
+    r_bytes0((s),(len),(arg));		\
+} while (0)
+
+#define r_bytes(s, arg) do {		\
+    int r_bytes_len;			\
+    r_bytes2((s), r_bytes_len, (arg));	\
+} while (0)
+d523 3
+a525 3
+static void
+r_bytes0(s, len, arg)
+    char *s;
+d539 5
+a543 1
+    s[len] = '\0';
+d552 1
+d560 1
+a560 1
+	rb_raise(rb_eTypeError, "bad symbol");
+d581 1
+a581 1
+    int len;
+d583 1
+a583 2
+    r_bytes2(buf, len, arg);
+    return rb_str_new(buf, len);
+a590 1
+    OBJ_TAINT(v);
+d607 1
+a607 1
+	rb_eof_error();
+d614 1
+a614 1
+	rb_raise(rb_eArgError, "dump format error (unlinked)");
+d622 1
+a622 1
+		rb_raise(rb_eArgError, "dump format error (user class)");
+d624 1
+a624 1
+	    RBASIC(v)->klass = c;
+d632 1
+a632 1
+	return Qtrue;
+d635 1
+a635 1
+	return Qfalse;
+d651 1
+a651 1
+	    v = rb_float_new(atof(buf));
+d658 1
+a658 1
+	    unsigned short *digits;
+d661 1
+a661 1
+	    OBJSETUP(big, rb_cBignum, T_BIGNUM);
+d664 1
+a664 1
+	    big->digits = digits = ALLOC_N(unsigned short, len);
+d668 1
+a668 1
+	    big = RBIGNUM(rb_big_norm((VALUE)big));
+d670 1
+a670 1
+		r_regist((VALUE)big, arg);
+d681 3
+a683 6
+	    int len;
+	    int options;
+
+	    r_bytes2(buf, len, arg);
+	    options = r_byte(arg);
+	    return r_regist(rb_reg_new(buf, len, options), arg);
+d689 1
+a689 1
+	    v = rb_ary_new2(len);
+d692 1
+a692 1
+		rb_ary_push(v, r_object(arg));
+d701 1
+a701 1
+	    v = rb_hash_new();
+d706 1
+a706 1
+		rb_hash_aset(v, key, value);
+d713 1
+a713 1
+	    VALUE klass, mem, values;
+d718 2
+a719 2
+	    klass = rb_path2class(r_unique(arg));
+	    mem = rb_ivar_get(klass, rb_intern("__member__"));
+d721 1
+a721 1
+		rb_raise(rb_eTypeError, "non-initialized struct");
+d725 1
+a725 1
+	    values = rb_ary_new2(len);
+d727 1
+a727 1
+		rb_ary_push(values, Qnil);
+d729 1
+a729 1
+	    v = rb_struct_alloc(klass, values);
+d735 4
+a738 4
+		    rb_raise(rb_eTypeError, "struct %s not compatible (:%s for :%s)",
+			     rb_class2name(klass),
+			     rb_id2name(slot),
+			     rb_id2name(FIX2INT(RARRAY(mem)->ptr[i])));
+d740 1
+a740 1
+		rb_struct_aset(v, INT2FIX(i), r_object(arg));
+d748 2
+a749 1
+	    VALUE klass;
+d751 3
+a753 3
+	    klass = rb_path2class(r_unique(arg));
+	    if (rb_respond_to(klass, s_load)) {
+		v = rb_funcall(klass, s_load, 1, r_string(arg));
+d756 2
+a757 2
+	    rb_raise(rb_eTypeError, "class %s needs to have method `_load_from'",
+		     rb_class2name(klass));
+d763 1
+a763 1
+	    VALUE klass;
+d766 1
+a766 1
+	    klass = rb_path2class(r_unique(arg));
+d768 1
+a768 1
+	    v = rb_obj_alloc(klass);
+d789 1
+a789 1
+	rb_raise(rb_eArgError, "dump format error(0x%x)", type);
+a791 1
+    return Qnil;		/* not reached */
+a806 1
+    return 0;
+d815 1
+d822 1
+a822 9
+    if (rb_obj_is_kind_of(port, rb_cIO)) {
+	rb_io_binmode(port);
+	GetOpenFile(port, fptr);
+	rb_io_check_readable(fptr);
+	arg.fp = fptr->f;
+    }
+    else if (rb_respond_to(port, rb_intern("to_str"))) {
+	int len;
+
+d824 2
+a825 2
+	arg.ptr = str2cstr(port, &len);
+	arg.end = arg.ptr + len;
+d828 9
+a836 1
+	rb_raise(rb_eTypeError, "instance of IO needed");
+d842 1
+a842 1
+	    rb_warn("Old marshal file format (can be read)");
+d848 1
+a848 1
+	v = rb_ensure(load, (VALUE)&arg, load_ensure, (VALUE)&arg);
+d851 1
+a851 1
+	rb_raise(rb_eTypeError, "Old marshal file format (can't read)");
+a856 1
+void
+d859 1
+a859 1
+    VALUE rb_mMarshal = rb_define_module("Marshal");
+d861 5
+a865 5
+    s_dump = rb_intern("_dump");
+    s_load = rb_intern("_load");
+    rb_define_module_function(rb_mMarshal, "dump", marshal_dump, -1);
+    rb_define_module_function(rb_mMarshal, "load", marshal_load, -1);
+    rb_define_module_function(rb_mMarshal, "restore", marshal_load, 1);
+d867 1
+a867 1
+    rb_provide("marshal.so");	/* for backward compatibility */
+@
+
+
+1.1.1.2.2.1
+log
+@990209
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:24 $
+a14 4
+#ifndef atof
+double strtod();
+#endif
+
+d644 3
+d650 1
+a650 1
+	    v = rb_float_new(strtod(buf, 0));
+@
+
+
+1.1.1.2.2.2
+log
+@990212
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/09 06:08:21 $
+d256 1
+a256 1
+	    v = rb_funcall(obj, s_dump, 1, INT2NUM(limit));
+d758 1
+a758 1
+	    rb_raise(rb_eTypeError, "class %s needs to have method `_load'",
+@
+
+
+1.1.1.2.2.3
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/12 11:17:04 $
+d20 1
+a20 1
+#define MARSHAL_MINOR   1
+d171 1
+a171 1
+hash_each(key, value, arg)
+d181 1
+a181 1
+obj_each(id, value, arg)
+d327 1
+a327 1
+	    st_foreach(RHASH(obj)->tbl, hash_each, &c_arg);
+d364 1
+a364 1
+		    st_foreach(ROBJECT(obj)->iv_tbl, obj_each, &c_arg);
+@
+
+
+1.1.1.2.2.4
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:21 $
+d854 1
+a854 1
+	rb_raise(rb_eTypeError, "old marshal file format (can't read)");
+@
+
+
+1.1.1.2.2.5
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:07 $
+d43 2
+@
+
+
+1.1.1.2.2.6
+log
+@thread bugs
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:29 $
+d460 1
+a460 1
+    if (arg->fp) return rb_getc(arg->fp);
+@
+
+
+1.1.1.2.2.7
+log
+@990624
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/09 09:21:15 $
+d256 1
+a256 1
+		rb_raise(rb_eTypeError, "_dump() must return String");
+d460 3
+a462 13
+    int c;
+
+    if (arg->fp) {
+	c = rb_getc(arg->fp);
+	if (c == EOF) rb_eof_error();
+    }
+    else if (arg->ptr < arg->end) {
+	c = *(unsigned char*)arg->ptr++;
+    }
+    else {
+	rb_raise(rb_eArgError, "marshal data too short");
+    }
+    return c;
+d607 4
+@
+
+
+1.1.1.1.2.1
+log
+@*** empty log message ***
+@
+text
+@d5 3
+a7 3
+  $Author: matz $
+  $Revision: 1.1.1.1 $
+  $Date: 1998/01/16 04:14:45 $
+@
+
+
+1.1.1.1.2.2
+log
+@1.1b7 pre
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.1 $
+  $Date: 1998/01/16 12:35:46 $
+d624 1
+a624 1
+	    RBASIC(v)->klass = c;
+@
+
+
+1.1.1.1.2.3
+log
+@1.1b8pre1
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.2 $
+  $Date: 1998/02/09 10:56:21 $
+d195 2
+a196 2
+w_uclass(obj, klass, arg)
+    VALUE obj, klass;
+d199 1
+a199 1
+    if (CLASS_OF(obj) != klass) {
+d359 1
+a359 1
+		VALUE klass = CLASS_OF(obj);
+d362 1
+a362 1
+		if (FL_TEST(klass, FL_SINGLETON)) {
+d365 1
+a365 1
+		path = rb_class2name(klass);
+d713 1
+a713 1
+	    VALUE klass, mem, values;
+d718 2
+a719 2
+	    klass = rb_path2class(r_unique(arg));
+	    mem = rb_ivar_get(klass, rb_intern("__member__"));
+d729 1
+a729 1
+	    v = struct_alloc(klass, values);
+d736 1
+a736 1
+			      rb_class2name(klass),
+d748 1
+a748 1
+	    VALUE klass;
+d751 3
+a753 3
+	    klass = rb_path2class(r_unique(arg));
+	    if (rb_respond_to(klass, s_load)) {
+		v = rb_funcall(klass, s_load, 1, r_string(arg));
+d757 1
+a757 1
+		      rb_class2name(klass));
+d763 1
+a763 1
+	    VALUE klass;
+d766 1
+a766 1
+	    klass = rb_path2class(r_unique(arg));
+d768 1
+a768 1
+	    v = obj_alloc(klass);
+@
+
+
+1.1.1.1.2.4
+log
+@heredoc etc.
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.3 $
+  $Date: 1998/02/18 01:56:39 $
+d842 1
+a842 1
+	    Warn("Old marshal file format (can be read)");
+@
+
+
+1.1.1.1.2.5
+log
+@1.1b9_12
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.4 $
+  $Date: 1998/03/25 09:36:58 $
+d497 1
+a498 2
+    int c = (char)r_byte(arg);
+    int i;
+@
+
+
+1.1.1.1.2.6
+log
+@no INT,UINT
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.5 $
+  $Date: 1998/04/20 06:20:34 $
+d72 1
+a72 1
+    else str_cat(arg->str, &c, 1);
+d97 1
+a97 1
+    for (i=0; i<sizeof(short); i++) {
+d289 1
+a289 1
+		unsigned short *d = RBIGNUM(obj)->digits;
+d455 1
+a455 1
+    char *ptr, *end;
+d470 1
+a470 1
+static unsigned short
+d474 1
+a474 1
+    unsigned short x;
+d478 1
+a478 1
+    for (i=0; i<sizeof(short); i++) {
+d659 1
+a659 1
+	    unsigned short *digits;
+d665 1
+a665 1
+	    big->digits = digits = ALLOC_N(unsigned short, len);
+@
+
+
+1.1.1.1.2.7
+log
+@1.1b9_19
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.6 $
+  $Date: 1998/05/13 05:58:00 $
+d448 1
+a448 1
+    rb_ensure(dump, (VALUE)&c_arg, dump_ensure, (VALUE)&arg);
+d849 1
+a849 1
+	v = rb_ensure(load, (VALUE)&arg, load_ensure, (VALUE)&arg);
+@
+
+
+1.1.1.1.2.8
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.7 $
+  $Date: 1998/05/13 07:26:21 $
+d46 1
+a46 1
+VALUE rb_path2class _((char*));
+@
+
+
+1.1.1.1.2.9
+log
+@remove unused variables
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.8 $
+  $Date: 1998/05/18 04:56:06 $
+d211 1
+d284 1
+a388 1
+    return 0;
+a396 1
+    return 0;
+d509 1
+a509 1
+    else {
+d553 1
+d750 1
+a807 1
+    return 0;
+d816 1
+a857 1
+void
+@
+
+
+1.1.1.1.2.10
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.9 $
+  $Date: 1998/05/25 04:57:41 $
+d41 5
+d171 1
+@
+
+
+1.1.1.1.2.11
+log
+@baseline
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.10 $
+  $Date: 1998/06/02 10:05:25 $
+d13 1
+a13 1
+#include "rubyio.h"
+@
+
+
+1.1.1.1.2.12
+log
+@980626
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.11 $
+  $Date: 1998/06/16 04:23:37 $
+d400 1
+@
+
+
+1.1.1.1.2.13
+log
+@1.1b9_29
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.12 $
+  $Date: 1998/06/26 09:44:27 $
+d210 4
+d228 1
+a228 1
+	if (RSHIFT((long)obj, 32) == 0 || RSHIFT((long)obj, 32) == -1) {
+d230 1
+a230 1
+	    w_long(FIX2LONG(obj), arg);
+d233 2
+a234 2
+	    w_object(int2big(FIX2LONG(obj)), arg, limit);
+	    return;
+a240 4
+	limit--;
+	c_arg.limit = limit;
+	c_arg.arg = arg;
+
+d342 1
+a342 1
+		    w_symbol(FIX2LONG(RARRAY(mem)->ptr[i]), arg);
+d459 1
+a459 1
+    if (arg->ptr < arg->end) return *(unsigned char*)arg->ptr++;
+a513 1
+static long blen;		/* hidden length register */
+d515 1
+a515 1
+  (blen = r_long(arg), r_bytes0(&s,ALLOCA_N(char,blen),blen,arg))
+@
+
+
+1.1.1.1.2.14
+log
+@str2cstr
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.13 $
+  $Date: 1998/07/03 07:06:31 $
+d815 1
+a815 9
+    if (obj_is_kind_of(port, cIO)) {
+	io_binmode(port);
+	GetOpenFile(port, fptr);
+	io_readable(fptr);
+	arg.fp = fptr->f;
+    }
+    else if (rb_respond_to(port, rb_intern("to_str"))) {
+	int len;
+
+d817 1
+a817 1
+	arg.ptr = str2cstr(port, &len);
+d821 9
+a829 1
+	TypeError("instance of IO needed");
+@
+
+
+1.1.1.1.2.15
+log
+@marshal/reg_clone
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.14 $
+  $Date: 1998/07/13 04:37:46 $
+d302 1
+a302 1
+	    w_byte(reg_options(obj), arg);
+d514 3
+a516 10
+#define r_bytes2(s, len, arg) do {	\
+    (len) = r_long(arg);		\
+    (s) = ALLOCA_N(char,(len)+1);	\
+    r_bytes0((s),(len),(arg));		\
+} while (0)
+
+#define r_bytes(s, arg) do {		\
+    int r_bytes_len;			\
+    r_bytes2((s), r_bytes_len, (arg));	\
+} while (0)
+d518 3
+a520 3
+static void
+r_bytes0(s, len, arg)
+    char *s;
+d534 5
+a538 1
+    s[len] = '\0';
+d575 1
+a575 1
+    int len;
+a576 1
+    r_bytes2(buf, len, arg);
+d675 3
+a677 6
+	    int len;
+	    int options;
+
+	    r_bytes2(buf, len, arg);
+	    options = r_byte(arg);
+	    return r_regist(reg_new(buf, len, options), arg);
+@
+
+
+1.1.1.1.2.16
+log
+@1.1c4
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.15 $
+  $Date: 1998/07/24 04:32:28 $
+d668 1
+a668 1
+		r_regist((VALUE)big, arg);
+@
+
+
+1.1.1.1.2.17
+log
+@1.1c7
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.16 $
+  $Date: 1998/09/03 07:43:35 $
+d255 1
+a255 1
+		TypeError("_dump must return String");
+d756 1
+a756 1
+	    TypeError("class %s needs to have method `_load'",
+d862 2
+a863 2
+    s_dump = rb_intern("_dump");
+    s_load = rb_intern("_load");
+@
+
+
+1.1.1.1.2.16.2.1
+log
+@1.1d series
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.16 $
+  $Date: 1998/09/03 07:43:35 $
+d67 1
+a67 1
+    else rb_str_cat(arg->str, &c, 1);
+d81 1
+a81 1
+	rb_str_cat(arg->str, s, n);
+d153 1
+a153 1
+	st_add_direct(arg->symbol, id, arg->symbol->num_entries);
+d168 1
+a168 1
+rb_hash_each(key, value, arg)
+d178 1
+a178 1
+rb_obj_each(id, value, arg)
+d208 1
+a208 1
+	rb_raise(rb_eRuntimeError, "exceed depth limit");
+d213 1
+a213 1
+    else if (obj == Qtrue) {
+d216 1
+a216 1
+    else if (obj == Qfalse) {
+d229 1
+a229 1
+	    w_object(rb_int2big(FIX2LONG(obj)), arg, limit);
+d247 1
+a247 1
+	st_add_direct(arg->data, obj, arg->data->num_entries);
+d255 1
+a255 1
+		rb_raise(rb_eTypeError, "_dump_to must return String");
+d293 1
+a293 1
+	    w_uclass(obj, rb_cString, arg);
+d299 1
+a299 1
+	    w_uclass(obj, rb_cRegexp, arg);
+d302 1
+a302 1
+	    w_byte(rb_reg_options(obj), arg);
+d306 1
+a306 1
+	    w_uclass(obj, rb_cArray, arg);
+d321 1
+a321 1
+	    w_uclass(obj, rb_cHash, arg);
+d324 1
+a324 1
+	    st_foreach(RHASH(obj)->tbl, rb_hash_each, &c_arg);
+d339 1
+a339 1
+		    rb_raise(rb_eTypeError, "non-initialized struct");
+d355 1
+a355 1
+		    rb_raise(rb_eTypeError, "singleton can't be dumped");
+d361 1
+a361 1
+		    st_foreach(ROBJECT(obj)->iv_tbl, rb_obj_each, &c_arg);
+d370 1
+a370 2
+	    rb_raise(rb_eTypeError, "can't dump %s",
+		     rb_class2name(CLASS_OF(obj)));
+d414 1
+a414 1
+	if (rb_obj_is_kind_of(port, rb_cIO)) {
+d417 1
+a417 1
+	    rb_io_binmode(port);
+d419 1
+a419 1
+	    rb_io_check_writable(fptr);
+d423 1
+a423 1
+	    rb_raise(rb_eTypeError, "instance of IO needed");
+d428 1
+a428 1
+	port = rb_str_new(0, 0);
+d482 2
+a483 2
+    rb_raise(rb_eTypeError, "long too big for this architecture (size %d, given %d)",
+	     sizeof(long), size);
+d557 1
+a557 1
+	rb_raise(rb_eTypeError, "bad symbol");
+d581 1
+a581 1
+    return rb_str_taint(rb_str_new(buf, len));
+d605 1
+a605 1
+	rb_eof_error();
+d612 1
+a612 1
+	rb_raise(rb_eArgError, "dump format error (unlinked)");
+d620 1
+a620 1
+		rb_raise(rb_eArgError, "dump format error (user class)");
+d630 1
+a630 1
+	return Qtrue;
+d633 1
+a633 1
+	return Qfalse;
+d649 1
+a649 1
+	    v = rb_float_new(atof(buf));
+d659 1
+a659 1
+	    OBJSETUP(big, rb_cBignum, T_BIGNUM);
+d666 1
+a666 1
+	    big = RBIGNUM(rb_big_norm((VALUE)big));
+d684 1
+a684 1
+	    return r_regist(rb_reg_new(buf, len, options), arg);
+d690 1
+a690 1
+	    v = rb_ary_new2(len);
+d693 1
+a693 1
+		rb_ary_push(v, r_object(arg));
+d702 1
+a702 1
+	    v = rb_hash_new();
+d707 1
+a707 1
+		rb_hash_aset(v, key, value);
+d722 1
+a722 1
+		rb_raise(rb_eTypeError, "non-initialized struct");
+d726 1
+a726 1
+	    values = rb_ary_new2(len);
+d728 1
+a728 1
+		rb_ary_push(values, Qnil);
+d730 1
+a730 1
+	    v = rb_struct_alloc(klass, values);
+d736 4
+a739 4
+		    rb_raise(rb_eTypeError, "struct %s not compatible (:%s for :%s)",
+			     rb_class2name(klass),
+			     rb_id2name(slot),
+			     rb_id2name(FIX2INT(RARRAY(mem)->ptr[i])));
+d741 1
+a741 1
+		rb_struct_aset(v, INT2FIX(i), r_object(arg));
+d756 2
+a757 2
+	    rb_raise(rb_eTypeError, "class %s needs to have method `_load_from'",
+		     rb_class2name(klass));
+d768 1
+a768 1
+	    v = rb_obj_alloc(klass);
+d789 1
+a789 1
+	rb_raise(rb_eArgError, "dump format error(0x%x)", type);
+d822 2
+a823 2
+    if (rb_obj_is_kind_of(port, rb_cIO)) {
+	rb_io_binmode(port);
+d825 1
+a825 1
+	rb_io_check_readable(fptr);
+d836 1
+a836 1
+	rb_raise(rb_eTypeError, "instance of IO needed");
+d842 1
+a842 1
+	    rb_warn("Old marshal file format (can be read)");
+d851 1
+a851 1
+	rb_raise(rb_eTypeError, "Old marshal file format (can't read)");
+d860 1
+a860 1
+    VALUE rb_mMarshal = rb_define_module("Marshal");
+d864 3
+a866 3
+    rb_define_module_function(rb_mMarshal, "dump", marshal_dump, -1);
+    rb_define_module_function(rb_mMarshal, "load", marshal_load, -1);
+    rb_define_module_function(rb_mMarshal, "restore", marshal_load, 1);
+@
+
+
+1.1.1.1.2.16.2.2
+log
+@join 1.1c6
+@
+text
+@d6 2
+a7 2
+  $Revision: 1.1.1.1.2.16.2.1 $
+  $Date: 1998/09/08 07:08:51 $
+a392 2
+
+static st_table *cache[2];
+@
+
+
+1.1.1.1.2.16.2.3
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 1
+  $Date: 1998/11/09 09:11:50 $
+d584 1
+a584 1
+    return rb_str_new(buf, len);
+a591 1
+    rb_obj_taint(v);
+d865 2
+a866 2
+    s_dump = rb_intern("_dump");
+    s_load = rb_intern("_load");
+@

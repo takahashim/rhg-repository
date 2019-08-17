@@ -1,0 +1,1370 @@
+head	1.13;
+access;
+symbols
+	v1_6_7:1.5.2.2
+	v1_6_6:1.5.2.2
+	v1_6_5:1.5.2.2
+	v1_6_4:1.5.2.2
+	v1_7_1:1.9
+	v1_6_4_preview4:1.5.2.2
+	v1_6_4_preview3:1.5.2.2
+	v1_6_4_preview2:1.5.2.2
+	v1_6_4_preview1:1.5.2.2
+	v1_6_3:1.5.2.2
+	ruby_m17n:1.5.0.4
+	ruby_1_6:1.5.0.2
+	v1_6_2:1.5
+	v1_6_1:1.5
+	v1_6_0:1.5
+	v1_4_6:1.2.2.1
+	v1_4_5:1.2.2.1
+	v1_4_4:1.2.2.1
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.1
+	v1_3_6_repack:1.1.1.3.2.1
+	v1_3_6:1.1.1.3.2.1
+	v1_3_5:1.1.1.3.2.1
+	v1_2_6repack:1.1.1.2.2.4
+	v1_3_4_990625:1.1.1.3.2.1
+	v1_3_4_990624:1.1.1.3.2.1
+	v1_2_6:1.1.1.2.2.4
+	v1_3_4_990611:1.1.1.3.2.1
+	v1_3_4_990531:1.1.1.3.2.1
+	v1_3_3_990518:1.1.1.3.2.1
+	v1_3_3_990513:1.1.1.3.2.1
+	v1_3_3_990507:1.1.1.3.2.1
+	v1_2_5:1.1.1.2.2.4
+	v1_2_4:1.1.1.2.2.4
+	v1_3_1_990225:1.1.1.3.2.1
+	v1_3_1_990224:1.1.1.3.2.1
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.4
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.4
+	v1_2_1repack:1.1.1.2.2.4
+	v1_2_1:1.1.1.2.2.4
+	v1_2_stable:1.1.1.2.2.4
+	v1_1d1:1.1.1.2.2.4.2.1
+	v1_1d0:1.1.1.2.2.4.2.1
+	v1_1c9_1:1.1.1.2.2.4
+	v1_1c9:1.1.1.2.2.4
+	v1_1c8:1.1.1.2.2.4
+	v1_1c7:1.1.1.2.2.4
+	v1_1c6:1.1.1.2.2.4
+	v1_1d-start:1.1.1.2.2.4.2.1
+	v1_1c5:1.1.1.2.2.4
+	v1_1dev:1.1.1.2.2.4.0.2
+	v1_1c4:1.1.1.2.2.4
+	v1_1c3:1.1.1.2.2.4
+	v1_1c2:1.1.1.2.2.4
+	v1_1c1:1.1.1.2.2.4
+	v1_1c0:1.1.1.2.2.4
+	v1_1b9_31:1.1.1.2.2.4
+	v1_1b9_30:1.1.1.2.2.4
+	v1_1b9_28:1.1.1.2.2.4
+	v1_1b9_27:1.1.1.2.2.4
+	v1_1b9_26:1.1.1.2.2.4
+	r1_1b9_25:1.1.1.2.2.4
+	r1_1b9_24:1.1.1.2.2.4
+	v1_1b9_23:1.1.1.2.2.4
+	v1_1b9_22:1.1.1.2.2.3
+	v1_1b9_20:1.1.1.2.2.3
+	v1_1b9_18:1.1.1.2.2.3
+	v1_1b9_16:1.1.1.2.2.3
+	v1_1b9_15:1.1.1.2.2.3
+	v1_1b9_13:1.1.1.2.2.3
+	v1_1b9_12:1.1.1.2.2.3
+	v1_1b9_11:1.1.1.2.2.3
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2.2.1
+	v1_1b8:1.1.1.2.2.1
+	v1_1b7:1.1.1.2.2.1
+	v1_1b6:1.1.1.2.2.1
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.13
+date	2002.04.18.08.46.18;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.04.11.11.39.25;	author nobu;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.04.11.10.02.59;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.04.10.08.45.22;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.03.13.05.45.09;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.03.09.17.49.24;	author eban;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.03.07.05.43.11;	author eban;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.02.14.05.51.57;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.01.09.41.23;	author matz;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2000.02.17.07.11.12;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.05.04.37.06;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.06;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.10;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.24;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.13;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.46;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.03.17.10.06.57;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.03.17.10.12.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.05.25.04.57.42;	author matz;	state Exp;
+branches
+	1.1.1.2.2.4.2.1;
+next	;
+
+1.1.1.2.2.4.2.1
+date	98.09.08.07.08.53;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2000.01.17.08.24.05;	author matz;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2001.03.07.05.42.21;	author eban;	state Exp;
+branches;
+next	1.5.2.2;
+
+1.5.2.2
+date	2001.03.09.17.49.31;	author eban;	state Exp;
+branches;
+next	1.5.2.3;
+
+1.5.2.3
+date	2002.06.05.09.54.07;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@* re.c (rb_reg_expr_str): should treat backslash specially in
+  escaping.
+
+* io.c: complete off_t handling; missing argument for
+  fptr_finalize(); polished rb_scan_args call.
+
+* dir.c: wrap multi-statment macro by do { } while (0)
+
+* eval.c, numeric,c, sprintf.c, util.c: ditto.
+
+* bignum.c (rb_big_eq): check `y == x' if y is neither Fixnum,
+  Bignum, nor Float.
+@
+text
+@/**********************************************************************
+
+  math.c -
+
+  $Author: nobu $
+  $Date: 2002/04/11 11:39:25 $
+  created at: Tue Jan 25 14:12:56 JST 1994
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+
+**********************************************************************/
+
+#include "ruby.h"
+#include <math.h>
+
+VALUE rb_mMath;
+
+#define Need_Float(x) (x) = rb_Float(x)
+#define Need_Float2(x,y) do {\
+    Need_Float(x);\
+    Need_Float(y);\
+} while (0)
+
+static VALUE
+math_atan2(obj, y, x)
+    VALUE obj, x, y;
+{
+    Need_Float2(y, x);
+    
+    return rb_float_new(atan2(RFLOAT(y)->value, RFLOAT(x)->value));
+}
+
+static VALUE
+math_cos(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+
+    return rb_float_new(cos(RFLOAT(x)->value));
+}
+
+static VALUE
+math_sin(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+
+    return rb_float_new(sin(RFLOAT(x)->value));
+}
+
+static VALUE
+math_tan(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+
+    return rb_float_new(tan(RFLOAT(x)->value));
+}
+
+static VALUE
+math_acos(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    /*
+    if (RFLOAT(x)->value < -1.0 || RFLOAT(x)->value > 1.0)
+	rb_raise(rb_eArgError, "Out of range (-1..1)");
+    */
+    return rb_float_new(acos(RFLOAT(x)->value));
+}
+
+static VALUE
+math_asin(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    /*
+    if (RFLOAT(x)->value < -1.0 || RFLOAT(x)->value > 1.0)
+	rb_raise(rb_eArgError, "Out of range (-1..1)");
+    */
+    return rb_float_new(asin(RFLOAT(x)->value));
+}
+
+static VALUE
+math_atan(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(atan(RFLOAT(x)->value));
+}
+
+#ifndef HAVE_COSH
+double
+cosh(x)
+    double x;
+{
+    return (exp(x) + exp(-x)) / 2;
+}
+#endif
+
+static VALUE
+math_cosh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(cosh(RFLOAT(x)->value));
+}
+
+#ifndef HAVE_SINH
+double
+sinh(x)
+    double x;
+{
+    return (exp(x) - exp(-x)) / 2;
+}
+#endif
+
+static VALUE
+math_sinh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(sinh(RFLOAT(x)->value));
+}
+
+#ifndef HAVE_TANH
+double
+tanh(x)
+    double x;
+{
+    return sinh(x) / cosh(x);
+}
+#endif
+
+static VALUE
+math_tanh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(tanh(RFLOAT(x)->value));
+}
+
+static VALUE
+math_acosh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(acosh(RFLOAT(x)->value));
+}
+
+static VALUE
+math_asinh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(asinh(RFLOAT(x)->value));
+}
+
+static VALUE
+math_atanh(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(atanh(RFLOAT(x)->value));
+}
+
+static VALUE
+math_exp(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(exp(RFLOAT(x)->value));
+}
+
+#if defined __CYGWIN__
+#define log(x) ((x) < 0.0 ? nan() : log(x))
+#define log10(x) ((x) < 0.0 ? nan() : log10(x))
+#endif
+
+static VALUE
+math_log(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(log(RFLOAT(x)->value));
+}
+
+static VALUE
+math_log10(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(log10(RFLOAT(x)->value));
+}
+
+static VALUE
+math_sqrt(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+
+    if (RFLOAT(x)->value < 0.0) rb_raise(rb_eArgError, "square root for negative number");
+    return rb_float_new(sqrt(RFLOAT(x)->value));
+}
+
+static VALUE
+math_frexp(obj, x)
+    VALUE obj, x;
+{
+    double d;
+    int exp;
+
+    Need_Float(x);
+    
+    d = frexp(RFLOAT(x)->value, &exp);
+    return rb_assoc_new(rb_float_new(d), INT2NUM(exp));
+}
+
+static VALUE
+math_ldexp(obj, x, n)
+    VALUE obj, x, n;
+{
+    double d;
+
+    Need_Float(x);
+    
+    return rb_float_new(d = ldexp(RFLOAT(x)->value, NUM2INT(n)));
+}
+
+static VALUE
+math_hypot(obj, x, y)
+    VALUE obj, x, y;
+{
+    Need_Float2(x, y);
+    
+    return rb_float_new(hypot(RFLOAT(x)->value, RFLOAT(y)->value));
+}
+
+void
+Init_Math()
+{
+    rb_mMath = rb_define_module("Math");
+
+#ifdef M_PI
+    rb_define_const(rb_mMath, "PI", rb_float_new(M_PI));
+#else
+    rb_define_const(rb_mMath, "PI", rb_float_new(atan(1.0)*4.0));
+#endif
+
+#ifdef M_E
+    rb_define_const(rb_mMath, "E", rb_float_new(M_E));
+#else
+    rb_define_const(rb_mMath, "E", rb_float_new(exp(1.0)));
+#endif
+
+    rb_define_module_function(rb_mMath, "atan2", math_atan2, 2);
+    rb_define_module_function(rb_mMath, "cos", math_cos, 1);
+    rb_define_module_function(rb_mMath, "sin", math_sin, 1);
+    rb_define_module_function(rb_mMath, "tan", math_tan, 1);
+
+    rb_define_module_function(rb_mMath, "acos", math_acos, 1);
+    rb_define_module_function(rb_mMath, "asin", math_asin, 1);
+    rb_define_module_function(rb_mMath, "atan", math_atan, 1);
+
+    rb_define_module_function(rb_mMath, "cosh", math_cosh, 1);
+    rb_define_module_function(rb_mMath, "sinh", math_sinh, 1);
+    rb_define_module_function(rb_mMath, "tanh", math_tanh, 1);
+
+    rb_define_module_function(rb_mMath, "acosh", math_acosh, 1);
+    rb_define_module_function(rb_mMath, "asinh", math_asinh, 1);
+    rb_define_module_function(rb_mMath, "atanh", math_atanh, 1);
+
+    rb_define_module_function(rb_mMath, "exp", math_exp, 1);
+    rb_define_module_function(rb_mMath, "log", math_log, 1);
+    rb_define_module_function(rb_mMath, "log10", math_log10, 1);
+    rb_define_module_function(rb_mMath, "sqrt", math_sqrt, 1);
+
+    rb_define_module_function(rb_mMath, "frexp", math_frexp, 1);
+    rb_define_module_function(rb_mMath, "ldexp", math_ldexp, 2);
+
+    rb_define_module_function(rb_mMath, "hypot", math_hypot, 2);
+}
+@
+
+
+1.12
+log
+@should be HAVE_TANH
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/04/11 10:02:59 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+d19 1
+a19 1
+#define Need_Float2(x,y) {\
+d22 1
+a22 1
+}
+d29 1
+d89 1
+d107 1
+d125 1
+d143 1
+d152 1
+d161 1
+d170 1
+d179 1
+d193 1
+d202 1
+d224 1
+a225 1
+
+d236 1
+d245 1
+@
+
+
+1.11
+log
+@* eval.c (assign): ruby_verbose should be surrounded by RTEST().
+
+* object.c (rb_str2cstr): ditto.
+
+* parse.y (void_expr): ditto.
+
+* parse.y (void_stmts): ditto.
+
+* variable.c (rb_ivar_get): ditto.
+
+* variable.c (rb_cvar_set): ditto.
+
+* variable.c (rb_cvar_get): ditto.
+
+* dir.c (glob_helper): should have proceed link when link->path
+  was non existing symbolic link.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/04/10 08:45:22 $
+d125 1
+a125 1
+#ifndef HAVE_SINH
+@
+
+
+1.10
+log
+@* variable.c (rb_obj_remove_instance_variable): raise NameError if
+  specified instance variable is not defined.
+
+* variable.c (generic_ivar_remove): modified to check ivar
+  existence.
+
+* file.c (rb_file_s_extname): new method based on the proposal
+  (and patch) from Mike Hall. [new]
+
+* eval.c (error_handle): default to 1 unless status is set.
+
+* eval.c (ruby_options): guard error_handle() with PROT_NONE.
+
+* eval.c (ruby_stop): ditto.
+
+* math.c (math_acosh): added. [new]
+
+* math.c (math_asinh): ditto.
+
+* math.c (math_atanh): ditto.
+
+* struct.c (rb_struct_each_pair): method added. [new]
+
+* class.c (rb_singleton_class): wrong condition; was creating
+  unnecessary singleton class.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/13 05:45:09 $
+d91 9
+d108 9
+d124 9
+@
+
+
+1.9
+log
+@* io.c (argf_seek_m): wrong calling sequence of rb_io_seek().
+
+* parse.y (cond0): no special treatment of string literal in
+  condition.
+
+* math.c: add acos, asin, atan, conh, sinh, tanh and hypot to Math.
+
+* configure.in: check hypot availablility.
+
+* missing/hypot.c: public domain rewrite of hypot.
+
+* parse.y (warn_unless_e_option): warning condition was wrong.
+
+* parse.y (warning_unless_e_option): ditto.
+
+* enum.c (enum_all): new method 'all?', which returns true if
+  block returns true for all elements.
+
+* enum.c (enum_any): new method 'any?', which returns true if
+  block retruns true for any of elements.
+
+* marshal.c (marshal_load): do not give warning unless explicitly
+  set to verbose.
+
+* eval.c (rb_exit): give string value "exit" to SystemExit.
+
+* ruby.c (proc_options): -v should not print version if
+  proc_options called via moreswitches().
+
+* parse.y (stmt): while/until modifier must work for empty body.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/09 17:49:24 $
+d116 24
+d238 4
+@
+
+
+1.8
+log
+@* math.c (math_log, math_log10): use nan() instead of 0.0/0.0 on Cygwin.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/07 05:43:11 $
+d60 56
+d177 8
+d207 8
+d222 2
+@
+
+
+1.7
+log
+@* math.c (math_log, math_log10): should return NaN if x < 0.0
+  on Cygwin.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/14 05:51:57 $
+d68 2
+a69 2
+#define log(x) ((x) < 0.0 ? 0.0 / 0.0 : log(x))
+#define log10(x) ((x) < 0.0 ? 0.0 / 0.0 : log10(x))
+@
+
+
+1.6
+log
+@* dir.c (dir_s_glob): supprt backslash escape of metacharacters
+  and delimiters.
+
+* dir.c (remove_backslases): remove backslashes from path before
+  calling stat(2).
+
+* dir.c (dir_s_glob): call rb_yield directly (via push_pattern) if
+  block is given to the method.
+
+* dir.c (push_pattern): do not call rb_ary_push; yield directly.
+
+* eval.c (blk_copy_prev): reduced ALLOC_N too much.
+
+* eval.c (frame_dup): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:23 $
+d66 5
+@
+
+
+1.5
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 07:11:12 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.5.2.1
+log
+@* math.c (math_log, math_log10): should return NaN if x < 0.0
+  on Cygwin.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:23 $
+a65 5
+
+#if defined __CYGWIN__
+#define log(x) ((x) < 0.0 ? 0.0 / 0.0 : log(x))
+#define log10(x) ((x) < 0.0 ? 0.0 / 0.0 : log10(x))
+#endif
+@
+
+
+1.5.2.2
+log
+@* math.c (math_log, math_log10): use nan() instead of 0.0/0.0 on Cygwin.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/03/07 05:42:21 $
+d68 2
+a69 2
+#define log(x) ((x) < 0.0 ? nan() : log(x))
+#define log10(x) ((x) < 0.0 ? nan() : log10(x))
+@
+
+
+1.5.2.3
+log
+@* math.c (Init_Math): backport asin, acos, atan.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/09 17:49:31 $
+a59 33
+math_acos(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    /*
+    if (RFLOAT(x)->value < -1.0 || RFLOAT(x)->value > 1.0)
+	rb_raise(rb_eArgError, "Out of range (-1..1)");
+    */
+    return rb_float_new(acos(RFLOAT(x)->value));
+}
+
+static VALUE
+math_asin(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    /*
+    if (RFLOAT(x)->value < -1.0 || RFLOAT(x)->value > 1.0)
+	rb_raise(rb_eArgError, "Out of range (-1..1)");
+    */
+    return rb_float_new(asin(RFLOAT(x)->value));
+}
+
+static VALUE
+math_atan(obj, x)
+    VALUE obj, x;
+{
+    Need_Float(x);
+    
+    return rb_float_new(atan(RFLOAT(x)->value));
+}
+
+static VALUE
+a141 4
+
+    rb_define_module_function(rb_mMath, "acos", math_acos, 1);
+    rb_define_module_function(rb_mMath, "asin", math_asin, 1);
+    rb_define_module_function(rb_mMath, "atan", math_atan, 1);
+@
+
+
+1.4
+log
+@2000-02-17
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/01/05 04:37:06 $
+d11 1
+a11 1
+************************************************/
+@
+
+
+1.3
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:06 $
+d25 1
+a25 1
+math_atan2(obj, x, y)
+d28 2
+a29 2
+    Need_Float2(x, y);
+    return rb_float_new(atan2(RFLOAT(x)->value, RFLOAT(y)->value));
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:13 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.2.2.1
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:06 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 09:28:03 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d16 1
+a16 10
+VALUE mMath;
+VALUE float_new();
+VALUE f_float();
+
+#define Need_Float(x) \
+if (FIXNUM_P(x)) {\
+    (x) = (struct RFloat*)float_new((double)FIX2INT(x));\
+} else {\
+    (x) = (struct RFloat*)f_float(x, x);\
+}
+d18 1
+d26 1
+a26 2
+    VALUE obj;
+    struct RFloat *x, *y;
+d29 1
+a29 1
+    return float_new(atan2(x->value, y->value));
+d34 1
+a34 2
+    VALUE obj;
+    struct RFloat *x;
+d38 1
+a38 1
+    return float_new(cos(x->value));
+d43 1
+a43 2
+    VALUE obj;
+    struct RFloat *x;
+d47 1
+a47 1
+    return float_new(sin(x->value));
+d52 1
+a52 2
+    VALUE obj;
+    struct RFloat *x;
+d56 1
+a56 1
+    return float_new(tan(x->value));
+d61 1
+a61 2
+    VALUE obj;
+    struct RFloat *x;
+d64 1
+a64 1
+    return float_new(exp(x->value));
+d69 1
+a69 2
+    VALUE obj;
+    struct RFloat *x;
+d72 1
+a72 1
+    return float_new(log(x->value));
+d77 1
+a77 2
+    VALUE obj;
+    struct RFloat *x;
+d80 1
+a80 1
+    return float_new(log10(x->value));
+d85 11
+a95 2
+    VALUE obj;
+    struct RFloat *x;
+d97 3
+d101 1
+d103 11
+a113 2
+    if (x->value < 0.0) ArgError("square root for negative number");
+    return float_new(sqrt(x->value));
+d119 1
+a119 1
+    mMath = rb_define_module("Math");
+d122 1
+a122 1
+    rb_define_const(mMath, "PI", float_new(M_PI));
+d124 1
+a124 1
+    rb_define_const(mMath, "PI", float_new(atan(1.0)*4.0));
+d128 1
+a128 1
+    rb_define_const(mMath, "E", float_new(M_E));
+d130 1
+a130 1
+    rb_define_const(mMath, "E", float_new(exp(1.0)));
+d133 12
+a144 9
+    rb_define_module_function(mMath, "atan2", math_atan2, 2);
+    rb_define_module_function(mMath, "cos", math_cos, 1);
+    rb_define_module_function(mMath, "sin", math_sin, 1);
+    rb_define_module_function(mMath, "tan", math_tan, 1);
+
+    rb_define_module_function(mMath, "exp", math_exp, 1);
+    rb_define_module_function(mMath, "log", math_log, 1);
+    rb_define_module_function(mMath, "log10", math_log10, 1);
+    rb_define_module_function(mMath, "sqrt", math_sqrt, 1);
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d17 9
+a26 1
+#define Need_Float(x) (x) = rb_Float(x)
+d34 2
+a35 1
+    VALUE obj, x, y;
+d38 1
+a38 1
+    return float_new(atan2(RFLOAT(x)->value, RFLOAT(y)->value));
+d43 2
+a44 1
+    VALUE obj, x;
+d48 1
+a48 1
+    return float_new(cos(RFLOAT(x)->value));
+d53 2
+a54 1
+    VALUE obj, x;
+d58 1
+a58 1
+    return float_new(sin(RFLOAT(x)->value));
+d63 2
+a64 1
+    VALUE obj, x;
+d68 1
+a68 1
+    return float_new(tan(RFLOAT(x)->value));
+d73 2
+a74 1
+    VALUE obj, x;
+d77 1
+a77 1
+    return float_new(exp(RFLOAT(x)->value));
+d82 2
+a83 1
+    VALUE obj, x;
+d86 1
+a86 1
+    return float_new(log(RFLOAT(x)->value));
+d91 2
+a92 1
+    VALUE obj, x;
+d95 1
+a95 1
+    return float_new(log10(RFLOAT(x)->value));
+d100 2
+a101 1
+    VALUE obj, x;
+d105 2
+a106 2
+    if (RFLOAT(x)->value < 0.0) ArgError("square root for negative number");
+    return float_new(sqrt(RFLOAT(x)->value));
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/09/08 07:08:53 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d16 1
+a16 1
+VALUE rb_mMath;
+d29 1
+a29 1
+    return rb_float_new(atan2(RFLOAT(x)->value, RFLOAT(y)->value));
+d38 1
+a38 1
+    return rb_float_new(cos(RFLOAT(x)->value));
+d47 1
+a47 1
+    return rb_float_new(sin(RFLOAT(x)->value));
+d56 1
+a56 1
+    return rb_float_new(tan(RFLOAT(x)->value));
+d64 1
+a64 1
+    return rb_float_new(exp(RFLOAT(x)->value));
+d72 1
+a72 1
+    return rb_float_new(log(RFLOAT(x)->value));
+d80 1
+a80 1
+    return rb_float_new(log10(RFLOAT(x)->value));
+d89 2
+a90 25
+    if (RFLOAT(x)->value < 0.0) rb_raise(rb_eArgError, "square root for negative number");
+    return rb_float_new(sqrt(RFLOAT(x)->value));
+}
+
+static VALUE
+math_frexp(obj, x)
+    VALUE obj, x;
+{
+    double d;
+    int exp;
+
+    Need_Float(x);
+    d = frexp(RFLOAT(x)->value, &exp);
+
+    return rb_assoc_new(rb_float_new(d), INT2NUM(exp));
+}
+
+static VALUE
+math_ldexp(obj, x, n)
+    VALUE obj, x, n;
+{
+    double d;
+
+    Need_Float(x);
+    return rb_float_new(d = ldexp(RFLOAT(x)->value, NUM2INT(n)));
+d96 1
+a96 1
+    rb_mMath = rb_define_module("Math");
+d99 1
+a99 1
+    rb_define_const(rb_mMath, "PI", rb_float_new(M_PI));
+d101 1
+a101 1
+    rb_define_const(rb_mMath, "PI", rb_float_new(atan(1.0)*4.0));
+d105 1
+a105 1
+    rb_define_const(rb_mMath, "E", rb_float_new(M_E));
+d107 1
+a107 1
+    rb_define_const(rb_mMath, "E", rb_float_new(exp(1.0)));
+d110 9
+a118 12
+    rb_define_module_function(rb_mMath, "atan2", math_atan2, 2);
+    rb_define_module_function(rb_mMath, "cos", math_cos, 1);
+    rb_define_module_function(rb_mMath, "sin", math_sin, 1);
+    rb_define_module_function(rb_mMath, "tan", math_tan, 1);
+
+    rb_define_module_function(rb_mMath, "exp", math_exp, 1);
+    rb_define_module_function(rb_mMath, "log", math_log, 1);
+    rb_define_module_function(rb_mMath, "log10", math_log10, 1);
+    rb_define_module_function(rb_mMath, "sqrt", math_sqrt, 1);
+
+    rb_define_module_function(rb_mMath, "frexp", math_frexp, 1);
+    rb_define_module_function(rb_mMath, "ldexp", math_ldexp, 2);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:24 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@modulo, frexp, ldexp
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:46 $
+a92 24
+static VALUE
+math_frexp(obj, x)
+    VALUE obj, x;
+{
+    double d;
+    int exp;
+
+    Need_Float(x);
+    d = frexp(RFLOAT(x)->value, &exp);
+
+    return assoc_new(float_new(d), INT2NUM(exp));
+}
+
+static VALUE
+math_ldexp(obj, x, n)
+    VALUE obj, x, n;
+{
+    double d;
+    int exp;
+
+    Need_Float(x);
+    return float_new(d = ldexp(RFLOAT(x)->value, NUM2INT(n)));
+}
+
+d118 1
+a118 3
+
+    rb_define_module_function(mMath, "frexp", math_frexp, 1);
+    rb_define_module_function(mMath, "ldexp", math_ldexp, 2);
+@
+
+
+1.1.1.2.2.3
+log
+@sqrt was missing
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/17 10:06:57 $
+a141 1
+    rb_define_module_function(mMath, "sqrt", math_sqrt, 1);
+@
+
+
+1.1.1.2.2.4
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/03/17 10:12:47 $
+d111 1
+@
+
+
+1.1.1.2.2.4.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:42 $
+d16 1
+a16 1
+VALUE rb_mMath;
+d29 1
+a29 1
+    return rb_float_new(atan2(RFLOAT(x)->value, RFLOAT(y)->value));
+d38 1
+a38 1
+    return rb_float_new(cos(RFLOAT(x)->value));
+d47 1
+a47 1
+    return rb_float_new(sin(RFLOAT(x)->value));
+d56 1
+a56 1
+    return rb_float_new(tan(RFLOAT(x)->value));
+d64 1
+a64 1
+    return rb_float_new(exp(RFLOAT(x)->value));
+d72 1
+a72 1
+    return rb_float_new(log(RFLOAT(x)->value));
+d80 1
+a80 1
+    return rb_float_new(log10(RFLOAT(x)->value));
+d89 2
+a90 2
+    if (RFLOAT(x)->value < 0.0) rb_raise(rb_eArgError, "square root for negative number");
+    return rb_float_new(sqrt(RFLOAT(x)->value));
+d103 1
+a103 1
+    return rb_assoc_new(rb_float_new(d), INT2NUM(exp));
+d113 1
+a113 1
+    return rb_float_new(d = ldexp(RFLOAT(x)->value, NUM2INT(n)));
+d119 1
+a119 1
+    rb_mMath = rb_define_module("Math");
+d122 1
+a122 1
+    rb_define_const(rb_mMath, "PI", rb_float_new(M_PI));
+d124 1
+a124 1
+    rb_define_const(rb_mMath, "PI", rb_float_new(atan(1.0)*4.0));
+d128 1
+a128 1
+    rb_define_const(rb_mMath, "E", rb_float_new(M_E));
+d130 1
+a130 1
+    rb_define_const(rb_mMath, "E", rb_float_new(exp(1.0)));
+d133 9
+a141 9
+    rb_define_module_function(rb_mMath, "atan2", math_atan2, 2);
+    rb_define_module_function(rb_mMath, "cos", math_cos, 1);
+    rb_define_module_function(rb_mMath, "sin", math_sin, 1);
+    rb_define_module_function(rb_mMath, "tan", math_tan, 1);
+
+    rb_define_module_function(rb_mMath, "exp", math_exp, 1);
+    rb_define_module_function(rb_mMath, "log", math_log, 1);
+    rb_define_module_function(rb_mMath, "log10", math_log10, 1);
+    rb_define_module_function(rb_mMath, "sqrt", math_sqrt, 1);
+d143 2
+a144 2
+    rb_define_module_function(rb_mMath, "frexp", math_frexp, 1);
+    rb_define_module_function(rb_mMath, "ldexp", math_ldexp, 2);
+@

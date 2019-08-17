@@ -1,0 +1,648 @@
+head	1.4;
+access;
+symbols
+	v1_6_4:1.1.2.3
+	v1_7_1:1.3
+	v1_6_4_preview4:1.1.2.3
+	v1_6_4_preview3:1.1.2.3
+	ruby_1_6:1.1.0.2
+	v0_7_1:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2001.07.19.05.42.06;	author knu;	state dead;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.07.23.52.57;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.07.23.34.33;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.30.18.17.39;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.04.30.18.17.39;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.04.30.18.39.35;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.05.07.23.35.08;	author knu;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2001.05.07.23.59.00;	author knu;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2001.07.19.05.44.25;	author knu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@irb´ØÏ¢¤ª¤Þ¤±¥³¥Þ¥ó¥É¤È¥é¥¤¥Ö¥é¥ê
+				$Release Version: 0.7.1 $
+			   	$Revision: 1.3 $
+			   	$Date: 2001/05/07 23:52:57 $
+			   	by Keiju ISHITSUKA(Nihon Rational Co.,Ltd.)
+
+=begin
+
+:¥³¥Þ¥ó¥É:
+* rtags		-- ruby tags command
+
+:´Ø¿ô¥é¥¤¥Ö¥é¥ê:
+* xmp		-- irb version of gotoken xmp-function
+
+:¥¯¥é¥¹¥é¥¤¥Ö¥é¥ê:
+* frame.rb      -- frame tracer
+* completion.rb -- irb completor
+
+= rtags
+
+rtags¤ÏemacsµÚ¤ÓviÍÑ¤Î, TAG¥Õ¥¡¥¤¥ë¤ò¤Ä¤¯¤ë¥³¥Þ¥ó¥É¤Ç¤¹.
+
+== »È¤¤Êý
+
+   rtags [-vi] file....
+
+¥«¥ì¥ó¥È¥Ç¥£¥ì¥¯¥È¥ê¤ËemacsÍÑ¤ÎTAGS¥Õ¥¡¥¤¥ë¤¬¤Ç¤­¤Þ¤¹. -vi¥ª¥×¥·¥ç¥ó¤ò
+¤Ä¤±¤¿»þ¤Ë¤ÏviÍÑ¤Îtags¥Õ¥¡¥¤¥ë¤òºîÀ®¤·¤Þ¤¹.
+
+emacs¤Î¾ì¹ç, ÄÌ¾ï¤Îetags.el¤¬¤½¤Î¤Þ¤Þ»È¤¨¤Þ¤¹. ¸¡º÷²ÄÇ½¤Ê¤Î¤Ï,
+
+* ¥¯¥é¥¹
+* ¥á¥½¥Ã¥É
+* ÆÃ°Û¥á¥½¥Ã¥É
+* alias
+* attr¤ÇÀë¸À¤µ¤ì¤¿¥¢¥¯¥»¥µ(¥Ñ¥é¥á¡¼¥¿¤¬¥·¥ó¥Ü¥ë¤«Ê¸»úÎó¥ê¥Æ¥é¥ë¤Ë¸Â¤ë)
+* attr_XXX¤ÇÀë¸À¤µ¤ì¤¿¥¢¥¯¥»¥µ(¥Ñ¥é¥á¡¼¥¿¤¬¥·¥ó¥Ü¥ë¤«Ê¸»úÎó¥ê¥Æ¥é¥ë¤Ë¸Â¤ë)
+
+¤Ç¤¹.
+
+C¤Ê¤É¤Ç»È¤Ã¤Æ¤¤¤ë¤Î¤È°ã¤¦¤Î¤Ï, ¥³¥ó¥×¥ê¡¼¥·¥ç¥ó¤Ë´Ø¤¹¤ëÉôÊ¬¤Ç,
+
+´Ø¿ôÌ¾¤Ï,
+
+  ´Ø¿ôÌ¾(
+
+¥¯¥é¥¹¤Ï,
+
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾
+
+¥á¥½¥Ã¥É¤Ï,
+
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾#¥á¥½¥Ã¥ÉÌ¾
+
+ÆÃ°Û¥á¥½¥Ã¥É(¥¯¥é¥¹¥á¥½¥Ã¥É)¤Ï
+
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾.¥á¥½¥Ã¥ÉÌ¾
+
+¤Ç¥³¥ó¥×¥ê¡¼¥·¥ç¥ó¤ò¹Ô¤Ê¤¦¤È¤³¤í¤Ç¤¹.
+
+= xmp.rb
+
+¤´¤È¤±¤óxmp¤Î¾å°Ì¸ß´¹¥Ð¡¼¥¸¥ç¥ó¤Ç¤¹. ¤¿¤À, Èó¾ï¤Ë½Å¤¤¤Î¤Ç¤´¤È¤±¤óxmp¤Ç
+¤ÏÂÐ±þ¤Ç¤­¤Ê¤¤»þ¤Ë, »ÈÍÑ¤¹¤ë¤ÈÎÉ¤¤¤Ç¤·¤ç¤¦.
+
+== »È¤¤Êý
+
+=== ´Ø¿ô¤È¤·¤Æ»È¤¦.
+
+    require "irb/xmp"
+    xmp <<END
+    foo = 1
+    foo
+    END
+    ---
+    foo = 1
+        ==>1
+    foo
+	==>1
+
+=== XMP¥¤¥ó¥¹¥¿¥ó¥¹¤òÍÑ¤¤¤ë.
+
+¤³¤Î¾ì¹ç¤Ï, XMP¤¬¥³¥ó¥Æ¥­¥¹¥È¾ðÊó¤ò»ý¤Ä¤Î¤Ç, ÊÑ¿ô¤ÎÃÍ¤Ê¤É¤òÊÝ»ý¤·¤Æ¤¤
+¤Þ¤¹.
+
+  require "irb/xmp"
+  xmp = XMP.new
+  xmp.puts <<END
+  foo = 1
+  foo
+  END
+  xmp.puts <<END
+  foo
+  END
+  ===
+  foo = 1
+      ==>1
+  foo
+      ==>1
+  foo
+      ==>1
+
+== ¥³¥ó¥Æ¥­¥¹¥È¤Ë´Ø¤·¤Æ
+
+XMP¥á¥½¥Ã¥É·²¤Î¥³¥ó¥Æ¥­¥¹¥È¤Ï, ¸Æ¤Ó½Ð¤¹Á°¤Î¥³¥ó¥Æ¥­¥¹¥È¤ÇÉ¾²Á¤µ¤ì¤Þ¤¹.
+ÌÀ¼¨Åª¤Ë¥³¥ó¥Æ¥­¥¹¥È¤ò»ØÄê¤¹¤ë¤È¤½¤Î¥³¥ó¥Æ¥­¥¹¥È¤ÇÉ¾²Á¤·¤Þ¤¹.
+
+Îã:
+
+  xmp "foo", an_binding
+
+:Ãí:
+¥Þ¥ë¥Á¥¹¥ì¥Ã¥É¤Ë¤ÏÂÐ±þ¤·¤Æ¤¤¤Þ¤»¤ó.
+
+= frame.rb
+¸½ºß¼Â¹ÔÃæ¤Î¥Õ¥ì¡¼¥à¾ðÊó¤ò¼è¤ê°·¤¦¤¿¤á¤Î¥¯¥é¥¹¤Ç¤¹. 
+
+* IRB::Frame.top(n = 0)
+  ¾å¤«¤énÈÖÌÜ¤Î¥³¥ó¥Æ¥­¥¹¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. n¤Ï0¤¬ºÇ¾å°Ì¤Ë¤Ê¤ê¤Þ¤¹.
+* IRB::Frame.bottom(n = 0)
+  ²¼¤«¤énÈÖÌÜ¤Î¥³¥ó¥Æ¥­¥¹¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. n¤Ï0¤¬ºÇ²¼°Ì¤Ë¤Ê¤ê¤Þ¤¹.
+* IRB::Frame.sender
+  ¥»¥ó¥À¤Ë¤Ê¤Ã¤Æ¤¤¤ë¥ª¥Ö¥¸¥§¥¯¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. ¥»¥ó¥À¤È¤Ï, ¤½¤Î¥á¥½¥Ã
+  ¥É¤ò¸Æ¤Ó½Ð¤·¤¿Â¦¤Îself¤Î¤³¤È¤Ç¤¹.
+
+:Ãí:
+set_trace_func¤òÍÑ¤¤¤ÆRuby¤Î¼Â¹Ô¤ò¥È¥ì¡¼¥¹¤·¤Æ¤¤¤Þ¤¹. ¥Þ¥ë¥Á¥¹¥ì¥Ã¥É¤Ë
+¤ÏÂÐ±þ¤·¤Æ¤¤¤Þ¤»¤ó.
+
+= completion.rb
+irb¤Îcompletionµ¡Ç½¤òÄó¶¡¤¹¤ë¤â¤Î¤Ç¤¹. 
+
+== »È¤¤Êý
+
+   % irb -r irb/completion
+
+¤È¤¹¤ë¤«, ~/.irbrc Ãæ¤Ë
+
+   require "irb/completion"
+
+¤òÆþ¤ì¤Æ¤¯¤À¤µ¤¤. irb¼Â¹ÔÃæ¤Ë require "irb/completion" ¤·¤Æ¤â¤è¤¤¤Ç¤¹.
+
+irb¼Â¹ÔÃæ¤Ë (TAB) ¤ò²¡¤¹¤È¥³¥ó¥×¥ì¡¼¥·¥ç¥ó¤·¤Þ¤¹.
+
+¥È¥Ã¥×¥ì¥Ù¥ë¤Ç(TAB)¤ò²¡¤¹¤È¤¹¤Ù¤Æ¤Î¹½Ê¸Í×ÁÇ, ¥¯¥é¥¹, ¥á¥½¥Ã¥É¤Î¸õÊä¤¬¤Ç
+¤Þ¤¹. ¸õÊä¤¬Í£°ì¤Ê¤é¤Ð´°Á´¤ËÊä´°¤·¤Þ¤¹.
+
+  irb(main):001:0> in    
+  in                    inspect               instance_eval
+  include               install_alias_method  instance_of?
+  initialize            install_aliases       instance_variables
+  irb(main):001:0> inspect
+  "main"
+  irb(main):002:0> foo = Object.new
+  #<Object:0x4027146c>
+
+  ((|ÊÑ¿ôÌ¾.|))¤Î¸å¤Ë(TAB)¤ò²¡¤¹¤È, ¤½¤Î¥ª¥Ö¥¸¥§¥¯¥È¤Î¥á¥½¥Ã¥É°ìÍ÷¤¬¤Ç¤Þ
+  ¤¹.
+
+  irb(main):003:0> foo.
+  foo.==                  foo.frozen?             foo.protected_methods
+  foo.===                 foo.hash                foo.public_methods
+  foo.=~                  foo.id                  foo.respond_to?
+  foo.__id__              foo.inspect             foo.send
+  foo.__send__            foo.instance_eval       foo.singleton_methods
+  foo.class               foo.instance_of?        foo.taint
+  foo.clone               foo.instance_variables  foo.tainted?
+  foo.display             foo.is_a?               foo.to_a
+  foo.dup                 foo.kind_of?            foo.to_s
+  foo.eql?                foo.method              foo.type
+  foo.equal?              foo.methods             foo.untaint
+  foo.extend              foo.nil?                
+  foo.freeze              foo.private_methods     
+
+=end
+
+% Begin Emacs Environment
+% Local Variables:
+% mode: text
+% comment-column: 0
+% comment-start: "%"
+% comment-end: "\n"
+% End:
+%
+
+@
+
+
+1.3
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@d3 2
+a4 2
+			   	$Revision: 1.2 $
+			   	$Date: 2001/05/07 23:34:33 $
+@
+
+
+1.2
+log
+@Convert from JIS to EUC.
+@
+text
+@d3 2
+a4 2
+			   	$Revision: 1.1 $
+			   	$Date: 2001/04/30 18:17:39 $
+d7 1
+a7 1
+==begin
+d175 1
+a175 1
+==end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 1
+irb$B4XO"$*$^$1%3%^%s%I$H%i%$%V%i%j(B
+d3 2
+a4 2
+			   	$Revision: 1.2 $
+			   	$Date: 2001/04/24 07:47:54 $
+d9 1
+a9 1
+:$B%3%^%s%I(B:
+d12 1
+a12 1
+:$B4X?t%i%$%V%i%j(B:
+d15 1
+a15 1
+:$B%/%i%9%i%$%V%i%j(B:
+d21 1
+a21 1
+rtags$B$O(Bemacs$B5Z$S(Bvi$BMQ$N(B, TAG$B%U%!%$%k$r$D$/$k%3%^%s%I$G$9(B.
+d23 1
+a23 1
+== $B;H$$J}(B
+d27 2
+a28 2
+$B%+%l%s%H%G%#%l%/%H%j$K(Bemacs$BMQ$N(BTAGS$B%U%!%$%k$,$G$-$^$9(B. -vi$B%*%W%7%g%s$r(B
+$B$D$1$?;~$K$O(Bvi$BMQ$N(Btags$B%U%!%$%k$r:n@@.$7$^$9(B.
+d30 1
+a30 1
+emacs$B$N>l9g(B, $BDL>o$N(Betags.el$B$,$=$N$^$^;H$($^$9(B. $B8!:w2DG=$J$N$O(B,
+d32 3
+a34 3
+* $B%/%i%9(B
+* $B%a%=%C%I(B
+* $BFC0[%a%=%C%I(B
+d36 2
+a37 2
+* attr$B$G@@k8@@$5$l$?%"%/%;%5(B($B%Q%i%a!<%?$,%7%s%\%k$+J8;zNs%j%F%i%k$K8B$k(B)
+* attr_XXX$B$G@@k8@@$5$l$?%"%/%;%5(B($B%Q%i%a!<%?$,%7%s%\%k$+J8;zNs%j%F%i%k$K8B$k(B)
+d39 1
+a39 1
+$B$G$9(B.
+d41 1
+a41 1
+C$B$J$I$G;H$C$F$$$k$N$H0c$&$N$O(B, $B%3%s%W%j!<%7%g%s$K4X$9$kItJ,$G(B,
+d43 1
+a43 1
+$B4X?tL>$O(B,
+d45 1
+a45 1
+  $B4X?tL>(B(
+d47 1
+a47 1
+$B%/%i%9$O(B,
+d49 1
+a49 1
+  ::$B%/%i%9L>(B::....::$B%/%i%9L>(B
+d51 1
+a51 1
+$B%a%=%C%I$O(B,
+d53 1
+a53 1
+  ::$B%/%i%9L>(B::....::$B%/%i%9L>(B#$B%a%=%C%IL>(B
+d55 1
+a55 1
+$BFC0[%a%=%C%I(B($B%/%i%9%a%=%C%I(B)$B$O(B
+d57 1
+a57 1
+  ::$B%/%i%9L>(B::....::$B%/%i%9L>(B.$B%a%=%C%IL>(B
+d59 1
+a59 1
+$B$G%3%s%W%j!<%7%g%s$r9T$J$&$H$3$m$G$9(B.
+d63 2
+a64 2
+$B$4$H$1$s(Bxmp$B$N>e0L8_49%P!<%8%g%s$G$9(B. $B$?$@@(B, $BHs>o$K=E$$$N$G$4$H$1$s(Bxmp$B$G(B
+$B$OBP1~$G$-$J$$;~$K(B, $B;HMQ$9$k$HNI$$$G$7$g$&(B.
+d66 1
+a66 1
+== $B;H$$J}(B
+d68 1
+a68 1
+=== $B4X?t$H$7$F;H$&(B.
+d81 1
+a81 1
+=== XMP$B%$%s%9%?%s%9$rMQ$$$k(B.
+d83 2
+a84 2
+$B$3$N>l9g$O(B, XMP$B$,%3%s%F%-%9%H>pJs$r;}$D$N$G(B, $BJQ?t$NCM$J$I$rJ];}$7$F$$(B
+$B$^$9(B.
+d103 1
+a103 1
+== $B%3%s%F%-%9%H$K4X$7$F(B
+d105 2
+a106 2
+XMP$B%a%=%C%I72$N%3%s%F%-%9%H$O(B, $B8F$S=P$9A0$N%3%s%F%-%9%H$GI>2A$5$l$^$9(B.
+$BL@@<(E*$K%3%s%F%-%9%H$r;XDj$9$k$H$=$N%3%s%F%-%9%H$GI>2A$7$^$9(B.
+d108 1
+a108 1
+$BNc(B:
+d112 2
+a113 2
+:$BCm(B:
+$B%^%k%A%9%l%C%I$K$OBP1~$7$F$$$^$;$s(B.
+d116 1
+a116 1
+$B8=:_<B9TCf$N%U%l!<%`>pJs$r<h$j07$&$?$a$N%/%i%9$G$9(B. 
+d119 1
+a119 1
+  $B>e$+$i(Bn$BHVL\$N%3%s%F%-%9%H$r<h$j=P$7$^$9(B. n$B$O(B0$B$,:G>e0L$K$J$j$^$9(B.
+d121 1
+a121 1
+  $B2<$+$i(Bn$BHVL\$N%3%s%F%-%9%H$r<h$j=P$7$^$9(B. n$B$O(B0$B$,:G2<0L$K$J$j$^$9(B.
+d123 2
+a124 2
+  $B%;%s%@@$K$J$C$F$$$k%*%V%8%'%/%H$r<h$j=P$7$^$9(B. $B%;%s%@@$H$O(B, $B$=$N%a%=%C(B
+  $B%I$r8F$S=P$7$?B&$N(Bself$B$N$3$H$G$9(B.
+d126 3
+a128 3
+:$BCm(B:
+set_trace_func$B$rMQ$$$F(BRuby$B$N<B9T$r%H%l!<%9$7$F$$$^$9(B. $B%^%k%A%9%l%C%I$K(B
+$B$OBP1~$7$F$$$^$;$s(B.
+d131 1
+a131 1
+irb$B$N(Bcompletion$B5!G=$rDs6!$9$k$b$N$G$9(B. 
+d133 1
+a133 1
+== $B;H$$J}(B
+d137 1
+a137 1
+$B$H$9$k$+(B, ~/.irbrc $BCf$K(B
+d141 1
+a141 1
+$B$rF~$l$F$/$@@$5$$(B. irb$B<B9TCf$K(B require "irb/completion" $B$7$F$b$h$$$G$9(B.
+d143 1
+a143 1
+irb$B<B9TCf$K(B (TAB) $B$r2!$9$H%3%s%W%l!<%7%g%s$7$^$9(B.
+d145 2
+a146 2
+$B%H%C%W%l%Y%k$G(B(TAB)$B$r2!$9$H$9$Y$F$N9=J8MWAG(B, $B%/%i%9(B, $B%a%=%C%I$N8uJd$,$G(B
+$B$^$9(B. $B8uJd$,M#0l$J$i$P40A4$KJd40$7$^$9(B.
+d157 2
+a158 2
+  ((|$BJQ?tL>(B.|))$B$N8e$K(B(TAB)$B$r2!$9$H(B, $B$=$N%*%V%8%'%/%H$N%a%=%C%I0lMw$,$G$^(B
+  $B$9(B.
+@
+
+
+1.1.2.1
+log
+@* sample/irb.rb, lib/irb.rb, lib/irb/*, doc/irb/*: Merge from irb
+0.7.3 and irb-tools 0.7.1.
+
+* instruby.rb: Install help-message's too.
+
+* lib/irb/main.rb: This file is not needed anymore.
+@
+text
+@d3 2
+a4 2
+			   	$Revision: 1.1.1.1 $
+			   	$Date: 2001/04/30 18:17:39 $
+@
+
+
+1.1.2.2
+log
+@Convert from JIS to EUC.
+@
+text
+@d1 1
+a1 1
+irb´ØÏ¢¤ª¤Þ¤±¥³¥Þ¥ó¥É¤È¥é¥¤¥Ö¥é¥ê
+d3 2
+a4 2
+			   	$Revision: 1.1.2.1 $
+			   	$Date: 2001/04/30 18:39:35 $
+d9 1
+a9 1
+:¥³¥Þ¥ó¥É:
+d12 1
+a12 1
+:´Ø¿ô¥é¥¤¥Ö¥é¥ê:
+d15 1
+a15 1
+:¥¯¥é¥¹¥é¥¤¥Ö¥é¥ê:
+d21 1
+a21 1
+rtags¤ÏemacsµÚ¤ÓviÍÑ¤Î, TAG¥Õ¥¡¥¤¥ë¤ò¤Ä¤¯¤ë¥³¥Þ¥ó¥É¤Ç¤¹.
+d23 1
+a23 1
+== »È¤¤Êý
+d27 2
+a28 2
+¥«¥ì¥ó¥È¥Ç¥£¥ì¥¯¥È¥ê¤ËemacsÍÑ¤ÎTAGS¥Õ¥¡¥¤¥ë¤¬¤Ç¤­¤Þ¤¹. -vi¥ª¥×¥·¥ç¥ó¤ò
+¤Ä¤±¤¿»þ¤Ë¤ÏviÍÑ¤Îtags¥Õ¥¡¥¤¥ë¤òºîÀ®¤·¤Þ¤¹.
+d30 1
+a30 1
+emacs¤Î¾ì¹ç, ÄÌ¾ï¤Îetags.el¤¬¤½¤Î¤Þ¤Þ»È¤¨¤Þ¤¹. ¸¡º÷²ÄÇ½¤Ê¤Î¤Ï,
+d32 3
+a34 3
+* ¥¯¥é¥¹
+* ¥á¥½¥Ã¥É
+* ÆÃ°Û¥á¥½¥Ã¥É
+d36 2
+a37 2
+* attr¤ÇÀë¸À¤µ¤ì¤¿¥¢¥¯¥»¥µ(¥Ñ¥é¥á¡¼¥¿¤¬¥·¥ó¥Ü¥ë¤«Ê¸»úÎó¥ê¥Æ¥é¥ë¤Ë¸Â¤ë)
+* attr_XXX¤ÇÀë¸À¤µ¤ì¤¿¥¢¥¯¥»¥µ(¥Ñ¥é¥á¡¼¥¿¤¬¥·¥ó¥Ü¥ë¤«Ê¸»úÎó¥ê¥Æ¥é¥ë¤Ë¸Â¤ë)
+d39 1
+a39 1
+¤Ç¤¹.
+d41 1
+a41 1
+C¤Ê¤É¤Ç»È¤Ã¤Æ¤¤¤ë¤Î¤È°ã¤¦¤Î¤Ï, ¥³¥ó¥×¥ê¡¼¥·¥ç¥ó¤Ë´Ø¤¹¤ëÉôÊ¬¤Ç,
+d43 1
+a43 1
+´Ø¿ôÌ¾¤Ï,
+d45 1
+a45 1
+  ´Ø¿ôÌ¾(
+d47 1
+a47 1
+¥¯¥é¥¹¤Ï,
+d49 1
+a49 1
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾
+d51 1
+a51 1
+¥á¥½¥Ã¥É¤Ï,
+d53 1
+a53 1
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾#¥á¥½¥Ã¥ÉÌ¾
+d55 1
+a55 1
+ÆÃ°Û¥á¥½¥Ã¥É(¥¯¥é¥¹¥á¥½¥Ã¥É)¤Ï
+d57 1
+a57 1
+  ::¥¯¥é¥¹Ì¾::....::¥¯¥é¥¹Ì¾.¥á¥½¥Ã¥ÉÌ¾
+d59 1
+a59 1
+¤Ç¥³¥ó¥×¥ê¡¼¥·¥ç¥ó¤ò¹Ô¤Ê¤¦¤È¤³¤í¤Ç¤¹.
+d63 2
+a64 2
+¤´¤È¤±¤óxmp¤Î¾å°Ì¸ß´¹¥Ð¡¼¥¸¥ç¥ó¤Ç¤¹. ¤¿¤À, Èó¾ï¤Ë½Å¤¤¤Î¤Ç¤´¤È¤±¤óxmp¤Ç
+¤ÏÂÐ±þ¤Ç¤­¤Ê¤¤»þ¤Ë, »ÈÍÑ¤¹¤ë¤ÈÎÉ¤¤¤Ç¤·¤ç¤¦.
+d66 1
+a66 1
+== »È¤¤Êý
+d68 1
+a68 1
+=== ´Ø¿ô¤È¤·¤Æ»È¤¦.
+d81 1
+a81 1
+=== XMP¥¤¥ó¥¹¥¿¥ó¥¹¤òÍÑ¤¤¤ë.
+d83 2
+a84 2
+¤³¤Î¾ì¹ç¤Ï, XMP¤¬¥³¥ó¥Æ¥­¥¹¥È¾ðÊó¤ò»ý¤Ä¤Î¤Ç, ÊÑ¿ô¤ÎÃÍ¤Ê¤É¤òÊÝ»ý¤·¤Æ¤¤
+¤Þ¤¹.
+d103 1
+a103 1
+== ¥³¥ó¥Æ¥­¥¹¥È¤Ë´Ø¤·¤Æ
+d105 2
+a106 2
+XMP¥á¥½¥Ã¥É·²¤Î¥³¥ó¥Æ¥­¥¹¥È¤Ï, ¸Æ¤Ó½Ð¤¹Á°¤Î¥³¥ó¥Æ¥­¥¹¥È¤ÇÉ¾²Á¤µ¤ì¤Þ¤¹.
+ÌÀ¼¨Åª¤Ë¥³¥ó¥Æ¥­¥¹¥È¤ò»ØÄê¤¹¤ë¤È¤½¤Î¥³¥ó¥Æ¥­¥¹¥È¤ÇÉ¾²Á¤·¤Þ¤¹.
+d108 1
+a108 1
+Îã:
+d112 2
+a113 2
+:Ãí:
+¥Þ¥ë¥Á¥¹¥ì¥Ã¥É¤Ë¤ÏÂÐ±þ¤·¤Æ¤¤¤Þ¤»¤ó.
+d116 1
+a116 1
+¸½ºß¼Â¹ÔÃæ¤Î¥Õ¥ì¡¼¥à¾ðÊó¤ò¼è¤ê°·¤¦¤¿¤á¤Î¥¯¥é¥¹¤Ç¤¹. 
+d119 1
+a119 1
+  ¾å¤«¤énÈÖÌÜ¤Î¥³¥ó¥Æ¥­¥¹¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. n¤Ï0¤¬ºÇ¾å°Ì¤Ë¤Ê¤ê¤Þ¤¹.
+d121 1
+a121 1
+  ²¼¤«¤énÈÖÌÜ¤Î¥³¥ó¥Æ¥­¥¹¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. n¤Ï0¤¬ºÇ²¼°Ì¤Ë¤Ê¤ê¤Þ¤¹.
+d123 2
+a124 2
+  ¥»¥ó¥À¤Ë¤Ê¤Ã¤Æ¤¤¤ë¥ª¥Ö¥¸¥§¥¯¥È¤ò¼è¤ê½Ð¤·¤Þ¤¹. ¥»¥ó¥À¤È¤Ï, ¤½¤Î¥á¥½¥Ã
+  ¥É¤ò¸Æ¤Ó½Ð¤·¤¿Â¦¤Îself¤Î¤³¤È¤Ç¤¹.
+d126 3
+a128 3
+:Ãí:
+set_trace_func¤òÍÑ¤¤¤ÆRuby¤Î¼Â¹Ô¤ò¥È¥ì¡¼¥¹¤·¤Æ¤¤¤Þ¤¹. ¥Þ¥ë¥Á¥¹¥ì¥Ã¥É¤Ë
+¤ÏÂÐ±þ¤·¤Æ¤¤¤Þ¤»¤ó.
+d131 1
+a131 1
+irb¤Îcompletionµ¡Ç½¤òÄó¶¡¤¹¤ë¤â¤Î¤Ç¤¹. 
+d133 1
+a133 1
+== »È¤¤Êý
+d137 1
+a137 1
+¤È¤¹¤ë¤«, ~/.irbrc Ãæ¤Ë
+d141 1
+a141 1
+¤òÆþ¤ì¤Æ¤¯¤À¤µ¤¤. irb¼Â¹ÔÃæ¤Ë require "irb/completion" ¤·¤Æ¤â¤è¤¤¤Ç¤¹.
+d143 1
+a143 1
+irb¼Â¹ÔÃæ¤Ë (TAB) ¤ò²¡¤¹¤È¥³¥ó¥×¥ì¡¼¥·¥ç¥ó¤·¤Þ¤¹.
+d145 2
+a146 2
+¥È¥Ã¥×¥ì¥Ù¥ë¤Ç(TAB)¤ò²¡¤¹¤È¤¹¤Ù¤Æ¤Î¹½Ê¸Í×ÁÇ, ¥¯¥é¥¹, ¥á¥½¥Ã¥É¤Î¸õÊä¤¬¤Ç
+¤Þ¤¹. ¸õÊä¤¬Í£°ì¤Ê¤é¤Ð´°Á´¤ËÊä´°¤·¤Þ¤¹.
+d157 2
+a158 2
+  ((|ÊÑ¿ôÌ¾.|))¤Î¸å¤Ë(TAB)¤ò²¡¤¹¤È, ¤½¤Î¥ª¥Ö¥¸¥§¥¯¥È¤Î¥á¥½¥Ã¥É°ìÍ÷¤¬¤Ç¤Þ
+  ¤¹.
+@
+
+
+1.1.2.3
+log
+@Hit `=begin' and `=end' in proper places so rd2 can format them
+without a problem.
+@
+text
+@d3 2
+a4 2
+			   	$Revision: 1.1.2.2 $
+			   	$Date: 2001/05/07 23:35:08 $
+d7 1
+a7 1
+=begin
+d175 1
+a175 1
+=end
+@
+
+
+1.1.2.4
+log
+@Rename *.jp to *.ja, since jp is a region code and ja is a language
+code.
+@
+text
+@d3 2
+a4 2
+			   	$Revision: 1.1.2.3 $
+			   	$Date: 2001/05/07 23:59:00 $
+@
+
+
+1.1.1.1
+log
+@This is the virgin import of irb-tools 0.7.1.
+@
+text
+@@

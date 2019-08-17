@@ -1,0 +1,4936 @@
+head	1.34;
+access;
+symbols
+	v1_6_7:1.20.2.5
+	v1_6_6:1.20.2.3
+	v1_6_5:1.20.2.3
+	v1_6_4:1.20.2.1
+	v1_7_1:1.22
+	v1_6_4_preview4:1.20.2.1
+	v1_6_4_preview3:1.20.2.1
+	v1_6_4_preview2:1.20.2.1
+	v1_6_4_preview1:1.20.2.1
+	v1_6_3:1.20.2.1
+	ruby_m17n:1.21.0.2
+	ruby_1_6:1.20.0.2
+	v1_6_2:1.19
+	v1_6_1:1.17
+	v1_6_0:1.17
+	v1_4_6:1.2.2.2
+	v1_4_5:1.2.2.2
+	v1_4_4:1.2.2.2
+	ruby_1_4_3:1.2.2.2
+	ruby1_4_3:1.2.2.2
+	v1_4_3:1.2.2.2
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.2.2.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.2.2.8
+	v1_3_6_repack:1.1.1.2.2.5
+	v1_3_6:1.1.1.2.2.5
+	v1_3_5:1.1.1.2.2.4
+	v1_2_6repack:1.1.1.1.4.3
+	v1_3_4_990625:1.1.1.2.2.3
+	v1_3_4_990624:1.1.1.2.2.3
+	v1_2_6:1.1.1.1.4.3
+	v1_3_4_990611:1.1.1.2.2.2
+	v1_3_4_990531:1.1.1.2.2.2
+	v1_3_3_990518:1.1.1.2.2.1
+	v1_3_3_990513:1.1.1.2.2.1
+	v1_3_3_990507:1.1.1.2.2.1
+	v1_2_5:1.1.1.1.4.3
+	v1_2_4:1.1.1.1.4.3
+	v1_3_1_990225:1.1.1.2
+	v1_3_1_990224:1.1.1.2
+	v1_3_1_990215:1.1.1.2
+	v1_3_1_990212:1.1.1.2
+	v1_3_1_990210:1.1.1.2
+	v1_3_1_:1.1.1.2
+	v1_3_1_990209:1.1.1.2
+	v1_3_1_990205:1.1.1.2
+	v1_3_1_990203:1.1.1.2
+	v1_3_1_990201:1.1.1.2
+	v1_3_1"_990201:1.1.1.2
+	v1_3_1_990128:1.1.1.2
+	v1_3_1_990127:1.1.1.2
+	v1_3_1_990126:1.1.1.2
+	ruby_1_3:1.1.1.2.0.2
+	v1_2_2:1.1.1.1.4.2
+	RUBY_1_3:1.1.1.2
+	v1_2_2_pr1:1.1.1.1.4.2
+	v1_2_1repack:1.1.1.1.4.2
+	v1_2_1:1.1.1.1.4.2
+	v1_2_stable:1.1.1.1.4.2
+	v1_1d1:1.1.1.1.4.2.2.2
+	v1_1d0:1.1.1.1.4.2.2.2
+	v1_1c9_1:1.1.1.1.4.2
+	v1_1c9:1.1.1.1.4.2
+	v1_1c8:1.1.1.1.4.2
+	v1_1c7:1.1.1.1.4.2
+	v1_1c6:1.1.1.1.4.2
+	v1_1d-start:1.1.1.1.4.2.2.1
+	v1_1c5:1.1.1.1.4.2
+	v1_1dev:1.1.1.1.4.2.0.2
+	v1_1c4:1.1.1.1.4.2
+	v1_1c3:1.1.1.1.4.2
+	v1_1c2:1.1.1.1.4.1
+	v1_1c1:1.1.1.1.4.1
+	v1_1c0:1.1.1.1.4.1
+	v1_1b9_31:1.1.1.1.4.1
+	v1_1b9_30:1.1.1.1.4.1
+	v1_1b9_28:1.1.1.1.4.1
+	v1_1b9_27:1.1.1.1.4.1
+	v1_1b9_26:1.1.1.1.4.1
+	r1_1b9_25:1.1.1.1.4.1
+	r1_1b9_24:1.1.1.1.4.1
+	v1_1b9_23:1.1.1.1.4.1
+	v1_1b9_22:1.1.1.1.4.1
+	v1_1b9_20:1.1.1.1.4.1
+	v1_1b9_18:1.1.1.1.4.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.34
+date	2002.10.02.16.45.34;	author nobu;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.09.18.06.02.38;	author nahi;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.09.11.12.29.17;	author akr;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.29.11.52.09;	author nahi;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.03.29.03.05.11;	author nahi;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.02.25.15.30.31;	author nahi;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.02.23.09.40.58;	author nahi;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.02.04.08.07.04;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.01.04.14.15.23;	author matz;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.10.02.04.31.23;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.07.02.08.46.28;	author matz;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.06.23.15.14.22;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.03.21.03.41.45;	author matz;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.12.27.05.59.03;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.12.25.07.31.43;	author matz;	state Exp;
+branches
+	1.20.2.1;
+next	1.19;
+
+1.19
+date	2000.10.20.16.37.01;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.10.14.14.44.58;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.08.28.09.53.40;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.08.15.06.22.48;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.08.07.05.02.10;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.18.06.00.44;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.28.08.27.00;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.09.04.53.11;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.01.09.41.38;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.17.08.58.20;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.29.08.05.31;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.08.08.49.00;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.08.05.00.24;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.37.22;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.10.06.47.11;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.08.03.57.01;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.15.08.52.17;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.16;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.07;	author matz;	state Exp;
+branches
+	1.1.1.1.4.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	99.01.20.04.59.35;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	;
+
+1.1.1.2.2.1
+date	99.04.09.17.57.43;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	99.05.25.08.26.20;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	99.06.24.04.24.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.07.15.07.59.58;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	99.07.22.10.37.25;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	99.07.30.06.38.22;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	99.07.30.06.41.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	99.08.06.06.48.24;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	99.08.11.07.24.10;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.1
+date	98.04.30.07.41.20;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2;
+
+1.1.1.1.4.2
+date	98.08.14.03.56.23;	author matz;	state Exp;
+branches
+	1.1.1.1.4.2.2.1;
+next	1.1.1.1.4.3;
+
+1.1.1.1.4.3
+date	99.04.08.09.12.09;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.1.4.2.2.1
+date	98.09.08.07.09.43;	author matz;	state Exp;
+branches;
+next	1.1.1.1.4.2.2.2;
+
+1.1.1.1.4.2.2.2
+date	98.12.16.07.30.36;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.11.09.03.57.28;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	99.11.10.06.36.01;	author matz;	state Exp;
+branches;
+next	;
+
+1.20.2.1
+date	2000.12.28.04.45.16;	author matz;	state Exp;
+branches;
+next	1.20.2.2;
+
+1.20.2.2
+date	2001.06.23.10.13.41;	author knu;	state Exp;
+branches;
+next	1.20.2.3;
+
+1.20.2.3
+date	2001.06.29.08.34.21;	author matz;	state Exp;
+branches;
+next	1.20.2.4;
+
+1.20.2.4
+date	2002.02.04.08.09.12;	author matz;	state Exp;
+branches;
+next	1.20.2.5;
+
+1.20.2.5
+date	2002.02.04.09.27.43;	author nahi;	state Exp;
+branches;
+next	1.20.2.6;
+
+1.20.2.6
+date	2002.03.30.13.35.47;	author nahi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.34
+log
+@use Object#class instead of deprecated Object#type.
+@
+text
+@# Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+# Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+if $SAFE > 0
+  STDERR.print "-r debug.rb is not available in safe mode\n"
+  exit 1
+end
+
+require 'tracer'
+require 'pp'
+
+class Tracer
+  def Tracer.trace_func(*vars)
+    Single.trace_func(*vars)
+  end
+end
+
+SCRIPT_LINES__ = {} unless defined? SCRIPT_LINES__
+
+class DEBUGGER__
+class Mutex
+  def initialize
+    @@locker = nil
+    @@waiting = []
+    @@locked = false;
+  end
+
+  def locked?
+    @@locked
+  end
+
+  def lock
+    return if @@locker == Thread.current
+    while (Thread.critical = true; @@locked)
+      @@waiting.push Thread.current
+      Thread.stop
+    end
+    @@locked = true
+    @@locker = Thread.current
+    Thread.critical = false
+    self
+  end
+
+  def unlock
+    return unless @@locked
+    unless @@locker == Thread.current
+      raise RuntimeError, "unlocked by other"
+    end
+    Thread.critical = true
+    t = @@waiting.shift
+    @@locked = false
+    @@locker = nil
+    Thread.critical = false
+    t.run if t
+    self
+  end
+end
+MUTEX = Mutex.new
+
+class Context
+  DEBUG_LAST_CMD = []
+
+  begin
+    require 'readline'
+    def readline(prompt, hist)
+      Readline::readline(prompt, hist)
+    end
+  rescue LoadError
+    def readline(prompt, hist)
+      STDOUT.print prompt
+      STDOUT.flush
+      line = STDIN.gets
+      exit unless line
+      line.chomp!
+      line
+    end
+    USE_READLINE = false
+  end
+
+  def initialize
+    if Thread.current == Thread.main
+      @@stop_next = 1
+    else
+      @@stop_next = 0
+    end
+    @@last_file = nil
+    @@file = nil
+    @@line = nil
+    @@no_step = nil
+    @@frames = []
+    @@finish_pos = 0
+    @@trace = false
+    @@catch = "StandardError"
+    @@suspend_next = false
+  end
+
+  def stop_next(n=1)
+    @@stop_next = n
+  end
+
+  def set_suspend
+    @@suspend_next = true
+  end
+
+  def clear_suspend
+    @@suspend_next = false
+  end
+
+  def suspend_all
+    DEBUGGER__.suspend
+  end
+
+  def resume_all
+    DEBUGGER__.resume
+  end
+
+  def check_suspend
+    while (Thread.critical = true; @@suspend_next)
+      DEBUGGER__.waiting.push Thread.current
+      @@suspend_next = false
+      Thread.stop
+    end
+    Thread.critical = false
+  end
+
+  def trace?
+    @@trace
+  end
+
+  def set_trace(arg)
+    @@trace = arg
+  end
+
+  def stdout
+    DEBUGGER__.stdout
+  end
+
+  def break_points
+    DEBUGGER__.break_points
+  end
+
+  def display
+    DEBUGGER__.display
+  end
+
+  def context(th)
+    DEBUGGER__.context(th)
+  end
+
+  def set_trace_all(arg)
+    DEBUGGER__.set_trace(arg)
+  end
+
+  def set_last_thread(th)
+    DEBUGGER__.set_last_thread(th)
+  end
+
+  def debug_eval(str, binding)
+    begin
+      val = eval(str, binding)
+      val
+    rescue StandardError, ScriptError
+      at = eval("caller(0)", binding)
+      stdout.printf "%s:%s\n", at.shift, $!.to_s.sub(/\(eval\):1:(in `.*?':)?/, '') #`
+      for i in at
+	stdout.printf "\tfrom %s\n", i
+      end
+      throw :debug_error
+    end
+  end
+
+  def debug_silent_eval(str, binding)
+    begin
+      val = eval(str, binding)
+      val
+    rescue StandardError, ScriptError
+      nil
+    end
+  end
+
+  def var_list(ary, binding)
+    ary.sort!
+    for v in ary
+      stdout.printf "  %s => %s\n", v, eval(v, binding).inspect
+    end
+  end
+
+  def debug_variable_info(input, binding)
+    case input
+    when /^\s*g(?:lobal)?$/
+      var_list(global_variables, binding)
+
+    when /^\s*l(?:ocal)?$/
+      var_list(eval("local_variables", binding), binding)
+
+    when /^\s*i(?:nstance)?\s+/
+      obj = debug_eval($', binding)
+      var_list(obj.instance_variables, obj.instance_eval{binding()})
+
+    when /^\s*c(?:onst(?:ant)?)?\s+/
+      obj = debug_eval($', binding)
+      unless obj.kind_of? Module
+	stdout.print "Should be Class/Module: ", $', "\n"
+      else
+	var_list(obj.constants, obj.module_eval{binding()})
+      end
+    end
+  end
+
+  def debug_method_info(input, binding)
+    case input
+    when /^i(:?nstance)?\s+/
+      obj = debug_eval($', binding)
+
+      len = 0
+      for v in obj.methods.sort
+	len += v.size + 1
+	if len > 70
+	  len = v.size + 1
+	  stdout.print "\n"
+	end
+	stdout.print v, " "
+      end
+      stdout.print "\n"
+
+    else
+      obj = debug_eval(input, binding)
+      unless obj.kind_of? Module
+	stdout.print "Should be Class/Module: ", input, "\n"
+      else
+	len = 0
+	for v in obj.instance_methods.sort
+	  len += v.size + 1
+	  if len > 70
+	    len = v.size + 1
+	    stdout.print "\n"
+	  end
+	  stdout.print v, " "
+	end
+	stdout.print "\n"
+      end
+    end
+  end
+
+  def thnum
+    num = DEBUGGER__.instance_eval{@@thread_list[Thread.current]}
+    unless num
+      DEBUGGER__.make_thread_list
+      num = DEBUGGER__.instance_eval{@@thread_list[Thread.current]}
+    end
+    num
+  end
+
+  def debug_command(file, line, id, binding)
+    MUTEX.lock
+    set_last_thread(Thread.current)
+    frame_pos = 0
+    binding_file = file
+    binding_line = line
+    previous_line = nil
+    if (ENV['EMACS'] == 't')
+      stdout.printf "\032\032%s:%d:\n", binding_file, binding_line
+    else
+      stdout.printf "%s:%d:%s", binding_file, binding_line,
+	line_at(binding_file, binding_line)
+    end
+    @@frames[0] = [binding, file, line, id]
+    display_expressions(binding)
+    prompt = true
+    while prompt and input = readline("(rdb:%d) "%thnum(), true)
+      catch(:debug_error) do
+	if input == ""
+	  input = DEBUG_LAST_CMD[0]
+	  stdout.print input, "\n"
+	else
+	  DEBUG_LAST_CMD[0] = input
+	end
+
+	case input
+	when /^\s*tr(?:ace)?(?:\s+(on|off))?(?:\s+(all))?$/
+          if defined?( $2 )
+            if $1 == 'on'
+              set_trace_all true
+            else
+              set_trace_all false
+            end
+          elsif defined?( $1 )
+            if $1 == 'on'
+              set_trace true
+            else
+              set_trace false
+            end
+          end
+          if trace?
+            stdout.print "Trace on.\n"
+          else
+            stdout.print "Trace off.\n"
+          end
+
+	when /^\s*b(?:reak)?\s+(?:(.+):)?(.+)$/
+	  pos = $2
+	  file = File.basename($1) if $1
+	  if pos =~ /^\d+$/
+	    pname = pos
+	    pos = pos.to_i
+	  else
+	    pname = pos = pos.intern.id2name
+	  end
+	  break_points.push [true, 0, file, pos]
+	  stdout.printf "Set breakpoint %d at %s:%s\n", break_points.size, file, pname
+
+	when /^\s*wat(?:ch)?\s+(.+)$/
+	  exp = $1
+	  break_points.push [true, 1, exp]
+	  stdout.printf "Set watchpoint %d\n", break_points.size, exp
+
+	when /^\s*b(?:reak)?$/
+	  if break_points.find{|b| b[1] == 0}
+	    n = 1
+	    stdout.print "Breakpoints:\n"
+	    for b in break_points
+	      if b[0] and b[1] == 0
+		stdout.printf "  %d %s:%s\n", n, b[2], b[3] 
+	      end
+	      n += 1
+	    end
+	  end
+	  if break_points.find{|b| b[1] == 1}
+	    n = 1
+	    stdout.print "\n"
+	    stdout.print "Watchpoints:\n"
+	    for b in break_points
+	      if b[0] and b[1] == 1
+		stdout.printf "  %d %s\n", n, b[2]
+	      end
+	      n += 1
+	    end
+	  end
+	  if break_points.size == 0
+	    stdout.print "No breakpoints\n"
+	  else
+	    stdout.print "\n"
+	  end
+
+	when /^\s*del(?:ete)?(?:\s+(\d+))?$/
+	  pos = $1
+	  unless pos
+	    input = readline("Clear all breakpoints? (y/n) ", false)
+	    if input == "y"
+	      for b in break_points
+		b[0] = false
+	      end
+	    end
+	  else
+	    pos = pos.to_i
+	    if break_points[pos-1]
+	      break_points[pos-1][0] = false
+	    else
+	      stdout.printf "Breakpoint %d is not defined\n", pos
+	    end
+	  end
+
+	when /^\s*disp(?:lay)?\s+(.+)$/
+	  exp = $1
+	  display.push [true, exp]
+	  stdout.printf "%d: ", display.size
+	  display_expression(exp, binding)
+
+	when /^\s*disp(?:lay)?$/
+	  display_expressions(binding)
+
+	when /^\s*undisp(?:lay)?(?:\s+(\d+))?$/
+	  pos = $1
+	  unless pos
+	    input = readline("Clear all expressions? (y/n) ", false)
+	    if input == "y"
+	      for d in display
+		d[0] = false
+	      end
+	    end
+	  else
+	    pos = pos.to_i
+	    if display[pos-1]
+	      display[pos-1][0] = false
+	    else
+	      stdout.printf "Display expression %d is not defined\n", pos
+	    end
+	  end
+
+	when /^\s*c(?:ont)?$/
+	  prompt = false
+
+	when /^\s*s(?:tep)?(?:\s+(\d+))?$/
+	  if $1
+	    lev = $1.to_i
+	  else
+	    lev = 1
+	  end
+	  @@stop_next = lev
+	  prompt = false
+
+	when /^\s*n(?:ext)?(?:\s+(\d+))?$/
+	  if $1
+	    lev = $1.to_i
+	  else
+	    lev = 1
+	  end
+	  @@stop_next = lev
+	  @@no_step = @@frames.size - frame_pos
+	  prompt = false
+
+	when /^\s*w(?:here)?$/, /^\s*f(?:rame)?$/
+	  display_frames(frame_pos)
+
+	when /^\s*l(?:ist)?(?:\s+(.+))?$/
+	  if not $1
+	    b = previous_line ? previous_line + 10 : binding_line - 5
+	    e = b + 9
+	  elsif $1 == '-'
+	    b = previous_line ? previous_line - 10 : binding_line - 5
+	    e = b + 9
+	  else
+	    b, e = $1.split(/[-,]/)
+	    if e
+	      b = b.to_i
+	      e = e.to_i
+	    else
+	      b = b.to_i - 5
+	      e = b + 9
+	    end
+	  end
+	  previous_line = b
+	  display_list(b, e, binding_file, binding_line)
+
+	when /^\s*up(?:\s+(\d+))?$/
+	  previous_line = nil
+	  if $1
+	    lev = $1.to_i
+	  else
+	    lev = 1
+	  end
+	  frame_pos += lev
+	  if frame_pos >= @@frames.size
+	    frame_pos = @@frames.size - 1
+	    stdout.print "At toplevel\n"
+	  end
+	  binding, binding_file, binding_line = @@frames[frame_pos]
+	  stdout.print format_frame(frame_pos)
+
+	when /^\s*down(?:\s+(\d+))?$/
+	  previous_line = nil
+	  if $1
+	    lev = $1.to_i
+	  else
+	    lev = 1
+	  end
+	  frame_pos -= lev
+	  if frame_pos < 0
+	    frame_pos = 0
+	    stdout.print "At stack bottom\n"
+	  end
+	  binding, binding_file, binding_line = @@frames[frame_pos]
+	  stdout.print format_frame(frame_pos)
+
+	when /^\s*fin(?:ish)?$/
+	  if frame_pos == @@frames.size
+	    stdout.print "\"finish\" not meaningful in the outermost frame.\n"
+	  else
+	    @@finish_pos = @@frames.size - frame_pos
+	    frame_pos = 0
+	    prompt = false
+	  end
+
+	when /^\s*cat(?:ch)?(?:\s+(.+))?$/
+	  if $1
+	    excn = $1
+	    if excn == 'off'
+	      @@catch = nil
+	      stdout.print "Clear catchpoint.\n"
+	    else
+	      @@catch = excn
+	      stdout.printf "Set catchpoint %s.\n", @@catch
+	    end
+	  else
+	    if @@catch
+	      stdout.printf "Catchpoint %s.\n", @@catch
+	    else
+	      stdout.print "No catchpoint.\n"
+	    end
+	  end
+
+	when /^\s*q(?:uit)?$/
+	  input = readline("Really quit? (y/n) ", false)
+	  if input == "y"
+	    exit!	# exit -> exit!: No graceful way to stop threads...
+	  end
+
+	when /^\s*v(?:ar)?\s+/
+	  debug_variable_info($', binding)
+
+	when /^\s*m(?:ethod)?\s+/
+	  debug_method_info($', binding)
+
+	when /^\s*th(?:read)?\s+/
+	  if DEBUGGER__.debug_thread_info($', binding) == :cont
+	    prompt = false
+	  end
+
+	when /^\s*pp\s+/
+	  PP.pp(debug_eval($', binding), stdout)
+
+	when /^\s*p\s+/
+	  stdout.printf "%s\n", debug_eval($', binding).inspect
+
+	when /^\s*h(?:elp)?$/
+	  debug_print_help()
+
+	else
+	  v = debug_eval(input, binding)
+	  stdout.printf "%s\n", v.inspect unless (v == nil)
+	end
+      end
+    end
+    MUTEX.unlock
+    resume_all
+  end
+
+  def debug_print_help
+    stdout.print <<EOHELP
+Debugger help v.-0.002b
+Commands
+  b[reak] [file|method:]<line|method>
+                             set breakpoint to some position
+  wat[ch] <expression>       set watchpoint to some expression
+  cat[ch] <an Exception>     set catchpoint to an exception
+  b[reak]                    list breakpoints
+  cat[ch]                    show catchpoint
+  del[ete][ nnn]             delete some or all breakpoints
+  disp[lay] <expression>     add expression into display expression list
+  undisp[lay][ nnn]          delete one particular or all display expressions
+  c[ont]                     run until program ends or hit breakpoint
+  s[tep][ nnn]               step (into methods) one line or till line nnn
+  n[ext][ nnn]               go over one line or till line nnn
+  w[here]                    display frames
+  f[rame]                    alias for where
+  l[ist][ (-|nn-mm)]         list program, - lists backwards
+                             nn-mm lists given lines
+  up[ nn]                    move to higher frame
+  down[ nn]                  move to lower frame
+  fin[ish]                   return to outer frame
+  tr[ace] (on|off)           set trace mode of current thread
+  tr[ace] (on|off) all       set trace mode of all threads
+  q[uit]                     exit from debugger
+  v[ar] g[lobal]             show global variables
+  v[ar] l[ocal]              show local variables
+  v[ar] i[nstance] <object>  show instance variables of object
+  v[ar] c[onst] <object>     show constants of object
+  m[ethod] i[nstance] <obj>  show methods of object
+  m[ethod] <class|module>    show instance methods of class or module
+  th[read] l[ist]            list all threads
+  th[read] c[ur[rent]]       show current thread
+  th[read] [sw[itch]] <nnn>  switch thread context to nnn
+  th[read] stop <nnn>        stop thread nnn
+  th[read] resume <nnn>      resume thread nnn
+  p expression               evaluate expression and print its value
+  h[elp]                     print this help
+  <everything else>          evaluate
+EOHELP
+  end
+
+  def display_expressions(binding)
+    n = 1
+    for d in display
+      if d[0]
+	stdout.printf "%d: ", n
+	display_expression(d[1], binding)
+      end
+      n += 1
+    end
+  end
+
+  def display_expression(exp, binding)
+    stdout.printf "%s = %s\n", exp, debug_silent_eval(exp, binding).to_s
+  end
+
+  def frame_set_pos(file, line)
+    if @@frames[0]
+      @@frames[0][1] = file
+      @@frames[0][2] = line
+    end
+  end
+
+  def display_frames(pos)
+    0.upto(@@frames.size - 1) do |n|
+      if n == pos
+	stdout.print "--> "
+      else
+	stdout.print "    "
+      end
+      stdout.print format_frame(n)
+    end
+  end
+
+  def format_frame(pos)
+    bind, file, line, id = @@frames[pos]
+    sprintf "#%d %s:%s%s\n", pos + 1, file, line,
+      (id ? ":in `#{id.id2name}'" : "")
+  end
+
+  def display_list(b, e, file, line)
+    stdout.printf "[%d, %d] in %s\n", b, e, file
+    if lines = SCRIPT_LINES__[file] and lines != true
+      n = 0
+      b.upto(e) do |n|
+	if n > 0 && lines[n-1]
+	  if n == line
+	    stdout.printf "=> %d  %s\n", n, lines[n-1].chomp
+	  else
+	    stdout.printf "   %d  %s\n", n, lines[n-1].chomp
+	  end
+	end
+      end
+    else
+      stdout.printf "No sourcefile available for %s\n", file
+    end
+  end
+
+  def line_at(file, line)
+    lines = SCRIPT_LINES__[file]
+    if lines
+      return "\n" if lines == true
+      line = lines[line-1]
+      return "\n" unless line
+      return line
+    end
+    return "\n"
+  end
+
+  def debug_funcname(id)
+    if id.nil?
+      "toplevel"
+    else
+      id.id2name
+    end
+  end
+
+  def check_break_points(file, pos, binding, id)
+    return false if break_points.empty?
+    file = File.basename(file)
+    n = 1
+    for b in break_points
+      if b[0]
+	if b[1] == 0 and b[2] == file and b[3] == pos
+	  stdout.printf "Breakpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+	  return true
+	elsif b[1] == 1
+	  if debug_silent_eval(b[2], binding)
+	    stdout.printf "Watchpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+	    return true
+	  end
+	end
+      end
+      n += 1
+    end
+    return false
+  end
+
+  def excn_handle(file, line, id, binding)
+    if $!.class <= SystemExit
+      set_trace_func nil
+      exit
+    end
+
+    if @@catch and ($!.class.ancestors.find { |e| e.to_s == @@catch })
+      stdout.printf "%s:%d: `%s' (%s)\n", file, line, $!, $!.class
+      fs = @@frames.size
+      tb = caller(0)[-fs..-1]
+      if tb
+	for i in tb
+	  stdout.printf "\tfrom %s\n", i
+	end
+      end
+      suspend_all
+      debug_command(file, line, id, binding)
+    end
+  end
+
+  def trace_func(event, file, line, id, binding, klass)
+    Tracer.trace_func(event, file, line, id, binding, klass) if trace?
+    context(Thread.current).check_suspend
+    @@file = file
+    @@line = line
+    case event
+    when 'line'
+      frame_set_pos(file, line)
+      if !@@no_step or @@frames.size == @@no_step
+	@@stop_next -= 1
+      elsif @@frames.size < @@no_step
+	@@stop_next = 0		# break here before leaving...
+      else
+	# nothing to do. skipped.
+      end
+      if @@stop_next == 0 or check_break_points(file, line, binding, id)
+	@@no_step = nil
+	suspend_all
+	debug_command(file, line, id, binding)
+      end
+
+    when 'call'
+      @@frames.unshift [binding, file, line, id]
+      if check_break_points(file, id.id2name, binding, id) or
+	  check_break_points(klass.to_s, id.id2name, binding, id)
+	suspend_all
+	debug_command(file, line, id, binding)
+      end
+
+    when 'c-call'
+      frame_set_pos(file, line)
+
+    when 'class'
+      @@frames.unshift [binding, file, line, id]
+
+    when 'return', 'end'
+      if @@frames.size == @@finish_pos
+	@@stop_next = 1
+	@@finish_pos = 0
+      end
+      @@frames.shift
+
+    when 'end'
+      @@frames.shift
+
+    when 'raise' 
+      excn_handle(file, line, id, binding)
+
+    end
+    @@last_file = file
+  end
+end
+
+trap("INT") { DEBUGGER__.interrupt }
+@@last_thread = Thread::main
+@@max_thread = 1
+@@thread_list = {Thread::main => 1}
+@@break_points = []
+@@display = []
+@@waiting = []
+@@stdout = STDOUT
+
+class << DEBUGGER__
+  def stdout
+    @@stdout
+  end
+
+  def stdout=(s)
+    @@stdout = s
+  end
+
+  def display
+    @@display
+  end
+
+  def break_points
+    @@break_points
+  end
+
+  def waiting
+    @@waiting
+  end
+
+  def set_trace( arg )
+    Thread.critical = true
+    make_thread_list
+    for th in @@thread_list
+      context(th[0]).set_trace arg
+    end
+    Thread.critical = false
+    arg
+  end
+
+  def set_last_thread(th)
+    @@last_thread = th
+  end
+
+  def suspend
+    Thread.critical = true
+    make_thread_list
+    for th in @@thread_list
+      next if th[0] == Thread.current
+      context(th[0]).set_suspend
+    end
+    Thread.critical = false
+    # Schedule other threads to suspend as soon as possible.
+    Thread.pass
+  end
+
+  def resume
+    Thread.critical = true
+    make_thread_list
+    for th in @@thread_list
+      next if th[0] == Thread.current
+      context(th[0]).clear_suspend
+    end
+    waiting.each do |th|
+      th.run
+    end
+    waiting.clear
+    Thread.critical = false
+    # Schedule other threads to restart as soon as possible.
+    Thread.pass
+  end
+
+  def context(thread=Thread.current)
+    c = thread[:__debugger_data__]
+    unless c
+      thread[:__debugger_data__] = c = Context.new
+    end
+    c
+  end
+
+  def interrupt
+    context(@@last_thread).stop_next
+  end
+
+  def get_thread(num)
+    th = @@thread_list.index(num)
+    unless th
+      @@stdout.print "No thread ##{num}\n"
+      throw :debug_error
+    end
+    th
+  end
+
+  def thread_list(num)
+    th = get_thread(num)
+    if th == Thread.current
+      @@stdout.print "+"
+    else
+      @@stdout.print " "
+    end
+    @@stdout.printf "%d ", num
+    @@stdout.print th.inspect, "\t"
+    file = context(th).instance_eval{@@file}
+    if file
+      @@stdout.print file,":",context(th).instance_eval{@@line}
+    end
+    @@stdout.print "\n"
+  end
+
+  def thread_list_all
+    for th in @@thread_list.values.sort
+      thread_list(th)
+    end
+  end
+
+  def make_thread_list
+    hash = {}
+    for th in Thread::list
+      if @@thread_list.key? th
+	hash[th] = @@thread_list[th]
+      else
+	@@max_thread += 1
+	hash[th] = @@max_thread
+      end
+    end
+    @@thread_list = hash
+  end
+
+  def debug_thread_info(input, binding)
+    case input
+    when /^l(?:ist)?/
+      make_thread_list
+      thread_list_all
+
+    when /^c(?:ur(?:rent)?)?$/
+      make_thread_list
+      thread_list(@@thread_list[Thread.current])
+
+    when /^(?:sw(?:itch)?\s+)?(\d+)/
+      make_thread_list
+      th = get_thread($1.to_i)
+      if th == Thread.current
+	@@stdout.print "It's the current thread.\n"
+      else
+	thread_list(@@thread_list[th])
+	context(th).stop_next
+	th.run
+	return :cont
+      end
+
+    when /^stop\s+(\d+)/
+      make_thread_list
+      th = get_thread($1.to_i)
+      if th == Thread.current
+	@@stdout.print "It's the current thread.\n"
+      elsif th.stop?
+	@@stdout.print "Already stopped.\n"
+      else
+	thread_list(@@thread_list[th])
+	context(th).suspend 
+      end
+
+    when /^resume\s+(\d+)/
+      make_thread_list
+      th = get_thread($1.to_i)
+      if th == Thread.current
+	@@stdout.print "It's the current thread.\n"
+      elsif !th.stop?
+	@@stdout.print "Already running."
+      else
+	thread_list(@@thread_list[th])
+	th.run
+      end
+    end
+  end
+end
+
+stdout.printf "Debug.rb\n"
+stdout.printf "Emacs support available.\n\n"
+set_trace_func proc { |event, file, line, id, binding, klass, *rest|
+  DEBUGGER__.context.trace_func event, file, line, id, binding, klass
+}
+end
+@
+
+
+1.33
+log
+@No exception report when the exception is not specified to catch.
+[ruby-talk:50330]
+@
+text
+@d669 1
+a669 1
+    if $!.type <= SystemExit
+d674 2
+a675 2
+    if @@catch and ($!.type.ancestors.find { |e| e.to_s == @@catch })
+      stdout.printf "%s:%d: `%s' (%s)\n", file, line, $!, $!.type
+@
+
+
+1.32
+log
+@* pp.rb (ARGF.pretty_print): implemented.
+(PP.pp): arguments reordered.
+@
+text
+@a668 1
+    stdout.printf "%s:%d: `%s' (%s)\n", file, line, $!, $!.type
+d675 1
+@
+
+
+1.31
+log
+@Changed the regexp again to simplify code.  See also [ruby-dev:16682].
+@
+text
+@d510 1
+a510 1
+	  PP.pp(debug_eval($', binding), 79, stdout)
+@
+
+
+1.30
+log
+@Changed regexp for parsing break command '.*?+' to '.+'.
+  See also [ruby-dev:16652].
+@
+text
+@d300 3
+a302 8
+	when /^\s*b(?:reak)?\s+((?:.+:)?.+)$/
+	  pos = $1
+	  if pos.index(":")
+	    pos = pos.split(":")
+	    file = pos[0...-1].join(":")
+	    pos = pos[-1]
+	  end
+	  file = File.basename(file)
+@
+
+
+1.29
+log
+@Corrected mis-indentation.  Try diff -w to find that these are the same without
+  indentation.
+@
+text
+@d300 1
+a300 1
+	when /^\s*b(?:reak)?\s+((?:.*?+:)?.+)$/
+@
+
+
+1.28
+log
+@Refactoring.  Added Context#format_frame to format a frame, used by up/down
+  command and Context#display_frames.
+@
+text
+@d21 6
+a26 6
+  class Mutex
+    def initialize
+      @@locker = nil
+      @@waiting = []
+      @@locked = false;
+    end
+d28 3
+a30 3
+    def locked?
+      @@locked
+    end
+d32 11
+a42 11
+    def lock
+      return if @@locker == Thread.current
+      while (Thread.critical = true; @@locked)
+	@@waiting.push Thread.current
+	Thread.stop
+      end
+      @@locked = true
+      @@locker = Thread.current
+      Thread.critical = false
+      self
+    end
+d44 12
+a55 13
+    def unlock
+      return unless @@locked
+      unless @@locker == Thread.current
+	raise RuntimeError, "unlocked by other"
+      end
+      Thread.critical = true
+      t = @@waiting.shift
+      @@locked = false
+      @@locker = nil
+      Thread.critical = false
+      t.run if t
+      self
+    end
+d57 2
+a58 1
+  MUTEX = Mutex.new
+d60 2
+a61 2
+  class Context
+    DEBUG_LAST_CMD = []
+d63 13
+a75 15
+    begin
+      require 'readline'
+      def readline(prompt, hist)
+	Readline::readline(prompt, hist)
+      end
+    rescue LoadError
+      def readline(prompt, hist)
+	STDOUT.print prompt
+	STDOUT.flush
+	line = STDIN.gets
+	exit unless line
+	line.chomp!
+	line
+      end
+      USE_READLINE = false
+d77 19
+d97 3
+a99 16
+    def initialize
+      if Thread.current == Thread.main
+	@@stop_next = 1
+      else
+	@@stop_next = 0
+      end
+      @@last_file = nil
+      @@file = nil
+      @@line = nil
+      @@no_step = nil
+      @@frames = []
+      @@finish_pos = 0
+      @@trace = false
+      @@catch = "StandardError"
+      @@suspend_next = false
+    end
+d101 3
+a103 3
+    def stop_next(n=1)
+      @@stop_next = n
+    end
+d105 3
+a107 3
+    def set_suspend
+      @@suspend_next = true
+    end
+d109 3
+a111 3
+    def clear_suspend
+      @@suspend_next = false
+    end
+d113 3
+a115 3
+    def suspend_all
+      DEBUGGER__.suspend
+    end
+d117 5
+a121 2
+    def resume_all
+      DEBUGGER__.resume
+d123 2
+d126 3
+a128 8
+    def check_suspend
+      while (Thread.critical = true; @@suspend_next)
+	DEBUGGER__.waiting.push Thread.current
+	@@suspend_next = false
+	Thread.stop
+      end
+      Thread.critical = false
+    end
+d130 3
+a132 3
+    def trace?
+      @@trace
+    end
+d134 3
+a136 3
+    def set_trace(arg)
+      @@trace = arg
+    end
+d138 3
+a140 3
+    def stdout
+      DEBUGGER__.stdout
+    end
+d142 3
+a144 3
+    def break_points
+      DEBUGGER__.break_points
+    end
+d146 3
+a148 3
+    def display
+      DEBUGGER__.display
+    end
+d150 3
+a152 3
+    def context(th)
+      DEBUGGER__.context(th)
+    end
+d154 3
+a156 3
+    def set_trace_all(arg)
+      DEBUGGER__.set_trace(arg)
+    end
+d158 11
+a168 2
+    def set_last_thread(th)
+      DEBUGGER__.set_last_thread(th)
+d170 1
+d172 6
+a177 12
+    def debug_eval(str, binding)
+      begin
+	val = eval(str, binding)
+	val
+      rescue StandardError, ScriptError
+	at = eval("caller(0)", binding)
+	stdout.printf "%s:%s\n", at.shift, $!.to_s.sub(/\(eval\):1:(in `.*?':)?/, '') #`
+	for i in at
+	  stdout.printf "\tfrom %s\n", i
+	end
+	throw :debug_error
+      end
+d179 1
+d181 4
+a184 7
+    def debug_silent_eval(str, binding)
+      begin
+	val = eval(str, binding)
+	val
+      rescue StandardError, ScriptError
+	nil
+      end
+d186 1
+d188 18
+a205 4
+    def var_list(ary, binding)
+      ary.sort!
+      for v in ary
+	stdout.printf "  %s => %s\n", v, eval(v, binding).inspect
+d208 1
+d210 11
+a220 18
+    def debug_variable_info(input, binding)
+      case input
+      when /^\s*g(?:lobal)?$/
+	var_list(global_variables, binding)
+
+      when /^\s*l(?:ocal)?$/
+	var_list(eval("local_variables", binding), binding)
+
+      when /^\s*i(?:nstance)?\s+/
+	obj = debug_eval($', binding)
+	var_list(obj.instance_variables, obj.instance_eval{binding()})
+
+      when /^\s*c(?:onst(?:ant)?)?\s+/
+	obj = debug_eval($', binding)
+	unless obj.kind_of? Module
+	  stdout.print "Should be Class/Module: ", $', "\n"
+	else
+	  var_list(obj.constants, obj.module_eval{binding()})
+d222 1
+d224 1
+a224 6
+    end
+
+    def debug_method_info(input, binding)
+      case input
+      when /^i(:?nstance)?\s+/
+	obj = debug_eval($', binding)
+d226 5
+d232 1
+a232 1
+	for v in obj.methods.sort
+d241 3
+d245 30
+a274 4
+      else
+	obj = debug_eval(input, binding)
+	unless obj.kind_of? Module
+	  stdout.print "Should be Class/Module: ", input, "\n"
+d276 37
+a312 8
+	  len = 0
+	  for v in obj.instance_methods.sort
+	    len += v.size + 1
+	    if len > 70
+	      len = v.size + 1
+	      stdout.print "\n"
+	    end
+	    stdout.print v, " "
+d314 2
+a315 4
+	  stdout.print "\n"
+	end
+      end
+    end
+d317 12
+a328 41
+    def thnum
+      num = DEBUGGER__.instance_eval{@@thread_list[Thread.current]}
+      unless num
+	DEBUGGER__.make_thread_list
+	num = DEBUGGER__.instance_eval{@@thread_list[Thread.current]}
+      end
+      num
+    end
+
+    def debug_command(file, line, id, binding)
+      MUTEX.lock
+      set_last_thread(Thread.current)
+      frame_pos = 0
+      binding_file = file
+      binding_line = line
+      previous_line = nil
+      if (ENV['EMACS'] == 't')
+	stdout.printf "\032\032%s:%d:\n", binding_file, binding_line
+      else
+	stdout.printf "%s:%d:%s", binding_file, binding_line,
+	  line_at(binding_file, binding_line)
+      end
+      @@frames[0] = [binding, file, line, id]
+      display_expressions(binding)
+      prompt = true
+      while prompt and input = readline("(rdb:%d) "%thnum(), true)
+	catch(:debug_error) do
+	  if input == ""
+	    input = DEBUG_LAST_CMD[0]
+	    stdout.print input, "\n"
+	  else
+	    DEBUG_LAST_CMD[0] = input
+	  end
+
+	  case input
+	  when /^\s*tr(?:ace)?(?:\s+(on|off))?(?:\s+(all))?$/
+	    if defined?( $2 )
+	      if $1 == 'on'
+		set_trace_all true
+	      else
+		set_trace_all false
+d330 10
+a339 5
+	    elsif defined?( $1 )
+	      if $1 == 'on'
+		set_trace true
+	      else
+		set_trace false
+d341 1
+d343 6
+a348 5
+	    if trace?
+	      stdout.print "Trace on.\n"
+	    else
+	      stdout.print "Trace off.\n"
+	    end
+d350 5
+a354 26
+	  when /^\s*b(?:reak)?\s+((?:.*?+:)?.+)$/
+	    pos = $1
+	    if pos.index(":")
+	      pos = pos.split(":")
+	      file = pos[0...-1].join(":")
+	      pos = pos[-1]
+	    end
+	    file = File.basename(file)
+	    if pos =~ /^\d+$/
+	      pname = pos
+	      pos = pos.to_i
+	    else
+	      pname = pos = pos.intern.id2name
+	    end
+	    break_points.push [true, 0, file, pos]
+	    stdout.printf "Set breakpoint %d at %s:%s\n", break_points.size, file, pname
+
+	  when /^\s*wat(?:ch)?\s+(.+)$/
+	    exp = $1
+	    break_points.push [true, 1, exp]
+	    stdout.printf "Set watchpoint %d\n", break_points.size, exp
+
+	  when /^\s*b(?:reak)?$/
+	    if break_points.find{|b| b[1] == 0}
+	      n = 1
+	      stdout.print "Breakpoints:\n"
+d356 1
+a356 4
+		if b[0] and b[1] == 0
+		  stdout.printf "  %d %s:%s\n", n, b[2], b[3] 
+		end
+		n += 1
+d359 4
+a362 13
+	    if break_points.find{|b| b[1] == 1}
+	      n = 1
+	      stdout.print "\n"
+	      stdout.print "Watchpoints:\n"
+	      for b in break_points
+		if b[0] and b[1] == 1
+		  stdout.printf "  %d %s\n", n, b[2]
+		end
+		n += 1
+	      end
+	    end
+	    if break_points.size == 0
+	      stdout.print "No breakpoints\n"
+d364 1
+a364 1
+	      stdout.print "\n"
+d366 1
+d368 16
+a383 15
+	  when /^\s*del(?:ete)?(?:\s+(\d+))?$/
+	    pos = $1
+	    unless pos
+	      input = readline("Clear all breakpoints? (y/n) ", false)
+	      if input == "y"
+		for b in break_points
+		  b[0] = false
+		end
+	      end
+	    else
+	      pos = pos.to_i
+	      if break_points[pos-1]
+		break_points[pos-1][0] = false
+	      else
+		stdout.printf "Breakpoint %d is not defined\n", pos
+d386 4
+a389 19
+
+	  when /^\s*disp(?:lay)?\s+(.+)$/
+	    exp = $1
+	    display.push [true, exp]
+	    stdout.printf "%d: ", display.size
+	    display_expression(exp, binding)
+
+	  when /^\s*disp(?:lay)?$/
+	    display_expressions(binding)
+
+	  when /^\s*undisp(?:lay)?(?:\s+(\d+))?$/
+	    pos = $1
+	    unless pos
+	      input = readline("Clear all expressions? (y/n) ", false)
+	      if input == "y"
+		for d in display
+		  d[0] = false
+		end
+	      end
+d391 1
+a391 6
+	      pos = pos.to_i
+	      if display[pos-1]
+		display[pos-1][0] = false
+	      else
+		stdout.printf "Display expression %d is not defined\n", pos
+	      end
+d393 1
+d395 2
+a396 2
+	  when /^\s*c(?:ont)?$/
+	    prompt = false
+d398 8
+a405 8
+	  when /^\s*s(?:tep)?(?:\s+(\d+))?$/
+	    if $1
+	      lev = $1.to_i
+	    else
+	      lev = 1
+	    end
+	    @@stop_next = lev
+	    prompt = false
+d407 25
+a431 3
+	  when /^\s*n(?:ext)?(?:\s+(\d+))?$/
+	    if $1
+	      lev = $1.to_i
+d433 2
+a434 1
+	      lev = 1
+d436 3
+a438 3
+	    @@stop_next = lev
+	    @@no_step = @@frames.size - frame_pos
+	    prompt = false
+d440 14
+a453 2
+	  when /^\s*w(?:here)?$/, /^\s*f(?:rame)?$/
+	    display_frames(frame_pos)
+d455 14
+a468 19
+	  when /^\s*l(?:ist)?(?:\s+(.+))?$/
+	    if not $1
+	      b = previous_line ? previous_line + 10 : binding_line - 5
+	      e = b + 9
+	    elsif $1 == '-'
+	      b = previous_line ? previous_line - 10 : binding_line - 5
+	      e = b + 9
+	    else
+	      b, e = $1.split(/[-,]/)
+	      if e
+		b = b.to_i
+		e = e.to_i
+	      else
+		b = b.to_i - 5
+		e = b + 9
+	      end
+	    end
+	    previous_line = b
+	    display_list(b, e, binding_file, binding_line)
+d470 8
+a477 14
+	  when /^\s*up(?:\s+(\d+))?$/
+	    previous_line = nil
+	    if $1
+	      lev = $1.to_i
+	    else
+	      lev = 1
+	    end
+	    frame_pos += lev
+	    if frame_pos >= @@frames.size
+	      frame_pos = @@frames.size - 1
+	      stdout.print "At toplevel\n"
+	    end
+	    binding, binding_file, binding_line = @@frames[frame_pos]
+	    stdout.print format_frame(frame_pos)
+d479 6
+a484 4
+	  when /^\s*down(?:\s+(\d+))?$/
+	    previous_line = nil
+	    if $1
+	      lev = $1.to_i
+d486 2
+a487 1
+	      lev = 1
+d489 3
+a491 11
+	    frame_pos -= lev
+	    if frame_pos < 0
+	      frame_pos = 0
+	      stdout.print "At stack bottom\n"
+	    end
+	    binding, binding_file, binding_line = @@frames[frame_pos]
+	    stdout.print format_frame(frame_pos)
+
+	  when /^\s*fin(?:ish)?$/
+	    if frame_pos == @@frames.size
+	      stdout.print "\"finish\" not meaningful in the outermost frame.\n"
+d493 1
+a493 3
+	      @@finish_pos = @@frames.size - frame_pos
+	      frame_pos = 0
+	      prompt = false
+d495 1
+d497 5
+a501 17
+	  when /^\s*cat(?:ch)?(?:\s+(.+))?$/
+	    if $1
+	      excn = $1
+	      if excn == 'off'
+		@@catch = nil
+		stdout.print "Clear catchpoint.\n"
+	      else
+		@@catch = excn
+		stdout.printf "Set catchpoint %s.\n", @@catch
+	      end
+	    else
+	      if @@catch
+		stdout.printf "Catchpoint %s.\n", @@catch
+	      else
+		stdout.print "No catchpoint.\n"
+	      end
+	    end
+d503 2
+a504 5
+	  when /^\s*q(?:uit)?$/
+	    input = readline("Really quit? (y/n) ", false)
+	    if input == "y"
+	      exit!	# exit -> exit!: No graceful way to stop threads...
+	    end
+d506 2
+a507 2
+	  when /^\s*v(?:ar)?\s+/
+	    debug_variable_info($', binding)
+d509 4
+a512 2
+	  when /^\s*m(?:ethod)?\s+/
+	    debug_method_info($', binding)
+d514 2
+a515 4
+	  when /^\s*th(?:read)?\s+/
+	    if DEBUGGER__.debug_thread_info($', binding) == :cont
+	      prompt = false
+	    end
+d517 2
+a518 2
+	  when /^\s*pp\s+/
+	    PP.pp(debug_eval($', binding), 79, stdout)
+d520 2
+a521 2
+	  when /^\s*p\s+/
+	    stdout.printf "%s\n", debug_eval($', binding).inspect
+d523 3
+a525 7
+	  when /^\s*h(?:elp)?$/
+	    debug_print_help()
+
+	  else
+	    v = debug_eval(input, binding)
+	    stdout.printf "%s\n", v.inspect unless (v == nil)
+	  end
+a527 2
+      MUTEX.unlock
+      resume_all
+d529 3
+d533 2
+a534 2
+    def debug_print_help
+      stdout.print <<EOHELP
+d574 1
+a574 1
+     end
+d576 6
+a581 8
+    def display_expressions(binding)
+      n = 1
+      for d in display
+	if d[0]
+          stdout.printf "%d: ", n
+	  display_expression(d[1], binding)
+	end
+	n += 1
+d583 1
+d585 1
+d587 3
+a589 3
+    def display_expression(exp, binding)
+      stdout.printf "%s = %s\n", exp, debug_silent_eval(exp, binding).to_s
+    end
+d591 4
+a594 5
+    def frame_set_pos(file, line)
+      if @@frames[0]
+	@@frames[0][1] = file
+	@@frames[0][2] = line
+      end
+d596 1
+d598 6
+a603 8
+    def display_frames(pos)
+      0.upto(@@frames.size - 1) do |n|
+        if n == pos
+          stdout.print "--> "
+        else
+          stdout.print "    "
+        end
+        stdout.print format_frame(n)
+d605 1
+d607 1
+d609 5
+a613 5
+    def format_frame(pos)
+      bind, file, line, id = @@frames[pos]
+      sprintf "#%d %s:%s%s\n", pos + 1, file, line,
+	(id ? ":in `#{id.id2name}'" : "")
+    end
+d615 10
+a624 11
+    def display_list(b, e, file, line)
+      stdout.printf "[%d, %d] in %s\n", b, e, file
+      if lines = SCRIPT_LINES__[file] and lines != true
+	n = 0
+	b.upto(e) do |n|
+	  if n > 0 && lines[n-1]
+	    if n == line
+	      stdout.printf "=> %d  %s\n", n, lines[n-1].chomp
+	    else
+	      stdout.printf "   %d  %s\n", n, lines[n-1].chomp
+	    end
+a626 2
+      else
+	stdout.printf "No sourcefile available for %s\n", file
+d628 2
+d631 1
+d633 7
+a639 9
+    def line_at(file, line)
+      lines = SCRIPT_LINES__[file]
+      if lines
+	return "\n" if lines == true
+	line = lines[line-1]
+	return "\n" unless line
+	return line
+      end
+      return "\n"
+d641 2
+d644 5
+a648 6
+    def debug_funcname(id)
+      if id.nil?
+	"toplevel"
+      else
+	id.id2name
+      end
+d650 1
+d652 12
+a663 8
+    def check_break_points(file, pos, binding, id)
+      return false if break_points.empty?
+      file = File.basename(file)
+      n = 1
+      for b in break_points
+	if b[0]
+	  if b[1] == 0 and b[2] == file and b[3] == pos
+	    stdout.printf "Breakpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+a664 5
+	  elsif b[1] == 1
+	    if debug_silent_eval(b[2], binding)
+	      stdout.printf "Watchpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+	      return true
+	    end
+a666 1
+	n += 1
+d668 22
+a689 1
+      return false
+d691 1
+d693 19
+a711 5
+    def excn_handle(file, line, id, binding)
+      stdout.printf "%s:%d: `%s' (%s)\n", file, line, $!, $!.type
+      if $!.type <= SystemExit
+	set_trace_func nil
+	exit
+d714 4
+a717 8
+      if @@catch and ($!.type.ancestors.find { |e| e.to_s == @@catch })
+	fs = @@frames.size
+	tb = caller(0)[-fs..-1]
+	if tb
+	  for i in tb
+	    stdout.printf "\tfrom %s\n", i
+	  end
+	end
+a720 1
+    end
+d722 12
+a733 20
+    def trace_func(event, file, line, id, binding, klass)
+      Tracer.trace_func(event, file, line, id, binding, klass) if trace?
+      context(Thread.current).check_suspend
+      @@file = file
+      @@line = line
+      case event
+      when 'line'
+	frame_set_pos(file, line)
+	if !@@no_step or @@frames.size == @@no_step
+	  @@stop_next -= 1
+	elsif @@frames.size < @@no_step
+	  @@stop_next = 0		# break here before leaving...
+	else
+	  # nothing to do. skipped.
+	end
+	if @@stop_next == 0 or check_break_points(file, line, binding, id)
+	  @@no_step = nil
+	  suspend_all
+	  debug_command(file, line, id, binding)
+	end
+d735 2
+a736 7
+      when 'call'
+	@@frames.unshift [binding, file, line, id]
+	if check_break_points(file, id.id2name, binding, id) or
+	    check_break_points(klass.to_s, id.id2name, binding, id)
+	  suspend_all
+	  debug_command(file, line, id, binding)
+	end
+d738 2
+a739 2
+      when 'c-call'
+	frame_set_pos(file, line)
+d741 4
+a744 2
+      when 'class'
+	@@frames.unshift [binding, file, line, id]
+d746 13
+a758 6
+      when 'return', 'end'
+	if @@frames.size == @@finish_pos
+	  @@stop_next = 1
+	  @@finish_pos = 0
+	end
+	@@frames.shift
+d760 3
+a762 2
+      when 'end'
+	@@frames.shift
+d764 3
+a766 2
+      when 'raise' 
+	excn_handle(file, line, id, binding)
+d768 2
+a769 3
+      end
+      @@last_file = file
+    end
+d772 3
+a774 8
+  trap("INT") { DEBUGGER__.interrupt }
+  @@last_thread = Thread::main
+  @@max_thread = 1
+  @@thread_list = {Thread::main => 1}
+  @@break_points = []
+  @@display = []
+  @@waiting = []
+  @@stdout = STDOUT
+d776 5
+a780 3
+  class <<DEBUGGER__
+    def stdout
+      @@stdout
+d782 3
+d786 3
+a788 3
+    def stdout=(s)
+      @@stdout = s
+    end
+d790 11
+a800 3
+    def display
+      @@display
+    end
+d802 15
+a816 3
+    def break_points
+      @@break_points
+    end
+d818 4
+a821 2
+    def waiting
+      @@waiting
+d823 2
+d826 3
+a828 9
+    def set_trace( arg )
+      Thread.critical = true
+      make_thread_list
+      for th in @@thread_list
+        context(th[0]).set_trace arg
+      end
+      Thread.critical = false
+      arg
+    end
+d830 5
+a834 2
+    def set_last_thread(th)
+      @@last_thread = th
+d836 2
+d839 12
+a850 10
+    def suspend
+      Thread.critical = true
+      make_thread_list
+      for th in @@thread_list
+	next if th[0] == Thread.current
+	context(th[0]).set_suspend
+      end
+      Thread.critical = false
+      # Schedule other threads to suspend as soon as possible.
+      Thread.pass
+d852 2
+d855 3
+a857 14
+    def resume
+      Thread.critical = true
+      make_thread_list
+      for th in @@thread_list
+	next if th[0] == Thread.current
+	context(th[0]).clear_suspend
+      end
+      waiting.each do |th|
+	th.run
+      end
+      waiting.clear
+      Thread.critical = false
+      # Schedule other threads to restart as soon as possible.
+      Thread.pass
+d859 1
+d861 8
+a868 4
+    def context(thread=Thread.current)
+      c = thread[:__debugger_data__]
+      unless c
+	thread[:__debugger_data__] = c = Context.new
+a869 1
+      c
+d871 2
+d874 5
+a878 3
+    def interrupt
+      context(@@last_thread).stop_next
+    end
+d880 3
+a882 8
+    def get_thread(num)
+      th = @@thread_list.index(num)
+      unless th
+	@@stdout.print "No thread ##{num}\n"
+	throw :debug_error
+      end
+      th
+    end
+d884 3
+a886 2
+    def thread_list(num)
+      th = get_thread(num)
+d888 1
+a888 1
+	@@stdout.print "+"
+d890 4
+a893 7
+	@@stdout.print " "
+      end
+      @@stdout.printf "%d ", num
+      @@stdout.print th.inspect, "\t"
+      file = context(th).instance_eval{@@file}
+      if file
+	@@stdout.print file,":",context(th).instance_eval{@@line}
+a894 2
+      @@stdout.print "\n"
+    end
+d896 10
+a905 3
+    def thread_list_all
+      for th in @@thread_list.values.sort
+	thread_list(th)
+a906 1
+    end
+d908 10
+a917 58
+    def make_thread_list
+      hash = {}
+      for th in Thread::list
+	if @@thread_list.key? th
+	  hash[th] = @@thread_list[th]
+	else
+	  @@max_thread += 1
+	  hash[th] = @@max_thread
+	end
+      end
+      @@thread_list = hash
+    end
+
+    def debug_thread_info(input, binding)
+      case input
+      when /^l(?:ist)?/
+	make_thread_list
+	thread_list_all
+
+      when /^c(?:ur(?:rent)?)?$/
+	make_thread_list
+	thread_list(@@thread_list[Thread.current])
+
+      when /^(?:sw(?:itch)?\s+)?(\d+)/
+	make_thread_list
+	th = get_thread($1.to_i)
+	if th == Thread.current
+	  @@stdout.print "It's the current thread.\n"
+	else
+	  thread_list(@@thread_list[th])
+	  context(th).stop_next
+	  th.run
+	  return :cont
+	end
+
+      when /^stop\s+(\d+)/
+	make_thread_list
+	th = get_thread($1.to_i)
+	if th == Thread.current
+	  @@stdout.print "It's the current thread.\n"
+	elsif th.stop?
+	  @@stdout.print "Already stopped.\n"
+	else
+	  thread_list(@@thread_list[th])
+	  context(th).suspend 
+	end
+
+      when /^resume\s+(\d+)/
+	make_thread_list
+	th = get_thread($1.to_i)
+	if th == Thread.current
+	  @@stdout.print "It's the current thread.\n"
+	elsif !th.stop?
+	  @@stdout.print "Already running."
+	else
+	  thread_list(@@thread_list[th])
+	  th.run
+	end
+d921 1
+d923 5
+a927 5
+  stdout.printf "Debug.rb\n"
+  stdout.printf "Emacs support available.\n\n"
+  set_trace_func proc { |event, file, line, id, binding, klass, *rest|
+    DEBUGGER__.context.trace_func event, file, line, id, binding, klass
+  }
+@
+
+
+1.27
+log
+@* object.c (rb_class_real): should not follow ICLASS link
+
+* variable.c (classname): should follow ICLASS link explicitly.
+@
+text
+@d453 1
+a453 1
+           stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+d468 1
+a468 1
+           stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+d599 7
+a605 11
+      pos += 1
+      n = 0
+      at = @@frames
+      for bind, file, line, id in at
+	n += 1
+	break unless bind
+	if pos == n
+	  stdout.printf "--> #%d  %s:%s%s\n", n, file, line, id ? ":in `#{id.id2name}'":""
+	else
+	  stdout.printf "    #%d  %s:%s%s\n", n, file, line, id ? ":in `#{id.id2name}'":""
+	end
+d609 6
+d783 1
+@
+
+
+1.26
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d453 1
+a453 1
+	    stdout.printf "#%d %s:%s\n", frame_pos, binding_file, binding_line
+d468 1
+a468 1
+	    stdout.printf "#%d %s:%s\n", frame_pos, binding_file, binding_line
+@
+
+
+1.25
+log
+@* ext/socket/socket.c (unix_addr): getsockname(2) may result len = 0.
+
+* ext/socket/socket.c (unix_peeraddr): getpeername(2) may result
+  len = 0.
+
+* string.c (rb_str_subpat_set): support function for new argument
+  pattern String#[re,offset] = val. [new]
+
+* eval.c (POP_BLOCK): rb_gc_force_recycle() was called too much.
+  Should not be called if SCOPE_DONT_RECYCLE is set.
+
+* string.c (rb_str_aref_m): new argument pattern
+  String#[re,offset]. [new]
+
+* string.c (rb_str_substr): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_succ): ditto.
+
+* array.c (rb_ary_subseq): ditto.
+
+* array.c (rb_ary_initialize): Array.new([1,2,3]) => [1,2,3]. [new]
+
+* string.c (rb_str_reverse): should return an instance of
+  receiver's class.
+
+* string.c (rb_str_times): ditto.
+
+* array.c (rb_ary_times): ditto
+
+* string.c (str_gsub): ditto.
+
+* string.c (rb_str_ljust): ditto.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+
+* eval.c (eval): retrieves file, line information from binding.
+
+* eval.c (intersect_fds): counts intersecting fds.
+
+* eval.c (rb_thread_schedule): only fds requested by
+  each thread count as select_value.
+@
+text
+@d10 1
+d513 3
+@
+
+
+1.24
+log
+@* error.c (exc_exception): clone the receiver exception instead of
+  creating brand new exception object of the receiver.
+
+* eval.c (rb_eval_string_wrap): extend new ruby_top_self, not
+  original self.
+
+* eval.c (rb_eval_cmd): respect ruby_wrapper if set.
+
+* eval.c (eval): do not update ruby_class unless scope is not
+  provided.
+
+* eval.c (eval): preserve wrapper information.
+
+* eval.c (proc_invoke): ditto.
+
+* eval.c (block_pass): ditto.
+
+* parse.y (void_expr): too much warnings for void context
+  (e.g. foo[1] that can be mere Proc call).
+
+* error.c (rb_name_error): new function to raise NameError with
+  name attribute set.
+
+* eval.c (rb_f_missing): set name and args in the exception
+  object. [new]
+
+* error.c (name_name): NameError#name - new method.
+
+* error.c (nometh_args): NoMethodError#args - new method.
+
+* lex.c (rb_reserved_word): lex_state after tRESCUE should be
+  EXPR_MID.
+
+* gc.c (add_heap): allocation size of the heap unit is doubled for
+  each allocation.
+
+* dir.c (isdelim): space, tab, and newline are no longer
+  delimiters for glob patterns.
+
+* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@a85 1
+      @@last = [nil, nil]
+d703 3
+a705 8
+	  if [file, line] == @@last
+	    @@stop_next = 1
+	  else
+	    @@no_step = nil
+	    suspend_all
+	    debug_command(file, line, id, binding)
+	    @@last = [file, line]
+	  end
+@
+
+
+1.23
+log
+@* eval.c (svalue_to_avalue): new conversion scheme between single
+  value and array values.
+
+* eval.c (avalue_to_svalue): ditto.
+
+* eval.c (rb_eval): REXPAND now uses avalue_to_svalue(), return
+  and yield too.
+
+* eval.c (rb_yield_0): use avalue_to_svalue().
+
+* eval.c (proc_invoke): Proc#call gives avaules, whereas
+  Proc#yield gives mvalues.
+
+* eval.c (bmcall): convert given value (svalue) to avalue.
+@
+text
+@d303 3
+a305 1
+	      file, pos = pos.split(":")
+@
+
+
+1.22
+log
+@* gc.c (id2ref): sometimes confused symbol and reference.
+
+* dir.c (glob_helper): breaks loop after calling recusive
+  glob_helper; all wild cards should be consumed; no need for
+  further match.
+
+* dir.c (dir_s_glob): gives warning if no match found.
+
+* object.c (sym_inspect): did allocate extra byte space.
+
+* marshal.c (shortlen): shortlen should return number of bytes
+  written.
+
+* eval.c (ev_const_defined): need not to check if cbase->nd_class
+  is rb_cObject.
+
+* eval.c (ev_const_get): ditto.
+
+* time.c (time_zone): return "UTC" for UTC time objects.
+
+* eval.c (THREAD_ALLOC): flags should be initialized.
+
+* signal.c (rb_f_kill): should use FIX2INT, not FIX2UINT.
+@
+text
+@d198 1
+a198 1
+	var_list(obj.instance_variables, binding)
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d538 1
+a538 1
+  del[ele][ nnn]             delete some or all breakpoints
+@
+
+
+1.20
+log
+@cvs.netlab.co.jp last commit
+@
+text
+@d101 1
+a101 1
+    def suspend
+d105 12
+d119 1
+a119 1
+	waiting.push Thread.current
+d146 2
+a147 2
+    def waiting
+      DEBUGGER__.waiting
+d154 4
+d256 1
+a256 1
+      DEBUGGER__.set_last_thread(Thread.current)
+d525 1
+a525 1
+      DEBUGGER__.resume_all_thread
+d681 1
+a681 1
+	DEBUGGER__.suspend_all_thread
+d688 1
+a688 1
+      DEBUGGER__.context(Thread.current).check_suspend
+d706 1
+a706 1
+	    DEBUGGER__.suspend_all_thread
+d716 1
+a716 1
+	  DEBUGGER__.suspend_all_thread
+d729 1
+d787 1
+a787 1
+    def suspend_all_thread
+d792 1
+a792 1
+	context(th[0]).suspend
+d799 1
+a799 1
+    def resume_all_thread
+d801 5
+@
+
+
+1.20.2.1
+log
+@matz
+@
+text
+@d101 1
+a101 1
+    def set_suspend
+a104 12
+    def clear_suspend
+      @@suspend_next = false
+    end
+
+    def suspend_all
+      DEBUGGER__.suspend
+    end
+
+    def resume_all
+      DEBUGGER__.resume
+    end
+
+d107 1
+a107 1
+	DEBUGGER__.waiting.push Thread.current
+d134 2
+a135 2
+    def context(th)
+      DEBUGGER__.context(th)
+a141 4
+    def set_last_thread(th)
+      DEBUGGER__.set_last_thread(th)
+    end
+
+d240 1
+a240 1
+      set_last_thread(Thread.current)
+d509 1
+a509 1
+      resume_all
+d665 1
+a665 1
+	suspend_all
+d672 1
+a672 1
+      context(Thread.current).check_suspend
+d690 1
+a690 1
+	    suspend_all
+d700 1
+a700 1
+	  suspend_all
+a712 1
+	  @@finish_pos = 0
+d770 1
+a770 1
+    def suspend
+d775 1
+a775 1
+	context(th[0]).set_suspend
+d782 1
+a782 1
+    def resume
+a783 5
+      make_thread_list
+      for th in @@thread_list
+	next if th[0] == Thread.current
+	context(th[0]).clear_suspend
+      end
+@
+
+
+1.20.2.2
+log
+@Fix a typo: delele -> delete
+@
+text
+@d538 1
+a538 1
+  del[ete][ nnn]             delete some or all breakpoints
+@
+
+
+1.20.2.3
+log
+@* lib/debug.rb: ivar access bug.
+@
+text
+@d198 1
+a198 1
+	var_list(obj.instance_variables, obj.instance_eval{binding()})
+@
+
+
+1.20.2.4
+log
+@* object.c (rb_class_real): should not follow ICLASS link
+
+* variable.c (classname): should follow ICLASS link explicitly.
+@
+text
+@d451 1
+a451 1
+           stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+d466 1
+a466 1
+           stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+@
+
+
+1.20.2.5
+log
+@Comment for previous update;
+  Illegal frame number dumped after up/down command.
+  Good catch by Laurent Julliard. [ruby-talk:32952]
+@
+text
+@d451 1
+a451 1
+	    stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+d466 1
+a466 1
+	    stdout.printf "#%d %s:%s\n", frame_pos+1, binding_file, binding_line
+@
+
+
+1.20.2.6
+log
+@Changed regexp for 'break' command.
+Compare only basename of the target source file to check breakpoint.
+@
+text
+@d300 6
+a305 3
+   	  when /^\s*b(?:reak)?\s+(?:(.+):)?(.+)$/
+     	    pos = $2
+       	    file = File.basename($1 || file)
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d94 1
+d101 21
+d125 1
+d129 1
+d134 8
+d253 2
+a254 1
+      while input = readline("(rdb:%d) "%thnum(), true)
+d264 8
+a271 2
+	  when /^\s*tr(?:ace)?(?:\s+(on|off))?$/
+	    if defined?( $1 )
+d273 1
+a273 1
+		@@trace = true
+d275 1
+a275 1
+		@@trace = false
+d278 2
+a279 2
+	    if @@trace
+	      stdout.print "Trace on\n"
+d281 1
+a281 1
+	      stdout.print "Trace off\n"
+d378 1
+a378 2
+	    MUTEX.unlock
+	    return
+d387 1
+a387 1
+	    return
+d397 1
+a397 1
+	    return
+d458 1
+a458 2
+	      MUTEX.unlock
+	      return
+d480 4
+a483 2
+	    input = readline("really quit? (y/n) ", false)
+	    exit if input == "y"
+d493 1
+a493 2
+	      MUTEX.unlock
+	      return
+d508 2
+d535 2
+a536 1
+  tr[ace][ (on|off)]         set trace mode
+d545 4
+a548 5
+  th[read] c[ur[rent]]       show current threads
+  th[read] <nnn>             stop thread nnn
+  th[read] stop <nnn>        alias for th[read] <nnn>
+  th[read] c[ur[rent]] <nnn> alias for th[read] <nnn>
+  th[read] resume <nnn>      run thread nnn
+d630 1
+a630 1
+      MUTEX.lock	# Stop all threads before 'line' and 'call'.
+a646 1
+      MUTEX.unlock
+a657 1
+	MUTEX.lock
+d665 1
+d671 2
+a672 1
+      Tracer.trace_func(event, file, line, id, binding) if @@trace
+d690 1
+d700 1
+d727 1
+a727 2
+  trap("INT") {  DEBUGGER__.interrupt }
+#  $DEBUG = true
+d733 1
+d740 1
+d753 13
+d770 23
+d808 1
+a808 1
+	@@stdout.print "no thread no.", num, "\n"
+d855 5
+a859 1
+      when /^c(?:ur(?:rent)?)?\s+(\d+)/, /^stop\s+(\d+)/, /^(\d+)/
+d862 8
+a869 4
+	thread_list(@@thread_list[th])
+	context(th).stop_next
+	th.run
+	return :cont
+d871 1
+a871 1
+      when /^c(?:ur(?:rent)?)?$/
+d873 9
+a881 1
+	thread_list(@@thread_list[Thread.current])
+d886 8
+a893 3
+	thread_list(@@thread_list[th])
+	th.run
+	return :cont
+d900 2
+a901 2
+  set_trace_func proc{|event, file, line, id, binding,klass,*rest|
+    DEBUGGER__.context.trace_func event, file, line, id, binding,klass
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d459 1
+a459 1
+	    stdout.printf "%s\n", debug_eval($', binding)
+d466 1
+a466 1
+	    stdout.printf "%s\n", v unless (v == nil)
+d477 1
+a477 1
+	                     set breakpoint to some position
+d590 1
+a590 2
+      return false if break_points.empty?
+      MUTEX.lock
+d612 1
+a612 1
+      stdout.printf "Exception `%s': %s\n", $!.type, $!
+d618 8
+a625 6
+      MUTEX.lock
+      fs = @@frames.size
+      tb = caller(0)[-fs..-1]
+      if tb
+	for i in tb
+	  stdout.printf "\tfrom %s\n", i
+a626 2
+      end
+      if @@catch and ($!.type.ancestors.find { |e| e.to_s == @@catch })
+a627 2
+      else
+	MUTEX.unlock
+@
+
+
+1.17
+log
+@matz
+@
+text
+@a7 1
+SCRIPT_LINES__ = {} unless defined? SCRIPT_LINES__
+d10 1
+d17 1
+d93 1
+d135 2
+a136 10
+      if false # ary.size < 0
+	f = open("|less", "w")
+	for v in ary
+	  f.printf "  %s => %s\n", v, eval(v, binding).inspect
+	end
+	f.close
+      else
+	for v in ary
+	  stdout.printf "  %s => %s\n", v, eval(v, binding).inspect
+	end
+d155 1
+a155 1
+	  stdout.print "should be Class/Module: ", $', "\n"
+d181 1
+a181 1
+	  stdout.print "should be Class/Module: ", input, "\n"
+d232 6
+a237 6
+	    if !defined?( $1 )
+	      @@trace = !@@trace
+	    elsif $1 == 'on'
+	      @@trace = true
+	    else
+	      @@trace = false
+d268 1
+a268 1
+	      stdout.print "breakpoints:\n"
+d279 1
+a279 1
+	      stdout.print "watchpoints:\n"
+d288 1
+a288 1
+	      stdout.print "no breakpoints\n"
+d296 1
+a296 1
+	      input = readline("clear all breakpoints? (y/n) ", false)
+d323 1
+a323 1
+	      input = readline("clear all expressions? (y/n) ", false)
+d334 1
+a334 1
+		stdout.printf "display expression %d is not defined\n", pos
+d394 1
+a394 1
+	      stdout.print "at toplevel\n"
+d409 1
+a409 1
+	      stdout.print "at stack bottom\n"
+a418 1
+	      p @@finish_pos
+d420 1
+d424 18
+d459 1
+a459 1
+	    p debug_eval($', binding)
+d461 1
+a461 1
+	  when /^\s*h(?:elp)?/
+d466 1
+a466 1
+	    p v unless (v == nil)
+d473 1
+a473 1
+      print <<EOHELP
+d479 1
+d481 1
+d566 1
+a566 1
+	stdout.printf "no sourcefile available for %s\n", file
+d597 1
+a597 1
+	    stdout.printf "breakpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+d601 1
+a601 1
+	      stdout.printf "watchpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+d613 1
+a613 1
+      p $!
+d618 1
+a621 2
+
+      stdout.printf "%s\n", $!
+d627 5
+a631 1
+      debug_command(file, line, id, binding)
+d801 2
+a802 2
+  @@stdout.printf "Debug.rb\n"
+  @@stdout.printf "Emacs support available.\n\n"
+@
+
+
+1.16
+log
+@matz
+@
+text
+@d122 9
+d319 3
+a321 3
+	    display.push.push [true, exp]
+	    stdout.printf "  %d: %s = %s\n", display.size, exp,
+	      eval(exp, binding) rescue "--"
+d505 2
+a506 1
+	  stdout.printf "%d: %s = %s\n", n, d[1], debug_eval(d[1], binding).to_s
+d512 4
+d576 2
+a582 1
+	    MUTEX.lock
+d585 5
+a589 4
+	  elsif b[1] == 1 and debug_eval(b[2], binding)
+	    MUTEX.lock
+	    stdout.printf "watchpoint %d, %s at %s:%s\n", n, debug_funcname(id), file, pos
+	    return true
+d594 1
+@
+
+
+1.15
+log
+@matz
+@
+text
+@d455 2
+a456 1
+  b[reak] [file or method:]<line>  set breakpoint to some position
+d479 1
+a479 1
+  m[ethod] <class or module> show instance methods of class or module
+@
+
+
+1.14
+log
+@matz
+@
+text
+@d13 1
+a13 1
+    Single.trace_func *vars
+d219 1
+a219 1
+	catch (:debug_error) do
+@
+
+
+1.13
+log
+@matz
+@
+text
+@d581 1
+@
+
+
+1.12
+log
+@2000-05-09
+@
+text
+@d10 8
+d91 1
+d228 14
+d471 1
+d599 1
+@
+
+
+1.11
+log
+@2000-05-01
+@
+text
+@d2 1
+a2 1
+# Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+d529 1
+a529 1
+      if id == 0
+@
+
+
+1.10
+log
+@2000-03-17
+@
+text
+@d1 3
+d196 32
+a227 18
+	DEBUGGER__.set_last_thread(Thread.current)
+	frame_pos = 0
+	binding_file = file
+	binding_line = line
+	previous_line = nil
+	if (ENV['EMACS'] == 't')
+	  stdout.printf "\032\032%s:%d:\n", binding_file, binding_line
+	else
+	  stdout.printf "%s:%d:%s", binding_file, binding_line,
+	    line_at(binding_file, binding_line)
+	end
+	@@frames[0] = [binding, file, line, id]
+	display_expressions(binding)
+	while input = readline("(rdb:%d) "%thnum(), true)
+	  catch (:debug_error) do
+	    if input == ""
+	      input = DEBUG_LAST_CMD[0]
+	      stdout.print input, "\n"
+d229 1
+a229 1
+	      DEBUG_LAST_CMD[0] = input
+d231 2
+d234 14
+a247 5
+	    case input
+	    when /^\s*b(?:reak)?\s+((?:.*?+:)?.+)$/
+	      pos = $1
+	      if pos.index(":")
+		file, pos = pos.split(":")
+d249 8
+a256 25
+	      file = File.basename(file)
+	      if pos =~ /^\d+$/
+		pname = pos
+		pos = pos.to_i
+	      else
+		pname = pos = pos.intern.id2name
+	      end
+	      break_points.push [true, 0, file, pos]
+	      stdout.printf "Set breakpoint %d at %s:%s\n", break_points.size, file,
+		pname
+
+	    when /^\s*wat(?:ch)?\s+(.+)$/
+	      exp = $1
+	      break_points.push [true, 1, exp]
+	      stdout.printf "Set watchpoint %d\n", break_points.size, exp
+
+	    when /^\s*b(?:reak)?$/
+	      if break_points.find{|b| b[1] == 0}
+		n = 1
+		stdout.print "breakpoints:\n"
+		for b in break_points
+		  if b[0] and b[1] == 0
+		    stdout.printf "  %d %s:%s\n", n, b[2], b[3] 
+		  end
+		  n += 1
+d258 1
+d260 12
+a271 4
+	      if break_points.find{|b| b[1] == 1}
+		n = 1
+		stdout.print "\n"
+		stdout.print "watchpoints:\n"
+d273 1
+a273 4
+		  if b[0] and b[1] == 1
+		    stdout.printf "  %d %s\n", n, b[2]
+		  end
+		  n += 1
+d276 4
+a279 2
+	      if break_points.size == 0
+		stdout.print "no breakpoints\n"
+d281 1
+a281 1
+		stdout.print "\n"
+d283 1
+d285 16
+a300 15
+	    when /^\s*del(?:ete)?(?:\s+(\d+))?$/
+	      pos = $1
+	      unless pos
+		input = readline("clear all breakpoints? (y/n) ", false)
+		if input == "y"
+		  for b in break_points
+		    b[0] = false
+		  end
+		end
+	      else
+		pos = pos.to_i
+		if break_points[pos-1]
+		  break_points[pos-1][0] = false
+		else
+		  stdout.printf "Breakpoint %d is not defined\n", pos
+d303 4
+a306 19
+
+	    when /^\s*disp(?:lay)?\s+(.+)$/
+	      exp = $1
+	      display.push.push [true, exp]
+	      stdout.printf "  %d: %s = %s\n", display.size, exp,
+		eval(exp, binding) rescue "--"
+
+	    when /^\s*disp(?:lay)?$/
+	      display_expressions(binding)
+
+	    when /^\s*undisp(?:lay)?(?:\s+(\d+))?$/
+	      pos = $1
+	      unless pos
+		input = readline("clear all expressions? (y/n) ", false)
+		if input == "y"
+		  for d in display
+		    d[0] = false
+		  end
+		end
+d308 1
+a308 6
+		pos = pos.to_i
+		if display[pos-1]
+		  display[pos-1][0] = false
+		else
+		  stdout.printf "display expression %d is not defined\n", pos
+		end
+d310 1
+d312 3
+a314 3
+	    when /^\s*c(?:ont)?$/
+	      MUTEX.unlock
+	      return
+d316 8
+a323 8
+	    when /^\s*s(?:tep)?(?:\s+(\d+))?$/
+	      if $1
+		lev = $1.to_i
+	      else
+		lev = 1
+	      end
+	      @@stop_next = lev
+	      return
+d325 23
+a347 23
+	    when /^\s*n(?:ext)?(?:\s+(\d+))?$/
+	      if $1
+		lev = $1.to_i
+	      else
+		lev = 1
+	      end
+	      @@stop_next = lev
+	      @@no_step = @@frames.size - frame_pos
+	      return
+
+	    when /^\s*w(?:here)?$/, /^\s*f(?:rame)?$/
+	      display_frames(frame_pos)
+
+	    when /^\s*l(?:ist)?(?:\s+(.+))?$/
+	      if not $1
+		b = previous_line ? previous_line + 10 : binding_line - 5
+		e = b + 9
+	      elsif $1 == '-'
+		b = previous_line ? previous_line - 10 : binding_line - 5
+		e = b + 9
+	      else
+		b, e = $1.split(/[-,]/)
+		if e
+d417 3
+d427 39
+@
+
+
+1.9
+log
+@2000-02-29
+@
+text
+@d448 1
+a448 1
+	  stdout.printf "--> #%d  %s:%s%s\n", n, file, line, id != 0 ? ":in `#{id.id2name}'":""
+d450 1
+a450 1
+	  stdout.printf "    #%d  %s:%s%s\n", n, file, line, id != 0 ? ":in `#{id.id2name}'":""
+@
+
+
+1.8
+log
+@2000-02-08
+@
+text
+@d386 2
+a387 2
+	  when /^\s*fi(?:nish)?$/
+	    if frame_pos == 0
+d391 1
+a566 1
+	@@frames.shift
+d570 1
+@
+
+
+1.7
+log
+@2000-01-08
+@
+text
+@d100 1
+a100 1
+      rescue
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d112 1
+a112 1
+      if ary.size > 24
+a127 1
+	f = open("|less", "w")
+d164 1
+a164 1
+	obj = debug_eval($', binding)
+d166 1
+a166 1
+	  stdout.print "should be Class/Module: ", $', "\n"
+@
+
+
+1.5
+log
+@19991110
+@
+text
+@d1 5
+a5 1
+LINES__ = {} unless defined? LINES__
+d8 35
+a42 12
+  begin
+    require 'readline'
+    def readline(prompt, hist)
+      Readline::readline(prompt, hist)
+    end
+  rescue LoadError
+    def readline(prompt, hist)
+      STDOUT.print prompt
+      STDOUT.flush
+      line = STDIN.gets
+      line.chomp!
+      line
+a43 1
+    USE_READLINE = false
+d45 21
+d67 14
+a80 12
+  trap("INT") {  DEBUGGER__::CONTEXT.interrupt }
+  $DEBUG = true
+  def initialize
+    @@break_points = []
+    @@display = []
+    @@stop_next = 1
+    @@frames = [nil]
+    @@last_file = nil
+    @@last = [nil, nil]
+    @@no_step = nil
+    @@finish_pos = 0
+  end
+d82 3
+a84 1
+  DEBUG_LAST_CMD = []
+d86 9
+a94 3
+  def interrupt
+    @@stop_next = 1
+  end
+d96 11
+a106 10
+  def debug_eval(str, binding)
+    begin
+      val = eval(str, binding)
+      val
+    rescue
+      at = caller(0)
+      STDOUT.printf "%s:%s\n", at.shift, $!
+      for i in at
+	break if i =~ /`debug_(eval|command)'$/ #`
+	STDOUT.printf "\tfrom %s\n", i
+a108 1
+  end
+d110 8
+a117 16
+  def debug_command(file, line, id, binding)
+    frame_pos = 0
+    binding_file = file
+    binding_line = line
+    previus_line = nil
+    if (ENV['EMACS'] == 't')
+      STDOUT.printf "\032\032%s:%d:\n", binding_file, binding_line
+    else
+      STDOUT.printf "%s:%d:%s", binding_file, binding_line,
+	line_at(binding_file, binding_line)
+    end
+    @@frames[0] = binding
+    display_expressions(binding)
+    while input = readline("(rdb:-) ", true)
+      if input == ""
+	input = DEBUG_LAST_CMD[0]
+d119 3
+a121 1
+	DEBUG_LAST_CMD[0] = input
+d123 1
+d125 1
+d127 15
+a141 9
+      when /^b(?:reak)?\s+((?:[^:\n]+:)?.+)$/
+	pos = $1
+	if pos.index(":")
+	  file, pos = pos.split(":")
+	end
+	file = File.basename(file)
+	if pos =~ /^\d+$/
+	  pname = pos
+	  pos = pos.to_i
+d143 1
+a143 1
+	  pname = pos = pos.intern.id2name
+d145 14
+a158 15
+	@@break_points.push [true, 0, file, pos]
+	STDOUT.printf "Set breakpoint %d at %s:%s\n", @@break_points.size, file,
+	  pname
+
+      when /^wat(?:ch)?\s+(.+)$/
+	exp = $1
+	@@break_points.push [true, 1, exp]
+	STDOUT.printf "Set watchpoint %d\n", @@break_points.size, exp
+
+      when /^b(?:reak)?$/, /^info b(?:reak)?$/
+	n = 1
+	STDOUT.print "breakpoints:\n"
+	for b in @@break_points
+	  if b[0] and (b[1] == 0)
+	    STDOUT.printf "  %d %s:%s\n", n, b[2], b[3] 
+d160 1
+a160 1
+	  n += 1
+d162 15
+a176 6
+	n = 1
+	STDOUT.print "\n"
+	STDOUT.print "watchpoints:\n"
+	for b in @@break_points
+	  if b[0] and (b[1] == 1)
+	    STDOUT.printf "  %d %s\n", n, b[2]
+d178 1
+a178 1
+	  n += 1
+d180 215
+a394 1
+	STDOUT.print "\n"
+d396 14
+a409 7
+      when /^del(?:ete)?(?:\s+(\d+))?$/
+	pos = $1
+	unless pos
+	  input = readline("clear all breakpoints? (y/n) ", false)
+	  if input == "y"
+	    for b in @@break_points
+	      b[0] = false
+d411 4
+a414 5
+	  end
+	else
+	  pos = pos.to_i
+	  if @@break_points[pos-1]
+	    @@break_points[pos-1][0] = false
+d416 2
+a417 1
+	    STDOUT.printf "Breakpoint %d is not defined\n", pos
+d420 12
+d433 6
+a438 5
+      when /^disp(?:lay)?\s+(.+)$/
+	exp = $1
+	@@display.push.push [true, exp]
+	STDOUT.printf "  %d: %s = %s\n", @@display.size, exp,
+	  debug_eval(exp, binding).to_s
+d440 14
+a453 2
+      when /^disp(?:lay)?$/, /^info disp(?:lay)?$/
+	display_expressions(binding)
+d455 10
+a464 7
+      when /^undisp(?:lay)?(?:\s+(\d+))?$/
+	pos = $1
+	unless pos
+	  input = readline("clear all expressions? (y/n) ", false)
+	  if input == "y"
+	    for d in @@display
+	      d[0] = false
+d467 38
+a504 6
+	else
+	  pos = pos.to_i
+	  if @@display[pos-1]
+	    @@display[pos-1][0] = false
+	  else
+	    STDOUT.printf "display expression %d is not defined\n", pos
+d507 4
+d512 13
+a524 8
+      when /^c(?:ont)?$/
+	return
+
+      when /^s(?:tep)?(?:\s+(\d+))?$/
+	if $1
+	  lev = $1.to_i
+	else
+	  lev = 1
+d526 3
+a528 2
+	@@stop_next = lev
+	return
+d530 10
+a539 3
+      when /^n(?:ext)?(?:\s+(\d+))?$/
+	if $1
+	  lev = $1.to_i
+d541 1
+a541 1
+	  lev = 1
+d543 3
+a545 9
+	@@stop_next = lev
+	@@no_step = @@frames.size - frame_pos
+	return
+
+      when /^w(?:here)?$/, /^f(?:rame)?$/
+	at = caller(0)
+	0.upto(@@frames.size - 1) do |n|
+	  if frame_pos == n
+	    STDOUT.printf "--> #%d  %s\n", n, at[-(@@frames.size - n)]
+d547 3
+a549 1
+	    STDOUT.printf "    #%d  %s\n", n, at[-(@@frames.size - n)]
+d553 17
+a569 74
+      when /^l(?:ist)?(?:\s+(.+))?$/
+        if not $1
+          b = previus_line ? previus_line + 10 : binding_line - 5
+          e = b + 9
+        elsif $1 == '-'
+          b = previus_line ? previus_line - 10 : binding_line - 5
+          e = b + 9
+        else
+          b, e = $1.split(/[-,]/)
+          if e
+            b = b.to_i
+            e = e.to_i
+          else
+            b = b.to_i - 5
+            e = b + 9
+          end
+        end
+        previus_line = b
+        STDOUT.printf "[%d, %d] in %s\n", b, e, binding_file
+        line_at(binding_file, binding_line)
+        if lines = LINES__[binding_file] and lines != true
+          n = 0
+          b.upto(e) do |n|
+            if n > 0 && lines[n-1]
+	      if n == binding_line
+              	STDOUT.printf "=> %d  %s\n", n, lines[n-1].chomp
+	      else
+              	STDOUT.printf "   %d  %s\n", n, lines[n-1].chomp
+	      end
+            end
+          end
+        else
+          STDOUT.printf "no sourcefile available for %s\n", binding_file
+        end
+
+      when /^up(?:\s+(\d+))?$/
+	previus_line = nil
+        if $1
+          lev = $1.to_i
+        else
+          lev = 1
+        end
+        frame_pos += lev
+        if frame_pos >= @@frames.size
+	  frame_pos = @@frames.size - 1
+          STDOUT.print "at toplevel\n"
+	end
+        binding = @@frames[frame_pos]
+        info, binding_file, binding_line = frame_info(frame_pos)
+        STDOUT.printf "#%d %s\n", frame_pos, info
+
+      when /^down(?:\s+(\d+))?$/
+	previus_line = nil
+        if $1
+          lev = $1.to_i
+        else
+          lev = 1
+        end
+        frame_pos -= lev
+        if frame_pos < 0
+          frame_pos = 0
+          STDOUT.print "at stack bottom\n"
+	end
+        binding = @@frames[frame_pos]
+        info, binding_file, binding_line = frame_info(frame_pos)
+        STDOUT.printf "#%d %s\n", frame_pos, info
+
+      when /^fi(?:nish)?$/
+	if  frame_pos == 0
+	  STDOUT.print "\"finish\" not meaningful in the outermost frame.\n"
+	else
+	  @@finish_pos = @@frames.size - frame_pos
+	  frame_pos = 0
+	  return
+d572 2
+a573 3
+      when /^q(?:uit)?$/
+	input = readline("really quit? (y/n) ", false)
+	exit if input == "y"
+d575 2
+a576 2
+      when /^p\s+/
+	p debug_eval($', binding)
+a577 3
+      else
+	v = debug_eval(input, binding)
+	p v unless (v == nil)
+d579 1
+d582 16
+a597 8
+  
+  def display_expressions(binding)
+    n = 1
+    for d in @@display
+      if d[0]
+      	STDOUT.printf "%d: %s = %s\n", n, d[1], debug_eval(d[1], binding).to_s
+      end
+      n += 1
+a598 1
+  end
+d600 3
+a602 5
+  def frame_info(pos = 0)
+    info = caller(0)[-(@@frames.size - pos)]
+    info.sub(/:in `.*'$/, "") =~ /^(.*):(\d+)$/ #`
+    [info, $1, $2.to_i]
+  end
+d604 2
+a605 7
+  def line_at(file, line)
+    lines = LINES__[file]
+    if lines
+      return "\n" if lines == true
+      line = lines[line-1]
+      return "\n" unless line
+      return line
+a606 2
+    return "\n"
+  end
+d608 2
+a609 5
+  def debug_funcname(id)
+    if id == 0
+      "toplevel"
+    else
+      id.id2name
+a610 1
+  end
+d612 4
+a615 14
+  def check_break_points(file, pos, binding, id)
+    file = File.basename(file)
+    n = 1
+    for b in @@break_points
+      if b[0]
+	if b[1] == 0 and b[2] == file and b[3] == pos
+      	  STDOUT.printf "breakpoint %d, %s at %s:%s\n", n, debug_funcname(id),
+	    file, pos
+      	  return true
+	elsif b[1] == 1 and debug_eval(b[2], binding)
+      	  STDOUT.printf "watchpoint %d, %s at %s:%s\n", n, debug_funcname(id),
+	    file, pos
+      	  return true
+      	end
+d617 5
+a621 1
+      n += 1
+a622 2
+    return false
+  end
+d624 7
+a630 7
+  def excn_handle(file, line, id, binding)
+    fs = @@frames.size
+    tb = caller(0)[-fs..-1]
+
+    STDOUT.printf "%s\n", $!
+    for i in tb
+      STDOUT.printf "\tfrom %s\n", i
+a631 2
+    debug_command(file, line, id, binding)
+  end
+d633 4
+a636 7
+  def trace_func(event, file, line, id, binding)
+    case event
+    when 'line'
+      if !@@no_step or @@frames.size == @@no_step
+	@@stop_next -= 1
+      elsif @@frames.size < @@no_step
+	@@stop_next = 0		# break here before leaving...
+d638 1
+a638 1
+	# nothing to do. skipped.
+d640 5
+a644 8
+      if @@stop_next == 0
+	if [file, line] == @@last
+	  @@stop_next = 1
+	else
+	  @@no_step = nil
+	  debug_command(file, line, id, binding)
+	  @@last = [file, line]
+	end
+d646 6
+a651 2
+      if check_break_points(file, line, binding, id)
+	debug_command(file, line, id, binding)
+d653 1
+d655 9
+a663 4
+    when 'call'
+      @@frames.unshift binding
+      if check_break_points(file, id.id2name, binding, id)
+	debug_command(file, line, id, binding)
+d665 2
+d668 24
+a691 7
+    when 'class'
+      @@frames.unshift binding
+    
+    when 'return', 'end'
+      @@frames.shift
+      if @@frames.size == @@finish_pos
+	@@stop_next = 1
+a692 4
+    
+    when 'raise' 
+      excn_handle(file, line, id, binding)
+
+a693 1
+    @@last_file = file
+d696 4
+a699 5
+  CONTEXT = new
+
+
+  set_trace_func proc{|event, file, line, id, binding,*rest|
+    DEBUGGER__::CONTEXT.trace_func event, file, line, id, binding
+@
+
+
+1.4
+log
+@19991108
+@
+text
+@d30 1
+d260 7
+a266 3
+	@@finish_pos = @@frames.size - frame_pos
+	frame_pos = 0
+	return
+d381 1
+a384 1
+      @@frames.shift
+@
+
+
+1.3
+log
+@-r debug, -s, etc.
+@
+text
+@d29 1
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d1 2
+a28 1
+    @@scripts = {}
+d210 1
+a210 1
+        if lines = @@scripts[binding_file] and lines != true
+d293 1
+a293 1
+    lines = @@scripts[file]
+d300 1
+a300 13
+    save = $DEBUG
+    begin
+      $DEBUG = false
+      f = open(file)
+      lines = @@scripts[file] = f.readlines
+    rescue
+      $DEBUG = save
+      @@scripts[file] = true
+      return "\n"
+    end
+    line = lines[line-1]
+    return "\n" unless line
+    return line
+d388 5
+a393 4
+
+set_trace_func proc{|event, file, line, id, binding,*rest|
+  DEBUGGER__::CONTEXT.trace_func event, file, line, id, binding
+}
+@
+
+
+1.2.2.1
+log
+@19991109
+@
+text
+@a28 1
+    @@no_step = nil
+@
+
+
+1.2.2.2
+log
+@19991110
+@
+text
+@d28 1
+a29 2
+    @@finish_pos = 0
+  end
+d258 3
+a260 7
+	if  frame_pos == 0
+	  STDOUT.print "\"finish\" not meaningful in the outermost frame.\n"
+	else
+	  @@finish_pos = @@frames.size - frame_pos
+	  frame_pos = 0
+	  return
+	end
+a386 1
+      @@frames.shift
+d390 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 16
+a17 1
+class DEBUGGER__
+d19 1
+a19 1
+  $DEBUG = TRUE
+d22 1
+a24 1
+    @@frame_pos = nil
+d26 1
+d30 2
+d42 1
+a42 1
+      printf "%s:%s\n", at.shift, $!
+d45 1
+a45 1
+	printf "\tfrom %s\n", i
+d51 4
+d56 1
+a56 1
+      printf "\032\032%s:%d:\n", file, line
+d58 2
+a59 1
+      printf "%s:%d:%s", file, line, line_at(file, line)
+d61 9
+a69 5
+    @@frames[-1] = binding
+    STDOUT.print "(rdb:-) "
+    STDOUT.flush
+    while input = STDIN.gets
+      input.chop!
+d71 3
+a73 3
+      when /^b(reak)?\s+(([^:\n]+:)?.+)/
+	pos = $2
+	if pos.index ":"
+d79 1
+a79 1
+	  pos = Integer(pos)
+d83 25
+a107 6
+	printf "Set breakpoint %d at %s:%s\n", @@break_points.size, file, pname
+	@@break_points.push [file, pos]
+      when /^b(reak)?$/, /^info b(reak)?$/
+	n = 0
+	for f, p in @@break_points
+	  printf "%d %s:%s\n", n, f, p
+d110 4
+a113 2
+      when /^del(ete)?(\s+(\d+))?$/
+	pos = $3
+d115 1
+a115 3
+	  STDOUT.print "clear all breakpoints? (y/n) "
+	  STDOUT.flush
+	  input = STDIN.gets.chop!
+d117 2
+a118 2
+	    for n in @@break_points.indexes
+	      @@break_points[n] = nil
+d122 3
+a124 5
+	  pos = Integer(pos)
+	  if @@break_points[pos]
+	    bp = @@break_points[pos]
+	    printf "Clear breakpoint %d at %s:%s\n", pos, bp[0], bp[1]
+	    @@break_points[pos] = nil
+d126 1
+a126 1
+	    printf "Breakpoint %d is not defined\n", pos
+d129 19
+a147 5
+      when /^c(ont)?$/
+	return
+      when /^s(tep)?\s*(\d+)?$/
+	if $1
+	  lev = Integer($1)
+d149 6
+a154 1
+	  lev = 1
+d156 2
+a157 1
+	@@stop_next = lev
+d159 2
+a160 1
+      when /^n(ext)?\s*(\d+)?$/
+d162 1
+a162 1
+	  lev = Integer($1)
+a166 1
+	@@no_step = @@frames.size
+d168 2
+a169 1
+      when /^up\s*(\d+)?$/
+d171 1
+a171 1
+	  lev = Integer($1)
+d175 2
+a176 25
+	unless @@frame_pos
+	  @@frame_pos = @@frames.size - 1
+	end
+	@@frame_pos -= lev
+	if @@frame_pos < 0
+	  STDOUT.print "at toplevel\n"
+	  @@frame_pos = 0
+	else
+	  binding = @@frames[@@frame_pos]
+	end
+      when /^down\s*(\d+)??$/
+	if $1
+	  lev = Integer($1)
+	else
+	  lev = 1
+	end
+	if lev >= @@frames.size or @@frame_pos and @@frame_pos+lev >= @@frames.size 
+	  STDOUT.print "at stack bottom\n"
+	  @@frame_pos = nil
+	else
+	  @@frame_pos += lev
+	  binding = @@frames[@@frame_pos]
+	end
+      when /^fin(ish)?$/
+	@@finish_pos = @@frames.size
+d178 6
+a183 16
+      when /^q(uit)?$/
+	STDOUT.print "really quit? (y/n) "
+	STDOUT.flush
+	input = STDIN.gets.chop!
+	exit if input == "y"
+      when /^where$/
+	at = caller(4)
+	for i in at
+	  printf " %s\n", i
+	end
+      when /^l(ist)?(\s+(.*))?$/
+	if $3
+	  b, e = $3.split(/[-,]/)
+	  b = Integer(b)-1
+	  if e
+	    e = Integer(e)-1
+d185 1
+a185 1
+	    e = b + 10
+d188 77
+a264 15
+	unless b
+	  b = line - 1
+	  e = line + 9
+	end
+	p [b,e]
+	line_at(file, line)
+	if lines = @@scripts[file] and lines != TRUE
+	  n = b+1
+	  for l in lines[b..e]
+	    printf "%4d %s", n, l
+	    n += 1
+	  end
+	else
+	  printf "no sourcefile available for %s\n", file
+	end
+d267 1
+d270 1
+a270 1
+	p v unless v == nil
+a271 2
+      STDOUT.print "(rdb:-) "
+      STDOUT.flush
+d275 16
+d294 1
+a294 1
+      return "\n" if lines == TRUE
+d299 1
+d301 1
+d305 2
+a306 1
+      @@scripts[file] = TRUE
+d324 25
+a348 5
+    if @@break_points.include? [file, pos]
+      index = @@break_points.index([file, pos])
+      printf "Breakpoint %d, %s at %s:%s\n",
+	index, debug_funcname(id), file, pos
+      return TRUE
+d350 1
+a350 1
+    return FALSE
+d354 3
+a356 2
+    if event == 'line'
+      if @@no_step == nil or @@no_step >= @@frames.size
+d358 4
+d375 3
+a377 3
+    end
+    if event == 'call'
+      @@frames.push binding
+d381 6
+a386 6
+    end
+    if event == 'class'
+      @@frames.push binding
+    end
+    if event == 'return' or event == 'end'
+      if @@finish_pos == @@frames.size
+d389 5
+a393 1
+      @@frames.pop
+d401 1
+a401 1
+set_trace_func proc{|event, file, line, id, binding|
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@ruby 1.3 cycle
+@
+text
+@a13 2
+  DEBUG_LAST_CMD = []
+
+a42 5
+      if input == ""
+	input = DEBUG_LAST_CMD[0]
+      else
+	DEBUG_LAST_CMD[0] = input
+      end
+d172 1
+a172 1
+	p debug_eval($', binding) #'
+a189 1
+    save = $DEBUG
+a190 1
+      $DEBUG = FALSE
+a193 1
+      $DEBUG = save
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d95 2
+a96 2
+	if $2
+	  lev = Integer($2)
+d103 2
+a104 2
+	if $2
+	  lev = Integer($2)
+@
+
+
+1.1.1.2.2.2
+log
+@regexp null pattern
+@
+text
+@d270 1
+a270 1
+set_trace_func proc{|event, file, line, id, binding,*rest|
+@
+
+
+1.1.1.2.2.3
+log
+@990624
+@
+text
+@a132 3
+	unless @@frame_pos
+	  @@frame_pos = @@frames.size - 1
+	end
+@
+
+
+1.1.1.2.2.4
+log
+@990715
+@
+text
+@a2 9
+
+  def max(a,b)
+    if (a<b); b; else a; end  
+  end
+
+  def min(a,b)
+    if (a<=b); a; else b; end
+  end
+
+d9 1
+a9 1
+    @@frame_pos = nil	# nil means not '0' but `unknown'.
+d26 1
+a26 1
+      STDOUT.printf "%s:%s\n", at.shift, $!
+d29 1
+a29 1
+	STDOUT.printf "\tfrom %s\n", i
+a34 3
+    binding_file = file
+    binding_line = line
+    debug_line = {}
+d36 1
+a36 1
+      STDOUT.printf "\032\032%s:%d:\n", binding_file, binding_line
+d38 1
+a38 2
+      STDOUT.printf "%s:%d:%s", binding_file, binding_line,
+	line_at(binding_file, binding_line)
+a50 1
+
+d63 1
+a63 2
+	STDOUT.printf "Set breakpoint %d at %s:%s\n", @@break_points.size, file,
+	  pname
+d65 1
+a65 2
+
+      when /^b(reak)?$/
+d68 1
+a68 1
+	  STDOUT.printf "%d %s:%s\n", n, f, p
+a70 1
+
+d86 1
+a86 1
+	    STDOUT.printf "Clear breakpoint %d at %s:%s\n", pos, bp[0], bp[1]
+d89 1
+a89 1
+	    STDOUT.printf "Breakpoint %d is not defined\n", pos
+a91 1
+
+a93 1
+
+a101 1
+
+d111 3
+a113 34
+
+      when /^i(?:nfo)?/, /^w(?:here)?/
+	fs = @@frames.size
+	tb = caller(0)[-fs..-1].reverse
+	unless @@frame_pos; @@frame_pos = fs - 1; end
+
+	(fs-1).downto(0){ |i|
+	  if (@@frame_pos == i)
+	    STDOUT.printf "-->  frame %d:%s\n", i, tb[i]
+	  else
+	    STDOUT.printf "     frame %d:%s\n", i, tb[i]
+	  end
+	}
+
+      when /^l(ist)?$/
+	fs = @@frames.size
+	tb = caller(0)[-fs..-1].reverse
+	unless @@frame_pos; @@frame_pos = fs - 1; end
+
+	file, line, func = tb[@@frame_pos].split(":")
+	line = line.to_i
+	b = line - 1
+	e = line + 9
+	line_at(file, line)
+	if lines = @@scripts[file] and lines != TRUE
+	  lines = [0] + lines	# Simple offset adjust
+	  b = max(0, b); e = min(lines.size-1, e)
+	  for l in b..e
+	    if (l == line) 
+	      STDOUT.printf "--> %5d %s", l, lines[l]
+	    else
+	      STDOUT.printf "    %5d %s", l, lines[l]
+	    end
+	  end
+d115 4
+a118 1
+	  STDOUT.printf "no sourcefile available for %s\n", file
+a119 4
+
+      when /^d(?:own)?\s*(\d+)??$/
+	if $1; lev = Integer($1); else lev = 1; end
+	unless @@frame_pos; @@frame_pos = 0; end
+d122 1
+a122 1
+	  STDOUT.print "at stack bottom\n"
+d125 10
+a134 1
+	  STDOUT.printf "at level %d\n", @@frame_pos
+d136 2
+a137 9
+	binding = @@frames[@@frame_pos]
+
+      when /^u(?:p)?\s*(\d+)?$/
+	if $1; lev = Integer($1); else lev = 1; end
+	unless @@frame_pos; @@frame_pos = @@frames.size - 1; end
+	@@frame_pos += lev
+	p @@frame_pos
+	if @@frame_pos >= @@frames.size
+	  STDOUT.print "at toplevel\n"
+d140 1
+a140 5
+	  binding = @@frames[@@frame_pos]
+	  frame_info = caller(4)[-(@@frame_pos+1)]
+	  STDOUT.print "at #{frame_info}\n"
+	  frame_info.sub( /:in `.*'$/, '' ) =~ /^(.*):(\d+)$/ #`
+	  binding_file, binding_line = $1, $2.to_i
+d143 1
+a143 2
+
+      when /^f(inish)?/
+a145 1
+
+d151 30
+a180 1
+
+d182 1
+a182 2
+	p debug_eval($', binding)
+
+d227 1
+a227 1
+      STDOUT.printf "Breakpoint %d, %s at %s:%s\n",
+a233 13
+  def excn_handle(file, line, id, binding)
+    fs = @@frames.size
+    tb = caller(0)[-fs..-1]
+    unless @@frame_pos; @@frame_pos = fs - 1; end
+
+    STDOUT.printf "%s\n", $!
+    for i in tb
+      STDOUT.printf "\tfrom %s\n", i
+    end
+    debug_command(file, line, id, binding)
+  end
+
+
+a251 1
+
+a257 1
+
+a260 1
+    
+a266 6
+    
+    if event == 'raise' 
+      # @@frames.push binding
+      excn_handle(file, line, id, binding)
+    end
+
+@
+
+
+1.1.1.2.2.5
+log
+@backtrace may be Qnil
+@
+text
+@d1 1
+d3 9
+d13 1
+a13 1
+  $DEBUG = true
+d18 1
+a19 1
+    @@last = [nil, nil]
+a43 1
+    frame_pos = 0
+d46 1
+a46 1
+    previus_line = nil
+d53 1
+a53 1
+    @@frames[0] = binding
+d63 1
+d65 2
+a66 3
+      case input
+      when /^b(?:reak)?\s+((?:[^:\n]+:)?.+)/
+	pos = $1
+d81 1
+a81 1
+      when /^b(?:reak)?$/, /^i(?:nfo) b(?:reak)?$/
+d88 2
+a89 2
+      when /^del(?:ete)?(?:\s+(\d+))?$/
+	pos = $1
+d110 1
+a110 1
+      when /^c(?:ont)?$/
+d113 3
+a115 3
+      when /^s(?:tep)?\s*(\d+)?$/
+	if $1
+	  lev = Integer($1)
+d122 3
+a124 3
+      when /^n(?:ext)?\s*(\d+)?$/
+	if $1
+	  lev = Integer($1)
+d129 1
+a129 1
+	@@no_step = @@frames.size - frame_pos
+d132 8
+a139 5
+      when /^w(?:here)?$/, /^f(?:rame)?$/
+	at = caller(0)
+	0.upto( @@frames.size - 1 ) do |n|
+	  if ( frame_pos == n )
+	    STDOUT.printf "--> #%d  %s\n", n, at[-(@@frames.size - n)]
+d141 23
+a163 1
+	    STDOUT.printf "    #%d  %s\n", n, at[-(@@frames.size - n)]
+d165 2
+d169 9
+a177 46
+      when /^l(?:ist)?(?:\s+(.+))?$/
+        if !$1
+          b = previus_line ? previus_line + 10 : binding_line - 5
+          e = b + 9
+        elsif $1 == '-'
+          b = previus_line ? previus_line - 10 : binding_line - 5
+          e = b + 9
+        else
+          b, e = $1.split(/[-,]/)
+          if e
+            b = Integer(b)
+            e = Integer(e)
+          else
+            b = Integer(b) - 5
+            e = b + 9
+          end
+        end
+        previus_line = b
+        STDOUT.printf "[%d, %d] in %s\n", b, e, binding_file
+        line_at(binding_file, binding_line)
+        if lines = @@scripts[binding_file] and lines != true
+          n = 0
+          b.upto(e) do |n|
+            if n > 0 && lines[n-1]
+	      if ( n == binding_line )
+              	STDOUT.printf "=> %d  %s\n", n, lines[n-1].chomp
+	      else
+              	STDOUT.printf "   %d  %s\n", n, lines[n-1].chomp
+	      end
+            end
+          end
+        else
+          STDOUT.printf "no sourcefile available for %s\n", binding_file
+        end
+
+      when /^up\s*(\d+)?$/
+	previus_line = nil
+        if $1
+          lev = Integer($1)
+        else
+          lev = 1
+        end
+        frame_pos += lev
+        if frame_pos >= @@frames.size
+	  frame_pos = @@frames.size - 1
+          STDOUT.print "at toplevel\n"
+d179 17
+a195 15
+        binding = @@frames[frame_pos]
+        info, binding_file, binding_line = frame_info(frame_pos)
+        STDOUT.printf "#%d %s\n", frame_pos, info
+
+      when /^down\s*(\d+)?$/
+	previus_line = nil
+        if $1
+          lev = Integer($1)
+        else
+          lev = 1
+        end
+        frame_pos -= lev
+        if frame_pos < 0
+          frame_pos = 0
+          STDOUT.print "at stack bottom\n"
+d197 3
+a199 7
+        binding = @@frames[frame_pos]
+        info, binding_file, binding_line = frame_info(frame_pos)
+        STDOUT.printf "#%d %s\n", frame_pos, info
+
+      when /^fi(?:nish)?$/
+	@@finish_pos = @@frames.size - frame_pos
+	frame_pos = 0
+d202 1
+a202 1
+      when /^q(?:uit)?$/
+a219 6
+  def frame_info(pos = 0)
+    info = caller(0)[-(@@frames.size - pos)]
+    info.sub( /:in `.*'$/, '' ) =~ /^(.*):(\d+)$/ #`
+    [info, $1, $2.to_i]
+  end
+
+d223 1
+a223 1
+      return "\n" if lines == true
+d230 1
+a230 1
+      $DEBUG = false
+d235 1
+a235 1
+      @@scripts[file] = true
+d257 1
+a257 1
+      return true
+d259 1
+a259 1
+    return false
+d265 1
+d274 1
+d276 2
+a277 3
+    case event
+    when 'line'
+      if !@@no_step or @@frames.size == @@no_step
+a278 4
+      elsif @@frames.size < @@no_step
+	@@stop_next = 0		# break here before leaving...
+      else
+	# nothing to do. skipped.
+d292 1
+d294 2
+a295 2
+    when 'call'
+      @@frames.unshift binding
+d299 1
+d301 3
+a303 2
+    when 'class'
+      @@frames.unshift binding
+d305 2
+a306 2
+    when 'return', 'end'
+      if @@frames.size == @@finish_pos
+d309 2
+a310 1
+      @@frames.shift
+d312 2
+a313 1
+    when 'raise' 
+d315 1
+a316 1
+    end
+@
+
+
+1.1.1.2.2.6
+log
+@new debug.rb
+@
+text
+@a1 16
+  begin
+    require 'readline'
+    def readline(prompt)
+      Readline::readline(prompt, true)
+    end
+  rescue LoadError
+    def readline(prompt)
+      STDOUT.print prompt
+      STDOUT.flush
+      line = STDIN.gets
+      line.chomp!
+      line
+    end
+    USE_READLINE = false
+  end
+
+a5 1
+    @@display = []
+d45 4
+a48 2
+    display_expressions(binding)
+    while input = readline("(rdb:-) ")
+d58 1
+a58 1
+	if pos.index(":")
+d64 1
+a64 1
+	  pos = pos.to_i
+a67 1
+	@@break_points.push [true, 0, file, pos]
+d70 1
+d72 4
+a75 21
+      when /^wat(?:ch)?\s+((?:[^:\n]+:)?.+)$/
+	exp = $1
+	@@break_points.push [true, 1, exp]
+	STDOUT.printf "Set watchpoint %d\n", @@break_points.size, exp
+
+      when /^b(?:reak)?$/, /^info b(?:reak)?$/
+	n = 1
+	STDOUT.print "breakpoints:\n"
+	for b in @@break_points
+	  if b[0] and (b[1] == 0)
+	    STDOUT.printf "  %d %s:%s\n", n, b[2], b[3] 
+	  end
+	  n += 1
+	end
+	n = 1
+	STDOUT.print "\n"
+	STDOUT.print "watchpoints:\n"
+	for b in @@break_points
+	  if b[0] and (b[1] == 1)
+	    STDOUT.printf "  %d %s\n", n, b[2]
+	  end
+a77 1
+	STDOUT.print "\n"
+d84 1
+a84 1
+	  input = readline
+d86 2
+a87 2
+	    for b in @@break_points
+	      b[0] = false
+d91 5
+a95 3
+	  pos = pos.to_i
+	  if @@break_points[pos-1]
+	    @@break_points[pos-1][0] = false
+d101 1
+a101 28
+      when /^disp(?:lay)?\s+(.+)$/
+	exp = $1
+	@@display.push.push [true, exp]
+	STDOUT.printf "  %d: %s = %s\n", @@display.size, exp,
+	  debug_eval(exp, binding).to_s
+
+      when /^disp(?:lay)?$/, /^info disp(?:lay)?$/
+	display_expressions(binding)
+
+      when /^undisp(?:lay)?(?:\s+(\d+))?$/
+	pos = $1
+	unless pos
+	  input = readline("clear all expressions? (y/n) ")
+	  if input == "y"
+	    for d in @@display
+	      d[0] = false
+	    end
+	  end
+	else
+	  pos = pos.to_i
+	  if @@display[pos-1]
+	    @@display[pos-1][0] = false
+	  else
+	    STDOUT.printf "display expression %d is not defined\n", pos
+	  end
+	end
+
+      when /^co(?:nt)?$/
+d106 1
+a106 1
+	  lev = $1.to_i
+d115 1
+a115 1
+	  lev = $1.to_i
+d125 2
+a126 2
+	0.upto(@@frames.size - 1) do |n|
+	  if frame_pos == n
+d134 1
+a134 1
+        if not $1
+d143 2
+a144 2
+            b = b.to_i
+            e = e.to_i
+d146 1
+a146 1
+            b = b.to_i - 5
+d157 1
+a157 1
+	      if n == binding_line
+d171 1
+a171 1
+          lev = $1.to_i
+d187 1
+a187 1
+          lev = $1.to_i
+d206 3
+a208 1
+	input = readline("really quit? (y/n) ")
+d216 1
+a216 1
+	p v unless (v == nil)
+d218 2
+a222 10
+  def display_expressions(binding)
+    n = 1
+    for d in @@display
+      if d[0]
+      	STDOUT.printf "%d: %s = %s\n", n, d[1], debug_eval(d[1], binding).to_s
+      end
+      n += 1
+    end
+  end
+
+d225 1
+a225 1
+    info.sub(/:in `.*'$/, "") =~ /^(.*):(\d+)$/ #`
+d262 5
+a266 14
+    n = 1
+    for b in @@break_points
+      if b[0]
+	if b[1] == 0 and b[2] == file and b[3] == pos
+      	  STDOUT.printf "breakpoint %d, %s at %s:%s\n", n, debug_funcname(id),
+	    file, pos
+      	  return true
+	elsif b[1] == 1 and debug_eval(b[2], binding)
+      	  STDOUT.printf "watchpoint %d, %s at %s:%s\n", n, debug_funcname(id),
+	    file, pos
+      	  return true
+      	end
+      end
+      n += 1
+@
+
+
+1.1.1.2.2.7
+log
+@debug.rb - readline fixed
+@
+text
+@d4 2
+a5 2
+    def readline(prompt, hist)
+      Readline::readline(prompt, hist)
+d8 1
+a8 1
+    def readline(prompt, hist)
+d63 1
+a63 1
+    while input = readline("(rdb:-) ", true)
+d115 3
+a117 1
+	  input = readline("clear all breakpoints? (y/n) ", false)
+d144 1
+a144 1
+	  input = readline("clear all expressions? (y/n) ", false)
+d264 1
+a264 1
+	input = readline("really quit? (y/n) ", false)
+@
+
+
+1.1.1.2.2.8
+log
+@990806
+@
+text
+@d71 1
+a71 1
+      when /^b(?:reak)?\s+((?:[^:\n]+:)?.+)$/
+d87 1
+a87 1
+      when /^wat(?:ch)?\s+(.+)$/
+d157 1
+a157 1
+      when /^c(?:ont)?$/
+d160 1
+a160 1
+      when /^s(?:tep)?\s+(\d+)?$/
+d169 1
+a169 1
+      when /^n(?:ext)?\s+(\d+)?$/
+d224 1
+a224 1
+      when /^up\s+(\d+)?$/
+d240 1
+a240 1
+      when /^down\s+(\d+)?$/
+@
+
+
+1.1.1.2.2.9
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d160 1
+a160 1
+      when /^s(?:tep)?(?:\s+(\d+))?$/
+d169 1
+a169 1
+      when /^n(?:ext)?(?:\s+(\d+))?$/
+d224 1
+a224 1
+      when /^up(?:\s+(\d+))?$/
+d240 1
+a240 1
+      when /^down(?:\s+(\d+))?$/
+@
+
+
+1.1.1.1.4.1
+log
+@new exception model
+@
+text
+@a13 2
+  DEBUG_LAST_CMD = []
+
+a42 5
+      if input == ""
+	input = DEBUG_LAST_CMD[0]
+      else
+	DEBUG_LAST_CMD[0] = input
+      end
+@
+
+
+1.1.1.1.4.2
+log
+@*** empty log message ***
+@
+text
+@d179 1
+a179 1
+	p debug_eval($', binding) #'
+a196 1
+    save = $DEBUG
+a197 1
+      $DEBUG = FALSE
+a200 1
+      $DEBUG = save
+@
+
+
+1.1.1.1.4.3
+log
+@*** empty log message ***
+@
+text
+@d95 2
+a96 2
+	if $2
+	  lev = Integer($2)
+d103 2
+a104 2
+	if $2
+	  lev = Integer($2)
+@
+
+
+1.1.1.1.4.2.2.1
+log
+@1.1d series
+@
+text
+@d270 2
+a271 2
+set_trace_func proc{|event, file, line, id, binding, klass|
+  DEBUGGER__::CONTEXT.trace_func event, file, line, id, binding, klass
+@
+
+
+1.1.1.1.4.2.2.2
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d270 2
+a271 2
+set_trace_func proc{|event, file, line, id, binding|
+  DEBUGGER__::CONTEXT.trace_func event, file, line, id, binding
+@

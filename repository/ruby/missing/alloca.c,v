@@ -1,0 +1,382 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.1.1.1.12.1
+	v1_6_6:1.1.1.1.12.1
+	v1_6_5:1.1.1.1.12.1
+	v1_6_4:1.1.1.1.12.1
+	v1_7_1:1.2
+	v1_6_4_preview4:1.1.1.1.12.1
+	v1_6_4_preview3:1.1.1.1.12.1
+	v1_6_4_preview2:1.1.1.1
+	v1_6_4_preview1:1.1.1.1
+	v1_6_3:1.1.1.1
+	ruby_m17n:1.1.1.1.0.14
+	ruby_1_6:1.1.1.1.0.12
+	v1_6_2:1.1.1.1
+	v1_6_1:1.1.1.1
+	v1_6_0:1.1.1.1
+	v1_4_6:1.1.1.1
+	v1_4_5:1.1.1.1
+	v1_4_4:1.1.1.1
+	ruby_1_4_3:1.1.1.1
+	ruby1_4_3:1.1.1.1
+	v1_4_3:1.1.1.1
+	v1_5_0:1.1.1.1
+	ruby_1_4_3_pre1:1.1.1.1
+	ruby_1_4:1.1.1.1.0.10
+	v1_4_2:1.1.1.1
+	v1_4_1:1.1.1.1
+	v1_4_0:1.1.1.1
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.1.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.1.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.1.1
+	v1_2_4:1.1.1.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.8
+	v1_2_2:1.1.1.1
+	RUBY_1_3:1.1.1.1
+	v1_2_2_pr1:1.1.1.1
+	v1_2_1repack:1.1.1.1
+	v1_2_1:1.1.1.1
+	v1_2_stable:1.1.1.1
+	v1_1d1:1.1.1.1
+	v1_1d0:1.1.1.1
+	v1_1c9_1:1.1.1.1
+	v1_1c9:1.1.1.1
+	v1_1c8:1.1.1.1
+	v1_1c7:1.1.1.1
+	v1_1c6:1.1.1.1
+	v1_1d-start:1.1.1.1
+	v1_1c5:1.1.1.1
+	v1_1dev:1.1.1.1.0.6
+	v1_1c4:1.1.1.1
+	v1_1c3:1.1.1.1
+	v1_1c2:1.1.1.1
+	v1_1c1:1.1.1.1
+	v1_1c0:1.1.1.1
+	v1_1b9_31:1.1.1.1
+	v1_1b9_30:1.1.1.1
+	v1_1b9_28:1.1.1.1
+	v1_1b9_27:1.1.1.1
+	v1_1b9_26:1.1.1.1
+	r1_1b9_25:1.1.1.1
+	r1_1b9_24:1.1.1.1
+	v1_1b9_23:1.1.1.1
+	v1_1b9_22:1.1.1.1
+	v1_1b9_20:1.1.1.1
+	v1_1b9_18:1.1.1.1
+	v1_1b9_16:1.1.1.1
+	v1_1b9_15:1.1.1.1
+	v1_1b9_13:1.1.1.1
+	v1_1b9_12:1.1.1.1
+	v1_1b9_11:1.1.1.1
+	v1_1b9_08:1.1.1.1
+	v1_1b9_07:1.1.1.1
+	r1_1b9:1.1.1.1
+	v1_1b8:1.1.1.1
+	v1_1b7:1.1.1.1
+	v1_1b6:1.1.1.1
+	v1_1r:1.1.1.1.0.4
+	v1_1:1.1.1.1
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2001.05.06.15.05.36;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1.12.1;
+next	;
+
+1.1.1.1.12.1
+date	2001.05.01.08.45.26;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@forgot some checkins.
+@
+text
+@/* alloca -- (mostly) portable public-domain implementation -- D A Gwyn
+
+   last edit:	86/05/30	rms
+   include config.h, since on VMS it renames some symbols.
+   Use xmalloc instead of malloc.
+
+   This implementation of the PWB library alloca() function,
+   which is used to allocate space off the run-time stack so
+   that it is automatically reclaimed upon procedure exit, 
+   was inspired by discussions with J. Q. Johnson of Cornell.
+
+   It should work under any C implementation that uses an
+   actual procedure stack (as opposed to a linked list of
+   frames).  There are some preprocessor constants that can
+   be defined when compiling for your specific system, for
+   improved efficiency; however, the defaults should be okay.
+
+   The general concept of this implementation is to keep
+   track of all alloca()-allocated blocks, and reclaim any
+   that are found to be deeper in the stack than the current
+   invocation.  This heuristic does not reclaim storage as
+   soon as it becomes invalid, but it will do so eventually.
+
+   As a special case, alloca(0) reclaims storage without
+   allocating any.  It is a good idea to use alloca(0) in
+   your main control loop, etc. to force garbage collection.
+*/
+#ifndef lint
+static char	SCCSid[] = "@@(#)alloca.c	1.1";	/* for the "what" utility */
+#endif
+
+#include "config.h"
+#ifdef emacs
+#ifdef static
+/* actually, only want this if static is defined as ""
+   -- this is for usg, in which emacs must undefine static
+   in order to make unexec workable
+   */
+#ifndef STACK_DIRECTION
+you
+lose
+-- must know STACK_DIRECTION at compile-time
+#endif /* STACK_DIRECTION undefined */
+#endif /* static */
+#endif /* emacs */
+
+#ifdef X3J11
+typedef void	*pointer;		/* generic pointer type */
+#else
+typedef char	*pointer;		/* generic pointer type */
+#endif /* X3J11 */
+
+#define	NULL	0			/* null pointer constant */
+
+#ifdef RUBY_LIB
+#define xmalloc ruby_xmalloc
+#define xfree ruby_xfree
+#endif
+
+extern void	xfree();
+extern pointer	xmalloc();
+
+/*
+	Define STACK_DIRECTION if you know the direction of stack
+	growth for your system; otherwise it will be automatically
+	deduced at run-time.
+
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown
+*/
+
+#ifndef STACK_DIRECTION
+#define	STACK_DIRECTION	0		/* direction unknown */
+#endif
+
+#if STACK_DIRECTION != 0
+
+#define	STACK_DIR	STACK_DIRECTION	/* known at compile-time */
+
+#else	/* STACK_DIRECTION == 0; need run-time code */
+
+static int	stack_dir;		/* 1 or -1 once known */
+#define	STACK_DIR	stack_dir
+
+static void
+find_stack_direction (/* void */)
+{
+  static char	*addr = NULL;	/* address of first
+				   `dummy', once known */
+  auto char	dummy;		/* to get stack address */
+
+  if (addr == NULL)
+    {				/* initial entry */
+      addr = &dummy;
+
+      find_stack_direction ();	/* recurse once */
+    }
+  else				/* second entry */
+    if (&dummy > addr)
+      stack_dir = 1;		/* stack grew upward */
+    else
+      stack_dir = -1;		/* stack grew downward */
+}
+
+#endif	/* STACK_DIRECTION == 0 */
+
+/*
+	An "alloca header" is used to:
+	(a) chain together all alloca()ed blocks;
+	(b) keep track of stack depth.
+
+	It is very important that sizeof(header) agree with malloc()
+	alignment chunk size.  The following default should work okay.
+*/
+
+#ifndef	ALIGN_SIZE
+#define	ALIGN_SIZE	sizeof(double)
+#endif
+
+typedef union hdr
+{
+  char	align[ALIGN_SIZE];	/* to force sizeof(header) */
+  struct
+    {
+      union hdr *next;		/* for chaining headers */
+      char *deep;		/* for stack depth measure */
+    } h;
+} header;
+
+/*
+	alloca( size ) returns a pointer to at least `size' bytes of
+	storage which will be automatically reclaimed upon exit from
+	the procedure that called alloca().  Originally, this space
+	was supposed to be taken from the current stack frame of the
+	caller, but that method cannot be made to work for some
+	implementations of C, for example under Gould's UTX/32.
+*/
+
+static header *last_alloca_header = NULL; /* -> last alloca header */
+
+pointer
+alloca (size)			/* returns pointer to storage */
+     unsigned	size;		/* # bytes to allocate */
+{
+  auto char	probe;		/* probes stack depth: */
+  register char	*depth = &probe;
+
+#if STACK_DIRECTION == 0
+  if (STACK_DIR == 0)		/* unknown growth direction */
+    find_stack_direction ();
+#endif
+
+  /* Reclaim garbage, defined as all alloca()ed storage that
+     was allocated from deeper in the stack than currently. */
+  {
+    register header	*hp;	/* traverses linked list */
+
+    for (hp = last_alloca_header; hp != NULL;)
+      if (STACK_DIR > 0 && hp->h.deep > depth
+	  || STACK_DIR < 0 && hp->h.deep < depth)
+	{
+	  register header	*np = hp->h.next;
+
+	  xfree ((pointer) hp);	/* collect garbage */
+
+	  hp = np;		/* -> next header */
+	}
+      else
+	break;			/* rest are not deeper */
+
+    last_alloca_header = hp;	/* -> last valid storage */
+  }
+
+  if (size == 0)
+    return NULL;		/* no allocation required */
+
+  /* Allocate combined header + user data storage. */
+
+  {
+    register pointer	new = xmalloc (sizeof (header) + size);
+    /* address of header */
+
+    ((header *)new)->h.next = last_alloca_header;
+    ((header *)new)->h.deep = depth;
+
+    last_alloca_header = (header *)new;
+
+    /* User storage begins just after header. */
+
+    return (pointer)((char *)new + sizeof(header));
+  }
+}
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d55 6
+a60 1
+extern void	free();
+d165 1
+a165 1
+	  free ((pointer) hp);	/* collect garbage */
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.1.12.1
+log
+@* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): inifinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe leve 4.
+@
+text
+@d5 1
+d56 1
+a56 1
+extern pointer	malloc();
+d176 1
+a176 1
+    register pointer	new = malloc (sizeof (header) + size);
+@
+

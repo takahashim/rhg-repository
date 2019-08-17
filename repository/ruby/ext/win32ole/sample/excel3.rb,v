@@ -1,0 +1,36 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.06.01.12.34.29;	author suke;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge win32ole from rough
+@
+text
+@require 'win32ole'
+
+#application = WIN32OLE.new('Excel.Application.5')
+application = WIN32OLE.new('Excel.Application')
+
+application.visible = TRUE
+workbook = application.Workbooks.Add();
+sheet = workbook.Worksheets(1);
+sheetS = workbook.Worksheets
+puts "The number of sheets is #{sheetS.count}"
+puts "Now add 2 sheets after of `#{sheet.name}`"
+sheetS.add({'count'=>2, 'after'=>sheet})
+puts "The number of sheets is #{sheetS.count}"
+@

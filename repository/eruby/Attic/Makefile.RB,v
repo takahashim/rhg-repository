@@ -1,0 +1,1162 @@
+head	1.29;
+access;
+symbols
+	release_0_9_2:1.26
+	release_0_9_1:1.23
+	release_0_9_0:1.23
+	release_0_1_1:1.15
+	release_0_1_0:1.13
+	start:1.1.1.1
+	shugo:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.29
+date	2001.05.18.07.44.53;	author shugo;	state dead;
+branches;
+next	1.28;
+
+1.28
+date	2001.05.01.09.15.29;	author shugo;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.05.01.03.25.33;	author shugo;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.04.26.07.41.38;	author shugo;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.04.23.04.00.18;	author shugo;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.04.20.09.29.38;	author shugo;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.04.20.04.03.26;	author shugo;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.04.19.06.02.39;	author shugo;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.04.13.02.37.55;	author shugo;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.03.26.08.49.37;	author shugo;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.12.22.02.26.44;	author shugo;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.12.12.05.40.04;	author shugo;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.09.29.02.03.44;	author shugo;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.09.14.08.18.28;	author shugo;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.09.13.07.35.51;	author shugo;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.09.12.02.11.52;	author shugo;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.09.06.10.04.23;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.08.31.02.54.41;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.30.02.36.05;	author shugo;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.05.24.05.12.00;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.05.19.05.30.17;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.18.08.31.09;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.05.18.08.09.13;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.08.10.04.44.39;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.06.21.07.18.57;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.06.01.06.13.56;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.05.21.06.45.38;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.05.18.07.18.20;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.05.17.09.29.02;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.29
+log
+@* Makefile.RB: removed.
+@
+text
+@#!/usr/bin/env ruby
+
+require "mkmf"
+require "getoptlong"
+
+$DEFAULT_CHARSET = case $KCODE
+		   when /^e/i
+		     "EUC-JP"
+		   when /^s/i
+		     "SHIFT_JIS"
+		   when /^u/i
+		     "UTF-8"
+		   else
+		     "ISO-8859-1"
+		   end
+$ENABLE_SHARED = false
+
+parser = GetoptLong.new
+parser.set_options(["--help", GetoptLong::NO_ARGUMENT],
+		   ["--default-charset", GetoptLong::OPTIONAL_ARGUMENT],
+		   ["--enable-shared", GetoptLong::OPTIONAL_ARGUMENT])
+
+def usage
+  $stderr.printf <<EOS, $0
+usage: %s [options]
+
+  --help                        print this message
+  --default-charset=CHARSET     default charset value
+  --enable-shared               build a shared library for Ruby.
+EOS
+end
+
+begin
+  parser.each_option do |name, arg|
+    case name
+    when "--default-charset"
+      $DEFAULT_CHARSET = arg
+    when "--enable-shared"
+      $ENABLE_SHARED = true
+    when "--help"
+      usage
+      exit(1)
+    end
+  end
+rescue
+  usage
+  exit(1)
+end
+
+srcdir = File.dirname($0)
+$MAJOR, $MINOR, $TEENY =
+  open(File.join(srcdir, "eruby.h")).grep(/ERUBY_VERSION/)[0].scan(/(\d+).(\d+).(\d+)/)[0]
+
+$CFLAGS = CFLAGS
+
+$AR = "ar"
+$AROPT = "rcu $@@"
+
+begin
+  $LIBRUBYARG = Config.expand(CONFIG["LIBRUBYARG"])
+rescue
+  $LIBRUBYARG = CONFIG["LIBRUBYARG"]
+end
+if $LIBRUBYARG =~ /\.a$/
+  $RUBY_SHARED = false
+  $LIBRUBYARG = $hdrdir + "/" + $LIBRUBYARG
+else
+  $RUBY_SHARED = true
+  $LIBRUBYARG.gsub!(/-L\./, "-L#{CONFIG['prefix']}/lib")
+end
+
+$DLDFLAGS = CONFIG["DLDFLAGS"]
+$XLDFLAGS = CONFIG["XLDFLAGS"]
+
+$LIBERUBY_A = "liberuby.a"
+$LIBERUBY = "${LIBERUBY_A}"
+$LIBERUBYARG="$(LIBERUBY_A)"
+
+$LIBERUBY_SO = "liberuby.#{CONFIG['DLEXT']}.$(MAJOR).$(MINOR).$(TEENY)"
+$LIBERUBY_ALIASES = "liberuby.#{CONFIG['DLEXT']}"
+if $ENABLE_SHARED
+  if $CFLAGS.index(CONFIG["CCDLFLAGS"]).nil?
+    $CFLAGS = $CFLAGS + " " + CONFIG["CCDLFLAGS"]
+  end
+  $LIBERUBY = "${LIBERUBY_SO}"
+  $LIBERUBYARG="-L. -leruby"
+  case PLATFORM
+  when /-sunos4/
+    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+  when /-linux/
+    $DLDFLAGS = '-Wl,-soname,liberuby.so.$(MAJOR).$(MINOR)'
+    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+  when /-(freebsd|netbsd)/
+    $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR)"
+    if PLATFORM =~ /elf/ || PLATFORM =~ /-freebsd[3-9]/
+      $LIBERUBY_SO = "liberuby.so.$(MAJOR_MINOR)"
+      $LIBERUBY_ALIASES = "liberuby.so"
+    else
+      $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR) liberuby.so"
+    end
+  when /-solaris/
+    $XLDFLAGS = "-R$(prefix)/lib"
+  when /-hpux/
+    $XLDFLAGS = "-Wl,+s,+b,$(prefix)/lib"
+    $LIBRUBY_SO = "liberuby.sl.$(MAJOR).$(MINOR).$(TEENY)"
+    $LIBRUBY_ALIASES = 'liberuby.sl.$(MAJOR).$(MINOR) liberuby.sl'
+  when /-aix/
+    $DLDFLAGS='-Wl,-bE:eruby.imp'
+    if $RUBY_SHARED
+      $LIBRUBYARG = "-Wl," + CONFIG["libdir"] + "/" + CONFIG["LIBRUBY_SO"]
+      $LIBRUBYARG.sub!(/\.so\.[.0-9]*$/, '.so')
+      $XLDFLAGS = ""
+    else
+      $XLDFLAGS = "-Wl,-bE:#{$topdir}/ruby.imp"
+    end
+    $LIBERUBYARG = "-L$(prefix)/lib -Wl,liberuby.so"
+    if CONFIG["DLDFLAGS"] !~ /-Wl,/
+      $LIBRUBYARG.gsub!(/-Wl,/, '')
+      $XLDFLAGS.gsub!(/-Wl,/, '')
+      $DLDFLAGS.gsub!(/-Wl,/, '')
+    end
+    ifile = open("eruby.imp", "w")
+    begin
+      ifile.write <<EOIF
+#!
+ruby_filename
+eruby_mode
+eruby_noheader
+eruby_charset
+EOIF
+    ensure
+      ifile.close
+    end
+  end
+end
+
+if PLATFORM =~ /-mswin32/
+  $AR = "lib"
+  $AROPT = "/out:$@@"
+  $LIBERUBY_A = "liberuby.lib"
+  $LIBERUBY = "$(LIBERUBY_A)"
+  $LIBRUBYARG.gsub!(CONFIG["RUBY_SO_NAME"] + ".lib", CONFIG["LIBRUBY_A"])
+  if /nmake/i =~ $make
+    LD = "(set LIB=$(libdir:/=\\);$(LIB))& $(CC)"
+    $VPATH = "{$(VPATH)}"
+  else
+    LD = "env LIB='$(subst /,\\\\,$(libdir));$(LIB)' $(CC)"
+  end
+else
+  LD = "$(CC)"
+end
+
+prefix = CONFIG["prefix"]
+Prefixed = Regexp.new(Regexp.quote(prefix))
+def prefixed(name)
+  CONFIG[name].sub(Prefixed, "$(prefix)")
+end
+
+mfile = open("Makefile", "w")
+begin
+  drive = File::PATH_SEPARATOR == ';' ? /\A\w:/ : /\A/
+  mfile.write <<EOMF
+# Generated automatically by Makefile.RB.
+
+srcdir = #{srcdir}
+VPATH = $(srcdir)
+CC = #{CONFIG["CC"]}
+AR = #{CONFIG["AR"]}
+LD = #{LD}
+RANLIB = #{CONFIG["RANLIB"]}
+RUBY_INSTALL_NAME = #{CONFIG["RUBY_INSTALL_NAME"]}
+RUBY = $(RUBY_INSTALL_NAME)
+
+DESTDIR = 
+
+prefix = #{prefix}
+bindir = $(DESTDIR)#{prefixed("bindir")}
+libdir = $(DESTDIR)#{prefixed("libdir")}
+includedir = $(DESTDIR)#{prefixed("includedir")}
+archdir = $(DESTDIR)#{$archdir.sub(drive, '')}
+sitearchdir = $(DESTDIR)#{$sitearchdir.sub(drive, '')}
+mandir = $(DESTDIR)#{prefixed("mandir")}
+
+topdir = #{$topdir}
+hdrdir = #{$hdrdir}
+
+CFLAGS = #{CONFIG["CCDLFLAGS"]} #{$CFLAGS} -I. -I$(hdrdir)
+LDFLAGS = #{CONFIG["LDFLAGS"]}
+LIBS = $(LIBRUBYARG) #{CONFIG["LIBS"]}
+XLDFLAGS = #{$XLDFLAGS}
+DLDFLAGS = #{$DLDFLAGS}
+LDSHARED = #{CONFIG["LDSHARED"]}
+INSTALL_PROGRAM = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0755, true'
+INSTALL_DLLIB = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0555, true'
+INSTALL_DATA = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0644, true'
+INSTALL_DIR = $(RUBY) -r ftools -e 'File.makedirs(*ARGV)'
+LIBRUBYARG = #{$LIBRUBYARG}
+
+RM = ruby -e "ARGV.each {|f|File.unlink(f) rescue Errno}"
+
+ERUBY = eruby#{CONFIG["EXEEXT"]}
+DLLIB = eruby.#{CONFIG["DLEXT"]}
+MANPAGE = eruby.1
+
+MAJOR = #{$MAJOR}
+MINOR = #{$MINOR}
+TEENY = #{$TEENY}
+MAJOR_MINOR = #{$MAJOR.to_i * 10 + $MINOR.to_i}
+
+LIBERUBY_A = #{$LIBERUBY_A}
+LIBERUBY_SO = #{$LIBERUBY_SO}
+LIBERUBY_ALIASES = #{$LIBERUBY_ALIASES}
+LIBERUBY = #{$LIBERUBY}
+LIBERUBYARG = #{$LIBERUBYARG}
+.SUFFIXES: .#{$OBJEXT} .c .rd .1
+
+LIBERUBY_OBJS = eruby_lib.#{$OBJEXT}
+OBJS = eruby_logo.#{$OBJEXT} eruby_main.#{$OBJEXT}
+EXT_OBJS = eruby_ext.#{$OBJEXT}
+
+#{$VPATH}.c.#{$OBJEXT}:
+	$(CC) $(CFLAGS) -c $<
+
+all: $(LIBERUBY_A) $(ERUBY) $(DLLIB) $(MANPAGE)
+
+install: all
+	@@-$(INSTALL_DIR) $(bindir)
+	@@-$(INSTALL_DIR) $(libdir)
+	@@-$(INSTALL_DIR) $(includedir)
+	@@-$(INSTALL_DIR) $(mandir)/man1
+	@@-$(INSTALL_DIR) $(archdir)
+	@@-$(INSTALL_PROGRAM) $(ERUBY) $(bindir)/$(ERUBY)
+	@@-if [ -f $(LIBERUBY_SO) ]; then \
+		$(INSTALL_DATA) $(LIBERUBY_SO) $(libdir)/$(LIBERUBY_SO); \
+		cd $(libdir); \
+		$(RUBY) -e 'ARGV.each{|link| File.delete link \
+			if File.exist? link; \
+			File.symlink "$(LIBERUBY_SO)", link}' \
+			$(LIBERUBY_ALIASES); \
+	fi
+	@@-$(INSTALL_DATA) $(LIBERUBY_A) $(libdir)/$(LIBERUBY_A)
+	@@-$(INSTALL_DATA) #{srcdir}/eruby.h $(includedir)/eruby.h
+	@@-$(INSTALL_DATA) #{srcdir}/$(MANPAGE) $(mandir)/man1/$(MANPAGE)
+	@@-$(INSTALL_DLLIB) $(DLLIB) $(archdir)
+
+clean:
+	$(RM) $(ERUBY)
+	$(RM) $(DLLIB)
+	$(RM) $(LIBERUBY_A)
+	$(RM) $(LIBERUBY_SO)
+	$(RM) $(LIBERUBY_ALIASES)
+	$(RM) $(LIBERUBY_OBJS)
+	$(RM) $(OBJS)
+	$(RM) $(EXT_OBJS)
+	$(RM) eruby.imp
+
+distclean: clean
+	$(RM) config.h
+	$(RM) Makefile
+	$(RM) *~
+
+$(LIBERUBY_A): $(LIBERUBY_OBJS)
+	$(AR) #{$AROPT} $(LIBERUBY_OBJS)
+	@@-$(RANLIB) $@@ 2> /dev/null || true
+
+$(LIBERUBY_SO): $(LIBERUBY_OBJS)
+	$(LDSHARED) $(DLDFLAGS) $(LIBERUBY_OBJS) $(LIBS) -o $@@
+	@@-$(RUBY) -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+		File.symlink "$(LIBERUBY_SO)", link}' $(LIBERUBY_ALIASES)
+
+$(ERUBY): $(OBJS) $(LIBERUBY)
+	$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBS) -o $@@
+
+$(MANPAGE): #{$VPATH}eruby.rd
+
+#{$VPATH}.rd#{$VPATH}.1:
+	$(RUBY) -S rd2 -r rd/rd2man-lib -o $* $<
+	$(RUBY) -i~ -ne 'print if ~/.+/' $@@
+	$(RM) $@@~
+
+eruby_logo.c: #{$VPATH}eruby_logo.png
+	$(srcdir)/bin2c $(srcdir)/eruby_logo.png
+eruby_lib.#{$OBJEXT}: #{$VPATH}eruby_lib.c #{$VPATH}eruby.h config.h
+eruby_logo.#{$OBJEXT}: #{$VPATH}eruby_logo.c #{$VPATH}eruby_logo.h
+eruby_main.#{$OBJEXT}: #{$VPATH}eruby_main.c #{$VPATH}eruby.h #{$VPATH}eruby_logo.h
+eruby_ext.#{$OBJEXT}: #{$VPATH}eruby_ext.c #{$VPATH}eruby.h
+
+EOMF
+  if CONFIG["DLEXT"] != $OBJEXT
+    mfile.print "$(DLLIB): $(EXT_OBJS) $(LIBERUBY)\n"
+    if /mswin32/ =~ RUBY_PLATFORM
+      if /nmake/i =~ $make
+	mfile.print "\tset LIB=$(LIBPATH:/=\\);$(LIB)\n"
+      else
+	mfile.print "\tenv LIB='$(subst /,\\\\,$(LIBPATH));$(LIB)' \\\n"
+      end
+    end
+    mfile.print "\t$(LDSHARED) #{CONFIG['DLDFLAGS']} -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)\n"
+  else
+    mfile.print "$(DLLIB): $(EXT_OBJS) $(LIBERUBY)\n"
+    case RUBY_PLATFORM
+    when "m68k-human"
+      mfile.printf "ar cru $(DLLIB) $(EXT_OBJS) $(LIBS)\n"
+    else
+      mfile.printf "ld #{CONFIG['DLDFLAGS']} -r -o $(DLLIB) $(EXT_OBJS) $(LIBERUBYARG) $(LIBS)\n"
+    end
+  end
+
+ensure
+  mfile.close
+end
+
+cfile = open("config.h", "w")
+begin
+  cfile.write <<EOCF
+/* Generated automatically by Makefile.RB. */
+
+#define ERUBY_DEFAULT_CHARSET "#{$DEFAULT_CHARSET}"
+EOCF
+ensure
+  cfile.close
+end
+
+# Local variables:
+# mode: Ruby
+# tab-width: 8
+# End:
+@
+
+
+1.28
+log
+@* Makefile.RB: add .1 to .SUFFIXES.
+@
+text
+@@
+
+
+1.27
+log
+@* Makefile.RB: fixed duplicated DESTDIR.
+* Makefile.RB: create $(mandir)/man1.
+@
+text
+@d215 1
+a215 1
+.SUFFIXES: .#{$OBJEXT} .c .rd
+@
+
+
+1.26
+log
+@* Makefile.RB (DLLIB): use CONFIG['DLDFLAGS'] instead of
+$DLDFLAGS.
+* Makefile.RB (LIBERUBY_SO): added LIBS.
+@
+text
+@d176 1
+a176 1
+prefix = $(DESTDIR)#{prefix}
+d230 1
+a230 1
+	@@-$(INSTALL_DIR) $(mandir)
+@
+
+
+1.25
+log
+@* Makefile.RB (clean): remove eruby_ext.o.
+* eruby_lib.c (eruby_compiler_compile_string): check type.
+@
+text
+@d189 1
+a189 1
+LIBS = $(LIBERUBYARG) $(LIBRUBYARG) #{CONFIG["LIBS"]}
+d267 1
+a267 1
+	$(LDSHARED) $(DLDFLAGS) $(LIBERUBY_OBJS) -o $@@
+d272 1
+a272 1
+	$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBS) -o $@@
+d298 1
+a298 1
+    mfile.print "\t$(LDSHARED) $(DLDFLAGS) -o $(DLLIB) $(EXT_OBJS) $(LIBS)\n"
+d305 1
+a305 1
+      mfile.printf "ld $(DLDFLAGS) -r -o $(DLLIB) $(EXT_OBJS) $(LIBS)\n"
+@
+
+
+1.24
+log
+@* Makefile.RB: use INSTALL_DLLIB instead of INSTALL_DATA.
+@
+text
+@d254 1
+a255 1
+	$(RM) *~
+d258 3
+a260 1
+	$(RM) config.h Makefile
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d244 1
+a244 1
+	@@-$(INSTALL_DATA) $(DLLIB) $(archdir)
+@
+
+
+1.22
+log
+@* eruby_lib.c: renamed from eruby.c.
+* eruby_lib.c (eruby_init): new class ERuby::Compiler.
+* eruby_ext.c: new file for eruby extention library.
+* examples/test.rb: example for eruby extention library.
+@
+text
+@d175 1
+d196 1
+a196 1
+INSTALL_DIR = $(RUBY) -r ftools -e 'File::makedirs(*ARGV)'
+@
+
+
+1.21
+log
+@* Makefile.RB: install under $(prefix).
+@
+text
+@d161 1
+d174 8
+a181 5
+prefix = #{prefix}
+bindir = #{prefixed("bindir")}
+libdir = #{prefixed("libdir")}
+includedir = #{prefixed("includedir")}
+mandir = #{prefixed("mandir")}
+d188 1
+a188 1
+LIBS = #{CONFIG["LIBS"]}
+d193 1
+d195 1
+d200 3
+a202 2
+TARGET = eruby#{CONFIG["EXEEXT"]}
+MANPAGE = #{srcdir}/eruby.1
+d216 1
+a216 1
+ERUBY_OBJS = eruby.#{$OBJEXT}
+d218 1
+d223 1
+a223 1
+all: $(LIBERUBY_A) $(TARGET) $(MANPAGE)
+d226 6
+a231 1
+	@@-$(INSTALL_PROGRAM) $(TARGET) $(bindir)/$(TARGET)
+d243 1
+d246 2
+a247 1
+	$(RM) $(TARGET)
+d251 1
+a251 1
+	$(RM) $(ERUBY_OBJS)
+d259 2
+a260 2
+$(LIBERUBY_A): $(ERUBY_OBJS)
+	$(AR) #{$AROPT} $(ERUBY_OBJS)
+d263 2
+a264 2
+$(LIBERUBY_SO): $(ERUBY_OBJS)
+	$(LDSHARED) $(DLDFLAGS) $(ERUBY_OBJS) -o $@@
+d268 2
+a269 2
+$(TARGET): $(OBJS) $(LIBERUBY)
+	$(LD) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBRUBYARG) $(LIBS) -o $@@
+d280 1
+a280 1
+eruby.#{$OBJEXT}: #{$VPATH}eruby.c #{$VPATH}eruby.h config.h
+d283 2
+d286 20
+@
+
+
+1.20
+log
+@hack for mswin32
+@
+text
+@d153 6
+d173 5
+a177 5
+prefix = #{CONFIG["prefix"]}
+bindir = $(prefix)/bin
+libdir = $(prefix)/lib
+includedir = $(prefix)/include
+mandir = #{CONFIG["mandir"]}
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d143 8
+d158 2
+a159 1
+VPATH = #{srcdir}
+d162 1
+d189 1
+a189 1
+MANPAGE = eruby.1
+d201 1
+d206 1
+a206 1
+.c.o:
+d248 1
+a248 1
+	$(CC) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBRUBYARG) $(LIBS) -o $@@
+d250 12
+a261 10
+$(MANPAGE): eruby.rd
+	rd2 -r rd/rd2man-lib $< > $@@
+	$(RUBY) -i -pe 'gsub(/eruby\.rd/, "eruby")' $@@
+	$(RUBY) -i -ne 'print if ~/.+/' $@@
+
+eruby_logo.c: eruby_logo.png
+	./bin2c eruby_logo.png
+eruby.#{$OBJEXT}: eruby.c eruby.h config.h
+eruby_logo.#{$OBJEXT}: eruby_logo.c eruby_logo.h
+eruby_main.#{$OBJEXT}: eruby_main.c eruby.h eruby_logo.h
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d50 1
+d52 1
+a52 1
+  open("eruby.h").grep(/ERUBY_VERSION/)[0].scan(/(\d+).(\d+).(\d+)/)[0]
+d150 1
+d152 2
+d166 1
+a166 1
+CFLAGS = #{$CFLAGS} -I$(hdrdir)
+d211 2
+a212 2
+	@@-$(INSTALL_DATA) eruby.h $(includedir)/eruby.h
+	@@-$(INSTALL_DATA) $(MANPAGE) $(mandir)/man1/$(MANPAGE)
+d228 2
+a229 2
+	#{$AR} #{$AROPT} $(ERUBY_OBJS)
+	@@-ranlib $@@ 2> /dev/null || true
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+		     "US-ASCII"
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@a54 1
+$RM = "rm -f"
+d141 1
+a141 2
+  $LIBRUBYARG.gsub!(/ruby\.mswin32\.lib/, "libruby.lib")
+  $RM = "del"
+d172 2
+d211 8
+a218 8
+	#{$RM} $(TARGET)
+	#{$RM} $(LIBERUBY_A)
+	#{$RM} $(LIBERUBY_SO)
+	#{$RM} $(LIBERUBY_ALIASES)
+	#{$RM} $(ERUBY_OBJS)
+	#{$RM} $(OBJS)
+	#{$RM} eruby.imp
+	#{$RM} *~
+d221 1
+a221 1
+	#{$RM} config.h Makefile
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d55 4
+d137 9
+d211 8
+a218 8
+	rm -f $(TARGET)
+	rm -f $(LIBERUBY_A)
+	rm -f $(LIBERUBY_SO)
+	rm -f $(LIBERUBY_ALIASES)
+	rm -f $(ERUBY_OBJS)
+	rm -f $(OBJS)
+	rm -f eruby.imp
+	rm -f *~
+d221 1
+a221 1
+	rm -f config.h Makefile
+d224 1
+a224 1
+	ar rcu $@@ $(ERUBY_OBJS)
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d146 1
+d162 1
+d181 1
+a181 1
+all: $(LIBERUBY_A) $(TARGET)
+d195 1
+d221 5
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d89 1
+a89 1
+  when /-freebsd/
+d91 4
+a94 7
+    if PLATFORM =~ /elf/
+      $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR).$(TEENY)"
+      $LIBERUBY_ALIASES = ""
+    end
+  when /-netbsd/
+    $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR)"
+    if PLATFORM =~ /elf/
+a95 2
+    else
+      $LIBERUBY_ALIASES = ""
+d165 1
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d199 1
+a199 1
+	rm -f $(TARGET) $(OBJS) *~ lib/eruby/*~
+d203 2
+d206 1
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d16 1
+d19 3
+a21 2
+parser.set_options(['--help', GetoptLong::NO_ARGUMENT],
+		   ['--default-charset', GetoptLong::OPTIONAL_ARGUMENT])
+d26 1
+a26 1
+				
+d29 1
+d38 2
+d50 10
+a59 1
+$LIBRUBYARG = CONFIG["LIBRUBYARG"]
+d61 1
+d64 1
+d68 70
+d144 1
+a144 1
+RUBY_INSTALL_NAME = #{CONFIG["ruby_install_name"]}
+d150 1
+d155 1
+a155 1
+CFLAGS = #{CONFIG["CCDLFLAGS"]} -I$(hdrdir) #{CFLAGS}
+d158 2
+a159 2
+XLDFLAGS = #{CONFIG["XLDFLAGS"]}
+DLDFLAGS = #{$DLDFLAGS} #{$LDFLAGS}
+d162 2
+a164 2
+OBJS = eruby.#{$OBJEXT} eruby_logo.#{$OBJEXT} eruby_main.#{$OBJEXT}
+LIBRUBYARG = #{$LIBRUBYARG}
+d167 13
+d183 1
+a183 1
+all: $(TARGET)
+d186 11
+a196 1
+	$(INSTALL_PROGRAM) $(TARGET) $(bindir)/$(TARGET)
+d200 4
+d208 11
+a218 2
+$(TARGET): $(OBJS)
+	$(CC) $(LDFLAGS) $(XLDFLAGS) $(OBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d58 2
+a59 1
+RUBY = #{CONFIG["ruby_install_name"]}
+d65 1
+d68 1
+a68 1
+CFLAGS = -I$(hdrdir) #{CFLAGS}
+d76 1
+a76 1
+OBJS = eruby.o eruby_logo.o eruby_main.o
+d78 1
+a78 1
+TARGET = eruby
+d99 3
+a101 3
+eruby.o: eruby.c eruby.h config.h
+eruby_logo.o: eruby_logo.c eruby_logo.h
+eruby_main.o: eruby_main.c eruby.h eruby_logo.h
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d58 1
+d72 1
+a72 1
+INSTALL_PROGRAM = ruby -r ftools -e 'File.install ARGV[0], ARGV[1], 0755, true'
+d75 1
+a75 2
+RUBY_INSTALL_NAME = #{CONFIG["RUBY_INSTALL_NAME"]}
+LIBRUBYARG = #$LIBRUBYARG
+a83 1
+	strip $(TARGET)
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d88 1
+a88 1
+	rm -f $(TARGET) $(OBJS) *~
+d98 3
+d108 1
+a108 1
+  cfile.write <<EOMF
+d112 1
+a112 1
+EOMF
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d88 1
+a88 1
+	rm -f config.h $(TARGET) $(OBJS) *~
+d91 1
+a91 1
+	rm -f Makefile
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d6 39
+d84 1
+d88 1
+a88 1
+	rm -f $(TARGET) $(OBJS) *~
+d96 2
+a97 2
+eruby_logo.c: eruby_logo.gif
+	./bin2c eruby_logo.gif
+d101 11
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d9 2
+d20 1
+a20 1
+prefix = CONFIG["prefix"]
+d29 1
+d32 1
+a32 3
+INSTALL = #{CONFIG["INSTALL"]}
+INSTALL_PROGRAM = #{CONFIG["INSTALL_PROGRAM"]}
+INSTALL_DATA = #{CONFIG["INSTALL_DATA"]}
+d48 1
+a48 1
+	rm -f $(TARGET) $(LIBERUBY) $(OBJS) *~
+d54 1
+a54 1
+	$(CC) $(LDFLAGS) $(OBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@a5 33
+$prefix = nil
+$shared = false
+$LIBERUBY = "liberuby.a"
+$LIBERUBYARG = "liberuby.a"
+
+opts = GetoptLong.new(["--prefix", GetoptLong::REQUIRED_ARGUMENT],
+		      ["--enable-shared", GetoptLong::NO_ARGUMENT],
+		      ["--help", GetoptLong::NO_ARGUMENT],)
+begin
+  for name, arg in opts
+    case name
+    when "--prefix"
+      $prefix = arg
+    when "--enable-shared"
+      $shared = true
+      $LIBERUBY = "liberuby.so"
+      $LIBERUBYARG = "-L. -leruby"
+    when "--help"
+      $stderr.print <<EOF
+Usage: #{$0} [options]
+Configuration:
+  --help		print this message
+
+  --prefix=PREFIX	install files in PREFIX
+  --enable-shared	build a shared library for eRuby
+EOF
+      exit 1
+    end
+  end
+rescue
+  exit 1
+end
+
+d18 1
+a18 1
+prefix = #{$prefix || CONFIG["prefix"]}
+d33 1
+a33 2
+MAINOBJ = eruby.o
+OBJS = eruby_logo.o eruby_main.o
+a35 2
+LIBERUBY = #{$LIBERUBY}
+LIBERUBYARG = #{$LIBERUBYARG}
+d41 1
+a41 1
+all: $(TARGET) $(LIBERUBY)
+a44 1
+	if [ -f liberuby.so ]; then $(INSTALL_PROGRAM) liberuby.so $(libdir); fi
+d52 2
+a53 8
+liberuby.a: $(MAINOBJ)
+	ar rcu $@@ $<
+
+liberuby.so: $(MAINOBJ)
+	$(LDSHARED) -o $@@ $<
+
+$(TARGET): $(OBJS) $(LIBERUBY)
+	$(CC) $(LDFLAGS) $(OBJS) $(LIBERUBYARG) $(LIBRUBYARG) $(LIBS) -o $@@
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d4 34
+d40 2
+a41 2
+if $LIBRUBYARG == "libruby.a"
+  $LIBRUBYARG = $hdrdir + "/libruby.a"
+d51 3
+a53 2
+prefix = #{CONFIG["prefix"]}
+bindir = #{CONFIG["bindir"]}
+d55 3
+a57 1
+CFLAGS = -I#$hdrdir #{CFLAGS}
+d60 2
+d66 3
+d70 2
+a71 2
+OBJS = eruby.o eruby_logo.o eruby_main.o
+LIBERUBY = liberuby.a
+d81 1
+d89 5
+a93 2
+$(LIBERUBY): eruby.o
+	ar rcu $@@ eruby.o
+d95 2
+a96 2
+$(TARGET): $(OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) $(LIBRUBYARG) $(LIBS) -o $@@
+d104 5
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 1
+all: $(TARGET)
+d41 1
+a41 1
+	rm -f $(TARGET) $(OBJS) *~
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d20 1
+a20 1
+CFLAGS = -I#$hdrdir #{CFLAGS} #{$defs.join(" ")}
+d29 1
+d45 3
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

@@ -1,0 +1,456 @@
+head	1.13;
+access;
+symbols
+	release_1_0_1:1.13
+	version_1_0-branch:1.13.0.2
+	root-of-version_1_0:1.13
+	release_1_0_0:1.13
+	release_0_9_9:1.12
+	release_0_9_8:1.11
+	release_0_9_7:1.11
+	release_0_9_6:1.11
+	release_0_9_5:1.11
+	autoconfiscation-branch:1.11.0.2
+	root-of-autoconfiscation:1.11
+	release_0_9_4:1.11
+	release_0_9_3:1.9
+	release_0_9_2:1.9
+	release_0_9_1:1.9
+	release_0_9_0:1.9
+	release_0_8_6:1.9
+	release_0_8_5:1.9
+	release_0_8_4:1.9
+	release_0_8_3:1.7
+	release_0_8_2:1.7;
+locks; strict;
+comment	@# @;
+
+
+1.13
+date	2002.06.18.08.47.45;	author shugo;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.05.28.07.19.00;	author shugo;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.10.12.03.36.36;	author shugo;	state Exp;
+branches
+	1.11.2.1;
+next	1.10;
+
+1.10
+date	2001.10.04.09.19.38;	author shugo;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.20.09.26.24;	author shugo;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.09.09.50.28;	author shugo;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.04.03.07.20;	author shugo;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.01.09.10.06;	author shugo;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.05.29.04.36.58;	author shugo;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.05.28.08.35.27;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.05.28.02.36.09;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.25.19.15.11;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.25.10.19.39;	author shugo;	state Exp;
+branches;
+next	;
+
+1.11.2.1
+date	2001.10.19.09.44.42;	author shugo;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@* configure.rb.in: cause error if both --with-apache and
+--with-apxs specified.
+* configure.rb.in: cause error if --with-apache is specified for
+Apache2.
+@
+text
+@version =
+  open(File.join($srcdir, "mod_ruby.h")).grep(/MOD_RUBY_STRING_VERSION/)[0]
+$MAJOR, $MINOR, $TEENY = version.scan(/mod_ruby\/(\d+).(\d+).(\d+)/)[0] #/
+AC_SUBST("MAJOR")
+AC_SUBST("MINOR")
+AC_SUBST("TEENY")
+
+AC_PROG_INSTALL()
+
+AC_MSG_CHECKING("whether we are using gcc")
+if $CC == "gcc" || `#{$CC} -v 2>&1` =~ /gcc/
+  $using_gcc = true
+  $CFLAGS += " -Wall"
+else
+  $using_gcc = false
+end
+AC_MSG_RESULT($using_gcc)
+
+AC_MSG_CHECKING("Ruby version")
+AC_MSG_RESULT(RUBY_VERSION)
+if RUBY_VERSION < "1.6"
+  AC_MSG_ERROR("mod_ruby requires Ruby 1.6.x or later.")
+end
+if RUBY_VERSION < "1.6.4"
+  AC_MSG_WARN("mod_ruby recommends Ruby 1.6.4 or later.")
+end
+
+AC_MSG_CHECKING("for static Apache module support")
+AC_ARG_WITH("apache",
+"  --with-apache=DIR       Build static Apache module.  DIR is the path
+                          to the top-level Apache source directory") { |withval|
+  if withval == "yes"
+    AC_MSG_ERROR("You need to specify a directory with --with-apache")
+  end
+  $APACHE_SRCDIR = File.expand_path(withval)
+  if File.file?("#{$APACHE_SRCDIR}/src/include/httpd.h")
+    $APACHE_INCLUDES = "-I#{$APACHE_SRCDIR}/src/include -I#{$APACHE_SRCDIR}/src/os/unix"
+  elsif File.file?("#{$APACHE_SRCDIR}/include/httpd.h")
+    AC_MSG_ERROR("static module is not supported for Apache2. Please use --with-apxs option")
+  else
+    AC_MSG_ERROR("Unable to locate #{withval}/src/include/httpd.h")
+  end
+  $TARGET = "libruby.a"
+  $INSTALL_TARGET = "install-static"
+  st = File.stat($APACHE_SRCDIR)
+  $APACHE_SRC_UID = st.uid
+  $APACHE_SRC_GID = st.gid
+  AC_MSG_RESULT("yes")
+}.if_not_given {
+  AC_MSG_RESULT("no")
+}
+
+AC_MSG_CHECKING("for dynamic Apache module support")
+AC_ARG_WITH("apxs",
+"  --with-apxs[=FILE]      Build shared Apache module.  FILE is the optional
+                          pathname to the Apache apxs tool; [apxs]") { |withval|
+  if $TARGET
+    AC_MSG_ERROR("--with-apache and --with-apxs are mutually exclusive")
+  end
+  if withval == "yes"
+    $APXS = "apxs"
+  else
+    $APXS = withval
+  end
+}.if_not_given {
+  unless $TARGET
+    $APXS = "apxs"
+  end
+}
+
+if $APXS
+  $CFLAGS += " " + `#{$APXS} -q CFLAGS`.chomp
+  $APACHE_INCLUDES = "-I" + `#{$APXS} -q INCLUDEDIR`.chomp
+  $APACHE_LIBEXECDIR = `#{$APXS} -q LIBEXECDIR`.chomp
+  if $? != 0
+    AC_MSG_ERROR("failed to exec #{$APXS}")
+  end
+  $TARGET = "mod_ruby.so"
+  $INSTALL_TARGET = "install-shared"
+  AC_MSG_RESULT("yes")
+else
+  AC_MSG_RESULT("no")
+end
+
+AC_SUBST("TARGET")
+AC_SUBST("INSTALL_TARGET")
+AC_SUBST("APACHE_SRCDIR")
+AC_SUBST("APACHE_INCLUDES")
+AC_SUBST("APACHE_LIBEXECDIR")
+AC_SUBST("APACHE_SRC_UID")
+AC_SUBST("APACHE_SRC_GID")
+
+case RUBY_PLATFORM
+when /-aix/
+  $DLDFLAGS = "-Wl,-bE:mod_ruby.imp -Wl,-bI:httpd.exp -Wl,-bM:SRE -Wl,-bnoentry -lc"
+  open("mod_ruby.imp", "w") do |ifile|
+    ifile.write <<EOF
+#!
+ruby_module
+EOF
+  end
+  print <<EOF
+To build mod_ruby on the AIX platform, you need to have the apache
+export file `httpd.exp' in the current directory.
+Please copy <apache-src-directory>/support/httpd.exp to the current
+directory before making `mod_ruby.so'.
+EOF
+#'
+when /cygwin/
+  if $INSTALL_TARGET == "install-shared"
+    $LIBS += ' ' + File.join($APACHE_LIBEXECDIR, "cyghttpd.dll")
+  end
+end
+
+AC_MSG_CHECKING("for eruby")
+$ENABLE_ERUBY = false
+AC_ARG_ENABLE("eruby",
+	      "  --enable-eruby          enable eruby") { |enableval|
+  if enableval == "yes"
+    $ENABLE_ERUBY = true
+    $LIBERUBYARG = "-leruby"
+    AC_DEFINE("USE_ERUBY")
+  end
+}
+AC_MSG_RESULT($ENABLE_ERUBY)
+
+AC_ARG_WITH("eruby-includes",
+	    "  --with-eruby-includes=DIR   eruby include files are in DIR") { |withval|
+  if $ENABLE_ERUBY
+    $ERUBY_INCLUDES = "-I#{withval}"
+  end
+}
+
+AC_ARG_WITH("eruby-libraries",
+	    "  --with-eruby-libraries=DIR  eruby library files are in DIR") { |withval|
+  if $ENABLE_ERUBY
+    $LIBERUBYARG = "-L#{withval} #{$LIBERUBYARG}"
+  end
+}
+
+AC_SUBST("ERUBY_INCLUDES")
+AC_SUBST("LIBERUBYARG")
+
+librubyarg = $LIBRUBYARG.dup
+Config.expand(librubyarg)
+$MODULE_LIBS = "#{$LIBERUBYARG} #{librubyarg} #{$LIBS}"
+AC_SUBST("MODULE_LIBS")
+
+AC_OUTPUT("Makefile",
+	  "libruby.module")
+
+# Local variables:
+# mode: Ruby
+# tab-width: 8
+# End:
+@
+
+
+1.12
+log
+@* configure.rb.in: fix for cygwin.
+@
+text
+@d36 5
+a40 1
+  unless File.file?("#{$APACHE_SRCDIR}/src/include/httpd.h")
+a42 1
+  $APACHE_INCLUDES = "-I#{$APACHE_SRCDIR}/src/include -I#{$APACHE_SRCDIR}/src/os/unix"
+d57 3
+@
+
+
+1.11
+log
+@* configure.rb.in: chomp output of apxs.
+@
+text
+@d87 1
+a87 1
+case PLATFORM
+d103 4
+@
+
+
+1.11.2.1
+log
+@* autoconfiscated
+@
+text
+@@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d66 3
+a68 3
+  $CFLAGS += " " + `#{$APXS} -q CFLAGS`
+  $APACHE_INCLUDES = "-I" + `#{$APXS} -q INCLUDEDIR`
+  $APACHE_LIBEXECDIR = `#{$APXS} -q LIBEXECDIR`
+@
+
+
+1.9
+log
+@* version 0.8.4 released.
+@
+text
+@d3 1
+a3 1
+$MAJOR, $MINOR, $TEENY = version.scan(/mod_ruby\/(\d+).(\d+).(\d+)/)[0]
+d139 2
+a140 1
+AC_OUTPUT("Makefile", "libruby.module")
+@
+
+
+1.8
+log
+@* configure.rb.in: check for gcc.
+* mod_ruby.c (ruby_object_handler_0): call log_error().
+* lib/apache/eruby-run.rb (handler): set @@compiler.sourcefile.
+@
+text
+@d1 7
+@
+
+
+1.7
+log
+@* lib/auto-reload: new file.
+* lib/apache/ruby-run.rb: renamed from ruby/apache/ruby.rb.
+* lib/apache/eruby-run.rb: renamed from ruby/apache/eruby.rb.
+* lib/apache/rd2html.rb: renamed from ruby/apache/rd2html.rb.
+* lib/apache/eruby-run.rb (handler): specify filename for backtrace.
+* changed license from GPL to LGPL.
+* COPYING: new file.
+@
+text
+@d3 9
+@
+
+
+1.6
+log
+@* configure.rb.in: exit if fail to exec apxs.
+@
+text
+@a47 1
+AC_MSG_RESULT($APXS)
+d58 3
+d89 1
+a89 1
+AC_MSG_CHECKING("whether enable eruby")
+@
+
+
+1.5
+log
+@* configure.rb.in: removed -mwin32 hack.
+@
+text
+@d54 3
+@
+
+
+1.4
+log
+@* mod_ruby.c: hack for cygwin.
+* configure.rb.in: ditto.
+@
+text
+@a66 2
+when /-cygwin/
+  $CFLAGS.sub!(/-mwin32/, "")	# for Apache
+@
+
+
+1.3
+log
+@* mod_ruby.c (ruby_startup): don't initialize ruby if
+ruby_running(). (for static Apache module)
+* mod_ruby.c: use EXTERN.
+* libruby.module.in: use MODULE_LIBS to expand LIBRUBYARG.
+* configure.rb.in: set $ERUBY_INCLUDES instead of modify $CFLAGS.
+* Makefile.in: RUBY_SO_NAME for cygwin.
+@
+text
+@d67 2
+@
+
+
+1.2
+log
+@* install-rb: new file.
+* Makefile.in: change owner and group of $(APACHE_SRCDIR)/
+src/modules/ruby/*.
+@
+text
+@d27 2
+a28 2
+  $APACHE_SRC_OWNER = st.uid
+  $APACHE_SRC_GROUP = st.gid
+d63 2
+a64 2
+AC_SUBST("APACHE_SRC_OWNER")
+AC_SUBST("APACHE_SRC_GROUP")
+d99 1
+a99 1
+    $CFLAGS += " -I#{withval}"
+d110 1
+d113 4
+a116 1
+$MODULE_LIBS = "#{$LIBERUBYARG} #{Config.expand($LIBRUBYARG)} #{$LIBS}"
+d119 5
+@
+
+
+1.1
+log
+@* Makefile.in: static Apache module support..
+@
+text
+@d1 2
+d19 2
+a20 1
+  unless File.file?("#{withval}/src/include/httpd.h")
+d23 1
+a23 2
+  $APACHE_SRCDIR = withval
+  $APACHE_INCLUDES = "-I#{withval}/src/include -I#{withval}/src/os/unix"
+d25 4
+a28 1
+  $install = "install-static"
+d55 1
+a55 1
+  $install = "install-shared"
+d59 1
+a59 1
+AC_SUBST("install")
+d63 2
+@

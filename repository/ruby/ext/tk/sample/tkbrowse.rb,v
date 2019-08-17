@@ -1,0 +1,373 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.2
+	v1_6_6:1.2
+	v1_6_5:1.2
+	v1_6_4:1.2
+	v1_7_1:1.2
+	v1_6_4_preview4:1.2
+	v1_6_4_preview3:1.2
+	v1_6_4_preview2:1.2
+	v1_6_4_preview1:1.2
+	v1_6_3:1.2
+	ruby_m17n:1.2.0.6
+	ruby_1_6:1.2.0.4
+	v1_6_2:1.2
+	v1_6_1:1.2
+	v1_6_0:1.2
+	v1_4_6:1.2
+	v1_4_5:1.2
+	v1_4_4:1.2
+	ruby_1_4_3:1.2
+	ruby1_4_3:1.2
+	v1_4_3:1.2
+	v1_5_0:1.2
+	ruby_1_4_3_pre1:1.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.1
+	v1_3_6_repack:1.1.1.1
+	v1_3_6:1.1.1.1
+	v1_3_5:1.1.1.1
+	v1_2_6repack:1.1.2.1
+	v1_3_4_990625:1.1.1.1
+	v1_3_4_990624:1.1.1.1
+	v1_2_6:1.1.2.1
+	v1_3_4_990611:1.1.1.1
+	v1_3_4_990531:1.1.1.1
+	v1_3_3_990518:1.1.1.1
+	v1_3_3_990513:1.1.1.1
+	v1_3_3_990507:1.1.1.1
+	v1_2_5:1.1.2.1
+	v1_2_4:1.1.2.1
+	v1_3_1_990225:1.1.1.1
+	v1_3_1_990224:1.1.1.1
+	v1_3_1_990215:1.1.1.1
+	v1_3_1_990212:1.1.1.1
+	v1_3_1_990210:1.1.1.1
+	v1_3_1_:1.1.1.1
+	v1_3_1_990209:1.1.1.1
+	v1_3_1_990205:1.1.1.1
+	v1_3_1_990203:1.1.1.1
+	v1_3_1_990201:1.1.1.1
+	v1_3_1"_990201:1.1.1.1
+	v1_3_1_990128:1.1.1.1
+	v1_3_1_990127:1.1.1.1
+	v1_3_1_990126:1.1.1.1
+	ruby_1_3:1.1.1.1.0.2
+	v1_2_2:1.1.2.1
+	RUBY_1_3:1.1.1.1
+	RUBY:1.1.1
+	v1_2_2_pr1:1.1.2.1
+	v1_2_1repack:1.1.2.1
+	v1_2_1:1.1.2.1
+	v1_2_stable:1.1.2.1
+	v1_1c9_1:1.1.2.1
+	v1_1c9:1.1.2.1
+	v1_1c8:1.1.2.1
+	v1_1r:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.08.13.05.37.52;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.11.17.09.12.44;	author matz;	state dead;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	99.01.20.04.59.34;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	98.11.17.09.12.44;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove marshal/gtk/kconv
+@
+text
+@#!/usr/local/bin/ruby
+#
+# This script generates a directory browser, which lists the working
+# directory and allows you to open files or subdirectories by
+# double-clicking.
+
+# Create a scrollbar on the right side of the main window and a listbox
+# on the left side.
+
+require "tkscrollbox"
+
+# The procedure below is invoked to open a browser on a given file;  if the
+# file is a directory then another instance of this program is invoked; if
+# the file is a regular file then the Mx editor is invoked to display
+# the file.
+
+$dirlist = {}
+
+def browsedir (dir)
+  if $dirlist.key? dir
+    $dirlist[dir]
+  else
+    top = if $dirlist.size > 0 then TkToplevel.new else nil end
+    list = TkScrollbox.new(top) {
+      relief 'raised'
+      width 20
+      height 20
+      setgrid 'yes'
+      pack
+    }
+    list.insert 'end', *`ls #{dir}`.split
+
+    # Set up bindings for the browser.
+
+    list.focus
+    list.bind "Control-q", proc{exit}
+    list.bind "Control-c", proc{exit}
+    list.bind "Control-p", proc{
+      print "selection <", TkSelection.get, ">\n"
+    }
+
+    list.bind "Double-Button-1", proc{
+      for i in TkSelection.get.split
+	print "clicked ", i, "\n"
+	browse dir, i
+      end
+    }
+    $dirlist[dir] = list
+  end
+end
+
+def browse (dir, file)
+  file="#{dir}/#{file}"
+  if File.directory? file
+    browsedir(file)
+  else
+    if File.file? file
+      if ENV['EDITOR']
+	system format("%s %s&", ENV['EDITOR'], file)
+      else
+	system "xedit #{file}&"
+      end
+    else
+      STDERR.print "\"#{file}\" isn't a directory or regular file"
+    end
+  end
+end
+
+# Fill the listbox with a list of all the files in the directory (run
+# the "ls" command to get that information).
+
+if ARGV.length>0 
+  dir = ARGV[0]
+else
+  dir="."
+end
+
+browsedir(dir)
+Tk.mainloop
+@
+
+
+1.1
+log
+@file tkbrowse.rb was initially added on branch v1_1r.
+@
+text
+@d1 79
+@
+
+
+1.1.1.1
+log
+@ruby 1.3 cycle
+@
+text
+@a0 79
+#!/usr/local/bin/ruby
+#
+# This script generates a directory browser, which lists the working
+# directory and allows you to open files or subdirectories by
+# double-clicking.
+
+# Create a scrollbar on the right side of the main window and a listbox
+# on the left side.
+
+require "tkscrollbox"
+
+# The procedure below is invoked to open a browser on a given file;  if the
+# file is a directory then another instance of this program is invoked; if
+# the file is a regular file then the Mx editor is invoked to display
+# the file.
+
+$dirlist = {}
+
+def browsedir (dir)
+  if $dirlist.key? dir
+    $dirlist[dir]
+  else
+    top = if $dirlist.size > 0 then TkToplevel.new else nil end
+    list = TkScrollbox.new(top) {
+      relief 'raised'
+      width 20
+      height 20
+      setgrid 'yes'
+      pack
+    }
+    list.insert 'end', *`ls #{dir}`.split
+
+    # Set up bindings for the browser.
+
+    list.focus
+    list.bind "Control-q", proc{exit}
+    list.bind "Control-c", proc{exit}
+    list.bind "Control-p", proc{
+      print "selection <", TkSelection.get, ">\n"
+    }
+
+    list.bind "Double-Button-1", proc{
+      for i in TkSelection.get.split
+	print "clicked ", i, "\n"
+	browse dir, i
+      end
+    }
+    $dirlist[dir] = list
+  end
+end
+
+def browse (dir, file)
+  file="#{dir}/#{file}"
+  if File.directory? file
+    browsedir(file)
+  else
+    if File.file? file
+      if ENV['EDITOR']
+	system format("%s %s&", ENV['EDITOR'], file)
+      else
+	system "xedit #{file}&"
+      end
+    else
+      STDERR.print "\"#{file}\" isn't a directory or regular file"
+    end
+  end
+end
+
+# Fill the listbox with a list of all the files in the directory (run
+# the "ls" command to get that information).
+
+if ARGV.length>0 
+  dir = ARGV[0]
+else
+  dir="."
+end
+
+browsedir(dir)
+Tk.mainloop
+@
+
+
+1.1.2.1
+log
+@1.1c8
+@
+text
+@a0 79
+#!/usr/local/bin/ruby
+#
+# This script generates a directory browser, which lists the working
+# directory and allows you to open files or subdirectories by
+# double-clicking.
+
+# Create a scrollbar on the right side of the main window and a listbox
+# on the left side.
+
+require "tkscrollbox"
+
+# The procedure below is invoked to open a browser on a given file;  if the
+# file is a directory then another instance of this program is invoked; if
+# the file is a regular file then the Mx editor is invoked to display
+# the file.
+
+$dirlist = {}
+
+def browsedir (dir)
+  if $dirlist.key? dir
+    $dirlist[dir]
+  else
+    top = if $dirlist.size > 0 then TkToplevel.new else nil end
+    list = TkScrollbox.new(top) {
+      relief 'raised'
+      width 20
+      height 20
+      setgrid 'yes'
+      pack
+    }
+    list.insert 'end', *`ls #{dir}`.split
+
+    # Set up bindings for the browser.
+
+    list.focus
+    list.bind "Control-q", proc{exit}
+    list.bind "Control-c", proc{exit}
+    list.bind "Control-p", proc{
+      print "selection <", TkSelection.get, ">\n"
+    }
+
+    list.bind "Double-Button-1", proc{
+      for i in TkSelection.get.split
+	print "clicked ", i, "\n"
+	browse dir, i
+      end
+    }
+    $dirlist[dir] = list
+  end
+end
+
+def browse (dir, file)
+  file="#{dir}/#{file}"
+  if File.directory? file
+    browsedir(file)
+  else
+    if File.file? file
+      if ENV['EDITOR']
+	system format("%s %s&", ENV['EDITOR'], file)
+      else
+	system "xedit #{file}&"
+      end
+    else
+      STDERR.print "\"#{file}\" isn't a directory or regular file"
+    end
+  end
+end
+
+# Fill the listbox with a list of all the files in the directory (run
+# the "ls" command to get that information).
+
+if ARGV.length>0 
+  dir = ARGV[0]
+else
+  dir="."
+end
+
+browsedir(dir)
+Tk.mainloop
+@
+

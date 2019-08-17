@@ -1,0 +1,1915 @@
+head	1.9;
+access;
+symbols
+	v1_6_3:1.9
+	ruby_1_6:1.9.0.2
+	v1_4_6:1.4.2.4
+	v1_4_5:1.4.2.4
+	v1_4_4:1.4.2.2
+	ruby_1_4_3:1.4.2.1
+	ruby1_4_3:1.4
+	v1_4_3:1.4
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.4
+	ruby_1_4:1.4.0.2
+	v1_4_2:1.3
+	v1_4_1:1.3
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.7
+	v1_3_6_repack:1.1.1.3.2.6
+	v1_3_6:1.1.1.3.2.6
+	v1_3_5:1.1.1.3.2.5
+	v1_2_6repack:1.1.1.2.2.4
+	v1_3_4_990625:1.1.1.3.2.5
+	v1_3_4_990624:1.1.1.3.2.5
+	v1_2_6:1.1.1.2.2.4
+	v1_3_4_990611:1.1.1.3.2.5
+	v1_3_4_990531:1.1.1.3.2.5
+	v1_3_3_990518:1.1.1.3.2.4
+	v1_3_3_990513:1.1.1.3.2.3
+	v1_3_3_990507:1.1.1.3.2.2
+	v1_2_5:1.1.1.2.2.4
+	v1_2_4:1.1.1.2.2.4
+	v1_3_1_990225:1.1.1.3.2.2
+	v1_3_1_990224:1.1.1.3.2.1
+	v1_3_1_990215:1.1.1.3.2.1
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3
+	v1_3_1"_990201:1.1.1.3
+	v1_3_1_990128:1.1.1.3
+	v1_3_1_990127:1.1.1.3
+	v1_3_1_990126:1.1.1.3
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.4
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.4
+	v1_2_1repack:1.1.1.2.2.3
+	v1_2_1:1.1.1.2.2.3
+	v1_2_stable:1.1.1.2.2.3
+	v1_1d1:1.1.1.2.2.3.2.1
+	v1_1d0:1.1.1.2.2.3
+	v1_1c9_1:1.1.1.2.2.3
+	v1_1c9:1.1.1.2.2.3
+	v1_1c8:1.1.1.2.2.3
+	v1_1c7:1.1.1.2.2.3
+	v1_1c6:1.1.1.2.2.3
+	v1_1d-start:1.1.1.2.2.3
+	v1_1c5:1.1.1.2.2.3
+	v1_1dev:1.1.1.2.2.3.0.2
+	v1_1c4:1.1.1.2.2.3
+	v1_1c3:1.1.1.2.2.3
+	v1_1c2:1.1.1.2.2.3
+	v1_1c1:1.1.1.2.2.3
+	v1_1c0:1.1.1.2.2.3
+	v1_1b9_31:1.1.1.2.2.3
+	v1_1b9_30:1.1.1.2.2.3
+	v1_1b9_28:1.1.1.2.2.3
+	v1_1b9_27:1.1.1.2.2.2
+	v1_1b9_26:1.1.1.2.2.2
+	r1_1b9_25:1.1.1.2.2.1
+	r1_1b9_24:1.1.1.2.2.1
+	v1_1b9_23:1.1.1.2.2.1
+	v1_1b9_22:1.1.1.2.2.1
+	v1_1b9_20:1.1.1.2.2.1
+	v1_1b9_18:1.1.1.2.2.1
+	v1_1b9_16:1.1.1.2.2.1
+	v1_1b9_15:1.1.1.2.2.1
+	v1_1b9_13:1.1.1.2.2.1
+	v1_1b9_12:1.1.1.2.2.1
+	v1_1b9_11:1.1.1.2.2.1
+	v1_1b9_08:1.1.1.2.2.1
+	v1_1b9_07:1.1.1.2.2.1
+	r1_1b9:1.1.1.2
+	v1_1b8:1.1.1.2
+	v1_1b7:1.1.1.2
+	v1_1b6:1.1.1.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2000.08.03.09.55.54;	author matz;	state dead;
+branches;
+next	1.8;
+
+1.8
+date	2000.05.25.05.55.12;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.03.17.08.58.21;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.05.04.37.25;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.11.04.08.39.39;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.22.04.30.11;	author matz;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	99.08.24.08.21.56;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.20;	author matz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.08;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.22;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.38;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.02.03.09.48.00;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.25.06.39.12;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.05.10.08.22.50;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.05.17.09.54.20;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.05.25.08.26.20;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.07.28.09.26.52;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.08.06.06.48.24;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.08.11.07.24.11;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.03.26.09.09.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.06.18.07.47.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.06.26.09.45.09;	author matz;	state Exp;
+branches
+	1.1.1.2.2.3.2.1;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	99.01.18.09.08.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.3.2.1
+date	98.12.22.09.01.55;	author matz;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	99.12.07.16.47.21;	author matz;	state Exp;
+branches;
+next	1.4.2.2;
+
+1.4.2.2
+date	2000.01.05.04.41.20;	author matz;	state Exp;
+branches;
+next	1.4.2.3;
+
+1.4.2.3
+date	2000.03.23.04.14.31;	author matz;	state Exp;
+branches;
+next	1.4.2.4;
+
+1.4.2.4
+date	2000.05.30.04.21.38;	author matz;	state Exp;
+branches;
+next	1.4.2.5;
+
+1.4.2.5
+date	2000.08.28.03.12.13;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@matz - add/remove files
+@
+text
+@SHELL = $(COMPSEC)
+
+#### Start of system configuration section. ####
+
+srcdir = .
+VPATH = .:./missing
+
+CC = cl
+YACC = byacc
+PURIFY =
+AUTOCONF = autoconf
+
+
+prefix = 
+CFLAGS = -nologo -DNT=1 -Ox -I. -I./missing
+LDFLAGS = $(CFLAGS) -Fm
+#CFLAGS = -nologo -DNT=1 -Zi -I. -I./missing
+#LDFLAGS = $(CFLAGS) -Fm
+XLDFLAGS = 
+#EXTLIBS = 
+LIBS = user32.lib advapi32.lib wsock32.lib $(EXTLIBS)
+MISSING = crypt.obj alloca.obj win32.obj isinf.obj isnan.obj
+LDSHARED = 
+DLDFLAGS = 
+SOLIBS = 
+
+RUBY_INSTALL_NAME=ruby
+EXEEXT = .exe
+PROGRAM=$(RUBY_INSTALL_NAME)$(EXEEXT)
+
+STACK = 0x2000000
+ORGLIBPATH = $(LIB)
+
+#### End of system configuration section. ####
+
+LIBRUBY_A     = libruby.lib
+LIBRUBY_SO    = rubymw.dll
+LIBRUBY       = $(LIBRUBY_SO)
+LIBRUBYARG    = rubymw.lib
+
+EXTOBJS       = dmyext.obj
+
+MAINOBJ       = main.obj
+
+OBJS          = array.obj \
+		bignum.obj \
+		class.obj \
+		compar.obj \
+		dir.obj \
+		dln.obj \
+		enum.obj \
+		error.obj \
+		eval.obj \
+		file.obj \
+		gc.obj \
+		hash.obj \
+		inits.obj \
+		io.obj \
+		marshal.obj \
+		math.obj \
+		numeric.obj \
+		object.obj \
+		pack.obj \
+		parse.obj \
+		prec.obj \
+		process.obj \
+		random.obj \
+		range.obj \
+		re.obj \
+		regex.obj \
+		ruby.obj \
+		signal.obj \
+		sprintf.obj \
+		st.obj \
+		string.obj \
+		struct.obj \
+		time.obj \
+		util.obj \
+		variable.obj \
+		version.obj \
+		$(MISSING)
+
+all:		miniruby$(EXEEXT) rbconfig.rb ext/extmk.rb ext/Setup rubymw.lib $(MISCLIBS)
+		set LIB=..\..\win32;$(ORGLIBPATH)
+		@@.\miniruby$(EXEEXT) -Xext extmk.rb
+
+ext/extmk.rb:	ext/extmk.rb.in rbconfig.rb
+		@@echo Creating ext/extmk.rb
+		@@.\miniruby$(EXEEXT) -Xext mswin32_extmk.rb
+
+miniruby$(EXEEXT):	$(OBJS) $(MAINOBJ) $(EXTOBJS) 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(OBJS) $(LIBS) -o $@@
+
+$(PROGRAM):	$(LIBRUBY) $(MAINOBJ) $(LIBRUBY_SO)
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) -o $@@ $(LIBRUBYARG) -link /STACK:$(STACK)
+
+$(LIBRUBY_A):	$(OBJS) dmyext.obj
+		lib -nologo /OUT:$@@ $(OBJS) dmyext.obj
+
+rubymw.lib:	ruby.def
+		lib -nologo /OUT:$@@ /DEF:ruby.def
+
+$(LIBRUBY_SO):	$(LIBRUBY_A) $(EXTOBJS) ruby.def
+		set LIB=.\win32;$(ORGLIBPATH)
+		$(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY_A) $(LIBS) -o $@@ -link /DLL /DEF:ruby.def
+
+install:	rbconfig.rb
+		.\miniruby.exe $(srcdir)/instruby.rb $(DESTDIR)
+
+clean:;		@@rm -f $(OBJS) $(LIBRUBY_A) $(MAINOBJ) rbconfig.rb
+		@@rm -f ext/extinit.c ext/extinit.obj ext/vc*.pdb *.obj
+		@@-.\miniruby$(EXEEXT) -Xext extmk.rb clean
+
+distclean:	clean
+		@@rm -f Makefile ext/extmk.rb config.h
+		@@rm -f ext/config.cache config.cache config.log config.status
+		@@rm -f *~ core *.core gmon.out y.tab.c y.output ruby.imp
+		@@rm -f *.map *.pdb *.ilk rubymw.* ruby.def
+		@@rm -f $(PROGRAM) miniruby$(EXEEXT)
+
+realclean:	distclean
+		@@rm -f parse.c
+		@@rm -f lex.c
+
+test:		miniruby$(EXEEXT)
+		@@.\miniruby$(EXEEXT) $(srcdir)/rubytest.rb
+
+rbconfig.rb:	miniruby$(EXEEXT)
+		@@.\miniruby$(EXEEXT) $(srcdir)/mkconfig.rb rbconfig.rb
+
+config.status:	$(srcdir)/configure
+#		$(SHELL) ./config.status --recheck
+
+.c.obj:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+
+parse.c: parse.y
+	$(YACC) $(YFLAGS) parse.y
+	sed -e "s!^extern char \*getenv();!/* & */!" y.tab.c > parse.c
+	@@rm y.tab.c
+
+alloca.obj: missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/alloca.c
+
+crypt.obj: missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/crypt.c
+
+dup2.obj: missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/dup2.c
+
+finite.obj: missing/finite.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/finite.c
+
+flock.obj: missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/flock.c
+
+isinf.obj: missing/isinf.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/isinf.c
+
+isnan.obj: missing/isnan.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/isnan.c
+
+memcmp.obj: missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memcmp.c
+
+memmove.obj: missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memmove.c
+
+mkdir.obj: missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/mkdir.c
+
+vsnprintf.obj: missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/vsnprintf.c
+
+strcasecmp.obj: missing/strcasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strcasecmp.c
+
+strncasecmp.obj: missing/strncasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strncasecmp.c
+
+strchr.obj: missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strchr.c
+
+strdup.obj: missing/strdup.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strdup.c
+
+strerror.obj: missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strerror.c
+
+strftime.obj: missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/strftime.c
+
+strstr.obj: missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strstr.c
+
+strtod.obj: missing/strtod.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtod.c
+
+strtol.obj: missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtol.c
+
+strtoul.obj: missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtoul.c
+
+nt.obj: missing/nt.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/nt.c
+
+x68.obj: missing/x68.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/x68.c
+
+os2.obj: missing/os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/os2.c
+
+dl_os2.obj: missing/dl_os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/dl_os2.c
+
+# when I use -I., there is confliction at "OpenFile" 
+# so, set . into environment varible "include"
+win32.obj: win32/win32.c
+	@@set include=$(INCLUDE);.
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c win32/win32.c
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
+###
+parse.obj: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+###
+array.obj: array.c ruby.h config.h defines.h intern.h
+bignum.obj: bignum.c ruby.h config.h defines.h intern.h
+class.obj: class.c ruby.h config.h defines.h intern.h node.h st.h
+compar.obj: compar.c ruby.h config.h defines.h intern.h
+dir.obj: dir.c ruby.h config.h defines.h intern.h
+dln.obj: dln.c config.h defines.h dln.h
+dmyext.obj: dmyext.c
+enum.obj: enum.c ruby.h config.h defines.h intern.h
+error.obj: error.c ruby.h config.h defines.h intern.h env.h
+eval.obj: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+gc.obj: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+hash.obj: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h util.h
+inits.obj: inits.c ruby.h config.h defines.h intern.h
+io.obj: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h env.h
+main.obj: main.c ruby.h config.h defines.h intern.h
+marshal.obj: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+prec.obj: prec.c ruby.h config.h defines.h intern.h
+math.obj: math.c ruby.h config.h defines.h intern.h
+numeric.obj: numeric.c ruby.h config.h defines.h intern.h
+object.obj: object.c ruby.h config.h defines.h intern.h st.h
+pack.obj: pack.c ruby.h config.h defines.h intern.h
+process.obj: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+random.obj: random.c ruby.h config.h defines.h intern.h
+range.obj: range.c ruby.h config.h defines.h intern.h
+re.obj: re.c ruby.h config.h defines.h intern.h re.h regex.h
+regex.obj: regex.c config.h regex.h util.h
+ruby.obj: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+signal.obj: signal.c ruby.h config.h defines.h intern.h rubysig.h
+sprintf.obj: sprintf.c ruby.h config.h defines.h intern.h
+st.obj: st.c config.h st.h
+string.obj: string.c ruby.h config.h defines.h intern.h re.h regex.h
+struct.obj: struct.c ruby.h config.h defines.h intern.h
+time.obj: time.c ruby.h config.h defines.h intern.h
+util.obj: util.c ruby.h config.h defines.h intern.h util.h
+variable.obj: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+version.obj: version.c ruby.h config.h defines.h intern.h version.h
+@
+
+
+1.8
+log
+@2000-05-25
+@
+text
+@@
+
+
+1.7
+log
+@2000-03-17
+@
+text
+@a93 1
+		@@rm -f $@@
+a96 1
+		@@rm -f $@@
+a106 1
+		@@rm -f $@@
+a107 1
+		@@mv rubymw.map rubydll.map
+@
+
+
+1.6
+log
+@20000105
+@
+text
+@d31 1
+a31 1
+STACK = 0x200000
+@
+
+
+1.5
+log
+@19991104
+@
+text
+@d21 1
+a21 1
+LIBS = advapi32.lib wsock32.lib $(EXTLIBS)
+@
+
+
+1.4
+log
+@19990922
+@
+text
+@d22 1
+a22 1
+MISSING = crypt.obj alloca.obj win32.obj fnmatch.obj isinf.obj isnan.obj
+a167 3
+
+fnmatch.obj: missing/fnmatch.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/fnmatch.c
+@
+
+
+1.4.2.1
+log
+@19991208
+@
+text
+@d22 1
+a22 1
+MISSING = crypt.obj alloca.obj win32.obj isinf.obj isnan.obj
+d168 3
+@
+
+
+1.4.2.2
+log
+@20000105
+@
+text
+@d21 1
+a21 1
+LIBS = user32.lib advapi32.lib wsock32.lib $(EXTLIBS)
+@
+
+
+1.4.2.3
+log
+@2000-03-23
+@
+text
+@d31 1
+a31 1
+STACK = 0x2000000
+@
+
+
+1.4.2.4
+log
+@2000-05-30
+@
+text
+@d94 1
+d98 1
+d109 1
+d111 1
+@
+
+
+1.4.2.5
+log
+@matz
+@
+text
+@d15 1
+a15 1
+CFLAGS = -nologo -DNT=1 -MD -Ox -I. -I./missing
+d21 1
+a21 1
+LIBS = RubyCRT.lib user32.lib advapi32.lib wsock32.lib $(EXTLIBS)
+d97 1
+a97 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) -o $@@ $(LIBRUBYARG) $(LIBS) -link /STACK:$(STACK)
+@
+
+
+1.3
+log
+@1.4.1 to be
+@
+text
+@d101 2
+a102 2
+$(LIBRUBY_A):	$(OBJS)
+		lib -nologo /OUT:$@@ $(OBJS)
+d107 1
+a107 1
+$(LIBRUBY_SO):	$(LIBRUBY_A) $(EXTOBJS) 
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d83 1
+a83 1
+all:		miniruby$(EXEEXT) rbconfig.rb ext/extmk.rb ext/Setup.nt rubymw.lib $(MISCLIBS)
+d251 1
+a251 1
+io.obj: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 273
+a273 233
+SHELL = $(COMPSEC)
+
+#### Start of system configuration section. ####
+
+srcdir = .
+VPATH = .:./missing
+
+CC = cl
+YACC = byacc
+RANLIB = 
+AR = 
+INSTALL = ginstall -c
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = $(INSTALL) -m 644
+PURIFY =
+
+
+#CFLAGS = -nologo -DNT=1 -Ox 
+#LDFLAGS =  $(CFLAGS) -Fm
+CFLAGS = -nologo -DNT=1 -Zi -MD 
+LDFLAGS =  $(CFLAGS) -Fm -MD
+LIBS =  $(EXTLIBS)  advapi32.lib wsock32.lib
+MISSING = crypt.obj setenv.obj alloca.obj nt.obj
+
+prefix = 
+binprefix = 
+exec_prefix = 
+bindir = 
+libdir = 
+
+STACK = 0x200000
+
+#### End of system configuration section. ####
+
+
+LIBRUBY       = libruby.lib
+
+EXTOBJS       = dmyext.obj
+
+MAINOBJ       = main.obj
+
+OBJS          = array.obj \
+		bignum.obj \
+		class.obj \
+		compar.obj \
+		dir.obj \
+		dln.obj \
+		enum.obj \
+		error.obj \
+		eval.obj \
+		file.obj \
+		fnmatch.obj \
+		gc.obj \
+		glob.obj \
+		hash.obj \
+		inits.obj \
+		io.obj \
+		math.obj \
+		numeric.obj \
+		object.obj \
+		pack.obj \
+		parse.obj \
+		process.obj \
+		random.obj \
+		range.obj \
+		re.obj \
+		regex.obj \
+		ruby.obj \
+		signal.obj \
+		sprintf.obj \
+		st.obj \
+		string.obj \
+		struct.obj \
+		time.obj \
+		util.obj \
+		variable.obj \
+		version.obj \
+		$(MISSING)
+
+all:            miniruby.exe ext/Setup 
+		cd ext
+		..\miniruby .\extmk.rb  static
+		cd ..
+
+miniruby.exe:   $(OBJS) $(MAINOBJ) $(EXTOBJS) 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		@@rm -f miniruby.exe
+#               $(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby.exe
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby.exe -link /NOD:LIBC
+
+ruby.exe:       $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) ruby.dll 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		@@rm -f ruby.exe
+#               $(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby.exe
+#               $(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby.exe -link /DEF:rubyexe.def /NOD:LIBC
+		$(CC) $(LDFLAGS) $(MAINOBJ) -o ruby.exe ruby.lib -link /NOD:LIBC /STACK:$(STACK)
+
+ruby.dll:       $(LIBRUBY) $(EXTOBJS) 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		@@rm -f ruby.dll
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby.dll  -link /DLL /DEF:ruby.def /NOD:LIBC
+
+$(LIBRUBY):     $(OBJS)
+		lib /OUT:$(LIBRUBY) $(OBJS)
+
+install:;       $(INSTALL_PROGRAM) ruby.exe $(bindir)/ruby.exe
+		@@-strip $(bindir)/ruby
+		@@test -d $(libdir) || mkdir $(libdir)
+		cd ext; ../miniruby ./extmk.rb install
+		@@for rb in `grep '^lib/' MANIFEST`; do \
+		  $(INSTALL_DATA) $$rb $(libdir); \
+		done
+
+clean:;         @@rm -f $(OBJS) $(LIBRUBY) main.obj dmyext.obj *.pdb *.map *.exp
+		@@rm -f ext/extinit.c ext/extinit.obj
+		cd ext
+		..\miniruby .\extmk.rb clean
+		cd ..
+
+realclean:      clean
+		@@rm -f Makefile ext/extmk.rb
+		@@rm -f config.cache config.h config.log config.status
+		@@rm -f core ruby miniruby *~
+
+test:;          @@-./ruby sample/test.rb > ./ruby_test 2>&1; \
+		 if grep '^end of test' ./ruby_test > /dev/null; then \
+		   echo "test succeeded"; \
+		 else \
+		   grep '^sample/test.rb' ./ruby_test; \
+		   grep '^not' ./ruby_test; \
+		   echo "test failed";\
+		 fi;\
+		 rm -f ./ruby_test
+
+.c.obj:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+
+alloca.obj: missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/alloca.c
+
+crypt.obj: missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/crypt.c
+
+dup2.obj: missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/dup2.c
+
+flock.obj: missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/flock.c
+
+memmove.obj: missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memmove.c
+
+mkdir.obj: missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/mkdir.c
+
+setenv.obj: missing/setenv.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/setenv.c
+
+strerror.obj: missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strerror.c
+
+strdup.obj: missing/strdup.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strdup.c
+
+strftime.obj: missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/strftime.c
+
+strstr.obj: missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strstr.c
+
+strtol.obj: missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtol.c
+
+strtoul.obj: missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtoul.c
+
+# when I use -I., there is confliction at "OpenFile" 
+# so, set . into environment varible "include"
+nt.obj: missing/nt.c
+	@@set include=$(INCLUDE);.
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/nt.c
+
+parse.c: parse.y
+	$(YACC) $(YFLAGS) parse.y
+	sed -e "s!^extern char \*getenv();!/* & */!" y.tab.c > parse.c
+	@@rm y.tab.c
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
+###
+parse.obj : parse.y ruby.h defines.h config.h env.h node.h st.h regex.h 
+###
+array.obj: array.c ruby.h config.h defines.h
+bignum.obj: bignum.c ruby.h config.h defines.h
+class.obj: class.c ruby.h config.h defines.h node.h st.h
+compar.obj: compar.c ruby.h config.h defines.h
+dir.obj: dir.c ruby.h config.h defines.h
+dln.obj: dln.c config.h defines.h dln.h st.h
+dmyext.obj: dmyext.c
+enum.obj: enum.c ruby.h config.h defines.h
+error.obj: error.c ruby.h config.h defines.h env.h
+eval.obj: eval.c ruby.h config.h defines.h env.h node.h sig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h io.h sig.h
+fnmatch.obj: fnmatch.c config.h fnmatch.h
+gc.obj: gc.c ruby.h config.h defines.h env.h sig.h st.h node.h re.h regex.h
+glob.obj: glob.c config.h fnmatch.h
+hash.obj: hash.c ruby.h config.h defines.h st.h
+inits.obj: inits.c ruby.h config.h defines.h
+io.obj: io.c ruby.h config.h defines.h io.h sig.h
+main.obj: main.c
+math.obj: math.c ruby.h config.h defines.h
+numeric.obj: numeric.c ruby.h config.h defines.h
+object.obj: object.c ruby.h config.h defines.h st.h
+pack.obj: pack.c ruby.h config.h defines.h
+process.obj: process.c ruby.h config.h defines.h sig.h st.h
+random.obj: random.c ruby.h config.h defines.h
+range.obj: range.c ruby.h config.h defines.h
+re.obj: re.c ruby.h config.h defines.h re.h regex.h
+regex.obj: regex.c config.h defines.h regex.h util.h
+ruby.obj: ruby.c ruby.h config.h defines.h re.h regex.h dln.h
+signal.obj: signal.c ruby.h config.h defines.h sig.h
+sprintf.obj: sprintf.c ruby.h config.h defines.h
+st.obj: st.c config.h st.h
+string.obj: string.c ruby.h config.h defines.h re.h regex.h
+struct.obj: struct.c ruby.h config.h defines.h
+time.obj: time.c ruby.h config.h defines.h
+util.obj: util.c defines.h config.h util.h
+variable.obj: variable.c ruby.h config.h defines.h env.h st.h
+version.obj: version.c ruby.h config.h defines.h version.h
+director.obj : director.c dir.h
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d18 4
+a21 4
+CFLAGS = -nologo -DNT=1 -Ox 
+LDFLAGS =  $(CFLAGS) -Fm
+#CFLAGS = -nologo -DNT=1 -Zi -MD 
+#LDFLAGS =  $(CFLAGS) -Fm -MD
+a31 2
+ORGLIBPATH = $(LIB)
+#MISCLIBS = win32\sdbm.lib
+a58 1
+		marshal.obj \
+d80 1
+a80 1
+all:            miniruby.exe ext/Setup $(MISCLIBS)
+a81 1
+		set LIB=..\..\win32;$(ORGLIBPATH)
+a82 1
+#		..\miniruby .\extmk.rb
+d89 2
+a90 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby.exe
+d92 3
+a94 1
+ruby.exe:       $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) rubymw.dll 
+d97 2
+a98 1
+		$(CC) $(LDFLAGS) $(MAINOBJ) -o ruby.exe rubymw.lib -link /STACK:$(STACK)
+d100 5
+a104 5
+rubymw.dll:       $(LIBRUBY) $(EXTOBJS) 
+		set LIB=.\win32;$(ORGLIBPATH)
+		@@rm -f rubymw.dll
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o rubymw.dll  -link /DLL /DEF:ruby.def
+		@@mv rubymw.map rubydll.map
+a189 7
+
+win32\sdbm.lib : win32\sdbm.c win32\sdbm.h
+	cd win32
+	$(CC) $(CFLAGS) $(CPPFLAGS) -DMSDOS -c sdbm.c
+	lib /OUT:sdbm.lib sdbm.obj
+	copy sdbm.h ndbm.h
+	cd ..
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d1 241
+a241 230
+SHELL = $(COMPSEC)
+
+#### Start of system configuration section. ####
+
+srcdir = .
+VPATH = .:./missing
+
+CC = cl
+YACC = byacc
+RANLIB = 
+AR = 
+INSTALL = ginstall -c
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = $(INSTALL) -m 644
+PURIFY =
+
+
+CFLAGS = -nologo -DNT=1 -Ox -I. -I./missing
+LDFLAGS =  $(CFLAGS) -Fm
+#CFLAGS = -nologo -DNT=1 -Zi -MD 
+#LDFLAGS =  $(CFLAGS) -Fm -MD
+LIBS =  $(EXTLIBS)  advapi32.lib wsock32.lib
+MISSING = crypt.obj alloca.obj win32.obj
+
+prefix = 
+binprefix = 
+exec_prefix = 
+bindir = 
+libdir = 
+
+STACK = 0x200000
+ORGLIBPATH = $(LIB)
+
+#### End of system configuration section. ####
+
+
+LIBRUBY       = libruby.lib
+
+EXTOBJS       = dmyext.obj
+
+MAINOBJ       = main.obj
+
+OBJS          = array.obj \
+		bignum.obj \
+		class.obj \
+		compar.obj \
+		dir.obj \
+		dln.obj \
+		enum.obj \
+		error.obj \
+		eval.obj \
+		file.obj \
+		fnmatch.obj \
+		gc.obj \
+		glob.obj \
+		hash.obj \
+		inits.obj \
+		io.obj \
+		math.obj \
+		marshal.obj \
+		numeric.obj \
+		object.obj \
+		pack.obj \
+		parse.obj \
+		process.obj \
+		random.obj \
+		range.obj \
+		re.obj \
+		regex.obj \
+		ruby.obj \
+		signal.obj \
+		sprintf.obj \
+		st.obj \
+		string.obj \
+		struct.obj \
+		time.obj \
+		util.obj \
+		variable.obj \
+		version.obj \
+		$(MISSING)
+
+all:            miniruby.exe ext/Setup $(MISCLIBS)
+		cd ext
+		set LIB=..\..\win32;$(ORGLIBPATH)
+		..\miniruby .\extmk.rb  static
+#		..\miniruby .\extmk.rb
+		cd ..
+
+miniruby.exe:   $(OBJS) $(MAINOBJ) $(EXTOBJS) 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		@@rm -f miniruby.exe
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby.exe
+
+ruby.exe:       $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) rubymw.dll 
+		@@rm -f ruby.exe
+#               $(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby.exe
+		$(CC) $(LDFLAGS) $(MAINOBJ) -o ruby.exe rubymw.lib -link /STACK:$(STACK)
+
+rubymw.dll:       $(LIBRUBY) $(EXTOBJS) 
+		set LIB=.\win32;$(ORGLIBPATH)
+		@@rm -f rubymw.dll
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o rubymw.dll  -link /DLL /DEF:ruby.def
+		@@mv rubymw.map rubydll.map
+
+$(LIBRUBY):     $(OBJS)
+		lib /OUT:$(LIBRUBY) $(OBJS)
+
+install:;       $(INSTALL_PROGRAM) ruby.exe $(bindir)/ruby.exe
+		@@-strip $(bindir)/ruby
+		@@test -d $(libdir) || mkdir $(libdir)
+		cd ext; ../miniruby ./extmk.rb install
+		@@for rb in `grep '^lib/' MANIFEST`; do \
+		  $(INSTALL_DATA) $$rb $(libdir); \
+		done
+
+clean:;         @@rm -f $(OBJS) $(LIBRUBY) main.obj dmyext.obj *.pdb *.map *.exp
+		@@rm -f ext/extinit.c ext/extinit.obj
+		cd ext
+		..\miniruby .\extmk.rb clean
+		cd ..
+
+realclean:      clean
+		@@rm -f Makefile ext/extmk.rb
+		@@rm -f config.cache config.h config.log config.status
+		@@rm -f core ruby miniruby *~
+
+test:;          @@-./ruby sample/test.rb > ./ruby_test 2>&1; \
+		 if grep '^end of test' ./ruby_test > /dev/null; then \
+		   echo "test succeeded"; \
+		 else \
+		   grep '^sample/test.rb' ./ruby_test; \
+		   grep '^not' ./ruby_test; \
+		   echo "test failed";\
+		 fi;\
+		 rm -f ./ruby_test
+
+.c.obj:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+
+alloca.obj: missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/alloca.c
+
+crypt.obj: missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/crypt.c
+
+dup2.obj: missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/dup2.c
+
+flock.obj: missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/flock.c
+
+memmove.obj: missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memmove.c
+
+mkdir.obj: missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/mkdir.c
+
+strerror.obj: missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strerror.c
+
+strdup.obj: missing/strdup.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strdup.c
+
+strftime.obj: missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/strftime.c
+
+strstr.obj: missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strstr.c
+
+strtol.obj: missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtol.c
+
+strtoul.obj: missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtoul.c
+
+# when I use -I., there is confliction at "OpenFile" 
+# so, set . into environment varible "include"
+win32.obj: win32/win32.c
+	@@set include=$(INCLUDE);.
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c win32/win32.c
+
+parse.c: parse.y
+	$(YACC) $(YFLAGS) parse.y
+	sed -e "s!^extern char \*getenv();!/* & */!" y.tab.c > parse.c
+	@@rm y.tab.c
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
+###
+parse.obj : parse.y ruby.h defines.h config.h env.h node.h st.h regex.h 
+###
+array.obj: array.c ruby.h config.h defines.h
+bignum.obj: bignum.c ruby.h config.h defines.h
+class.obj: class.c ruby.h config.h defines.h node.h st.h
+compar.obj: compar.c ruby.h config.h defines.h
+dir.obj: dir.c ruby.h config.h defines.h
+dln.obj: dln.c config.h defines.h dln.h st.h
+dmyext.obj: dmyext.c
+enum.obj: enum.c ruby.h config.h defines.h
+error.obj: error.c ruby.h config.h defines.h env.h
+eval.obj: eval.c ruby.h config.h defines.h env.h node.h rubysig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h rubyio.h rubysig.h
+fnmatch.obj: fnmatch.c config.h fnmatch.h
+gc.obj: gc.c ruby.h config.h defines.h env.h rubysig.h st.h node.h re.h regex.h
+glob.obj: glob.c config.h fnmatch.h
+hash.obj: hash.c ruby.h config.h defines.h st.h
+inits.obj: inits.c ruby.h config.h defines.h
+io.obj: io.c ruby.h config.h defines.h rubyio.h rubysig.h
+main.obj: main.c
+math.obj: math.c ruby.h config.h defines.h
+numeric.obj: numeric.c ruby.h config.h defines.h
+object.obj: object.c ruby.h config.h defines.h st.h
+pack.obj: pack.c ruby.h config.h defines.h
+process.obj: process.c ruby.h config.h defines.h rubysig.h st.h
+random.obj: random.c ruby.h config.h defines.h
+range.obj: range.c ruby.h config.h defines.h
+re.obj: re.c ruby.h config.h defines.h re.h regex.h
+regex.obj: regex.c config.h defines.h regex.h util.h
+ruby.obj: ruby.c ruby.h config.h defines.h re.h regex.h dln.h
+signal.obj: signal.c ruby.h config.h defines.h rubysig.h
+sprintf.obj: sprintf.c ruby.h config.h defines.h
+st.obj: st.c config.h st.h
+string.obj: string.c ruby.h config.h defines.h re.h regex.h
+struct.obj: struct.c ruby.h config.h defines.h
+time.obj: time.c ruby.h config.h defines.h
+util.obj: util.c defines.h config.h util.h
+variable.obj: variable.c ruby.h config.h defines.h env.h st.h
+version.obj: version.c ruby.h config.h defines.h version.h
+director.obj : director.c dir.h
+@
+
+
+1.1.1.3.2.1
+log
+@990203
+@
+text
+@a64 1
+		prec.obj \
+a230 1
+prec.obj: prec.c ruby.h config.h defines.h
+@
+
+
+1.1.1.3.2.2
+log
+@990225
+@
+text
+@d23 1
+a23 1
+MISSING = crypt.obj alloca.obj win32.obj fnmatch.obj isinf.obj isnan.obj
+d53 1
+a177 9
+fnmatch.obj: missing/fnmatch.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/fnmatch.c
+
+isinf.obj: missing/isinf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/isinf.c
+
+isnan.obj: missing/isnan.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/isnan.c
+
+d205 1
+d207 1
+a207 1
+glob.obj: glob.c config.h missing/fnmatch.h
+@
+
+
+1.1.1.3.2.3
+log
+@regexp,range,squeeze
+@
+text
+@d26 4
+a29 3
+RUBY_INSTALL_NAME=ruby
+binsuffix = .exe
+PROGRAM=$(RUBY_INSTALL_NAME)$(binsuffix)
+d54 1
+d82 2
+a83 1
+all:		miniruby$(binsuffix) rbconfig.rb ext/Setup $(MISCLIBS)
+d85 3
+a87 1
+		@@./miniruby$(binsuffix) -Xext extmk.rb static
+d89 1
+a89 1
+miniruby$(binsuffix):	$(OBJS) $(MAINOBJ) $(EXTOBJS) 
+d92 2
+a93 2
+		@@rm -f miniruby$(binsuffix)
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY_A) $(LIBS) -o $@@
+d95 4
+a98 3
+$(PROGRAM):     $(LIBRUBY) $(MAINOBJ) rubymw.dll
+		@@rm -f $(PROGRAM)
+		$(CC) $(LDFLAGS) $(MAINOBJ) -o $(PROGRAM) rubymw.lib -link /STACK:$(STACK)
+d103 1
+a103 1
+		$(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o rubymw.dll  -link /DLL /DEF:ruby.def
+d109 28
+a136 19
+install:	rbconfig.rb
+		./miniruby.exe $(srcdir)/instruby.rb $(DESTDIR)
+
+clean:;		@@rm -f $(OBJS) $(LIBRUBY) rbconfig.rb
+		@@rm -f ext/extinit.c ext/extinit.obj *.obj
+		@@-./miniruby$(binsuffix) -Xext extmk.rb clean 2> /dev/null || true
+
+distclean:	clean
+		@@rm -f Makefile ext/extmk.rb config.h
+		@@rm -f ext/config.cache config.cache config.log config.status
+		@@rm -f *~ core *.core gmon.out y.tab.c y.output ruby.imp
+		@@rm -f $(PROGRAM) miniruby$(binsuffix)
+
+realclean:	distclean
+		@@rm -f parse.c
+		@@rm -f lex.c
+
+test:		miniruby$(binsuffix)
+		@@./miniruby$(binsuffix) $(srcdir)/rubytest.rb
+d214 1
+@
+
+
+1.1.1.3.2.4
+log
+@arity/strict yield
+@
+text
+@d22 1
+a22 1
+LIBS =  advapi32.lib wsock32.lib
+d88 1
+a88 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBS) -o $@@
+d108 1
+a108 1
+		@@.\miniruby$(binsuffix) -Xext extmk.rb clean 2> nul || true
+d121 1
+a121 1
+		@@.\miniruby$(binsuffix) $(srcdir)/rubytest.rb
+@
+
+
+1.1.1.3.2.5
+log
+@regexp null pattern
+@
+text
+@d82 1
+a82 1
+		@@.\miniruby$(binsuffix) -Xext extmk.rb static
+d88 1
+a88 1
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(OBJS) $(LIBS) -o $@@
+a121 6
+
+rbconfig.rb:	miniruby$(binsuffix)
+		@@.\miniruby$(binsuffix) $(srcdir)/mkconfig.rb rbconfig.rb
+
+config.status:	$(srcdir)/configure
+#		$(SHELL) ./config.status --recheck
+@
+
+
+1.1.1.3.2.6
+log
+@990728
+@
+text
+@d10 5
+a15 1
+AUTOCONF = autoconf
+a17 1
+prefix = 
+d19 4
+a22 6
+LDFLAGS = $(CFLAGS) -Fm
+#CFLAGS = -nologo -DNT=1 -Zi -MD
+#LDFLAGS = $(CFLAGS) -Fm -MD
+XLDFLAGS = 
+EXTLIBS = 
+LIBS = advapi32.lib wsock32.lib $(EXTLIBS)
+a23 3
+LDSHARED = 
+DLDFLAGS = 
+SOLIBS = 
+d25 1
+d27 2
+a28 2
+EXEEXT = .exe
+PROGRAM=$(RUBY_INSTALL_NAME)$(EXEEXT)
+d80 1
+a80 1
+all:		miniruby$(EXEEXT) rbconfig.rb ext/Setup $(MISCLIBS)
+d82 1
+a82 1
+		@@.\miniruby$(EXEEXT) -Xext extmk.rb static
+d84 1
+a84 1
+miniruby$(EXEEXT):	$(OBJS) $(MAINOBJ) $(EXTOBJS) 
+d87 1
+a87 1
+		@@rm -f miniruby$(EXEEXT)
+d104 1
+a104 1
+		.\miniruby.exe $(srcdir)/instruby.rb $(DESTDIR)
+d107 2
+a108 2
+		@@rm -f ext/extinit.c ext/extinit.obj ext/vc*.pdb *.obj
+		@@.\miniruby$(EXEEXT) -Xext extmk.rb clean
+d114 1
+a114 2
+		@@rm -f *.map rubymw.* ruby.def
+		@@rm -f $(PROGRAM) miniruby$(EXEEXT)
+d120 2
+a121 2
+test:		miniruby$(EXEEXT)
+		@@.\miniruby$(EXEEXT) $(srcdir)/rubytest.rb
+d123 2
+a124 2
+rbconfig.rb:	miniruby$(EXEEXT)
+		@@.\miniruby$(EXEEXT) $(srcdir)/mkconfig.rb rbconfig.rb
+@
+
+
+1.1.1.3.2.7
+log
+@990806
+@
+text
+@d17 2
+a18 2
+#CFLAGS = -nologo -DNT=1 -Zi -I. -I./missing
+#LDFLAGS = $(CFLAGS) -Fm
+d20 1
+a20 1
+#EXTLIBS = 
+d36 2
+a37 4
+LIBRUBY_A     = libruby.lib
+LIBRUBY_SO    = rubymw.dll
+LIBRUBY       = $(LIBRUBY_SO)
+LIBRUBYARG    = rubymw.lib
+d57 1
+a58 1
+		math.obj \
+d81 1
+a81 1
+all:		miniruby$(EXEEXT) rbconfig.rb ext/extmk.rb ext/Setup.nt rubymw.lib $(MISCLIBS)
+a84 4
+ext/extmk.rb:	ext/extmk.rb.in rbconfig.rb
+		@@echo Creating ext/extmk.rb
+		@@.\miniruby$(EXEEXT) -Xext mswin32_extmk.rb
+
+d88 1
+a88 1
+		@@rm -f $@@
+d91 3
+a93 6
+$(PROGRAM):	$(LIBRUBY) $(MAINOBJ) $(LIBRUBY_SO)
+		@@rm -f $@@
+		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINOBJ) -o $@@ $(LIBRUBYARG) -link /STACK:$(STACK)
+
+$(LIBRUBY_A):	$(OBJS)
+		lib -nologo /OUT:$@@ $(OBJS)
+d95 1
+a95 4
+rubymw.lib:	ruby.def
+		lib -nologo /OUT:$@@ /DEF:ruby.def
+
+$(LIBRUBY_SO):	$(LIBRUBY_A) $(EXTOBJS) 
+d97 2
+a98 2
+		@@rm -f $@@
+		$(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY_A) $(LIBS) -o $@@ -link /DLL /DEF:ruby.def
+d101 3
+d107 1
+a107 1
+clean:;		@@rm -f $(OBJS) $(LIBRUBY_A) $(MAINOBJ) rbconfig.rb
+d109 1
+a109 1
+		@@-.\miniruby$(EXEEXT) -Xext extmk.rb clean
+d115 1
+a115 1
+		@@rm -f *.map *.pdb *.ilk rubymw.* ruby.def
+a133 5
+parse.c: parse.y
+	$(YACC) $(YFLAGS) parse.y
+	sed -e "s!^extern char \*getenv();!/* & */!" y.tab.c > parse.c
+	@@rm y.tab.c
+
+a142 3
+finite.obj: missing/finite.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/finite.c
+
+a145 12
+isinf.obj: missing/isinf.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/isinf.c
+
+isnan.obj: missing/isnan.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/isnan.c
+
+fnmatch.obj: missing/fnmatch.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/fnmatch.c
+
+memcmp.obj: missing/memcmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memcmp.c
+
+d152 2
+a153 11
+vsnprintf.obj: missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/vsnprintf.c
+
+strcasecmp.obj: missing/strcasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strcasecmp.c
+
+strncasecmp.obj: missing/strncasecmp.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strncasecmp.c
+
+strchr.obj: missing/strchr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strchr.c
+a157 3
+strerror.obj: missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strerror.c
+
+a163 3
+strtod.obj: missing/strtod.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtod.c
+
+d170 2
+a171 2
+nt.obj: missing/nt.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/nt.c
+d173 2
+a174 2
+x68.obj: missing/x68.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/x68.c
+d176 2
+a177 5
+os2.obj: missing/os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/os2.c
+
+dl_os2.obj: missing/dl_os2.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/dl_os2.c
+d185 5
+d193 1
+a193 1
+parse.obj: parse.y ruby.h config.h defines.h intern.h env.h node.h st.h regex.h util.h lex.c
+d195 6
+a200 6
+array.obj: array.c ruby.h config.h defines.h intern.h
+bignum.obj: bignum.c ruby.h config.h defines.h intern.h
+class.obj: class.c ruby.h config.h defines.h intern.h node.h st.h
+compar.obj: compar.c ruby.h config.h defines.h intern.h
+dir.obj: dir.c ruby.h config.h defines.h intern.h
+dln.obj: dln.c config.h defines.h dln.h
+d202 21
+a222 23
+enum.obj: enum.c ruby.h config.h defines.h intern.h
+error.obj: error.c ruby.h config.h defines.h intern.h env.h
+eval.obj: eval.c ruby.h config.h defines.h intern.h node.h env.h rubysig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+gc.obj: gc.c ruby.h config.h defines.h intern.h rubysig.h st.h node.h env.h re.h regex.h
+hash.obj: hash.c ruby.h config.h defines.h intern.h st.h rubysig.h util.h
+inits.obj: inits.c ruby.h config.h defines.h intern.h
+io.obj: io.c ruby.h config.h defines.h intern.h rubyio.h rubysig.h
+main.obj: main.c ruby.h config.h defines.h intern.h
+marshal.obj: marshal.c ruby.h config.h defines.h intern.h rubyio.h st.h
+prec.obj: prec.c ruby.h config.h defines.h intern.h
+math.obj: math.c ruby.h config.h defines.h intern.h
+numeric.obj: numeric.c ruby.h config.h defines.h intern.h
+object.obj: object.c ruby.h config.h defines.h intern.h st.h
+pack.obj: pack.c ruby.h config.h defines.h intern.h
+process.obj: process.c ruby.h config.h defines.h intern.h rubysig.h st.h
+random.obj: random.c ruby.h config.h defines.h intern.h
+range.obj: range.c ruby.h config.h defines.h intern.h
+re.obj: re.c ruby.h config.h defines.h intern.h re.h regex.h
+regex.obj: regex.c config.h regex.h util.h
+ruby.obj: ruby.c ruby.h config.h defines.h intern.h dln.h util.h
+signal.obj: signal.c ruby.h config.h defines.h intern.h rubysig.h
+sprintf.obj: sprintf.c ruby.h config.h defines.h intern.h
+d224 8
+a231 6
+string.obj: string.c ruby.h config.h defines.h intern.h re.h regex.h
+struct.obj: struct.c ruby.h config.h defines.h intern.h
+time.obj: time.c ruby.h config.h defines.h intern.h
+util.obj: util.c ruby.h config.h defines.h intern.h util.h
+variable.obj: variable.c ruby.h config.h defines.h intern.h env.h node.h st.h
+version.obj: version.c ruby.h config.h defines.h intern.h version.h
+@
+
+
+1.1.1.3.2.8
+log
+@1.3.8 to be, final beta (hopefully)
+@
+text
+@d85 1
+a85 1
+		@@.\miniruby$(EXEEXT) -Xext extmk.rb
+@
+
+
+1.1.1.2.2.1
+log
+@1.1b9_05_pre1
+@
+text
+@d1 241
+a241 241
+SHELL = $(COMPSEC)
+
+#### Start of system configuration section. ####
+
+srcdir = .
+VPATH = .:./missing
+
+CC = cl
+YACC = byacc
+RANLIB = 
+AR = 
+INSTALL = ginstall -c
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = $(INSTALL) -m 644
+PURIFY =
+
+
+CFLAGS = -nologo -DNT=1 -Ox 
+LDFLAGS =  $(CFLAGS) -Fm
+#CFLAGS = -nologo -DNT=1 -Zi -MD 
+#LDFLAGS =  $(CFLAGS) -Fm -MD
+LIBS =  $(EXTLIBS)  advapi32.lib wsock32.lib
+MISSING = crypt.obj setenv.obj alloca.obj nt.obj
+
+prefix = 
+binprefix = 
+exec_prefix = 
+bindir = 
+libdir = 
+
+STACK = 0x200000
+ORGLIBPATH = $(LIB)
+#MISCLIBS = win32\sdbm.lib
+
+#### End of system configuration section. ####
+
+
+LIBRUBY       = libruby.lib
+
+EXTOBJS       = dmyext.obj
+
+MAINOBJ       = main.obj
+
+OBJS          = array.obj \
+		bignum.obj \
+		class.obj \
+		compar.obj \
+		dir.obj \
+		dln.obj \
+		enum.obj \
+		error.obj \
+		eval.obj \
+		file.obj \
+		fnmatch.obj \
+		gc.obj \
+		glob.obj \
+		hash.obj \
+		inits.obj \
+		io.obj \
+		math.obj \
+		marshal.obj \
+		numeric.obj \
+		object.obj \
+		pack.obj \
+		parse.obj \
+		process.obj \
+		random.obj \
+		range.obj \
+		re.obj \
+		regex.obj \
+		ruby.obj \
+		signal.obj \
+		sprintf.obj \
+		st.obj \
+		string.obj \
+		struct.obj \
+		time.obj \
+		util.obj \
+		variable.obj \
+		version.obj \
+		$(MISSING)
+
+all:            miniruby.exe ext/Setup $(MISCLIBS)
+		cd ext
+		set LIB=..\..\win32;$(ORGLIBPATH)
+		..\miniruby .\extmk.rb  static
+#		..\miniruby .\extmk.rb
+		cd ..
+
+miniruby.exe:   $(OBJS) $(MAINOBJ) $(EXTOBJS) 
+		@@echo $(EXTOBJS)
+		@@echo $(LIBS)
+		@@rm -f miniruby.exe
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(OBJS) $(EXTOBJS) $(LIBS) -o miniruby.exe
+
+ruby.exe:       $(LIBRUBY) $(MAINOBJ) $(EXTOBJS) rubymw.dll 
+		@@rm -f ruby.exe
+#               $(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o ruby.exe
+		$(CC) $(LDFLAGS) $(MAINOBJ) -o ruby.exe rubymw.lib -link /STACK:$(STACK)
+
+rubymw.dll:       $(LIBRUBY) $(EXTOBJS) 
+		set LIB=.\win32;$(ORGLIBPATH)
+		@@rm -f rubymw.dll
+		$(PURIFY) $(CC) $(LDFLAGS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBY) $(LIBS) -o rubymw.dll  -link /DLL /DEF:ruby.def
+		@@mv rubymw.map rubydll.map
+
+$(LIBRUBY):     $(OBJS)
+		lib /OUT:$(LIBRUBY) $(OBJS)
+
+install:;       $(INSTALL_PROGRAM) ruby.exe $(bindir)/ruby.exe
+		@@-strip $(bindir)/ruby
+		@@test -d $(libdir) || mkdir $(libdir)
+		cd ext; ../miniruby ./extmk.rb install
+		@@for rb in `grep '^lib/' MANIFEST`; do \
+		  $(INSTALL_DATA) $$rb $(libdir); \
+		done
+
+clean:;         @@rm -f $(OBJS) $(LIBRUBY) main.obj dmyext.obj *.pdb *.map *.exp
+		@@rm -f ext/extinit.c ext/extinit.obj
+		cd ext
+		..\miniruby .\extmk.rb clean
+		cd ..
+
+realclean:      clean
+		@@rm -f Makefile ext/extmk.rb
+		@@rm -f config.cache config.h config.log config.status
+		@@rm -f core ruby miniruby *~
+
+test:;          @@-./ruby sample/test.rb > ./ruby_test 2>&1; \
+		 if grep '^end of test' ./ruby_test > /dev/null; then \
+		   echo "test succeeded"; \
+		 else \
+		   grep '^sample/test.rb' ./ruby_test; \
+		   grep '^not' ./ruby_test; \
+		   echo "test failed";\
+		 fi;\
+		 rm -f ./ruby_test
+
+.c.obj:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+
+alloca.obj: missing/alloca.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/alloca.c
+
+crypt.obj: missing/crypt.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/crypt.c
+
+dup2.obj: missing/dup2.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/dup2.c
+
+flock.obj: missing/flock.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/flock.c
+
+memmove.obj: missing/memmove.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/memmove.c
+
+mkdir.obj: missing/mkdir.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/mkdir.c
+
+setenv.obj: missing/setenv.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/setenv.c
+
+strerror.obj: missing/strerror.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strerror.c
+
+strdup.obj: missing/strdup.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strdup.c
+
+strftime.obj: missing/strftime.c
+	$(CC) -I. $(CFLAGS) $(CPPFLAGS) -c missing/strftime.c
+
+strstr.obj: missing/strstr.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strstr.c
+
+strtol.obj: missing/strtol.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtol.c
+
+strtoul.obj: missing/strtoul.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/strtoul.c
+
+# when I use -I., there is confliction at "OpenFile" 
+# so, set . into environment varible "include"
+nt.obj: missing/nt.c
+	@@set include=$(INCLUDE);.
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/nt.c
+
+parse.c: parse.y
+	$(YACC) $(YFLAGS) parse.y
+	sed -e "s!^extern char \*getenv();!/* & */!" y.tab.c > parse.c
+	@@rm y.tab.c
+
+win32\sdbm.lib : win32\sdbm.c win32\sdbm.h
+	cd win32
+	$(CC) $(CFLAGS) $(CPPFLAGS) -DMSDOS -c sdbm.c
+	lib /OUT:sdbm.lib sdbm.obj
+	copy sdbm.h ndbm.h
+	cd ..
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
+###
+parse.obj : parse.y ruby.h defines.h config.h env.h node.h st.h regex.h 
+###
+array.obj: array.c ruby.h config.h defines.h
+bignum.obj: bignum.c ruby.h config.h defines.h
+class.obj: class.c ruby.h config.h defines.h node.h st.h
+compar.obj: compar.c ruby.h config.h defines.h
+dir.obj: dir.c ruby.h config.h defines.h
+dln.obj: dln.c config.h defines.h dln.h st.h
+dmyext.obj: dmyext.c
+enum.obj: enum.c ruby.h config.h defines.h
+error.obj: error.c ruby.h config.h defines.h env.h
+eval.obj: eval.c ruby.h config.h defines.h env.h node.h sig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h io.h sig.h
+fnmatch.obj: fnmatch.c config.h fnmatch.h
+gc.obj: gc.c ruby.h config.h defines.h env.h sig.h st.h node.h re.h regex.h
+glob.obj: glob.c config.h fnmatch.h
+hash.obj: hash.c ruby.h config.h defines.h st.h
+inits.obj: inits.c ruby.h config.h defines.h
+io.obj: io.c ruby.h config.h defines.h io.h sig.h
+main.obj: main.c
+math.obj: math.c ruby.h config.h defines.h
+numeric.obj: numeric.c ruby.h config.h defines.h
+object.obj: object.c ruby.h config.h defines.h st.h
+pack.obj: pack.c ruby.h config.h defines.h
+process.obj: process.c ruby.h config.h defines.h sig.h st.h
+random.obj: random.c ruby.h config.h defines.h
+range.obj: range.c ruby.h config.h defines.h
+re.obj: re.c ruby.h config.h defines.h re.h regex.h
+regex.obj: regex.c config.h defines.h regex.h util.h
+ruby.obj: ruby.c ruby.h config.h defines.h re.h regex.h dln.h
+signal.obj: signal.c ruby.h config.h defines.h sig.h
+sprintf.obj: sprintf.c ruby.h config.h defines.h
+st.obj: st.c config.h st.h
+string.obj: string.c ruby.h config.h defines.h re.h regex.h
+struct.obj: struct.c ruby.h config.h defines.h
+time.obj: time.c ruby.h config.h defines.h
+util.obj: util.c defines.h config.h util.h
+variable.obj: variable.c ruby.h config.h defines.h env.h st.h
+version.obj: version.c ruby.h config.h defines.h version.h
+director.obj : director.c dir.h
+@
+
+
+1.1.1.2.2.2
+log
+@1.1b9_26
+@
+text
+@d18 1
+a18 1
+CFLAGS = -nologo -DNT=1 -Ox -I. -I./missing
+@
+
+
+1.1.1.2.2.3
+log
+@980626
+@
+text
+@d213 2
+a214 2
+eval.obj: eval.c ruby.h config.h defines.h env.h node.h rubysig.h st.h dln.h
+file.obj: file.c ruby.h config.h defines.h rubyio.h rubysig.h
+d216 1
+a216 1
+gc.obj: gc.c ruby.h config.h defines.h env.h rubysig.h st.h node.h re.h regex.h
+d220 1
+a220 1
+io.obj: io.c ruby.h config.h defines.h rubyio.h rubysig.h
+d226 1
+a226 1
+process.obj: process.c ruby.h config.h defines.h rubysig.h st.h
+d232 1
+a232 1
+signal.obj: signal.c ruby.h config.h defines.h rubysig.h
+@
+
+
+1.1.1.2.2.4
+log
+@1.2.2 PR1
+@
+text
+@d23 1
+a23 1
+MISSING = crypt.obj setenv.obj vsnprintf.obj alloca.obj nt.obj
+a179 3
+
+vsnprintf.obj: missing/vsnprintf.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c missing/vsnprintf.c
+@
+
+
+1.1.1.2.2.3.2.1
+log
+@1.1d1
+@
+text
+@d23 1
+a23 1
+MISSING = crypt.obj alloca.obj nt.obj
+d159 3
+@
+
+

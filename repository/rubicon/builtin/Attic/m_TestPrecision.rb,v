@@ -1,0 +1,61 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.23.19.31.57;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Archive save
+@
+text
+@require '../rubicon'
+
+
+class TestPrecision < Rubicon::TestCase
+
+  def test_prec
+    assert_fail("untested")
+  end
+
+  def test_prec_f
+    assert_fail("untested")
+  end
+
+  def test_prec_i
+    assert_fail("untested")
+  end
+
+  def test_s_append_features
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestPrecision) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

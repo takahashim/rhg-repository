@@ -1,0 +1,54 @@
+head	1.2;
+access;
+symbols
+	v1_1_8:1.1.1.1
+	SHIGEO:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.04.17.15.00.23;	author knu;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.22.04.48.58;	author knu;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.03.22.04.48.58;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@* ext/Setup*, ext/bigfloat/*: Back out the import of BigFloat in
+  favor of its forthcoming successor, BigDecimal.
+@
+text
+@bigfloat.o: bigfloat.c bigfloat.h $(hdrdir)/ruby.h
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@Import Shigeo Kobayashi's BigFloat module.
+@
+text
+@@

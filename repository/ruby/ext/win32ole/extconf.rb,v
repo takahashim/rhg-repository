@@ -1,0 +1,99 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.10.24.12.58.42;	author nobu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.06.03.11.44.08;	author suke;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.06.01.12.34.29;	author suke;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@* configure.in (LIBPATHFLAG): avoid $ substitution.
+  [ruby-dev:18577]
+
+* ext/extmk.rb (extmake): expand $srcdir.
+
+* ext/win32ole/extconf.rb: should not override $CFLAGS, but
+  append.
+
+* lib/mkmf.rb (config_string): use given config hash.
+@
+text
+@#----------------------------------
+# extconf.rb
+# $Revision: 1.2 $
+# $Date: 2002/06/03 11:44:08 $
+#----------------------------------
+require 'mkmf'
+
+def create_win32ole_makefile
+  if have_library("ole32") and
+     have_library("oleaut32") and
+     have_library("uuid") and 
+     have_library("user32") and
+     have_library("advapi32")
+    create_makefile("win32ole")
+  end
+end
+
+case RUBY_PLATFORM
+when /mswin32/
+  $CFLAGS += ' /W3'
+when /cygwin/, /mingw/
+  $defs << '-DNONAMELESSUNION'
+end
+create_win32ole_makefile
+@
+
+
+1.2
+log
+@change PLATFORM with RUBY_PLATFORM.
+@
+text
+@d3 2
+a4 2
+# $Revision: 1.1 $
+# $Date: 2002/06/01 12:34:29 $
+d20 3
+a22 5
+  $CFLAGS='/W3'
+when /mingw/
+  $CFLAGS='-DNONAMELESSUNION'
+when /cygwin/
+  $CFLAGS='-DNONAMELESSUNION'
+@
+
+
+1.1
+log
+@merge win32ole from rough
+@
+text
+@d3 2
+a4 2
+# $Revision: 1.5 $
+# $Date: 2002/05/10 10:35:40 $
+d18 1
+a18 1
+case PLATFORM
+@

@@ -1,0 +1,915 @@
+head	1.5;
+access;
+symbols
+	start:1.1.1.1 NaCl:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	99.06.21.07.15.32;	author shugo;	state dead;
+branches;
+next	1.4;
+
+1.4
+date	99.06.01.07.05.50;	author shugo;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.05.21.06.48.04;	author shugo;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.05.19.00.45.57;	author shugo;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	99.04.20.08.41.05;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@/*
+ * $Id: ruby_module.c,v 1.4 1999/06/01 07:05:50 shugo Exp $
+ * Copyright (C) 1998-1999  Network Applied Communication Laboratory, Inc.
+ *
+ * This file is part of mod_ruby.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA
+ */
+
+#ifdef WIN32
+#include <windows.h>
+#endif
+
+#include "httpd.h"
+#include "http_config.h"
+#include "http_core.h"
+#include "http_log.h"
+#include "http_main.h"
+#include "http_protocol.h"
+#include "http_request.h"
+#include "util_script.h"
+#include "multithread.h"
+
+#include "ruby.h"
+#include "rubyio.h"
+#define regoff_t ruby_regoff_t
+#define regex_t ruby_regex_t
+#define regmatch_t ruby_regmatch_t
+#include "re.h"
+#include "util.h"
+#include "version.h"
+
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#ifdef USE_ERUBY
+#include "eruby.h"
+#endif
+
+#include "ruby_module.h"
+#include "ruby_config.h"
+#include "apachelib.h"
+
+extern char **environ;
+static char **origenviron;
+
+extern VALUE ruby_errinfo;
+extern VALUE rb_defout;
+extern VALUE rb_stdin;
+
+#ifdef MULTITHREAD
+static mutex *mod_ruby_mutex = NULL;
+#endif
+static int ruby_is_running = 0;
+static int exit_status;
+
+static const command_rec ruby_cmds[] =
+{
+    {"RubyKanjiCode", ruby_cmd_kanji_code, NULL, OR_ALL, TAKE1,
+     "set $KCODE"},
+    {"RubyRequire", ruby_cmd_require, NULL, OR_ALL, ITERATE,
+     "ruby script name, pulled in via require"},
+    {"RubyPassEnv", ruby_cmd_pass_env, NULL, RSRC_CONF, ITERATE,
+     "pass environment variables to ENV"},
+    {"RubySetEnv", ruby_cmd_set_env, NULL, OR_ALL, TAKE2,
+     "Ruby ENV key and value" },
+    {"RubyTimeOut", ruby_cmd_timeout, NULL, RSRC_CONF, TAKE1,
+     "time to wait execution of ruby script"},
+    {NULL}
+};
+
+static int ruby_handler(request_rec*);
+static int eruby_handler(request_rec*);
+
+static const handler_rec ruby_handlers[] =
+{
+    {"ruby-script", ruby_handler},
+#ifdef USE_ERUBY
+    {ERUBY_MIME_TYPE, eruby_handler},
+#endif
+    {NULL}
+};
+
+static void ruby_startup(server_rec*, pool*);
+
+MODULE_VAR_EXPORT module ruby_module =
+{
+    STANDARD_MODULE_STUFF,
+    ruby_startup,		/* initializer */
+    ruby_create_dir_config,	/* dir config creater */
+    ruby_merge_dir_config,	/* dir merger --- default is to override */
+    ruby_create_server_config,	/* create per-server config structure */
+    NULL,			/* merge server config */
+    ruby_cmds,			/* command table */
+    ruby_handlers,		/* handlers */
+    NULL,			/* filename translation */
+    NULL,			/* check_user_id */
+    NULL,			/* check auth */
+    NULL,			/* check access */
+    NULL,			/* type_checker */
+    NULL,			/* fixups */
+    NULL,			/* logger */
+    NULL,			/* header parser */
+    NULL,			/* child_init */
+    NULL,			/* child_exit */
+    NULL			/* post read-request */
+};
+
+/* copied from eval.c */
+#define TAG_RETURN	0x1
+#define TAG_BREAK	0x2
+#define TAG_NEXT	0x3
+#define TAG_RETRY	0x4
+#define TAG_REDO	0x5
+#define TAG_RAISE	0x6
+#define TAG_THROW	0x7
+#define TAG_FATAL	0x8
+#define TAG_MASK	0xf
+
+#define STRING_LITERAL(s) rb_str_new(s, sizeof(s) - 1)
+#define STR_CAT_LITERAL(str, s) rb_str_cat(str, s, sizeof(s) - 1)
+
+int ruby_running()
+{
+    return ruby_is_running;
+}
+
+static VALUE ruby_require0(VALUE fname)
+{
+    rb_f_require(Qnil, fname);
+    return Qnil;
+}
+
+int ruby_require(char *filename)
+{
+    VALUE fname = rb_str_new2(filename);
+    int state;
+
+    rb_protect(ruby_require0, fname, &state);
+    return state;
+}
+
+static VALUE f_p(int argc, VALUE *argv, VALUE self)
+{
+    int i;
+
+    for (i = 0; i < argc; i++) {
+	rb_io_write(rb_defout, rb_inspect(argv[i]));
+	rb_io_write(rb_defout, rb_default_rs);
+    }
+    return Qnil;
+}
+
+static VALUE f_exit(int argc, VALUE *argv, VALUE obj)
+{
+    VALUE status;
+
+    rb_secure(4);
+    if (rb_scan_args(argc, argv, "01", &status) == 1) {
+	exit_status = NUM2INT(status);
+	if (exit_status < 0)
+	    rb_raise(rb_eArgError, "negative status code %d", exit_status);
+    }
+    else {
+	exit_status = OK;
+    }
+    rb_exc_raise(rb_exc_new(rb_eSystemExit, 0, 0));
+    return Qnil;		/* not reached */
+}
+
+static void ruby_startup(server_rec *s, pool *p)
+{
+    ruby_server_config *conf =
+	(ruby_server_config *) ap_get_module_config(s->module_config,
+						    &ruby_module);
+    static char ruby_version[BUFSIZ];
+    char **list;
+    int i;
+
+#if MODULE_MAGIC_NUMBER >= 19980507
+    ap_add_version_component(MOD_RUBY_STRING_VERSION);
+    snprintf(ruby_version, BUFSIZ, "Ruby/%s(%s)", RUBY_VERSION, RUBY_RELEASE_DATE);
+    ap_add_version_component(ruby_version);
+#endif
+
+#ifdef MULTITHREAD
+    mod_ruby_mutex = ap_create_mutex("mod_ruby_mutex");
+#endif
+
+    ruby_init();
+    rb_set_safe_level(1);
+    rb_define_global_function("p", f_p, -1);
+    rb_define_global_function("exit", f_exit, -1);
+    ruby_init_apachelib();
+
+    rb_define_global_const("MOD_RUBY", STRING_LITERAL(MOD_RUBY_STRING_VERSION));
+    origenviron = environ;
+    ap_table_set(conf->env, "PATH", getenv("PATH"));
+    ap_table_set(conf->env, "RUBYLIB", getenv("RUBYLIB"));
+
+    list = (char **) conf->required_files->elts;
+    for (i = 0; i < conf->required_files->nelts; i++) {
+	if (ruby_require(list[i])) {
+	    fprintf(stderr, "Require of Ruby file `%s' failed, exiting...\n", 
+		    list[i]);
+	    exit(1);
+	}
+    }
+
+    ruby_is_running = 1;
+}
+
+static void mr_clearenv()
+{
+#ifdef WIN32
+    char *orgp, *p;
+
+    orgp = p = GetEnvironmentStrings();
+
+    if (p == NULL)
+	return;
+
+    while (*p) {
+	char buf[1024];
+	char *q;
+
+	strncpy(buf, p, sizeof buf);
+	q = strchr(buf, '=');
+	if (q)
+	    *(q+1) = '\0';
+
+	putenv(buf);
+	p += strlen(p) + 1;
+    }
+
+    FreeEnvironmentStrings(orgp);
+#else
+    if (environ == origenviron) {
+	environ = ALLOC_N(char*, 1);
+    }
+    else {
+	char **p;
+
+	for (p = environ; *p; p++) {
+	    if (*p) free(*p);
+	}
+	REALLOC_N(environ, char*, 1);
+    }
+    *environ = NULL;
+#endif
+}
+
+static void mr_setenv(const char *name, const char *value)
+{
+    if (!name) return;
+    if (value && *value)
+	ruby_setenv(name, value);
+    else
+	ruby_unsetenv(name);
+}
+
+static void setenv_from_table(table *tbl)
+{
+    array_header *env_arr;
+    table_entry *env;
+    int i;
+
+    env_arr = ap_table_elts(tbl);
+    env = (table_entry *) env_arr->elts;
+    for (i = 0; i < env_arr->nelts; i++) {
+	if (env[i].key == NULL)
+	    continue;
+	mr_setenv(env[i].key, env[i].val);
+    }
+}
+
+static void setup_env(request_rec *r, ruby_dir_config *dconf)
+{
+    ruby_server_config *sconf =
+	(ruby_server_config *) ap_get_module_config(r->server->module_config,
+						    &ruby_module);
+    char server_port[BUFSIZ];
+
+    mr_clearenv();
+    setenv_from_table(sconf->env);
+    if (dconf) setenv_from_table(dconf->env);
+    mr_setenv("MOD_RUBY", MOD_RUBY_STRING_VERSION);
+    mr_setenv("GATEWAY_INTERFACE", RUBY_GATEWAY_INTERFACE);
+    mr_setenv("HTTP_USER_AGENT", ap_table_get(r->headers_in, "User-Agent"));
+    mr_setenv("HTTP_REFERER", ap_table_get(r->headers_in, "Referer"));
+    mr_setenv("HTTP_COOKIE", ap_table_get(r->headers_in, "Cookie"));
+    mr_setenv("HTTP_FORWARDED", ap_table_get(r->headers_in, "Forwarded"));
+    mr_setenv("HTTP_HOST", ap_table_get(r->headers_in, "Host"));
+    mr_setenv("HTTP_CONNECTION", ap_table_get(r->headers_in, "Connection"));
+    mr_setenv("HTTP_PROXY_CONNECTION",
+	      ap_table_get(r->headers_in, "Proxy-Connection"));
+    mr_setenv("HTTP_ACCEPT", ap_table_get(r->headers_in, "Accept"));
+    mr_setenv("CONTENT_TYPE", ap_table_get(r->headers_in, "Content-Type"));
+    mr_setenv("CONTENT_LENGTH", ap_table_get(r->headers_in, "Content-Length"));
+    mr_setenv("REMOTE_ADDR", r->connection->remote_ip);
+    mr_setenv("REMOTE_HOST",
+	      ap_get_remote_host(r->connection, r->per_dir_config, REMOTE_NAME));
+    mr_setenv("REMOTE_USER", r->connection->user);
+    mr_setenv("REMOTE_IDENT", ap_get_remote_logname(r));
+    mr_setenv("REQUEST_METHOD", r->method);
+    mr_setenv("SCRIPT_FILENAME", r->filename);
+    mr_setenv("REQUEST_FILENAME", r->filename);
+    mr_setenv("REQUEST_URI", r->uri);
+    if (!strcmp(r->protocol, "INCLUDED")) {
+	mr_setenv("SCRIPT_NAME", r->uri);
+	mr_setenv("PATH_INFO", r->path_info);
+    }
+    else if (!r->path_info || !*r->path_info) {
+	mr_setenv("SCRIPT_NAME", r->uri);
+	ruby_unsetenv("PATH_INFO");
+    }
+    else {
+	int path_info_start = ap_find_path_info(r->uri, r->path_info);
+
+	mr_setenv("SCRIPT_NAME", ap_pstrndup(r->pool, r->uri, path_info_start));
+	mr_setenv("PATH_INFO", r->path_info);
+    }
+    if (r->path_info && *r->path_info) {
+#ifdef ap_escape_uri
+	request_rec *pa_req =
+	    ap_sub_req_lookup_uri(ap_escape_uri(r->pool, r->path_info), r);
+#else
+	request_rec *pa_req =
+	    ap_sub_req_lookup_uri(escape_uri(r->pool, r->path_info), r);
+#endif	
+
+	if (pa_req->filename) {
+	    char *pt = ap_pstrcat(r->pool, pa_req->filename, pa_req->path_info,
+				  NULL);
+#ifdef WIN32
+	    char buffer[HUGE_STRING_LEN];
+	    /* We need to make this a real Windows path name */
+	    GetFullPathName(pt, HUGE_STRING_LEN, buffer, NULL);
+	    mr_setenv("PATH_TRANSLATED", ap_pstrdup(r->pool, buffer));
+#else
+	    mr_setenv("PATH_TRANSLATED", pt);
+#endif
+	}
+	ap_destroy_sub_req(pa_req);
+    }
+    else {
+	ruby_unsetenv("PATH_TRANSLATED");
+    }
+    mr_setenv("QUERY_STRING", r->args);
+    mr_setenv("AUTH_TYPE", r->connection->ap_auth_type);
+    mr_setenv("DOCUMENT_ROOT", ap_document_root(r));
+    mr_setenv("SERVER_ADMIN", r->server->server_admin);
+    mr_setenv("SERVER_NAME", ap_get_server_name(r));
+    snprintf(server_port, BUFSIZ, "%u", ap_get_server_port(r));
+    mr_setenv("SERVER_PORT", server_port);
+    mr_setenv("SERVER_PROTOCOL", r->protocol);
+    mr_setenv("SERVER_SOFTWARE", ap_get_server_version());
+}
+
+static void get_error_pos(VALUE str)
+{
+    char buff[BUFSIZ];
+    ID last_func = rb_frame_last_func();
+
+    if (ruby_sourcefile) {
+	if (last_func) {
+	    snprintf(buff, BUFSIZ, "%s:%d:in `%s'", ruby_sourcefile, ruby_sourceline,
+		     rb_id2name(last_func));
+	}
+	else {
+	    snprintf(buff, BUFSIZ, "%s:%d", ruby_sourcefile, ruby_sourceline);
+	}
+	rb_str_cat(str, buff, strlen(buff));
+    }
+}
+
+static void get_exception_info(VALUE str)
+{
+    VALUE errat;
+    VALUE eclass;
+    VALUE einfo;
+
+    if (NIL_P(ruby_errinfo)) return;
+
+    errat = rb_funcall(ruby_errinfo, rb_intern("backtrace"), 0);
+    if (!NIL_P(errat)) {
+	VALUE mesg = RARRAY(errat)->ptr[0];
+
+	if (NIL_P(mesg)) {
+	    get_error_pos(str);
+	}
+	else {
+	    rb_str_cat(str, RSTRING(mesg)->ptr, RSTRING(mesg)->len);
+	}
+    }
+
+    eclass = CLASS_OF(ruby_errinfo);
+    einfo = rb_obj_as_string(ruby_errinfo);
+    if (eclass == rb_eRuntimeError && RSTRING(einfo)->len == 0) {
+	STR_CAT_LITERAL(str, ": unhandled exception\n");
+    }
+    else {
+	VALUE epath;
+
+	epath = rb_class_path(eclass);
+	if (RSTRING(einfo)->len == 0) {
+	    STR_CAT_LITERAL(str, ": ");
+	    rb_str_cat(str, RSTRING(epath)->ptr, RSTRING(epath)->len);
+	    STR_CAT_LITERAL(str, "\n");
+	}
+	else {
+	    char *tail  = 0;
+	    int len = RSTRING(einfo)->len;
+
+	    if (RSTRING(epath)->ptr[0] == '#') epath = 0;
+	    if ((tail = strchr(RSTRING(einfo)->ptr, '\n')) != NULL) {
+		len = tail - RSTRING(einfo)->ptr;
+		tail++;		/* skip newline */
+	    }
+	    STR_CAT_LITERAL(str, ": ");
+	    rb_str_cat(str, RSTRING(einfo)->ptr, len);
+	    if (epath) {
+		STR_CAT_LITERAL(str, " (");
+		rb_str_cat(str, RSTRING(epath)->ptr, RSTRING(epath)->len);
+		STR_CAT_LITERAL(str, ")\n");
+	    }
+	    if (tail) {
+		rb_str_cat(str, tail, RSTRING(einfo)->len - len - 1);
+		STR_CAT_LITERAL(str, "\n");
+	    }
+	}
+    }
+
+    if (!NIL_P(errat)) {
+	int i;
+	struct RArray *ep = RARRAY(errat);
+
+#define TRACE_MAX (TRACE_HEAD+TRACE_TAIL+5)
+#define TRACE_HEAD 8
+#define TRACE_TAIL 5
+
+	rb_ary_pop(errat);
+	ep = RARRAY(errat);
+	for (i=1; i<ep->len; i++) {
+	    if (TYPE(ep->ptr[i]) == T_STRING) {
+		STR_CAT_LITERAL(str, "\tfrom ");
+		rb_str_cat(str, RSTRING(ep->ptr[i])->ptr, RSTRING(ep->ptr[i])->len);
+		STR_CAT_LITERAL(str, "\n");
+	    }
+	    if (i == TRACE_HEAD && ep->len > TRACE_MAX) {
+		char buff[BUFSIZ];
+		snprintf(buff, BUFSIZ, "\t ... %d levels...\n",
+			 ep->len - TRACE_HEAD - TRACE_TAIL);
+		rb_str_cat(str, buff, strlen(buff));
+		i = ep->len - TRACE_TAIL;
+	    }
+	}
+    }
+    ruby_errinfo = Qnil;
+}
+
+static void ruby_error_print(request_rec *r, int state, int sync)
+{
+    char buff[BUFSIZ];
+    VALUE errmsg, logmsg;
+
+    if (!sync) {
+	r->content_type = "text/html";
+	ap_send_http_header(r);
+	ap_rputs("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n", r);
+	ap_rputs("<html>\n", r);
+	ap_rputs("<head><title>Error</title></head>\n", r);
+	ap_rputs("<body>\n", r);
+    }
+    ap_rputs("<pre>\n", r);
+
+    errmsg = STRING_LITERAL("");
+    switch (state) {
+    case TAG_RETURN:
+	get_error_pos(errmsg);
+	STR_CAT_LITERAL(errmsg, ": unexpected return\n");
+	break;
+    case TAG_NEXT:
+	get_error_pos(errmsg);
+	STR_CAT_LITERAL(errmsg, ": unexpected next\n");
+	break;
+    case TAG_BREAK:
+	get_error_pos(errmsg);
+	STR_CAT_LITERAL(errmsg, ": unexpected break\n");
+	break;
+    case TAG_REDO:
+	get_error_pos(errmsg);
+	STR_CAT_LITERAL(errmsg, ": unexpected redo\n");
+	break;
+    case TAG_RETRY:
+	get_error_pos(errmsg);
+	STR_CAT_LITERAL(errmsg, ": retry outside of rescue clause\n");
+	break;
+    case TAG_RAISE:
+    case TAG_FATAL:
+	get_exception_info(errmsg);
+	break;
+    default:
+	get_error_pos(errmsg);
+	snprintf(buff, BUFSIZ, ": unknown longjmp status %d", state);
+	rb_str_cat(errmsg, buff, strlen(buff));
+	break;
+    }
+    ap_rputs(ap_escape_html(r->pool, RSTRING(errmsg)->ptr), r);
+    logmsg = STRING_LITERAL("ruby script error\n");
+    rb_str_concat(logmsg, errmsg);
+    ap_log_error(APLOG_MARK, APLOG_ERR | APLOG_NOERRNO, r->server, RSTRING(logmsg)->ptr);
+
+    ap_rputs("</pre>\n", r);
+    if (!sync) {
+	ap_rputs("</body>\n", r);
+	ap_rputs("</html>\n", r);
+    }
+}
+
+static VALUE stdin_reopen(VALUE io)
+{
+    rb_funcall(rb_stdin, rb_intern("reopen"), 1, io);
+    return rb_stdin;
+}
+
+struct wcb_arg {
+    request_rec *r;
+    FILE *fp;
+};
+
+static VALUE write_client_block0(struct wcb_arg *arg)
+{
+    char buff[HUGE_STRING_LEN];
+    int len;
+#ifdef SIGPIPE
+    void (*handler) (int);
+#endif
+
+    ap_hard_timeout("write script args", arg->r);
+#ifdef SIGPIPE
+    handler = signal(SIGPIPE, SIG_IGN);
+#endif
+    while ((len = ap_get_client_block(arg->r, buff, HUGE_STRING_LEN)) > 0) {
+	ap_reset_timeout(arg->r);
+	if (fwrite(buff, 1, len, arg->fp) == EOF)
+	    break;
+    }
+#ifdef SIGPIPE
+    signal(SIGPIPE, handler);
+#endif
+    ap_kill_timeout(arg->r);
+    fclose(arg->fp);
+    return Qnil;
+}
+
+static int write_client_block(request_rec *r)
+{
+    struct wcb_arg arg;
+    int state;
+    int pipes[2];
+    FILE *file;
+    OpenFile *fp;
+    NEWOBJ(io, struct RFile);
+    OBJSETUP(io, rb_cIO, T_FILE);
+
+#ifdef NT
+    if (_pipe(pipes, 1024, O_BINARY) == -1)
+#else
+    if (pipe(pipes) == -1)
+#endif
+	return -1;
+    if ((file = fdopen(pipes[1], "w")) == NULL)
+	return -1;
+    MakeOpenFile(io, fp);
+    if ((fp->f = fdopen(pipes[0], "r")) == NULL)
+	return -1;
+    fp->mode = FMODE_READABLE;
+    rb_protect(stdin_reopen, (VALUE) io, &state);
+    if (state) {
+	fclose(file);
+	rb_protect(rb_io_close, (VALUE) io, &state);
+	return -1;
+    }
+    arg.r = r;
+    arg.fp = file;
+    rb_thread_create(write_client_block0, &arg);
+    return 0;
+}
+
+struct to_arg {
+    VALUE thread;
+    int timeout;
+};
+
+static VALUE do_timeout(struct to_arg *arg)
+{
+    char buff[BUFSIZ];
+    VALUE err;
+
+    rb_thread_sleep(arg->timeout);
+    snprintf(buff, BUFSIZ, "timeout (%d sec)", arg->timeout);
+    err = rb_exc_new2(rb_eApacheTimeoutError, buff);
+    rb_funcall(arg->thread, rb_intern("raise"), 1, err);
+    return Qnil;
+}
+
+static VALUE load_ruby_script(request_rec *r)
+{
+    ruby_server_config *sconf =
+	(ruby_server_config *) ap_get_module_config(r->server->module_config,
+						    &ruby_module);
+    VALUE orig_defout = rb_defout;
+    VALUE timeout_thread;
+    int state;
+    request_data *data;
+    struct to_arg arg;
+
+    rb_defout = ruby_create_request(r);
+    arg.thread = rb_thread_current();
+    arg.timeout = sconf->timeout;
+    timeout_thread = rb_thread_create(do_timeout, (void *) &arg);
+    ruby_errinfo = Qnil;
+    rb_load_protect(rb_str_new2(r->filename), 1, &state);
+    rb_funcall(timeout_thread, rb_intern("exit"), 0);
+    if (state && !rb_obj_is_kind_of(ruby_errinfo, rb_eSystemExit)) {
+	Data_Get_Struct(rb_defout, request_data, data);
+	ruby_error_print(r, state, data->sync);
+    }
+    else {
+	rb_request_flush(rb_defout);
+    }
+    rb_defout = orig_defout;
+    return Qnil;
+}
+
+#ifdef USE_ERUBY
+static char *get_charset()
+{
+    switch (rb_kcode()) {
+    case MBCTYPE_EUC:
+	return "EUC-JP";
+    case MBCTYPE_SJIS:
+	return "SHIFT_JIS";
+    case MBCTYPE_UTF8:
+	return "UTF8";
+    case MBCTYPE_ASCII:
+    default:
+	return "US-ASCII";
+    }
+}
+
+static VALUE load_eruby_script(request_rec *r)
+{
+    ruby_server_config *sconf =
+	(ruby_server_config *) ap_get_module_config(r->server->module_config,
+						    &ruby_module);
+    VALUE orig_defout = rb_defout;
+    VALUE timeout_thread;
+    VALUE script;
+    int state;
+    request_data *data;
+    struct to_arg arg;
+
+    rb_defout = ruby_create_request(r);
+    arg.thread = rb_thread_current();
+    arg.timeout = sconf->timeout;
+    timeout_thread = rb_thread_create(do_timeout, (void *) &arg);
+    ruby_errinfo = Qnil;
+    r->content_type = ap_psprintf(r->pool, "text/html; charset=%s", get_charset());
+    r->content_encoding = "7bit";
+    ap_send_http_header(r);
+    script = eruby_load(r->filename, 1, &state);
+    if (!NIL_P(script)) unlink(RSTRING(script)->ptr);
+    rb_funcall(timeout_thread, rb_intern("exit"), 0);
+    if (state && !rb_obj_is_kind_of(ruby_errinfo, rb_eSystemExit)) {
+	Data_Get_Struct(rb_defout, request_data, data);
+	ruby_error_print(r, state, data->sync);
+    }
+    else {
+	rb_request_flush(rb_defout);
+    }
+    rb_defout = orig_defout;
+    return Qnil;
+}
+#endif
+
+static VALUE thread_join(VALUE thread)
+{
+    return rb_funcall(thread, rb_intern("join"), 0);
+}
+
+static int ruby_handler0(VALUE (*load)(request_rec*), request_rec *r)
+{
+    VALUE thread;
+    ruby_dir_config *dconf = NULL;
+    int retval, state;
+    const char *kcode_orig = NULL;
+
+    (void) ap_acquire_mutex(mod_ruby_mutex);
+
+    if (r->finfo.st_mode == 0)
+	return NOT_FOUND;
+    if (S_ISDIR(r->finfo.st_mode))
+	return FORBIDDEN;
+
+    if(r->per_dir_config) {
+	dconf = (ruby_dir_config *) ap_get_module_config(r->per_dir_config,
+							 &ruby_module);
+	if (dconf->kcode) {
+	    kcode_orig = rb_get_kcode();
+	    rb_set_kcode(dconf->kcode);
+	}
+    }
+
+    if ((retval = ap_setup_client_block(r, REQUEST_CHUNKED_ERROR)))
+	return retval;
+
+    if (ap_should_client_block(r)) {
+	if (write_client_block(r) == -1)
+	    return SERVER_ERROR;
+    }
+
+    ap_chdir_file(r->filename);
+    setup_env(r, dconf);
+    exit_status = -1;
+
+    ap_soft_timeout("load ruby script", r);
+    thread = rb_thread_create(load, r);
+    rb_protect(thread_join, thread, &state);
+    ap_kill_timeout(r);
+
+    if (kcode_orig) rb_set_kcode(kcode_orig);
+    (void) ap_release_mutex(mod_ruby_mutex);
+
+#if defined(RUBY_RELEASE_CODE) && RUBY_RELEASE_CODE >= 19990601
+    rb_exec_end_proc();
+#endif
+    rb_gc();
+
+    if (exit_status < 0) {
+	return OK;
+    }
+    else {
+	return exit_status;
+    }
+}
+
+static int ruby_handler(request_rec *r)
+{
+    return ruby_handler0(load_ruby_script, r);
+}
+
+#ifdef USE_ERUBY
+static int eruby_handler(request_rec *r)
+{
+    return ruby_handler0(load_eruby_script, r);
+}
+#endif
+
+/*
+ * Local variables:
+ * mode: C
+ * tab-width: 8
+ * End:
+ */
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_module.c,v 1.3 1999/05/21 06:48:04 shugo Exp $
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_module.c,v 1.2 1999/05/19 00:45:57 shugo Exp $
+d749 5
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_module.c,v 1.1.1.1 1999/04/20 08:41:05 shugo Exp $
+d46 4
+a204 1
+    ruby_script("mod_ruby");
+d456 1
+d674 1
+d687 2
+a688 1
+    eruby_load(r->filename, 1, &state);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+a2 1
+ * $Id: ruby_module.c,v 1.1.1.1 1999/04/20 07:13:15 shugo Exp $
+a22 4
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+d39 4
+d46 4
+d83 1
+d88 3
+d100 2
+a101 2
+    ruby_create_dir_config,		/* dir config creater */
+    ruby_merge_dir_config,		/* dir merger --- default is to override */
+d618 1
+a618 1
+static VALUE load_script(request_rec *r)
+d647 49
+d701 1
+a701 1
+static int ruby_handler(request_rec *r)
+d737 1
+a737 1
+    thread = rb_thread_create(load_script, r);
+d751 12
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@

@@ -1,0 +1,727 @@
+head	1.8;
+access;
+symbols
+	v1_6_7:1.1.2.3
+	v1_6_6:1.1.2.3
+	v1_6_5:1.1.2.3
+	ruby_1_6:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.8
+date	2002.09.26.13.49.40;	author knu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.09.05.02.11.41;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.09.04.09.21.07;	author michal;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.09.04.06.37.37;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.09.03.05.20.10;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.09.06.05.27.19;	author knu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.09.06.04.59.51;	author knu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.07.13.20.06.13;	author knu;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2001.08.16.07.35.42;	author knu;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2001.09.06.05.02.29;	author knu;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2001.09.06.05.29.27;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@* ext/digest/digest.c (rb_digest_base_s_digest): Fix a double
+  free() bug mingled with allocation framework deployment.
+
+* ext/digest/digest.c (rb_digest_base_s_hexdigest): Get rid of
+  redundant struct allocation.
+@
+text
+@/************************************************
+
+  digest.c -
+
+  $Author: matz $
+  created at: Fri May 25 08:57:27 JST 2001
+
+  Copyright (C) 1995-2001 Yukihiro Matsumoto
+  Copyright (C) 2001 Akinori MUSHA
+
+  $RoughId: digest.c,v 1.16 2001/07/13 15:38:27 knu Exp $
+  $Id: digest.c,v 1.7 2002/09/05 02:11:41 matz Exp $
+
+************************************************/
+
+/*
+ * This module provides an interface to the following hash algorithms:
+ *
+ *   - the MD5 Message-Digest Algorithm by the RSA Data Security,
+ *     Inc., described in RFC 1321
+ *
+ *   - the SHA-1 Secure Hash Algorithm by NIST (the US' National
+ *     Institute of Standards and Technology), described in FIPS PUB
+ *     180-1.
+ *
+ *   - the SHA-256/384/512 Secure Hash Algorithm by NIST (the US'
+ *     National Institute of Standards and Technology), described in
+ *     FIPS PUB 180-2.
+ *
+ *   - the RIPEMD-160 cryptographic hash function, designed by Hans
+ *     Dobbertin, Antoon Bosselaers, and Bart Preneel.
+ */
+
+#include "digest.h"
+
+static VALUE mDigest, cDigest_Base;
+static ID id_metadata;
+
+/*
+ * Digest::Base
+ */
+
+static algo_t *
+get_digest_base_metadata(klass)
+    VALUE klass;
+{
+    VALUE obj;
+    algo_t *algo;
+
+    if (rb_cvar_defined(klass, id_metadata) == Qfalse) {
+	rb_notimplement();
+    }
+
+    obj = rb_cvar_get(klass, id_metadata);
+
+    Data_Get_Struct(obj, algo_t, algo);
+
+    return algo;
+}
+	
+static VALUE
+rb_digest_base_alloc(klass)
+    VALUE klass;
+{
+    algo_t *algo;
+    VALUE obj;
+    void *pctx;
+
+    if (klass == cDigest_Base) {
+	rb_raise(rb_eNotImpError, "Digest::Base is an abstract class");
+    }
+
+    algo = get_digest_base_metadata(klass);
+
+    pctx = xmalloc(algo->ctx_size);
+    algo->init_func(pctx);
+
+    obj = Data_Wrap_Struct(klass, 0, free, pctx);
+
+    return obj;
+}
+
+static VALUE
+rb_digest_base_s_digest(klass, str)
+    VALUE klass;
+    VALUE str;
+{
+    algo_t *algo;
+    void *pctx;
+    size_t len;
+    unsigned char *digest;
+    VALUE obj = rb_digest_base_alloc(klass);
+
+    algo = get_digest_base_metadata(klass);
+    Data_Get_Struct(obj, void, pctx);
+
+    StringValue(str);
+    algo->update_func(pctx, RSTRING(str)->ptr, RSTRING(str)->len);
+
+    len = algo->digest_len;
+
+    digest = xmalloc(len);
+    algo->final_func(digest, pctx);
+
+    obj = rb_str_new(digest, len);
+
+    free(digest);
+
+    return obj;
+}
+
+static VALUE
+rb_digest_base_s_hexdigest(klass, str)
+    VALUE klass;
+    VALUE str;
+{
+    algo_t *algo;
+    void *pctx;
+    size_t len;
+    unsigned char *hexdigest;
+    VALUE obj = rb_digest_base_alloc(klass);
+
+    algo = get_digest_base_metadata(klass);
+    Data_Get_Struct(obj, void, pctx);
+
+    StringValue(str);
+    algo->update_func(pctx, RSTRING(str)->ptr, RSTRING(str)->len);
+
+    len = algo->digest_len * 2;
+
+    hexdigest = xmalloc(len + 1); /* +1 is for '\0' */
+    algo->end_func(pctx, hexdigest);
+
+    obj = rb_str_new(hexdigest, len);
+
+    free(hexdigest);
+
+    return obj;
+}
+
+static VALUE
+rb_digest_base_become(copy, obj)
+    VALUE copy, obj;
+{
+    algo_t *algo;
+    void *pctx1, *pctx2;
+
+    if (copy == obj) return copy;
+    rb_check_frozen(copy);
+    algo = get_digest_base_metadata(CLASS_OF(copy));
+    if (algo != get_digest_base_metadata(CLASS_OF(obj))) {
+	rb_raise(rb_eTypeError, "wrong argument class");
+    }
+    Data_Get_Struct(obj, void, pctx1);
+    Data_Get_Struct(copy, void, pctx2);
+    memcpy(pctx2, pctx1, algo->ctx_size);
+
+    return copy;
+}
+
+static VALUE
+rb_digest_base_update(self, str)
+    VALUE self, str;
+{
+    algo_t *algo;
+    void *pctx;
+
+    StringValue(str);
+    algo = get_digest_base_metadata(CLASS_OF(self));
+    Data_Get_Struct(self, void, pctx);
+
+    algo->update_func(pctx, RSTRING(str)->ptr, RSTRING(str)->len);
+
+    return self;
+}
+
+static VALUE
+rb_digest_base_init(argc, argv, self)
+    int argc;
+    VALUE* argv;
+    VALUE self;
+{
+    VALUE arg;
+
+    rb_scan_args(argc, argv, "01", &arg);
+
+    if (!NIL_P(arg)) rb_digest_base_update(self, arg);
+
+    return self;
+}
+
+static VALUE
+rb_digest_base_digest(self)
+    VALUE self;
+{
+    algo_t *algo;
+    void *pctx1, *pctx2;
+    unsigned char *digest;
+    size_t len;
+    VALUE str;
+
+    algo = get_digest_base_metadata(CLASS_OF(self));
+    Data_Get_Struct(self, void, pctx1);
+
+    len = algo->ctx_size;
+
+    pctx2 = xmalloc(len);
+    memcpy(pctx2, pctx1, len);
+
+    len = algo->digest_len;
+
+    digest = xmalloc(len);
+    algo->final_func(digest, pctx2);
+
+    str = rb_str_new(digest, len);
+
+    free(digest);
+    free(pctx2);
+
+    return str;
+}
+
+static VALUE
+rb_digest_base_hexdigest(self)
+    VALUE self;
+{
+    algo_t *algo;
+    void *pctx1, *pctx2;
+    unsigned char *hexdigest;
+    size_t len;
+    VALUE str;
+
+    algo = get_digest_base_metadata(CLASS_OF(self));
+    Data_Get_Struct(self, void, pctx1);
+
+    len = algo->ctx_size;
+
+    pctx2 = xmalloc(len);
+    memcpy(pctx2, pctx1, len);
+
+    len = algo->digest_len * 2;
+
+    hexdigest = xmalloc(len + 1); /* +1 is for '\0' */
+    algo->end_func(pctx2, hexdigest);
+
+    str = rb_str_new(hexdigest, len);
+
+    free(hexdigest);
+    free(pctx2);
+
+    return str;
+}
+
+static VALUE
+rb_digest_base_equal(self, other)
+    VALUE self, other;
+{
+    algo_t *algo;
+    VALUE klass;
+    VALUE str1, str2;
+
+    klass = CLASS_OF(self);
+    algo = get_digest_base_metadata(klass);
+
+    if (CLASS_OF(other) == klass) {
+	void *pctx1, *pctx2;
+
+	Data_Get_Struct(self, void, pctx1);
+	Data_Get_Struct(other, void, pctx2);
+
+	return algo->equal_func(pctx1, pctx2) ? Qtrue : Qfalse;
+    }
+
+    StringValue(other);
+    str2 = other;
+
+    if (RSTRING(str2)->len == algo->digest_len)
+	str1 = rb_digest_base_digest(self);
+    else
+	str1 = rb_digest_base_hexdigest(self);
+
+    if (RSTRING(str1)->len == RSTRING(str2)->len
+      && rb_str_cmp(str1, str2) == 0)
+	return Qtrue;
+
+    return Qfalse;
+}
+
+/*
+ * Init
+ */
+
+void
+Init_digest()
+{
+    mDigest = rb_define_module("Digest");
+
+    cDigest_Base = rb_define_class_under(mDigest, "Base", rb_cObject);
+
+    rb_define_singleton_method(cDigest_Base, "allocate", rb_digest_base_alloc, 0);
+    rb_define_singleton_method(cDigest_Base, "digest", rb_digest_base_s_digest, 1);
+    rb_define_singleton_method(cDigest_Base, "hexdigest", rb_digest_base_s_hexdigest, 1);
+
+    rb_define_method(cDigest_Base, "initialize", rb_digest_base_init, -1);
+    rb_define_method(cDigest_Base, "become",  rb_digest_base_become, 1);
+    rb_define_method(cDigest_Base, "update", rb_digest_base_update, 1);
+    rb_define_method(cDigest_Base, "<<", rb_digest_base_update, 1);
+    rb_define_method(cDigest_Base, "digest", rb_digest_base_digest, 0);
+    rb_define_method(cDigest_Base, "hexdigest", rb_digest_base_hexdigest, 0);
+    rb_define_method(cDigest_Base, "to_s", rb_digest_base_hexdigest, 0);
+    rb_define_method(cDigest_Base, "==", rb_digest_base_equal, 1);
+
+    id_metadata = rb_intern("metadata");
+}
+@
+
+
+1.7
+log
+@= should be ==
+@
+text
+@d5 1
+a5 1
+  $Author: michal $
+d12 1
+a12 1
+  $Id: digest.c,v 1.6 2002/09/04 09:21:07 michal Exp $
+a107 1
+    free(pctx);
+a122 1
+    StringValue(str);
+d124 1
+d126 1
+a126 2
+    pctx = xmalloc(algo->ctx_size);
+    algo->init_func(pctx);
+a136 1
+    free(pctx);
+@
+
+
+1.6
+log
+@Fix rb_digest_base_become (ruby-core:428)
+@
+text
+@d5 1
+a5 1
+  $Author: matz $
+d12 1
+a12 1
+  $Id: digest.c,v 1.5 2002/09/04 06:37:37 matz Exp $
+d151 1
+a151 1
+    if (copy = obj) return copy;
+@
+
+
+1.5
+log
+@* class.c (rb_make_metaclass): obj.meta.super.meta should be equal
+  to obj.meta.meta.super (ruby-bugs-ja:PR#324).
+
+* parse.y (yylex): the warning message "invalid
+  character syntax" was never issued.
+
+* marshal.c (r_bytes): do not use alloca (ruby-bugs:PR#382).
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.4 2002/09/03 05:20:10 matz Exp $
+a149 1
+    VALUE klass;
+d153 1
+a153 1
+    algo = get_digest_base_metadata(CLASS_OF(klass));
+d157 1
+a157 1
+    Data_Get_Struct(copy, void, pctx1);
+@
+
+
+1.4
+log
+@	* variable.c (rb_copy_generic_ivar): remove old generic instance
+	  variable table if it existes.
+
+	* class.c (rb_make_metaclass): metaclass of a metaclass is a
+	  metaclass itself.
+@
+text
+@d5 1
+a5 1
+  $Author: knu $
+d12 1
+a12 1
+  $Id: digest.c,v 1.3 2001/09/06 05:27:19 knu Exp $
+a151 1
+    printf("Digest::Base::bacome\n");
+a303 1
+    printf("Init_digest\n");
+@
+
+
+1.3
+log
+@* ext/digest/digest.c (rb_digest_base_s_hexdigest): remove a debug
+  print.
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.2 2001/09/06 04:59:51 knu Exp $
+d44 2
+a45 2
+get_digest_base_metadata(class)
+    VALUE class;
+d50 1
+a50 1
+    if (rb_cvar_defined(class, id_metadata) == Qfalse)
+d52 1
+d54 1
+a54 1
+    obj = rb_cvar_get(class, id_metadata);
+d62 2
+a63 4
+rb_digest_base_s_new(argc, argv, class)
+    int argc;
+    VALUE* argv;
+    VALUE class;
+d69 1
+a69 1
+    if (class == cDigest_Base)
+d71 1
+d73 1
+a73 1
+    algo = get_digest_base_metadata(class);
+d78 1
+a78 3
+    obj = Data_Wrap_Struct(class, 0, free, pctx);
+
+    rb_obj_call_init(obj, argc, argv);
+d84 2
+a85 2
+rb_digest_base_s_digest(class, str)
+    VALUE class;
+d92 1
+a92 1
+    VALUE obj;
+d94 2
+a95 2
+    if (class == cDigest_Base)
+	rb_raise(rb_eNotImpError, "Digest::Base is an abstract class");
+a96 1
+#ifdef StringValue
+a97 8
+#else
+    Check_Type(str, T_STRING);
+#endif
+
+    algo = get_digest_base_metadata(class);
+
+    pctx = xmalloc(algo->ctx_size);
+    algo->init_func(pctx);
+d114 2
+a115 2
+rb_digest_base_s_hexdigest(class, str)
+    VALUE class;
+d122 1
+a122 1
+    VALUE obj;
+a123 4
+    if (class == cDigest_Base)
+	rb_raise(rb_eNotImpError, "Digest::Base is an abstract class");
+
+#ifdef StringValue
+d125 1
+a125 5
+#else
+    Check_Type(str, T_STRING);
+#endif
+
+    algo = get_digest_base_metadata(class);
+d145 2
+a146 2
+rb_digest_base_clone(self)
+    VALUE self;
+d150 1
+a150 1
+    VALUE class;
+d152 9
+a160 5
+    class = CLASS_OF(self);
+    algo = get_digest_base_metadata(class);
+    Data_Get_Struct(self, void, pctx1);
+
+    pctx2 = xmalloc(algo->ctx_size);
+d163 1
+a163 1
+    return Data_Wrap_Struct(class, 0, free, pctx2);
+a172 1
+#ifdef StringValue
+a173 4
+#else
+    Check_Type(str, T_STRING);
+#endif
+
+d264 1
+a264 1
+    VALUE class;
+d267 2
+a268 2
+    class = CLASS_OF(self);
+    algo = get_digest_base_metadata(class);
+d270 1
+a270 1
+    if (CLASS_OF(other) == class) {
+a278 1
+#ifdef StringValue
+a279 3
+#else
+    Check_Type(other, T_STRING);
+#endif
+d305 2
+a306 1
+    rb_define_singleton_method(cDigest_Base, "new", rb_digest_base_s_new, -1);
+d311 1
+a311 1
+    rb_define_method(cDigest_Base, "clone",  rb_digest_base_clone, 0);
+@
+
+
+1.2
+log
+@* ext/digest/digest.c (rb_digest_base_s_digest,
+  rb_digest_base_s_hexdigest): ensure that a string is given.
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.1 2001/07/13 20:06:13 knu Exp $
+d154 1
+a154 1
+    puts(hexdigest);
+@
+
+
+1.1
+log
+@Import the "digest" module and the submodules, from the Rough Ruby
+project.
+
+  ext/digest:
+    This module provides the module Digest and the abstract class
+    Digest::Base.
+
+  ext/digest/md5 (which obsoletes ext/md5):
+    This module provides the class Digest::MD5 which implements the
+    MD5 Message-Digest Algorithm.
+
+  ext/digest/rmd160:
+    This module provides the class Digest::RMD160 which implements the
+    RIPEMD-160 cryptographic hash function.
+
+  ext/digest/sha1 (which obsoletes ext/sha1):
+    This module provides the class Digest::SHA1 which implements the
+    SHA-1 Secure Hash Algorithm.
+
+  ext/digest/sha2:
+    This module provides the classes Digest::SHA256, Digest::SHA384
+    and Digest::SHA512 which implement the SHA-256, SHA-384 and
+    SHA-512 Secure Hash Algorithms, respectively.
+
+  lib/md5.rb, lib/sha1.rb:
+    These files are provided for backward compatibility.
+
+All these classes have the common API, which previously ext/md5 and
+ext/sha1 modules provided.  While the new API keeps 100% backward
+compatibility, it has been enriched with several utility methods.
+
+Read digest.txt for further details.
+@
+text
+@d12 1
+a12 1
+  $Id$
+d99 6
+d137 6
+@
+
+
+1.1.2.1
+log
+@* LEGAL, ext/Setup*, ext/digest/*: Merge from 1.7: Import digest
+  modules.
+
+* ext/md5/*: Move to ext/digest/md5.
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.1 2001/07/13 20:06:13 knu Exp $
+@
+
+
+1.1.2.2
+log
+@* ext/digest/digest.c (rb_digest_base_s_digest,
+  rb_digest_base_s_hexdigest): ensure that a string is given.
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.1.2.1 2001/08/16 07:35:42 knu Exp $
+a98 6
+#ifdef StringValue
+    StringValue(str);
+#else
+    Check_Type(str, T_STRING);
+#endif
+
+a130 6
+
+#ifdef StringValue
+    StringValue(str);
+#else
+    Check_Type(str, T_STRING);
+#endif
+@
+
+
+1.1.2.3
+log
+@* ext/digest/digest.c (rb_digest_base_s_hexdigest): remove a debug
+  print.
+@
+text
+@d12 1
+a12 1
+  $Id: digest.c,v 1.1.2.2 2001/09/06 05:02:29 knu Exp $
+d154 1
+a154 1
+
+@

@@ -1,0 +1,6555 @@
+head	1.56;
+access;
+symbols
+	v1_6_7:1.24.2.7
+	v1_6_6:1.24.2.3
+	v1_6_5:1.24.2.2
+	v1_6_4:1.24.2.1
+	v1_7_1:1.36
+	v1_6_4_preview4:1.24.2.1
+	v1_6_4_preview3:1.24.2.1
+	v1_6_4_preview2:1.24
+	v1_6_4_preview1:1.24
+	v1_6_3:1.24
+	ruby_m17n:1.25.0.2
+	ruby_1_6:1.24.0.2
+	v1_6_2:1.24
+	v1_6_1:1.18
+	v1_6_0:1.18
+	v1_4_6:1.2.2.6
+	v1_4_5:1.2.2.5
+	v1_4_4:1.2.2.5
+	ruby_1_4_3:1.2.2.2
+	ruby1_4_3:1.2.2.2
+	v1_4_3:1.2.2.2
+	v1_5_0:1.5
+	ruby_1_4_3_pre1:1.2.2.2
+	ruby_1_4:1.2.0.2
+	v1_4_2:1.2
+	v1_4_1:1.2
+	v1_4_0:1.2
+	v1_3_7:1.1.1.3.2.11
+	v1_3_6_repack:1.1.1.3.2.11
+	v1_3_6:1.1.1.3.2.11
+	v1_3_5:1.1.1.3.2.10
+	v1_2_6repack:1.1.1.2.2.17
+	v1_3_4_990625:1.1.1.3.2.9
+	v1_3_4_990624:1.1.1.3.2.9
+	v1_2_6:1.1.1.2.2.17
+	v1_3_4_990611:1.1.1.3.2.8
+	v1_3_4_990531:1.1.1.3.2.7
+	v1_3_3_990518:1.1.1.3.2.7
+	v1_3_3_990513:1.1.1.3.2.7
+	v1_3_3_990507:1.1.1.3.2.7
+	v1_2_5:1.1.1.2.2.17
+	v1_2_4:1.1.1.2.2.17
+	v1_3_1_990225:1.1.1.3.2.4
+	v1_3_1_990224:1.1.1.3.2.3
+	v1_3_1_990215:1.1.1.3.2.2
+	v1_3_1_990212:1.1.1.3.2.1
+	v1_3_1_990210:1.1.1.3.2.1
+	v1_3_1_:1.1.1.3.2.1
+	v1_3_1_990209:1.1.1.3.2.1
+	v1_3_1_990205:1.1.1.3.2.1
+	v1_3_1_990203:1.1.1.3.2.1
+	v1_3_1_990201:1.1.1.3.2.1
+	v1_3_1"_990201:1.1.1.3.2.1
+	v1_3_1_990128:1.1.1.3.2.1
+	v1_3_1_990127:1.1.1.3.2.1
+	v1_3_1_990126:1.1.1.3.2.1
+	ruby_1_3:1.1.1.3.0.2
+	v1_2_2:1.1.1.2.2.17
+	RUBY_1_3:1.1.1.3
+	v1_2_2_pr1:1.1.1.2.2.17
+	v1_2_1repack:1.1.1.2.2.17
+	v1_2_1:1.1.1.2.2.17
+	v1_2_stable:1.1.1.2.2.17
+	v1_1d1:1.1.1.2.2.15.2.5
+	v1_1d0:1.1.1.2.2.15.2.4
+	v1_1c9_1:1.1.1.2.2.17
+	v1_1c9:1.1.1.2.2.16
+	v1_1c8:1.1.1.2.2.16
+	v1_1c7:1.1.1.2.2.16
+	v1_1c6:1.1.1.2.2.16
+	v1_1d-start:1.1.1.2.2.15.2.1
+	v1_1c5:1.1.1.2.2.15
+	v1_1dev:1.1.1.2.2.15.0.2
+	v1_1c4:1.1.1.2.2.15
+	v1_1c3:1.1.1.2.2.15
+	v1_1c2:1.1.1.2.2.15
+	v1_1c1:1.1.1.2.2.14
+	v1_1c0:1.1.1.2.2.14
+	v1_1b9_31:1.1.1.2.2.13
+	v1_1b9_30:1.1.1.2.2.12
+	v1_1b9_28:1.1.1.2.2.9
+	v1_1b9_27:1.1.1.2.2.7
+	v1_1b9_26:1.1.1.2.2.7
+	r1_1b9_25:1.1.1.2.2.6
+	r1_1b9_24:1.1.1.2.2.6
+	v1_1b9_23:1.1.1.2.2.6
+	v1_1b9_22:1.1.1.2.2.5
+	v1_1b9_20:1.1.1.2.2.4
+	v1_1b9_18:1.1.1.2.2.3
+	v1_1b9_16:1.1.1.2.2.3
+	v1_1b9_15:1.1.1.2.2.3
+	v1_1b9_13:1.1.1.2.2.3
+	v1_1b9_12:1.1.1.2.2.3
+	v1_1b9_11:1.1.1.2.2.3
+	v1_1b9_08:1.1.1.2.2.3
+	v1_1b9_07:1.1.1.2.2.3
+	r1_1b9:1.1.1.2.2.3
+	v1_1b8:1.1.1.2.2.3
+	v1_1b7:1.1.1.2.2.3
+	v1_1b6:1.1.1.2.2.2
+	v1_1r:1.1.1.2.0.2
+	v1_1:1.1.1.2
+	v1_0r:1.1.1.1.0.2
+	v1_0:1.1.1.1
+	RUBY:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.56
+date	2002.09.17.13.52.45;	author michal;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.08.28.08.05.23;	author michal;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.08.21.15.47.54;	author michal;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.07.11.08.22.10;	author matz;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.05.14.06.22.26;	author matz;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.03.22.07.26.35;	author matz;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.03.11.08.02.02;	author matz;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.02.26.06.48.59;	author matz;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.02.25.09.16.25;	author matz;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.02.19.06.43.58;	author matz;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.02.06.07.30.13;	author matz;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.01.11.09.18.50;	author matz;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.01.04.14.14.34;	author matz;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.11.21.15.41.26;	author matz;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.11.19.05.03.03;	author matz;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.11.08.06.43.08;	author matz;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.10.09.09.42.47;	author eban;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.09.08.14.17.09;	author matz;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.08.06.03.05.13;	author matz;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.07.31.08.04.13;	author nobu;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.05.21.04.22.54;	author matz;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.05.16.09.05.50;	author matz;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.05.02.04.22.11;	author matz;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.03.28.08.43.25;	author matz;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.02.20.14.52.31;	author eban;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.02.19.07.03.06;	author matz;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.02.16.07.53.19;	author matz;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.02.15.06.00.55;	author matz;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.01.29.05.10.42;	author matz;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.01.10.07.52.45;	author matz;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.01.10.07.30.18;	author eban;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.12.26.08.08.50;	author matz;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.12.25.06.29.07;	author matz;	state Exp;
+branches
+	1.24.2.1;
+next	1.23;
+
+1.23
+date	2000.11.27.09.23.23;	author matz;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.11.13.10.11.28;	author eban;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.10.20.16.36.53;	author matz;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.10.17.18.13.58;	author matz;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.10.10.07.03.21;	author matz;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.08.07.05.01.54;	author matz;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.07.21.08.45.32;	author matz;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.06.19.08.38.08;	author matz;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.13.09.42.40;	author matz;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.05.24.04.34.05;	author matz;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.05.17.04.38.15;	author matz;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.05.09.04.53.02;	author matz;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.05.01.09.41.25;	author matz;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.03.13.07.18.37;	author matz;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.03.07.08.37.43;	author matz;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.02.17.07.11.14;	author matz;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.05.04.37.08;	author matz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.12.14.06.49.50;	author matz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.12.06.09.03.55;	author matz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.11.25.09.03.06;	author matz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.10.29.09.25.31;	author matz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.13.05.45.12;	author matz;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	98.01.16.12.13.06;	author matz;	state Exp;
+branches;
+next	1.1.1.2;
+
+1.1.1.2
+date	98.01.16.12.19.11;	author matz;	state Exp;
+branches
+	1.1.1.2.2.1;
+next	1.1.1.3;
+
+1.1.1.3
+date	99.01.20.04.59.25;	author matz;	state Exp;
+branches
+	1.1.1.3.2.1;
+next	;
+
+1.1.1.3.2.1
+date	99.01.26.10.08.14;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.2;
+
+1.1.1.3.2.2
+date	99.02.15.07.31.51;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.3;
+
+1.1.1.3.2.3
+date	99.02.24.04.31.23;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.4;
+
+1.1.1.3.2.4
+date	99.02.25.06.39.10;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.5;
+
+1.1.1.3.2.5
+date	99.03.24.08.52.31;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.6;
+
+1.1.1.3.2.6
+date	99.04.09.17.57.42;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.7;
+
+1.1.1.3.2.7
+date	99.05.06.08.31.43;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.8;
+
+1.1.1.3.2.8
+date	99.06.01.06.59.19;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.9;
+
+1.1.1.3.2.9
+date	99.06.24.04.24.00;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.10;
+
+1.1.1.3.2.10
+date	99.07.15.07.59.51;	author matz;	state Exp;
+branches;
+next	1.1.1.3.2.11;
+
+1.1.1.3.2.11
+date	99.07.28.09.26.46;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.1
+date	98.01.16.12.35.47;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.2;
+
+1.1.1.2.2.2
+date	98.01.19.07.34.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.3;
+
+1.1.1.2.2.3
+date	98.01.29.09.48.13;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.4;
+
+1.1.1.2.2.4
+date	98.05.13.07.26.27;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.5;
+
+1.1.1.2.2.5
+date	98.05.18.04.56.12;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.6;
+
+1.1.1.2.2.6
+date	98.05.25.04.57.48;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.7;
+
+1.1.1.2.2.7
+date	98.06.16.04.23.42;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.8;
+
+1.1.1.2.2.8
+date	98.06.24.04.38.02;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.9;
+
+1.1.1.2.2.9
+date	98.06.26.09.44.31;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.10;
+
+1.1.1.2.2.10
+date	98.07.03.07.06.35;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.11;
+
+1.1.1.2.2.11
+date	98.07.08.07.16.55;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.12;
+
+1.1.1.2.2.12
+date	98.07.09.08.40.22;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.13;
+
+1.1.1.2.2.13
+date	98.07.13.04.37.52;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.14;
+
+1.1.1.2.2.14
+date	98.07.17.05.12.41;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15;
+
+1.1.1.2.2.15
+date	98.08.10.05.41.18;	author matz;	state Exp;
+branches
+	1.1.1.2.2.15.2.1;
+next	1.1.1.2.2.16;
+
+1.1.1.2.2.16
+date	98.10.06.02.45.00;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.17;
+
+1.1.1.2.2.17
+date	98.12.14.09.00.07;	author matz;	state Exp;
+branches;
+next	;
+
+1.1.1.2.2.15.2.1
+date	98.09.08.07.09.01;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15.2.2;
+
+1.1.1.2.2.15.2.2
+date	98.10.06.03.28.14;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15.2.3;
+
+1.1.1.2.2.15.2.3
+date	98.11.25.03.31.15;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15.2.4;
+
+1.1.1.2.2.15.2.4
+date	98.12.16.07.30.33;	author matz;	state Exp;
+branches;
+next	1.1.1.2.2.15.2.5;
+
+1.1.1.2.2.15.2.5
+date	98.12.22.09.01.52;	author matz;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	99.10.25.05.09.12;	author matz;	state Exp;
+branches;
+next	1.2.2.2;
+
+1.2.2.2
+date	99.11.24.07.13.52;	author matz;	state Exp;
+branches;
+next	1.2.2.3;
+
+1.2.2.3
+date	2000.01.17.08.24.09;	author matz;	state Exp;
+branches;
+next	1.2.2.4;
+
+1.2.2.4
+date	2000.02.17.08.29.01;	author matz;	state Exp;
+branches;
+next	1.2.2.5;
+
+1.2.2.5
+date	2000.03.13.09.15.44;	author matz;	state Exp;
+branches;
+next	1.2.2.6;
+
+1.2.2.6
+date	2000.07.24.07.16.13;	author matz;	state Exp;
+branches;
+next	;
+
+1.24.2.1
+date	2001.05.11.14.55.58;	author knu;	state Exp;
+branches;
+next	1.24.2.2;
+
+1.24.2.2
+date	2001.09.08.14.05.51;	author matz;	state Exp;
+branches;
+next	1.24.2.3;
+
+1.24.2.3
+date	2001.11.22.18.16.24;	author usa;	state Exp;
+branches;
+next	1.24.2.4;
+
+1.24.2.4
+date	2002.01.04.14.19.48;	author matz;	state Exp;
+branches;
+next	1.24.2.5;
+
+1.24.2.5
+date	2002.02.25.09.18.09;	author matz;	state Exp;
+branches;
+next	1.24.2.6;
+
+1.24.2.6
+date	2002.02.25.10.42.26;	author nobu;	state Exp;
+branches;
+next	1.24.2.7;
+
+1.24.2.7
+date	2002.02.27.04.50.30;	author matz;	state Exp;
+branches;
+next	1.24.2.8;
+
+1.24.2.8
+date	2002.03.12.09.27.26;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.56
+log
+@move struct timeval to missing.h
+@
+text
+@/**********************************************************************
+
+  process.c -
+
+  $Author: michal $
+  $Date: 2002/08/28 08:05:23 $
+  created at: Tue Aug 10 14:30:50 JST 1993
+
+  Copyright (C) 1993-2002 Yukihiro Matsumoto
+  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
+  Copyright (C) 2000  Information-technology Promotion Agency, Japan
+
+**********************************************************************/
+
+#include "ruby.h"
+#include "rubysig.h"
+#include <stdio.h>
+#include <errno.h>
+#include <signal.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#include <time.h>
+#include <ctype.h>
+
+struct timeval rb_time_interval _((VALUE));
+
+#ifdef HAVE_SYS_WAIT_H
+# include <sys/wait.h>
+#endif
+#ifdef HAVE_GETPRIORITY
+# include <sys/resource.h>
+#endif
+#include "st.h"
+
+#ifdef __EMX__
+#undef HAVE_GETPGRP
+#endif
+
+#ifdef HAVE_SYS_TIMES_H
+#include <sys/times.h>
+#endif
+
+#if defined(HAVE_TIMES) || defined(NT)
+static VALUE S_Tms;
+#endif
+
+#ifndef WIFEXITED
+#define WIFEXITED(w)    (((w) & 0xff) == 0)
+#endif
+#ifndef WIFSIGNALED
+#define WIFSIGNALED(w)  (((w) & 0x7f) > 0 && (((w) & 0x7f) < 0x7f))
+#endif
+#ifndef WIFSTOPPED
+#define WIFSTOPPED(w)   (((w) & 0xff) == 0x7f)
+#endif
+#ifndef WEXITSTATUS
+#define WEXITSTATUS(w)  (((w) >> 8) & 0xff)
+#endif
+#ifndef WTERMSIG
+#define WTERMSIG(w)     ((w) & 0x7f)
+#endif
+#ifndef WSTOPSIG
+#define WSTOPSIG        WEXITSTATUS
+#endif
+
+static VALUE
+get_pid()
+{
+    return INT2FIX(getpid());
+}
+
+static VALUE
+get_ppid()
+{
+#ifdef NT
+    return INT2FIX(0);
+#else
+    return INT2FIX(getppid());
+#endif
+}
+
+static VALUE rb_cProcStatus;
+VALUE rb_last_status = Qnil;
+
+static void
+last_status_set(status)
+    int status;
+{
+    rb_last_status = rb_obj_alloc(rb_cProcStatus);
+    rb_iv_set(rb_last_status, "status", INT2FIX(status));
+}
+
+static VALUE
+pst_to_i(st)
+    VALUE st;
+{
+    return rb_iv_get(st, "status");
+}
+
+static VALUE
+pst_to_s(st)
+    VALUE st;
+{
+    return rb_fix2str(pst_to_i(st), 10);
+}
+
+static VALUE
+pst_equal(st1, st2)
+    VALUE st1, st2;
+{
+    if (st1 == st2) return Qtrue;
+    return rb_equal(pst_to_i(st1), st2);
+}
+
+static VALUE
+pst_bitand(st1, st2)
+    VALUE st1, st2;
+{
+    int status = NUM2INT(st1) & NUM2INT(st2);
+
+    return INT2NUM(status);
+}
+
+static VALUE
+pst_rshift(st1, st2)
+    VALUE st1, st2;
+{
+    int status = NUM2INT(st1) >> NUM2INT(st2);
+
+    return INT2NUM(status);
+}
+
+static VALUE
+pst_wifstopped(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFSTOPPED(status))
+	return Qtrue;
+    else
+	return Qfalse;
+}
+
+static VALUE
+pst_wstopsig(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFSTOPPED(status))
+	return INT2NUM(WSTOPSIG(status));
+    return Qnil;
+}
+
+static VALUE
+pst_wifsignaled(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFSIGNALED(status))
+	return Qtrue;
+    else
+	return Qfalse;
+}
+
+static VALUE
+pst_wtermsig(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFSIGNALED(status))
+	return INT2NUM(WTERMSIG(status));
+    return Qnil;
+}
+
+static VALUE
+pst_wifexited(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFEXITED(status))
+	return Qtrue;
+    else
+	return Qfalse;
+}
+
+static VALUE
+pst_wexitstatus(st)
+    VALUE st;
+{
+    int status = NUM2INT(st);
+
+    if (WIFEXITED(status))
+	return INT2NUM(WEXITSTATUS(status));
+    return Qnil;
+}
+
+static VALUE
+pst_wcoredump(st)
+    VALUE st;
+{
+#ifdef WCOREDUMP
+    int status = NUM2INT(st);
+
+    if (WCOREDUMP(status))
+	return Qtrue;
+    else
+	return Qfalse;
+#else
+    return Qfalse;
+#endif
+}
+
+#if !defined(HAVE_WAITPID) && !defined(HAVE_WAIT4)
+#define NO_WAITPID
+static st_table *pid_tbl;
+#endif
+
+int
+rb_waitpid(pid, st, flags)
+    int pid;
+    int *st;
+    int flags;
+{
+    int result;
+#ifndef NO_WAITPID
+    int oflags = flags;
+    if (!rb_thread_alone()) {	/* there're other threads to run */
+	flags |= WNOHANG;
+    }
+
+  retry:
+    TRAP_BEG;
+#ifdef HAVE_WAITPID
+    result = waitpid(pid, st, flags);
+#else  /* HAVE_WAIT4 */
+    result = wait4(pid, st, flags, NULL);
+#endif
+    TRAP_END;
+    if (result < 0) {
+	if (errno == EINTR) {
+	    rb_thread_polling();
+	    goto retry;
+	}
+	return -1;
+    }
+    if (result == 0) {
+	if (oflags & WNOHANG) return 0;
+	rb_thread_polling();
+	if (rb_thread_alone()) flags = oflags;
+	goto retry;
+    }
+#else  /* NO_WAITPID */
+    if (pid_tbl && st_lookup(pid_tbl, pid, st)) {
+	last_status_set(*st);
+	st_delete(pid_tbl, &pid, NULL);
+	return pid;
+    }
+
+    if (flags) {
+	rb_raise(rb_eArgError, "can't do waitpid with flags");
+    }
+
+    for (;;) {
+	TRAP_BEG;
+	result = wait(st);
+	TRAP_END;
+	if (result < 0) {
+	    if (errno == EINTR) {
+		rb_thread_schedule();
+		continue;
+	    }
+	    return -1;
+	}
+	if (result == pid) {
+	    break;
+	}
+	if (!pid_tbl)
+	    pid_tbl = st_init_numtable();
+	st_insert(pid_tbl, pid, st);
+	if (!rb_thread_alone()) rb_thread_schedule();
+    }
+#endif
+    last_status_set(*st);
+    return result;
+}
+
+#ifdef NO_WAITPID
+struct wait_data {
+    int pid;
+    int status;
+};
+
+static int
+wait_each(key, value, data)
+    int key, value;
+    struct wait_data *data;
+{
+    if (data->status != -1) return ST_STOP;
+
+    data->pid = key;
+    data->status = value;
+    return ST_DELETE;
+}
+
+static int
+waitall_each(key, value, data)
+    int key, value;
+    VALUE data;
+{
+    last_status_set(value);
+    rb_ary_push(data, rb_assoc_new(INT2NUM(key), rb_last_status));
+    return ST_DELETE;
+}
+#endif
+
+static VALUE
+proc_wait(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE vpid, vflags;
+    int pid, flags, status;
+
+    flags = 0;
+    rb_scan_args(argc, argv, "02", &vpid, &vflags);
+    if (argc == 0) {
+	pid = -1;
+    }
+    else {
+	pid = NUM2INT(vpid);
+	if (argc == 2 && !NIL_P(vflags)) {
+	    flags = NUM2UINT(vflags);
+	}
+    }
+    if ((pid = rb_waitpid(pid, &status, flags)) < 0)
+	rb_sys_fail(0);
+    if (pid == 0) {
+	rb_last_status = Qnil;
+	return Qnil;
+    }
+    return INT2FIX(pid);
+}
+
+static VALUE
+proc_wait2(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE pid = proc_wait(argc, argv);
+    if (NIL_P(pid)) return Qnil;
+    return rb_assoc_new(pid, rb_last_status);
+}
+
+static VALUE
+proc_waitall()
+{
+    VALUE result;
+    int pid, status;
+
+    result = rb_ary_new();
+#ifdef NO_WAITPID
+    if (pid_tbl) {
+	st_foreach(pid_tbl, waitall_each, result);
+    }
+
+    for (pid = -1;;) {
+	pid = wait(&status);
+	if (pid == -1) {
+	    if (errno == ECHILD)
+		break;
+            if (errno == EINTR) {
+		rb_thread_schedule();
+		continue;
+	    }
+	    rb_sys_fail(0);
+	}
+	last_status_set(status);
+	rb_ary_push(result, rb_assoc_new(INT2NUM(pid), rb_last_status));
+    }
+#else
+    rb_last_status = Qnil;
+    for (pid = -1;;) {
+	pid = rb_waitpid(-1, &status, 0);
+	if (pid == -1) {
+	    if (errno == ECHILD)
+		break;
+	    rb_sys_fail(0);
+	}
+	rb_ary_push(result, rb_assoc_new(INT2NUM(pid), rb_last_status));
+    }
+#endif
+    return result;
+}
+
+#ifndef HAVE_STRING_H
+char *strtok();
+#endif
+
+#ifdef HAVE_SETITIMER
+#define before_exec() rb_thread_stop_timer()
+#define after_exec() rb_thread_start_timer()
+#else
+#define before_exec()
+#define after_exec()
+#endif
+
+extern char *dln_find_exe();
+
+static void
+security(str)
+    char *str;
+{
+    if (rb_env_path_tainted()) {
+	if (rb_safe_level() > 0) {
+	    rb_raise(rb_eSecurityError, "Insecure PATH - %s", str);
+	}
+    }
+}
+
+static int
+proc_exec_v(argv, prog)
+    char **argv;
+    char *prog;
+{
+    if (prog) {
+	security(prog);
+    }
+    else {
+	security(argv[0]);
+	prog = dln_find_exe(argv[0], 0);
+	if (!prog) {
+	    errno = ENOENT;
+	    return -1;
+	}
+    }
+#if (defined(MSDOS) && !defined(DJGPP)) || defined(__human68k__) || defined(__EMX__) || defined(OS2)
+    {
+#if defined(__human68k__)
+#define COMMAND "command.x"
+#endif
+#if defined(__EMX__) || defined(OS2) /* OS/2 emx */
+#define COMMAND "cmd.exe"
+#endif
+#if (defined(MSDOS) && !defined(DJGPP))
+#define COMMAND "command.com"
+#endif
+	char *extension;
+
+	if ((extension = strrchr(prog, '.')) != NULL && strcasecmp(extension, ".bat") == 0) {
+	    char **new_argv;
+	    char *p;
+	    int n;
+
+	    for (n = 0; argv[n]; n++)
+		/* no-op */;
+	    new_argv = ALLOCA_N(char*, n + 2);
+	    for (; n > 0; n--)
+		new_argv[n + 1] = argv[n];
+	    new_argv[1] = strcpy(ALLOCA_N(char, strlen(argv[0]) + 1), argv[0]);
+	    for (p = new_argv[1]; *p != '\0'; p++)
+		if (*p == '/')
+		    *p = '\\';
+	    new_argv[0] = COMMAND;
+	    argv = new_argv;
+	    prog = dln_find_exe(argv[0], 0);
+	    if (!prog) {
+		errno = ENOENT;
+		return -1;
+	    }
+	}
+    }
+#endif /* MSDOS or __human68k__ or __EMX__ */
+    before_exec();
+    execv(prog, argv);
+    after_exec();
+    return -1;
+}
+
+static int
+proc_exec_n(argc, argv, progv)
+    int argc;
+    VALUE *argv;
+    VALUE progv;
+{
+    char *prog = 0;
+    char **args;
+    int i;
+
+    if (progv) {
+	prog = RSTRING(progv)->ptr;
+    }
+    args = ALLOCA_N(char*, argc+1);
+    for (i=0; i<argc; i++) {
+	SafeStringValue(argv[i]);
+	args[i] = RSTRING(argv[i])->ptr;
+    }
+    args[i] = 0;
+    if (args[0]) {
+	return proc_exec_v(args, prog);
+    }
+    return -1;
+}
+
+int
+rb_proc_exec(str)
+    const char *str;
+{
+    const char *s = str;
+    char *ss, *t;
+    char **argv, **a;
+
+    while (*str && ISSPACE(*str))
+	str++;
+
+    for (s=str; *s; s++) {
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+#if defined(MSDOS)
+	    int status;
+	    before_exec();
+	    status = system(str);
+	    after_exec();
+	    if (status != -1)
+		exit(status);
+#else
+#if defined(__human68k__) || defined(__CYGWIN32__) || defined(__EMX__)
+	    char *shell = dln_find_exe("sh", 0);
+	    int status = -1;
+	    before_exec();
+	    if (shell)
+		execl(shell, "sh", "-c", str, (char *) NULL);
+	    else
+		status = system(str);
+	    after_exec();
+	    if (status != -1)
+		exit(status);
+#else
+	    before_exec();
+	    execl("/bin/sh", "sh", "-c", str, (char *)NULL);
+	    after_exec();
+#endif
+#endif
+	    return -1;
+	}
+    }
+    a = argv = ALLOCA_N(char*, (s-str)/2+2);
+    ss = ALLOCA_N(char, s-str+1);
+    strcpy(ss, str);
+    if (*a++ = strtok(ss, " \t")) {
+	while (t = strtok(NULL, " \t")) {
+	    *a++ = t;
+	}
+	*a = NULL;
+    }
+    if (argv[0]) {
+	return proc_exec_v(argv, 0);
+    }
+    errno = ENOENT;
+    return -1;
+}
+
+#if defined(__human68k__)
+static int
+proc_spawn_v(argv, prog)
+    char **argv;
+    char *prog;
+{
+    char *extension;
+    int status;
+
+    if (prog) {
+	security(prog);
+    }
+    else {
+	security(argv[0]);
+	prog = dln_find_exe(argv[0], 0);
+	if (!prog)
+	    return -1;
+    }
+
+    if ((extension = strrchr(prog, '.')) != NULL && strcasecmp(extension, ".bat") == 0) {
+	char **new_argv;
+	char *p;
+	int n;
+
+	for (n = 0; argv[n]; n++)
+	    /* no-op */;
+	new_argv = ALLOCA_N(char*, n + 2);
+	for (; n > 0; n--)
+	    new_argv[n + 1] = argv[n];
+	new_argv[1] = strcpy(ALLOCA_N(char, strlen(argv[0]) + 1), argv[0]);
+	for (p = new_argv[1]; *p != '\0'; p++)
+	    if (*p == '/')
+		*p = '\\';
+	new_argv[0] = COMMAND;
+	argv = new_argv;
+	prog = dln_find_exe(argv[0], 0);
+	if (!prog) {
+	    errno = ENOENT;
+	    return -1;
+	}
+    }
+    before_exec();
+    status = spawnv(P_WAIT, prog, argv);
+    after_exec();
+    return status;
+}
+
+static int
+proc_spawn_n(argc, argv, prog)
+    int argc;
+    VALUE *argv;
+    VALUE prog;
+{
+    char **args;
+    int i;
+
+    args = ALLOCA_N(char*, argc + 1);
+    for (i = 0; i < argc; i++) {
+	SafeStr(argv[i]);
+	args[i] = RSTRING(argv[i])->ptr;
+    }
+    SafeStringValue(prog);
+    args[i] = (char*) 0;
+    if (args[0])
+	return proc_spawn_v(args, RSTRING(prog)->ptr);
+    return -1;
+}
+
+static int
+proc_spawn(sv)
+    VALUE sv;
+{
+    char *str;
+    char *s, *t;
+    char **argv, **a;
+    int status;
+
+    SafeStringValue(sv);
+    str = s = RSTRING(sv)->ptr;
+    for (s = str; *s; s++) {
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+	    char *shell = dln_find_exe("sh", 0);
+	    before_exec();
+	    status = shell?spawnl(P_WAIT,shell,"sh","-c",str,(char*)NULL):system(str);
+	    after_exec();
+	    return status;
+	}
+    }
+    a = argv = ALLOCA_N(char*, (s - str) / 2 + 2);
+    s = ALLOCA_N(char, s - str + 1);
+    strcpy(s, str);
+    if (*a++ = strtok(s, " \t")) {
+	while (t = strtok(NULL, " \t"))
+	    *a++ = t;
+	*a = NULL;
+    }
+    return argv[0] ? proc_spawn_v(argv, 0) : -1;
+}
+#endif /* __human68k__ */
+
+VALUE
+rb_f_exec(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    VALUE prog = 0;
+
+    if (argc == 0) {
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+    if (prog) {
+	SafeStringValue(prog);
+    }
+    if (argc == 1 && prog == 0) {
+	VALUE cmd = argv[0];
+
+	SafeStringValue(cmd);
+	rb_proc_exec(RSTRING(cmd)->ptr);
+    }
+    else {
+	proc_exec_n(argc, argv, prog);
+    }
+    rb_sys_fail(RSTRING(argv[0])->ptr);
+    return Qnil;		/* dummy */
+}
+
+static VALUE
+rb_f_fork(obj)
+    VALUE obj;
+{
+#if !defined(__human68k__) && !defined(NT) && !defined(__MACOS__) && !defined(__EMX__) && !defined(__VMS)
+    int pid;
+
+    rb_secure(2);
+    switch (pid = fork()) {
+      case 0:
+#ifdef linux
+	after_exec();
+#endif
+	rb_thread_atfork();
+	if (rb_block_given_p()) {
+	    int status;
+
+	    rb_protect(rb_yield, Qundef, &status);
+	    ruby_stop(status);
+	}
+	return Qnil;
+
+      case -1:
+	rb_sys_fail("fork(2)");
+	return Qnil;
+
+      default:
+	return INT2FIX(pid);
+    }
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+rb_f_exit_bang(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+{
+    VALUE status;
+    int istatus;
+
+    rb_secure(4);
+    if (rb_scan_args(argc, argv, "01", &status) == 1) {
+	istatus = NUM2INT(status);
+    }
+    else {
+	istatus = -1;
+    }
+    _exit(istatus);
+
+    return Qnil;		/* not reached */
+}
+
+void
+rb_syswait(pid)
+    int pid;
+{
+    static int overriding;
+    RETSIGTYPE (*hfunc)_((int)), (*qfunc)_((int)), (*ifunc)_((int));
+    int status;
+    int i, hooked = Qfalse;
+
+    if (!overriding) {
+#ifdef SIGHUP
+	hfunc = signal(SIGHUP, SIG_IGN);
+#endif
+#ifdef SIGQUIT
+	qfunc = signal(SIGQUIT, SIG_IGN);
+#endif
+	ifunc = signal(SIGINT, SIG_IGN);
+	overriding = Qtrue;
+	hooked = Qtrue;
+    }
+
+    do {
+	i = rb_waitpid(pid, &status, 0);
+    } while (i == -1 && errno == EINTR);
+
+    if (hooked) {
+#ifdef SIGHUP
+	signal(SIGHUP, hfunc);
+#endif
+#ifdef SIGQUIT
+	signal(SIGQUIT, qfunc);
+#endif
+	signal(SIGINT, ifunc);
+	overriding = Qfalse;
+    }
+}
+
+static VALUE
+rb_f_system(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+#if defined(NT) || defined(__EMX__)
+    VALUE cmd;
+    int status;
+
+    fflush(stdout);
+    fflush(stderr);
+    if (argc == 0) {
+	rb_last_status = Qnil;
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	argv[0] = RARRAY(argv[0])->ptr[0];
+    }
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+
+    SafeStringValue(cmd);
+    status = do_spawn(RSTRING(cmd)->ptr);
+    last_status_set(status);
+
+    if (status == 0) return Qtrue;
+    return Qfalse;
+#elif defined(DJGPP)
+    VALUE cmd;
+    int status;
+
+    if (argc == 0) {
+	rb_last_status = Qnil;
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	argv[0] = RARRAY(argv[0])->ptr[0];
+    }
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+
+    SafeStringValue(cmd);
+    status = system(RSTRING(cmd)->ptr);
+    last_status_set((status & 0xff) << 8);
+
+    if (status == 0) return Qtrue;
+    return Qfalse;
+#elif defined(__human68k__)
+    VALUE prog = 0;
+    int status;
+
+    fflush(stdin);
+    fflush(stdout);
+    fflush(stderr);
+    if (argc == 0) {
+	rb_last_status = Qnil;
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+
+    if (argc == 1 && prog == 0) {
+	status = proc_spawn(argv[0]);
+    }
+    else {
+	status = proc_spawn_n(argc, argv, prog);
+    }
+    last_status_set(status == -1 ? 127 : status);
+    return status == 0 ? Qtrue : Qfalse;
+#elif defined(__VMS)
+    VALUE cmd;
+    int status;
+
+    if (argc == 0) {
+	rb_last_status = Qnil;
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	argv[0] = RARRAY(argv[0])->ptr[0];
+    }
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+
+    SafeStringValue(cmd);
+    status = system(RSTRING(cmd)->ptr);
+    last_status_set((status & 0xff) << 8);
+
+    if (status == 0) return Qtrue;
+    return Qfalse;
+#else
+    volatile VALUE prog = 0;
+    int pid;
+    int i;
+
+    fflush(stdout);
+    fflush(stderr);
+    if (argc == 0) {
+	rb_last_status = Qnil;
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    rb_raise(rb_eArgError, "wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+
+    if (prog) {
+	SafeStringValue(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	SafeStringValue(argv[i]);
+    }
+  retry:
+    switch (pid = fork()) {
+      case 0:
+	if (argc == 1 && prog == 0) {
+	    rb_proc_exec(RSTRING(argv[0])->ptr);
+	}
+	else {
+	    proc_exec_n(argc, argv, prog);
+	}
+	_exit(127);
+	break;			/* not reached */
+
+      case -1:
+	if (errno == EAGAIN) {
+	    rb_thread_sleep(1);
+	    goto retry;
+	}
+	rb_sys_fail(0);
+	break;
+
+      default:
+	rb_syswait(pid);
+    }
+
+    if (NUM2INT(rb_last_status) == 0)
+	return Qtrue;
+    return Qfalse;
+#endif
+}
+
+static VALUE
+rb_f_sleep(argc, argv)
+    int argc;
+    VALUE *argv;
+{
+    int beg, end;
+
+    beg = time(0);
+    if (argc == 0) {
+	rb_thread_sleep_forever();
+    }
+    else if (argc == 1) {
+	rb_thread_wait_for(rb_time_interval(argv[0]));
+    }
+    else {
+	rb_raise(rb_eArgError, "wrong number of arguments");
+    }
+
+    end = time(0) - beg;
+
+    return INT2FIX(end);
+}
+
+static VALUE
+proc_getpgrp()
+{
+    int pgrp;
+
+#if defined(HAVE_GETPGRP) && defined(GETPGRP_VOID)
+    pgrp = getpgrp();
+    if (pgrp < 0) rb_sys_fail(0);
+    return INT2FIX(pgrp);
+#else
+# ifdef HAVE_GETPGID
+    pgrp = getpgid(0);
+    if (pgrp < 0) rb_sys_fail(0);
+    return INT2FIX(pgrp);
+# else
+    rb_notimplement();
+# endif
+#endif
+}
+
+static VALUE
+proc_setpgrp()
+{
+  /* check for posix setpgid() first; this matches the posix */
+  /* getpgrp() above.  It appears that configure will set SETPGRP_VOID */
+  /* even though setpgrp(0,0) would be prefered. The posix call avoids */
+  /* this confusion. */
+#ifdef HAVE_SETPGID
+  if (setpgid(0,0) < 0) rb_sys_fail(0);
+#elif defined(HAVE_SETPGRP) && defined(SETPGRP_VOID)
+    if (setpgrp() < 0) rb_sys_fail(0);
+#else
+    rb_notimplement();
+#endif
+    return INT2FIX(0);
+}
+
+static VALUE
+proc_getpgid(obj, pid)
+    VALUE obj, pid;
+{
+#if defined(HAVE_GETPGID) && !defined(__CHECKER__)
+    int i = getpgid(NUM2INT(pid));
+
+    if (i < 0) rb_sys_fail(0);
+    return INT2NUM(i);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_setpgid(obj, pid, pgrp)
+    VALUE obj, pid, pgrp;
+{
+#ifdef HAVE_SETPGID
+    int ipid, ipgrp;
+
+    rb_secure(2);
+    ipid = NUM2INT(pid);
+    ipgrp = NUM2INT(pgrp);
+
+    if (setpgid(ipid, ipgrp) < 0) rb_sys_fail(0);
+    return INT2FIX(0);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_setsid()
+{
+#if defined(HAVE_SETSID)
+    int pid;
+
+    rb_secure(2);
+    pid = setsid();
+    if (pid < 0) rb_sys_fail(0);
+    return INT2FIX(pid);
+#elif defined(HAVE_SETPGRP) && defined(TIOCNOTTY)
+  pid_t pid;
+  int ret;
+
+  rb_secure(2);
+  pid = getpid();
+#if defined(SETPGRP_VOID)
+  ret = setpgrp();
+  /* If `pid_t setpgrp(void)' is equivalent to setsid(),
+     `ret' will be the same value as `pid', and following open() will fail.
+     In Linux, `int setpgrp(void)' is equivalent to setpgid(0, 0). */
+#else
+  ret = setpgrp(0, pid);
+#endif
+  if (ret == -1) rb_sys_fail(0);
+
+  if ((fd = open("/dev/tty", O_RDWR)) >= 0) {
+    ioctl(fd, TIOCNOTTY, NULL);
+    close(fd);
+  }
+  return INT2FIX(pid);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_getpriority(obj, which, who)
+    VALUE obj, which, who;
+{
+#ifdef HAVE_GETPRIORITY
+    int prio, iwhich, iwho;
+
+    iwhich = NUM2INT(which);
+    iwho   = NUM2INT(who);
+
+    errno = 0;
+    prio = getpriority(iwhich, iwho);
+    if (errno) rb_sys_fail(0);
+    return INT2FIX(prio);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_setpriority(obj, which, who, prio)
+    VALUE obj, which, who, prio;
+{
+#ifdef HAVE_GETPRIORITY
+    int iwhich, iwho, iprio;
+
+    rb_secure(2);
+    iwhich = NUM2INT(which);
+    iwho   = NUM2INT(who);
+    iprio  = NUM2INT(prio);
+
+    if (setpriority(iwhich, iwho, iprio) < 0)
+	rb_sys_fail(0);
+    return INT2FIX(0);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_getuid(obj)
+    VALUE obj;
+{
+    int uid = getuid();
+    return INT2FIX(uid);
+}
+
+static VALUE
+proc_setuid(obj, id)
+    VALUE obj, id;
+{
+    int uid = NUM2INT(id);
+
+#if defined(HAVE_SETRESUID) &&  !defined(__CHECKER__)
+    if (setresuid(uid, -1, -1) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETREUID
+    if (setreuid(uid, -1) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETRUID
+    if (setruid(uid) < 0) rb_sys_fail(0);
+#else
+    {
+	if (geteuid() == uid) {
+	    if (setuid(uid) < 0) rb_sys_fail(0);
+	}
+	else {
+	    rb_notimplement();
+	}
+    }
+#endif
+    return INT2FIX(uid);
+}
+
+static VALUE
+proc_getgid(obj)
+    VALUE obj;
+{
+    int gid = getgid();
+    return INT2FIX(gid);
+}
+
+static VALUE
+proc_setgid(obj, id)
+    VALUE obj, id;
+{
+    int gid = NUM2INT(id);
+
+#if defined(HAVE_SETRESGID) && !defined(__CHECKER__)
+    if (setresgid(gid, -1, -1) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETREGID
+    if (setregid(gid, -1) < 0) rb_sys_fail(0);
+#elif defined HAS_SETRGID
+    if (setrgid((GIDTYPE)gid) < 0) rb_sys_fail(0);
+#else
+    {
+	if (getegid() == gid) {
+	    if (setgid(gid) < 0) rb_sys_fail(0);
+	}
+	else {
+	    rb_notimplement();
+	}
+    }
+#endif
+    return INT2FIX(gid);
+}
+
+static VALUE
+proc_geteuid(obj)
+    VALUE obj;
+{
+    int euid = geteuid();
+    return INT2FIX(euid);
+}
+
+static VALUE
+proc_seteuid(obj, euid)
+    VALUE obj, euid;
+{
+#if defined(HAVE_SETRESUID) && !defined(__CHECKER__)
+    if (setresuid(-1, NUM2INT(euid), -1) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETREUID
+    if (setreuid(-1, NUM2INT(euid)) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETEUID
+    if (seteuid(NUM2INT(euid)) < 0) rb_sys_fail(0);
+#else
+    euid = NUM2INT(euid);
+    if (euid == getuid()) {
+	if (setuid(euid) < 0) rb_sys_fail(0);
+    }
+    else {
+	rb_notimplement();
+    }
+#endif
+    return euid;
+}
+
+static VALUE
+proc_getegid(obj)
+    VALUE obj;
+{
+    int egid = getegid();
+
+    return INT2FIX(egid);
+}
+
+static VALUE
+proc_setegid(obj, egid)
+    VALUE obj, egid;
+{
+    rb_secure(2);
+#if defined(HAVE_SETRESGID) && !defined(__CHECKER__)
+    if (setresgid(-1, NUM2INT(egid), -1) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETREGID
+    if (setregid(-1, NUM2INT(egid)) < 0) rb_sys_fail(0);
+#elif defined HAVE_SETEGID
+    if (setegid(NUM2INT(egid)) < 0) rb_sys_fail(0);
+#else
+    egid = NUM2INT(egid);
+    if (egid == getgid()) {
+	if (setgid(egid) < 0) rb_sys_fail(0);
+    }
+    else {
+	rb_notimplement();
+    }
+#endif
+    return egid;
+}
+
+VALUE
+rb_proc_times(obj)
+    VALUE obj;
+{
+#if defined(HAVE_TIMES) && !defined(__CHECKER__)
+#ifndef HZ
+# ifdef CLK_TCK
+#   define HZ CLK_TCK
+# else
+#   define HZ 60
+# endif
+#endif /* HZ */
+    struct tms buf;
+
+    times(&buf);
+    return rb_struct_new(S_Tms,
+			 rb_float_new((double)buf.tms_utime / HZ),
+			 rb_float_new((double)buf.tms_stime / HZ),
+			 rb_float_new((double)buf.tms_cutime / HZ),
+			 rb_float_new((double)buf.tms_cstime / HZ));
+#else
+    rb_notimplement();
+#endif
+}
+
+VALUE rb_mProcess;
+
+void
+Init_process()
+{
+    rb_define_virtual_variable("$$", get_pid, 0);
+    rb_define_readonly_variable("$?", &rb_last_status);
+    rb_define_global_function("exec", rb_f_exec, -1);
+    rb_define_global_function("fork", rb_f_fork, 0);
+    rb_define_global_function("exit!", rb_f_exit_bang, -1);
+    rb_define_global_function("system", rb_f_system, -1);
+    rb_define_global_function("sleep", rb_f_sleep, -1);
+
+    rb_mProcess = rb_define_module("Process");
+
+#if !defined(NT) && !defined(DJGPP)
+#ifdef WNOHANG
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(WNOHANG));
+#else
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(0));
+#endif
+#ifdef WUNTRACED
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(WUNTRACED));
+#else
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(0));
+#endif
+#endif
+
+    rb_define_singleton_method(rb_mProcess, "fork", rb_f_fork, 0);
+    rb_define_singleton_method(rb_mProcess, "exit!", rb_f_exit_bang, -1);
+
+    rb_define_module_function(rb_mProcess, "kill", rb_f_kill, -1);
+    rb_define_module_function(rb_mProcess, "wait", proc_wait, -1);
+    rb_define_module_function(rb_mProcess, "wait2", proc_wait2, -1);
+    rb_define_module_function(rb_mProcess, "waitpid", proc_wait, -1);
+    rb_define_module_function(rb_mProcess, "waitpid2", proc_wait2, -1);
+    rb_define_module_function(rb_mProcess, "waitall", proc_waitall, 0);
+
+    rb_cProcStatus = rb_define_class_under(rb_mProcess, "Status", rb_cObject);
+    rb_undef_method(CLASS_OF(rb_cProcStatus), "new");
+
+    rb_define_method(rb_cProcStatus, "==", pst_equal, 1);
+    rb_define_method(rb_cProcStatus, "&", pst_bitand, 1);
+    rb_define_method(rb_cProcStatus, ">>", pst_rshift, 1);
+    rb_define_method(rb_cProcStatus, "to_i", pst_to_i, 0);
+    rb_define_method(rb_cProcStatus, "to_int", pst_to_i, 0);
+    rb_define_method(rb_cProcStatus, "to_s", pst_to_s, 0);
+    rb_define_method(rb_cProcStatus, "inspect", pst_to_s, 0);
+
+    rb_define_method(rb_cProcStatus, "stopped?", pst_wifstopped, 0);
+    rb_define_method(rb_cProcStatus, "stopsig", pst_wstopsig, 0);
+    rb_define_method(rb_cProcStatus, "signaled?", pst_wifsignaled, 0);
+    rb_define_method(rb_cProcStatus, "termsig", pst_wtermsig, 0);
+    rb_define_method(rb_cProcStatus, "exited?", pst_wifexited, 0);
+    rb_define_method(rb_cProcStatus, "exitstatus", pst_wexitstatus, 0);
+    rb_define_method(rb_cProcStatus, "coredump?", pst_wcoredump, 0);
+
+    rb_define_module_function(rb_mProcess, "pid", get_pid, 0);
+    rb_define_module_function(rb_mProcess, "ppid", get_ppid, 0);
+
+    rb_define_module_function(rb_mProcess, "getpgrp", proc_getpgrp, 0);
+    rb_define_module_function(rb_mProcess, "setpgrp", proc_setpgrp, 0);
+    rb_define_module_function(rb_mProcess, "getpgid", proc_getpgid, 1);
+    rb_define_module_function(rb_mProcess, "setpgid", proc_setpgid, 2);
+
+    rb_define_module_function(rb_mProcess, "setsid", proc_setsid, 0);
+
+    rb_define_module_function(rb_mProcess, "getpriority", proc_getpriority, 2);
+    rb_define_module_function(rb_mProcess, "setpriority", proc_setpriority, 3);
+
+#ifdef HAVE_GETPRIORITY
+    rb_define_const(rb_mProcess, "PRIO_PROCESS", INT2FIX(PRIO_PROCESS));
+    rb_define_const(rb_mProcess, "PRIO_PGRP", INT2FIX(PRIO_PGRP));
+    rb_define_const(rb_mProcess, "PRIO_USER", INT2FIX(PRIO_USER));
+#endif
+
+    rb_define_module_function(rb_mProcess, "uid", proc_getuid, 0);
+    rb_define_module_function(rb_mProcess, "uid=", proc_setuid, 1);
+    rb_define_module_function(rb_mProcess, "gid", proc_getgid, 0);
+    rb_define_module_function(rb_mProcess, "gid=", proc_setgid, 1);
+    rb_define_module_function(rb_mProcess, "euid", proc_geteuid, 0);
+    rb_define_module_function(rb_mProcess, "euid=", proc_seteuid, 1);
+    rb_define_module_function(rb_mProcess, "egid", proc_getegid, 0);
+    rb_define_module_function(rb_mProcess, "egid=", proc_setegid, 1);
+
+    rb_define_module_function(rb_mProcess, "times", rb_proc_times, 0);
+
+#if defined(HAVE_TIMES) || defined(NT)
+    S_Tms = rb_struct_define("Tms", "utime", "stime", "cutime", "cstime", 0);
+#endif
+}
+@
+
+
+1.55
+log
+@Int vs Long cleanup #3 (ruby-core:352)
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/08/21 15:47:54 $
+a24 10
+#ifndef NT
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#else
+struct timeval {
+        long    tv_sec;         /* seconds */
+        long    tv_usec;        /* and microseconds */
+};
+#endif
+#endif /* NT */
+@
+
+
+1.54
+log
+@*.c: Int vs Long cleanup
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/07/11 08:22:10 $
+d834 1
+a834 2
+#else
+#ifdef DJGPP
+d857 1
+a857 2
+#else
+#if defined(__human68k__)
+a858 1
+    int i;
+d885 1
+a885 2
+#else
+#if defined(__VMS)
+d961 1
+a961 4
+#endif /* __VMS */
+#endif /* __human68k__ */
+#endif /* DJGPP */
+#endif /* NT */
+@
+
+
+1.53
+log
+@* string.c (rb_str_slice_bang): if there's no corresponding
+  substring, slice! should return nil without exception.
+
+* array.c (rb_ary_insert): type fixed.
+
+* string.c (rb_str_split_m): accept separator value nil as well.
+
+* string.c (rb_str_become): was leaking memory.
+
+* class.c (rb_include_module): should not alter other
+  classes/modules by inclusion.  by this fix, local order may not
+  be preserved for some cases.
+
+* class.c (include_class_new): module may be T_ICLASS; retrieve
+  original module information.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/05/14 06:22:26 $
+d1036 1
+a1036 1
+    int i;
+a1037 1
+    i = getpgid(NUM2INT(pid));
+d1150 1
+a1150 1
+    int uid;
+a1151 1
+    uid = NUM2INT(id);
+d1183 1
+a1183 1
+    int gid;
+a1184 1
+    gid = NUM2INT(id);
+d1239 1
+@
+
+
+1.52
+log
+@* eval.c (rb_clear_cache_by_class): new function.
+
+* eval.c (set_method_visibility): should have clear cache forq
+  updated visibility.
+
+* numeric.c (flo_to_s): default format precision to be "%.16g".
+
+* util.c (ruby_strtod): use own strtod(3) implementation to avoid
+  locale hell.  Due to this change "0xff".to_f no longer returns 255.0
+
+* eval.c (avalue_to_yvalue): new function to distinguish yvalue
+  (no-arg == Qundef) from svalue (no-arg == Qnil).
+
+* eval.c (rb_yield_0): use avalue_to_yvalue().
+
+* eval.c (assign): warn if val == Qundef where it means rhs is
+  void (e.g. yield without value or call without argument).
+
+* parse.y (value_expr): need not to warn for WHILE and UNTIL,
+  since they can have return value (via valued break).
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/22 07:26:35 $
+d1017 7
+a1023 1
+#if defined(HAVE_SETPGRP) && defined(SETPGRP_VOID)
+a1025 3
+# ifdef HAVE_SETPGID
+    if (setpgid(0, 0) < 0) rb_sys_fail(0);
+# else
+a1026 1
+# endif
+@
+
+
+1.51
+log
+@* the VMS support patch submitted by Akiyoshi, Masamichi
+  <Masamichi.Akiyoshi@@jp.compaq.com> is merged.
+
+* eval.c (exec_under): changing ruby_class is OK, but should not
+  alter cbase.
+
+* eval.c (yield_under_i): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/03/11 08:02:02 $
+d729 1
+a729 1
+	    rb_protect(rb_yield, Qnil, &status);
+@
+
+
+1.50
+log
+@* marshal.c (w_object): module inclusion using extend() should
+  also be detected.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/26 06:48:59 $
+d716 1
+a716 1
+#if !defined(__human68k__) && !defined(NT) && !defined(__MACOS__) && !defined(__EMX__)
+d889 24
+d965 1
+@
+
+
+1.49
+log
+@* eval.c (rb_eval): call trace_func for if/while conditions.
+
+* marshal.c (r_object): separate r_regist from proc calling.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/25 09:16:25 $
+d1001 1
+d1012 1
+@
+
+
+1.48
+log
+@* eval.c (method_inspect): should not dump core for unbound
+  singleton methods.
+
+* object.c (rb_mod_to_s): better description.
+
+* hash.c (env_select): should path the assoc list.
+
+* process.c (rb_syswait): thread kludge; should be fixed to
+  support native thread.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/19 06:43:58 $
+d800 1
+@
+
+
+1.47
+log
+@* file.c (path_check_1): should check directory sticky bits.
+
+* process.c (security): need not to warn twice.
+
+* marshal.c (r_object): complete restoration before calling
+  r_regist().
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/06 07:30:13 $
+d771 1
+d774 1
+a774 1
+    int i;
+d776 1
+d778 1
+a778 1
+    hfunc = signal(SIGHUP, SIG_IGN);
+d781 1
+a781 1
+    qfunc = signal(SIGQUIT, SIG_IGN);
+d783 4
+a786 1
+    ifunc = signal(SIGINT, SIG_IGN);
+d792 1
+d794 1
+a794 1
+    signal(SIGHUP, hfunc);
+d797 1
+a797 1
+    signal(SIGQUIT, qfunc);
+d799 2
+a800 1
+    signal(SIGINT, ifunc);
+@
+
+
+1.46
+log
+@* io.c (rb_io_readlines): avoid calling GetOpenFile() repeatedly.
+
+* io.c (rb_io_each_line): ditto.
+
+* io.c (argf_getline): ditto.
+
+* process.c: should include <time.h> to get proper CLK_TCK.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/11 09:18:50 $
+a432 3
+	}
+	else {
+	    rb_warn("Insecure PATH - %s", str);
+@
+
+
+1.45
+log
+@* re.c (match_select): should propagate taintness.
+
+* hash.c (rb_hash_set_default): Hash#default= should return the
+  new value.
+
+* string.c (rb_str_to_i): accepts optional base argument. [new]
+
+* numeric.c (rb_fix2str): should not handle negative fixnum values
+  int32 via calling sprintf() directly.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/01/04 14:14:34 $
+d23 2
+@
+
+
+1.44
+log
+@* process.c (rb_f_system): abandon vfork.
+
+* io.c (pipe_open): ditto.
+
+* defines.h: sparc linux needs different FLUSH_REGISTER_WINDOWS
+
+* regex.c (re_search): abandon stclass optimization.
+
+* bignum.c (rb_cstr2inum): deny "0_".
+
+* bignum.c (rb_cstr2inum): allow "0\n" and so on.
+
+* error.c (rb_invalid_str): utility function to show inspect()'ed
+  string.
+
+* bignum.c (rb_cstr2inum): prints invalid strings in inspect()'ed
+  format.
+
+* object.c (rb_Float): ditto.
+
+* object.c (rb_convert_type): no longer use rb_rescue().
+
+* re.c (rb_reg_search): initialize taint status of match object.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/21 15:41:26 $
+d9 1
+a9 1
+  Copyright (C) 1993-2001 Yukihiro Matsumoto
+@
+
+
+1.43
+log
+@* parse.y (str_extend): should check nesting parentheses in #{}.
+
+* process.c (pst_wstopsig): returns nil unless WIFSTOPPED() is
+  non-zero.
+
+* process.c (pst_wtermsig): returns nil unless WIFSIGNALED() is
+  non-zero.
+
+* process.c (pst_wexitstatus): returns nil unless WIFEXITED() is
+  non-zero.
+
+* eval.c (rb_thread_select): tv_sec and tv_usec should not be
+  negative.
+
+* signal.c (posix_signal): do not set SA_RESTART for SIGVTALRM.
+
+* parse.y (call_args2): block_arg may follow the first argument in
+  call_args2.
+
+* eval.c (stack_check): should avoid stack length check during
+  raising SystemStackError exception.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/19 05:03:03 $
+a42 3
+#ifdef HAVE_VFORK_H
+#include <vfork.h>
+#endif
+d908 1
+a908 1
+    switch (pid = vfork()) {
+@
+
+
+1.42
+log
+@* parse.y (parse_regx): should raise error on untermitated
+  expression interpolation.
+
+* pack.c (pack_unpack): should give length to utf8_to_uv().
+
+* pack.c (utf8_to_uv): add length check.
+
+* massages: replace "wrong #" by "wrong number".
+
+* marshal.c (w_float): output Infinity and NaN explicitly.
+
+* marshal.c (r_object): support new explicit float format.
+
+* eval.c (rb_thread_wait_for): select may cause ERESTART on
+  Solaris.
+
+* eval.c (rb_thread_select): ditto.
+
+* array.c (rb_ary_join): dumped core if sep is not T_STRING nor T_NIL.
+
+* array.c (rb_ary_join): buffer size calculattion was wrong.
+
+* array.c (rb_ary_to_s): if rb_output_fs is nil, insert newlines
+  between array elements (use rb_default_rs as newline litral)
+  [experimental].
+
+* gc.c (init_mark_stack): no need to clear mark_stack.
+
+* gc.c (gc_mark_all): need to handle finalizer mark.
+
+* gc.c (gc_mark_rest): use MEMCPY instead of memcpy.
+
+* gc.c (rb_gc_mark): earlier const check to avoid pusing special
+  constants into mark stack.
+
+* numeric.c (fix_to_s): 'to_s' now takes optional argument to
+  specify radix. [new]
+
+* bignum.c (rb_big_to_s): ditto. [new]
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/11/08 06:43:08 $
+d164 3
+a166 1
+    return INT2NUM(WSTOPSIG(status));
+d187 3
+a189 1
+    return INT2NUM(WTERMSIG(status));
+d210 3
+a212 1
+    return INT2NUM(WEXITSTATUS(status));
+@
+
+
+1.41
+log
+@* process.c (security): always give warning for insecure PATH.
+
+* dir.c (my_getcwd): do not rely on MAXPATHLEN.
+
+* file.c (rb_file_s_readlink): ditto.
+
+* file.c (path_check_1): ditto.
+
+* eval.c (rb_yield_0): should not call rb_f_block_given_p().
+
+* string.c (rb_str_chomp_bang): should terminate string by NUL.
+
+* eval.c (rb_yield_0): better error message.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/10/09 09:42:47 $
+d676 1
+a676 1
+static VALUE
+d684 1
+a684 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d807 1
+a807 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d831 1
+a831 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d859 1
+a859 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d887 1
+a887 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d951 1
+a951 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+@
+
+
+1.40
+log
+@* process.c (Init_process): activate the case NT.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/09/08 14:17:09 $
+d425 2
+a426 2
+    if (rb_safe_level() > 0) {
+	if (rb_env_path_tainted()) {
+d429 3
+a525 2
+
+    security(str);
+@
+
+
+1.39
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+
+* class.c (rb_include_module): should check whole ancestors to
+  avoid duplicate module inclusion.
+
+* string.c (trnext): should check backslash before updating "now"
+  position.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/08/06 03:05:13 $
+d1283 1
+a1284 1
+#ifndef NT
+a1311 1
+#endif /* ifndef NT */
+@
+
+
+1.38
+log
+@* string.c (rb_str_lstrip_bang): new method.
+
+* string.c (rb_str_rstrip_bang): new method.
+
+* string.c (rb_str_associate): should consider STR_ASSOC too.
+
+* eval.c (rb_undefined): do not recurse if method_missing is
+  undefined.
+
+* process.c (proc_waitpid): now all arguments are optional.
+
+* process.c (Init_process): waitpid is now alias to wait.
+
+* process.c (Init_process): waitpid2 is now alias to wait2.
+
+* process.c (rb_waitpid): made public.
+
+* ext/pty/pty.c (pty_getpty): avoid disturbing SIGCHLD using
+  thread and rb_waitpid.
+
+* process.c (proc_getpgrp): now takes no argument on all
+  platforms.
+
+* process.c (proc_setpgrp): ditto.
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::pack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::pack_sockaddr_un(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_in): added
+  Socket::unpack_sockaddr_in(). [new]
+
+* ext/socket/socket.c (sock_s_pack_sockaddr_un): added
+  Socket::unpack_sockaddr_un(). [new]
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2001/07/31 08:04:13 $
+d1115 1
+a1115 1
+    setresuid(uid, -1, -1);
+d1117 1
+a1117 1
+    setreuid(uid, -1);
+d1119 1
+a1119 1
+    setruid(uid);
+d1122 4
+a1125 3
+	if (geteuid() == uid)
+	    setuid(uid);
+	else
+d1127 1
+d1149 1
+a1149 1
+    setresgid(gid, -1, -1);
+d1151 1
+a1151 1
+    setregid(gid, -1);
+d1153 1
+a1153 1
+    setrgid((GIDTYPE)gid);
+d1156 4
+a1159 3
+	if (getegid() == gid)
+	    setgid(gid);
+	else
+d1161 1
+d1187 4
+a1190 3
+    if (euid == getuid())
+	setuid(euid);
+    else
+d1192 1
+d1218 4
+a1221 3
+    if (egid == getgid())
+	setgid(egid);
+    else
+d1223 1
+@
+
+
+1.37
+log
+@* process.c (last_status_set): nothing returned, should be void.
+
+* ext/socket/socket.c (load_addr_info): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/05/21 04:22:54 $
+d230 2
+a231 2
+static int
+rb_waitpid(pid, flags, st)
+d233 1
+a234 1
+    int *st;
+d329 1
+a329 44
+proc_wait()
+{
+    int pid, status;
+#ifdef NO_WAITPID
+    struct wait_data data;
+
+    if (pid_tbl) {
+	data.status = -1;
+	st_foreach(pid_tbl, wait_each, &data);
+	if (data.status != -1) {
+	    last_status_set(data.status);
+	    return INT2FIX(data.pid);
+	}
+    }
+
+    while (1) {
+	TRAP_BEG;
+	pid = wait(&status);
+	TRAP_END;
+	if (pid >= 0) break;
+        if (errno == EINTR) {
+            rb_thread_schedule();
+            continue;
+        }
+        rb_sys_fail(0);
+    }
+    last_status_set(status);
+#else
+    if ((pid = rb_waitpid(-1, 0, &status)) < 0)
+	rb_sys_fail(0);
+#endif
+    return INT2FIX(pid);
+}
+
+static VALUE
+proc_wait2()
+{
+    VALUE pid = proc_wait();
+
+    return rb_assoc_new(pid, rb_last_status);
+}
+
+static VALUE
+proc_waitpid(argc, argv)
+d337 9
+a345 3
+    rb_scan_args(argc, argv, "11", &vpid, &vflags);
+    if (argc == 2 && !NIL_P(vflags)) {
+	flags = NUM2UINT(vflags);
+d347 1
+a347 2
+
+    if ((pid = rb_waitpid(NUM2INT(vpid), flags, &status)) < 0)
+d357 1
+a357 1
+proc_waitpid2(argc, argv)
+d361 1
+a361 1
+    VALUE pid = proc_waitpid(argc, argv);
+d395 1
+a395 1
+	pid = rb_waitpid(-1, 0, &status);
+d781 1
+a781 1
+	i = rb_waitpid(pid, 0, &status);
+d959 1
+a959 3
+proc_getpgrp(argc, argv)
+    int argc;
+    VALUE *argv;
+a960 1
+#ifdef HAVE_GETPGRP
+a961 3
+#ifndef GETPGRP_VOID
+    VALUE vpid;
+    int pid;
+d963 1
+a963 5
+    rb_scan_args(argc, argv, "01", &vpid);
+    pid = NIL_P(vpid)?0:NUM2INT(vpid);
+    pgrp = getpgrp(pid);
+#else
+    rb_scan_args(argc, argv, "0");
+a964 1
+#endif
+d968 5
+d974 1
+d979 1
+a979 3
+proc_setpgrp(argc, argv)
+    int argc;
+    VALUE *argv;
+d981 1
+a981 12
+#ifdef HAVE_SETPGRP
+#ifndef SETPGRP_VOID
+    VALUE pid, pgrp;
+    int ipid, ipgrp;
+
+    rb_scan_args(argc, argv, "02", &pid, &pgrp);
+
+    ipid = NIL_P(pid)?0:NUM2INT(pid);
+    ipgrp = NIL_P(pgrp)?0:NUM2INT(pgrp);
+    if (setpgrp(ipid, ipgrp) < 0) rb_sys_fail(0);
+#else
+    rb_scan_args(argc, argv, "0");
+a982 2
+#endif
+    return INT2FIX(0);
+d984 3
+d988 1
+d1277 4
+a1280 2
+    rb_define_module_function(rb_mProcess, "wait", proc_wait, 0);
+    rb_define_module_function(rb_mProcess, "wait2", proc_wait2, 0);
+a1281 2
+    rb_define_module_function(rb_mProcess, "waitpid", proc_waitpid, -1);
+    rb_define_module_function(rb_mProcess, "waitpid2", proc_waitpid2, -1);
+d1306 2
+a1307 2
+    rb_define_module_function(rb_mProcess, "getpgrp", proc_getpgrp, -1);
+    rb_define_module_function(rb_mProcess, "setpgrp", proc_setpgrp, -1);
+@
+
+
+1.36
+log
+@* bignum.c (rb_big2str): t should be protected from GC.
+
+* process.c (rb_proc_times): need not to check retrun value from
+  times(2).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/16 09:05:50 $
+d98 1
+a98 1
+static VALUE
+d656 1
+a656 1
+    after_exec();    
+@
+
+
+1.35
+log
+@* array.c (rb_ary_and): should not push frozen key string.
+
+* array.c (rb_ary_or): ditto.
+
+* eval.c (rb_thread_schedule): should save context before raising
+  deadlock, saved context for current thread might be obsolete.
+
+* time.c (make_time_t): non DST timezone shift supported (hopefully).
+
+* time.c (make_time_t): strict range detection for negative time_t.
+
+* signal.c: SIGINFO added.
+
+* eval.c (rb_ensure): should not SEGV when prot_tag is NULL.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/05/02 04:22:11 $
+d1288 1
+a1288 1
+    if (times(&buf) == -1) rb_sys_fail(0);
+@
+
+
+1.34
+log
+@* eval.c (block_pass): should not downgrade safe level.
+
+* ext/dbm/extconf.rb: allow specifying dbm-type explicitly.
+
+* ext/dbm/extconf.rb: avoid gdbm if possible, because it leaks
+  memory, whereas gdbm.so doesn't.  potential incompatibility.
+
+* string.c (rb_str_insert): new method.
+
+* parse.y (yylex): lex_state after RESCUE_MOD should be EXPR_BEG.
+
+* array.c (rb_ary_insert): new method.
+
+* array.c (rb_ary_update): new utility function.
+
+* io.c (set_outfile): should check if closed before assignment.
+
+* eval.c (rb_eval): should preserve value of ruby_errinfo.
+
+* eval.c (rb_thread_schedule): infinite sleep should not cause
+  dead lock.
+
+* array.c (rb_ary_flatten_bang): proper recursive detection.
+
+* eval.c (yield_under): need not to prohibit at safe level 4.
+
+* pack.c (pack_pack): p/P packs nil into NULL.
+
+* pack.c (pack_unpack): p/P unpacks NULL into nil.
+
+* pack.c (pack_pack): size check for P template.
+
+* ruby.c (set_arg0): wrong predicate when new $0 value is bigger
+  than original space.
+
+* gc.c (id2ref): should use NUM2ULONG()
+
+* object.c (rb_mod_const_get): check whether name is a class
+  variable name.
+
+* object.c (rb_mod_const_set): ditto.
+
+* object.c (rb_mod_const_defined): ditto.
+
+* marshal.c (w_float): precision changed to "%.16g"
+
+* eval.c (rb_call0): wrong retry behavior.
+
+* numeric.c (fix_aref): a bug on long>int architecture.
+
+* eval.c (rb_eval_string_wrap): should restore ruby_wrapper.
+
+* regex.c (re_compile_pattern): char class at either edge of range
+  should be invalid.
+
+* eval.c (handle_rescue): use === to compare exception match.
+
+* error.c (syserr_eqq): comparison between SytemCallErrors should
+  based on their error numbers.
+
+* eval.c (safe_getter): should use INT2NUM().
+
+* bignum.c (rb_big2long): 2**31 cannot fit in 31 bit long.
+
+* regex.c (calculate_must_string): wrong length calculation.
+
+* eval.c (rb_thread_start_0): fixed memory leak.
+
+* parse.y (none): should clear cmdarg_stack too.
+
+* io.c (rb_fopen): use setvbuf() to avoid recursive malloc() on
+  some platforms.
+
+* file.c (rb_stat_dev): device functions should honor stat field
+  types (except long long such as dev_t).
+
+* eval.c (rb_mod_nesting): should not push nil for nesting array.
+
+* eval.c (rb_mod_s_constants): should not search array by
+  rb_mod_const_at() for nil (happens for singleton class).
+
+* class.c (rb_singleton_class_attached): should modify iv_tbl by
+  itself, no longer use rb_iv_set() to avoid freeze check error.
+
+* variable.c (rb_const_get): error message "uninitialized constant
+  Foo at Bar::Baz" instead of "uninitialized constantBar::Baz::Foo".
+
+* eval.c (rb_mod_included): new hook called from rb_mod_include().
+
+* io.c (opt_i_set): should strdup() inplace_edit string.
+
+* eval.c (exec_under): need to push cref too.
+
+* eval.c (rb_f_missing): raise NameError for "undefined local
+  variable or method".
+
+* error.c (Init_Exception): new exception NoMethodError.
+  NameError moved under ScriptError again.
+
+* eval.c (rb_f_missing): use NoMethodError instead of NameError.
+
+* file.c (Init_File): should redifine "new" class method.
+
+* eval.c (PUSH_CREF): sharing cref node was problematic.  maintain
+  runtime cref list instead.
+
+* eval.c (rb_eval): copy defn node before registering.
+
+* eval.c (rb_load): clear ruby_cref before loading.
+
+* variable.c (rb_const_get): no recursion to show full class path
+  for modules.
+
+* eval.c (rb_set_safe_level): should set safe level in curr_thread
+  as well.
+
+* eval.c (safe_setter): ditto.
+
+* object.c (rb_obj_is_instance_of): nil belongs to false, not true.
+
+* time.c (make_time_t): proper (I hope) daylight saving time
+  handling for both US and Europe.  I HATE DST!
+
+* eval.c (rb_thread_wait_for): non blocked signal interrupt should
+  stop the interval.
+
+* eval.c (proc_eq): class check aded.
+
+* eval.c (proc_eq): typo fixed ("return" was ommitted).
+
+* error.c (Init_Exception): move NameError under StandardError.
+
+* class.c (rb_mod_clone): should copy method bodies too.
+
+* bignum.c (bigdivrem): should trim trailing zero bdigits of
+  remainder, even if dd == 0.
+
+* file.c (check3rdbyte): safe string check moved here.
+
+* time.c (make_time_t): remove HAVE_TM_ZONE code since it
+  sometimes reports wrong time.
+
+* time.c (make_time_t): remove unnecessary range check for
+  platforms where negative time_t is available.
+
+* process.c (proc_waitall): should push Process::Status instead of
+  Finuxm status.
+
+* process.c (waitall_each): should add all entries in pid_tbl.
+  these changes are inspired by Koji Arai.  Thanks.
+
+* process.c (proc_wait): should not iterate if pid_tbl is 0.
+
+* process.c (proc_waitall): ditto.
+
+* numeric.c (flodivmod): a bug in no fmod case.
+
+* process.c (pst_wifsignaled): should apply WIFSIGNALED for status
+  (int), not st (VALUE).
+
+* io.c (Init_IO): value of $/ and $\ are no longer restricted to
+  strings.  type checks are done on demand.
+
+* class.c (rb_include_module): module inclusion should be check
+  taints.
+
+* ruby.h (STR2CSTR): replace to StringType() and StringTypePtr().
+
+* ruby.h (rb_str2cstr): ditto.
+
+* eval.c (rb_load): should not copy topleve local variables.  It
+  cause variable/method ambiguity.  Thanks to L. Peter Deutsch.
+
+* class.c (rb_include_module): freeze check at first.
+
+* eval.c (rb_attr): sprintf() and rb_intern() moved into
+  conditional body.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/03/28 08:43:25 $
+a718 1
+    int i;
+@
+
+
+1.33
+log
+@* object.c (rb_str2cstr): warn if string contains \0 and length
+  value is ignored.
+
+* class.c (rb_singleton_class_clone): should copy class constant
+  table as well.
+
+* class.c (rb_include_module): sometimes cache was mistakenly left
+  uncleared - based on the patch by K.Kosako.
+
+* ruby.h: all Check_SafeStr()'s are replaced by SafeStr() to
+  ensure 'to_str' be always effective.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/02/20 14:52:31 $
+d173 1
+a173 1
+    if (WIFSIGNALED(st))
+a316 6
+struct waitall_data {
+    int pid;
+    int status;
+    VALUE ary;
+};
+
+d320 1
+a320 1
+    struct waitall_data *data;
+d322 2
+a323 10
+    VALUE pid_status_member;
+
+    if (data->status != -1) return ST_STOP;
+
+    data->pid = key;
+    data->status = value;
+    pid_status_member = rb_ary_new2(2);
+    rb_ary_push(pid_status_member, INT2NUM(key));
+    rb_ary_push(pid_status_member, INT2NUM(value));
+    rb_ary_push(data->ary, pid_status_member);
+d335 7
+a341 5
+    data.status = -1;
+    st_foreach(pid_tbl, wait_each, &data);
+    if (data.status != -1) {
+	last_status_set(data.status);
+	return INT2FIX(data.pid);
+d407 1
+a407 1
+    VALUE pid_status_ary, pid_status_member;
+d409 2
+d412 2
+a413 8
+    struct waitall_data data;
+
+    data.ary = pid_status_ary = rb_ary_new();
+    data.status = -1;
+    st_foreach(pid_tbl, waitall_each, &data);
+    if (data.status != -1) {
+	last_status_set(data.status);
+	return pid_status_ary;
+d427 2
+a428 4
+	pid_status_member = rb_ary_new2(2);
+	rb_ary_push(pid_status_member, INT2NUM(pid));
+	rb_ary_push(pid_status_member, INT2NUM(status));
+	rb_ary_push(pid_status_ary, pid_status_member);
+a429 2
+    if (RARRAY(pid_status_ary)->len != 0)
+	last_status_set(status);
+d431 1
+a431 1
+    pid_status_ary = rb_ary_new();
+d439 1
+a439 4
+	pid_status_member = rb_ary_new2(2);
+	rb_ary_push(pid_status_member, INT2NUM(pid));
+	rb_ary_push(pid_status_member, INT2NUM(status));
+	rb_ary_push(pid_status_ary, pid_status_member);
+d442 1
+a442 1
+    return pid_status_ary;
+d544 1
+a544 1
+	SafeStr(argv[i]);
+d674 1
+a674 1
+    SafeStr(prog);
+d690 1
+a690 1
+    SafeStr(sv);
+d733 1
+a733 1
+	SafeStr(prog);
+d738 1
+a738 1
+	SafeStr(cmd);
+d856 1
+a856 1
+    SafeStr(cmd);
+d880 1
+a880 1
+    SafeStr(cmd);
+d937 1
+a937 1
+	SafeStr(prog);
+d940 1
+a940 1
+	SafeStr(argv[i]);
+@
+
+
+1.32
+log
+@* process.c: add W* macro if not available.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/02/19 07:03:06 $
+d567 1
+d694 1
+a694 1
+	Check_SafeStr(argv[i]);
+d697 1
+a697 1
+    Check_SafeStr(prog);
+d713 1
+a713 1
+    Check_SafeStr(sv);
+d756 1
+a756 4
+	Check_SafeStr(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	Check_SafeStr(argv[i]);
+d759 4
+a762 1
+	rb_proc_exec(RSTRING(argv[0])->ptr);
+d879 1
+a879 1
+    Check_SafeStr(cmd);
+d903 1
+a903 1
+    Check_SafeStr(cmd);
+d960 1
+a960 1
+	Check_SafeStr(prog);
+d963 1
+a963 1
+	Check_SafeStr(argv[i]);
+@
+
+
+1.31
+log
+@* eval.c (secure_visibility): visibility check for untainted modules.
+
+* signal.c (sigpipe): sighandler which does nothing.
+
+* signal.c (trap): set sigpipe function for SIGPIPE.
+
+* signal.c (Init_signal): default SIGPIPE handler should be
+  sigpipe function.
+
+* array.c (rb_ary_subseq): wrong boundary check.
+
+* parse.y (cond0): integer literal in condition should not be
+  compared to lineno ($.).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/16 07:53:19 $
+d58 19
+@
+
+
+1.30
+log
+@* io.c (set_outfile): f should be the FILE* from the assigning value.
+
+* ext/socket/socket.c (tcp_s_open): should not give default value
+  to local_host.
+
+* time.c (time_s_times): move to Process::times.
+
+* file.c (rb_file_s_lchmod): new method File::lchmod.
+
+* file.c (rb_file_s_lchown): new method File::lchown.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/02/15 06:00:55 $
+d302 1
+a302 1
+}
+d307 1
+a307 1
+    struct wait_data *data;
+d566 4
+@
+
+
+1.29
+log
+@* process.c (proc_waitall): new method based on a patch from Brian
+  Fundakowski Feldman <green@@green.dyndns.org>.
+
+* process.c (last_status_set): objectify $? value (Process::Status).
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/29 05:10:42 $
+d52 8
+d119 10
+a128 1
+pst_ifstopped(st)
+d140 1
+a140 1
+pst_stopsig(st)
+d149 1
+a149 1
+pst_ifsignaled(st)
+d161 1
+a161 1
+pst_termsig(st)
+d170 1
+a170 1
+pst_ifexited(st)
+d182 1
+a182 1
+pst_exitstatus(st)
+d191 1
+a191 1
+pst_coredump(st)
+d1274 25
+d1342 1
+d1348 7
+a1354 7
+    rb_define_method(rb_cProcStatus, "ifstopped?", pst_ifstopped, 0);
+    rb_define_method(rb_cProcStatus, "stopsig", pst_stopsig, 0);
+    rb_define_method(rb_cProcStatus, "ifsignaled?", pst_ifsignaled, 0);
+    rb_define_method(rb_cProcStatus, "termsig", pst_termsig, 0);
+    rb_define_method(rb_cProcStatus, "ifexited?", pst_ifexited, 0);
+    rb_define_method(rb_cProcStatus, "exitstatus", pst_exitstatus, 0);
+    rb_define_method(rb_cProcStatus, "coredump?", pst_coredump, 0);
+d1384 6
+@
+
+
+1.28
+log
+@* string.c (str_independent): should not clear str->orig here.
+  it's too early.
+@
+text
+@d6 1
+a6 1
+  $Date: 2001/01/10 07:52:45 $
+d68 1
+d71 118
+d230 1
+a230 1
+	rb_last_status = INT2FIX(*st);
+d259 1
+a259 1
+    rb_last_status = INT2FIX(*st);
+d280 24
+d309 1
+a309 1
+    int pid, state;
+d316 1
+a316 1
+	rb_last_status = data.status;
+d322 1
+a322 1
+	pid = wait(&state);
+d331 1
+a331 1
+    rb_last_status = INT2FIX(state);
+d333 1
+a333 1
+    if ((pid = rb_waitpid(-1, 0, &state)) < 0)
+d380 52
+d552 1
+a552 1
+	    int state;
+d554 1
+a554 1
+	    state = system(str);
+d556 2
+a557 2
+	    if (state != -1)
+		exit(state);
+d561 1
+a561 1
+	    int state = -1;
+d566 1
+a566 1
+		state = system(str);
+d568 2
+a569 2
+	    if (state != -1)
+		exit(state);
+d602 1
+a602 1
+    int state;
+d637 1
+a637 1
+    state = spawnv(P_WAIT, prog, argv);
+d639 1
+a639 1
+    return state;
+d670 1
+a670 1
+    int state;
+d678 1
+a678 1
+	    state = shell?spawnl(P_WAIT,shell,"sh","-c",str,(char*)NULL):system(str);
+d680 1
+a680 1
+	    return state;
+d821 1
+a821 1
+    int state;
+d826 1
+a826 1
+	rb_last_status = INT2FIX(0);
+d839 2
+a840 2
+    state = do_spawn(RSTRING(cmd)->ptr);
+    rb_last_status = INT2FIX(state);
+d842 1
+a842 1
+    if (state == 0) return Qtrue;
+d847 1
+a847 1
+    int state;
+d850 1
+a850 1
+	rb_last_status = INT2FIX(0);
+d863 2
+a864 2
+    state = system(RSTRING(cmd)->ptr);
+    rb_last_status = INT2FIX((state & 0xff) << 8);
+d866 1
+a866 1
+    if (state == 0) return Qtrue;
+d872 1
+a872 1
+    int state;
+d878 1
+a878 1
+	rb_last_status = INT2FIX(0);
+d891 1
+a891 1
+	state = proc_spawn(argv[0]);
+d894 1
+a894 1
+	state = proc_spawn_n(argc, argv, prog);
+d896 2
+a897 2
+    rb_last_status = state == -1 ? INT2FIX(127) : INT2FIX(state);
+    return state == 0 ? Qtrue : Qfalse;
+d906 1
+a906 1
+	rb_last_status = INT2FIX(0);
+d948 2
+a949 1
+    if (rb_last_status == INT2FIX(0)) return Qtrue;
+d1291 1
+d1294 18
+@
+
+
+1.27
+log
+@* m17n baseline.
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2001/01/10 07:30:18 $
+d955 1
+a955 1
+#if defined HAVE_SETRESUID
+d987 1
+a987 1
+#if defined HAVE_SETRESGID
+d1016 1
+a1016 1
+#if defined HAVE_SETRESUID
+d1045 1
+a1045 1
+#if defined HAVE_SETRESGID
+@
+
+
+1.26
+log
+@setres[ug]id, NORETURN
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/12/26 08:08:50 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.25
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/25 06:29:07 $
+d955 3
+a957 1
+#ifdef HAVE_SETREUID
+d959 1
+a959 2
+#else
+#ifdef HAVE_SETRUID
+a968 1
+#endif
+d987 3
+a989 4
+#ifdef HAS_SETRGID
+	setrgid((GIDTYPE)gid);
+#else
+#ifdef HAVE_SETREGID
+d991 2
+a1000 1
+#endif
+d1016 5
+a1020 1
+#ifdef HAVE_SETEUID
+a1022 3
+#ifdef HAVE_SETREUID
+    if (setreuid(-1, NUM2INT(euid)) < 0) rb_sys_fail(0);
+#else
+a1028 1
+#endif
+d1045 5
+a1049 1
+#ifdef HAVE_SETEGID
+a1051 3
+#ifdef HAVE_SETREGID
+    if (setregid(-1, NUM2INT(egid)) < 0) rb_sys_fail(0);
+#else
+a1056 1
+#endif
+@
+
+
+1.24
+log
+@001225
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/11/27 09:23:23 $
+d237 1
+d239 1
+@
+
+
+1.24.2.1
+log
+@* process.c: silence VC++ warnings.
+
+* sprintf.c: ditto.
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/12/25 06:29:07 $
+a236 1
+#ifndef HAVE_STRING_H
+a237 1
+#endif
+@
+
+
+1.24.2.2
+log
+@* eval.c (rb_thread_restore_context): save current value of
+  lastline and lastmatch in the thread struct for later restore.
+
+* eval.c (rb_thread_save_context): restore lastline and lastmatch.
+
+* numeric.c (flo_to_s): should handle negative float value.
+@
+text
+@d5 2
+a6 2
+  $Author: knu $
+  $Date: 2001/05/11 14:55:58 $
+d956 1
+a956 1
+    if (setreuid(uid, -1) < 0) rb_sys_fail(0);
+d959 1
+a959 1
+    if (setruid(uid) < 0) rb_sys_fail(0);
+d962 3
+a964 4
+	if (geteuid() == uid) {
+	    if (setuid(uid) < 0) rb_sys_fail(0);
+	}
+	else {
+a965 1
+	}
+d987 3
+d991 1
+a991 4
+    if (setregid(gid, -1) < 0) rb_sys_fail(0);
+#else
+#ifdef HAS_SETRGID
+    if (setrgid((GIDTYPE)gid) < 0) rb_sys_fail(0);
+d994 3
+a996 4
+	if (getegid() == gid) {
+	    if (setgid(gid) < 0) rb_sys_fail(0);
+	}
+	else {
+a997 1
+	}
+d1016 3
+a1021 3
+#ifdef HAVE_SETEUID
+    if (seteuid(NUM2INT(euid)) < 0) rb_sys_fail(0);
+#else
+d1023 3
+a1025 4
+    if (euid == getuid()) {
+	if (setuid(euid) < 0) rb_sys_fail(0);
+    }
+    else {
+a1026 1
+    }
+d1045 3
+a1050 3
+#ifdef HAVE_SETEGID
+    if (setegid(NUM2INT(egid)) < 0) rb_sys_fail(0);
+#else
+d1052 3
+a1054 4
+    if (egid == getgid()) {
+	if (setgid(egid) < 0) rb_sys_fail(0);
+    }
+    else {
+a1055 1
+    }
+@
+
+
+1.24.2.3
+log
+@	* process.c (Init_process): enable getpid and getppid on NT.
+	  (ruby-bugs-ja:PR#152)
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2001/09/08 14:05:51 $
+a1104 1
+#endif /* ifndef NT */
+d1108 1
+@
+
+
+1.24.2.4
+log
+@forgot to commit everything bug ChangeLog
+@
+text
+@d5 2
+a6 2
+  $Author: usa $
+  $Date: 2001/11/22 18:16:24 $
+d43 3
+d730 1
+a730 1
+    switch (pid = fork()) {
+@
+
+
+1.24.2.5
+log
+@* process.c (rb_syswait): thread kludge; should be fixed to
+  support native thread.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/01/04 14:19:48 $
+a590 1
+    static int overriding;
+d593 1
+a593 1
+    int i, hooked = Qfalse;
+a594 1
+    if (!overriding) {
+d596 1
+a596 1
+	hfunc = signal(SIGHUP, SIG_IGN);
+d599 1
+a599 1
+	qfunc = signal(SIGQUIT, SIG_IGN);
+d601 1
+a601 4
+	ifunc = signal(SIGINT, SIG_IGN);
+	overriding = Qtrue;
+	hooked = Qtrue;
+    }
+d604 1
+a604 1
+	i = rb_waitpid(pid, &status, 0);
+a606 1
+    if (hooked) {
+d608 1
+a608 1
+	signal(SIGHUP, hfunc);
+d611 1
+a611 1
+	signal(SIGQUIT, qfunc);
+d613 1
+a613 2
+	signal(SIGINT, ifunc);
+    }
+@
+
+
+1.24.2.6
+log
+@* process.c (rb_syswait): argument order of rb_waitpid() inverted.
+
+* sample/test.rb (system): test with scripts under the source
+  directory.
+@
+text
+@d6 1
+a6 1
+  $Date: 2002/02/25 09:18:09 $
+d609 1
+a609 1
+	i = rb_waitpid(pid, 0, &status);
+@
+
+
+1.24.2.7
+log
+@* eval.c (rb_f_missing): NoMethod error messages for true, false,
+  nil must respond visibility like for other objects.
+@
+text
+@d5 2
+a6 2
+  $Author: nobu $
+  $Date: 2002/02/25 10:42:26 $
+a619 1
+	overriding = Qfalse;
+@
+
+
+1.24.2.8
+log
+@* regex.c (re_compile_pattern): '\0111' should be '\011' plus '1',
+  since octal literals are formed by three digits at most.
+
+* eval.c (rb_eval_cmd): cbase should not be NULL; it should be
+  either ruby_wrapper or Object.
+
+* enum.c (enum_each_with_index): should return self.
+
+* process.c (proc_setpgrp): should return value for non-void function.
+
+* process.c (proc_getpgid): should raise exception if getpgid() return -1.
+
+* string.c (rb_str_ljust): should return a duplicated string.
+
+* string.c (rb_str_rjust): ditto.
+
+* string.c (rb_str_center): ditto.
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2002/02/27 04:50:30 $
+a845 1
+    if (i < 0) rb_sys_fail(0);
+a942 1
+    return INT2FIX(0);
+@
+
+
+1.23
+log
+@matz
+@
+text
+@d5 2
+a6 2
+  $Author: eban $
+  $Date: 2000/11/13 10:11:28 $
+a533 15
+fork_rescue(data, errinfo)
+    VALUE data, errinfo;
+{
+    int status = 1;
+
+    if (rb_obj_is_kind_of(errinfo, rb_eSystemExit)) {
+	VALUE st = rb_iv_get(errinfo, "status");
+
+	status = NUM2INT(st);
+    }
+    ruby_finalize();
+    _exit(status);
+}
+
+static VALUE
+a547 4
+#if 0
+	    rb_rescue2(rb_yield, Qnil, fork_rescue, 0, rb_eException, 0);
+	    _exit(0);
+#else
+a551 1
+#endif
+@
+
+
+1.22
+log
+@eban
+@
+text
+@d5 2
+a6 2
+  $Author: matz $
+  $Date: 2000/10/20 16:36:53 $
+d220 4
+a223 1
+    if (pid == 0) return Qnil;
+d233 1
+d534 15
+d561 1
+d563 2
+a564 1
+	    rb_yield(Qnil);
+d566 6
+@
+
+
+1.21
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/17 18:13:58 $
+d660 1
+a660 1
+    rb_last_status = INT2FIX(state);
+@
+
+
+1.20
+log
+@1.6.2 (to be)
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/10/10 07:03:21 $
+d180 1
+a180 1
+	TRA_END;
+@
+
+
+1.19
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/08/07 05:01:54 $
+d89 1
+d95 1
+d121 1
+d123 1
+d177 5
+a181 1
+    while ((pid = wait(&state)) < 0) {
+d229 1
+a229 1
+    VALUE pid = proc_waitpid2(argc, argv);
+@
+
+
+1.18
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/07/21 08:45:32 $
+d284 1
+a284 1
+	    new_argv = ALLOCA_N(char *, n + 2);
+d412 1
+a412 1
+	new_argv = ALLOCA_N(char *, n + 2);
+d442 1
+a442 1
+    args = ALLOCA_N(char *, argc + 1);
+d448 1
+a448 1
+    args[i] = (char *) 0;
+d474 1
+a474 1
+    a = argv = ALLOCA_N(char *, (s - str) / 2 + 2);
+@
+
+
+1.17
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/19 08:38:08 $
+d577 1
+a577 1
+    RETSIGTYPE (*hfunc)(), (*qfunc)(), (*ifunc)();
+d820 1
+a820 1
+#ifdef HAVE_GETPGID
+@
+
+
+1.16
+log
+@2000-06-19
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/06/13 09:42:40 $
+d894 1
+d896 1
+a896 1
+    if (prio < 0) rb_sys_fail(0);
+@
+
+
+1.15
+log
+@2000-06-13
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/24 04:34:05 $
+d189 1
+a189 2
+proc_waitpid(obj, vpid, vflags)
+    VALUE obj, vpid, vflags;
+d191 11
+d204 5
+a208 2
+    if (NIL_P(vflags)) flags = 0;
+    else flags = NUM2UINT(vflags);
+d216 9
+d859 2
+a860 1
+  pid_t sid;
+d862 2
+d865 4
+a868 1
+  sid = setpgrp();
+d870 1
+a870 1
+  sid = setpgrp(0, getpid());
+d872 1
+a872 1
+  if (sid == -1) return -1;
+d878 1
+a878 2
+  return sid;
+}
+d1076 3
+a1078 1
+    rb_define_module_function(rb_mProcess, "waitpid", proc_waitpid, 2);
+@
+
+
+1.14
+log
+@2000-05-24
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/17 04:38:15 $
+d829 1
+a829 1
+#ifdef HAVE_SETSID
+d836 16
+a1043 1
+#if !defined(NT)
+a1044 1
+#endif
+@
+
+
+1.13
+log
+@2000-05-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/09 04:53:02 $
+d512 1
+a512 1
+	if (rb_iterator_p()) {
+@
+
+
+1.12
+log
+@2000-05-09
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/05/01 09:41:25 $
+d96 1
+a96 1
+	    rb_thread_schedule();
+d103 1
+a103 1
+	rb_thread_schedule();
+@
+
+
+1.11
+log
+@2000-05-01
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/13 07:18:37 $
+d11 1
+a11 1
+  Copyright (C) 2000  Information-technology Promotion Agancy, Japan
+@
+
+
+1.10
+log
+@2000-03-13
+@
+text
+@d1 1
+a1 1
+/************************************************
+d6 1
+a6 1
+  $Date: 2000/03/07 08:37:43 $
+d10 2
+d13 1
+a13 1
+************************************************/
+@
+
+
+1.9
+log
+@2000-03-07
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 07:11:14 $
+d786 1
+a786 1
+    return Qnil;
+d818 1
+a818 1
+    return Qnil;
+@
+
+
+1.8
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/05 04:37:08 $
+a45 5
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+# include "macruby_missing.h"
+#endif
+
+a217 1
+#ifndef USE_CWGUSI
+a220 1
+#endif
+a228 1
+#ifndef USE_CWGUSI
+a280 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+a310 1
+#ifndef USE_CWGUSI
+a359 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+a543 3
+#ifdef USE_CWGUSI
+    exit(istatus);
+#else
+d545 1
+a545 1
+#endif
+a662 3
+#if defined(USE_CWGUSI)
+    rb_notimplement();
+#else
+a713 1
+#endif /* USE_CWGUSI */
+a1002 1
+#ifndef USE_CWGUSI
+a1003 1
+#endif
+a1004 1
+#ifndef USE_CWGUSI
+a1005 1
+#endif
+a1029 1
+#ifndef USE_CWGUSI
+a1030 1
+#endif
+a1034 1
+#ifndef USE_CWGUSI
+a1036 1
+#endif /* ifndef USE_CWGUSI */
+@
+
+
+1.7
+log
+@20000105
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/14 06:49:50 $
+d163 1
+a163 1
+rb_f_wait()
+d192 1
+a192 1
+rb_f_waitpid(obj, vpid, vflags)
+d198 1
+a198 1
+    else flags = FIX2UINT(vflags);
+d200 1
+a200 1
+    if ((pid = rb_waitpid(FIX2UINT(vpid), flags, &status)) < 0)
+d202 1
+d1060 2
+a1061 2
+    rb_define_module_function(rb_mProcess, "wait", rb_f_wait, 0);
+    rb_define_module_function(rb_mProcess, "waitpid", rb_f_waitpid, 2);
+@
+
+
+1.6
+log
+@19991214
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/12/06 09:03:55 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+@
+
+
+1.5
+log
+@19991206
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/25 09:03:06 $
+d834 1
+d849 1
+a849 1
+    int pid = setsid();
+d851 2
+d885 1
+d1002 1
+@
+
+
+1.4
+log
+@19991125
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/29 09:25:31 $
+d508 1
+@
+
+
+1.3
+log
+@19991029
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:12 $
+d603 7
+d629 5
+d682 1
+a682 1
+   volatile VALUE prog = 0;
+@
+
+
+1.2
+log
+@1.4.0
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/28 09:26:46 $
+d647 1
+a647 1
+	return INT2FIX(0);
+d678 1
+a678 1
+	return INT2FIX(0);
+@
+
+
+1.2.2.1
+log
+@19991025
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/08/13 05:45:12 $
+d647 1
+a647 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d678 1
+a678 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+@
+
+
+1.2.2.2
+log
+@19991124-1.4.3pre1
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/10/25 05:09:12 $
+a602 7
+    fflush(stdout);
+    fflush(stderr);
+    if (argc == 0) {
+	rb_last_status = INT2FIX(0);
+	rb_raise(rb_eArgError, "wrong # of arguments");
+    }
+
+a621 5
+    if (argc == 0) {
+	rb_last_status = INT2FIX(0);
+	rb_raise(rb_eArgError, "wrong # of arguments");
+    }
+
+d670 1
+a670 1
+    volatile VALUE prog = 0;
+@
+
+
+1.2.2.3
+log
+@2000-01-17
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/11/24 07:13:52 $
+d9 1
+a9 1
+  Copyright (C) 1993-2000 Yukihiro Matsumoto
+@
+
+
+1.2.2.4
+log
+@2000-02-17
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/01/17 08:24:09 $
+d198 1
+a198 1
+    else flags = NUM2UINT(vflags);
+d200 1
+a200 1
+    if ((pid = rb_waitpid(NUM2INT(vpid), flags, &status)) < 0)
+a201 1
+    if (pid == 0) return Qnil;
+@
+
+
+1.2.2.5
+log
+@2000-03-13
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/02/17 08:29:01 $
+d807 1
+a807 1
+    return INT2FIX(0);
+d838 1
+a838 1
+    return INT2FIX(0);
+@
+
+
+1.2.2.6
+log
+@matz
+@
+text
+@d6 1
+a6 1
+  $Date: 2000/03/13 09:15:44 $
+a866 1
+    errno = 0;
+d868 1
+a868 1
+    if (errno) rb_sys_fail(0);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+  $Date: 1996/12/25 10:42:47 $
+d9 1
+a9 1
+  Copyright (C) 1993-1996 Yukihiro Matsumoto
+d14 1
+a14 1
+#include "sig.h"
+a16 1
+#include <ctype.h>
+d31 1
+d33 1
+a33 1
+struct timeval time_timeval();
+d46 9
+d71 1
+a71 1
+VALUE last_status = Qnil;
+d74 1
+a75 2
+#else
+# define WAIT_CALL
+d85 1
+a85 1
+#if defined(THREAD) && (defined(HAVE_WAITPID) || defined(HAVE_WAIT4))
+d87 1
+a87 1
+    if (!thread_alone()) {	/* there're other threads to run */
+a89 1
+#endif
+d91 1
+a92 1
+  retry:
+d94 2
+a95 16
+    if (result < 0) {
+	if (errno == EINTR) {
+#ifdef THREAD
+	    thread_schedule();
+#endif
+	    goto retry;
+	}
+	return -1;
+    }
+#ifdef THREAD
+    if (result == 0) {
+	if (oflags & WNOHANG) return 0;
+	thread_schedule();
+	if (thread_alone()) flags = oflags;
+	goto retry;
+    }
+a96 5
+#else
+#ifdef HAVE_WAIT4
+  retry:
+
+    result = wait4(pid, st, flags, NULL);
+d99 1
+a99 3
+#ifdef THREAD
+	    thread_schedule();
+#endif
+a103 1
+#ifdef THREAD
+d106 2
+a107 2
+	thread_schedule();
+	if (thread_alone()) flags = oflags;
+d110 1
+a110 2
+#endif
+#else
+d112 1
+a112 1
+	last_status = INT2FIX(*st);
+d118 1
+a118 1
+	ArgError("Can't do waitpid with flags");
+d125 1
+a125 3
+#ifdef THREAD
+		thread_schedule();
+#endif
+d136 1
+d139 1
+a139 2
+#endif
+    last_status = INT2FIX(*st);
+d143 1
+a143 1
+#ifndef WAIT_CALL
+d163 1
+a163 1
+f_wait()
+d166 1
+a166 1
+#ifndef WAIT_CALL
+d172 1
+a172 1
+	last_status = data.status;
+a174 1
+#endif
+d177 10
+a186 3
+	if (errno == EINTR) {
+#ifdef THREAD
+	    thread_schedule();
+a187 6
+	    continue;
+	}
+	if (errno == ECHILD) return Qnil;
+	rb_sys_fail(0);
+    }
+    last_status = INT2FIX(state);
+d192 1
+a192 1
+f_waitpid(obj, vpid, vflags)
+d207 3
+a209 22
+#if defined(THREAD) && defined(HAVE_SETITIMER)
+static void
+before_exec()
+{
+    struct itimerval tval;
+
+    tval.it_interval.tv_sec = 0;
+    tval.it_interval.tv_usec = 0;
+    tval.it_value = tval.it_interval;
+    setitimer(ITIMER_VIRTUAL, &tval, NULL);
+}
+
+static void
+after_exec()
+{
+    struct itimerval tval;
+
+    tval.it_interval.tv_sec = 0;
+    tval.it_interval.tv_usec = 100000;
+    tval.it_value = tval.it_interval;
+    setitimer(ITIMER_VIRTUAL, &tval, NULL);
+}
+d221 6
+a226 5
+    extern int env_path_tainted;
+    extern VALUE eSecurityError;
+
+    if (rb_safe_level() > 0 && env_path_tainted) {
+	Raise(eSecurityError, "Insecure PATH - %s", str);
+d231 1
+a231 1
+proc_exec_v(argv)
+d233 1
+d235 11
+a245 7
+    char *prog;
+
+    security(argv[0]);
+    prog = dln_find_exe(argv[0], 0);
+    if (!prog) {
+	errno = ENOENT;
+	return -1;
+d247 1
+a247 1
+#if (defined(MSDOS) && !defined(DJGPP)) || defined(__human68k__)
+d251 5
+a255 1
+#else
+d283 1
+a283 1
+#endif /* MSDOS or __human68k__ */
+d288 3
+d294 1
+a294 1
+proc_exec_n(argc, argv)
+d297 1
+d299 1
+d303 3
+a307 1
+	Check_SafeStr(argv[i]);
+d312 1
+a312 1
+	return proc_exec_v(args);
+d319 1
+a319 1
+    char *str;
+d321 3
+a323 1
+    char *s = str, *t;
+d328 1
+a328 1
+	if (*s != ' ' && !isalpha(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+d337 1
+a337 1
+#if defined(__human68k__)
+d358 3
+a360 3
+    s = ALLOCA_N(char, s-str+1);
+    strcpy(s, str);
+    if (*a++ = strtok(s, " \t")) {
+d367 1
+a367 1
+	return proc_exec_v(argv);
+d371 3
+d378 1
+a378 1
+proc_spawn_v(argv)
+d380 1
+a381 1
+    char *prog;
+d385 9
+a393 3
+    prog = dln_find_exe(argv[0], 0);
+    if (!prog)
+	return -1;
+d424 1
+a424 1
+proc_spawn_n(argc, argv)
+d427 1
+d437 1
+d440 1
+a440 1
+	return proc_exec_v(args);
+d445 3
+a447 1
+proc_spawn(str)
+d449 1
+a449 2
+{
+    char *s = str, *t;
+d453 2
+d456 1
+a456 1
+	if (*s != ' ' && !isalpha(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+d459 1
+a459 1
+	    state = shell ? spawnl(P_WAIT, shell, "sh", "-c", str, (char *) NULL) : system(str) ;
+d472 1
+a472 1
+    return argv[0] ? proc_spawn_v(argv) : -1 ;
+d477 1
+a477 1
+f_exec(argc, argv)
+d481 21
+a501 2
+    if (argc == 1) {
+	Check_SafeStr(argv[0]);
+d505 1
+a505 1
+	proc_exec_n(argc, argv);
+d511 1
+a511 1
+f_fork(obj)
+d514 1
+a514 1
+#if !defined(__human68k__)
+d523 1
+a523 1
+	if (iterator_p()) {
+d542 4
+a545 2
+f_exit_bang(obj, status)
+    VALUE obj, status;
+d547 2
+a548 1
+    int code = -1;
+d550 6
+a555 3
+    rb_secure(2);
+    if (FIXNUM_P(status)) {
+	code = INT2FIX(status);
+d557 6
+a562 4
+
+    _exit(code);
+
+    /* not reached */
+d571 1
+d581 3
+a583 1
+    if (rb_waitpid(pid, 0, &status) < 0) rb_sys_fail("wait");
+d595 1
+a595 1
+f_system(argc, argv)
+d599 1
+a599 1
+#ifdef NT
+d603 7
+a609 1
+    cmd = ary_join(ary_new4(argc, argv), str_new2(" "));
+d613 1
+a613 1
+    last_status = INT2FIX(state);
+d615 2
+a616 2
+    if (state == 0) return TRUE;
+    return FALSE;
+d618 1
+a618 1
+#if defined(DJGPP)
+d622 7
+a628 1
+    cmd = ary_join(ary_new4(argc, argv), str_new2(" "));
+d632 1
+a632 1
+    last_status = INT2FIX(state);
+d634 2
+a635 2
+    if (state == 0) return TRUE;
+    return FALSE;
+d638 1
+d646 1
+a646 1
+	last_status = INT2FIX(0);
+d650 7
+a656 2
+    for (i = 0; i < argc; i++)
+	Check_SafeStr(argv[i]);
+d658 11
+a668 4
+    state = argc == 1 ? proc_spawn(RSTRING(argv[0])->ptr) : proc_spawn_n(argc, argv) ;
+    last_status = state == -1 ? INT2FIX(127) : INT2FIX(state);
+
+    return state == 0 ? TRUE : FALSE ;
+d670 2
+a672 1
+    int pid;
+a673 1
+    fflush(stdin);		/* is it really needed? */
+d677 1
+a677 1
+	last_status = INT2FIX(0);
+d681 12
+a692 1
+    for (i=0; i<argc; i++) {
+a694 1
+
+d698 1
+a698 1
+	if (argc == 1) {
+d702 1
+a702 1
+	    proc_exec_n(argc, argv);
+d709 1
+a709 5
+#ifdef THREAD
+	    thread_sleep(1);
+#else
+	    sleep(1);
+#endif
+d719 6
+a724 5
+    if (last_status == INT2FIX(0)) return TRUE;
+    return FALSE;
+#endif
+#endif
+#endif
+d728 1
+a728 1
+f_sleep(argc, argv)
+a734 8
+#ifdef THREAD
+    if (argc == 0) {
+	thread_sleep_forever();
+    }
+    else if (argc == 1) {
+	thread_wait_for(time_timeval(argv[0]));
+    }
+#else
+d736 1
+a736 3
+	TRAP_BEG;
+	sleep((32767<<16)+32767);
+	TRAP_END;
+d739 1
+a739 8
+	struct timeval tv;
+	int n;
+
+	tv = time_timeval(argv[0]);
+	TRAP_BEG;
+	n = select(0, 0, 0, 0, &tv);
+	TRAP_END;
+	if (n<0) rb_sys_fail(0);
+a740 1
+#endif
+d742 1
+a742 1
+	ArgError("wrong # of arguments");
+a749 1
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__)
+d755 1
+d757 1
+a757 1
+#ifdef BSD_GETPGRP
+d762 2
+a763 2
+    pid = NUM2INT(vpid);
+    pgrp = BSD_GETPGRP(pid);
+d770 3
+d780 2
+a781 1
+#ifdef BSD_SETPGRP
+d787 3
+a789 3
+    ipid = NUM2INT(pid);
+    ipgrp = NUM2INT(pgrp);
+    if (BSD_SETPGRP(ipid, ipgrp) < 0) rb_sys_fail(0);
+d795 17
+a813 1
+#ifdef HAVE_SETPGID
+d818 1
+d826 3
+d830 11
+d842 1
+a879 1
+#endif
+d896 3
+a901 3
+#ifdef HAVE_SETREUID
+    setreuid(uid, -1);
+#else
+d1001 1
+a1001 3
+VALUE mProcess;
+
+extern VALUE f_kill();
+d1006 1
+a1006 2
+    extern VALUE mKernel;
+
+a1007 4
+    rb_define_readonly_variable("$?", &last_status);
+    rb_define_global_function("exec", f_exec, -1);
+#ifndef NT
+    rb_define_global_function("fork", f_fork, 0);
+d1009 8
+a1016 3
+    rb_define_global_function("exit!", f_exit_bang, 1);
+    rb_define_global_function("system", f_system, -1);
+    rb_define_global_function("sleep", f_sleep, -1);
+d1018 1
+a1018 1
+    mProcess = rb_define_module("Process");
+d1022 1
+a1022 1
+    rb_define_const(mProcess, "WNOHANG", INT2FIX(WNOHANG));
+d1024 1
+a1024 1
+    rb_define_const(mProcess, "WNOHANG", INT2FIX(0));
+d1027 1
+a1027 1
+    rb_define_const(mProcess, "WUNTRACED", INT2FIX(WUNTRACED));
+d1029 1
+a1029 1
+    rb_define_const(mProcess, "WUNTRACED", INT2FIX(0));
+d1033 6
+a1038 2
+#ifndef NT
+    rb_define_singleton_method(mProcess, "fork", f_fork, 0);
+a1039 2
+    rb_define_singleton_method(mProcess, "exit!", f_exit_bang, 1);
+    rb_define_module_function(mProcess, "kill", f_kill, -1);
+d1041 13
+a1053 2
+    rb_define_module_function(mProcess, "wait", f_wait, 0);
+    rb_define_module_function(mProcess, "waitpid", f_waitpid, 2);
+d1055 1
+a1055 3
+    rb_define_module_function(mProcess, "pid", get_pid, 0);
+    rb_define_module_function(mProcess, "ppid", get_ppid, 0);
+#endif
+d1057 2
+a1058 6
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__)
+    rb_define_module_function(mProcess, "getpgrp", proc_getpgrp, -1);
+    rb_define_module_function(mProcess, "setpgrp", proc_setpgrp, -1);
+#ifdef HAVE_SETPGID
+    rb_define_module_function(mProcess, "setpgid", proc_setpgid, 2);
+#endif
+d1061 4
+a1064 2
+    rb_define_module_function(mProcess, "getpriority", proc_getpriority, 2);
+    rb_define_module_function(mProcess, "setpriority", proc_setpriority, 3);
+d1066 8
+a1073 14
+    rb_define_const(mProcess, "PRIO_PROCESS", INT2FIX(PRIO_PROCESS));
+    rb_define_const(mProcess, "PRIO_PGRP", INT2FIX(PRIO_PGRP));
+    rb_define_const(mProcess, "PRIO_USER", INT2FIX(PRIO_USER));
+#endif
+
+    rb_define_module_function(mProcess, "uid", proc_getuid, 0);
+    rb_define_module_function(mProcess, "uid=", proc_setuid, 1);
+    rb_define_module_function(mProcess, "gid", proc_getgid, 0);
+    rb_define_module_function(mProcess, "gid=", proc_setgid, 1);
+    rb_define_module_function(mProcess, "euid", proc_geteuid, 0);
+    rb_define_module_function(mProcess, "euid=", proc_seteuid, 1);
+    rb_define_module_function(mProcess, "egid", proc_getegid, 0);
+    rb_define_module_function(mProcess, "egid=", proc_setegid, 1);
+#endif
+@
+
+
+1.1.1.1
+log
+@
+@
+text
+@@
+
+
+1.1.1.2
+log
+@*** empty log message ***
+@
+text
+@d111 3
+a252 1
+int env_path_tainted();
+d258 1
+d261 2
+a262 4
+    if (rb_safe_level() > 0) {
+	if (env_path_tainted()) {
+	    Raise(eSecurityError, "Insecure PATH - %s", str);
+	}
+d267 1
+a267 1
+proc_exec_v(argv, prog)
+d269 1
+d271 6
+a276 11
+{
+    if (prog) {
+	security(prog);
+    }
+    else {
+	security(argv[0]);
+	prog = dln_find_exe(argv[0], 0);
+	if (!prog) {
+	    errno = ENOENT;
+	    return -1;
+	}
+d318 1
+a318 1
+proc_exec_n(argc, argv, progv)
+a320 1
+    VALUE progv;
+a321 1
+    char *prog = 0;
+a324 4
+    if (progv) {
+	Check_SafeStr(progv);
+	prog = RSTRING(progv)->ptr;
+    }
+d332 1
+a332 1
+	return proc_exec_v(args, prog);
+d385 1
+a385 1
+	return proc_exec_v(argv, 0);
+d393 1
+a393 1
+proc_spawn_v(argv, prog)
+d395 1
+a396 1
+{
+d400 3
+a402 9
+    if (prog) {
+	security(prog);
+    }
+    else {
+	security(argv[0]);
+	prog = dln_find_exe(argv[0], 0);
+	if (!prog)
+	    return -1;
+    }
+d433 1
+a433 1
+proc_spawn_n(argc, argv, prog)
+a435 1
+    VALUE prog;
+a444 1
+    Check_SafeStr(prog);
+d447 1
+a447 1
+	return proc_spawn_v(args, RSTRING(prog)->ptr);
+d476 1
+a476 1
+    return argv[0] ? proc_spawn_v(argv, 0) : -1 ;
+d485 1
+a485 18
+    VALUE prog = 0;
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+    if (argc == 1 && prog == 0) {
+d490 1
+a490 1
+	proc_exec_n(argc, argv, prog);
+a576 6
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	argv[0] = RARRAY(argv[0])->ptr[0];
+    }
+a589 6
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	argv[0] = RARRAY(argv[0])->ptr[0];
+    }
+a599 1
+    VALUE prog = 0;
+d611 2
+a612 7
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+    }
+d614 1
+a614 6
+    if (argc == 1 && prog == 0) {
+	state = proc_spawn(RSTRING(argv[0])->ptr);
+    }
+    else {
+	state = proc_spawn_n(argc, argv, prog);
+    }
+a618 1
+    VALUE prog = 0;
+d630 2
+a631 6
+    if (TYPE(argv[0]) == T_ARRAY) {
+	if (RARRAY(argv[0])->len != 2) {
+	    ArgError("wrong first argument");
+	}
+	prog = RARRAY(argv[0])->ptr[0];
+	argv[0] = RARRAY(argv[0])->ptr[1];
+d637 1
+a637 1
+	if (argc == 1 && prog == 0) {
+d641 1
+a641 1
+	    proc_exec_n(argc, argv, prog);
+d933 2
+@
+
+
+1.1.1.3
+log
+@ruby 1.3 cycle
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/22 09:01:52 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+d14 1
+a14 1
+#include "rubysig.h"
+d17 1
+a31 1
+#include <ctype.h>
+d33 1
+a33 1
+struct timeval rb_time_timeval _((VALUE));
+a45 5
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+# include "macruby_missing.h"
+#endif
+
+d62 1
+a62 1
+VALUE rb_last_status = Qnil;
+a64 1
+#define NO_WAITPID
+d66 2
+d77 1
+a77 2
+#ifndef NO_WAITPID
+#if defined(USE_THREAD)
+d79 1
+a79 1
+    if (!rb_thread_alone()) {	/* there're other threads to run */
+d84 1
+a85 1
+#ifdef HAVE_WAITPID
+d87 21
+a107 1
+#else  /* HAVE_WAIT4 */
+a108 1
+#endif
+a110 3
+#ifdef USE_THREAD
+	    rb_thread_schedule();
+#endif
+d115 1
+a115 1
+#ifdef USE_THREAD
+d118 2
+a119 2
+	rb_thread_schedule();
+	if (rb_thread_alone()) flags = oflags;
+d123 1
+a123 1
+#else  /* NO_WAITPID */
+d125 1
+a125 1
+	rb_last_status = INT2FIX(*st);
+d131 1
+a131 1
+	rb_raise(rb_eArgError, "Can't do waitpid with flags");
+d138 2
+a139 2
+#ifdef USE_THREAD
+		rb_thread_schedule();
+d151 1
+a151 2
+#ifdef USE_THREAD
+	if (!thread_alone()) rb_thread_schedule();
+a152 1
+    }
+d154 1
+a154 1
+    rb_last_status = INT2FIX(*st);
+d158 1
+a158 1
+#ifdef NO_WAITPID
+d178 1
+a178 1
+rb_f_wait()
+d181 1
+a181 1
+#ifdef NO_WAITPID
+d187 1
+a187 1
+	rb_last_status = data.status;
+d190 1
+d193 3
+a195 3
+        if (errno == EINTR) {
+#ifdef USE_THREAD
+            rb_thread_schedule();
+d197 4
+a200 3
+            continue;
+        }
+        rb_sys_fail(0);
+d202 1
+a202 5
+    rb_last_status = INT2FIX(state);
+#else
+    if ((pid = rb_waitpid(-1, 0, &state)) < 0)
+	rb_sys_fail(0);
+#endif
+d207 1
+a207 1
+rb_f_waitpid(obj, vpid, vflags)
+d222 22
+a243 3
+#if defined(USE_THREAD) && defined(HAVE_SETITIMER)
+#define before_exec() rb_thread_stop_timer()
+#define after_exec() rb_thread_start_timer()
+d250 1
+d256 2
+d259 2
+a260 3
+#ifndef USE_CWGUSI
+	if (rb_env_path_tainted()) {
+	    rb_raise(rb_eSecurityError, "Insecure PATH - %s", str);
+a261 1
+#endif
+a269 1
+#ifndef USE_CWGUSI
+a317 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+d331 1
+d336 1
+a349 1
+#ifndef USE_CWGUSI
+d355 1
+a355 1
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+d364 1
+a364 1
+#if defined(__human68k__) || defined(__CYGWIN32__)
+a397 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+d469 2
+a470 2
+proc_spawn(sv)
+    VALUE sv;
+d472 1
+a472 2
+    char *str;
+    char *s, *t;
+a475 2
+    Check_SafeStr(sv);
+    str = s = RSTRING(sv)->ptr;
+d477 1
+a477 1
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+d498 1
+a498 1
+rb_f_exec(argc, argv)
+a502 1
+    int i;
+a503 3
+    if (argc == 0) {
+	rb_raise(rb_eArgError, "wrong # of arguments");
+    }
+d506 1
+a506 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d514 1
+a514 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+a518 6
+    if (prog) {
+	Check_SafeStr(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	Check_SafeStr(argv[i]);
+    }
+d520 1
+d530 1
+a530 1
+rb_f_fork(obj)
+d542 1
+a542 1
+	if (rb_iterator_p()) {
+d561 1
+a561 1
+rb_f_exit_bang(obj, status)
+d566 1
+a566 1
+    rb_secure(4);
+a570 3
+#ifdef USE_CWGUSI
+    exit(code);
+#else
+a571 1
+#endif
+a581 1
+    int i;
+d591 1
+a591 3
+    do {
+	i = rb_waitpid(pid, 0, &status);
+    } while (i == -1 && errno == EINTR);
+d603 1
+a603 1
+rb_f_system(argc, argv)
+d613 1
+a613 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d617 1
+a617 1
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+d621 1
+a621 1
+    rb_last_status = INT2FIX(state);
+d623 2
+a624 2
+    if (state == 0) return Qtrue;
+    return Qfalse;
+d632 1
+a632 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d636 1
+a636 1
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+d640 1
+a640 1
+    rb_last_status = INT2FIX(state);
+d642 2
+a643 2
+    if (state == 0) return Qtrue;
+    return Qfalse;
+d654 1
+a654 1
+	rb_last_status = INT2FIX(0);
+d660 1
+a660 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d667 1
+a667 1
+	state = proc_spawn(argv[0]);
+d672 3
+a674 2
+    rb_last_status = state == -1 ? INT2FIX(127) : INT2FIX(state);
+    return state == 0 ? Qtrue : Qfalse ;
+d676 2
+a677 1
+    volatile VALUE prog = 0;
+a678 1
+    int i;
+d680 1
+d684 1
+a684 1
+	rb_last_status = INT2FIX(0);
+d690 1
+a690 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+a695 6
+    if (prog) {
+	Check_SafeStr(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	Check_SafeStr(argv[i]);
+    }
+d710 2
+a711 2
+#ifdef USE_THREAD
+	    rb_thread_sleep(1);
+d724 2
+a725 2
+    if (rb_last_status == INT2FIX(0)) return Qtrue;
+    return Qfalse;
+d732 1
+a732 1
+rb_f_sleep(argc, argv)
+d739 1
+a739 1
+#ifdef USE_THREAD
+d741 1
+a741 1
+	rb_thread_sleep_forever();
+d744 1
+a744 1
+	rb_thread_wait_for(rb_time_timeval(argv[0]));
+d756 1
+a756 1
+	tv = rb_time_timeval(argv[0]);
+d764 1
+a764 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d772 1
+a772 1
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__) && !defined(USE_CWGUSI)
+d784 1
+a784 1
+    pid = NIL_P(vpid)?0:NUM2INT(vpid);
+a798 1
+#ifdef HAVE_SETPGRP
+d805 2
+a806 2
+    ipid = NIL_P(pid)?0:NUM2INT(pid);
+    ipgrp = NIL_P(pgrp)?0:NUM2INT(pgrp);
+a812 17
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+proc_getpgid(obj, pid)
+    VALUE obj, pid;
+{
+#ifdef HAVE_GETPGID
+    int i;
+
+    i = getpgid(NUM2INT(pid));
+    return INT2NUM(i);
+#else
+    rb_notimplement();
+#endif
+d815 1
+a819 1
+#ifdef HAVE_SETPGID
+a826 3
+#else
+    rb_notimplement();
+#endif
+a827 11
+
+static VALUE
+proc_setsid()
+{
+#ifdef HAVE_SETSID
+    int pid = setsid();
+
+    if (pid < 0) rb_sys_fail(0);
+    return INT2FIX(pid);
+#else
+    rb_notimplement();
+a828 1
+}
+d883 3
+a888 3
+#ifdef HAVE_SETRUID
+    setruid(uid);
+#else
+d988 3
+a990 1
+VALUE rb_mProcess;
+a994 1
+#ifndef USE_CWGUSI
+d996 4
+d1001 3
+a1003 12
+    rb_define_readonly_variable("$?", &rb_last_status);
+#ifndef USE_CWGUSI
+    rb_define_global_function("exec", rb_f_exec, -1);
+#endif
+#if !defined(NT) && !defined(USE_CWGUSI)
+    rb_define_global_function("fork", rb_f_fork, 0);
+#endif
+    rb_define_global_function("exit!", rb_f_exit_bang, 1);
+#ifndef USE_CWGUSI
+    rb_define_global_function("system", rb_f_system, -1);
+#endif
+    rb_define_global_function("sleep", rb_f_sleep, -1);
+d1005 1
+a1005 1
+    rb_mProcess = rb_define_module("Process");
+d1009 1
+a1009 1
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(WNOHANG));
+d1011 1
+a1011 1
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(0));
+d1014 1
+a1014 1
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(WUNTRACED));
+d1016 1
+a1016 1
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(0));
+d1020 2
+a1021 6
+#if !defined(NT) && !defined(USE_CWGUSI)
+    rb_define_singleton_method(rb_mProcess, "fork", rb_f_fork, 0);
+#endif
+    rb_define_singleton_method(rb_mProcess, "exit!", rb_f_exit_bang, 1);
+#ifndef USE_CWGUSI
+    rb_define_module_function(rb_mProcess, "kill", rb_f_kill, -1);
+d1023 2
+d1026 2
+a1027 2
+    rb_define_module_function(rb_mProcess, "wait", rb_f_wait, 0);
+    rb_define_module_function(rb_mProcess, "waitpid", rb_f_waitpid, 2);
+d1029 3
+a1031 11
+#ifndef USE_CWGUSI
+    rb_define_module_function(rb_mProcess, "pid", get_pid, 0);
+    rb_define_module_function(rb_mProcess, "ppid", get_ppid, 0);
+#endif /* ifndef USE_CWGUSI */
+#endif /* ifndef NT */
+
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__) && !defined(USE_CWGUSI)
+    rb_define_module_function(rb_mProcess, "getpgrp", proc_getpgrp, -1);
+    rb_define_module_function(rb_mProcess, "setpgrp", proc_setpgrp, -1);
+    rb_define_module_function(rb_mProcess, "getpgid", proc_getpgid, 1);
+    rb_define_module_function(rb_mProcess, "setpgid", proc_setpgid, 2);
+d1033 6
+a1038 4
+    rb_define_module_function(rb_mProcess, "setsid", proc_setsid, 0);
+
+    rb_define_module_function(rb_mProcess, "getpriority", proc_getpriority, 2);
+    rb_define_module_function(rb_mProcess, "setpriority", proc_setpriority, 3);
+d1041 2
+a1042 4
+    rb_define_const(rb_mProcess, "PRIO_PROCESS", INT2FIX(PRIO_PROCESS));
+    rb_define_const(rb_mProcess, "PRIO_PGRP", INT2FIX(PRIO_PGRP));
+    rb_define_const(rb_mProcess, "PRIO_USER", INT2FIX(PRIO_USER));
+#endif
+d1044 13
+a1056 8
+    rb_define_module_function(rb_mProcess, "uid", proc_getuid, 0);
+    rb_define_module_function(rb_mProcess, "uid=", proc_setuid, 1);
+    rb_define_module_function(rb_mProcess, "gid", proc_getgid, 0);
+    rb_define_module_function(rb_mProcess, "gid=", proc_setgid, 1);
+    rb_define_module_function(rb_mProcess, "euid", proc_geteuid, 0);
+    rb_define_module_function(rb_mProcess, "euid=", proc_seteuid, 1);
+    rb_define_module_function(rb_mProcess, "egid", proc_getegid, 0);
+    rb_define_module_function(rb_mProcess, "egid=", proc_setegid, 1);
+@
+
+
+1.1.1.3.2.1
+log
+@990126
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/20 04:59:25 $
+d9 1
+a9 1
+  Copyright (C) 1993-1999 Yukihiro Matsumoto
+d141 1
+a141 1
+	if (!rb_thread_alone()) rb_thread_schedule();
+d524 1
+a524 1
+#if !defined(__human68k__) && !defined(__MACOS__)
+d673 1
+a673 4
+#if defined(USE_CWGUSI)
+    rb_notimplement();
+#else
+   volatile VALUE prog = 0;
+d728 3
+a730 4
+#endif /* USE_CWGUSI */
+#endif /* __human68k__ */
+#endif /* DJGPP */
+#endif /* NT */
+d1035 1
+a1035 1
+#if !defined(NT)
+d1039 1
+d1041 1
+d1059 1
+a1059 1
+#if !defined(NT)
+@
+
+
+1.1.1.3.2.2
+log
+@990215
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/01/26 10:08:14 $
+d785 1
+a785 1
+#ifndef GETPGRP_VOID
+d791 1
+a791 1
+    pgrp = getpgrp(pid);
+d806 1
+a806 1
+#ifndef SETPGRP_VOID
+d814 1
+a814 1
+    if (setpgrp(ipid, ipgrp) < 0) rb_sys_fail(0);
+@
+
+
+1.1.1.3.2.3
+log
+@990224
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/15 07:31:51 $
+d778 1
+a783 1
+#ifdef HAVE_GETPGRP
+a797 3
+#else
+    rb_notimplement();
+#endif
+d905 1
+d1078 1
+d1103 1
+@
+
+
+1.1.1.3.2.4
+log
+@990225
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/24 04:31:23 $
+d120 1
+a120 1
+	rb_raise(rb_eArgError, "can't do waitpid with flags");
+@
+
+
+1.1.1.3.2.5
+log
+@990324
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/02/25 06:39:10 $
+d82 1
+d87 1
+d97 1
+d99 1
+d104 1
+d111 1
+d127 1
+d129 1
+d140 1
+d142 1
+d184 1
+d186 1
+d215 1
+a215 1
+#ifdef HAVE_SETITIMER
+d323 1
+a323 1
+    const char *str;
+d326 1
+a326 2
+    const char *s = str;
+    char *ss, *t;
+d361 3
+a363 3
+    ss = ALLOCA_N(char, s-str+1);
+    strcpy(ss, str);
+    if (*a++ = strtok(ss, " \t")) {
+d715 1
+d717 3
+d745 1
+d752 17
+@
+
+
+1.1.1.3.2.6
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/03/24 08:52:31 $
+d243 1
+a243 1
+#if (defined(MSDOS) && !defined(DJGPP)) || defined(__human68k__) || defined(__EMX__) || defined(OS2)
+d247 1
+a247 5
+#endif
+#if defined(__EMX__) || defined(OS2) /* OS/2 emx */
+#define COMMAND "cmd.exe"
+#endif
+#if (defined(MSDOS) && !defined(DJGPP))
+d275 1
+a275 1
+#endif /* MSDOS or __human68k__ or __EMX__ */
+d329 1
+a329 1
+#if defined(__human68k__) || defined(__CYGWIN32__) || defined(__EMX__)
+d513 1
+a513 1
+#if !defined(__human68k__) && !defined(NT) && !defined(__MACOS__) && !defined(__EMX__)
+d1008 1
+d1010 1
+@
+
+
+1.1.1.3.2.7
+log
+@small fixes
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/04/09 17:57:42 $
+d482 7
+@
+
+
+1.1.1.3.2.8
+log
+@rb_exec_end_proc, etc.
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/05/06 08:31:43 $
+a50 4
+#ifdef __EMX__
+#undef HAVE_GETPGRP
+#endif
+
+d610 1
+a610 1
+#if defined(DJGPP) || defined(__EMX__)
+@
+
+
+1.1.1.3.2.9
+log
+@990624
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/01 06:59:19 $
+d595 1
+a595 1
+#if defined(NT) || defined(__EMX__)
+d614 1
+a614 1
+#ifdef DJGPP
+@
+
+
+1.1.1.3.2.10
+log
+@990715
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/06/24 04:24:00 $
+d33 1
+a33 1
+struct timeval rb_time_interval _((VALUE));
+d542 2
+a543 4
+rb_f_exit_bang(argc, argv, obj)
+    int argc;
+    VALUE *argv;
+    VALUE obj;
+d545 1
+a545 2
+    VALUE status;
+    int istatus;
+d548 2
+a549 5
+    if (rb_scan_args(argc, argv, "01", &status) == 1) {
+	istatus = NUM2INT(status);
+    }
+    else {
+	istatus = -1;
+d551 1
+d553 1
+a553 1
+    exit(istatus);
+d555 1
+a555 1
+    _exit(istatus);
+d557 2
+a558 1
+    return Qnil;		/* not reached */
+d735 1
+a735 1
+	rb_thread_wait_for(rb_time_interval(argv[0]));
+d1010 1
+a1010 1
+    rb_define_global_function("exit!", rb_f_exit_bang, -1);
+d1032 1
+a1032 1
+    rb_define_singleton_method(rb_mProcess, "exit!", rb_f_exit_bang, -1);
+@
+
+
+1.1.1.3.2.11
+log
+@990728
+@
+text
+@d6 1
+a6 1
+  $Date: 1999/07/15 07:59:51 $
+d459 1
+a459 1
+	    state = shell?spawnl(P_WAIT,shell,"sh","-c",str,(char*)NULL):system(str);
+d472 1
+a472 1
+    return argv[0] ? proc_spawn_v(argv, 0) : -1;
+d665 1
+a665 1
+    return state == 0 ? Qtrue : Qfalse;
+@
+
+
+1.1.1.2.2.1
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 05:04:57 $
+d9 1
+a9 1
+  Copyright (C) 1993-1998 Yukihiro Matsumoto
+@
+
+
+1.1.1.2.2.2
+log
+@Mon Jan 19 16:33:52 JST 1998
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/16 12:35:47 $
+a581 1
+    int i;
+d591 1
+a591 3
+    do {
+	i = rb_waitpid(pid, 0, &status);
+    } while (i == -1 && errno == EINTR);
+@
+
+
+1.1.1.2.2.3
+log
+@eban's exec patch for cygwin32
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/19 07:34:00 $
+d364 1
+a364 1
+#if defined(__human68k__) || defined(__CYGWIN32__)
+@
+
+
+1.1.1.2.2.4
+log
+@1.1b9_19
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/01/29 09:48:13 $
+a45 5
+#ifdef USE_CWGUSI
+# include <sys/errno.h>
+# include "macruby_missing.h"
+#endif
+
+a258 1
+#ifndef USE_CWGUSI
+a261 1
+#endif
+a269 1
+#ifndef USE_CWGUSI
+a317 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+a349 1
+#ifndef USE_CWGUSI
+a397 3
+#else /* USE_CWGUSI */
+    rb_notimplement();
+#endif /* USE_CWGUSI */
+a570 3
+#ifdef USE_CWGUSI
+    exit(code);
+#else
+a571 1
+#endif
+d775 1
+a775 1
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__) && !defined(USE_CWGUSI)
+a796 1
+#ifdef HAVE_SETPGRP
+a816 1
+#endif
+a997 1
+#ifndef USE_CWGUSI
+a998 1
+#endif
+a999 1
+#ifndef USE_CWGUSI
+d1001 1
+a1001 2
+#endif
+#if !defined(NT) && !defined(USE_CWGUSI)
+a1004 1
+#ifndef USE_CWGUSI
+a1005 1
+#endif
+d1023 1
+a1023 1
+#if !defined(NT) && !defined(USE_CWGUSI)
+a1026 1
+#ifndef USE_CWGUSI
+a1027 1
+#endif
+a1031 1
+#ifndef USE_CWGUSI
+d1034 1
+a1034 2
+#endif /* ifndef USE_CWGUSI */
+#endif /* ifndef NT */
+d1036 1
+a1036 1
+#if !defined(NT) && !defined(DJGPP) && !defined(__human68k__) && !defined(USE_CWGUSI)
+a1037 1
+#ifdef HAVE_SETPGRP
+a1038 1
+#endif
+@
+
+
+1.1.1.2.2.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/13 07:26:27 $
+d17 1
+a31 1
+#include <ctype.h>
+d33 1
+a33 1
+struct timeval time_timeval _((VALUE));
+d255 1
+d367 1
+a367 1
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+d492 1
+a492 1
+	if (*s != ' ' && !ISALPHA(*s) && strchr("*?{}[]<>()~&|\\$;'`\"\n",*s)) {
+@
+
+
+1.1.1.2.2.6
+log
+@remove unused variables
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/18 04:56:12 $
+d697 2
+a698 1
+    volatile VALUE prog = 0;
+@
+
+
+1.1.1.2.2.7
+log
+@baseline
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/05/25 04:57:48 $
+d14 1
+a14 1
+#include "rubysig.h"
+@
+
+
+1.1.1.2.2.8
+log
+@thread->thred
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/16 04:23:42 $
+d84 1
+a84 1
+    if (!thred_alone()) {	/* there're other threads to run */
+d95 1
+a95 1
+	    thred_schedule();
+d104 2
+a105 2
+	thred_schedule();
+	if (thred_alone()) flags = oflags;
+d123 2
+a124 2
+	thred_schedule();
+	if (thred_alone()) flags = oflags;
+d144 1
+a144 1
+		thred_schedule();
+d200 1
+a200 1
+	    thred_schedule();
+d731 1
+a731 1
+	    thred_sleep(1);
+d761 1
+a761 1
+	thred_sleep_forever();
+d764 1
+a764 1
+	thred_wait_for(time_timeval(argv[0]));
+@
+
+
+1.1.1.2.2.9
+log
+@980626
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/24 04:38:02 $
+d84 1
+a84 1
+    if (!thread_alone()) {	/* there're other threads to run */
+d95 1
+a95 1
+	    thread_schedule();
+d104 2
+a105 2
+	thread_schedule();
+	if (thread_alone()) flags = oflags;
+d123 2
+a124 2
+	thread_schedule();
+	if (thread_alone()) flags = oflags;
+d144 1
+a144 1
+		thread_schedule();
+d200 1
+a200 1
+	    thread_schedule();
+d260 2
+d731 1
+a731 1
+	    thread_sleep(1);
+d761 1
+a761 1
+	thread_sleep_forever();
+d764 1
+a764 1
+	thread_wait_for(time_timeval(argv[0]));
+@
+
+
+1.1.1.2.2.10
+log
+@1.1b9_29
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/06/26 09:44:31 $
+d812 1
+a817 1
+#ifdef HAVE_SETPGRP
+d832 1
+a832 2
+#else
+    rb_notimplement();
+a833 1
+}
+d835 1
+a839 1
+#ifdef HAVE_SETPGID
+a846 3
+#else
+    rb_notimplement();
+#endif
+a847 11
+
+static VALUE
+proc_setsid()
+{
+#ifdef HAVE_SETSID
+    int pid = setsid();
+
+    if (pid < 0) rb_sys_fail(0);
+    return NUM2INT(pid);
+#else
+    rb_notimplement();
+a848 1
+}
+d1065 1
+d1067 2
+d1070 1
+d1072 1
+a1072 2
+    rb_define_module_function(mProcess, "setsid", proc_setsid, 0);
+
+a1075 1
+#ifdef PRIO_PROCESS
+@
+
+
+1.1.1.2.2.11
+log
+@wait
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/03 07:06:35 $
+d69 3
+a71 1
+#if defined(HAVE_WAITPID) || defined(HAVE_WAIT4)
+a72 2
+#else
+static st_table *pid_tbl;
+d82 1
+a82 2
+#ifdef WAIT_CALL
+#if defined(THREAD)
+d89 1
+a90 1
+#ifdef HAVE_WAITPID
+a91 3
+#else  /* HAVE_WAIT4 */
+    result = wait4(pid, st, flags, NULL);
+#endif
+d109 20
+a128 1
+#else  /* WAIT_CALL */
+d156 1
+a156 2
+#ifdef THREAD
+	if (!thread_alone()) thread_schedule();
+a157 1
+    }
+d195 1
+d198 1
+a198 1
+        if (errno == EINTR) {
+d200 1
+a200 1
+            thread_schedule();
+d202 4
+a205 3
+            continue;
+        }
+        rb_sys_fail(0);
+a207 4
+#else
+    if ((pid = rb_waitpid(-1, 0, &state)) < 0)
+	rb_sys_fail(0);
+#endif
+@
+
+
+1.1.1.2.2.12
+log
+@1.1b9_30
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/08 07:16:55 $
+d69 3
+a71 2
+#if !defined(HAVE_WAITPID) && !defined(HAVE_WAIT4)
+#define NO_WAITPID
+d82 1
+a82 1
+#ifndef NO_WAITPID
+d113 1
+a113 1
+#else  /* NO_WAITPID */
+d150 1
+a150 1
+#ifdef NO_WAITPID
+d173 1
+a173 1
+#ifdef NO_WAITPID
+d850 1
+a850 1
+    return INT2FIX(pid);
+@
+
+
+1.1.1.2.2.13
+log
+@str2cstr
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/09 08:40:22 $
+d790 1
+a790 1
+    pid = NIL_P(vpid)?0:NUM2INT(vpid);
+d812 2
+a813 2
+    ipid = NIL_P(pid)?0:NUM2INT(pid);
+    ipgrp = NIL_P(pgrp)?0:NUM2INT(pgrp);
+@
+
+
+1.1.1.2.2.14
+log
+@1.1c0
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/13 04:37:52 $
+d327 1
+d332 1
+d469 2
+a470 2
+proc_spawn(sv)
+    VALUE sv;
+d472 1
+a472 2
+    char *str;
+    char *s, *t;
+a475 2
+    Check_SafeStr(sv);
+    str = s = RSTRING(sv)->ptr;
+a502 1
+    int i;
+a518 6
+    if (prog) {
+	Check_SafeStr(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	Check_SafeStr(argv[i]);
+    }
+d520 1
+d674 1
+a674 1
+	state = proc_spawn(argv[0]);
+d680 1
+a684 1
+    int i;
+a701 6
+    if (prog) {
+	Check_SafeStr(prog);
+    }
+    for (i = 0; i < argc; i++) {
+	Check_SafeStr(argv[i]);
+    }
+@
+
+
+1.1.1.2.2.15
+log
+@1.1c2
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/07/17 05:12:41 $
+d693 1
+@
+
+
+1.1.1.2.2.16
+log
+@1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/10 05:41:18 $
+d920 3
+a924 3
+#else
+#ifdef HAVE_SETRUID
+    setruid(uid);
+@
+
+
+1.1.1.2.2.17
+log
+@1.1c final (hopefully)
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:45:00 $
+d216 21
+a236 2
+#define before_exec() thread_stop_timer()
+#define after_exec() thread_start_timer()
+a505 3
+    if (argc == 0) {
+	ArgError("wrong # of arguments");
+    }
+@
+
+
+1.1.1.2.2.15.2.1
+log
+@1.1d series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/08/10 05:41:18 $
+d33 1
+a33 1
+struct timeval rb_time_timeval _((VALUE));
+d67 1
+a67 1
+VALUE rb_last_status = Qnil;
+d84 1
+a84 1
+    if (!rb_thread_alone()) {	/* there're other threads to run */
+d98 1
+a98 1
+	    rb_thread_schedule();
+d107 2
+a108 2
+	rb_thread_schedule();
+	if (rb_thread_alone()) flags = oflags;
+d114 1
+a114 1
+	rb_last_status = INT2FIX(*st);
+d120 1
+a120 1
+	rb_raise(rb_eArgError, "Can't do waitpid with flags");
+d128 1
+a128 1
+		rb_thread_schedule();
+d141 1
+a141 1
+	if (!thread_alone()) rb_thread_schedule();
+d145 1
+a145 1
+    rb_last_status = INT2FIX(*st);
+d169 1
+a169 1
+rb_f_wait()
+d178 1
+a178 1
+	rb_last_status = data.status;
+d185 1
+a185 1
+            rb_thread_schedule();
+d191 1
+a191 1
+    rb_last_status = INT2FIX(state);
+d200 1
+a200 1
+rb_f_waitpid(obj, vpid, vflags)
+d250 2
+a251 2
+	if (rb_env_path_tainted()) {
+	    rb_raise(rb_eSecurityError, "Insecure PATH - %s", str);
+d499 1
+a499 1
+rb_f_exec(argc, argv)
+d508 1
+a508 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d516 1
+a516 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d537 1
+a537 1
+rb_f_fork(obj)
+d549 1
+a549 1
+	if (rb_iterator_p()) {
+d568 1
+a568 1
+rb_f_exit_bang(obj, status)
+d617 1
+a617 1
+rb_f_system(argc, argv)
+d627 1
+a627 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d631 1
+a631 1
+    cmd = rb_ary_join(ary_new4(argc, argv), rb_str_new2(" "));
+d635 1
+a635 1
+    rb_last_status = INT2FIX(state);
+d637 2
+a638 2
+    if (state == 0) return Qtrue;
+    return Qfalse;
+d646 1
+a646 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d650 1
+a650 1
+    cmd = rb_ary_join(ary_new4(argc, argv), rb_str_new2(" "));
+d654 1
+a654 1
+    rb_last_status = INT2FIX(state);
+d656 2
+a657 2
+    if (state == 0) return Qtrue;
+    return Qfalse;
+d668 1
+a668 1
+	rb_last_status = INT2FIX(0);
+d674 1
+a674 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d686 2
+a687 2
+    rb_last_status = state == -1 ? INT2FIX(127) : INT2FIX(state);
+    return state == 0 ? Qtrue : Qfalse ;
+d696 1
+a696 1
+	rb_last_status = INT2FIX(0);
+d702 1
+a702 1
+	    rb_raise(rb_eArgError, "wrong first argument");
+d729 1
+a729 1
+	    rb_thread_sleep(1);
+d742 2
+a743 2
+    if (rb_last_status == INT2FIX(0)) return Qtrue;
+    return Qfalse;
+d750 1
+a750 1
+rb_f_sleep(argc, argv)
+d759 1
+a759 1
+	rb_thread_sleep_forever();
+d762 1
+a762 1
+	rb_thread_wait_for(rb_time_timeval(argv[0]));
+d774 1
+a774 1
+	tv = rb_time_timeval(argv[0]);
+d782 1
+a782 1
+	rb_raise(rb_eArgError, "wrong # of arguments");
+d1025 3
+a1027 1
+VALUE rb_mProcess;
+d1035 1
+a1035 1
+    rb_define_readonly_variable("$?", &rb_last_status);
+d1037 1
+a1037 1
+    rb_define_global_function("exec", rb_f_exec, -1);
+d1040 1
+a1040 1
+    rb_define_global_function("fork", rb_f_fork, 0);
+d1042 1
+a1042 1
+    rb_define_global_function("exit!", rb_f_exit_bang, 1);
+d1044 1
+a1044 1
+    rb_define_global_function("system", rb_f_system, -1);
+d1046 1
+a1046 1
+    rb_define_global_function("sleep", rb_f_sleep, -1);
+d1048 1
+a1048 1
+    rb_mProcess = rb_define_module("Process");
+d1052 1
+a1052 1
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(WNOHANG));
+d1054 1
+a1054 1
+    rb_define_const(rb_mProcess, "WNOHANG", INT2FIX(0));
+d1057 1
+a1057 1
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(WUNTRACED));
+d1059 1
+a1059 1
+    rb_define_const(rb_mProcess, "WUNTRACED", INT2FIX(0));
+d1064 1
+a1064 1
+    rb_define_singleton_method(rb_mProcess, "fork", rb_f_fork, 0);
+d1066 1
+a1066 1
+    rb_define_singleton_method(rb_mProcess, "exit!", rb_f_exit_bang, 1);
+d1068 1
+a1068 1
+    rb_define_module_function(rb_mProcess, "kill", rb_f_kill, -1);
+d1071 2
+a1072 2
+    rb_define_module_function(rb_mProcess, "wait", rb_f_wait, 0);
+    rb_define_module_function(rb_mProcess, "waitpid", rb_f_waitpid, 2);
+d1075 2
+a1076 2
+    rb_define_module_function(rb_mProcess, "pid", get_pid, 0);
+    rb_define_module_function(rb_mProcess, "ppid", get_ppid, 0);
+d1081 3
+a1083 3
+    rb_define_module_function(rb_mProcess, "getpgrp", proc_getpgrp, -1);
+    rb_define_module_function(rb_mProcess, "setpgrp", proc_setpgrp, -1);
+    rb_define_module_function(rb_mProcess, "setpgid", proc_setpgid, 2);
+d1085 1
+a1085 1
+    rb_define_module_function(rb_mProcess, "setsid", proc_setsid, 0);
+d1087 2
+a1088 2
+    rb_define_module_function(rb_mProcess, "getpriority", proc_getpriority, 2);
+    rb_define_module_function(rb_mProcess, "setpriority", proc_setpriority, 3);
+d1091 3
+a1093 3
+    rb_define_const(rb_mProcess, "PRIO_PROCESS", INT2FIX(PRIO_PROCESS));
+    rb_define_const(rb_mProcess, "PRIO_PGRP", INT2FIX(PRIO_PGRP));
+    rb_define_const(rb_mProcess, "PRIO_USER", INT2FIX(PRIO_USER));
+d1096 8
+a1103 8
+    rb_define_module_function(rb_mProcess, "uid", proc_getuid, 0);
+    rb_define_module_function(rb_mProcess, "uid=", proc_setuid, 1);
+    rb_define_module_function(rb_mProcess, "gid", proc_getgid, 0);
+    rb_define_module_function(rb_mProcess, "gid=", proc_setgid, 1);
+    rb_define_module_function(rb_mProcess, "euid", proc_geteuid, 0);
+    rb_define_module_function(rb_mProcess, "euid=", proc_seteuid, 1);
+    rb_define_module_function(rb_mProcess, "egid", proc_getegid, 0);
+    rb_define_module_function(rb_mProcess, "egid=", proc_setegid, 1);
+@
+
+
+1.1.1.2.2.15.2.2
+log
+@join 1.1c6
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/10/06 02:45:00 $
+d82 1
+a82 1
+#if defined(USE_THREAD)
+d97 1
+a97 1
+#ifdef USE_THREAD
+d104 1
+a104 1
+#ifdef USE_THREAD
+d127 1
+a127 1
+#ifdef USE_THREAD
+d140 1
+a140 1
+#ifdef USE_THREAD
+d184 1
+a184 1
+#ifdef USE_THREAD
+d215 1
+a215 1
+#if defined(USE_THREAD) && defined(HAVE_SETITIMER)
+d728 1
+a728 1
+#ifdef USE_THREAD
+d757 1
+a757 1
+#ifdef USE_THREAD
+d920 3
+a924 3
+#else
+#ifdef HAVE_SETRUID
+    setruid(uid);
+@
+
+
+1.1.1.2.2.15.2.3
+log
+@*** empty log message ***
+@
+text
+@d573 1
+a573 1
+    rb_secure(4);
+@
+
+
+1.1.1.2.2.15.2.4
+log
+@first public release of 1.1d (pre1.2) series
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/14 09:00:07 $
+d215 22
+a236 3
+#if defined(THREAD) && defined(HAVE_SETITIMER)
+#define before_exec() thread_stop_timer()
+#define after_exec() thread_start_timer()
+a505 3
+    if (argc == 0) {
+	rb_raise(rb_eArgError, "wrong # of arguments");
+    }
+a837 14
+proc_getpgid(obj, pid)
+    VALUE obj, pid;
+{
+#ifdef HAVE_GETPGID
+    int i;
+
+    i = getpgid(NUM2INT(pid));
+    return INT2NUM(i);
+#else
+    rb_notimplement();
+#endif
+}
+
+static VALUE
+d1088 1
+a1088 1
+#ifdef HAVE_GETPRIORITY
+@
+
+
+1.1.1.2.2.15.2.5
+log
+@1.1d1
+@
+text
+@d6 1
+a6 1
+  $Date: 1998/12/16 07:30:33 $
+d615 1
+a615 1
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+d634 1
+a634 1
+    cmd = rb_ary_join(rb_ary_new4(argc, argv), rb_str_new2(" "));
+@

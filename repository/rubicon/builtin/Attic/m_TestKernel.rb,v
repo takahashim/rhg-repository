@@ -1,0 +1,449 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2000.06.18.17.21.58;	author dave;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.18.17.19.40;	author dave;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Yes... Dave has taken on Kernel
+@
+text
+@require '../rubicon'
+
+
+class TestKernel < Rubicon::TestCase
+
+  def test_EQUAL # '=='
+    assert_fail("untested")
+  end
+
+  def test_MATCH # '=~'
+    assert_fail("untested")
+  end
+
+  def test_VERY_EQUAL # '==='
+    assert_fail("untested")
+  end
+
+  def test___id__
+    assert_fail("untested")
+  end
+
+  def test___send__
+    assert_fail("untested")
+  end
+
+  def test_class
+    assert_fail("untested")
+  end
+
+  def test_clone
+    assert_fail("untested")
+  end
+
+  def test_display
+    assert_fail("untested")
+  end
+
+  def test_dup
+    assert_fail("untested")
+  end
+
+  def test_eql?
+    assert_fail("untested")
+  end
+
+  def test_equal?
+    assert_fail("untested")
+  end
+
+  def test_extend
+    assert_fail("untested")
+  end
+
+  def test_freeze
+    assert_fail("untested")
+  end
+
+  def test_frozen?
+    assert_fail("untested")
+  end
+
+  def test_hash
+    assert_fail("untested")
+  end
+
+  def test_id
+    assert_fail("untested")
+  end
+
+  def test_inspect
+    assert_fail("untested")
+  end
+
+  def test_instance_eval
+    assert_fail("untested")
+  end
+
+  def test_instance_of?
+    assert_fail("untested")
+  end
+
+  def test_instance_variables
+    assert_fail("untested")
+  end
+
+  def test_is_a?
+    assert_fail("untested")
+  end
+
+  def test_kind_of?
+    assert_fail("untested")
+  end
+
+  def test_method
+    assert_fail("untested")
+  end
+
+  def test_methods
+    assert_fail("untested")
+  end
+
+  def test_nil?
+    assert_fail("untested")
+  end
+
+  def test_private_methods
+    assert_fail("untested")
+  end
+
+  def test_protected_methods
+    assert_fail("untested")
+  end
+
+  def test_public_methods
+    assert_fail("untested")
+  end
+
+  def test_respond_to?
+    assert_fail("untested")
+  end
+
+  def test_send
+    assert_fail("untested")
+  end
+
+  def test_singleton_methods
+    assert_fail("untested")
+  end
+
+  def test_taint
+    assert_fail("untested")
+  end
+
+  def test_tainted?
+    assert_fail("untested")
+  end
+
+  def test_to_a
+    assert_fail("untested")
+  end
+
+  def test_to_s
+    assert_fail("untested")
+  end
+
+  def test_type
+    assert_fail("untested")
+  end
+
+  def test_untaint
+    assert_fail("untested")
+  end
+
+  def test_s_Array
+    assert_fail("untested")
+  end
+
+  def test_s_Float
+    assert_fail("untested")
+  end
+
+  def test_s_Integer
+    assert_fail("untested")
+  end
+
+  def test_s_String
+    assert_fail("untested")
+  end
+
+  def test_s_`
+    assert_fail("untested")
+  end
+
+  def test_s_abort
+    assert_fail("untested")
+  end
+
+  def test_s_at_exit
+    assert_fail("untested")
+  end
+
+  def test_s_autoload
+    assert_fail("untested")
+  end
+
+  def test_s_binding
+    assert_fail("untested")
+  end
+
+  def test_s_block_given?
+    assert_fail("untested")
+  end
+
+  def test_s_callcc
+    assert_fail("untested")
+  end
+
+  def test_s_caller
+    assert_fail("untested")
+  end
+
+  def test_s_catch
+    assert_fail("untested")
+  end
+
+  def test_s_chomp
+    assert_fail("untested")
+  end
+
+  def test_s_chomp!
+    assert_fail("untested")
+  end
+
+  def test_s_chop
+    assert_fail("untested")
+  end
+
+  def test_s_chop!
+    assert_fail("untested")
+  end
+
+  def test_s_eval
+    assert_fail("untested")
+  end
+
+  def test_s_exec
+    assert_fail("untested")
+  end
+
+  def test_s_exit
+    assert_fail("untested")
+  end
+
+  def test_s_exit!
+    assert_fail("untested")
+  end
+
+  def test_s_fail
+    assert_fail("untested")
+  end
+
+  def test_s_fork
+    assert_fail("untested")
+  end
+
+  def test_s_format
+    assert_fail("untested")
+  end
+
+  def test_s_getc
+    assert_fail("untested")
+  end
+
+  def test_s_gets
+    assert_fail("untested")
+  end
+
+  def test_s_global_variables
+    assert_fail("untested")
+  end
+
+  def test_s_gsub
+    assert_fail("untested")
+  end
+
+  def test_s_gsub!
+    assert_fail("untested")
+  end
+
+  def test_s_iterator?
+    assert_fail("untested")
+  end
+
+  def test_s_lambda
+    assert_fail("untested")
+  end
+
+  def test_s_load
+    assert_fail("untested")
+  end
+
+  def test_s_local_variables
+    assert_fail("untested")
+  end
+
+  def test_s_loop
+    assert_fail("untested")
+  end
+
+  def test_s_method_missing
+    assert_fail("untested")
+  end
+
+  def test_s_open
+    assert_fail("untested")
+  end
+
+  def test_s_p
+    assert_fail("untested")
+  end
+
+  def test_s_print
+    assert_fail("untested")
+  end
+
+  def test_s_printf
+    assert_fail("untested")
+  end
+
+  def test_s_proc
+    assert_fail("untested")
+  end
+
+  def test_s_putc
+    assert_fail("untested")
+  end
+
+  def test_s_puts
+    assert_fail("untested")
+  end
+
+  def test_s_raise
+    assert_fail("untested")
+  end
+
+  def test_s_rand
+    assert_fail("untested")
+  end
+
+  def test_s_readline
+    assert_fail("untested")
+  end
+
+  def test_s_readlines
+    assert_fail("untested")
+  end
+
+  def test_s_require
+    assert_fail("untested")
+  end
+
+  def test_s_scan
+    assert_fail("untested")
+  end
+
+  def test_s_select
+    assert_fail("untested")
+  end
+
+  def test_s_set_trace_func
+    assert_fail("untested")
+  end
+
+  def test_s_singleton_method_added
+    assert_fail("untested")
+  end
+
+  def test_s_sleep
+    assert_fail("untested")
+  end
+
+  def test_s_split
+    assert_fail("untested")
+  end
+
+  def test_s_sprintf
+    assert_fail("untested")
+  end
+
+  def test_s_srand
+    assert_fail("untested")
+  end
+
+  def test_s_sub
+    assert_fail("untested")
+  end
+
+  def test_s_sub!
+    assert_fail("untested")
+  end
+
+  def test_s_syscall
+    assert_fail("untested")
+  end
+
+  def test_s_system
+    assert_fail("untested")
+  end
+
+  def test_s_test
+    assert_fail("untested")
+  end
+
+  def test_s_throw
+    assert_fail("untested")
+  end
+
+  def test_s_trace_var
+    assert_fail("untested")
+  end
+
+  def test_s_trap
+    assert_fail("untested")
+  end
+
+  def test_s_untrace_var
+    assert_fail("untested")
+  end
+
+end
+
+Rubicon::handleTests(TestKernel) if $0 == __FILE__
+@
+
+
+1.1
+log
+@Add in the modules
+@
+text
+@@
+

@@ -1,0 +1,53 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.01.17.08.05.01;	author matz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* eval.c (block_pass): allow "retry" from within argument passed
+  block. [new]
+
+* eval.c (localjump_error): should preserve exit status in the
+  exception object. [new]
+
+* eval.c (proc_invoke): should raise exception for "break" if it's
+  yielding, not calling. [new]
+
+* eval.c (block_pass): should NOT raise exception for "break". [new]
+
+* eval.c (block_pass): should allow block argument relay even in
+  the tainted mode.
+
+* ext/socket/socket.c: support subclassing by proper "initialize"
+  calling convention. [new]
+@
+text
+@README		this file
+tk.rb		Tk interface
+tkafter.rb	handles Tcl after
+tkbgerror.rb	Tk error module
+tkcanvas.rb	Tk canvas interface
+tkclass.rb	provides generic names for Tk classes
+tkdialog.rb	Tk dialog class
+tkentry.rb	Tk entry class
+tkfont.rb	Tk font support
+tkmenubar.rb	TK menubar utility
+tkmngfocus.rb	focus manager
+tkpalette.rb	pallete support
+tkscrollbox.rb	scroll box, also example of compound widget
+tktext.rb	text classes
+tkvirtevent.rb	virtual event support
+@

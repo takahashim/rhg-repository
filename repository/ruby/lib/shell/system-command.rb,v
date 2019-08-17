@@ -1,0 +1,260 @@
+head	1.2;
+access;
+symbols
+	v1_6_7:1.1.2.1
+	v1_6_6:1.1.2.1
+	v1_6_5:1.1.2.1
+	v1_6_4:1.1.2.1
+	v1_7_1:1.1
+	v1_6_4_preview4:1.1.2.1
+	v1_6_4_preview3:1.1.2.1
+	ruby_1_6:1.1.0.2
+	SHELL_v0_6:1.1.1.1
+	KEIJU:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.10.02.16.45.35;	author nobu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.05.17.10.02.48;	author knu;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.05.17.10.35.32;	author knu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@use Object#class instead of deprecated Object#type.
+@
+text
+@#
+#   shell/system-command.rb - 
+#   	$Release Version: 0.6.0 $
+#   	$Revision: 1.1 $
+#   	$Date: 2001/05/17 10:02:48 $
+#   	by Keiju ISHITSUKA(Nihon Rational Software Co.,Ltd)
+#
+# --
+#
+#   
+#
+
+require "shell/filter"
+
+class Shell
+  class SystemCommand < Filter
+    def initialize(sh, command, *opts)
+      if t = opts.find{|opt| !opt.kind_of?(String) && opt.class}
+	Shell.Fail TypeError, t.class, "String"
+      end
+      super(sh)
+      @@command = command
+      @@opts = opts
+      
+      @@input_queue = Queue.new
+      @@pid = nil
+
+      sh.process_controller.add_schedule(self)
+    end
+
+    attr_reader :command
+    alias name command
+
+    def wait?
+      @@shell.process_controller.waiting_job?(self)
+    end
+
+    def active?
+      @@shell.process_controller.active_job?(self)
+    end
+
+    def input=(inp)
+      super
+      if active?
+	start_export
+      end
+    end
+
+    def start
+      @@pid, @@pipe_in, @@pipe_out = @@shell.process_controller.sfork(self) {
+	Dir.chdir @@shell.pwd
+	exec(@@command, *@@opts)
+      }
+      if @@input
+	start_export
+      end
+      start_import
+    end
+
+    def flush
+      @@pipe_out.flush if @@pipe_out and !@@pipe_out.closed?
+    end
+
+    def terminate
+      begin
+	@@pipe_in.close
+      rescue IOError
+      end
+      begin
+	@@pipe_out.close
+      rescue IOError
+      end
+    end
+
+    def kill(sig)
+      if @@pid
+	Process.kill(sig, @@pid)
+      end
+    end
+
+
+    def start_import
+#      Thread.critical = true
+      notify "Job(%id) start imp-pipe.", @@shell.debug?
+      rs = @@shell.record_separator unless rs
+      _eop = true
+#      Thread.critical = false
+      th = Thread.start {
+	Thread.critical = true
+	begin
+	  Thread.critical = false
+	  while l = @@pipe_in.gets
+	    @@input_queue.push l
+	  end
+	  _eop = false
+	rescue Errno::EPIPE
+	  _eop = false
+	ensure
+	  if _eop
+	    notify("warn: Process finishing...",
+		   "wait for Job[%id] to finish pipe importing.",
+		   "You can use Shell#transact or Shell#check_point for more safe execution.")
+#	    Tracer.on
+	    Thread.current.run
+	    redo
+	  end
+	  Thread.exclusive do
+	    notify "job(%id}) close imp-pipe.", @@shell.debug?
+	    @@input_queue.push :EOF
+	    @@pipe_in.close
+	  end
+	end
+      }
+    end
+
+    def start_export
+      notify "job(%id) start exp-pipe.", @@shell.debug?
+      _eop = true
+      th = Thread.start{
+	Thread.critical = true
+	begin
+	  Thread.critical = false
+	  @@input.each{|l| @@pipe_out.print l}
+	  _eop = false
+	rescue Errno::EPIPE
+	  _eop = false
+	ensure
+	  if _eop
+	    notify("shell: warn: Process finishing...",
+		   "wait for Job(%id) to finish pipe exporting.",
+		   "You can use Shell#transact or Shell#check_point for more safe execution.")
+#	    Tracer.on
+	    redo
+	  end
+	  Thread.exclusive do
+	    notify "job(%id) close exp-pipe.", @@shell.debug?
+	    @@pipe_out.close
+	  end
+	end
+      }
+    end
+
+    alias super_each each
+    def each(rs = nil)
+      while (l = @@input_queue.pop) != :EOF
+	yield l
+      end
+    end
+
+    # ex)
+    #    if you wish to output: 
+    #	    "shell: job(#{@@command}:#{@@pid}) close pipe-out."
+    #	 then 
+    #	    mes: "job(%id) close pipe-out."
+    #    yorn: Boolean(@@shell.debug? or @@shell.verbose?)
+    def notify(*opts, &block)
+      Thread.exclusive do
+	@@shell.notify(*opts) {|mes|
+	  yield mes if iterator?
+
+	  mes.gsub!("%id", "#{@@command}:##{@@pid}")
+	  mes.gsub!("%name", "#{@@command}")
+	  mes.gsub!("%pid", "#{@@pid}")
+	}
+      end
+    end
+  end
+end
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.4 $
+#   	$Date: 2001/03/19 09:03:35 $
+d18 2
+a19 2
+      if t = opts.find{|opt| !opt.kind_of?(String) && opt.type}
+	Shell.Fail TypeError, t.type, "String"
+@
+
+
+1.1.2.1
+log
+@* doc/shell.rd*, lib/shell*: bring shell.rb 0.6 onto the ruby_1_6
+branch.
+@
+text
+@d4 2
+a5 2
+#   	$Revision: 1.1.1.1 $
+#   	$Date: 2001/05/17 10:02:48 $
+@
+
+
+1.1.1.1
+log
+@Import Keiju ISHITSUKA's shell.rb 0.6 with some minor changes:
+
+	- all Japanese code were converted to EUC
+	- shell.doc and shell.doc.jp were renamed to shell.rd and
+	shell.rd.jp, respectively.  (They will be converted to RD
+	shortly)
+@
+text
+@@

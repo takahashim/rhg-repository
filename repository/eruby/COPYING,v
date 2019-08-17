@@ -1,0 +1,57 @@
+head	1.1;
+access;
+symbols
+	release_0_9_8:1.1
+	autoconfiscation-branch:1.1.0.2
+	root-of-autoconfiscation:1.1
+	release_0_9_7:1.1
+	release_0_9_6:1.1
+	release_0_9_5:1.1
+	release_0_9_4:1.1
+	release_0_9_3:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.06.04.05.20.18;	author shugo;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@* examples/e2r.rb: new file.
+* examples/test.rhtml: new file.
+* examples/foo.rhtml: new file.
+* COPYING: new file.
+* GPL: new file.
+* LGPL: new file.
+* eruby_lib.c (eruby_import): use Kernel#eval for backtrace.
+@
+text
+@eruby - The Embedded Ruby Language Processor
+
+LICENSE
+=======
+
+eruby is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+liberuby (part of eruby, consists of eruby_lib.c and eruby_ext.c) is
+free software; you can redistribute it and/or modify it under the terms
+of the GNU Lesser General Public License as published by the Free
+Software Foundation; either version 2.1 of the License, or (at your
+option) any later version.
+
+eruby is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+@
